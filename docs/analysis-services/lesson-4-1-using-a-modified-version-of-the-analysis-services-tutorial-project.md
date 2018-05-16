@@ -3,7 +3,7 @@ title: "Using a Modified Version of the Analysis Services Tutorial Project | Mic
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: multidimensional-models
+ms.custom: multidimensional-models
 ms.topic: tutorial
 ms.author: owend
 ms.reviewer: owend

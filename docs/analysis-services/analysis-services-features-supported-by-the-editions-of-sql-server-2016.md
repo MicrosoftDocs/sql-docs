@@ -3,6 +3,7 @@ title: "Analysis Services Features Supported by the Editions of SQL Server 2016 
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
+ms.custom:
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend

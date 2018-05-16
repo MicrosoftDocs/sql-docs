@@ -27,23 +27,23 @@ Even if you own the computer, you should consider the usefulness of any particul
 
 ### In-Database engine instance file paths
 
-The following table shows the file location of R and Python for version and database engine instance combinations. 
+The following table shows the file location of R and Python for version and database engine instance combinations. MSSQL13 indicates SQL Server 2016 and is R-only. MSSQL14 indicates SQL Server 2017 and has R and Python folders. 
 
-|Version | Instance name|Default path|
-|--------|--------------|------------|
-| SQL Server 2016 |default instance| C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
-| SQL Server 2016 |named instance | C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library|
-| SQL Server 2017 with R|default instance | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
-| SQL Server 2017 with R|named instance| C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library |
-| SQL Server 2017 with Python |default instance | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library |
-| SQL Server 2017 with Python|named instance| C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library |
+File paths also include instance names. SQL Server installs [database engine instances](../../database-engine/configure-windows/database-engine-instances-sql-server.md) as the default instance (MSSQLSERVER) or as a user-defined named instance. If SQL Server is installed as a named instance, you will see that name appended as follows: `MSSQL13.<instance_name>`.
+
+|Version and language  | Default path|
+|----------------------|------------|
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
+| SQL Server 2017 with R|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2017 with Python |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
+
 
 ### Standalone server file paths 
 
 The following table lists the default paths of the binaries when SQL Server 2016 R Server (Standalone) or SQL Server 2017 Machine Learning Server (Standalone) server is installed. 
 
 |Version| Installation|Default path|
-|------|------|------|
+|-------|-------------|------------|
 | SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|Machine Learning Server, with R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
 |SQL Server 2017|Machine Learning Server, with Python |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
@@ -57,17 +57,23 @@ This section summarizes R and Python features included in a default installation
 
 ### R components
 
-Components include Microsoft's distribution of open-source R as [Microsoft R Open](https://mran.microsoft.com/open). Base R packages include core functionality such as **stats** and **utils**. You can run `installed.packages(priority = "base")` to return a package list. A base installation of R also includes numerous sample datasets, and standard R tools such as RGui (a lightweight interactive editor) and RTerm (an R command prompt).
+Open-source R is Microsoft's distribution [Microsoft R Open (MRO)](https://mran.microsoft.com/open). R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets, and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
-Microsoft packages include [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) adds machine learning modeling in R. Other packages include [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) for writing MDX statements in R, and [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) for including R script in stored procedures.
+Proprietary R packages in your installation include:
 
++ [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. 
++ [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) adds machine learning modeling in R.
++ [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) for writing MDX statements in R.
++ [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) for including R script in stored procedures.
+
+The following table summarizes the version of R provided by MRO and the Microsoft packages installed with specific in-database analytics engines.
 
 |Release             | R version       | Microsoft packages    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2016 R Services | 3.2.2   | RevoScaleR, sqlrutil  |
-| SQL Server 2017 Machine Learning Services| 3.4.3 | RevoScaleR, MicrosoftML, olapR, sqlrutil|
+| [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | RevoScaleR, sqlrutil  |
+| [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 | RevoScaleR, MicrosoftML, olapR, sqlrutil|
 
-You can add packages and pre-installed models to SQL Server 2016 R Services by binding to the Modern Lifecycle Support policy. Binding changes the servicing model. By default, after an initial installation, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are only possible through product upgrades (from SQL Server 2016 to SQL Server 2017) or by binding R support to Microsoft Machine Learning Server. For more information, see [Upgrade R and Python components in SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+You can upgrade R components packages, add new R packages, and pre-installed models by *binding* to the Modern Lifecycle Support policy. Binding changes the servicing model. By default, after an initial installation, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are only possible through product upgrades (from SQL Server 2016 to SQL Server 2017) or by binding R support to Microsoft Machine Learning Server. For more information, see [Upgrade R and Python components in SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ### Python components
 
@@ -85,9 +91,9 @@ After an initial installation, Python packages are refreshed through service pac
 
 ## Administrative permissions for package installation
 
-The permissions required for package installation have changed between SQL Server 2016 and SQL Server 2017.
+The package library used by an in-database instance is physically located in the Program Files folder of your SQL Server instance. Writing to this location requires administrator permissions. However, SQL Server 2017 offers some additional methodologies for package installation that gives non-administrators the ability to add packages.
 
-+ In SQL Server 2016, administrative access is required for installation of new R packages.
++ In SQL Server 2016, administrative access is required for new package installation.
 + In SQL Server 2017, you can continue to install packages as an administrator for both R and Python, and this is probably the easiest method. 
 
     The DDL statement, CREATE EXTERNAL LIBRARY, allows the database administrator  to install packages without using R tools. 

@@ -94,13 +94,23 @@ In terms of user experience, the technology and how you work with it is unchange
 
 Microsoft Machine Learning Setup detects the existing features and SQL Server version and invokes a utility called SqlBindR.exe to change the binding. Internally, SqlBindR is chained to Setup and used indirectly. Later, you can call SqlBindR directly from the command line to exercise specific options.
 
-1. Verify your server meets minimum build requirements. For SQL Server 2016 R Services, the minimum is [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) and [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). In SSMS, run `SELECT @@version` to return server version information. 
+1. In SSMS, run `SELECT @@version` to verify the server meets minimum build requirements. 
 
-1. Check the version of R and RevoScaleR to confirm the existing versions are lower than what you plan to replace them with. For SQL Server 2016 R Services, R Base package is 3.2.2 and RevoScaleR is 8.0.3.
+   For SQL Server 2016 R Services, the minimum is [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) and [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1).
 
-    + Go to \Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
-    + Double-click **R** to open the console.
-    + To get package versions, use `library(help="base")` and `library(help="RevoScaleR")`. 
+1. Check the version of R base and RevoScaleR packages to confirm the existing versions are lower than what you plan to replace them with. For SQL Server 2016 R Services, R Base package is 3.2.2 and RevoScaleR is 8.0.3.
+
+    ```SQL
+    EXECUTE sp_execute_external_script
+    @language=N'R'
+    ,@script = N'str(OutputDataSet);
+    packagematrix <- installed.packages();
+    Name <- packagematrix[,1];
+    Version <- packagematrix[,3];
+    OutputDataSet <- data.frame(Name, Version);'
+    , @input_data_1 = N''
+    WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+    ```
 
 1. Download Microsoft Machine Learning Server onto the computer that has the instance you want to upgrade. We recommend the [latest version](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer).
 
@@ -134,15 +144,23 @@ If upgrade fails, check [SqlBindR error codes](#sqlbindr-error-codes) for more i
 
 Recheck the version of R and RevoScaleR to confirm you have newer versions. Use the R console distributed with the R packages in your database engine instance to get package information:
 
-+ Go to \Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
-+ Double-click **R** to open the console.
-+ To get package versions, use `library(help="base")` and `library(help="RevoScaleR")`. 
+```SQL
+EXECUTE sp_execute_external_script
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+```
 
 For SQL Server 2016 R Services bound to Machine Learning Server 9.3, R Base package should be 3.4.1, RevoScaleR should be  9.3, and you should also have MicrosoftML 9.3. 
 
 If you added the pre-trained models, the models are embedded in the MicrosoftML library and you can call them through MicrosoftML functions. For more information, see [R samples for MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
 
-## Offline (no internet access)
+## Offline binding (no internet access)
 
 For systems with no internet connectivity, you can download the installer and .cab files to an internet-connected machine, and then transfer files to the isolated server. 
 
@@ -152,7 +170,7 @@ The following instructions explain how to place the files for an offline install
 
 1. Download the MLS Installer. It downloads as a single zipped file. We recommend the [latest version](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer), but you can also install [earlier versions](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components).
 
-1. Download .cab files. The following links are for 9.3 release. If you require earlier versions, additional links can be found in [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Recall that Python/Anaconda can only be added to a SQL Server 2017 Machine Learning Services instance. Pre-trained models exist for both R and Python; the .cab provides models in the languages you are using.
+1. Download .cab files. The following links are for the 9.3 release. If you require earlier versions, additional links can be found in [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Recall that Python/Anaconda can only be added to a SQL Server 2017 Machine Learning Services instance. Pre-trained models exist for both R and Python; the .cab provides models in the languages you are using.
 
     | Feature | Download |
     |---------|----------|
@@ -164,7 +182,7 @@ The following instructions explain how to place the files for an offline install
 
 1. On the server, type `%temp%` in the Run command to get the physical location of the temp directory. The physical path varies by machine, but it is usually `C:\Users\<your-user-name>\AppData\Local\Temp`.
 
-1. Place.cab files in the %temp% folder.
+1. Place the .cab files in the %temp% folder.
 
 1. Unzip the Installer.
 
@@ -284,11 +302,11 @@ If you find folders with a name like this, you can remove it after installation 
 |*bind*| Upgrades the specified SQL database instance to the latest version of R Server and ensures the instance automatically gets future upgrades of R Server|
 |*unbind*|Uninstalls the latest version of R Server from the specified SQL database instance and prevents future R Server upgrades from affecting the instance|
 
-<a name="sqlbinder-error-codes"<a/>
+<a name="sqlbinder-error-codes"><a/>
 
-### Errors
+## Binding errors
 
-The tool returns the following error messages:
+MLS Installer and SqlBindR both return the following error codes and messages.
 
 |Error code  | Message           | Details               |
 |------------|-------------------|-----------------------|
@@ -298,10 +316,10 @@ The tool returns the following error messages:
 |Bind error 3 | Invalid instance | An instance exists, but is not valid for binding. |
 |Bind error 4 | Not bindable | |
 |Bind error 5 | Already bound | You ran the *bind* command, but the specified instance is already bound. |
-|Bind error 6 | Bind failed | An error occurred while unbinding the instance. |
+|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the MLS installer without selecting any features. Binding requires that you select both an MSSQL instance and R and Python, assuming the instance is SQL Server 2017.|
 |Bind error 7 | Not bound | The database engine instance has R Services or SQL Server Machine Learning Services. The instance is not bound to Microsoft Machine Learning Server. |
 |Bind error 8 | Unbind failed | An error occurred while unbinding the instance. |
-|Bind error 9 | No instances found | No instances were found on this computer. |
+|Bind error 9 | No instances found | No database engine instances were found on this computer. |
 
 
 ## See also

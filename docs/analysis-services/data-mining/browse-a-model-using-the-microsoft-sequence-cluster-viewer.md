@@ -3,7 +3,7 @@ title: "Browse a Model Using the Microsoft Sequence Cluster Viewer | Microsoft D
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
+ms.custom: data-mining
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend

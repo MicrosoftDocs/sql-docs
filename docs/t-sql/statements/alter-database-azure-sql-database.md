@@ -67,7 +67,7 @@ ALTER DATABASE { database_name }
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
-      | 'BC_Gen5_2'	| 'BC_Gen5_4'	| 'BC_Gen5_8'	| 'BC_Gen5_16' | 'BC_Gen5_24'	| 'BC_Gen5_32' | 'BC_Gen5_48'	| 'BC_Gen5_80' |
+      | 'BC_GEN5_2'	| 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
       }
 
 ```  

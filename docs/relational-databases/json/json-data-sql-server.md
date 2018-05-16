@@ -94,8 +94,8 @@ If you must modify parts of JSON text, you can use the [JSON_MODIFY (Transact-SQ
   
 ```sql  
 DECLARE @json NVARCHAR(MAX);
-SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}';
-SET @json = JSON_MODIFY(@jsonInfo,'$.info.address[1].town','London');
+SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}}';
+SET @json = JSON_MODIFY(@json,'$.info.address[1].town','London');
 SELECT modifiedJson = @json;
 ```  
 **Results**  

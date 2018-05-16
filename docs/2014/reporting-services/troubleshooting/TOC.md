@@ -6,4 +6,4 @@
 ### [rsProcessingError - Reporting Services Error](rsprocessingerror-reporting-services-error.md)
 ### [rsServerConfigurationError - Reporting Services Error](rsserverconfigurationerror-reporting-services-error.md)
 ### [rrRenderingError - Reporting Services Error](rrrenderingerror-reporting-services-error.md)
-### [Report Server Windows Service (MSSQLServer) 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)
+### [Report Server Windows Service (MSSQLServer) 107](report-server-windows-service-mssqlserver-107.md)

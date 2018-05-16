@@ -2,9 +2,8 @@
 title: "SQL Data Warehouse Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: ""
 ms.prod_service: "sql-data-warehouse"
-ms.service: "sql-data-warehouse"
+ms.service: sql-data-warehouse
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"

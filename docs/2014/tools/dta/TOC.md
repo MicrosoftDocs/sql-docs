@@ -1,0 +1,11 @@
+# [Tutorial: Database Engine Tuning Advisor](dta/tutorial-database-engine-tuning-advisor.md)
+## [Lesson 1: Basic Navigation in Database Engine Tuning Advisor](dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)
+### [Launching Database Engine Tuning Advisor](dta/lesson-1-1-launching-database-engine-tuning-advisor.md)
+### [Setting Tool Options and Layout](dta/lesson-1-2-setting-tool-options-and-layout.md)
+## [Lesson 2: Using Database Engine Tuning Advisor](dta/lesson-2-using-database-engine-tuning-advisor.md)
+### [Tuning a Workload](dta/lesson-1-1-tuning-a-workload.md)
+### [Viewing Tuning Recommendations](dta/lesson-1-2-viewing-tuning-recommendations.md)
+### [Viewing Tuning Reports](dta/lesson-1-3-viewing-tuning-reports.md)
+## [Lesson 3: Using the dta Command Prompt Utility](dta/lesson-3-using-the-dta-command-prompt-utility.md)
+### [Starting the dta Command Prompt Utility and Tuning a Workload](dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)
+

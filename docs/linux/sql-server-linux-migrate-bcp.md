@@ -115,7 +115,7 @@ Id          Name                Location
 
 In this tutorial, you use `bcp` to export data from the sample table we created earlier to a new data file.
 
-Copy and paste the followikng commands into the terminal window. These commands use the `bcp` command-line utility to export data from the table **TestEmployees** in the database **BcpSampleDB** to a new data file called **~/test_export.txt**.  Remember to replace the username and `<your_password>` as necessary before running the command.
+Copy and paste the following commands into the terminal window. These commands use the `bcp` command-line utility to export data from the table **TestEmployees** in the database **BcpSampleDB** to a new data file called **~/test_export.txt**.  Remember to replace the username and `<your_password>` as necessary before running the command.
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','

@@ -752,6 +752,7 @@ The following resources are required for resumable online index create operation
 > **Resumable Online Index Create** is currently only supported for non-clustered index.
 
 The following functionality is disabled for resumable index create operations
+- •	Resumable Index Create is not supported for a clustered index for public preview.
 - After a resumable online index create operation is paused, the initial value of MAXDOP cannot be changed
 - DROP EXISTING clause is not supported
 - Create an index that contains 

@@ -26,8 +26,8 @@
 ## [Analysis Services Tutorials +](analysis-services/analysis-services-tutorials-ssas.md)
 ## [Integration Services Tutorials +](integration-services/integration-services-tutorials.md)
 ## [Database Engine Tutorials +](relational-databases/database-engine-tutorials.md)
-## [Tutorial: SQL Server Management Studio +](tutorials/tutorial-sql-server-management-studio.md)
-## [Tutorial: Database Engine Tuning Advisor +](dta/tutorial-database-engine-tuning-advisor.md)
+## [Tutorial: SQL Server Management Studio +](ssms/tutorials/tutorial-sql-server-management-studio.md)
+## [Tutorial: Database Engine Tuning Advisor +](tools/dta/tutorial-database-engine-tuning-advisor.md)
 ## [Tutorial: Writing Transact-SQL Statements +](t-sql/tutorial-writing-transact-sql-statements.md)
 
 

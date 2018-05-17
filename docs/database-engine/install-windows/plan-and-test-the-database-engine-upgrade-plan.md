@@ -51,7 +51,7 @@ manager: craigg
   
 -   **Third-party components:** Determine the compatibility of third-party components, such as integrated backup.  
   
--   **Target environment:** Verify that your target environment meets the hardware and software requirements and that is can support the original system's requirements. For example, your upgrade may involve the consolidation of multiple SQL Server instances to a single, new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance, or the virtualization of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment to a private or public cloud.  
+-   **Target environment:** Verify that your target environment meets the hardware and software requirements and that it can support the original system's requirements. For example, your upgrade may involve the consolidation of multiple SQL Server instances to a single, new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance, or the virtualization of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment to a private or public cloud.  
   
 -   **Edition:** Determine the appropriate edition of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] for your upgrade and determine the valid upgrade paths for the upgrade. For detailed information, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Before you upgrade from one edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another, verify that the functionality that you are currently using is supported in the edition to which you are upgrading.  
   

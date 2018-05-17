@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"

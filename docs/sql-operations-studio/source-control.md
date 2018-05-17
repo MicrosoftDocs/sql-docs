@@ -4,7 +4,7 @@ description: Learn how to configure source control in SQL Operations Studio (pre
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
 ms.prod: sql
-ms.reviewer: "alayu; erickang; sstein"
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos

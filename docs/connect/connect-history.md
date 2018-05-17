@@ -2,19 +2,15 @@
 title: "Driver history for Microsoft SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "5/4/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.component: "connect"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "David-Engel"
-ms.author: "v-daveng"
-manager: "kenvh"
-ms.workload: "Inactive"
+ms.topic: conceptual
+author: David-Engel
+ms.author: v-daveng
+manager: kenvh
 ---
 # Driver history for Microsoft SQL Server
 

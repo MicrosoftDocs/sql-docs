@@ -2,13 +2,10 @@
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.component: "replication"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

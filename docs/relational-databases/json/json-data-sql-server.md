@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2018"
@@ -63,10 +63,10 @@ The next sections discuss the key capabilities that SQL Server provides with its
 ### Extract values from JSON text and use them in queries
 If you have JSON text that's stored in database tables, you can read or modify values in the JSON text by using the following built-in functions:  
     
--   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) extracts a scalar value from a JSON string.
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) extracts an object or an array from a JSON string.
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) tests whether a string contains valid JSON.
--   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) changes a value in a JSON string.
+-   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) tests whether a string contains valid JSON.
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) extracts a scalar value from a JSON string.
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) extracts an object or an array from a JSON string.
+-   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) changes a value in a JSON string.
 
 **Example**
   

@@ -135,9 +135,9 @@ The following are issues and limitations with this 17.7 release:
 Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
 
 
-## Uninstall and reinstall
+## Uninstall and reinstall SSMS
 
-If your SSMS installation is having *random* problems, and reinstalling SSMS isn't resolving them, you can first try repairing the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, a *hard* reinstall might help.
+If your SSMS installation is having problems, and a standard uninstall and reinstall doesn't resolve them, you can first try [repairing](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, the following steps have been found to fix many random issues:
 
 1.	Uninstall SSMS the same way you uninstall any application (using *Apps & features*, *Programs and features*, etc. depending on your version of Windows).
 
@@ -157,7 +157,7 @@ If your SSMS installation is having *random* problems, and reinstalling SSMS isn
 
 5.	Reinstall SSMS.
 
-6.	If needed, update Microsoft Visual C++ 2015 Redistributable to the [latest version](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads).
+6.	Upgrade to the [latest version of the Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) if you're not currently up to date.
 
 
 

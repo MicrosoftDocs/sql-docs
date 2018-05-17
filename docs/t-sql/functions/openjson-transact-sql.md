@@ -357,7 +357,7 @@ DECLARE @json NVARCHAR(max)  = N'{
   WITH (id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
-        dateOfBirth datetime2, spouse nvarchar(50)
+        dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
 ## See Also  

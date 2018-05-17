@@ -101,7 +101,7 @@ When you perform resumable online index create or rebuild, the following guideli
 > [!IMPORTANT]
 > Resumable index create or rebuild does not require you to keep open a long running transaction, allowing log truncation during this operation and a better log space management. With the new design, we managed to keep necessary data in a database together with all references required to restart the resumable operation.
 
-Generally, there is no performance difference between resumable and non-resumable online index create or rebuild. When you update a resumable index while an index rebuild operation is paused:
+Generally, there is no performance difference between resumable and non-resumable online index rebuild, and a small performance difference between resumable and nonresumable index create. When you update a resumable index while an index rebuild operation is paused:
 - For read-mostly workloads, the performance impact is insignificant. 
 - For update-heavy workloads, you may experience some throughput degradation (our testing shows less than 10% degradation).
 

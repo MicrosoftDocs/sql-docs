@@ -3,12 +3,9 @@ title: "Run Transact-SQL Script Files Using sqlcmd | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/15/2016"
 ms.prod: sql
-ms.prod_service: "sql-tools"
 ms.technology: ssms
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

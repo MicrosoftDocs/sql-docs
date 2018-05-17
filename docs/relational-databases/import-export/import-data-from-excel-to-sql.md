@@ -19,23 +19,26 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 # Import data from Excel to SQL Server or Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 There are several ways to import data from Excel files to SQL Server or to Azure SQL Database. This article summarizes each of these options and provides links to more detailed instructions.
--   You can import data in a single step from Excel to SQL by using one of the following tools:
+
+A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this list. To learn more about the solution that interests you, follow the links provided for more info.
+
+-   You can import data in a single step, directly from Excel to SQL, by using one of the following tools:
     -   The SQL Server Import and Export Wizard
     -   SQL Server Integration Services (SSIS)
     -   The OPENROWSET function
--   You can import data in two steps by saving your data as text, and then using one of the following tools:
+-   You can import data in two steps, by exporting your data from Excel as text, and then using one of the following tools to import the text file:
     -   The BULK INSERT statement
     -   BCP
     -   Azure Data Factory
 
-A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this overview. To learn more about the solution that interests you, follow the links provided for more info.
+If you want to import multiple worksheets from an Excel workbook, you typically have to run each of these tools once for each sheet.
 
 > [!IMPORTANT]
 > For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).
 
 ## SQL Server Import and Export Wizard
 
-Import data directly from Excel files by stepping through the pages of the SQL Server Import and Export Wizard. Optionally, save the import/export settings as a SQL Server Integration Services (SSIS) package that you can customize and reuse.
+Import data directly from Excel files by stepping through the pages of the SQL Server Import and Export Wizard. Optionally, save the settings as a SQL Server Integration Services (SSIS) package that you can customize and reuse.
 
 ![Connect to an Excel data source](media/excel-connection.png)
 
@@ -222,4 +225,4 @@ To start learning how to copy data with Azure data factory, see the following to
 -   [Tutorial: Create a pipeline with Copy Activity using Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## See Also
-[Load data from or to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)
+[Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

@@ -1,7 +1,7 @@
 ---
 title: "Plan and Test the Database Engine Upgrade Plan | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/20/2016"
+ms.date: "05/18/2018"
 ms.prod: sql
 ms.prod_service: install
 ms.reviewer: ""
@@ -51,21 +51,21 @@ manager: craigg
   
 -   **Third-party components:** Determine the compatibility of third-party components, such as integrated backup.  
   
--   **Target environment:** Verify that your target environment meets the hardware and software requirements, and can support the original system's requirements. For example, your upgrade may involve the consolidation of multiple SQL Server instances to a single, new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance, or the virtualization of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment to a private or public cloud.  
+-   **Target environment:** Verify that your target environment meets the hardware and software requirements and that is can support the original system's requirements. For example, your upgrade may involve the consolidation of multiple SQL Server instances to a single, new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance, or the virtualization of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment to a private or public cloud.  
   
--   **Edition:** Determine the appropriate edition of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] for your upgrade, and determine the valid upgrade paths for the upgrade. For detailed information, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Before you upgrade from one edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another, verify that the functionality that you are currently using is supported in the edition to which you are upgrading.  
+-   **Edition:** Determine the appropriate edition of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] for your upgrade and determine the valid upgrade paths for the upgrade. For detailed information, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Before you upgrade from one edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another, verify that the functionality that you are currently using is supported in the edition to which you are upgrading.  
   
     > [!NOTE]  
     >  When you upgrade [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] from a prior version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choose between Enterprise Edition: Core-based Licensing and Enterprise Edition. These Enterprise editions differ only with respect to the licensing modes. For more information, see [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 -   **Backward compatibility:** Review the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] database engine  backward compatibility article to review changes in behavior between [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version from which you are upgrading. See [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
--   **Upgrade advisor:**  Run the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] Upgrade Advisor to assist in diagnosing issues that might either block the upgrade process or require modification to existing scripts or applications due to a breaking change. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] contains a new version of the Upgrade Advisor to assist customers preparing to upgrade an existing system.  This tool also contains an ability to check your existing databases to see if they can leverage new features, such as Stretch Tables, after upgrade is complete.   
-    You can download [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]Upgrade Advisor  [here](https://www.microsoft.com/en-us/download/details.aspx?id=48119).  
+-   **Data Migration Assistant:**  Run the Data Migration Assistant to assist in diagnosing issues that might either block the upgrade process or require modification to existing scripts or applications due to a breaking change.
+    You can download the Data Migration Assitant [here](https://aka.ms/get-dma).  
   
--   **System configuration checker:**  Run the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] System Configuration Checker (SCC) to determine if the SQL Server setup program detects any blocking issues before you actually schedule the upgrade. For more information, see [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   **System configuration checker:**  Run the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] System Configuration Checker (SCC) to determine if the SQL Server setup program detects any blocking issues before you schedule the upgrade. For more information, see [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
--   **Upgrading memory-optimized tables:** When upgrading a SQL Server 2014 database instance containing memory-optimized tables to SQL Server 2016, the upgrade process will require additional time to convert the memory-optimized  tables to the new on-disk format (and the database will be offline while these steps are happening.   The amount of time is dependent upon the size of the memory-optimized tables and the speed of the I/O subsystem. The upgrade requires three size of data operations for in-place and new installation upgrades (step 1 is not required for rolling upgrades, but steps 2 and 3 are required) :  
+-   **Upgrading memory-optimized tables:** When upgrading a SQL Server 2014 database instance containing memory-optimized tables to SQL Server 2016, the upgrade process will require additional time to convert the memory-optimized  tables to the new on-disk format (and the database will be offline while these steps are happening.   The amount of time is dependent upon the size of the memory-optimized tables and the speed of the I/O subsystem. The upgrade requires three size of data operations for in-place and new installation upgrades (step 1 is not required for rolling upgrades, but steps 2 and 3 are required):  
   
     1.  Run database recovery using the old on-disk format (this includes loading all data in memory-optimized tables into memory from disk)  
   
@@ -73,7 +73,7 @@ manager: craigg
   
     3.  Run database recovery using the new format (this includes loading all data in memory-optimized tables into memory from disk)  
   
-     Additionally, insufficient space on disk during this process will cause recovery to fail. Ensure there is sufficient space on disk to store the existing database plus additional storage equal to the current size of the containers in the MEMORY_OPTIMIZED_DATA filegroup in the database to perform an in-place upgrade or when attaching a SQL Server 2014 database to a SQL Server 2016 instance.Use the following query to determine the disk space currently required for the MEMORY_OPTIMIZED_DATA filegroup, and consequently also the amount of free disk space required for upgrade to succeed:  
+     Additionally, insufficient space on disk during this process will cause recovery to fail. Ensure there is sufficient space on disk to store the existing database plus additional storage equal to the current size of the containers in the MEMORY_OPTIMIZED_DATA filegroup in the database to perform an in-place upgrade or when attaching a SQL Server 2014 database to a SQL Server 2016 instance. Use the following query to determine the disk space currently required for the MEMORY_OPTIMIZED_DATA filegroup, and consequently also the amount of free disk space required for upgrade to succeed:  
   
     ```  
     select cast(sum(size) as float)*8/1024/1024 'size in GB'   
@@ -86,13 +86,14 @@ manager: craigg
   
 -   **Choose the upgrade method:** See [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
--   **Develop a rollback plan:**. Executing this plan will enable you to restore your original environment if you need to rollback.  
+-   **Develop a rollback plan:** Executing this plan will enable you to restore your original environment if you need to rollback.  
   
 -   **Determine acceptance criteria:** You need to know the upgrade is successful before you cut over users to the upgraded environment.  
   
 -   **Test the upgrade plan:** To test performance using your actual workload, use the Microsoft SQL Server Distributed Replay Utility. This utility can use multiple computers to replay trace data, simulating a mission-critical workload. By performing a replay on a test server before and after a SQL Server upgrade, you can measure performance differences and look for any incompatibilities your application may have with the upgrade. For more information, see [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) and [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md).  
   
 ## Next steps  
- [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
+[Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md) 
   
-  
+## Additional resources 
+[Database Migration Guide](https://aka.ms/datamigration)  

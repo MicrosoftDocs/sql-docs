@@ -1,25 +1,14 @@
 ---
 title: "Configure HTTP Access to Analysis Services on IIS 8.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure HTTP Access to Analysis Services on IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,22 +29,6 @@ ms.workload: "On Demand"
  Setting up HTTP access is a post-installation task. Analysis Services must be installed before you can configure it for HTTP access. As the Analysis Services administrator, you will need to grant permissions to Windows accounts before HTTP access is possible. Additionally, it is a best practice to validate your installation first, ensuring that it is fully operational before configuring the server any further. After HTTP access is configured, you can use both the HTTP endpoint and the regular network name of the server over TCP/IP. Setting up HTTP access does not invalidate other approaches for data access.  
   
  As you move forward with MSMDPUMP configuration, remember there are two connections to consider: client-to-IIS, IIS-to-SSAS. The instructions in this article are about IIS-to-SSAS. Your client application might require additional configuration before it can connect to IIS. Decisions such as whether to use SSL, or how to configure bindings, are out of scope for this article. See [Web Server (IIS)](http://technet.microsoft.com/library/hh831725.aspx) for more information about IIS.  
-  
- This topic includes the following sections:  
-  
--   [Overview](#bkmk_overview)  
-  
--   [Prerequisites](#bkmk_prereq)  
-  
--   [Copy the MSMDPUMP.dll to a folder on the Web server](#bkmk_copy)  
-  
--   [Create an application pool and virtual directory in IIS](#bkmk_appPool)  
-  
--   [Configure IIS authentication and add the extension](#bkmk_auth)  
-  
--   [Edit the MSMDPUMP.INI file to set the target server](#bkmk_edit)  
-  
--   [Test your configuration](#bkmk_test)  
   
 ##  <a name="bkmk_overview"></a> Overview  
  MSMDPUMP is an ISAPI extension that loads into IIS and provides redirection to a local or remote Analysis Services instance. By configuring this ISAPI extension, you create an HTTP endpoint to an Analysis Services instance.  

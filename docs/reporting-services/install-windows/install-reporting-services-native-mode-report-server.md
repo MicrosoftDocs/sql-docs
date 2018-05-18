@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "12/20/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -21,7 +20,6 @@ caps.latest.revision: 68
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Install Reporting Services 2016 native mode report server
 

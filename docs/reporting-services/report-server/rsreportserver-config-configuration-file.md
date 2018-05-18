@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/12/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-server"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,13 +11,12 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 caps.latest.revision: 20
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # RsReportServer.config Configuration File
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** file stores settings that are used by the Report Server Web service and background processing. All [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications run within a single process that reads configuration settings stored in the RSReportServer.config file. Both Native mode and SharePoint mode report servers use the RSReportServer.config, however the two modes do not use all of the same settings in the configuration file. The SharePoint mode version of the file is smaller as many of the settings for SharePoint mode are stored in SharePoint configuration databases rather than the file. This topic describes the default configuration file that is installed for Native mode and SharePoint mode and some of the important settings and behaviors that are controlled by the configuration file.  

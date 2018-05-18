@@ -1,17 +1,15 @@
 ---
 title: "Transaction Processing | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [ADO]"
   - "data updates [ADO], transaction processing"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "nested transactions [ADO]"
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Transaction Processing
 A *transaction* delimits the beginning and end of a series of data access operations executed across a connection. Subject to the transactional capabilities of your data source, the **Connection** object also allows you to create and manage transactions. For example, using the Microsoft OLE DB Provider for SQL Server to access a database on Microsoft SQL Server, you can create multiple nested transactions for the commands you execute.  

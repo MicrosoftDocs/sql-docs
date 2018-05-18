@@ -1,25 +1,18 @@
 ---
-title: "Locking Behavior (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
-caps.latest.revision: 27
-
+title: Locking behavior - Parallel Data Warehouse | Microsoft Docs
+description: Learn how Parallel Data Warehouse uses locking to ensure the integrity of transactions and to maintain the consistency of databases when multiple users are accessing data at the same time. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Locking Behavior
-SQL Server PDW uses locking to ensure the integrity of transactions and to maintain the consistency of databases when multiple users are accessing data at the same time.  
+
+# Locking behavior in Parallel Data Warehouse
+Learn how Parallel Data Warehouse uses locking to ensure the integrity of transactions and to maintain the consistency of databases when multiple users are accessing data at the same time.  
   
 ## <a name="Basics"></a>Locking Basics  
 **Modes**  

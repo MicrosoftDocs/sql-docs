@@ -1,10 +1,9 @@
----
+﻿---
 title: "SQL Server Native Client Support for High Availability, Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/04/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client|features"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,10 +13,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: 35
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Native Client Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,29 +68,11 @@ ms.workload: "On Demand"
  If you upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client application that currently uses database mirroring to a multi-subnet scenario, you should remove the **Failover_Partner** connection property and replace it with **MultiSubnetFailover** set to **Yes** and replace the server name in the connection string with an availability group listener. If a connection string uses **Failover_Partner** and **MultiSubnetFailover=Yes**, the driver will generate an error. However, if a connection string uses **Failover_Partner** and **MultiSubnetFailover=No** (or **ApplicationIntent=ReadWrite**), the application will use database mirroring.  
   
  The driver will return an error if database mirroring is used on the primary database in the availability group, and if **MultiSubnetFailover=Yes** is used in the connection string that connects to a primary database instead of to an availability group listener.  
-  
-## Specifying Application Intent  
- When **ApplicationIntent=ReadOnly**, the client requests a read workload when connecting to an Always On enabled database. The server will enforce the intent at connection time and during a USE database statement but only to an Always On enabled database.  
-  
- The **ApplicationIntent** keyword does not work with legacy, read-only databases.  
-  
- A database can allow or disallow read workloads on the targeted Always On database. (This is done with the **ALLOW_CONNECTIONS** clause of the **PRIMARY_ROLE** and **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)] statements.)  
-  
- The **ApplicationIntent** keyword is used to enable read-only routing.  
-  
-## Read-Only Routing  
- Read-only routing is a feature that can ensure the availability of a read only replica of a database. To enable read-only routing:  
-  
-1.  You must connect to an Always On Availability Group availability group listener.  
-  
-2.  The **ApplicationIntent** connection string keyword must be set to **ReadOnly**.  
-  
-3.  The Availability Group must be configured by the database administrator to enable read-only routing.  
-  
- It is possible that multiple connections using read-only routing will not all connect to the same read-only replica. Changes in database synchronization or changes in the server's routing configuration can result in client connections to different read-only replicas. To ensure that all read-only requests connect to the same read-only replica, do not pass an availability group listener to the **Server** connection string keyword. Instead, specify the name of the read-only instance.  
-  
- Read-only routing may take longer than connecting to the primary because read only routing first connects to the primary and then looks for the best available readable secondary. Because of this, you should increase your login timeout.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## ODBC  
  Two ODBC connection string keywords were added to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   

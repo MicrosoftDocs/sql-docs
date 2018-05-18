@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying [Reporting Services], reports in SharePoint integrated mode"
   - "SharePoint integration [Reporting Services], publishing to a library"
@@ -22,7 +21,6 @@ caps.latest.revision: 15
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Publish a Report to a SharePoint Library
   To publish a report to a SharePoint site configured for SharePoint integration, you must set the project properties in Report Designer. In the project properties, all references to servers, reports, and shared data sources must be fully qualified URLs. In the report definition, all references to subreports, drillthrough reports, and resources such as Web-based images, must be fully qualified URLS.  

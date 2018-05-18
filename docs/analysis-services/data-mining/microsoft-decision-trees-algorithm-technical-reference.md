@@ -1,34 +1,14 @@
 ---
 title: "Microsoft Decision Trees Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "SPLIT_METHOD parameter"
-  - "MINIMUM_SUPPORT parameter"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES parameter"
-  - "FORCED_REGRESSOR parameter"
-  - "decision tree algorithms [Analysis Services]"
-  - "decision trees [Analysis Services]"
-  - "COMPLEXITY_PENALTY parameter"
-  - "SCORE_METHOD parameter"
-ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Decision Trees Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -1,15 +1,13 @@
----
+﻿---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/27/2017"
-ms.prod: "sql-non-specified"
+ms.date: "5/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "PolyBase, external table"
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: 30
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -131,9 +129,10 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
 <reject_options> ::=  
 {  
-    | REJECT_TYPE = value | percentage  
-    | REJECT_VALUE = reject_value  
-    | REJECT_SAMPLE_VALUE = reject_sample_value  
+    | REJECT_TYPE = value | percentage,  
+    | REJECT_VALUE = reject_value,  
+    | REJECT_SAMPLE_VALUE = reject_sample_value,
+    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
   
 }  
 ```  
@@ -179,6 +178,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  LOCATION =  '*folder_or_filepath*'  
  Specifies the folder or the file path and file name for the actual data in Hadoop or Azure blob storage. The location starts from the root folder; the root folder is the data location specified in the external data source.  
+
+
+In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder if it does not already exist. You can then use INSERT INTO to export data from a local SQL Server table to the external data source. For more information, see [Polybase Queries](/sql/relational-databases/polybase/polybase-queries). 
+
+In SQL Data Warehouse and Analytics Platform System, the [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it does not exist. In these two products, CREATE EXTERNAL TABLE does not create the path and folder.
+
   
  If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase does not return hidden folders. It also does not return files for which the file name begins with an underline (_) or a period (.).  
   
@@ -227,7 +232,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 > [!NOTE]  
 >  Since PolyBase computes the percentage of failed rows at intervals, the actual percentage of failed rows can exceed *reject_value*.  
   
- Example:  
+
+Example:  
   
  This example shows how the three REJECT options interact with each other. For example, if REJECT_TYPE = percentage, REJECT_VALUE = 30, and REJECT_SAMPLE_VALUE = 100, the following scenario could occur:  
   
@@ -240,6 +246,13 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   Percent of failed rows is recalculated as 50%. The percentage of failed rows has exceeded the 30% reject value.  
   
 -   The PolyBase query fails with 50% rejected rows after attempting to return the first 200 rows. Note that matching rows have been returned before the PolyBase query detects the reject threshold has been exceeded.  
+  
+REJECTED_ROW_LOCATION = *Directory Location*
+  
+  Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
+If the specified path does not exist, PolyBase will create one on your behalf. A child directory is created with the name “_rejectedrows”. The “_” character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there is a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. 
+
+The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files corresponding files have a matching suffix. 
   
  Sharded external table options  
  Specifies the external data source (a non-SQL Server data source) and a distribution method for the [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  

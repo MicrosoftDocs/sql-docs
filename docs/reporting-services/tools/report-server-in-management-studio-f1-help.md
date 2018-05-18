@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "tools"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -20,7 +19,6 @@ caps.latest.revision: 41
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Report Server in Management Studio F1 Help
   This section includes topics about the dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] that can be used to manage report servers.  

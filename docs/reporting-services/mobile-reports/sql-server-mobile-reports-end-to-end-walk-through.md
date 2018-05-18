@@ -4,20 +4,18 @@ ms.custom: ""
 ms.date: "11/07/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 caps.latest.revision: 14
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # SQL Server mobile reports: End-to-end walk-through
 Walk through creating mobile reports for any screen size with [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] on the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal, and viewing them in the Power BI mobile apps.

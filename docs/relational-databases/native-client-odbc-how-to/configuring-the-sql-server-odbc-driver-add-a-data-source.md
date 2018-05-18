@@ -1,10 +1,9 @@
----
+﻿---
 title: "Add a Data Source (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "data sources [ODBC]"
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configuring the SQL Server ODBC Driver - Add a Data Source
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

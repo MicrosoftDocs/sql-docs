@@ -1,10 +1,9 @@
 ---
 title: "Run an SSIS package with Transact-SQL (VS Code) | Microsoft Docs"
 ms.date: "09/25/2017"
-ms.topic: "article"
-ms.prod: "sql-non-specified"
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "quick-start"
 ms.suite: "sql"
 ms.custom: ""
@@ -12,8 +11,7 @@ ms.technology:
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Run an SSIS package from Visual Studio Code with Transact-SQL
 This quick start demonstrates how to use Visual Studio Code to connect to the SSIS Catalog database, and then use Transact-SQL statements to run an SSIS package stored in the SSIS Catalog.

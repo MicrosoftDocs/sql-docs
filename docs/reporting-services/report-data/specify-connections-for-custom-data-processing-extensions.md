@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "custom data processing extensions [Reporting Services]"
   - "IDbConnection interface, connection strings"
@@ -29,7 +28,6 @@ caps.latest.revision: 20
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Specify Connections for Custom Data Processing Extensions
   You can create or use third-party custom data processing extensions on a report server to enhance the data processing capability of supported data sources, or to support additional types of data sources that are not available in a default [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation. Connections are handled differently depending on the implementation. The following implementations are available for data processing extensions:  

@@ -1,17 +1,15 @@
 ---
 title: "Levels Collection (ADO MD) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Levels"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "Levels collection [ADO MD]"
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Levels Collection (ADO MD)
 Contains the [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) objects that make up a hierarchy.  

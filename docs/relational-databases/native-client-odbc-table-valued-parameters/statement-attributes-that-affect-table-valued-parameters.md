@@ -1,10 +1,9 @@
----
+﻿---
 title: "Statement Attributes that Affect Table-Valued Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), statement attribute"
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Statement Attributes that Affect Table-Valued Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

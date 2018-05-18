@@ -1,10 +1,9 @@
----
+﻿---
 title: "Data Type Mapping in ITableDefinition | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-data-types"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "OLE DB, data types"
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 caps.latest.revision: 35
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Data Type Mapping in ITableDefinition
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

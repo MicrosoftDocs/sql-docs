@@ -1,10 +1,9 @@
----
+﻿---
 title: "Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -14,10 +13,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

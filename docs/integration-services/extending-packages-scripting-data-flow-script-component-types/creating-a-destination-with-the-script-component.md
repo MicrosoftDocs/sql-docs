@@ -2,9 +2,8 @@
 title: "Creating a Destination with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-scripting-data-flow-script-component-types"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,8 +23,7 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Creating a Destination with the Script Component
   You use a destination component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to save data received from upstream sources and transformations to a data source. Ordinarily the destination component connects to the data source through an existing connection manager.  

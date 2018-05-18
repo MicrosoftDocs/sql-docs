@@ -1,21 +1,20 @@
----
+﻿---
 title: "Import data from Excel to SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/02/2017"
-ms.prod: "sql-non-specified"
+ms.date: "05/15/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "import-export"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,8 +28,10 @@ There are several ways to import data from Excel files to SQL Server or to Azure
     -   BCP
     -   Azure Data Factory
 
+A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this overview. To learn more about the solution that interests you, follow the links provided for more info.
+
 > [!IMPORTANT]
-> A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this overview. To learn more about the solution that interests you, follow the links provided for more info.
+> For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).
 
 ## SQL Server Import and Export Wizard
 
@@ -39,6 +40,8 @@ Import data directly from Excel files by stepping through the pages of the SQL S
 ![Connect to an Excel data source](media/excel-connection.png)
 
 For an example of using the wizard to import from Excel to SQL Server, see [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+
+To learn how to launch the wizard, see [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
 ## SQL Server Integration Services (SSIS)
 
@@ -53,6 +56,10 @@ For more info about these SSIS components, see the following topics:
 To start learning how to build SSIS packages, see the tutorial [How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md).
 
 ## OPENROWSET and linked servers
+
+> [!NOTE]
+> In Azure, the OPENROWSET and OPENDATASOURCE functions are available only on SQL Database Managed Instance (Preview).
+
 > [!NOTE]
 > The ACE provider (formerly the Jet provider) that connects to Excel data sources is intended for interactive client-side use. If you use the ACE provider on the server, especially in automated processes or processes running in parallel, you may see unexpected results.
 
@@ -145,10 +152,12 @@ For more examples and info about both linked servers and distributed queries, se
 -   [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
 -   [How to import data from Excel to SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
-## Prerequisite - Save Excel data as text
+## <a name="prereq"></a> Prerequisite - Save Excel data as text
 To use the rest of the methods described on this page - the BULK INSERT statement, the BCP tool, or Azure Data Factory - first you have to export your Excel data to a text file.
 
 In Excel, select **File | Save As** and then select **Text (Tab delimited) (\*.txt)** or **CSV (Comma delimited) (\*.csv)** as the destination file type.
+
+If you want to export multiple worksheets from the workbook, select each sheet and then repeat this procedure. The **Save as** command exports only the active sheet.
 
 > [!TIP]
 > For best results with data importing tools, save sheets that contain only the column headers and the rows of data. If the saved data contains page titles, blank lines, notes, and so forth, you may see unexpected results later when you import the data.
@@ -156,6 +165,8 @@ In Excel, select **File | Save As** and then select **Text (Tab delimited) (\*.t
 ## BULK INSERT command
 
 `BULK INSERT` is a Transact-SQL command that you can run from SQL Server Management Studio. The following example loads the data from the `Data.csv` comma-delimited file into an existing database table.
+
+As described previously in the [Prerequisite](#prereq) section, you have to export your Excel data as text before you can use BULK INSERT to import it. BULK INSERT can't read Excel files directly.
 
 ```sql
 USE ImportFromExcel;
@@ -176,6 +187,8 @@ For more info, see the following topics:
 
 BCP is a program that you run from the command prompt. The following example loads the data from the `Data.csv` comma-delimited file into the existing `Data_bcp` database table.
 
+As described previously in the [Prerequisite](#prereq) section, you have to export your Excel data as text before you can use BCP to import it. BCP can't read Excel files directly.
+
 ```sql
 bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 ```
@@ -188,12 +201,16 @@ For more info about BCP, see the following topics:
 ## Copy Wizard (Azure Data Factory)
 Import data saved as text files by stepping through the pages of the Copy Wizard.
 
+As described previously in the [Prerequisite](#prereq) section, you have to export your Excel data as text before you can use Azure Data Factory to import it. Data Factory can't read Excel files directly.
+
 For more info about the Copy Wizard, see the following topics:
 -   [Data Factory Copy Wizard](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 -   [Tutorial: Create a pipeline with Copy Activity using Data Factory Copy Wizard](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## Azure Data Factory
 If you're familiar with Azure Data Factory and don't want to run the Copy Wizard, create a pipeline with a Copy activity that copies from the text file to SQL Server or to Azure SQL Database.
+
+As described previously in the [Prerequisite](#prereq) section, you have to export your Excel data as text before you can use Azure Data Factory to import it. Data Factory can't read Excel files directly.
 
 For more info about using these Data Factory sources and sinks, see the following topics:
 -   [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
@@ -204,6 +221,5 @@ To start learning how to copy data with Azure data factory, see the following to
 -   [Move data by using Copy Activity](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [Tutorial: Create a pipeline with Copy Activity using Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
-## Next steps
-
-To learn more about the solution that interests you, follow the links provided for more info.
+## See Also
+[Load data from or to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

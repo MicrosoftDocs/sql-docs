@@ -23,13 +23,14 @@
 ### [Run with PowerShell](ssis-quickstart-run-powershell.md)
 ### [Run with C#](./ssis-quickstart-run-dotnet.md) 
 
-# [Lift and shift SSIS packages to Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-## [Tutorial - Deploy, run, and monitor a package on Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Connect to data sources with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
+# [Deploy and run packages in Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Tutorial - Deploy and run a package in Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Connect to data with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Connect to files and file shares](lift-shift/ssis-azure-files-file-shares.md)
+## [Connect to SSISDB in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Validate packages deployed to Azure](lift-shift/ssis-azure-validate-packages.md)
-## [Connect to the SSIS Catalog on Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Schedule package execution on Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Schedule packages in Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Schedule packages in Azure with SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [Install or upgrade](../integration-services/install-windows/install-integration-services.md)
 
@@ -104,7 +105,8 @@
 
 # [Import and export data](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [Load data from or to Excel](load-data-to-from-excel-with-ssis.md)
+# [Import from or export to Excel](load-data-to-from-excel-with-ssis.md)
+# [Load data to SQL Data Warehouse](load-data-to-sql-data-warehouse.md)
 
 # [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 

@@ -1,25 +1,18 @@
 ---
-title: "Appliance Management Tasks (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 516d05a9-b791-4ad3-b8cf-ba34a854e309
-caps.latest.revision: 25
-
+title: Appliance management tasks - Analytics Platform System | Microsoft Docs
+description: This guide describes how to perform appliance administration tasks for Analytics Platform System (APS).  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Appliance Management Tasks
-This guide describes how to perform appliance administration tasks for SQL Server PDW.  
+
+# Appliance management tasks for Analytics Platform System
+This guide describes how to perform appliance administration tasks for Analytics Platform System (APS).  
   
 ## Guide Sections  
   

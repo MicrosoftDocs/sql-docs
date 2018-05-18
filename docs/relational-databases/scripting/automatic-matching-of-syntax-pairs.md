@@ -1,26 +1,18 @@
----
+﻿---
 title: "Automatic Matching of Syntax Pairs | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-scripting"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.prod: sql
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IntelliSense [SQL Server], delimiter highlighting"
   - "IntelliSense [SQL Server], syntax pair matching"
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Automatic Matching of Syntax Pairs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,6 +64,4 @@ ms.workload: "Inactive"
 -   Opening and closing quotes on attributes.  
   
 ## MDX and DMX Editor Parenthesis Matching  
- The Multi-Dimensional Expressions (MDX) and and Data Mining Expressions (DMX) Editors automatically match parenthesis pairs in functions.  
-  
-  
+ The Multi-Dimensional Expressions (MDX) and and Data Mining Expressions (DMX) Editors automatically match parenthesis pairs in functions.

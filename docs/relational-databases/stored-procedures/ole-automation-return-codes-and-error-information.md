@@ -1,17 +1,16 @@
----
+﻿---
 title: "OLE Automation Return Codes and Error Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/05/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-ole"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "return codes [SQL Server]"
   - "OLE Automation [SQL Server], return codes"
@@ -20,8 +19,8 @@ ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # OLE Automation Return Codes and Error Information
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

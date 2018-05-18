@@ -3,7 +3,7 @@ title: "Use sqlcmd with Scripting Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
-ms.technology: ssms
+ms.technology: scripting
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""

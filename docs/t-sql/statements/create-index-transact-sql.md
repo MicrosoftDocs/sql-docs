@@ -1045,36 +1045,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;  
 GO  
 ```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### M. Basic syntax  
-  
-```sql  
-CREATE INDEX IX_VendorID   
-    ON ProductVendor (VendorID);  
-CREATE INDEX IX_VendorID   
-    ON dbo.ProductVendor (VendorID DESC, Name ASC, Address DESC);  
-CREATE INDEX IX_VendorID   
-    ON Purchasing..ProductVendor (VendorID);  
-```  
-  
-### N. Create a non-clustered index on a table in the current database  
- The following example creates a non-clustered index on the `VendorID` column of the `ProductVendor` table.  
-  
-```sql  
-CREATE INDEX IX_ProductVendor_VendorID   
-    ON ProductVendor (VendorID);   
-```  
-  
-### O. Create a clustered index on a table in another database  
- The following example creates a non-clustered index on the `VendorID` column of the `ProductVendor` table in the `Purchasing` database.  
-  
-```sql  
-CREATE CLUSTERED INDEX IX_ProductVendor_VendorID   
-    ON Purchasing..ProductVendor (VendorID);   
-```  
-### Create, resume, pause, and abort resumable index operations
+### M. Create, resume, pause, and abort resumable index operations
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1094,6 +1065,54 @@ ALTER INDEX test_idx on test_table RESUME
 -- Abort resumable index create operation which is running or paused
 ALTER INDEX test_idx on test_table ABORT 
 ```
+
+## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### N. Basic syntax  
+  ### Create, resume, pause, and abort resumable index operations
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+
+```sql  
+CREATE INDEX IX_VendorID   
+    ON ProductVendor (VendorID);  
+CREATE INDEX IX_VendorID   
+    ON dbo.ProductVendor (VendorID DESC, Name ASC, Address DESC);  
+CREATE INDEX IX_VendorID   
+    ON Purchasing..ProductVendor (VendorID);  
+```  
+  
+### O. Create a non-clustered index on a table in the current database  
+ The following example creates a non-clustered index on the `VendorID` column of the `ProductVendor` table.  
+  
+```sql  
+CREATE INDEX IX_ProductVendor_VendorID   
+    ON ProductVendor (VendorID);   
+```  
+  
+### P. Create a clustered index on a table in another database  
+ The following example creates a non-clustered index on the `VendorID` column of the `ProductVendor` table in the `Purchasing` database.  
+  
+```sql  
+CREATE CLUSTERED INDEX IX_ProductVendor_VendorID   
+    ON Purchasing..ProductVendor (VendorID);   
+```  
   
 ## See Also  
  [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   

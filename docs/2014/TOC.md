@@ -20,7 +20,9 @@
 # [Setup and Servicing Installation](sql-server/install/setup-and-servicing-installation.md)
 # [Upgrade Advisor](sql-server/install/sql-server-2014-upgrade-advisor.md)
 
-
+# [Database Features +](relational-databases/database-features.md)
+# [SQL Server PowerShell +](powershell/sql-server-powershell.md)
+# [SQL Server Management Studio +](ssms/sql-server-management-studio-ssms.md)
 
 # [Tutorials for SQL Server 2014 +](tutorials/tutorials-for-sql-server-2014.md)
 ## [Analysis Services Tutorials +](analysis-services/analysis-services-tutorials-ssas.md)

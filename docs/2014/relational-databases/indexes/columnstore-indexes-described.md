@@ -194,7 +194,7 @@ manager: "jhubbard"
 ##  <a name="related"></a> Related Tasks and Topics  
   
 ### Nonclustered Columnstore Indexes  
- For common tasks, see [Using Nonclustered Columnstore Indexes](indexes.md).  
+ For common tasks, see [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).  
   
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   

@@ -42,6 +42,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Design Tables &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
- [Tables](../relational-databases/tables.md)  
+ [Tables](../relational-databases/tables/tables.md)  
   
   

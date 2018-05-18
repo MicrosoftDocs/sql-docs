@@ -20,10 +20,8 @@ manager: "jhubbard"
   
 ## In This Section  
   
-||||  
-|-|-|-|  
 |[Databases](databases/databases.md)|[Back Up and Restore of SQL Server Databases](backup-restore/back-up-and-restore-of-sql-server-databases.md)|  
-|[Tables](tables.md)|[Sequence Numbers](sequence-numbers/sequence-numbers.md)|[Bulk Import and Export of Data &#40;SQL Server&#41;](import-export/bulk-import-and-export-of-data-sql-server.md)|  
+|[Tables](tables/tables.md)|[Sequence Numbers](sequence-numbers/sequence-numbers.md)|[Bulk Import and Export of Data &#40;SQL Server&#41;](import-export/bulk-import-and-export-of-data-sql-server.md)|  
 |[In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)|[DDL Triggers](triggers/ddl-triggers.md)|[Data Compression](data-compression/data-compression.md)|  
 |[Indexes](indexes/indexes.md)|[DML Triggers](triggers/dml-triggers.md)|[OLE Automation Objects in Transact-SQL](stored-procedures/ole-automation-objects-in-transact-sql.md)|  
 |[Partitioned Tables and Indexes](partitions/partitioned-tables-and-indexes.md)|[Synonyms &#40;Database Engine&#41;](synonyms/synonyms-database-engine.md)|[Event Notifications](service-broker/event-notifications.md)|  

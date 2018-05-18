@@ -3,8 +3,6 @@ title: "sys.dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Doc
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: system-objects

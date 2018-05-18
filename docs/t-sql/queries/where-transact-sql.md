@@ -1,4 +1,4 @@
-﻿---
+---
 title: "WHERE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -51,19 +51,21 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ### A. Finding a row by using a simple equality  
   
 ```  
--- Uses AdventureWorks  
+USE AdventureWorks2012
+GO
   
-SELECT EmployeeKey, LastName  
-FROM DimEmployee  
-WHERE LastName = 'Smith' ;  
+SELECT BusinessEntityID, LastName  
+FROM Person.Person
+WHERE LastName = 'Smith';  
 ```  
   
 ### B. Finding rows that contain a value as part of a string  
   
 ```  
--- Uses AdventureWorks  
+USE AdventureWorks2012
+GO
   
-SELECT EmployeeKey, LastName  
+SELECT BusinessEntityID, LastName  
 FROM DimEmployee  
 WHERE LastName LIKE ('%Smi%');  
 ```  
@@ -71,51 +73,56 @@ WHERE LastName LIKE ('%Smi%');
 ### C. Finding rows by using a comparison operator  
   
 ```  
--- Uses AdventureWorks  
-  
-SELECT EmployeeKey, LastName  
-FROM DimEmployee  
-WHERE EmployeeKey  <= 500;  
+USE AdventureWorks2012
+GO
+
+SELECT BusinessEntityID, LastName  
+FROM  Person.Person  
+WHERE BusinessEntityID  <= 500;  
 ```  
   
 ### D. Finding rows that meet any of three conditions  
   
 ```  
--- Uses AdventureWorks  
+USE AdventureWorks2012
+GO
   
-SELECT EmployeeKey, LastName  
-FROM DimEmployee  
-WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;  
+SELECT BusinessEntityID, LastName  
+FROM Person.Person    
+WHERE BusinessEntityID = 1 OR BusinessEntityID = 8 OR BusinessEntityID = 12;  
 ```  
   
 ### E. Finding rows that must meet several conditions  
   
 ```  
--- Uses AdventureWorks  
+USE AdventureWorks2012
+GO
   
-SELECT EmployeeKey, LastName  
-FROM DimEmployee  
-WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';  
+SELECT BusinessEntityID, LastName  
+FROM Person.Person
+WHERE BusinessEntityID <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';
 ```  
   
 ### F. Finding rows that are in a list of values  
   
 ```  
--- Uses AdventureWorks  
+USE AdventureWorks2012
+GO
   
-SELECT EmployeeKey, LastName  
-FROM DimEmployee  
+SELECT BusinessEntityID, LastName  
+FROM Person.Person    
 WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');  
 ```  
   
 ### G. Finding rows that have a value between two values  
   
 ```  
--- Uses AdventureWorks  
-  
-SELECT EmployeeKey, LastName  
-FROM DimEmployee  
-WHERE EmployeeKey Between 100 AND 200;  
+USE AdventureWorks2012
+GO
+
+SELECT BusinessEntityID, LastName  
+FROM Person.Person   
+WHERE BusinessEntityID Between 100 AND 200;  
 ```  
   
 ## See Also  

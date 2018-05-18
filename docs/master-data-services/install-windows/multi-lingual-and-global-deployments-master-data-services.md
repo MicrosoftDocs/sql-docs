@@ -3,7 +3,6 @@ title: "Multi-Lingual and Global Deployments (Master Data Services) | Microsoft 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "mds"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install

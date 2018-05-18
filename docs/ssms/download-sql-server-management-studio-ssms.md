@@ -125,7 +125,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
   * Verify the version of .NET Framework on the computer is 4.6.1 (or greater).
   * Close any other instances of Visual Studio that are open on the computer.
   * Make sure all the latest OS updates are installed on the computer.
-  * The noted actions are typically required only once. There are few cases where a reboot is required during additional upgrades to the same major version of SSMS. For minor upgrades, all the prerequirements for SSMS are already be installed on the computer.
+  * The noted actions are typically required only once. There are few cases where a reboot is required during additional upgrades to the same major version of SSMS. For minor upgrades, all the prerequirements for SSMS are already installed on the computer.
 
 
 ## Release Notes

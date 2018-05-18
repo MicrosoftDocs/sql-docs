@@ -3,12 +3,9 @@ title: "Columnstore index recommendations in Database Engine Tuning Advisor (DTA
 ms.custom: ""
 ms.date: "01/09/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -7,11 +7,10 @@ manager: craigg
 ms.date: 03/08/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ---
 # Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server

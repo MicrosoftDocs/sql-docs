@@ -19,5 +19,5 @@ This section contains documentation about user interface (UI) designers and dial
 
 ## Next Steps
 
-- [Analysis Services Designers and Dialog Boxes (Multidimensional)](../analysis-services-designers-and-dialog-boxes-multidimensional.md)
+- [Analysis Services Designers and Dialog Boxes (Multidimensional)](../analysis-services-designers-and-dialog-boxes-multidimensional-data.md)
 

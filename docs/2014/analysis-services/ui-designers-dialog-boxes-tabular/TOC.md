@@ -1,4 +1,4 @@
-# [UI Designers and Dialog Boxes for Tabular Analysis](ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular.md)
+# [UI Designers and Dialog Boxes for Tabular Analysis](ui-designers-dialog-boxes-tabular.md)
 
 # [Analysis Services Designers and Dialog Boxes (Tabular)](../analysis-services-designers-and-dialog-boxes-tabular.md)
 ## [Dialog Boxes Reference](../dialog-boxes-reference-ssas.md)

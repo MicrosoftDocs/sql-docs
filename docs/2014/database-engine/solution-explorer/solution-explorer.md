@@ -15,4 +15,4 @@ manager: "jhubbard"
 ---
 # Solution Explorer Source Control
 
-See [Solution Explorer Source Control](solution-explorer-source-control.md).
+See [Solution Explorer Source Control](../solution-explorer-source-control.md).

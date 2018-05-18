@@ -1,7 +1,6 @@
 # [Managed Backup to Windows Azure](managed-backup-to-azure.md)
 ## [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)
 ## [SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)
-## [Setting up SQL Server Managed Backup to Windows Azure](../enable-sql-server-managed-backup-to-microsoft-azure.md)
 ## [Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)
 ## [Monitor SQL Server Managed Backup to Windows Azure](../monitor-sql-server-managed-backup-to-windows-azure.md)
 ## [Troubleshooting SQL Server Managed  Backup to Windows Azure](../troubleshooting-sql-server-managed-backup-to-windows-azure.md)

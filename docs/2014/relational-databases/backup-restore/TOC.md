@@ -5,6 +5,7 @@
 #### [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 ## [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)
 ### [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)
+#### [Setting up SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)
 ### [Restoring From Backups Stored in Windows Azure](restoring-from-backups-stored-in-microsoft-azure.md)
 ## [Recovery Models](recovery-models-sql-server.md)
 ### [View or Change the Recovery Model of a Database](view-or-change-the-recovery-model-of-a-database-sql-server.md)

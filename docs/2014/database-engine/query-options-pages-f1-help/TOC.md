@@ -1,5 +1,5 @@
 # [Query Options Pages](query-options-pages.md)
-# [Query Options Pages F1 Help](query-options-pages-f1-help.md)
+# [Query Options Pages F1 Help](../query-options-pages-f1-help.md)
 ## [Query Options Execution (General Page)](../query-options-execution-general-page.md)
 ## [Query Options Execution (Advanced Page)](../query-options-execution-advanced-page.md)
 ## [Query Options Execution (ANSI Page)](../query-options-execution-ansi-page.md)

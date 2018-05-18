@@ -15,4 +15,4 @@ manager: "jhubbard"
 ---
 # Managed Backup to Windows Azure
 
-See [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).
+See [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).

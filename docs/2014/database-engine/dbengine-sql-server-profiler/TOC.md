@@ -1,4 +1,4 @@
-# [SQL Server Profiler](dbengine-sql-server-profiler/dbengine-sql-server-profiler.md)
+# [SQL Server Profiler](dbengine-sql-server-profiler.md)
 ## [Run SQL Server Profiler](../run-sql-server-profiler.md)
 ## [Modify a Trace Template (SQL Server Profiler)](../modify-a-trace-template-sql-server-profiler.md)
 ## [Correlate a Trace with Windows Performance Log Data (SQL Server Profiler)](../correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)

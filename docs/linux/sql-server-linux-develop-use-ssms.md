@@ -7,11 +7,10 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ---
 # Use SQL Server Management Studio (SSMS) on Windows to manage SQL Server on Linux

@@ -3,13 +3,9 @@ title: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: performancems.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: f1458ca8-54dd-48c4-86ae-a8bbedbb7db3
 caps.latest.revision: 8

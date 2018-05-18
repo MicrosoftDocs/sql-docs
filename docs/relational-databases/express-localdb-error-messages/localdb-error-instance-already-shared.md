@@ -3,13 +3,9 @@ title: "LOCALDB_ERROR_INSTANCE_ALREADY_SHARED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: performancems.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
 caps.latest.revision: 7

@@ -3,13 +3,9 @@ title: "LOCALDB_ERROR_INSTANCE_BUSY | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: performancems.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 0ed9d0f8-3297-4e31-a3e9-4a827f381789
 caps.latest.revision: 8

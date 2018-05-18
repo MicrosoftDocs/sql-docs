@@ -3,13 +3,9 @@ title: "LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: performancems.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 12adc059-ad8e-4bc9-9693-79cc3e7eaff0
 caps.latest.revision: 9

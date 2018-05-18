@@ -3,13 +3,9 @@ title: "LOCALDB_ERROR_WAIT_TIMEOUT | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: performancems.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: e5b55efa-daa1-4c39-aa71-eeb7707ed601
 caps.latest.revision: 9

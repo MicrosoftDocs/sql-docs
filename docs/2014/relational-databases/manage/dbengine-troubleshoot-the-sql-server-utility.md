@@ -9,8 +9,6 @@ ms.technology:
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
-caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"

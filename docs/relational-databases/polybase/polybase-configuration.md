@@ -7,11 +7,11 @@ ms.prod_service: "database-engine"
 ms.component: database
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # PolyBase configuration

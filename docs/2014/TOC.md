@@ -16,11 +16,12 @@
 ## [Developer's Guide (Master Data Services)](master-data-services/develop/master-data-services-developer-documentation.md)
 ## [Developer's Guide (Replication)](relational-databases/replication/concepts/replication-developer-documentation.md)
 ## [Developer's Guide (Reporting Services) ++](reporting-services/dev-guide/TOC.md)
-# [SQL Server PowerShell](powershell/sql-server-powershell.md)
 # [Installation for SQL Server 2014 +](sql-server/install/planning-a-sql-server-installation.md)
 # [Setup and Servicing Installation](sql-server/install/setup-and-servicing-installation.md)
 # [Upgrade Advisor](sql-server/install/sql-server-2014-upgrade-advisor.md)
 
+# [Database Features +](relational-databases/database-features.md)
+# [SQL Server PowerShell +](powershell/sql-server-powershell.md)
 
 # [Tutorials for SQL Server 2014 +](tutorials/tutorials-for-sql-server-2014.md)
 ## [Analysis Services Tutorials +](analysis-services/analysis-services-tutorials-ssas.md)

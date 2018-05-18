@@ -1,4 +1,4 @@
-# [Extended Events (Database Engine)](dbengine-extended-events.md)
+# [Extended Events](dbengine-extended-events.md)
 ## [Create an Extended Events Session](../create-an-extended-events-session.md)
 ### [Create an Extended Events Session Using Query Editor](../create-an-extended-events-session-using-query-editor.md)
 ### [Create an Extended Events Session Using the Wizard (Object Explorer)](../create-an-extended-events-session-using-the-wizard-object-explorer.md)

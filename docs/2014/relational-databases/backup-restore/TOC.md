@@ -63,6 +63,7 @@
 #### [Restore Database (General Page)](restore-database-general-page.md)
 #### [Restore Database (Options Page)](restore-database-options-page.md)
 #### [Restore Database (Files Page)](restore-database-files-page.md)
+#### [Continue with Restore](dbengine-continue-with-restore.md)
 #### [Select Backup Device](select-backup-device.md)
 #### [Connect to Windows Azure Storage (Restore)](connect-to-microsoft-azure-storage-restore.md)
 ### [Restore a Database to a New Location](restore-a-database-to-a-new-location-sql-server.md)

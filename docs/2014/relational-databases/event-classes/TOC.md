@@ -19,6 +19,7 @@
 ### [CursorRecompile Event Class](cursorrecompile-event-class.md)
 ### [CursorUnprepare Event Class](cursorunprepare-event-class.md)
 ## [CLR Event Category](clr-event-category.md)
+### [Assembly Load Event Class](dbengine-assembly-load-event-class.md)
 ## [Database Event Category](database-event-category.md)
 ### [Data File Auto Grow Event Class](data-file-auto-grow-event-class.md)
 ### [Data File Auto Shrink Event Class](data-file-auto-shrink-event-class.md)

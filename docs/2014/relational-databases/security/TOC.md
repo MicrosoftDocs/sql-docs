@@ -29,6 +29,7 @@
 ### [Encryption Hierarchy](encryption/encryption-hierarchy.md)
 ### [Choose an Encryption Algorithm](encryption/choose-an-encryption-algorithm.md)
 ### [Transparent Data Encryption (TDE)](encryption/transparent-data-encryption.md)
+#### [Transparent Data Encryption with Azure SQL Database](dbengine-transparent-data-encryption-with-azure-sql-database.md)
 ## [Move a TDE Protected Database to Another SQL Server](encryption/move-a-tde-protected-database-to-another-sql-server.md)
 ## [Enable TDE Using EKM](encryption/enable-tde-on-sql-server-using-ekm.md)
 ### [SQL Server and Database Encryption Keys](encryption/sql-server-and-database-encryption-keys-database-engine.md)

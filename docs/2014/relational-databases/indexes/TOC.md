@@ -2,6 +2,8 @@
 ## [Heaps (Tables without Clustered Indexes)](heaps-tables-without-clustered-indexes.md)
 ## [Clustered and Nonclustered Indexes Described](clustered-and-nonclustered-indexes-described.md)
 ## [Columnstore Indexes Described](columnstore-indexes-described.md)
+### [Using Nonclustered Columnstore Indexes](dbengine-columnstore-indexes.md)
+### [Using Clustered Columnstore Indexes](dbengine-columnstore-indexes.md)
 ## [Create Clustered Indexes](create-clustered-indexes.md)
 ## [Create Nonclustered Indexes](create-nonclustered-indexes.md)
 ## [Create Unique Indexes](create-unique-indexes.md)

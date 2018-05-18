@@ -1,4 +1,4 @@
-# [Database Features (Relational Databases)](database-features.md)
+# [Database Features](database-features.md)
 ## [Databases (Database Engine) +](databases/databases.md)
 ## [Tables +](tables/tables.md)
 ## [In-Memory OLTP (In-Memory Optimization) +](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)

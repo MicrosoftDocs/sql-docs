@@ -7,11 +7,10 @@ manager: craigg
 ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.custom: "sql-linux"
 ms.suite: "sql"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ---
 # How to get started developing applications for SQL Server on Linux

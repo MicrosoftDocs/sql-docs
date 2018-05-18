@@ -3,7 +3,6 @@ title: "Check Parameters for the System Configuration Checker | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install

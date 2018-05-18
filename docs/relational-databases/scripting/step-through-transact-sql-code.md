@@ -3,7 +3,7 @@ title: "Step Through Transact-SQL Code | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.technology: ssms
+ms.technology: scripting
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""

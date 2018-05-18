@@ -15,4 +15,5 @@
 ## [Move a UCP from One Instance of SQL Server to Another (SQL Server Utility)](move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)
 ## [Remove a Utility Control Point (SQL Server Utility)](remove-a-utility-control-point-sql-server-utility.md)
 ## [Troubleshoot SQL Server Resource Health (SQL Server Utility)](troubleshoot-sql-server-resource-health-sql-server-utility.md)
+## [Troubleshoot the SQL Server Utility +](dbengine-troubleshoot-the-sql-server-utility.md)
 ## [Utility Explorer F1 Help](utility-explorer-f1-help.md)

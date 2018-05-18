@@ -3,12 +3,9 @@ title: "Performance Center for SQL Server Database Engine and Azure SQL Database
 ms.custom: ""
 ms.date: "04/08/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.component: "performance"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 

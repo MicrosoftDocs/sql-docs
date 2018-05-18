@@ -3,11 +3,9 @@ title: "Editions and supported features of SQL Server 2017 ~ Linux | Microsoft D
 ms.custom: "sql-linux"
 ms.date: "09/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "sql-linux"
+ms.technology: linux
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -29,8 +27,8 @@ helpviewer_keywords:
   - "Setup [SQL Server]"
 ms.assetid: 
 caps.latest.revision: 121
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Editions and supported features of SQL Server 2017 on Linux

@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.technology: scripting
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""

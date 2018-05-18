@@ -6,7 +6,6 @@ ms.prod: sql
 ms.reviewer: ""
 ms.suite: "SQL"
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: data-compression
 ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual

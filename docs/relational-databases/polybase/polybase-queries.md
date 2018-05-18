@@ -7,7 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Azure blob storage, export with PolyBase"
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 caps.latest.revision: 18
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # PolyBase Queries

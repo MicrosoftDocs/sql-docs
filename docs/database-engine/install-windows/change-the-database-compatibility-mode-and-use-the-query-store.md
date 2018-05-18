@@ -3,7 +3,6 @@ title: "Change the Database Compatibility Level and Use the Query Store | Micros
 ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install

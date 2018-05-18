@@ -3,7 +3,6 @@ title: "Secure a Master Data Manager Web Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "mds"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install

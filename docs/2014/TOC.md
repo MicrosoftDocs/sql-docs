@@ -22,6 +22,7 @@
 
 # [Database Features +](relational-databases/database-features.md)
 # [SQL Server PowerShell +](powershell/sql-server-powershell.md)
+# [SQL Server Management Studio +](ssms/sql-server-management-studio-ssms.md)
 
 # [Tutorials for SQL Server 2014 +](tutorials/tutorials-for-sql-server-2014.md)
 ## [Analysis Services Tutorials +](analysis-services/analysis-services-tutorials-ssas.md)

@@ -10,5 +10,4 @@
 ## [Unpack a DAC Package](unpack-a-dac-package.md)
 ## [Upgrade a Data-tier Application](upgrade-a-data-tier-application.md)
 ## [Validate a DAC Package](validate-a-dac-package.md)
-## [Validation Rules for Data-tier Application Wizards](../../database-engine/validation-rules-for-data-tier-application-wizards.md)
 ## [Deploy a Database By Using a DAC](deploy-a-database-by-using-a-dac.md)

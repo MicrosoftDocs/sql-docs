@@ -21,7 +21,6 @@
 ### [Copy a Policy-Based Management Facet State to an XML File](copy-a-policy-based-management-facet-state-to-an-xml-file.md)
 ## [Monitor and Enforce Best Practices by Using Policy-Based Management](monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 ### [Asymmetric Keys Encryption Strength](asymmetric-keys-encryption-strength.md)
-### [Backup Files Must Be on Separate Devices from the Database Files](../../database-engine/backup-files-must-be-on-separate-devices-from-the-database-files.md)
 ### [Check Disk I/O Subsystem for I/O Delay Problems](check-disk-input-and-output-subsystem-for-io-delay-problems.md)
 ### [Check Disk Input Output Subsystem for Read Retry Problems](check-disk-input-output-subsystem-for-read-retry-problems.md)
 ### [Check Integrity of Database with Suspect Pages](check-integrity-of-database-with-suspect-pages.md)
@@ -43,7 +42,6 @@
 ### [Server public Permissions](server-public-permissions.md)
 ### [Set the AUTO_CLOSE Database Option to OFF](set-the-auto-close-database-option-to-off.md)
 ### [Set the AUTO_SHRINK Database Option to OFF](set-the-auto-shrink-database-option-to-off.md)
-### [Set the Collation of User-defined Databases to Match Those of the master and model Databases](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md)
 ### [Set the Max Degree of Parallelism Option for Optimal Performance](set-the-max-degree-of-parallelism-option-for-optimal-performance.md)
 ### [Set the PAGE_VERIFY Database Option to CHECKSUM](set-the-page-verify-database-option-to-checksum.md)
 ### [SQL Server Login Password Expiration](sql-server-login-password-expiration.md)
@@ -73,3 +71,4 @@
 ### [Select Source Dialog Box](select-source-dialog-box.md)
 ### [Export As Policy Dialog Box](export-as-policy-dialog-box.md)
 ### [Import Policies Dialog Box](import-policies-dialog-box.md)
+

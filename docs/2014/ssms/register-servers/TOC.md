@@ -15,6 +15,3 @@
 ## [Create a Central Management Server and Server Group (SQL Server Management Studio)](create-a-central-management-server-and-server-group.md)
 ## [Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)](execute-statements-against-multiple-servers-simultaneously.md)
 ## [Registered Servers F1 Help](registered-servers-f1-help.md)
-### [New or Edit Server Registration (General Tab) (Reporting Services)](../../database-engine/new-or-edit-server-registration-general-tab-reporting-services.md)
-### [New or Edit Server Registration (General Tab) (Analysis Services - Multidimensional Data)](../../database-engine/new-edit-server-registration-analysis-services-multidimensional-data.md)
-### [New or Edit Server Registration (General Tab) (SSIS)](../../database-engine/new-or-edit-server-registration-general-tab-ssis.md)

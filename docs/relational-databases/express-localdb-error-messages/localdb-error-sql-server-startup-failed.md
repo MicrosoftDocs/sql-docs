@@ -5,7 +5,8 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: performancems.tgt_pltfrm: ""
+ms.technology: performance
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
 caps.latest.revision: 8

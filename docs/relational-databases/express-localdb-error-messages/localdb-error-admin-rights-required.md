@@ -5,12 +5,13 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: performancems.tgt_pltfrm: ""
+ms.technology: supportability
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 2414167c-33cb-4103-8105-994cbda29b9d
 caps.latest.revision: 7
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED

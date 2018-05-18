@@ -5,12 +5,13 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: performancems.tgt_pltfrm: ""
+ms.technology: performance
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID

@@ -14,4 +14,4 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Database Features 
-See [Database Features](../relational-databases/features.md).
+See [Database Features](../relational-databases/database-features.md).

@@ -11,7 +11,7 @@
 ## [WMI Provider for Server Events Classes and Properties](../wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)
 ## [Sample: Creating a SQL Server Agent Alert by Using the WMI Provider for Server Events](../wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)
 ## [Sample: Using the WMI Event Provider with the .NET Framework](../wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)
-# [WMI Provider Events and Errors](wmi-provider-events-and-errors.md)
+# [WMI Provider Events and Errors](../../database-engine/wmi-provider-events-and-errors.md)
 ## [WMI Error 0x8007052f](../wmi-provider-error-0x8007052f.md)
 # [WMI Provider for Configuration Management Classes](../wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)
 ## [CInstance Class](../wmi-provider-configuration-classes/cinstance-class.md)

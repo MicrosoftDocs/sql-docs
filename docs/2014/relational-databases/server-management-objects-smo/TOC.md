@@ -9,7 +9,7 @@
 ### [SMO Namespaces](smo-object-model-namespaces.md)
 ### [SMO Object Model Diagram](smo-object-model-diagram.md)
 ## [Programming Languages](smo-programming-languages.md)
-### [Getting Started in Visual Basic .NET](getting-started-in-visual-basic-net.md)
+### [Getting Started in Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)
 ### [Getting Started in Visual C# .NET](smo-programming-getting-started-in-visual-csharp-net.md)
 ## [Backward Compatibility in SMO](backward-compatibility-in-smo.md)
 ## [Creating SMO Programs](create-program/creating-smo-programs.md)

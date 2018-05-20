@@ -1,6 +1,6 @@
 ---
 title: "Run an SSIS package with Transact-SQL (SSMS) | Microsoft Docs"
-ms.date: "09/25/2017"
+ms.date: "05/21/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -22,12 +22,21 @@ SQL Server Management Studio is an integrated environment for managing any SQL i
 
 Before you start, make sure you have the latest version of SQL Server Management Studio (SSMS). To download SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
+An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
+
+## Supported platforms
+
+You can use the information in this quickstart to run an SSIS package on the following platforms:
+
+-   SQL Server on Windows.
+
+-   Azure SQL Database. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+You cannot use the information in this quickstart to run an SSIS package on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
 ## Connect to the SSISDB database
 
 Use SQL Server Management Studio to establish a connection to the SSIS Catalog on your Azure SQL Database server. 
-
-> [!NOTE]
-> An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
 
 1. Open SQL Server Management Studio.
 
@@ -37,7 +46,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog o
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database engine | This value is required. |
    | **Server name** | The fully qualified server name | If you're connecting to an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`. |
-   | **Authentication** | SQL Server Authentication | This quickstart uses SQL authentication. |
+   | **Authentication** | SQL Server Authentication | This quickstart uses SQL authentication. If you're connecting to an Azure SQL Database server, you can't use Windows authentication. |
    | **Login** | The server admin account | This is the account that you specified when you created the server. |
    | **Password** | The password for your server admin account | This is the password that you specified when you created the server. |
 

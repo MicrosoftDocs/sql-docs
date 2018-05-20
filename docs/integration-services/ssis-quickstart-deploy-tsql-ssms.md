@@ -1,6 +1,6 @@
 ---
 title: "Deploy an SSIS project with Transact-SQL (SSMS) | Microsoft Docs"
-ms.date: "09/25/2017"
+ms.date: "05/21/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -17,21 +17,25 @@ manager: craigg
 
 This quick start demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then use Transact-SQL statements to deploy an SSIS project to the SSIS Catalog. 
 
-> [!NOTE]
-> The method described in this article is not available when you connect to an Azure SQL Database server with SSMS. The `catalog.deploy_project` stored procedure expects path to the `.ispac` file in the local (on premises) file system.
-
 SQL Server Management Studio is an integrated environment for managing any SQL infrastructure, from SQL Server to SQL Database. For more info about SSMS, see [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
 ## Prerequisites
 
 Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
+## Supported platforms
+
+You can use the information in this quickstart to deploy an SSIS project to the following platforms:
+
+-   SQL Server on Windows.
+
+You cannot use the information in this quickstart to deploy an SSIS package to Azure SQL Database. The `catalog.deploy_project` stored procedure expects path to the `.ispac` file in the local (on premises) file system. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+You cannot use the information in this quickstart to deploy an SSIS package to SQL Server on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
 ## Connect to the SSIS Catalog database
 
 Use SQL Server Management Studio to establish a connection to the SSIS Catalog. 
-
-> [!NOTE]
-> An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
 
 1. Open SQL Server Management Studio.
 
@@ -56,7 +60,7 @@ Run the following Transact-SQL code to deploy an SSIS project.
 
 2.  Update the parameter values in the `catalog.deploy_project` stored procedure for your system.
 
-3.  Make sure that SSISDB is the current database.
+3.  Make sure that **SSISDB** is the current database.
 
 4.  Run the script.
 

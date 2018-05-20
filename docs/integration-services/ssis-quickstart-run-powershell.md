@@ -16,11 +16,21 @@ manager: craigg
 # Run an SSIS package with PowerShell
 This quick start tutorial demonstrates how to use a PowerShell script to connect to a database server and run an SSIS package.
 
+## Supported platforms
+
+You can use the information in this quickstart to run an SSIS package on the following platforms:
+
+-   SQL Server on Windows.
+
+-   Azure SQL Database. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+You cannot use the information in this quickstart to run an SSIS package on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
 ## PowerShell script
 Provide appropriate values for the variables at the top of the following script, and then run the script to run the SSIS package.
 
 > [!NOTE]
-> The following example uses Windows Authentication. To use SQL Server authentication, replace the `Integrated Security=SSPI;` argument with `User ID=<user name>;Password=<password>;`.
+> The following example uses Windows Authentication. To use SQL Server authentication, replace the `Integrated Security=SSPI;` argument with `User ID=<user name>;Password=<password>;`. If you're connecting to an Azure SQL Database server, you can't use Windows authentication. 
 
 ```powershell
 # Variables

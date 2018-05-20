@@ -16,11 +16,25 @@ manager: craigg
 # Deploy an SSIS project with PowerShell
 This quick start tutorial demonstrates how to use a PowerShell script to connect to a database server and deploy an SSIS project to the SSIS Catalog.
 
+## Prerequisites
+
+An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
+
+## Supported platforms
+
+You can use the information in this quickstart to deploy an SSIS project to the following platforms:
+
+-   SQL Server on Windows.
+
+-   Azure SQL Database. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+You cannot use the information in this quickstart to deploy an SSIS package to SQL Server on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
 ## PowerShell script
 Provide appropriate values for the variables at the top of the following script, and then run the script to deploy the SSIS project.
 
 > [!NOTE]
-> The following example uses Windows Authentication. To use SQL Server authentication, replace the `Integrated Security=SSPI;` argument with `User ID=<user name>;Password=<password>;`.
+> The following example uses Windows Authentication to deploy to a SQL Server on premises. To use SQL Server authentication, replace the `Integrated Security=SSPI;` argument with `User ID=<user name>;Password=<password>;`. If you're connecting to an Azure SQL Database server, you can't use Windows authentication.
 
 ```powershell
 # Variables

@@ -1,6 +1,6 @@
 ---
 title: "Run an SSIS package from the command prompt | Microsoft Docs"
-ms.date: "09/25/2017"
+ms.date: "05/21/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -20,6 +20,16 @@ This quick start tutorial demonstrates how to run an SSIS package from the comma
 > The method described in this article has not been tested with packages deployed to an Azure SQL Database server.
 
 For more info about `DTExec.exe`, see [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility).
+
+## Supported platforms
+
+You can use the information in this quickstart to run an SSIS package on the following platforms:
+
+-   SQL Server on Windows.
+
+The method described in this article has not been tested with packages deployed to an Azure SQL Database server. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+You cannot use the information in this quickstart to run an SSIS package on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 ## Run a package with dtexec
 

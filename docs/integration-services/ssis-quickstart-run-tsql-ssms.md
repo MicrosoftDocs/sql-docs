@@ -14,7 +14,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Run an SSIS package from SSMS with Transact-SQL
-This quick start demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then use Transact-SQL statements to run an SSIS package stored in the SSIS Catalog.
+This quickstart demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then use Transact-SQL statements to run an SSIS package stored in the SSIS Catalog.
 
 SQL Server Management Studio is an integrated environment for managing any SQL infrastructure, from SQL Server to SQL Database. For more info about SSMS, see [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
@@ -47,8 +47,8 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog o
    | **Server type** | Database engine | This value is required. |
    | **Server name** | The fully qualified server name | If you're connecting to an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`. |
    | **Authentication** | SQL Server Authentication | This quickstart uses SQL authentication. If you're connecting to an Azure SQL Database server, you can't use Windows authentication. |
-   | **Login** | The server admin account | This is the account that you specified when you created the server. |
-   | **Password** | The password for your server admin account | This is the password that you specified when you created the server. |
+   | **Login** | The server admin account | This account is the account that you specified when you created the server. |
+   | **Password** | The password for your server admin account | This password is the password that you specified when you created the server. |
 
 3.  Click **Connect**. The Object Explorer window opens in SSMS.
 

@@ -14,7 +14,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Run an SSIS package with C# code in a .NET app
-This quick start tutorial demonstrates how to write C# code to connect to a database server and run an SSIS package.
+This quickstart demonstrates how to write C# code to connect to a database server and run an SSIS package.
 
 You can use Visual Studio, Visual Studio Code, or another tool of your choice to create a C# app.
 

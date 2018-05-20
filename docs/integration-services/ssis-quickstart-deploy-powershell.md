@@ -14,7 +14,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Deploy an SSIS project with PowerShell
-This quick start tutorial demonstrates how to use a PowerShell script to connect to a database server and deploy an SSIS project to the SSIS Catalog.
+This quickstart demonstrates how to use a PowerShell script to connect to a database server and deploy an SSIS project to the SSIS Catalog.
 
 ## Prerequisites
 

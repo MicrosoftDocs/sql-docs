@@ -14,7 +14,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Deploy an SSIS project from Visual Studio Code with Transact-SQL
-This quick start demonstrates how to use Visual Studio Code to connect to the SSIS Catalog database, and then use Transact-SQL statements to deploy an SSIS project to the SSIS Catalog.
+This quickstart demonstrates how to use Visual Studio Code to connect to the SSIS Catalog database, and then use Transact-SQL statements to deploy an SSIS project to the SSIS Catalog.
 
 Visual Studio Code is a code editor for Windows, macOS, and Linux that supports extensions, including the `mssql` extension for connecting to Microsoft SQL Server, Azure SQL Database, or Azure SQL Data Warehouse. For more info about VS Code, see [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -61,8 +61,8 @@ Use Visual Studio Code to establish a connection to the SSIS Catalog.
    | **Server name** | The fully qualified server name |  |
    | **Database name** | **SSISDB** | The name of the database to which to connect. |
    | **Authentication** | SQL Login| This quickstart uses SQL authentication. |
-   | **User name** | The server admin account | This is the account that you specified when you created the server. |
-   | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
+   | **User name** | The server admin account | This account is the account that you specified when you created the server. |
+   | **Password (SQL Login)** | The password for your server admin account | This password is the password that you specified when you created the server. |
    | **Save Password?** | Yes or No | If you do not want to enter the password each time, select Yes. |
    | **Enter a name for this profile** | A profile name, such as **mySSISServer** | A saved profile name speeds your connection on subsequent logins. | 
 

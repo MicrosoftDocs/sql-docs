@@ -14,7 +14,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Run an SSIS package from the command prompt with DTExec.exe
-This quick start tutorial demonstrates how to run an SSIS package from the command prompt by running `DTExec.exe` with the appropriate parameters.
+This quickstart demonstrates how to run an SSIS package from the command prompt by running `DTExec.exe` with the appropriate parameters.
 
 > [!NOTE]
 > The method described in this article has not been tested with packages deployed to an Azure SQL Database server.

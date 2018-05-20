@@ -14,7 +14,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Run an SSIS package with PowerShell
-This quick start tutorial demonstrates how to use a PowerShell script to connect to a database server and run an SSIS package.
+This quickstart demonstrates how to use a PowerShell script to connect to a database server and run an SSIS package.
 
 ## Supported platforms
 

@@ -1,6 +1,6 @@
 ---
 title: "Run an SSIS package with PowerShell | Microsoft Docs"
-ms.date: "09/25/2017"
+ms.date: "05/21/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"

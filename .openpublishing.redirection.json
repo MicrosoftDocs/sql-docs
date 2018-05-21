@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
+            "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r/using-r-in-azure-sql-database.md",
             "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services#azure-sql-database-roadmap",
             "redirect_document_id": false

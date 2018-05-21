@@ -1,5 +1,5 @@
 # [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)
-## [Deploy Projects to Integration Services Server](../../deploy-projects-to-integration-services-server.md)
+## [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)
 ## [Create and Map a Server Environment](../create-and-map-a-server-environment.md)
 ## [Integration Services Project Conversion Wizard](../integration-services-project-conversion-wizard.md)
 ## [Integration Services Deployment Wizard](../integration-services-deployment-wizard.md)

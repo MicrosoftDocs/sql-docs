@@ -97,14 +97,15 @@
 ## [Package management](r/r-package-management-for-sql-server-r-services.md)
 ### [Default packages](r/installing-and-managing-r-packages.md)
 ### [Get package information](r/determine-which-packages-are-installed-on-sql-server.md)
-### [Install new R packages](r/install-additional-r-packages-on-sql-server.md)
 ### [Install new Python packages](python/install-additional-python-packages-on-sql-server.md)
-### R-only
+### [Install new R packages](r/install-additional-r-packages-on-sql-server.md)
+#### [Use R package managers](r/install-additional-r-packages-on-sql-server.md)
+#### [Use RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [Use T-SQL (CREATE EXTERNAL LIBRARY)](r/install-r-packages-tsql.md)
+#### [Use a miniCRAN repo](r/create-a-local-package-repository-using-minicran.md)
 #### [Enable remote R package management](r/r-package-how-to-enable-or-disable.md)
-#### [RevoScaleR functions for R package management](r/use-revoscaler-to-manage-r-packages.md)
-#### [R package synchronization](r/package-install-uninstall-and-sync.md)
-#### [miniCRAN for local R package repository](r/create-a-local-package-repository-using-minicran.md)
-#### [Workarounds for R "user libraries"](r/packages-installed-in-user-libraries.md)
+#### [Synchronize R packages](r/package-install-uninstall-and-sync.md)
+#### [Workarounds for R "user libraries"](r/packages-installed-in-user-libraries.md
 
 ## Data exploration and modeling
 ### [R libraries and data types](r/r-libraries-and-data-types.md)

@@ -31,7 +31,7 @@ To add an Azure Data Lake Analytics Task to a package, drag it from SSIS Toolbox
 
 ## General Page Configuration
 
-Use the **General** page of the **Azure Data Lake Analytics Task Editor** dialog box to configure the Azure Data Lake Analytics Task and provide the U-SQL script that the task submits. To learn more about the U-SQL language, see [U-SQL language reference](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference).
+Use the **General** page to configure the Azure Data Lake Analytics Task and provide the U-SQL script that the task submits. To learn more about the U-SQL language, see [U-SQL language reference](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference).
 
 ### Basic Configuration
 
@@ -40,7 +40,7 @@ Use the **General** page of the **Azure Data Lake Analytics Task Editor** dialog
 
 ### U-SQL Configuration
 
-U-SQL configuration contains tow settings: **SourceType** and dynamic options based on **SourceType** value. 
+U-SQL configuration has tow settings: **SourceType** and dynamic options based on **SourceType** value. 
 
 - **SourceTpye:** Specifies the source type of the query. This property has the options listed in the following table.
 
@@ -55,14 +55,14 @@ U-SQL configuration contains tow settings: **SourceType** and dynamic options ba
 |SourceType|Dynamic Options|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Type the U-SQL statement to submit in the option box, or click the browse button (...) to type the U-SQL statement in the Enter U-SQL Query dialog box.|  
-|**SourceType = FileConnection**|Select an existing file connection manager, or click <**New connection...*> to create a new connecion manager. **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+|**SourceType = FileConnection**|Select an existing file connection manager, or click <**New connection...*> to create a new connection manager. **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
 |**Variable**|Select an existing variable, or click \<**New variable...**> to create a new variable. **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)|
 
 
 ### Job Configuration
 Job configuration specifies U-SQL job submission properties.
 
-- **AzureDataLakeAnalyticsConnection:** Specifies the Azure Data Lake Analytics account connection to submit U-SQL script. Choose the connection from a list of defined connection managers. To create a new connection, select <**New connection**>. Related topic: [Azure Data Lake Analytics Connection Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
+- **AzureDataLakeAnalyticsConnection:** Specifies the Azure Data Lake Analytics account connection to submit U-SQL script. Choose the connection from a list of defined connection managers. To create a new connection, select <**New connection**>. Related article: [Azure Data Lake Analytics Connection Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
 
 - **JobName:** Specifies the name of U-SQL job. 
 - **AnalyticsUnits:** Specifies the Analytics Unit count for U-SQL job.
@@ -72,8 +72,8 @@ Job configuration specifies U-SQL job submission properties.
 
 |Value|Description|
 |-----------|-----------------|
-|True|The task execution result is based on U-SQL job execution result. Job succeed --> Task succeed; Job failed --> Task failed; Task succeed or failed --> Task completed.|
-|False|The task execution result is based on U-SQL job submission result. Job submission succeed and passing Preparing phase --> Task succeed; Job submission failed or job failed at Preparing phase --> Task failed; Task succeed or failed --> Task completed.|
+|True|The task execution result is based on U-SQL job execution result. Job succeeds --> Task succeeds; Job fails --> Task fails; Task succeeds or fails --> Task completes.|
+|False|The task execution result is based on U-SQL job submission result. Job submission succeeds and passed Preparing phase --> Task succeeds; Job submission fails or job fails at Preparing phase --> Task fails; Task succeeds or fails --> Task completes.|
 
 - **TimeOut:** Specifies a time-out value for job execution with second as the unit. A cancellation will be sent out if a job is time-out. If a job is time-out, the task is failed. TimeOut property is not available if **Synchronous** is set to **false**.
 
@@ -115,12 +115,12 @@ OUTPUT @rs1
       USING Outputters.Tsv(quoting:false, dateTimeFormat:null);
 ```
 
-In above script example, the input and output to the script is defined in **@in** and **@out** parameters. The values for **@in** and **@out** parameters in the U-SQL script are passed dynamically by Parameter Mapping configuration like below.
+In above script example, the input and output paths are defined in **@in** and **@out** parameters. The values for **@in** and **@out** parameters in the U-SQL script are passed dynamically by Parameter Mapping configuration.
 
 |Variable Name|Parameter Name|
 |-------------|--------------|
-|User:Variable1|@in|
-|User:Variable2|@out| 
+|User: Variable1|@in|
+|User: Variable2|@out| 
 
 ## Expression Page Configuration
 

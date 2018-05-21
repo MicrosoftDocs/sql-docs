@@ -1,7 +1,7 @@
 ---
 title: "Ring Buffer Target | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,19 +31,20 @@ manager: "jhubbard"
 |------------|--------------------|-----------------|  
 |max_memory|Any 32 bit integer. This value is optional.|The maximum amount of memory in kilobytes (KB) to use. Existing events are dropped based on the limit that is first reached: max_event_limit or max_memory.|  
 |max_event_limit|Any 32 bit integer. This value is optional.|The maximum number of events kept in the ring_buffer. Existing events are dropped based on the limit that is first reached: max_event_limit or max_memory. Default = 1000.|  
-|occurrence_number|One of the following values:<br /><br /> 0 (the default) = Oldest event is discarded when all the memory allocated to the target is used.<br /><br /> Any 32 bit integer = The number of events of each type to keep before being discarded on a per-event FIFO basis.<br /><br /> <br /><br /> This value is optional.|The FIFO mode to use, and, if set to a value greater than 0, the preferred number of events of each type to keep in the buffer.|  
+|occurrence_number|One of the following values:<br /><br /> 0 (the default) = Oldest event is discarded when all the memory allocated to the target is used.<br /><br /> Any 32 bit integer = The number of events of each type to keep before being discarded on a per-event FIFO basis.<br /><br /> <br /><br /> This value is optional.|The FIFO mode to use, and, if set to a value greater than 0, the preferred number of events of each type to keep in the buffer.|
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## Adding the Target to a Session  
  To add the ring buffer target to an Extended Events session, you must include the following statement when you create or alter an event session:  
   
-```  
+```sql
 ADD TARGET package0.ring_buffer  
 ```  
   
 ## Reviewing the Target Output  
  To review the output from the ring buffer target, you can use the following query, replacing *session_name* with the name of the event session.  
   
-```  
+```sql
 SELECT name, target_name, CAST(xet.target_data AS xml)  
 FROM sys.dm_xe_session_targets AS xet  
 JOIN sys.dm_xe_sessions AS xe  
@@ -68,12 +69,13 @@ WHERE xe.name = 'session_name'
     </action>  
   </event>  
 </RingBufferTarget>  
-```  
-  
-## See Also  
- [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
-  
-  
+```
+
+
+## See Also
+
+- [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)
+- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)
+- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql?view=sql-server-2016)
+- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](https://docs.microsoft.com/sql/t-sql/statements/alter-event-session-transact-sql?view=sql-server-2016)
+

@@ -116,7 +116,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 > **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. Other tools include:
 >
 > * [SQL Server Operations Studio (Preview)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
 > * [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 > * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 

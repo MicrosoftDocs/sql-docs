@@ -32,7 +32,10 @@ Use the OData Source component in an SSIS package to consume data from an Open D
 The OData source includes support for the following data sources:
 -   Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online
 -   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: http://\<server>/_vti_bin/ListData.svc. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](http://msdn.microsoft.com/library/ff521587.aspx).
-  
+
+> [!NOTE]
+> The OData Source component does not support complex types, such as multiple-choice items, in SharePoint lists.
+
 ## OData Format and Performance
  Most OData services can return results in multiple formats. You can specify the format of the result set by using the `$format` query option. Formats such as JSON and JSON Light are more efficient than ATOM or XML, and may give you better performance when transferring large amounts of data. The following table provides results from sample tests. As you can see, there was a 30-53% performance gain when switching from ATOM to JSON and a 67% performance gain when switching from ATOM to the new JSON light format (available in WCF Data Services 5.1).  
   

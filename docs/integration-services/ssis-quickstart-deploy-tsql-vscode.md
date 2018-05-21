@@ -60,7 +60,7 @@ Use Visual Studio Code to establish a connection to the SSIS Catalog.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server name** | The fully qualified server name |  |
    | **Database name** | **SSISDB** | The name of the database to which to connect. |
-   | **Authentication** | SQL Login| This quickstart uses SQL authentication. |
+   | **Authentication** | SQL Login | |
    | **User name** | The server admin account | This account is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This password is the password that you specified when you created the server. |
    | **Save Password?** | Yes or No | If you do not want to enter the password each time, select Yes. |

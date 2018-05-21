@@ -1,6 +1,6 @@
 ---
 title: "Lift and shift SQL Server Integration Services workloads to the cloud | Microsoft Docs"
-ms.date: "04/13/2018"
+ms.date: "05/21/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"

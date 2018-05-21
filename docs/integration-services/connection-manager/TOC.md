@@ -8,6 +8,7 @@
 # [Analysis Services Connection Manager](analysis-services-connection-manager.md)  
 ## [Add Analysis Services Connection Manager Dialog Box UI Reference](add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
 # [Azure Data Lake Store Connection Manager](azure-data-lake-store-connection-manager.md)  
+# [Azure Data Lake Analytics Connection Manager](azure-data-lake-analytics-connection-manager.md) 
 # [Azure HDInsight Connection Manager](azure-hdinsight-connection-manager.md)  
 # [Azure Resource Manager Connection Manager](azure-resource-manager-connection-manager.md)  
 # [Azure Storage Connection Manager](azure-storage-connection-manager.md)  

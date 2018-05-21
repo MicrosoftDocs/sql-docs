@@ -33,7 +33,7 @@ The Azure Data Lake Store connection manager is a component of the [SQL Server I
  
 ## Configure the Azure Data Lake Store Connection Manager
 
-1.  In the **Add SSIS Connection Manager** dialog box, select **AzureDataLake**, and then select **Add**. The **Azure Data Lake Store Connection Manager Editor** dialog box opens.
+1.  In the **Add SSIS Connection Manager** dialog box, select **AzureDataLakeStore**, and then select **Add**. The **Azure Data Lake Store Connection Manager Editor** dialog box opens.
   
 2.  In the **Azure Data Lake Store Connection Manager Editor** dialog box, in the **ADLS Host** field, provide the Azure Data Lake Store host URL. For example: `https://test.azuredatalakestore.net` or `test.azuredatalakestore.net`.
   

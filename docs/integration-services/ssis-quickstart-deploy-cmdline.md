@@ -45,7 +45,7 @@ To deploy the project to Azure SQL Database, get the connection information you 
 
 ## Authentication methods in the Deployment Wizard
 
-If you're deploying to a SQL Server with the Deployment Wizard, you have to use SQL Server authentication; you can't use Windows authentication.
+If you're deploying to a SQL Server with the Deployment Wizard, you have to use Windows authentication; you can't use SQL Server authentication.
 
 If you're deploying to an Azure SQL Database server, you have to use SQL Server authentication or Azure Active Directory authentication; you can't use Windows authentication.
 

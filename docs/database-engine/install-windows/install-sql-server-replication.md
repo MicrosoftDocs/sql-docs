@@ -2,16 +2,12 @@
 title: "Install SQL Server Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "components [SQL Server replication]"
   - "command line installations [SQL Server replication]"
@@ -20,9 +16,9 @@ helpviewer_keywords:
   - "command prompt [SQL Server replication]"
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Install SQL Server replication
 

@@ -3,14 +3,12 @@ title: "Finding More OLE DB Driver for SQL Server Information | Microsoft Docs"
 description: "Where to find more OLE DB Driver for SQL Server information"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "oledb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,11 +16,12 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, additional resources"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Finding More OLE DB Driver for SQL Server Information
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   For more information about OLE DB Driver for SQL Server and other types of data access programming, see the following online resources:  
   
@@ -39,6 +38,6 @@ ms.workload: "Inactive"
   
 
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)  
   
   

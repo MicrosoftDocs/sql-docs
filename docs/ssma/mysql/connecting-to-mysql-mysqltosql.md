@@ -1,17 +1,15 @@
 ---
 title: "Connecting to MySQL (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -22,8 +20,7 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Connecting to MySQL (MySQLToSQL)
 To migrate MySQL databases to SQL Server or SQL Azure, you must connect to the MySQL database that you want to migrate. When you connect, SSMA obtains metadata about all MySQL schemas, and then displays it in the MySQL Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  

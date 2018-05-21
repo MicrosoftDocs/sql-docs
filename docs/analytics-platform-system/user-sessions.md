@@ -1,24 +1,17 @@
 ---
-title: "User Sessions (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0425cef2-de4d-4f42-91c5-cb1cd4bb1265
-caps.latest.revision: 15
-
+title: User sessions in Analytics Platform System | Microsoft Docs"
+description: User sessions in Analytics Platform System's Parallel Data Warehouse.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# User Sessions
+
+# User Sessions in Analytics Platform System
 A login with the appropriate permissions can manage the sessions of all logins on a SQL Server PDW appliance, including performing these actions:  
   
 -   View the current sessions on the appliance, including both active and idle sessions.  

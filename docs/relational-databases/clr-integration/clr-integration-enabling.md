@@ -2,9 +2,8 @@
 title: "Enabling CLR Integration | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,8 +18,7 @@ ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 caps.latest.revision: 19
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # CLR Integration - Enabling
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

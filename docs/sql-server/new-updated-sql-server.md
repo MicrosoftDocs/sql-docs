@@ -8,10 +8,12 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 
 ms.component: sql-server
-ms.date: 02/03/2018
+ms.date: 04/28/2018
 ---
 # New and Recently Updated: SQL Server docs
 
@@ -25,7 +27,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
+- *Date range of updates:* &nbsp; **2018-02-03** &nbsp; -to- &nbsp; **2018-04-28**
 - *Subject area:* &nbsp; **SQL Server**.
 
 
@@ -38,7 +40,8 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters](failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)
+1. [How to contribute to SQL Server Documentation](sql-server-docs-contribute.md)
+2. [SQL Server privacy supplement](sql-server-privacy.md)
 
 
 
@@ -64,7 +67,9 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [SQL Server offline help and Help Viewer](#TitleNum_1)
+1. [SQL Server 2012 Service Pack release notes](#TitleNum_1)
+2. [SQL Server 2016 Release Notes](#TitleNum_2)
+3. [SQL Server Documentation](#TitleNum_3)
 
 
 
@@ -75,51 +80,110 @@ This compact list provides links to all the updated articles that are listed in 
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [SQL Server offline help and Help Viewer](sql-server-help-installation.md)
+### 1. &nbsp; [SQL Server 2012 Service Pack release notes](sql-server-2012-sp4-release-notes.md)
 
-*Updated: 2017-12-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Updated: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 67.  ms.author= "craigg".  -->
+<!-- Source markdown line 57.  ms.author= craigg.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 ea491fdc173a54fb4cdb3dfa2e26bd206d1cc45d 22444427a48064b76088d19d1ffae0a885bfe2a7  (PR=4338  ,  Filename=sql-server-help-installation.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=f2fde1c324466530f92006561a9a29decb711e1b) -->
+<!-- git diff --ignore-all-space --unified=0 ce108992ea942b4a11f30d67a1a52d7f26868caa a6269ba2cb2d3b3b54aebf5087dc4d513e476a96  (PR=5676  ,  Filename=sql-server-2012-sp4-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-   The Help Viewer opens to the Manage Content tab.
+- **Automatic Soft-NUMA partitioning** – With SQL 2014 SP2, Automatic [Soft-NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) partitioning is introduced when Trace Flag 8079 is enabled at the server level. When Trace Flag 8079 is enabled during startup, SQL Server 2014 SP2 interrogates the hardware layout and automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance of the workload with Auto-Soft NUMA before it is turned ON in production.
 
-2. To install the latest help content package, choose **Online** under Installation source.
-
-   ![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-onlinesource.png)
-
-   >[!NOTE]
-   > To install from disk (SQL Server 2014 help), choose **Disk** under Installation source, and specify the disk location.
-
-   The Local store path on the Manage Content tab shows where the content will be installed on the local computer. If you want to change the location, click **Move**, enter a different folder path in the **To** field, and then click **OK**.
-   If the help installation fails after changing the Local store path, close and reopen the Help Viewer, ensure the new location appears in the Local store path, and then try the installation again.
-
-3. Click **Add** next to each content package (book) that you want to install.
-   To install all SQL Server help content, add all 13 books under SQL Server.
-
-4. Click **Update** at lower right.
-   The help table of contents on the left automatically updates with the added books.
-
-   ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)
-
-> [!NOTE]
-> Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the book names as follows:
-
-| Contents pane | SQL Server book |
-|-----|-----|
-|Analysis services language reference | Analysis Services (MDX) language reference|
-|Data Analysis Expressions (DAX) reference | Data Analysis Expressions (DAX) reference|
-|Data mining extensions (DMX) reference | Data mining extensions (DMX) reference|
-|Developer Guides for SQL Server | SQL Server Developer Reference|
-|Download SQL Server Management Studio | SQL Server Management Studio|
+**Service Pack 3 release notes**
 
 
+**Download pages**
+
+- [SQL Server 2012 SP3 Feature Pack](http://go.microsoft.com/fwlink/?linkid=615935)
+- [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
+
+For more detailed information to identify the location and name of the file to download based on your currently installed version, see the "Select the correct file to download" section in [SQL Server 2012 Service Pack 3 release information](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).
+
+**Service Pack 2 release notes**
+
+
+**Download pages**
+
+- [SQL Server 2012 SP2 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)
+
+Use the table below to identify the location and name of the file to download based on your currently installed version. Download pages have system requirements and basic installation instructions.
+
+|If your current installed version is...|And you want to...|Download and install...|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### 2. &nbsp; [SQL Server 2016 Release Notes](sql-server-2016-release-notes.md)
+
+*Updated: 2018-04-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
+
+<!-- Source markdown line 25.  ms.author= craigg.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 a15210866acf524dae49f3a7fd7957c9ffa6a78a 7257cb2017779242cbb8fa2b562f4b102502e942  (PR=5695  ,  Filename=sql-server-2016-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=d1c114b98fea55d2d4829dffdb25daf1b3f73dc2) -->
+
+
+
+  This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
+
+- Download SQL Server 2016 from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+- Azure Virtual Machine small: Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
+- Download SSMS: To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)]**.
+
+**<a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)**
+
+
+SQL Server 2016 SP2 includes all cumulative updates released after 2016 SP1, up to and including CU8.
+
+- [Microsoft Download SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- For a complete list of updates, see [SQL Server 2016 Service Pack 2 release information](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### 3. &nbsp; [SQL Server Documentation](sql-server-technical-documentation.md)
+
+*Updated: 2018-04-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2))
+
+<!-- Source markdown line 77.  ms.author= craigg.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 0262010ba39785a6d46b42f8469fb17701f13008 c69a83236391d039381a93c65ebbb2efa53e11b8  (PR=5695  ,  Filename=sql-server-technical-documentation.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=d1c114b98fea55d2d4829dffdb25daf1b3f73dc2) -->
+
+
+
+
+<!-- : : : m-r -->
+**Try SQL Server!**
+- Download from Evaluation Center: [Download SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- Download from Evaluation Center: Download SQL Server Management Studio (SSMS)
+- Download from Evaluation Center: Download SQL Server Data Tools (SSDT)
+- Create Virtual Machine: [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 
 
@@ -130,40 +194,36 @@ This compact list provides links to all the updated articles that are listed in 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### Subject areas that *do* have new or recently updated articles
 
-
-- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (11+6): &nbsp; &nbsp;**Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (18+0): &nbsp; &nbsp;**Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (218+14): **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (14+0): &nbsp; &nbsp;**Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (3+2): &nbsp; &nbsp; **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+3): &nbsp; &nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (7+10): &nbsp; &nbsp;**Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (2+3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (5+2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 
 #### Subject areas that do *not* have any new or recently updated articles
 
-
-- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
-
 

@@ -1,23 +1,16 @@
 ---
-title: "Remote Table Copy (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
-caps.latest.revision: 23
-
+title: Remote table copy - Parallel Data Warehouse | Microsoft Docs
+description: Using remote table copy in Analytics Platform System Parallel Data Warehouse.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
+
 # Remote Table Copy
 Describes how to use the remote table copy feature to copy  tables from SQL Server PDW databases to remote (non-appliance) SMP SQL Server databases. Use remote table copy to enables hub and spoke scenarios for SQL Server PDW.  
   

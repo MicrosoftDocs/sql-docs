@@ -3,14 +3,12 @@ title: "Data Source Objects (OLE DB) | Microsoft Docs"
 description: "Data Source Objects (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-data-source-objects"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -23,8 +21,7 @@ helpviewer_keywords:
   - "CLSID"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Data Source Objects (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,6 +88,6 @@ else
 -   [Persisted Data Source Objects](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
 ## See Also  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

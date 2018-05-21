@@ -1,35 +1,14 @@
 ---
 title: "Inserting, Updating, and Dropping Members (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "inserting dimension members"
-  - "XML for Analysis, members"
-  - "removing dimension members"
-  - "dropping dimension members"
-  - "write-enabled dimensions [Analysis Services]"
-  - "XMLA, members"
-  - "deleting dimension members"
-  - "dimensions [Analysis Services], XML for Analysis"
-ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Inserting, Updating, and Dropping Members (XMLA)
   You can use the [Insert](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), and [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) commands in XML for Analysis (XMLA) to respectively insert, update, or delete members from a write-enabled dimension. For more information about write-enabled dimensions, see [Write-Enabled Dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  

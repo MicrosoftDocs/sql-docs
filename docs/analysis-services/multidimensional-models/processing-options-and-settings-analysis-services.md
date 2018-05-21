@@ -1,36 +1,14 @@
 ---
 title: "Processing Options and Settings (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "process data option [Analysis Services]"
-  - "processing objects [Analysis Services]"
-  - "unprocess option [Analysis Services]"
-  - "process full option [Analysis Services]"
-  - "process index option [Analysis Services]"
-  - "process structure option [Analysis Services]"
-  - "process incremental option [Analysis Services]"
-  - "process update option [Analysis Services]"
-  - "process clear structure option [Analysis Services]"
-  - "process default option [Analysis Services]"
-ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Processing Options and Settings (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

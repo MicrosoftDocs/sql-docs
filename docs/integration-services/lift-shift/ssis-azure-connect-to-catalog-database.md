@@ -1,10 +1,9 @@
 ---
-title: "Connect to the SSISDB Catalog database on Azure | Microsoft Docs"
+title: "Connect to the SSIS Catalog database (SSISDB) in Azure | Microsoft Docs"
 ms.date: "09/25/2017"
-ms.topic: "article"
-ms.prod: "sql-non-specified"
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
@@ -12,10 +11,9 @@ ms.technology:
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
-# Connect to the SSISDB Catalog database on Azure
+# Connect to the SSIS Catalog database (SSISDB) in Azure
 
 Get the connection information you need to connect to the SSISDB Catalog database hosted on an Azure SQL Database server. You  need the following items to connect:
 - fully qualified server name
@@ -26,7 +24,7 @@ Get the connection information you need to connect to the SSISDB Catalog databas
 > You can't create the SSISDB Catalog database on Azure SQL Database at this time independently of creating the Azure-SSIS Integration Runtime in Azure Data Factory version 2. It's the Azure-SSIS IR that runs SSIS packages on Azure. For more info, see [Deploy SSIS packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## Prerequisites
-Before you start, make sure you have version 17.2 or later of SQL Server Management Studio. To download the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Before you start, make sure you have version 17.2 or later of SQL Server Management Studio (SSMS). If the SSISDB Catalog database is hosted on SQL Database Managed Instance (Preview), make sure you have version 17.6 or later of SSMS. To download the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## Get the connection info from the Azure portal
 1. Log in to the [Azure portal](https://portal.azure.com/).

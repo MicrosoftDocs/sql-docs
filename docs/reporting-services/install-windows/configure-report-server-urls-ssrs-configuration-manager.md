@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "05/18/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Server Windows service, virtual directories"
   - "report servers [Reporting Services], virtual directories"
@@ -22,7 +21,6 @@ caps.latest.revision: 10
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Configure Report Server URLs  (SSRS Configuration Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], URLs are used to access the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Before you can use either application, you must configure at least one URL each for the Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both application URLs that work well in most deployment scenarios, including side-by-side deployments with other Web services and applications.  

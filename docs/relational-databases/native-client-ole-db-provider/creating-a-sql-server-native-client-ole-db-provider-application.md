@@ -1,10 +1,9 @@
----
+﻿---
 title: "Creating a SQL Server Native Client OLE DB Provider Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-provider"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "OLE DB, creating applications"
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Creating a SQL Server Native Client OLE DB Provider Application
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

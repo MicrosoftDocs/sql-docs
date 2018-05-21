@@ -3,27 +3,24 @@ title: "Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB) 
 description: "Retrieve data from a FILESTREAM column using ISequentialStream (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   This sample shows uses an ISequentialStream interface in an ICommandText interface to retrieve a single record from a Filestream column.  
   
- For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ For more information on the filestream feature, see [FILESTREAM Support](../../../oledb/features/filestream-support.md).  
   
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  

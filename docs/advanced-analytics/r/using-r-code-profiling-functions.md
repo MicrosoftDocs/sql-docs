@@ -1,24 +1,15 @@
 ---
-title: "Using R Code Profiling Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/29/2016"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: 6
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Using R Code profiling functions (SQL Server Machine Learning) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Using R Code Profiling Functions
+# Using R code profiling functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In addition to using SQL Server resources and tools to monitor R script execution, you can use performance tools provided by other R packages to get more information about internal function calls. This topic provides a list of some basic resources to get you started. For expert guidance, we recommend the chapter on [Performance](http://adv-r.had.co.nz/Performance.html) in the book ""Advanced R"", by Hadley Wickham.

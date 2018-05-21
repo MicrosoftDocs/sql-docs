@@ -2,9 +2,8 @@
 title: "Step 4: Testing the Lesson 2 Tutorial Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,8 +17,7 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Lesson 2-4 - Testing the Lesson 2 Tutorial Package
 With the Foreach Loop container and the Flat File connection manager now configured, the Lesson 2 package can iterate through the collection of 14 flat files in the Sample Data folder. Each time a file name is found that matches the specified file name criteria, the Foreach Loop container populates the user-defined variable with the file name. This variable, in turn, updates the ConnectionString property of the Flat File connection manager, and a connection to the new flat file is made. The Foreach Loop container then runs the unmodified data flow task against the data in the new flat file before connecting to the next file in the folder.  

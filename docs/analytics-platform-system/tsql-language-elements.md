@@ -1,30 +1,18 @@
 ---
-title: T-SQL language elements - Analytics Platform System Parallel Data Warehouse | Microsoft Docs
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: Transact-SQL (T-SQL) language elements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
-services: sql-data-warehouse
-documentationcenter: NA
-editor: ''
-ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.author: barbkess
-
+title: T-SQL language elements - Parallel Data Warehouse | Microsoft Docs
+description: T-SQL language elements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Language elements
-Transact-SQL (T-SQL) language elements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+
+# T-SQL language elements for Parallel Data Warehouse
+T-SQL language elements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## Core elements
 * [syntax conventions](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)

@@ -1,15 +1,13 @@
----
+﻿---
 title: "ATN2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "ATN2 function"
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ATN2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,8 +40,8 @@ ATN2 ( float_expression , float_expression )
 ```  
   
 ## Arguments  
-*float_expression*
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the **float** data type.
+*float_expression*  
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of data type **float**.
   
 ## Return types
 **float**
@@ -53,14 +51,14 @@ The following example calculates the `ATN2` for the specified `x` and `y` compon
   
 ```sql
 DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar,ATN2(@x,@y ));  
+SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar, ATN2(@y, @x));  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```sql
-The ATN2 of the angle is: 0.265345                         
+The ATN2 of the angle is: 1.30545                         
 (1 row(s) affected)  
 ```  
   

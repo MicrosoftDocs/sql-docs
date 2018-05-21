@@ -8,10 +8,12 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 
 ms.component: ssis
-ms.date: 02/03/2018
+ms.date: 04/28/2018
 ---
 # New and Recently Updated: Integration Services for SQL Server
 
@@ -25,7 +27,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
+- *Date range of updates:* &nbsp; **2018-02-03** &nbsp; -to- &nbsp; **2018-04-28**
 - *Subject area:* &nbsp; **Integration Services for SQL Server**.
 
 
@@ -38,18 +40,9 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Browse All Principals Dialog Box](catalog/browse-all-principals-dialog-box.md)
-2. [Configure Dialog Box](catalog/configure-dialog-box.md)
-3. [Folder Properties Dialog Box](catalog/folder-properties-dialog-box.md)
-4. [Integration Services (SSIS) Catalog Transact-SQL Reference](catalog/integration-services-ssis-catalog-transact-sql-reference.md)
-5. [Integration Services (SSIS) Server and Catalog](catalog/integration-services-ssis-server-and-catalog.md)
-6. [Package Properties Dialog Box](catalog/package-properties-dialog-box.md)
-7. [Project Properties Dialog Box](catalog/project-properties-dialog-box.md)
-8. [Project Versions Dialog Box](catalog/project-versions-dialog-box.md)
-9. [Set Parameter Value Dialog Box](catalog/set-parameter-value-dialog-box.md)
-10. [SSIS Catalog](catalog/ssis-catalog.md)
-11. [Validate Dialog Box](catalog/validate-dialog-box.md)
-12. [View the List of Packages on the Integration Services Server](catalog/view-the-list-of-packages-on-the-integration-services-server.md)
+1. [Load data from or to Excel with SQL Server Integration Services (SSIS)](load-data-to-from-excel-with-ssis.md)
+2. [Load data from SQL Server to Azure SQL Data Warehouse with SQL Server Integration Services (SSIS)](load-data-to-sql-data-warehouse.md)
+3. [Scale Out support for high availability via SQL Server failover cluster instance](scale-out/scale-out-failover-cluster-instance.md)
 
 
 
@@ -75,7 +68,8 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Schedule the execution of an SSIS package on Azure](#TitleNum_1)
+1. [Install Integration Services](#TitleNum_1)
+2. [Deploy, run, and monitor an SSIS package on Azure](#TitleNum_2)
 
 
 
@@ -86,53 +80,113 @@ This compact list provides links to all the updated articles that are listed in 
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Schedule the execution of an SSIS package on Azure](lift-shift/ssis-azure-schedule-packages.md)
+### 1. &nbsp; [Install Integration Services](install-windows/install-integration-services.md)
 
-*Updated: 2018-01-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Updated: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 28.  ms.author= "douglasl".  -->
+<!-- Source markdown line 75.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 be778f8096559da9b84670382deb11f56c129971 640dd3cb59a88ccbc4cf6eab363a45e284f6b873  (PR=4662  ,  Filename=ssis-azure-schedule-packages.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
+<!-- git diff --ignore-all-space --unified=0 49551f3b1138f805e6d5e0f6099a100e2f3b3e7a 97caaafc1587b2326f4c357dd5eb21f2de7d358f  (PR=5676  ,  Filename=install-integration-services.md  ,  Dirpath=docs\integration-services\install-windows\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server to your on-premises SQL Server as a linked server.
+**A complete installation of Integration Services**
 
-1.  **Set up the linked server**
 
-    ```
-    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
-    EXEC sp_addlinkedserver
-        @server='myLinkedServer', -- Name your linked server
-        @srvproduct='',
-        @provider='sqlncli', -- Use SQL Server native client
-        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
-        @location='',
-        @provstr='',
-        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
-    ```
+For a complete installation of  *{Included-Content-Goes-Here}* , select the components that you need from the following list:
 
-2.  **Set up linked server credentials**
+-   **Integration Services (SSIS)**. Install SSIS with the SQL Server Setup wizard. Selecting SSIS installs the following things:
+    -   Support for the SSIS Catalog on the SQL Server Database Engine.
+    -   Optionally, the SSIS Scale Out feature, which consists of a Master and Workers.
+    -   32-bit and 64-bit SSIS components.
+    -   Installing SSIS does **not** install the tools required to design and develop SSIS packages.
+-   **SQL Server Database Engine**. Install the Database Engine with the SQL Server Setup wizard. Selecting the Database Engine lets you create and host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
+-   **SQL Server Data Tools (SSDT)**. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)]. Installing SSDT lets you design and deploy SSIS packages. SSDT installs the following things:
+    -   The SSIS package design and development tools, including SSIS Designer.
+    -   32-bit SSIS components only.
+    -   A limited version of Visual Studio (if a Visual Studio edition is not already installed).
+    -   Visual Studio Tools for Applications (VSTA), the script editor used by the SSIS Script Task and Script Component.
+    -   SSIS wizards including the Deployment Wizard and the Package Upgrade Wizard.
+    -   SQL Server Import and Export Wizard.
+-   **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
 
-    ```
-    -- Add your Azure SQL DB server admin credentials
-    EXEC sp_addlinkedsrvlogin
-        @rmtsrvname = 'myLinkedServer',
-        @useself = 'false',
-        @rmtuser = 'myUsername', -- Add your server admin username
-        @rmtpassword = 'myPassword' -- Add your server admin password
-    ```
 
-3.  **Set up linked server options**
 
-    ```
-    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
-    ```
+&nbsp;
 
-For more info, see [Create Linked Servers](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md).
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### 2. &nbsp; [Deploy, run, and monitor an SSIS package on Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+
+*Updated: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
+
+<!-- Source markdown line 99.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 07f2b752818f2e786c4380fb822099190c59f302 54de9497353bac2d6a8a87e546fc6ab9e444a734  (PR=5676  ,  Filename=ssis-azure-deploy-run-monitor-tutorial.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
+
+
+
+**Deploy a project with PowerShell**
+
+
+To deploy a project with PowerShell to SSISDB on Azure SQL Database, adapt the following script to your requirements. The script enumerates the child folders under `$ProjectFilePath` and the projects in each child folder, then creates the same folders in SSISDB and deploys the projects to those folders.
+
+This script requires SQL Server Data Tools version 17.x or SQL Server Management Studio installed on the computer where you run the script.
+
+```
+**Variables**
+
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+**Load the IntegrationServices Assembly**
+
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+**Store the IntegrationServices Assembly namespace to avoid typing it every time**
+
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+**Create a connection to the server**
+
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+**Create the Integration Services object**
+
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+**Get the catalog**
+
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+```
 
 
 
@@ -145,40 +199,36 @@ For more info, see [Create Linked Servers](lift-shift/../../relational-databases
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### Subject areas that *do* have new or recently updated articles
 
-
-- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (11+6): &nbsp; &nbsp;**Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (18+0): &nbsp; &nbsp;**Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (218+14): **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (14+0): &nbsp; &nbsp;**Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (3+2): &nbsp; &nbsp; **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+3): &nbsp; &nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (7+10): &nbsp; &nbsp;**Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (2+3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (5+2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 
 #### Subject areas that do *not* have any new or recently updated articles
 
-
-- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
-
 

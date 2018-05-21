@@ -1,35 +1,14 @@
 ---
 title: "AMO Concepts and Object Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "AMO, classes"
-  - "Analysis Management Objects, classes"
-  - "objects [Analysis Management Objects]"
-  - "AMO, objects"
-  - "classes [AMO]"
-  - "AMO"
-  - "Analysis Management Objects"
-  - "Analysis Management Objects, objects"
-ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # AMO Concepts and Object Model
   This topic provides a definition of Analysis Management Objects (AMO), how AMO is related to other tools and libraries provided in the architecture of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], and a conceptual explanation of all major objects in AMO.  

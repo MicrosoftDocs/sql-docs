@@ -1,17 +1,16 @@
 ---
-title: "SQL Server Index Design Guide | Microsoft Docs"
+title: "SQL Server Index Architecture and Design Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/1/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/03/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index design guide" 
   - "index design guidance"
@@ -27,13 +26,13 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 caps.latest.revision: 3
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# SQL Server Index Design Guide
+# SQL Server Index Architecture and Design Guide
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] index design guide contains information and best practices to help you design effective indexes to meet the needs of your application.  
+Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] index design guide contains information on index architecture, and best practices to help you design effective indexes to meet the needs of your application.  
     
 This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](../relational-databases/indexes/indexes.md).  
 
@@ -625,7 +624,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. For more information, refer to [Columnstore Indexes overview](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
-**Applies to**: [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+For version information, see [Columnstore indexes - What's new](/sql/relational-databases/indexes/columnstore-indexes-what-s-new).
 
 ### Columnstore Index Architecture
 
@@ -644,7 +643,7 @@ A columnstore index physically stores most of the data in columnstore format. In
 
 A columnstore index also physically stores some rows in a rowstore format called a deltastore. The deltastore,also called delta rowgroups, is a holding place for rows that are too few in number to qualify for compression into the columnstore. Each delta rowgroup is implemented as a clustered B-tree index. 
 
-- A **deltastore** is a a holding place for rows that are too few in number to be compressed into the columnstore. The deltastore is a rowstore. 
+- The **deltastore** is a holding place for rows that are too few in number to be compressed into the columnstore. The deltastore stores the rows in rowstore format. 
   
 #### Operations are performed on rowgroups and column segments
 
@@ -879,6 +878,11 @@ The performance of a nonclustered index is better than nonclustered hash indexes
 > One way to improve performance in this situation is to add another column to the nonclustered index.
 
 ##  <a name="Additional_Reading"></a> Additional Reading  
+[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
+[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
+[Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Create a Primary Key](../relational-databases/tables/create-primary-keys.md)    
@@ -888,8 +892,5 @@ The performance of a nonclustered index is better than nonclustered hash indexes
 [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [Index Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md)   
-[Indexes and ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
-[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
-[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
-[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
-[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)  
+[Indexes and ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
+[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

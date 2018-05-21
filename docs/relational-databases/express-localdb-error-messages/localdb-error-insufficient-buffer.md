@@ -2,22 +2,17 @@
 title: "LOCALDB_ERROR_INSUFFICIENT_BUFFER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "localdb"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 caps.latest.revision: 8
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # LOCALDB_ERROR_INSUFFICIENT_BUFFER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

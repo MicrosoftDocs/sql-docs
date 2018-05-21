@@ -9,4 +9,5 @@
 # [Change the account for Scale Out logging](change-logdb-account.md)
 # [Manage certificates for Scale Out](deal-with-certificates-in-ssis-scale-out.md)
 # [High availability for Scale Out](scale-out-support-for-high-availability.md)
+# [High availability via SQL Server failover cluster instance](scale-out-failover-cluster-instance.md)
 # [Troubleshoot Scale Out](troubleshooting-scale-out.md)

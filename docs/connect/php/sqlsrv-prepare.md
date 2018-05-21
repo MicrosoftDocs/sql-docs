@@ -2,16 +2,14 @@
 title: "sqlsrv_prepare | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_prepare"
 apitype: "NA"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "sqlsrv_prepare"
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 caps.latest.revision: 52
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

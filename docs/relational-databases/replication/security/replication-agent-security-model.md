@@ -1,17 +1,16 @@
 ---
 title: "Replication Agent Security Model | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/07/2015"
-ms.prod: "sql-non-specified"
+ms.date: "04/26/2018"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, security"
   - "agents [SQL Server replication], security"
@@ -26,8 +25,7 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 caps.latest.revision: 72
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Replication Agent Security Model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,8 +59,8 @@ ms.workload: "On Demand"
 |Log Reader Agent|The Windows account under which the agent runs is used when it makes connections to the Distributor. This account must at minimum be a member of the **db_owner** fixed database role in the distribution database.<br /><br /> The account that is used to connect to the Publisher must at minimum be a member of the **db_owner** fixed database role in the publication database.<br /><br /> When selecting the **sync_type** options *replication support only*, *initialize with backup*, or *initialize from lsn*, the log reader agent must run after executing **sp_addsubscription**, so that the set-up scripts are written to the distribution database. The log reader agent must be running under an account that is a member of the **sysadmin** fixed server role. When the **sync_type** option is set to *Automatic*, no special log reader agent actions are required.|  
 |Distribution Agent for a push subscription|The Windows account under which the agent runs is used when it makes connections to the Distributor. This account must:<br /><br /> -At minimum be a member of the **db_owner** fixed database role in the distribution database.<br /><br /> -Be a member of the PAL.<br /><br /> -Have read permissions on the snapshot share.<br /><br /> -Have read permissions on the installation directory of the OLE DB provider for the Subscriber if the subscription is for a non-SQL Server Subscriber.<br /><br /> -When replicating LOB data, the distribution agent must have write permissions on the replication **C:\Program Files\Microsoft SQL Server\XX\COMfolder** where XX represents the instanceID.<br /><br /> <br /><br /> Note that the account that is used to *connect* to the Subscriber must at minimum be a member of the **db_owner** fixed database role in the subscription database, or have equivalent permissions if the subscription is for a non-SQL Server Subscriber.<br /><br /> Also note that when using `-subscriptionstreams >= 2` on the distribution agent you must also grant the **View Server State** permission on the subscribers to detect deadlocks.|  
 |Distribution Agent for a pull subscription|The Windows account under which the agent runs is used when it makes connections to the Subscriber. This account must at minimum be a member of the **db_owner** fixed database role in the subscription database. The account that is used to connect to the Distributor must:<br /><br /> -Be a member of the PAL.<br /><br /> -Have read permissions on the snapshot share.<br /><br /> -When replicating LOB data, the distribution agent must have write permissions on the replication **C:\Program Files\Microsoft SQL Server\XX\COMfolder** where XX represents the instanceID.<br /><br /> <br /><br /> Note that when using `-subscriptionstreams >= 2` on the distribution agent you must also grant the **View Server State** permission on the subscribers to detect deadlocks.|  
-|Merge Agent for a push subscription|The Windows account under which the agent runs is used when it makes connections to the Publisher and Distributor. This account must:<br /><br /> -At minimum be a member of the **db_owner** fixed database role in the distribution database.<br /><br /> -Be a member of the PAL.<br /><br /> -Be a login that is associated with a user in the publication database.<br /><br /> -Have read permissions on the snapshot share.<br /><br /> <br /><br /> Note that the account used to *connect* to the Subscriber must at minimum be a member of the **db_owner** fixed database role in the subscription database.|  
-|Merge Agent for a pull subscription|The Windows account under which the agent runs is used when it makes connections to the Subscriber. This account must at minimum be a member of the **db_owner** fixed database role in the subscription database. The account that is used to connect to the Publisher and Distributor must:<br /><br /> -Be a member of the PAL.<br /><br /> -Be a login associated with a user in the publication database.<br /><br /> -Be a login associated with a user in the distribution database. The user can be the **Guest** user.<br /><br /> -Have read permissions on the snapshot share.|  
+|Merge Agent for a push subscription|The Windows account under which the agent runs is used when it makes connections to the Publisher and Distributor. This account must:<br /><br /> -At minimum be a member of the **db_owner** fixed database role in the distribution database.<br /><br /> -Be a member of the PAL.<br /><br /> -Be a login that is associated with a user with read/write permissions in the publication database.<br /><br /> -Have read permissions on the snapshot share.<br /><br /> <br /><br /> Note that the account used to *connect* to the Subscriber must at minimum be a member of the **db_owner** fixed database role in the subscription database.|  
+|Merge Agent for a pull subscription|The Windows account under which the agent runs is used when it makes connections to the Subscriber. This account must at minimum be a member of the **db_owner** fixed database role in the subscription database. The account that is used to connect to the Publisher and Distributor must:<br /><br /> -Be a member of the PAL.<br /><br /> -Be a login associated with a user with read/write permissions in the publication database.<br /><br /> -Be a login associated with a user in the distribution database. The user can be the **Guest** user.<br /><br /> -Have read permissions on the snapshot share.|  
 |Queue Reader Agent|The Windows account under which the agent runs is used when it makes connections to the Distributor. This account must at minimum be a member of the **db_owner** fixed database role in the distribution database.<br /><br /> The account that is used to connect to the Publisher must at minimum be a member of the **db_owner** fixed database role in the publication database.<br /><br /> The account that is used to connect to the Subscriber must at minimum be a member of the **db_owner** fixed database role in the subscription database.|  
   
 ## Agent Security Under SQL Server Agent  

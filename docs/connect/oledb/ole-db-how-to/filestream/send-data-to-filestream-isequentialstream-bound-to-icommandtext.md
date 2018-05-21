@@ -3,27 +3,24 @@ title: "Send Data to FILESTREAM - ISequentialStream Bound to ICommandText | Micr
 description: "Send data to FILESTREAM - ISequentialStream bound to ICommandText"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Send Data to FILESTREAM - ISequentialStream Bound to ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   This sample uses an ISequentialStream interface bound to an ICommandText parameter to send between 4MB and 4GB of data to a filestream column.  
   
- For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ For more information on the filestream feature, see [FILESTREAM Support](../../../oledb/features/filestream-support.md).  
   
 ## Example  
  Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  

@@ -3,22 +3,19 @@ title: "Obtain a FAST_FORWARD Cursor | Microsoft Docs"
 description: "Obtain a FAST_FORWARD cursor using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fast forward-only cursors"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Obtain a FAST_FORWARD Cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

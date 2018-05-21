@@ -2,9 +2,8 @@
 title: "Developing Specific Types of Script Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "extending-packages-scripting-data-flow-script-component-types"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,8 +19,7 @@ ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Developing Specific Types of Script Components
   The Script component is a configurable tool that you can use in the data flow of a package to fill almost any requirement that is not met by the sources, transformations, and destinations that are included with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. This section contains Script component code samples that demonstrate the four options for configuring the Script component:  

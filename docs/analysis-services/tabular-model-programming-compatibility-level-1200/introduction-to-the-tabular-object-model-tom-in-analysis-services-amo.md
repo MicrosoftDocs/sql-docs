@@ -1,26 +1,16 @@
 ---
-title: "Introduction to the Tabular Object Model (TOM) in Analysis Services AMO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+title: "Understanding Tabular Object Model (TOM) in Analysis Services AMO | Microsoft Docs"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Introduction to the Tabular Object Model (TOM) in Analysis Services AMO
+# Understanding Tabular Object Model (TOM) in Analysis Services AMO
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   The Tabular object model (TOM) is an extension of the Analysis Services Management Object (AMO) client library, created to support programming scenarios for Tabular models built at compatibility level 1200 and higher. As with AMO, TOM provides a programmatic way to handle administrative functions like creating models, importing and refreshing data, and assigning roles and permissions.  
   

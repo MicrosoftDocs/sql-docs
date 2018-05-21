@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server-web-service"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -26,7 +25,6 @@ caps.latest.revision: 26
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Report Server Web Service Endpoints
   The Report Server Web service provides several endpoints for managing a report server as well as executing and navigating reports.  

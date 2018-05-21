@@ -1,17 +1,15 @@
 ---
 title: "ExecuteComplete Event (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Connection::ExecuteComplete"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "ExecuteComplete event [ADO]"
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ExecuteComplete Event (ADO)
 The **ExecuteComplete** event is called after a command has finished executing.  

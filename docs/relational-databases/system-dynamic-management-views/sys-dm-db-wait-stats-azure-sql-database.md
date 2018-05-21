@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,8 +8,7 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "dmv's"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "dm_db_wait_stats"
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

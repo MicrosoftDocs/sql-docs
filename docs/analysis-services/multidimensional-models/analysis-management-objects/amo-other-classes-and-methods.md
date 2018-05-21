@@ -1,35 +1,14 @@
 ---
 title: "AMO Other Classes and Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "restores [AMO]"
-  - "AMO, backup and restore"
-  - "capture logs [AMO]"
-  - "AmoException class [AMO]"
-  - "Analysis Management Objects, backup and restore"
-  - "assembly objects [AMO]"
-  - "traces [AMO]"
-  - "backups [AMO]"
-ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # AMO Other Classes and Methods
   This section contains common classes that are not specific to OLAP or data mining, and that are helpful when administering or managing objects in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. These classes cover features such as stored procedures, tracing, exceptions, and backup and restore.  

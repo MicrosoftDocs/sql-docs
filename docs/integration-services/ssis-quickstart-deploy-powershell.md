@@ -30,6 +30,17 @@ You can use the information in this quickstart to deploy an SSIS project to the 
 
 You cannot use the information in this quickstart to deploy an SSIS package to SQL Server on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
+## For Azure SQL Database, get the connection info
+
+To deploy the project to Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
+
+1. Log in to the [Azure portal](https://portal.azure.com/).
+2. Select **SQL Databases** from the left-hand menu, and then select the SSISDB database on the **SQL databases** page. 
+3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
+4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
+5. Click **Show database connection strings**.
+6. Review the complete **ADO.NET** connection string.
+
 ## PowerShell script
 Provide appropriate values for the variables at the top of the following script, and then run the script to deploy the SSIS project.
 

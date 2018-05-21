@@ -22,6 +22,8 @@ SQL Server Management Studio is an integrated environment for managing any SQL i
 
 Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
+The validation described in this article for deployment to Azure SQL Database requires SQL Server Data Tools (SSDT) version 17.4 or later. To get the latest version of SSDT, see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+
 An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
 
 ## Supported platforms
@@ -33,6 +35,15 @@ You can use the information in this quickstart to deploy an SSIS project to the 
 -   Azure SQL Database. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 You cannot use the information in this quickstart to deploy an SSIS package to SQL Server on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
+## For Azure SQL Database, get the connection info
+
+To deploy the project to Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
+
+1. Log in to the [Azure portal](https://portal.azure.com/).
+2. Select **SQL Databases** from the left-hand menu, and then select the SSISDB database on the **SQL databases** page. 
+3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
+4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 
 ## Connect to the SSISDB database
 

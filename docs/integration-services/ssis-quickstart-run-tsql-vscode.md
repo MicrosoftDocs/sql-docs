@@ -44,6 +44,15 @@ To enable `mssql` commands and T-SQL IntelliSense, set the language mode is set 
 
 3. In the **Select language mode** drop-down menu that opens, select or enter **SQL**, and then press **ENTER** to set the language mode to SQL. 
 
+## For Azure SQL Database, get the connection info
+
+To run the package on Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
+
+1. Log in to the [Azure portal](https://portal.azure.com/).
+2. Select **SQL Databases** from the left-hand menu, and then select the SSISDB database on the **SQL databases** page. 
+3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
+4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
+
 ## Connect to the SSIS Catalog database
 
 Use Visual Studio Code to establish a connection to the SSIS Catalog.

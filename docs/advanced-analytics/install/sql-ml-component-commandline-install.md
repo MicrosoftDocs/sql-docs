@@ -14,10 +14,10 @@ manager: cgronlun
 
 This article provides instructions for intalling SQL Server machine learning components from a command line:
 
-+ [In-database instance](#indb)
++ [New In-Database instance](#indb)
 + [Add to an existing database engine instance](#add-existing)
 + [Silent install](#silent)
-+ [Standalone server](#shared-feature)
++ [New standalone server](#shared-feature)
 
 You can specify silent, basic, or full interaction with the Setup user interface. This article supplements [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), covering the parameters unique to R and Python machine learning components.
 

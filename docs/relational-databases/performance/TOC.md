@@ -60,3 +60,6 @@
 # [Joins](joins.md)   
 
 # [Subqueries](subqueries.md)    
+
+# [Scalar UDF Inlining](scalar-udf-inlining.md)
+

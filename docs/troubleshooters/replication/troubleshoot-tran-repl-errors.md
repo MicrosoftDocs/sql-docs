@@ -53,7 +53,7 @@ Errors can occur in any step of this process, and finding those errors can be th
 ## Find errors with Snapshot Agent
 The **Snapshot Agent** is the agent that generates the snapshot, and writes it to the specified snapshot folder. 
 
-1. View the status of your Snapshot Agent. To do this, expand the **Local Publication** node under ***Replication** in **Object Explorer**, right-click your publication **AdvWorksProductTrans** > **View Snapshot Agent Status**. 
+1. View the status of your Snapshot Agent. To do this, expand the **Local Publication** node under **Replication** in **Object Explorer**, right-click your publication **AdvWorksProductTrans** > **View Snapshot Agent Status**. 
 
     ![View Snapshot Agent status](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
@@ -94,7 +94,7 @@ The **Log Reader Agent** connects to  your publisher database and scans the tran
     ![Log Reader Failing](media/troubleshooting-tran-repl-errors/log-reader-agent-failure.png)
 
 
-5. This view will show you two Agents, the **Snapshot Agent** and the **Log Reader Agent**. The one encountering an error will have the Red X. In this case, the **Log Reader Agent** is the one with the Red X, which indicates there's an issue with it. Double-click the line that's reporting the error to launch the **Agent Hisotyr** for the **Log Reader Agent**. This provides more information about the error: 
+5. This view will show you two Agents, the **Snapshot Agent** and the **Log Reader Agent**. The one encountering an error will have the Red X. In this case, the **Log Reader Agent** is the one with the Red X, which indicates there's an issue with it. Double-click the line that's reporting the error to launch the **Agent History** for the **Log Reader Agent**. This provides more information about the error: 
     
     ![Log Reader Error](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 

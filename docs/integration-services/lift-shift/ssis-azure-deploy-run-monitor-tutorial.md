@@ -79,8 +79,9 @@ To learn more about deploying packages and about the Deployment Wizard, see [Dep
   
 3.  On the **Select Destination** page, select the destination for the project.
     -   Enter the fully qualified server name in the format `<server_name>.database.windows.net`.
+    -   Provide authentication information, and then select **Connect**.
     -   Then select **Browse** to select the target folder in SSISDB.
-    -   Select **Next** to open the **Review** page.  
+    -   Then select **Next** to open the **Review** page. (The **Next** button is enabled only after you select **Connect**.)
   
 4.  On the **Review** page, review the settings you selected.
     -   You can change your selections by selecting **Previous**, or by selecting any of the steps in the left pane.

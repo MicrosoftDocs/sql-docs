@@ -3,12 +3,9 @@ title: "View Resource Governor Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "resource-governor"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -16,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Resource Governor, properties"
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

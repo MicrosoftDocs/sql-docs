@@ -3,18 +3,15 @@ title: "LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
 caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER

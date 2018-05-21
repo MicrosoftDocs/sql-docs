@@ -3,12 +3,9 @@ title: "SQL Server Identifiers in PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "powershell"
-ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: scripting
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -22,8 +19,8 @@ helpviewer_keywords:
   - "Cmdlets [SQL Server], Decode-Sqlname"
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 caps.latest.revision: 24
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Identifiers in PowerShell

@@ -3,8 +3,6 @@ title: "Subqueries (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/18/2018"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""

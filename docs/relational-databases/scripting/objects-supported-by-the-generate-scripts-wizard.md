@@ -3,12 +3,9 @@ title: "Objects Supported by the Generate Scripts Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.technology: scripting
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495

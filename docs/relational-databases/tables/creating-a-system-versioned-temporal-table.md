@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Creating a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"

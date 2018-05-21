@@ -45,7 +45,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database engine | This value is required. |
    | **Server name** | The fully qualified server name |  |
-   | **Authentication** | SQL Server Authentication | This quickstart uses SQL authentication. |
+   | **Authentication** | SQL Server Authentication | |
    | **Login** | The server admin account | This account is the account that you specified when you created the server. |
    | **Password** | The password for your server admin account | This password is the password that you specified when you created the server. |
 

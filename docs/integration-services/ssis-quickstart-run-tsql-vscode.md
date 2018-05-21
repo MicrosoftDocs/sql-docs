@@ -44,6 +44,15 @@ To enable `mssql` commands and T-SQL IntelliSense, set the language mode is set 
 
 3. In the **Select language mode** drop-down menu that opens, select or enter **SQL**, and then press **ENTER** to set the language mode to SQL. 
 
+## For Azure SQL Database, get the connection info
+
+To run the package on Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
+
+1. Log in to the [Azure portal](https://portal.azure.com/).
+2. Select **SQL Databases** from the left-hand menu, and then select the SSISDB database on the **SQL databases** page. 
+3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
+4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
+
 ## Connect to the SSIS Catalog database
 
 Use Visual Studio Code to establish a connection to the SSIS Catalog.
@@ -63,7 +72,7 @@ Use Visual Studio Code to establish a connection to the SSIS Catalog.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server name** | The fully qualified server name | If you're connecting to an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`. |
    | **Database name** | **SSISDB** | The name of the database to which to connect. |
-   | **Authentication** | SQL Login| This quickstart uses SQL authentication. If you're connecting to an Azure SQL Database server, you can't use Windows authentication. |
+   | **Authentication** | SQL Login | With SQL Server authentication, you can connect to SQL Server or to Azure SQL Database. If you're connecting to an Azure SQL Database server, you can't use Windows authentication. |
    | **User name** | The server admin account | This account is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This password is the password that you specified when you created the server. |
    | **Save Password?** | Yes or No | If you do not want to enter the password each time, select Yes. |

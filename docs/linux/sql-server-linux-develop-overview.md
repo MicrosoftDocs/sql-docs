@@ -49,11 +49,11 @@ Tools that currently run on Windows such as SSMS, SSDT, and PowerShell, also wor
 
 See the following topics for more information:
 
-- [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
 - [SQL PowerShell](sql-server-linux-manage-powershell.md)
 
-> [!Note] 
+> [!Note]
 > Make sure that you are using the latest versions of these tools for the best experience.
 
 ## Use new SQL tools for Linux

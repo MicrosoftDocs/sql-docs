@@ -347,7 +347,7 @@ For more info about SSIS on Linux, see the following articles:
 -   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
 -   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
 
-#### SQL Server Management Studio (SSMS)
+#### < a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
 

@@ -154,7 +154,6 @@ following the guideline for Troubleshooting DTC Transactions.
 ```
 
 The preceding example shows that DTC could not re-enlist the database from the new primary replica in the transaction that was created after failover. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance cannot determine the result of the distributed transaction so it marks the database as suspect. The transaction is marked as a unit of work (UOW) and referred to by a GUID. In order to recover the database, either commit or rollback the transaction manually. 
-```
 
 >[!WARNING]
 >When you manually commit or rollback a transaction it can affect an application. Verify that the action of commit or rollback is consistent with your application requirements. 

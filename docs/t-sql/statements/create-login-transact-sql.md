@@ -42,7 +42,7 @@ Creates a login.
 
 # [SQL Server](#tab/sqlserver)
   
-## Syntax for SQL Server 
+## Syntax 
   
 ```sql  
 -- Syntax for SQL Server  
@@ -247,7 +247,8 @@ GO
   
 # [SQL Database](#tab/sqldb)
   
-## Syntax for SQL Database single and pooled databases
+## Syntax 
+### Syntax for SQL Database single and pooled databases
   
 ```sql  
 -- Syntax for Azure SQL Database  
@@ -258,7 +259,7 @@ CREATE LOGIN login_name
     PASSWORD = { 'password' }  
     [ SID = sid ]  
 ```  
-## Syntax for SQL Database Managed Instance databases
+### Syntax for SQL Database Managed Instance databases
 
 ```sql
 -- Syntax for Azure SQL Database Managed Instance (preview)
@@ -368,7 +369,7 @@ GO
   
 # [SQL Data Warehouse](#tab/sqldw)
   
-## Syntax for SQL Data Warehouse 
+## Syntax 
   
 ```sql
 -- Syntax for Azure SQL Data Warehouse  
@@ -470,7 +471,7 @@ GO
   
 # [SQL Parallel Data Warehouse](#tab/sqlpdw)
   
-## Syntax for Parallel Data Warehouse 
+## Syntax 
   
 ```sql
 -- Syntax for Parallel Data Warehouse  

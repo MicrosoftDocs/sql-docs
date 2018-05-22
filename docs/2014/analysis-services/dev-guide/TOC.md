@@ -1,4 +1,4 @@
-# [Developer's Guide (Analysis Services)](../analysis-services-developer-documentation.md)
+# [Developer's Guide (Analysis Services)](analysis-services-developer-documentation.md)
 # [Tabular Model Programming +](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 # [Data Mining Programming](data-mining-programming.md)
 ## [OLE DB for Data Mining](ole-db-for-data-mining.md)

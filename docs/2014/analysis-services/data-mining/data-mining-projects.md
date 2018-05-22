@@ -60,7 +60,7 @@ manager: "mblythe"
   
  For example, a single data mining project can contain a reference to multiple data sources, with each data source supporting multiple data source views. In turn, each data source view can support multiple mining structures, each with many related mining models.  
   
- Additionally, your project might include plug-in algorithms, custom assemblies, or custom stored procedures; however, these objects are not described here. For more information, see [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
+ Additionally, your project might include plug-in algorithms, custom assemblies, or custom stored procedures; however, these objects are not described here. For more information, see [Developer's Guide &#40;Analysis Services&#41;](../dev-guide/analysis-services-developer-documentation.md).  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  

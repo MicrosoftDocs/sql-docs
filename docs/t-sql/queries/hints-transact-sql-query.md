@@ -272,13 +272,13 @@ manager: craigg
  Enables automatically generated quick statistics (histogram amendment) for any leading index column for which cardinality estimation is needed. The histogram used to estimate cardinality will be adjusted at query compile time to account for actual maximum or minimum value of this column. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
  Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a query plan using the Simple Containment assumption instead of the default Base Containment assumption for joins, under the query optimizer [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or newer. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Forces the Query Optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model that corresponds to the current database compatibility level. Use this hint to override [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting LEGACY_CARDINALITY_ESTIMATION=ON or [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
-*  'DISABLE_INTERLEAVED_EXECUTION_TVF' 
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
  Disables interleaved execution for multi-statement table valued functions. For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
-*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK' 
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
  Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
-*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS' 
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins
 ](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
  

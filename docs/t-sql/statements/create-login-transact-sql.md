@@ -42,7 +42,7 @@ Creates a login.
 
 # [SQL Server](#tab/sqlserver)
   
-## Syntax  
+## Syntax for SQL Server 
   
 ```sql  
 -- Syntax for SQL Server  
@@ -368,7 +368,7 @@ GO
   
 # [SQL Data Warehouse](#tab/sqldw)
   
-## Syntax  
+## Syntax for SQL Data Warehouse 
   
 ```sql
 -- Syntax for Azure SQL Data Warehouse  
@@ -475,7 +475,7 @@ GO
 
 # [SQL Parallel Data Warehouse](#tab/sqlpdw)
   
-## Syntax  
+## Syntax for Parallel Data Warehouse 
   
 ```sql
 -- Syntax for Parallel Data Warehouse  

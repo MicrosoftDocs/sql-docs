@@ -258,7 +258,7 @@ CREATE LOGIN login_name
     PASSWORD = { 'password' }  
     [ SID = sid ]  
 ```  
-## Syntax for SQL Database Managed Instance
+## Syntax for SQL Database Managed Instance databases
 
 ```sql
 -- Syntax for Azure SQL Database Managed Instance (preview)

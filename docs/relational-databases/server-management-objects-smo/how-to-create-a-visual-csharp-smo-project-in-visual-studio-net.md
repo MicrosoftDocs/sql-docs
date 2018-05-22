@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create a Visual C# SMO Project in Visual Studio .NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

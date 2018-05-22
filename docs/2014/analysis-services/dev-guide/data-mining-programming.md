@@ -64,7 +64,7 @@ manager: "mblythe"
  Introduces XML for Analysis (XMLA) and its extensions.  
   
 ## See Also  
- [Developer's Guide &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
+ [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
  [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

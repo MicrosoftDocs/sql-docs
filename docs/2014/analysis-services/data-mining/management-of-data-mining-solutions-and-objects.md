@@ -92,6 +92,6 @@ manager: "mblythe"
  **Restrictions:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] generates some XMLA statements that are supported for internal use only, and cannot be used in XML DDL scripts.  
   
 ## See Also  
- [Developer's Guide &#40;Analysis Services&#41;](../dev-guide/analysis-services-developer-documentation.md)  
+ [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

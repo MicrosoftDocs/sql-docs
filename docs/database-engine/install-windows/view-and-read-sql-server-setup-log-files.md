@@ -31,14 +31,14 @@ SQL Server Setup creates log files in a dated and time-stamped folder within **\
 
    | File           | Path |
    | :------        | :----------------------------- |
-   | Summary.txt    | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** |
-   | Summary_\<MachineName>\_Date.txt  | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss** |
-   | Detail.txt | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss**|
-   | Datastore | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore**
-   | MSI Log Files | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\<Name>.log**|
-   | ConfigurationFile.ini | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss** |
-   | SystemConfigurationCheck_Report.htm| **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss** |
-   | For unattended installations | **%temp%\sqlsetup*.log** |
+   | **Summary.txt**    | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** |
+   | **Summary_\<MachineName>\_Date.txt**  | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss** |
+   | **Detail.txt** | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss**|
+   | **Datastore** | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore**
+   | **MSI Log Files** | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\<Name>.log**|
+   | **ConfigurationFile.ini** | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss** |
+   | **SystemConfigurationCheck_Report.htm** | **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss** |
+   | **For unattended installations** | **%temp%\sqlsetup*.log** |
    | &nbsp; | &nbsp; |
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)

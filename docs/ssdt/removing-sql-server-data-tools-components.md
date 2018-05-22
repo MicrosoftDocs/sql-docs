@@ -3,16 +3,17 @@ title: "Removing SQL Server Data Tools Components | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f8ddb919-661f-4868-8c71-87c96f1f4487
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Removing SQL Server Data Tools Components
 Some SQL Server Data Tools (SSDT) components are not removed when you uninstall SSDT or Visual Studio.  

@@ -3,16 +3,17 @@ title: "Customize Database Build and Deployment by Using Build and Deployment Co
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Customize Database Build and Deployment by Using Build and Deployment Contributors
 Visual Studio provides extensibility points that you can use to modify the behavior of the build and deployment actions for database projects.  

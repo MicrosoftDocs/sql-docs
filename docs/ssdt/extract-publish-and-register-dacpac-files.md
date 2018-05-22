@@ -3,7 +3,8 @@ title: "Extract, Publish, and Register .dacpac Files | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,9 +17,9 @@ f1_keywords:
   - "sql.data.tools.DacExtractDialog"
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Extract, Publish, and Register .dacpac Files
 This topic describes four procedures that you can perform by right clicking a connected database in SQL Server Object Explorer:  

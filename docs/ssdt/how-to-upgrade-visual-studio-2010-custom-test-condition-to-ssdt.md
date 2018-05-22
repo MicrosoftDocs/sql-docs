@@ -3,16 +3,17 @@ title: "How to: Upgrade a Visual Studio 2010 Custom Test Condition from a Previo
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # How to: Upgrade a Visual Studio 2010 Custom Test Condition from a Previous Release to SQL Server Data Tools
 To use a test unit condition that you created in a version prior to SQL Server Data Tools, you must upgrade it:  

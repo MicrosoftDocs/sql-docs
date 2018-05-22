@@ -3,7 +3,8 @@ title: "Creating and Defining SQL Server Unit Tests | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,9 +14,9 @@ f1_keywords:
   - "sql.data.tools.unittesting.designer"
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Creating and Defining SQL Server Unit Tests
 You can run SQL Server unit tests to verify whether changes to one or more database objects in a schema have broken existing functionality in a database application. These tests complement the unit tests that your software developers create. You must run both kinds of tests to verify the behavior of your application.  

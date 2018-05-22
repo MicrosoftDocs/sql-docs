@@ -3,7 +3,8 @@ title: "How to: Work with CLR Database Objects | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,9 +13,9 @@ f1_keywords:
   - "sql.data.tools.allowsqlclrdebugging"
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # How to: Work with CLR Database Objects
 In addition to the Transact\-SQL programming language, you can use .NET Framework languages to create database objects that retrieve and update data. Database objects that are written in managed code are called SQL Server Common Language Run (CLR) database objects. For an explanation of the advantages of using CLR database objects hosted in SQL Server, as well as how to choose between Transact\-SQL and CLR, see [Advantages of CLR Integration](http://msdn.microsoft.com/en-us/library/ms131045.aspx) and [Advantages of Using Managed Code to Create Database Objects](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  

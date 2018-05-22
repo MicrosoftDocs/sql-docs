@@ -3,7 +3,8 @@ title: "Database Project Settings | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -40,9 +41,9 @@ f1_keywords:
   - "sql.data.tools.extendedpropertieseditor.dialog"
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Database Project Settings
 You use database project settings to control aspects of your database, debugging and build configurations. These settings fall into the following categories.  

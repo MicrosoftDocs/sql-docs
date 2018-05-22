@@ -3,7 +3,8 @@ title: "How to: View and Edit Data in a Table | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,9 +14,9 @@ f1_keywords:
   - "sql.data.tools.queryresults.executequerydeletingrow"
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # How to: View and Edit Data in a Table
 You can view, edit, and delete data in an existing table by using a visual Data Editor.  

@@ -3,16 +3,17 @@ title: "Troubleshooting SQL Server Database Unit Testing Issues | Microsoft Docs
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Troubleshooting SQL Server Database Unit Testing Issues
 You might encounter the issues in this topic when you work with SQL Server unit tests on a database:  

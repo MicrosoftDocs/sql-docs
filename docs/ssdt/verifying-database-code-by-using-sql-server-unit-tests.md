@@ -3,16 +3,17 @@ title: "Verifying Database Code by Using SQL Server Unit Tests | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Verifying Database Code by Using SQL Server Unit Tests
 You can use SQL Server unit tests to establish a baseline state for your database and then to verify any subsequent changes that you make to database objects.  

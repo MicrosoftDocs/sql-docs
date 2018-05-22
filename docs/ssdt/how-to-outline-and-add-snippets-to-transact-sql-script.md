@@ -3,16 +3,17 @@ title: "How to: Outline and Add Snippets to Transact-SQL Script | Microsoft Docs
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # How to: Outline and Add Snippets to Transact-SQL Script
 SQL Server Data Tools includes a code library consisting of code snippets that are ready to be inserted in your application. Each snippet performs a complete scripting task such as creating a function, table, trigger, index, view, user-defined data type, etc. You can insert a snippet into your source code with a few mouse clicks. These snippets increase your productivity by reducing the amount of time you spend typing.  

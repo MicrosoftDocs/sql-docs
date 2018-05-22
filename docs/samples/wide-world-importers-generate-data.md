@@ -36,7 +36,7 @@ To generate sample data up to the current date:
             @AreDatesPrinted = 1;
     ```
 
-    This statement adds sample sales and purchase data to the database, up to the current date. It displays the progress of the data generation by day. It can take about 10 minutes for every year that needs data. Because of a random factor in the data generation, there are some differences in the data generated between runs.
+    This statement adds sample sales and purchase data to the database, up to the current date. It displays the progress of the data generation by day. Data generation can take about 10 minutes for every year that needs data. Because of a random factor in the data generation, there are some differences in the data that's generated between runs.
 
     To increase or decrease the amount of data generated for orders per day, change the value for the parameter `@AverageNumberOfCustomerOrdersPerDay`. Use the parameters `@SaturdayPercentageOfNormalWorkDay` and `@SundayPercentageOfNormalWorkDay` to determine the order volume for weekend days.
 
@@ -44,7 +44,7 @@ To generate sample data up to the current date:
 
 To import sample data up to the current date in the WideWorldImportersDW OLAP database:
 
-1. Execute the data generation logic in the WideWorldImporters OLTP database using the steps in the preceding section.
+1. Execute the data generation logic in the WideWorldImporters OLTP database by using the steps in the preceding section.
 2. If you haven't yet done so, install a clean version of the WideWorldImportersDW database. For installation instructions, see [Installation and configuration](wide-world-importers-oltp-install-configure.md).
 3. Reseed the OLAP database by executing the following statement in the database:
 
@@ -52,7 +52,7 @@ To import sample data up to the current date in the WideWorldImportersDW OLAP da
     EXECUTE [Application].Configuration_ReseedETL
     ```
 
-4. Run the *Daily ETL.ispac* SSIS package to import the data into the OLAP database. To learn how to run the ETL job, see [WideWorldImporters ETL workflow](wide-world-importers-perform-etl.md).
+4. Run the *Daily ETL.ispac* SQL Server Integration Services package to import the data into the OLAP database. To learn how to run the ETL job, see [WideWorldImporters ETL workflow](wide-world-importers-perform-etl.md).
 
 ## Generate data in WideWorldImportersDW for performance testing
 
@@ -60,7 +60,7 @@ WideWorldImportersDW can arbitrarily increase data size for performance testing.
 
 One of the challenges is to keep the size of the download small enough to download easily, but large enough to demonstrate SQL Server performance features. For example, significant benefits for columnstore indexes are achieved only when you work with larger numbers of rows. 
 
-You can use the `Application.Configuration_PopulateLargeSaleTable` procedure to increase the number of rows in the `Fact.Sale` table. The rows are inserted in the 2012 calendar year to avoid colliding with existing World Wide Importers data that begins at January 1, 2013.
+You can use the `Application.Configuration_PopulateLargeSaleTable` procedure to increase the number of rows in the `Fact.Sale` table. The rows are inserted in the 2012 calendar year to avoid colliding with existing World Wide Importers data that begins January 1, 2013.
 
 ### Procedure details
 

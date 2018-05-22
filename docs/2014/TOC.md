@@ -12,7 +12,7 @@
 # [Developer Reference for SQL Server 2014](developer-reference-for-sql-server-2014.md)
 ## [Developer's Guide (Analysis Services) +](analysis-services/dev-guide/data-mining-programming.md)
 ## [Developer's Guide (Database Engine) +?](database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)
-## [Developer's Guide (Integration Services) ++](integration-services/dev-guide/TOC.md)
+## [Developer's Guide (Integration Services) +](integration-services/integration-services-developer-documentation.md)
 ## [Developer's Guide (Master Data Services)](master-data-services/develop/master-data-services-developer-documentation.md)
 ## [Developer's Guide (Replication)](relational-databases/replication/concepts/replication-developer-documentation.md)
 ## [Developer's Guide (Reporting Services) ++](reporting-services/dev-guide/TOC.md)

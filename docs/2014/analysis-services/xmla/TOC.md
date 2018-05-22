@@ -1,5 +1,5 @@
 # [XMLA Reference](xml-for-analysis-xmla-reference.md)
-# [XML Elements (XMLA)](xml-elements-xmla.md)
+# [XML Elements (XMLA)](../dev-guide/xml-elements-xmla.md)
 ## [Headers](xml-elements-headers/xml-elements-headers.md)
 ### [BeginSession Element](xml-elements-headers/beginsession-element-xmla.md)
 ### [EndSession Element](xml-elements-headers/endsession-element-xmla.md)

@@ -32,7 +32,7 @@
 ## [DISCOVER_TRACE_EVENT_CATEGORIES Rowset](xml/discover-trace-event-categories-rowset.md)
 ## [DISCOVER_TRACES Rowset](xml/discover-traces-rowset.md)
 ## [DISCOVER_TRANSACTIONS Rowset](xml/discover-transactions-rowset.md)
-## [DISCOVER_XEVENT_TRACE_DEFINITION Rowset](discover-xevent-trace-definition-rowset.md)
+## [DISCOVER_XEVENT_TRACE_DEFINITION Rowset](../dev-guide/discover-xevent-trace-definition-rowset.md)
 ## [DISCOVER_XML_METADATA Rowset](xml/discover-xml-metadata-rowset.md)
 # [OLE DB Schema Rowsets](ole-db/ole-db-schema-rowsets.md)
 ## [DBSCHEMA_CATALOGS Rowset](ole-db/dbschema-catalogs-rowset.md)

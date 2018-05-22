@@ -15,7 +15,7 @@
 ## [Developer's Guide (Integration Services) +](integration-services/integration-services-developer-documentation.md)
 ## [Developer's Guide (Master Data Services)](master-data-services/develop/master-data-services-developer-documentation.md)
 ## [Developer's Guide (Replication)](relational-databases/replication/concepts/replication-developer-documentation.md)
-## [Developer's Guide (Reporting Services) ++](reporting-services/dev-guide/TOC.md)
+## [Developer's Guide (Reporting Services) ++](reporting-services/reporting-services-developer-documentation.md)
 # [Installation for SQL Server 2014 +](sql-server/install/planning-a-sql-server-installation.md)
 # [Setup and Servicing Installation](sql-server/install/setup-and-servicing-installation.md)
 # [Upgrade Advisor](sql-server/install/sql-server-2014-upgrade-advisor.md)

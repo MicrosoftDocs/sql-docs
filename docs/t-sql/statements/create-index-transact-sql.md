@@ -1029,3 +1029,4 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
  
 
+---

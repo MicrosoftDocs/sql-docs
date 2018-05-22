@@ -468,11 +468,6 @@ GO
  [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)   
  [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)  
   
-
-
-  
-
-
 # [SQL Parallel Data Warehouse](#tab/sqlpdw)
   
 ## Syntax for Parallel Data Warehouse 
@@ -490,9 +485,6 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
     | CHECK_POLICY = { ON | OFF}  
 ```  
 
----
-
-  
 ## Arguments  
 *login_name*  
 Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](http://msdn.microsoft.com/library/ms175874.aspx) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of less than 21 characters. 
@@ -583,4 +575,4 @@ GO
  [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)   
  [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)  
   
-  
+---  

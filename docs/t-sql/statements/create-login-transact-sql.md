@@ -126,15 +126,15 @@ Specifies the name of an asymmetric key to be associated with this login. This k
 - Passwords are case-sensitive.
 - Prehashing of passwords is supported only when you are creating SQL Server logins.
 - If MUST_CHANGE is specified, CHECK_EXPIRATION and CHECK_POLICY must be set to ON. Otherwise, the statement will fail.
--  A combination of CHECK_POLICY = OFF and CHECK_EXPIRATION = ON is not supported.
--  When CHECK_POLICY is set to OFF, *lockout_time* is reset and CHECK_EXPIRATION is set to OFF.  
+- A combination of CHECK_POLICY = OFF and CHECK_EXPIRATION = ON is not supported.
+- When CHECK_POLICY is set to OFF, *lockout_time* is reset and CHECK_EXPIRATION is set to OFF.  
   
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION and CHECK_POLICY are only enforced on Windows Server 2003 and later. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
 - Logins created from certificates or asymmetric keys are used only for code signing. They cannot be used to connect to SQL Server. You can create a login from a certificate or asymmetric key only when the certificate or asymmetric key already exists in master. 
--  For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
--  Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.  
+- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.  
 - The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
 - For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
@@ -247,7 +247,7 @@ GO
   
 # [SQL Database](#tab/sqldb)
   
-## Syntax  
+## Syntax for SQL Database single and pooled databases
   
 ```sql  
 -- Syntax for Azure SQL Database  
@@ -258,7 +258,7 @@ CREATE LOGIN login_name
     PASSWORD = { 'password' }  
     [ SID = sid ]  
 ```  
-
+## Syntax for SQL Database Managed Instance
 
 ```sql
 -- Syntax for Azure SQL Database Managed Instance (preview)
@@ -274,17 +274,15 @@ CREATE LOGIN login_name { WITH <option_list> }
   
 ## Arguments  
 *login_name*  
-Specifies the name of the login that is created. Azure SQL Database supports two types of logins: SQL Server logins, Active Directory logins. 
+Specifies the name of the login that is created. Azure SQL Database supports only SQL logins. 
 
-- With Azure SQL Database, you can configure one Azure Active Directory account, either an individual or security group account, to be configured as an administrator. This account is automatically configured for you as an Active Directory login.
-
-PASSWORD **='***password***'**  
-Applies to SQL Server logins only. Specifies the password for the login that is being created. You should use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
+PASSWORD **='**password**'*  
+Specifies the password for the SQL login that is being created. You should use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
   
 Passwords are case-sensitive. Passwords should always be at least 8 characters long, and cannot exceed 128 characters.  Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.  
 
- SID = *sid*  
- Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
+SID = *sid*  
+Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
   
 ## Remarks  
 - Passwords are case-sensitive.
@@ -321,13 +319,10 @@ Only the server-level principal login (created by the provisioning process) or m
 ## After creating a login  
 After creating a login, the login can connect to SQL Database but only has the permissions granted to the **public** role. Consider performing some of the following activities.  
   
-- To connect to a database, create a database user for the login. For more information, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- To grant permissions to a user in a database, use the **ALTER SERVER ROLE** … **ADD MEMBER** statement to add the use to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](grant-transact-sql.md) statement. For more information, see [Non-admistrator Roles](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, and [GRANT](grant-transact-sql) statement.
+- To connect to a database, create a database user for the login in that database. For more information, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
+- To grant permissions to a user in a database, use the **ALTER SERVER ROLE** … **ADD MEMBER** statement to add the use to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT]((../../t-sql/statements/grant-transact-sql.md)) statement. For more information, see [Non-admistrator Roles](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, and [GRANT](grant-transact-sql) statement.
 - To grant server-wide permissions, create a database user in the master database and use the **ALTER SERVER ROLE** … **ADD MEMBER** statement to add the use to one of the administrative server roles. For more information, see [Server-Level Roles](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
- 
-  
- 
- - Use the **GRANT** statement, to grant server-level permissions to the new login or to a role containing the login. For more information, see [GRANT](../../t-sql/statements/grant-transact-sql.md).  
+- Use the **GRANT** statement, to grant server-level permissions to the new login or to a role containing the login. For more information, see [GRANT](../../t-sql/statements/grant-transact-sql.md).  
   
 ## Examples  
   
@@ -387,12 +382,10 @@ CREATE LOGIN login_name
   
 ## Arguments  
 *login_name*  
-Specifies the name of the login that is created. Azure SQL Data Warehouse supports two types of logins: SQL Server logins, Active Directory logins. 
+Specifies the name of the login that is created. Azure SQL Database supports only SQL logins. 
 
-- With Azure SQL Data Warehouse, you can configure one Azure Active Directory account, either an individual or security group account, to be configured as an administrator. This account is automatically configured for you as an Active Directory login.
-
-PASSWORD **='***password***'**  
-Applies to SQL Server logins only. Specifies the password for the login that is being created. You should use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
+PASSWORD **='**password**'*  
+Specifies the password for the SQL login that is being created. You should use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
   
 Passwords are case-sensitive. Passwords should always be at least 8 characters long, and cannot exceed 128 characters.  Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.  
 
@@ -428,7 +421,7 @@ Only the server-level principal login (created by the provisioning process) or m
 After creating a login, the login can connect to SQL Data Warehouse but only has the permissions granted to the **public** role. Consider performing some of the following activities.  
   
 - To connect to a database, create a database user for the login. For more information, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- To grant permissions to a user in a database, use the **ALTER SERVER ROLE** … **ADD MEMBER** statement to add the use to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](grant-transact-sql.md) statement. For more information, see [Non-admistrator Roles](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, and [GRANT](grant-transact-sql) statement.
+- To grant permissions to a user in a database, use the **ALTER SERVER ROLE** … **ADD MEMBER** statement to add the use to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT]((../../t-sql/statements/grant-transact-sql.md)) statement. For more information, see [Non-admistrator Roles](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, and [GRANT](grant-transact-sql) statement.
 - To grant server-wide permissions, create a database user in the master database and use the **ALTER SERVER ROLE** … **ADD MEMBER** statement to add the use to one of the administrative server roles. For more information, see [Server-Level Roles](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
 - Use the **GRANT** statement, to grant server-level permissions to the new login or to a role containing the login. For more information, see [GRANT](../../t-sql/statements/grant-transact-sql.md).  
   
@@ -528,14 +521,14 @@ Specifies that the login be mapped to a Windows login.
 ## Remarks  
 - Passwords are case-sensitive.
 - If MUST_CHANGE is specified, CHECK_EXPIRATION and CHECK_POLICY must be set to ON. Otherwise, the statement will fail.
--  A combination of CHECK_POLICY = OFF and CHECK_EXPIRATION = ON is not supported.
--  When CHECK_POLICY is set to OFF, *lockout_time* is reset and CHECK_EXPIRATION is set to OFF.  
+- A combination of CHECK_POLICY = OFF and CHECK_EXPIRATION = ON is not supported.
+- When CHECK_POLICY is set to OFF, *lockout_time* is reset and CHECK_EXPIRATION is set to OFF.  
   
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION and CHECK_POLICY are only enforced on Windows Server 2003 and later. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
--  For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
--  Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.  
+- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.  
 - For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 ## Permissions  

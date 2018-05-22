@@ -20,7 +20,7 @@ manager: "erikre"
 # Analysis Services Language Reference
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [Data Analysis Expressions (DAX) Reference](http://msdn.microsoft.com/en-us/70a82136-0926-4a91-bcb3-e18e82593b0d)  
+  [Data Analysis Expressions (DAX) Reference](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)  
   
  [Multidimensional Expressions &#40;MDX&#41; Reference](../mdx/multidimensional-expressions-mdx-reference.md)  
   

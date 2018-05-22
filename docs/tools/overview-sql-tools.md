@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/22/2018"

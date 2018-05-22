@@ -756,8 +756,8 @@ The following functionality is disabled for resumable index create operations
 - After a resumable online index create operation is paused, the initial value of MAXDOP cannot be changed
 - DROP EXISTING clause is not supported
 - Create an index that contains 
-- Computed or TIMESTAMP column(s) as key columns
-- LOB column as included column for resumable index create
+ - Computed or TIMESTAMP column(s) as key columns
+ - LOB column as included column for resumable index create
  
 ## Row and Page Locks Options  
  When ALLOW_ROW_LOCKS = ON and ALLOW_PAGE_LOCK = ON, row-, page-, and table-level locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock.  

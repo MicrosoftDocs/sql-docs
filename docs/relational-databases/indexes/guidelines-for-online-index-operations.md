@@ -103,7 +103,7 @@ When you perform resumable online index create or rebuild, the following guideli
 
 Generally, there is no performance difference between resumable and non-resumable online index rebuild. For create resumable index, there is a constant overhead that causes a small performance difference between resumable and non-resumable index create. This difference is mostly noticeable only for smaller tables.
 
-When you update a resumable index while an index rebuild operation is paused:
+When you update a resumable index while an index operation is paused:
 - For read-mostly workloads, the performance impact is insignificant. 
 - For update-heavy workloads, you may experience some throughput degradation (our testing shows less than 10% degradation).
 

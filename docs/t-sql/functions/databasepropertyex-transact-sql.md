@@ -98,7 +98,7 @@ An expression specifying the name of the database property to return. *property*
 <br/>   
 
 > [!NOTE]  
-> <sup>1</sup> For databases that are part of an Availability Group, `LastGoodCheckDbTime` will return the date and time of the last successful DBCC CHECKDB that ran on the primary replica, regardless of which replica you run the command from.
+> <sup>1</sup> For databases that are part of an Availability Group, `LastGoodCheckDbTime` will return the date and time of the last successful DBCC CHECKDB that ran on the primary replica, regardless of which replica you run the command from. 
 
 ## Return types
 **sql_variant**

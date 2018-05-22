@@ -37,12 +37,8 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 Creates a login for SQL Server, SQL Database, SQL Data Warehouse, or Parallel Data Warehouse databases. Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
 
-- [SQL Server](../../t-sql/statements/create-login-transact-sql.md?view=sqlallproducts-allversions&tabs=sqlserver)
-- [SQL Database](../../t-sql/statements/create-login-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldb)
-- [SQL Data Warehouse](../../t-sql/statements/create-login-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldw)
-- [Parallel Data Warehouse](../../t-sql/statements/create-login-transact-sql.md?view=sqlallproducts-allversions&tabs=sqlpdw)
-
-For more information about the syntax conventions, see ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+For more information about the syntax conventions, see ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+ 
 # [SQL Server](#tab/sqlserver)
   
 ## Syntax 

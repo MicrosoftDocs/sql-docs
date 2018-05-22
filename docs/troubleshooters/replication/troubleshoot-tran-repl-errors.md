@@ -45,7 +45,7 @@ Errors can occur in any step of this process. Finding those errors can be the mo
 1. Use Replication Monitor to identify at which point replication is encountering the error (which agent?):
     - If errors are occurring in the **Publisher to Distributor** section, the issue is with the Log Reader Agent. 
     - If errors are occurring in the **Distributor to Subscriber** section, the issue is with the Distribution Agent.  
-2. Look through that agent's job history  in Job Activity Monitor to identify details of the error. If the job history is not showing sufficient details, you can [enable verbose logging](#enable-verbose-logging) on that specific agent.
+2. Look through that agent's job history in Job Activity Monitor to identify details of the error. If the job history is not showing enough details, you can [enable verbose logging](#enable-verbose-logging) on that specific agent.
 3. Try to determine a solution for the error.
 
 
@@ -77,7 +77,7 @@ The Snapshot Agent is the agent that generates the snapshot and writes it to the
         The replication agent had encountered an exception.
         Exception Message: Access to path '\\node1\repldata.....' is denied.
 
-If your Windows permissions are not configured correctly for your snapshot folder, you'll see an "access is denied" error for the Snapshot Agent. You'll need to verify permissions to the folder where your snapshot is stored. Also make sure that the account that's used to run the Snapshot Agent has adequate permissions to access the share.  
+If your Windows permissions are not configured correctly for your snapshot folder, you'll see an "access is denied" error for the Snapshot Agent. You'll need to verify permissions to the folder where your snapshot is stored. Also make sure that the account that's used to run the Snapshot Agent has permissions to access the share.  
 
 ## Find errors by using the Log Reader Agent
 The Log Reader Agent connects to your publisher database and scans the transaction log for any transactions that are marked "for replication." It then adds those transactions to the distribution database. 

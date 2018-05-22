@@ -19,7 +19,7 @@ Use the *WWI_Integration* ETL package to migrate data from the WideWorldImporter
 
 The package ensures high performance by using SQL Server Integration Services to orchestrate bulk T-SQL operations (instead of separate transformations in Integration Services).
 
-Dimensions are loaded first, and then Fact tables. You can rerun the package any time after a failure.
+Dimensions are loaded first, and then Fact tables are loaded. You can rerun the package any time after a failure.
 
 The workflow looks like this:
 

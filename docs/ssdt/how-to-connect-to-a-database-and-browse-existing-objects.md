@@ -3,7 +3,8 @@ title: "How to: Connect to a Database and Browse Existing Objects | Microsoft Do
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,9 +13,9 @@ f1_keywords:
   - "sql.data.tools.connectionpicker.f1"
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # How to: Connect to a Database and Browse Existing Objects
 A very common task for database administrators and developers is to connect to a live database, design or browse its schema and query against its objects. The SQL Server Object Explorer in Visual Studio now contains a dedicated **SQL Server** node, under which all connected SQL Server instances and their databases are grouped in an SSMS-like hierarchy. The connected SQL Server instances can be an on-premise one, such as running SQL Server 2008 or an off-premise SQL Azure instance.  

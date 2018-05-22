@@ -3,16 +3,17 @@ title: "How to: Use Microsoft SQL Server 2012 Objects in Your Project | Microsof
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # How to: Use Microsoft SQL Server 2012 Objects in Your Project
 In this example, you will add a sequence object to a database project targeting Microsoft SQL Server 2012.  

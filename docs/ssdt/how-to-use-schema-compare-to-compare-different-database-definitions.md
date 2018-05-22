@@ -3,7 +3,8 @@ title: "How to: Use Schema Compare to Compare Different Database Definitions | M
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,9 +17,9 @@ f1_keywords:
   - "sql.data.tools.schemacompare.connectiondialog.error.f1"
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # How to: Use Schema Compare to Compare Different Database Definitions
 SQL Server Data Tools (SSDT) includes a Schema Compare utility that you can use to compare two database definitions.  The source and target of the comparison can be any combination of connected database, SQL Server database project or snapshot or .dacpac file.  The results of the comparison appear as a set of actions that must be taken with the target to make it the same as the source.  Once the comparison is complete you can update the target directly (if the target is a project or a database) or generate an update script that has the same effect.  

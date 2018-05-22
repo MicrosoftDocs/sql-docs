@@ -3,16 +3,17 @@ title: "Scripts in SQL Server Unit Tests | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Scripts in SQL Server Unit Tests
 Each SQL Server unit test contains a single pre-test action, test action, and post-test action. Each of these actions in turn contains the following:  

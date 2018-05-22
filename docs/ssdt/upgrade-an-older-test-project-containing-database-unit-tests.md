@@ -3,16 +3,17 @@ title: "Upgrade an Older Test Project Containing Database Unit Tests | Microsoft
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Upgrade an Older Test Project Containing Database Unit Tests
 You can upgrade an older test project, which was created in Visual Studio 2010 and that contains database unit tests, to use the new SQL Server Data Tools database unit testing runtime and tools. Once you have upgraded an older project you can add SQL Server unit tests to the project (see [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md) for more information.  

@@ -3,7 +3,8 @@ title: "Overview of Extensibility for Database Code Analysis Rules | Microsoft D
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,9 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Overview of Extensibility for Database Code Analysis Rules
 Visual Studio editions containing SQL Server Data Tools include code analysis rules to report on Transact\-SQL design, naming, and performance warnings in your database code. For more information, see [Analyzing Database Code to Improve Code Quality](http://msdn.microsoft.com/en-us/library/dd172133(v=vs.100).aspx).  

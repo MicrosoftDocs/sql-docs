@@ -3,7 +3,8 @@ title: "How to: Create a Snapshot of a Project | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,9 +14,9 @@ f1_keywords:
   - "sql.data.tools.SqlProjectImportSnapshotDialog.dialog"
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # How to: Create a Snapshot of a Project
 A **Data-tier Application** file provides you with a read-only representation of the database schema at the time it is created. It is essentially being treated as a database schema from which you can import the schema objects back to a project. You can also compare it with the schema of a database or a project, and update the database or project to reflect the schema defined in the snapshot.  

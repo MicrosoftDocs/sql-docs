@@ -3,16 +3,17 @@ title: "Walkthrough: Extend Database Project Build to Generate Model Statistics 
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Walkthrough: Extend Database Project Build to Generate Model Statistics
 You can create a build contributor to perform custom actions when you build a database project. In this walkthrough, you create a build contributor named ModelStatistics that outputs statistics from the SQL database model when you build a database project. Because this build contributor takes parameters when you build, some additional steps are required.  

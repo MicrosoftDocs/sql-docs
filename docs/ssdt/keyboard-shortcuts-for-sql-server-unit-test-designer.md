@@ -3,16 +3,17 @@ title: "Keyboard Shortcuts for SQL Server Unit Test Designer | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Keyboard Shortcuts for SQL Server Unit Test Designer
 You can use the following keyboard shortcuts to navigate within the SQL Server Unit Test Designer.  

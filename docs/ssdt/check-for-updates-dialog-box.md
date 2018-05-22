@@ -3,7 +3,8 @@ title: "Check for Updates Dialog Box | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,9 +13,9 @@ f1_keywords:
   - "sql.data.tools.checkforupdates.dialog"
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Check for Updates Dialog Box
 Beginning in the November 2012 release of SQL Server Data Tools, you see a **Check for Updates** menu option under the **SQL** menu.  

@@ -3,7 +3,8 @@ title: "Add Database Reference Dialog Box | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,9 +13,9 @@ f1_keywords:
   - "sql.data.tools.adddatabasereference.dialog"
 ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Add Database Reference Dialog Box
 This topic describes the procedures you can perform in the **Add Database Reference** dialog box.  

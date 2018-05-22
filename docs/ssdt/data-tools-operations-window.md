@@ -3,7 +3,8 @@ title: "Data Tools Operations Window | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,9 +13,9 @@ f1_keywords:
   - "sql.data.tools.datatoolsoperations"
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Data Tools Operations Window
 The **Data Tools Operations**  window shows the progress of some operations discussed in this topic, and notifies you of any errors.  

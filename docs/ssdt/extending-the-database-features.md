@@ -3,16 +3,17 @@ title: "Extending the Database Features | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
 caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Extending the Database Features
 You can create feature extensions that let you extend features such as unit testing, and database code analysis. For more information, see the following topics:  

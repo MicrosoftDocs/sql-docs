@@ -3,7 +3,8 @@ title: "How to: Create Database Objects Using Table Designer | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,9 +14,9 @@ f1_keywords:
   - "sql.data.tools.design.table.context.view"
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # How to: Create Database Objects Using Table Designer
 Not only is the new **SQL Server** node in **SQL Server Object Explorer** very similar to SSMS visually, but you can create new objects using contextual menus that function like their SSMS-counterparts.  

@@ -3,7 +3,8 @@ title: "Analyze Script Performance | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,9 +13,9 @@ f1_keywords:
   - "sql.data.tools.codeanalysis.configuring"
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Analyze Script Performance
 You can use the tools provided by SQL Server Data Tools to determine whether you can improve the performance of your query, stored procedures, or scripts. For example, by monitoring client statistics such as the response times for frequently used queries, you can determine whether changes to the query or indexes on the tables are required. Such statistics can include client execution time, query profile, and packets/bytes sent and received.  

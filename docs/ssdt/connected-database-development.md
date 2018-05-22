@@ -3,7 +3,8 @@ title: "Connected Database Development | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,9 +13,9 @@ f1_keywords:
   - "SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER"
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Connected Database Development
 This section describes features provided by SQL Server Data Tools for designing and querying a connected database.  

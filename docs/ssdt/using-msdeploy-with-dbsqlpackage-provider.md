@@ -3,16 +3,17 @@ title: "Using MSDeploy with dbSqlPackage Provider | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "04/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Using MSDeploy with dbSqlPackage Provider
 **DbSqlPackage** is an **MSDeploy** provider that allows you interact with SQL Server/SQL Azure databases. **DbSqlPackage** supports the following actions:  

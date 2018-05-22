@@ -3,16 +3,17 @@ title: "SQL Server Unit Test Files | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # SQL Server Unit Test Files
 Like the unit tests for managed code, SQL Server unit tests reside in test projects. You can see the items that compose a SQL Server unit test in the hierarchy of a test project in **Solution Explorer**.  

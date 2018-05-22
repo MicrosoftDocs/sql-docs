@@ -3,16 +3,17 @@ title: "Using Transact-SQL Assertions in SQL Server Unit Tests | Microsoft Docs"
 ms.custom: 
   - "SSDT"
 ms.date: "02/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
+ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
 # Using Transact-SQL Assertions in SQL Server Unit Tests
 In a SQL Server unit test, a Transact\-SQL test script runs and returns a result. Sometimes, the results are returned as a results set. You can validate results by using test conditions. For example, you can use a test condition to check how many rows were returned in a specific result set or to verify how long a particular test took to run. For more information about test conditions, see [Using Test Conditions in SQL Server Unit Tests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  

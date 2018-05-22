@@ -257,37 +257,6 @@ Alternatively, this is more work, but you could also fully uninstall and reinsta
 
 You might have added other open-source or third-party packages to your package library. Since reversing the binding switches the location of the default package library, you must reinstall the packages to the library that R and Python are now using. For more information, see [Default packages](installing-and-managing-r-packages.md), [Install new R packages](install-additional-r-packages-on-sql-server.md), and [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md).
 
-## Known issues
-
-This section lists known issues specific to use of the SqlBindR.exe utility, or to upgrades of Machine Learning Server that might affect SQL Server instances.
-
-### Restoring packages that were previously installed
-
-If you upgraded to Microsoft R Server 9.0.1, the version of SqlBindR.exe for that version failed to restore the original packages or R components completely, requiring that the user run SQL Server repair on the instance, apply all service releases, and then restart the instance.
-
-Later version of SqlBindR automatically restore the original R features, eliminating the need for reinstallation of R components or re-patch the server. However, you must install any R package updates that might have been added after the initial installation.
-
-If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
-
-### Problems with multiple upgrades from SQL Server
-
-If you have previously upgraded an instance of SQL Server 2016 R Services to 9.0.1, when you run the new installer for Microsoft R Server 9.1.0, it displays a list of all valid instances, and then by default selects previously bound instances. If you continue, the previously bound instances are unbound. As a result, the earlier 9.0.1 installation is removed, including any related packages, but the new version of Microsoft R Server (9.1.0) is not installed.
-
-As a workaround, you can modify the existing R Server installation as follows:
-1. In Control Panel, open **Add or Remove Programs**.
-2. Locate Microsoft R Server, and click **Change/Modify**.
-3. When the installer starts, select the instances you want to bind to 9.1.0.
-
-Microsoft Machine Learning Server 9.2.1 and 9.3 do not have this issue.
-
-### Binding or unbinding leaves multiple temporary folders
-
-Sometimes the binding and unbinding operations fail to clean up temporary folders.
-If you find folders with a name like this, you can remove it after installation is complete: R_SERVICES_<guid>
-
-> [!NOTE]
-> Be sure to wait until installation is complete. It can take a long time to remove R libraries associated with one version and then add the new R libraries. When the operation completes, temporary folders are removed.
-
 ## SqlBindR.exe command syntax
 
 ### Usage
@@ -321,6 +290,36 @@ MLS Installer and SqlBindR both return the following error codes and messages.
 |Bind error 8 | Unbind failed | An error occurred while unbinding the instance. |
 |Bind error 9 | No instances found | No database engine instances were found on this computer. |
 
+## Known issues
+
+This section lists known issues specific to use of the SqlBindR.exe utility, or to upgrades of Machine Learning Server that might affect SQL Server instances.
+
+### Restoring packages that were previously installed
+
+If you upgraded to Microsoft R Server 9.0.1, the version of SqlBindR.exe for that version failed to restore the original packages or R components completely, requiring that the user run SQL Server repair on the instance, apply all service releases, and then restart the instance.
+
+Later version of SqlBindR automatically restore the original R features, eliminating the need for reinstallation of R components or re-patch the server. However, you must install any R package updates that might have been added after the initial installation.
+
+If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
+
+### Problems with multiple upgrades from SQL Server
+
+If you have previously upgraded an instance of SQL Server 2016 R Services to 9.0.1, when you run the new installer for Microsoft R Server 9.1.0, it displays a list of all valid instances, and then by default selects previously bound instances. If you continue, the previously bound instances are unbound. As a result, the earlier 9.0.1 installation is removed, including any related packages, but the new version of Microsoft R Server (9.1.0) is not installed.
+
+As a workaround, you can modify the existing R Server installation as follows:
+1. In Control Panel, open **Add or Remove Programs**.
+2. Locate Microsoft R Server, and click **Change/Modify**.
+3. When the installer starts, select the instances you want to bind to 9.1.0.
+
+Microsoft Machine Learning Server 9.2.1 and 9.3 do not have this issue.
+
+### Binding or unbinding leaves multiple temporary folders
+
+Sometimes the binding and unbinding operations fail to clean up temporary folders.
+If you find folders with a name like this, you can remove it after installation is complete: R_SERVICES_<guid>
+
+> [!NOTE]
+> Be sure to wait until installation is complete. It can take a long time to remove R libraries associated with one version and then add the new R libraries. When the operation completes, temporary folders are removed.
 
 ## See also
 

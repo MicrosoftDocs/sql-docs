@@ -1,7 +1,7 @@
 ---
 title: "Configure availability group for distributed transactions | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2017"
+ms.date: "05/22/2018"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -29,7 +29,7 @@ manager: craigg
 In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] also supports distributed transactions, however support in [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] is limited. In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] a distributed transaction with a database in an availability group is not supported if it includes more than one database on the same server. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 and later provides full support for distributed transactions in availability groups. In [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] versions prior to Service Pack 2, cross-database distributed transactions (i.e. transaction using databases on the same SQL Server instance) involving a database in an availability group are not supported. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 
 >
 >In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] the configuration steps are the same as in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -51,7 +51,7 @@ Configure an availability group to support distributed transactions. Set the ava
 
 You can create an availability group for distributed transactions on  [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] or later. To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The following script creates an availability group for distributed transactions. 
 
-```transact-sql
+```sql
 CREATE AVAILABILITY GROUP MyAG
    WITH (
       DTC_SUPPORT = PER_DB  
@@ -77,7 +77,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 You can alter an availability group for distributed transactions on [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] or later. To alter an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the `ALTER AVAILABILITY GROUP` script. The example script changes the availability group to support distributed transactions. 
 
-```transact-sql
+```sql
 ALTER AVAILABILITY GROUP MyaAG
    SET (
       DTC_SUPPORT = PER_DB  
@@ -162,19 +162,19 @@ Run only one of the following scripts:
 
    * To commit the transaction, update and run the following script - replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
-      ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
+   ```
 
    * To roll back the transaction, update and run the following script - replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
-     ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
+   ```
 
 After you commit or roll back the transaction, you can use `ALTER DATABASE` to set the database online. Update and run the following script - set the database name for the name of the suspect database:
 
-   ```transact-sql
+   ```sql
    ALTER DATABASE [DB1] SET ONLINE
    ```
 

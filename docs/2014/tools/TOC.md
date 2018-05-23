@@ -11,9 +11,9 @@
 ## [sqllogship Application](sqllogship-application.md)
 ## [sqlps Utility](sqlps-utility.md)
 ## [sqlservr Application](sqlservr-application.md)
-## [ssbdiagnose Utility (Service Broker) +](ssbdiagnose/ssbdiagnose-utility-service-broker.md) +
+## [ssbdiagnose Utility (Service Broker) +](ssbdiagnose/ssbdiagnose-utility-service-broker.md)
 ## [tablediff Utility](tablediff-utility.md)
-# [SQL Server Configuration Manager Help +](tools/configuration-manager/sql-server-configuration-manager-help.md)
+# [SQL Server Configuration Manager Help +](configuration-manager/sql-server-configuration-manager-help.md)
 # [SQL Server Distributed Replay +](distributed-replay/sql-server-distributed-replay.md)
 # [SQL Server Profiler +](sql-server-profiler/sql-server-profiler.md)
 

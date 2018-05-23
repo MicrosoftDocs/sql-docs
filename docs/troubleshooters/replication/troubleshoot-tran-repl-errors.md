@@ -19,7 +19,7 @@ manager: craigg
 
 
 # Troubleshooter: Find errors by using SQL Server transactional replication 
-Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step to creating a publication is having the Snapshot Agent create the snapshot and save it to the snapshot folder. Next, the Distribution Agent applies the snapshot to the subscriber. 
+Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step in creating a publication is having the Snapshot Agent create the snapshot and save it to the snapshot folder. Next, the Distribution Agent applies the snapshot to the subscriber. 
 
 This process creates the publication and puts it in the *synchronizing* state. Synchronization works in three phases:
 1. Transactions occur on objects that are replicated, and are marked "for replication" in the transaction log. 
@@ -43,14 +43,14 @@ Errors can occur in any step of this process. Finding those errors can be the mo
 
 ### Steps to take
 1. Use Replication Monitor to identify at which point replication is encountering the error (which agent?):
-    - If errors are occurring in the **Publisher to Distributor** section, the issue is with the Log Reader Agent. 
-    - If errors are occurring in the **Distributor to Subscriber** section, the issue is with the Distribution Agent.  
+   - If errors are occurring in the **Publisher to Distributor** section, the issue is with the Log Reader Agent. 
+   - If errors are occurring in the **Distributor to Subscriber** section, the issue is with the Distribution Agent.  
 2. Look through that agent's job history in Job Activity Monitor to identify details of the error. If the job history is not showing enough details, you can [enable verbose logging](#enable-verbose-logging) on that specific agent.
 3. Try to determine a solution for the error.
 
 
 ## Find errors by using the Snapshot Agent
-The Snapshot Agent is the agent that generates the snapshot and writes it to the specified snapshot folder. 
+The Snapshot Agent generates the snapshot and writes it to the specified snapshot folder. 
 
 1. View the status of your Snapshot Agent:
 

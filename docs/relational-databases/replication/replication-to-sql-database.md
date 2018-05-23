@@ -1,7 +1,7 @@
 ﻿---
 title: "Replication to SQL Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/24/2016"
+ms.date: "6/7/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "replication"
@@ -25,7 +25,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[Azure SQL Database Managed Instance](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) (preview) supports transactional and snapshot replication. SQL Databases in a Managed Instance can participate in any replication role - publisher, distributor, or subscriber. Databases participating in replication can be hosted in an instance of SQL Server on-premises or on in the cloud with a Managed Instance. 
+[Azure SQL Database Managed Instance](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) (preview) supports transactional and snapshot replication. SQL Databases on Managed Instance can participate in any replication role - publisher, distributor, or subscriber. Databases participating in replication can be hosted in an instance of SQL Server on-premises or on in the cloud with a Managed Instance. 
 
 Supported topologies include:
 
@@ -37,8 +37,8 @@ In any scenario, a replication topology can include a mix of on-premises and clo
 
 ## Requirements
 
-- Publisher and distributor databases on Azure SQL Database must be on a Managed Instance
-- To configure publisher or dististributor databases on Azure SQL Databases, use Transact-SQL
+- Publisher and distributor databases on Azure SQL Database must be on Managed Instance
+- To configure publisher or distributor databases on Azure SQL Databases, use Transact-SQL
 - All instances of SQL Server must be on the same virtual network
 - Databases on Azure SQL Database Managed Instance use SQL Authentication
 

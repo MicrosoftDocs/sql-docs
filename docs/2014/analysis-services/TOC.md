@@ -158,6 +158,9 @@
 #### [UI Wizards for Data Mining Analysis +](ui-wizards-data-mining/ui-wizards-data-mining.md)
 
 
+# [Developer's Guide (Analysis Services) +](dev-guide/analysis-services-dev-guide.md)
+
+
 # [Analysis Services Tutorials](analysis-services-tutorials-ssas.md)
 ## [Tabular Modeling (Adventure Works Tutorial)](tabular-modeling-adventure-works-tutorial.md)
 ### [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md)

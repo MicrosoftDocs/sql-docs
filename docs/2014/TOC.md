@@ -15,14 +15,15 @@
 ## [Developer's Guide (Integration Services) +](integration-services/integration-services-developer-documentation.md)
 ## [Developer's Guide (Master Data Services)](master-data-services/develop/master-data-services-developer-documentation.md)
 ## [Developer's Guide (Replication)](relational-databases/replication/concepts/replication-developer-documentation.md)
-## [Developer's Guide (Reporting Services) ++](reporting-services/dev-guide/TOC.md)
-# [Installation for SQL Server 2014 +](sql-server/install/planning-a-sql-server-installation.md)
+## [Developer's Guide (Reporting Services) ++](reporting-services/reporting-services-developer-documentation.md)
+# [Installation for SQL Server 2014 +](database-engine/install-windows/installation-for-sql-server.md)
 # [Setup and Servicing Installation](sql-server/install/setup-and-servicing-installation.md)
 # [Upgrade Advisor](sql-server/install/sql-server-2014-upgrade-advisor.md)
 
 # [Database Features +](relational-databases/database-features.md)
 # [SQL Server PowerShell +](powershell/sql-server-powershell.md)
 # [SQL Server Management Studio +](ssms/sql-server-management-studio-ssms.md)
+# [Tools](tools/command-prompt-utility-reference-database-engine.md)
 
 # [Tutorials for SQL Server 2014 +](tutorials/tutorials-for-sql-server-2014.md)
 ## [Analysis Services Tutorials +](analysis-services/analysis-services-tutorials-ssas.md)

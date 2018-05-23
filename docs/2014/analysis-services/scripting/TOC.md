@@ -2,7 +2,7 @@
 # [Analysis Services Scripting Language XML Element Hierarchy (ASSL)](analysis-services-scripting-language-xml-element-hierarchy-assl.md)
 # [Analysis Services Scripting Language XML Data Type Hierarchy (ASSL)](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)
 # [Analysis Services Scripting Language XML Elements (ASSL)](analysis-services-scripting-language-xml-elements-assl.md)
-## [Objects](objects/objects-assl.md)
+## [Objects +](objects/objects-assl.md)
 ## [Collections +](collections/collections-assl.md)
 ## [Properties +](properties/properties-assl.md)
 # [Analysis Services Scripting Language XML Data Types (ASSL) +](data-type/analysis-services-scripting-language-xml-data-types-assl.md)

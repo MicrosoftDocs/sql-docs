@@ -3692,6 +3692,12 @@
         "source_path": "docs/relational-databases/import-export/reporting-import-flat-file-failures.md",
         "redirect_url": "/sql/relational-databases/import-export/import-flat-file-wizard",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/relational-databases/security/microsoft-sql-and-the-gdpr-requirements.md",
+        "redirect_url": "/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database",
+        "redirect_document_id": false
       }
+      
     ]
 }

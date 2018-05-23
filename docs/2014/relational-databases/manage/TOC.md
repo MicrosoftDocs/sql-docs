@@ -16,7 +16,6 @@
 ## [Remove a Utility Control Point (SQL Server Utility)](remove-a-utility-control-point-sql-server-utility.md)
 ## [Troubleshoot the SQL Server Utility](../../database-engine/troubleshoot-the-sql-server-utility.md)
 ## [Troubleshoot SQL Server Resource Health (SQL Server Utility)](troubleshoot-sql-server-resource-health-sql-server-utility.md)
-## [Troubleshoot the SQL Server Utility +](dbengine-troubleshoot-the-sql-server-utility.md)
 ## [Utility Explorer F1 Help](utility-explorer-f1-help.md)
 ### [Utility Dashboard (SQL Server Utility)](../../database-engine/utility-dashboard-sql-server-utility.md)
 ### [Deployed Data-tier Application Details (SQL Server Utility)](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)

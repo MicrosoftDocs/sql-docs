@@ -1,6 +1,6 @@
 # [SQL Server Management Studio](sql-server-management-studio-ssms.md)
-## [Use SQL Server Management Studio](../relational-databases/use-sql-server-management-studio.md)
-## [Features in SQL Server Management Studio](../relational-databases/features-in-sql-server-management-studio.md)
+## [Use SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)
+## [Features in SQL Server Management Studio](../database-engine/features-in-sql-server-management-studio.md)
 ## [The SQL Server Management Studio Environment](the-sql-server-management-studio-environment.md)
 ## [General User Interface Elements](general-user-interface-elements.md)
 ## [About Dialog Box](about-dialog-box.md)

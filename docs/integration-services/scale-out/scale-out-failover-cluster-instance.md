@@ -58,7 +58,7 @@ Bring the Scale Out Master service online.
 ![Bring online](media/bring-online.PNG)
 
 > [!NOTE]
-> If you want to failover SSISDB and Scale Out Master service separately, follow [7. Configure the Scale Out Master service role of the Windows failover cluster](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)
+> If you want to failover SSISDB and Scale Out Master service separately, follow [7. Configure the Scale Out Master service role of the Windows failover cluster](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
 ## 7. Install Scale Out Workers
 Install Scale Out Worker on worker nodes. During the installation, specify https://[Sql Server network name]:[master port] for master endpoint. 

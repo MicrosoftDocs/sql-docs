@@ -20,7 +20,7 @@
 ### [Transactional Replication](./transactional/transactional-replication.md) 
 
 ## [Replication to Memory-Optimized Table Subscribers](replication-to-memory-optimized-table-subscribers.md)  
-## [Replication to SQL Database](replication-to-sql-database.md)  
+## [Replication with SQL Database](replication-to-sql-database.md)  
 ## [Republish Data](republish-data.md)  
 ## [Replication over the Internet](replication-over-the-internet.md)  
 ### [Publish Data over the Internet Using VPN](publish-data-over-the-internet-using-vpn.md)  

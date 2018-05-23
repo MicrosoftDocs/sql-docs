@@ -7,11 +7,10 @@ manager: craigg
 ms.date: 04/20/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ---
 # Release notes for SQL Server 2017 on Linux
@@ -348,7 +347,7 @@ For more info about SSIS on Linux, see the following articles:
 -   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
 -   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
 
-#### SQL Server Management Studio (SSMS)
+#### < a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
 

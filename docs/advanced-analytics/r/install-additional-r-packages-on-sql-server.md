@@ -14,7 +14,14 @@ manager: cgronlun
 # Install new R packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to install new R packages to an instance of SQL Server where machine learning is enabled. There are multiple methods for installing new R packages, depending on which version of SQL Server you have, and whether the server has an internet connection.
+This article describes how to install new R packages to an instance of SQL Server where machine learning is enabled. There are multiple methods for installing new R packages, depending on which version of SQL Server you have, and whether the server has an internet connection. The following approaches for new package installation are possible.
+
+| Approach                           | Permissions  | Remote/Local |
+|------------------------------------|---------------------------|-------|
+| [Use conventional R package managers](#bkmk_rInstall)  | Admin | Local |
+| [Use RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Admin | Local |
+| [Use T-SQL (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | Admin to setup, database roles afterwards | both 
+| [Use a miniCRAN to create a local repository](create-a-local-package-repository-using-minicran.md) | Admin to setup, database roles afterwards | both |
 
 ## <a name="bkmk_rInstall"></a> Install R packages over an Internet connection
 
@@ -73,51 +80,6 @@ This procedure assumes that you have prepared all the packages that you need, in
     This command extracts the R package `mynewpackage` from its local zipped file, assuming you saved the copy in the directory `C:\Temp\Downloaded packages`, and installs the package on the local computer. If the package has any dependencies, the installer checks for existing packages in the library. If you have created a repository that includes the dependencies, the installer installs the required packages as well.
 
     If any required packages are not present in the instance library, and cannot be found in the zipped files, installation of the target package fails.
-
-## <a name="bkmk_createlibrary"></a> Use CREATE EXTERNAL LIBRARY
-
-**Applies to:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
-The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement makes it possible to add a package or set of packages to an instance or a specific database without running R or Python code directly. However, this method requires package preparation and additional database permissions.
-
-+ All packages must be be available as a local zipped file, rather than downloaded on demand from the internet.
-
-    If you do not have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
-
-+ All dependencies must be identified by name and version, and included in the zip file. The statement fails if required packages are not available, including downstream package dependencies. We recommend using **miniCRAN** or **igraph** for analyzing packages dependencies. Installing the wrong version of package or package dependency can also cause the statement to fail. 
-
-+ You must have the necessary permissions on the database. For details, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
-
-### Prepare the packages in archive format
-
-1. If you are installing a single package, download the package in zipped format. 
-
-2. If the package requires any other packages, you must verify that the required packages are available. You can use miniCRAN to analyze the target package and identify all its dependencies. 
-
-3. Copy the zipped files or miniCRAN repository containing all packages to a local folder on the server.
-
-4. Open a **Query** window, using an account with administrative privileges.
-
-5. Run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package collection to the database.
-
-    For example, the following statement names as the package source a miniCRAN repository containing the **randomForest** package, together with its dependencies. 
-
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
-
-    You cannot use an arbitrary name; the external library name must have the same name that you expect to use when loading or calling the package.
-
-6. If the library is successfully created, you can run the package in SQL Server, by calling it inside a stored procedure.
-    
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
 
 ## Tips for package installation
 

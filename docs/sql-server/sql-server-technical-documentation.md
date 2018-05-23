@@ -101,6 +101,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Azure migration journey - asses, migrate, optimize](https://azure.microsoft.com/en-us/migration/)]
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -110,6 +111,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [Migrate data to SQL Server on Linux](../linux/sql-server-linux-migrate-overview.md)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Import data from Excel to SQL Server or SQL Database](https://docs.microsoft.com/sql/relational-databases/import-export/import-data-from-excel-to-sql?view=sql-server-2017)
 ::: moniker-end
 
 ## Update your version of SQL Server

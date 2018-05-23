@@ -7,11 +7,10 @@ manager: craigg
 ms.date: 03/08/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.technology: linux
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ---
 # Quickstart: Install SQL Server and create a database on Red Hat
@@ -116,7 +115,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 > **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. Other tools include:
 >
 > * [SQL Server Operations Studio (Preview)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
 > * [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 > * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 

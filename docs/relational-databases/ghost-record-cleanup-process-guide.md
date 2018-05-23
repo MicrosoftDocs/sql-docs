@@ -22,7 +22,7 @@ manager: "craigg"
 ---
 # Ghost Cleanup Process Guide
 
-The ghost cleanup process is a background process that deletes records off of pages that have been marked for deletion. The following article provides an overview of this process.
+The ghost cleanup process is a single-threaded background process that deletes records off of pages that have been marked for deletion. The following article provides an overview of this process.
 
 ## Ghost records
 
@@ -34,15 +34,25 @@ Records that are marked for deletion, or *ghosted*, are cleaned up by the backgr
 
 When a record is ghosted, the database is marked as having ghosted entries, and the ghost cleanup process will only scan those databases. The ghost cleanup process will also mark the database as 'having no ghosted records' once all ghosted records have been deleted, and it will skip this database the next time it runs. The process will also skip any databases it is unable to take a shared lock on, and will try again the next time it runs.
 
-The ghost cleanup process runs on a single thread.
+The below query can identify how many ghosted records exist in a single database. 
+
+ ```sql
+ SELECT sum(ghost_record_count) total_ghost_records, db_name(database_id) 
+ FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL)
+ group by database_id
+ order by total_ghost_records desc
+```
 
 ## Disabling the ghost cleanup
 
-On high-load systems with many deletes, the ghost cleanup process can cause a performance issue from keeping pages in the buffer pool and generating IO. As such, it is possible to disable this process with the use of trace flag 661. More information about this can be found in [Tuning Options for SQL Server when running high performance workloads](https://support.microsoft.com/en-us/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). However, there are performance implications from disabling the process.
+On high-load systems with many deletes, the ghost cleanup process can cause a performance issue from keeping pages in the buffer pool and generating IO. As such, it is possible to disable this process with the use of trace flag 661. More information about this can be found in [Tuning options for SQL Server when running high performance workloads](https://support.microsoft.com/en-us/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). However, there are performance implications from disabling the process.
 
-If the ghost cleanup process is disabled, then ghosted records will no longer be removed from pages, and SQL will be unable to reuse this space until something is done to remove those records manually. This can cause your database to grow unnecessarily. Additionally, it can lead to page splits, which can cause a performance issue when generating execution plans and when performing index operations such as scans. For more information about page splits, see [Fill factor for an index](/indexes/specify-fill-factor-for-an-index.md).
+Disabling the ghost cleanup process can cause your database to grow unnecessarily large and can lead to performance issues. Since the ghost cleanup process removes records that are marked as ghosts, disabling the process will leave these records on the page, preventing SQL from reusing this space. This forces SQL to add data to new pages instead, leading to bloated database files, and can also cause [page splits](/indexes/specify-fill-factor-for-an-index.md). Page splits lead to performance issues when creating execution plans, and when doing scan operations. 
 
-Once the ghost cleanup process is disabled, some action needs to be taken to remove the ghosted records. One option is to execute an index rebuild, which will move data around on pages. Another option is to manually run [sp_clean_db_free_space](/system-stored-procedures/sp-clean-db-free-space-transact-sql.md), which will delete ghosted records.
+Once the ghost cleanup process is disabled, some action needs to be taken to remove the ghosted records. One option is to execute an index rebuild, which will move data around on pages. Another option is to manually run [sp_clean_db_free_space](/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)(to clean all database data files) or [sp_clean_db_file_free_space](/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)(to clean a single database datafile), which will delete ghosted records.
+
+ >[!warning]
+ > Disabling the ghost cleanup process is not generally recommended. Doing so should be tested thoroughly in a controlled environment before being implemented permanently in a production environment.
 
 
 ## See also  

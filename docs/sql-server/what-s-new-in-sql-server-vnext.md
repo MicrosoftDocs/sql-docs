@@ -39,11 +39,11 @@ The following sections summarize all of the updates for SQL Server vNext by area
 - **IsMemoryGrantFeedbackAdjusted** and **LastRequestedMemory** attributes are added to the `MemoryGrantInfo` query plan XML element. These execution plan attributes provide better visibility into the current state of a memory grant feedback operation for both row and batch mode. **IsMemoryGrantFeedbackAdjusted** attribute allows you to check the state of memory grant feedback for the statement within an actual query execution plan. **LastRequestedMemory** attribute shows the granted memory in Kilobytes (KB) from the prior query execution.
 
 - Intelligent query processing introduces
-  - Approximate COUNT DISTINCT
-  - Batch mode on rowstores
-  - Memory grant feedback for row mode
-  - Scalar T-SQL inline user-defined function (UDF)
-  - Table variable deferred compilation
+  - **Approximate COUNT DISTINCT**
+  - **Batch mode on rowstores**
+  - **Memory grant feedback for row mode**
+  - **Scalar T-SQL inline user-defined function (UDF)**
+  - **Table variable deferred compilation**
 
 ## SQL Server on Linux
 
@@ -63,7 +63,7 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 - Database scoped default setting for online and resumable DDL operations. 
 
-- 
+
 ## Next steps
 
 See the [SQL Server vNext Release Notes](sql-server-vnext-release-notes.md).

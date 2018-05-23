@@ -3,7 +3,6 @@ title: "Install SQL Server Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install

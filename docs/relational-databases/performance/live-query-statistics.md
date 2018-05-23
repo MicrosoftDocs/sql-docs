@@ -3,12 +3,9 @@ title: "Live Query Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

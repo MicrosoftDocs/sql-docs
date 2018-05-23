@@ -3,18 +3,15 @@ title: "Run Windows PowerShell from SQL Server Management Studio | Microsoft Doc
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "powershell"
-ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: scripting
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 caps.latest.revision: 11
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Run Windows PowerShell from SQL Server Management Studio

@@ -392,7 +392,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetDescField**  
   
- When the *FieldIdentifier* parameter has one of the following values, a 64-bit value is passed in **ValuePtr*:  
+ When the *FieldIdentifier* parameter has one of the following values, a 64-bit value is passed in *ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -416,7 +416,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- When the *Attribute* parameter has one of the following values, a 64-bit value is passed in **ValuePtr*:  
+ When the *Attribute* parameter has one of the following values, a 64-bit value is passed in *ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -484,7 +484,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- When the *Option* parameter has one of the following values, a 64-bit value is passed in **Value*:  
+ When the *Option* parameter has one of the following values, a 64-bit value is passed in *Value*:  
   
  SQL_KEYSET_SIZE  
   

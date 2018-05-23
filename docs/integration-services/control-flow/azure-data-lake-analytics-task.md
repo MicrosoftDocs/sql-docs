@@ -31,7 +31,7 @@ To add an Azure Data Lake Analytics Task to a package, drag it from SSIS Toolbox
 
 ## General Page Configuration
 
-Use the **General** page to configure the Azure Data Lake Analytics Task and provide the U-SQL script that the task submits. To learn more about the U-SQL language, see [U-SQL language reference](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference).
+Use the **General** page to configure the Azure Data Lake Analytics Task and provide the U-SQL script that the task submits. To learn more about the U-SQL language, see [U-SQL Language Reference](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference).
 
 ### Basic Configuration
 
@@ -55,8 +55,8 @@ U-SQL configuration has tow settings: **SourceType** and dynamic options based o
 |SourceType|Dynamic Options|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Type the U-SQL statement to submit in the option box, or click the browse button (...) to type the U-SQL statement in the Enter U-SQL Query dialog box.|  
-|**SourceType = FileConnection**|Select an existing file connection manager, or click <**New connection...*> to create a new connection manager. **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
-|**Variable**|Select an existing variable, or click \<**New variable...**> to create a new variable. **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)|
+|**SourceType = FileConnection**|Select an existing file connection manager, or click <**New connection...**> to create a new connection manager. **Related Article:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+|**SourceType = Variable**|Select an existing variable, or click \<**New variable...**> to create a new variable. **Related Article:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)|
 
 
 ### Job Configuration

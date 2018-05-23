@@ -15,7 +15,7 @@
 ## [Monitoring](monitoring-replication.md)
 ## [Publish Data and Database Objects +](publish/publish-data-and-database-objects.md)
 # [Developer's Guide (Replication) +](concepts/replication-developer-documentation.md)
-# [Errors and Events Reference +](errors-and-events-reference-replication.md)
+# [Errors and Events Reference](errors-and-events-reference-replication.md)
 # [Technical Reference (Replication)](technical-reference-replication.md)
 # [Properties Reference](properties-reference-replication.md)
 ## [Distributor Properties](distributor-properties.md)

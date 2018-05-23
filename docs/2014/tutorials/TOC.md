@@ -78,6 +78,8 @@
 #### [Lesson 5: Extending the Time Series Model](lesson-5-extending-the-time-series-model.md)
 
 
+# [Tutorial: Writing Transact-SQL Statements +](../t-sql/tutorial-writing-transact-sql-statements.md)
+
 
 # [Accessing the Report Server Web Service Using Visual Basic or Visual C# (SSRS Tutorial)](access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)
 ## [Lesson 1: Creating the Web Service Client Project](lesson-1-creating-the-web-service-client-project.md)

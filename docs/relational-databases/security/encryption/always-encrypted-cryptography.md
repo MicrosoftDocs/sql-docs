@@ -32,7 +32,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
  A column encryption key (CEK), is a content encryption key (i.e. a key used to protect data) that is protected by a CMK.  
   
- All [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK store providers encrypt CEKs by using RSA with Optimal Asymmetric Encryption Padding (RSA-OAEP) with the default parameters specified by RFC 3447 in Section A.2.1. Those default parameters are using a hash function of SHA-1 and a mask generation function of MGF1 with SHA-1.  
+ All [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK store providers encrypt CEKs by using RSA with Optimal Asymmetric Encryption Padding (RSA-OAEP) with the default parameters specified by RFC 8017 in Section A.2.1. Those default parameters are using a hash function of SHA-1 and a mask generation function of MGF1 with SHA-1.  
   
 ## Data Encryption Algorithm  
  Always Encrypted uses the **AEAD_AES_256_CBC_HMAC_SHA_256** algorithm to encrypt data in the database.  

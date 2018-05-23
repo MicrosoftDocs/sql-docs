@@ -35,7 +35,7 @@ manager: craigg
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|Specifies the total amount of dynamic memory the server is using for maintaining connections.|  
 |**Database Cache Memory (KB)**|Specifies the amount of memory the server is currently using for the database pages cache.|  
-|**External benefit of memory**| An internal and unactionable estimation of the performance benefit from adding memory to a specific cache. It is used by the engine to balance memory usage between cache and is useful to support when troubleshooting cases with unexpected cache growth. The value is presented as a calcuation of ms per page, multiplied by 10 billion, and then truncated to an integer. | 
+|**External benefit of memory**| An internal estimation of the performance benefit from adding memory to a specific cache. It is used by the engine to balance memory usage between cache and is useful to support when troubleshooting cases with unexpected cache growth. The value is presented as an integer based on an internal calculation. | 
 |**Free Memory (KB)**|Specifies the amount of committed memory currently not used by the server.|  
 |**Granted Workspace Memory (KB)**|Specifies the total amount of memory currently granted to executing processes, such as hash, sort, bulk copy, and index creation operations.|  
 |**Lock Blocks**|Specifies the current number of lock blocks in use on the server (refreshed periodically). A lock block represents an individual locked resource, such as a table, page, or row.|  

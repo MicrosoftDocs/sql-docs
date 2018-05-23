@@ -72,7 +72,7 @@
 # [Errors and Events Reference](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
 
 # [Developer's Guide (Database Engine) +](../relational-databases/database-engine-developer-documentation.md)
-## [Common Language Runtime (CLR) Integration Programming Concepts +](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
+## [Common Language Runtime (CLR) Integration Programming Concepts +](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
 ## [SQL Server Native Client Programming +](../relational-databases/native-client/sql-server-native-client-programming.md)
 ## [SQLXML 4.0 Programming Concepts +](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)
 ### [SQLXML 4.0 .NET Framework Support](dev-guide/sqlxml-4-0-net-framework-support.md)

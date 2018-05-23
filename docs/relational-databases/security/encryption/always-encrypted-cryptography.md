@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Always Encrypted Cryptography | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/29/2016"

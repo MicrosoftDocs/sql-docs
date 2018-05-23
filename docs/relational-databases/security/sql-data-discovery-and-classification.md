@@ -19,10 +19,9 @@ ms.author: giladm
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Data Discovery & Classification introduces a new tool built into SQL Server Management Studio (SSMS) for **discovering**, **classifying**, **labeling** & **reporting** the sensitive data in your databases.
-Discovering and classifying your most sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
-* Helping meet data privacy standards and regulatory compliance requirements, such as GDPR.
+Discovering and classifying your most sensitive data (business, financial, healthcare, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
+* Helping meet data privacy standards.
 * Controlling access to and hardening the security of databases/columns containing highly sensitive data.
-
 
 > [!NOTE]
 > Data Discovery & Classification is **supported for SQL Server 2008 and later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866265).

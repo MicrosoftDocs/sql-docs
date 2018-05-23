@@ -12,6 +12,8 @@
 ## [sqlps Utility](sqlps-utility.md)
 ## [sqlservr Application](sqlservr-application.md)
 ## [ssbdiagnose Utility (Service Broker) +](ssbdiagnose/ssbdiagnose-utility-service-broker.md)
+## [Ssms Utility](../ssms/ssms-utility.md)
+### [SQL Server Management Studio Keyboard Shortcuts](../ssms/sql-server-management-studio-keyboard-shortcuts.md)
 ## [tablediff Utility](tablediff-utility.md)
 # [SQL Server Configuration Manager Help +](configuration-manager/sql-server-configuration-manager-help.md)
 # [SQL Server Distributed Replay +](distributed-replay/sql-server-distributed-replay.md)

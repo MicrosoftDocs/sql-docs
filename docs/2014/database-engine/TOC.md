@@ -69,7 +69,7 @@
 ### [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)
 ### [Invoke-Sqlcmd cmdlet](invoke-sqlcmd-cmdlet.md)
 ### [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)
-# [Errors and Events Reference](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
+# [Errors and Events Reference +](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
 
 # [Developer's Guide (Database Engine) +](../relational-databases/database-engine-developer-documentation.md)
 ## [Common Language Runtime (CLR) Integration Programming Concepts +](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
@@ -84,7 +84,8 @@
 ### [Program Exception Message Box](dev-guide/program-exception-message-box.md)
 ### [Deploying an Exception Message Box Application](dev-guide/deploying-an-exception-message-box-application.md)
 ### [Exception Message Box Reference](dev-guide/exception-message-box-reference.md)
-## [SQL Server Express Local DB Reference +](../relational-databases/sql-server-express-localdb-reference.md)
+## [SQL Server Express Local DB Reference](../relational-databases/sql-server-express-localdb-reference.md)
+## [SQL Server Express Local DB Error Message Reference +](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)
 ## [SQL Server Management Objects](dev-guide/sql-server-management-objects.md)
 ### [Preparing to Use SMO](dev-guide/preparing-to-use-smo.md)
 ### [System Requirements](dev-guide/system-requirements.md)

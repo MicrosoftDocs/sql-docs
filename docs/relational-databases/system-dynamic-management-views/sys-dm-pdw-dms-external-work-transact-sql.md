@@ -5,7 +5,6 @@ ms.date: "03/06/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.service: "sql-data-warehouse"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: system-objects

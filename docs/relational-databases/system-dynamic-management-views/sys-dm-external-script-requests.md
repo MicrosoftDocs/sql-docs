@@ -3,8 +3,6 @@ title: "sys.dm_external_script_requests | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/24/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

@@ -1,5 +1,7 @@
-# [SQL Server Agent +](agent/sql-server-agent.md)
 # [SQL Server Management Studio](sql-server-management-studio-ssms.md)
+## [Use SQL Server Management Studio](../relational-databases/use-sql-server-management-studio.md)
+## [Features in SQL Server Management Studio](../relational-databases/features-in-sql-server-management-studio.md)
+## [SQL Server Agent +](agent/sql-server-agent.md)
 ## [Register Servers +](register-servers/register-servers.md)
 ## [SQL Server Management Studio Keyboard Shortcuts](sql-server-management-studio-keyboard-shortcuts.md)
 ## [The SQL Server Management Studio Environment](the-sql-server-management-studio-environment.md)

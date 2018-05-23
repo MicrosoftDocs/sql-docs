@@ -3,8 +3,6 @@ title: "sys.dm_server_audit_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: system-objects

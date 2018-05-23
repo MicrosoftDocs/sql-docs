@@ -3,8 +3,6 @@ title: "sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft
 ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: system-objects

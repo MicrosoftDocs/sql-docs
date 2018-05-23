@@ -2,7 +2,7 @@
 title: "SQL Server Integration Services (SSIS) Scale Out Support for High Availability | Microsoft Docs"
 ms.description: "This article describes how to configure SSIS Scale Out for high availability"
 ms.custom: ""
-ms.date: "12/19/2017"
+ms.date: "05/23/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.component: "scale-out"
@@ -80,7 +80,7 @@ Call the stored procedure `[catalog].[update_logdb_info]` with the following par
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## 7. Configure the Scale Out Master service role of the Windows failover cluster
+## 7. Configure the Scale Out Master service role of the Windows Server failover cluster
 
 1.  In Failover Cluster Manager, connect to the cluster for Scale Out. Select the cluster. Select **Action** in the menu and then select **Configure Role**.
 

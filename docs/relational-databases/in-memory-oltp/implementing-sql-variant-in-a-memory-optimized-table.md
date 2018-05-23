@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46

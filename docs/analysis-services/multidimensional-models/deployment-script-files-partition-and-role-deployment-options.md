@@ -50,7 +50,7 @@ manager: kfile
   
      —or—  
   
--   Open the \<*project name*>.deploymentoptions in any text editor and manually change the options.  
+-   Open the \<*project name*>.deploymentoptions in any text editor and manually change the options. The options for PartitionDeployment are DeployPartitions, RetainPartitions. The options for RoleDeployment are DeployRolesAndMembers, DeployRolesRetainMembers, RetainRoles.
   
 ## See Also  
  [Specifying the Installation Target](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   

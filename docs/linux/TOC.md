@@ -47,7 +47,6 @@
 ## [Develop](sql-server-linux-develop-overview.md)
 ### [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md)
 ### [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-### [Use SSMS](sql-server-linux-develop-use-ssms.md)
 ### [Use SSDT](sql-server-linux-develop-use-ssdt.md)
 
 ## [Manage](sql-server-linux-management-overview.md)

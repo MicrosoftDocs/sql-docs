@@ -4,7 +4,7 @@ description: Learn about the Integrated terminal in SQL Operations Studio (previ
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
 ms.prod: sql
-ms.reviewer: "alayu; erickang; sstein"
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos

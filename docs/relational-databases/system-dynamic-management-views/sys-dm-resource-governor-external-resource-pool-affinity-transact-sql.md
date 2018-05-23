@@ -3,8 +3,6 @@ title: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) 
 ms.custom: ""
 ms.date: "11/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: system-objects

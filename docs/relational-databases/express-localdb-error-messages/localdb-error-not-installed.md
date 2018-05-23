@@ -3,12 +3,9 @@ title: "LOCALDB_ERROR_NOT_INSTALLED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd

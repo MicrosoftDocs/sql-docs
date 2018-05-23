@@ -5,7 +5,7 @@ ms.prod_service: "sql-tools"
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to:
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Connect to SQL Azure dialog box"
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 caps.latest.revision: 17
-author: "Shamikg"
-ms.author: "Shamikg"
+author: Shamikg
+ms.author: Shamikg
 manager: craigg
 ---
 # Connect To Azure SQL DB (AccessToSQL)

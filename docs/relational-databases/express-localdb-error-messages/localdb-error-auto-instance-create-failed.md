@@ -3,12 +3,9 @@ title: "LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ca7d2c05-2bde-4284-bb17-aa7fd8d7b20a

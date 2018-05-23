@@ -3,7 +3,6 @@ title: "Are you upgrading from SQL Server 2005? | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install

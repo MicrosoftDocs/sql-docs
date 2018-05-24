@@ -1,5 +1,4 @@
 # [Errors and Events Reference](errors-and-events-reference-database-engine.md)
-## [Database Engine Events and Errors +](database-engine-events-and-errors.md)
 ## [Showplan Logical and Physical Operators Reference](../showplan-logical-and-physical-operators-reference.md)
 ## [SQL Server Event Class Reference +](../event-classes/sql-server-event-class-reference.md)
 ## [Database Engine Events and Errors](database-engine-events-and-errors.md)

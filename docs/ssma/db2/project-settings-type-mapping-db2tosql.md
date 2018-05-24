@@ -170,7 +170,7 @@ The following table contains the default type mapping for columns.
 |smallint|smallint|  
 |timestamp|datetime2|  
 |timestamp with local time zone|datetimeoffset|  
-|timestamp with local time zone[*..\*]|datetimeoffset[*]|  
+|timestamp with local time zone[\*..\*]|datetimeoffset[\*]|  
 |timestamp with time zone|datetimeoffset|  
 |timestamp with time zone[*..\*]|datetimeoffset[*]|  
 |timestamp[*..\*]|datetime2[*]|  

@@ -251,7 +251,7 @@ You can use verbose logging to see more detailed information about errors occurr
     ![Output text file](media/troubleshooting-tran-repl-errors/output.png)
 
     
-1. To disable verbose logging, follow the same previous steps to remove the entire `-Output` line that you added previously. 
+1. To disable verbose logging, follow the same previous steps to remove the entire `-Output` line that you added earlier. 
 
 For more information, see [Enabling verbose logging for replication agents](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
 

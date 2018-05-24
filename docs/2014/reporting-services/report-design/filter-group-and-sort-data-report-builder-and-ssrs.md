@@ -65,7 +65,7 @@ manager: "mblythe"
   
  To customize a view for each user, you can include a reference to the built-in field UserID in a filter. For more information, see [Built-in Globals and Users References &#40;Report Builder and SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Grouping"></a> Grouping Data in the Report  
  Groups organize data in a report for display or for calculating aggregate values. Understanding how to define groups and use group features helps you to design reports that are more concise.  
@@ -102,7 +102,7 @@ manager: "mblythe"
   
  When you nest a data region in a cell in a table, matrix, or list, you are automatically scoping the data to the innermost group memberships of the cell. For example, assume that you add a chart to a cell that is in both a row group and a column group. The data available to that chart is scoped to the innermost row group instance and innermost column group instance at run time. For more information, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Sorting"></a> Sorting Data in the Report  
  To control the sort order of data in your report, you can sort data in a dataset query, or define a sort expression for a data region or group. You can also add interactive sort buttons to tables and matrices to enable a user to change the sort order for rows.  
@@ -166,7 +166,7 @@ FROM Production.Product
   
  You add interactive sort buttons to a text box in a tablix data region cell. By default, every cell contains a text box. In the text box properties, you specify which part of a table or matrix data region to sort (the parent group values, the child group values, or the detail rows), what to sort by, and whether to apply the sort expression to other report items that have a peer relationship. For example, if a table and a chart that provide views on the same dataset are contained in a rectangle, they are peer data regions. When a user toggles the sort order in the table, the sort order for the chart also toggles. For more information, see [Interactive Sort &#40;Report Builder and SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="HowTo"></a> How-To Topics  
  [Keep Headers Visible When Scrolling Through a Report &#40;Report Builder and SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  

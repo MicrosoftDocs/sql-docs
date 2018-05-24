@@ -106,7 +106,7 @@ manager: "jhubbard"
  A free monthly electronic newsletter is available to help you keep up to date with accessibility topics about [!INCLUDE[msCoName](../includes/msconame-md.md)] products. To subscribe, see the [Microsoft Accessibility Web Site](http://go.microsoft.com/fwlink/?LinkID=8287).  
   
 ## See Also  
- [Get Started with Product Documentation for SQL Server](../../root-toc/books-online-for-sql-server-2014.md)   
+ [Get Started with Product Documentation for SQL Server](../root-toc/books-online-for-sql-server-2014.md)   
  [Getting SQL Server Assistance](getting-sql-server-assistance.md)  
   
   

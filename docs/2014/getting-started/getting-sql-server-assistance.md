@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   A copy of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Books Online is published in both the MSDN Library and the TechNet Library on the Internet. The topics in these copies of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online include comments from the community, such as additional information and code examples from other customers. You can view the MSDN Library copy at the [SQL Server 2014 Books Online](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
   
--   You can use the Help Library Manager to install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online on a local computer. For more information, see [Add or Remove Product Documentation for SQL Server](../../root-toc/books-online-for-sql-server-2014.md).  
+-   You can use the Help Library Manager to install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online on a local computer. For more information, see [Add or Remove Product Documentation for SQL Server](../root-toc/books-online-for-sql-server-2014.md).  
   
  Both the copy of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online in the MSDN Library and the Books Online files available through Help Library Manager are refreshed when [!INCLUDE[msCoName](../includes/msconame-md.md)] publishes an update to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   

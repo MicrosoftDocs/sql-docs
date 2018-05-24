@@ -50,7 +50,7 @@ WHERE O_ORDERKEY = L_ORDERKEY
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 ```
 
-This query computes the sum of discounted prices for line items and presents the results grouped by the shipping date and shipping priority. The expression **L_EXTENDEDPRICE *(1 - L_DISCOUNT)** is the formula for the discounted price for a given line item. Such formulas can be extracted into functions for modularity and reuse.
+This query computes the sum of discounted prices for line items and presents the results grouped by the shipping date and shipping priority. The expression **L_EXTENDEDPRICE \*(1 - L_DISCOUNT)** is the formula for the discounted price for a given line item. Such formulas can be extracted into functions for modularity and reuse.
 
 ```sql
 CREATE FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2)) 
@@ -134,26 +134,27 @@ The results of running this query are shown in the below table:
 
 ## Inlineability of Scalar UDFs
 A scalar T-SQL UDF is inlineable if all of the following conditions hold:
-1.	The UDF is written using the following constructs:
+
+1. The UDF is written using the following constructs:
     a. DECLARE, SET: Variable declaration and assignments.
     b. SELECT: SQL query with single/multiple variable assignments .
     c. IF/ELSE: Branching with arbitrary levels of nesting.
     d. RETURN: Single or multiple return statements.
     e. UDF: Nested/recursive function calls.
-    f. Others: Relational operations such as EXISTS, ISNULL.
-2.	The UDF does not invoke any intrinsic function that is either time-dependent (such as GETDATE()) or has side effects  (such as NEWSEQUENTIALID()).
-3.	The UDF uses the "EXECUTE AS CALLER" option (this is the default if not specified).
-4.	The UDF does not use table variables or table valued parameters.
-5.	The query invoking a scalar UDF does not include a scalar UDF call in its GROUP BY clause.
-6.	The UDF is not natively compiled.
-7.	The UDF is not in a computed column definition or a check constraint.
+    f. Others: Relational operations such as EXISTS, ISNULL.    
+2. The UDF does not invoke any intrinsic function that is either time-dependent (such as GETDATE()) or has side effects  (such as NEWSEQUENTIALID()).
+3. The UDF uses the "EXECUTE AS CALLER" option (this is the default if not specified).
+4. The UDF does not use table variables or table valued parameters.
+5. The query invoking a scalar UDF does not include a scalar UDF call in its GROUP BY clause.
+6. The UDF is not natively compiled.
+7. The UDF is not in a computed column definition or a check constraint.
 
 ### Checking whether a UDF is inlineable or not
-For every T-SQL scalar UDF, the sys.sql_modules catalog view includes a property called "is_inlineable", which indicates whether that UDF is inlineable or not. A value of 1 indicates that it is inlineable, and 0 indicates otherwise.
+For every T-SQL scalar UDF, the *sys.sql_modules* catalog view includes a property called *is_inlineable*, which indicates whether that UDF is inlineable or not. A value of 1 indicates that it is inlineable, and 0 indicates otherwise.
 
-**Note:** If a scalar UDF is inlineable, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server might choose not to inline it.
+**Note:** If a scalar UDF is inlineable, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server *might* choose not to inline it.
 
-### Enabling scalar UDF inlining
+## Enabling scalar UDF inlining
 You can make workloads automatically eligible for scalar UDF inlining by enabling compatibility level 150 for the database.  You can set this using Transact-SQL. For example:  
 
 ```sql
@@ -187,7 +188,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
-Scalar UDF inlining can also be disabled for a specific UDF using the INLINE=ON|OFF option in the CREATE/ALTER FUNCTION statement.
+Scalar UDF inlining can also be disabled for a specific UDF using the INLINE clause in the CREATE/ALTER FUNCTION statement.
 For example:
 
 ```sql
@@ -212,7 +213,7 @@ BEGIN
 END
 ```
 
-**NOTE:** The INLINE=ON|OFF clause is not mandatory. If INLINE clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If INLINE=ON is specified but the UDF is found to be non-inlineable, an error will thrown.
+**NOTE:** The INLINE clause is not mandatory. If INLINE clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If INLINE=ON is specified but the UDF is found to be non-inlineable, an error will be thrown.
 
 ## See Also
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

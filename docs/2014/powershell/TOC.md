@@ -11,4 +11,8 @@
 ## [Escape SQL Server Identifiers](escape-sql-server-identifiers.md)
 # [Manage Authentication in Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)
 # [Manage Tab Completion (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)
-# [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md)
+# [Import the SQLPS Module](../database-engine/import-the-sqlps-module.md)
+# [Convert URNs to SQL Server Provider Paths](../database-engine/convert-urns-to-sql-server-provider-paths.md)
+# [Use the Database Engine cmdlets](../database-engine/use-the-database-engine-cmdlets.md)
+# [Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)
+

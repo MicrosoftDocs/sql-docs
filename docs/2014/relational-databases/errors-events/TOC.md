@@ -5,6 +5,7 @@
 ## [Database Engine Events and Errors](database-engine-events-and-errors.md)
 ### [Understanding Database Engine Errors](understanding-database-engine-errors.md)
 ### [Database Engine Error Severities](database-engine-error-severities.md)
+### [Cause and Resolution of Database Engine Errors](../../database-engine/cause-and-resolution-of-database-engine-errors.md)
 ### [MSSQLSERVER_-2](mssqlserver-neg2-database-engine-error.md)
 ### [MSSQLSERVER_-1](mssqlserver-1-database-engine-error.md)
 ### [MSSQLSERVER2](mssqlserver-2-database-engine-error.md)

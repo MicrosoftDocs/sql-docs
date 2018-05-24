@@ -1,6 +1,0 @@
-# [Troubleshoot the SQL Server Utility](dbengine-troubleshoot-utility.md)
-## [Troubleshoot the SQL Server Utility](../troubleshoot-the-sql-server-utility.md)
-### [Utility Dashboard (SQL Server Utility)](../utility-dashboard-sql-server-utility.md)
-### [Deployed Data-tier Application Details (SQL Server Utility)](../deployed-data-tier-application-details-sql-server-utility.md)
-### [Managed Instance Details (SQL Server Utility)](../managed-instance-details-sql-server-utility.md)
-### [Utility Administration (SQL Server Utility)](../utility-administration-sql-server-utility.md)

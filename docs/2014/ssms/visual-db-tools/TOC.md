@@ -38,6 +38,8 @@
 ##### [Issues of Database Evolution (Visual Database Tools)](issues-of-database-evolution-visual-database-tools.md)
 ##### [Development, Test, and Production Databases (Visual Database Tools)](development-test-and-production-databases-visual-database-tools.md)
 ## [Design Tables (Visual Database Tools)](design-tables-visual-database-tools.md)
+### [Open Table Designer (Visual Database Tools)](../../database-engine/open-table-designer-visual-database-tools.md)
+### [Save Your Work in Table Designer (Visual Database Tools)](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)
 ## [Design Queries and Views How-to Topics (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)
 ### [Open the Query and View Designer (Visual Database Tools)](open-the-query-and-view-designer-visual-database-tools.md)
 ### [Navigate in the Query and View Designer (Visual Database Tools)](navigate-in-the-query-and-view-designer-visual-database-tools.md)

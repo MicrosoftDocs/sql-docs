@@ -137,7 +137,7 @@ Steps for a new deployment:
 - Select the logical server TDE pane, and for each logical SQL server:  
    - Select the AKV in the same region 
    - Select the key to use as TDE Protector – each server will use the local copy of the TDE Protector. 
-   - Doing this in the Portal will create an [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault – do not delete this identity.  Access can be revoked by removing the permissions in Azure Key Vault instead. for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault.
+   - Doing this in the Portal will create an [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault – do not delete this identity. Access can be revoked by removing the permissions in Azure Key Vault instead for the logical SQL server, which is used to assign the logical SQL Server permissions to access the key vault.
 - Create the primary database. 
 - Follow the [active geo-replication guidance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) to complete the scenario, this step will create the secondary database.
 

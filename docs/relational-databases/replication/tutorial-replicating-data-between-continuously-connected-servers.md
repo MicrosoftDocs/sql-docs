@@ -136,7 +136,7 @@ If your SQL Server Agent was not running when you created the publication, you'l
 
 !["Start" button and change in status message to show that the Snapshot Agent has run](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-If you see an error here, see [Troubleshooting Snapshot Agent errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-by-using-the-snapshot-agent). 
+If you see an error here, see [Troubleshooting Snapshot Agent errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent). 
 
   
 ### Add the Distribution Agent login to the PAL  

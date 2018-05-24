@@ -43,6 +43,12 @@ To deploy the project to Azure SQL Database, get the connection information you 
 3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 
+## Authentication methods in the Deployment Wizard
+
+If you're deploying to a SQL Server with the Deployment Wizard, you have to use Windows authentication; you can't use SQL Server authentication.
+
+If you're deploying to an Azure SQL Database server, you have to use SQL Server authentication or Azure Active Directory authentication; you can't use Windows authentication.
+
 ## Start the Integration Services Deployment Wizard
 1. Open a Command Prompt window.
 
@@ -59,10 +65,11 @@ To deploy the project to Azure SQL Database, get the connection information you 
     Click **Next** to see the **Select Destination** page.
   
 3.  On the **Select Destination** page, select the destination for the project.
-    -   Enter the fully qualified server name. If the target server is an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`.
-    -   Then click **Browse** to select the target folder in SSISDB.
-    Click **Next** to open the **Review** page.  
-  
+    -   Enter the fully qualified server name. If the target server is an Azure SQL Database server, the name is in this format `<server_name>.database.windows.net`.
+    -   Provide authentication information, and then select **Connect**. See [Authentication methods in the Deployment Wizard](#wizard_auth) in this article.
+    -   Then select **Browse** to select the target folder in SSISDB.
+    -   Then select **Next** to open the **Review** page. (The **Next** button is enabled only after you select **Connect**.)
+
 4.  On the **Review** page, review the settings you selected.
     -   You can change your selections by clicking **Previous**, or by clicking any of the steps in the left pane.
     -   Click **Deploy** to start the deployment process.

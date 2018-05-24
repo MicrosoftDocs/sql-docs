@@ -3,8 +3,6 @@ title: "Replication Related Dynamic Management Views (Transact-SQL) | Microsoft 
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: system-objects

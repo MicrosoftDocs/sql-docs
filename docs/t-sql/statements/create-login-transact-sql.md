@@ -313,7 +313,7 @@ In SQL Database, login data required to authenticate a connection and server-lev
 Only the server-level principal login (created by the provisioning process) or members of the `loginmanager` database role in the master database can create new logins. For more information, see [Server-Level Roles](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
 
 ## Logins
-- Must have **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role. Only AAD account with **ALTER ANY LOGIN** permission on the server or membership in the securityadmin  permission can execute this command
+- Must have **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role. Only Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in the securityadmin  permission can execute this command
 - Must be a member of Azure AD within the same directory used for Azure SQL logical server
   
 ## After creating a login  

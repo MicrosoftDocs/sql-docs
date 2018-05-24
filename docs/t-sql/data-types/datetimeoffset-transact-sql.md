@@ -1,4 +1,4 @@
-﻿---
+---
 title: "datetimeoffset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/23/2017"

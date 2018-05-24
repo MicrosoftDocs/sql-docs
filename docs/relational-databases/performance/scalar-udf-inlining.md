@@ -136,12 +136,12 @@ The results of running this query are shown in the below table:
 A scalar T-SQL UDF is inlineable if all of the following conditions hold:
 
 1. The UDF is written using the following constructs:
-    a. DECLARE, SET: Variable declaration and assignments.
-    b. SELECT: SQL query with single/multiple variable assignments .
-    c. IF/ELSE: Branching with arbitrary levels of nesting.
-    d. RETURN: Single or multiple return statements.
-    e. UDF: Nested/recursive function calls.
-    f. Others: Relational operations such as EXISTS, ISNULL.    
+    - DECLARE, SET: Variable declaration and assignments.
+    -  SELECT: SQL query with single/multiple variable assignments .
+    - IF/ELSE: Branching with arbitrary levels of nesting.
+    - RETURN: Single or multiple return statements.
+    - UDF: Nested/recursive function calls.
+    - Others: Relational operations such as EXISTS, ISNULL.    
 2. The UDF does not invoke any intrinsic function that is either time-dependent (such as GETDATE()) or has side effects  (such as NEWSEQUENTIALID()).
 3. The UDF uses the "EXECUTE AS CALLER" option (this is the default if not specified).
 4. The UDF does not use table variables or table valued parameters.

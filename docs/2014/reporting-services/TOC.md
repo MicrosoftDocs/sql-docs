@@ -55,7 +55,7 @@
 ### [Previewing Reports in Report Builder](report-builder/previewing-reports-in-report-builder.md)
 ## [Add Data to a Report +](report-data/report-datasets-ssrs.md)
 ## [Tables, Matrices, and Lists +](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
-## [Report Parts +](report-parts-report-builder-and-ssrs.md)
+## [Report Parts +](report-design/report-parts-in-report-designer-ssrs.md)
 ## [Charts +](report-design/charts-report-builder-and-ssrs.md)
 ## [Sparklines and Data Bars +](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)
 ## [Gauges +](report-design/gauges-report-builder-and-ssrs.md)

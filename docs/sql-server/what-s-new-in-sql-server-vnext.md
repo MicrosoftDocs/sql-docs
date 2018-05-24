@@ -34,7 +34,7 @@ The following sections summarize all of the updates for SQL Server vNext by area
 
 ## Database Engine
 
-### Intelligent query processor features 
+### Intelligent query processor features
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. 
 
@@ -47,7 +47,7 @@ The following sections summarize all of the updates for SQL Server vNext by area
 
 - **Batch mode on rowstores**
 
-- **Scalar T-SQL inline user-defined function (UDF)**
+- **Scalar UDF inlining** automatically transforms scalar user defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations.
 

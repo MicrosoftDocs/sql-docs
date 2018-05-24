@@ -1,7 +1,7 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/22/2017"
+ms.date: "05/24/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.component: "non-specific"
@@ -72,18 +72,6 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension th
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
 -   Azure Blob & ADLS File Enumerator. See [Foreach Loop Container](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
-
-## Download the Feature Pack
- Download the SQL Server Integration Services (SSIS) Feature Pack for Azure.
- 
-- [SSIS Feature Pack for Azure](http://go.microsoft.com/fwlink/?LinkID=626967) for SQL Server 2016
-- [SSIS Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798) for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
-
-## Prerequisites
- You must install the following prerequisites before installing this feature pack.
-
--   SQL Server Integration Services
--   .Net Framework 4.5
 
 ## Scenario: Processing big data
  Use Azure Connector to complete following big data processing work:

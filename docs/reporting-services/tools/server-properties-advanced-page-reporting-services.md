@@ -104,7 +104,7 @@ Turning off this option mitigates a threat whereby a malicious user launches a d
 Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
 **EnableReportDesignClientDownload**  
-Specifies whether Report Builder installation package can be downloaded from the report server. If you clear this setting, the URL to Report Builder will not work. For more information, see [Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md).  
+Specifies whether Report Builder installation package can be downloaded from the report server. If you clear this setting, the URL to Report Builder will not work. 
 
 **EditSessionCacheLimit**  
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  

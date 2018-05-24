@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-05-24"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,7 +87,7 @@ manager: "jhubbard"
 
 
 ## Additional Information  
- [SQL Server 2014 Resources](../books-online-for-sql-server-2014.md)  
+ [SQL Server 2014 Resources](../root-toc/books-online-for-sql-server-2014.md)  
   
  [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/p/?linkID=296445)  
   

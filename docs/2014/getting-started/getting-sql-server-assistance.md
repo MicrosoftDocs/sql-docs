@@ -1,7 +1,7 @@
 ---
 title: "Getting SQL Server Assistance | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-05-24"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   A copy of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Books Online is published in both the MSDN Library and the TechNet Library on the Internet. The topics in these copies of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online include comments from the community, such as additional information and code examples from other customers. You can view the MSDN Library copy at the [SQL Server 2014 Books Online](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
   
--   You can use the Help Library Manager to install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online on a local computer. For more information, see [Add or Remove Product Documentation for SQL Server](/sql/2014/books-online-for-sql-server-2014).  
+-   You can use the Help Library Manager to install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online on a local computer. For more information, see [Add or Remove Product Documentation for SQL Server](../root-toc/books-online-for-sql-server-2014.md).  
   
  Both the copy of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online in the MSDN Library and the Books Online files available through Help Library Manager are refreshed when [!INCLUDE[msCoName](../includes/msconame-md.md)] publishes an update to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
@@ -92,6 +92,6 @@ manager: "jhubbard"
  [!INCLUDE[msCoName](../includes/msconame-md.md)] products have a support lifecycle that defines how long support is available for each release. [!INCLUDE[msCoName](../includes/msconame-md.md)] support maintains a page that defines the [!INCLUDE[msCoName](../includes/msconame-md.md)] support lifecycle. The page contains links to other pages that specify the availability of support for [!INCLUDE[msCoName](../includes/msconame-md.md)] products. For more information, see [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## See Also  
- [Use Product Documentation for SQL Server](/sql/2014/books-online-for-sql-server-2014)  
+ [Use Product Documentation for SQL Server](../root-toc/books-online-for-sql-server-2014.md)  
   
   

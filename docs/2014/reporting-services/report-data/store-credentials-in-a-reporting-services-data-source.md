@@ -72,7 +72,7 @@ manager: "mblythe"
   
 8.  Click **Apply**.  
   
-     ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Configure stored credentials for a report-specific data source (SharePoint mode)  
   
@@ -100,7 +100,7 @@ manager: "mblythe"
   
 8.  Click **ok**.  
   
-     ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configure stored credentials for a shared data source (Native mode)  
   
@@ -126,7 +126,7 @@ manager: "mblythe"
   
 6.  Click **Apply**.  
   
-     ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Configure stored credentials for a shared data source (SharePoint mode)  
   
@@ -154,7 +154,7 @@ manager: "mblythe"
   
 7.  Click **Ok**.  
   
-     ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
+     ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Security policy requirements for stored credentials](#bkmk_top)  
   
 ## See Also  
  [Specify Credential and Connection Information for Report Data Sources](../../integration-services/connection-manager/data-sources.md)   

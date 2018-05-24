@@ -65,7 +65,7 @@ manager: "mblythe"
   
      For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="ChangeLayer"></a> To change options for a layer by using the map layer wizard  
   
@@ -73,7 +73,7 @@ manager: "mblythe"
   
      For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="AddVectorLayer"></a> To add a point, line, or polygon layer from the Map pane toolbar  
   
@@ -104,7 +104,7 @@ manager: "mblythe"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="FilterAnalyticalData"></a> To filter analytical data for the layer  
   
@@ -116,7 +116,7 @@ manager: "mblythe"
   
 4.  Define a filter equation to limit the analytical data that is used in the map display. For more information, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="PointProperties"></a> To control point properties for a point layer or for polygon center points  
   
@@ -126,7 +126,7 @@ manager: "mblythe"
   
     -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) page.  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Embedded"></a> To specify embedded data as a source of spatial data  
   
@@ -145,7 +145,7 @@ manager: "mblythe"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="ESRI"></a> To specify an ESRI Shapefile as a source of spatial data  
   
@@ -162,7 +162,7 @@ manager: "mblythe"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="DatasetField"></a> To specify a report dataset field as a source of spatial data  
   
@@ -178,7 +178,7 @@ manager: "mblythe"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="TileLayer"></a> To add a tile layer  
   
@@ -196,7 +196,7 @@ manager: "mblythe"
     > [!NOTE]  
     >  A tile layer can also be added when you add a polygon, line, or point layer in the Map or Map Layer wizard. On the **Choose spatial data and map view options** page, select the option **Add a Bing Maps background for this map view**.  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="DrawingOrder"></a> To change the drawing order of a layer  
   
@@ -206,7 +206,7 @@ manager: "mblythe"
   
 3.  On the Map pane toolbar, click the up or down arrow to change the drawing order of each layer.  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Transparency"></a> To change the transparency of a polygon, line, or point layer  
   
@@ -220,7 +220,7 @@ manager: "mblythe"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="TileTransparency"></a> To change the transparency of a tile layer  
   
@@ -234,7 +234,7 @@ manager: "mblythe"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Secure"></a> To specify a secure connection for a tile layer  
   
@@ -246,7 +246,7 @@ manager: "mblythe"
   
  The connection for the Bing Maps Web service will use the HTTP SSL (Secure Sockets Layer) service to retrieve Bing map tiles for this layer.  
   
- ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+ ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Language"></a> To specify the language for tile labels  
   
@@ -258,7 +258,7 @@ manager: "mblythe"
   
      The order of precedence for setting the tile label language is: report property Language, default locale for Report Builder, and map property TileLanguage.  
   
-2.  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+2.  ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="ConditionalHide"></a> To conditionally hide a layer based on viewport zoom level  
   
@@ -276,7 +276,7 @@ manager: "mblythe"
   
      You can also conditionally hide the layer. For more information, see [Hide an Item &#40;Report Builder and SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
-2.  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
+2.  ![Arrow icon used with Back to Top link](../../root-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)   

@@ -1,7 +1,7 @@
 ---
 title: "Create a trusted location for PowerPivot sites in Central Administration | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/27/2017"
+ms.date: "04/28/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -60,7 +60,7 @@ manager: "mblythe"
 11. Click **OK**.  
   
 ## See Also  
- [PowerPivot Gallery](../../books-online-for-sql-server-2014.md)   
+ [PowerPivot Gallery](../../root-toc/books-online-for-sql-server-2014.md)   
  [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md)   
  [Use PowerPivot Gallery](use-power-pivot-gallery.md)  
   

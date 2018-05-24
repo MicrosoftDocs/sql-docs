@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooter: Find errors by using SQL Server transactional replication | Microsoft Docs"
+title: "Troubleshooter: Find errors with SQL Server transactional replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/26/2018"
 ms.prod: sql
@@ -18,7 +18,7 @@ manager: craigg
 ---
 
 
-# Troubleshooter: Find errors by using SQL Server transactional replication 
+# Troubleshooter: Find errors with SQL Server transactional replication 
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step in creating a publication is having the Snapshot Agent create the snapshot and save it to the snapshot folder. Next, the Distribution Agent applies the snapshot to the subscriber. 
 
 This process creates the publication and puts it in the *synchronizing* state. Synchronization works in three phases:
@@ -49,7 +49,7 @@ Errors can occur in any step of this process. Finding those errors can be the mo
 3. Try to determine a solution for the error.
 
 
-## Find errors by using the Snapshot Agent
+## Find errors with the Snapshot Agent
 The Snapshot Agent generates the snapshot and writes it to the specified snapshot folder. 
 
 1. View the status of your Snapshot Agent:
@@ -77,9 +77,9 @@ The Snapshot Agent generates the snapshot and writes it to the specified snapsho
         The replication agent had encountered an exception.
         Exception Message: Access to path '\\node1\repldata.....' is denied.
 
-If your Windows permissions are not configured correctly for your snapshot folder, you'll see an "access is denied" error for the Snapshot Agent. You'll need to verify permissions to the folder where your snapshot is stored. Also make sure that the account that's used to run the Snapshot Agent has permissions to access the share.  
+If your Windows permissions are not configured correctly for your snapshot folder, you'll see an "access is denied" error for the Snapshot Agent. You'll need to verify permissions to the folder where your snapshot is stored, and make sure that the account used to run the Snapshot Agent has permissions to access the share.  
 
-## Find errors by using the Log Reader Agent
+## Find errors with the Log Reader Agent
 The Log Reader Agent connects to your publisher database and scans the transaction log for any transactions that are marked "for replication." It then adds those transactions to the distribution database. 
 
 1.  Connect to the publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expand the server node, right-click the **Replication** folder, and then select **Launch Replication Monitor**:  
@@ -145,7 +145,7 @@ The Log Reader Agent connects to your publisher database and scans the transacti
 
     ![Log Reader Agent running with no replicated transactions](media/troubleshooting-tran-repl-errors/log-reader-running.png)
 
-## Find errors by using the Distribution Agent
+## Find errors with the Distribution Agent
 The Distribution Agent finds data in the distribution database and then applies it to the subscriber. 
 
 1. Connect to the publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expand the server node, right-click the **Replication** folder, and then select **Launch Replication Monitor**.  
@@ -251,7 +251,7 @@ You can use verbose logging to see more detailed information about errors occurr
     ![Output text file](media/troubleshooting-tran-repl-errors/output.png)
 
     
-1. To disable verbose logging, follow the same steps as before. But this time, remove the entire line that you just added, starting with `-Output`. 
+1. To disable verbose logging, follow the same previous steps to remove the entire `-Output` line that you added previously. 
 
 For more information, see [Enabling verbose logging for replication agents](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
 

@@ -1,7 +1,7 @@
 ---
 title: "PowerPivot for SharePoint (SSAS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/08/2017"
+ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -64,7 +64,7 @@ manager: "mblythe"
   
  [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot Gallery](/sql/2014/books-online-for-sql-server-2014)  
+ [PowerPivot Gallery](../../root-toc/books-online-for-sql-server-2014.md)  
   
  [PowerPivot Data Access](power-pivot-data-access.md)  
   

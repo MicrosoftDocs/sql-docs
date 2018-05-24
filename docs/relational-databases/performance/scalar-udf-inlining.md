@@ -71,12 +71,9 @@ GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 
 Due to the reasons outlined earlier, the query with the UDF performs poorly. Now, with scalar UDF inlining, the scalar expression in the body of the UDF is substituted directly in the query. The results of running this query  are shown in the below table:
 
-| --- | --- | --- | --- |
 | Query: | Query without UDF | Query with UDF (without inlining) | Query with scalar UDF inlining | 
 | --- | --- | --- | --- |
 | Execution time: | 1.6 seconds | 29 minutes 11 seconds | 1.6 seconds |
-| --- | --- | --- | --- |
-
 
 ## See Also
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

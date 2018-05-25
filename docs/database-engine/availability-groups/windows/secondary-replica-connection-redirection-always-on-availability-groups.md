@@ -1,7 +1,7 @@
 ---
 title: "SQL Server secondary to primary replica read/write connection redirection-Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2018"
+ms.date: "07/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""

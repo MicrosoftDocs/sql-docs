@@ -217,10 +217,8 @@ Deleting a shared data source deactivates any report, model, or data-driven subs
      For report models, the list of dependent items shows the reports that were created in Report Builder. For shared data sources, the dependent items list can include both reports and report models.  
   
 ## See Also  
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [Configure Data Source Properties for a Paginated Report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

@@ -80,3 +80,5 @@ This topic lists the new features introduced by each release of ADO, ADO MD, and
 
  *Data providers supporting URL binding*
  ADO 2.5 supports OLE DB providers that recognize the URL schemes. This includes OLE DB Provider for Internet Publishing, which accesses the Windows 2000 file system and recognizes the existing HTTP scheme.
+ 
+ Test

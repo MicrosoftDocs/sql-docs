@@ -43,8 +43,8 @@ The web portal of the report server provides an upload feature so that you can a
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## See Also  
-[Create, Modify, and Delete Shared Data Sources](create-modify-and-delete-shared-data-sources-ssrs.md)
+## See Also   
+[Create, Modify, and Delete Shared Data Sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
 [Upload Files to a Folder](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
   

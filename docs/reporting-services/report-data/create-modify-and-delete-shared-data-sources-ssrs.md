@@ -204,7 +204,7 @@ Deleting a shared data source deactivates any report, model, or data-driven subs
  Use caution when deleting a report model. If you delete a model, you can no longer open and modify any reports that are based on that model in Report Builder. If you inadvertently delete a model that is used by existing reports, you must regenerate the model, re-create and save any reports that use the model, and re-specify any model item security that you want to use. You cannot simply regenerate the model and then attach it to an existing report.  
   
 ## Dependent Items  
- To view a list of reports and models that use the data source, open the Dependent Items page for the shared data source. You can access this page when you open the data source in Report Manager or a SharePoint application page. Note that the Dependent Items page does not show data-driven subscriptions. If a shared data source is used by a subscription, the subscription will not appear in the dependent items list.  
+ To view a list of reports and models that use the data source, open the Dependent Items page for the shared data source. You can access this page when you open the data source in the web portal or a SharePoint application page. Note that the Dependent Items page does not show data-driven subscriptions. If a shared data source is used by a subscription, the subscription will not appear in the dependent items list.  
   
  **To view dependent items in SharePoint**  
   

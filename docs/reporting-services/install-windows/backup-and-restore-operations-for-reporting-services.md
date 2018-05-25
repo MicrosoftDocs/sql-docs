@@ -1,7 +1,7 @@
 ---
 title: "Backup and Restore Operations for Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: "05/24/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "install-windows"
@@ -74,7 +74,7 @@ manager: "kfile"
   
 -   Reportingservicesservice.exe.config  
   
--   Web.config for both the Report Server and Report Manager [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications  
+-   Web.config for the Report Server  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application
   
 -   Machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   

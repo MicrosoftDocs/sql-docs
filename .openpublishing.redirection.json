@@ -151,6 +151,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/sql/reporting-services/report-server/configure-report-builder-access.md",
+            "redirect_url": "/sql/reporting-services/report-server/configure-web-portal",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/sql-server/sql-server-new-updated-sql-docs-pr.md",
             "redirect_url": "/sql/sql-server/new-updated-sql-server",
             "redirect_document_id": true

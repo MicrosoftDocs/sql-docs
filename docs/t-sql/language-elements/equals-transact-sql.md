@@ -52,7 +52,7 @@ expression = expression
   
 -   If `ANSI_NULLS` is set to ON, the result of any comparison with NULL is UNKNOWN, following the ANSI convention that NULL is an unknown value and cannot be compared with any other value, including other NULLs.  
   
--   If `ANSI_NULLS` is set to OFF, the result of comparing NULL to NULL is TRUE, and the result of comparing NULL to any other value is FALSE.  
+-   If `ANSI_NULLS` is set to OFF, the result of comparing NULL equal to NULL is TRUE, and the result of comparing NULL equal to any other value is FALSE.  
 
 For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   

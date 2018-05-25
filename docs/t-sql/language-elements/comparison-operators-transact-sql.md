@@ -48,7 +48,7 @@ manager: craigg
   
  Unlike other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, a **Boolean** data type cannot be specified as the data type of a table column or variable, and cannot be returned in a result set.  
   
- When SET ANSI_NULLS is ON, an operator that has one or two NULL expressions returns UNKNOWN. When SET ANSI_NULLS is OFF, the same rules apply, except for the equals (=) and not equals (<>) operators. When SET ANSI_NULLS is OFF, these operators will treat NULL as a known value, equivalent to any other NULL, and will only return TRUE or FALSE (never UNKNOWN).  
+ When SET ANSI_NULLS is ON, an operator that has one or two NULL expressions returns UNKNOWN. When SET ANSI_NULLS is OFF, the same rules apply, except for the equals (=) and not equals (<>) operators. When SET ANSI_NULLS is OFF, these operators treat NULL as a known value, equivalent to any other NULL, and only return TRUE or FALSE (never UNKNOWN).  
   
  Expressions with **Boolean** data types are used in the WHERE clause to filter the rows that qualify for the search conditions and in control-of-flow language statements such as IF and WHILE, for example:  
   

@@ -56,7 +56,7 @@ expression = expression
 
 For more information, see [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- A boolean expression resulting in UNKNOWN will behave similarly to FALSE in most, but not all cases. See [NULL and UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) and [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md) for more information.  
+ A boolean expression resulting in UNKNOWN behaves similarly to FALSE in most, but not all cases. See [NULL and UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) and [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md) for more information.  
   
   
 ## Examples  

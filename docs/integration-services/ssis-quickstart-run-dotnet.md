@@ -26,14 +26,14 @@ An Azure SQL Database server listens on port 1433. If you're trying to connect t
 
 ## For Azure SQL Database, get the connection info
 
-If you want to deploy the project to Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
+To run the package on Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
 
 1. Log in to the [Azure portal](https://portal.azure.com/).
-2. Select **SQL Databases** from the left-hand menu, and click the SSISDB database on the **SQL databases** page. 
-3. On the **Overview** page for your database, review the fully qualified server name. To bring up the **Click to copy** option, hover over the server name. 
+2. Select **SQL Databases** from the left-hand menu, and then select the SSISDB database on the **SQL databases** page. 
+3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 5. Click **Show database connection strings**.
-6. Review the complete **ADO.NET** connection string. The sample code uses a `SqlConnectionStringBuilder` to recreate this connection string with the individual parameter values that you provide.
+6. Review the complete **ADO.NET** connection string. Optionally, your code can use a `SqlConnectionStringBuilder` to recreate this connection string with the individual parameter values that you provide.
 
 ## Create a new Visual Studio project
 

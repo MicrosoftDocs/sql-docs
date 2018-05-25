@@ -23,21 +23,20 @@ monikerRange: "= azuresqldb-current || >= sql-server-2018 || = sqlallproducts-al
 This article introduces Scalar UDF inlining, a feature under the intelligent query processing suite of features. This feature improves performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
 ## T-SQL Scalar User-Defined Functions
-T-SQL Scalar User-Defined Functions are [User-Defined Functions] that are implemented in Transact-SQL and return a single data value.
-T-SQL UDFs are an elegant way to achieve code reuse and modularity across SQL queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries. 
+User-Defined Functions that are implemented in Transact-SQL and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across SQL queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries. 
 
 ## Performance of Scalar UDFs
 Scalar UDFs typically end up performing poorly due to the following reasons.
 
-- Iterative invocation: UDFs are invoked in an iterative manner, once per qualifying tuple. This incurs additional costs of repeated context switching due to function invocation. Especially, UDFs that execute SQL queries in their body are severely affected. 
-- Lack of costing: During optimization, only relational operators are costed, while scalar operators are not. Prior to the introduction of scalar UDFs, other scalar operators were generally cheap and did not require costing. A small CPU cost added for a scalar operation was enough. 
-- Interpreted execution: UDFs are evaluated as a batch of statements, executed statement-by-statement. Note that each statement itself is compiled, and the compiled plan is cached. Although this caching strategy saves some time as it avoids recompilations, each statement executes in isolation. No cross-statement optimizations are carried out.
-- Serial execution: SQL Server does not use intra-query parallelism in queries that invoke UDFs. There are several reasons for this, but it is beyond the scope of this article. 
+- **Iterative invocation:** UDFs are invoked in an iterative manner, once per qualifying tuple. This incurs additional costs of repeated context switching due to function invocation. Especially, UDFs that execute SQL queries in their body are severely affected. 
+- **Lack of costing:** During optimization, only relational operators are costed, while scalar operators are not. Prior to the introduction of scalar UDFs, other scalar operators were generally cheap and did not require costing. A small CPU cost added for a scalar operation was enough. 
+- **Interpreted execution:** UDFs are evaluated as a batch of statements, executed statement-by-statement. Note that each statement itself is compiled, and the compiled plan is cached. Although this caching strategy saves some time as it avoids recompilations, each statement executes in isolation. No cross-statement optimizations are carried out.
+- **Serial execution:** SQL Server does not use intra-query parallelism in queries that invoke UDFs. There are several reasons for this, but it is beyond the scope of this article. 
 
-## Automatic inlining of Scalar UDFs
+## Automatic Inlining of Scalar UDFs
 The goal of the Scalar UDF inlining feature is to improve performance of queries that invoke scalar UDFs, where UDF execution is the main bottleneck.
 
-With this new feature, scalar UDFs are transformed into scalar expressions or scalar subqueries which are substituted in the calling query in place of the UDF operator. These expressions and subqueries are then optimized. As a result, the query plan will no longer have a user-defined function operator, but its effects will be observed in the plan, like views or inline TVFs. 
+With this new feature, scalar UDFs are automatically transformed into scalar expressions or scalar subqueries which are substituted in the calling query in place of the UDF operator. These expressions and subqueries are then optimized. As a result, the query plan will no longer have a user-defined function operator, but its effects will be observed in the plan, like views or inline TVFs. 
 
 ### Example 1 - Single statement scalar UDF
 
@@ -153,6 +152,9 @@ A scalar T-SQL UDF is inlineable if all of the following conditions hold:
 For every T-SQL scalar UDF, the *sys.sql_modules* catalog view includes a property called *is_inlineable*, which indicates whether that UDF is inlineable or not. A value of 1 indicates that it is inlineable, and 0 indicates otherwise.
 
 **Note:** If a scalar UDF is inlineable, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server *might* choose not to inline it.
+
+### Checking whether inlining has happened or not
+If all the preconditions are satisfied and SQL Server decides to perform inlining, it transforms the UDF into a relational expression. From the query plan, it is easy to figure out whether inlining has happened or not. The plan xml will not have a <UserDefinedFunction> xml node for a UDF that has been inlined successfully. Certain XEvents are also emitted to indicate this.
 
 ## Enabling scalar UDF inlining
 You can make workloads automatically eligible for scalar UDF inlining by enabling compatibility level 150 for the database.  You can set this using Transact-SQL. For example:  

@@ -24,7 +24,6 @@ manager: craigg
 This topic lists the additions in each release of Data Migration Assistant (DMA).
 
 ## DMA v3.5
-
 The v3.5 release of DMA includes the following additions:
 - Significant performance improvements for migrating to Azure SQL Database (benchmark tests indicate the process is four times faster than with prior versions of DMA).
 - The memory footprint is further optimized to improve the stability of the migration workflow.

@@ -25,7 +25,7 @@ Microsoft SQL Server 2017 Reporting Services support Representational State Tran
 
 The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog. Examples of objects are folders, reports, KPIs, data sources, datasets, refresh plans, subscriptions, and more. Using the REST API, you can, for example, navigate the folder hierarchy, discover the contents of a folder, or download a report definition. You can also create, update, and delete objects. Examples of working with objects are upload a report, execute a refresh plan, delete a folder, and so on.
 
-[!INCLUDE [gdpr-hybrid-note](../../includes/gdpr-hybrid-note.md)]
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## Components of a REST API request/response
 

@@ -1,7 +1,7 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/02/2018"
+ms.date: "05/28/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -23,19 +23,28 @@ manager: craigg
 
 This topic lists the additions in each release of Data Migration Assistant (DMA).
 
+## DMA v3.5
+
+The v3.5 release of DMA includes the following additions:
+- Significant performance improvements for migrating to Azure SQL Database (benchmark tests indicate the process is four times faster than with prior versions of DMA).
+- The memory footprint is further optimized to improve the stability of the migration workflow.
+- Full compliance with General Data Protection Regulation (GDPR) privacy regulations.
+- The ability to skip assessments during the schema and data migrations, if you have already performed the assessment and addressed any breaking schema objects prior to migration.
+- A fix to address an issue with the tool crashing when an invalid network share path is provided for backup files, when performing an upgrade of a legacy version of SQL Server on-premises to a later version or to SQL Server on Azure VMs.
+
 ## DMA v3.4
 The v3.4 release of DMA includes the following additions:
 - Support for SQL Server 2017 as a source for migrations to Azure SQL Database.
 - Enhancements to stability, performance, and assessment rule correctness.
 
 ## DMA v3.3
-The v3.3 release of DMA enables migration of an on-premises SQL Server instance to the new version of SQL Server 2017, on both Windows and Linux. While the overall migration workflow for Windows and Linux is the same, the move to SQL Server 2017 for Linux requires a couple of additional considerations.
+The v3.3 release of DMA enables migration of an on-premises SQL Server instance to the new version of SQL Server 2017, on both Windows and Linux. While the overall migration workflow for Windows and Linux is the same,the move to SQL Server 2017 for Linux requires a couple of additional considerations.
 
 ### Specifying the back-up path
 Linux and Windows use different path formats. As a result, migrating to SQL Server 2017 on Linux requires that the user provide both the Windows and Linux versions of the path to the location of the physical file. This is accomplished in different ways depending on the location of the physical file.
 If the physical back-up file is on a computer running:
 - Linux, use a ‘samba’ share to share the file with other computers on the network.
--	Windows, use the ‘mnt’ command to mount the share onto the computer running Linux.
+- Windows, use the ‘mnt’ command to mount the share onto the computer running Linux.
 
 > [!NOTE]
 > Details of using a ‘samba’ share or the ‘mnt’ command are beyond the scope of this article.

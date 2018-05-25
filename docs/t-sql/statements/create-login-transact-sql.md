@@ -255,7 +255,7 @@ CREATE LOGIN login_name
   
 <option_list> ::=   
     PASSWORD = { 'password' }  
-    [ SID = sid ]  
+    [ , SID = sid ]  
 ```  
 
 > [!IMPORTANT]  
@@ -364,7 +364,7 @@ CREATE LOGIN login_name
   
 <option_list> ::=   
     PASSWORD = { 'password' }  
-    [ SID = sid ]  
+    [ , SID = sid ]  
 ```  
   
 ## Arguments  

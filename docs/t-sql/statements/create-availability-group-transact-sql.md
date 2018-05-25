@@ -45,70 +45,76 @@ manager: craigg
 ```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
-   WITH (<with_option_spec> [ ,...n ] )  
-   FOR [ DATABASE database_name [ ,...n ] ]  
-   REPLICA ON <add_replica_spec> [ ,...n ]  
-   AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+  { <availability_group_spec> | <distributed_availability_group_spec> }  
 [ ; ]  
-  
-<with_option_spec>::=   
-    AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
-  | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
-  | HEALTH_CHECK_TIMEOUT = milliseconds  
-  | DB_FAILOVER  = { ON | OFF }   
-  | DTC_SUPPORT  = { PER_DB | NONE }  
-  | BASIC  
-  | DISTRIBUTED
-  | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
-  | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
-  
-<add_replica_spec>::=  
-  <server_instance> WITH  
+
+<availability_group_sec>::=  
+  WITH (<with_option_spec> [ ,...n ] )  
+  FOR [ DATABASE database_name [ ,...n ] ]  
+  REPLICA ON <add_replica_spec> [ ,...n ]  
+  [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+
+  <with_option_spec>::=   
+      AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+    | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
+    | HEALTH_CHECK_TIMEOUT = milliseconds  
+    | DB_FAILOVER  = { ON | OFF }   
+    | DTC_SUPPORT  = { PER_DB | NONE }  
+    | BASIC  
+    | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
+    | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
+    
+  <add_replica_spec>::=  
+    <server_instance> WITH  
+      (  
+        ENDPOINT_URL = 'TCP://system-address:port',  
+        AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+        FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
+        [ , <add_replica_option> [ ,...n ] ]  
+      )   
+    
+    <add_replica_option>::=  
+        SEEDING_MODE = { AUTOMATIC | MANUAL }  
+      | BACKUP_PRIORITY = n  
+      | SECONDARY_ROLE ( {   
+              [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
+          [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
+      } )  
+      | PRIMARY_ROLE ( {   
+              [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
+          [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
+      } )  
+      | SESSION_TIMEOUT = integer  
+
+  <listener_option> ::=  
+    {  
+        WITH DHCP [ ON ( <network_subnet_option> ) ]  
+      | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
+    }  
+    
+    <network_subnet_option> ::=  
+      ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+    
+    <ip_address_option> ::=  
+      {   
+          ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
+        | ‘ipv6_address’  
+      }  
+
+<distributed_availability_group_spec>::=  
+  WITH (DISTRIBUTED)  
+  AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
+
+  <add_availability_group_spec>::=  
+  <ag_name> WITH  
     (  
-       ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
-       [ , <add_replica_option> [ ,...n ] ]  
-    )   
-  
-  <add_replica_option>::=  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }  
-     | BACKUP_PRIORITY = n  
-     | SECONDARY_ROLE ( {   
-            [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
-     } )  
-     | PRIMARY_ROLE ( {   
-            [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-     } )  
-     | SESSION_TIMEOUT = integer  
-  
-<add_availability_group_spec>::=  
- <ag_name> WITH  
-    (  
-       LISTENER_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = MANUAL,  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }  
+      LISTENER_URL = 'TCP://system-address:port',  
+      AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+      FAILOVER_MODE = MANUAL,  
+      SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
   
-<listener_option> ::=  
-   {  
-      WITH DHCP [ ON ( <network_subnet_option> ) ]  
-    | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
-   }  
-  
-  <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
-  
-  <ip_address_option> ::=  
-     {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
-     }  
-  
+
 ```  
   
 ## Arguments  

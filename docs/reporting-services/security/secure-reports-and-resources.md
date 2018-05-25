@@ -76,7 +76,6 @@ manager: "kfile"
   
 ## See Also  
  [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Secure Shared Data Source Items](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

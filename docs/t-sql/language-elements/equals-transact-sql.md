@@ -48,7 +48,7 @@ expression = expression
  Boolean  
   
 ## Remarks  
- When you compare a NULL value with another NULL or non-NULL value, the result depends on the `ANSI_NULLS` setting:  
+ When you compare using a NULL expression, the result depends on the `ANSI_NULLS` setting:  
   
 -   If `ANSI_NULLS` is set to ON, the result of any comparison with NULL is UNKNOWN, following the ANSI convention that NULL is an unknown value and cannot be compared with any other value, including other NULLs.  
   

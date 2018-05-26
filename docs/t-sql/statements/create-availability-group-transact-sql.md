@@ -48,8 +48,8 @@ CREATE AVAILABILITY GROUP group_name
   { <availability_group_spec> | <distributed_availability_group_spec> }  
 [ ; ]  
 
-<availability_group_sec>::=  
-  WITH (<with_option_spec> [ ,...n ] )  
+<availability_group_spec>::=  
+  [ WITH (<with_option_spec> [ ,...n ] ) ]  
   FOR [ DATABASE database_name [ ,...n ] ]  
   REPLICA ON <add_replica_spec> [ ,...n ]  
   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  

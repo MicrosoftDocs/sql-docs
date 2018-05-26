@@ -52,7 +52,7 @@
 ## [Common Language Runtime (CLR) Integration Programming Concepts +](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
 ## [SQL Server Native Client Programming +](native-client/sql-server-native-client-programming.md)
 ## [SQLXML 4.0 Programming Concepts +](sqlxml/sqlxml-4-0-programming-concepts.md)
-## [Database Engine Extended Stored Procedures Programming +](database-engine-extended-stored-procedures-programming.md)
+## [Database Engine Extended Stored Procedures Programming +](extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
 ## [Data Collector Programming](../database-engine/dev-guide/data-collector-programming.md)
 ## [Exception Message Box Programming](../database-engine/dev-guide/exception-message-box-programming.md)
 ### [Program Exception Message Box](../database-engine/dev-guide/program-exception-message-box.md)

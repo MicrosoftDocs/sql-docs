@@ -191,4 +191,3 @@
 #### [Task 16: Verifying with Master Data Manager](task-16-verifying-with-master-data-manager.md)
 #### [Task 17: Reviewing DQS Cleansing Project Created by the SSIS package](task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)
 ### [Conclusion](conclusion.md)
-

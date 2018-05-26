@@ -55,7 +55,6 @@
 ## [Activity Monitor](../relational-databases/performance-monitor/activity-monitor.md)
 ### [Open Activity Monitor (SQL Server Management Studio)](../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)# [High Availability Solutions](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)
 ## [Windows Server Failover Clustering (WSFC) with SQL Server +](../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)
-## [Always On Failover Cluster Instances +](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 ## [Always On Availability Groups +](availability-groups/windows/always-on-availability-groups-sql-server.md)
 ## [The Database Mirroring Endpoint +](database-mirroring/the-database-mirroring-endpoint-sql-server.md)
 ## [About Log Shipping +](log-shipping/about-log-shipping-sql-server.md)

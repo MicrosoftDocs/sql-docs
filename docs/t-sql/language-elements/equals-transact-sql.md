@@ -1,4 +1,4 @@
-﻿---
+---
 title: "= (Equals) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2016"

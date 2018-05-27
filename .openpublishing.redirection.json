@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
+            "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r/using-r-in-azure-sql-database.md",
             "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services#azure-sql-database-roadmap",
             "redirect_document_id": false
@@ -143,6 +148,11 @@
         {
             "source_path": "docs/relational-databases/relational-databases-new-updated-sql-docs-pr.md",
             "redirect_url": "/sql/relational-databases/new-updated-relational-databases",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/sql/reporting-services/report-server/configure-report-builder-access.md",
+            "redirect_url": "/sql/reporting-services/report-server/configure-web-portal",
             "redirect_document_id": true
         },
         {
@@ -3687,6 +3697,12 @@
         "source_path": "docs/relational-databases/import-export/reporting-import-flat-file-failures.md",
         "redirect_url": "/sql/relational-databases/import-export/import-flat-file-wizard",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/relational-databases/security/microsoft-sql-and-the-gdpr-requirements.md",
+        "redirect_url": "/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database",
+        "redirect_document_id": false
       }
+      
     ]
 }

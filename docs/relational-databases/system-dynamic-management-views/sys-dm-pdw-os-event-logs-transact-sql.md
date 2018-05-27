@@ -5,7 +5,6 @@ ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "pdw"
 ms.reviewer: ""
-ms.component: "dmv's"
 ms.suite: "sql"
 ms.technology: system-objects
 ms.tgt_pltfrm: ""

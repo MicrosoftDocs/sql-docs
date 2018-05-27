@@ -24,9 +24,7 @@ You can configure a SQL Server Always On Availability Group (AG) for read-scale 
 >[!NOTE]
 >An availability group with `CLUSTER_TYPE = NONE` can include replicas hosted on different operating system platforms. It cannot support high availability. For Linux operating system see [Configure a SQL Server Availability Group for read-scale on Linux](sql-server-linux-availability-group-configure-rs.md)
 
-# Install SQL Server
-
-Install SQL Server on all the Windows replicas to be involved.
+[!INCLUDE [Create prerequisites](../includes/ss-availability-group-rs-prereq.md)]
 
 ## Create the AG
 
@@ -66,9 +64,9 @@ ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE);
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-[!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
+[!INCLUDE [Create post](../includes/ss-availability-group-rs-postactivity.md)]
 
-This AG isn't a high-availability configuration. If you need high availability, follow the instructions at [Configure an Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md). Specifically, create the AG with `CLUSTER_TYPE=WSFC` (in Windows) or `CLUSTER_TYPE=EXTERNAL` (in Linux). Then integrate with a cluster manager by using either Windows Server failover clustering on Windows or Pacemaker on Linux.
+This AG isn't a high-availability configuration. If you need high availability, follow the instructions at [Configure an Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md) or [Creation and Configuration of Availability Groups on Windows](creation-and-configuration-of-availability-groups-sql-server.md).
 
 ## Connect to read-only secondary replicas
 
@@ -86,4 +84,3 @@ There are two ways to connect to read-only secondary replicas. Applications can 
 * [Configure a distributed Availability Group](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
 * [Learn more about availability groups](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
 * [Perform a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
-

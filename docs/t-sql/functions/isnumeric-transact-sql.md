@@ -54,7 +54,7 @@ ISNUMERIC ( expression )
 
 |||
 |-|-|
-| [Exact Numerics](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**, **int**, **smallint**, **tinyint** |
+| [Exact Numerics](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**, **int**, **smallint**, **tinyint**, **bit** |
 | [Fixed Precision](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**, **numeric** |
 | [Approximate](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**, **real** |
 | [Monetary Values](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**, **smallmoney** |

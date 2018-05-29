@@ -32,7 +32,7 @@ manager: craigg
   
  Starting with the [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], the JDBC driver support for Java Database Connectivity (JDBC) Spec API has been extended to include the JDBC 4.0 API. The JDBC 4.0 API was introduced as part of the Sun Java SE Development Kit (JDK) 6.0 and Java Runtime Environment (JRE) 6.0. JDBC 4.0 is a superset of the JDBC 3.0 API.  
   
- When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe* and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC Driver, see [Deploying the JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md) topic.  
+ When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC Driver, see [Deploying the JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md) topic.  
   
 **Microsoft JDBC Driver 6.4 for SQL Server:**  
 
@@ -44,12 +44,12 @@ manager: craigg
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Requires a Java Runtime Environment (JRE) 7.0. Using JRE 6.0 or lower throws an exception.<br /><br /> New Features in 6.4 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle reuse. |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 6.4 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle reuse. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Requires a Java Runtime Environment (JRE) 9.0. Using JRE 8.0 or lower throws an exception.<br /><br /> New Features in 6.4 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle reuse. |    
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Requires a Java Runtime Environment (JRE) 7.0. Using JRE 6.0 or lower throws an exception.<br /><br /> New Features in 6.4 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle re-use. |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 6.4 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle re-use. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Requires a Java Runtime Environment (JRE) 9.0. Using JRE 8.0 or lower throws an exception.<br /><br /> New Features in 6.4 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle re-use. |    
 
 
-  The JDBC Driver 6.4 is also available on the Maven Central Repository and can added to a Maven project by adding the following code in the POM.XML 
+  The JDBC Driver 6.4 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML 
   
  ```xml
 <dependency>
@@ -71,7 +71,7 @@ manager: craigg
 |mssql-jdbc-6.2.1.jre7.jar|4.1|7|Requires a Java Runtime Environment (JRE) 7.0. Using JRE 6.0 or lower throws an exception.<br /><br /> New Features in 6.2 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle re-use. |  
 |mssql-jdbc-6.2.1.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 6.2 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle re-use|    
 
-  The JDBC Driver 6.2 is also available on the Maven Central Repository and can added to a Maven project by adding the following code in the POM.XML 
+  The JDBC Driver 6.2 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML 
   
  ```xml
 <dependency>
@@ -102,7 +102,7 @@ manager: craigg
 |---------|-----------------|  
 |sqljdbc41.jar|**sqljdbc41.jar** class library provides support for JDBC 4.0 API. It includes all of the features of the JDBC 4.0 driver as well as the JDBC 4.0 API methods. JDBC 4.1 is not supported (throws an exception “SQLFeatureNotSupportedException”).<br /><br /> **sqljdbc41.jar** class library requires a Java Runtime Environment (JRE) 7.0. Using **sqljdbc41.jar** on JRE 6.0 and 5.0 throws an exception.<br /><br /> 
   
- Note that the JDBC driver is designed to work with and be supported by all major Sun equivalent Java virtual machines, but is tested on Sun JRE 5.0, 6.0 and 7.0.  
+ The JDBC driver is designed to work with and be supported by all major Sun equivalent Java virtual machines, but is tested on Sun JRE 5.0, 6.0 and 7.0.  
   
  The following summarizes support provided by the JAR file included with Microsoft JDBC Driver 4.1 for SQL Server.  
   

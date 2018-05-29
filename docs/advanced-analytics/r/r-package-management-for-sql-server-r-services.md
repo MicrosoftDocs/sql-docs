@@ -21,7 +21,6 @@ Unlike a typical R or Python development, packages used by SQL Server must be in
 
 + The server administrator can monitor the addition of new files and libraries on the server, and control the growth of files used by package libraries. 
 + Packages can be more easily shared by multiple database users, as opposed to installing multiple copies of the same package in user libraries.
-+ Only secured, approved packages can be installed, to protect the server and its operations.
 
 However, these restrictions necessarily mean some changes in the way that data scientists and analysts work:
 

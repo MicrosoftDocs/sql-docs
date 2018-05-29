@@ -233,7 +233,3 @@
 ### [Lesson 10: Defining Administrative Roles](lesson-10-defining-administrative-roles.md)
 #### [Granting Process Database Permissions](lesson-10-granting-process-database-permissions.md)
 ## [Data Mining Tutorials](data-mining-tutorials-analysis-services.md)
-### [Basic Data Mining Tutorial +](../tutorials/basic-data-mining-tutorial.md)
-### [Intermediate Data Mining Tutorial +](../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)
-### [Creating and Querying Data Mining Models with DMX: Tutorials](../tutorials/create-query-data-mining-models-dmx-tutorials.md)
-

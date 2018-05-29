@@ -32,6 +32,9 @@ You can run SSIS packages deployed to the SSISDB Catalog database on an Azure SQ
 
   - [Run with the Stored Procedure activity](#sproc_activity)
 
+> [!NOTE]
+> Running a package with `dtexec.exe` has not been tested with packages deployed to Azure.
+
 ## <a name="ssms"></a> Run a package with SSMS
 
 In SQL Server Management Studio (SSMS), you can right-click on a package deployed to the SSIS Catalog database, SSISDB, and select **Execute** to open the **Execute Package** dialog box. For more info, see [Run an SSIS package with SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).

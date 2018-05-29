@@ -1,15 +1,13 @@
----
+﻿---
 title: "PRINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -28,8 +26,8 @@ ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # PRINT (Transact-SQL)

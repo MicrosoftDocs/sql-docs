@@ -2,16 +2,15 @@
 title: "XML Input File Reference (Database Engine Tuning Advisor) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "dta"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -22,8 +21,7 @@ ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # XML Input File Reference (Database Engine Tuning Advisor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

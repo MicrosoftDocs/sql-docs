@@ -1,15 +1,13 @@
----
+﻿---
 title: "OPENROWSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/09/2018"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -28,10 +26,10 @@ helpviewer_keywords:
   - "ad hoc connection information"
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 caps.latest.revision: 130
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +125,10 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, t
   
  CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }  
  Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32.  
-  
+
+> [!IMPORTANT]
+> CODEPAGE is not a supported option on Linux.
+
 > [!NOTE]  
 >  We recommend that you specify a collation name for each column in a format file, except when you want the 65001 option to have priority over the collation/code page specification.  
   

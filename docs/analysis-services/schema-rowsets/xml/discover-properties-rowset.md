@@ -1,31 +1,14 @@
 ---
 title: "DISCOVER_PROPERTIES Rowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "DISCOVER_PROPERTIES"
-apitype: "NA"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "DISCOVER_PROPERTIES rowset"
-ms.assetid: 3e2b50e2-3855-4091-8b02-4968e8e57d4c
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DISCOVER_PROPERTIES Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

@@ -1,15 +1,13 @@
----
+﻿---
 title: "Language Elements (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,8 +16,8 @@ ms.assetid: e9b8daff-b72f-4a53-907d-5a83a78785ec
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Language Elements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

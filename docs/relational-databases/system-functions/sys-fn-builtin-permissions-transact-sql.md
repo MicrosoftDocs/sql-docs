@@ -1,15 +1,13 @@
----
+﻿---
 title: "sys.fn_builtin_permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -32,8 +30,8 @@ ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 caps.latest.revision: 42
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -330,13 +328,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
  `sys.fn_builtin_permissions` will return an empty set when it is called with a class name that is not valid.  
  
-The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times.   
- 
-![Database Engine Permissions](../../relational-databases/security/media/database-engine-permissions.PNG) 
-
->[!NOTE]
-> As part of this topic the poster is far to small to read. Download the Database Engine Permissions Poster from [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
-   
+[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
 ## Permissions  
  Requires membership in the public role.  

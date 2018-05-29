@@ -1,25 +1,22 @@
 ---
 title: "Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/16/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/09/2018"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-query-tuning"
+ms.technology: performance
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016 Preview"
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 caps.latest.revision: 11
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ In this lesson, you create an Azure storage account and a blob container.
 [Lesson 2: Create a SQL Server Credential](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 In this lesson, you create a Credential to store security information used to access the Azure storage account.  
   
-[Lesson 3: Write a Full Database Backup to the Azure Blob Storage Service](http://msdn.microsoft.com/library/454c8296-64e9-46ed-b141-5ebfbc8a4fe2)  
+[Lesson 3: Write a Full Database Backup to the Azure Blob Storage Service](https://technet.microsoft.com/en-us/library/jj720552&#40;v=sql.110&#41;.aspx)  
 In this lesson, you issue a T-SQL statement to write a backup of the AdventureWorks2012 database to the Azure Blob storage service.  
   
 [Lesson 4: Perform a Restore From a Full Database Backup](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  

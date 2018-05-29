@@ -1,28 +1,14 @@
 ---
 title: "Define Attribute Relationships | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributes [Analysis Services], relationships"
-  - "relationships [Analysis Services], attributes"
-ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Attribute Relationships - Define
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

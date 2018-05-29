@@ -2,16 +2,15 @@
 title: "Run Integration Services (SSIS) Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "packages"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecute.f1"
   - "sql13.ssis.ssms.executepackage.f1"
@@ -27,11 +26,13 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Run Integration Services (SSIS) Packages
   To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you can use one of several tools depending on where those packages are stored. The tools are listed in the table below.  
+
+> [!NOTE]
+> With the release of SQL Server for Linux, you can run SSIS packages on Linux. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
   
  To store a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you use the project deployment model to deploy the project to the server. For information, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   

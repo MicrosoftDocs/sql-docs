@@ -1,17 +1,15 @@
 ---
 title: "Execute Method (ADO Connection) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Connection15::Execute"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "Execute method [ADO]"
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Execute Method (ADO Connection)
 Executes the specified query, SQL statement, stored procedure, or provider-specific text.  

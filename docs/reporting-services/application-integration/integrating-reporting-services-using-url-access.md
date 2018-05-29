@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "application-integration"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -23,7 +22,6 @@ caps.latest.revision: 32
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Integrating Reporting Services Using URL Access
   With URL access, you access reports through a report server URL. A URL request enables you to access a specific report server as well as the reports, resources, and other items in the report server database. You can also customize the report viewing and navigation experience for your users. The query string of the URL contains device information settings, as well as report parameters targeted at your report and the chosen rendering output. The way the report server handles URL requests depends on the parameters, parameter prefixes, and type of item that you are accessing through the URL.  

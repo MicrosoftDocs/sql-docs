@@ -1,24 +1,15 @@
 ---
-title: "Configuration and Management | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 7
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Configure and manage SQL Server Machine Learning Service instances | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Configuration and Management
+# Configure and manage machine learning components in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides links to more detailed information about how to configure a server to support machine learning services with SQL Server in these products:

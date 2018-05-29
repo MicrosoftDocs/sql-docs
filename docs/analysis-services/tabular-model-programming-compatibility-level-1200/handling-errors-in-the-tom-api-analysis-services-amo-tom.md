@@ -1,24 +1,14 @@
 ---
 title: "Handling errors in the TOM API (Analysis Services AMO-TOM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: ec44daa0-a90e-42ad-b70d-6a7a7a4e4b7b
-caps.latest.revision: 4
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Handling errors in the TOM API (Analysis Services AMO-TOM)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

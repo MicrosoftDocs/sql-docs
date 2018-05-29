@@ -2,16 +2,15 @@
 title: "Surface Area Configuration | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reducing attackable surface area"
   - "upgrading SQL Server, security"
@@ -21,10 +20,9 @@ helpviewer_keywords:
   - "installing SQL Server, security"
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 caps.latest.revision: 79
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # Surface Area Configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

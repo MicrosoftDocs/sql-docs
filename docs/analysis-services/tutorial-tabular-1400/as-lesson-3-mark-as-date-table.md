@@ -1,23 +1,14 @@
----
+﻿---
 title: "Analysis Services tutorial lesson 3: Mark as Date Table | Microsoft Docs"
-description: Describes how to mark a date table in the Analysis Services tutorial project. 
-ms.prod_service: "analysis-services, azure-analysis-services"
-services: analysis-services
-ms.suite: "pro-bi"
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Mark as Date Table
 

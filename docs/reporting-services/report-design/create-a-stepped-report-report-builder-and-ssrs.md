@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-design"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,13 +11,12 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Create a Stepped Report (Report Builder and SSRS)
 A stepped report is a type of  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report that shows detail rows or child groups indented under a parent group in the same column, as shown in the example below:  

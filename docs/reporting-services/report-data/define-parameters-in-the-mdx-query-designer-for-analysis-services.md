@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [Reporting Services], MDX"
   - "Multidimensional Expressions [Reporting Services]"
@@ -24,7 +23,6 @@ caps.latest.revision: 37
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Define Parameters in the MDX Query Designer for Analysis Services
   To parameterize an MDX query for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, you must add a query parameter to the query. In the MDX query designer, you can add a query parameter in both Design mode and Query mode by specifying a filter. After you define the query with a query parameter, Reporting Services automatically creates a report parameter and a dataset to provide the list of valid values. This enables a user to specify a value that is passed directly to the query.  

@@ -1,17 +1,15 @@
 ---
 title: "Error Object Properties Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
@@ -24,10 +22,9 @@ helpviewer_keywords:
   - "Description property [ADO], VC++ example"
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)
 This example triggers an error, traps it, and displays the [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [Number](../../../ado/reference/ado-api/number-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-error.md), and [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) properties of the resulting [Error](../../../ado/reference/ado-api/error-object.md) object.  

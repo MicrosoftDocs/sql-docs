@@ -1,29 +1,16 @@
 ---
-title: "Tabular Model Designer | Microsoft Docs"
-ms.date: "10/19/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1"
-ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+title: "Tabular model designer in SQL Server Data Tools| Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Tabular Model Designer (SSAS)
+# Tabular model designer
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrated with Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], with additional project type templates specifically for developing professional tabular model solutions.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is installed as a free web download. See [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) for details.    
   
@@ -138,6 +125,5 @@ The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../include
   
 ## See also  
  [Tabular Model Projects](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Properties](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

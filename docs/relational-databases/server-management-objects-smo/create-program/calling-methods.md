@@ -1,10 +1,9 @@
----
+﻿---
 title: "Calling Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,8 +20,8 @@ ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Calling Methods
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -1,32 +1,23 @@
 ---
-title: "Command-prompt installation of SQL Server machine learning components | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid:
-caps.latest.revision: 4
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Command-prompt installation of SQL Server machine learning components | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Install SQL Server machine learning components from the command line
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides instructions for intalling SQL Server machine learning components from a command line:
 
-+ [In-database instance](#indb)
++ [New In-Database instance](#indb)
 + [Add to an existing database engine instance](#add-existing)
 + [Silent install](#silent)
-+ [Standalone server](#shared-feature)
++ [New standalone server](#shared-feature)
 
 You can specify silent, basic, or full interaction with the Setup user interface. This article supplements [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), covering the parameters unique to R and Python machine learning components.
 
@@ -69,7 +60,7 @@ In-database analytics are available for database engine instances, required for 
 
 To view progress information without the interactive on-screen prompts, use the /qs argument.
 
-> [!Important]
+> [!IMPORTANT]
 > After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation tasks](#post-install) for instructions.
 
 ### SQL Server 2017: database engine, advanced analytics with Python and R

@@ -2,16 +2,12 @@
 title: "Performance Monitoring and Tuning Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tools [SQL Server], monitoring performance"
   - "monitoring server performance [SQL Server], tools"
@@ -23,10 +19,9 @@ helpviewer_keywords:
   - "server performance [SQL Server], tools"
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Performance Monitoring and Tuning Tools
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

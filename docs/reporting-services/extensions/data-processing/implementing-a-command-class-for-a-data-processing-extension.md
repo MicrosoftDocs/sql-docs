@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "extensions"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -24,7 +23,6 @@ caps.latest.revision: 35
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Implementing a Command Class for a Data Processing Extension
   The **Command** object formulates a request and passes it on to the data source. The command text can take many different syntactical forms, including text and XML. If results are returned, the **Command** object returns results as a **DataReader** object.  

@@ -2,16 +2,15 @@
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "sqlcmd"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [SQL Server], command prompt"
   - "QUIT command"
@@ -32,8 +31,8 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: 155
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -417,7 +416,7 @@ Prints raw error messages to the screen.
  If the **sqlcmd** script contains an incorrect comment, syntax error, or is missing a scripting variable, ERRORLEVEL returned is 1.  
   
  **-m** *error_level*  
- Controls which error messages are sent to **stdout**. Messages that have a severity level greater than or equal to this level are sent. When this value is set to **-1**, all messages including informational messages, are sent. Spaces are not allowed between the **-m** and **-1**. For example, **-m-1** is valid, and **-m-1** is not.  
+ Controls which error messages are sent to **stdout**. Messages that have a severity level greater than or equal to this level are sent. When this value is set to **-1**, all messages including informational messages, are sent. Spaces are not allowed between the **-m** and **-1**. For example, **-m-1** is valid, and **-m -1** is not.  
   
  This option also sets the **sqlcmd** scripting variable SQLCMDERRORLEVEL. This variable has a default of 0.  
   

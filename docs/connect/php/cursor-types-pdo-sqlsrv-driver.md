@@ -2,22 +2,19 @@
 title: "Cursor Types (PDO_SQLSRV Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Cursor Types (PDO_SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

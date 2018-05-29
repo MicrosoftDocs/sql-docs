@@ -1,24 +1,18 @@
 ---
-title: "How to create a script task that uses the SSIS PDW destination adapter"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow."
-ms.date: "01/05/2017"
-ms.topic: "article"
-ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
-caps.latest.revision: 8
-
+title: Create a script task with SSIS PDW destination adapter | Microsoft Docs
+desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# How to create a script task that uses the SSIS PDW destination adapter
-The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow. This SSIS package script code is a code example for using the SSIS PDW destination adaptor.  
+
+# Create a script task that uses SSIS Parallel Data Warehouse destination adapter
+This SSIS package script code is a code example for using the SSIS PDW destination adapter.  The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow. 
   
 ## Sample Code  
   

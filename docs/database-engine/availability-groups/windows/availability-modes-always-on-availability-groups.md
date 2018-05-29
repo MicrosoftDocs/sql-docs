@@ -2,16 +2,13 @@
 title: "Availability Modes (Always On Availability Groups) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], asynchronous commit"
@@ -21,10 +18,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability modes"
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Availability Modes (Always On Availability Groups)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ ms.workload: "On Demand"
 -   [Related Content](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> Supported Availability Modes  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports two availability modes—asynchronous-commit mode and synchronous-commit mode, as follows:  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports three availability modes—asynchronous-commit mode, synchronous-commit mode, and configuration only mode as follows:  
   
 -   *Asynchronous-commit mode* is a disaster-recovery solution that works well when the availability replicas are distributed over considerable distances. If every secondary replica is running under asynchronous-commit mode, the primary replica does not wait for any of the secondary replicas to harden the log. Rather, immediately after writing the log record to the local log file, the primary replica sends the transaction confirmation to the client. The primary replica runs with minimum transaction latency in relation to a secondary replica that is configured for asynchronous-commit mode.  If the current primary is configured for asynchronous commit availability mode, it will commit transactions asynchronously for all secondary replicas regardless of their individual availability mode settings.  
   

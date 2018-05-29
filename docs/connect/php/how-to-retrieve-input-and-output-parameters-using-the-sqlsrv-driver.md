@@ -1,25 +1,20 @@
 ---
 title: "How to: Retrieve I/O Parameters Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.date: "04/12/2018"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedure support"
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +24,7 @@ This topic demonstrates how to use the SQLSRV driver to call a stored procedure 
 > [!NOTE]  
 > Variables that are initialized or updated to **null**, **DateTime**, or stream types cannot be used as output parameters.  
   
-## Example  
+## Example 1
 The following example calls a stored procedure that subtracts used vacation hours from the available vacation hours of a specified employee. The variable that represents used vacation hours, *$vacationHrs*, is passed to the stored procedure as an input parameter. After updating the available vacation hours, the stored procedure uses the same parameter to return the number of remaining vacation hours.  
   
 > [!NOTE]  
@@ -101,7 +96,7 @@ $employeeId = 4;
 $vacationHrs = 8;  
 $params = array(   
                  array($employeeId, SQLSRV_PARAM_IN),  
-                 array($vacationHrs, SQLSRV_PARAM_INOUT)  
+                 array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                );  
   
 /* Execute the query. */  
@@ -123,7 +118,37 @@ sqlsrv_free_stmt( $stmt3);
 sqlsrv_close( $conn);  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> When binding an input/output parameter to a bigint type, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
+
+## Example 2
+This code sample shows how to bind a large bigint value as an input/output parameter.  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"testDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume the stored procedure spTestProcedure exists, which retrieves a bigint value of some large number
+// e.g. 9223372036854
+$bigintOut = 0;
+$outSql = "{CALL spTestProcedure (?)}";
+$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_INOUT, null, SQLSRV_SQLTYPE_BIGINT)));
+sqlsrv_execute($stmt);
+echo "$bigintOut\n";   // Expect 9223372036854
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
 ## See Also  
 [How to: Specify Parameter Direction Using the SQLSRV Driver](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 

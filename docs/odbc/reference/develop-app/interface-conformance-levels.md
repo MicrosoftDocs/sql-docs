@@ -2,16 +2,13 @@
 title: "Interface Conformance Levels | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interface conformance levels [ODBC]"
   - "conformance levels [ODBC], interface"
@@ -19,10 +16,9 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], conformance levels"
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Interface Conformance Levels
 The purpose of leveling is to inform the application what features are available to it from the driver. A leveling scheme based on functions does not sufficiently achieve this goal. In ODBC 3.*x*, drivers are classified based on the features they possess. Supporting the feature can include supporting the function; it can also include supporting a descriptor field, a statement attribute, a "Y" value for an information type returned by **SQLGetInfo**, and so on.  

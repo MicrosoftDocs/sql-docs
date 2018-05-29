@@ -2,16 +2,13 @@
 title: "SQLGetConnectOption Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLGetConnectOption"
 apilocation: 
@@ -23,10 +20,9 @@ helpviewer_keywords:
   - "SQLGetConnectOption function [ODBC]"
 ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetConnectOption Function
 **Conformance**  

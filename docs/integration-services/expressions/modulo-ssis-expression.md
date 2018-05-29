@@ -2,16 +2,15 @@
 title: "(Modulo) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "% (modulo operator)"
   - "remainder of division operation"
@@ -20,8 +19,7 @@ ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # (Modulo) (SSIS Expression)
   Provides the integer remainder after dividing the first numeric expression by the second one.  

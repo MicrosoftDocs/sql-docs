@@ -1,17 +1,16 @@
----
+﻿---
 title: "Change the Configuration Settings for a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database configuration [SQL Server]"
   - "configuration options [SQL Server], databases"
@@ -20,8 +19,8 @@ ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
 caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Change the Configuration Settings for a Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

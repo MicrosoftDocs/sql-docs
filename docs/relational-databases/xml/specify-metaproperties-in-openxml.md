@@ -2,16 +2,14 @@
 title: "Specify Metaproperties in OPENXML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "xml"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
+ms.technology: xml
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "overflow in XML document [SQL Server]"
   - "metaproperties [XML in SQL Server]"
@@ -22,8 +20,7 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Specify Metaproperties in OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

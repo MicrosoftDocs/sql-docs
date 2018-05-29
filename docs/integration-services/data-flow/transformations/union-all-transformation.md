@@ -2,16 +2,15 @@
 title: "Union All Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.unionalltrans.f1"
   - "sql13.dts.designer.unionalltransformation.f1"
@@ -24,8 +23,7 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Union All Transformation
   The Union All transformation combines multiple inputs into one output. For example, the outputs from five different Flat File sources can be inputs to the Union All transformation and combined into one output.  

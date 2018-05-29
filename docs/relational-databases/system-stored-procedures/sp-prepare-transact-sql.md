@@ -1,15 +1,13 @@
----
+﻿---
 title: "sp_prepare (Transact SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords:
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "sp_prepare"
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

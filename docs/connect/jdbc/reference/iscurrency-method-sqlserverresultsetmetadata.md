@@ -2,16 +2,13 @@
 title: "isCurrency Method (SQLServerResultSetMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLServerResultSetMetaData.isCurrency"
 apilocation: 
@@ -19,10 +16,9 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # isCurrency Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

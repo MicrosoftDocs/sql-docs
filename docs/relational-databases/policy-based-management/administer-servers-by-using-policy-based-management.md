@@ -2,16 +2,15 @@
 title: "Administer Servers by Using Policy-Based Management | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "facet See facets"
   - "Declarative Management Framework See Policy-Based Management"
@@ -24,10 +23,9 @@ helpviewer_keywords:
   - "PolicyAdministratorRole role"
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Administer Servers by Using Policy-Based Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

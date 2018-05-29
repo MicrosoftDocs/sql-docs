@@ -1,10 +1,9 @@
----
+﻿---
 title: "Configuring SQL Server in SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,8 +18,8 @@ ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 caps.latest.revision: 42
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configuring SQL Server in SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -4,17 +4,14 @@ description: This article describes how SQL Server runs on Linux and provides in
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 05/24/2018
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.workload: "Active"
 ---
 # SQL Server on Linux
 
@@ -42,7 +39,7 @@ After installation, connect to the SQL Server instance on your Linux machine. Yo
 | Tool | Tutorial |
 |-----|-----|
 | Visual Studio Code (VS Code) | [Use VS Code with SQL Server on Linux](sql-server-linux-develop-use-vscode.md) |
-| SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) |
+| SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-manage-ssms.md) |
 | SQL Server Data Tools (SSDT) | [Use SSDT with SQL Server on Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## Explore
@@ -55,3 +52,5 @@ If you are already familiar with SQL Server, review the [Release notes](sql-serv
 > For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

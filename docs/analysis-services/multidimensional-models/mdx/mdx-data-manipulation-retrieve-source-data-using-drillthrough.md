@@ -1,30 +1,14 @@
 ---
 title: "Using DRILLTHROUGH to Retrieve Source Data (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DRILLTHROUGH statement"
-  - "retrieving data"
-  - "queries [MDX], DRILLTHROUGH statement"
-  - "data retrieval [MDX]"
-ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
-caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Manipulation - Retrieve Source Data Using DRILLTHROUGH
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

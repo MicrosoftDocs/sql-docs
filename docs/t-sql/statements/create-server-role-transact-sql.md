@@ -2,14 +2,12 @@
 title: "CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -28,10 +26,9 @@ helpviewer_keywords:
   - "roles, server"
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

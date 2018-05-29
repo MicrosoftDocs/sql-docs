@@ -2,16 +2,14 @@
 title: "Add a Secondary Database to a Log Shipping Configuration (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "log-shipping"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "adding secondary databases"
   - "secondary databases [SQL Server], in log shipping"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "log shipping [SQL Server], secondary databases"
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Add a Secondary Database to a Log Shipping Configuration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

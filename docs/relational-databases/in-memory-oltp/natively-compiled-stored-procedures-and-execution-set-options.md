@@ -1,23 +1,21 @@
----
+﻿---
 title: "Natively Compiled Stored Procedures and Execution Set Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 caps.latest.revision: 5
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Natively Compiled Stored Procedures and Execution Set Options
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

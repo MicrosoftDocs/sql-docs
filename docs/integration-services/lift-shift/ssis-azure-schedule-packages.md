@@ -1,10 +1,9 @@
 ---
-title: "Schedule SSIS package execution on Azure | Microsoft Docs"
-ms.date: "01/16/2018"
-ms.topic: "article"
-ms.prod: "sql-non-specified"
+title: "Schedule SSIS packages in Azure | Microsoft Docs"
+ms.date: "05/09/2018"
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
@@ -12,14 +11,77 @@ ms.technology:
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
-# Schedule the execution of an SSIS package on Azure
+# Schedule the execution of an SSIS package in Azure
 You can schedule the execution of packages stored in the SSISDB Catalog database on an Azure SQL Database server by choosing one of the following scheduling options:
--   [SQL Server Agent](#agent)
+-   [The Schedule option in SQL Server Management Studio (SSMS)](#ssms)
+-   [The Azure Data Factory Execute SSIS Package activity](#execute)
+-   [The Azure Data Factory SQL Server Stored Procedure activity](#storedproc)
 -   [SQL Database elastic jobs](#elastic)
--   [The Azure Data Factory SQL Server Stored Procedure activity](#sproc)
+-   [SQL Server Agent](#agent)
+
+## <a name="ssms"></a> Schedule a package with SSMS
+
+In SQL Server Management Studio (SSMS), you can right-click on a package deployed to the SSIS Catalog database, SSISDB, and select **Schedule** to open the **New schedule** dialog box. For more info, see [Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md).
+
+This feature requires SQL Server Management Studio version 17.7 or higher. To get the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+
+## <a name="execute"></a> Schedule a package with the Execute SSIS Package activity
+
+For info about how to schedule an SSIS package by using the Execute SSIS Package activity in Azure Data Factory, see [Run an SSIS package using SSIS activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+
+## <a name="storedproc"></a> Schedule a package with the Stored Procedure activity
+
+For info about how to schedule an SSIS package by using the Stored Procedure activity in Azure Data Factory, see [Run an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+
+For Data Factory version 1, see [Run an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
+
+## <a name="elastic"></a> Schedule a package with SQL Database Elastic Jobs
+
+For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+
+### Prerequisites
+
+Before you can use elastic jobs to schedule SSIS packages stored in the SSISDB Catalog database on an Azure SQL Database server, you have to do the following things:
+
+1.  Install and configure the Elastic Database jobs components. For more info, see [Installing Elastic Database jobs overview](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
+
+2. Create database-scoped credentials that jobs can use to send commands to the SSIS Catalog database. For more info, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+
+### Create an elastic job
+
+Create the job by using a Transact-SQL script similar to the script shown in the following example:
+
+```sql
+-- Create Elastic Jobs target group 
+EXEC jobs.sp_add_target_group 'TargetGroup' 
+
+-- Add Elastic Jobs target group member 
+EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
+	@target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+	@database_name='SSISDB' 
+
+-- Add a job to schedule SSIS package execution
+EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
+	@schedule_interval_type='Minutes', @schedule_interval_count=60
+
+-- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
+EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
+	@command=N'DECLARE @exe_id bigint 
+		EXEC [SSISDB].[catalog].[create_execution]
+            @folder_name=N''folderName'', @project_name=N''projectName'',
+            @package_name=N''packageName'', @use32bitruntime=0,
+            @runinscaleout=1, @useanyworker=1, 
+			@execution_id=@exe_id OUTPUT		 
+		EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+	@credential_name='YourDBScopedCredentials', 
+	@target_group_name='TargetGroup' 
+
+-- Enable the job schedule 
+EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
+	@schedule_interval_type='Minutes', @schedule_interval_count=60 
+```
 
 ## <a name="agent"></a> Schedule a package with SQL Server Agent
 
@@ -90,60 +152,6 @@ To schedule a package with SQL Server Agent on premises, create a job with a job
     ```
 
 6.  Finish configuring and scheduling the job.
-
-## <a name="elastic"></a> Schedule a package with SQL Database Elastic Jobs
-
-For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
-
-### Prerequisites
-
-Before you can use elastic jobs to schedule SSIS packages stored in the SSISDB Catalog database on an Azure SQL Database server, you have to do the following things:
-
-1.  Install and configure the Elastic Database jobs components. For more info, see [Installing Elastic Database jobs overview](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
-
-2. Create database-scoped credentials that jobs can use to send commands to the SSIS Catalog database. For more info, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
-
-### Create an elastic job
-
-Create the job by using a Transact-SQL script similar to the script shown in the following example:
-
-```sql
--- Create Elastic Jobs target group 
-EXEC jobs.sp_add_target_group 'TargetGroup' 
-
--- Add Elastic Jobs target group member 
-EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
-	@target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
-	@database_name='SSISDB' 
-
--- Add a job to schedule SSIS package execution
-EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
-	@schedule_interval_type='Minutes', @schedule_interval_count=60
-
--- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
-	@command=N'DECLARE @exe_id bigint 
-		EXEC [SSISDB].[catalog].[create_execution]
-            @folder_name=N''folderName'', @project_name=N''projectName'',
-            @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1, 
-			@execution_id=@exe_id OUTPUT		 
-		EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
-	@credential_name='YourDBScopedCredentials', 
-	@target_group_name='TargetGroup' 
-
--- Enable the job schedule 
-EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
-	@schedule_interval_type='Minutes', @schedule_interval_count=60 
-```
-
-## <a name="sproc"></a> Schedule a package with the Azure Data Factory SQL Server Stored Procedure activity
-
-For info about how to schedule an SSIS package by using the Azure Data Factory Stored Procedure activity, see the following articles:
-
--   For Data Factory version 2: [Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
-
--   For Data Factory version 1: [Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## Next steps
 For more info about SQL Server Agent, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).

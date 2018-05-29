@@ -1,17 +1,15 @@
 ---
 title: "EndOfRecordset Event (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "EndOfRecordset"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "EndOfRecordset event [ADO]"
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # EndOfRecordset Event (ADO)
 The **EndOfRecordset** event is called when there is an attempt to move to a row past the end of the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

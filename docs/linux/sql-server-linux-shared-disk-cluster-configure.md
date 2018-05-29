@@ -6,15 +6,12 @@ ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85 
-ms.workload: "Inactive"
 ---
 # Configure failover cluster instance - SQL Server on Linux (RHEL)
 

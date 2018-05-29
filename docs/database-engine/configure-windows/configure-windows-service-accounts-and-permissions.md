@@ -1,17 +1,14 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/15/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.date: "05/08/2018"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "startup service states [SQL Server]"
   - "Setup [SQL Server], user accounts"
@@ -54,10 +51,9 @@ helpviewer_keywords:
   - "accounts [SQL Server], user"
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: 207
-author: "MikeRayMSFT"
-ms.author: "MikeRay"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure Windows Service Accounts and Permissions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,6 +66,7 @@ ms.workload: "Active"
   
 |||  
 |-|-|  
+|SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
@@ -132,7 +129,7 @@ The following table lists the default service accounts used by setup when instal
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)* **|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
@@ -144,7 +141,8 @@ The following table lists the default service accounts used by setup when instal
 |PolyBase Engine  |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
 |PolyBase Data Movement Service |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
   
- *When resources external to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer are needed, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends using a Managed Service Account (MSA), configured with the minimum privileges necessary.  
+ *When resources external to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer are needed, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends using a Managed Service Account (MSA), configured with the minimum privileges necessary.   
+ ** When installed on a Domain Controller, a virtual account as the service account is not supported.
   
  **SQL Server Failover Cluster Instance**
   

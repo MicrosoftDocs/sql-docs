@@ -2,9 +2,8 @@
 title: "Get started with this simple example of the Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "import-export-data"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,8 +15,7 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Get started with this simple example of the Import and Export Wizard
 Learn what to expect in the SQL Server Import and Export Wizard by walking through a common scenario - importing data from an Excel spreadsheet to a SQL Server database. Even if you plan to use a different source and a different destination, this topic shows you most of what you need to know about running the wizard.
@@ -57,9 +55,12 @@ You probably don't want to see this page again, so go ahead and click **Do not s
 ## Step 3 - Pick Excel as your data source
 On the next page, **Choose a Data Source**, you pick Microsoft Excel as your data source. Then you browse to pick the Excel file. Finally you specify the Excel version that you used to create the file.
 
+> [!IMPORTANT]
+> For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
 ![Choose the Excel data source](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-For more info about connecting to Excel, see [Connect to an Excel Data Source](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). For more info about this page of the wizard, see [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
+For more info about this page of the wizard, see [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## Step 4 - Pick SQL Server as your destination
 On the next page, **Choose a Destination**, you pick Microsoft SQL Server as your destination by picking one of the data providers in the list that connects to SQL Server. In this example, you pick the **.Net Framework Data Provider for SQL Server**.
@@ -157,4 +158,4 @@ Learn more about how the wizard works.
 
 -   **Learn how to connect to data sources and destinations.** If you're looking for info about how to connect to your data, select the page you want from the list here - [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). There's a separate page of documentation for each of several commonly used data sources.
 
-
+-   **Learn more about loading data from and to Excel.** If you're looking for info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

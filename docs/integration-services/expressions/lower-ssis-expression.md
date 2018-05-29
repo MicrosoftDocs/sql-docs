@@ -2,16 +2,15 @@
 title: "LOWER (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "expressions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "converting uppercase to lowercase"
   - "LOWER function"
@@ -21,8 +20,7 @@ ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # LOWER (SSIS Expression)
   Returns a character expression after converting uppercase characters to lowercase characters.  

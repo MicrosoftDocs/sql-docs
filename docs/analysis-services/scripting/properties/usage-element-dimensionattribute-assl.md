@@ -1,35 +1,14 @@
 ---
 title: "Usage Element (DimensionAttribute) (ASSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Usage Element (DimensionAttribute)"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "Usage"
-helpviewer_keywords: 
-  - "Usage element"
-ms.assetid: c5e38d2e-5a8e-4157-84e9-285e78c84e74
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
+ms.topic: reference
+author: minewiskan
+ms.author: owend
+manager: kfile
 ---
 # Usage Element (DimensionAttribute) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

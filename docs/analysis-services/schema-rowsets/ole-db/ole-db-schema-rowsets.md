@@ -1,31 +1,14 @@
 ---
 title: "OLE DB Schema Rowsets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "schema rowsets [OLE DB]"
-  - "schema rowsets [Analysis Services], OLE DB"
-  - "OLE DB schema rowsets"
-  - "rowsets [Analysis Services], OLE DB"
-ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # OLE DB Schema Rowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

@@ -2,22 +2,19 @@
 title: "Retrieving Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 caps.latest.revision: 42
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Retrieving Data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

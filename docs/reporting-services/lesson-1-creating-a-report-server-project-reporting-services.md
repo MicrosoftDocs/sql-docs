@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "11/30/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -17,7 +16,6 @@ caps.latest.revision: 57
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Lesson 1: Creating a Report Server Project (Reporting Services)
 

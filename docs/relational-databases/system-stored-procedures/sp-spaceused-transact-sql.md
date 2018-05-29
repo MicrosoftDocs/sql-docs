@@ -1,15 +1,13 @@
----
+﻿---
 title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "sp_spaceused"
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 caps.latest.revision: 62
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -82,7 +80,7 @@ If *objname* is not specified, results are returned for the whole database.
  *oneresultset* is **bit**, with a default of **0**.  
 
 [ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
-**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+**Applies to:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  When @oneresultset=1, the parameter @include_total_xtp_storage determines whether the single resultset includes columns for MEMORY_OPTIMIZED_DATA storage. The default value is 0, that is, by default (if the parameter is omitted) the XTP columns are not included in the resultset.  
 

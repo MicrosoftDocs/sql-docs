@@ -2,16 +2,13 @@
 title: "Back Up Files and Filegroups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up filegroups [SQL Server]"
   - "file backups [SQL Server], how-to topics"
@@ -20,10 +17,9 @@ helpviewer_keywords:
   - "filegroups [SQL Server], backing up"
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Back Up Files and Filegroups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -204,7 +200,7 @@ GO
   
      The following example creates a full file backup of every file in the secondary filegroups 'FileGroup1' and 'FileGroup2' in the `MyDB` database. The backups are created on the default backup location of the server instance `Computer\Instance`.  
   
-    ```  
+    ```sql  
     --Enter this command at the PowerShell command prompt, C:\PS>  
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2"  
     ```  

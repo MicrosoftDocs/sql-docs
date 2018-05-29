@@ -1,22 +1,13 @@
 ---
-title: "Performance for R Services - data optimization | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/12/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Performance for SQL Server R Services - data optimization | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Performance for R Services - data optimization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +26,7 @@ When working with large data sets, you should always use the SQL compute context
 
 ## Factors
 
-The R language has the concept of “factors”, which are special variable for categorical data. Data scientists often use factor variables in their formula, because handling categorical variables as factors ensures that the data is processed properly by machine learning functions. For more information, see [R for Dummies: Factor Variables] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+The R language has the concept of “factors”, which are special variable for categorical data. Data scientists often use factor variables in their formula, because handling categorical variables as factors ensures that the data is processed properly by machine learning functions. For more information, see [R for Dummies: Factor Variables](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 By design, factor variables can be converted from strings to integers and back again for storage or processing. The R `data.frame` function handles all strings as factor variables, unless the argument *stringsAsFactors* is set to **False**. What this means is that strings are automatically converted to an integer for processing, and then mapped back to the original string.
 

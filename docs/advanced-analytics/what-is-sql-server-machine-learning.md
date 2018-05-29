@@ -1,22 +1,13 @@
 ---
-title: "What is SQL Server Machine Learning Services? | Microsoft Docs"
-ms.date: "03/07/2018"
-ms.prod: "machine-learning-services"
-ms.prod_service: "machine-learning-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 
-caps.latest.revision: 
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: 
+title: What is SQL Server Machine Learning Services? | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: overview
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # What is SQL Server Machine Learning Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +19,7 @@ The key value proposition of Machine Learning Services is the power of its propr
 There are two options for using machine learning capabilities in SQL Server: 
 
 + [**SQL Server Machine Learning Services (In-Database)**](r/sql-server-r-services.md) operates within the database engine instance, where the calculation engine is fully integrated with the database engine. Most installations are this option.
-+ [**SQL Server Machine Learning Server (Standalone)**](r/r-server-standalone.md) is a non-SQL installation. Although you use SQL Server Setup to install the server, it is completely decoupled from SQL Server. Functionally, it is equivalent to the non-SQL [Microsoft Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
++ [**SQL Server Machine Learning Server (Standalone)**](r/r-server-standalone.md) is Machine Learning Server for Windows that runs independently of the database engine. Although you use SQL Server Setup to install the server, the feature is not instance-aware. Functionally, it is equivalent to the non-SQL-Server [Microsoft Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
 ## R and Python packages
 
@@ -44,7 +35,7 @@ Because the proprietary packages are built on open-source R and Python distribut
 | [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Primarily used on a non-SQL installation of Machine Learning Server, such as the [(Standalone) version](r/r-server-standalone.md). Use this package to deploy and host web services, build scale-out topologies with dedicated web and compute nodes, toggle between local and remote sessions, run diagnostics, and more. For an (In-Database) installation, use this package in a client capacity: for example, to access a web service on a remote server dedicated to running just Machine Learning Services workloads. |
 
-Portability of your custom R and Python code is addressed through package distribution and interpreters that are built into multiple products. The same packages that ship in SQL Server are also available in several other Microsoft products and services, including a non-SQL version called [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Free clients that include our R and Pyton interpreters include [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) and the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
+Portability of your custom R and Python code is addressed through package distribution and interpreters that are built into multiple products. The same packages that ship in SQL Server are also available in several other Microsoft products and services, including a non-SQL version called [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Free clients that include our R and Python interpreters include [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) and the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
 
 Packages and interpreters are also available on several [Azure virtual machines](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux), Azure Machine Learning, and Azure services like [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight). 
 

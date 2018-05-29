@@ -2,16 +2,15 @@
 title: "Monitor Replication Agents | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], agents"
   - "Log Reader Agent, monitoring"
@@ -25,8 +24,7 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 caps.latest.revision: 17
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Monitor Replication Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

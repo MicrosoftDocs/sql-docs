@@ -1,17 +1,15 @@
 ---
 title: "sqlsrv_query | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.date: "05/22/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_query"
 apitype: "NA"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_query"
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 caps.latest.revision: 46
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -164,7 +161,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## Example  
 This code sample shows how to bind a decimal value as an input parameter.  

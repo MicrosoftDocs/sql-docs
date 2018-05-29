@@ -1,15 +1,13 @@
----
+﻿---
 title: "sys.index_resumable_operations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,9 +22,9 @@ ms.assetid:
 caps.latest.revision: 1
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 
-ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # index_resumable_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

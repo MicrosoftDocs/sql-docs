@@ -1,30 +1,14 @@
 ---
 title: "Working with the ADOMD.NET Object Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "metadata [ADOMD.NET]"
-  - "object model (client) [ADOMD.NET]"
-  - "retrieving metadata"
-ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: adomd
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Retrieving Metadata - Working with ADOMD.NET Object Model
   ADOMD.NET provides an object model for viewing the cubes and subordinate objects contained by an analytical data source. However, not all metadata for a given analytical data source is available through the object model. The object model provides access to only the information that is most useful for a client application to display in order to allow a user to interactively construct commands. Because of the reduced complexity of the metadata to present, the ADOMD.NET object model is easier to use.  

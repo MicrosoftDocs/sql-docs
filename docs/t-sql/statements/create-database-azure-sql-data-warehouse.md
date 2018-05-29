@@ -1,4 +1,4 @@
----
+﻿---
 title: "CREATE DATABASE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/14/20178"
@@ -8,15 +8,15 @@ ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.component: "t-sql|statements"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE DATABASE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

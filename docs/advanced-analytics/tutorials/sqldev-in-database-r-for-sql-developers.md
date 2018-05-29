@@ -1,27 +1,13 @@
 ---
-title: "In-database R analytics for SQL developers (tutorial)| Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-  - "TSQL"
-ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "On Demand"
+title: In-database R analytics for SQL developers (tutorial)| Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # In-database R analytics for SQL developers (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

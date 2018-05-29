@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-server"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "administering Reporting Services"
   - "administering [Reporting Services]"
@@ -22,7 +21,6 @@ caps.latest.revision: 24
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Reporting Services Report Server (Native Mode)
   A report server configured for native mode runs as an application server that provides all processing and management capability exclusively through [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]components.  

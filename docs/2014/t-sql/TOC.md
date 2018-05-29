@@ -13,4 +13,5 @@
 ### [Summary: Configuring Permissions on Database Objects](lesson-2-5-summary-configuring-permissions-on-database-objects.md)
 ## [Lesson 3: Deleting Database Objects](lesson-3-1-deleting-database-objects.md)
 ### [Deleting Database Objects](lesson-3-deleting-database-objects.md)
+## [Summary: Writing Transact-SQL](../tutorials/summary-writing-transact-sql.md)
 

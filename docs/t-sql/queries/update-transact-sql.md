@@ -1,4 +1,4 @@
-﻿---
+---
 title: "UPDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2017"

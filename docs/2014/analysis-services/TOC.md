@@ -232,5 +232,5 @@
 #### [Defining and Browsing Translations](lesson-9-2-defining-and-browsing-translations.md)
 ### [Lesson 10: Defining Administrative Roles](lesson-10-defining-administrative-roles.md)
 #### [Granting Process Database Permissions](lesson-10-granting-process-database-permissions.md)
-## [Data Mining Tutorials +](data-mining-tutorials-analysis-services.md)
+## [Data Mining Tutorials](data-mining-tutorials-analysis-services.md)
 

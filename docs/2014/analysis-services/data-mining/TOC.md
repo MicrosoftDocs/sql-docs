@@ -170,7 +170,7 @@
 ### [Table Analysis Tools for Excel](../table-analysis-tools-for-excel.md)
 ### [Data Mining Client for Excel](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)
 ### [Data Mining Shapes for Visio](../data-mining-shapes-for-visio.md)
-# [Connect to a Data Mining Server](../connect-to-a-data-mining-server.md)
+### [Connect to a Data Mining Server](../connect-to-a-data-mining-server.md)
 # [Getting Started with Data Mining](../getting-started-with-data-mining-data-mining-add-ins-for-excel.md)
 ## [Choosing a Model](../choosing-a-model.md)
 ## [Checklist of Preparation for Data Mining](../checklist-of-preparation-for-data-mining.md)

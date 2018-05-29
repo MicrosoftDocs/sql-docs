@@ -1,7 +1,7 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/28/2018"
+ms.date: "05/30/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -40,7 +40,7 @@ The v3.4 release of DMA includes the following additions:
 The v3.3 release of DMA enables migration of an on-premises SQL Server instance to the new version of SQL Server 2017, on both Windows and Linux. While the overall migration workflow for Windows and Linux is the same, the move to SQL Server 2017 for Linux requires a couple of additional considerations.
 
 ### Specifying the back-up path
-Linux and Windows use different path formats. As a result, migrating to SQL Server 2017 on Linux requires that the user provide both the Windows and Linux versions of the path to the location of the physical file. This is accomplished in different ways depending on the location of the physical file.
+Linux and Windows use different path formats. As a result, migrating to SQL Server 2017 on Linux requires that the user provide both the Windows and Linux versions of the path to the location of the physical file. You can  provide both versions of the path in different ways depending on the location of the physical file.
 If the physical back-up file is on a computer running:
 - Linux, use a ‘samba’ share to share the file with other computers on the network.
 - Windows, use the ‘mnt’ command to mount the share onto the computer running Linux.
@@ -49,7 +49,7 @@ If the physical back-up file is on a computer running:
 > Details of using a ‘samba’ share or the ‘mnt’ command are beyond the scope of this article.
 
 ### Migrating Windows logins
-While the migration of Active Directory (AD) logins is officially supported by SQL Server 2017 on Linux, it requires additional configuration to work successfully. Refer to the topic [Active Directory Authentication with SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication) for detailed information about setting up Active Directory logins on SQL Server 2017 on Linux. After this the setup is complete, you can migrate Active Directory logins as usual. Standard SQL Authentication works as expected without any additional setup.
+While the migration of Active Directory (AD) logins is officially supported by SQL Server 2017 on Linux, it requires additional configuration to work successfully. Refer to the topic [Active Directory Authentication with SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication) for detailed information about setting up Active Directory logins on SQL Server 2017 on Linux. After this configuration the setup is complete and you can migrate Active Directory logins as usual. Standard SQL Authentication works as expected without any additional setup.
 
 ## DMA v3.2
 The v3.2 release of DMA includes the following additions:

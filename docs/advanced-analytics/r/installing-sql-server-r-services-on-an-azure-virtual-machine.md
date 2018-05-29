@@ -12,7 +12,7 @@ manager: cgronlun
 # Install SQL Server machine learning features on an Azure virtual machine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-We recommend using the [Data Science virtual machine](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), but if you want a VM that has just SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services, this article guides you through the steps.
+We recommend using the [Data Science virtual machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), but if you want a VM that has just SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services, this article guides you through the steps.
 
 ## Create a virtual machine on Azure
 

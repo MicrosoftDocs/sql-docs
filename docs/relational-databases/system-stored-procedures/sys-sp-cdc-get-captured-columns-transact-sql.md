@@ -60,7 +60,7 @@ sys.sp_cdc_get_captured_columns
 |capture_instance|**sysname**|Name of the capture instance.|  
 |column_name|**sysname**|Name of the captured source column.|  
 |column_id|**int**|ID of the column in the source table.|  
-|ordinal_position|**int**|Position of the column within the source table.|  
+|column_ordinal|**int**|Position of the column within the source table.|  
 |data_type|**sysname**|Column data type.|  
 |character_maximum_length|**int**|Maximum character length of the character-based column; otherwise, NULL.|  
 |numeric_precision|**tinyint**|Precision of the column if numeric-based; otherwise, NULL.|  

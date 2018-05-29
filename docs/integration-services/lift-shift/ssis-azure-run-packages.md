@@ -16,7 +16,7 @@ manager: craigg
 ---
 # Run an SSIS package in Azure
 
-You can run SSIS packages deployed to the SSISDB Catalog database on an Azure SQL Database server by choosing one of the options described in this article. You can run a package directly, or run a package as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](../../GitHub/sql-docs-pr/docs/integration-services/lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+You can run SSIS packages deployed to the SSISDB Catalog database on an Azure SQL Database server by choosing one of the options described in this article. You can run a package directly, or run a package as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Run a package directly
 

@@ -18,19 +18,11 @@ manager: craigg
 # System Requirements for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  To access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] by using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must have the following components installed on your computer:  
-  
--   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]  
-  
-     You can download the Microsoft JDBC Driver from the Microsoft Download Center links below: 
-	 * [Microsoft JDBC Driver 6.4 for SQL Server](http://go.microsoft.com/fwlink/?linkid=868290)
-     * [Microsoft JDBC Driver 6.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=852460)
-     * [Microsoft JDBC Driver 6.0 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841535)
-     * [Microsoft JDBC Driver 4.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841534) 
-     * [Microsoft JDBC Driver 4.1 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
-  
--   Java Runtime Environment  
-  
+  To access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] by using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must have the following components installed on your computer:
+
+- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([download](download-microsoft-jdbc-driver-for-sql-server.md))
+- Java Runtime Environment
+
 ## Java Runtime Environment Requirements  
  Starting with the Microsoft JDBC Driver 6.4 for SQL Server, Sun Java SE Development Kit (JDK) 9.0 and Java Runtime Environment (JRE) 9.0 are supported.
 

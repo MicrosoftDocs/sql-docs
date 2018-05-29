@@ -45,10 +45,19 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
  The following is a sample function that initializes and establishes a connection to the data source.  
   
 ```  
-void InitializeAndEstablishConnection() {  
+#include "msoledbsql.h"
+
+void InitializeAndEstablishConnection() {
+    IDBInitialize   *pIDBInitialize = NULL;
+    IDBProperties   *pIDBProperties = NULL;
+    DBPROP          InitProperties[4];
+    DBPROPSET       rgInitPropSet[1];
+    HRESULT         hr;
+    int             i;
+
    // Initialize the COM library.  
    CoInitialize(NULL);  
-  
+
    // Obtain access to the OLE DB Driver for SQL Server.  
    hr = CoCreateInstance(CLSID_MSOLEDBSQL,   
                          NULL,   
@@ -58,7 +67,7 @@ void InitializeAndEstablishConnection() {
    // Initialize property values needed to establish connection.  
    for (i = 0 ; i < 4 ; i++)   
       VariantInit(&InitProperties[i].vValue);  
-  
+
    // Server name.  
    // See DBPROP structure for more information on InitProperties  
    InitProperties[0].dwPropertyID  = DBPROP_INIT_DATASOURCE;  
@@ -67,14 +76,14 @@ void InitializeAndEstablishConnection() {
                      SysAllocString(L"Server");  
    InitProperties[0].dwOptions    = DBPROPOPTIONS_REQUIRED;  
    InitProperties[0].colid       = DB_NULLID;  
-  
+
    // Database.  
    InitProperties[1].dwPropertyID  = DBPROP_INIT_CATALOG;  
    InitProperties[1].vValue.vt    = VT_BSTR;  
    InitProperties[1].vValue.bstrVal= SysAllocString(L"database");  
    InitProperties[1].dwOptions    = DBPROPOPTIONS_REQUIRED;  
    InitProperties[1].colid       = DB_NULLID;  
-  
+
    // Username (login).  
    InitProperties[2].dwPropertyID  = DBPROP_AUTH_INTEGRATED;  
    InitProperties[2].vValue.vt    = VT_BSTR;  
@@ -83,23 +92,22 @@ void InitializeAndEstablishConnection() {
    InitProperties[2].colid       = DB_NULLID;  
    InitProperties[3].dwOptions    = DBPROPOPTIONS_REQUIRED;  
    InitProperties[3].colid       = DB_NULLID;  
-  
+
    // Construct the DBPROPSET structure(rgInitPropSet). The   
    // DBPROPSET structure is used to pass an array of DBPROP   
    // structures (InitProperties) to the SetProperties method.  
    rgInitPropSet[0].guidPropertySet = DBPROPSET_DBINIT;  
    rgInitPropSet[0].cProperties   = 4;  
    rgInitPropSet[0].rgProperties   = InitProperties;  
-  
+
    // Set initialization properties.  
    hr = pIDBInitialize->QueryInterface(IID_IDBProperties,   
                            (void **)&pIDBProperties);  
    hr = pIDBProperties->SetProperties(1, rgInitPropSet);   
    pIDBProperties->Release();  
-  
+
    // Now establish the connection to the data source.  
    pIDBInitialize->Initialize();  
-}  
 ```  
   
 ## See Also  

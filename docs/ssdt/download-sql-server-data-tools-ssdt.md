@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2018"
+ms.date: "05/24/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -23,19 +23,12 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. 
 
-Install SQL Server Data Tools (SSDT):
-
-- during an installation of Visual Studio, or into an existing Visual Studio installation.
-- as a standalone SSDT installation with a minimal Visual Studio shell.
-
-For most users, SSDT is installed during Visual Studio installation, or into an existing Visual Studio installation.
+For most users, SSDT is installed during Visual Studio installation, or into an existing Visual Studio installation. For detailed instructions, see [Install Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio), [Modify Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio).
 
 To install the latest version of SSDT, select the **Data storage and processing** workload during Visual Studio installation, or modify an existing installation to include SSDT. 
 
 
 ![Data storage and processing workload](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
-
-For detailed instructions, see [Install Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio), [Modify Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio).
 
 
 SSDT 15.x is a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.5 or later.

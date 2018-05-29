@@ -19,8 +19,8 @@ This article describes how to install new R packages to an instance of SQL Serve
 | Approach                           | Permissions  | Remote/Local |
 |------------------------------------|---------------------------|-------|
 | [Use conventional R package managers](#bkmk_rInstall)  | Admin | Local |
-| [Use RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Admin | Local |
-| [Use T-SQL (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | Admin to setup, database roles afterwards | both 
+| [Use RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Admin to setup, database roles afterwards | Both |
+| [Use T-SQL (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | Admin | both 
 | [Use a miniCRAN to create a local repository](create-a-local-package-repository-using-minicran.md) | Admin to setup, database roles afterwards | both |
 
 ## <a name="bkmk_rInstall"></a> Install R packages over an Internet connection

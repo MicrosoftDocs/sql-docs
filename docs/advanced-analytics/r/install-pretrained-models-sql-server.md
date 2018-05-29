@@ -26,8 +26,8 @@ Pre-trained models work with the following products and languages. The Setup pro
 
 + SQL Server 2016 R Services (In-Database) - R only, with the [MicrosoftML library](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + SQL Server 2016 R Server (Standalone) - R only, with the [MicrosoftML library](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 Machine Learning Services (In-Database) - R with the [MicrosoftML library] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python with the [microsoftml library](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 Machine Learning Server (Standalone) - R with the [MicrosoftML library] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python with the [microsoftml library](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 Machine Learning Services (In-Database) - R with the [MicrosoftML library](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python with the [microsoftml library](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 Machine Learning Server (Standalone) - R with the [MicrosoftML library](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python with the [microsoftml library](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 The installation process differs slightly depending on your version of SQL Server. See the following sections for instructions for each version.
 

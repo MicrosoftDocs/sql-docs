@@ -99,12 +99,13 @@
 ### [Get package information](r/determine-which-packages-are-installed-on-sql-server.md)
 ### [Install new Python packages](python/install-additional-python-packages-on-sql-server.md)
 ### [Install new R packages](r/install-additional-r-packages-on-sql-server.md)
-#### [Use R package managers](r/install-additional-r-packages-on-sql-server.md)
+#### [Use R package managers](r/use-r-package-managers-on-sql-server.md)
 #### [Use RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+##### [Enable remote R package management](r/r-package-how-to-enable-or-disable.md)
+##### [Synchronize R packages](r/package-install-uninstall-and-sync.md)
 #### [Use T-SQL](r/install-r-packages-tsql.md)
-#### [Use a miniCRAN repo](r/create-a-local-package-repository-using-minicran.md)
-#### [Enable remote R package management](r/r-package-how-to-enable-or-disable.md)
-#### [Synchronize R packages](r/package-install-uninstall-and-sync.md)
+#### [Create a local repo](r/create-a-local-package-repository-using-minicran.md)
+
 #### [Workarounds for R "user libraries"](r/packages-installed-in-user-libraries.md)
 
 ## Data exploration and modeling

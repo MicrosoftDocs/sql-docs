@@ -25,10 +25,8 @@ Unlike a typical R or Python development, packages used by SQL Server must be in
 
 However, these restrictions necessarily mean some changes in the way that data scientists and analysts work:
 
-+ Generally, package installation on SQL Server requires administrative access. In SQL Server 2017, the database administrator can use roles to give certain users the ability to install packages for private use, but the administrator still has to enable this feature.
-+ Many servers do not have Internet access. Installing packages to these computers requires some additional preparation.
-+ Packages are installed to an instance library. Packages cannot be shared across instances.
-+ Users cannot run any package that has been installed in a user library.
++ Generally, package installation on SQL Server requires administrative access. Alternatively, a database administrator use role assginments to enable package installation for private use.
++ Packages are installed to an instance library and cannot be shared across instances. Per-user libraries are not supported.
 
 ## Package installation guides for R or Python
 
@@ -40,9 +38,9 @@ See the following articles for detailed steps on how to install new R or Python 
 
     You can install R packages on SQL Server 2016 or 2017 as administrator, using R tools.
 
-    You can also install R packages from a remote R client where R Server 9.0.2 or later is installed.
+    You can also install R packages from a remote R client where R Server 9.0.2 or later is installed if package management has been enabled on the server and you are database owner or member of a package management role.
 
-    You can also install R packages in SQL Server 2017 using DDL statements.
+    You can also install R packages in SQL Server 2017 using CREATE EXTERNAL LIBRARY statements.
 
 ### Python packages
 
@@ -53,14 +51,9 @@ See the following articles for detailed steps on how to install new R or Python 
 Before you attempt to download or install any new package, review the requirements:
 
 + Make sure that there is a Windows version of the package.
-
-+ Identify all package dependencies, and ascertain their compatibility with the SQL Server environment.
-
 + Verify R version or Python versions compatibility. The package must be compatible with the version of R or Python that is running in SQL Server.
 
 + Permissions. Determine whether you have rights to install the package. To install to the instance library, administrative access to the computer running SQL Server is required. If you don't have administrative access to the SQL Server computer, find a database administrator to help with package installation.
-
-    In SQL Server 2017, you can install R packages from a remote client, if package management has been enabled on the server and you are database owner or member of a package management role.
 
 + Consider the risks and benefits of installing a particular package into the SQL Server environment. Check whether the package (or any packages that it requires) contains features that would be blocked by SQL Server or by policy. Many R and Python packages are a very poor fit for a hardened SQL Server environment. Problems might include:
 

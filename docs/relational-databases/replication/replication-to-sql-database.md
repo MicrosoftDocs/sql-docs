@@ -25,9 +25,13 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[Azure SQL Database Managed Instance](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) (preview) supports transactional and snapshot replication. SQL Databases on Managed Instance can participate in any replication role - publisher, distributor, or subscriber. Databases participating in replication can be hosted in an instance of SQL Server on-premises or on in the cloud with a Managed Instance. 
+[Azure SQL Database Managed Instance](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) (preview) supports transactional and snapshot replication. 
 
-Supported topologies include:
+## Publisher or Distributor on Azure SQL Database Managed Instance
+
+SQL Databases on Managed Instance can participate in any replication role - publisher, distributor, or subscriber. Databases participating in replication can be hosted in an instance of SQL Server on-premises or on in the cloud with a Managed Instance.
+
+### Supported topologies
 
 - All participating databases in the cloud
 - Publisher and distributor on-premises, with one or more of the subscribers in the cloud
@@ -35,7 +39,7 @@ Supported topologies include:
 
 In any scenario, a replication topology can include a mix of on-premises and cloud-hosted subscribers.
 
-## Requirements
+### Requirements
 
 - Publisher and distributor databases on Azure SQL Database must be on Managed Instance
 - To configure publisher or distributor databases on Azure SQL Databases, use Transact-SQL
@@ -44,11 +48,9 @@ In any scenario, a replication topology can include a mix of on-premises and clo
 
 ## Push subscriptions to Azure SQL Database (either single or elastic pool) 
 
-A SQL Database or an elastic pool can participate in transactional or snapshot replication as a push subscriber.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication can be configured to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] or elastic pool as a push subscription. In order to participate as a publisher or distributor, SQL Database has to be in a Managed Instance.
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication can be configured to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
- 
-### **Supported Configurations:**  
+### Supported Configurations 
  -  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on-premises or an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in an Azure virtual machine in the cloud. For more information, see [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] must be a push subscriber of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher.  
  -  The distribution database and the replication agents cannot be placed on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

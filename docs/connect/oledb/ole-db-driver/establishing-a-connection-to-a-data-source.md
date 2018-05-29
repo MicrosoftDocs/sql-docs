@@ -45,7 +45,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
  The following is a sample function that initializes and establishes a connection to the data source.  
   
 ```  
-#include "msoledbsql.h"
+#include <msoledbsql.h>
 
 void InitializeAndEstablishConnection() {
     IDBInitialize   *pIDBInitialize = NULL;

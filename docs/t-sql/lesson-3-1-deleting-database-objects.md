@@ -69,7 +69,7 @@ To remove all traces of this tutorial, you could just delete the database. Howev
 6.  Use the `DROP` statement to remove the view `vw_Names`:  
   
     ```  
-    DROP View vw_Names;  
+    DROP VIEW vw_Names;  
     GO  
   
     ```  
@@ -85,7 +85,7 @@ To remove all traces of this tutorial, you could just delete the database. Howev
 8.  Use the `DROP` statement to remove the `Products` table:  
   
     ```  
-    DROP Table Products;  
+    DROP TABLE Products;  
     GO  
   
     ```  

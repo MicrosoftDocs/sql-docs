@@ -1,10 +1,9 @@
 ---
-title: "Connect to the SSISDB Catalog database on Azure | Microsoft Docs"
+title: "Connect to the SSIS Catalog database (SSISDB) in Azure | Microsoft Docs"
 ms.date: "09/25/2017"
-ms.topic: "article"
-ms.prod: "sql-non-specified"
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
@@ -12,10 +11,9 @@ ms.technology:
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
-# Connect to the SSISDB Catalog database on Azure
+# Connect to the SSIS Catalog database (SSISDB) in Azure
 
 Get the connection information you need to connect to the SSISDB Catalog database hosted on an Azure SQL Database server. You  need the following items to connect:
 - fully qualified server name
@@ -46,7 +44,7 @@ Before you start, make sure you have version 17.2 or later of SQL Server Managem
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database Engine | This value is required. |
    | **Server name** | The fully qualified server name | The name should be in this format: **mysqldbserver.database.windows.net**. |
-   | **Authentication** | SQL Server Authentication | This quickstart uses SQL authentication. |
+   | **Authentication** | SQL Server Authentication | |
    | **Login** | The server admin account | This is the account that you specified when you created the server. |
    | **Password** | The password for your server admin account | This is the password that you specified when you created the server. |
 

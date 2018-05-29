@@ -5,19 +5,16 @@ documentationCenter: ""
 authors: "MightyPen"
 manager: craigg
 editor: ""
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.suite: "sql"
 ms.technology: "dbe-data-tier-apps"
 ms.devlang: "C++"
-ms.topic: "article"
+ms.topic: conceptual
 ms.custom: ""
 ms.tgt_pltfrm: "NA"
-ms.workload: "Inactive"
 ms.date: "07/13/2017"
-ms.author: "genemi"
+ms.author: genemi
 ---
 # Retrieve numeric data with SQL\_NUMERIC\_STRUCT
 

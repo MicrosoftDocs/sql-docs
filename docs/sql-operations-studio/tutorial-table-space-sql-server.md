@@ -3,17 +3,16 @@ title: "Tutorial: Enable the table space usage sample insight widget in SQL Oper
 description: This tutorial demonstrates how to enable the table space usage sample insight widget on the SQL Operations Studio (preview) database dashboard.
 ms.custom: "tools|sos"
 ms.date: "03/19/2018"
-ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sstein"
+ms.prod: sql
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
-author: "erickangMSFT"
-ms.author: "erickang"
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # Tutorial: Enable the table space usage sample insight widget using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

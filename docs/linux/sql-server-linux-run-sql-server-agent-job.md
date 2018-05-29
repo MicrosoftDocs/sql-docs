@@ -6,15 +6,12 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.workload: "Inactive"
 ---
 # Create and run SQL Server Agent jobs on Linux
 
@@ -154,7 +151,7 @@ The following steps create a SQL Server Agent job on Linux with Transact-SQL com
 
 You can also create and manage jobs remotely using SQL Server Management Studio (SSMS) on Windows.
 
-1. Start SSMS on Windows and connect to your Linux SQL Server instance. For more information, see [Manage SQL Server on Linux with SSMS](sql-server-linux-develop-use-ssms.md).
+1. Start SSMS on Windows and connect to your Linux SQL Server instance. For more information, see [Manage SQL Server on Linux with SSMS](sql-server-linux-manage-ssms.md).
 
 1. Verify that you have created a sample database named **SampleDB**.
 

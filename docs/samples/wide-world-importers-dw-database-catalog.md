@@ -1,22 +1,18 @@
 ---
 title: "WideWorldImporters OLAP database catalog - SQL | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "samples"
-ms.technology:
-  - "samples"
+ms.prod: sql
+ms.prod_service: sql
+ms.technology: samples
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
-robots: noindex,nofollow
-ms.workload: "On Demand"
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WideWorldImportersDW database catalog
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

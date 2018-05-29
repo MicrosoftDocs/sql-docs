@@ -3,21 +3,19 @@ title: "SQL Server Integration Services (SSIS) Scale Out Support for High Availa
 ms.description: "This article describes how to configure SSIS Scale Out for high availability with SQL Server failover cluster instance"
 ms.custom: ""
 ms.date: "04/10/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "scale-out"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Scale Out support for high availability via SQL Server failover cluster instance
 
@@ -60,7 +58,7 @@ Bring the Scale Out Master service online.
 ![Bring online](media/bring-online.PNG)
 
 > [!NOTE]
-> If you want to failover SSISDB and Scale Out Master service separately, follow [7. Configure the Scale Out Master service role of the Windows failover cluster](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)
+> If you want to failover SSISDB and Scale Out Master service separately, follow [7. Configure the Scale Out Master service role of the Windows failover cluster](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
 ## 7. Install Scale Out Workers
 Install Scale Out Worker on worker nodes. During the installation, specify https://[Sql Server network name]:[master port] for master endpoint. 

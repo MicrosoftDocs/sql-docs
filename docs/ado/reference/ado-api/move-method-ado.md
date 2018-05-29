@@ -1,17 +1,15 @@
 ---
 title: "Move Method (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Recordset15::Move"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "Move method [ADO]"
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Move Method (ADO)
 Moves the position of the current record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

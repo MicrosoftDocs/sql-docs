@@ -6,11 +6,10 @@ ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: "database-engine"
+ms.prod: sql  
 ms.component: ""
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid:
 ---
 # Quickstart: Run the SQL Server 2017 in the cloud

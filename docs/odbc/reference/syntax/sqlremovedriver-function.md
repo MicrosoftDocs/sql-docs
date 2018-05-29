@@ -2,16 +2,13 @@
 title: "SQLRemoveDriver Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLRemoveDriver"
 apilocation: 
@@ -23,10 +20,9 @@ helpviewer_keywords:
   - "SQLRemoveDriver function [ODBC]"
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLRemoveDriver Function
 **Conformance**  

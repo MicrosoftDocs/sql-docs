@@ -1,10 +1,10 @@
 ﻿---
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
-ms.date: 07/10/2017
-ms.prod: "sql"
+ms.date: 05/14/2018
+ms.prod: sql
 ms.reviewer: ""
-ms.technology: dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: article
 helpviewer_keywords: 
@@ -16,14 +16,11 @@ helpviewer_keywords:
   - "transaction logs [SQL Server], indexes"
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.suite: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
-ms.workload: "On Demand"
+ms.prod_service: "table-view-index, sql-database"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Guidelines for Online Index Operations
@@ -109,6 +106,19 @@ Generally, there is no performance difference between resumable and non-resumabl
 - For update-heavy workloads, you may experience some throughput degradation (our testing shows less than 10% degradation).
 
 Generally, there is no difference in defragmentation quality between resumable and non-resumable online index rebuild.
+
+## Online Default Options 
+
+> [!IMPORTANT]
+> These options are in public preview.
+
+You can set default options for online or resumable at a database level by setting the ELEVATE_ONLINE or ELEVATE_RESUMABLE database scoped configuration options. With these default options, you can avoid accidentally performing an operation that takes your database table offline. Both options will cause the engine to automatically elevate certain operations to online or resumable execution.  
+You can set either option as FAIL_UNSUPPORTED, WHEN_SUPPORTED, or OFF using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) command. You can set different values for online and resumable. 
+
+Both ELEVATE_ONLINE and ELEVATE_RESUMABLE only apply to DDL statements that support the online and resumable syntax respectively. For example, if you attempt to create an XML index with ELEVATE_ONLINE=FAIL_UNSUPORTED, the operation will run offline since XML indexes don’t support the ONLINE= syntax. The options only effect DDL statements that are submitted without specifying an ONLINE or RESUMABLE option. For example, by submitting a statement with ONLINE=OFF or RESUMABLE=OFF, the user can override a FAIL_UNSUPPORTED setting and run a statement offline and/or non-resumably. 
+ 
+> [!NOTE]
+> ELEVATE_ONLINE and ELEVATE_RESUMABLE does not apply to XML index operations. 
  
 ## Related Content  
  [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  

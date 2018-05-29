@@ -1,37 +1,35 @@
 ---
-title: "Load data from or to Excel with SSIS | Microsoft Docs"
+title: "Import from Excel or export to Excel with SSIS | Microsoft Docs"
 ms.description: "Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations."
 ms.date: "04/10/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
-# Load data from or to Excel with SQL Server Integration Services (SSIS)
+# Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)
 
 This article describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). The article also describes prerequisites, limitations, and known issues.
 
 You can import data from Excel or export data to Excel by creating an SSIS package and using the Excel Connection Manager and the Excel Source or the Excel Destination. You can also use the SQL Server Import and Export Wizard, which is built on SSIS.
 
 This article contains the three sets of information you need to use Excel successfully from SSIS or to understand and troubleshoot common problems:
--   [The files you need](#files-you-need).
--   The information you have to provide when you load data from or to Excel.
+1.  [The files you need](#files-you-need).
+2.  The information you have to provide when you load data from or to Excel.
     -   [Specify Excel](#specify-excel) as your data source.
     -   Provide the [Excel file name and path](#excel-file).
     -   Select the [Excel version](#excel-version).
     -   Specify whether the [first row contains column names](#first-row).
     -   Provide the [worksheet or range that contains the data](#sheets-ranges).
--   Known issues and limitations.
+3.  Known issues and limitations.
     -   Issues with [data types](#issues-types).
     -   Issues with [importing](#issues-importing).
     -   Issues with [exporting](#issues-exporting).
@@ -55,7 +53,7 @@ If you have an Office 365 subscription, you may see an error message when you ru
 
 If you have trouble installing the 2016 redistributable, install the 2010 redistributable instead from here: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (There is no redistributable for Excel 2013.)
 
-## <a name="specify-excel"></a> Get started
+## <a name="specify-excel"></a> Specify Excel
 
 The first step is to indicate that you want to connect to Excel.
 

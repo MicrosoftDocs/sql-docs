@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-server"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Reporting Services], trace"
   - "traces [Reporting Services]"
@@ -23,7 +22,6 @@ caps.latest.revision: 52
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Report Server Service Trace Log
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server trace logs are an ASCII text file that contain detailed information for Report Server service operations.  Ther information in the files include operations performed by the Report Server Web service, the web portal, and background processing. The trace log file includes redundant information that is recorded in other log files, plus additional information that is not otherwise available. Trace log information is useful if you are debugging an application that includes a report server or investigating a specific problem that was written to the event log or execution log. For example, when trouble shooting issues with subscriptions.  

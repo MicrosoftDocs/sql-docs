@@ -6,10 +6,8 @@ ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.component: "dmv's"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,11 +22,10 @@ helpviewer_keywords:
   - "sys.dm_continuous_copy_status"
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 caps.latest.revision: 18
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

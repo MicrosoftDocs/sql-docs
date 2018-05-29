@@ -2,22 +2,20 @@
 title: "Troubleshoot SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
 ms.description: "This article describes how to troubleshoot common issues with SSIS Scale Out"
 ms.custom: ""
-ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "05/09/2018"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
 ms.component: "scale-out"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Troubleshoot Scale Out
 
@@ -138,7 +136,15 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Value data: **0 (False)**
 
-4.  If it is not possible to clean up all non-self-signed certificates in step 2. Set the value of the registry key in step 3 to 2.
+4.  If it is not possible to clean up all non-self-signed certificates as described in step 2, set the value of the following registry key to 2.
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
+
+    Value name: **ClientAuthTrustMode** 
+
+    Value type: **REG_DWORD** 
+
+    Value data: **2**
 
 ## HTTP request error
 

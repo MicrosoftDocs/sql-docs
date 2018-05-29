@@ -2,16 +2,13 @@
 title: "Level 2 API Functions (ODBC Driver for Oracle) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC level 2 API functions [ODBC]"
   - "functions [ODBC], ODBC driver for Oracle"
@@ -21,10 +18,9 @@ helpviewer_keywords:
   - "level 2 API functions [ODBC]"
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Level 2 API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

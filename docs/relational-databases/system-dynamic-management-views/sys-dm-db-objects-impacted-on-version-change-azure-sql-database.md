@@ -6,10 +6,8 @@ ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.component: "dmv's"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,11 +22,10 @@ helpviewer_keywords:
   - "sys.dm_db_objects_impacted_on_version_change"
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

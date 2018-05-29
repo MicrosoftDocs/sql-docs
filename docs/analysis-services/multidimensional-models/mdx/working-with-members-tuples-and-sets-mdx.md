@@ -1,42 +1,14 @@
 ---
 title: "Working with Members, Tuples, and Sets (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MDX [Analysis Services], tuples"
-  - "member keys [MDX]"
-  - "MDX [Analysis Services], sets"
-  - "calculated members [MDX]"
-  - "members [MDX]"
-  - "Multidimensional Expressions [Analysis Services], members"
-  - "named sets [MDX]"
-  - "Multidimensional Expressions [Analysis Services], tuples"
-  - "member functions [MDX]"
-  - "sets [MDX]"
-  - "MDX [Analysis Services], members"
-  - "member names [MDX]"
-  - "Multidimensional Expressions [Analysis Services], sets"
-  - "tuple functions"
-  - "tuples"
-  - "set functions [MDX]"
-ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Working with Members, Tuples, and Sets (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

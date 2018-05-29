@@ -5,16 +5,13 @@ author: annashres
 ms.author: anshrest 
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
+ms.topic: conceptual
+ms.prod: sql
+ms.prod_service: sql
 ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: database-engine
-ms.assetid:
-ms.workload: "Inactive"
+ms.technology: configuration
 ---
 # Configure SQL Server to send feedback to Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ SQL Server 2017 always collects and sends information about the installation exp
 - By using the Error and Usage Reporting application
 - By setting registry subkeys on the server
 
-For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md)
+For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)
 
 > [!NOTE]
 > You can disable the sending of information to Microsoft only in paid versions of SQL Server.
@@ -105,15 +102,15 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 
     Entry type DWORD: 0 is opt out; 1 is opt in
 
-Additionally, to turn off usage and error reporting at the Visual Studio level, set the following registry subkey and settings:
+    Additionally, SSMS 17.x is based on the Visual Studio 2015 shell, and the Visual Studio installation enables customer feedback by default.  
 
--    Subkey = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    To configure Visual Studio to disable customer feedback on individual computers, change the value of the following registry subkey to string "0":  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    RegEntry name = TurnOffSwitch
+    For example, change the subkey to the following:  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    Entry type DWORD: 0 is opt out; 1 is opt in
- 
-Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage data collection.
+    Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage data collection.
 
 ## Set registry subkeys for crash dump collection
 

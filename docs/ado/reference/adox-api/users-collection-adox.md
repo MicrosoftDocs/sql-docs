@@ -1,17 +1,15 @@
 ---
 title: "Users Collection (ADOX) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Group::Users"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "Users collection [ADOX]"
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Users Collection (ADOX)
 Contains all stored [User](../../../ado/reference/adox-api/user-object-adox.md) objects of a [catalog](../../../ado/reference/adox-api/catalog-object-adox.md) or [group](../../../ado/reference/adox-api/group-object-adox.md).  

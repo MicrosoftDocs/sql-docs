@@ -2,9 +2,9 @@
   "build": {
 
     "content": [
-
       {
-        "group": "gr-sql-2016-a",
+        "group": "gr-sql-2014-b",
+        "src": "./2014",
         "files": [
           "**/*.md",
           "**/*.yml",
@@ -16,23 +16,54 @@
           "**/obj/**",
           "README.md",
           "LICENSE",
-          "LICENSE-CODE",
-          "index.md"
+          "LICENSE-CODE"
+        ]
+      },
+
+      {
+        "group": "gr-sql-2016-a",
+        "src": "./",
+        "files": [
+          "**/*.md",
+          "**/*.yml",
+          "breadcrumb/toc.yml"
+        ],
+        "exclude": [
+          "2014",
+          "**/includes/**",
+          "**/mref/**",
+          "**/obj/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE"
         ]
       }
     ],
 
     "resource": [
-
       {
-        "group": "gr-sql-2016-a",
+        "group": "gr-sql-2014-b",
+        "src": "./2014",
         "files": [
           "**/*.png",
           "**/*.gif",
           "**/*.jpg"
         ],
         "exclude": [
-          "index.md",
+          "**/obj/**"
+        ]
+      },
+
+      {
+        "group": "gr-sql-2016-a",
+        "src": "./",
+        "files": [
+          "**/*.png",
+          "**/*.gif",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "2014",
           "**/obj/**"
         ]
       }
@@ -43,7 +74,6 @@
 
     "globalMetadata": {
       "layout": "Conceptual",
-      "breadcrumb_path": "~/breadcrumb/toc.yml",
       "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana","iRaindrop"],
       "searchScope": ["sql"],
       "_op_documentIdPathDepotMapping": {
@@ -56,21 +86,37 @@
 
     "fileMetadata": {
 
+      "breadcrumb_path": {
+        "**/*.md": "~/breadcrumb/toc.yml",
+        "2014/**/*.md": "~/2014/breadcrumb/toc.yml"
+      },
+      
       "monikerRange": {
+
+        "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
+        "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
+        "dma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
+        "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
+        "sql-operations-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
+        "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
 
         "advanced-analytics/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "analysis-services/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016 || = sqlallproducts-allversions",
+        "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "database-engine/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "dmx/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
         "integration-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "linux/**/*.md": ">= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "master-data-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "mdx/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
         "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "relational-databases/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "reporting-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "reporting-services/mobile-reports/**/*.md": ">= sql-server-2017 || = sqlallproducts-allversions",
         "samples/**/*.md": "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
-        "ssdt/**/*.md": ">= ssdt-15vs2017 || = sqlallproducts-allversions",
+        "sql-server/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "ssdt/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "tools/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "t-sql/**/*.md": "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
@@ -83,11 +129,21 @@
 
     "groups": {
 
+      "gr-sql-2014-b": {
+        "moniker_range": "= sql-server-2014",
+        "dest": "temp2014b"
+      },
+
       "gr-sql-2016-a": {
-        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-analysis-services-2017 || >= sql-server-2016 || >= sql-server-2017 || >= sql-server-linux-2017 || >= ssdt-15vs2017 || = sqlallproducts-allversions"
+        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "dest": "temp2016a"
       }
     },
 
-    "xref":["mref/sql130.zip","mref/System.Reflection.Assembly.Load.yml","mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml"]
+    "xref":[
+      "mref/sql130.zip",
+      "mref/System.Reflection.Assembly.Load.yml",
+      "mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml"
+    ]
   }
 }

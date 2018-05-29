@@ -1,37 +1,14 @@
 ---
 title: "Microsoft Neural Network Algorithm | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "training neural networks"
-  - "output neurons [Analysis Services]"
-  - "algorithms [data mining]"
-  - "neural network algorithms [Analysis Services]"
-  - "neurons [Analysis Services]"
-  - "classification algorithms [Analysis Services]"
-  - "neural networks"
-  - "multilayer perceptron network of neurons [Analysis Services]"
-  - "hidden neurons"
-  - "Back-Propagated Delta Rule network"
-  - "input neurons [Analysis Services]"
-  - "regression algorithms [Analysis Services]"
-ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

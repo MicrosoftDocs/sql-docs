@@ -130,7 +130,7 @@ Operations within **tempdb** are minimally logged so that transactions can be ro
 
 ### tempdb sizes for vCore-based service tiers
 
-See [vCore-based resource limits](https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
+See [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
 ## Restrictions  
  The following operations cannot be performed on the **tempdb** database:  

@@ -29,7 +29,7 @@
 ## [Database Mail +](../relational-databases/database-mail/database-mail.md)
 ## [Extended Events +](../relational-databases/extended-events/extended-events.md)
 ## [SQL Trace +](../relational-databases/sql-trace/sql-trace.md)
-## [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
+## [SQL Server Profiler +](../tools/sql-server-profiler/sql-server-profiler.md)
 ## [Track Data Changes +](../relational-databases/track-changes/track-data-changes-sql-server.md)
 ## [Log File Viewer +](../relational-databases/logs/log-file-viewer.md)
 ## [Database Engine Tuning Advisor +](../relational-databases/performance/database-engine-tuning-advisor.md)

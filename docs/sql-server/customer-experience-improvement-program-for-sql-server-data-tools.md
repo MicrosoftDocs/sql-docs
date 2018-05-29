@@ -1,7 +1,7 @@
 ﻿---
 title: "Customer Experience Improvement Program for SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/29/2018"
+ms.date: "10/21/2016"
 ms.prod: sql
 ms.prod_service: sql
 ms.component: "sql-non-specified"
@@ -54,7 +54,51 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  The relevant registry key and settings are as follows:  
   
- Key = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
+- 64-bit OS, Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- 32-bit OS, Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
+
+When Group Policy is enabled, Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+
+Entry = OptIn
+
+Value = (DWORD)
+- 0 is opted out (turn off the VSCEIP)
+- 1 is opted in (turn on the VSCEIP)
+
+  
+> [!CAUTION]  
+>  Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer. You can also use the Last Known Good Configuration startup option if you encounter problems after manual changes have been applied.  
+  
+ For more information about the information collected, processed, or transmitted by CEIP, see the [Privacy Statement for the Microsoft Customer Experience Improvement Program](http://go.microsoft.com/fwlink/?LinkId=52143).  
+ 
+### Choice and Control over CEIP and SQL Server Data Tools for Visual Studio 2015  
+ SSDT for Visual Studio 2015 is the data modeling tool that ships with SQL Server 2016. It uses the CEIP options that are built into Visual Studio 2015. You can learn more about how to submit feedback through CEIP in Visual Studio 2015 from this [help document from Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
+  
+ For preview versions of SQL Server 2016, CEIP is turned on by default. You can turn it off, or back on again, by following the instructions below.  
+  
+ **In Visual Studio (applies to full language installations of Visual Studio 2015)**  
+  
+ If you run SSDT Setup on a computer that already has Visual Studio, only the SQL Server and Business Intelligence project templates are added. For this scenario, customer feedback options that Visual Studio provides can be used to opt in or out of CEIP.  
+  
+1.  Start Visual Studio.  
+  
+2.  From the Help menu, select **Send Feedback** > **Settings**.  
+  
+3.  To turn CEIP off, click **No, I would not like to participate**, and then click **OK**.  
+  
+     To turn CEIP on, click **Yes, I am willing to participate**, and then click **OK**.  
+  
+
+  
+ **Use a registry-based policy or Group Policy**  
+  
+ If you run SSDT Setup on a computer that does not have Visual Studio 2015, only the Visual Studio Shell is installed. The shell doesn't provide customer feedback options. In this case, a registry update is the only option for configuring CEIP  
+  
+ Enterprise customers may construct Group Policy to opt in or out by setting a registry-based policy for SQL Server 2016.  
+  
+ The relevant registry key and settings are as follows:  
+  
+ Key = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\14.0\SQM  
   
  RegEntry name = OptIn  
   
@@ -68,41 +112,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 >  Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer. You can also use the Last Known Good Configuration startup option if you encounter problems after manual changes have been applied.  
   
  For more information about the information collected, processed, or transmitted by CEIP, see the [Privacy Statement for the Microsoft Customer Experience Improvement Program](http://go.microsoft.com/fwlink/?LinkId=52143).  
- 
-### Choice and Control over  CEIP and SQL Server Data Tools for Visual Studio  
- SSDT uses the CEIP options that are built into Visual Studio. The VSCEIP is turned on by default. To turn CEIP on or off, see [Visual Studio Customer Experience Improvement Program](https://docs.microsoft.com/visualstudio/ide/visual-studio-experience-improvement-program).  
-  
- 
-  
- **Use a registry-based policy or Group Policy**  
-  
- If you run SSDT Setup on a computer that does not have Visual Studio, only the Visual Studio Shell is installed. The shell doesn't provide customer feedback options. In this case, a registry update is the only option for configuring CEIP.  
-  
- Enterprise customers may construct Group Policy to opt in or out by setting a registry-based policy:  
-  
-The relevant registry key and settings are as follows:  
-
-On a 64-bit OS, Key = `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM`
-On a 32-bit OS, Key = `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM`
-When Group Policy is enabled, Key = `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM`
-  
-Entry = OptIn
-
-Value = (DWORD)
-
-- 0 is opted out (turn off the VSCEIP)
-- 1 is opted in (turn on the VSCEIP)
-
-  
-> [!CAUTION]  
->  Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer. You can also use the Last Known Good Configuration startup option if you encounter problems after manual changes have been applied.  
-  
- For more information about the information collected, processed, or transmitted by CEIP, see the [Privacy Statement for the Microsoft Customer Experience Improvement Program](http://go.microsoft.com/fwlink/?LinkId=52143).  
   
 ### Choice and Control for CEIP and SQL Server Data Tools - BI (SSDT-BI)  
  If you are using SSDT-BI, you will be given an opportunity to participate in CEIP during installation. Later, CEIP configuration changes for SSDT-BI can be made through client tools or by editing registry settings.  
   
- **In SSDT and SSDT-BI for Visual Studio**  
+ **In SSDT and SSDT-BI for Visual studio 2013**  
   
 1.  Start the tool and open a new or existing project for either Analysis Services or Integration Services.  
   

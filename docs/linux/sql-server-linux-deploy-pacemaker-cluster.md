@@ -44,6 +44,8 @@ Use the following syntax to install the packages that make up the high availabil
     
     ```bash
     sudo subscription-manager list --available
+    ```
+
 3.  Run the following command to associate RHEL high availability with the subscription
     
     ```bash

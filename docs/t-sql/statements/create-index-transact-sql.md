@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"

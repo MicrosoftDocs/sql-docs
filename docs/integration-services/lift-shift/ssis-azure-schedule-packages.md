@@ -14,7 +14,7 @@ ms.author: "douglasl"
 manager: craigg
 ---
 # Schedule the execution of an SSIS package in Azure
-You can schedule the execution of SSIS packages deployed to the SSISDB Catalog database on an Azure SQL Database server by choosing one of the options described in this article. You can schedule a package directly, or schedule a package indirectly as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+You can schedule the execution of SSIS packages deployed to the SSISDB Catalog database on an Azure SQL Database server by choosing one of the options described in this article. You can schedule a package directly, or schedule a package indirectly as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Schedule a package directly
 

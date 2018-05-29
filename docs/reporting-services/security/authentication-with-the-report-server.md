@@ -87,7 +87,6 @@ manager: "kfile"
 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Security Extensions Overview](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Authentication in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Authorization in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  

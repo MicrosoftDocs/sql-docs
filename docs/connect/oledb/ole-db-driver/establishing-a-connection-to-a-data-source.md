@@ -108,6 +108,7 @@ void InitializeAndEstablishConnection() {
 
    // Now establish the connection to the data source.  
    pIDBInitialize->Initialize();  
+}
 ```  
   
 ## See Also  

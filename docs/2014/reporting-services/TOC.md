@@ -140,7 +140,7 @@
 ## [Report Server Web Service +](report-server-web-service/report-server-web-service.md)
 ## [Reporting Services Extensions +](extensions/reporting-services-extensions.md)
 ## [Custom Report Items +](custom-report-items/custom-report-items.md)
-## [Using Custom Assemblies with Reports](custom-assemblies/using-custom-assemblies-with-reports.md)
+## [Using Custom Assemblies with Reports +](custom-assemblies/using-custom-assemblies-with-reports.md)
 ## [Report Viewer Web Part Programmability in SharePoint Integration](report-viewer-web-part-programmability-in-sharepoint-integration.md)
 ## [Accessing the WMI Provider Programmatically](accessing-the-wmi-provider-programmatically.md)
 

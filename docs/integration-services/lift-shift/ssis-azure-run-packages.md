@@ -54,7 +54,7 @@ For more info, see the following examples:
 
 ## <a name="script"></a> Run a package with script or code
 
-In any development environment from which you can call a managed API, you can run a package by call the `Execute` method of the `Package` object in the `Microsoft.SQLServer.Management.IntegrationServices` namespace.
+In any development environment from which you can call a managed API, you can run a package by calling the `Execute` method of the `Package` object in the `Microsoft.SQLServer.Management.IntegrationServices` namespace.
 
 For more info, see the following examples:
 

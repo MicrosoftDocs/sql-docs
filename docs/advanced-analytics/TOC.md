@@ -105,8 +105,7 @@
 ##### [Enable remote R package management](r/r-package-how-to-enable-or-disable.md)
 ##### [Synchronize R packages](r/package-install-uninstall-and-sync.md)
 #### [Create a local repo](r/create-a-local-package-repository-using-minicran.md)
-
-#### [Workarounds for R "user libraries"](r/packages-installed-in-user-libraries.md)
+#### [Tips for using R packages](r/packages-installed-in-user-libraries.md)
 
 ## Data exploration and modeling
 ### [R libraries and data types](r/r-libraries-and-data-types.md)

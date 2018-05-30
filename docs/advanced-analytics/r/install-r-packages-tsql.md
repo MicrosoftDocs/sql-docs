@@ -4,7 +4,7 @@ description: Add new R packages to SQL Server 2017 Machine Learning Services (In
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/20/2018  
+ms.date: 05/30/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -14,7 +14,7 @@ manager: cgronlun
 # Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server 2017 Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to install new R packages to an instance of SQL Server where machine learning is enabled. There are multiple approaches to choose from. This approach works best for server administrators who are unfamiliar with R.
+This article expalins how to install new R packages on an instance of SQL Server where machine learning is enabled. There are multiple approaches to choose from. Using T-SQL works best for server administrators who are unfamiliar with R.
 
 **Applies to:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
@@ -30,7 +30,7 @@ The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 If you are installing a single package, download the package in zipped format.
 
-If the package requires any other packages, you must verify that the required packages are available. You can use miniCRAN to analyze the target package and identify all its dependencies. We recommend using [**miniCRAN**](create-a-local-package-repository-using-minicran.md) or [**igraph**](http://igraph.org/r/) for analyzing packages dependencies. Installing the wrong version of package or package dependency can also cause the statement to fail. 
+It's more common to install multiple packages due to package dependencies. When a package requires other packages, you must verify that all of them are accessible to each other during installation. We recommend [creating a local repository](create-a-local-package-repository-using-minicran.md) using [miniCRAN](http://andrie.github.io/miniCRAN/) to assemble a full collection of packages, as well as [igraph](http://igraph.org/r/) for analyzing packages dependencies. Installing the wrong version of a package or omitting a package dependency can cause a CREATE EXTERNAL LIBRARY statement to fail. 
 
 ## Copy the file to a local folder
 
@@ -44,7 +44,7 @@ Run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package c
 
 For example, the following statement names as the package source a miniCRAN repository containing the **randomForest** package, together with its dependencies. 
 
-```R
+```SQL
 CREATE EXTERNAL LIBRARY randomForest
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
@@ -59,7 +59,11 @@ If the library is successfully created, you can run the package in SQL Server, b
 ```SQL
 EXEC sp_execute_external_script
 @language =N'R',
-@script=N'
-library(randomForest)'
+@script=N'library(randomForest)'
 ```
 
+## See also
+
++ [Get package information](determine-which-packages-are-installed-on-sql-server.md)
++ [R tutorials](../tutorials/sql-server-r-tutorials.md)
++ [How-to guides](sql-server-machine-learning-tasks.md)

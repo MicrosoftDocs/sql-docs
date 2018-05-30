@@ -22,7 +22,7 @@ This article describes how to install new R packages to an instance of SQL Serve
 | [Use RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Admin-enabled, database roles afterwards | both|
 | [Use T-SQL (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | Admin-enabled, database roles afterwards | both 
 
-## Administrative permissions for package installation
+## Permissions for package installation
 
 The package library used by an in-database instance is physically located in the Program Files folder of your SQL Server instance. Writing to this location requires administrator permissions. However, SQL Server 2017 offers some additional methodologies for package installation that gives non-administrators the ability to add packages.
 
@@ -32,10 +32,34 @@ In SQL Server 2017, **dbo_owner** or another user with CREATE EXTERNAL LIBRARY p
 
 If you use the package management feature for Machine Learning Server, you can use RevoScaleR to install R packages at the database level. The database administrator must enable the feature and then grant users the ability to install their own packages on a per database basis. For more information, see [Enable package management using DDLs](r-package-how-to-enable-or-disable.md).
 
-### User libraries are not supported
+### Package location
+
+For in-database analytics, packages must be installed in the default library of the instance in question.
 
 Users who cannot install a package to a secured location often resort to installing a package to a user library. However, this is not possible in the SQL Server environment. File system access is typically restricted on the server, and even if you have admin rights and access to a user document folder on the server, the external script runtime that executes in SQL Server cannot access any packages installed outside the default instance library. However, workarounds are possible. For tips on how to resolve problems related to user libraries, see [Workarounds for R user libraries](packages-installed-in-user-libraries.md).
 
+## Considerations for package installation
+
+Before installing new packages, consider the risks and benefits of installing a particular package into the SQL Server environment. Many R and Python packages are a very poor fit for a hardened SQL Server environment. Consequently, you want to avoid packages containing features that would be blocked by SQL Server or by policy. Problems might include:
+
++ Packages that access the network
++ Packages that require Java or other frameworks not typically used in a SQL Server environment
++ Packages that require elevated file system access
++ Package is used for web development or other tasks that don't benefit by running inside SQL Server.
+
+## Offline installation (no internet access)
+
+In general, servers that host production databases block all internet connection. Installing new R or Python packages in such environments requires that you prepare all packages and their dependencies in advance, and copy the files to a folder on the server for use in installation.
+
+Identifying all dependencies can be complicated. For R, we recommend that you use [miniCRAN to create a local repository](create-a-local-package-repository-using-minicran.md) and then transfer the fully defined repo to an isolated SQL Server instance.
+
+1. Identify all package dependencies. 
+2. Check whether any required packages are already installed on the server. If the package is installed, verify that the version is correct.
+3. Download the package and all dependencies to a separate computer.
+4. Move the files to a folder accessible by the server.
+5. Run a supported installation command or DDL statement to install the package into the instance library.
+
+For Python, you must similarly prepare all dependencies and save them locally. Be sure to use Windows-compatible binaries and the WHL format.
 
 ## Tips for package installation
 

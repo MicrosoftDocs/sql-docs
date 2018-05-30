@@ -12,13 +12,14 @@ manager: cgronlun
 # Create a local R package repository using miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package, created by [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifies and downloads package dependencies into a single folder, which you can zip and copy to other computers for offline R package installation.
+[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package, created by [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifies and downloads packages and  dependencies into a single folder, which you can copy to other computers for offline R package installation.
 
 As an input, specify one or more packages. **miniCRAN** recursively reads the dependency tree for these packages and downloads only the listed packages and their dependencies from CRAN or similar repositories.
 
-As an output, **miniCRAN** creates an internally consistent repository consisting of the selected packages and all required dependencies. You can then move this local repository to the server, and proceed to install the packages without using the internet.
+As an output, **miniCRAN** creates an internally consistent repository consisting of the selected packages and all required dependencies. You can then move this local repository to the server, and proceed to install the packages without an internet connection.
 
-Experienced R users often look for the list of dependent packages in the DESCRIPTION file for the downloaded package. However, packages listed in **Imports** might have second-level dependencies. For this reason, we recommend **miniCRAN** for assembling the full collection of required packages.
+> [!NOTE]
+> Experienced R users often look for the list of dependent packages in the DESCRIPTION file for the downloaded package. However, packages listed in **Imports** might have second-level dependencies. For this reason, we recommend **miniCRAN** for assembling the full collection of required packages.
 
 ## Why create a local repository
 
@@ -86,7 +87,7 @@ Do **not** add dependencies to this initial list. The **igraph** package used by
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. Create the local repo. Be sure to change the R version if necessary to the version installed on your SQL Server instance. Version 3.2.2 is on SQL Server 2016, version 3.3 is on SQL Server 2017. If you did a component upgrade, your version might be newer. For more information, see [Get R and Python package information](determine-which-packages-are-in-sql-server.md).
+3. Create the local repo. Be sure to change the R version if necessary to the version installed on your SQL Server instance. Version 3.2.2 is on SQL Server 2016, version 3.3 is on SQL Server 2017. If you did a component upgrade, your version might be newer. For more information, see [Get R and Python package information](determine-which-packages-are-installed-on-sql-server.md).
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -99,12 +100,12 @@ At this point you should have a folder containing the packages you needed, and a
 
 Optionally, run the following code to list the packages contained in the local miniCRAN repository.
 
-    ```R
-    pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE);
-    head(pdb);
-    pdb$Package;
-    pdb[, c("Package", "Version", "License")]
-    ```
+```R
+pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE);
+head(pdb);
+pdb$Package;
+pdb[, c("Package", "Version", "License")]
+```
 
 ## Add packages to the instance library
 

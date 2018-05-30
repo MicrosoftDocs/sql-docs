@@ -50,7 +50,7 @@ Creating and editing shapefiles is a complex process that is beyond the scope of
 Many existing shapefiles can be downloaded from the Web, from sites like these:  
   
 - Diva-GIS: [http://www.diva-gis.org/Data](http://www.diva-gis.org/Data)  
-- OpenStreetMap: [http://openstreetmapdata.com/data](http://openstreetmapdata.com/data)  
+- OpenStreetMap: [https://www.openstreetmap.org/export](https://www.openstreetmap.org/export)  
   
 ### See also  
 - [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  

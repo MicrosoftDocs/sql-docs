@@ -34,7 +34,7 @@ For more information, see these resources:
 
 + [Python security overview](../python/security-overview-sql-server-python-services.md)
 
-+ [Installing and Managing R Packages](../../advanced-analytics/r-services/installing-and-managing-r-packages.md)
++ [Default R and Python packages in SQL Server](installing-and-managing-r-packages.md)
 
 ## Configuration and management
 

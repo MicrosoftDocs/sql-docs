@@ -104,7 +104,7 @@
 #### [Use RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
 ##### [Enable remote R package management](r/r-package-how-to-enable-or-disable.md)
 ##### [Synchronize R packages](r/package-install-uninstall-and-sync.md)
-#### [Create a local repo](r/create-a-local-package-repository-using-minicran.md)
+#### [Create a miniCRAN repo](r/create-a-local-package-repository-using-minicran.md)
 #### [Tips for using R packages](r/packages-installed-in-user-libraries.md)
 
 ## Data exploration and modeling

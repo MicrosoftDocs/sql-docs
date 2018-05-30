@@ -42,4 +42,4 @@ This does not work when running R solutions in SQL Server, because R packages mu
 
 + Update your code to remove direct references to the paths of R packages or R libraries. 
 
-+ Know which package library is associated with the instance. For more information, see [R packages installed with SQL Server](installing-and-managing-r-packages.md).
++ Know which package library is associated with the instance. For more information, see [Default R and Python packages in SQL Server](installing-and-managing-r-packages.md).

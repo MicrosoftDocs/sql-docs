@@ -29,7 +29,7 @@ This article provides links to more detailed information about how to configure 
 
 These articles describe how to install new R packages on the SQL Server instance, manage R package libraries, and restore package libraries after a database restore.
 
-+ [Installing and Managing R Packages](installing-and-managing-r-packages.md)
++ [Default R and Python packages in SQL Server](installing-and-managing-r-packages.md)
 + [Installing New R Packages](install-additional-r-packages-on-sql-server.md)
 + [Enable Package Management for an Instance using Database Roles](r-package-how-to-enable-or-disable.md)
 + [Create a Local Package Repository using miniCRAN](create-a-local-package-repository-using-minicran.md)

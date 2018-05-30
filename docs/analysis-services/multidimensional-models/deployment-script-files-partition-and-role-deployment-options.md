@@ -3,8 +3,8 @@ title: "Specifying Partition and Role Deployment Options | Microsoft Docs"
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: multidimensional-models
-ms.topic: article
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
@@ -50,7 +50,7 @@ manager: kfile
   
      —or—  
   
--   Open the \<*project name*>.deploymentoptions in any text editor and manually change the options.  
+-   Open the \<*project name*>.deploymentoptions in any text editor and manually change the options. The options for PartitionDeployment are DeployPartitions, RetainPartitions. The options for RoleDeployment are DeployRolesAndMembers, DeployRolesRetainMembers, RetainRoles.
   
 ## See Also  
  [Specifying the Installation Target](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   

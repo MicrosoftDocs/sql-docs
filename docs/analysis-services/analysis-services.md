@@ -1,29 +1,14 @@
 ﻿---
 title: "About SQL Server Analysis Services | Microsoft Docs"
-ms.date: "02/21/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "Analysis Services, about Analysis Services - Multidimensional Data"
-  - "SSAS"
-  - "Analysis Services"
-  - "SQL Server Analysis Services, about Analysis Services - Multidimensional Data"
-  - "SQL Server Analysis Services"
-  - "multidimensional data [Analysis Services]"
-  - "SSAS, about Analysis Services - Multidimensional Data"
-ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 60
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: overview
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # About SQL Server Analysis Services
 

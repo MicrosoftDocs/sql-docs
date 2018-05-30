@@ -1,18 +1,19 @@
 ---
-title: Install and manage machine learning packages in SQL Server | Microsoft Docs
+title: R and Python package management in SQL Server Machine Learning | Microsoft Docs
+description: Get R and Python package information, add new packages, and enable client access on a SQL Server instance configured for machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/15/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Install and manage machine learning packages in SQL Server
+# R and Python package management in SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how you can install new R or Python packages in SQL Server 2017 and in SQL Server 2016. It also describes limitations on the packages that you can install on SQL Server.
+This article introduces R and Python package management in SQL Server 2017 Machine Learning and SQL Server 2016 R Services. It also describes limitations on the packages that you can install on SQL Server.
 
 ## Overview of package management methods and requirements
 
@@ -20,11 +21,10 @@ Unlike a typical R or Python development, packages used by SQL Server must be in
 
 + The server administrator can monitor the addition of new files and libraries on the server, and control the growth of files used by package libraries. 
 + Packages can be more easily shared by multiple database users, as opposed to installing multiple copies of the same package in user libraries.
-+ Only secured, approved packages can be installed, to protect the server and its operations.
 
 However, these restrictions necessarily mean some changes in the way that data scientists and analysts work:
 
-+ Generally, administrative access to the server is required. In SQL Server 2017, the database administrator can use roles to give certain users the ability to install packages for private use, but the administrator still has to enable this feature.
++ Generally, package installation on SQL Server requires administrative access. In SQL Server 2017, the database administrator can use roles to give certain users the ability to install packages for private use, but the administrator still has to enable this feature.
 + Many servers do not have Internet access. Installing packages to these computers requires some additional preparation.
 + Packages are installed to an instance library. Packages cannot be shared across instances.
 + Users cannot run any package that has been installed in a user library.
@@ -33,7 +33,7 @@ However, these restrictions necessarily mean some changes in the way that data s
 
 See the following articles for detailed steps on how to install new R or Python packages. 
 
-### Install new R packages
+### R packages
 
 + [Install additional R packages on SQL Server](install-additional-r-packages-on-sql-server.md)
 
@@ -43,7 +43,7 @@ See the following articles for detailed steps on how to install new R or Python 
 
     You can also install R packages in SQL Server 2017 using DDL statements.
 
-### Install new Python packages
+### Python packages
 
 + [Install new Python packages on SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
@@ -51,7 +51,7 @@ See the following articles for detailed steps on how to install new R or Python 
 
 Before you attempt to download or install any new package, review the requirements:
 
-+ Make sure that there is a Windows version of the package: [Getting the correct package version and format](#packageVersion)
++ Make sure that there is a Windows version of the package.
 
 + Identify all package dependencies, and ascertain their compatibility with the SQL Server environment.
 
@@ -80,4 +80,4 @@ In general, servers that host production databases do not allow connection to th
 
 Identifying all dependencies can be complicated. For R, we recommend that you use [miniCRAN](create-a-local-package-repository-using-minicran.md) to prepare an offline package repository.
 
-For Python, you must similarly prepare all dependencies and save them locally. Be sure to use a Windows-compatible binaries and use the WHL format.
+For Python, you must similarly prepare all dependencies and save them locally. Be sure to use Windows-compatible binaries and the WHL format.

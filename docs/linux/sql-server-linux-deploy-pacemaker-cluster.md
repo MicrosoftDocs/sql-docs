@@ -7,11 +7,10 @@ manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ---
 
 # Deploy a Pacemaker cluster for SQL Server on Linux
@@ -45,6 +44,8 @@ Use the following syntax to install the packages that make up the high availabil
     
     ```bash
     sudo subscription-manager list --available
+    ```
+
 3.  Run the following command to associate RHEL high availability with the subscription
     
     ```bash

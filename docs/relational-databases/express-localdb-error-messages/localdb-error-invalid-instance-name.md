@@ -3,18 +3,15 @@ title: "LOCALDB_ERROR_INVALID_INSTANCE_NAME | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # LOCALDB_ERROR_INVALID_INSTANCE_NAME

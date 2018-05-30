@@ -3,8 +3,8 @@ title: "Physical Architecture (Analysis Services - Multidimensional Data) | Micr
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: olap
-ms.topic: article
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan

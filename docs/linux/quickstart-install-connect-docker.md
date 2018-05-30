@@ -7,11 +7,11 @@ manager: craigg
 ms.date: 03/07/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
+ms.technology: linux
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ---
 # Quickstart: Run the SQL Server 2017 container image with Docker
@@ -237,7 +237,7 @@ The following steps use **sqlcmd** outside of your container to connect to SQL S
 Other common tools to connect to SQL Server include:
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
 - [SQL Server Operations Studio (Preview)](../sql-operations-studio/what-is.md)
 - [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 

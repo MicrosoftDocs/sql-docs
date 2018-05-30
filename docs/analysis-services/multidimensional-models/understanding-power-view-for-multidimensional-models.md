@@ -3,8 +3,8 @@ title: "Understanding Power View for Multidimensional Models | Microsoft Docs"
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: multidimensional-models
-ms.topic: article
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
@@ -88,7 +88,7 @@ manager: kfile
  ![Non-aggregatable hierarchy in Power View](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Non-aggregatable hierarchy in Power View")  
   
 ### Implicit measures  
- Tabular models provide users the ability to create *implicit* measures such as count, sum, or average on fields. For multidimensional models, because dimension attribute data is stored is stored differently, querying implicit measures can take a long time. Because of this, implicit measures are not available in Power View.  
+ Tabular models provide users the ability to create *implicit* measures such as count, sum, or average on fields. For multidimensional models, because dimension attribute data is stored differently, querying implicit measures can take a long time. Because of this, implicit measures are not available in Power View.  
   
 ## Dimensions, attributes, and hierarchies  
  Cube dimensions are exposed as tables in tabular metadata. In the Power View Field List, dimension attributes are shown as columns within display folders.  The dimension attributes that have the AttributeHierarchyEnabled property set to false; for example: Birth Date attribute in Customer dimension, or AttributeHierarchyVisible property set to false will not appear in the Power View Field List. Multi-level hierarchies or user hierarchies; for example Customer Geography in the Customer dimension, are exposed as hierarchies in the Power View Field List. Hidden UnknownMembers of a dimension attribute are exposed in DAX Queries and in Power View.  

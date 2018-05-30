@@ -96,7 +96,7 @@ To learn more about deploying packages and about the Deployment Wizard, see [Dep
     -   You can change your selections by selecting **Previous**, or by selecting any of the steps in the left pane.
     -   Select **Deploy** to start the deployment process.
 
-    > ![NOTE]
+    > [!NOTE]
     > If you get the error message **There is no active worker agent. (.Net SqlClient Data Provider)**, make sure the Azure-SSIS Integration Runtime is running. This error occurs if you try to deploy while the Azure-SSIS IR is in a stopped state.
 
 5.  After the deployment process is complete, the **Results** page opens. This page displays the success or failure of each action.

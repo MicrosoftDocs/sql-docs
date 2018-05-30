@@ -25,7 +25,7 @@ manager: kfile
 </Translation>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|1-1: Required element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -43,7 +43,7 @@ manager: kfile
 ## Remarks  
  The **Language** element specifies the LCID used by the parent **Translation** element to assign the **Name** element of the parent **Translation** element to an attribute member, for the specified language, during an **Insert** or **Update** command.  
   
-## See Also  
+## See also
  [Insert Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Name Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)   
  [Update Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   

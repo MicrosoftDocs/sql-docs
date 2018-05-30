@@ -25,7 +25,7 @@ manager: kfile
 </Server>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -42,7 +42,7 @@ manager: kfile
   
 ## Remarks  
   
-## See Also  
+## See also
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   

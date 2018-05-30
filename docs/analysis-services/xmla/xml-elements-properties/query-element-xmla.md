@@ -25,7 +25,7 @@ manager: kfile
 </Queries>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -41,7 +41,7 @@ manager: kfile
 |Child elements|None|  
   
 ## Remarks  
- The **DesignAggregations** command supports usage-based optimization by including one or more **Query** elements in the **Queries** collection of the command. Each **Query** element represents a goal query that the design process uses to define aggregations that target the most frequently used queries. You can either specify your own goal queries, or you can use the information stored by an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in the query log to retrieve information about the most frequently used queries.  
+ The **DesignAggregations** command supports usage-based optimization by including one or more **Query** elements in the **Queries** collection of the command. Each **Query** element represents a goal query that the design process uses to define aggregations that target the most frequently used queries. You can either specify your own goal queries, or you can use the information stored by an instance of Analysis Services in the query log to retrieve information about the most frequently used queries.  
   
  If you are iteratively designing aggregations, you only have to pass goal queries in the first **DesignAggregations** command because the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance stores these goal queries and uses these queries during subsequent **DesignAggregations** commands. After you pass goal queries in the first **DesignAggregations** command of an iterative process, any subsequent **DesignAggregations** command that contains goal queries in the **Queries** property generates an error.  
   
@@ -62,7 +62,7 @@ manager: kfile
   
  Each dimension in the measure group that contains the aggregation design is represented by a *Dataset* value in the **Query** element. The order of *Dataset* values must match the order of dimensions included in the measure group.  
   
-## See Also  
+## See also
  [Designing Aggregations &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

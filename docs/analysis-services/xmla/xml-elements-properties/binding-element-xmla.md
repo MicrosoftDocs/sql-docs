@@ -12,7 +12,7 @@ manager: kfile
 ---
 # Binding Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Defines an out-of-line binding for an [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] object, such as an attribute in a dimension, for the [Bindings](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) collection of a [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) or [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) command.  
+  Defines an out-of-line binding for an Analysis Services object, such as an attribute in a dimension, for the [Bindings](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) collection of a [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) or [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) command.  
   
 ## Syntax  
   
@@ -27,7 +27,7 @@ manager: kfile
 </Bindings>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -35,7 +35,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ manager: kfile
   
  For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

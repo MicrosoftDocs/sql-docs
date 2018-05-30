@@ -12,7 +12,7 @@ manager: kfile
 ---
 # CommitTransaction Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Commits a transaction on the current session with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+  Commits a transaction on the current session with a Analysis Services instance.  
   
 ## Syntax  
   
@@ -23,7 +23,7 @@ manager: kfile
 </Command>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -31,7 +31,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -41,7 +41,7 @@ manager: kfile
 ## Remarks  
  The **CommitTransaction** command commits an active transaction, explicitly defined using the **BeginTransaction** element, on the current session. If an active transaction does not already exist, an error occurs. If an active transaction already exists, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance decrements the reference count of transactions for the current session. If the reference count of explicitly defined active transactions reaches zero, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance commits the transaction.  
   
-## See Also  
+## See also
  [BeginTransaction Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)   
  [Cancel Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)   
  [RollbackTransaction Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)   

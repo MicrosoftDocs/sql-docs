@@ -90,18 +90,33 @@ With Azure SQL Database, you can only use elastic transactions. For more info, s
 
 ## Deploy and run packages
 
-**Deployment model**. You have to use the **project deployment model**, not the package deployment model, when you deploy projects to SSISDB on Azure.
+To get started, see [Deploy, run, and monitor an SSIS package on Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-**Deployment and execution options**. To deploy projects and run packages on Azure, you can use one of several familiar tools and scripting options:
+### Connect to SSISDB
+
+The **name of the SQL Database** that hosts SSISDB becomes the first part of the four-part name to use when you deploy and run packages from SSDT and SSMS, in the following format - `<sql_database_name>.database.windows.net`. For info about how to connect to the SSIS Catalog database in Azure, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
+
+### Deploy projects and packages
+
+You have to use the **project deployment model**, not the package deployment model, when you deploy projects to SSISDB on Azure.
+
+To deploy projects on Azure, you can use one of several familiar tools and scripting options:
 -   SQL Server Management Studio (SSMS)
 -   Transact-SQL (from SSMS, Visual Studio Code, or another tool)
 -   A command-line tool
--   PowerShell
--   C# and the SSIS management object model
+-   PowerShell or C# and the SSIS management object model
 
-**Connect to SSISDB**. The **name of the SQL Database** that hosts SSISDB becomes the first part of the four-part name to use when you deploy and run packages from SSDT and SSMS, in the following format - `<sql_database_name>.database.windows.net`. For info about how to connect to the SSIS Catalog database in Azure, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
+For a deployment example that uses SSMS and the Integration Services Deployment Wizard, see [Deploy, run, and monitor an SSIS package on Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-To get started, see [Deploy, run, and monitor an SSIS package on Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+### Run packages
+
+For an overview of the methods that you can use to run SSIS packages deployed to Azure, see [Run an SSIS package in Azure](ssis-azure-run-packages.md).
+
+## Pass runtime values with environments
+
+To pass one or more runtime values to packages that you run as part of an Azure Data Factory pipeline, create SSIS execution environments in SSISDB with SQL Server Management Studio (SSMS). In each environment, create variables and assign values that correspond to the parameters for your projects or packages. Configure your SSIS packages in SSMS to associate those environment variables with your project or package parameters. When you run the packages in a Data Factory pipeline, switch between environments by specifying different environment paths on the Settings tab of the Execute SSIS Package activity UI.
+
+For more info about running a package as part of an Azure Data Factory pipeline, see [Run an SSIS package using the Execute SSIS Package Activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
 ## Monitor packages
 To monitor running packages in SSMS, you can use the following reporting tools in SSMS.

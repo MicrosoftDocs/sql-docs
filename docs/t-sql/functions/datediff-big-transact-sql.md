@@ -46,7 +46,8 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 *datepart*  
 The part of *date* to which `DATEDIFF_BIG` adds an **integer** *number*. This table lists all valid *datepart* arguments.
 
-Note: `DATEDIFF_BIG` does not accept user-defined variable equivalents for the *datepart* arguments.
+> [!NOTE]
+> `DATEDIFF_BIG` does not accept user-defined variable equivalents for the *datepart* arguments.
   
 |*datepart*|Abbreviations|  
 |---|---|
@@ -64,19 +65,16 @@ Note: `DATEDIFF_BIG` does not accept user-defined variable equivalents for the *
 |**nanosecond**|**ns**|  
   
 *startdate*  
-An expression that can resolve to a 
+An expression that can resolve to one of the following values:
 
 + **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
 + **smalldatetime**
-
-or
-
 + **time**
 
-value. For *date*, `DATEDIFF_BIG` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a **datetime**. Use four-digit years to avoid ambiguity issues. `DATEDIFF_BIG` subtracts *enddate* from *startdate*. To avoid ambiguity, use four-digit years. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
+For *date*, `DATEDIFF_BIG` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a **datetime**. Use four-digit years to avoid ambiguity issues. `DATEDIFF_BIG` subtracts *enddate* from *startdate*. To avoid ambiguity, use four-digit years. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
   
 *enddate*  
 See *startdate*.

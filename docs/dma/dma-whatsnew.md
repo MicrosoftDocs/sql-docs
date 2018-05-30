@@ -40,7 +40,7 @@ The v3.4 release of DMA includes the following additions:
 The v3.3 release of DMA enables migration of an on-premises SQL Server instance to the new version of SQL Server 2017, on both Windows and Linux. While the overall migration workflow for Windows and Linux is the same, the move to SQL Server 2017 for Linux requires a couple of additional considerations.
 
 ### Specifying the back-up path
-Linux and Windows use different path formats. As a result, migrating to SQL Server 2017 on Linux requires that the user provide both the Windows and Linux versions of the path to the location of the physical file. You can  provide both versions of the path in different ways depending on the location of the physical file.
+Linux and Windows use different path formats. As a result, migrating to SQL Server 2017 on Linux requires that the user provide both the Windows and Linux versions of the path to the location of the physical file. You can provide both versions of the path in different ways depending on the location of the physical file.
 If the physical back-up file is on a computer running:
 - Linux, use a ‘samba’ share to share the file with other computers on the network.
 - Windows, use the ‘mnt’ command to mount the share onto the computer running Linux.

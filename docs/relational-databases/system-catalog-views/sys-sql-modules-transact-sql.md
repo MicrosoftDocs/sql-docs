@@ -45,7 +45,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |**null_on_null_input**|**bit**|Module was declared to produce a NULL output on any NULL input.|  
 |**execute_as_principal_id**|**Int**|ID of the EXECUTE AS database principal.<br /><br /> NULL by default or if EXECUTE AS CALLER.<br /><br /> ID of the specified principal if EXECUTE AS SELF or EXECUTE AS \<principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = not natively compiled<br /><br /> 1 = is natively compiled<br /><br /> The default value is 0.|  
-|**is_inlineable**|**bit**|**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] onwards.<br /><br />Indicates whether the module is inlineable or not.<br /><br /> 0 = not inlineable<br /><br /> 1 = is inlineable. <br /><br /> Always contains a value of 1 for inline TVFs.<br />|  
+|**is_inlineable**|**bit**|**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] onwards.<br /><br />Indicates whether the module is inlineable or not. This is based on the conditions specified [here](../performance/scalar-udf-inlining.md)<br /><br /> 0 = not inlineable<br /><br /> 1 = is inlineable. <br /><br /> Always contains a value of 1 for inline TVFs.<br />|  
 |**inline_type**|**bit**|**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] onwards.<br /><br />Indicates whether inlining is turned on for the module currently. <br /><br />0 = inlining is turned off<br /><br /> 1 = inlining is turned on.<br /><br />Value will always be 1 for inline TVFs.<br />|  
 
   

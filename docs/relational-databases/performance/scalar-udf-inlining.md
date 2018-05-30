@@ -149,7 +149,7 @@ A scalar T-SQL UDF is inlineable if all of the following conditions hold:
 7. The UDF is not in a computed column definition or a check constraint.
 
 ### Checking whether a UDF is inlineable or not
-For every T-SQL scalar UDF, the *sys.sql_modules* catalog view includes a property called *is_inlineable*, which indicates whether that UDF is inlineable or not. A value of 1 indicates that it is inlineable, and 0 indicates otherwise.
+For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called *is_inlineable*, which indicates whether that UDF is inlineable or not. A value of 1 indicates that it is inlineable, and 0 indicates otherwise.
 
 **Note:** If a scalar UDF is inlineable, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server *might* choose not to inline it.
 
@@ -216,6 +216,10 @@ END
 ```
 
 **NOTE:** The INLINE clause is not mandatory. If INLINE clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If INLINE=ON is specified but the UDF is found to be non-inlineable, an error will be thrown.
+
+## Interoperability with Dynamic Data masking
+As described in this article, scalar UDF inlining transforms a query with scalar UDFs into a query with an equivalent scalar sub-query. Due to this transformation, the behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) may not be the same as without inlining. 
+More specifically, the behavior with inlining would be identical to the behavior observed if the UDF was a single scalar sub-query. 
 
 ## See Also
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

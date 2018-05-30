@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 -   [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](microsoft-replication-conflict-viewer-merge-replication.md)  
   
--   [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](../microsoft-replication-conflict-viewer-transactional-replication.md)  
+-   [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   
 -   [Microsoft Replication Interactive Conflict Resolver](microsoft-replication-interactive-conflict-resolver.md)  
   

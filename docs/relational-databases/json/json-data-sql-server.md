@@ -68,6 +68,7 @@ If you have JSON text that's stored in database tables, you can read or modify v
 -   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) extracts an object or an array from a JSON string.
 -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) changes a value in a JSON string.
 
+
 **Example**
   
 In the following example, the query uses both relational and JSON data (stored in a column named `jsonCol`) from a table:  

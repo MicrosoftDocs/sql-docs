@@ -27,7 +27,7 @@ manager: kfile
 </root>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -35,7 +35,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -45,7 +45,7 @@ manager: kfile
 ## Remarks  
  If an error occurs during the execution of a **Discover** method call or a single XMLA command in an **Execute** method call that prevents the method or command from completing, the **root** element for that method or command contains an **Exception** element and a **Messages** element. The **Exception** element indicates that an error which prevented the method or command from successfully executing occurred, and the **Messages** element contains the list of error or warning messages related to the error.  
   
-## See Also  
+## See also
  [Messages Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

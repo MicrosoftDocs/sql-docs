@@ -1631,6 +1631,16 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/analysis-services/multidimensional-models/scripting-language-assl/xmla-concepts.md",
+            "redirect_url": "/sql/analysis-services/xmla/xml-for-analysis-xmla-reference",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/tabular-model-data-access.md",
+            "redirect_url": "sql/analysis-services/tabular-models/tabular-models-ssas",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/analysis-services/what-s-new-in-sql-server-analysis-services-vnext.md",
             "redirect_url": "/sql/analysis-services/what-s-new-in-sql-server-analysis-services-2017",
             "redirect_document_id": true

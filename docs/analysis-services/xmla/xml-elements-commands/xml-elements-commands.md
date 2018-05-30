@@ -16,9 +16,9 @@ manager: kfile
   
 |Element|Description|  
 |-------------|-----------------|  
-|[Alter Element (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contains Analysis Services Scripting Language (ASSL) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method to alter objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Backup Element](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Backs up a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database to a backup file.|  
-|[Batch Element](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Performs one or more XML for Analysis (XMLA) commands as a batch operation, either sequentially or in parallel, on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Alter Element (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contains Analysis Services Scripting Language (ASSL) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method to alter objects on an instance of Analysis Services.|  
+|[Backup Element](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Backs up a Analysis Services database to a backup file.|  
+|[Batch Element](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Performs one or more XML for Analysis (XMLA) commands as a batch operation, either sequentially or in parallel, on an instance of Analysis Services.|  
 |[BeginTransaction Element](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Begins a transaction on the current session with an Analysis Services instance.|  
 |[Cancel Element](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|Cancels a currently running command on an Analysis Services instance.|  
 |[ClearCache Element](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md)|Clears the memory cache for the specified object on an Analysis Services instance.|  

@@ -74,9 +74,9 @@ manager: "jhubbard"
   
     -   **proc schema only** - a schema-only stored procedure article.  
   
-    -   **proc exec** - replicates the execution of the stored procedure to all Subscribers of the article. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../transactional/transactional-replication.md).  
+    -   **proc exec** - replicates the execution of the stored procedure to all Subscribers of the article. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-    -   **serializable proc exec** - replicates the execution of the stored procedure only if it is executed within the context of a serializable transaction. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../transactional/transactional-replication.md).  
+    -   **serializable proc exec** - replicates the execution of the stored procedure only if it is executed within the context of a serializable transaction. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
     -   **func schema only** - a schema-only user-defined function article.  
   

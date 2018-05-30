@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   Replicate stored procedure execution when making batch updates to published tables.  
   
-     If you have batch updates that occasionally affect a large number of rows at the Subscriber, you should consider updating the published table using a stored procedure and publish the execution of the stored procedure. Instead of sending an update or delete for every row affected, the Distribution Agent executes the same procedure at the Subscriber with the same parameter values. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../transactional/transactional-replication.md).  
+     If you have batch updates that occasionally affect a large number of rows at the Subscriber, you should consider updating the published table using a stored procedure and publish the execution of the stored procedure. Instead of sending an update or delete for every row affected, the Distribution Agent executes the same procedure at the Subscriber with the same parameter values. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 -   Spread articles across multiple publications.  
   

@@ -218,7 +218,7 @@ manager: "jhubbard"
         3.  If you select **Send report to an email recipient**, on the **Agent operator** list, select the recipient of the emailed report.  
   
             > [!NOTE]  
-            >  SQL Server Agent must be configured to use Database Mail in order to send mail. For more information, see [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/database-mail.md)  
+            >  SQL Server Agent must be configured to use Database Mail in order to send mail. For more information, see [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
     3.  To save more detailed information, under **Logging**, select **Log extended information**.  
   

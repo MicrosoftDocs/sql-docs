@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   When an updating subscription to a transactional publication supports failover from one updating mode to another, you can programmatically switch update modes to handle situations when connectivity changes for a short period of time. The update mode can be set programmatically and on demand using replication stored procedures. For more information, see [Updatable Subscriptions for Transactional Replication](../transactional/transactional-replication.md).  
+-   When an updating subscription to a transactional publication supports failover from one updating mode to another, you can programmatically switch update modes to handle situations when connectivity changes for a short period of time. The update mode can be set programmatically and on demand using replication stored procedures. For more information, see [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -72,6 +72,6 @@ manager: "jhubbard"
     -   **immediate** - fail over to immediate updating when connectivity has been restored.  
   
 ## See Also  
- [Updatable Subscriptions for Transactional Replication](../transactional/transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

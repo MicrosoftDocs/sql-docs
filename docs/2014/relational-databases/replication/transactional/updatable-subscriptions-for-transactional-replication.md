@@ -121,7 +121,7 @@ manager: "jhubbard"
     -   If conflicts are expected: you should not use foreign key constraints at the Publisher or Subscriber if you use "Subscriber wins" conflict resolution; you should not use foreign key constraints at the Subscriber if you use "Publisher wins" conflict resolution.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
  [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)   
  [Publish Data and Database Objects](../publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)  

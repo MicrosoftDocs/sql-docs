@@ -29,6 +29,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](transactional/transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
   
   

@@ -80,7 +80,7 @@ manager: "jhubbard"
  If performance is critical, **Performance Critical** is displayed in the **Status** column. For more information on how performance ratings are defined and how performance thresholds are set, see [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md).  
   
  **Latency**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The average amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber. The latency displayed is based on the most recent measurements taken by Replication Monitor. For more information about measuring latency, see [Measure Latency and Validate Connections for Transactional Replication](transactional/transactional-replication.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. The average amount of time that elapses between a transaction being committed at the Publisher and the corresponding transaction being committed at the Subscriber. The latency displayed is based on the most recent measurements taken by Replication Monitor. For more information about measuring latency, see [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## See Also  
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   

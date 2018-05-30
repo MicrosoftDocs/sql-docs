@@ -92,6 +92,6 @@ COMMIT TRANSACTION T2
  If you require a setting of XACT_ABORT OFF, specify the **-SkipErrors** parameter for the Distribution Agent. This allows the agent to continue applying changes at the Subscriber even if an error is encountered.  
   
 ## See Also  
- [Article Options for Transactional Replication](transactional-replication.md)  
+ [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 5.  To view information about agent warnings and thresholds, click the **Warnings** tab. For more information, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
-6.  To view information about tracer tokens, click the **Tracer Tokens** tab. For more information about how to use tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](../transactional/transactional-replication.md).  
+6.  To view information about tracer tokens, click the **Tracer Tokens** tab. For more information about how to use tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## See Also  
  [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)   

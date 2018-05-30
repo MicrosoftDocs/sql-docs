@@ -184,6 +184,6 @@ manager: "jhubbard"
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Transfer Snapshots Through FTP](../transfer-snapshots-through-ftp.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
- [Initialize a Subscription with a Snapshot]../initialize-a-subscription-with-a-snapshot.md)  
+ [Initialize a Subscription with a Snapshot](../initialize-a-subscription-with-a-snapshot.md)  
   
   

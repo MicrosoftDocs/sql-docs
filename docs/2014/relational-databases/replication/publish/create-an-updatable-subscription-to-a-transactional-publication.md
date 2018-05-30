@@ -96,7 +96,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
 ## See Also
 
-[Updatable Subscriptions for Transactional Replication](../transactional/transactional-replication.md)
+[Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)
 
 [Create a Publication](create-a-publication.md)
 

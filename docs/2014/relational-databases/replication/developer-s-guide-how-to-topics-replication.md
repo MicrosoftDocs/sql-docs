@@ -161,7 +161,7 @@ manager: "jhubbard"
   
 -   [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)  
   
--   [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](transactional/transactional-replication.md)  
+-   [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](administration/enable-coordinated-backups-for-transactional-replication.md)  
   
 -   [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)  
   

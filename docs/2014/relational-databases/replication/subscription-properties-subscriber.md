@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 ## Options for transactional subscriptions  
  **Updatable subscription**  
- Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](transactional/transactional-replication.md).  
+ Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ## Options for merge subscriptions  
  **Partition definition (HOST_NAME)**  
@@ -84,7 +84,7 @@ manager: "jhubbard"
  Determines whether to use the Interactive Resolver user interface to resolve conflicts during merge synchronization. This requires a value of **Enable** for **Use Windows Synchronization Manager**. For more information, see [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Web Synchronization**  
- **Use Web Synchronization** determines whether to connect to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) server to synchronize the subscription. This option is available only if the publication is enabled for Web synchronization. For more information, see [Web Synchronization for Merge Replication](merge/merge-replication.md).  
+ **Use Web Synchronization** determines whether to connect to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) server to synchronize the subscription. This option is available only if the publication is enabled for Web synchronization. For more information, see [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  If you select **True** for **Use Web Synchronization**:  
   

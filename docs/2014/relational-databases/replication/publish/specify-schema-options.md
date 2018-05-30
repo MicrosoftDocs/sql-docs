@@ -120,6 +120,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Publish Data and Database Objects](publish-data-and-database-objects.md)   
- [Article Options for Transactional Replication](../transactional/transactional-replication.md)  
+ [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)  
   
   

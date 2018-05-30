@@ -35,7 +35,7 @@ manager: "jhubbard"
   
      Indexing all the columns used in join filters is also important. Each time the Merge Agent runs, it searches the base table to determine which rows in a parent table and which rows in related tables are included in a partition. Creating an index on the joined columns avoids having [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] read each row in the table every time the Merge Agent runs.  
   
-     For more information on filtering, see [Filter Published Data for Merge Replication](../merge/merge-replication.md).  
+     For more information on filtering, see [Filter Published Data for Merge Replication](../merge/filter-published-data-for-merge-replication.md).  
   
 -   Consider overnormalizing tables that include Large Object (LOB) data types.  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   Limit the complexity of row filter clauses.  
   
-     Limiting the complexity of the filtering criteria helps improve performance when the Merge Agent is evaluating row changes to send to Subscribers. Avoid using sub-selects within merge row filter clauses. Instead, consider using join filters, which are generally more efficient when used to partition data in one table based on the row filter clause in another table. For more information about filtering, see [Filter Published Data for Merge Replication](../merge/merge-replication.md).  
+     Limiting the complexity of the filtering criteria helps improve performance when the Merge Agent is evaluating row changes to send to Subscribers. Avoid using sub-selects within merge row filter clauses. Instead, consider using join filters, which are generally more efficient when used to partition data in one table based on the row filter clause in another table. For more information about filtering, see [Filter Published Data for Merge Replication](../merge/filter-published-data-for-merge-replication.md).  
   
 -   Use precomputed partitions with parameterized filters (this feature is used by default). For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   

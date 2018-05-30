@@ -56,7 +56,7 @@ manager: "jhubbard"
  [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md)  
  Describes how to monitor performance in Replication Monitor, including information on setting performance thresholds. Includes information on article-level statistics for merge replication, which provide a detailed view of processing.  
   
- [Measure Latency and Validate Connections for Transactional Replication](../transactional/transactional-replication.md)  
+ [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md)  
  Describes tracer tokens, which allow you to measure the performance of a transactional replication topology.  
   
  [Monitor Replication Agents](../agents/replication-agents.md)  

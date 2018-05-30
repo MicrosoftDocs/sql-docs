@@ -99,7 +99,7 @@ manager: "jhubbard"
   
 -   A Virtual Private Network (VPN). For more information, see [Publish Data over the Internet Using VPN](../publish-data-over-the-internet-using-vpn.md).  
   
--   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](../merge/merge-replication.md).  
+-   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
  All types of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication can replicate data over a VPN, but you should consider Web synchronization if you are using merge replication.  
   
@@ -167,7 +167,7 @@ manager: "jhubbard"
 ### Does replication affect the size of the transaction log?  
  Merge replication and snapshot replication do not affect transaction log size, but transactional replication can. If a database includes one or more transactional publications, the log is not truncated until all transactions relevant to the publications have been delivered to the distribution database. If the transaction log is growing too large, and the Log Reader Agent is running on a scheduled basis, consider shortening the interval between runs. Or, set it to run in continuous mode. If it is set to run in continuous mode (the default), ensure that it is running. For more information on checking Log Reader Agent status, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
- Additionally, if you have set the option 'sync with backup' on the publication database or distribution database, the transaction log is not truncated until all transactions have been backed up. If the transaction log is growing too large, and you have this option set, consider shortening the interval between transaction log backups. For more information on backing up and restoring databases involved in transactional replication, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../transactional/transactional-replication.md).  
+ Additionally, if you have set the option 'sync with backup' on the publication database or distribution database, the transaction log is not truncated until all transactions have been backed up. If the transaction log is growing too large, and you have this option set, consider shortening the interval between transaction log backups. For more information on backing up and restoring databases involved in transactional replication, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
 ### How do I rebuild indexes or tables in replicated databases?  
  There are a variety of mechanisms for rebuilding indexes. They can all be used with no special considerations for replication, with the following exception: primary keys are required on tables in transactional publications, so you cannot drop and recreate primary keys on these tables.  

@@ -40,6 +40,6 @@ manager: "jhubbard"
  This completes the Replicating Data Between Continuously Connected Servers tutorial. For a similar tutorial that uses merge replication, see [Tutorial: Replicating Data with Mobile Clients](tutorial-replicating-data-with-mobile-clients.md).  
   
 ## See Also  
- [Measure Latency and Validate Connections for Transactional Replication](transactional/transactional-replication.md)  
+ [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

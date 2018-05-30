@@ -1,6 +1,6 @@
 # [Transactional Replication](transactional-replication.md)
 ## [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)
-## [Updatable Subscriptions for Transactional Replication]transactional/updatable-subscriptions-for-transactional-replication.md)
+## [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)
 ## [Queued Updating Conflict Detection and Resolution](updatable-subscriptions-queued-updating-conflict-resolution.md)
 ## [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)
 ## [Conflict Detection in Peer-to-Peer Replication](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)

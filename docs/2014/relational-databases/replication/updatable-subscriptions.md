@@ -37,6 +37,6 @@ manager: "jhubbard"
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
- [Updatable Subscriptions for Transactional Replication](transactional/transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

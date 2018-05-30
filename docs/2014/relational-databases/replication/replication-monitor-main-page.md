@@ -38,7 +38,7 @@ manager: "jhubbard"
   
     -   [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
   
-    -   [Measure Latency and Validate Connections for Transactional Replication](transactional/transactional-replication.md)  
+    -   [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
     -   [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   

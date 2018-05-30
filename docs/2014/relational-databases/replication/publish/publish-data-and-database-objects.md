@@ -107,7 +107,7 @@ manager: "jhubbard"
   
 -   [Filter Published Data](filter-published-data.md)  
   
--   [Article Options for Transactional Replication](../transactional/transactional-replication.md)  
+-   [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)  
   
 -   [Article Options for Merge Replication](../merge/article-options-for-merge-replication.md)  
   

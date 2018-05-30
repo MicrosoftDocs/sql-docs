@@ -105,7 +105,7 @@ manager: "jhubbard"
   
 -   The publication must use native snapshot mode. This is the default unless you are replicating to [!INCLUDE[ssEW](../../../includes/ssew-md.md)], which does not support logical records.  
   
--   The publication cannot allow Web synchronization. For more information about Web synchronization, see [Web Synchronization for Merge Replication](merge-replication.md).  
+-   The publication cannot allow Web synchronization. For more information about Web synchronization, see [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
 -   In order to use logical records on a filtered publication:  
   

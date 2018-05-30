@@ -69,7 +69,7 @@ manager: "jhubbard"
   
  **To set the sync with backup option**  
   
--   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](../transactional/transactional-replication.md)  
+-   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming: [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](enable-coordinated-backups-for-transactional-replication.md)  
   
 ## Restoring Databases Involved in Replication  
  You can restore all databases in a replication topology if recent backups are available and the appropriate steps are followed. The restore steps for the publication database depend on the type of replication and options that are used; however, the restore steps for all other databases are independent of the type and options.  

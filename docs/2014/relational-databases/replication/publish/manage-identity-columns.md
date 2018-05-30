@@ -135,7 +135,7 @@ manager: "jhubbard"
     -   To disable automatic identity range management, execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) at the Publisher on the publication database. Specify a value of **identityrangemanagementoption** for **@property** and either **manual** or **none** for **@value**.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](../transactional/transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Replicate Identity Columns](replicate-identity-columns.md)  
   

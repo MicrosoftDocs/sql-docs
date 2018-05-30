@@ -66,7 +66,7 @@ During a manual failover, the `pcs` command `move` or `crm` command `migrate` ad
 - **RHEL/Ubuntu example**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **SLES example**
@@ -75,35 +75,17 @@ During a manual failover, the `pcs` command `move` or `crm` command `migrate` ad
    crm config show
    ```
 
-Remove the location constraint so future failovers - including automatic failover - succeed. 
-
-To remove the constraint, run the following command: 
-
-- **RHEL/Ubuntu example**
-
-   In this example `ag_cluster-master` is the name of the resource that failed over. 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **SLES example**
-
-   In this example `ag_cluster` is the name of the resource that failed over. 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-Alternatively, you can run the following command to remove the location constraint.  
+An example of the constraint which gets created becuase of a manual failover. 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **RHEL/Ubuntu example**
 
-   In the following command `cli-prefer-ag_cluster-master` is the ID of the constraint that needs to be removed. `sudo pcs constraint --full` returns this ID. 
-
+   In the following command `cli-prefer-ag_cluster-master` is the ID of the constraint that needs to be removed. `sudo pcs constraint list --full` returns this ID. 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **SLES example**
 
    In the following command `cli-prefer-ms-ag_cluster` is the ID of the constraint. `crm config show` returns this ID. 

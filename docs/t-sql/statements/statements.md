@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -44,6 +44,7 @@ Data Manipulation Language (DML) affect the information stored in the database. 
 - BULK INSERT
 - DELETE
 - INSERT
+- UPDATE
 - MERGE
 - TRUNCATE TABLE
 

@@ -43,7 +43,7 @@ manager: kfile
 </Tuple>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -51,7 +51,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -67,7 +67,7 @@ manager: kfile
 ## Remarks  
  The **Member** element contains the information needed to identify and display a member within a given hierarchy. For parent **Members** elements, the hierarchy is already specified by the **Hierarchy** attribute of the parent element. For parent **Tuple** elements, the hierarchy is specified using the **Hierarchy** attribute of the **Member** element.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

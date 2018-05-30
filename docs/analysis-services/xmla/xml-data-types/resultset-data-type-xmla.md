@@ -26,14 +26,14 @@ manager: kfile
 </Resultset>  
 ```  
   
-## Data Type Characteristics  
+## Data type characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|None|  
 |Derived data types|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md), [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md), [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|  
   
-## Data Type Relationships  
+## Data type relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -44,7 +44,7 @@ manager: kfile
 ## Remarks  
  The **Resultset** data type is a self-describing XML result set that can include both schema and data, depending on the type of information to be returned.  
   
-## See Also  
+## See also
  [XML Data Types &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

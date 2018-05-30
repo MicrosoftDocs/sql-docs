@@ -12,7 +12,7 @@ manager: kfile
 ---
 # ProtocolCapabilities Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Uses the SOAP header in a SOAP request message to identify protocol capabilities between an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and a client application.  
+  Uses the SOAP header in a SOAP request message to identify protocol capabilities between an instance of Analysis Services and a client application.  
   
  **Namespace** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
@@ -34,7 +34,7 @@ manager: kfile
 </soap:Envelope>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -42,7 +42,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -66,7 +66,7 @@ manager: kfile
   
  Protocol capabilities do not have to be explicitly negotiated. That is, a client application does not have to include a **ProtocolCapabilities** element as part of the SOAP request. If a SOAP request does not include a **ProtocolCapabilities** element, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance responds using the same format as the SOAP request.  
   
-## See Also  
+## See also
  [Managing Connections and Sessions &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [Headers &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   

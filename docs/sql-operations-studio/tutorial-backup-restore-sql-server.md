@@ -72,7 +72,7 @@ After clicking **Backup**, the **Backup database** dialog disappears and the bac
 
 4. Click **Restore**
 
-5. To view the status of the restore operation, click **CTRL+T** to open the **Task History** sidebar.
+5. To view the status of the restore operation, press **CTRL+T** to open the **Task History** sidebar.
 
    ![restore](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 

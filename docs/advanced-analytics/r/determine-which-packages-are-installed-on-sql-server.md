@@ -5,7 +5,7 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/08/2018  
+ms.date: 05/29/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -20,7 +20,7 @@ R and Python script examples in this article show you how to get the path and ve
 
 ## Get the current R library
 
-For **R** in any version of SQL Server, run the following statement to verify the [default library](installing-and-managing-r-packages.md) for the current instance:
+For any version of SQL Server, run the following statement to verify the [default R package library](installing-and-managing-r-packages.md) for the current instance:
 
 ```sql
 EXECUTE sp_execute_external_script  

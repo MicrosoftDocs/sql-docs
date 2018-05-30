@@ -26,12 +26,11 @@ This article describes how to install new R packages to an instance of SQL Serve
 
 The package library used by an in-database instance is physically located in the Program Files folder of your SQL Server instance. Writing to this location requires administrator permissions. However, SQL Server 2017 offers some additional methodologies for package installation that gives non-administrators the ability to add packages.
 
-+ In SQL Server 2016, administrative access is required for new package installation.
-+ In SQL Server 2017, you can continue to install packages as an administrator for both R and Python, and this is probably the easiest method. 
+You can install packages as an administrator for both R and Python, and this is probably the easiest method. 
 
-    The DDL statement, CREATE EXTERNAL LIBRARY, allows the database administrator  to install packages without using R tools. 
+In SQL Server 2017, **dbo_owner** or another user with CREATE EXTERNAL LIBRARY permission can install R packages to the current database.
 
-    If you use the package management feature for Machine Learning Server, you can use RevoScaleR to install R packages at the database level. The database administrator must enable the feature and then grant users the ability to install their own packages on a per database basis. For more information, see [Enable package management using DDLs](r-package-how-to-enable-or-disable.md).
+If you use the package management feature for Machine Learning Server, you can use RevoScaleR to install R packages at the database level. The database administrator must enable the feature and then grant users the ability to install their own packages on a per database basis. For more information, see [Enable package management using DDLs](r-package-how-to-enable-or-disable.md).
 
 ### User libraries are not supported
 

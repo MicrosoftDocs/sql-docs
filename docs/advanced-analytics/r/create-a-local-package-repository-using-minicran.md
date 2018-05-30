@@ -3,7 +3,7 @@ title: Create a local R package repository using miniCRAN (SQL Server Machine Le
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/29/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,22 +12,17 @@ manager: cgronlun
 # Create a local R package repository using miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html)  package was created by Andre de Vries to support these common scenarios: 
+[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package, created by [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifies and downloads package dependencies into a single folder, which you can zip and copy to other computers for offline R package installation.
 
-+ Analyzing package dependencies for a single package or set of packages
-+ Preparing a set of R packages for installation onto a server without internet access.
-
-The user specifies a set of desired packages, and miniCRAN recursively reads the dependency tree for these packages, and downloads only the listed packages and their dependencies from CRAN or similar repositories.
+As an input, specify one or more packages, and miniCRAN recursively reads the dependency tree for these packages, and downloads only the listed packages and their dependencies from CRAN or similar repositories.
 
 As an output, miniCRAN creates an internally consistent repository consisting of the selected packages and all required dependencies. You can then move this local repository to the server, and proceed to install the packages without using the internet.
 
-Experienced R users often look for the list of dependent packages in the DESCRIPTION file for the downloaded package. However, packages listed in **Imports** might have second-level dependencies. For this reason, we recommend use of the **miniCRAN** method.
+Experienced R users often look for the list of dependent packages in the DESCRIPTION file for the downloaded package. However, packages listed in **Imports** might have second-level dependencies. For this reason, we recommend **miniCRAN** for assembling the full collection of required packages.
 
 ## What is a package repository
 
-The goal of creating a local package repository is to provide a single location that a server administrator or other users in the organization can use to install new R packages on a server that does not have internet access. After creating the repository, you can modify it by adding new packages or upgrading the version of existing packages.
-
-The [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package for R was written by [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html) to make it easier to create a consistent, managed set of R packages for an organization. 
+The goal of creating a local package repository is to provide a single location that a server administrator or other users in the organization can use to install new R packages on a server, especially one that does not have internet access. After creating the repository, you can modify it by adding new packages or upgrading the version of existing packages.
 
 Package repositories are useful in these scenarios:
 
@@ -50,7 +45,7 @@ For these reasons, we recommend that you build your local repository initially o
 
 After the repository has been created, you can move the repository to a different location.
 
-### Step 1. Install the miniCRAN package
+## Install miniCRAN
 
 You begin by creating a **miniCRAN** repository to use as a source. You should create this repository on a computer that has internet access.
 
@@ -62,7 +57,7 @@ You begin by creating a **miniCRAN** repository to use as a source. You should c
     library("miniCRAN")
     ```
 
-### Step 2. Define a package source: a CRAN mirror, or an MRAN snapshot
+## Step 2. Define a package source: a CRAN mirror, or an MRAN snapshot
 
 1. Specify a mirror site to use in getting packages. For example, you could use the MRAN site, or any other site in your region that contains the packages you need. If download fails, try another mirror site.
 
@@ -102,7 +97,7 @@ You begin by creating a **miniCRAN** repository to use as a source. You should c
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. Create the local repo. Be sure to change the R version if necessary
+3. Create the local repo. Be sure to change the R version if necessary.
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -178,16 +173,4 @@ The following procedure describes how to install the packages using R tools.
 > [!NOTE] 
 > To use the package in SQL Server, the packages must be installed into the default library used by the instance. 
 
-## Manually install a single package from a zipped file
 
-If you are installing a single package that has no dependencies, or you cannot use **miniCRAN**, you can also manually download the package you need. To do this requires that you are either an administrator or sole owner of a server.
-
-After downloading the packages, you install the R packages from the zipped file location.
-
-1. Download the package as a zipped file, and save it in a local folder
-
-2. Copy that folder to the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] computer.
-
-3. Install the packages into the SQL Server instance library using conventional R commands. If the package has dependencies that are not already installed, and you have not included them, installation might fail. 
-
-You can also upload individual packages into an instance of SQL Server 2017, by using the [CREATE EXTERNAL LIBRARY statement](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql). This process also required administrative access.

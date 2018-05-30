@@ -24,7 +24,7 @@ The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 + All dependencies must be identified by name and version, and included in the zip file. The statement fails if required packages are not available, including downstream package dependencies. 
 
-+ You must have the necessary permissions on the database. For details, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
++ You must be **db_owner** or have CREATE EXTERNAL LIBRARY permission in a database role. For details, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
 ## Download packages in archive format
 

@@ -4,7 +4,7 @@ description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/10/2018  
+ms.date: 05/29/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -70,55 +70,3 @@ This procedure assumes that you have prepared all the packages that you need, in
 
     If any required packages are not present in the instance library, and cannot be found in the zipped files, installation of the target package fails.
 
-## Tips for package installation
-
-This section provides assorted tips and common questions related to R package installation on SQL Server.
-
-###  <a name="packageVersion"></a> Get the correct package version and format
-
-There are multiple sources for R packages, such as CRAN and Bioconductor. The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Many packages are published to GitHub, where you can obtain the source code. Finally, you might have been given R packages that were developed by someone in your company, or you have a custom package you have written.
-
-Regardless of the source, before trying to install the package, ensure that you have obtained the binary format for the Windows platform. 
-
-### <a name="bkmk_zipPreparation"></a> Download the package as a zipped file
-
-For installation on a server without internet access, you must download a copy of the package in the format of a zipped file for offline installation. **Do not unzip the package.**
-
-For example, the following procedure describes now to get the correct version of the [FISHalyseR](http://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) package from Bioconductor, assuming the computer has access to the internet.
-
-1.  In the **Package Archives** list, find the **Windows binary** version.
-
-2.  Right-click the link to the .ZIP file, and select **Save target as**.
-
-3.  Navigate to the local folder where zipped packages are stored, and click
-    **Save**.
-
-    This process creates a local copy of the package. 
-
-4. If you get a download error, try a different mirror site.
-
-5. After the package archive has been downloaded, you can install the package, or copy the zipped package to a server that does not have internet access.
-
-> [!TIP]
-> If by mistake you install the package instead of downloading the binaries, a copy of the downloaded zipped file is also saved to your computer. Watch the status messages as the package is installed to determine the file location. You can copy that zipped file to the server that does not have internet access.
-> 
-> However, when you obtain packages using this method, the dependencies are not included. 
-
-### <a name="bkmk_packageDependencies"></a> Get required packages
-
-R packages frequently depend on multiple other packages, some of which might not be available in the default R library used by the instance. Sometimes a package requires a different version of a dependent package that is already installed.
-
-If you need to install multiple packages, or want to ensure that everyone in your organization gets the correct package type and version, we recommend that you use the [miniCRAN](https://mran.microsoft.com/package/miniCRAN) package to analyze the complete dependency chain. minicRAN creates a local repository that can be shared among multiple users or computers. For more information, see [Create a local package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
-
-
-### Know which library you are installing to and which packages are already installed.
-
-If you have previously modified the R environment on the computer, before installing anything, pause a moment, and ensure that the R environment variable `.libPath` uses just one path.
-
-This path should point to the R_SERVICES folder for the instance. For more information, including how to determine which packages are already installed, see [R packages installed with SQL Server](installing-and-managing-r-packages.md).
-
-### Side-by-side installation with Standalone R or Python Servers
-
-If you have installed SQL Server 2017 Microsoft Machine Learning Server (Standalone) or SQL Server 2016 R Server (Standalone) in addition to in-database analytics (SQL Server 2017 Machine Learning Services and SQL Server 2016 R Services), your computer has separate installations of R for each, with duplicates of all the R tools and libraries.
-
-Packages that are installed to the R_SERVER library are used only by a standalone server and cannot be accessed by a SQL Server (In-Database) instance. Always use the `R_SERVICES` library when installing packages that you want to use in-database on SQL Server.

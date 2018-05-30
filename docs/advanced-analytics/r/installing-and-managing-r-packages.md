@@ -13,25 +13,24 @@ manager: cgronlun
 # Default R and Python packages in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article covers package libraries, location, and versions of R and Python packages installed with SQL Server. 
+This article describes the R and Python packages installed with SQL Server, where to find the package library, and package versions for each release of SQL Server.  
 
 ## R package list for SQL Server
 
-R packages are installed with SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services when you select the R feature. 
+R packages are installed with [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) and [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) when you select the R feature during setup. 
 
 Packages         | 2016 | 2017 | Description |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Used for including R script in stored procedures. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | Adds machine learning algorithms in R. | |
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | Used for writing MDX statements in R.
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | Adds machine learning algorithms in R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | Used for writing MDX statements in R. |
 
-
-MicrosoftML and olapR are available by default in SQL Server 2017 Machine Learning Services. On a SQL Server 2016 R Services instance, you can add these packages through an [upgrade](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). An upgrade can also get you newer versions of packages, for example newer versions of RevoScaleR include functions for package management.
+MicrosoftML and olapR are available by default in SQL Server 2017 Machine Learning Services. On a SQL Server 2016 R Services instance, you can add these packages through a [component upgrade](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). A component upgrade also gets you newer versions of packages (for example, newer versions of RevoScaleR include functions for package management on SQL Server).
 
 ## Python package list for SQL Server
 
-Python packages are available in SQL Server 2017 only.
+Python packages are available in SQL Server 2017 only when you install [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and select the Python feature.
 
 | Packages         | 2017    |  Description |
 | -----------------|-------------|------------|
@@ -40,11 +39,11 @@ Python packages are available in SQL Server 2017 only.
 
 ## Open-source R in your installation
 
-R support includes open-source R so that you can call base R functions and install additional open-source and third-party pacakges. R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets, and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt). 
+R support includes open-source R so that you can call base R functions and install additional open-source and third-party packages. R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets, and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt). 
 
-The open-source R included in your installation is Microsoft's distribution [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
+The distribution of open-source R included in your installation is [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
-The following table summarizes the version of R provided by MRO and the Microsoft packages installed with specific in-database analytics engines.
+The following table summarizes the versions of R provided by MRO using SQL Server Setup.
 
 |Release             | R version       |
 |--------------------|-----------------|
@@ -61,7 +60,7 @@ SQL Server 2017 Machine Learning is the first release to have both R and Python 
 |--------------------|-----------------|-----------------------|
 | SQL Server 2017 Machine Learning Services  | 4.2 over Python 3.5 | revoscalepy, microsoftml |
 
-## Upgrade to newer versions
+## Component upgrades
 
 After an initial installation, R and Python packages are refreshed through service packs and cumulative updates, but full version upgrades are only possible by *binding* to the Modern Lifecycle Support policy. Binding changes the servicing model. By default, after an initial installation, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are only possible through product upgrades (from SQL Server 2016 to SQL Server 2017) or by binding R support to Microsoft Machine Learning Server. For more information, see [Upgrade R and Python components in SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 

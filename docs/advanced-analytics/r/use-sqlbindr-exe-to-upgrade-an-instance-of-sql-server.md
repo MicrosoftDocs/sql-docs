@@ -296,7 +296,7 @@ If you upgraded to Microsoft R Server 9.0.1, the version of SqlBindR.exe for tha
 
 Later version of SqlBindR automatically restore the original R features, eliminating the need for reinstallation of R components or re-patch the server. However, you must install any R package updates that might have been added after the initial installation.
 
-If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
+If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ### Problems with multiple upgrades from SQL Server
 

@@ -26,7 +26,7 @@ The ghost cleanup process is a single-threaded background process that deletes r
 
 ## Ghost records
 
-Records that are deleted from a leaf level of an index page aren't physically removed from the page - instead, the record is marked as 'to be deleted', or *ghosted*. This means that the row stays on the page but a bit is changed in the row header to indicate that the row is really a ghost. This is to optimize performance during a delete operation.  If records were physically deleted instead of being ghosted, then the object (such as the row) would be locked for the entirety of the delete operation.  This would cause a performance issue by extending the duration of the delete transaction, and by blocking other transactions from accessing the object. Ghosts are necessary for row-level locking, but are also necessary for snapshot isolation where we need to maintain the older versions of rows.
+Records that are deleted from a leaf level of an index page aren't physically removed from the page - instead, the record is marked as 'to be deleted', or *ghosted*. This means that the row stays on the page but a bit is changed in the row header to indicate that the row is really a ghost. This is to optimize performance during a delete operation. Ghosts are necessary for row-level locking, but are also necessary for snapshot isolation where we need to maintain the older versions of rows.
 
 ## Ghost record cleanup task
 

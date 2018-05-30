@@ -27,7 +27,7 @@ manager: kfile
 </AxesInfo>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -35,7 +35,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|1-n: Required element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -51,7 +51,7 @@ manager: kfile
 ## Remarks  
  In a **root** element that uses the **MDDataSet** object, an **AxisInfo** element contains a collection of **HierarchyInfo** elements that, combined with the value of the **name** attribute, represents the definition of a single axis returned in the multidimensional dataset.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

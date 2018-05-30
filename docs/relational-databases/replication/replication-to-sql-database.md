@@ -29,7 +29,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 
 ## Publisher or Distributor on Azure SQL Database Managed Instance
 
-SQL Databases on Managed Instance can participate in any replication role - publisher, distributor, or subscriber. Databases participating in replication can be hosted in an instance of SQL Server on-premises or on in the cloud with a Managed Instance.
+Azure SQL Databases in Managed Instance can participate in any replication role - publisher, distributor, or subscriber. Databases participating in replication can be hosted in an instance of SQL Server on-premises or on in the cloud with a Managed Instance.
 
 ### Supported topologies
 

@@ -26,7 +26,7 @@ manager: kfile
 </root>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -34,7 +34,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -44,7 +44,7 @@ manager: kfile
 ## Remarks  
  In the parent root element, the **Axes** element is followed by the **CellData** element, a collection of **Cell** elements that contain the cell property values for each cell returned in the multidimensional dataset.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

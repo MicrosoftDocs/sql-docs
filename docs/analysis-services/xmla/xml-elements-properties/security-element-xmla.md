@@ -25,7 +25,7 @@ manager: kfile
 </Backup>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|*SkipMembership*|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -41,7 +41,7 @@ manager: kfile
 |Child elements|None|  
   
 ## Remarks  
- The **Security** element determines whether the security definitions, such as roles and permissions, defined on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database are backed up or restored during, respectively, a **Backup** or **Restore** command. This element also determines if the Windows user accounts and groups defined as members of the security definitions are included as part of the **Backup** or **Restore** command.  
+ The **Security** element determines whether the security definitions, such as roles and permissions, defined on a Analysis Services database are backed up or restored during, respectively, a **Backup** or **Restore** command. This element also determines if the Windows user accounts and groups defined as members of the security definitions are included as part of the **Backup** or **Restore** command.  
   
  The value of this element is limited to one of the strings listed in the following table.  
   
@@ -51,7 +51,7 @@ manager: kfile
 |*CopyAll*|Include security definitions and membership information during **Backup** or **Restore** commands.|  
 |*IgnoreSecurity*|Exclude security definitions during **Backup** or **Restore** commands.|  
   
-## See Also  
+## See also
  [SynchronizeSecurity Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

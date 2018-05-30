@@ -21,14 +21,14 @@ manager: kfile
 <EnumString>...</EnumString>  
 ```  
   
-## Data Type Characteristics  
+## Data type characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|**string**|  
 |Derived data types|None|  
   
-## Data Type Relationships  
+## Data type relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -39,7 +39,7 @@ manager: kfile
 ## Remarks  
  XML for Analysis (XMLA) uses enumerations to limit string values to a set of verifiable settings. **EnumString** uses the standard XML **string** data type. The specific values for each of the named constants are specified with the enumerator definition. Enumerators are defined by adding them to the [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) schema rowset, and can be retrieved by using the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method with the DISCOVER_ENUMERATORS request type.  
   
- The following table describes the enumerators supported by an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ The following table describes the enumerators supported by an instance of Analysis Services.  
   
 |Enumerator|Description|  
 |----------------|-----------------|  
@@ -53,7 +53,7 @@ manager: kfile
 |ResultsetContents|Supports the XMLA property, **Content**, which determines whether metadata or data is returned in a **root** element.<br /><br /> For more information about **Content**, see [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |MDXSupportLevel|Supports the XMLA property, **MDXSupport**, which indicates the level of Multidimensional Expressions (MDX) support available on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.<br /><br /> For more information about **MDXSupport**, see [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
   
-## See Also  
+## See also
  [XML Data Types &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

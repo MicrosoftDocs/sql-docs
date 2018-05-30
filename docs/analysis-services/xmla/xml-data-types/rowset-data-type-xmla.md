@@ -27,14 +27,14 @@ manager: kfile
 </root>  
 ```  
   
-## Data Type Characteristics  
+## Data type characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|[Resultset](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
 |Derived data types|None|  
   
-## Data Type Relationships  
+## Data type relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -207,7 +207,7 @@ manager: kfile
 </root>  
 ```  
   
-## See Also  
+## See also
  [XML Data Types &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

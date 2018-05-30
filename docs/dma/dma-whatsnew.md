@@ -1,7 +1,7 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/30/2018"
+ms.date: "05/31/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -20,8 +20,15 @@ manager: craigg
 ---
 
 # What's new in Data Migration Assistant
-
 This topic lists the additions in each release of Data Migration Assistant (DMA).
+
+## DMA v3.5
+The v3.5 release of DMA includes the following additions:
+- Significant performance improvements for migrating to Azure SQL Database (benchmark tests indicate the process is four times faster than with prior versions of DMA).
+- The memory footprint is further optimized to improve the stability of the migration workflow.
+- Full compliance with General Data Protection Regulation (GDPR) privacy regulations.
+- The ability to skip assessments during the schema and data migrations (if you have already performed the assessment and addressed any breaking schema objects prior to migration).
+- A fix to address an issue with the tool crashing when an invalid network share path is provided for backup files, when performing an upgrade of a legacy version of SQL Server on-premises to a later version or to SQL Server on Azure VMs.
 
 ## DMA v3.4
 The v3.4 release of DMA includes the following additions:

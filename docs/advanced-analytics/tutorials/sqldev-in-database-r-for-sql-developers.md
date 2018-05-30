@@ -56,7 +56,7 @@ This tutorial uses a well-known public dataset, based on trips in New York city 
 
 ### Requirements
 
-This tutorial is intended for users who are already familiar with fundamental database operations, such as creating databases and tables, importing data into tables, and creating SQL queries. All R code is provided, so no R development environment is required. An experienced SQL programmer should be able to complete this example by using [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and by running the provided PowerShell scripts.
+This tutorial is for users who are familiar with basic database operations such as creating databases and tables, importing data into tables, and writing SQL queries. All R code is provided, so no R development environment is required. A skilled SQL programmer can use [! INCLUDE [tsql] (../../ includes / tsql-md.md)] in [! INCLUDE [ssManStudioFull] (../../ includes / ssmanstudiofull-md.md) And run the supplied PowerShell script to complete this example. However, before you start this tutorial, you should complete the following preparations:
 
 However, before starting the tutorial, you must complete these preparations:
 

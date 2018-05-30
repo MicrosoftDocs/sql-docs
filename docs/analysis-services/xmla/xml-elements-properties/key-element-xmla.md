@@ -25,7 +25,7 @@ manager: kfile
 </Keys>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -43,7 +43,7 @@ manager: kfile
 ## Remarks  
  The data type used by this element should match the data type of the appropriate key column of the specified attribute. If **Key** elements are not specified for a parent **Attribute** element, the **AttributeName** and **Name** elements specified in the parent **Attribute** element are used to identify the attribute member to be modified.  
   
-## See Also  
+## See also
  [Attribute Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)   
  [AttributeName Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)   
  [Drop Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   

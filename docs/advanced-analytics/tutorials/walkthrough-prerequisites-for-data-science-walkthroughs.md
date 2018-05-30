@@ -60,4 +60,4 @@ For this walkthrough, we have used the SQL login **RTestUser**. We generally rec
 
 ## Next lesson
 
-[Prepare the data using PowerShell](/walkthrough-prepare-the-data.md)
+[Prepare the data using PowerShell](walkthrough-prepare-the-data.md)

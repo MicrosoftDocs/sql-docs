@@ -1,6 +1,6 @@
 # [XML for Analysis (XMLA) Reference](xml-for-analysis-xmla-reference.md)
 
-# [XML for Analysis Compliance (XMLA)](xml-for-analysis-compliance-xmla.md)
+# [XML for Analysis (XMLA) Compliance](xml-for-analysis-compliance-xmla.md)
 # [XMLA data types](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)
 # [XMLA elements commands](../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)
 # [XMLA elements headers](../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)

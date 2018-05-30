@@ -12,7 +12,7 @@ manager: kfile
 ---
 # Lock Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Locks a specified object on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  
+  Locks a specified object on a Analysis Services instance.  
   
 ## Syntax  
   
@@ -27,7 +27,7 @@ manager: kfile
 </Command>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -35,7 +35,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -51,7 +51,7 @@ manager: kfile
   
  All locks are held in the context of the current transaction. When the current transaction is committed or rolled back, all locks defined within the transaction are automatically released.  
   
-## See Also  
+## See also
  [Unlock Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
  [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   

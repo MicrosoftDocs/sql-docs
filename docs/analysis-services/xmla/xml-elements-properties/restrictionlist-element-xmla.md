@@ -25,7 +25,7 @@ manager: kfile
 </Restrictions>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -43,7 +43,7 @@ manager: kfile
 ## Remarks  
  The **RestrictionList** element contains a collection of restriction columns on which the data returned by the **Discover** method can be filtered. Each restriction column in the **RestrictionList** element is defined by a separate XML element. The value of the restriction column is the data contained by the XML element, and the name of the restriction column corresponds to the name of the XML element.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

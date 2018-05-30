@@ -25,7 +25,7 @@ manager: kfile
 </Update>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|False|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -48,7 +48,7 @@ manager: kfile
   
  For more information about updating members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

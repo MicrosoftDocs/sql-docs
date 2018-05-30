@@ -25,7 +25,7 @@ manager: kfile
 </Lock>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|1-1: Required element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -43,7 +43,7 @@ manager: kfile
 ## Remarks  
  The **ID** element contains a globally unique identifier (GUID) used to identify a lock.  
   
-## See Also  
+## See also
  [Object Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
  [Mode Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

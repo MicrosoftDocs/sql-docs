@@ -20,13 +20,14 @@
 # [Setup and Servicing Installation](../sql-server/install/setup-and-servicing-installation.md)
 # [Upgrade Advisor](../sql-server/install/sql-server-2014-upgrade-advisor.md)
 
-# [Tutorials for SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
+# Tutorials:
 ## [Analysis Services Tutorials +](../analysis-services/analysis-services-tutorials-ssas.md)
 ## [Integration Services Tutorials +](../integration-services/integration-services-tutorials.md)
 ## [Database Engine Tutorials +](../relational-databases/database-engine-tutorials.md)
 ## [Tutorial: SQL Server Management Studio +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 ## [Tutorial: Database Engine Tuning Advisor +](../tools/dta/tutorial-database-engine-tuning-advisor.md)
 ## [Tutorial: Writing Transact-SQL Statements +](../t-sql/tutorial-writing-transact-sql-statements.md)
+## [Other Tutorials for SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
 
 
 

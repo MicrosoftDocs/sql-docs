@@ -51,7 +51,8 @@ DATEADD (datepart , number , date )
 *datepart*  
 The part of *date* to which `DATEADD` adds an **integer** *number*. This table lists all valid *datepart* arguments. 
 
-Note: `DATEADD` does not accept user-defined variable equivalents for the *datepart* arguments. 
+> [!NOTE]
+> `DATEADD` does not accept user-defined variable equivalents for the *datepart* arguments. 
   
 |*datepart*|Abbreviations|  
 |---|---|
@@ -73,19 +74,16 @@ Note: `DATEADD` does not accept user-defined variable equivalents for the *datep
 An expression that can resolve to an [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) that `DATEADD` adds to a *datepart* of *date*. `DATEADD` accepts user-defined variable values for *number*. `DATEADD` will truncate a specified *number* value that has a decimal fraction. It will not round the *number* value in this situation.
   
 *date*  
-An expression that can resolve to a 
+An expression that can resolve to one of the following values: 
 
 + **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
 + **smalldatetime**
-
-or
-
 + **time**
 
-value. For *date*, `DATEADD` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a **datetime**. Use four-digit years to avoid ambiguity issues. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
+For *date*, `DATEADD` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a **datetime**. Use four-digit years to avoid ambiguity issues. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
   
 ## Return types
 The *date* argument data type becomes the `DATEADD` return value data type, except for string literal *date* values. For a string literal, `DATEADD` returns a **datetime** value. `DATEADD` will raise an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.
@@ -97,16 +95,13 @@ The *date* argument data type becomes the `DATEADD` return value data type, exce
   
 Each *datepart* and its abbreviations return the same value.
   
-If
+If the following are true:
 
 + *datepart* is **month**
 + the *date* month has more days than the return month
-
-and
-
 + the *date* day does not exist in the return month
 
-then `DATEADD` returns the last day of the return month. For example, September has 30 (thirty) days; therefore, these statements return 2006-09-30 00:00:00.000:
+Then, `DATEADD` returns the last day of the return month. For example, September has 30 (thirty) days; therefore, these statements return 2006-09-30 00:00:00.000:
   
 ```sql
 SELECT DATEADD(month, 1, '20060830');
@@ -138,18 +133,13 @@ The seconds part of a [smalldatetime](../../t-sql/data-types/smalldatetime-trans
 -   For a *datepart* of **millisecond** and a *number* value less than -30001, or more than +29998, `DATEADD` performs its addition beginning at one minute.  
   
 ## Remarks  
-Use `DATEADD` in the
+Use `DATEADD` in the following clauses:
 
 + GROUP BY
 + HAVING
 + ORDER BY
 + SELECT \<list>
-
-and
-
 + WHERE
-
-clauses.
   
 ## Fractional seconds precision
 `DATEADD` does not allow addition for a *datepart* of **microsecond** or **nanosecond** for *date* data types **smalldatetime**, **date**, and **datetime**.

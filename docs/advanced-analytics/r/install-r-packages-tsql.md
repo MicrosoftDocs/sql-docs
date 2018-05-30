@@ -42,24 +42,24 @@ Open a **Query** window, using an account with administrative privileges.
 
 Run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package collection to the database.
 
-    For example, the following statement names as the package source a miniCRAN repository containing the **randomForest** package, together with its dependencies. 
+For example, the following statement names as the package source a miniCRAN repository containing the **randomForest** package, together with its dependencies. 
 
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
+```R
+CREATE EXTERNAL LIBRARY randomForest
+FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
+WITH (LANGUAGE = 'R');
+```
 
-    You cannot use an arbitrary name; the external library name must have the same name that you expect to use when loading or calling the package.
+You cannot use an arbitrary name; the external library name must have the same name that you expect to use when loading or calling the package.
 
 ## Verify package installation
 
 If the library is successfully created, you can run the package in SQL Server, by calling it inside a stored procedure.
     
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
+```SQL
+EXEC sp_execute_external_script
+@language =N'R',
+@script=N'
+library(randomForest)'
+```
 

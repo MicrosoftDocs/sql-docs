@@ -14,9 +14,9 @@ manager: cgronlun
 
 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package, created by [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifies and downloads package dependencies into a single folder, which you can zip and copy to other computers for offline R package installation.
 
-As an input, specify one or more packages, and miniCRAN recursively reads the dependency tree for these packages, and downloads only the listed packages and their dependencies from CRAN or similar repositories.
+As an input, specify one or more packages. **miniCRAN** recursively reads the dependency tree for these packages and downloads only the listed packages and their dependencies from CRAN or similar repositories.
 
-As an output, miniCRAN creates an internally consistent repository consisting of the selected packages and all required dependencies. You can then move this local repository to the server, and proceed to install the packages without using the internet.
+As an output, **miniCRAN** creates an internally consistent repository consisting of the selected packages and all required dependencies. You can then move this local repository to the server, and proceed to install the packages without using the internet.
 
 Experienced R users often look for the list of dependent packages in the DESCRIPTION file for the downloaded package. However, packages listed in **Imports** might have second-level dependencies. For this reason, we recommend **miniCRAN** for assembling the full collection of required packages.
 
@@ -37,78 +37,67 @@ Package repositories are useful in these scenarios:
 > [!TIP]
 > You can also use miniCRAN to prepare packages for use in Azure Machine Learning. For more information, see this blog: [Using miniCRAN in Azure ML, by Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
-## Prepare packages using miniCRAN
-
-The **miniCRAN** package itself is dependent on 18 other CRAN packages, among which is the **RCurl** package, which has a system dependency on the **curl-devel** package. Similarly, package **XML** has a dependency on **libxml2-devel**. 
-
-For these reasons, we recommend that you build your local repository initially on a machine with full Internet access, so that you can easily satisfy all these dependencies. 
-
-After the repository has been created, you can move the repository to a different location.
-
 ## Install miniCRAN
 
-You begin by creating a **miniCRAN** repository to use as a source. You should create this repository on a computer that has internet access.
+The **miniCRAN** package itself is dependent on 18 other CRAN packages, among which is the **RCurl** package, which has a system dependency on the **curl-devel** package. Similarly, package **XML** has a dependency on **libxml2-devel**. To resolve dependencies, we recommend that you build your local repository initially on a machine with full internet access. 
 
-1. Install the **miniCRAN** package and the required **igraph** package. This example checks for whether the package is already installed, but you can bypass the if statements and install the packages directly.
+Run the following commands on a computer with a base R, R tools, and internet connection. It's assumed that this is *not* your SQL Server computer. The following commands install the **miniCRAN** package and the required **igraph** package. This example checks for whether the package is already installed, but you can bypass the if statements and install the packages directly.
 
-    ```R
-    if(!require("miniCRAN")) install.packages("miniCRAN") 
-    if(!require("igraph")) install.packages("igraph") 
-    library("miniCRAN")
-    ```
+```R
+if(!require("miniCRAN")) install.packages("miniCRAN") 
+if(!require("igraph")) install.packages("igraph") 
+library("miniCRAN")
+```
 
-## Step 2. Define a package source: a CRAN mirror, or an MRAN snapshot
+## Set the CRAN mirror and MRAN snapshot
 
-1. Specify a mirror site to use in getting packages. For example, you could use the MRAN site, or any other site in your region that contains the packages you need. If download fails, try another mirror site.
+Specify a mirror site to use in getting packages. For example, you could use the MRAN site, or any other site in your region that contains the packages you need. If download fails, try another mirror site.
 
-    ```R
-    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com")
-    CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
-    ```
+```R
+CRAN_mirror <- c(CRAN = "https://mran.microsoft.com")
+CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+```
 
-2. Type the name of a local folder in which to store the collected packages. 
+## Create a local folder
 
-    Be sure to create the folder in advance. An error is raised if the `local_repo` folder does not exist when you run the R code later.
+Create a local folder, such as `C:\mylocalrepo` in which to store the collected packages. If you repeat this often, you should probably use a more descriptive name, such as "miniCRANZooPackages" or "miniCRANMyRPackagev2".
 
-    The folder should have a descriptive name. Here we've used "miniCRAN", but if you repeat this often, you should probably use a more descriptive name, such as "miniCRANZooPackages" or "miniCRANMyRPackagev2".
+Specify the folder as the local repo. R syntax uses a forward slash for path names, which is opposite from Windows conventions.
 
-    ```R
-    local_repo <- "~/miniCRAN"
-    ```
+```R
+local_repo <- "C:/mylocalrepo"
+```
 
-    The tilde expansion operator returns an environment variable, with results equivalent to `Sys.getenv("R_USER")`.
+## Add packages to the local repo
 
-### Step 3. Add packages to the repository
+After **miniCRAN** is installed, create a list that specifies the additional packages you want to download.
 
-1. After **miniCRAN** is installed, create a list that specifies the additional packages you want to download.
+Do **not** add dependencies to this initial list. The **igraph** package used by **miniCRAN** generates the list of dependencies for you. For more information about how to use the generated dependency graph, see [Using miniCRAN to identify package  dependencies](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).
 
-    Do **not** add dependencies to this initial list. The **igraph** package used by **miniCRAN** generates the list of dependencies for you. For more information about how to use the generated dependency graph, see [Using miniCRAN to identify package
-    dependencies](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).
-
-    The following R script adds the target packages, "zoo"
-    and "forecast" to a variable.
+1. Add target packages, "zoo" and "forecast" to a variable.
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
     ```
-2. It is not required that you plot the dependency graph, but it can be informative.
+
+2. Optionally, plot the dependency graph, but it can be informative.
     
     ```R
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. Create the local repo. Be sure to change the R version if necessary.
+3. Create the local repo. Be sure to change the R version if necessary to the version installed on your SQL Server instance. Version 3.2.2 is on SQL Server 2016, version 3.3 is on SQL Server 2017. If you did a component upgrade, your version might be newer. For more information, see [Get R and Python package information](determine-which-packages-are-in-sql-server.md).
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-    From this information, the miniCRAN package creates the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] later.
+   From this information, the miniCRAN package creates the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] later.
 
-4. At this point you should have a folder containing the packages you needed, and any additional packages that were required.
+4. At this point you should have a folder containing the packages you needed, and any additional packages that were required. The path should be similar to this example: C:\mylocalrepo\bin\windows\contrib\3.3 and it should contain a collection of zipped packages. Do not unzip the packages or rename any files.
 
-    You can run the following code to list the packages contained in the miniCRAN repository.
+5. Optionally, run the following code to list the packages contained in the local miniCRAN repository.
 
     ```R
     pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE);
@@ -117,51 +106,42 @@ You begin by creating a **miniCRAN** repository to use as a source. You should c
     pdb[, c("Package", "Version", "License")]
     ```
 
-### Step 4. Use the repository to add R packages to the instance library
+## Add packages to the instance library
 
-After you have created the repository and added the packages you need, you must move the package repository to the server computer, and ensure that the R packages are installed in the correct library for use from SQL Server.
+After you have a local repository with the packages you need, move the package repository to the SQL Server computer. The following procedure describes how to install the packages using R tools.
 
-The following procedure describes how to install the packages using R tools.
+1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages. The folder typically has this structure: miniCRAN root> bin > windows > contrib > version > all packages.
 
-1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages. The folder typically has this structure: miniCRAN root> -> bin -> windows -> contrib -> version no -> all packages.
+2. Open an R tool associated with the instance (for example, you could use Rgui.exe). Right-click **Run as administrator** to allow the tool to make updates to your system.
 
-2. Open an R command prompt using the R tool associated with the instance.
+    - For SQL Server 2017, the default folder is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
 
-    - For SQL Server 2017, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library`.
+    - For SQL Server 2016, the default folder is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
 
-    - For SQL Server 2016, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library`.
-
-    - For a named instance, the default path would be something like: `<instance_path>.RTEST/R_SERVICES/library`.
-
-    -  If you have installed SQL Server to a different drive, or made any other changes in the installation path, be sure to make those changes as well.
-
-3. Get the path for the instance library, and add it to the list of library paths.
+3. Get the path for the instance library, and add it to the list of library paths. On SQL Server 2017, the path is similar to the following example.
 
     ```R
-    .libPaths()[1];
-    lib <- .libPaths()[1]
+    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library"
     ```
-
-    On SQL Server, this command should return the path of the library associated with the instance, such as: "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library "
 
 4. Specify the new location on the server where you copied the **miniCRAN** repository, as `server_repo`.
 
     In this example, we assume that you copied the repository to a temporary folder on the server.
 
     ```R
-    source_repo <- "C:\\temp\\miniCRAN"
+    inputrepo <- "C:/mylocalrepo"
     ```
 
 5. Since you are working in a new R workspace on the server, you must also furnish the list of packages to install.
 
     ```R
-    tspackages <- c("zoo", "forecast")
+    mypackages <- c("zoo", "forecast")
     ```
 
 6. Install the packages, providing the path to the local copy of the miniCRAN repo.
 
     ```R
-    install.packages(tspackages, repos = file.path("file://", normalizePath;(source_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE);
+    install.packages(mypackages, repos = file.path("file://", normalizePath(inputrepo)), lib = outputlib, type = "win.binary", dependencies = TRUE);
     ```
 
 7. From the instance library, you can view the installed packages using a command like the following:

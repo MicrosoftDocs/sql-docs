@@ -158,7 +158,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-Click this link to jump to the next lesson: [View and explore the data using SQL](/walkthrough-view-and-explore-the-data.md)
+Click this link to jump to the next lesson: [View and explore the data using SQL](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>Troubleshooting
 
@@ -293,10 +293,10 @@ The T-SQL queries used in this walkthrough have been tested and can be run as-is
 
 ## Next lesson
 
-[View and explore the data using R and SQL](/walkthrough-view-and-explore-the-data.md)
+[View and explore the data using R and SQL](walkthrough-view-and-explore-the-data.md)
 
 ## Previous lesson
 
-[End-to-end data science walkthrough for R and SQL Server](/walkthrough-data-science-end-to-end-walkthrough.md)
+[End-to-end data science walkthrough for R and SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
 [Prerequisites for the data science walkthrough](walkthrough-prerequisites-for-data-science-walkthroughs.md)

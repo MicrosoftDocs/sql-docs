@@ -25,7 +25,7 @@ manager: kfile
 </HierarchyInfo>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -43,7 +43,7 @@ manager: kfile
 ## Remarks  
  The **DisplayInfo** element contains various items of information that help a client application render the parent **HierarchyInfo** or **Member** element. The value is equivalent to the DISPLAY_INFO property defined for axis rowsets in the OLE DB for OLAP specification.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

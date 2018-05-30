@@ -56,7 +56,10 @@ manager: craigg
     ```  
   
      For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
-  
+
+    > [!NOTE]  
+    SQL Server Broker is not Multisubnet aware. Be sure to use "registerallprovidersip" set to 0, and check if you are not using static IPs on DNS giving the required permission to cluster on DNS as defined on https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. Broker may delay message with status "CONVERSING" trying to use disabled IP.
+
 3.  **Grant CONNECT permission on the endpoint.**  
   
      Grant CONNECT permission on the Service Broker endpoint either to PUBLIC or to a login.  

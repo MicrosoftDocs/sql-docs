@@ -18,7 +18,7 @@ manager: kfile
   
 ```xml  
   
-<Alter> <!-- or any of the parent elements in the Element Relationships table -->  
+<Alter> <!-- or any of the parent elements in the Element relationships table -->  
 ...  
    <Object>  
       <!-- One or more object identifiers, depending on the parent element -->  
@@ -27,7 +27,7 @@ manager: kfile
 </Alter>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -40,7 +40,7 @@ manager: kfile
 |[Alter](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1: Optional element that can occur once and only once.|  
 |All others|1-1: Required element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -50,9 +50,9 @@ manager: kfile
 ## Remarks  
  The order in which identifiers appear is not important.  
   
- For **Alter** elements, the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] is used as the default object if the **Object** element is not specified.  
+ For **Alter** elements, the instance of Analysis Services is used as the default object if the **Object** element is not specified.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

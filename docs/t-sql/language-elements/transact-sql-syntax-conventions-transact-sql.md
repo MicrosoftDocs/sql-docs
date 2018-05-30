@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Transact-SQL Syntax Conventions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2018"
@@ -45,7 +45,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] keywords.|  
 |*italic*|User-supplied parameters of [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax.|  
 |**bold**|Database names, table names, column names, index names, stored procedures, utilities, data type names, and text that must be typed exactly as shown.|  
-|**underline**|Indicates the default value applied when the clause that contains the underlined value is omitted from the statement.|  
+|_underline_|Indicates the default value applied when the clause that contains the underlined value is omitted from the statement.|  
 |&#124; (vertical bar)|Separates syntax items enclosed in brackets or braces. You can use only one of the items.|  
 |`[ ]` (brackets)|Optional syntax items. Do not type the brackets.|  
 |{ } (braces)|Required syntax items. Do not type the braces.|  

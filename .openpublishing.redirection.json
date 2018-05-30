@@ -151,6 +151,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/sql/reporting-services/report-server/configure-report-builder-access.md",
+            "redirect_url": "/sql/reporting-services/report-server/configure-web-portal",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/sql-server/sql-server-new-updated-sql-docs-pr.md",
             "redirect_url": "/sql/sql-server/new-updated-sql-server",
             "redirect_document_id": true
@@ -1633,6 +1638,16 @@
         {
             "source_path": "docs/integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md",
             "redirect_url": "/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/multidimensional-models/scripting-language-assl/xmla-concepts.md",
+            "redirect_url": "/sql/analysis-services/xmla/xml-for-analysis-xmla-reference",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/tabular-model-data-access.md",
+            "redirect_url": "sql/analysis-services/tabular-models/tabular-models-ssas",
             "redirect_document_id": true
         },
         {

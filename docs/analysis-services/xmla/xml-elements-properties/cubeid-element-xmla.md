@@ -18,14 +18,14 @@ manager: kfile
   
 ```xml  
   
-<Object> <!-- or one of the elements listed below in the Element Relationships table -->  
+<Object> <!-- or one of the elements listed below in the Element relationships table -->  
    ...  
    <CubeID>...</CubeID>  
    ...  
 </Object>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ manager: kfile
 |[Target](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|1-1: Required element that occurs once and only once.|  
 |All others|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -48,7 +48,7 @@ manager: kfile
   
 ## Remarks  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

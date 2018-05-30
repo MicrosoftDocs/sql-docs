@@ -54,23 +54,25 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  The relevant registry key and settings are as follows:  
   
- Key = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
-  
- RegEntry name = OptIn  
-  
- Entry type DWORD:  
-  
--   0 is opt out  
-  
--   1 is opt in  
+- 64-bit OS, Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- 32-bit OS, Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
+
+When Group Policy is enabled, Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+
+Entry = OptIn
+
+Value = (DWORD)
+- 0 is opted out (turn off the VSCEIP)
+- 1 is opted in (turn on the VSCEIP)
+
   
 > [!CAUTION]  
 >  Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer. You can also use the Last Known Good Configuration startup option if you encounter problems after manual changes have been applied.  
   
  For more information about the information collected, processed, or transmitted by CEIP, see the [Privacy Statement for the Microsoft Customer Experience Improvement Program](http://go.microsoft.com/fwlink/?LinkId=52143).  
  
-### Choice and Control over  CEIP and SQL Server Data Tools for Visual Studio 2015  
- SSDT for Visual Studio 2015 is the data modeling tool that ships with SQL Server 2016. It uses the CEIP options  that are built into Visual Studio 2015. You can learn more about how to submit feedback through  CEIP in Visual Studio 2015 from this [help document from Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102).  
+### Choice and Control over CEIP and SQL Server Data Tools for Visual Studio 2015  
+ SSDT for Visual Studio 2015 is the data modeling tool that ships with SQL Server 2016. It uses the CEIP options that are built into Visual Studio 2015. You can learn more about how to submit feedback through CEIP in Visual Studio 2015 from this [help document from Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
   
  For preview versions of SQL Server 2016, CEIP is turned on by default. You can turn it off, or back on again, by following the instructions below.  
   

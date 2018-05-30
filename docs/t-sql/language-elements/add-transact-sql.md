@@ -1,4 +1,4 @@
-﻿---
+---
 title: "+ (Addition) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -74,7 +74,7 @@ GO
   
 SET NOCOUNT ON  
 DECLARE @startdate datetime, @adddays int;  
-SET @startdate = ''January 10, 1900 12:00 AM';  
+SET @startdate = 'January 10, 1900 12:00 AM';  
 SET @adddays = 5;  
 SET NOCOUNT OFF;  
 SELECT @startdate + 1.25 AS 'Start Date',   

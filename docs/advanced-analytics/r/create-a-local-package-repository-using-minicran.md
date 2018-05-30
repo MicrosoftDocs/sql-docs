@@ -20,7 +20,7 @@ As an output, **miniCRAN** creates an internally consistent repository consistin
 
 Experienced R users often look for the list of dependent packages in the DESCRIPTION file for the downloaded package. However, packages listed in **Imports** might have second-level dependencies. For this reason, we recommend **miniCRAN** for assembling the full collection of required packages.
 
-## What is a package repository
+## Why create a local repository
 
 The goal of creating a local package repository is to provide a single location that a server administrator or other users in the organization can use to install new R packages on a server, especially one that does not have internet access. After creating the repository, you can modify it by adding new packages or upgrading the version of existing packages.
 
@@ -70,7 +70,7 @@ local_repo <- "C:/mylocalrepo"
 
 ## Add packages to the local repo
 
-After **miniCRAN** is installed, create a list that specifies the additional packages you want to download.
+After **miniCRAN** is installed and loaded, create a list that specifies the additional packages you want to download.
 
 Do **not** add dependencies to this initial list. The **igraph** package used by **miniCRAN** generates the list of dependencies for you. For more information about how to use the generated dependency graph, see [Using miniCRAN to identify package  dependencies](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).
 
@@ -95,9 +95,9 @@ Do **not** add dependencies to this initial list. The **igraph** package used by
 
    From this information, the miniCRAN package creates the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] later.
 
-4. At this point you should have a folder containing the packages you needed, and any additional packages that were required. The path should be similar to this example: C:\mylocalrepo\bin\windows\contrib\3.3 and it should contain a collection of zipped packages. Do not unzip the packages or rename any files.
+At this point you should have a folder containing the packages you needed, and any additional packages that were required. The path should be similar to this example: C:\mylocalrepo\bin\windows\contrib\3.3 and it should contain a collection of zipped packages. Do not unzip the packages or rename any files.
 
-5. Optionally, run the following code to list the packages contained in the local miniCRAN repository.
+Optionally, run the following code to list the packages contained in the local miniCRAN repository.
 
     ```R
     pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE);
@@ -110,13 +110,13 @@ Do **not** add dependencies to this initial list. The **igraph** package used by
 
 After you have a local repository with the packages you need, move the package repository to the SQL Server computer. The following procedure describes how to install the packages using R tools.
 
-1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages. The folder typically has this structure: miniCRAN root> bin > windows > contrib > version > all packages.
+1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages. The folder typically has this structure: miniCRAN root> bin > windows > contrib > version > all packages. In the following examples, we assume a folder off the root drive: 
 
 2. Open an R tool associated with the instance (for example, you could use Rgui.exe). Right-click **Run as administrator** to allow the tool to make updates to your system.
 
-    - For SQL Server 2017, the default folder is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
+    - For SQL Server 2017, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
 
-    - For SQL Server 2016, the default folder is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
+    - For SQL Server 2016, he file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
 
 3. Get the path for the instance library, and add it to the list of library paths. On SQL Server 2017, the path is similar to the following example.
 
@@ -129,7 +129,7 @@ After you have a local repository with the packages you need, move the package r
     In this example, we assume that you copied the repository to a temporary folder on the server.
 
     ```R
-    inputrepo <- "C:/mylocalrepo"
+    inputlib <- "C:/temp/mylocalrepo"
     ```
 
 5. Since you are working in a new R workspace on the server, you must also furnish the list of packages to install.
@@ -141,7 +141,7 @@ After you have a local repository with the packages you need, move the package r
 6. Install the packages, providing the path to the local copy of the miniCRAN repo.
 
     ```R
-    install.packages(mypackages, repos = file.path("file://", normalizePath(inputrepo)), lib = outputlib, type = "win.binary", dependencies = TRUE);
+    install.packages(mypackages, repos = file.path("file://", normalizePath(inputlib, winslash = "/")), lib = outputlib, type = "win.binary", dependencies = TRUE);
     ```
 
 7. From the instance library, you can view the installed packages using a command like the following:
@@ -150,7 +150,10 @@ After you have a local repository with the packages you need, move the package r
     installed.packages()
     ```
 
-> [!NOTE] 
-> To use the package in SQL Server, the packages must be installed into the default library used by the instance. 
+## See also
+
++ [Get package information](determine-which-packages-are-installed-on-sql-server.md)
++ [R tutorials](../tutorials/sql-server-r-tutorials.md)
++ [How-to guides](sql-server-machine-learning-tasks.md)
 
 

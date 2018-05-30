@@ -16,11 +16,11 @@ manager: cgronlun
 
 This article describes how to install new R packages to an instance of SQL Server where machine learning is enabled. There are multiple methods for installing new R packages, depending on which version of SQL Server you have, and whether the server has an internet connection. The following approaches for new package installation are possible.
 
-| Approach                           | Permissions  | Remote/Local |
-|------------------------------------|---------------------------|-------|
+| Approach                           | Permissions               | Remote/Local |
+|------------------------------------|---------------------------|--------------|
 | [Use conventional R package managers](use-r-package-managers-on-sql-server.md)  | Admin | Local |
-| [Use RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Admin | Local |
-| [Use T-SQL (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | Admin to setup, database roles afterwards | both 
+| [Use RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Admin-enabled, database roles afterwards | both|
+| [Use T-SQL (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | Admin-enabled, database roles afterwards | both 
 
 ## Administrative permissions for package installation
 

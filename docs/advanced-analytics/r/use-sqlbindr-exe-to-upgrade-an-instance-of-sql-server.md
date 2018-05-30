@@ -28,15 +28,13 @@ For SQL Server 2017 Machine Learning Services, you would consider binding only w
 
 **SQL Server 2016 binding considerations**
 
-SQL Server 2016 R Services customers should consider binding to Microsoft Machine Learning Server to get updated R packages, which can further be refreshed at each new major and minor release of Microsoft Machine Learning Server. You could also upgrade to SQL Server 2017 to get Python support.
+For SQL Server 2016 R Services customers, binding provides updated R packages, new packages not part of the original installation, and pretrained models, all of which can further be refreshed at each new major and minor release of Microsoft Machine Learning Server. Binding does not give you Python support, which is a SQL Server 2017 feature. 
 
-Binding does not give you Python support, which is a SQL Server 2017 feature. 
+## Version map
 
-## Version list
+The following table is a version map, showing package versions across release vehicles so that you can ascertain   potentional upgrade paths when you bind to Microsoft Machine Learning Server (previously known as R Server before the addition of Python support starting in MLS 9.2.1). 
 
-The following table is a version map, showing the version installed with SQL Server, with possible upgrades when you bind to Microsoft Machine Learning Server (previously known as R Server before the addition of Python support starting in MLS 9.2.1). 
-
-Notice that binding does not guarantee the very latest version of R or Anaconda. When you bind to Microsoft Machine Learning Server (MLS), you get the R or Python version installed through Setup, which may or may not be the latest version available on the web.
+Notice that binding does not guarantee the very latest version of R or Anaconda. When you bind to Microsoft Machine Learning Server (MLS), you get the R or Python version installed through Setup, which may not be the latest version available on the web.
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 

@@ -67,13 +67,13 @@ After an initial installation, R and Python packages are refreshed through servi
 
 ## Package library location
 
-When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. 
+When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. On Windows, the instance library is a secured folder registered with SQL Server.
 
 All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server cannot access packages installed to other libraries. This applies to remote clients as well. When connecting to the server from a remote client, any R or Python code that you want to run in the server compute context can only use packages installed in the instance library.
 
-To protect server assets, the default instance library is installed to a secured folder that is registered with SQL Server and can be modified only by a computer administrator. If you are not the owner of the computer, you might need to get permission from an administrator to install packages to this library. 
+To protect server assets, the default instance library can be modified only by a computer administrator. If you are not the owner of the computer, you might need to get permission from an administrator to install packages to this library. 
 
-#### In-Database engine instance file paths
+#### File path for In-Database engine instances
 
 The following table shows the file location of R and Python for version and database engine instance combinations. MSSQL13 indicates SQL Server 2016 and is R-only. MSSQL14 indicates SQL Server 2017 and has R and Python folders. 
 
@@ -86,7 +86,7 @@ File paths also include instance names. SQL Server installs [database engine ins
 | SQL Server 2017 with Python |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
 
 
-#### Standalone server file paths 
+#### File path for Standalone server installations
 
 The following table lists the default paths of the binaries when SQL Server 2016 R Server (Standalone) or SQL Server 2017 Machine Learning Server (Standalone) server is installed. 
 

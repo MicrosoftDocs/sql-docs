@@ -12,7 +12,7 @@ manager: kfile
 ---
 # XML Elements - Methods - Execute
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Sends XML for Analysis (XMLA) commands to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. This includes requests involving data transfer, such as retrieving or updating data on the server.  
+  Sends XML for Analysis (XMLA) commands to an instance of Analysis Services. This includes requests involving data transfer, such as retrieving or updating data on the server.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -29,7 +29,7 @@ manager: kfile
 </Execute>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -37,7 +37,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -68,7 +68,7 @@ manager: kfile
 </Execute>  
 ```  
   
-## See Also  
+## See also
  [XML Data Types &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [Discover Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Methods &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   

@@ -12,7 +12,7 @@ manager: kfile
 ---
 # Alter Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contains Analysis Services Scripting Language (ASSL) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method to alter objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Contains Analysis Services Scripting Language (ASSL) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method to alter objects on an instance of Analysis Services.  
   
 ## Syntax  
   
@@ -26,7 +26,7 @@ manager: kfile
 </Command>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -34,7 +34,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -52,7 +52,7 @@ manager: kfile
 ## Remarks  
  Each **Alter** command changes the definition of one major object under the parent object specified by the [ParentObject](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) element.  
   
-## See Also  
+## See also
  [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

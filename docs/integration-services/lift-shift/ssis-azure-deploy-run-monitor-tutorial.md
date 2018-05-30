@@ -36,7 +36,7 @@ To run the package on Azure SQL Database, get the connection information you nee
 Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQL Database server. For more info and screenshots, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
 
 Here are the two most important things to remember. These steps are described in the following procedure.
--   Enter the fully-qualified name of the Azure SQL Database server in the format **mysqldbserver.database.windows.net**.
+-   Enter the fully qualified name of the Azure SQL Database server in the format **mysqldbserver.database.windows.net**.
 -   Select `SSISDB` as the database for the connection.
 
 > [!IMPORTANT]

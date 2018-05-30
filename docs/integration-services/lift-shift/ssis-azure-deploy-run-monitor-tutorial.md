@@ -186,6 +186,8 @@ You can also select a package in Object Explorer, right-click and select **Repor
 
 For more info about how to monitor running packages in SSMS, see [Monitor Running Packages and Other Operations](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
+## Monitor the Execute SSIS Package activity
+
 If you're running a package as part of an Azure Data Factory pipeline with the Execute SSIS Package activity, you can monitor the pipeline runs in the Data Factory UI. Then you can get the SSISDB execution ID from the output of the activity run, and use the ID to check more comprehensive execution logs and error messages in SSMS.
 
 ![Get the package execution ID in Data Factory](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)

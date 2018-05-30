@@ -1,31 +1,14 @@
 ---
 title: "Identifiers (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "formats [Analysis Services]"
-  - "Multidimensional Expressions [Analysis Services], identifiers"
-  - "identifiers [MDX]"
-  - "MDX [Analysis Services], identifiers"
-  - "delimited identifiers [MDX]"
-  - "regular identifiers [MDX]"
-  - "formats [Analysis Services], identifiers"
-ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Identifiers (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

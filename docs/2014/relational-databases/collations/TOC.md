@@ -5,7 +5,3 @@
 ## [View Collation Information](view-collation-information.md)
 ## [Write International Transact-SQL Statements](write-international-transact-sql-statements.md)
 ## [Set a Session Language](set-a-session-language.md)
-# [Linked Servers (Database Engine)](../linked-servers/linked-servers-database-engine.md)
-## [Create Linked Servers (SQL Server Database Engine)](../linked-servers/create-linked-servers-sql-server-database-engine.md)
-# [Logon Triggers](../triggers/logon-triggers.md)
-## [Capture Logon Trigger Event Data](../triggers/capture-logon-trigger-event-data.md)

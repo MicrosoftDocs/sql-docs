@@ -20,10 +20,9 @@
         - name: Configure and manage a database
           tocHref: /sql/database-engine/configure-windows/
           topicHref: /sql/database-engine/configure-windows/configure-database-engine-instances-sql-server
-          items:
-          - name: Collation and Unicode & Linked servers & Logon triggers
-            tocHref: /sql/relational-databases/collations/
-            topicHref: /sql/relational-databases/collations/collation-and-unicode-support
+        - name: Collations and Unicode
+          tocHref: /sql/relational-databases/collations/
+          topicHref: /sql/relational-databases/collations/collation-and-unicode-support
         - name: Scripting
           tocHref: /sql/relational-databases/scripting/
           topicHref: /sql/relational-databases/scripting/database-engine-scripting

@@ -31,9 +31,9 @@ The following table describes the functions used for R package installation and 
 
 ## Prerequisites
 
-+ [Enable remote R package management on SQL Server](r/r-package-how-to-enable-or-disable.md)
++ [Enable remote R package management on SQL Server](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR versions must be the same on both client and server environments. For more information, see [Get package information](r/determine-which-packages-are-installed-on-sql-server.md).
++ RevoScaleR versions must be the same on both client and server environments. For more information, see [Get package information](determine-which-packages-are-installed-on-sql-server.md).
 
 + Permission to connect to the server and a database, and to run R commands. You must be a member of a database role that allows you to install packages on the specified instance and database.
 

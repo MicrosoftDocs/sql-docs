@@ -26,9 +26,7 @@ The ghost cleanup process is a single-threaded background process that deletes r
 
 ## Ghost records
 
-Records that are deleted from a leaf level of an index page aren't physically removed from the page - instead, the record is marked as 'to be deleted', or *ghosted*. This means that the row stays on the page but a bit is changed in the row header to indicate that the row is really a ghost. This is to optimize performance during a delete operation.  
-
-If records were physically deleted instead of being ghosted, then the object (such as the table or index) would be locked for the entirety of the delete operation. This would cause a performance issue by extending the duration of the delete transaction, and by blocking other transactions from accessing the object. Additionally, this helps speed up a delete rollback as the record just has to be unghosted, rather than physically reinserted. The *ghosted* record will then be physically removed asynchronously at a later time by the ghost cleanup task.
+Records that are deleted from a leaf level of an index page aren't physically removed from the page - instead, the record is marked as 'to be deleted', or *ghosted*. This means that the row stays on the page but a bit is changed in the row header to indicate that the row is really a ghost. This is to optimize performance during a delete operation. Ghosts are necessary for row-level locking, but are also necessary for snapshot isolation where we need to maintain the older versions of rows.
 
 ## Ghost record cleanup task
 
@@ -42,7 +40,7 @@ The below query can identify how many ghosted records exist in a single database
  SELECT sum(ghost_record_count) total_ghost_records, db_name(database_id) 
  FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL)
  group by database_id
- order by total_ghost_records desc 
+ order by total_ghost_records desc
 ```
 
 ## Disable the ghost cleanup
@@ -54,7 +52,7 @@ Disabling the ghost cleanup process can cause your database to grow unnecessaril
 Once the ghost cleanup process is disabled, some action needs to be taken to remove the ghosted records. One option is to execute an index rebuild, which will move data around on pages. Another option is to manually run [sp_clean_db_free_space](/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) (to clean all database data files) or [sp_clean_db_file_free_space](/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) (to clean a single database datafile), which will delete ghosted records.
 
  >[!warning]
- > Disabling the ghost cleanup process is not generally recommended. Doing so should be tested thoroughly in a controlled environment before being implemented permanently in a production environment.    
+ > Disabling the ghost cleanup process is not generally recommended. Doing so should be tested thoroughly in a controlled environment before being implemented permanently in a production environment.
 
 
 ## Next steps  

@@ -31,13 +31,11 @@ The following table describes the functions used for R package installation and 
 
 ## Prerequisites
 
-+ To execute these functions, you must have permission to connect to the server and a database, and to run R commands.
++ [Enable remote R package management on SQL Server](r/r-package-how-to-enable-or-disable.md)
 
-+ When using these functions from a remote R client, you must create a compute context object first, using the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function. Thereafter, for each package management function that you use, pass the compute context as an argument.
++ RevoScaleR versions must be the same on both client and server environments. For more information, see [Get package information](r/determine-which-packages-are-installed-on-sql-server.md).
 
-+ If you do not specify a user name and password when you create the compute context, the identity of the user running the R code is used.
-
-+ It is also possible to run package management functions inside `sp_execute_external_script`. When you do so, the function is executed using the security context of the stored procedure caller.
++ Permission to connect to the server and a database, and to run R commands. You must be a member of a database role that allows you to install packages on the specified instance and database.
 
 + Packages in **shared scope** can be installed by users belonging to the `rpkgs-shared` role in a specified database. All users in this role can uninstall shared packages.
 
@@ -49,11 +47,9 @@ The following table describes the functions used for R package installation and 
 
 A client workstation can be [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) or a [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) (data scientists often use the free developer edition) on the same network.
 
-Before you start, ensure that these conditions are met:
+When calling package management functions from a remote R client, you must create a compute context object first, using the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function. Thereafter, for each package management function that you use, pass the compute context as an argument.
 
-+ RevoScaleR versions are the same on both client and server environments. 
-+ The [package management feature](..\r\r-package-how-to-enable-or-disable.md) has been enabled on the SQL Server instance.
-+ You are a member of a database role that allows you to install packages on the specified instance and database. In the future, roles will support installing packages to either a shared or private location. For now, you can install packages if you are a database owner.
+User identity is typically specified when setting the compute context. If you do not specify a user name and password when you create the compute context, the identity of the user running the R code is used.
 
 1. From an R command line, define a connection string to the instance and database.
 2. Use the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) constructor to define a SQL Server compute context, using the connection string.
@@ -77,6 +73,10 @@ Before you start, ensure that these conditions are met:
     
     Packages are installed using the credentials of the user making the connection, in the default scope for that user.
 
+## Call package management functions in stored procedures
+
+You cam run package management functions inside `sp_execute_external_script`. When you do so, the function is executed using the security context of the stored procedure caller.
+
 ## Examples
 
 This section provides examples of how to use these functions from a remote client when connecting to a SQL Server instance or database as the compute context.
@@ -96,7 +96,7 @@ Depending on where the server is located, and the security model, you might need
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
-
+```
 
 ### Get package path on a remote SQL Server compute context
 
@@ -202,3 +202,9 @@ exec sp_execute_external_script
   @database_name = @database_name;
 ```
 
+## See also
+
++ [Enable remote R package management](r-package-how-to-enable-or-disable.md)
++ [Synchronize R packages](package-install-uninstall-and-sync.md)
++ [Tips for installing R packages](packages-installed-in-user-libraries.md)
++ [Default packages](installing-and-managing-r-packages.md)

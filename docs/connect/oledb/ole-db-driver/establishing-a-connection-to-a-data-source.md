@@ -46,17 +46,34 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
   
 ```cpp
 #include <msoledbsql.h>
+#include <stdio.h>
 
-void InitializeAndEstablishConnection() {
-    IDBInitialize   *pIDBInitialize = nullptr;
-    IDBProperties   *pIDBProperties = nullptr;
-    DBPROP          InitProperties[4] = {0};
-    DBPROPSET       rgInitPropSet[1] = {0};
-    HRESULT         hr;
-    int             i;
+void InitializeAndEstablishConnection(IDBInitialize *pIDBInitialize);
 
-   // Initialize the COM library.  
-   CoInitialize(nullptr);  
+void main() {
+   IDBInitialize   *pIDBInitialize = nullptr;
+    
+   // Initialize The Component Object Module Library
+   CoInitialize(nullptr);
+    
+   InitializeAndEstablishConnection(pIDBInitialize);
+    
+   // Insert code the uses the established connection
+    
+   // Free Up All Allocated Memory
+   pIDBInitialize->UnInitialize();
+   pIDBInitialize->Release();
+   
+   // Release The Component Object Module Library
+   CoUninitialize();
+}
+
+
+void InitializeAndEstablishConnection(IDBInitialize *pIDBInitialize) {
+   IDBProperties   *pIDBProperties = nullptr;
+   DBPROP          InitProperties[4] = {0};
+   DBPROPSET       rgInitPropSet[1] = {0};
+   HRESULT         hr = NULL;
 
    // Obtain access to the OLE DB Driver for SQL Server.  
    hr = CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -68,7 +85,7 @@ void InitializeAndEstablishConnection() {
       printf("Failed to obtain access to the OLE DB Driver.\r\n");
    }
    // Initialize property values needed to establish connection.  
-   for (i = 0 ; i < 4 ; i++) {
+   for (int i = 0 ; i < 4 ; i++) {
       VariantInit(&InitProperties[i].vValue);  
    }
 

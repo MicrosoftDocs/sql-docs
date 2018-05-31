@@ -26,7 +26,7 @@
 ## [Save Reports to a Report Server](save-reports-to-a-report-server-report-builder.md)
 ## [Save a Report to a SharePoint Library](save-a-report-to-a-sharepoint-library-report-builder.md)
 ## [Save Reports to Your Computer](../save-reports-to-your-computer-report-builder.md)
-# [Install, Uninstall, and Report Builder Support](../install-uninstall-and-report-builder-support.md?toc=%2fsql%2freporting-services%2freport-builder%2ftoc.json)
+# [Install, Uninstall, and Report Builder Support](../install-uninstall-and-report-builder-support.md?toc=%2fsql%2freporting-services%2freport-builder%2ftoc.json&view=sql-server-2014)
 ## [Install the Stand-Alone Version of Report Builder](../install-windows/install-report-builder.md)
 ## [Uninstall the Stand-Alone Version of Report Builder](../install-windows/uninstall-report-builder.md)
 ## [Troubleshoot Report Builder](../troubleshoot-report-builder.md)

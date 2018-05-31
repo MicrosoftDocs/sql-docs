@@ -353,15 +353,18 @@
         - name: Report server (native)
           tocHref: /sql/reporting-services/report-server/
           topicHref: /sql/reporting-services/report-server/reporting-services-report-server-native-mode
+        - name: Report builder
+          tocHref: /sql/reporting-services/report-builder/
+          topicHref: /sql/reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs
         - name: Report data
           tocHref: /sql/reporting-services/report-data/
           topicHref: /sql/reporting-services/report-data/report-datasets-ssrs
         - name: Report design
-          tocHref: /sql/reporting-services/report-data/report-design/
-          topicHref: /sql/reporting-services/report-data/report-design/tables-matrices-and-lists-report-builder-and-ssrs
-        - name: Report builder
-          tocHref: /sql/reporting-services/report-data/report-builder/
-          topicHref: /sql/reporting-services/report-data/report-builder/export-reports-report-builder-and-ssrs
+          tocHref: /sql/reporting-services/report-design/
+          topicHref: /sql/reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs
+        - name: Report data
+          tocHref: /sql/reporting-services/report-data/
+          topicHref: /sql/reporting-services/report-data/export-reports-report-builder-and-ssrs ???
         - name: Reports
           tocHref: /sql/reporting-services/reports/
           topicHref: /sql/reporting-services/reports/reporting-services-reports-ssrs

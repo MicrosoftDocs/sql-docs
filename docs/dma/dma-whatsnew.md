@@ -1,7 +1,7 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/31/2018"
+ms.date: "06/01/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""

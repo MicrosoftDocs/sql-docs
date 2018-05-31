@@ -2,7 +2,7 @@
 title: Configure a SQL Server Availability Group for read-scale on Windows | Microsoft Docs
 description:
 author: Shawn Melton
-ms.author:
+ms.author:MikeRayMSFT
 ms.reviewer: ""
 ms.date: 05/24/2018
 ms.topic: article

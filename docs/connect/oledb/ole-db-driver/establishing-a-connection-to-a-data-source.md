@@ -64,6 +64,9 @@ void InitializeAndEstablishConnection() {
                          CLSCTX_INPROC_SERVER,  
                          IID_IDBInitialize,   
                          (void **) &pIDBInitialize);  
+   if (FAILED(hr)) {
+      printf("Failed to obtain access to the OLE DB Driver.\r\n");
+   }
    // Initialize property values needed to establish connection.  
    for (i = 0 ; i < 4 ; i++) {
       VariantInit(&InitProperties[i].vValue);  
@@ -104,7 +107,13 @@ void InitializeAndEstablishConnection() {
    // Set initialization properties.  
    hr = pIDBInitialize->QueryInterface(IID_IDBProperties,   
                            (void **)&pIDBProperties);  
-   hr = pIDBProperties->SetProperties(1, rgInitPropSet);   
+   if (FAILED(hr)) {
+      printf("Failed to obtain an IDBProperties interface.\r\n");
+   }
+   hr = pIDBProperties->SetProperties(1, rgInitPropSet);
+   if (FAILED(hr)) {
+      printf("Failed to set initialization properties.\r\n");
+   }
    pIDBProperties->Release();  
 
    // Now establish the connection to the data source.  

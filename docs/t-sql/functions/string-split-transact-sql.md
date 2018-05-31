@@ -42,10 +42,10 @@ STRING_SPLIT ( string , separator )
   
 ## Arguments  
  *string*  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (i.e. **nvarchar**, **varchar**, **nchar** or **char**).  
+ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (for example, **nvarchar**, **varchar**, **nchar**, or **char**).  
   
  *separator*  
- Is a single character [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (e.g. **nvarchar(1)**, **varchar(1)**, **nchar(1)** or **char(1)**) that is used as separator for concatenated strings.  
+ Is a single character [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (for example, **nvarchar(1)**, **varchar(1)**, **nchar(1)**, or **char(1)**) that is used as separator for concatenated strings.  
   
 ## Return Types  
  Returns a single-column table with fragments. The name of the column is **value**. Returns **nvarchar** if any of the input arguments are either **nvarchar** or **nchar**. Otherwise returns **varchar**. The length of the return type is the same as the length of the string argument.  
@@ -67,7 +67,7 @@ If the input string is **NULL**, the **STRING_SPLIT** table-valued function retu
   
 ## Examples  
   
-### A. Split comma separated value string  
+### A. Split comma-separated value string  
 Parse a comma separated list of values and return all non-empty tokens:  
   
 ```sql  
@@ -80,7 +80,7 @@ WHERE RTRIM(value) <> '';
   
 STRING_SPLIT will return empty string if there is nothing between separator. Condition RTRIM(value) <> '' will remove empty tokens.  
   
-### B. Split comma separated value string in a column  
+### B. Split comma-separated value string in a column  
 Product table has a column with comma-separate list of tags shown in the following example:  
   
 |ProductId|Name|Tags|  
@@ -110,7 +110,7 @@ FROM Product
 |3|HL Mountain Frame|mountain|  
   
 ### C. Aggregation by values  
-Users must create a report that shows the number of products per each tag, ordered by number of products, and to filter only the tags with more than 2 products.  
+Users must create a report that shows the number of products per each tag, ordered by number of products, and to filter only the tags with more than two products.  
   
 ```sql  
 SELECT value as tag, COUNT(*) AS [Number of articles]  
@@ -144,7 +144,7 @@ WHERE EXISTS (SELECT *
 ```  
   
 ### E. Find rows by list of values  
-Developers must create a query that finds articles by a list of ids. They can use following query:  
+Developers must create a query that finds articles by a list of IDs. They can use following query:  
   
 ```sql  
 SELECT ProductId, Name, Tags  

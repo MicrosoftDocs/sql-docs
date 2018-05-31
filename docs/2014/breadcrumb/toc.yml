@@ -54,7 +54,7 @@
         - name: Logs
           tocHref: /sql/relational-databases/logs/
           topicHref: /sql/relational-databases/logs/log-file-viewer
-        - name: Relational databases
+        - name: Database Features
           tocHref: /sql/relational-databases/
           topicHref: /sql/relational-databases/database-features
           items:

@@ -32,31 +32,31 @@ manager: craigg
   
  The data source object also exposes the **IDBInitialize** interface. After the properties are set, connection to the data source is established by calling the **IDBInitialize::Initialize** method. For example:  
   
-```  
+```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
                  NULL,   
                  CLSCTX_INPROC_SERVER,  
                  IID_IDBInitialize,   
                  (void **) &pIDBInitialize)  
-```  
+```
   
  This call to **CoCreateInstance** creates a single object of the class associated with CLSID_MSOLEDBSQL (CSLID associated with the data and code that will be used to create the object). IID_IDBInitialize is a reference to the identifier of the interface (**IDBInitialize**) to be used to communicate with the object.  
   
  The following is a sample function that initializes and establishes a connection to the data source.  
   
-```  
+```cpp
 #include <msoledbsql.h>
 
 void InitializeAndEstablishConnection() {
-    IDBInitialize   *pIDBInitialize = NULL;
-    IDBProperties   *pIDBProperties = NULL;
-    DBPROP          InitProperties[4];
-    DBPROPSET       rgInitPropSet[1];
+    IDBInitialize   *pIDBInitialize = nullptr;
+    IDBProperties   *pIDBProperties = nullptr;
+    DBPROP          InitProperties[4] = {0};
+    DBPROPSET       rgInitPropSet[1] = {0};
     HRESULT         hr;
     int             i;
 
    // Initialize the COM library.  
-   CoInitialize(NULL);  
+   CoInitialize(nullptr);  
 
    // Obtain access to the OLE DB Driver for SQL Server.  
    hr = CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -65,8 +65,9 @@ void InitializeAndEstablishConnection() {
                          IID_IDBInitialize,   
                          (void **) &pIDBInitialize);  
    // Initialize property values needed to establish connection.  
-   for (i = 0 ; i < 4 ; i++)   
+   for (i = 0 ; i < 4 ; i++) {
       VariantInit(&InitProperties[i].vValue);  
+   }
 
    // Server name.  
    // See DBPROP structure for more information on InitProperties  

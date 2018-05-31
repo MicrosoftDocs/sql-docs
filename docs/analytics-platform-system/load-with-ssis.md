@@ -24,7 +24,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -243,16 +243,16 @@ Run the package on your computer Integration Services.
   
 ## See Also  
 [Create a script task that uses the SSIS PDW destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[Tutorial: Creating a Basic Package Using a Wizard](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Tutorial: Creating a Basic Package Using a Wizard](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Getting Started (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [Dynamic Package Generation Sample](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [Designing Your SSIS Packages for Parallelism (SQL Server Video)](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server Community Examples: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Improving Incremental Loads with Change Data Capture](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[Slowly Changing Dimension Transformation](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[Bulk Insert Task](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[Improving Incremental Loads with Change Data Capture](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[Slowly Changing Dimension Transformation](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[Bulk Insert Task](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

@@ -6,6 +6,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
+            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },  
+        {
             "source_path": "docs/advanced-analytics/r/using-r-in-azure-sql-database.md",
             "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services#azure-sql-database-roadmap",
             "redirect_document_id": false

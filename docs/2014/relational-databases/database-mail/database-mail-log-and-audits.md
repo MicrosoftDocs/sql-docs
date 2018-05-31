@@ -34,7 +34,7 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Reviewing and managing Database Mail logs**|**Link to Topic**|  
-|Check the delivery status of an individual message|[Check the Status of E-Mail Messages Sent With Database Mail](database-mail.md)|  
+|Check the delivery status of an individual message|[Check the Status of E-Mail Messages Sent With Database Mail](check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |Clean up Database Mail messages, attachments, and log entries|[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql)<br /><br /> [sysmail_delete_log_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql)|  
 |Archive the Database Email Messages and Logs|[Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
   

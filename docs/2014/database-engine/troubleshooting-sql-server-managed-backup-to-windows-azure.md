@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 2.  **Email Notification Errors:**  
   
-     Error: “Database Mail is not enabled…” – You will see this error if you enable e-mail notifications, but Database Mail is not configured on the instance. You must configure Database Mail on the instance to be able to receive notification of the health status of [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For information about how to enable database mail, see [Configure Database Mail](../relational-databases/database-mail/database-mail.md). You must also enable SQL Server Agent to use Database Mail for notifications. For more information, see [Before You Begin](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
+     Error: “Database Mail is not enabled…” – You will see this error if you enable e-mail notifications, but Database Mail is not configured on the instance. You must configure Database Mail on the instance to be able to receive notification of the health status of [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For information about how to enable database mail, see [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md). You must also enable SQL Server Agent to use Database Mail for notifications. For more information, see [Before You Begin](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
   
      Following is a list of error numbers you might see that are associated with email notifications:  
   

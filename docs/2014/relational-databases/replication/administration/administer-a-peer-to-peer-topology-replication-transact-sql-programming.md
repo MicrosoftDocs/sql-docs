@@ -62,6 +62,6 @@ manager: "jhubbard"
 ## See Also  
  [Administration &#40;Replication&#41;](administration-replication.md)   
  [Back Up and Restore of SQL Server Databases](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Peer-to-Peer Transactional Replication](../transactional/transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)  
   
   

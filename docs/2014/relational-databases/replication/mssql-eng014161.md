@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  If the threshold value is appropriate, but it is being exceeded, you must determine where the performance bottleneck is in the system. For more information about how to monitor and troubleshoot replication performance, see the following topics:  
   
--   [Measure Latency and Validate Connections for Transactional Replication](transactional/transactional-replication.md)  
+-   [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
 -   [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)  
   

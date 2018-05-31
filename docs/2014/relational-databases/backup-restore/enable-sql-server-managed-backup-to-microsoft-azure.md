@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 7.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention. The following steps describe the process to enable and configure e-mail notifications:  
   
-    1.  Setup Database Mail if it is not already enabled on the instance. For more information, see [Configure Database Mail](../database-mail/database-mail.md).  
+    1.  Setup Database Mail if it is not already enabled on the instance. For more information, see [Configure Database Mail](../database-mail/configure-database-mail.md).  
   
     2.  Configure SQL Server Agent Notification to use Database Mail. For more information, see [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
@@ -210,7 +210,7 @@ manager: "jhubbard"
   
 8.  **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention.  To receive such notifications, you must enable run the stored procedure which creates a SQL Server Agent Job. The following steps describe the process to enable and configure e-mail notifications:  
   
-    1.  Setup Database Mail if it is not already enabled on the instance. For more information, see [Configure Database Mail](../database-mail/database-mail.md).  
+    1.  Setup Database Mail if it is not already enabled on the instance. For more information, see [Configure Database Mail](../database-mail/configure-database-mail.md).  
   
     2.  Configure SQL Server Agent Notification to use Database Mail. For more information, see [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   

@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 -   A Virtual Private Network (VPN). For more information, see [Publish Data over the Internet Using VPN](publish-data-over-the-internet-using-vpn.md).  
   
--   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](merge/merge-replication.md).  
+-   The Web synchronization option for merge replication. For more information, see [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  All types of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication can replicate data over a VPN, but you should consider Web synchronization if you are using merge replication.  
   

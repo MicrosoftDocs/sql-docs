@@ -212,6 +212,6 @@ go
 ```  
   
 ## See Also  
- [Article Options for Transactional Replication](transactional-replication.md)  
+ [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

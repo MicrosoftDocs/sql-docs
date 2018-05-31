@@ -157,7 +157,7 @@ manager: "jhubbard"
   
          View the total time for a transaction to travel through the system and also compare it to previous times.  
   
-     This tab is not displayed for Distributors running [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or earlier. For more information on tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](../transactional/transactional-replication.md).  
+     This tab is not displayed for Distributors running [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or earlier. For more information on tracer tokens, see [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 -   Detail windows for the agents associated with a publication. The following agents are associated with publications:  
   

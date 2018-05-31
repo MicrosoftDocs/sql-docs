@@ -114,7 +114,7 @@ manager: "jhubbard"
 |------------------------|----------------|  
 |Describes how to create a Database Mail accounts|[Create a Database Mail Account](create-a-database-mail-account.md)|  
 |Describes how to Create Database Mail profiles|[Create a Database Mail Profile](create-a-database-mail-profile.md)|  
-|Describes how to Configure Database mail|[Configure Database Mail](database-mail.md)|  
+|Describes how to Configure Database mail|[Configure Database Mail](configure-database-mail.md)|  
 |Describes how to create a Database Mail configuration script using templates||  
   
   

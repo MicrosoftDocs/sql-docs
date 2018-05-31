@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 ## Lessons in This Tutorial  
   
--   [Lesson 1: Publishing Data Using Merge Replication](merge/merge-replication.md)  
+-   [Lesson 1: Publishing Data Using Merge Replication](lesson-1-publishing-data-using-merge-replication.md)  
   
 -   [Lesson 2: Creating a Subscription to the Merge Publication](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   

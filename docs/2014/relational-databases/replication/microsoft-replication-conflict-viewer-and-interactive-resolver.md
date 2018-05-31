@@ -21,9 +21,9 @@ manager: "jhubbard"
 # Microsoft Replication Conflict Viewer and Interactive Resolver
   This section includes information on the Replication Conflict Viewer for merge replication and transactional replication, and the Interactive Resolver for merge replication:  
   
--   [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](merge/merge-replication.md)  
+-   [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](microsoft-replication-conflict-viewer-merge-replication.md)  
   
--   [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](transactional/transactional-replication.md)  
+-   [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   
 -   [Microsoft Replication Interactive Conflict Resolver](microsoft-replication-interactive-conflict-resolver.md)  
   

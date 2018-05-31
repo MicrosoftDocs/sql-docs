@@ -42,6 +42,6 @@ manager: "jhubbard"
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
   
 ## See Also  
- [Publishing Stored Procedure Execution in Transactional Replication](../transactional/transactional-replication.md)  
+ [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md)  
   
   

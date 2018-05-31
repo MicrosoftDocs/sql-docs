@@ -67,7 +67,7 @@ manager: "jhubbard"
 ## See Also  
  [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Start the Replication Monitor](monitor/start-the-replication-monitor.md)   
- [Measure Latency and Validate Connections for Transactional Replication](transactional/transactional-replication.md)   
+ [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  

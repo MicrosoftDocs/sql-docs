@@ -156,6 +156,6 @@ manager: "jhubbard"
  [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)   
  [Filter Published Data](filter-published-data.md)   
- [Filter Published Data for Merge Replication](../merge/merge-replication.md)  
+ [Filter Published Data for Merge Replication](../merge/filter-published-data-for-merge-replication.md)  
   
   

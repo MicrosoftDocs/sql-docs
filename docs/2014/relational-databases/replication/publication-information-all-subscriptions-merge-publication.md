@@ -104,6 +104,6 @@ manager: "jhubbard"
  [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
  [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Monitoring Replication](monitoring-replication.md)   
- [Web Synchronization for Merge Replication](merge/merge-replication.md)  
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

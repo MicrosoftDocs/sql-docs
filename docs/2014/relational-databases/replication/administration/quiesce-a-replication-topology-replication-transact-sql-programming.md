@@ -79,6 +79,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Measure Latency and Validate Connections for Transactional Replication](../transactional/transactional-replication.md)  
+ [Measure Latency and Validate Connections for Transactional Replication](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

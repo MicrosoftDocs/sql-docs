@@ -53,9 +53,9 @@ manager: "jhubbard"
 ## Backup and Restore Strategies  
  The strategies for backing up and restoring each node in a replication topology differ according to the type of replication used. For information on backup and restore strategies for each type of replication, see the following topics:  
   
--   [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../transactional/transactional-replication.md)  
+-   [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
   
--   [Strategies for Backing Up and Restoring Merge Replication](../merge/merge-replication.md)  
+-   [Strategies for Backing Up and Restoring Merge Replication](strategies-for-backing-up-and-restoring-merge-replication.md)  
   
  As part of any recovery strategy, always keep a current script of your replication settings in a safe location. In the event of server failure or the need to set up a test environment, you can modify the script by changing server name references, and it can be used to help recreate your replication settings. In addition to scripting your current replication settings, you should script the enabling and disabling of replication. For information about scripting replication objects, see [Scripting Replication](../scripting-replication.md).  
   

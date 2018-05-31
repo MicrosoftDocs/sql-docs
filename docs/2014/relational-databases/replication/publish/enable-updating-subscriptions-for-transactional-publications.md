@@ -104,7 +104,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [Publication Types for Transactional Replication](../transactional/transactional-replication.md)   
+ [Publication Types for Transactional Replication](../transactional/publication-types-for-transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
  [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   

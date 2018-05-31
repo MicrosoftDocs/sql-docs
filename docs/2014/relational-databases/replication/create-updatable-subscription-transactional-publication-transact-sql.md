@@ -271,7 +271,7 @@ GO
 
 ## See Also ##
 
-[Updatable Subscriptions for Transactional Replication](transactional/transactional-replication.md)
+[Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)
 
 [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)
 

@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   Size the distribution database appropriately. Test replication with a typical load for your system to determine how much space is required to store commands. Ensure the database is large enough to store commands without having to auto-grow frequently. For more information about changing the size of a database, see [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
--   Set the **sync with backup** option on the distribution database. For more information, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](transactional/transactional-replication.md) and [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](administration/enable-coordinated-backups-for-transactional-replication.md).  
+-   Set the **sync with backup** option on the distribution database. For more information, see [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) and [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](administration/enable-coordinated-backups-for-transactional-replication.md).  
   
 ## Local and Remote Distributors  
  By default, the Distributor is the same server as the Publisher (a local Distributor), but it can also be a separate server from the Publisher (a remote Distributor). Typically, you would choose to use a remote Distributor if you want to:  

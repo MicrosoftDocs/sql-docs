@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|The row was not found at the Subscriber when applying the replicated command.|  
   
 ## Explanation  
- This error is raised in transactional replication if the Distribution Agent attempts to update a row at the Subscriber, but the row has been deleted or the primary key of the row has been changed. By default, Subscribers to transactional publications should be treated as read-only, because changes are not propagated back to the Publisher. For transactional replication, user changes should be made at the Subscriber only if updatable subscriptions or peer-to-peer replication is used. For information about these options, see [Updatable Subscriptions for Transactional Replication](transactional/transactional-replication.md) and [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md).  
+ This error is raised in transactional replication if the Distribution Agent attempts to update a row at the Subscriber, but the row has been deleted or the primary key of the row has been changed. By default, Subscribers to transactional publications should be treated as read-only, because changes are not propagated back to the Publisher. For transactional replication, user changes should be made at the Subscriber only if updatable subscriptions or peer-to-peer replication is used. For information about these options, see [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md) and [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md).  
   
 ## User Action  
  **To resolve this problem:**  

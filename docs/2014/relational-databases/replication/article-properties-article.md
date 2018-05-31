@@ -83,7 +83,7 @@ manager: "jhubbard"
  For more information, see [Specify How Changes Are Propagated for Transactional Articles](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
  **Replicate**  
- This option applies to store procedures only. It determines whether to replicate the definition of the stored procedure (the CREATE PROCEDURE statement) or its execution. If you replicate the execution of the procedure, the procedure definition is replicated to the Subscriber when the subscription is initialized; when the procedure is executed at the Publisher, replication executes the corresponding procedure at the Subscriber. This can provide significantly better performance for cases where large batch operations are performed. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](transactional/transactional-replication.md).  
+ This option applies to store procedures only. It determines whether to replicate the definition of the stored procedure (the CREATE PROCEDURE statement) or its execution. If you replicate the execution of the procedure, the procedure definition is replicated to the Subscriber when the subscription is initialized; when the procedure is executed at the Publisher, replication executes the corresponding procedure at the Subscriber. This can provide significantly better performance for cases where large batch operations are performed. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## Options for merge publications  
  The **Article Properties** dialog box for merge publications has two tabs: **Properties** and **Resolver**.  

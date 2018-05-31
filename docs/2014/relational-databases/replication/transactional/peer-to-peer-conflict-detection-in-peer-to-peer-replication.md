@@ -98,6 +98,6 @@ manager: "jhubbard"
     5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): specify 'p2p_continue_onconflict' for the @property parameter and `false` for the @value parameter.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
   
   

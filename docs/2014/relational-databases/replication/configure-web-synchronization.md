@@ -162,6 +162,6 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
 >  Opening ports in your firewall can leave your server exposed to malicious attacks. Make sure that you understand firewall systems before you open ports. For more information, see [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ## See Also  
- [Web Synchronization for Merge Replication](merge/merge-replication.md)  
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

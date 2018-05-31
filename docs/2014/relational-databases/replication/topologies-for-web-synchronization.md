@@ -56,6 +56,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Configure Web Synchronization](configure-web-synchronization.md)   
- [Web Synchronization for Merge Replication](merge/merge-replication.md)  
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

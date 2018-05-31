@@ -28,7 +28,7 @@ manager: "jhubbard"
  To deliver a snapshot through FTP, see [Deliver a Snapshot Through FTP](publish/deliver-a-snapshot-through-ftp.md).  
   
 ## See Also  
- [Web Synchronization for Merge Replication](merge/merge-replication.md)   
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)   
  [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
  [Snapshot Options](snapshot-options.md)  
   

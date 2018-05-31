@@ -41,7 +41,7 @@ manager: "jhubbard"
  For more information about conflict detection and resolution for merge replication, see [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## See Also  
- [Article Options for Merge Replication](merge-replication.md)   
+ [Article Options for Merge Replication](article-options-for-merge-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

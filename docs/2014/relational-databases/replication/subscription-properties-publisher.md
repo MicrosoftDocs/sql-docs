@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ## Options for transactional subscriptions  
  **Prevent transaction looping**  
- Determines whether the Distribution Agent sends transactions that originated at the Subscriber back to the Subscriber. This option is used for bidirectional transactional replication. For more information, see [Bidirectional Transactional Replication](transactional/transactional-replication.md).  
+ Determines whether the Distribution Agent sends transactions that originated at the Subscriber back to the Subscriber. This option is used for bidirectional transactional replication. For more information, see [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md).  
   
  **Updatable subscription**  
  Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  

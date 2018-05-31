@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   The Log Reader Agent for all transactional publications.  
   
--   The Queue Reader Agent for transactional publications that allow updatable subscriptions. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job for this agent is created if you specified **Transactional publication with updatable subscriptions** on the **Publication Type** page, regardless of the type of updatable subscriptions you use. For more information about updatable subscriptions, see [Updatable Subscriptions for Transactional Replication](transactional/transactional-replication.md).  
+-   The Queue Reader Agent for transactional publications that allow updatable subscriptions. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job for this agent is created if you specified **Transactional publication with updatable subscriptions** on the **Publication Type** page, regardless of the type of updatable subscriptions you use. For more information about updatable subscriptions, see [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  For information about permissions required by agents and best practices for replication security, see [Replication Agent Security Model](security/replication-agent-security-model.md) and [Replication Security Best Practices](security/replication-security-best-practices.md).  
   

@@ -61,7 +61,7 @@ manager: "jhubbard"
 6.  Close the Replication Conflict Viewer.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](transactional/transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

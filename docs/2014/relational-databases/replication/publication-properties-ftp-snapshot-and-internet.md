@@ -25,7 +25,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Changes to any FTP settings require a new snapshot to be generated.  
   
--   Set properties for Web synchronization for merge replication on [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, which allows subscriptions to be synchronized over HTTPS (secure hypertext transfer protocol). To use Web synchronization, you must configure an [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) server. For more information, see [Web Synchronization for Merge Replication](merge/merge-replication.md).  
+-   Set properties for Web synchronization for merge replication on [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, which allows subscriptions to be synchronized over HTTPS (secure hypertext transfer protocol). To use Web synchronization, you must configure an [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) server. For more information, see [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
 ## Options  
  **Access snapshot files via FTP**  

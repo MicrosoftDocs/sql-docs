@@ -118,7 +118,7 @@ manager: "jhubbard"
   
  **To specify the mail profile for SQL Server Agent**  
   
--   [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/database-mail.md)  
+-   [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
 > [!NOTE]  
 >  Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to specify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must start up when the operating system starts.  

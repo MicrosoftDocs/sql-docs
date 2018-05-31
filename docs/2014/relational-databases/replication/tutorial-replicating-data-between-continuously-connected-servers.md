@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 ## Lessons in This Tutorial  
   
--   [Lesson 1: Publishing Data Using Transactional Replication](transactional/transactional-replication.md)  
+-   [Lesson 1: Publishing Data Using Transactional Replication](lesson-1-publishing-data-using-transactional-replication.md)  
   
 -   [Lesson 2: Creating a Subscription to the Transactional Publication](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   

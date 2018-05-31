@@ -20,7 +20,7 @@ Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 
 You can optionally enable AlwaysOn availability groups Extended Event (XE) session to help with root-cause diagnosis when you troubleshoot an availability group. Run the following command on each instance of SQL Server:
 
-```SQL
+```sql
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -35,7 +35,7 @@ The replicas involved in the read-scale Availability Group will need to authenti
 
 In an Active Directory environment where all secondary replicas on joined to the same domain SQL Server can authenticate utilizing the service account. You will need to explicitly create a login for the service account on each all SQL Server instances:
 
-```SQL
+```sql
 CREATE LOGIN [<domain>\service account] FROM WINDOWS;
 ```
 
@@ -43,18 +43,18 @@ CREATE LOGIN [<domain>\service account] FROM WINDOWS;
 
 In environments where the secondary replicas may not be joined to an Active Directory Domain you will need to utilize SQL Authentication. The following Transact-SQL script creates a login named `dbm_login` and a user named `dbm_user`. Update the script with a strong password. To create the database mirroring endpoint user, run the following command on all SQL Server instances:
 
-```SQL
+```sql
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
 
 #### Certificate Authentication
 
-If you utilizing a secondary replica that requires authentication with SQL Authentication you will need to utilize a certificate for authenticating between the mirroring endpoints.
+If you utilize a secondary replica that requires authentication with SQL Authentication use a certificate for authenticating between the mirroring endpoints.
 
-The following Transact-SQL script creates a master key and a certificate. It then backs up the certificate and secures the file with a private key. Update the script with strong passwords. Run the following on the primary SQL Server instance to create the certificate:
+The following Transact-SQL script creates a master key and a certificate. It then backs up the certificate and secures the file with a private key. Update the script with strong passwords. Run the following script on the primary SQL Server instance to create the certificate:
 
-```SQL
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -73,7 +73,7 @@ Ensure on each secondary replica that the service account for SQL Server has per
 
 The following Transact-SQL script creates a master key and a certificate from the backup that you created on the primary SQL Server replica. The command also authorizes the user to access the certificate. Update the script with strong passwords. The decryption password is the same password that you used to create the `.pvk` file in a previous step. To create the certificate, run the following script on all secondary replicas:
 
-```SQL
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate
     AUTHORIZATION dbm_user

@@ -87,7 +87,7 @@
 ## [Printing Reports +](report-builder/print-reports-report-builder-and-ssrs.md)
 ## [Saving Reports +](report-builder/saving-reports-report-builder.md)
 ## [Security](report-builder/security-report-builder.md)
-## [Install, Uninstall, and Report Builder Support +](install-uninstall-and-report-builder-support.md)
+## [Install, Uninstall, and Report Builder Support +](install-uninstall-and-report-builder-support.md?toc=%2fsql%2freporting-services%2freport-builder%2ftoc.json)
 ## [Report Builder F1 Help +](report-builder/report-builder-f1-help.md)
 ## [Glossary (Report Builder)](report-builder/glossary-report-builder.md)
 # [Reporting Services Reports +](reports/reporting-services-reports-ssrs.md)

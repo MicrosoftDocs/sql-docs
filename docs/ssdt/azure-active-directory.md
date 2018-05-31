@@ -1,7 +1,7 @@
 ---
 title: "Azure Active Directory in SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/27/2018"
+ms.date: "05/31/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -45,16 +45,16 @@ For more information, see [Connecting to SQL Database By Using Azure Active Dire
 
 *Active Directory Interactive Authentication* is available when connecting to the listed Azure SQL products with SSDT, but only with [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) or a later version.
 
-- [Download and install for .NET Framework, any version](https://www.microsoft.com/net/download/all)
-- [Visual Studio 2017 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)
+- [Download and install for .NET Framework, any version](https://www.microsoft.com/net/download/all).
+- [Visual Studio 2017 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), or a later version.
 
 #### Multi-Factor Authentication (MFA)
 
 Active Directory Interactive Authentication supports an interactive authentication allowing you to use Azure Active Directory (AD) Multi-Factor Authentication (MFA) to authenticate with the listed Azure SQL products. This method supports native and federated Azure AD users, and guest users from other accounts. The other types of account include:
 
-- Buisness-to-Business (B2B) users.
-- Microsoft accounts.
-- Non-Microsoft accounts such as @outlook.com, @hotmail.com, @live.com, and @gmail.com.
+- Business-to-Business (Azure AD B2B) users.
+- Microsoft accounts, such as @outlook.com, @hotmail.com, @live.com.
+- Non-Microsoft accounts, such as @gmail.com.
 
 If the MFA method is specified, the **User Name** must be specified, and the **Password** field is disabled. 
 

@@ -1,7 +1,7 @@
 ---
 title: "Report Parameters (Report Builder and Report Designer) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-26"
+ms.date: "2016-07-27"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,9 +27,7 @@ manager: "mblythe"
 # Report Parameters (Report Builder and Report Designer)
   This topic describes the common uses for SSRS report parameters, the properties you can set, and much more about parameters. Report parameters enable you to control report data, connect related reports together, and vary report presentation.  
   
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint mode and Native mode|  
+[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint mode and Native mode
   
  For a demonstration on how to add a parameter to a report, see [Tutorial: Adding Parameters to a Report (SSRS)](http://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 

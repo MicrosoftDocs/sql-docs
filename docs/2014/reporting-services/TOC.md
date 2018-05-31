@@ -92,8 +92,6 @@
 ## [Glossary (Report Builder)](report-builder/glossary-report-builder.md)
 # [Reporting Services Reports +](reports/reporting-services-reports-ssrs.md)
 # [Report Data +](report-data/report-data-ssrs.md)
-# [Report Parts in Report Designer](report-design/report-parts-in-report-designer-ssrs.md)
-## [Managing Report Parts](report-design/managing-report-parts.md)
 # [Schedules +](subscriptions/schedules.md)
 # [Subscriptions and Delivery +](subscriptions/subscriptions-and-delivery-reporting-services.md)
 # [Data Alerts](reporting-services-data-alerts.md)

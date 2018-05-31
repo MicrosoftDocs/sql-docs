@@ -29,6 +29,8 @@
 ## [Check for Updates or Turn Updates Off (Report Builder and SSRS)](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)
 ## [Browse for Report Parts and Set a Default Folder (Report Builder and SSRS)](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)
 ## [Troubleshoot Report Parts (Report Builder and SSRS)](../troubleshoot-report-parts-report-builder-and-ssrs.md)
+# [Report Parts in Report Designer](report-parts-in-report-designer-ssrs.md)
+## [Managing Report Parts](managing-report-parts.md)
 # [Charts](charts-report-builder-and-ssrs.md)
 ## [Add a Chart to a Report (Report Builder and SSRS)](add-a-chart-to-a-report-report-builder-and-ssrs.md)
 ## [Chart Types (Report Builder and SSRS)](chart-types-report-builder-and-ssrs.md)

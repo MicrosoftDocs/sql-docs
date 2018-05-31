@@ -56,7 +56,7 @@
 ### [Find in Files](find-in-files.md)
 ### [Find Results Windows](find-results-windows.md)
 ### [Replace in Files](replace-in-files.md)
-## [Manage Bookmarks](../native-client-ole-db-rowsets/bookmarks.md)
+## [Manage Bookmarks](manage-bookmarks.md)
 ### [Bookmarks F1 Help](bookmarks-f1-help.md)
 ## [Print Code and Results](print-code-and-results.md)
 ## [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-with-query-editor.md)

@@ -55,28 +55,7 @@ For information about these user rights, see the "Windows privileges and rights"
 > [!TIP]
 > If you are familiar with the use of the Support Diagnostics Platform (SDP) tool for SQL Server diagnostics, you can use SDP to review the output file with the name MachineName_UserRights.txt.
 
-## Determine whether 8dot3 notation is enabled
-
-> [!NOTE] 
-> The 8dot3 notation requirement has been removed in later releases. SQL Server 2016 R Services customers should install one of the following:
-> * SQL Server 2016 SP1 and CU1: [Cumulative Update 1 for SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
-> * SQL Server 2016 RTM, Cumulative Update 3, and this [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), which is available on demand.
-
-For compatibility with R, SQL Server 2016 R Services (In-Database) required the drive where the feature is installed to support the creation of short file names by using *8dot3 notation*. An 8.3 file name is also called a *short file name*, and it's used for compatibility with earlier versions of Microsoft Windows or as an alternative to long file names.
-
-If the volume where you are installing R does not support short file names, the processes that launch R from SQL Server might not be able to locate the correct executable, and Launchpad will not start.
-
-As a workaround, you can enable the 8dot3 notation on the volume where SQL Server is installed and where R Services is installed. You must then provide the short name for the working directory in the R Services configuration file.
-
-1. To enable 8dot3 notation, run the fsutil utility with the *8dot3name* argument as described here: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
-
-2. After the 8dot3 notation is enabled, open the RLauncher.config file and note the property of `WORKING_DIRECTORY`. For information about how to find this file, see [Data collection for Machine Learning troubleshooting](data-collection-ml-troubleshooting-process.md).
-
-3. Use the fsutil utility with the *file* argument to specify a short file path for the folder that's specified in WORKING_DIRECTORY.
-
-4. Edit the configuration file to specify the same working directory that you entered in the WORKING_DIRECTORY property. Alternatively, you can specify a different working directory and choose an existing path that's already compatible with the 8dot3 notation.
-
-## The user group for Launchpad cannot log on locally
+## User group for Launchpad cannot log on locally
 
 During setup of Machine Learning services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
 
@@ -85,24 +64,6 @@ However, in organizations where more restrictive security policies are enforced,
 To correct the problem, ensure that the group **SQLRUserGroup** has the system right **Allow log on locally**.
 
 For more information, see [Configure Windows service accounts and permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
-
-## Improper setup leading to mismatched DLLs
-
-If you install the database engine with other features, patch the server, and then later add the Machine Learning feature by using the original media, the wrong version of the Machine Learning components might be installed. When Launchpad detects a version mismatch, it shuts down and creates a dump file.
-
-To avoid this problem, be sure to install any new features at the same patch level as the server instance.
-
-**The wrong way to upgrade:**
-
-1. Install SQL Server 2016 without R Services.
-2. Upgrade SQL Server 2016 Cumulative Update 2.
-3. Install R Services (In-Database) by using the RTM media.
-
-**The correct way to upgrade:**
-
-1. Install SQL Server 2016 without R Services.
-2. Upgrade SQL Server 2016 to the desired patch level. For example, install Service Pack 1 and then Cumulative Update 2.
-3. To add the feature at the correct patch level, run SP1 and CU2 setup again, and then choose R Services (In-Database). 
 
 ## Permissions to run external scripts
 
@@ -195,67 +156,6 @@ By default, 20 accounts are set up and associated with the Launchpad.exe process
 
 To resolve the issue, ensure that the group has *Allow Log on Locally* permissions to the local instance where machine learning features have been installed and enabled. In some environments, this permission level might require a GPO exception from the network administrator.
 
-## Avoid clearing the workspace while you're running R in a SQL compute context
-
-Although clearing the workspace is common when you work in the R console, it can have unintended consequences in a SQL compute context.
-
-`revoScriptConnection` is an object in the R workspace that contains information about an R session that's called from SQL Server. However, if your R code includes a command to clear the workspace (such as `rm(list=ls())`), all information about the session and other objects in the R workspace is cleared as well.
-
-As a workaround, avoid indiscriminate clearing of variables and other objects while you're running R in SQL Server. You can delete specific variables by using the **remove** function:
-
-```R
-remove('name1', 'name2', ...)
-```
-
-If there are multiple variables to delete, we suggest that you save the names of temporary variables to a list and then perform periodic garbage collections on the list.
-
-## Implied authentication for remote execution via ODBC
-
-If you connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer to run R commands by using the **RevoScaleR** functions, you might get an error when you use ODBC calls that write data to the server. This error happens only when you're using Windows authentication.
-
-The reason is that the worker accounts that are created for R Services do not have permission to connect to the server. Therefore, ODBC calls cannot be executed on your behalf. The problem does not occur with SQL logins because, with SQL logins, the credentials are passed explicitly from the R client to the SQL Server instance and then to ODBC. However, using SQL logins is also less secure than using Windows authentication.
-
-To enable your Windows credentials to be passed securely from a script that's initiated remotely, SQL Server must emulate your credentials. This process is termed _implied authentication_. To make this work, the worker accounts that run R or Python scripts on the SQL Server computer must have the correct permissions.
-
-1. Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] as an administrator on the instance where you want to run R code.
-
-2. Run the following script. Be sure to edit the user group name, if you changed the default, and the computer and instance names.
-
-    ```SQL
-    USE [master]
-    GO
-    
-    CREATE LOGIN [computername\\SQLRUserGroup] FROM WINDOWS WITH
-    DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[language]
-    GO
-    ```
-
-## Valid script fails in T-SQL or in stored procedures
-
-Before wrapping your R code in a stored procedure, it is a good idea to run your R code in an external IDE, or in one of the R tools such as RTerm or RGui. By using these methods, you can test and debug the code by using the detailed error messages that are returned by R.
-
-However, sometimes code that works perfectly in an external IDE or utility might fail to run in a stored procedure or in a SQL Server compute context. If this happens, there are a variety of issues to look for before you can assume that the package doesn't work in SQL Server.
-
-1. Check to see whether Launchpad is running.
-
-2. Review messages to see whether either the input data or output data contains columns with incompatible or unsupported data types. For example, queries on a SQL database often return GUIDs or RowGUIDs, both of which are unsupported. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
-
-3. Review the help pages for individual R functions to determine whether all parameters are supported for the SQL Server compute context. For ScaleR help, use the inline R help commands, or see [Package Reference](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
-
-## Script returns inconsistent results
-
-R scripts can return different values in a SQL Server context, for several reasons:
-
-- Implicit type conversion is automatically performed on some data types, when the data is passed between SQL Server and R. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
-
-- Determine whether bitness is a factor. For example, there are often differences in the results of math operations for 32-bit and 64-bit floating point libraries.
-
-- Determine whether NaNs were produced in any operation. This can invalidate results.
-
-- Small differences can be amplified when you take a reciprocal of a number near zero.
-
-- Accumulated rounding errors can cause such things as values that are less than zero instead of zero.
-
 ## "Not enough quota to process this command"
 
 This error can mean one of several things:
@@ -293,6 +193,46 @@ To resolve the issue, you must reinstall the package to the SQL Server instance 
 
 >[!NOTE]
 >If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+## Launchpad shuts down due to mismatched DLLs
+
+If you install the database engine with other features, patch the server, and then later add the Machine Learning feature by using the original media, the wrong version of the Machine Learning components might be installed. When Launchpad detects a version mismatch, it shuts down and creates a dump file.
+
+To avoid this problem, be sure to install any new features at the same patch level as the server instance.
+
+**The wrong way to upgrade:**
+
+1. Install SQL Server 2016 without R Services.
+2. Upgrade SQL Server 2016 Cumulative Update 2.
+3. Install R Services (In-Database) by using the RTM media.
+
+**The correct way to upgrade:**
+
+1. Install SQL Server 2016 without R Services.
+2. Upgrade SQL Server 2016 to the desired patch level. For example, install Service Pack 1 and then Cumulative Update 2.
+3. To add the feature at the correct patch level, run SP1 and CU2 setup again, and then choose R Services (In-Database). 
+4. 
+## Launchpad fails to start if 8dot3 notation is required
+
+> [!NOTE] 
+> On older systems, Launchpad can fail to start if there is an 8dot3 notation requirement. This requirement has been removed in later releases. SQL Server 2016 R Services customers should install one of the following:
+> * SQL Server 2016 SP1 and CU1: [Cumulative Update 1 for SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
+> * SQL Server 2016 RTM, Cumulative Update 3, and this [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), which is available on demand.
+
+For compatibility with R, SQL Server 2016 R Services (In-Database) required the drive where the feature is installed to support the creation of short file names by using *8dot3 notation*. An 8.3 file name is also called a *short file name*, and it's used for compatibility with earlier versions of Microsoft Windows or as an alternative to long file names.
+
+If the volume where you are installing R does not support short file names, the processes that launch R from SQL Server might not be able to locate the correct executable, and Launchpad will not start.
+
+As a workaround, you can enable the 8dot3 notation on the volume where SQL Server is installed and where R Services is installed. You must then provide the short name for the working directory in the R Services configuration file.
+
+1. To enable 8dot3 notation, run the fsutil utility with the *8dot3name* argument as described here: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+
+2. After the 8dot3 notation is enabled, open the RLauncher.config file and note the property of `WORKING_DIRECTORY`. For information about how to find this file, see [Data collection for Machine Learning troubleshooting](data-collection-ml-troubleshooting-process.md).
+
+3. Use the fsutil utility with the *file* argument to specify a short file path for the folder that's specified in WORKING_DIRECTORY.
+
+4. Edit the configuration file to specify the same working directory that you entered in the WORKING_DIRECTORY property. Alternatively, you can specify a different working directory and choose an existing path that's already compatible with the 8dot3 notation.
+
 
 ## Next steps
 

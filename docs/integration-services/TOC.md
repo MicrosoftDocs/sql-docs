@@ -29,6 +29,7 @@
 ## [Connect to files and file shares](lift-shift/ssis-azure-files-file-shares.md)
 ## [Connect to SSISDB in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Validate packages deployed to Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Run packages in Azure](lift-shift/ssis-azure-run-packages.md)
 ## [Schedule packages in Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Schedule packages in Azure with SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 

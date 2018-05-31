@@ -136,7 +136,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  To verify site URLS in SharePoint mode, use the SharePoint cmdlet **Get-SPSite**. For more information, see [Get-SPSite](http://msdn.microsoft.com/library/ff607950&#40;v=office.15&#41;.aspx).  
+>  To verify site URLS in SharePoint mode, use the SharePoint cmdlet **Get-SPSite**. For more information, see [Get-SPSite](http://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
 ##  <a name="bkmk_list_all_one_user"></a> Script: List all subscriptions owned by a specific user  
  This script lists all of the subscriptions owned by a specific user. You can use this script to test your connection or to verify the report path and subscription id for use in the other scripts. This script is useful when someone in your organization leaves and you want to verify what subscriptions they owned so you can change the owner or delete the subscription.  

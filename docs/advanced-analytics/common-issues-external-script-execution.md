@@ -214,7 +214,7 @@ Such duplication becomes a problem when you try to run a script from a command l
 
 + Avoid direct use of the R libraries and tools that are installed for the use of the SQL Server instance, except in limited cases such as troubleshooting or installation of new packages. 
 + If you need to use an R command-line tool, you can install [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client). 
-+ SQL Server provides in-database management of R packages. This is the easiest way to create R package libraries that can be shared among users. For more information, see  [R package management for SQL Server](r/r-package-management-for-sql-server-r-services.md).
++ SQL Server provides in-database management of R packages. This is the easiest way to create R package libraries that can be shared among users. For more information, see  [R package management for SQL Server](r/install-additional-r-packages-on-sql-server.md).
 
 ### Avoid clearing the workspace while you're running R in a SQL compute context
 

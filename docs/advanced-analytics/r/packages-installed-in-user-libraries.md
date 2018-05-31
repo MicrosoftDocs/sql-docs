@@ -1,26 +1,22 @@
 ---
-title: Avoid errors when using R packages installed in user libraries | Microsoft Docs
+title: Tips for using R packages installed in user libraries on SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/30/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Avoiding errors on R packages installed in user libraries
+# Tips for using R packages in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Experienced R users are accustomed to installing R packages in a user library, whenever the default library is blocked or not available. However, this approach is not supported in SQL Server, and installation to a user library usually ends in a “package not found” error.
-
-This article describes workarounds to help you avoid this error. It explains how you can modify your R code, and suggests the correct R package installation process for using R packages from a SQL Server instance.
+This article is for experienced R developers who are unfamiliar with how packages are accessed and used in a SQL Server instance.
 
 ## Why R user libraries cannot be accessed from SQL Server
 
-R developers who need to install new R packages are accustomed to installing packages at will, using a private, user library whenever the default library is not available, or when the developer is not an administrator on the computer.
-
-For example, in a typical R development environment, the user would add the  location of the package to the R environment variable `libPath`, or reference the full package path, like this:
+R developers who need to install new R packages are accustomed to installing packages at will, using a private, user library whenever the default library is not available, or when the developer is not an administrator on the computer. For example, in a typical R development environment, the user would add the  location of the package to the R environment variable `libPath`, or reference the full package path, like this:
 
 ```R
 library("c:/Users/<username>/R/win-library/packagename")
@@ -30,13 +26,13 @@ This does not work when running R solutions in SQL Server, because R packages mu
 
 *Error in library(xxx) : there is no package called 'package-name'*
 
-## How to avoid “package not found” errors
+## How to avoid "package not found" errors
 
-+ Eliminate dependencies on user libraries 
++ Eliminate dependencies on user libraries. 
 
     It is a bad development practice to install required R packages to a custom user library, as it can lead to errors if a solution is run by another user who does not have access to the library location.
 
-    Also, if a package is installed in the default library, the R runtime loads the package from the default library, even if you specified a different version in the R code.
+    Also, if a package is installed in the default library, the R runtime loads the package from the default library, even if you specify a different version in the R code.
 
 + Modify your code to run in a shared environment.
 
@@ -46,4 +42,4 @@ This does not work when running R solutions in SQL Server, because R packages mu
 
 + Update your code to remove direct references to the paths of R packages or R libraries. 
 
-+ Know which package library is associated with the instance. For more information, see [R packages installed with SQL Server](installing-and-managing-r-packages.md)
++ Know which package library is associated with the instance. For more information, see [Default R and Python packages in SQL Server](installing-and-managing-r-packages.md).

@@ -37,7 +37,7 @@ manager: craigg
  A physical or logical entity that can be owned by a node, brought online and taken offline, moved between nodes, and managed as a cluster object. A cluster resource can be owned by only a single node at any point in time.  
   
  Role  
- A collection of cluster resources managed as a single cluster object to provide specific functinality. For SQL Server, a role will be either an Always On Availability Group (AG) or Always On Failover Cluster Instance (FCI). A role contains all of the cluster resources that are required for an AG or FCI. Failover and failback always act in context of roles. For an FCI, the role will contain an IP address resource, a network name resource, and the SQL Server resources. An AG role will contain the AG resource, and if a listener is configured, a networm name and an IP resource. 
+ A collection of cluster resources managed as a single cluster object to provide specific functionality. For SQL Server, a role will be either an Always On Availability Group (AG) or Always On Failover Cluster Instance (FCI). A role contains all of the cluster resources that are required for an AG or FCI. Failover and failback always act in context of roles. For an FCI, the role will contain an IP address resource, a network name resource, and the SQL Server resources. An AG role will contain the AG resource, and if a listener is configured, a network name and an IP resource. 
 
  Network name resource  
  A logical server name that is managed as a cluster resource. A network name resource must be used with an IP address resource. These entries may require objects in Active Directory Domain Services and/or DNS. 

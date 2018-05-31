@@ -73,7 +73,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
  The followng example returns the security identification number (SID) for the current security context.  
   
 ```  
-SELECT SUSER_SID('sa');  
+SELECT SUSER_SID();  
 ```  
   
 ### B. Using SUSER_SID with a specific login  

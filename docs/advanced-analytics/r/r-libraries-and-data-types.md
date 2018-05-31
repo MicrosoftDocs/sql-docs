@@ -30,7 +30,7 @@ To view the R version associated with a particular instance of SQL Server, open 
 
 To find the version of R included in a particular version of Microsoft R Server, see [R Server - What’s New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](../r/r-package-management-for-sql-server-r-services.md).
+Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## R and SQL Data Types
 

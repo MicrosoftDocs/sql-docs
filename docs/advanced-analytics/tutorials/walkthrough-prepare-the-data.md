@@ -79,7 +79,7 @@ The R script that you downloaded includes the commands to download and install t
 
 ### Install required packages on the server
 
-There are many different ways that you can install packages on SQL Server. For example, SQL Server provides a [package management](../r/installing-and-managing-r-packages.md) feature that lets database administrators create a package repository and assign user the rights to install their own packages. However, if you are an administrator on the computer, you can install new packages using R, as long as you install to the correct library.
+There are many different ways that you can install packages on SQL Server. For example, SQL Server provides [R package management](../r/install-additional-r-packages-on-sql-server.md) feature that lets database administrators create a package repository and assign user the rights to install their own packages. However, if you are an administrator on the computer, you can install new packages using R, as long as you install to the correct library.
 
 > [!NOTE]
 > On the server, **do not** install to a user library even if prompted. If you install to a user library, the SQL Server instance cannot find or run the packages. For more information, see [Installing New R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).

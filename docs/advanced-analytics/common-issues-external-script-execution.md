@@ -3,7 +3,7 @@ title: Common issues with external script execution in SQL Server| Microsoft Doc
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/31/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,25 +12,22 @@ manager: cgronlun
 # Common issues with external script execution in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article contains a list of known issues and common problems with running R or Python code in SQL Server.
+This article contains a list of known issues and common problems with running R or Python code in SQL Server. The list is not comprehensive. There are many packages, and errors can vary between versions of the same package. We recommend posting script errors on the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR), which supports the machine learning components used in R Services (In-Database), Machine Learning Services with Python, Microsoft R Client, and Microsoft R Server.
 
 Before you get started, we recommend that you collect some information about your system. To learn how, see [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md).
 
 Also, review a list of common issues that are specific to initial setup or configuration: [Setup and upgrade FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md).
 
+
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
-## Launchpad issues
+## External script and Launchpad service
 
-The SQL Server Trusted Launchpad service manages the execution of external scripts and communication with R, Python, or other external runtimes. Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.
+ SQL Server Trusted Launchpad service supports external script execution for R and Python. On SQL Server 2016 R Services, SP1 provides the service. SQL Server 2017 includes the service as part of the intitial installation.
 
-As part of the troubleshooting process, begin by answering the following questions:
+Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.
 
-- Did Launchpad always fail to run, or did it stop working?
-- What service account is Launchpad running under?
-- What user rights does the Launchpad service account have?
-
-### Determine whether Launchpad is running
+## Determine whether Launchpad is running
 
 1. Open the **Services** panel (Services.msc). Or, from the command line, type **SQLServerManager13.msc** or **SQLServerManager14.msc** to open [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
 
@@ -42,7 +39,7 @@ As part of the troubleshooting process, begin by answering the following questio
 
 5. To look for other errors, review the contents of rlauncher.log.
 
-### Check the Launchpad service account
+## Check the Launchpad service account
 
 The default service account might be "NT Service\$SQL2016" or "NT Service\$SQL2017". The final part might vary, depending on your SQL instance name.
 
@@ -58,11 +55,12 @@ For information about these user rights, see the "Windows privileges and rights"
 > [!TIP]
 > If you are familiar with the use of the Support Diagnostics Platform (SDP) tool for SQL Server diagnostics, you can use SDP to review the output file with the name MachineName_UserRights.txt.
 
-### Review Launchpad requirements
+## Determine whether 8dot3 notation is enabled
 
-Any of several issues can prevent Launchpad from starting. The Launchpad service might start and then stop or crash, or the service might stop with a connection timeout. In these cases, the system has usually been changed or configured such that Launchpad cannot run.
-
-#### Determine whether 8dot3 notation is enabled
+> [!NOTE] 
+> The 8dot3 notation requirement has been removed in later releases. SQL Server 2016 R Services customers should install one of the following:
+> * SQL Server 2016 SP1 and CU1: [Cumulative Update 1 for SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
+> * SQL Server 2016 RTM, Cumulative Update 3, and this [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), which is available on demand.
 
 For compatibility with R, SQL Server 2016 R Services (In-Database) required the drive where the feature is installed to support the creation of short file names by using *8dot3 notation*. An 8.3 file name is also called a *short file name*, and it's used for compatibility with earlier versions of Microsoft Windows or as an alternative to long file names.
 
@@ -78,12 +76,7 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 4. Edit the configuration file to specify the same working directory that you entered in the WORKING_DIRECTORY property. Alternatively, you can specify a different working directory and choose an existing path that's already compatible with the 8dot3 notation.
 
-> [!NOTE] 
-> This restriction has been removed in later releases. If you experience this issue, install one of the following:
-> * SQL Server 2016 SP1 and CU1: [Cumulative Update 1 for SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
-> * SQL Server 2016 RTM, Cumulative Update 3, and this [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), which is available on demand.
-
-#### The user group for Launchpad cannot log on locally
+## The user group for Launchpad cannot log on locally
 
 During setup of Machine Learning services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
 
@@ -93,7 +86,7 @@ To correct the problem, ensure that the group **SQLRUserGroup** has the system r
 
 For more information, see [Configure Windows service accounts and permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
-#### Improper setup leading to mismatched DLLs
+## Improper setup leading to mismatched DLLs
 
 If you install the database engine with other features, patch the server, and then later add the Machine Learning feature by using the original media, the wrong version of the Machine Learning components might be installed. When Launchpad detects a version mismatch, it shuts down and creates a dump file.
 
@@ -111,7 +104,7 @@ To avoid this problem, be sure to install any new features at the same patch lev
 2. Upgrade SQL Server 2016 to the desired patch level. For example, install Service Pack 1 and then Cumulative Update 2.
 3. To add the feature at the correct patch level, run SP1 and CU2 setup again, and then choose R Services (In-Database). 
 
-#### Check whether a user has rights to run external scripts
+## Permissions to run external scripts
 
 Even if Launchpad is configured correctly, it returns an error if the user does not have permission to run R or Python scripts.
 
@@ -125,11 +118,11 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 For more information, see [GRANT (Transact-SQL](../t-sql/statements/grant-transact-sql.md).
 
-### Common Launchpad errors
+## Common Launchpad errors
 
 This section lists the most common error messages that Launchpad returns.
 
-#### Error: *Unable to launch runtime for R script*
+## "Unable to launch runtime for R script"
 
 If the Windows group for R users (also used for Python) cannot log on to the instance that is running R Services, you might see the following errors:
 
@@ -153,7 +146,7 @@ For information about how to grant this user group the necessary permissions, se
 > [!NOTE]
 > This limitation does not apply if you use SQL logins to run R scripts from a remote workstation.
 
-#### Error: *Logon failure: the user has not been granted the requested logon type*
+## "Logon failure: the user has not been granted the requested logon type"
 
 By default, [!INCLUDE[rsql_launchpad_md](../includes/rsql-launchpad-md.md)] uses the following account on startup: `NT Service\MSSQLLaunchpad`. The account is configured by [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] setup to have all necessary permissions.
 
@@ -168,7 +161,7 @@ To grant the necessary permissions to the new service account, use the Local Sec
 + Log on as a service (SeServiceLogonRight)
 + Replace a process-level token (SeAssignPrimaryTokenPrivilege)
 
-#### Error: *Unable to communicate with the Launchpad service*
+## "Unable to communicate with the Launchpad service"
 
 If you have installed and then enabled machine learning, but you get this error when you try to run an R or Python script, the Launchpad service for the instance might have stopped running.
 
@@ -186,7 +179,7 @@ If you have installed and then enabled machine learning, but you get this error 
 
     c. If you change any of the service properties, restart the Launchpad service.
 
-#### Error: *Fatal error creation of tmpFile failed*
+## "Fatal error creation of tmpFile failed"
 
 In this scenario, you have successfully installed machine learning features, and Launchpad is running. You try to run some simple R or Python code, but Launchpad fails with an error like the following: 
 
@@ -202,21 +195,7 @@ By default, 20 accounts are set up and associated with the Launchpad.exe process
 
 To resolve the issue, ensure that the group has *Allow Log on Locally* permissions to the local instance where machine learning features have been installed and enabled. In some environments, this permission level might require a GPO exception from the network administrator.
 
-## R script issues
-
-This section contains some common issues that are specific to R script execution and R script errors. The list is not comprehensive, because there are many R packages, and errors might differ between versions of the same R package. We recommend that you post R script errors on the [Microsoft R Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR), which supports the machine learning components used in R Services (In-Database), Machine Learning Services with Python, Microsoft R Client, and Microsoft R Server.
-
-### Multiple R instances on the same computer
-
-It can be easy to find yourself with multiple distributions of R on the same computer, as well as multiple copies of the same R package in different versions. For example, if you install both Machine Learning Server (Standalone) and Machine Learning Services (In-Database), the installers create separate versions of the R libraries. 
-
-Such duplication becomes a problem when you try to run a script from a command line and you're not sure which libraries you are using. Or, you might install a package to the wrong library and then later wonder why you cannot find the package from SQL Server.
-
-+ Avoid direct use of the R libraries and tools that are installed for the use of the SQL Server instance, except in limited cases such as troubleshooting or installation of new packages. 
-+ If you need to use an R command-line tool, you can install [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client). 
-+ SQL Server provides in-database management of R packages. This is the easiest way to create R package libraries that can be shared among users. For more information, see  [R package management for SQL Server](r/install-additional-r-packages-on-sql-server.md).
-
-### Avoid clearing the workspace while you're running R in a SQL compute context
+## Avoid clearing the workspace while you're running R in a SQL compute context
 
 Although clearing the workspace is common when you work in the R console, it can have unintended consequences in a SQL compute context.
 
@@ -230,7 +209,7 @@ remove('name1', 'name2', ...)
 
 If there are multiple variables to delete, we suggest that you save the names of temporary variables to a list and then perform periodic garbage collections on the list.
 
-### Implied authentication for remote execution via ODBC
+## Implied authentication for remote execution via ODBC
 
 If you connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer to run R commands by using the **RevoScaleR** functions, you might get an error when you use ODBC calls that write data to the server. This error happens only when you're using Windows authentication.
 
@@ -251,7 +230,7 @@ To enable your Windows credentials to be passed securely from a script that's in
     GO
     ```
 
-### The R script works outside of T-SQL but not in a stored procedure
+## Valid script fails in T-SQL or in stored procedures
 
 Before wrapping your R code in a stored procedure, it is a good idea to run your R code in an external IDE, or in one of the R tools such as RTerm or RGui. By using these methods, you can test and debug the code by using the detailed error messages that are returned by R.
 
@@ -263,7 +242,7 @@ However, sometimes code that works perfectly in an external IDE or utility might
 
 3. Review the help pages for individual R functions to determine whether all parameters are supported for the SQL Server compute context. For ScaleR help, use the inline R help commands, or see [Package Reference](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
 
-### You get different results from the same script when running in SQL compared to other environments
+## Script returns inconsistent results
 
 R scripts can return different values in a SQL Server context, for several reasons:
 
@@ -277,7 +256,7 @@ R scripts can return different values in a SQL Server context, for several reaso
 
 - Accumulated rounding errors can cause such things as values that are less than zero instead of zero.
 
-### Error: *Not enough quota to process this command*
+## "Not enough quota to process this command"
 
 This error can mean one of several things:
 
@@ -285,7 +264,7 @@ This error can mean one of several things:
 
 - Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer’s resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](r/operationalizing-your-r-code.md).
 
-### Error: *Can't find package*
+## "Can't find package"
 
 If you run R code in SQL Server and get this message, but did not get the message when you ran the same code outside SQL Server, it means that the package was not installed to the default library location used by SQL Server.
 

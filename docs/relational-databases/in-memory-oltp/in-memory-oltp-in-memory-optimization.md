@@ -1,4 +1,4 @@
-﻿---
+---
 title: "In-Memory OLTP (In-Memory Optimization) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2016"

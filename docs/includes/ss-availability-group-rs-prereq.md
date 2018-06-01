@@ -3,7 +3,7 @@
 Before you create the availability group, you need to:
 
 - Set your environment so that all the servers that will host availability replicas can communicate.
-- Install SQL Server. See [Install SQL Server](install-sql-server.md) for details.
+- Install SQL Server. See [Install SQL Server](../database-engine/install-windows/install-sql-server.md) for details.
 
 ## Enable AlwaysOn availability groups and restart mssql-server
 
@@ -25,7 +25,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-For more information about this XE session, see [Always On Availability Groups extended events](always-on-extended-events.md).
+For more information about this XE session, see [Always On Availability Groups extended events](../database-engine/availability-groups/windows/always-on-extended-events.md).
 
 ## Database Mirroring Endpoint Authentication
 

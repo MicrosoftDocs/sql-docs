@@ -156,19 +156,18 @@
 
 ## [Known issues](known-issues-for-sql-server-machine-learning-services.md)
 ## [Release notes](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
-## [New and updated articles](new-updated-advanced-analytics.md)
-
-## [Setup and troubleshooting tips](machine-learning-troubleshooting-faq.md)
-### [Set up a virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md)
-### [Upgrade and install FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [Common issues for external script execution](common-issues-external-script-execution.md)
+## [Set up a virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+## [Troubleshooting](machine-learning-troubleshooting-faq.md)
+### [Data collection](data-collection-ml-troubleshooting-process.md)
+### [Install and upgrade errors](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [Launchpad and external script execution errors](common-issues-external-script-execution.md)
+### [R scripting errors](r-script-execution-errors.md)
 
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [Machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
 
-## Feedback Forums
+## Forums
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

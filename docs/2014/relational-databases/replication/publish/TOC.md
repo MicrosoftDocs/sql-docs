@@ -104,4 +104,3 @@
 ## [Validate Partition Information for a Merge Subscriber](../validate-partition-information-for-a-merge-subscriber.md)
 ## [Validate Data at the Subscriber](../validate-data-at-the-subscriber.md)
 # [Scripting Replication](../scripting-replication.md)
-# [Technical Reference (Replication) +](../technical-reference-replication.md)

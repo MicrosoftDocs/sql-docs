@@ -95,7 +95,7 @@
 ## [SqlXmlParameter Object (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)
 ## [SqlXmlAdapter Object (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)
 ## [Using the SQLXML Managed Classes](../../database-engine/dev-guide/using-the-sqlxml-managed-classes.md)
-## [Executing SQL Queries (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)
+## [Executing SQL Queries (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)
 ## [Executing SQL Queries by Using the ExecuteXMLReader Method](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)
 ## [Processing XML on the Client Side (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)
 ## [Executing XPath Queries (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)

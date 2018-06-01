@@ -123,7 +123,7 @@
 # [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 ## [Lesson 1: Basic Navigation in SQL Server Management Studio](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
 ### [Start SQL Server Management Studio](tutorials/lesson-1-1-start-sql-server-management-studio.md)
-### [Connect with Registered Servers and Object Explorer](object/object-explorer.md)
+### [Connect with Registered Servers and Object Explorer](tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)
 ### [Change the Environment Layout](tutorials/lesson-1-3-change-the-environment-layout.md)
 ### [Display the Query Window](tutorials/lesson-1-4-display-the-query-window.md)
 ### [Show the Object Explorer Details Page](tutorials/lesson-1-5-show-the-object-explorer-details-page.md)

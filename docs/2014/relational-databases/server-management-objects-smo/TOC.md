@@ -34,7 +34,7 @@
 ### [Creating, Altering, and Removing Foreign Keys](tasks/creating-altering-and-removing-foreign-keys.md)
 ### [Creating, Altering, and Removing Defaults](tasks/creating-altering-and-removing-defaults.md)
 ### [Creating, Altering, and Removing Rules](tasks/creating-altering-and-removing-rules.md)
-### [Creating, Altering, and Removing Views](../views/views.md)
+### [Creating, Altering, and Removing Views](tasks/creating-altering-and-removing-views.md)
 ### [Creating, Altering, and Removing Triggers](tasks/creating-altering-and-removing-triggers.md)
 ### [Creating, Altering, and Removing Stored Procedures](tasks/creating-altering-and-removing-stored-procedures.md)
 ### [Creating, Altering, and Removing User-Defined Functions](tasks/creating-altering-and-removing-user-defined-functions.md)

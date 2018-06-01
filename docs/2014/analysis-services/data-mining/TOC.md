@@ -32,7 +32,7 @@
 ## [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)
 ### [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)
 ### [Mining Model Content for Sequence Clustering Models](mining-model-content-for-sequence-clustering-models.md)
-### [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)
+### [Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)
 ## [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md)
 ### [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)
 ### [Mining Model Content for Time Series Models](mining-model-content-for-time-series-models-analysis-services-data-mining.md)

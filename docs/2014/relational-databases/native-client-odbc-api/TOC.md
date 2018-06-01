@@ -47,6 +47,6 @@
 ## [SQLSetEnvAttr](sqlsetenvattr.md)
 ## [SQLSetStmtAttr](sqlsetstmtattr.md)
 ## [SQLSpecialColumns](sqlspecialcolumns.md)
-## [SQLStatistics](../statistics/statistics.md)
+## [SQLStatistics](sqlstatistics.md)
 ## [SQLTablePrivileges](sqltableprivileges.md)
 ## [SQLTables](sqltables.md)

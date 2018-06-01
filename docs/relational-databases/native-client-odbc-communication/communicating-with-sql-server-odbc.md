@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Communicating with SQL Server (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

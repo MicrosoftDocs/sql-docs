@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2016"

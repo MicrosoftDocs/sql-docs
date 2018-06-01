@@ -18,7 +18,7 @@ Sometimes when you are working with multiple environments or installations of R 
 
 R and Python script examples in this article show you how to get the path and version of packages used by SQL Server.
 
-## Get the current R library
+## Get the R library location
 
 For any version of SQL Server, run the following statement to verify the [default R package library](installing-and-managing-r-packages.md) for the current instance:
 
@@ -53,7 +53,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## Get the current Python library
+## Get the Python library location
 
 For **Python** in SQL Server 2017, run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory, and the standard library path.
 

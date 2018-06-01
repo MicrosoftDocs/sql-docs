@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Transact-SQL Reference (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2017"

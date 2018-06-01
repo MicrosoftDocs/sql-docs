@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Processing Results How-to Topics (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

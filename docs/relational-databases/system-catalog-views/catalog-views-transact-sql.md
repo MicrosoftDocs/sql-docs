@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/02/2016"

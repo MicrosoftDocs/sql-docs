@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Data Types (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

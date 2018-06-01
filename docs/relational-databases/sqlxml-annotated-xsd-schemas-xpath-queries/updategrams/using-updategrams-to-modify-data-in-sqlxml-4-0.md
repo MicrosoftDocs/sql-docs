@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Using Updategrams to Modify Data in SQLXML 4.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

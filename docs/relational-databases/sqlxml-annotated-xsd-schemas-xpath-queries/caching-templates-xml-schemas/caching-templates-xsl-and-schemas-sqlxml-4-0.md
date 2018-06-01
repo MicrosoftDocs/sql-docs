@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Caching Templates, XSL, and Schemas (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

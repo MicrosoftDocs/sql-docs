@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Getting Started with Database Engine Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"

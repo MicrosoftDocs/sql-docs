@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Back Up and Restore of SQL Server Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"

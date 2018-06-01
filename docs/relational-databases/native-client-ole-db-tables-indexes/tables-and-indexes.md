@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

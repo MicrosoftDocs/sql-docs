@@ -64,7 +64,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
 |-----------|-----------------|  
 |TABULAR|This is the default value. If you do not set **ASSERVERMODE**, the server is installed in Tabular mode.|
 |MULTIDIMENSIONAL|This value is optional.|  
-|POWERPIVOT|This value is optional. In practice, if you set the **ROLE** parameter, the server mode is automatically set to 1, making **ASSERVERMODE** optional for a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint installation. For more information, see [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
+|POWERPIVOT|This value is optional. In practice, if you set the **ROLE** parameter, the server mode is automatically set to 1, making **ASSERVERMODE** optional for a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint installation. For more information, see [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
   
   
 ## See Also  

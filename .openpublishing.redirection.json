@@ -36,8 +36,8 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/advanced-analytics/python/publish-consume-python-code.md",
-            "redirect_url": "/sql/advanced-analytics/operationalization-with-mrsdeploy",
+            "source_path": "docs/advanced-analytics/new-updated-advanced-analytics.md",
+            "redirect_url": "/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services",
             "redirect_document_id": false
         },
         {

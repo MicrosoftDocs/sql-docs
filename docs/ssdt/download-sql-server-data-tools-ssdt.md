@@ -23,7 +23,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **SQL Server Data Tools** is a modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.
 
-For most users, SQL Server Data Tools (SSDT) is installed as part of Visual Studio. 
+For most users, SQL Server Data Tools (SSDT) is installed as part of Visual Studio. Installing SSDT using the Visual Studio installer adds the base SSDT functionality, so you need to run the SSDT standalone installer if you want to work with AS, IS, and RS projects. 
 
 ## Install SSDT with Visual Studio 2017
 
@@ -33,16 +33,15 @@ To install SSDT during [Visual Studio installation](https://docs.microsoft.com/v
 
 
 ## Install Analysis Services, Integration Services, and Reporting Services tools
-To install AS, IS, and RS project support, run the [SSDT services installer](#ssdt-for-visual-studio-2017). 
+To install AS, IS, and RS project support, run the [SSDT standalone installer](#ssdt-standalone-installer). 
 
-The installer lists available Visual Studio instances to add the SSDT services to. If Visual Studio is not installed, selecting **Install a new SQL Server Data Tools ... instance** installs SSDT with a minimal version of Visual Studio, but for the best experience we recommend using SSDT with [the latest version of Visual Studio](https://www.visualstudio.com/downloads). 
+The installer lists available Visual Studio instances to add the SSDT tools to. If Visual Studio is not installed, selecting **Install a new SQL Server Data Tools instance** installs SSDT with a minimal version of Visual Studio, but for the best experience we recommend using SSDT with [the latest version of Visual Studio](https://www.visualstudio.com/downloads). 
 
 ![select AS, IS, RS](../ssdt/media/download-sql-server-data-tools-ssdt/select-services.png)
 
 
 
-## SSDT for Visual Studio 2017
-Install Analysis Services (AS), Integration Services (IS), and Reporting Services (RS) tools.
+## SSDT for VS 2017 standalone installer
 
 [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.7.0) ](https://go.microsoft.com/fwlink/?linkid=874716) 
 
@@ -79,7 +78,7 @@ This release of **SSDT for VS 2017** can be installed in the following languages
 
 
 
-## SSDT for Visual Studio 2015
+## SSDT for Visual Studio 2015 standalone installer
 
 [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)
 

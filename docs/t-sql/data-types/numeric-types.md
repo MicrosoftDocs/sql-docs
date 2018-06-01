@@ -25,6 +25,8 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following **numeric** types.
   
 ## In this section
+
+[bit &#40;Transact-SQL&#41;](../../t-sql/data-types/bit-transact-sql.md)  
 [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
 [float and real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
 [int, bigint, smallint, and tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  

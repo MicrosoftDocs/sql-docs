@@ -1,7 +1,7 @@
 ﻿---
 title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2018"
+ms.date: "06/01/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -21,8 +21,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SQL Server Data Tools (SSDT) provides project templates and design surfaces for building SQL Server content types — relational databases, Analysis Services models, Reporting Services reports, and Integration Services packages.  
   
-It's based on a Visual Studio shell and co-released with SQL Server. New versions of SSDT integrate the latest features of SQL Server. Older versions include the templates and design environment that were current for that release.  
-  
 SSDT is backwards compatible, so you can always use [the newest SSDT](download-sql-server-data-tools-ssdt.md) to design and deploy databases, models, reports, and packages that run on older versions of SQL Server.  
   
 > [!NOTE]  
@@ -32,23 +30,20 @@ SSDT is backwards compatible, so you can always use [the newest SSDT](download-s
 
 The last few downloads are provided for the unlikely event that you experience issues with the [latest release](download-sql-server-data-tools-ssdt.md). 
 
-|Release| Visual Studio 2017|
+|SSDT release| Visual Studio 2017|
 |:---|:---|
+|15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
 |15.5.2|[SSDT for VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
-|15.5.1|[SSDT for VS2017 15.5.1](https://go.microsoft.com/fwlink/?LinkId=865748)|  
 <br>
 
 
-|Release| Visual Studio 2015|
+|SSDT release| Visual Studio 2015|
 |:---|:---|
 |17.3|[SSDT for VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| 
-|17.2|[SSDT for VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| 
-|17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)|
-|17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| 
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
 <br>
 
-|Release| Visual Studio 2013|
+|SSDT release| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
 <br>

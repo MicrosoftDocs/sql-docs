@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Performing Bulk Load of XML Data (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Data Source Objects (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

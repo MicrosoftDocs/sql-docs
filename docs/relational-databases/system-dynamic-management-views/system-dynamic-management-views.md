@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/29/2017"

@@ -27,23 +27,21 @@ For most users, SQL Server Data Tools (SSDT) is installed as part of the Visual 
 
 ## Install SSDT with Visual Studio 2017
 
-During Visual Studio installation, a list of workloads is presented where you select the components you want to install. To install SSDT, select the **Data storage and processing** workload, and then select **SQL Server Data Tools**. If Visual Studio is already installed, [edit the list of workloads](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) and add SSDT:
+During Visual Studio installation, a list of workloads is presented where you select the components you want to install. To install SSDT, select the **Data storage and processing** workload, and then select **SQL Server Data Tools**. If Visual Studio is already installed, [edit the list of workloads](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) to add SSDT:
 ![Data storage and processing workload](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
 
 
 
-## Install AS, IS, and RS projects
-The base SSDT installation doesn't include Analysis Services (AS), Integration Services (IS), or Reporting Services (RS) projects. To install AS, IS, and RS projects, run the [SSDT 15.7.0 services installer](#ssdt-1570-for-visual-studio-2017). 
+## Install Analysis Services, Integration Services, and Reporting Services tools
+The base SSDT installation doesn't include Analysis Services (AS), Integration Services (IS), or Reporting Services (RS) tools. To install AS, IS, and RS project support, run the [SSDT services installer](#ssdt-for-visual-studio-2017). 
 
-The installer lists available Visual Studio instances to add the SSDT services to. If Visual Studio is not installed, selecting **Install a new SQL Server Data Tools ... instance** installs SSDT with a minimal version of Visual Studio, but for the best experience we recommend using [the latest version of Visual Studio](https://www.visualstudio.com/downloads). 
+The installer lists available Visual Studio instances to add the SSDT services to. If Visual Studio is not installed, selecting **Install a new SQL Server Data Tools ... instance** installs SSDT with a minimal version of Visual Studio, but for the best experience we recommend using SSDT with [the latest version of Visual Studio](https://www.visualstudio.com/downloads). 
 
 ![select AS, IS, RS](../ssdt/media/download-sql-server-data-tools-ssdt/select-services.png)
 
 
 
-
-
-## SSDT (15.7.0) for Visual Studio 2017
+## SSDT for Visual Studio 2017
 
 [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.7.0) ](https://go.microsoft.com/fwlink/?linkid=874716) 
 
@@ -54,9 +52,9 @@ SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4
 
 **Version Information**  
   
-Release number: 15.7.0
-Build number: 14.0.16165.0
-Release date: June 1, 2018
+Release number: 15.7.0  
+Build number: 14.0.16165.0  
+Release date: June 1, 2018  
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

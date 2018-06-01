@@ -69,7 +69,7 @@
 ## [CubeInfo Element](xml-elements-properties/cubeinfo-element-xmla.md)
 ## [CubeName Element](xml-elements-properties/cubename-element-xmla.md)
 ## [CustomRollup Element](xml-elements-properties/customrollup-element-xmla.md)
-## [CustomRollupProperties Element](xml-elements-properties/properties-element-xmla.md)
+## [CustomRollupProperties Element](xml-elements-properties/customrollupproperties-element-xmla.md)
 ## [Database Element](xml-elements-properties/database-element-xmla.md)
 ## [DatabaseID Element](xml-elements-properties/databaseid-element-xmla.md)
 ## [DatabaseName Element](xml-elements-properties/databasename-element-xmla.md)

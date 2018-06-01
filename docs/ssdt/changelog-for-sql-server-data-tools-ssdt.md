@@ -25,25 +25,25 @@ For detailed posts about what's new and changed, see [the SSDT Team blog](https:
 
 ## SSDT for Visual Studio 2017 (15.7.0)
 Build number: 14.0.16165.0  
-Release date: June 1, 2018
+Release date: June 1, 2018  
   
 ### What's New?
 
 **SSIS:**
 
-1.	Fix an issue that *Integration Services Designers* page in Options dialog cannot be shown properly.
-2.	Fix an issue that luminosity ratio issue for text appearing in *Sort Transformation Editor* editor.
-3.	Fix an issue that *Resolve References* dialog disappears when attempting to edit a combobox.
-4.	Fix an issue that F1 help link of *Hadoop Connection Manager* doesn’t work.
-5.	Fix an issue that script task code will be lost if it’s in a container when targeting SQL Server 2016.
+1.Fix an issue that *Integration Services Designers* page in Options dialog cannot be shown properly.
+2.Fix an issue that luminosity ratio issue for text appearing in *Sort Transformation Editor* editor.
+3.Fix an issue that *Resolve References* dialog disappears when attempting to edit a combobox.
+4.Fix an issue that F1 help link of *Hadoop Connection Manager* doesn’t work.
+5.Fix an issue that script task code will be lost if it’s in a container when targeting SQL Server 2016.
 
 **Installer:**
 
-1.	Fix an issue that SSAS cannot be installed before SSRS and SSIS are installed in VS 15.7.2.
+- Fix an issue that SSAS cannot be installed before SSRS and SSIS are installed in VS 15.7.2.
 
 ### Known issues:
 
-1.	SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
 
 ## SSDT for Visual Studio 2017 (15.6.0)

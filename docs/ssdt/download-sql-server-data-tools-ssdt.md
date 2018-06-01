@@ -33,7 +33,7 @@ During Visual Studio installation, a list of workloads is presented where you se
 
 
 ## Install Analysis Services, Integration Services, and Reporting Services tools
-The base SSDT installation doesn't include Analysis Services (AS), Integration Services (IS), or Reporting Services (RS) tools. To install AS, IS, and RS project support, run the [SSDT services installer](#ssdt-for-visual-studio-2017). 
+To install AS, IS, and RS project support, run the [SSDT services installer](#ssdt-for-visual-studio-2017). 
 
 The installer lists available Visual Studio instances to add the SSDT services to. If Visual Studio is not installed, selecting **Install a new SQL Server Data Tools ... instance** installs SSDT with a minimal version of Visual Studio, but for the best experience we recommend using SSDT with [the latest version of Visual Studio](https://www.visualstudio.com/downloads). 
 
@@ -42,13 +42,14 @@ The installer lists available Visual Studio instances to add the SSDT services t
 
 
 ## SSDT for Visual Studio 2017
+Install Analysis Services (AS), Integration Services (IS), and Reporting Services (RS) tools.
 
 [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.7.0) ](https://go.microsoft.com/fwlink/?linkid=874716) 
 
 > [!IMPORTANT]
 > Before installing SSDT for Visual Studio 2017 (15.7.0), uninstall "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed, and close all VS instances. 
 
-SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4.1: [Download Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/en-us/download/details.aspx?id=56508)
+
 
 **Version Information**  
   
@@ -135,6 +136,10 @@ Relational databases|  SQL Server 2005* - SQL Server 2017<br> (use SSDT 17.x or 
   |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 – SQL Server 2017|
   |Integration Services packages| SQL Server 2012 – SQL Server 2017    |
   
+## DacFx
+SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4.1: [Download Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
+
+
 ## Next steps  
 After installing SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT:  
 

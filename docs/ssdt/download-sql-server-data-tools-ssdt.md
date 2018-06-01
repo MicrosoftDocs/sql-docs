@@ -23,11 +23,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **SQL Server Data Tools** is a modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.
 
-For most users, SQL Server Data Tools (SSDT) is installed as part of the Visual Studio installation. 
+For most users, SQL Server Data Tools (SSDT) is installed as part of Visual Studio. 
 
 ## Install SSDT with Visual Studio 2017
 
-During Visual Studio installation, a list of workloads is presented where you select the components you want to install. To install SSDT, select the **Data storage and processing** workload, and then select **SQL Server Data Tools**. If Visual Studio is already installed, [edit the list of workloads](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) to add SSDT:
+To install SSDT during [Visual Studio installation](https://docs.microsoft.com/visualstudio/install/install-visual-studio), select the **Data storage and processing** workload, and then select **SQL Server Data Tools**. If Visual Studio is already installed, you can [edit the list of workloads](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) to include SSDT:
 ![Data storage and processing workload](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
 
 

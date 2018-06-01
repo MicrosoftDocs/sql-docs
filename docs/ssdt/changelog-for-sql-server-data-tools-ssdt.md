@@ -31,11 +31,12 @@ Release date: June 1, 2018
 
 **SSIS:**
 
-1.Fix an issue that *Integration Services Designers* page in Options dialog cannot be shown properly.
-2.Fix an issue that luminosity ratio issue for text appearing in *Sort Transformation Editor* editor.
-3.Fix an issue that *Resolve References* dialog disappears when attempting to edit a combobox.
-4.Fix an issue that F1 help link of *Hadoop Connection Manager* doesn’t work.
-5.Fix an issue that script task code will be lost if it’s in a container when targeting SQL Server 2016.
+- Fix an issue that *Integration Services Designers* page in Options dialog cannot be shown properly.  
+- Fix an issue that luminosity ratio issue for text appearing in *Sort Transformation Editor* editor.  
+- Fix an issue that *Resolve References* dialog disappears when attempting to edit a combobox.  
+- Fix an issue that F1 help link of *Hadoop Connection Manager* doesn’t work.  
+- Fix an issue that script task code will be lost if it’s in a container when targeting SQL Server 2016.  
+
 
 **Installer:**
 
@@ -54,24 +55,24 @@ Release date: April 10, 2018
 
 **SSIS:**
 
-1.	Fix an issue that AS processing task doesn’t log any processing steps when targeting to SQLServer2016 and SQLServer2017
-2.	Fix an issue that access violation will happen when opening dtsx with very long non-English task names in SSDT
-3.	Fix an issue that sometimes variable list of ScriptTask will disappear in task UI
-4.	Fix an issue that adding copy of existing package will fail when the package location is SQL Server
-5.	Fix an issue that focus gets stuck while accessing the combo box in some editor dialog box.
-6.	Fix an issue that background will not change while switching VS theme.
-7.	Fix an issue that annotation and loading label is invisible in dark theme.
-8.	Fix an issue that the state property is not defined correctly for SSIS toolbox disabled items.
-9.	Fix an issue that it always fails to execute WebServiceTask.
-10.	Fix an issue that package deployment will fail if connection string is set to variable having expression dependent on project parameters.
+- Fix an issue that AS processing task doesn’t log any processing steps when targeting to SQLServer2016 and SQLServer2017
+- Fix an issue that access violation will happen when opening dtsx with very long non-English task names in SSDT
+- Fix an issue that sometimes variable list of ScriptTask will disappear in task UI
+- Fix an issue that adding copy of existing package will fail when the package location is SQL Server
+- Fix an issue that focus gets stuck while accessing the combo box in some editor dialog box.
+- Fix an issue that background will not change while switching VS theme.
+- Fix an issue that annotation and loading label is invisible in dark theme.
+- Fix an issue that the state property is not defined correctly for SSIS toolbox disabled items.
+- Fix an issue that it always fails to execute WebServiceTask.
+- Fix an issue that package deployment will fail if connection string is set to variable having expression dependent on project parameters.
 
 **Installer:**
 
-1.	Add the link of “Customer Experience Improvement Program for SQL Server Data Tools” in privacy disclaimer.
-2.	Fix an issue that VS installer window will popup when selecting “Install new SQL Server Data Tools for Visual Studio 2017 instance”
+- Add the link of “Customer Experience Improvement Program for SQL Server Data Tools” in privacy disclaimer.
+- Fix an issue that VS installer window will popup when selecting “Install new SQL Server Data Tools for Visual Studio 2017 instance”
 
 ### Known issues:
-1.	SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
 
 
@@ -81,14 +82,14 @@ Build number: 14.0.16156.0
 ### What's New?
 
 **SSIS**
-1.	Fix an issue that migrating SSIS 2008 projects will fail when both SSAS and SSIS are installed to the same VS 2017 instance.
-2.	Fix an issue that Rdlc projects cannot be built when both Rdlc report designer and SSIS are installed to same VS 2017 instance.
-3.	Fix an issue that the annotation color can't update.
-4.	Fix an issue that some strings in Hadoop connection manager editor are truncated in other languages.
-5.	Fix an issue that some strings are truncated in OData connection manager editor.
-6.	Fix an issue that some strings are truncated in Integration Services import project wizard window.
-7.	Fix an issue with the title in the SSIS tool box information window.
-8.	Fix an issue that some strings are truncated in Integration Services Deployment Wizard window. 
+- Fix an issue that migrating SSIS 2008 projects will fail when both SSAS and SSIS are installed to the same VS 2017 instance.
+- Fix an issue that Rdlc projects cannot be built when both Rdlc report designer and SSIS are installed to same VS 2017 instance.
+- Fix an issue that the annotation color can't update.
+- Fix an issue that some strings in Hadoop connection manager editor are truncated in other languages.
+- Fix an issue that some strings are truncated in OData connection manager editor.
+- Fix an issue that some strings are truncated in Integration Services import project wizard window.
+- Fix an issue with the title in the SSIS tool box information window.
+- Fix an issue that some strings are truncated in Integration Services Deployment Wizard window. 
 
 **Installer**
 - Fix an issue that sometimes downloading payload will fail with error "The system cannot find the file specified (0x80070002)".  

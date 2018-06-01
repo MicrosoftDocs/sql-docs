@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Performing Bulk Copy Operations (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

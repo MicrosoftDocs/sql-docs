@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Managing Text and Image Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -13,7 +13,7 @@ manager: cgronlun
 # Default R and Python packages in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the R and Python packages installed with SQL Server, where to find the package library, and package versions for each release of SQL Server.  
+This article lists the R and Python packages installed with SQL Server and where to find the package library.  
 
 ## R package list for SQL Server
 
@@ -30,7 +30,7 @@ MicrosoftML and olapR are available by default in SQL Server 2017 Machine Learni
 
 ## Python package list for SQL Server
 
-Python packages are available in SQL Server 2017 only when you install [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and select the Python feature.
+Python packages are available only in SQL Server 2017 when you install [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and select the Python feature.
 
 | Packages         | 2017    |  Description |
 | -----------------|-------------|------------|
@@ -50,6 +50,8 @@ The following table summarizes the versions of R provided by MRO using SQL Serve
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
 | [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
+You should never manually overwrite the version of R installed by SQL Server Setup with newer versions on the web. Microsoft R packages are based on specific versions of R. Modifying your installation could destabilize it.
+
 ## Open-source Python in your installation
 
 SQL Server 2017 adds Python components. When you select the Python language option, Anaconda 4.2 distribution is installed. In addition to Python code libraries, the standard installation includes sample data, unit tests, and sample scripts. 
@@ -59,6 +61,8 @@ SQL Server 2017 Machine Learning is the first release to have both R and Python 
 |Release             | Anaconda version| Microsoft packages    |
 |--------------------|-----------------|-----------------------|
 | SQL Server 2017 Machine Learning Services  | 4.2 over Python 3.5 | revoscalepy, microsoftml |
+
+You should never manually overwrite the version of Python installed by SQL Server Setup with newer versions on the web. Microsoft Python packages are based on specific versions of Anaconda. Modifying your installation could destabilize it.
 
 ## Component upgrades
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Microsoft SQL relational databases - guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

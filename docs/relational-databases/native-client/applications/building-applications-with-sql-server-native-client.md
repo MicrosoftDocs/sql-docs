@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Building Applications with SQL Server Native Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

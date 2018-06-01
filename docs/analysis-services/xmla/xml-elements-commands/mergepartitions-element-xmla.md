@@ -26,7 +26,7 @@ manager: kfile
 </Command>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -34,7 +34,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -44,7 +44,7 @@ manager: kfile
 ## Remarks  
  All object references in the **Sources** and **Target** elements must point to distinct partitions in the same measure group. Otherwise, an error occurs.  
   
-## See Also  
+## See also
  [Commands &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

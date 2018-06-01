@@ -6,6 +6,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
+            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },  
+        {
             "source_path": "docs/advanced-analytics/r/using-r-in-azure-sql-database.md",
             "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services#azure-sql-database-roadmap",
             "redirect_document_id": false
@@ -31,8 +36,8 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/advanced-analytics/python/publish-consume-python-code.md",
-            "redirect_url": "/sql/advanced-analytics/operationalization-with-mrsdeploy",
+            "source_path": "docs/advanced-analytics/new-updated-advanced-analytics.md",
+            "redirect_url": "/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services",
             "redirect_document_id": false
         },
         {
@@ -1638,6 +1643,16 @@
         {
             "source_path": "docs/integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md",
             "redirect_url": "/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/multidimensional-models/scripting-language-assl/xmla-concepts.md",
+            "redirect_url": "/sql/analysis-services/xmla/xml-for-analysis-xmla-reference",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/tabular-model-data-access.md",
+            "redirect_url": "sql/analysis-services/tabular-models/tabular-models-ssas",
             "redirect_document_id": true
         },
         {

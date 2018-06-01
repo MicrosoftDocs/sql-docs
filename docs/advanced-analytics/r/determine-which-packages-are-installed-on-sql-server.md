@@ -5,22 +5,22 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/08/2018  
+ms.date: 05/29/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-#  Get R and Python package information on SQL Server
+#  Get R and Python package information
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Sometimes when you are working with multiple environments or installations of R or Python, you need to verify that the code you are running is using the expected environment for Python, or the correct workspace for R. For example, if you have upgraded the machine learning components using binding, the path to the R library might be in a different folder than the default. Also, if you install R Client or an instance of the Standalone server, you might have multiple R libraries on your computer.
+Sometimes when you are working with multiple environments or installations of R or Python, you need to verify that the code you are running is using the expected environment for Python or the correct workspace for R. For example, if you have upgraded the machine learning components through [binding](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), the path to the R library might be in a different folder than the default. Also, if you install R Client or an instance of the Standalone server, you might have multiple R libraries on your computer.
 
-Examples in this article show you how to get the path and version of the library that is being used by SQL Server.
+R and Python script examples in this article show you how to get the path and version of packages used by SQL Server.
 
-## Get the current R library
+## Get the R library location
 
-For **R** in any version of SQL Server, run the following statement to verify the default library for the current instance:
+For any version of SQL Server, run the following statement to verify the [default R package library](installing-and-managing-r-packages.md) for the current instance:
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -30,7 +30,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Optionally, you can use rxSqlLibPaths in newer versions of RevoScaleR in SQL Server 2017 Machine Learning Services or [R Services ugpraded R to at least RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). This stored procedure returns the path of the instance library and the version of RevoScaleR used by SQL Server:
+Optionally, you can use [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) in newer versions of RevoScaleR in SQL Server 2017 Machine Learning Services or [R Services ugpraded R to at least RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). This stored procedure returns the path of the instance library and the version of RevoScaleR used by SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -53,7 +53,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## Get the current Python library
+## Get the Python library location
 
 For **Python** in SQL Server 2017, run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory, and the standard library path.
 

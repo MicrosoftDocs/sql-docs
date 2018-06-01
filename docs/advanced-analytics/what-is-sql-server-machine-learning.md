@@ -97,4 +97,4 @@ Recent releases of SQL Server documentation are version-agnostic. For SQL Server
 
 **Step 3:** Add your favorite R and Python packages and use them together with packages provided by Microsoft
 
-+ [R Package management for SQL Server](r/r-package-management-for-sql-server-r-services.md)
++ [R Package management for SQL Server](r/install-additional-r-packages-on-sql-server.md)

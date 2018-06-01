@@ -12,7 +12,7 @@ manager: kfile
 ---
 # DatabaseName Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Identifies the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database to be restored by the parent [Restore](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) command.  
+  Identifies the Analysis Services database to be restored by the parent [Restore](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) command.  
   
 ## Syntax  
   
@@ -25,7 +25,7 @@ manager: kfile
 </Restore>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -45,7 +45,7 @@ manager: kfile
   
  If the database already exists on the target instance, an error occurs unless the **AllowOverwrite** element for the parent **Restore** command is set to **True**.  
   
-## See Also  
+## See also
  [AllowOverwrite Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "About SQL Server Analysis Services | Microsoft Docs"
 ms.date: 05/08/2018
 ms.prod: sql

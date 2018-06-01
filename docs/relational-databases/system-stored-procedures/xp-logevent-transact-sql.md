@@ -65,7 +65,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  The following example logs the message, with variables passed to the message in the Windows Event Viewer.  
   
 ```  
-DECLARE @@TABNAME varchar(30, @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
+DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
 SET @@TABNAME = 'customers';  
 SET @@USERNAME = USER_NAME();  
 SELECT @@MESSAGE = 'The table ' + @@TABNAME + ' is not owned by the user   

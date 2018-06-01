@@ -44,7 +44,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 ## Arguments  
 *datepart*  
-The part of *date* to which `DATEDIFF_BIG` adds an **integer** *number*. This table lists all valid *datepart* arguments.
+The part of *startdate* and *enddate* that specifies the type of boundary crossed. `DATEDIFF_BIG` will not accept user-defined variable equivalents. This table lists all valid *datepart* arguments.
 
 > [!NOTE]
 > `DATEDIFF_BIG` does not accept user-defined variable equivalents for the *datepart* arguments.

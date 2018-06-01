@@ -17,7 +17,7 @@
 ## [CalculationProperties Element](calculationproperties-element-assl.md)
 ## [Calculations Element](calculations-element-assl.md)
 ## [CellPermissions Element](cellpermissions-element-assl.md)
-## [ClassifiedColumns Element](columns-element-assl.md)
+## [ClassifiedColumns Element](classifiedcolumns-element-assl.md)
 ## [Columns Element](columns-element-assl.md)
 ## [Commands Element](commands-element-assl.md)
 ## [CubePermissions Element](cubepermissions-element-assl.md)

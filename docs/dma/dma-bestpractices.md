@@ -1,7 +1,7 @@
 ---
 title: "Best practices for Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/31/2018"
+ms.date: "06/02/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""

@@ -132,4 +132,3 @@
 ## [View Information and Perform Tasks for the Agents Associated With a Subscription (Replication Monitor)](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)
 ## [View Replicated Commands and Other Information in the Distribution Database (Replication Transact-SQL Programming)](../monitor/view-replicated-commands-and-information-in-distribution-database.md)
 ## [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md)
-# [Publish Data and Database Objects +](../publish/publish-data-and-database-objects.md)

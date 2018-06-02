@@ -295,17 +295,17 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT ProductModelID     AS "@ProductModelID",  
-       Name               S "@ProductModelName",  
+       Name               AS "@ProductModelName",  
       (SELECT ProductID AS "data()"  
        FROM   Production.Product  
        WHERE  Production.Product.ProductModelID =   
               Production.ProductModel.ProductModelID  
-       FOR XML PATH ('')) S "@ProductIDs",  
+       FOR XML PATH ('')) AS "@ProductIDs",  
        (SELECT Name AS "ProductName"  
        FROM   Production.Product  
        WHERE  Production.Product.ProductModelID =   
               Production.ProductModel.ProductModelID  
-        FOR XML PATH ('')) as "ProductNames"  
+        FOR XML PATH ('')) AS "ProductNames"  
 FROM   Production.ProductModel  
 WHERE  ProductModelID= 7 or ProductModelID=9  
 FOR XML PATH('ProductModelData');  

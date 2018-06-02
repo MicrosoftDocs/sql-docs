@@ -27,7 +27,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Returns a **datetimeoffset** value for the specified date and time and with the specified offsets and precision.
+This function returns a **datetimeoffset** value for the specified date and time arguments. The returned value has a precision specified by the precision argument, and offsets determined by the hour and minute offset arguments.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -39,48 +39,48 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 ## Arguments  
 *year*  
-Integer expression specifying a year.
+An integer expression that specifies a year.
   
 *month*  
-Integer expression specifying a month.
+An integer expression that specifies a month.
   
 *day*  
-Integer expression specifying a day.
+An integer expression that specifies a day.
   
 *hour*  
-Integer expression specifying hours.
+An integer expression that specifies hours.
   
 *minute*  
-Integer expression specifying minutes.
+An integer expression that specifies minutes.
   
 *seconds*  
-Integer expression specifying seconds.
+An integer expression that specifies seconds.
   
 *fractions*  
-Integer expression specifying fractions.
+An integer expression that specifies a fractional value.
   
 *hour_offset*  
-Integer expression specifying the hour portion of the time zone offset.
+An integer expression that specifies the hour portion of the time zone offset.
   
 *minute_offset*  
-Integer expression specifying the minute portion of the time zone offset.
+An integer expression that specifies the minute portion of the time zone offset.
   
 *precision*  
-Integer literal specifying the precision of the **datetimeoffset** value to be returned.
+An integer literal that specifies the precision of the **datetimeoffset** value that `DATETIMEOFFSETFROMPARTS` will return.
   
 ## Return types
 **datetimeoffset(** *precision* **)**
   
 ## Remarks  
-**DATETIMEOFFSETFROMPARTS** returns a fully initialized **datetimeoffset** data type. The offset arguments are used to represent the time zone offset. If the offset arguments are omitted, then the time zone offset is assumed to be 00:00, that is, there is no time zone offset. If the offset arguments are specified, then both arguments must be present and both must be positive or negative. If *minute_offset* is specified without *hour_offset*, an error is raised. If other arguments are not valid, then an error is raised. If required arguments are null, then a null is returned. However, if the *precision* argument is null, then an error is raised.
+`DATETIMEOFFSETFROMPARTS` returns a fully initialized **datetimeoffset** data type. `DATETIMEOFFSETFROMPARTS` uses the offset arguments to represent the time zone offset. If the offset arguments are omitted, `DATETIMEOFFSETFROMPARTS` assumes a time zone offset of 00:00 - in other words, no time zone offset at all. For specified offset arguments, `DATETIMEOFFSETFROMPARTS` expects values for both arguments, and either both positive or both negative values for those arguments. For a specified *minute_offset* without a specified *hour_offset* value, `DATETIMEOFFSETFROMPARTS` will raise an error. If other arguments have invalid values, `DATETIMEOFFSETFROMPARTS` will raise an error. `DATETIMEOFFSETFROMPARTS` returns null if at least one required argument has a null value. However, if the *precision* argument has a null value, `DATETIMEOFFSETFROMPARTS` will raise an error.
   
-The *fractions* argument depends on the *precision* argument. For example, if *precision* is 7, then each fraction represents 100 nanoseconds; if *precision* is 3, then each fraction represents a millisecond. If the value of *precision* is zero, then the value of *fractions* must also be zero; otherwise, an error is raised.
-  
-This function is capable of being remoted to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not be remoted to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+The *fractions* argument depends on the *precision* argument. For example, for a *precision* value of 7, each fraction represents 100 nanoseconds; for a *precision* of 3, each fraction represents a millisecond. For a *precision* value of zero, the value of *fractions* must also be zero; otherwise, `DATETIMEOFFSETFROMPARTS` will raise an error.
+
+his function supports remoting to  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not support remoting to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## Examples  
   
-### A. Simple example without fractions of a second  
+### A. An example without fractions of a second  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
@@ -97,10 +97,10 @@ Result
 ```  
   
 ### B. Example with fractions of a second  
-The following example demonstrates the use of the *fractions* and *precision* parameters:
-1.   When *fractions* has a value of 5 and *precision* has a value of 1, then the value of *fractions* represents 5/10 of a second.  
-1.   When *fractions* has a value of 50 and *precision* has a value of 2, then the value of *fractions* represents 50/100 of a second.  
-1.   When *fractions* has a value of 500 and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
+Thisg example demonstrates the use of the *fractions* and *precision* parameters:
+1.   When *fractions* has a value of 5, and *precision* has a value of 1, then the value of *fractions* represents 5/10 of a second.  
+1.   When *fractions* has a value of 50, and *precision* has a value of 2, then the value of *fractions* represents 50/100 of a second.  
+1.   When *fractions* has a value of 500, and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  

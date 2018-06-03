@@ -32,7 +32,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns the database identification (ID) number.
+This function returns the database identification (ID) number of a specified database.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,21 +44,21 @@ DB_ID ( [ 'database_name' ] )
   
 ## Arguments  
 '*database_name*'  
-Is the database name used to return the corresponding database ID. *database_name* is **sysname**. If *database_name* is omitted, the current database ID is returned.
+The name of the database whose database ID number `DB_ID` will return. If the call to `DB_ID` omits *database_name*, `DB_ID` returns the ID of the current database.
   
 ## Return types
 **int**
   
 ## Permissions  
-If the caller of **DB_ID** is not the owner of the database and the database is not **master** or **tempdb**, the minimum permissions required to see the corresponding row are ALTER ANY DATABASE or VIEW ANY DATABASE server-level permission, or CREATE DATABASE permission in the **master** database. The database to which the caller is connected can always be viewed in **sys.databases**.
+If the caller of `DB_ID` does not own a specific non-**master** or non-**tempdb** database, `ALTER ANY DATABASE` or `VIEW ANY DATABASE` server-level permissions at minimum are required to see the corresponding `DB_ID` row. For the **master** database, `DB_ID` needs `CREATE DATABASE` permission at minimum. The database to which the caller connects will always appear in **sys.databases**.
   
 > [!IMPORTANT]  
->  By default, the public role has the VIEW ANY DATABASE permission, allowing all logins to see database information. To block a login from the ability to detect a database, REVOKE the VIEW ANY DATABASE permission from public, or DENY the VIEW ANY DATABASE permission for individual logins.  
+>  By default, the public role has the `VIEW ANY DATABASE` permission, which allows all logins to see database information. To prevent a login from detecting a database, `REVOKE` the `VIEW ANY DATABASE` permission from public, or `DENY` the `VIEW ANY DATABASE` permission for individual logins.  
   
 ## Examples  
   
 ### A. Returning the database ID of the current database  
-The following example returns the database ID of the current database.
+This example returns the database ID of the current database.
   
 ```sql
 SELECT DB_ID() AS [Database ID];  
@@ -66,7 +66,7 @@ GO
 ```  
   
 ### B. Returning the database ID of a specified database  
-The following example returns the database ID of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
+This example returns the database ID of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### C. Using DB_ID to specify the value of a system function parameter  
-The following example uses `DB_ID` to return the database ID of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database in the system function `sys.dm_db_index_operational_stats`. The function takes a database ID as the first parameter.
+This example uses `DB_ID` to return the database ID of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database in the system function `sys.dm_db_index_operational_stats`. The function takes a database ID as the first parameter.
   
 ```sql
 DECLARE @db_id int;  
@@ -99,14 +99,14 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D. Return the ID of the current database  
-The following example returns the database ID of the current database.
+This example returns the database ID of the current database.
   
 ```sql
 SELECT DB_ID();  
 ```  
   
 ### E. Return the ID of a named database.  
-The following example returns the database ID of the AdventureWorksDW2012 database.
+This example returns the database ID of the AdventureWorksDW2012 database.
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  

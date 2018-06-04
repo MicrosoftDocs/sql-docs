@@ -1,6 +1,6 @@
 ---
 title: "MDX Data Definition Statements (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Definition Statements (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   In Multidimensional Expressions (MDX), data definition statements create, drop, and manipulate multidimensional objects. The following table lists the available data definition statements.  
   

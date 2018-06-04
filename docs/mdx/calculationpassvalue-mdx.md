@@ -1,6 +1,6 @@
 ---
 title: "CalculationPassValue (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # CalculationPassValue (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Returns either the numeric or the string value of a Multidimensional Expressions (MDX) expression evaluated over the specified calculation pass of a cube.  
   
@@ -49,7 +49,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  If a string expression is provided, the function returns a string value by evaluating the specified MDX string expression in the specified calculation pass, and optionally modified by an access flag and an access flag modifier*.*  
   
- With automatic recursion resolution in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], this function has little practical use.  
+ With automatic recursion resolution in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], this function has little practical use.  
   
 > [!NOTE]  
 >  Only administrators can use the **CalculationPassValue** function within an MDX script. An error occurs if an MDX script that contains this function is run in the context of a role that does not have administrator privileges.  

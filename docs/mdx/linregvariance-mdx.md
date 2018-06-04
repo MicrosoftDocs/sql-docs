@@ -1,6 +1,6 @@
 ---
 title: "LinRegVariance (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # LinRegVariance (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Calculates the linear regression of a set, and returns the variance associated with the regression line, y = ax + b.  
   

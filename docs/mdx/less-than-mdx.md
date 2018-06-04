@@ -1,6 +1,6 @@
 ---
 title: "&lt; (Less Than) (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # &lt; (Less Than) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Performs a comparison operation that determines whether the value of one Multidimensional Expressions (MDX) expression is less than the value of another MDX expression.  
   

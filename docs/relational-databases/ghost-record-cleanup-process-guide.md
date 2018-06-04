@@ -45,11 +45,11 @@ The below query can identify how many ghosted records exist in a single database
 
 ## Disable the ghost cleanup
 
-On high-load systems with many deletes, the ghost cleanup process can cause a performance issue from keeping pages in the buffer pool and generating IO. As such, it is possible to disable this process with the use of trace flag 661. More information about this can be found in [Tuning options for SQL Server when running high performance workloads](https://support.microsoft.com/en-us/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). However, there are performance implications from disabling the process.
+On high-load systems with many deletes, the ghost cleanup process can cause a performance issue from keeping pages in the buffer pool and generating IO. As such, it is possible to disable this process with the use of trace flag 661. More information about this can be found in [Tuning options for SQL Server when running high performance workloads](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). However, there are performance implications from disabling the process.
 
-Disabling the ghost cleanup process can cause your database to grow unnecessarily large and can lead to performance issues. Since the ghost cleanup process removes records that are marked as ghosts, disabling the process will leave these records on the page, preventing SQL Server from reusing this space. This forces SQL Server to add data to new pages instead, leading to bloated database files, and can also cause [page splits](/indexes/specify-fill-factor-for-an-index.md). Page splits lead to performance issues when creating execution plans, and when doing scan operations. 
+Disabling the ghost cleanup process can cause your database to grow unnecessarily large and can lead to performance issues. Since the ghost cleanup process removes records that are marked as ghosts, disabling the process will leave these records on the page, preventing SQL Server from reusing this space. This forces SQL Server to add data to new pages instead, leading to bloated database files, and can also cause [page splits](indexes/specify-fill-factor-for-an-index.md). Page splits lead to performance issues when creating execution plans, and when doing scan operations. 
 
-Once the ghost cleanup process is disabled, some action needs to be taken to remove the ghosted records. One option is to execute an index rebuild, which will move data around on pages. Another option is to manually run [sp_clean_db_free_space](/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) (to clean all database data files) or [sp_clean_db_file_free_space](/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) (to clean a single database datafile), which will delete ghosted records.
+Once the ghost cleanup process is disabled, some action needs to be taken to remove the ghosted records. One option is to execute an index rebuild, which will move data around on pages. Another option is to manually run [sp_clean_db_free_space](system-stored-procedures/sp-clean-db-free-space-transact-sql.md) (to clean all database data files) or [sp_clean_db_file_free_space](system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) (to clean a single database datafile), which will delete ghosted records.
 
  >[!warning]
  > Disabling the ghost cleanup process is not generally recommended. Doing so should be tested thoroughly in a controlled environment before being implemented permanently in a production environment.
@@ -57,6 +57,7 @@ Once the ghost cleanup process is disabled, some action needs to be taken to rem
 
 ## Next steps  
 [Disabling the ghost clean up process](https://support.microsoft.com/en-us/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
-<br>[Remove ghost records from a single database file](/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
-<br>[Remove ghost records from all database data files](/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
+<br>[Remove ghost records from a single database file](system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
+<br>[Remove ghost records from all database data files](system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
+
 

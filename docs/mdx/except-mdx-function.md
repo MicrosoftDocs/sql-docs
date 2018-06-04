@@ -1,6 +1,6 @@
 ---
 title: "Except (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Except (MDX) function
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Evaluates two sets and removes those tuples in the first set that also exist in the second set, optionally retaining duplicates.  
   

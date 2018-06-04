@@ -1,6 +1,6 @@
 ---
 title: "+ (String Concatenation) (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # + (String Concatenation) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Performs a string operation that concatenates two or more character strings, tuples, or a combination of strings and tuples.  
   

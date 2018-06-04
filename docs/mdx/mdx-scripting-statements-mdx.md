@@ -1,6 +1,6 @@
 ---
 title: "MDX Scripting Statements (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Scripting Statements (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   In Multidimensional Expressions (MDX), the following statements manage context, scope, and control of flow within MDX scripts.  
   

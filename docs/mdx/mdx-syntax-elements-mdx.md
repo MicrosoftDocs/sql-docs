@@ -1,6 +1,6 @@
 ---
 title: "MDX Syntax Elements (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Syntax Elements (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Multidimensional Expressions (MDX) has several elements that are used by, or influence, most statements:  
   
@@ -19,7 +19,7 @@ manager: kfile
 |----------|----------------|  
 |[Identifiers](../mdx/identifiers-mdx.md)|Identifiers are the names of objects such as cubes, dimensions, members, and measures.|  
 |**Data Types**|Define the types of data that are contained by cells, member properties, and cell properties. MDX supports only the OLE VARIANT data type. For more information about the coercion, conversion, and manipulation of the VARIANT data type, see "VARIANT and VARIANTARG" in the Platform SDK documentation.|  
-|[Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)|Expressions are units of syntax that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] can resolve to single (scalar) values or objects. Expressions include functions that return a single value, a set expression, and so on.|  
+|[Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)|Expressions are units of syntax that Analysis Services can resolve to single (scalar) values or objects. Expressions include functions that return a single value, a set expression, and so on.|  
 |[Operators](../mdx/operators-mdx-syntax.md)|Operators are syntax elements that work with one or more simple MDX expressions to make more complex MDX expressions.|  
 |[Functions](../mdx/functions-mdx-syntax.md)|Functions are syntax elements that take zero, one, or more input values, and return a scalar value or an object. Examples include the [Sum](../mdx/sum-mdx.md) function for adding several values, the [Members](../mdx/members-set-mdx.md) function for returning a set of members from a dimension or level, and so on.|  
 |[Comments](../mdx/comments-mdx-syntax.md)|Comments are pieces of text that are inserted into MDX statements or scripts to explain the purpose of the statement. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not execute comments .|  

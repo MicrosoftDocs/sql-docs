@@ -1,6 +1,6 @@
 ---
 title: "UPDATE MEMBER Statement (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Definition - UPDATE MEMBER
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Updates an existing calculated member.  
   
@@ -55,7 +55,7 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |Property identifier|Meaning|  
 |-------------------------|-------------|  
-|FORMAT_STRING|A [!INCLUDE[msCoName](../includes/msconame-md.md)] Office style format string that the client application can use to display cell values.|  
+|FORMAT_STRING|A Office style format string that the client application can use to display cell values.|  
 |VISIBLE|A value that indicates whether the calculated member is visible in a schema rowset. Visible calculated members can be added to a set with the [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) function. A nonzero value indicates that the calculated member is visible. The default value for this property is *Visible*.<br /><br /> Calculated members that are not visible are generally used as intermediate steps in more complex calculated members. These calculated members can also be referred to by other types of members, such as measures.|  
 |NON_EMPTY_BEHAVIOR|The measure or set that MDX uses to determine the behavior of calculated members when resolving empty cells.|  
 |CAPTION|A string value that specifies the caption that the client application uses to display the member.|  

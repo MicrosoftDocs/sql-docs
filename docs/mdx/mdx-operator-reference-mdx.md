@@ -1,6 +1,6 @@
 ---
 title: "MDX Operator Reference (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Operator Reference (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   The Multidimensional Expressions (MDX) language supports arithmetic, logical, comparison, set, string, and unary operators. The following table lists the supported operators and their descriptions.  
   

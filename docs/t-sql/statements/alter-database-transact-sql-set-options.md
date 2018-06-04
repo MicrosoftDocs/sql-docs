@@ -37,7 +37,7 @@ manager: craigg
 # ALTER DATABASE SET Options (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  This topic contains the ALTER DATABASE syntax that is related to setting database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For other ALTER DATABASE syntax, see the following topics.  
+  This article contains the ALTER DATABASE syntax that is related to setting database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For other ALTER DATABASE syntax, see the following topics.  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
@@ -269,7 +269,7 @@ SET
   
  `CURRENT` performs the action in the current database. `CURRENT` is not supported for all options in all contexts. If `CURRENT` fails, provide the database name.  
   
- **\<auto_option> ::=**  
+ **\<auto_option> ::=**
   
  Controls automatic options.  
  <a name="auto_close"></a> AUTO_CLOSE { ON | OFF }  
@@ -433,7 +433,7 @@ SET
  OFF  
  Cursors remain open when a transaction is committed; rolling back a transaction closes any cursors except those defined as INSENSITIVE or STATIC.  
   
- Connection-level settings that are set by using the SET statement override the default database setting for CURSOR_CLOSE_ON_COMMIT. By default, ODBC and OLE DB clients issue a connection-level SET statement setting CURSOR_CLOSE_ON_COMMIT to OFF for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
+ Connection-level settings that are set by using the SET statement override the default database setting for CURSOR_CLOSE_ON_COMMIT. By default, ODBC, and OLE DB clients issue a connection-level SET statement setting CURSOR_CLOSE_ON_COMMIT to OFF for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
   
  The status of this option can be determined by examining the is_cursor_close_on_commit_on column in the sys.databases catalog view or the IsCloseCursorsOnCommitEnabled property of the DATABASEPROPERTYEX function.  
   
@@ -533,7 +533,7 @@ SET
  SINGLE_USER  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Specifies that only one user at a time can access the database. If SINGLE_USER is specified and there are other users connected to the database the ALTER DATABASE statement will be blocked until all users disconnect from the specified database. To override this behavior, see the WITH \<termination> clause.  
+ Specifies that only one user at a time can access the database. If SINGLE_USER is specified and there are other users connected to the database, the ALTER DATABASE statement will be blocked until all users disconnect from the specified database. To override this behavior, see the WITH \<termination> clause.  
   
  The database remains in SINGLE_USER mode even if the user that set the option logs off. At that point, a different user, but only one, can connect to the database.  
   

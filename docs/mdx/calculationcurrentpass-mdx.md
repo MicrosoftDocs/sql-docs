@@ -23,7 +23,7 @@ CalculationCurrentPass()
 ```  
   
 ## Remarks  
- The **CalculationCurrentPass** function returns the zero-based index of the calculation pass for the current query context. With automatic recursion resolution in[ !INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], this function has little practical use.  
+ The **CalculationCurrentPass** function returns the zero-based index of the calculation pass for the current query context. With automatic recursion resolution, this function has little practical use.  
   
 ## See Also  
  [CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)   

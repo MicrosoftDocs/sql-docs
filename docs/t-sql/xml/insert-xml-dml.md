@@ -128,7 +128,7 @@ GO
 ```  
   
 ### C. Inserting attributes into a document  
- The following example illustrates how attributes are inserted in a document.First, a document is assigned to an **xml** type variable. Then, a series of **insert** XML DML statements is used to insert attributes into the document. After each attribute insertion, the SELECT statement displays the result.  
+ The following example illustrates how attributes are inserted in a document. First, a document is assigned to an **xml** type variable. Then, a series of **insert** XML DML statements is used to insert attributes into the document. After each attribute insertion, the SELECT statement displays the result.  
   
 ```  
 USE AdventureWorks;  

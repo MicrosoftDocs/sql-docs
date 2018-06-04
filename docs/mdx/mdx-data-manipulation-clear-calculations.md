@@ -1,6 +1,6 @@
 ---
 title: "CLEAR CALCULATIONS Statement (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Manipulation - CLEAR CALCULATIONS
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Removes all calculations from the cube and returns the cube to calculation pass 0.  
   

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Creating a SQL Server Native Client OLE DB Provider Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

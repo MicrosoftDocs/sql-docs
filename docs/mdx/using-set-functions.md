@@ -1,25 +1,14 @@
 ---
 title: "Using Set Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "set functions [MDX]"
-ms.assetid: b08ddc9d-38f8-41aa-b791-b5352f1a8783
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Using Set Functions
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

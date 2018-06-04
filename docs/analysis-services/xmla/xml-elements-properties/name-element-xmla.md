@@ -25,7 +25,7 @@ manager: kfile
 </Attribute>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -38,7 +38,7 @@ manager: kfile
 |[Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|1-1: Required element that occurs once and only once.|  
 |[Translation](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -50,7 +50,7 @@ manager: kfile
   
  For **Translation** elements, the **Name** element contains the caption of the attribute member, in the language specified by the **Language** element of the parent **Translation** object. If the **Name** element is not specified or contains an empty string, the value of the **Name** element for the **Attribute** element that contains the **Translation** element is used.  
   
-## See Also  
+## See also
  [Insert Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Language Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/language-element-xmla.md)   
  [Update Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   

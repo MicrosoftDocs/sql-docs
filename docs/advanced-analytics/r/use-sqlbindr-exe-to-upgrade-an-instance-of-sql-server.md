@@ -22,27 +22,23 @@ Binding does not change the fundamentals of your installation: R and Python inte
 > [!NOTE]
 > Binding applies to (In-Database) instances only. Binding is not relevant for a (Standalone) installation.
 
-**SQL Server 2017**
+**SQL Server 2017 binding considerations**
 
 For SQL Server 2017 Machine Learning Services, you would consider binding only when Microsoft Machine Learning Server begins to offer additional packages or newer versions over what you already have.
 
-**SQL Server 2016**
+**SQL Server 2016 binding considerations**
 
-For SQL Server 2016 R Services customers, there are two paths for getting new and updated R packages. One involves upgrading to SQL Server 2017; the second, binding to Microsoft Machine Learning Server.
+For SQL Server 2016 R Services customers, binding provides updated R packages, new packages not part of the original installation, and pretrained models, all of which can further be refreshed at each new major and minor release of Microsoft Machine Learning Server. Binding does not give you Python support, which is a SQL Server 2017 feature. 
 
-Upgrading to SQL Server 2017 gets you R packages at the versions included in that release, plus Python features. Alternatively, binding gets you updated R packages, which can further be refreshed at each new major and minor release of Microsoft Machine Learning Server. 
+## Version map
 
-Binding does not give you Python support, which is a SQL Server 2017 feature. 
+The following table is a version map, showing package versions across release vehicles so that you can ascertain   potentional upgrade paths when you bind to Microsoft Machine Learning Server (previously known as R Server before the addition of Python support starting in MLS 9.2.1). 
 
-**Component upgrades available through Microsoft Machine Learning Server**
-
-The following table is a version map, showing the version installed with SQL Server, with possible upgrades when you bind to Microsoft Machine Learning Server (previously known as R Server before the addition of Python support starting in MLS 9.2.1). 
-
-Notice that binding does not guarantee the very latest version of R or Anaconda. When you bind to Microsoft Machine Learning Server, you get the R or Python version installed through Setup, which may or may not be the latest version available on the web.
+Notice that binding does not guarantee the very latest version of R or Anaconda. When you bind to Microsoft Machine Learning Server (MLS), you get the R or Python version installed through Setup, which may not be the latest version available on the web.
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-Component |Initial Release | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
+Component |Initial Release | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) over R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
@@ -300,7 +296,7 @@ If you upgraded to Microsoft R Server 9.0.1, the version of SqlBindR.exe for tha
 
 Later version of SqlBindR automatically restore the original R features, eliminating the need for reinstallation of R components or re-patch the server. However, you must install any R package updates that might have been added after the initial installation.
 
-If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
+If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ### Problems with multiple upgrades from SQL Server
 

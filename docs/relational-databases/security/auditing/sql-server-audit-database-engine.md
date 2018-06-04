@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Server Audit (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/21/2016"

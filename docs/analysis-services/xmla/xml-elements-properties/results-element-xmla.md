@@ -27,7 +27,7 @@ manager: kfile
 </return>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -35,7 +35,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ manager: kfile
   
  For non-transactional **Batch** commands, the **results** element contains one **root** element for each command executed by the **Batch** command, whether the command completes successfully or unsuccessfully. For transactional **Batch** commands, the **results** element contains only one **root** element, which contains the error information for the command that failed within the **Batch** command.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

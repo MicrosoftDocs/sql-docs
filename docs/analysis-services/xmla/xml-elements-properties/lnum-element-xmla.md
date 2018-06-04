@@ -25,7 +25,7 @@ manager: kfile
 </HierarchyInfo>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|1-1: Required element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -45,7 +45,7 @@ manager: kfile
   
  For **Member** elements, the **LNum** element contains the zero-based ordinal position, from the root level of the hierarchy, of the member represented by the parent [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) element. A value of zero represents the root level of the hierarchy.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

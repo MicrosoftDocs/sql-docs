@@ -12,7 +12,7 @@ manager: kfile
 ---
 # ObjectDefinition Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contains one or more Analysis Services Scripting Language (ASSL) elements, used to create or alter objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Contains one or more Analysis Services Scripting Language (ASSL) elements, used to create or alter objects on an instance of Analysis Services.  
   
 ## Syntax  
   
@@ -27,7 +27,7 @@ manager: kfile
 </Create>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -35,7 +35,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -59,7 +59,7 @@ manager: kfile
 </Create>  
 ```  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQLXML 4.0 Data Access Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

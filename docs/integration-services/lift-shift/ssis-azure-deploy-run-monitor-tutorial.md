@@ -36,7 +36,7 @@ To run the package on Azure SQL Database, get the connection information you nee
 Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQL Database server. For more info and screenshots, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
 
 Here are the two most important things to remember. These steps are described in the following procedure.
--   Enter the fully-qualified name of the Azure SQL Database server in the format **mysqldbserver.database.windows.net**.
+-   Enter the fully qualified name of the Azure SQL Database server in the format **mysqldbserver.database.windows.net**.
 -   Select `SSISDB` as the database for the connection.
 
 > [!IMPORTANT]
@@ -96,7 +96,7 @@ To learn more about deploying packages and about the Deployment Wizard, see [Dep
     -   You can change your selections by selecting **Previous**, or by selecting any of the steps in the left pane.
     -   Select **Deploy** to start the deployment process.
 
-    > ![NOTE]
+    > [!NOTE]
     > If you get the error message **There is no active worker agent. (.Net SqlClient Data Provider)**, make sure the Azure-SSIS Integration Runtime is running. This error occurs if you try to deploy while the Azure-SSIS IR is in a stopped state.
 
 5.  After the deployment process is complete, the **Results** page opens. This page displays the success or failure of each action.
@@ -185,6 +185,8 @@ To view the status of currently running Integration Services operations on the I
 You can also select a package in Object Explorer, right-click and select **Reports**, then **Standard Reports**, then **All Executions**.
 
 For more info about how to monitor running packages in SSMS, see [Monitor Running Packages and Other Operations](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
+
+## Monitor the Execute SSIS Package activity
 
 If you're running a package as part of an Azure Data Factory pipeline with the Execute SSIS Package activity, you can monitor the pipeline runs in the Data Factory UI. Then you can get the SSISDB execution ID from the output of the activity run, and use the ID to check more comprehensive execution logs and error messages in SSMS.
 

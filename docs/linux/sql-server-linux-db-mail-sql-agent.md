@@ -93,7 +93,7 @@ You can use the mssql-conf utility or environment variables to register your DB 
 
 ```bash
 # via mssql-conf
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile default
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 # via environment variable
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```

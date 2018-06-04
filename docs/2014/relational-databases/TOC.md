@@ -60,9 +60,7 @@
 ### [Exception Message Box Reference](../database-engine/dev-guide/exception-message-box-reference.md)
 ## [SQL Server Express Local DB Reference](sql-server-express-localdb-reference.md)
 ## [SQL Server Express Local DB Error Message Reference +](express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)
-
 ## [SQL Server Express LocalDB Instance API Reference +](express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)
-
 ## [SQL Server Management Objects](../database-engine/dev-guide/sql-server-management-objects.md)
 ### [Preparing to Use SMO](../database-engine/dev-guide/preparing-to-use-smo.md)
 ### [System Requirements](../database-engine/dev-guide/system-requirements.md)

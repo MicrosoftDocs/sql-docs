@@ -1,30 +1,14 @@
 ---
 title: "Comments (MDX Syntax) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "remarks [MDX]"
-  - "MDX [Analysis Services], comments"
-  - "commenting characters"
-  - "nonexecuting text strings [MDX]"
-  - "Multidimensional Expressions [Analysis Services], comments"
-  - "comments [MDX]"
-ms.assetid: 9c00b30c-28f6-4f23-b812-ccc0e900daa5
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Comments (MDX Syntax)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

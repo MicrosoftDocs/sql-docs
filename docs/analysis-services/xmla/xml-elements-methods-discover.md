@@ -1,6 +1,6 @@
 ---
 title: "Discover Method (XMLA) | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 05/30/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: xmla
@@ -12,7 +12,7 @@ manager: kfile
 ---
 # XML Elements - Methods - Discover
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Retrieves information, such as the list of available databases or details about a specific object, from an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The data retrieved with the **Discover** method depends on the values of the parameters passed to it.  
+  Retrieves information, such as the list of available databases or details about a specific object, from an instance of Analysis Services. The data retrieved with the **Discover** method depends on the values of the parameters passed to it.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -29,7 +29,7 @@ manager: kfile
 </Discover>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -37,7 +37,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -45,13 +45,13 @@ manager: kfile
 |Child elements|[Properties](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md), [RequestType](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md), [Restrictions](../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)|  
   
 ## Remarks  
- The **Discover** method requests metadata about [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances and objects. Metadata is returned using the XMLA [Rowset](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) data type.  
+ The **Discover** method requests metadata about instances and objects. Metadata is returned using the XMLA [Rowset](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) data type.  
  
 > [!TIP] 
 > If you are unfamiliar with XML commands, click the XMLA query template on the **Query** toolbar in Management Studio, to build the query and add parameters. For more information, see [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md). 
   
 ## Example  
- In the following code sample, the client sends the **Discover** call to request a list of cubes from the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database:  
+ In the following code sample, the client sends the **Discover** call to request a list of cubes from the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample Analysis Services database:  
   
 ```  
 <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">  
@@ -71,7 +71,7 @@ manager: kfile
 </Discover>  
 ```  
   
-## See Also  
+## See also
  [XML Data Types &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [Execute Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [Methods &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   

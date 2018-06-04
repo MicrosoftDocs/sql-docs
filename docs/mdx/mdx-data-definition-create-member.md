@@ -1,31 +1,14 @@
 ---
 title: "CREATE MEMBER Statement (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CREATE_MEMBER"
-  - "CREATE MEMBER"
-  - "Member"
-  - "CREATE"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "CREATE MEMBER statement"
-  - "calculated members [MDX]"
-ms.assetid: 49379217-be2c-4139-a206-1168078b9b76
-caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Definition - CREATE MEMBER
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

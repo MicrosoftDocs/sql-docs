@@ -1,7 +1,7 @@
 ---
 title: "Create a Native Mode Report Server Database  (SSRS Configuration Manager) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/24/2017"
+ms.date: "05/24/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.component: "install-windows"
@@ -115,7 +115,7 @@ To create a report server database or to change the connection string or credent
   
 7.  Review the information on the Summary page to verify the settings are correct, and then select **Next**.  
   
-8.  Verify the connection by selecting a URL on the Report Server URL page or Report Manager URL page. The URLs must be defined in order for this test to work. If the report server database connection is valid, you will see either the report server folder hierarchy or Report Manager in a browser window. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+8.  Verify the connection by selecting a URL on the Report Server URL page. The URLs must be defined in order for this test to work. If the report server database connection is valid, you will see the report server folder hierarchy. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
 
 ## Change database credentials
 

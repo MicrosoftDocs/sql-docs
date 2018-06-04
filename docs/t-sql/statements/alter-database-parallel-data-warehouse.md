@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ALTER DATABASE (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -20,7 +20,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 # ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use this statement to manage disk space allocations for a database as it grows or shrinks in size.  
+  Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The topic also describes syntax related to setting database options in Parallel Data Warehouse. 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,10 @@ ALTER DATABASE database_name
     AUTOGROW = { ON | OFF }  
     | REPLICATED_SIZE = size [GB]  
     | DISTRIBUTED_SIZE = size [GB]  
-    | LOG_SIZE = size [GB]  
+    | LOG_SIZE = size [GB]
+    | SET AUTO_CREATE_STATISTICS { ON | OFF }
+    | SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+    | SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
 }  
   
 <db_encryption_option> ::=  
@@ -62,10 +65,36 @@ ALTER DATABASE database_name
   
  ENCRYPTION { ON | OFF }  
  Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] when [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+
+ SET AUTO_CREATE_STATISTICS { ON | OFF }
+ When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a histogram in an existing statistics object.
+
+ Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
+
+ For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics)
+
+ SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+ When the automatic update statistics option, AUTO_UPDATE_STATISTICS, is ON, the query optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. Statistics become out-of-date after operations insert, update, delete, or merge change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
+
+ Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
+
+ For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
+
+
+ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
+ The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the CREATE STATISTICS statement.
+
+ Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
+
+ For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
+
   
 ## Permissions  
  Requires the ALTER permission on the database.  
   
+## Error Messages
+If auto-stats is disabled and you try to alter the statistics settings, PDW gives the error "This option is not supported in PDW." The system administrator can enable auto-stats by enabling the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
+
 ## General Remarks  
  The values for REPLICATED_SIZE, DISTRIBUTED_SIZE, and LOG_SIZE can be greater than, equal to, or less than the current values for the database.  
   
@@ -73,6 +102,8 @@ ALTER DATABASE database_name
  Grow and shrink operations are approximate. The resulting actual sizes can vary from the size parameters.  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not perform the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.  
+
+The statistics settings only work if the administrator has enable auto-stats.  If you are an administrator, use the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) to enable or disable auto-stats. 
   
 ## Locking Behavior  
  Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) statement on the database.  
@@ -160,6 +191,29 @@ ALTER DATABASE CustomerSales
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
+
+### E. Check for current statistics values
+
+The following query returns the current statistics values for all databases. The value 1 means the feature is on, and a 0 means the feature is off.
+
+```sql
+SELECT NAME,
+    is_auto_create_stats_on,
+    is_auto_update_stats_on,
+    is_auto_update_stats_async_on
+FROM sys.databases;
+```
+### F. Enable auto-create and auto-update stats for a database
+Use the following statement to enable create and update statistics automatically and asynchronously for database, CustomerSales.  This creates and updates single-column statistics as necessary to create high quality query plans.
+
+```sql
+ALTER DATABASE CustomerSales
+    SET AUTO_CREATE_STATISTICS ON;
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS ON; 
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS_ASYNC ON;
+```
   
 ## See Also  
  [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   

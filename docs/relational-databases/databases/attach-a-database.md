@@ -159,7 +159,7 @@ We don't recommend using detach and attach for Backup and Recovery. There are no
   
 ## See Also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
- <br>[Manage metadata when making a database available on another server](/manage-metadata-when-making-a-database-available-on-another-server.md)  
+ <br>[Manage metadata when making a database available on another server](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Detach a Database](../../relational-databases/databases/detach-a-database.md)  
   
   

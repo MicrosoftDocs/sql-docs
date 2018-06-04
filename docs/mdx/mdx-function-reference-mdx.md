@@ -1,37 +1,14 @@
 ---
 title: "MDX Function Reference (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "member functions [MDX]"
-  - "level functions [MDX]"
-  - "MDX [Analysis Services], functions"
-  - "array functions"
-  - "string functions"
-  - "Multidimensional Expressions [Analysis Services], functions"
-  - "hierarchy functions [MDX]"
-  - "numeric functions [MDX]"
-  - "tuple functions"
-  - "subcube functions [MDX]"
-  - "functions [MDX]"
-  - "logical functions [MDX]"
-  - "set functions [MDX]"
-ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Function Reference (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

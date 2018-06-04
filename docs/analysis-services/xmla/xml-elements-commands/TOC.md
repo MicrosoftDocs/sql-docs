@@ -1,4 +1,4 @@
-# [XML Elements - Commands](xml-elements-commands.md)
+# [XMLA Elements - Commands](xml-elements-commands.md)
 
 # [Alter Element (XMLA)](alter-element-xmla.md)
 # [Attach Element](attach-element.md)

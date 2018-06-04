@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -28,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Returns current lowore-level I/O, locking, latching, and access method activity for each partition of a table or index in the database.    
+  Returns current lower-level I/O, locking, latching, and access method activity for each partition of a table or index in the database.    
     
  Memory-optimized indexes do not appear in this DMV.    
     

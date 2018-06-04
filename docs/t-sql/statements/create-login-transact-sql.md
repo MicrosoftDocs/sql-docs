@@ -1,7 +1,7 @@
 ﻿---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2018"
+ms.date: "05/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "t-sql|statements"
@@ -247,7 +247,6 @@ GO
 # [SQL Database](#tab/sqldb)
   
 ## Syntax 
-### Syntax for SQL Database single and pooled databases
   
 ```sql  
 -- Syntax for Azure SQL Database  
@@ -256,18 +255,8 @@ CREATE LOGIN login_name
   
 <option_list> ::=   
     PASSWORD = { 'password' }  
-    [ SID = sid ]  
+    [ , SID = sid ]  
 ```  
-### Syntax for SQL Database Managed Instance databases
-
-```sql
--- Syntax for Azure SQL Database Managed Instance (preview)
-CREATE LOGIN login_name { WITH <option_list> } 
-
-<option_list> ::=    
-    | DEFAULT_DATABASE = database      
-    | DEFAULT_LANGUAGE = language 
-```
 
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), this T-SQL feature has certain behavior changes. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information) for details for all T-SQL behavior changes.
@@ -306,14 +295,12 @@ In SQL Database, login data required to authenticate a connection and server-lev
   
  For more information about SQL Database logins, see [Managing Databases and Logins in Windows Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins). 
  
-### SQL Database Managed Instance logins 
-
 ## Permissions
 
 Only the server-level principal login (created by the provisioning process) or members of the `loginmanager` database role in the master database can create new logins. For more information, see [Server-Level Roles](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
 
 ## Logins
-- Must have **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role. Only AAD account with **ALTER ANY LOGIN** permission on the server or membership in the securityadmin  permission can execute this command
+- Must have **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role. Only Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in the securityadmin  permission can execute this command
 - Must be a member of Azure AD within the same directory used for Azure SQL logical server
   
 ## After creating a login  
@@ -377,7 +364,7 @@ CREATE LOGIN login_name
   
 <option_list> ::=   
     PASSWORD = { 'password' }  
-    [ SID = sid ]  
+    [ , SID = sid ]  
 ```  
   
 ## Arguments  

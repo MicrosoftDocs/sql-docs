@@ -30,7 +30,8 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  -  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on-premises or an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in an Azure virtual machine in the cloud. For more information, see [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] must be a push subscriber of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher.  
  -  The distribution database and the replication agents cannot be placed on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
- - Snapshot and one-way transactional replication are supported. Peer-to-peer transactional replication and merge replication are not supported.  
+ - Snapshot and one-way transactional replication are supported. Peer-to-peer transactional replication and merge replication are not supported.
+ - SQL Database managed instance supports publisher and distributor databases. For more information, see [Replication with SQL Database Managed Instance](replication-with-sql-database-managed-instance.md).
  
  ## Versions  
  - The publisher and distributor must be at least at one of the following versions:  

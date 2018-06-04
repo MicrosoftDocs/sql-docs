@@ -1,6 +1,6 @@
 ---
 title: "Avg (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Avg (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Evaluates a set and returns the average of the non empty values of the cells in the set, averaged over the measures in the set or over a specified measure.  
   

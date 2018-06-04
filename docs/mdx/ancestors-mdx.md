@@ -1,6 +1,6 @@
 ---
 title: "Ancestors (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,9 +11,9 @@ author: minewiskan
 manager: kfile
 ---
 # Ancestors (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  A function that returns the set of all ancestors of a specified member at a specified level or at a specified distance from the member. With [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the set returned will always consist of a single member - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not support multiple parents for a single member.  
+
+  A function that returns the set of all ancestors of a specified member at a specified level or at a specified distance from the member. With [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the set returned will always consist of a single member - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not support multiple parents for a single member.  
   
 ## Syntax  
   

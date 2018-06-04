@@ -1,6 +1,6 @@
 ---
 title: "CREATE ACTION Statement (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Definition - CREATE ACTION
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Creates an action that can be associated with a cube, dimension, hierarchy, or subordinate object.  
   
@@ -70,10 +70,10 @@ FOR
  It is possible for client applications to create and run actions that are unsafe; it is also possible for client applications to use unsafe functions. To avoid these situations, use the **Safety Options** property. For more information, see Safety Options Property.  
   
 > [!NOTE]  
->  This statement is included for backwards compatibility. Actions new to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], such as Drillthrough or Report actions, are not supported.  
+>  This statement is included for backwards compatibility. Actions new to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], such as Drillthrough or Report actions, are not supported.  
   
 ## Action Types  
- The following table describes the different types of actions available in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ The following table describes the different types of actions available in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 |Action type|Description|  
 |-----------------|-----------------|  

@@ -1,6 +1,6 @@
 ---
 title: "VBA functions in MDX and DAX | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # VBA functions in MDX and DAX
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   This document contains a crossed reference of all VBA functions available in [Visual Basic for Applications Functions](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) that are supported in MDX; also, the list includes a note when there is functional equivalence with the DAX language.  
   

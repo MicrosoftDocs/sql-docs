@@ -1,6 +1,6 @@
 ---
 title: "Using Stored Procedures (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Using Stored Procedures (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   You can extend the functionality of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and Multidimensional Expressions (MDX) by writing .NET stored procedures or user-defined functions. For more information, see [ADOMD.NET Server Programming](../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
   
@@ -27,7 +27,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ```  
   
 > [!NOTE]  
->  *Stored procedure* is the terminology used in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] for these types of functions. Earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] called these types of functions as *user-defined functions*.  
+>  *Stored procedure* is the terminology used in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] for these types of functions. Earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] called these types of functions as *user-defined functions*.  
   
 ## Types of stored procedures  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports both COM and CLR assemblies. CLR assemblies are recommended because of the enhanced security available to CLR assemblies. If Microsoft Office Excel is installed on the server, Excel functions are also available.  

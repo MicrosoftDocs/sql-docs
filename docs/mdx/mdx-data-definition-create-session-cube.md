@@ -1,6 +1,6 @@
 ---
 title: "CREATE SESSION CUBE Statement  (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Definition - CREATE SESSION CUBE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Creates and populates a session cube from an existing server cube. The session cube is only visible within the current session; it cannot be browsed or queried from any other session. The session cube is implicitly deleted when the session is closed.  
   

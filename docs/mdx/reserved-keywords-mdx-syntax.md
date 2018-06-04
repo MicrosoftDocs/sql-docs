@@ -1,6 +1,6 @@
 ---
 title: "Reserved Keywords (MDX Syntax) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,9 +11,9 @@ author: minewiskan
 manager: kfile
 ---
 # Reserved Keywords (MDX Syntax)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reserves certain keywords for its exclusive use. For a list of reserved keywords, see [MDX Reserved Words](../mdx/mdx-reserved-words.md).  
+
+  Analysis Services reserves certain keywords for its exclusive use. For a list of reserved keywords, see [MDX Reserved Words](../mdx/mdx-reserved-words.md).  
   
  Reserved keywords follow these guidelines:  
   

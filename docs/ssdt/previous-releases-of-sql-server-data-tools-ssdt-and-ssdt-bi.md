@@ -1,7 +1,7 @@
 ﻿---
 title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2018"
+ms.date: "06/04/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -34,6 +34,7 @@ The last few downloads are provided for the unlikely event that you experience i
 
 |Release| Visual Studio 2017|
 |:---|:---|
+|15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
 |15.5.2|[SSDT for VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
 |15.5.1|[SSDT for VS2017 15.5.1](https://go.microsoft.com/fwlink/?LinkId=865748)|  
 <br>

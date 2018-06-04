@@ -1,4 +1,4 @@
-# [Monitor Replication +](monitoring-replication-overview.md)
+# [Monitor Replication](monitoring-replication-overview.md)
 ## [Monitoring](../monitoring-replication.md)
 ## [Overview of the Replication Monitor Interface](overview-of-the-replication-monitor-interface.md)
 ## [Start the Replication Monitor](start-the-replication-monitor.md)

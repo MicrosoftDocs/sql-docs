@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Extended Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2016"

@@ -29,6 +29,7 @@
 ## [Connect to files and file shares](lift-shift/ssis-azure-files-file-shares.md)
 ## [Connect to SSISDB in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Validate packages deployed to Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Run packages in Azure](lift-shift/ssis-azure-run-packages.md)
 ## [Schedule packages in Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Schedule packages in Azure with SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
@@ -71,7 +72,8 @@
 # [Event Handlers](integration-services-ssis-event-handlers.md)
 # [Queries](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
-# [Deploy Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [Deploy packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [Run packages](packages/run-integration-services-ssis-packages.md)
 # [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
 # [Catalog and server](catalog/integration-services-ssis-server-and-catalog.md)

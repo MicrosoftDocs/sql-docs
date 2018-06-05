@@ -25,7 +25,7 @@ manager: kfile
 </Synchronize>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|*SkipMembership*|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -41,7 +41,7 @@ manager: kfile
 |Child elements|None|  
   
 ## Remarks  
- The **Security** element determines whether the security definitions, such as roles and permissions, defined on an [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database are synchronized during a **Synchronize** command. This element also determines if the Windows user accounts and groups defined as members of the security definitions are included as part of the **Synchronize** command.  
+ The **Security** element determines whether the security definitions, such as roles and permissions, defined on an Analysis Services database are synchronized during a **Synchronize** command. This element also determines if the Windows user accounts and groups defined as members of the security definitions are included as part of the **Synchronize** command.  
   
  The value of this element is limited to one of the strings listed in the following table.  
   
@@ -51,7 +51,7 @@ manager: kfile
 |*CopyAll*|Include security definitions and membership information during a **Synchronize** command.|  
 |*IgnoreSecurity*|Exclude security definitions during a **Synchronize** command.|  
   
-## See Also  
+## See also
  [Security Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

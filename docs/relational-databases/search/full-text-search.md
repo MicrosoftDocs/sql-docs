@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Full-Text Search | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2018"

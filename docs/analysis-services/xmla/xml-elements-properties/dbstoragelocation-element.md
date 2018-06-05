@@ -25,7 +25,7 @@ manager: kfile
 </Database>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|""|  
 |Cardinality|0-1: Optional element that can occur one time only.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -45,7 +45,7 @@ manager: kfile
   
  In addition, the **DbStorageLocation** database property cannot be set to point to the server data folder or any of its subfolders. If the location points to the server data folder or any of its subfolders, an error will be raised when executing a **Create**, **Attach**, or **Alter** command.  
   
-## See Also  
+## See also
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Attach and Detach Analysis Services Databases](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   

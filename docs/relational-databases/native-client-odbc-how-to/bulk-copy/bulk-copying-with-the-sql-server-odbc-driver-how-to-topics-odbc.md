@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

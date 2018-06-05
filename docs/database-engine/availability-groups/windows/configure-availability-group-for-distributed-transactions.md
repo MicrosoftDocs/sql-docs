@@ -3,7 +3,6 @@ title: "Configure availability group for distributed transactions | Microsoft Do
 ms.custom: ""
 ms.date: "05/22/2018"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 
 caps.latest.revision: 33
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure availability group for distributed transactions

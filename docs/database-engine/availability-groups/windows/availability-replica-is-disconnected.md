@@ -3,7 +3,6 @@ title: "Availability replica is disconnected | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 caps.latest.revision: 12
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Availability replica is disconnected

@@ -3,7 +3,6 @@ title: "Windows Server Failover Clustering with SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/18/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Windows Server Failover Clustering with SQL Server

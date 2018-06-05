@@ -3,7 +3,6 @@ title: "Logins and Jobs for Availability Group Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Logins and Jobs for Availability Group Databases

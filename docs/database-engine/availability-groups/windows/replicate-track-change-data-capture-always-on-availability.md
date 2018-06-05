@@ -3,7 +3,6 @@ title: "Replication, Change Tracking, & Change Data Capture - Availability Group
 ms.custom: ""
 ms.date: "04/25/2018"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 37
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication, change tracking, & change data capture - Always On availability groups

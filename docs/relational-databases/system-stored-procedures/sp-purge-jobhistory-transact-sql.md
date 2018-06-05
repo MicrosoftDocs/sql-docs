@@ -43,7 +43,7 @@ sp_purge_jobhistory
   
 ## Arguments  
  [ **@job_name=** ] **'***job_name***'**  
- The name of the job for which to delete the history records. *job_name*is **sysname**, with a default of NULL. Either *job_id* or *job_name* must be specified, but both cannot be specified.  
+ The name of the job for which to delete the history records. *job_name* is **sysname**, with a default of NULL. Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
 > [!NOTE]  
 >  Members of the **sysadmin** fixed server role or members of the **SQLAgentOperatorRole** fixed database role can execute **sp_purge_jobhistory** without specifying a *job_name* or *job_id*. When **sysadmin** users do not specify these arguments, the job history for all local and multiserver jobs is deleted within the time specified by *oldest_date*. When **SQLAgentOperatorRole** users do not specify these arguments, the job history for all local jobs is deleted within the time specified by *oldest_date*.  

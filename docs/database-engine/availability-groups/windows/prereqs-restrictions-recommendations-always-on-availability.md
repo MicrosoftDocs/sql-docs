@@ -1,7 +1,7 @@
 ---
 title: "Prereqs, Restrictions, Recommendations - Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/02/2017"
+ms.date: "06/05/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -164,7 +164,7 @@ manager: craigg
   
     -   If a given thread is idle for a while, it is released back into the general [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] thread pool. Normally, an inactive thread is released after ~15 seconds of inactivity. However, depending on the last activity, an idle thread might be retained longer.  
 
-    - A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. Redo threads are released after ~15 seconds of inactivity. 
+    - A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. 
 
   
 -   In addition, availability groups use unshared threads, as follows:  

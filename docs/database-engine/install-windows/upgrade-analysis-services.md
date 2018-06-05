@@ -3,7 +3,6 @@ title: "Upgrade Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

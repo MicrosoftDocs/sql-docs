@@ -3,7 +3,6 @@ title: "Use Object Explorer Details to Monitor Availability Groups | Microsoft D
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server]"
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Use Object Explorer Details to Monitor Availability Groups

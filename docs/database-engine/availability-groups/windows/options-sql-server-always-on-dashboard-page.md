@@ -3,7 +3,6 @@ title: "Options (SQL Server Always On, Dashboard Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -13,8 +12,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Alwayson.Dashboard"
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 8
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Options (SQL Server Always On, Dashboard Page)

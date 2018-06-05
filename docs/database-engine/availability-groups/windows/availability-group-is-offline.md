@@ -3,7 +3,6 @@ title: "Availability group is offline | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: 14
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Availability group is offline

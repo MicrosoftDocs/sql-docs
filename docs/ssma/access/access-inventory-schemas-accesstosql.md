@@ -1,8 +1,6 @@
 ---
 title: "Access Inventory Schemas (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -41,7 +39,6 @@ helpviewer_keywords:
   - "SSMA_Access_InventoryTables"
   - "tables, inventory"
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

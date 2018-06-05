@@ -3,7 +3,6 @@ title: "Upgrade Replicated Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2016"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "upgrading replicated databases"
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 caps.latest.revision: 74
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Replicated Databases

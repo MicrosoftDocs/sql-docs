@@ -3,7 +3,6 @@ title: "Service Broker with Always On Availability Groups (SQL Server) | Microso
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Service Broker with Always On Availability Groups (SQL Server)

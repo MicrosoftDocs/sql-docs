@@ -10,8 +10,8 @@ ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: "pensivebrian"
+ms.author: "broneill"
 manager: craigg
 ---
 # Download and install sqlpackage
@@ -26,7 +26,7 @@ Download and install the latest release, the *May Public Preview*:
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|May 7, 2018 |0.29.3|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|May 7, 2018 |0.29.3|
 
-For details about the latest release, see the [release notes](release-notes.md).
+For details about the latest release, see the release notes.
 
 ## Get SQL Operations Studio (preview) for Windows
 
@@ -146,11 +146,9 @@ To check for latest updates, click the gear icon on the bottom left of the windo
 ## Next Steps
 
 See one of the following quickstarts to get started:
-- [Connect & Query SQL Server](quickstart-sql-server.md)
-- [Connect & Query Azure SQL Database](quickstart-sql-database.md)
-- [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
+- ???
 
 Contribute to [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 - [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
 
-[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) and [usage data collection](usage-data-collection.md).
+[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)

@@ -4,32 +4,32 @@ ms.custom:
   - "SSDT"
 ms.date: "2017-04-26"
 ms.prod: "sql-non-specified"
-ms.reviewer: ""
+ms.reviewer: "alayu; sstein"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 caps.latest.revision: 53
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "pensivebrian"
+ms.author: "broneill"
+manager: "craigg"
 ---
 # SqlPackage.exe
 **SqlPackage.exe** is a command line utility that automates the following database development tasks:  
   
--   [Extract](https://msdn.microsoft.com/library/hh550080(vs.103).aspx#Anchor_1): Creates a database snapshot (.dacpac) file from a live SQL Server or Microsoft Azure SQL Database.  
+-   [Extract](#help-for-the-extract-action): Creates a database snapshot (.dacpac) file from a live SQL Server or Microsoft Azure SQL Database.  
   
--   [Publish](https://msdn.microsoft.com/library/hh550080(vs.103).aspx#Anchor_2): Incrementally updates a database schema to match the schema of a source .dacpac file. If the database does not exist on the server, the publish operation will create it. Otherwise, an existing database will be updated.  
+-   [Publish](#publish-parameters-properties-and-sqlcmd-variables): Incrementally updates a database schema to match the schema of a source .dacpac file. If the database does not exist on the server, the publish operation will create it. Otherwise, an existing database will be updated.  
   
--   [Export](https://msdn.microsoft.com/library/hh550080(vs.103).aspx#Anchor_3): Exports a live database - including database schema and user data - from SQL Server or Microsoft Azure SQL Database to a BACPAC package (.bacpac file).  
+-   [Export](#export-parameters-and-properties): Exports a live database - including database schema and user data - from SQL Server or Microsoft Azure SQL Database to a BACPAC package (.bacpac file).  
   
--   [Import](https://msdn.microsoft.com/library/hh550080(vs.103).aspx#Anchor_4): Imports the schema and table data from a BACPAC package into a new user database in an instance of SQL Server or Microsoft Azure SQL Database.  
+-   [Import](#import-parameters-and-properties): Imports the schema and table data from a BACPAC package into a new user database in an instance of SQL Server or Microsoft Azure SQL Database.  
   
--   [DeployReport](https://msdn.microsoft.com/library/hh550080(vs.103).aspx#Anchor_5): Creates an XML report of the changes that would be made by a publish action.  
+-   [DeployReport](#deployreport-parameters-and-properties): Creates an XML report of the changes that would be made by a publish action.  
   
--   [DriftReport](https://msdn.microsoft.com/library/hh550080(vs.103).aspx#Anchor_6): Creates an XML report of the changes that have been made to a registered database since it was last registered.  
+-   [DriftReport](#driftreport-parameters): Creates an XML report of the changes that have been made to a registered database since it was last registered.  
   
--   [Script](https://msdn.microsoft.com/library/hh550080(vs.103).aspx#Anchor_7): Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.  
+-   [Script](#script-parameters-and-properties): Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.  
   
 The **SqlPackage.exe** command line allows you to specify these actions along with action specific parameters and properties.  
   
@@ -40,7 +40,7 @@ The **SqlPackage.exe** command line allows you to specify these actions along wi
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```  
   
-To see solutions to common customer problems with Microsoft Azure SQL Database, SQL Server Data Tools, and SQL Server Management Studio, see [Database Lifecycle Management](http://msdn.microsoft.com/library/jj907294.aspx).    
+   
  
 ### Help for the Extract action.
 |Parameter|Short Form|Value|Description|
@@ -547,5 +547,3 @@ A **SqlPackage.exe** script action creates a Transact-SQL incremental update scr
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Specifies whether collation compatibility is verified.
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifies whether checks should be performed before publishing that willstop the publish action if issues are present that might block successfulpublishing. For example, your publish action might stop if you haveforeign keys on the target database that do not exist in the databaseproject, and that will cause errors when you publish.|
   
-## See Also  
-[Database Lifecycle Management](http://msdn.microsoft.com/library/jj907294.aspx)  

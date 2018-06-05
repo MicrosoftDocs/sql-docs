@@ -1,7 +1,6 @@
 ---
 title: "Connect To Azure SQL DB (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"

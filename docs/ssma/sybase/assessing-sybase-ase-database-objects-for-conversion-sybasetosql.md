@@ -3,8 +3,6 @@ title: "Assessing SAP ASE Database Objects for Conversion (SybaseToSQL) | Micros
 ms.custom: ""
 ms.date: "12/01/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma

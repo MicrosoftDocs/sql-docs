@@ -3,7 +3,6 @@ title: "Repair a Failed SQL Server Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -11,8 +10,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 caps.latest.revision: 18
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Repair a Failed SQL Server Installation

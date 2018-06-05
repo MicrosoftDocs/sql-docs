@@ -3,12 +3,9 @@ title: "Installation Wizard Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "2017-04-21"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -17,8 +14,8 @@ helpviewer_keywords:
   - "Instance Name page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Instance Name page"
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
 ---

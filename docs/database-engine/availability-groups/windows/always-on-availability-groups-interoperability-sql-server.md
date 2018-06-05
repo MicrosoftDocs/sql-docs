@@ -3,7 +3,6 @@ title: "Always On Availability Groups: Interoperability (SQL Server) | Microsoft
 ms.custom: ""
 ms.date: "04/20/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 caps.latest.revision: 21
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Always On Availability Groups: Interoperability (SQL Server)

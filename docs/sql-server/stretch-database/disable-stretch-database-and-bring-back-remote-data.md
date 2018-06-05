@@ -3,21 +3,16 @@ title: "Disable Stretch Database and bring back remote data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "stretch-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, disabling"
   - "disabling Stretch Database"
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
-caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Disable Stretch Database and bring back remote data

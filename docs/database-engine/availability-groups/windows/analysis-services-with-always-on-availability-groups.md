@@ -3,7 +3,6 @@ title: "Analysis Services with Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -11,8 +10,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: "erikre"
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---

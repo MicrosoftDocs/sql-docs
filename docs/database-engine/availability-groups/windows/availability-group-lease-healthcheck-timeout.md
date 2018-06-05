@@ -9,8 +9,8 @@ ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid:
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts 

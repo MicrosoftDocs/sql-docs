@@ -3,7 +3,6 @@ title: "WSFC Quorum Modes and Voting Configuration (SQL Server) | Microsoft Docs
 ms.custom: ""
 ms.date: "10/03/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # WSFC Quorum Modes and Voting Configuration (SQL Server)

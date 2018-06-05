@@ -3,7 +3,6 @@ title: "Join a Secondary Replica to an Availability Group (SQL Server) | Microso
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 caps.latest.revision: 41
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Join a Secondary Replica to an Availability Group (SQL Server)

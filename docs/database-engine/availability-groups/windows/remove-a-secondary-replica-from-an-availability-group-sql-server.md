@@ -3,7 +3,6 @@ title: "Remove a Secondary Replica from an Availability Group (SQL Server) | Mic
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 caps.latest.revision: 38
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Remove a Secondary Replica from an Availability Group (SQL Server)

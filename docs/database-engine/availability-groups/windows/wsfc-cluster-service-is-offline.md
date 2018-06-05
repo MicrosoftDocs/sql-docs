@@ -3,7 +3,6 @@ title: "WSFC cluster service is offline | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---

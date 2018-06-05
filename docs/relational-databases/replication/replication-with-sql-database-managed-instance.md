@@ -51,20 +51,21 @@ Managed instance can host replication databases in the follwoing configurations:
 
    ![Replication-from-on-premises-to-azure-sql-db-subscriber](./media/replication-with-sql-database-managed-instance/03-azure-sql-db-subscriber.png)
 
-   In this configuration managed instance is a subscriber. This configuration supports migration from on-premises to Azure. In the subscriber role, SQL database does not require managed instance. For more information about Azure SQL Database subscribers, see [Replication to SQL Database](replication-to-sql-database.md).
+   In this configuration managed instance is a subscriber. This configuration supports migration from on-premises to Azure. In the subscriber role, SQL database does not require managed instance, you can use a SQL Database Managed Instance as a step in migration from on-premises to the Azure. For more information about Azure SQL Database subscribers, see [Replication to SQL Database](replication-to-sql-database.md).
 
 ## Requirements
 
-- All instances of SQL Server need to be on the same vNet.
+- All instances of SQL Server need to be on the same vNet
 
 - Connectivity between replication participants use SQL Authentication
 
 - Managed instance distributors and publishers use an Azure storage account for the working directory
 
-
 ## Features
 
 - Supports mix of on-premises and Azure SQL Database Managed Instance instances.
+
+## Configure publishing and distribution 
 
 ## Remarks
 

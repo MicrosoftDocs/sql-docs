@@ -84,7 +84,7 @@ CREATE CERTIFICATE dbm_certificate
             );
 ```
 
-## Create the database-mirroring endpoints on all replicas
+## Create database-mirroring endpoints on all replicas
 
 Database-mirroring endpoints use the Transmission Control Protocol (TCP) to send and receive messages between the server instances that participate in database-mirroring sessions or host availability replicas. The database-mirroring endpoint listens on a unique TCP port number.
 

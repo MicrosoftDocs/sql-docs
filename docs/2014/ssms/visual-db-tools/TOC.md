@@ -17,7 +17,7 @@
 ## [Copy an Image of a Database Diagram to the Clipboard (Visual Database Tools)](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)
 ## [Work with Tables in Database Diagram (Visual Database Tools)](work-with-tables-in-database-diagram-visual-database-tools.md)
 ## [Add Tables to Diagrams (Visual Database Tools)](add-tables-to-diagrams-visual-database-tools.md)
-## [Add Related Tables to Diagrams (Visual Database Tools)](../../database-engine/add-related-tables-to-diagrams-visual-database-tools.md)
+## [Add Related Tables to Diagrams (Visual Database Tools)](add-related-tables-to-diagrams-visual-database-tools.md)
 ## [Save Selected Tables on a Diagram (Visual Database Tools)](save-selected-tables-on-a-diagram-visual-database-tools.md)
 ## [Copy Tables from One Database Diagrams to Another (Visual Database Tools)](copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md)
 ## [Remove Tables from Database Diagrams (Visual Database Tools)](remove-tables-from-database-diagrams-visual-database-tools.md)

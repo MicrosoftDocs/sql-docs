@@ -61,7 +61,7 @@
 ### [Execute Process Task Editor (General Page)](../execute-process-task-editor-general-page.md)
 ### [Execute Process Task Editor (Process Page)](../execute-process-task-editor-process-page.md)
 ## [Execute SQL Task](execute-sql-task.md)
-### [Parameters and Return Codes in the Execute SQL Task](parameters-and-return-codes-in-the-execute-sql-task.md)
+### [Parameters and Return Codes in the Execute SQL Task](../parameters-and-return-codes-in-the-execute-sql-task.md)
 ### [Result Sets in the Execute SQL Task](../result-sets-in-the-execute-sql-task.md)
 ### [Execute SQL Task Editor (General Page)](../execute-sql-task-editor-general-page.md)
 ### [Execute SQL Task Editor (Parameter Mapping Page)](../execute-sql-task-editor-parameter-mapping-page.md)

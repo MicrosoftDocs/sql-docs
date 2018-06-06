@@ -150,8 +150,6 @@
 ## [Connect to Server (Oracle), Login](connect-to-server-oracle-login.md)
 ## [Connect to Server (Oracle), Connection Properties](connect-to-server-oracle-connection-properties.md)
 
-# [Developer's Guide (Replication) +](concepts/replication-developer-documentation.md)
-
 # [Replication Tutorials](replication-tutorials.md)
 ## [Preparing the Server for Replication](tutorial-preparing-the-server-for-replication.md)
 ### [Lesson 1: Creating Windows Accounts for Replication](lesson-1-creating-windows-accounts-for-replication.md)

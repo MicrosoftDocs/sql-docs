@@ -19,7 +19,7 @@ There are two ways to fail over the primary replica in an availability group wit
 
 Use this method when the primary replica isn't available and can't be recovered. 
 
-To force failover with data loss, connect to the SQL Server instance that hosts the target secondary replica and run the following command:
+To force failover with data loss, connect to the SQL Server instance that hosts the target secondary replica and then run the following command:
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;

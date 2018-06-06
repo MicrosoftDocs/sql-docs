@@ -119,7 +119,7 @@ The following table lists the return value for **week** and **weekday***datepart
 |7|16|7|  
   
 ## year, month, and day datepart Arguments  
-The values that are returned for DATEPART (**year**, *date*), DATEPART (**month**, *date*), and DATEPART (**day**, *date*) are the same as those returned by the functions [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md), and [DAY](../../t-sql/functions/day-transact-sql.md), f respectively.
+The values that are returned for DATEPART (**year**, *date*), DATEPART (**month**, *date*), and DATEPART (**day**, *date*) are the same as those returned by the functions [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md), and [DAY](../../t-sql/functions/day-transact-sql.md), respectively.
   
 ## ISO_WEEK datepart  
 ISO 8601 includes the ISO week-date system, a numbering system for weeks. Each week is associated with the year in which Thursday occurs. For example, week 1 of 2004 (2004W01) ran from Monday 29 December 2003 to Sunday, 4 January 2004. The highest week number in a year might be 52 or 53. This style of numbering is typically used in European countries/regions, but rare elsewhere.

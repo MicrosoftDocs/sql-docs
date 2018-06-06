@@ -8,7 +8,7 @@
 # [Methods](xml-elements-methods.md)
 ## [Discover Method](xml-elements-methods-discover.md)
 ## [Execute Method](xml-elements-methods-execute.md)
-# [Commands](../../relational-databases/native-client-ole-db-commands/commands.md)
+# [Commands](xml-elements-commands/xml-elements-commands.md)
 ## [Alter Element](xml-elements-commands/alter-element-xmla.md)
 ## [Attach Element](xml-elements-commands/attach-element.md)
 ## [Backup Element](xml-elements-commands/backup-element-xmla.md)

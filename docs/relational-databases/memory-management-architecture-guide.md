@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/23/2017"
@@ -124,11 +124,11 @@ The following table indicates whether a specific type of memory allocation falls
 
 ## <a name="dynamic-memory-management"></a> Dynamic Memory Management
 
-The default memory management behavior of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] is to acquire as much memory as it needs without creating a memory shortage on the system. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does this by using the Memory Notification APIs in Microsoft Windows.
+The default memory management behavior of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] is to acquire as much memory as it needs without creating a memory shortage on the system. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does this by using the Memory Notification APIs in Microsoft Windows.
 
 When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is using memory dynamically, it queries the system periodically to determine the amount of free memory. Maintaining this free memory prevents the operating system (OS) from paging. If less memory is free, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] releases memory to the OS. If more memory is free, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may allocate more memory. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adds memory only when its workload requires more memory; a server at rest does not increase the size of its virtual address space.  
   
-**[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controls the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory allocation, compile memory, all caches (including the buffer pool), query execution memory grants, lock manager memory, and CLR<sup>1</sup> memory (essentially any memory clerk found in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
+**[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controls the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory allocation, compile memory, all caches (including the buffer pool), [query execution memory grants](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md), lock manager memory, and CLR<sup>1</sup> memory (essentially any memory clerk found in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
 
 <sup>1</sup> CLR memory is managed under max_server_memory allocations starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -172,7 +172,7 @@ As other applications are started on a computer running an instance of [!INCLUDE
 
 ## Effects of min and max server memory
 
-The min server memory and max server memory configuration options establish upper and lower limits to the amount of memory used by the buffer pool and other caches of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine. The buffer pool does not immediately acquire the amount of memory specified in min server memory. The buffer pool starts with only the memory required to initialize. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] workload increases, it keeps acquiring the memory required to support the workload. The buffer pool does not free any of the acquired memory until it reaches the amount specified in min server memory. Once min server memory is reached, the buffer pool then uses the standard algorithm to acquire and free memory as needed. The only difference is that the buffer pool never drops its memory allocation below the level specified in min server memory, and never acquires more memory than the level specified in max server memory.
+The *min server memory* and *max server memory* configuration options establish upper and lower limits to the amount of memory used by the buffer pool and other caches of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine. The buffer pool does not immediately acquire the amount of memory specified in min server memory. The buffer pool starts with only the memory required to initialize. As the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] workload increases, it keeps acquiring the memory required to support the workload. The buffer pool does not free any of the acquired memory until it reaches the amount specified in min server memory. Once min server memory is reached, the buffer pool then uses the standard algorithm to acquire and free memory as needed. The only difference is that the buffer pool never drops its memory allocation below the level specified in min server memory, and never acquires more memory than the level specified in max server memory.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as a process acquires more memory than specified by max server memory option. Both internal and external components can allocate memory outside of the buffer pool, which consumes additional memory, but the memory allocated to the buffer pool usually still represents the largest portion of memory consumed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -193,6 +193,23 @@ The following list describes the approximate amount of memory used by different 
 The **network packet size** is the size of the tabular data scheme (TDS) packets that are used to communicate between applications and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine. The default packet size is 4 KB, and is controlled by the network packet size configuration option.
 
 When multiple active result sets (MARS) are enabled, the user connection is approximately (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB
+
+## Effects of min memory per query
+
+The *min memory per query* configuration option establishes the minimum amount of memory (in kilobytes) that will be allocated for the execution of a query. This is also known as the minimum memory grant.
+
+For **row mode execution**, the initial memory grant cannot be exceeded under any condition. If more memory than the initial grant is needed to execute **hash** or **sort** operations, then these will spill to disk. A hash operation that spills is supported by a Workfile in TempDB, while a sort operation that spills is supported by a [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables). Spills are usually caused by 
+A spill that occurs during a Sort operation is known as a [Sort Warning](../relational-databases/event-classes/sort-warnings-event-class.md). Sort warnings indicate that sort operations do not fit into memory. This does not include sort operations involving the creation of indexes, only sort operations within a query (such as an `ORDER BY` clause used in a `SELECT` statement).
+
+A spill that occurs during a hash operation is known as a [Hash Warning](../relational-databases/event-classes/hash-warning-event-class.md). These occur when a hash recursion or cessation of hashing (hash bailout) has occurred during a hashing operation.
+-  Hash recursion occurs when the build input does not fit into available memory, resulting in the split of input into multiple partitions that are processed separately. If any of these partitions still do not fit into available memory, it is split into sub-partitions, which are also processed separately. This splitting process continues until each partition fits into available memory or until the maximum recursion level is reached.
+-  Hash bailout occurs when a hashing operation reaches its maximum recursion level and shifts to an alternate plan to process the remaining partitioned data. These events can cause reduced performance in your server.
+
+For **batch mode execution**, the initial memory grant can dynamically increase up to a certain internal threshold by default. This dynamic memory grant mechanism is designed to allow memory resident execution of **hash** or **sort** operations running in batch mode. If these operations still do not fit into memory, then these will spill to disk.
+
+For more information on *min memory per query*, see [Configure the min memory per query Server Configuration Option](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md).
+
+For more information on execution modes, see the [Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
 ## Buffer management
 

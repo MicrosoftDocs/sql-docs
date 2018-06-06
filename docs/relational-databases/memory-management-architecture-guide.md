@@ -200,7 +200,8 @@ The *min memory per query* configuration option establishes the minimum amount o
 > For recommendations on using this configuration, see [Configure the min memory per query Server Configuration Option](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
 ### <a name="memory-grant-considerations"></a>Memory grant considerations
-For **row mode execution**, the initial memory grant cannot be exceeded under any condition. If more memory than the initial grant is needed to execute **hash** or **sort** operations, then these will spill to disk. A hash operation that spills is supported by a Workfile in TempDB, while a sort operation that spills is supported by a [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables). Spills are usually caused by 
+For **row mode execution**, the initial memory grant cannot be exceeded under any condition. If more memory than the initial grant is needed to execute **hash** or **sort** operations, then these will spill to disk. A hash operation that spills is supported by a Workfile in TempDB, while a sort operation that spills is supported by a [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables).   
+
 A spill that occurs during a Sort operation is known as a [Sort Warning](../relational-databases/event-classes/sort-warnings-event-class.md). Sort warnings indicate that sort operations do not fit into memory. This does not include sort operations involving the creation of indexes, only sort operations within a query (such as an `ORDER BY` clause used in a `SELECT` statement).
 
 A spill that occurs during a hash operation is known as a [Hash Warning](../relational-databases/event-classes/hash-warning-event-class.md). These occur when a hash recursion or cessation of hashing (hash bailout) has occurred during a hashing operation.

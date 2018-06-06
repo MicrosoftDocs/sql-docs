@@ -44,7 +44,7 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can process SQL s
 Batch mode execution is closely integrated with, and optimized around, the columnstore storage format. Batch mode processing operates on compressed data when possible, and eliminates the [exchange operator](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange) used by row mode execution. The result is better parallelism and faster performance.    
 
 When a query is executed in batch mode, and accesses data in columnstore indexes, the execution tree operators and child operators read multiple rows together in column segments. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reads only the columns required for the result, as referenced by a SELECT statement, JOIN predicate, or filter predicate.    
-For more information on columnstore indexes, see [Columnstore Index Architecture](../relational-databases/sql-server-index-design-guide.md#columnstore_index).
+For more information on columnstore indexes, see [Columnstore Index Architecture](../relational-databases/sql-server-index-design-guide.md#columnstore_index).  
 
 > [!NOTE]
 > Batch mode execution is very efficient Data Warehousing scenarios, where large amounts of data are read and aggregated.

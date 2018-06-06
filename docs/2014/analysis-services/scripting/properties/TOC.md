@@ -185,7 +185,7 @@
 ## [Process Element](process-element-assl.md)
 ## [ProcessingMode Element](processingmode-element-assl.md)
 ## [ProcessingPriority Element](processingpriority-element-assl.md)
-## [ProcessingQuery Element](query-element-assl.md)
+## [ProcessingQuery Element](processingquery-element-assl.md)
 ## [ProductName Element](productname-element-assl.md)
 ## [Query Element](query-element-assl.md)
 ## [QueryDefinition Element](querydefinition-element-assl.md)

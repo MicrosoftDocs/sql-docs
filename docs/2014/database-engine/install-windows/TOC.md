@@ -8,7 +8,7 @@
 ## [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)
 ## [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)
 # [Install SQL Server 2014](install-sql-server.md)
-## [About the SQL Server Database Engine](../sql-server-database-engine-overview.md)
+
 ## [Install Distributed Replay](../../tools/distributed-replay/install-distributed-replay.md)
 ## [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)
 ## [Install Distributed Replay (Setup)](../../sql-server/install/install-distributed-replay-setup.md)

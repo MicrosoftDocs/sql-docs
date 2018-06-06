@@ -126,7 +126,7 @@ The default memory management behavior of the [!INCLUDE[ssDEnoversion](../includ
 
 When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is using memory dynamically, it queries the system periodically to determine the amount of free memory. Maintaining this free memory prevents the operating system (OS) from paging. If less memory is free, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] releases memory to the OS. If more memory is free, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may allocate more memory. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adds memory only when its workload requires more memory; a server at rest does not increase the size of its virtual address space.  
   
-**[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controls the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory allocation, compile memory, all caches (including the buffer pool), [query execution memory grants](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md), lock manager memory, and CLR<sup>1</sup> memory (essentially any memory clerk found in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
+**[Max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controls the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory allocation, compile memory, all caches (including the buffer pool), [query execution memory grants](#effects-of-min-memory-per-query), [lock manager memory](#memory-used-by-sql-server-objects-specifications), and CLR<sup>1</sup> memory (essentially any memory clerk found in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
 
 <sup>1</sup> CLR memory is managed under max_server_memory allocations starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -164,7 +164,7 @@ FROM sys.dm_os_process_memory;
 
 When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts, it computes the size of virtual address space for the buffer pool based on a number of parameters such as amount of physical memory on the system, number of server threads and various startup parameters. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserves the computed amount of its process virtual address space for the buffer pool, but it acquires (commits) only the required amount of physical memory for the current load.
 
-The instance then continues to acquire memory as needed to support the workload. As more users connect and run queries, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquires the additional physical memory on demand. A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance continues to acquire physical memory until it either reaches its max server memory allocation target or Windows indicates there is no longer an excess of free memory; it frees memory when it has more than the min server memory setting, and Windows indicates that there is a shortage of free memory.
+The instance then continues to acquire memory as needed to support the workload. As more users connect and run queries, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquires the additional physical memory on demand. A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance continues to acquire physical memory until it either reaches its max server memory allocation target or the OS indicates there is no longer an excess of free memory; it frees memory when it has more than the min server memory setting, and the OS indicates that there is a shortage of free memory. 
 
 As other applications are started on a computer running an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], they consume memory and the amount of free physical memory drops below the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] target. The instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adjusts its memory consumption. If another application is stopped and more memory becomes available, the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] increases the size of its memory allocation. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can free and acquire several megabytes of memory each second, allowing it to quickly adjust to memory allocation changes.
 
@@ -191,10 +191,14 @@ The **network packet size** is the size of the tabular data scheme (TDS) packets
 When multiple active result sets (MARS) are enabled, the user connection is approximately (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB
 
 ## Effects of min memory per query
-The *min memory per query* configuration option establishes the minimum amount of memory (in kilobytes) that will be allocated for the execution of a query. This is also known as the minimum memory grant.
+The *min memory per query* configuration option establishes the minimum amount of memory (in kilobytes) that will be allocated for the execution of a query. This is also known as the minimum memory grant. All queries must wait until the minimum memory requested can be secured, before execution can start, or until the value specified in the query wait server configuration option is exceeded. The wait type that is accumulated in this scenario is RESOURCE_SEMAPHORE.
 
 > [!IMPORTANT]
-> Do not set the min memory per query server configuration option too high, especially on very busy systems, because the query has to wait on RESOURCE_SEMAPHORE, until it can secure the minimum memory requested, or until the value specified in the query wait server configuration option is exceeded. For other recommendations on using this configuration, see [Configure the min memory per query Server Configuration Option](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
+> Do not set the min memory per query server configuration option too high, especially on very busy systems, because doing so could lead to:         
+> - Increased competition for memory resources.         
+> - Decreased concurrency by increasing the amount of memory for every single query, even if the required memory at runtime is lower that this configuration.    
+>    
+> For recommendations on using this configuration, see [Configure the min memory per query Server Configuration Option](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
 ### <a name="memory-grant-considerations"></a>Memory grant considerations
 For **row mode execution**, the initial memory grant cannot be exceeded under any condition. If more memory than the initial grant is needed to execute **hash** or **sort** operations, then these will spill to disk. A hash operation that spills is supported by a Workfile in TempDB, while a sort operation that spills is supported by a [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables). Spills are usually caused by 
@@ -263,6 +267,30 @@ Long I/Os often indicate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 Long I/Os may also be caused by a component in the I/O path (for example, a driver, controller, or firmware) continually postponing servicing an old I/O request in favor of servicing newer requests that are closer to the current position of the disk head. The common technique of processing requests in priority based upon which ones are closest to the current position of the read/write head is known as "elevator seeking." This may be difficult to corroborate with the Windows System Monitor (PERFMON.EXE) tool because most I/Os are being serviced promptly. Long I/O requests can be aggravated by workloads that perform large amounts of sequential I/O, such as backup and restore, table scans, sorting, creating indexes, bulk loads, and zeroing out files.
 
 Isolated long I/Os that do not appear related to any of the previous conditions may be caused by a hardware or driver problem. The system event log may contain a related event that helps to diagnose the problem.
+
+### Memory pressure detection
+Memory pressure is a condition resulting from memory shortage, and can result in:
+- Extra I/Os (such as very active lazy writer background thread)
+- Higher recompile ratio
+- Longer running queries (if memory grant waits exist)
+- Extra CPU cycles
+
+This situation can be trigerred by external or internal causes. External causes include:
+- Available physical memory (RAM) is low. This causes the system to trim working sets of currently running processes, which may result in overall slowdown. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may reduce the commit target of the buffer pool and start trimming internal caches more often. 
+- Overall available system memory (which includes the system page file) is low. This may cause the system to fail memory allocations, as it is unable to page out currently allocated memory.
+Internal causes include:
+- Responding to the external memory pressure, when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sets lower memory usage caps.
+- Memory settings were manually lowered by reducing the *max server memory* configuration. 
+- Changes in memory distribution of internal components between the several caches.
+
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implements a framework dedicated to detecting and handling memory pressure, as part of its dynamic memory management. This framework includes the backgroud task called **Resource Monitor**. The Resource Monitor task monitors the state of external and internal memory indicators. Once one of these indicators changes status, it calculates the corresponding notification and it broadcasts it. These notifications are internal messages from each of the engine components, and stored in ring buffers. 
+
+Two ring buffers hold information relevant to dynamic memory management: 
+- The Resource Monitor ring buffer, which tracks Resource Monitor activity like was memory pressure signaled or not. This ring buffer has status information depending on the current condition of *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, or *RESOURCE_MEMPHYSICAL_STEADY*.
+- The Memory Broker ring buffer, which contains records of memory notifications for each Resource Governor resource pool. As internal memory pressure is detected, low memory notification is turned on for components that allocate memory, to trigger actions meant to balance the memory between caches. 
+
+Memory brokers monitor the demand consumption of memory by each component and then based on the information collected, it calculates and optimal value of memory for each of these components. There is a set of brokers for each Resource Governor resource pool. This information is then broadcast to each of the components, which grow or shrink their usage as required.
+For more information about memory brokers, see [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md). 
 
 ### Error Detection  
 Database pages can use one of two optional mechanisms that help insure the integrity of the page from the time it is written to disk until it is read again: torn page protection and checksum protection. These mechanisms allow an independent method of verifying the correctness of not only the data storage, but hardware components such as controllers, drivers, cables, and even the operating system. The protection is added to the page just before writing it to disk, and verified after it is read from disk.

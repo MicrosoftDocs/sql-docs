@@ -130,9 +130,6 @@
 ### [Tutorial: Creating Drillthrough and Main Reports](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)
 ### [Tutorial: Introducing Expressions](../reporting-services/tutorial-introducing-expressions.md)
 
-# [Integration Services Tutorials +](../integration-services/integration-services-tutorials.md)
-# [Database Engine Tutorials +](../relational-databases/database-engine-tutorials.md)
-# [Tutorial: Writing Transact-SQL Statements +](../t-sql/tutorial-writing-transact-sql-statements.md)
 # [Replication Tutorials +](../relational-databases/replication/replication-tutorials.md)
 
 # [Enterprise Information Management Tutorials](enterprise-information-management-tutorials.md)

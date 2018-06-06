@@ -18,8 +18,8 @@ ms.tgt_pltfrm: ""
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 You can configure a SQL Server Always On availability group for read-scale workloads on Windows. There are two types of architecture for availability groups:
-* An architecture for high availability uses a cluster manager to provide improved business continuity and can include readable-secondary replicas. To create this high-availability architecture, see [Create and configure availability groups on Windows](creation-and-configuration-of-availability-groups-sql-server.md). 
-* The other architecture supports only read-scale workloads. 
+* An architecture for high availability that uses a cluster manager to provide improved business continuity and that can include readable-secondary replicas. To create this high-availability architecture, see [Create and configure availability groups on Windows](creation-and-configuration-of-availability-groups-sql-server.md). 
+* An architecture that supports only read-scale workloads. 
 
 This article explains how to create an availability group without a cluster manager for read-scale workloads. This architecture provides read-scale only. It doesn't provide high availability.
 
@@ -28,9 +28,9 @@ This article explains how to create an availability group without a cluster mana
 
 [!INCLUDE [Create prerequisites](../../../includes/ss-availability-group-rs-prereq.md)]
 
-## Create the availability group
+## Create an availability group
 
-Create the availability group. Set `CLUSTER_TYPE = NONE`. In addition, set each replica with `FAILOVER_MODE = NONE`. Client applications that run analytics or reporting workloads can directly connect to the secondary databases. You can also create a read-only routing list. Connections to the primary replica forward read connection requests to each of the secondary replicas from the routing list in a round-robin fashion.
+Create an availability group. Set `CLUSTER_TYPE = NONE`. In addition, set each replica with `FAILOVER_MODE = NONE`. Client applications that run analytics or reporting workloads can directly connect to the secondary databases. You can also create a read-only routing list. Connections to the primary replica forward read connection requests to each of the secondary replicas from the routing list in a round-robin fashion.
 
 The following Transact-SQL script creates an availability group named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. 
 

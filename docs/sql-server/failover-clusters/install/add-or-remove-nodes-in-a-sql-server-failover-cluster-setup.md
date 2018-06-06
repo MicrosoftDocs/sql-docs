@@ -2,12 +2,10 @@
 title: "Add or Remove Nodes in a SQL Server Failover Cluster (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.prod: sql
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +18,8 @@ helpviewer_keywords:
   - "removing nodes"
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 caps.latest.revision: 49
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add or Remove Nodes in a SQL Server Failover Cluster (Setup)

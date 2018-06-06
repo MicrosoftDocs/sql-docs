@@ -1,6 +1,6 @@
 ---
 title: "CREATE KPI Statement (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Definition - CREATE KPI
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Creates a key performance indicator (KPI). A KPI is a collection of calculations that are associated with a measure group in a cube and are used to evaluate business or scenario success.  
   

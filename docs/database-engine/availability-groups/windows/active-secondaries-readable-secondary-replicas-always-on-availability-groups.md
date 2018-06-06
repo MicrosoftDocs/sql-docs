@@ -3,7 +3,6 @@ title: "Active Secondaries-Readable Secondary Replicas-Always On Availability | 
 ms.custom: ""
 ms.date: "06/06/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: 80
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Active Secondaries: Readable Secondary Replicas (Always On Availability Groups)

@@ -3,7 +3,6 @@ title: "Distributed availability groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/12/2018"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -14,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: "allanhirt"
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
 ---
 # Distributed availability groups

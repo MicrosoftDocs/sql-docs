@@ -1,6 +1,6 @@
 ---
 title: "UPDATE CUBE Statement (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Manipulation - UPDATE CUBE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   The UPDATE CUBE statement is used to write back data to any cell in a cube that aggregates to its parent using the SUM aggregation. For more explanation and an example, see "Understanding Allocations" in this blog post: [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
   

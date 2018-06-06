@@ -3,7 +3,6 @@ title: "Install SQL Server 2016 from the Installation Wizard (Setup) | Microsoft
 ms.custom: ""
 ms.date: "09/06/2016"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server, installing"
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 91
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Install SQL Server from the Installation Wizard (Setup)

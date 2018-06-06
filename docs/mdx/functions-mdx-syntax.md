@@ -1,6 +1,6 @@
 ---
 title: "Functions (MDX Syntax) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Functions (MDX Syntax)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Multidimensional Expressions (MDX) has several categories of intrinsic functions to perform certain operations. The following table lists the function categories that are available in MDX.  
   

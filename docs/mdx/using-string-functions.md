@@ -1,6 +1,6 @@
 ---
 title: "Using String Functions | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Using String Functions
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   You can use string functions on nearly every object in Multidimensional Expressions (MDX). In stored procedures, you use string functions primarily to convert the object to a string representation. You also use string functions to evaluate a string expression over an object in order to return a value.  
   

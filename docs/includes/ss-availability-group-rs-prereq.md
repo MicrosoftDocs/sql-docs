@@ -48,7 +48,7 @@ CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
 
-#### Certificate Authentication
+#### Certificate authentication
 
 If you utilize a secondary replica that requires authentication with SQL authentication, use a certificate for authenticating between the mirroring endpoints.
 
@@ -67,7 +67,7 @@ BACKUP CERTIFICATE dbm_certificate
 
 At this point, your primary SQL Server replica has a certificate at `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer` and a private key at `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas.
 
-Ensure on each secondary replica that the service account for the SQL Server instance has permissions to access the certificate.
+On each secondary replica, ensure that the service account for the SQL Server instance has permissions to access the certificate.
 
 #### Create the certificate on secondary servers
 

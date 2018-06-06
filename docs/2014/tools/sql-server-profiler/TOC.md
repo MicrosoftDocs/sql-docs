@@ -68,7 +68,7 @@
 ## [Trace Table Properties (Events Selection Tab)](../../database-engine/trace-table-properties-events-selection-tab.md)
 ## [SQL Server Profiler - Performance Counters Limit](../../database-engine/sql-server-profiler-performance-counters-limit.md)
 ## [SQL Server Profiler - Tools/Options (General Options Page)](../../database-engine/sql-server-profiler-tools-options-general-options-page.md)
-## [SQL Server Profiler - Source Table/Database Engine Tuning Advisor - Select Workload Table](../../relational-databases/performance/database-engine-tuning-advisor.md)
+## [SQL Server Profiler - Source Table/Database Engine Tuning Advisor - Select Workload Table](../../database-engine/select-workload-table-sql-server-profiler-source-table-database-engine-tuning-advisor.md)
 ## [SQL Server Profiler - Destination Table](../../database-engine/sql-server-profiler-destination-table.md)
 ## [SQL Server Profiler - Replay Configuration (Basic Replay Options)](../../database-engine/sql-server-profiler-replay-configuration-basic-replay-options.md)
 ## [SQL Server Profiler - Replay Configuration (Advanced Replay Options)](../../database-engine/sql-server-profiler-replay-configuration-advanced-replay-options.md)

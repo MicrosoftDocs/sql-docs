@@ -18,7 +18,7 @@ ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 
 ### Verify that the database is created on the secondary servers
 
-To see if the `db1` database was created and is synchronized, run the following query on each secondary SQL Server replica:
+To see whether the `db1` database was created and is synchronized, run the following query on each secondary SQL Server replica:
 
 ```sql
 SELECT * FROM sys.databases WHERE name = 'db1';

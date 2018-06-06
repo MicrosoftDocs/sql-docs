@@ -98,7 +98,7 @@
 ## [Executing SQL Queries (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)
 ## [Executing SQL Queries by Using the ExecuteXMLReader Method](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)
 ## [Processing XML on the Client Side (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)
-## [Executing XPath Queries (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)
+## [Executing XPath Queries (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md)
 ## [Executing XPath Queries with Namespaces (SQLXML Managed Classes)](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md)
 ## [Executing Template Files by Using the CommandText Property](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)
 ## [Executing Template Files by Using the CommandStream Property](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)

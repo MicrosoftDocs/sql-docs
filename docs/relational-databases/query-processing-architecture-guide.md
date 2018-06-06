@@ -33,15 +33,17 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can process SQL s
 - Batch mode execution
 
 ### Row mode execution
-*Row mode execution* is a query processing method used with traditional RDMBS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required record stored in row format, which includes the intersection of that row with all the columns specified on the table. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
+*Row mode execution* is a query processing method used with traditional RDMBS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, accross all the columns specified in the table schema. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
 
 > [!NOTE]
 > Row mode execution is very efficient for OLTP scenarios, but can be less efficient when scanning large amounts of data, for example in Data Warehousing scenarios.
 
 ### Batch mode execution  
-*Batch mode execution* is a query processing method used to process multiple rows together (hence the term batch), from tables where data is stored in columnar format. Each column within a batch is stored as a vector in a separate area of memory, so batch mode processing is vector-based. Batch mode processing also uses algorithms that are optimized for the multi-core CPUs and increased memory throughput that are found on modern hardware.      
+*Batch mode execution* is a query processing method used to process multiple rows together (hence the term batch). Each column within a batch is stored as a vector in a separate area of memory, so batch mode processing is vector-based. Batch mode processing also uses algorithms that are optimized for the multi-core CPUs and increased memory throughput that are found on modern hardware.      
+
 Batch mode execution is closely integrated with, and optimized around, the columnstore storage format. Batch mode processing operates on compressed data when possible, and eliminates the [exchange operator](../relational-databases/showplan-logical-and-physical-operators-reference.md #exchange) used by row mode execution. The result is better parallelism and faster performance.    
-When a query is executed and accesses data in columnstore indexes, the execution tree operators and child operators read multiple rows together in column segments. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reads only the columns required for the result, as referenced by a SELECT statement, JOIN predicate, or filter predicate.    
+
+When a query is executed in batch mode, and accesses data in columnstore indexes, the execution tree operators and child operators read multiple rows together in column segments. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reads only the columns required for the result, as referenced by a SELECT statement, JOIN predicate, or filter predicate.    
 For more information on columnstore indexes, see [Columnstore Index Architecture](../relational-databases/sql-server-index-design-guide.md#columnstore_index).
 
 > [!NOTE]

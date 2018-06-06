@@ -1,7 +1,7 @@
 ---
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/23/2017"
+ms.date: "06/06/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "relational-databases-misc"
@@ -71,7 +71,7 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 
 ## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
-In earlier versions of SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
+In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
 -  **Single-page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. THe buffer pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
 -  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8-KB.
 -  **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
@@ -105,7 +105,6 @@ This behavior is typically observed during the following operations:
 -  Tracing operations that have to store large input parameters.
 
 ## Changes to "memory_to_reserve" starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
 In earlier versions of SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager set aside a part of the process virtual address space (VAS) for use by the **Multi-Page Allocator (MPA)**, **CLR Allocator**, memory allocations for **thread stacks** in the SQL Server process, and **Direct Windows allocations (DWA)**. This part of the virtual address space is also known as "Mem-To-Leave" or "non-Buffer Pool" region.
 
 The virtual address space that is reserved for these allocations is determined by the ***memory_to_reserve*** configuration option. The default value that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses is 256 MB. To override the default value, use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* startup parameter. Refer to the documentation page on [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
@@ -123,7 +122,6 @@ The following table indicates whether a specific type of memory allocation falls
 |Direct allocations from Windows|Yes|Yes|
 
 ## <a name="dynamic-memory-management"></a> Dynamic Memory Management
-
 The default memory management behavior of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] is to acquire as much memory as it needs without creating a memory shortage on the system. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does this by using the Memory Notification APIs in Microsoft Windows.
 
 When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is using memory dynamically, it queries the system periodically to determine the amount of free memory. Maintaining this free memory prevents the operating system (OS) from paging. If less memory is free, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] releases memory to the OS. If more memory is free, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may allocate more memory. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adds memory only when its workload requires more memory; a server at rest does not increase the size of its virtual address space.  
@@ -182,7 +180,7 @@ If the same value is specified for both min server memory and max server memory,
 
 If an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on a computer where other applications are frequently stopped or started, the allocation and deallocation of memory by the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may slow the startup times of other applications. Also, if [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is one of several server applications running on a single computer, the system administrators may need to control the amount of memory allocated to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In these cases, you can use the min server memory and max server memory options to control how much memory [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can use. The **min server memory** and **max server memory** options are specified in megabytes. For more information, see [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
-## Memory used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects specifications
+## Memory used by SQL Server objects specifications
 The following list describes the approximate amount of memory used by different objects in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The amounts listed are estimates and can vary depending on the environment and how objects are created:
 
 * Lock (as maintained by the Lock Manager): 64 bytes + 32 bytes per owner   
@@ -198,7 +196,7 @@ The *min memory per query* configuration option establishes the minimum amount o
 > [!IMPORTANT]
 > Do not set the min memory per query server configuration option too high, especially on very busy systems, because the query has to wait on REOSURCE_SEMAPHORE, until it can secure the minimum memory requested, or until the value specified in the query wait server configuration option is exceeded. For other recommendations on using this configuration, see [Configure the min memory per query Server Configuration Option](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
-### Memory grant considerations
+### <a name="memory-grant-considerations"></a>Memory grant considerations
 For **row mode execution**, the initial memory grant cannot be exceeded under any condition. If more memory than the initial grant is needed to execute **hash** or **sort** operations, then these will spill to disk. A hash operation that spills is supported by a Workfile in TempDB, while a sort operation that spills is supported by a [Worktable](../relational-databases/query-processing-architecture-guide.md#worktables). Spills are usually caused by 
 A spill that occurs during a Sort operation is known as a [Sort Warning](../relational-databases/event-classes/sort-warnings-event-class.md). Sort warnings indicate that sort operations do not fit into memory. This does not include sort operations involving the creation of indexes, only sort operations within a query (such as an `ORDER BY` clause used in a `SELECT` statement).
 

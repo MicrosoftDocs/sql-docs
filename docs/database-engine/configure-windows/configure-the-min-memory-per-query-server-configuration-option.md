@@ -48,13 +48,13 @@ manager: craigg
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The amount of min memory per query has precedence over the [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) option. If you modify both options and the index create memory is less than min memory per query, you receive a warning message, but the value is set. During query execution you receive another similar warning.  
+-   The amount of min memory per query has precedence over the [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) option. If you modify both options and the index create memory is less than min memory per query, you receive a warning message, but the value is set. During query execution, you receive another similar warning.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
 -   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor tries to determine the optimal amount of memory to allocate to a query. The min memory per query option lets the administrator specify the minimum amount of memory any single query receives. Queries generally receive more memory than this if they have hash and sort operations on a large volume of data. Increasing the value of min memory per query may improve performance for some small to medium-sized queries, but doing so could lead to increased competition for memory resources. The min memory per query option includes memory allocated for sort operations.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor tries to determine the optimal amount of memory to allocate to a query. The min memory per query option lets the administrator specify the minimum amount of memory any single query receives. Queries generally receive more memory than this, if they have hash and sort operations on a large volume of data. Increasing the value of min memory per query may improve performance for some small to medium-sized queries, but doing so could lead to increased competition for memory resources. The min memory per query option includes memory allocated for sort operations.  
 
 -    Do not set the min memory per query server configuration option too high, especially on very busy systems, because the query has to wait<sup>1</sup> until it can secure the minimum memory requested, or until the value specified in the query wait server configuration option is exceeded. If more memory is available than the specified minimum value required to execute the query, the query is allowed to make use of the additional memory, provided that the memory can be used effectively by the query.     
 

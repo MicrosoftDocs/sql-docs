@@ -1,7 +1,7 @@
 # [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)
 # [Data Source Names and 64-Bit Operating Systems](data-source-names-and-64-bit-operating-systems.md)
 # [Creating a SQL Server Native Client ODBC Driver Application](creating-a-driver-application.md)
-## [Asynchronous Mode and SQLCancel](../../native-client-odbc-api/sqlcancel.md)
+## [Asynchronous Mode and SQLCancel](creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)
 ## [Multithreaded Applications](creating-a-driver-application-multithreaded-applications.md)
 # [Communicating with SQL Server (ODBC)](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)
 ## [Allocating an Environment Handle](../../native-client-odbc-communication/allocating-an-environment-handle.md)

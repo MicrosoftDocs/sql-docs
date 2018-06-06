@@ -69,7 +69,7 @@ Microsoft Python Open     |no change; use previous|
 Microsoft Python Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
 **SQL Server 2017 CU7** |
 Microsoft R Open     |no change; use previous|
-Microsoft R Server      |o change; use previous|
+Microsoft R Server      |no change; use previous|
 Microsoft Python Open     |no change; use previous|
 Microsoft Python Server    |no change; use previous|
 

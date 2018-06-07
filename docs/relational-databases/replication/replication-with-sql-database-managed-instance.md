@@ -29,7 +29,7 @@ Azure SQL Database Managed Instance (preview) supports transactional replication
 
 ## Common configurations
 
-In general, the publisher and the distributor must both be either in the cloud or on premises. The following configurations are supported:
+In general, the publisher and the distributor must both be either in the cloud or on-premises. The following configurations are supported:
 
 - **Publisher with local distributor on managed instance**
 
@@ -47,23 +47,23 @@ In general, the publisher and the distributor must both be either in the cloud o
 
   - Both managed instances are in the same location.
 
-- **Publisher and distributor on premises with subscriber on managed instance**
+- **Publisher and distributor on-premises with subscriber on managed instance**
 
    ![Replication-from-on-premises-to-azure-sql-db-subscriber](./media/replication-with-sql-database-managed-instance/03-azure-sql-db-subscriber.png)
 
-   In this configuration managed instance is a subscriber. This configuration supports migration from on-premises to Azure. In the subscriber role, SQL database does not require managed instance, you can use a SQL Database Managed Instance as a step in migration from on-premises to the Azure. For more information about Azure SQL Database subscribers, see [Replication to SQL Database](replication-to-sql-database.md).
+   In this configuration, Azure SQL Database is a subscriber. This configuration supports migration from on-premises to Azure. In the subscriber role, SQL database does not require managed instance, however you can use a SQL Database Managed Instance as a step in migration from on-premises to the Azure. For more information about Azure SQL Database subscribers, see [Replication to SQL Database](replication-to-sql-database.md).
 
 ## Requirements
 
 Publisher and distributor on Azure SQL Database requires:
 
-- Azure SQL Database Managed Instance. 
+- Azure SQL Database Managed Instance.
 
    Azure SQL Databases that are not configured with Managed instance can only be subscribers.
 
 - All instances of SQL Server need to be on the same vNet.
 
-- Connectivity between replication participants use SQL Authentication.
+- Connectivity uses SQL Authentication between replication participants.
 
 - An Azure Storage Account share for the replication working directory.
 
@@ -128,7 +128,7 @@ Supports:
 
     In the following query, replace `<Publishing_DB>` with the name of your publisher database.
 
-    Replace `<Publication_Name>` with the name for your pubication.
+    Replace `<Publication_Name>` with the name for your publication.
 
     Replace `<SQL_USER>` and `<PASSWORD>` with the SQL Server Account and password.
 

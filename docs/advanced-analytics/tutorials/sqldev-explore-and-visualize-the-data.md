@@ -157,7 +157,7 @@ Typically the data scientist will generate multiple data visualizations to get i
 
 1. Use the existing stored procedure, **PlotInOutputFiles**, to write histograms, scatterplots, and other R graphics to .JPG and .PDF format. The `RunSQL_SQL_Walkthrough.ps1` creates **PlotInOutputFiles** and adds it the database. Use right-click **Modify** to view the source.
 
-2. Optionally, as a learning exercise, create your own copy of the procedure as **PlotInOutputFiles2**, with a unqiue name to avoid a naming conflict.
+2. Optionally, as a learning exercise, create your own copy of the procedure as **PlotInOutputFiles2**, with a unique name to avoid a naming conflict.
 
     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open a new **Query** window, and paste in the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.
   

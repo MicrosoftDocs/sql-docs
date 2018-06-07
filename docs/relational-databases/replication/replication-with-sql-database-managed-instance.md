@@ -55,6 +55,8 @@ Managed instance can host replication databases in the follwoing configurations:
 
 ## Requirements
 
+- Publisher and distributor in Azure require SQL Database Managed Instance
+
 - All instances of SQL Server need to be on the same vNet
 
 - Connectivity between replication participants use SQL Authentication
@@ -65,28 +67,112 @@ Managed instance can host replication databases in the follwoing configurations:
 
 - Supports mix of on-premises and Azure SQL Database Managed Instance instances.
 
-## Configure publishing and distribution 
+## Configure publishing and distribution example
 
-## Remarks
+1. [Create an Azure SQL Database Managed Instance](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-create-tutorial-portal) in the portal.
 
+1. [Create an Azure Storage Account](http://docs.microsoft.com/azure/storage/common/storage-create-storage-account#create-a-storage-account) for the working directory. Be sure to copy the storage keys. See [View and copy storage access keys](http://docs.microsoft.com/en-us/storage/common/storage-create-storage-account#create-a-storage-account). 
 
-## Replication Architecture
- 
-## Scenarios
+1. Create a database for the publisher.
 
-### Typical Replication Scenario
+   In the example scripts below, replace '<Publishing_DB>' with the name of this database.
 
-- Migrate from on premises to Azure SQL Database Managed instance. 
+1. Create a database user with SQL Authentication for the distributor. See, [Creating database users](http://docs.microsoft.com/azure/sql-database/sql-database-security-tutorial#creating-database-users). Use a secure password. 
 
+   In the example scripts below, use '<SQL_USER>' and '<PASSWORD>' with this SQL Server Account database user and password.
 
+1. [Connect to the SQL Database Managed Instance](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ssms).
 
-#### Data Migration Scenario
+1. Run the following query to add the distributor and the distribution database.
 
+   ```sql
+   USE [master]​
+   GO
+   EXEC sp_adddistributor @distributor = @@ServerName​;
+   EXEC sp_adddistributiondb @database = N'distribution'​;
+   ```
 
-## Limitations
+1. To configure a publisher to use a specified distribution database, update and run the follwing query.
 
+   Replace '<SQL_USER>' and '<PASSWORD>' with the SQL Server Account and password.
 
-## Examples
+   Replace '\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>' with the value for your storage account. 
 
+   Replace '<STORAGE_CONNECTION_STRING>' with the value for your access keys.
+
+   After you update the following query, run it. 
+
+   ```sql
+   USE [master]​
+   EXEC sp_adddistpublisher @publisher = @@ServerName,
+                @distribution_db = N'distribution',​
+                @security_mode = 0,
+                @login = N'<SQL_USER>''<SQL_USER>',
+                @password = N'<PASSWORD>',
+                @working_directory = N'\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>',
+                @storage_connection_string = N'<STORAGE_CONNECTION_STRING>';
+   GO​
+   ```
+
+1. Configure the publisher for replication. 
+
+    In the following query, replace '<Publishing_DB>' with the name of your publisher database.
+
+    Replace '<Publication_Name>' a name for your pubication.
+
+    Replace '<SQL_USER>' and '<PASSWORD>' with the SQL Server Account and password.
+
+    After you update the query, run it to create the publication.
+
+   ```sql
+   USE [<Publishing_DB>]​
+   EXEC sp_replicationdboption @dbname = N'<Publishing_DB>',
+                @optname = N'publish',
+                @value = N'true'​;
+
+   EXEC sp_addpublication @publication = N'<Publication_Name>',
+                @status = N'active';​
+
+   EXEC sp_changelogreader_agent @publisher_security_mode = 0,
+                @publisher_login = N'<SQL_USER>',
+                @publisher_password = N'<PASSWORD>',
+                @job_login = N'<SQL_USER>',
+                @job_password = N'<PASSWORD>';
+
+   EXEC sp_addpublication_snapshot @publication = N'<Publication_Name>',
+                @frequency_type = 1,​
+                @publisher_security_mode = 0,​
+                @publisher_login = N'<SQL_USER>',
+                @publisher_password = N'<PASSWORD>',
+                @job_login = N'<SQL_USER>',
+                @job_password = N'<PASSWORD>'
+
+   EXEC sp_addarticle @publication = N'<Publication_Name>', 
+                @type = N'logbased'
+   ```
+
+1. To add a subscription, update the values in the following query and run it.
+
+   ```
+   USE [<Publishing_DB>]​
+   @article = N'<Object_Name>',
+   @source_object = N'<Object_Name>',
+   @source_owner = N'<Object_Schema>'​
+
+   EXEC sp_addsubscription @publication = N'<Publication_Name>',​
+                @subscriber = @@ServerName,
+                @destination_db = N'<Subscribing_DB>',
+                @subscription_type = N'Push'​
+
+   EXEC sp_addpushsubscription_agent @publication = N'<Publication_Name>',
+                @subscriber = @@ServerName,​
+                @subscriber_db = N'<Subscribing_DB>',
+                @subscriber_security_mode = 0,
+                @subscriber_login = N'<SQL_USER>',
+                @subscriber_password = N'<PASSWORD>',
+                @job_login = N'<SQL_USER>', 
+                @job_password = N'<PASSWORD>'
+   GO​
+   ```
 
 ## See Also

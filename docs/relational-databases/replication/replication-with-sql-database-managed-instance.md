@@ -57,7 +57,7 @@ In general, the publisher and the distributor must both be either in the cloud o
 
 Publisher and distributor on Azure SQL Database requires:
 
-- Azure SQL Database Managed Instance.
+- Azure SQL Database Managed Instance. 
 
    Azure SQL Databases that are not configured with Managed instance can only be subscribers.
 
@@ -106,11 +106,11 @@ Supports:
 
    Replace `<SQL_USER>` and `<PASSWORD>` with the SQL Server Account and password.
 
-   Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the value for your storage account.
+   Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the value for your storage account. 
 
    Replace `<STORAGE_CONNECTION_STRING>` with the value for your access keys.
 
-   After you update the following query, run it.
+   After you update the following query, run it. 
 
    ```sql
    USE [master]​
@@ -124,7 +124,7 @@ Supports:
    GO​
    ```
 
-1. Configure the publisher for replication.
+1. Configure the publisher for replication. 
 
     In the following query, replace `<Publishing_DB>` with the name of your publisher database.
 
@@ -158,18 +158,18 @@ Supports:
                 @job_password = N'<PASSWORD>'
    ```
 
-1. Add the article, subscription, and push subscription agent.
+1. Add the article, subscription, and push subscription agent. 
 
    To add these objects, update the following script.
 
    Replace `<Object_Name>` with the name of the publication object.
 
-   Replace `<Object_Schema>` with the name of the source schema.
+   Replace `<Object_Schema>` with the name of the source schema. 
 
-   Replace the other parameters in angle brackets `<>` to match the values in the previous scripts.
+   Replace the other parameters in angle brackets `<>` to match the values in the previous scripts. 
 
    ```sql
-   EXEC sp_addarticle @publication = N'<Publication_Name>'.
+   EXEC sp_addarticle @publication = N'<Publication_Name>',
                 @type = N'logbased',
                 @article = N'<Object_Name>',
                 @source_object = N'<Object_Name>',
@@ -186,7 +186,7 @@ Supports:
                 @subscriber_security_mode = 0,
                 @subscriber_login = N'<SQL_USER>',
                 @subscriber_password = N'<PASSWORD>',
-                @job_login = N'<SQL_USER>'.
+                @job_login = N'<SQL_USER>', 
                 @job_password = N'<PASSWORD>'
    GO​
    ```

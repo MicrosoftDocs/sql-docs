@@ -3,7 +3,7 @@ title: Lesson 5 Train and save a model using T-SQL | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 06/07/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -14,7 +14,7 @@ manager: cgronlun
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
-In this lesson, you'll learn how to train a machine learning model by using R. You'll train the model using the data features you just created, and then save the trained model in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. In this case, the R packages are already installed with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], so everything can be done from SQL.
+In this lesson, you'll learn how to train a machine learning model by using R. You'll train the model using the data features you created in the previous lesson, and then save the trained model in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. In this case, the R packages are already installed with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], so everything can be done from SQL.
 
 ## Create the stored procedure
 

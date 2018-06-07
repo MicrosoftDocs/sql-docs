@@ -3,7 +3,7 @@ title: Lesson 4 Ceate data features using T-SQL  | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 06/07/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist

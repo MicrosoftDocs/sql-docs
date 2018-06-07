@@ -3,7 +3,7 @@ title: In-database R analytics for SQL developers (tutorial)| Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 06/07/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -56,11 +56,11 @@ This tutorial uses a well-known public dataset, based on trips in New York city 
 
 ### Requirements
 
-This tutorial is for users who are familiar with basic database operations such as creating databases and tables, importing data into tables, and writing SQL queries. All R code is provided, so no R development environment is required. A skilled SQL programmer can use [! INCLUDE [tsql] (../../ includes / tsql-md.md)] in [! INCLUDE [ssManStudioFull] (../../ includes / ssmanstudiofull-md.md) And run the supplied PowerShell script to complete this example. However, before you start this tutorial, you should complete the following preparations:
+This tutorial assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know R. As such, all R code is provided. A skilled SQL programmer can use a supplied PowerShell script, sample data on GitHub, and  [!INCLUDE [tsql](../../ includes / tsql-md.md)] in [!INCLUDE [ssManStudioFull](../../ includes / ssmanstudiofull-md.md) to complete this example. 
 
-However, before starting the tutorial, you must complete these preparations:
+Before starting the tutorial:
 
-- Connect to an instance of SQL Server 2016 with R Services, or SQL Server 2017 with Machine Learning Services and R enabled.
+- Verify you have a configured instance of [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) or [SQL Server 2017 Machine Learning Services with R enabled](../install/sql-machine-learning-services-windows-install.md#verify-installation). Additionally, [confirm you have the R libraries](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
 - The login that you use for this tutorial must have permissions to create databases and other objects, to upload data, select data, and run stored procedures.
 
 > [!NOTE]

@@ -41,7 +41,7 @@ sqlsrv_configure( string $setting, mixed $value )
   
 |Setting|Possible values for $value parameter (integer equivalent in parentheses)|Default value|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
-|ClientBufferMaxKBSize<sup>1</sup>|A non negative number up to the PHP memory limit.<br /><br />Zero or any negative number is not allowed.|10240 KB|  
+|ClientBufferMaxKBSize<sup>1</sup>|A non negative number up to the PHP memory limit.<br /><br />Zero and negative numbers are not allowed.|10240 KB|  
 |LogSeverity<sup>2</sup>|SQLSRV_LOG_SEVERITY_ALL (-1)<br /><br />SQLSRV_LOG_SEVERITY_ERROR (1)<br /><br />SQLSRV_LOG_SEVERITY_NOTICE (4)<br /><br />SQLSRV_LOG_SEVERITY_WARNING (2)|SQLSRV_LOG_SEVERITY_ERROR (1)|  
 |LogSubsystems<sup>2</sup>|SQLSRV_LOG_SYSTEM_ALL (-1)<br /><br />SQLSRV_LOG_SYSTEM_CONN (2)<br /><br />SQLSRV_LOG_SYSTEM_INIT (1)<br /><br />SQLSRV_LOG_SYSTEM_OFF (0)<br /><br />SQLSRV_LOG_SYSTEM_STMT (4)<br /><br />SQLSRV_LOG_SYSTEM_UTIL (8)|SQLSRV_LOG_SYSTEM_OFF (0)|  
 |WarningsReturnAsErrors<sup>3</sup>|**true** (1) or **false** (0)|**true** (1)|  

@@ -29,7 +29,7 @@ Azure SQL Database Managed Instance (preview) supports transactional replication
 
 ## Common configurations
 
-Managed instance can host replication databases in the follwoing configurations:
+In general, the publisher and the distributor must both be either in the cloud or on premises. The following configurations are supported:
 
 - **Publisher with local distributor on managed instance**
 
@@ -43,9 +43,9 @@ Managed instance can host replication databases in the follwoing configurations:
 
    Publisher and distributor are configured on two managed instances. In this configuration:
 
-   - Both managed instances are in the same vNet.
+      - Both managed instances are in the same vNet.
 
-   - Both managed instances are in the same location.
+      - Both managed instances are in the same location.
 
 - **Publisher and distributor on premises with subscriber on managed instance**
 
@@ -55,29 +55,39 @@ Managed instance can host replication databases in the follwoing configurations:
 
 ## Requirements
 
-- Publisher and distributor in Azure require SQL Database Managed Instance
+Publisher and distributor on Azure SQL Database requires:
 
-- All instances of SQL Server need to be on the same vNet
+- Azure SQL Database Managed Instance.
 
-- Connectivity between replication participants use SQL Authentication
+   Azure SQL Databases that are not configured with Managed instance can only be subscribers.
 
-- Managed instance distributors and publishers use an Azure storage account for the working directory
+- All instances of SQL Server need to be on the same vNet.
+
+- Connectivity between replication participants use SQL Authentication.
+
+- An Azure Storage Account share for the replication working directory.
 
 ## Features
 
-- Supports mix of on-premises and Azure SQL Database Managed Instance instances.
+Supports:
+
+- Transactional and snapshot replication mix of on-premises and Azure SQL Database Managed Instance instances.
+
+- Subscribers can be on-premises, in Azure SQL Database, or elastic pools.
+
+- One-way or bidirectional replication
 
 ## Configure publishing and distribution example
 
 1. [Create an Azure SQL Database Managed Instance](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-create-tutorial-portal) in the portal.
 
-1. [Create an Azure Storage Account](http://docs.microsoft.com/azure/storage/common/storage-create-storage-account#create-a-storage-account) for the working directory. Be sure to copy the storage keys. See [View and copy storage access keys](http://docs.microsoft.com/en-us/storage/common/storage-create-storage-account#create-a-storage-account). 
+1. [Create an Azure Storage Account](http://docs.microsoft.com/azure/storage/common/storage-create-storage-account#create-a-storage-account) for the working directory. Be sure to copy the storage keys. See [View and copy storage access keys](http://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-access-keys).
 
 1. Create a database for the publisher.
 
    In the example scripts below, replace `<Publishing_DB>` with the name of this database.
 
-1. Create a database user with SQL Authentication for the distributor. See, [Creating database users](http://docs.microsoft.com/azure/sql-database/sql-database-security-tutorial#creating-database-users). Use a secure password. 
+1. Create a database user with SQL Authentication for the distributor. See, [Creating database users](http://docs.microsoft.com/azure/sql-database/sql-database-security-tutorial#creating-database-users). Use a secure password.
 
    In the example scripts below, use `<SQL_USER>` and `<PASSWORD>` with this SQL Server Account database user and password.
 
@@ -96,11 +106,11 @@ Managed instance can host replication databases in the follwoing configurations:
 
    Replace `<SQL_USER>` and `<PASSWORD>` with the SQL Server Account and password.
 
-   Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the value for your storage account. 
+   Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the value for your storage account.
 
    Replace `<STORAGE_CONNECTION_STRING>` with the value for your access keys.
 
-   After you update the following query, run it. 
+   After you update the following query, run it.
 
    ```sql
    USE [master]​
@@ -114,11 +124,11 @@ Managed instance can host replication databases in the follwoing configurations:
    GO​
    ```
 
-1. Configure the publisher for replication. 
+1. Configure the publisher for replication.
 
     In the following query, replace `<Publishing_DB>` with the name of your publisher database.
 
-    Replace `<Publication_Name>` a name for your pubication.
+    Replace `<Publication_Name>` with the name for your pubication.
 
     Replace `<SQL_USER>` and `<PASSWORD>` with the SQL Server Account and password.
 
@@ -146,18 +156,24 @@ Managed instance can host replication databases in the follwoing configurations:
                 @publisher_password = N'<PASSWORD>',
                 @job_login = N'<SQL_USER>',
                 @job_password = N'<PASSWORD>'
-
-   EXEC sp_addarticle @publication = N'<Publication_Name>', 
-                @type = N'logbased'
    ```
 
-1. To add a subscription, update the values in the following query and run it.
+1. Add the article, subscription, and push subscription agent.
+
+   To add these objects, update the following script.
+
+   Replace `<Object_Name>` with the name of the publication object.
+
+   Replace `<Object_Schema>` with the name of the source schema.
+
+   Replace the other parameters in angle brackets `<>` to match the values in the previous scripts.
 
    ```sql
-   USE [<Publishing_DB>]​
-   @article = N'<Object_Name>',
-   @source_object = N'<Object_Name>',
-   @source_owner = N'<Object_Schema>'​
+   EXEC sp_addarticle @publication = N'<Publication_Name>'.
+                @type = N'logbased',
+                @article = N'<Object_Name>',
+                @source_object = N'<Object_Name>',
+                @source_owner = N'<Object_Schema>'​
 
    EXEC sp_addsubscription @publication = N'<Publication_Name>',​
                 @subscriber = @@ServerName,
@@ -170,9 +186,19 @@ Managed instance can host replication databases in the follwoing configurations:
                 @subscriber_security_mode = 0,
                 @subscriber_login = N'<SQL_USER>',
                 @subscriber_password = N'<PASSWORD>',
-                @job_login = N'<SQL_USER>', 
+                @job_login = N'<SQL_USER>'.
                 @job_password = N'<PASSWORD>'
    GO​
    ```
 
+## Limitations
+
+The following features are not supported:
+
+- Updateable subscriptions
+
+- Active geo replication
+
 ## See Also
+
+- [What is a Managed Instance (preview)?](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)

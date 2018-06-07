@@ -75,11 +75,11 @@ Managed instance can host replication databases in the follwoing configurations:
 
 1. Create a database for the publisher.
 
-   In the example scripts below, replace '<Publishing_DB>' with the name of this database.
+   In the example scripts below, replace `<Publishing_DB>` with the name of this database.
 
 1. Create a database user with SQL Authentication for the distributor. See, [Creating database users](http://docs.microsoft.com/azure/sql-database/sql-database-security-tutorial#creating-database-users). Use a secure password. 
 
-   In the example scripts below, use '<SQL_USER>' and '<PASSWORD>' with this SQL Server Account database user and password.
+   In the example scripts below, use `<SQL_USER>` and `<PASSWORD>` with this SQL Server Account database user and password.
 
 1. [Connect to the SQL Database Managed Instance](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ssms).
 
@@ -94,11 +94,11 @@ Managed instance can host replication databases in the follwoing configurations:
 
 1. To configure a publisher to use a specified distribution database, update and run the follwing query.
 
-   Replace '<SQL_USER>' and '<PASSWORD>' with the SQL Server Account and password.
+   Replace `<SQL_USER>` and `<PASSWORD>` with the SQL Server Account and password.
 
-   Replace '\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>' with the value for your storage account. 
+   Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the value for your storage account. 
 
-   Replace '<STORAGE_CONNECTION_STRING>' with the value for your access keys.
+   Replace `<STORAGE_CONNECTION_STRING>` with the value for your access keys.
 
    After you update the following query, run it. 
 
@@ -107,7 +107,7 @@ Managed instance can host replication databases in the follwoing configurations:
    EXEC sp_adddistpublisher @publisher = @@ServerName,
                 @distribution_db = N'distribution',​
                 @security_mode = 0,
-                @login = N'<SQL_USER>''<SQL_USER>',
+                @login = N'<SQL_USER>',
                 @password = N'<PASSWORD>',
                 @working_directory = N'\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>',
                 @storage_connection_string = N'<STORAGE_CONNECTION_STRING>';
@@ -116,11 +116,11 @@ Managed instance can host replication databases in the follwoing configurations:
 
 1. Configure the publisher for replication. 
 
-    In the following query, replace '<Publishing_DB>' with the name of your publisher database.
+    In the following query, replace `<Publishing_DB>` with the name of your publisher database.
 
-    Replace '<Publication_Name>' a name for your pubication.
+    Replace `<Publication_Name>` a name for your pubication.
 
-    Replace '<SQL_USER>' and '<PASSWORD>' with the SQL Server Account and password.
+    Replace `<SQL_USER>` and `<PASSWORD>` with the SQL Server Account and password.
 
     After you update the query, run it to create the publication.
 
@@ -153,7 +153,7 @@ Managed instance can host replication databases in the follwoing configurations:
 
 1. To add a subscription, update the values in the following query and run it.
 
-   ```
+   ```sql
    USE [<Publishing_DB>]​
    @article = N'<Object_Name>',
    @source_object = N'<Object_Name>',

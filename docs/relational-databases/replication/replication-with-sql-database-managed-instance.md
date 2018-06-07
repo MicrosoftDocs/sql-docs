@@ -59,7 +59,8 @@ Publisher and distributor on Azure SQL Database requires:
 
 - Azure SQL Database Managed Instance.
 
-   Azure SQL Databases that are not configured with Managed instance can only be subscribers.
+   >[!NOTE]
+   >Azure SQL Databases that are not configured with Managed instance can only be subscribers.
 
 - All instances of SQL Server need to be on the same vNet.
 

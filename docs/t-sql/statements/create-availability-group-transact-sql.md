@@ -72,19 +72,21 @@ CREATE AVAILABILITY GROUP group_name
         FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
         [ , <add_replica_option> [ ,...n ] ]  
       )   
-    
+
     <add_replica_option>::=  
-        SEEDING_MODE = { AUTOMATIC | MANUAL }  
-      | BACKUP_PRIORITY = n  
-      | SECONDARY_ROLE ( {   
+         SEEDING_MODE = { AUTOMATIC | MANUAL }  
+       | BACKUP_PRIORITY = n  
+       | SECONDARY_ROLE ( {   
               [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
           [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
-      } )  
-      | PRIMARY_ROLE ( {   
+       } )  
+       | PRIMARY_ROLE ( {   
               [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
           [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-      } )  
-      | SESSION_TIMEOUT = integer  
+          [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+       } )  
+       | SESSION_TIMEOUT = integer  
+
 
   <listener_option> ::=  
     {  
@@ -107,6 +109,7 @@ CREATE AVAILABILITY GROUP group_name
 
   <add_availability_group_spec>::=  
   <ag_name> WITH  
+
     (  
       LISTENER_URL = 'TCP://system-address:port',  
       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  

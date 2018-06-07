@@ -25,7 +25,7 @@ ms.author: edmaca
 manager: craigg
 ---
 # sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates the Snapshot Agent for the specified publication. This stored procedure is executed at the Publisher on the publication database.  
   

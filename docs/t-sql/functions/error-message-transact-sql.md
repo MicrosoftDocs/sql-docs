@@ -45,7 +45,7 @@ ERROR_MESSAGE ( )
  **nvarchar(4000)**  
   
 ## Return Value  
-When called in a CATCH block, `ERROR_MESSAGE` returns the complete text of the error message that invoked the `CATCH` block. The text includes the values supplied for any substitutable parameters - for example, lengths, object names, or times.  
+When called in a CATCH block, `ERROR_MESSAGE` returns the complete text of the error message that caused the `CATCH` block to run. The text includes the values supplied for any substitutable parameters - for example, lengths, object names, or times.  
   
 `ERROR_MESSAGE` returns NULL when called outside the scope of a CATCH block.  
   

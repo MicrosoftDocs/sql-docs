@@ -752,7 +752,7 @@ The following resources are required for resumable online index create operation
 > **Resumable Online Index Create** is currently only supported for non-clustered index.
 
 The following functionality is disabled for resumable index create operations
-- •	Resumable Index Create is not supported for a clustered index for public preview.
+- Resumable Index Create is not supported for a clustered index for public preview.
 - After a resumable online index create operation is paused, the initial value of MAXDOP cannot be changed
 - DROP EXISTING clause is not supported
 - Create an index that contains 
@@ -1049,12 +1049,12 @@ GO
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
-CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+CREATE  INDEX test_idx on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
 -- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
-CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+CREATE INDEX test_idx on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 
 ALTER INDEX test_idx on test_table PAUSE   

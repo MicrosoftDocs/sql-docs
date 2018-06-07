@@ -43,9 +43,9 @@ In general, the publisher and the distributor must both be either in the cloud o
 
    Publisher and distributor are configured on two managed instances. In this configuration:
 
-      - Both managed instances are in the same vNet.
+  - Both managed instances are in the same vNet.
 
-      - Both managed instances are in the same location.
+  - Both managed instances are in the same location.
 
 - **Publisher and distributor on premises with subscriber on managed instance**
 

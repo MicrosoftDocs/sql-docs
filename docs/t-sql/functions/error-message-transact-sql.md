@@ -38,7 +38,7 @@ This function returns the message text of the error that caused the CATCH block 
 ## Syntax  
   
 ```  
-ERROR_MESSAGE ()   
+ERROR_MESSAGE ( )   
 ```  
   
 ## Return Types  

@@ -56,7 +56,8 @@ This tutorial uses a well-known public dataset, based on trips in New York city 
 
 ### Requirements
 
-This tutorial assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know R. As such, all R code is provided. A skilled SQL programmer can use a supplied PowerShell script, sample data on GitHub, and [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md) to complete this example. 
+This tutorial assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know R. As such, all R code is provided. A skilled SQL programmer can use a supplied PowerShell script, sample data on GitHub, and [!INCLUDE[tsql](../../includes/tsql-md.md)] in 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to complete this example. 
 
 Before starting the tutorial:
 

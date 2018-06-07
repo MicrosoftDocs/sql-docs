@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # DAX Properties
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
    The DAX section of msmdsrv.ini contains settings used to control certain query behaviors in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], such as the upper limit on the number of rows returned in a DAX query result set.
 

@@ -52,8 +52,8 @@ DATEPART ( datepart , date )
 *datepart*  
 The specific part of the *date* argument for which `DATEPART` will return an **integer**. This table lists all valid *datepart* arguments.
 
-[!NOTE]
-`DATEPART` does not accept user-defined variable equivalents for the *datepart* arguments.
+> [!NOTE]
+> `DATEPART` does not accept user-defined variable equivalents for the *datepart* arguments.
   
 |*datepart*|Abbreviations|  
 |---|---|

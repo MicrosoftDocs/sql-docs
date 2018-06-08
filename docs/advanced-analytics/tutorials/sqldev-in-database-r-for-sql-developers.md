@@ -28,33 +28,21 @@ In this tutorial, we assume that you have been given all the R code needed for t
 
 - [Lesson 1: Download the sample data](../tutorials/sqldev-download-the-sample-data.md)
 
-    Download the sample dataset and the sample SQL script files to a local computer.
+- [Lesson 2: Create objects and import data](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
-- [Lesson 2: Import data to SQL Server using PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [Lesson 3: Explore and visualize data shape and distribution by calling R functions in stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-    Execute a PowerShell script that creates a database and a table on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance and loads the sample data to the table.
-
-- [Lesson 3: Explore and visualize the data](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-    Perform basic data exploration and visualization, by calling R packages and functions from [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures.
-
-- [Lesson 4: Create data features using T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
-
-    Create new data features using custom SQL functions.
+- [Lesson 4: Create data features using functions](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
--   [Lesson 5: Train and save an R model using T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-
-    Build a machine learning model using R in stored procedures. Save the model to a SQL Server table.
+- [Lesson 5: Train and save an R model using functions and stored procedures](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
--   [Lesson 6: Operationalize the model](../tutorials/sqldev-operationalize-the-model.md)
+- [Lesson 6: Wrap R code in a stored procedure](../tutorials/sqldev-operationalize-the-model.md). After the model has been saved to the database, call the model for prediction from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
 
-    After the model has been saved to the database, call the model for prediction from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
-
-### Scenario
+## Scenario
 
 This tutorial uses a well-known public dataset, based on trips in New York city taxis. To make the sample code run quicker, we created a representative 1% sampling of the data. You'll use this data to build a binary classification model that predicts whether a particular trip is likely to get a tip or not, based on columns such as the time of day, distance, and pick-up location.
 
-### Requirements
+## Requirements
 
 This tutorial assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know R. As such, all R code is provided. A skilled SQL programmer can use a supplied PowerShell script, sample data on GitHub, and [!INCLUDE[tsql](../../includes/tsql-md.md)] in 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to complete this example. 

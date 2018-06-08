@@ -16,7 +16,7 @@ This article is part of a tutorial for SQL developers on how to use R in SQL Ser
 
 In this step, you'll download the sample dataset and the [!INCLUDE[tsql](../../includes/tsql-md.md)] script files that are used in this tutorial. Both the data and the script files are shared on GitHub, but the PowerShell script will download the data and script files to a local directory of your choosing.
 
-## Download the data and scripts
+## Download data and scripts
 
 1.  Open a Windows PowerShell command console.
   

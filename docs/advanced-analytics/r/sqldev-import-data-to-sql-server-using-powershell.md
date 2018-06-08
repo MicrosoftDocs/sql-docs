@@ -18,17 +18,17 @@ In this step, you'll run a PowerShell script to create the database objects requ
 
 ## Create objects
 
-Among the downloaded files, you should see a PowerShell script (RunSQL_SQL_Walkthrough.ps1) that prepares the environment for the walkthrough. Actions performed by the script include:
+Among the downloaded files, you should see a PowerShell script (`RunSQL_SQL_Walkthrough.ps1`) that prepares the environment for the walkthrough. Actions performed by the script include:
 
 - Install the SQL Native Client and SQL command-line utilities, if not already installed. These utilities are required for bulk-loading the data to the database using **bcp**.
 
-- Create a database and a table on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and bulk-inserting data into the table.
+- Create a database and tables on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and bulk-insert data sourced from a .csv file.
 
 - Create multiple SQL functions and stored procedures.
 
 ### Modify the script to use a trusted Windows identity
 
-By default, the script assumes a SQL Server database user login and password. If you are db_owner under your Windows user account, you can use your Windows identity to create the objects. To do so, open `RunSQL_SQL_Walkthrough.ps1` in a code editor to append **`-T`** to the bcp bulk insert command:
+By default, the script assumes a SQL Server database user login and password. If you are db_owner under your Windows user account, you can use your Windows identity to create the objects. To do so, open `RunSQL_SQL_Walkthrough.ps1` in a code editor and append **`-T`** to the bcp bulk insert command (line 238):
 
 ```text
 bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
@@ -41,22 +41,21 @@ Open a PowerShell command prompt as administrator and run the following command.
 ```ps
 .\RunSQL_SQL_Walkthrough.ps1
 ```
-
 You are prompted to input the following information:
 
 - Server instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] has been installed. On a default instance, this can be as simple as the machine name.
-- 
+
 - Database name. For this tutorial, scripts assume `TaxiNYC_Sample`.
 
-- User name and user password. Enter a SQL Server database login for these values. Alternatively, if you modified the script to accept a trusted Windows identity, press Enter to leave these values blank.
+- User name and user password. Enter a SQL Server database login for these values. Alternatively, if you modified the script to accept a trusted Windows identity, press Enter to leave these values blank. Your Windows identity is used on the connection.
 
 - Fully qualified file name for the sample data downloaded in the previous lesson. For example: `C:\tempRSQL\nyctaxi1pct.csv`
 
-During script execution, all placeholder names in the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts are updated to use the inputs you provide.
+After you provide these values, the script executes immediately. During script execution, all placeholder names in the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts are updated to use the inputs you provide.
 
-## Confirm object creation
+## Review database objects
    
-Confirm the database objects exist on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and the login you specified. You should see the database, tables, functions, and stored procedures that were created.
+When script execution is finished, confirm the database objects exist on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You should see the database, tables, functions, and stored procedures.
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
 
@@ -65,7 +64,9 @@ Confirm the database objects exist on the [!INCLUDE[ssNoVersion](../../includes/
 >   
 > If the table already exists, the data will be appended, not overwritten. Therefore, be sure to drop any existing objects before running the script.
 
-### Objects used in this tutorial
+## Objects used in this tutorial
+
+The following table summarizes the objects created in this lesson. Although you only run one PowerShell script (`RunSQL_SQL_Walkthrough.ps1`), that script calls other SQL scripts in turn to create the objects in your database. Scripts used to create each object are mentioned in the description.
 
 |**Object name**|**Object type**|**Description**|
 |----------|------------------------|---------------|

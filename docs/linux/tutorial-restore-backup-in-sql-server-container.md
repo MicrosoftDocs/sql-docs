@@ -97,7 +97,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 This tutorial uses the [Wide World Importers sample database](../sample/world-wide-importers/wide-world-importers-documentation.md). Use the following steps to download and copy the Wide World Importers database backup file into your SQL Server container.
 
-1. First, use **docker exec** to create a backup folder. The following command creates a **/var/opt/mssql/** directory inside the SQL Server container.
+1. First, use **docker exec** to create a backup folder. The following command creates a **/var/opt/mssql/backup** directory inside the SQL Server container.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup

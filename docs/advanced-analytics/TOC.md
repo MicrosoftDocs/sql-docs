@@ -75,7 +75,7 @@
 #### [3 - Visualize data using R in stored procedures](tutorials/sqldev-explore-and-visualize-the-data.md)
 #### [4 - Create data features using R in T-SQL functions](tutorials/sqldev-create-data-features-using-t-sql.md)
 #### [5 - Train and save a model to a SQL table](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [6 - Predict potential outcomes](tutorials/sqldev-operationalize-the-model.md)
+#### [6 - Predict outcomes](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)

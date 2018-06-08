@@ -54,7 +54,7 @@ When called in a CATCH block, `ERROR_NUMBER` returns the error number of the err
   
 `ERROR_NUMBER` returns a relevant error number regardless of how many times it runs, or where it runs within the scope of the `CATCH` block. This contrasts with a function like @@ERROR, which only returns an error number in the statement immediately following the one that causes an error.  
 
-In nested `CATCH` blocks, `ERROR_NUMBER` returns the error number specific to the scope of the `CATCH` block that referenced that `CATCH` block. For example, the `CATCH` block of an outer TRY...CATCH construct could have an inner `TRY...CATCH` construct. Inside that inner `CATCH` block, `ERROR_NUMBER` returns the number of the error that invoked the inner `CATCH` block. If `ERROR_NUMBER` runs in the outer `CATCH` block, it returns the number of the error that invoked that outer `CATCH` block.  
+In a nested `CATCH` block, `ERROR_NUMBER` returns the error number specific to the scope of the `CATCH` block that referenced that `CATCH` block. For example, the `CATCH` block of an outer TRY...CATCH construct could have an inner `TRY...CATCH` construct. Inside that inner `CATCH` block, `ERROR_NUMBER` returns the number of the error that invoked the inner `CATCH` block. If `ERROR_NUMBER` runs in the outer `CATCH` block, it returns the number of the error that invoked that outer `CATCH` block.  
   
 ## Examples  
   

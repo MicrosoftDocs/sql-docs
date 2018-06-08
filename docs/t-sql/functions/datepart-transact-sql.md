@@ -146,7 +146,7 @@ serves as the default. After setting DATEFIRST, use this suggested SQL statement
 |7|16|7|  
   
 ## year, month, and day datepart Arguments  
-The values returned by DATEPART (**year**, *date*), DATEPART (**month**, *date*), and DATEPART (**day**, *date*) match those returned by the functions [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md), and [DAY](../../t-sql/functions/day-transact-sql.md), respectively.
+The values that are returned for DATEPART (**year**, *date*), DATEPART (**month**, *date*), and DATEPART (**day**, *date*) are the same as those returned by the functions [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md), and [DAY](../../t-sql/functions/day-transact-sql.md), respectively.
   
 ## ISO_WEEK datepart  
 ISO 8601 includes the ISO week-date system, a numbering system for weeks. Each week is associated with the year in which Thursday occurs. For example, week 1 of 2004 (2004W01) covered Monday, 29 December 2003 to Sunday, 4 January 2004. European countries / regions typically use this style of numbering. Non-European countries / regions typically do not use it.

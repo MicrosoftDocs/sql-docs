@@ -1,5 +1,5 @@
 ---
-title: Lesson 1 Download the sample data | Microsoft Docs
+title: Lesson 1 Download the sample data (SQL Server Machine Learning) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,14 +9,14 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 1: Download the sample data
+# Lesson 1: Download data and scripts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
 In this step, you'll download the sample dataset and the [!INCLUDE[tsql](../../includes/tsql-md.md)] script files that are used in this tutorial. Both the data and the script files are shared on GitHub, but the PowerShell script will download the data and script files to a local directory of your choosing.
 
-## Download data and scripts
+## Download tutorial files from Github
 
 1.  Open a Windows PowerShell command console.
   

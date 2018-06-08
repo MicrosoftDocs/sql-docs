@@ -1,5 +1,5 @@
 ---
-title: Lesson 2 Import data to SQL Server using PowerShell | Microsoft Docs
+title: Lesson 2 Prepare environment using PowerShell (SQL Server Machine Learning) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,14 +9,14 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 2: Import data to SQL Server using PowerShell
+# Lesson 2: Set up the tutorial environment using PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
 In this step, you'll run a PowerShell script to create the database objects required for the walkthrough. The script creates and loads a database using sample data obtained in the previous step. It also creates functions and stored procedures used throughout the tutorial.
 
-## Create objects
+## Create and load database objects
 
 Among the downloaded files, you should see a PowerShell script (`RunSQL_SQL_Walkthrough.ps1`) that prepares the environment for the walkthrough. Actions performed by the script include:
 

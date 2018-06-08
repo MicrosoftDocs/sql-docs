@@ -36,7 +36,7 @@ manager: "jhubbard"
 |[Broker:Forwarded Message Dropped Event Class](broker-forwarded-message-dropped-event-class.md)|An event generated when SQL Server drops a Service Broker message that was to have been forwarded.|  
 |[Broker:Forwarded Message Sent Event Class](broker-forwarded-message-sent-event-class.md)|An event generated when SQL Server forwards a Service Broker message.|  
 |[Broker:Message Classify Event Class](broker-message-classify-event-class.md)|An event generated when Service Broker determines the routing for a message.|  
-|[Broker:Message Drop Event Class](../Topic/Broker:Message%20Drop%20Event%20Class.md)|An event generated when Service Broker is unable to retain a received message that should have been delivered to a service in this instance|  
+|[Broker:Message Drop Event Class](broker-message-drop-event-class.md)|An event generated when Service Broker is unable to retain a received message that should have been delivered to a service in this instance|  
 |[Broker:Remote Message Ack Event Class](broker-remote-message-ack-event-class.md)|An event generated when Service Broker sends or receives a message acknowledgement.|  
   
  Two security audit events are also provided for Service Broker. For more information on those events, see [Audit Broker Login Event Class](audit-broker-login-event-class.md) and [Audit Broker Conversation Event Class](audit-broker-conversation-event-class.md).  

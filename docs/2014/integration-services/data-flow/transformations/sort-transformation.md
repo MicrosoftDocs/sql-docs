@@ -57,6 +57,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Flow](../data-flow.md)   
- [Integration Services Transformations](/integration-services-transformations.md)  
+ [Integration Services Transformations](integration-services-transformations.md)  
   
   

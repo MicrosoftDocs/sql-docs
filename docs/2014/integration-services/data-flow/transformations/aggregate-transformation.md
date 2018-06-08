@@ -122,14 +122,14 @@ manager: "jhubbard"
   
  For more information about how to set properties, click one of the following topics:  
   
--   [Aggregate Values in a Dataset by Using the Aggregate Transformation](/aggregate-transformation.md)  
+-   [Aggregate Values in a Dataset by Using the Aggregate Transformation](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 -   [Set the Properties of a Data Flow Component](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Sort Data for the Merge and Merge Join Transformations](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## Related Tasks  
- [Aggregate Values in a Dataset by Using the Aggregate Transformation](/aggregate-transformation.md)  
+ [Aggregate Values in a Dataset by Using the Aggregate Transformation](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## See Also  
  [Data Flow](../data-flow.md)   

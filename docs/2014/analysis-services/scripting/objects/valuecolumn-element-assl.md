@@ -54,7 +54,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- If the [NameColumn](column-element-assl.md) element of `DimensionAttribute` is specified, the same `DataItem` values are used as default values for the `ValueColumn` element. If the `NameColumn` element of `DimensionAttribute` is not specified and the [KeyColumns](../collections/columns-element-assl.md) collection of `DimensionAttribute` contains a single [KeyColumn](keycolumn-element-assl.md) element representing a key column with a string data type, the same `DataItem` values are used as default values for the `ValueColumn` element.  
+ If the [NameColumn](namecolumn-element-assl.md) element of `DimensionAttribute` is specified, the same `DataItem` values are used as default values for the `ValueColumn` element. If the `NameColumn` element of `DimensionAttribute` is not specified and the [KeyColumns](../collections/keycolumns-element-assl.md) collection of `DimensionAttribute` contains a single [KeyColumn](keycolumn-element-assl.md) element representing a key column with a string data type, the same `DataItem` values are used as default values for the `ValueColumn` element.  
   
  For more information about the `DataItem` type, including a table of Analysis Services Scripting Language (ASSL) objects and properties of the `DataItem` type, see [DataItem Data Type &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   

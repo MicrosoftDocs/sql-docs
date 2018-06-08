@@ -31,7 +31,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  Note that dynamic MDX functions (such as [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) or [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) are not supported in the Slice property for partitions. You must define the slice by using explicit tuples or member references.  
 >   
->  For example, rather than using  [: &#40;Range&#41; &#40;MDX&#41;](../Topic/:%20\(Range\)%20\(MDX\).md) to define a range, you would need to enumerate each member by the specific years.  
+>  For example, rather than using  [: &#40;Range&#41; &#40;MDX&#41;](/sql/mdx/range-mdx) to define a range, you would need to enumerate each member by the specific years.  
 >   
 >  If you need to define a complex slice, we recommend that you define the tuples in the slice by using an XMLA Alter script. Then, you can use either the ascmd command-line tool or the SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) to run the script and create the specified set of members immediately before you process the partition.  
   

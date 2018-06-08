@@ -10,12 +10,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 6: Operationalize the R model
+# Lesson 6: Predict potential outcomes using an R model in a stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
-In this step, you learn to *operationalize* and use the model against new data using a stored procedure. This stored procedure can be called directly by other applications to make predictions on new observations. The walkthrough demonstrates several ways to perform scoring using an R model in a stored procedure:
+In this step, you learn to use the model against new observations to predict potential outcomes. The model is wrapped in a stored procedure which can be called directly by other applications. The walkthrough demonstrates several ways to perform scoring:
 
 - **Batch scoring mode**: Use a SELECT query as an input to the stored procedure. The stored procedure returns a table of observations corresponding to the input cases.
 

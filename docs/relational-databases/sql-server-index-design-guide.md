@@ -637,37 +637,33 @@ When discussing columnstore indexes, we use the terms *rowstore* and *columnstor
 
 - A **columnstore** is data that is logically organized as a table with rows and columns, and physically stored in a column-wise data format.
   
-A columnstore index physically stores most of the data in columnstore format. In columnstore format, the data is compressed and uncompressed as columns. There is no need to uncompress other values in each row that are not requested by the query. This makes it fast to scan an entire column of a large table. 
+  A columnstore index physically stores most of the data in columnstore format. In columnstore format, the data is compressed and uncompressed as columns. There is no need to uncompress other values in each row that are not requested by the query. This makes it fast to scan an entire column of a large table. 
 
 - A **rowstore** is data that is logically organized as a table with rows and columns, and then physically stored in a row-wise data format. This has been the traditional way to store relational table data such as a heap or clustered B-tree index.
 
-A columnstore index also physically stores some rows in a rowstore format called a deltastore. The deltastore,also called delta rowgroups, is a holding place for rows that are too few in number to qualify for compression into the columnstore. Each delta rowgroup is implemented as a clustered B-tree index. 
+  A columnstore index also physically stores some rows in a rowstore format called a deltastore. The deltastore,also called delta rowgroups, is a holding place for rows that are too few in number to qualify for compression into the columnstore. Each delta rowgroup is implemented as a clustered B-tree index. 
 
 - The **deltastore** is a holding place for rows that are too few in number to be compressed into the columnstore. The deltastore stores the rows in rowstore format. 
   
 #### Operations are performed on rowgroups and column segments
 
-The columnstore index groups rows into manageable units. Each of these units is called a rowgroup. For best performance, the number of rows in a rowgroup is large enough to improve compression rates and small enough to benefit from in-memory operations.
-
-* A **rowgroup** is a group of rows on which the columnstore index performs management and compression operations. 
+The columnstore index groups rows into manageable units. Each of these units is called a **rowgroup**. For best performance, the number of rows in a rowgroup is large enough to improve compression rates and small enough to benefit from in-memory operations.
 
 For example, the columnstore index performs these operations on rowgroups:
 
 * Compresses rowgroups into the columnstore. Compression is performed on each column segment within a rowgroup.
-* Merges rowgroups during an ALTER INDEX REORGANIZE operation.
-* Creates new rowgroups during an ALTER INDEX REBUILD operation.
+* Merges rowgroups during an `ALTER INDEX ... REORGANIZE` operation.
+* Creates new rowgroups during an `ALTER INDEX ... REBUILD` operation.
 * Reports on rowgroup health and fragmentation in the dynamic management views (DMVs).
 
-The deltastore is comprised of one or more rowgroups called delta rowgroups. Each delta rowgroup is a clustered B-tree index that stores rows when they are too few in number for compression into the columnstore.  
+The deltastore is comprised of one or more rowgroups called **delta rowgroups**. Each delta rowgroup is a clustered B-tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows, or until the index is rebuilt.  When a delta rowgroup contains 1,048,576 rows it is marked as closed, and waits for a process called the tuple-mover to compress it into the columnstore. 
 
-* A **delta rowgroup** is a clustered B-tree index that stores small bulk loads and inserts until the rowgroup contains 1,048,576 rows or until the index is rebuilt.  When a delta rowgroup contains 1,048,576 rows it is marked as closed and waits for a process called the tuple-mover to compress it into the columnstore. 
+Each column has some of its values in each rowgroup. These values are called **column segments**. Each rowgroup contains one column segment for every column in the table. Each column has one column segment in each rowgroup.
 
-Each column has some of its values in each rowgroup. These values are called column segments. When the columnstore index compresses a rowgroup, it compresses each column segment separately. To uncompress an entire column, the columnstore index only needs to uncompress one column segment from each rowgroup.
-
-* A **column segment** is the portion of column values in a rowgroup. Each rowgroup contains one column segment for every column in the table. Each column has one column segment in each rowgroup.| 
-  
- ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
  
+When the columnstore index compresses a rowgroup, it compresses each column segment separately. To uncompress an entire column, the columnstore index only needs to uncompress one column segment from each rowgroup.   
+
 #### Small loads and inserts go to the deltastore
 A columnstore index improves columnstore compression and performance by compressing at least 102,400 rows at a time into the columnstore index. To compress rows in bulk, the columnstore index accumulates small loads and inserts in the deltastore. The deltastore operations are handled behind the scenes. To return the correct query results, the clustered columnstore index combines query results from both the columnstore and the deltastore. 
 

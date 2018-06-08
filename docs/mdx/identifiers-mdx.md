@@ -1,6 +1,6 @@
 ---
 title: "Identifiers (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,9 +11,9 @@ author: minewiskan
 manager: kfile
 ---
 # Identifiers (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  An identifier is the name of an [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object. Every [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object can and must have an identifier. This includes cubes, dimensions, hierarchies, levels, members, and so on. You use the identifier of an object to reference the object in Multidimensional Expressions (MDX) statements.  
+
+  An identifier is the name of an Analysis Services object. Every object can and must have an identifier. This includes cubes, dimensions, hierarchies, levels, members, and so on. You use the identifier of an object to reference the object in Multidimensional Expressions (MDX) statements.  
   
  Depending on how you name the object, the identifier of the object identifier will be either a regular or delimited identifier.  
   
@@ -74,7 +74,7 @@ manager: kfile
   
 -   When the name of an object or part of the name uses reserved words.  
   
-     We recommend that reserved keywords not be used as object names. Databases upgraded from earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may contain identifiers that include words not reserved in the earlier version, but are reserved words for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Until you can change the identifier for the object, you can reference the object using a delimited identifier.  
+     We recommend that reserved keywords not be used as object names. Databases upgraded from earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may contain identifiers that include words not reserved in the earlier version, but are now reserved. Until you can change the identifier for the object, you can reference the object using a delimited identifier.  
   
 -   When the name of an object uses characters not listed as qualified identifiers.  
   

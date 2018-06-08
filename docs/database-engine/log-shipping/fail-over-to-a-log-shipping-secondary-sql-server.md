@@ -3,8 +3,6 @@ title: "Fail Over to a Log Shipping Secondary (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: "log-shipping"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "failover [SQL Server], log shipping"
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Fail Over to a Log Shipping Secondary (SQL Server)

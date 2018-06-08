@@ -3,8 +3,6 @@ title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma

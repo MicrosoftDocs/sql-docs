@@ -3,7 +3,6 @@ title: "Add a Secondary Replica to an Availability Group (SQL Server) | Microsof
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 caps.latest.revision: 38
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add a Secondary Replica to an Availability Group (SQL Server)

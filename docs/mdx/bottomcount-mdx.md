@@ -1,6 +1,6 @@
 ---
 title: "BottomCount (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # BottomCount (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Sorts a set in ascending order, and returns the specified number of tuples in the specified set with the lowest values.  
   

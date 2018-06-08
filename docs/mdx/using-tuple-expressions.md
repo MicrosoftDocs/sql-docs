@@ -1,6 +1,6 @@
 ---
 title: "Using Tuple Expressions | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Using Tuple Expressions
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   A tuple is made up of one member from every dimension that is contained within a cube. Therefore, a tuple uniquely identifies a single cell within the cube.  
   

@@ -3,7 +3,6 @@ title: "Failover and Failover Modes (Always On Availability Groups) | Microsoft 
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 75
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Failover and Failover Modes (Always On Availability Groups)

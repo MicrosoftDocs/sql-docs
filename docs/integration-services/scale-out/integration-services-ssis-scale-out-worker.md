@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs"
-ms.description: "This article describes the Scale Out Master component of SSIS Scale Out"
+description: "This article describes the Scale Out Master component of SSIS Scale Out"
 ms.custom: ""
 ms.date: "12/19/2017"
 ms.prod: sql

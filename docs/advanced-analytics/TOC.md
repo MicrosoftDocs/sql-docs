@@ -74,7 +74,7 @@
 #### [2 - Set up the environment](r/sqldev-import-data-to-sql-server-using-powershell.md)
 #### [3 - Visualize data using R in stored procedures](tutorials/sqldev-explore-and-visualize-the-data.md)
 #### [4 - Create data features using R in T-SQL functions](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [5 - Train and save a model to a SQL table](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [5 - Train and save to SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
 #### [6 - Predict outcomes](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)

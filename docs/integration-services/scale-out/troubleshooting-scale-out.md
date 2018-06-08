@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
-ms.description: "This article describes how to troubleshoot common issues with SSIS Scale Out"
+description: "This article describes how to troubleshoot common issues with SSIS Scale Out"
 ms.custom: ""
 ms.date: "05/09/2018"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
-title: Lesson 3 Explore and visualize the data | Microsoft Docs
+title: Lesson 3 Explore and visualize data using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -275,4 +276,4 @@ To view the plot, open the destination folder and review the files that were cre
 
 ## Previous lesson
 
-[Lesson 2: Import data to SQL Server using PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lesson 2: Prepare the tutorial environment using PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)

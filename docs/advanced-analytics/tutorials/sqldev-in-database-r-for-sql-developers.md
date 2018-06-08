@@ -1,5 +1,6 @@
 ---
-title: Embedded R analytics for SQL developers (tutorial)| Microsoft Docs
+title: Embedded R analytics tutorial for SQL Server Machine Learning developers | Microsoft Docs
+description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 

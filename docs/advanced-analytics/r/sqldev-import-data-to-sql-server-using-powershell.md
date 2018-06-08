@@ -1,5 +1,6 @@
 ---
-title: Lesson 2 Prepare environment using PowerShell (SQL Server Machine Learning) | Microsoft Docs
+title: Lesson 2 Prepare R tutorial environment using PowerShell (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 

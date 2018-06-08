@@ -1,5 +1,6 @@
 ---
-title: Lesson 5 Train and save a model using T-SQL | Microsoft Docs
+title: Lesson 5 Train and save a model using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -100,5 +101,5 @@ In the next step you'll use the trained model to create predictions.
 
 ## Previous lesson
 
-[Lesson 4: Create data features using T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lesson 4: Create data features using R and T-SQL functions](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

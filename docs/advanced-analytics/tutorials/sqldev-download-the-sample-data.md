@@ -1,5 +1,6 @@
 ---
-title: Lesson 1 Download the sample data (SQL Server Machine Learning) | Microsoft Docs
+title: Lesson 1 Download sample data and scripts for embedded R (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -60,4 +61,4 @@ In this step, you'll download the sample dataset and the [!INCLUDE[tsql](../../i
 
 ## Previous lesson
 
-[In-database R analytics for SQL developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[Embedded R analytics for SQL developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)

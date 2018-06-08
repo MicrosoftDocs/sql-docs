@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Integration Services Scale Out Manager | Microsoft Docs"
-ms.description: "This article describes the Scale Out Manager tool which you can use to manager SSIS Scale Out"
+description: "This article describes the Scale Out Manager tool which you can use to manager SSIS Scale Out"
 ms.custom: ""
 ms.date: "12/19/2017"
 ms.prod: sql

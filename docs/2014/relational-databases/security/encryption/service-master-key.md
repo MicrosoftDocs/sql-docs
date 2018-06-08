@@ -36,6 +36,6 @@ manager: "jhubbard"
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
 ## See Also  
- [Encryption Hierarchy](/encryption-hierarchy.md)  
+ [Encryption Hierarchy](encryption-hierarchy.md)  
   
   

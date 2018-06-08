@@ -278,7 +278,7 @@ manager: "jhubbard"
 9. Run the package.  
   
 ## See Also  
- [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](ole-db-connection-manager.md)   
+ [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implement a Lookup in No Cache or Partial Cache Mode](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services Transformations](../data-flow/transformations/integration-services-transformations.md)  
   

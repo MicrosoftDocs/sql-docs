@@ -34,8 +34,8 @@ manager: "jhubbard"
 >  **Related topics:**  
 >   
 >  -   [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
-> -   [Move a TDE Protected Database to Another SQL Server](/move-a-tde-protected-database-to-another-sql-server.md)  
-> -   [Enable TDE Using EKM](/enable-tde-on-sql-server-using-ekm.md)  
+> -   [Move a TDE Protected Database to Another SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
+> -   [Enable TDE Using EKM](enable-tde-on-sql-server-using-ekm.md)  
   
 ## About TDE  
  Encryption of the database file is performed at the page level. The pages in an encrypted database are encrypted before they are written to disk and decrypted when read into memory. TDE does not increase the size of the encrypted database.  
@@ -228,11 +228,11 @@ GO
  TDE can be enabled on a database that has In-Memory OLTP objects. In-Memory OLTP log records are encrypted if TDE is enabled. Data in a MEMORY_OPTIMIZED_DATA filegroup is not encrypted if TDE is enabled.  
   
 ## See Also  
- [Move a TDE Protected Database to Another SQL Server](/move-a-tde-protected-database-to-another-sql-server.md)   
- [Enable TDE Using EKM](/enable-tde-on-sql-server-using-ekm.md)   
+ [Move a TDE Protected Database to Another SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
+ [Enable TDE Using EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
- [SQL Server Encryption](/sql-server-encryption.md)   
- [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](/sql-server-and-database-encryption-keys-database-engine.md)   
+ [SQL Server Encryption](sql-server-encryption.md)   
+ [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Security Center for SQL Server Database Engine and Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
   

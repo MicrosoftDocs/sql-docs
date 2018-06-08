@@ -435,6 +435,6 @@ End Sub
   
 ## See Also  
  [Error Handling in Data](../../data-flow/error-handling-in-data.md)   
- [Using Error Outputs](/using-error-outputs-in-a-data-flow-component.md)  
+ [Using Error Outputs](using-error-outputs-in-a-data-flow-component.md)  
   
   

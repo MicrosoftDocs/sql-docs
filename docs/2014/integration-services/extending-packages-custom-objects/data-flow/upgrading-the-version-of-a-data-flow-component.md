@@ -45,7 +45,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The data flow engine passes its own version number into the <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> method in the *pipelineVersion* parameter. This parameter is not useful in version 1.0 of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], but may become useful in subsequent versions.  
   
- The sample code uses only the two enumeration values that map directly to the prior Boolean values for the custom property. Users can select the other available enumeration values through the component's custom user interface, in the Advanced Editor, or programmatically. For information on displaying enumeration values for a custom property in the Advanced Editor, see "Creating Custom Properties" in [Design-time Methods of a Data Flow Component](/design-time-methods-of-a-data-flow-component.md).  
+ The sample code uses only the two enumeration values that map directly to the prior Boolean values for the custom property. Users can select the other available enumeration values through the component's custom user interface, in the Advanced Editor, or programmatically. For information on displaying enumeration values for a custom property in the Advanced Editor, see "Creating Custom Properties" in [Design-time Methods of a Data Flow Component](design-time-methods-of-a-data-flow-component.md).  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  

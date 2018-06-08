@@ -78,6 +78,6 @@ manager: "jhubbard"
  The simplest way to update the configuration of the Slowly Changing Dimension transformation outputs is to rerun the Slowly Changing Dimension Wizard and modify properties from the wizard pages. You can also update the Slowly Changing Dimension transformation using the **Advanced Editor** dialog box or programmatically.  
   
 ## See Also  
- [Slowly Changing Dimension Transformation](/slowly-changing-dimension-transformation.md)  
+ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

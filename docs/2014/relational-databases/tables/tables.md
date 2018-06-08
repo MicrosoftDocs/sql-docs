@@ -64,7 +64,7 @@ manager: "jhubbard"
 |Describes how to create a table.|[Create Tables &#40;Database Engine&#41;](create-tables-database-engine.md)|  
 |Describes how to delete a table.|[Delete Tables &#40;Database Engine&#41;](delete-tables-database-engine.md)|  
 |Describes how to create a new table that contains some or all of the columns in an existing table.|[Duplicate Tables](duplicate-tables.md)|  
-|Describes how to rename a table.|[Rename Tables &#40;Database Engine&#41;](../../database-engine/rename-tables-database-engine.md)|  
+|Describes how to rename a table.|[Rename Tables &#40;Database Engine&#41;](rename-tables-database-engine.md)|  
 |Describes how to view the properties of the table.|[View the Table Definition](view-the-table-definition.md)|  
 |Describes how to determine whether other objects such as a view or stored procedure depend on a table.|[View the Dependencies of a Table](view-the-dependencies-of-a-table.md)|  
   

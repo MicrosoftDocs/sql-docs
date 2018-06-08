@@ -2,7 +2,7 @@
 ## [Create Tables (Database Engine)](create-tables-database-engine.md)
 ## [Delete Tables (Database Engine)](delete-tables-database-engine.md)
 ## [Duplicate Tables](duplicate-tables.md)
-## [Rename Tables (Database Engine)](../../database-engine/rename-tables-database-engine.md)	
+## [Rename Tables (Database Engine)](rename-tables-database-engine.md)	
 ## [View the Table Definition](view-the-table-definition.md)
 ### [Table Properties](table-properties-ssms.md)
 ### [Column Properties (General Page)](column-properties-general-page.md)

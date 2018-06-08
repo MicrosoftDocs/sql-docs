@@ -1,7 +1,7 @@
 ---
 title: "Deploy and run SSIS packages in Azure | Microsoft Docs"
 description: Learn how you can move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Microsoft Azure cloud.
-ms.date: "05/22/2018"
+ms.date: "06/07/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -56,14 +56,16 @@ For info about the prerequisites for the Azure-SSIS Integration Runtime, see [De
 
 ## Provision SSIS on Azure
 
-Before you can deploy and run SSIS packages in Azure, you have to provision the SSIS Catalog (SSISDB) and the Azure-SSIS Integration Runtime. Follow the provisioning steps in this article: [Deploy and run an SSIS package in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+**Provision**. Before you can deploy and run SSIS packages in Azure, you have to provision the SSIS Catalog (SSISDB) and the Azure-SSIS Integration Runtime. Follow the provisioning steps in this article: [Deploy and run an SSIS package in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
-When you provision the Azure-SSIS IR, you can scale up and scale out by specifying values for the following options:
+**Scale up and out**. When you provision the Azure-SSIS IR, you can scale up and scale out by specifying values for the following options:
 -   The node size (including the number of cores) and the number of nodes in the cluster.
 -   The existing instance of Azure SQL Database to host the SSIS Catalog Database (SSISDB), and the service tier for the database.
 -   The maximum parallel executions per node.
 
-For more info about performance, see [Configure the Azure-SSIS Integration Runtime for high performance](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
+**Improve performance**. For more info, see [Configure the Azure-SSIS Integration Runtime for high performance](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
+
+**Reduce costs**. To reduce costs, run the Azure-SSIS IR only when you need it. For more info, see [How to schedule starting and stopping of an Azure SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime).
 
 ## Design packages
 

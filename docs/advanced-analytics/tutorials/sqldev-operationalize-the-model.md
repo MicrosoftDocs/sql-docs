@@ -87,13 +87,13 @@ Now let's see how batch scoring works.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    This query can be used as input to the stored procedure, _PredictTipBatchMode_, provided as part of the download.
+    This query can be used as input to the stored procedure, _PredictTipMode_, provided as part of the download.
 
-2. Take a minute to review the code of the stored procedure _PredictTipBatchMode_ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Take a minute to review the code of the stored procedure _PredictTipMode_ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);

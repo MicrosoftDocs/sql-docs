@@ -245,6 +245,7 @@ Approach for estimating dimension cache requirements:
   
 2.  If a performance improvement is evident, incrementally reduce the value until you reach a balance between performance and memory utilization.  
 
+
  **ExpressNonEmptyUseEnabled**  
  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] support.  
   

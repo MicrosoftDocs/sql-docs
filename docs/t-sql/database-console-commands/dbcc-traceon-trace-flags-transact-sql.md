@@ -37,7 +37,6 @@ The following table lists and describes the trace flags that are available in [!
 
 > [!IMPORTANT]
 > Trace flag behavior may not be supported in future releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-
   
 |Trace flag|Description|  
 |---|---|

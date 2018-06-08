@@ -53,7 +53,7 @@ In the original dataset, the taxi identifiers and trip records were provided in 
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
 
-## Create a stored procedure to plot the data
+## Create a stored procedure using rxHistogram to plot the data
 
 To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **PlotHistogram**.
 
@@ -152,7 +152,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
     ![taxi trips with and without tips](media/rsql-devtut-tippedornot.jpg "taxi trips with and without tips")  
   
-## Create a stored procedure using Hist and export to multiple output formats
+## Create a stored procedure using Hist and multiple output formats
 
 Typically, data scientists generate multiple data visualizations to get insights into the data from different perspectives. In this example, the stored procedure uses the Hist function to create the histogram, exporting the binary data to popular formats such as .JPG, .PDF, and .PNG. 
 

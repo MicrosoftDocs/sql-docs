@@ -70,7 +70,7 @@
 #### [Move data between SQL Server and XDF file](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [Create a simple simulation](tutorials/deepdive-create-a-simple-simulation.md)
 ### [Embedded R in stored procedures and functions](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [1 - Download data and scripts](tutorials/sqldev-download-the-sample-data.md)
+#### [1 - Get data and scripts](tutorials/sqldev-download-the-sample-data.md)
 #### [2 - Set up the environment](r/sqldev-import-data-to-sql-server-using-powershell.md)
 #### [3 - Visualize data using R in stored procedures](tutorials/sqldev-explore-and-visualize-the-data.md)
 #### [4 - Create data features using R in T-SQL functions](tutorials/sqldev-create-data-features-using-t-sql.md)

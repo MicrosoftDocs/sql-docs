@@ -130,7 +130,7 @@ We don't recommend using detach and attach for Backup and Recovery. There are no
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Use the [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the FOR ATTACH close.  
+3.  Use the [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the FOR ATTACH clause.  
   
      Copy and paste the following example into the query window and click **Execute**. This example attaches the files of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and renames the database to `MyAdventureWorks`.  
   

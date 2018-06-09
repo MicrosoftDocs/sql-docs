@@ -65,8 +65,6 @@ For info about the prerequisites for the Azure-SSIS Integration Runtime, see [De
 
 **Improve performance**. For more info, see [Configure the Azure-SSIS Integration Runtime for high performance](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
 
-**Reduce costs**. To reduce costs, run the Azure-SSIS IR only when you need it. For more info, see [How to schedule starting and stopping of an Azure SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime).
-
 ## Design packages
 
 You continue to **design and build packages** on-premises in SSDT, or in Visual Studio with SSDT installed.

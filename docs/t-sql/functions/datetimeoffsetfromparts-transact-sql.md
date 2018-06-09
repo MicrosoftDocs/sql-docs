@@ -97,7 +97,7 @@ Result
 ```  
   
 ### B. Example with fractions of a second  
-Thisg example demonstrates the use of the *fractions* and *precision* parameters:
+This example demonstrates the use of the *fractions* and *precision* parameters:
 1.   When *fractions* has a value of 5, and *precision* has a value of 1, then the value of *fractions* represents 5/10 of a second.  
 1.   When *fractions* has a value of 50, and *precision* has a value of 2, then the value of *fractions* represents 50/100 of a second.  
 1.   When *fractions* has a value of 500, and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  

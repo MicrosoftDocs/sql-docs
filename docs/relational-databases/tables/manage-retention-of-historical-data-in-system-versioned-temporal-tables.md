@@ -408,7 +408,14 @@ EXECUTE sp_executesql
 IF @historyTableName IS NULL OR @historyTableSchema IS NULL OR @periodColumnName IS NULL  
     THROW 50010, 'History table cannot be found. Either specified table is not system-versioned temporal or you have provided incorrect argument values.', 1  
   
-/*Generate 3 statements that will run inside a transaction: SET SYSTEM_VERSIONING = OFF, DELETE FROM history_table, SET SYSTEM_VERSIONING = ON */  
+/*Generate 3 statements that will run inside a transaction:
+  (1) SET SYSTEM_VERSIONING = OFF,
+  (2) DELETE FROM history_table,
+  (3) SET SYSTEM_VERSIONING = ON
+  On SQL Server 2016, it is critical that (1) and (2) run in separate EXEC statements, or SQL Server will generate the following error: 
+  Msg 13560, Level 16, State 1, Line XXX
+  Cannot delete rows from a temporal history table '<database_name>.<history_table_schema_name>.<history_table_name>'.
+*/  
 SET @disableVersioningScript =  @disableVersioningScript + 'ALTER TABLE [' + @temporalTableSchema + '].[' + @temporalTableName + '] SET (SYSTEM_VERSIONING = OFF)'  
 SET @deleteHistoryDataScript =  @deleteHistoryDataScript + ' DELETE FROM  [' + @historyTableSchema + '].[' + @historyTableName + ']   
      WHERE ['+ @periodColumnName + '] < ' + '''' + convert(varchar(128), @cleanupOlderThanDate, 126) +  ''''   

@@ -29,7 +29,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # &#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns the error number for the last [!INCLUDE[tsql](../../includes/tsql-md.md)] statement executed.  
+This function returns the error number for the last [!INCLUDE[tsql](../../includes/tsql-md.md)] statement executed.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,21 +40,32 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ```  
   
 ## Return Types  
- integer  
+**integer**  
   
 ## Remarks  
- Returns 0 if the previous [!INCLUDE[tsql](../../includes/tsql-md.md)] statement encountered no errors.  
+`@@ERROR` returns 0 if the previous [!INCLUDE[tsql](../../includes/tsql-md.md)] statement encountered no errors.  
   
- Returns an error number if the previous statement encountered an error. If the error was one of the errors in the sys.messages catalog view, then @@ERROR contains the value from the sys.messages.message_id column for that error. You can view the text associated with an @@ERROR error number in sys.messages.  
+`@@ERROR` returns an error number if the previous statement encountered an error. If the sys.messages catalog view has the error, then @@ERROR holds the sys.messages.message_id column value for that error. See the text associated with an @@ERROR error number in sys.messages.  
   
- Because @@ERROR is cleared and reset on each statement executed, check it immediately following the statement being verified, or save it to a local variable that can be checked later.  
+Because `@@ERROR` clears and resets when each statement executes, check it immediately following a statement in question, or save its value in a local variable for later checking.  
   
- Use the TRY...CATCH construct to handle errors. The TRY...CATCH construct also supports additional system functions (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY, and ERROR_STATE) that return more error information than @@ERROR. TRY...CATCH also supports an ERROR_NUMBER function that is not limited to returning the error number in the statement immediately after the statement that generated an error. For more information, see [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+Use the TRY...CATCH construct to handle errors. The TRY...CATCH construct also supports additional system functions
+
++ [ERROR_LINE()](./error-line-transact-sql.md)
++ [ERROR_MESSAGE()](./error-message-transact-sql.md)
++ [ERROR_PROCEDURE()](./error-procedure-transact-sql.md)
++ [ERROR_SEVERITY()](./error-severity-transact-sql.md)
+
+and  
+
++ [ERROR_STATE()](./error-state-transact-sql.md)
+
+that return more error information than @@ERROR. TRY...CATCH also supports the [ERROR_NUMBER](./error-number-transact-sql.md) function. `ERROR_NUMBER` returns a relevant error number regardless of how many times it runs, or where it runs within the scope of the CATCH block. For more information, see [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## Examples  
   
 ### A. Using @@ERROR to detect a specific error  
- The following example uses `@@ERROR` to check for a check constraint violation (error #547) in an `UPDATE` statement.  
+This example uses `@@ERROR` to detect a potential `UPDATE` statement check constraint violation (error #547).  
   
 ```  
 USE AdventureWorks2012;  
@@ -68,7 +79,7 @@ GO
 ```  
   
 ### B. Using @@ERROR to conditionally exit a procedure  
- The following example uses `IF...ELSE` statements to test `@@ERROR` after an `DELETE` statement in a stored procedure. The value of the `@@ERROR` variable determines the return code sent to the calling program, indicating success or failure of the procedure.  
+Following a stored procedure `DELETE` statement, this example uses `IF...ELSE` statements to test `@@ERROR`. The `@@ERROR` variable value determines the return code sent to the calling program, indicating success or failure of the procedure.  
   
 ```  
 USE AdventureWorks2012;  
@@ -103,7 +114,7 @@ GO
 ```  
   
 ### C. Using @@ERROR with @@ROWCOUNT  
- The following example uses `@@ERROR` with `@@ROWCOUNT` to validate the operation of an `UPDATE` statement. The value of `@@ERROR` is checked for any indication of an error, and `@@ROWCOUNT` is used to ensure that the update was successfully applied to a row in the table.  
+This example uses `@@ERROR` with `@@ROWCOUNT` to validate the operation of an `UPDATE` statement. The stored procedure checks the `@@ERROR` value for any error, and uses `@@ROWCOUNT` to ensure that the stored procedure successfully applied the update to a table row. 
   
 ```  
 USE AdventureWorks2012;  

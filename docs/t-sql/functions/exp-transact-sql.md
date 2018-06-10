@@ -28,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns the exponential value of the specified **float** expression.  
+A mathematical function that returns the exponential value of the specified **float** expression.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,27 +40,39 @@ EXP ( float_expression )
   
 ## Arguments  
  *float_expression*  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to **float**.  
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float**, or of a type that can implicitly convert to **float**.  
   
 ## Return Types  
- **float**  
+**float**  
   
 ## Remarks  
- The constant **e** (2.718281…), is the base of natural logarithms.  
+The constant **e** (2.718281…) serves as the base of natural logarithms.  
   
- The exponent of a number is the constant **e** raised to the power of the number. For example EXP(1.0) = e^1.0 = 2.71828182845905 and EXP(10) = e^10 = 22026.4657948067.  
+The exponent of a number is the constant **e** raised to the power of the number. For example,
+
+EXP(1.0) = e^1.0 = 2.71828182845905  
+
+and  
+
+EXP(10) = e^10 = 22026.4657948067  
   
- The exponential of the natural logarithm of a number is the number itself: EXP (LOG (*n*)) = *n*. And the natural logarithm of the exponential of a number is the number itself: LOG (EXP (*n*)) = *n*.  
+The exponential of the natural logarithm of a number is the number itself:  
   
-## Examples  
+EXP (LOG (*n*)) = *n*  
   
-### A. Finding the exponent of a number  
- The following example declares a variable and returns the exponential value of the specified variable (`10`) with a text description.  
+and the natural logarithm of the exponential of a number is the number itself:  
+
+LOG (EXP (*n*)) = *n*  
+  
+## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### A. The exponent of a number  
+This example declares a variable, and then returns the exponential value of the specified variable (`10`) with a text description.  
   
 ```  
 DECLARE @var float  
 SET @var = 10  
-SELECT 'The EXP of the variable is: ' + CONVERT(varchar,EXP(@var))  
+SELECT 'The EXP of the variable = ' + CONVERT(varchar,EXP(@var))  
 GO  
 ```  
   
@@ -68,12 +80,12 @@ GO
   
 ```  
 ----------------------------------------------------------  
-The EXP of the variable is: 22026.5  
+The EXP of the variable = 22026.5  
 (1 row(s) affected)  
 ```  
   
 ### B. Finding exponentials and natural logarithms  
- The following example returns the exponential value of the natural logarithm of `20` and the natural logarithm of the exponential of `20`. Because these functions are inverse functions of one another, the return value in both cases is `20`.  
+This example returns the exponential value of the natural logarithm of `20`, and the natural logarithm of the exponential of `20`. Because these functions are inverse functions of one another, both statements return a value of `20`.  
   
 ```  
 SELECT EXP( LOG(20)), LOG( EXP(20))  
@@ -89,10 +101,8 @@ GO
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
 ### C. Finding the exponent of a number  
- The following example returns the exponential value of the specified value (`10`).  
+This example returns the exponential value of the specified value (`10`).  
   
 ```  
 SELECT EXP(10);  
@@ -103,20 +113,6 @@ SELECT EXP(10);
 ```  
 ----------  
 22026.4657948067  
-```  
-  
-### D. Finding exponential values and natural logarithms  
- The following example returns the exponential value of the natural logarithm of `20` and the natural logarithm of the exponential of `20`. Because these functions are inverse functions of one another, the return value in both cases is `20`.  
-  
-```  
-SELECT EXP( LOG(20)), LOG( EXP(20));  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
--------------- -----------------  
-20                  20  
 ```  
   
 ## See Also  

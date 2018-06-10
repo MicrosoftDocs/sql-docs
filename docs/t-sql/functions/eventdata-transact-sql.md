@@ -45,7 +45,7 @@ EVENTDATA( )
 ```  
   
 ## Remarks  
-`EVENTDATA` returns data only when referenced directly inside of a DDL or logon trigger. `EVENTDATA` returns null if other routines call it, even if a DDL or logon trigger call those routines.
+`EVENTDATA` returns data only when referenced directly inside of a DDL or logon trigger. `EVENTDATA` returns null if other routines call it, even if a DDL or logon trigger calls those routines.
   
 Data returned by `EVENTDATA` is invalid after a transaction that
 

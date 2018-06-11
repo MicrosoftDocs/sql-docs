@@ -1,5 +1,5 @@
 ---
-title: "SQL Server TDE Extensible Key Management Using the Azure Key Vault | Microsoft Docs"
+title: "SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/11/2018"
 ms.prod: sql
@@ -21,7 +21,7 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ---
-# Setup Steps for Extensible Key Management Using the Azure Key Vault
+# SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The following steps walkthrough the installation and configuration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Connector for Azure Key Vault.  

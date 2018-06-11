@@ -6,7 +6,7 @@
     tocHref: /sql/
     topicHref: /sql/index
     items:
-    - name: SQL Server 2014 root
+    - name: SQL Server 2014
       tocHref: /sql/root-toc/
       topicHref: /sql/root-toc/books-online-for-sql-server-2014
       items:
@@ -17,10 +17,10 @@
         tocHref: /sql/database-engine/
         topicHref: /sql/database-engine/sql-server-database-engine-overview
         items:
-        - name: Configure and manage a database
+        - name: Configure windows
           tocHref: /sql/database-engine/configure-windows/
           topicHref: /sql/database-engine/configure-windows/configure-database-engine-instances-sql-server
-        - name: Collations and Unicode
+        - name: Collations
           tocHref: /sql/relational-databases/collations/
           topicHref: /sql/relational-databases/collations/collation-and-unicode-support
         - name: Scripting
@@ -45,7 +45,7 @@
         - name: Sql trace
           tocHref: /sql/relational-databases/sql-trace/
           topicHref: /sql/relational-databases/sql-trace/sql-trace
-        - name: Profiler
+        - name: Sql server profiler
           tocHref: /sql/tools/sql-server-profiler/
           topicHref: /sql/tools/sql-server-profiler/sql-server-profiler
         - name: Track changes
@@ -54,7 +54,10 @@
         - name: Logs
           tocHref: /sql/relational-databases/logs/
           topicHref: /sql/relational-databases/logs/log-file-viewer
-        - name: Database Features
+        - name: Performance
+          tocHref: /sql/relational-databases/performance/
+          topicHref: /sql/relational-databases/performance/monitor-and-tune-for-performance
+        - name: Relational databases
           tocHref: /sql/relational-databases/
           topicHref: /sql/relational-databases/database-features
           items:
@@ -76,28 +79,25 @@
           - name: Views
             tocHref: /sql/relational-databases/views/
             topicHref: /sql/relational-databases/views/views
-          - name: Stored procedures and OLE
+          - name: Stored procedures
             tocHref: /sql/relational-databases/stored-procedures/
             topicHref: /sql/relational-databases/stored-procedures/stored-procedures-database-engine
-          - name: Full text and semantic searches
-            tocHref: /sql/relational-databases/search/full-text-search/
-            topicHref: /sql/relational-databases/search/full-text-search/full-text-search.md
+          - name: Search
+            tocHref: /sql/relational-databases/search/
+            topicHref: /sql/relational-databases/search/full-text-search
           - name: User defined functions
             tocHref: /sql/relational-databases/user-defined-functions/
             topicHref: /sql/relational-databases/user-defined-functions/user-defined-functions
           - name: Statistics
             tocHref: /sql/relational-databases/statistics/
             topicHref: /sql/relational-databases/statistics/statistics
-          - name: Performance
-            tocHref: /sql/relational-databases/performance/
-            topicHref: /sql/relational-databases/performance/monitor-and-tune-for-performance
           - name: Triggers
             tocHref: /sql/relational-databases/triggers/
             topicHref: /sql/relational-databases/triggers/ddl-triggers
-          - name: Xml data
+          - name: Xml
             tocHref: /sql/relational-databases/xml/
             topicHref: /sql/relational-databases/xml/xml-data-sql-server
-          - name: Spatial data
+          - name: Spatial
             tocHref: /sql/relational-databases/spatial/
             topicHref: /sql/relational-databases/spatial/spatial-data-sql-server
           - name: Blob
@@ -109,55 +109,58 @@
           - name: Backup restore
             tocHref: /sql/relational-databases/backup-restore/
             topicHref: /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
-          - name: Data import export
+          - name: Import export
             tocHref: /sql/relational-databases/import-export/
             topicHref: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
           - name: Data compression
             tocHref: /sql/relational-databases/data-compression/
             topicHref: /sql/relational-databases/data-compression/data-compression
-          - name: Event notification from Service Broker
+          - name: Service broker
             tocHref: /sql/relational-databases/service-broker/
             topicHref: /sql/relational-databases/service-broker/event-notifications
-          - name: CLR integration
+          - name: Clr integration
             tocHref: /sql/relational-databases/clr-integration/
             topicHref: /sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts
           - name: Native client
             tocHref: /sql/relational-databases/native-client/
             topicHref: /sql/relational-databases/native-client/sql-server-native-client-programming
             items:
-            - name: OLE DB
+            - name: Ole db
               tocHref: /sql/relational-databases/native-client/ole-db/
               topicHref: /sql/relational-databases/native-client/ole-db/sql-server-native-client-ole-db
-            - name: ODBC
+            - name: Odbc
               tocHref: /sql/relational-databases/native-client/odbc/
               topicHref: /sql/relational-databases/native-client/odbc/sql-server-native-client-odbc
               items:
-              - name: ODBC API
-                tocHref: /sql/relational-databases/native-client-odbc-api/
-                topicHref: /sql/relational-databases/native-client-odbc-api/odbc-api-implementation-details
-              - name: Bulk copy functions
+              - name: Native client odbc extensions bulk copy functions
                 tocHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/
                 topicHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions
-          - name: SQLXML 4.0
+              - name: Native client odbc api
+                tocHref: /sql/relational-databases/native-client-odbc-api/
+                topicHref: /sql/relational-databases/native-client-odbc-api/odbc-api-implementation-details
+          - name: Sqlxml
             tocHref: /sql/relational-databases/sqlxml/
             topicHref: /sql/relational-databases/sqlxml/sqlxml-4-0-programming-concepts
           - name: Extended stored procedures programming
             tocHref: /sql/relational-databases/extended-stored-procedures-programming/
             topicHref: /sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming
-          - name: Express LocalDB error messages
+          - name: Express localdb error messages
             tocHref: /sql/relational-databases/express-localdb-error-messages/
             topicHref: /sql/relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages
-          - name: SMO
+          - name: Express localdb instance apis
+            tocHref: /sql/relational-databases/express-localdb-instance-apis/
+            topicHref: /sql/relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis
+          - name: Server management objects smo
             tocHref: /sql/relational-databases/server-management-objects-smo/
             topicHref: /sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide
-          - name: WMI provider
+          - name: Wmi provider configuration
             tocHref: /sql/relational-databases/wmi-provider-configuration/
             topicHref: /sql/relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management
-        - name: SSMS
+        - name: Ssms
           tocHref: /sql/ssms/
           topicHref: /sql/ssms/sql-server-management-studio-ssms
           items:
-          - name: Visual DB tools
+          - name: Visual db tools
             tocHref: /sql/ssms/visual-db-tools/
             topicHref: /sql/ssms/visual-db-tools/visual-database-tools
           - name: Menu help
@@ -169,7 +172,7 @@
         - name: Manage
           tocHref: /sql/relational-databases/manage/
           topicHref: /sql/relational-databases/manage/sql-server-utility-features-and-tasks
-        - name: Policy-based management
+        - name: Policy based management
           tocHref: /sql/relational-databases/policy-based-management/
           topicHref: /sql/relational-databases/policy-based-management/administer-servers-by-using-policy-based-management
         - name: Register servers
@@ -181,13 +184,13 @@
         - name: Data collection
           tocHref: /sql/relational-databases/data-collection/
           topicHref: /sql/relational-databases/data-collection/data-collection
-        - name: Performance Monitor
+        - name: Performance monitor
           tocHref: /sql/relational-databases/performance-monitor/
           topicHref: /sql/relational-databases/performance-monitor/monitor-resource-usage-system-monitor
         - name: Failover clusters
           tocHref: /sql/sql-server/failover-clusters/
-          topicHref: /sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server
-        - name: Always On availability groups
+          topicHref: /sql/sql-server/failover-clusters/windows-server-failover-clustering-wsfc-with-sql-server
+        - name: Windows
           tocHref: /sql/database-engine/availability-groups/windows/
           topicHref: /sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server
         - name: Database mirroring
@@ -203,16 +206,13 @@
           tocHref: /sql/tools/
           topicHref: /sql/tools/command-prompt-utility-reference-database-engine
           items:
-          - name: Data engine Tuning Advisor (DTA)
+          - name: Dta
             tocHref: /sql/tools/dta/
             topicHref: /sql/tools/dta/dta-utility
-          - name: Service Broker Diagnose
+          - name: Ssbdiagnose
             tocHref: /sql/tools/ssbdiagnose/
             topicHref: /sql/tools/ssbdiagnose/ssbdiagnose-utility-service-broker
-          - name: Configuration manager
-            tocHref: /sql/tools/configuration-manager/
-            topicHref: /sql/tools/configuration-manager/sql-server-configuration-manager-help
-        - name: Errors and events ref
+        - name: Errors events
           tocHref: /sql/relational-databases/errors-events/
           topicHref: /sql/relational-databases/errors-events/errors-and-events-reference-database-engine
           items:
@@ -230,57 +230,28 @@
           tocHref: /sql/analysis-services/multidimensional-models/
           topicHref: /sql/analysis-services/multidimensional-models/multidimensional-models-ssas
           items:
-          - name: MDX data access
+          - name: Mdx
             tocHref: /sql/analysis-services/multidimensional-models/mdx/
             topicHref: /sql/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data
         - name: Data mining
           tocHref: /sql/analysis-services/data-mining/
           topicHref: /sql/analysis-services/data-mining/data-mining-ssas
-        - name: UI wizards multidimensional
+        - name: Ui wizards multidimensional
           tocHref: /sql/analysis-services/ui-wizards-multidimensional/
           topicHref: /sql/analysis-services/ui-wizards-multidimensional/ui-wizards-multidimensional
-        - name: UI wizards data mining
-          tocHref: /sql/analysis-services/ui-wizards-data-mining/
-          topicHref: /sql/analysis-services/ui-wizards-data-mining/ui-wizards-data-mining
-        - name: UI dialogs multidimensional
+        - name: Ui designers dialog boxes multidimensional
           tocHref: /sql/analysis-services/ui-designers-dialog-boxes-multidimensional/
           topicHref: /sql/analysis-services/ui-designers-dialog-boxes-multidimensional/ui-designers-dialog-boxes-multidimensional
-        - name: UI dialogs tabular
+        - name: Ui designers dialog boxes tabular
           tocHref: /sql/analysis-services/ui-designers-dialog-boxes-tabular/
           topicHref: /sql/analysis-services/ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular
-        - name: UI dialogs data mining
+        - name: Ui designers dialog boxes data mining
           tocHref: /sql/analysis-services/ui-designers-dialog-boxes-data-mining/
           topicHref: /sql/analysis-services/ui-designers-dialog-boxes-data-mining/ui-designers-dialog-boxes-data-mining
-        - name: Developer guide
-          tocHref: /sql/analysis-services/dev-guide/
-          topicHref: /sql/analysis-services/dev-guide/analysis-services-dev-guide
-          items:
-          - name: Tabular model programming
-            tocHref: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/
-            topicHref: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103
-          - name: Schema rowsets
-            tocHref: /sql/analysis-services/schema-rowsets/
-            topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
-          - name: Scripting ASSL for XMLA
-            tocHref: /sql/analysis-services/scripting/
-            topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
-            items:
-            - name: Objects
-              tocHref: /sql/analysis-services/scripting/objects/
-              topicHref: /sql/analysis-services/scripting/objects/objects-assl
-            - name: Collections
-              tocHref: /sql/analysis-services/scripting/collections/
-              topicHref: /sql/analysis-services/scripting/collections/collections-assl
-            - name: Properties
-              tocHref: /sql/analysis-services/scripting/properties/
-              topicHref: /sql/analysis-services/scripting/properties/properties-assl
-            - name: Data types
-              tocHref: /sql/analysis-services/scripting/data-type/
-              topicHref: /sql/analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl
-          - name: XMLA ref
-            tocHref: /sql/analysis-services/xmla/
-            topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
-      - name: Integration Services
+        - name: Ui wizards data mining
+          tocHref: /sql/analysis-services/ui-wizards-data-mining/
+          topicHref: /sql/analysis-services/ui-wizards-data-mining/ui-wizards-data-mining
+      - name: Integration services
         tocHref: /sql/integration-services/
         topicHref: /sql/integration-services/sql-server-integration-services
         items:
@@ -297,10 +268,10 @@
         - name: Change data capture
           tocHref: /sql/integration-services/change-data-capture/
           topicHref: /sql/integration-services/change-data-capture/change-data-capture-ssis
-        - name: Import export data wizard
+        - name: Import export data
           tocHref: /sql/integration-services/import-export-data/
           topicHref: /sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard
-        - name: Tools to troubleshoot packages
+        - name: Troubleshooting
           tocHref: /sql/integration-services/troubleshooting/
           topicHref: /sql/integration-services/troubleshooting/troubleshooting-tools-for-package-development
         - name: Connection manager
@@ -312,22 +283,22 @@
         - name: Service
           tocHref: /sql/integration-services/service/
           topicHref: /sql/integration-services/service/integration-services-service-ssis-service
-        - name: Server and catalog
+        - name: Catalog
           tocHref: /sql/integration-services/catalog/
           topicHref: /sql/integration-services/catalog/integration-services-ssis-server-and-catalog
-        - name: Projects and packages
+        - name: Packages
           tocHref: /sql/integration-services/packages/
           topicHref: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-        - name: Monitor packages
+        - name: Performance
           tocHref: /sql/integration-services/performance/
           topicHref: /sql/integration-services/performance/monitor-running-packages-and-other-operations
         - name: Security
           tocHref: /sql/integration-services/security/
           topicHref: /sql/integration-services/security/security-overview-integration-services
-        - name: Extend packages by scripting
+        - name: Extending packages scripting
           tocHref: /sql/integration-services/extending-packages-scripting/
           topicHref: /sql/integration-services/extending-packages-scripting/extending-packages-with-scripting
-      - name: Data Quality Services
+      - name: Data quality services
         tocHref: /sql/data-quality-services/
         topicHref: /sql/data-quality-services/data-quality-services
       - name: Replication
@@ -337,20 +308,38 @@
         - name: Transactional
           tocHref: /sql/relational-databases/replication/transactional/
           topicHref: /sql/relational-databases/replication/transactional/transactional-replication
+        - name: Merge
+          tocHref: /sql/relational-databases/replication/merge/
+          topicHref: /sql/relational-databases/replication/merge/merge-replication
+        - name: Non sql
+          tocHref: /sql/relational-databases/replication/non-sql/
+          topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
+        - name: Agents
+          tocHref: /sql/relational-databases/replication/agents/
+          topicHref: /sql/relational-databases/replication/agents/replication-agents
+        - name: Security
+          tocHref: /sql/relational-databases/replication/security/
+          topicHref: /sql/relational-databases/replication/security/security-and-protection-replication
+        - name: Administration
+          tocHref: /sql/relational-databases/replication/administration/
+          topicHref: /sql/relational-databases/replication/administration/administration-replication
+        - name: Monitor
+          tocHref: /sql/relational-databases/replication/monitor/
+          topicHref: /sql/relational-databases/replication/monitor/monitoring-replication-overview
         - name: Publish
           tocHref: /sql/relational-databases/replication/publish/
           topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-        - name: Developer concepts
-          tocHref: /sql/relational-databases/replication/concepts/
-          topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
+        - name: Errors events
+          tocHref: /sql/relational-databases/replication/errors-events/
+          topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
       - name: Reporting services
         tocHref: /sql/reporting-services/
         topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
         items:
-        - name: Report server sharepoint (integrated)
+        - name: Report server sharepoint
           tocHref: /sql/reporting-services/report-server-sharepoint/
           topicHref: /sql/reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library
-        - name: Report server (native)
+        - name: Report server
           tocHref: /sql/reporting-services/report-server/
           topicHref: /sql/reporting-services/report-server/reporting-services-report-server-native-mode
         - name: Report builder
@@ -362,9 +351,6 @@
         - name: Report design
           tocHref: /sql/reporting-services/report-design/
           topicHref: /sql/reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs
-        - name: Report data
-          tocHref: /sql/reporting-services/report-data/
-          topicHref: /sql/reporting-services/report-data/export-reports-report-builder-and-ssrs ???
         - name: Reports
           tocHref: /sql/reporting-services/reports/
           topicHref: /sql/reporting-services/reports/reporting-services-reports-ssrs
@@ -377,7 +363,7 @@
         - name: Tools
           tocHref: /sql/reporting-services/tools/
           topicHref: /sql/reporting-services/tools/reporting-services-tools
-        - name: WMI provider library reference
+        - name: Wmi provider library reference
           tocHref: /sql/reporting-services/wmi-provider-library-reference/
           topicHref: /sql/reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs
         - name: Troubleshooting
@@ -401,17 +387,48 @@
       - name: Master data services
         tocHref: /sql/master-data-services/
         topicHref: /sql/master-data-services/master-data-services
+      - name: Configuration manager
+        tocHref: /sql/tools/configuration-manager/
+        topicHref: /sql/tools/configuration-manager/sql-server-configuration-manager-help
+      - name: Dev guide
+        tocHref: /sql/analysis-services/dev-guide/
+        topicHref: /sql/analysis-services/dev-guide/analysis-services-dev-guide
+        items:
+        - name: Tabular model programming compatibility levels 1050 1103
+          tocHref: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/
+          topicHref: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103
+        - name: Schema rowsets
+          tocHref: /sql/analysis-services/schema-rowsets/
+          topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
+        - name: Scripting
+          tocHref: /sql/analysis-services/scripting/
+          topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
+          items:
+          - name: Objects
+            tocHref: /sql/analysis-services/scripting/objects/
+            topicHref: /sql/analysis-services/scripting/objects/objects-assl
+          - name: Collections
+            tocHref: /sql/analysis-services/scripting/collections/
+            topicHref: /sql/analysis-services/scripting/collections/collections-assl
+          - name: Properties
+            tocHref: /sql/analysis-services/scripting/properties/
+            topicHref: /sql/analysis-services/scripting/properties/properties-assl
+          - name: Data type
+            tocHref: /sql/analysis-services/scripting/data-type/
+            topicHref: /sql/analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl
+        - name: Xmla
+          tocHref: /sql/analysis-services/xmla/
+          topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
+      - name: Concepts
+        tocHref: /sql/relational-databases/replication/concepts/
+        topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
       - name: Install windows
         tocHref: /sql/database-engine/install-windows/
         topicHref: /sql/database-engine/install-windows/installation-for-sql-server
-      - name: Tutorials
-        tocHref: /sql/tutorials/
-        topicHref: /sql/tutorials/tutorials-for-sql-server-2014
-        items:
       - name: T-SQL
         tocHref: /sql/t-sql/
         topicHref: /sql/t-sql/tutorial-writing-transact-sql-statements
-
-
-# EOFile
+      - name: Tutorials
+        tocHref: /sql/tutorials/
+        topicHref: /sql/tutorials/tutorials-for-sql-server-2014
 

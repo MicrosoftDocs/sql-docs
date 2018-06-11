@@ -2,7 +2,7 @@
 title: "Establishing a Connection to a Data Source | Microsoft Docs"
 description: "Establishing a connection to a data source using OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "05/31/2018"
+ms.date: "06/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb-driver-for-sql-server"
@@ -67,7 +67,6 @@ void main() {
    // Release The Component Object Module Library
    CoUninitialize();
 }
-
 
 void InitializeAndEstablishConnection(IDBInitialize *pIDBInitialize) {
    IDBProperties   *pIDBProperties = nullptr;

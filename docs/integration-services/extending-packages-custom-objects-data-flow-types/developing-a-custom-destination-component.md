@@ -7,8 +7,7 @@ ms.prod_service: "integration-services"
 ms.component: "extending-packages-custom-objects-data-flow-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 

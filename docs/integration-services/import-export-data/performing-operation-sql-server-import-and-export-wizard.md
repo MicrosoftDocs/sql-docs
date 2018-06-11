@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/11/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "import-export-data"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: integration-services  - "integration-services"

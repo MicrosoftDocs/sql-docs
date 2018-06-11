@@ -5,8 +5,7 @@ ms.date: "07/21/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21

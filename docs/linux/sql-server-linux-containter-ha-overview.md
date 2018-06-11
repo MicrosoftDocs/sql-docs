@@ -98,14 +98,10 @@ The StatefulSet includes the following Kubernetes components:
    
    A Kubernetes job that implements the manual failover workflow
 
+### Notes
 
+To deploy an AG in Kubernetes, define a SqlServer resource with the names of one or more AGs that the instance should be a part of.
 
-The AG agent container automatically creates and monitors the AG, and triggers fail over in case of health issues.
-
-Annotate (specify?) a a SQL Server instance resource withthe names of one or more AGs that the instance should be a part of. 
-
-Regardless of the AG configuration, The operator will always deploy the health monitoring container as well as the AG health container. For example, if the custom resource does not list any AG, the operator will still deploy these containers. 
-
-The health agent provides instance level health monitoring. It connects to the SQL Server instance and runs `sp_server_diagnostics`. The AG agent checks the AG health - including database level health check, trigers failover if necessary, adds or removes replicas dynamically as pods become enabled or disabled, and as you deploy new SQL Server  resources or remove existing ones.  
+Regardless of the AG configuration, The operator will always deploy the health monitoring container as well as the AG health container. If the SqlServer resource does not list any AG, the operator will still deploy these containers.
 
 The version for the operator image is identical to the version for the SQL Server image `https://coreos.com/blog/introducing-operators.html 

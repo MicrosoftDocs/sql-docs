@@ -42,7 +42,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
   
  This call to **CoCreateInstance** creates a single object of the class associated with CLSID_MSOLEDBSQL (CSLID associated with the data and code that will be used to create the object). IID_IDBInitialize is a reference to the identifier of the interface (**IDBInitialize**) to be used to communicate with the object.  
   
- The following is a sample function that initializes and establishes a connection to the data source.  
+ The following sample shows how to initialize and establish a connection to the data source.
   
 ```cpp
 #include "msoledbsql.h"
@@ -80,7 +80,7 @@ _ExitMain:
 
 HRESULT InitializeAndEstablishConnection(IDBInitialize *&pIDBInitialize) {
     IDBProperties   *pIDBProperties = nullptr;
-    DBPROP          InitProperties[4] = { 0 };
+    DBPROP          InitProperties[3] = { 0 };
     DBPROPSET       rgInitPropSet[1] = { 0 };
     HRESULT         hr = S_OK;
 
@@ -95,7 +95,7 @@ HRESULT InitializeAndEstablishConnection(IDBInitialize *&pIDBInitialize) {
         goto _ExitInitialize;
     }
     // Initialize property values needed to establish connection.  
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 3; i++) {
         VariantInit(&InitProperties[i].vValue);
     }
 
@@ -120,14 +120,12 @@ HRESULT InitializeAndEstablishConnection(IDBInitialize *&pIDBInitialize) {
     InitProperties[2].vValue.bstrVal = SysAllocString(L"SSPI");
     InitProperties[2].dwOptions = DBPROPOPTIONS_REQUIRED;
     InitProperties[2].colid = DB_NULLID;
-    InitProperties[3].dwOptions = DBPROPOPTIONS_REQUIRED;
-    InitProperties[3].colid = DB_NULLID;
 
     // Construct the DBPROPSET structure(rgInitPropSet). The   
     // DBPROPSET structure is used to pass an array of DBPROP   
     // structures (InitProperties) to the SetProperties method.  
     rgInitPropSet[0].guidPropertySet = DBPROPSET_DBINIT;
-    rgInitPropSet[0].cProperties = 4;
+    rgInitPropSet[0].cProperties = 3;
     rgInitPropSet[0].rgProperties = InitProperties;
 
     // Set initialization properties.  

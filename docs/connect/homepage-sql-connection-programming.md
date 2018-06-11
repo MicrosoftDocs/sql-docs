@@ -5,7 +5,6 @@ author: MightyPen
 ms.date: "04/16/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "connect"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: connectivity

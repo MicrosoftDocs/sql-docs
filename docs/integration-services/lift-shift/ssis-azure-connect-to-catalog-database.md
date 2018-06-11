@@ -5,7 +5,6 @@ ms.date: "09/25/2017"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services  - "integration-services"

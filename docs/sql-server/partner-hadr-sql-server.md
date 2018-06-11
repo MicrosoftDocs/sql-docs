@@ -97,8 +97,8 @@ To learn more about some of our other partners, see [monitoring][mon_partners], 
 [veeam_twitter]:https://twitter.com/veeam
 [dh2i_twitter]:https://twitter.com/dh2i
 [hpe_twitter]:https://twitter.com/hpe
-[azure_twitter]: https://twitter.com/hashtag/azuresiterecovery
-[sios_twitter]:  www.twitter.com/SIOSTech
+[azure_twitter]:https://twitter.com/hashtag/azuresiterecovery
+[sios_twitter]:https://www.twitter.com/SIOSTech
 
 <!--Docs links>-->
 [portworx_docs]: http://docs.portworx.com/

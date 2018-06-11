@@ -35,6 +35,7 @@ To provide high availability and disaster recovery for your SQL Server services,
 |![idera][3]|**IDERA**<br>SQL Safe Backup is a high-performance backup and recovery solution for SQL Server that saves money by reducing database backup time and backup file size, and by providing instant read and write access to databases within backup files.<br><br>Microsoft SQL Server: 2005 SP1 or later, 2008, 2008 R2, 2012, 2014, 2016; all editions |[Website][idera_website]|
 |![nec][7]|**NEC**<br>ExpressCluster is a comprehensive and fully automated high-availability and disaster recovery solution against all major failures including hardware, software, network and site failures for SQL Server and associated applications running on physical or virtual machines in on-premises or cloud environments.<br><br>Microsoft SQL Server: 2005 or later; all editions |[Website][necec_website]<br>[Datasheet][necec_datasheet]<br>[Video][necec_youtube]<br>[Download][necec_download]|
 |![portworx][6] |**Portworx**<br>Portworx is the solution for stateful containers running in production. With Portworx, users can manage any database or stateful service on any infrastructure using any container scheduler, including Kubernetes, Mesosphere DC/OS, and Docker Swarm. Portworx solves the five most common problems DevOps teams encounter when running containerized databases and other stateful services in production: persistence, high availability, data automation, support for multiple data stores and infrastructure, and security.<br><br>SQL Server 2017 on Docker |[Website][portworx_website]<br>[Documentation][portworx_docs]<br>[Video][portworx_youtube]|
+|![sios][8] |**SIOS**<br>SIOS Technology delivers cost-efficient high availability and disaster recovery solutions for SQL Server on Windows or Linux. SIOS SANless clustering eliminates the need for a shared storage SAN, giving you complete flexibility to protect your most important applications in physical, virtual, cloud and hybrid cloud configurations in single and multi-site environments.<br><br>Add SIOS DataKeeper to your Windows Server Failover Clustering environment to create a SANless volume resource that replaces traditional shared storage making it easy to run WSFC in Azure.<br><br>SIOS Protection Suite is a fully flexible clustering solution that protects critical Linux applications such as SQL Server, SAP, HANA, Oracle and many others.|[Website][sios_website]<br>[Datasheet][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[Video][sios_video]|
 |![veeam][1] |**Veeam**<br>Veeam Backup & Replication is a powerful, easy-to-use and affordable backup and availability solution. It provides fast, flexible and reliable recovery of virtualized applications and data, bringing VM (virtual machine) backup and replication together in a single software solution. Veeam Backup & Replication delivers award-winning support for VMware vSphere and Microsoft Hyper-V virtual environments.<br><br>SQL Server 2005 SP4 – SQL Server 2016 on Windows |[Website][veeam_website]<br>[Datasheet][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Video][veeam_youtube]|
 
 
@@ -50,7 +51,7 @@ To learn more about some of our other partners, see [monitoring][mon_partners], 
 [5]: ./media/partner-hadr-sql-server/azure_logo.png
 [6]: ./media/partner-hadr-sql-server/portworx_logo.png
 [7]: ./media/partner-hadr-sql-server/nec_logo.png
-
+[8]: ./media/partner-hadr-sql-server/sios_logo.png
 
 <!--Article links-->
 [mon_partners]: ./partner-monitor-sql-server.md
@@ -65,6 +66,7 @@ To learn more about some of our other partners, see [monitoring][mon_partners], 
 [azure_website]: http://docs.microsoft.com/azure/site-recovery/site-recovery-sql
 [necec_website]: https://www.necam.com/ExpressCluster/
 [portworx_website]: https://portworx.com/
+[sios_website]: https://us.sios.com/
 
 <!--Get Started Links-->
 
@@ -74,9 +76,11 @@ To learn more about some of our other partners, see [monitoring][mon_partners], 
 [hpe]:https://www.hpe.com/h20195/v2/default.aspx?cc=us&lc=en&oid=376220
 [necec_datasheet]: https://www.necam.com/docs/?id=0d9ef7a7-f935-4909-b6bb-20a47b3
 [azure_datasheet]: http://docs.microsoft.com/azure/site-recovery/site-recovery-sql#site-recovery-support
+[sios_datasheet]: https://us.sios.com/solutions/high-availability-cluster-software-cloud/
 
 <!--Marketplace Links -->
 [azure_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps?search=site%20recovery&page=1
+[sios_marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/sios_datakeeper.sios-datakeeper-8
 <!--Press links-->
 <!--[veeam_press]:-->
 
@@ -87,6 +91,7 @@ To learn more about some of our other partners, see [monitoring][mon_partners], 
 [azure_youtube]: https://mva.microsoft.com/en-US/training-courses/is-your-lack-of-a-disaster-recovery-site-keeping-you-up-at-night-8680?l=oF7YrFH1_7504984382
 [necec_youtube]: https://www.youtube.com/watch?v=9La3Cw1Q1Jk
 [portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ 
+[sios_youtube]: https://www.youtube.com/watch?v=U3M44gJNWQE
 
 <!--Twitter links-->
 [veeam_twitter]:https://twitter.com/veeam

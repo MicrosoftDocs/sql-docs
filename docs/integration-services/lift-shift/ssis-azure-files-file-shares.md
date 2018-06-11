@@ -4,8 +4,7 @@ description: Learn how to open and save files on premises and in Azure when you 
 ms.date: "11/27/2017"
 ms.topic: conceptual
 ms.prod: sql  
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services  - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

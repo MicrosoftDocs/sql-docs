@@ -7,8 +7,7 @@ ms.prod_service: "integration-services"
 ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services  - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 

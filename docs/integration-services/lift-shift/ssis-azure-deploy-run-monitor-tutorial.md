@@ -8,8 +8,7 @@ ms.prod_service: "integration-services"
 ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services  - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

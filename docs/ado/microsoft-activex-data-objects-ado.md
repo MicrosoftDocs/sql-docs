@@ -6,7 +6,6 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual

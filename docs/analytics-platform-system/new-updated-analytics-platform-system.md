@@ -10,14 +10,9 @@ ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-
-ms.component: aps-pdw
 ms.date: 04/28/2018
 ---
 # New and Recently Updated: Analytics Platform System for SQL Server
-
-
 
 Nearly every day Microsoft updates some of its existing articles on its [Docs.Microsoft.com](http://docs.microsoft.com/) documentation website. This article displays excerpts from recently updated articles. Links to new articles might also be listed.
 

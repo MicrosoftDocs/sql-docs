@@ -1,6 +1,6 @@
 ---
 title: "Feature Properties | Microsoft Docs"
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: 
@@ -12,6 +12,7 @@ manager: kfile
 ---
 # Feature Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   Feature properties pertain to product features, most of them advanced, including properties that control links between server instances.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the server properties listed in the following table. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  

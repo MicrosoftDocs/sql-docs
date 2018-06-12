@@ -3,7 +3,6 @@ title: "Transactions - Always On availability groups and database mirroring | Mi
 ms.custom: ""
 ms.date: "05/22/2018"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 caps.latest.revision: 33
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Transactions - availability groups and database mirroring

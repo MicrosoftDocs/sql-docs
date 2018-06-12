@@ -3,7 +3,6 @@ title: "Install SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], installing"
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 caps.latest.revision: 45
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Install SQL Server Database Engine

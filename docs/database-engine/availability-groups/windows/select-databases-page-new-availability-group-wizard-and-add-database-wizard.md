@@ -3,7 +3,6 @@ title: "Select Databases Page (New Availability Group Wizard and Add Database Wi
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -14,8 +13,8 @@ f1_keywords:
   - "sql13.swb.newagwizard.selectdatabases.f1"
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Select Databases Page (New Availability Group Wizard and Add Database Wizard)

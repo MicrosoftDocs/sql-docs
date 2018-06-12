@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/02/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "import-export-data"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 

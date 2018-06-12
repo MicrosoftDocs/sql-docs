@@ -2,7 +2,6 @@
 title: "Ensuring Sufficient TempDB Space | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"

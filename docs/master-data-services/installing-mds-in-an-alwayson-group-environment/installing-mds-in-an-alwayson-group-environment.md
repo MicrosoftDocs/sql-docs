@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "07/28/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.component: "installing-mds-in-an-alwayson-group-environment"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ""

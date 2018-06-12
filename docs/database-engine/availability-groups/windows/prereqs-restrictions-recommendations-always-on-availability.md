@@ -3,7 +3,6 @@ title: "Prereqs, Restrictions, Recommendations - Always On Availability Groups |
 ms.custom: ""
 ms.date: "05/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server]"
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: 151
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Prereqs, Restrictions, Recommendations - Always On Availability Groups

@@ -1,14 +1,12 @@
 ---
 title: "Monitor Running Packages and Other Operations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+ms.custom: supportability
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -40,7 +38,12 @@ manager: craigg
      For more information, see [Performance Counters](../../integration-services/performance/performance-counters.md).  
   
 -   Data taps  
-  
+
+> [!NOTE]
+> This article describes how to monitor running SSIS packages in general, and how to monitor running packages on premises. You can also run and monitor SSIS packages in Azure SQL Database. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Although you can also run SSIS packages on Linux, no monitoring tools are provided on Linux. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+
 ## Operation Types  
  Several different types of operations are monitored in the **SSISDB** catalog, on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Each operation can have multiple messages associated with it. Each message can be classified into one of several different types. For example, a message can be of type Information, Warning, or Error. For the full list of message types, see the documentation for the Transact-SQL [catalog.operation_messages &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) view. For a full list of the operations types, see [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
   

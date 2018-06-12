@@ -1,6 +1,6 @@
 ---
 title: "Using Tuple Functions | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Using Tuple Functions
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   A tuple function retrieves a tuple from a set or retrieves a tuple by resolving the string representation of a tuple.  
   

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/06/2016"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

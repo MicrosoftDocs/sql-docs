@@ -1,6 +1,6 @@
 ---
 title: "Expressions (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,9 +11,9 @@ author: minewiskan
 manager: kfile
 ---
 # Expressions (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  An expression is a combination of identifiers, values, and operators that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] can evaluate to get a result. The data can be used in several different places when accessing or changing data. For example, you can use an expression as part of the data to be retrieved by a query or as a search condition to look for data that meets a set of criteria.  
+
+  An expression is a combination of identifiers, values, and operators that can be evaluated to get a result. The data can be used in several different places when accessing or changing data. For example, you can use an expression as part of the data to be retrieved by a query or as a search condition to look for data that meets a set of criteria.  
   
 ## Simple and Complex Expressions  
  An expression can be simple or complex in MDX:  

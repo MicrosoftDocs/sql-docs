@@ -3,8 +3,6 @@ title: "Monitor Log Shipping (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: "log-shipping"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -20,8 +18,8 @@ helpviewer_keywords:
   - "monitoring log shipping [SQL Server]"
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: 29
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Monitor Log Shipping (Transact-SQL)

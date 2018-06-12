@@ -3,7 +3,6 @@ title: "Data synchronization state of availability database is not healthy | Mic
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: "erikre"
 ---
 # Data synchronization state of availability database is not healthy

@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services Language Reference | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Analysis Services Language Reference
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   [Data Analysis Expressions (DAX) Reference](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)  
   

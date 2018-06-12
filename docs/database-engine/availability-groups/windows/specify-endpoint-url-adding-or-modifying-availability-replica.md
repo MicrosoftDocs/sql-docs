@@ -3,7 +3,6 @@ title: "Specify Endpoint URL - Adding or Modifying Availability Replica | Micros
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "Endpoint URLs (HADR)"
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 caps.latest.revision: 22
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Specify Endpoint URL - Adding or Modifying Availability Replica

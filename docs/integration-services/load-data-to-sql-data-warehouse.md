@@ -18,7 +18,7 @@ ms.author: douglasl
 ---
 # Load data from SQL Server to Azure SQL Data Warehouse with SQL Server Integration Services (SSIS)
 
-Create a SQL Server Integration Services (SSIS) package to load data from SQL Server into [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index.md). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
+Create a SQL Server Integration Services (SSIS) package to load data from SQL Server into [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
 
 In this tutorial, you will:
 

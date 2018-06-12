@@ -12,8 +12,11 @@ ms.topic: "article"
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
+monikerRange: "= sql-server-atver15-seattle || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server vNext
+
+[!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server vNext. For more information and known issues, see the [SQL Server vNext Release Notes](sql-server-vnext-release-notes.md).
 

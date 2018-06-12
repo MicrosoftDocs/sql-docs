@@ -43,6 +43,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 ::: moniker range="= sqlallproducts-allversions"
 |What's new  | Release notes  |
 |---------|---------|
+|[What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)     | [SQL Server vNext Release Notes](../sql-server/sql-server-vnext-release-notes.md)        |
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 
@@ -51,6 +52,12 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
 - [Previous Versions](https://docs.microsoft.com/previous-versions/sql/)
+::: moniker-end
+
+::: moniker range="= sql-server-atver15-seattle"
+|What's new  | Release notes  |
+|---------|---------|
+|[What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)     | [SQL Server vNext Release Notes](../sql-server/sql-server-vnext-release-notes.md)        |
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

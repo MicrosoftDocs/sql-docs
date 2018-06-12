@@ -1,14 +1,12 @@
 ---
 title: "Refreshing Data (MDS Add-in for Excel) | Microsoft Docs"
-ms.custom: ""
+ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945

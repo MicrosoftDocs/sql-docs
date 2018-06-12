@@ -9,11 +9,11 @@
 ## [Compute Capacity Limits by Edition of SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Customer Experience Improvement Program](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [Configure SQL Server to send feedback to Microsoft](sql-server-customer-feedback.md)
-### Partners
-#### [Monitoring](partner-monitor-sql-server.md)
-#### [High availability and disaster recovery](partner-hadr-sql-server.md)
-#### [Management](partner-management-sql-server.md)
-#### [Development](partner-dev-sql-server.md)
+## Partners
+### [Monitoring](partner-monitor-sql-server.md)
+### [High availability and disaster recovery](partner-hadr-sql-server.md)
+### [Management](partner-management-sql-server.md)
+### [Development](partner-dev-sql-server.md)
 
 # [New and updated articles](new-updated-sql-server.md)
 

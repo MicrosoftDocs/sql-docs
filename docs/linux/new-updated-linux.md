@@ -9,7 +9,6 @@ ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.component: linux
 ms.date: 04/28/2018
 ---
 # New and Recently Updated: SQL Server on Linux docs

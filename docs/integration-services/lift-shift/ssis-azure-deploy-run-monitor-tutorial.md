@@ -1,20 +1,19 @@
 ---
 title: "Deploy and run an SSIS package in Azure | Microsoft Docs"
+description: Learn how to deploy a SQL Server Integration Services (SSIS) project to the SSIS Catalog on Azure SQL Database, run a package 
 ms.date: "5/22/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Deploy and run an SSIS package in Azure
-This tutorial shows you how to deploy a SQL Server Integration Services project to the SSISDB Catalog database on Azure SQL Database, run a package in the Azure-SSIS Integration Runtime, and monitor the running package.
+# Tutorial: Deploy and run a SQL Server Integration Services (SSIS) package in Azure
+This tutorial shows you how to deploy a SQL Server Integration Services (SSIS) project to the SSIS Catalog in Azure SQL Database, run a package in the Azure-SSIS Integration Runtime, and monitor the running package.
 
 ## Prerequisites
 
@@ -36,7 +35,7 @@ To run the package on Azure SQL Database, get the connection information you nee
 Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQL Database server. For more info and screenshots, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
 
 Here are the two most important things to remember. These steps are described in the following procedure.
--   Enter the fully-qualified name of the Azure SQL Database server in the format **mysqldbserver.database.windows.net**.
+-   Enter the fully qualified name of the Azure SQL Database server in the format **mysqldbserver.database.windows.net**.
 -   Select `SSISDB` as the database for the connection.
 
 > [!IMPORTANT]
@@ -96,7 +95,7 @@ To learn more about deploying packages and about the Deployment Wizard, see [Dep
     -   You can change your selections by selecting **Previous**, or by selecting any of the steps in the left pane.
     -   Select **Deploy** to start the deployment process.
 
-    > ![NOTE]
+    > [!NOTE]
     > If you get the error message **There is no active worker agent. (.Net SqlClient Data Provider)**, make sure the Azure-SSIS Integration Runtime is running. This error occurs if you try to deploy while the Azure-SSIS IR is in a stopped state.
 
 5.  After the deployment process is complete, the **Results** page opens. This page displays the success or failure of each action.
@@ -186,9 +185,17 @@ You can also select a package in Object Explorer, right-click and select **Repor
 
 For more info about how to monitor running packages in SSMS, see [Monitor Running Packages and Other Operations](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
+## Monitor the Execute SSIS Package activity
+
+If you're running a package as part of an Azure Data Factory pipeline with the Execute SSIS Package activity, you can monitor the pipeline runs in the Data Factory UI. Then you can get the SSISDB execution ID from the output of the activity run, and use the ID to check more comprehensive execution logs and error messages in SSMS.
+
+![Get the package execution ID in Data Factory](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## Monitor the Azure-SSIS Integration Runtime
 
-To get status info about the Azure-SSIS Integration Runtime in which packages are running, use the following PowerShell commands. For each of the commands, provide the names of the Data Factory, the Azure-SSIS IR, and the resource group. For more info, see [Monitor Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+To get status info about the Azure-SSIS Integration Runtime in which packages are running, use the following PowerShell commands. For each of the commands, provide the names of the Data Factory, the Azure-SSIS IR, and the resource group.
+
+For more info, see [Monitor Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### Get metadata about the Azure-SSIS Integration Runtime
 

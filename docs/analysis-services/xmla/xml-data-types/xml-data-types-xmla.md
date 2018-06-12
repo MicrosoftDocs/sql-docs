@@ -20,7 +20,7 @@ manager: kfile
 |----------------|-----------------|  
 |Boolean|The standard XML **boolean** data type.|  
 |Decimal|The standard XML **decimal** data type.|  
-|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|A namespace on the **root** element. This namespace is returned when an XMLA command does not return a result because either the XMLA command does not normally return a result or because an error occurred on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance while executing the XMLA command.|  
+|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|A namespace on the **root** element. This namespace is returned when an XMLA command does not return a result because either the XMLA command does not normally return a result or because an error occurred on the Analysis Services instance while executing the XMLA command.|  
 |[EnumString](../../../analysis-services/xmla/xml-data-types/enumstring-data-type-xmla.md)|A set of named string constants for a given enumerator.|  
 |Integer|The standard XML **int** data type.|  
 |[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|Multidimensional data returned by the *Result* parameter of the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.|  
@@ -31,7 +31,7 @@ manager: kfile
   
  For complete descriptions of the standard XML data types, see the World Wide Web Consortium (WC3) candidate recommendation.  
   
-## See Also  
+## See also
  [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [XML for Analysis  &#40;XMLA&#41; Reference](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   

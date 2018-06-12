@@ -12,7 +12,7 @@ manager: kfile
 ---
 # PropertyList Element - Supported XMLA Properties
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the properties listed in the following table. You use these listed properties in the [Properties](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) element of the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) and [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) methods.  
+  Analysis Services supports the properties listed in the following table. You use these listed properties in the [Properties](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) element of the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) and [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) methods.  
   
 |Name|Description|Type|Values|  
 |----------|-----------------|----------|------------|  
@@ -128,7 +128,7 @@ manager: kfile
 |UserName|This property is no longer supported.<br /><br /> Specifies a string that returns the user name that the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance associates with the command. For backward compatibility, this property is ignored without generating an error when used with the **Execute** or **Discover** method. This property is equivalent to the OLE DB property, DBPROP_USERNAME.<br /><br /> The default value for this property is the user name that opened the current session or connection.<br /><br /> This property can be used with the **Execute** method.|Optional, read-only **String** property||  
 |VisualMode|This property is equivalent to the OLE DB property, MDPROP_VISUALMODE.<br /><br /> The default value for this property is zero (0), equivalent to DBPROPVAL_VISUAL_MODE_DEFAULT.<br /><br /> This property can be used with the **Discover** and **Execute** methods.|Optional, write-only **Integer** property||  
   
-## See Also  
+## See also
  [PropertyList Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
   
   

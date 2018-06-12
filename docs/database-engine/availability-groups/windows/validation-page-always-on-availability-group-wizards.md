@@ -3,7 +3,6 @@ title: "Validation Page (Always On Availability Group Wizards) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - ", listeners"
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Validation Page (Always On Availability Group Wizards)

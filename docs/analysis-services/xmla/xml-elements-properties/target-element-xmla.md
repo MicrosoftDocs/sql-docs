@@ -28,7 +28,7 @@ manager: kfile
 </MergePartitions>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -36,7 +36,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|1-n: Required element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -75,7 +75,7 @@ manager: kfile
 </MergePartitions>  
 ```  
   
-## See Also  
+## See also
  [Source Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

@@ -3,7 +3,6 @@ title: "SQL Server Multi-Subnet Clustering (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -16,9 +15,8 @@ helpviewer_keywords:
   - "multi-site failover cluster"
   - "failover clustering [SQL Server]"
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
-caps.latest.revision: 52
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Multi-Subnet Clustering (SQL Server)

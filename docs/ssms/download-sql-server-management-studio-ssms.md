@@ -72,6 +72,7 @@ SQL Server Management Studio 17.7 Upgrade Package (upgrades 17.x to 17.7):<br>
 
 > [!NOTE]
 > The SQL Server PowerShell module is now a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
+
 ## SQL Server Management Studio
 
 

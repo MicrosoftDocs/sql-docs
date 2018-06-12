@@ -120,7 +120,7 @@ To take advantages of the resource management and securty features in SQL Server
 **Resources**
 
 + [Resource Governance for R](resource-governance-for-r-services.md)
-+ [R Package Management for SQL Server](r-package-management-for-sql-server-r-services.md)
++ [R Package Management for SQL Server](install-additional-r-packages-on-sql-server.md)
 
 ## See also
 

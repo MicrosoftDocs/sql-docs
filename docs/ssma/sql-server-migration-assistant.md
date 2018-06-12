@@ -3,8 +3,6 @@ title: "SQL Server Migration Assistant | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-access"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
@@ -99,4 +97,3 @@ In some cases, a particular feature is not something that customers should use d
 Customers must not use undocumented APIs, including but not limited to: stored procedures, extended stored procedures, functions, views, tables, columns, properties, or metadata. Microsoft customer support does not support databases or applications that leverage or use undocumented entry points.  
   
 Server and database upgrades to future versions of SQL Server are not guaranteed for applications and databases that leverage and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature is not documented in Microsoft SQL Server documentation, it is not a supported part of SQL Server.  
-  

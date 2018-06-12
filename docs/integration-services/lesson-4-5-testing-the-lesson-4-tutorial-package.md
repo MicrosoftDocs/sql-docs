@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: tutorial
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439

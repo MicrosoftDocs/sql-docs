@@ -3,12 +3,9 @@ title: "Network Protocols and Network Libraries | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -24,8 +21,8 @@ helpviewer_keywords:
   - "configuration options [SQL Server], libraries"
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Network Protocols and Network Libraries

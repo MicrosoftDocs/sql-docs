@@ -26,7 +26,7 @@ manager: kfile
 </Synchronize>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -34,7 +34,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|1-1: Required element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -42,9 +42,9 @@ manager: kfile
 |Child elements|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md), [Object](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
 ## Remarks  
- The **Synchronize** command uses the **Source** element to establish a connection to and identify a database on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] with which to synchronize the target database.  
+ The **Synchronize** command uses the **Source** element to establish a connection to and identify a database on an instance of Analysis Services with which to synchronize the target database.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

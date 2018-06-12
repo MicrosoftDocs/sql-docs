@@ -4,7 +4,7 @@ description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/10/2018  
+ms.date: 05/29/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -16,82 +16,46 @@ manager: cgronlun
 
 This article describes how to install new R packages to an instance of SQL Server where machine learning is enabled. There are multiple methods for installing new R packages, depending on which version of SQL Server you have, and whether the server has an internet connection. The following approaches for new package installation are possible.
 
-| Approach                           | Permissions  | Remote/Local |
-|------------------------------------|---------------------------|-------|
-| [Use conventional R package managers](#bkmk_rInstall)  | Admin | Local |
-| [Use RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Admin to setup, database roles afterwards | Both |
-| [Use T-SQL (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | Admin | both 
-| [Use a miniCRAN to create a local repository](create-a-local-package-repository-using-minicran.md) | Admin to setup, database roles afterwards | both |
+| Approach                           | Permissions               | Remote/Local |
+|------------------------------------|---------------------------|--------------|
+| [Use conventional R package managers](use-r-package-managers-on-sql-server.md)  | Admin | Local |
+| [Use RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Admin-enabled, database roles afterwards | both|
+| [Use T-SQL (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | Admin-enabled, database roles afterwards | both 
 
-## <a name="bkmk_rInstall"></a> Install R packages over an Internet connection
+## Who installs (permissions)
 
-You can use standard R tools to install new packages on an instance of SQL Server 2016 or SQL Server 2017, providing the computer has an open port 80 and you have administrator rights.
+The R package library is physically located in the Program Files folder of your SQL Server instance, in a secure folder with restricted access. Writing to this location requires administrator permissions.
 
-> [!IMPORTANT] 
-> Be sure to install packages to the default library that is associated with the current instance. Never install packages to a user directory.
+Non-administrators can install packages but doing so requires addititional configuration and capability not available in initial installations. There are two approaches for non-admin package installations: RevoScaleR using version 9.0.1 and later, or using CREATE EXTERNAL LIBRARY (SQL Server 2017 only). In SQL Server 2017, **dbo_owner** or another user with CREATE EXTERNAL LIBRARY permission can install R packages to the current database.
 
-This procedure uses RGui but you can use RTerm or any other R command-line tool that supports elevated access.
+R developers are accustomed to creating user libraries for the packages they need if centrally located libraries are off-limits. This practice is problematic for R code executing in a SQL Server database engine instance. SQL Server cannot load packages from external libraries, even if that library is on the same computer. Only packages from the instance library can be used in R code running in SQL Server.
 
-### Install a package using RGui
+File system access is typically restricted on the server, and even if you have admin rights and access to a user document folder on the server, the external script runtime that executes in SQL Server cannot access any packages installed outside the default instance library. 
 
-1. [Determine the location of the instance library](installing-and-managing-r-packages.md). Navigate to the folder where the R tools are installed. For example, the default path for a SQL Server 2017 default instance is as follows: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+## Considerations for package installation
 
-1. Right-click RGui.exe, and select **Run as administrator**. If you do not have the required permissions, contact the database administrator and provide a list of the packages you need.
+Before installing new packages, consider whether the capabilities enabled by a given package are suitable in a SQL Server environment. On a hardened SQL Server environment, you might want to avoid the following:
 
-1. From the command line, if you know the package name, you can type: `install.packages("the_package-name")`
-    Double quotation marks are required for the package name.
++ Packages that require network access
++ Packages that require Java or other frameworks not typically used in a SQL Server environment
++ Packages that require elevated file system access
++ Package is used for web development or other tasks that don't benefit by running inside SQL Server
 
-1. When asked for a mirror site, select any site that is convenient for your location.
+## Offline installation (no internet access)
 
-If the target package depends on additional packages, the R installer automatically downloads the dependencies and installs them for you.
+In general, servers that host production databases block internet connections. Installing new R or Python packages in such environments requires that you prepare packages and dependencies in advance, and copy the files to a folder on the server for offline installation.
 
-If you have multiple instances of SQL Server, such as side-by-side instances of SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services, run installation separately for each instance if you want to use the package in both contexts. Packages cannot be shared across instances.
+Identifying all dependencies gets complicated. For R, we recommend that you use [miniCRAN to create a local repository](create-a-local-package-repository-using-minicran.md) and then transfer the fully defined repo to an isolated SQL Server instance.
 
-## <a name = "bkmk_offlineInstall"></a> Offline installation using R tools
+Alternativley, you can perform this steps manually:
 
-If the server does not have internet access, additional steps are required to prepare the packages. To install R packages on a server that does not have internet access, you must:
+1. Identify all package dependencies. 
+2. Check whether any required packages are already installed on the server. If the package is installed, verify that the version is correct.
+3. Download the package and all dependencies to a separate computer.
+4. Move the files to a folder accessible by the server.
+5. Run a supported installation command or DDL statement to install the package into the instance library.
 
-+ Analyze dependencies in advance.
-+ Download the target package to a computer with Internet access.
-+ Download any required packages to the same computer and place all packages in a single package archive.
-+ Zip the archive if it is not already in zipped format.
-+ Copy the package archive to a location on the server.
-+ Install the target package specifying the archive file as source.
-
-> [!IMPORTANT] 
-> > Be sure that you analyze all dependencies and download **all** required packages **before** beginning installation. We recommend [miniCRAN](https://mran.microsoft.com/package/miniCRAN) for this process. This R package takes a list of packages you want to install, analyzes dependencies, and gets all the zipped files for you. miniCRAN then creates a single repository that you can copy to the server computer.
-> 
-> For details, see [Create a local package repository using miniCRAN](create-a-local-package-repository-using-minicran.md)
-
-This procedure assumes that you have prepared all the packages that you need, in zipped format, and are ready to copy them to the server.
-
-1. Copy the package zipped file, or for multiple packages, the complete repository containing all packages in zipped format, to a location that the server can access.
-
-2. Open the folder on the server where the R tools for the instance are installed. For example, if you are using the Windows command prompt on a system with SQL Server 2016 R Services, switch to `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
-
-3. Right-click on RGui or RTerm and select **Run as administrator**.
-
-4. Run the R command `install.packages` and specify the package or repository name, and the location of the zipped files.
-
-    ```R
-    install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)
-    ```
-
-    This command extracts the R package `mynewpackage` from its local zipped file, assuming you saved the copy in the directory `C:\Temp\Downloaded packages`, and installs the package on the local computer. If the package has any dependencies, the installer checks for existing packages in the library. If you have created a repository that includes the dependencies, the installer installs the required packages as well.
-
-    If any required packages are not present in the instance library, and cannot be found in the zipped files, installation of the target package fails.
-
-## Tips for package installation
-
-This section provides assorted tips and common questions related to R package installation on SQL Server.
-
-###  <a name="packageVersion"></a> Get the correct package version and format
-
-There are multiple sources for R packages, such as CRAN and Bioconductor. The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Many packages are published to GitHub, where you can obtain the source code. Finally, you might have been given R packages that were developed by someone in your company, or you have a custom package you have written.
-
-Regardless of the source, before trying to install the package, ensure that you have obtained the binary format for the Windows platform. 
-
-### <a name="bkmk_zipPreparation"></a> Download the package as a zipped file
+### Download the package as a zipped file
 
 For installation on a server without internet access, you must download a copy of the package in the format of a zipped file for offline installation. **Do not unzip the package.**
 
@@ -115,21 +79,17 @@ For example, the following procedure describes now to get the correct version of
 > 
 > However, when you obtain packages using this method, the dependencies are not included. 
 
-### <a name="bkmk_packageDependencies"></a> Get required packages
 
-R packages frequently depend on multiple other packages, some of which might not be available in the default R library used by the instance. Sometimes a package requires a different version of a dependent package that is already installed.
+## Side-by-side installation with Standalone R or Python Servers
 
-If you need to install multiple packages, or want to ensure that everyone in your organization gets the correct package type and version, we recommend that you use the [miniCRAN](https://mran.microsoft.com/package/miniCRAN) package to analyze the complete dependency chain. minicRAN creates a local repository that can be shared among multiple users or computers. For more information, see [Create a local package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
+R and Python features are included in several Microsoft products, all of which could co-exist on the same computer.
+
+If you installed SQL Server 2017 Microsoft Machine Learning Server (Standalone) or SQL Server 2016 R Server (Standalone) in addition to in-database analytics (SQL Server 2017 Machine Learning Services and SQL Server 2016 R Services), your computer has separate installations of R for each, with duplicates of all the R tools and libraries.
+
+Packages that are installed to the R_SERVER library are used only by a standalone server and cannot be accessed by a SQL Server (In-Database) instance. Always use the `R_SERVICES` library when installing packages that you want to use in-database on SQL Server. For more information about paths, see [Package library location](installing-and-managing-r-packages.md#package-library-location).
 
 
-### Know which library you are installing to and which packages are already installed.
+## See also
 
-If you have previously modified the R environment on the computer, before installing anything, pause a moment, and ensure that the R environment variable `.libPath` uses just one path.
-
-This path should point to the R_SERVICES folder for the instance. For more information, including how to determine which packages are already installed, see [R packages installed with SQL Server](installing-and-managing-r-packages.md).
-
-### Side-by-side installation with Standalone R or Python Servers
-
-If you have installed SQL Server 2017 Microsoft Machine Learning Server (Standalone) or SQL Server 2016 R Server (Standalone) in addition to in-database analytics (SQL Server 2017 Machine Learning Services and SQL Server 2016 R Services), your computer has separate installations of R for each, with duplicates of all the R tools and libraries.
-
-Packages that are installed to the R_SERVER library are used only by a standalone server and cannot be accessed by a SQL Server (In-Database) instance. Always use the `R_SERVICES` library when installing packages that you want to use in-database on SQL Server.
++ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
++ [Tutorials, samples, solutions](../tutorials/machine-learning-services-tutorials.md)

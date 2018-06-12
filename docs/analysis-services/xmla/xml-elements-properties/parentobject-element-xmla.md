@@ -27,7 +27,7 @@ manager: kfile
 </Create>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -35,7 +35,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -46,7 +46,7 @@ manager: kfile
  The order in which identifiers appear is not important.  
   
 ## Example  
- The following example creates the **Market Basket** mining structure, included in the [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] sample [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database.  
+ The following example creates the **Market Basket** mining structure, included in the [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] sample Analysis Services database.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -168,7 +168,7 @@ manager: kfile
 </Create>  
 ```  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

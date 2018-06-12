@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: integration-services  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f

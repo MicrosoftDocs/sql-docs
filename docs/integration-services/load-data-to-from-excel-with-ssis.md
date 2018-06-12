@@ -4,7 +4,6 @@ description: "Learn how to import or export Excel data with SQL Server Integrati
 ms.date: "04/10/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""

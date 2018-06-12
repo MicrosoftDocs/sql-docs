@@ -25,7 +25,7 @@ manager: kfile"
 </ProtocolCapabilities>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile"
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -41,7 +41,7 @@ manager: kfile"
 |Child elements|None|  
   
 ## Remarks  
- The **Capability** element indicates that a particular capability, such as binary or compression, is supported by either the application that included the **ProtocolCapabilities** header element in the SOAP header of the SOAP request, or by the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that included the **ProtocolCapabilities** header element in the SOAP header of the SOAP response. The value of the **Capability** element is the name of the capability to be supported.  
+ The **Capability** element indicates that a particular capability, such as binary or compression, is supported by either the application that included the **ProtocolCapabilities** header element in the SOAP header of the SOAP request, or by the instance of Analysis Services that included the **ProtocolCapabilities** header element in the SOAP header of the SOAP response. The value of the **Capability** element is the name of the capability to be supported.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the capabilities listed in the following table.  
   
@@ -50,7 +50,7 @@ manager: kfile"
 |sx|Binary XML support|  
 |xpress|Compression support|  
   
-## See Also  
+## See also
  [Managing Connections and Sessions &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

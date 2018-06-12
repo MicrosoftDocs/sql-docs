@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Backing Up and Restoring Databases and Transaction Logs | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

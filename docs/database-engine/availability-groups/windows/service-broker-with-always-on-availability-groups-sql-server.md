@@ -3,7 +3,6 @@ title: "Service Broker with Always On Availability Groups (SQL Server) | Microso
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Service Broker with Always On Availability Groups (SQL Server)
@@ -56,7 +55,10 @@ manager: craigg
     ```  
   
      For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
-  
+
+    > [!NOTE]  
+    SQL Server Broker is not Multisubnet aware. Be sure to use "registerallprovidersip" set to 0, and check if you are not using static IPs on DNS giving the required permission to cluster on DNS as defined on https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. Broker may delay message with status "CONVERSING" trying to use disabled IP.
+
 3.  **Grant CONNECT permission on the endpoint.**  
   
      Grant CONNECT permission on the Service Broker endpoint either to PUBLIC or to a login.  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Import and export data from SQL Server and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2017"

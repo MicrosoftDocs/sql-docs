@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/22/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity

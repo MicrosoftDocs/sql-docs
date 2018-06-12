@@ -1,8 +1,6 @@
 ---
 title: "Installing SSMA for MySQL (MySqlToSql) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -35,7 +33,7 @@ If you want to upgrade to a later version of SSMA for MySQL, you must first unin
 |-|-|  
 |**Topic**|**Description**|  
 |[Installing SSMA for MySQL Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Provides information about and instructions for installing the SSMA client.|  
-|[Installing SSMA Components on SQL Server (MySQL to SQL)](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Provides information about and instructions for installing the extension pack on instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Installing SSMA Components on SQL Server (MySQL to SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Provides information about and instructions for installing the extension pack on instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Removing the SSMA for MySQL Components &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Provides instructions for uninstalling the client program.|  
   
 ## See Also  

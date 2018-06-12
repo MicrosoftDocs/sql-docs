@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "building-packages-programmatically"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: integration-services 
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -25,9 +23,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], column mapping"
   - "data flow [Integration Services], components"
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Selecting Input Columns Programmatically

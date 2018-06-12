@@ -3,7 +3,6 @@ title: "Upgrade Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], upgrading"
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 caps.latest.revision: 62
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Database Engine

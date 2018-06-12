@@ -3,8 +3,6 @@ title: "How to: Retrieve Output Parameters Using the SQLSRV Driver | Microsoft D
 ms.custom: ""
 ms.date: "04/11/2018"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -28,7 +26,7 @@ This topic demonstrates how to call a stored procedure in which one parameter ha
   
 Data truncation can occur when stream types such as SQLSRV_SQLTYPE_VARCHAR('max') are used as output parameters. Stream types are not supported as output parameters. For non-stream types, data truncation can occur if the length of the output parameter is not specified or if the specified length is not sufficiently large for the output parameter.  
   
-## Example  
+## Example 1
 The following example calls a stored procedure that returns the year-to-date sales by a specified employee. The PHP variable *$lastName* is an input parameter and *$salesYTD* is an output parameter.  
   
 > [!NOTE]  
@@ -120,9 +118,9 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> When binding an output parameter to a bigint value, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
+> When binding an output parameter to a bigint type, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
 
-## Example  
+## Example 2
 This code sample shows how to bind a large bigint value as an output parameter.  
 
 ```

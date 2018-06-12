@@ -4,8 +4,7 @@ description: Learn how to open and save files on premises and in Azure when you 
 ms.date: "11/27/2017"
 ms.topic: conceptual
 ms.prod: sql  
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -23,9 +22,9 @@ If you need to store and process temporary files during a single package executi
 ## Use on-premises file shares
 To continue to use **on-premises file shares** when you lift and shift packages that use local file systems into SSIS in Azure, do the following things:
 1.	Transfer files from local file systems to on-premises file shares.
-2.	Join the on-premises file shares to an Azure virtual network (VNet).
-3.	Join your Azure-SSIS IR to the same VNet. For more info, see [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
-4.	Connect your Azure-SSIS IR to the on-premises file shares inside the same VNet by setting up access credentials that use Windows authentication. For more info, see [Connect to data and file shares with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
+2.	Join the on-premises file shares to an Azure virtual network.
+3.	Join your Azure-SSIS IR to the same virtual network. For more info, see [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+4.	Connect your Azure-SSIS IR to the on-premises file shares inside the same virtual network by setting up access credentials that use Windows authentication. For more info, see [Connect to data and file shares with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
 5.	Update local file paths in your packages to UNC paths pointing to on-premises file shares. For example, update `C:\abc.txt` to `\\<on-prem-server-name>\<share-name>\abc.txt`.
 
 ## Use Azure file shares

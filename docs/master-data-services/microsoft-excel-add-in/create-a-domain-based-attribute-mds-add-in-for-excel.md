@@ -1,14 +1,12 @@
 ---
 title: "Create a Domain-based Attribute (MDS Add-in for Excel) | Microsoft Docs"
-ms.custom: ""
+ms.custom: microsoft-excel-add-in
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b

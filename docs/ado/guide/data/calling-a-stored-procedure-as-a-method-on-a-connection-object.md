@@ -2,7 +2,6 @@
 title: "Calling a Stored Procedure as a Method on a Connection object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"

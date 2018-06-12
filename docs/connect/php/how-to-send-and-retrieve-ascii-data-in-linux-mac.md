@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/16/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "php"
 ms.suite: "sql"
 ms.technology: connectivity
 ms.tgt_pltfrm: ""

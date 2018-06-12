@@ -7,8 +7,7 @@ ms.prod_service: "integration-services"
 ms.component: "system-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services  - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8

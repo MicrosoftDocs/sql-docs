@@ -47,10 +47,10 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) The SQL Server 2014 content will soon be merged into the .docs site.  For now, see:
-- [Books Online for SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
+- [Books Online for SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/sql/)
+- [Previous Versions](https://docs.microsoft.com/previous-versions/sql/)
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -101,7 +101,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
-- [Azure migration journey - asses, migrate, optimize](https://azure.microsoft.com/en-us/migration/)]
+- [Azure migration journey - asses, migrate, optimize](https://azure.microsoft.com/migration/)]
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -120,8 +120,8 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 
 ## Samples
 
-- [Wide World Importers sample database](https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is)
-- [AdventureWorks sample databases and scripts for SQL Server 2016](https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are) 
+- [Wide World Importers sample database](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
+- [AdventureWorks sample databases and scripts for SQL Server 2016](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -44,7 +44,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 ## Arguments  
 *datepart*  
-The part of *date* to which `DATEDIFF_BIG` adds an **integer** *number*. This table lists all valid *datepart* arguments.
+The part of *startdate* and *enddate* that specifies the type of boundary crossed. `DATEDIFF_BIG` will not accept user-defined variable equivalents. This table lists all valid *datepart* arguments.
 
 > [!NOTE]
 > `DATEDIFF_BIG` does not accept user-defined variable equivalents for the *datepart* arguments.
@@ -103,15 +103,15 @@ If *startdate* and *enddate* have different date data types, and one has more ti
 The following statements have the same *startdate* and the same *enddate* values. Those dates are adjacent and they differ in time by .0000001 second. The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If *startdate* and *enddate* have different year values but they have the same calendar week values, `DATEDIFF_BIG` will return 0 for *datepart* **week**.
 
 ```sql
-SELECT DATEDIFF_BIG(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF_BIG(quarter, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF_BIG(month, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF_BIG(dayofyear, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF_BIG(day, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF_BIG(week, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF_BIG(hour, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF_BIG(minute, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF_BIG(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(quarter,     '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(month,       '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(dayofyear,   '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(day,         '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(week,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(hour,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(minute,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
@@ -129,14 +129,13 @@ This example uses different types of expressions as arguments for the *startdate
   
 ```sql
 CREATE TABLE dbo.Duration  
-    (  
-    startDate datetime2  
-    ,endDate datetime2  
-    );  
+    (startDate datetime2, endDate datetime2);  
+    
 INSERT INTO dbo.Duration(startDate,endDate)  
-    VALUES('2007-05-06 12:10:09','2007-05-07 12:10:09');  
-SELECT DATEDIFF_BIG(day,startDate,endDate) AS 'Duration'  
-FROM dbo.Duration;  
+    VALUES('2007-05-06 12:10:09', '2007-05-07 12:10:09');  
+    
+SELECT DATEDIFF_BIG(day, startDate, endDate) AS 'Duration'  
+    FROM dbo.Duration;  
 -- Returns: 1  
 ```  
 

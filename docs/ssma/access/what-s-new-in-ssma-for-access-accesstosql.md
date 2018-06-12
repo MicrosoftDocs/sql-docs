@@ -1,8 +1,6 @@
 ---
 title: "What's New in SSMA for Access(AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "03/01/2018"
 ms.reviewer: ""

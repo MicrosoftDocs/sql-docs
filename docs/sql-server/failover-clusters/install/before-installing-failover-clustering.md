@@ -2,12 +2,10 @@
 title: "Before Installing Failover Clustering | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.prod: sql
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], preinstallation checklist"
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 141
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Before Installing Failover Clustering

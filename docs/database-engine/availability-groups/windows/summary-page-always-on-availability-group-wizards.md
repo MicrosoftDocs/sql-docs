@@ -3,7 +3,6 @@ title: "Summary Page (Always On Availability Group Wizards) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -16,8 +15,8 @@ f1_keywords:
   - "sql13.swb.failoverwizard.summary.f1"
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 caps.latest.revision: 12
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Summary Page (Always On Availability Group Wizards)

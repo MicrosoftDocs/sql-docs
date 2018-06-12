@@ -1,6 +1,6 @@
 ---
 title: "Bitwise Operators | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Bitwise Operators
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Logical operators evaluate values and return a Boolean value. In Multidimensional Expressions (MDX), logical operators do not perform bitwise operations.  
   

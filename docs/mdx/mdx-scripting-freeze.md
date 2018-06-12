@@ -1,6 +1,6 @@
 ---
 title: "FREEZE Statement (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Scripting - FREEZE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Locks the cell values of a specified subcube to their current values. When the cell values are locked, changes to other cells have no effect on the cells that are locked.  
   

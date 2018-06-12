@@ -3,7 +3,7 @@ title: Install pre-trained machine learning models on SQL Server | Microsoft Doc
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/31/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,9 +12,9 @@ manager: cgronlun
 # Install pre-trained machine learning models on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to add pre-trained models to an (In-Database) instance of SQL Server that already has R Services or SQL Server Machine Learning Services installed. 
+This article describes how to add pre-trained machine learning models for sentiment analysis and image featurization to an (In-Database) instance of SQL Server that already has R Services or SQL Server Machine Learning Services installed. 
 
-Pre-trained models exist to help customers who need to perform tasks such as sentiment analysis or image featurization, but who do not have the resources to obtain the large datasets or train a complex model. The Machine Learning Server team created and trained these models to help you get started on text and image processing efficiently. For more information, see the [Resources](#bkmk_resources) section of this article.
+Pre-trained models exist to help customers who need to perform sentiment analysis or image featurization, but do not have the resources to obtain the large datasets or train a complex model. The Machine Learning Server team created and trained these models to help you get started on text and image processing efficiently. For more information, see the [Resources](#bkmk_resources) section of this article.
 
 For an example of how to use the pre-trained models with SQL Server data, see this blog by the SQL Server Machine Learning team: [Sentiment analysis with Python in SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
@@ -102,12 +102,30 @@ With SQL Server 2016, you must perform some additional steps to register the mod
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-## Install pre-trained models on SQL Server Machine Learning Services (In-Database)
+## Install pre-trained models on SQL Server 2017 Machine Learning Services (In-Database)
 
 If you have already installed SQL Server 2017, you can get the pre-trained models in two ways:
 
-+ Upgrade the Python and R components by using binding, and install the pre-trained models at the same time
 + Install just the pre-trained models
++ Upgrade the Python and R components by using binding, and install the pre-trained models at the same time
+
+### Add pre-trained models only
+
+To add the pre-trained models, you can run RSetup.exe from the command line.
+
+For the R version of the models, install the MLM component to R_SERVICES:
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"
+```
+
+For the Python version of the models, install the MLM component to PYTHON_SERVICES:
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
+```
+
+### Bind and install pre-trained models
 
 The following instructions describe the process for upgrading the machine learning components and getting the pre-trained models at the same time.
 

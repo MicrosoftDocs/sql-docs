@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Server Encryption | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"

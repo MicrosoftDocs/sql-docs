@@ -5,8 +5,6 @@ ms.date: "03/26/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.prod_service: drivers
-ms.component: php
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Local Audit"
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 caps.latest.revision: 8
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Local Audit for SQL Server Usage Feedback Collection

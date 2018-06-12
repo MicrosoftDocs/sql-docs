@@ -3,7 +3,6 @@ title: "View and Read Failover Cluster Instance Diagnostics Log | Microsoft Docs
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -11,8 +10,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 23
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View and Read Failover Cluster Instance Diagnostics Log

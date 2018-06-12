@@ -1,6 +1,6 @@
 ---
 title: "Working with Empty Values | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Working with Empty Values
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   An empty value indicates that a specific member, tuple, or cell is empty. An empty cell value indicates either that the data for the specified cell cannot be found in the underlying fact table, or that the tuple for the specified cell represents a combination of members that is not applicable for the cube.  
   

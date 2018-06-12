@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/31/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.component: "data-quality-services"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

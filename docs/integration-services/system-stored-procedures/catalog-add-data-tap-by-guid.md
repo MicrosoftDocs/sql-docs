@@ -7,8 +7,7 @@ ms.prod_service: "integration-services"
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services  - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb

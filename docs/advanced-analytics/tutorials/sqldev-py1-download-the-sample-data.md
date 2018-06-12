@@ -42,7 +42,7 @@ Both the data and the scripts for this tutorial are shared on Github. In this st
 
 3. Depending on your internet connection, the download might take a while. 
 
-## View the results
+## View results
 
 When all files have been downloaded, the PowerShell script opens to the folder specified by  *DestDir*. 
 

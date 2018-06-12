@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado-net"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity

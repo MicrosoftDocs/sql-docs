@@ -1,14 +1,12 @@
 ---
 title: "Identify the Source of Packages with Digital Signatures | Microsoft Docs"
-ms.custom: ""
+ms.custom: security
 ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 

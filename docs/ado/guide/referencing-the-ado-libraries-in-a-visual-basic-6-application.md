@@ -7,7 +7,6 @@ ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs: 

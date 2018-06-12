@@ -3,12 +3,10 @@ title: "Excel Connection Manager | Microsoft Docs"
 ms.date: "04/02/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "connection-manager"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 

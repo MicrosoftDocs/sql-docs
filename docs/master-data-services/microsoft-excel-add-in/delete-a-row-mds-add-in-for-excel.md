@@ -1,14 +1,12 @@
 ---
 title: "Delete a Row (MDS Add-in for Excel) | Microsoft Docs"
-ms.custom: ""
+ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e

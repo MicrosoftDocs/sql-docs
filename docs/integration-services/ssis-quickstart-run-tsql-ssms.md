@@ -1,14 +1,12 @@
 ---
 title: "Run an SSIS package with Transact-SQL (SSMS) | Microsoft Docs"
 ms.date: "05/21/2018"
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "quick-start"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

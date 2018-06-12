@@ -24,7 +24,7 @@ manager: craigg
 # SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  The following steps walkthrough the installation and configuration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Connector for Azure Key Vault.  
+  The following steps walk through the installation and configuration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Connector for Azure Key Vault.  
   
 ## Before You Start  
  To use Azure Key Vault with your SQL Server, there are a few prerequisites:  
@@ -179,7 +179,7 @@ SQL Server Version  |Redistributable Install Link
     1. Create your encryption key locally on a local HSM device. (Make sure this is an asymmetric, RSA 2048 key so it's is supported by SQL Server.)
     2. Import the encryption key to Azure Key Vault. See the steps below for how to do that.
     3. Before using the key in Azure Key Vault for the first time, take an Azure Key Vault key backup. Learn more about the [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) command.
-    4. Whenever any changes are made to the key (e.g. add ACLs, add tags, add key attributes), be sure to take another Azure Key Vault key backup.
+    4. Whenever any changes are made to the key (for example add ACLs, add tags, add key attributes), be sure to take another Azure Key Vault key backup.
 
         > [!NOTE]  
         >  Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere.
@@ -271,7 +271,7 @@ SQL Server Version  |Redistributable Install Link
   
   
 ## Part IV: Configure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- Please refer to [B. Frequently Asked Questions](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) to see a note about the minimum permission levels needed for each action in this section.  
+ Refer to [B. Frequently Asked Questions](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) to see a note about the minimum permission levels needed for each action in this section.  
   
 1.  **Launch sqlcmd.exe or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  
   
@@ -297,7 +297,7 @@ SQL Server Version  |Redistributable Install Link
   
 3.  **Register (create) the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector as an EKM provider with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     -- Create a cryptographic provider, using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector which is an EKM provider for the Azure Key Vault.    
+     -- Create a cryptographic provider, using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector, which is an EKM provider for the Azure Key Vault.    
     This example uses the name `AzureKeyVault_EKM_Prov`.  
   
     ```sql  
@@ -323,7 +323,7 @@ SQL Server Version  |Redistributable Install Link
      Modify the [!INCLUDE[tsql](../../../includes/tsql-md.md)] script below in the following ways:  
   
     -   Edit the `IDENTITY` argument (`ContosoDevKeyVault`) to point to your Azure Key Vault.
-        - If you're using **public Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
+        - If you're using **global Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
         - If you're using a **private Azure cloud** (ex. Azure Government, Azure China, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.   
     -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.  
   

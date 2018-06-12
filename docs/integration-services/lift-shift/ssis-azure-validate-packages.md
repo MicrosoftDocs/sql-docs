@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: integration-services  - "integration-services"
+ms.technology: integration-services
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

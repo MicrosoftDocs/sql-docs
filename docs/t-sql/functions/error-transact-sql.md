@@ -1,4 +1,4 @@
-﻿---
+---
 title: "@@ERROR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"

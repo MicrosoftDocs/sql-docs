@@ -27,17 +27,24 @@ monikerRange: "= sql-server-atver15-seattle || = sqlallproducts-allversions"
 
 ## CTP 2.0 
 
-Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following list summarizes new improvements and updates in [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
+Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
 
-- Database engine improvement example.
-- SQL Server on Linux added support for replication.
-- SQL Server Machine Learning Services
+- Database engine - Intelligent query processor
+- SQL Server on Linux
+  - Replication support
+  - Active Directory Impersonation
+  - Always On Availability Group on Docker containers with Kubernetes
+- SQL Server Machine Learning Services - High availability with Windows Server failover cluster
+- Security 
+  - Always Encrypted with enclaves
+  - Database scoped default setting for online and resumeable DDL operations 
 
-The following sections summarize all of the updates for SQL Server vNext by area.
+
+Continue reading for more details about these features.
 
 ## Database Engine
 
-### Intelligent query processor features
+### Intelligent query processor 
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. 
 
@@ -54,19 +61,26 @@ The following sections summarize all of the updates for SQL Server vNext by area
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations.
 
-- **Configure Always On availability group in Kubernetes cluster**. A Kubernetes cluster can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On availability groups. A Kubernetes operator deploys a StatefulSet including an **mssql-server container** and a container for a health monitoring agent. An additional **AG agent container** is deployed to each pod of the StatefulSet  to automatically create and monitor the availability group and fail over in case of health issues.
-
 ## SQL Server on Linux
 
-- **Replication support**. Configure replication on Linux with [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md). 
+- **Replication support**. CTP 2.0 supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
-- **Active Directory impersonation**.
+  Create the following types of publications:
+  - Transactional
+  - Snapshot
+  - Merge
+
+  CTP 2.0 does not support configuration of replication with the user interface. Use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+  
+- **Always On Availability Group on Docker containers with Kubernetes**. Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including an **mssql-server container** and a container for a health monitoring agent. An additional **AG agent container** is deployed to each pod of the StatefulSet  to automatically create and monitor the availability group and fail over in case of health issues.
+
+- **Active Directory impersonation**
 
 ## SQL Server Machine Learning Services
 
 - **sp_execute_external_script**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
 
-- **Windows Server Failover Cluster**: Configure high availability with Machine Learning Services on a Windows Server Failover Cluster. 
+- **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 

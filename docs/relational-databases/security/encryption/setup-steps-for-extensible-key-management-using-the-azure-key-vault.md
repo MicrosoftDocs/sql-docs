@@ -1,7 +1,7 @@
 ---
-title: "Setup Steps for Extensible Key Management Using the Azure Key Vault | Microsoft Docs"
+title: "SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "06/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.component: "security"
@@ -21,7 +21,7 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ---
-# Setup Steps for Extensible Key Management Using the Azure Key Vault
+# SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The following steps walkthrough the installation and configuration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Connector for Azure Key Vault.  
@@ -48,7 +48,7 @@ SQL Server Version  |Redistributable Install Link
 ## Part I: Set up an Azure Active Directory service principal  
  In order to grant SQL Server access permissions to your Azure Key Vault, you will need a Service Principal account in Azure Active Directory (AAD).  
   
-1.  Go to the [Azure classic portal](https://manage.windowsazure.com), and sign in.  
+1.  Go to the [Azure Portal](https://ms.portal.azure.com/), and sign in.  
   
 2.  Register an application with Azure Active Directory. For detailed step-by-step instructions to register an application, see the **Get an identity for the application** section  of the [Azure Key Vault blog post](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).  
   
@@ -66,7 +66,7 @@ SQL Server Version  |Redistributable Install Link
   
 1.  **Open PowerShell and Sign in**  
   
-     Install and start the [latest Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (1.0.1 or higher). Sign in to your Azure account with the following command:  
+     Install and start the [latest Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 or higher). Sign in to your Azure account with the following command:  
   
     ```powershell  
     Login-AzureRmAccount  
@@ -166,12 +166,15 @@ SQL Server Version  |Redistributable Install Link
 5.  **Generate an Asymmetric Key in the Key Vault**  
   
      There are two ways to generate a key in Azure Key Vault: 1) Import an existing key or 2) create a new key.  
+     
+        > [!NOTE]  
+        >  SQL Server only supports 2048-bit RSA keys."
 
     ### Best Practice:
     
     To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practice:
  
-    1. Create your encryption key locally on a local HSM device. (Make sure this is an asymmetric, RSA 2048 key so it's storable in Azure Key Vault.)
+    1. Create your encryption key locally on a local HSM device. (Make sure this is an asymmetric, RSA 2048 key so it's is supported by SQL Server.)
     2. Import the encryption key to Azure Key Vault. See the steps below for how to do that.
     3. Before using the key in Azure Key Vault for the first time, take an Azure Key Vault key backup. Learn more about the [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) command.
     4. Whenever any changes are made to the key (e.g. add ACLs, add tags, add key attributes), be sure to take another Azure Key Vault key backup.
@@ -180,11 +183,11 @@ SQL Server Version  |Redistributable Install Link
         >  Backing up a key is an Azure Key Vault key operation which returns a file that can be saved anywhere."
 
     ### Types of keys:
-    There are two types of keys you can generate in Azure Key Vault. Both are asymmetric 2048-bit RSA keys.  
+    There are two types of keys you can generate in Azure Key Vault that will work with SQL Server. Both are asymmetric 2048-bit RSA keys.  
   
     -   **Software-protected:** Processed in software and encrypted at rest. Operations on software-protected keys occur on Azure Virtual Machines. Recommended for keys not used in a production deployment.  
   
-    -   **HSM-protected:** Created and protected by a hardware security module (HSM) for additional security. Costs  about $1 per key version.  
+    -   **HSM-protected:** Created and protected by a hardware security module (HSM) for additional security. Cost is about $1 per key version.  
   
         > [!IMPORTANT]  
         >  The SQL Server Connector requires the key name to only use the characters “a-z”, “A-Z”, “0-9”, and “-“, with a 26-character limit.   
@@ -208,12 +211,15 @@ SQL Server Version  |Redistributable Install Link
     ```  
  
     > [!IMPORTANT]  
-    > Importing the asymmetric key is highly recommended for production scenarios because it allows the administrator to escrow the key in a key escrow system. If the asymmetric key is created in the vault, it cannot be escrowed because the private key can never leave the vault. Keys used to protect critical data should be escrowed. The loss of an asymmetric key will result in permanently unrecoverable data.  
+    > Importing the asymmetric key is highly recommended for production scenarios because it allows the administrator to escrow the key in a key escrow system. If the asymmetric key is created in the vault, it cannot be escrowed because the private key can never leave the vault. Keys used to protect critical data should be escrowed. The loss of an asymmetric key will result in permanent data loss.  
 
     ### Create a new key
 
+        > [!NOTE]  
+        >  SQL Server only supports 2048-bit RSA keys."
+    
     ##### Example:  
-    If you'd like, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected. In this example, let’s create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
+    Alternatively, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected. In this example, let’s create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  

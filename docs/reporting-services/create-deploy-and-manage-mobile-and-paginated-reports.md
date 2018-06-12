@@ -2,7 +2,7 @@
 title: "What is SQL Server Reporting Services (SSRS) | Microsoft Docs"
 description: "Learn about tools and services for mobile and paginated Reporting Services reports on premises."
 ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: "05/25/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "reporting-services"
@@ -97,7 +97,7 @@ More about the [Web portal (SSRS Native Mode)](../reporting-services/web-portal-
 
 ## Reporting Services in SharePoint integrated mode
 
-You publish reports to Repoorting Services in SharePoint integrated mode. You can schedule report processing, access reports on demand, subscribe to published reports, and export reports to other applications such as Microsoft Excel. Create data alerts on reports published to a SharePoint site and receive email messages when report data changes.  
+You publish reports to Reporting Services in SharePoint integrated mode. You can schedule report processing, access reports on demand, subscribe to published reports, and export reports to other applications such as Microsoft Excel. Create data alerts on reports published to a SharePoint site and receive email messages when report data changes.  
 
 More about [Reporting Services Report Server in SharePoint integrated mode](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
 

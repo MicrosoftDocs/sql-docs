@@ -1,14 +1,12 @@
 ---
 title: "Monitor Running Packages and Other Operations | Microsoft Docs"
-ms.custom: ""
+ms.custom: supportability
 ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 

@@ -23,6 +23,8 @@ helpviewer_keywords:
   - "removing SQL Server Native Client"
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 caps.latest.revision: 43
+author: "JennieHubbard"
+ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Installing SQL Server Native Client

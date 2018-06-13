@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.service: "virtual-machines"
 ms.suite: ""
 ms.technology: 
   - "database-engine"

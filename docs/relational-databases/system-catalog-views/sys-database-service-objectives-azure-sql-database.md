@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.database_service_objectives (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2016"
@@ -29,7 +29,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 Returns the edition (service tier), service objective (pricing tier) and elastic pool name, if any, for an Azure SQL database or an Azure SQL Data Warehouse. If logged on to the master database in an Azure SQL Database server, returns information on all databases. For Azure SQL Data Warehouse, you must be connected to the master database.  
   
   
- For information on pricing , see [SQL Database options and performance: SQL Database Pricing](https://azure.microsoft.com/en-us/pricing/details/sql-database/) and [SQL Data Warehouse Pricing](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ For information on pricing , see [SQL Database options and performance: SQL Database Pricing](https://azure.microsoft.com/pricing/details/sql-database/) and [SQL Data Warehouse Pricing](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
  To change the service settings, see [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) and [ALTER DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
   

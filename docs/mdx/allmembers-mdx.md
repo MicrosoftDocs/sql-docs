@@ -1,6 +1,6 @@
 ---
 title: "AllMembers (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # AllMembers (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Evaluates either a hierarchy or a level expression and returns a set that contains all members of the specified hierarchy or level, which includes all calculated members in the hierarchy or level.  
   

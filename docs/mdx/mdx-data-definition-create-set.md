@@ -1,6 +1,6 @@
 ---
 title: "CREATE SET Statement (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Definition - CREATE SET
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Creates a named set with session scope for the current cube.  
   
@@ -87,7 +87,7 @@ SELECT [Core Products] ON 0
  Specifies that the set is not visible to users who query the cube.  
   
 ## Standard Properties  
- Each set has a set of default properties. When a client application is connected to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the default properties are either supported, or available to be supported, as the administrator chooses.  
+ Each set has a set of default properties. When a client application is connected to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the default properties are either supported, or available to be supported, as the administrator chooses.  
   
 |Property identifier|Meaning|  
 |-------------------------|-------------|  

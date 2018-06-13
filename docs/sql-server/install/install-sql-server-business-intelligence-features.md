@@ -3,11 +3,9 @@ title: "Install SQL Server 2016 Business Intelligence Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/02/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece

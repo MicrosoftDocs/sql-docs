@@ -3,7 +3,6 @@ title: "Use the Always On availability group dashboard (SQL Server Management St
 ms.custom: ""
 ms.date: "10/30/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], dashboard"
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Use the Always On availability group dashboard (SQL Server Management Studio)

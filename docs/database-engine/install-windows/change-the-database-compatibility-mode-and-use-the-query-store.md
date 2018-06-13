@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "plan guides [SQL Server], migrating query plans"
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 caps.latest.revision: 19
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Change the Database Compatibility Level and use the Query Store

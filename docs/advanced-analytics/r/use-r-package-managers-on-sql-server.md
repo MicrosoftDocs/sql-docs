@@ -48,9 +48,7 @@ If the server does not have internet access, additional steps are required to pr
 + Install the target package specifying the archive file as source.
 
 > [!IMPORTANT] 
-> > Be sure that you analyze all dependencies and download **all** required packages **before** beginning installation. We recommend [miniCRAN](https://mran.microsoft.com/package/miniCRAN) for this process. This R package takes a list of packages you want to install, analyzes dependencies, and gets all the zipped files for you. miniCRAN then creates a single repository that you can copy to the server computer.
-> 
-> For details, see [Create a local package repository using miniCRAN](create-a-local-package-repository-using-minicran.md)
+>  Be sure that you analyze all dependencies and download **all** required packages **before** beginning installation. We recommend [miniCRAN](https://mran.microsoft.com/package/miniCRAN) for this process. This R package takes a list of packages you want to install, analyzes dependencies, and gets all the zipped files for you. miniCRAN then creates a single repository that you can copy to the server computer. For details, see [Create a local package repository using miniCRAN](create-a-local-package-repository-using-minicran.md)
 
 This procedure assumes that you have prepared all the packages that you need, in zipped format, and are ready to copy them to the server.
 
@@ -70,3 +68,8 @@ This procedure assumes that you have prepared all the packages that you need, in
 
     If any required packages are not present in the instance library, and cannot be found in the zipped files, installation of the target package fails.
 
+## See also
+
++ [Install new R packages](install-additional-r-packages-on-sql-server.md)
++ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
++ [Tutorials, samples, solutions](../tutorials/machine-learning-services-tutorials.md)

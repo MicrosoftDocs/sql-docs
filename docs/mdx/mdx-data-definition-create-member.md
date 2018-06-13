@@ -1,6 +1,6 @@
 ---
 title: "CREATE MEMBER Statement (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Definition - CREATE MEMBER
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Creates a calculated member.  
   
@@ -100,14 +100,14 @@ WHERE ProfitRatio
 ```  
   
 ## Standard Properties  
- Each calculated member has a set of default properties. When a client application is connected to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the default properties are either supported, or available to be supported, as the administrator chooses.  
+ Each calculated member has a set of default properties. When a client application is connected to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the default properties are either supported, or available to be supported, as the administrator chooses.  
   
  Additional member properties may be available, depending upon the cube definition. The following properties represent information relevant to the dimension level in the cube.  
   
 |Property identifier|Meaning|  
 |-------------------------|-------------|  
 |SOLVE_ORDER|The order in which the calculated member will be solved in cases where a calculated member references one other calculated member (that is, where calculated members intersect each other).|  
-|FORMAT_STRING|A [!INCLUDE[msCoName](../includes/msconame-md.md)] Office style format string that the client application can use when displaying cell values.|  
+|FORMAT_STRING|A Office style format string that the client application can use when displaying cell values.|  
 |VISIBLE|A value that indicates whether the calculated member is visible in a schema rowset. Visible calculated members can be added to a set with the [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) function. A nonzero value indicates that the calculated member is visible. The default value for this property is *Visible*.<br /><br /> Calculated members that are not visible (where this value is set to zero) are generally used as intermediate steps in more complex calculated members. These calculated members can also be referred to by other types of members, such as measures.|  
 |NON_EMPTY_BEHAVIOR|The measure or set that is used to determine the behavior of calculated members when resolving empty cells.<br /><br /> **\*\* Warning \*\*** This property is deprecated. Avoid setting it. See [Deprecated Analysis Services Features in SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md) for details.|  
 |CAPTION|A string that the client application uses as the caption for the member.|  

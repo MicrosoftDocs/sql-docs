@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Requirements for Running SQLXML Examples | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

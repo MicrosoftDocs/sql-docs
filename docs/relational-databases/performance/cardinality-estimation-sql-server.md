@@ -268,7 +268,7 @@ WHERE s.ticket = r.ticket AND
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx)  
- [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)
- [USE HINT Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)     
+ [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)     
+ [USE HINT Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)   

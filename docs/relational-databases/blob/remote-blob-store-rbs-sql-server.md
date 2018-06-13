@@ -37,7 +37,7 @@ manager: craigg
 ### Efficient BLOB management  
  Several RBS features support stored BLOBs management:  
   
--   BLOBS are managed with ACID (atomic consistency isolation durable) transactions.  
+-   BLOBS are managed with ACID (atomic, consistent, isolatable, durable) transactions.  
   
 -   BLOBs are organized into collections.  
   

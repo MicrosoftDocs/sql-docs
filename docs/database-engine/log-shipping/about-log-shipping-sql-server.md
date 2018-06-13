@@ -3,8 +3,6 @@ title: "About Log Shipping (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: "log-shipping"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -27,8 +25,8 @@ helpviewer_keywords:
   - "primary servers [SQL Server]"
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---

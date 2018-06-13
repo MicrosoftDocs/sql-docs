@@ -69,13 +69,13 @@
 #### [Analyze data in local compute context](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [Move data between SQL Server and XDF file](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [Create a simple simulation](tutorials/deepdive-create-a-simple-simulation.md)
-### [R: In-Database analytics for SQL developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [Step 1: Download the sample data](tutorials/sqldev-download-the-sample-data.md)
-#### [Step 2: Import data to SQL Server using PowerShell](r/sqldev-import-data-to-sql-server-using-powershell.md)
-#### [Step 3: Explore and visualize the data](tutorials/sqldev-explore-and-visualize-the-data.md)
-#### [Step 4: Create data features using T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [Step 5: Train and save a model using T-SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [Step 6: Operationalize the model](tutorials/sqldev-operationalize-the-model.md)
+### [Embedded R in stored procedures and functions](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [1 - Get data and scripts](tutorials/sqldev-download-the-sample-data.md)
+#### [2 - Set up the environment](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [3 - Visualize data using R in stored procedures](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [4 - Create data features using R in T-SQL functions](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [5 - Train and save to SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [6 - Predict outcomes](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
@@ -156,19 +156,18 @@
 
 ## [Known issues](known-issues-for-sql-server-machine-learning-services.md)
 ## [Release notes](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
-## [New and updated articles](new-updated-advanced-analytics.md)
-
-## [Setup and troubleshooting tips](machine-learning-troubleshooting-faq.md)
-### [Set up a virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md)
-### [Upgrade and install FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [Common issues for external script execution](common-issues-external-script-execution.md)
+## [Set up a virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+## [Troubleshooting](machine-learning-troubleshooting-faq.md)
+### [Data collection](data-collection-ml-troubleshooting-process.md)
+### [Install and upgrade errors](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [Launchpad and external script execution errors](common-issues-external-script-execution.md)
+### [R scripting errors](r-script-execution-errors.md)
 
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [Machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
 
-## Feedback Forums
+## Forums
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

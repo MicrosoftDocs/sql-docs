@@ -3,16 +3,14 @@ title: "Configure HealthCheckTimeout Property Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure HealthCheckTimeout Property Settings

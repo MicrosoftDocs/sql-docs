@@ -3,7 +3,6 @@ title: "Availability Modes (Always On Availability Groups) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability modes"
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 41
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Availability Modes (Always On Availability Groups)

@@ -1,6 +1,6 @@
 ---
 title: "Using Scalar Expressions | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Using Scalar Expressions
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   In Multidimensional Expressions (MDX), a scalar expression is an element of MDX syntax that, when evaluated, returns a single value within the context of evaluation.  
   

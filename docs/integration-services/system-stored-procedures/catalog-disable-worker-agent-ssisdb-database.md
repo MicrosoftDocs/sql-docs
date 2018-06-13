@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66

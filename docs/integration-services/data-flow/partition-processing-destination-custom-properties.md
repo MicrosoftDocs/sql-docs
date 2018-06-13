@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d

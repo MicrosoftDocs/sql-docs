@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "change-data-capture"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60

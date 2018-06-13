@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "import-export-data"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8

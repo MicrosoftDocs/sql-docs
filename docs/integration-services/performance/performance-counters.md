@@ -1,14 +1,12 @@
 ---
 title: "Performance Counters | Microsoft Docs"
-ms.custom: ""
+ms.custom: supportability
 ms.date: "08/27/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

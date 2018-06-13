@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 caps.latest.revision: 1

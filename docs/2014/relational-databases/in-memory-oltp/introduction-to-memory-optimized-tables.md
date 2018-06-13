@@ -11,6 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 14
+author: "stevestein"
+ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Introduction to Memory-Optimized Tables

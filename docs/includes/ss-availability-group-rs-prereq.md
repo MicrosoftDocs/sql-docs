@@ -8,7 +8,7 @@ Before you create the availability group, you need to:
 ## Enable Always On availability groups and restart mssql-server
 
 >[!NOTE]
->The following command utilizes cmdlets from the sqlserver module that is published in the PowerShell Gallery. You can install this module by using the Install-Module command.
+>The following command utilizes cmdlets from the sqlserver module that's published in the PowerShell Gallery. You can install this module by using the Install-Module command.
 
 Enable Always On availability groups on each replica that hosts a SQL Server instance. Then restart the SQL Server service. Run the following command to enable and then restart the SQL Server services:
 

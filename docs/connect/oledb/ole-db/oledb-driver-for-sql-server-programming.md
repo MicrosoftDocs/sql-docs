@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db"
+ms.component: "oledb|ole-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity

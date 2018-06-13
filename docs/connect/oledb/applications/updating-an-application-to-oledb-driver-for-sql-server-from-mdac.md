@@ -32,7 +32,7 @@ manager: craigg
 
  OLE DB Driver for SQL Server and MDAC differ in the other following areas:  
 
--   Users who use ADO to access an OLE DB Driver for SQL Server may find less filtering functionality than when they accessed a SQL OLE DB provider.  
+-   Users who use ADO to access the OLE DB Driver for SQL Server may find less filtering functionality than when they accessed the SQL OLE DB provider.  
 
 -   If an ADO application uses OLE DB Driver for SQL Server and attempts to update a computed column, an error will be reported. With MDAC, the update was accepted but ignored.  
 

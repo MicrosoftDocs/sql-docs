@@ -1,7 +1,7 @@
 ---
 title: "The Transaction Log (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-04"
+ms.date: "01/04/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

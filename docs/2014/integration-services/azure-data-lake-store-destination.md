@@ -1,7 +1,7 @@
 ---
 title: "Azure Data Lake Store Destination | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-06-06"
+ms.date: "06/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Claims to Windows Token Service (C2WTS) and Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-25"
+ms.date: "03/25/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

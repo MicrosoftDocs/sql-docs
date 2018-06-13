@@ -1,7 +1,7 @@
 ---
 title: "Configure the user connections Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-12-02"
+ms.date: "12/02/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

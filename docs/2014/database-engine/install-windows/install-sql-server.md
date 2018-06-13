@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-09"
+ms.date: "09/09/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

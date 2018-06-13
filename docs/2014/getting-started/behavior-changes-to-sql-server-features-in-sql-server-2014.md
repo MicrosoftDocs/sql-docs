@@ -1,7 +1,7 @@
 ---
 title: "Behavior Changes to SQL Server Features in SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-05-24"
+ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

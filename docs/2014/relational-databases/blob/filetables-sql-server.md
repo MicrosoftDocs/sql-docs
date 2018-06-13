@@ -1,7 +1,7 @@
 ---
 title: "FileTables (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-06"
+ms.date: "07/06/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

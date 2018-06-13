@@ -1,7 +1,7 @@
 ---
 title: "model Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-02"
+ms.date: "10/02/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

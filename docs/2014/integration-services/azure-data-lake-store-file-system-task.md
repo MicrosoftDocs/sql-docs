@@ -1,7 +1,7 @@
 ---
 title: "Azure Data Lake Store File System Task | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-08-24"
+ms.date: "08/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Report Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-08-12"
+ms.date: "08/12/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

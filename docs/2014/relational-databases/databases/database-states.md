@@ -1,7 +1,7 @@
 ---
 title: "Database States | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-15"
+ms.date: "07/15/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

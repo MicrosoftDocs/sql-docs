@@ -1,7 +1,7 @@
 ---
 title: "Define and Modify a Parameterized Row Filter for a Merge Article | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-06-02"
+ms.date: "06/02/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

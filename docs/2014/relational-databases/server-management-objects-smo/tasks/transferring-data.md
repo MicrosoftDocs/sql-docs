@@ -1,7 +1,7 @@
 ---
 title: "Transferring Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-20"
+ms.date: "10/20/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

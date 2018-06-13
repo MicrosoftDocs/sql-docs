@@ -1,7 +1,7 @@
 ---
 title: "Setting up SQL Server Managed Backup to Windows Azure | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-04"
+ms.date: "08/04/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

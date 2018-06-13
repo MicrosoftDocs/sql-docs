@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Backup to URL | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-25"
+ms.date: "01/25/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

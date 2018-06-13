@@ -1,7 +1,7 @@
 ---
 title: "Set the Partition Slice Property (Analysis Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-08-05"
+ms.date: "08/05/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

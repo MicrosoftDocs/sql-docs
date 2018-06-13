@@ -1,7 +1,7 @@
 ---
 title: "Memory-Optimized Table Variables | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-07-14"
+ms.date: "07/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

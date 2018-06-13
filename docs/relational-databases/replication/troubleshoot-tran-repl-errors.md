@@ -258,7 +258,7 @@ For more information, see [Enabling verbose logging for replication agents](http
 
 ## See also
 <br>[Transactional replication overview](../../relational-databases/replication/transactional/transactional-replication.md)
-<br>[Replication tutorials](/../../relational-databases/replication/replication-tutorials.md)
+<br>[Replication tutorials](../../relational-databases/replication/replication-tutorials.md)
 <br>[ReplTalk blog](https://blogs.msdn.microsoft.com/repltalk)
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]

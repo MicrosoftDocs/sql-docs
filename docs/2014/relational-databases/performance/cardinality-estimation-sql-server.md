@@ -1,7 +1,7 @@
 ---
 title: "Cardinality Estimation (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-24"
+ms.date: "11/24/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

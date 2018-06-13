@@ -1,7 +1,7 @@
 ---
 title: "Security Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-09-23"
+ms.date: "09/23/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

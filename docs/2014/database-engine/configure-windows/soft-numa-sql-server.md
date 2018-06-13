@@ -1,7 +1,7 @@
 ---
 title: "Configure SQL Server to Use Soft-NUMA (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-12"
+ms.date: "07/12/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

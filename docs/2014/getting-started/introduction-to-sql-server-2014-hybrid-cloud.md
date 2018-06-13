@@ -1,7 +1,7 @@
 ---
 title: "Introduction to SQL Server 2014 Hybrid Cloud | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-05-24"
+ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.service: "virtual-machines"

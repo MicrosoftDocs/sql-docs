@@ -1,7 +1,7 @@
 ---
 title: "Where to find the Reporting Services add-in for SharePoint Products | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-16"
+ms.date: "11/16/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

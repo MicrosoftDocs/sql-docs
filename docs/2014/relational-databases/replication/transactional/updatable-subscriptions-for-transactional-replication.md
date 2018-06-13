@@ -1,7 +1,7 @@
 ---
 title: "Updatable Subscriptions for Transactional Replication | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-31"
+ms.date: "03/31/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

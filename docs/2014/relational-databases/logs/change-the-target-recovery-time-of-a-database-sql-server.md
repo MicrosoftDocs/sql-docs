@@ -1,7 +1,7 @@
 ---
 title: "Change the Target Recovery Time of a Database (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-13"
+ms.date: "10/13/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Transparent Data Encryption (TDE) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-23"
+ms.date: "11/23/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

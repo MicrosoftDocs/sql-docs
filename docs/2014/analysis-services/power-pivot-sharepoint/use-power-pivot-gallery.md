@@ -1,7 +1,7 @@
 ---
 title: "Use PowerPivot Gallery | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-09-01"
+ms.date: "09/01/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

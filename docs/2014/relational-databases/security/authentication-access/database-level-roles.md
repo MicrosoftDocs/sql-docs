@@ -1,7 +1,7 @@
 ---
 title: "Database-Level Roles | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-09-22"
+ms.date: "09/22/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-22"
+ms.date: "06/22/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

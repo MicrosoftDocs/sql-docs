@@ -1,7 +1,7 @@
 ---
 title: "Configure the remote access Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-19"
+ms.date: "10/19/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

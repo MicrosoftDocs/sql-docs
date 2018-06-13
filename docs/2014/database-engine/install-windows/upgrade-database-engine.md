@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-26"
+ms.date: "10/26/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

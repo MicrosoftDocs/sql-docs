@@ -1,7 +1,7 @@
 ---
 title: "Control Transaction Durability | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-19"
+ms.date: "05/19/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

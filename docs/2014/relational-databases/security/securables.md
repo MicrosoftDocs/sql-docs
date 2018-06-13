@@ -1,7 +1,7 @@
 ---
 title: "Securables | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-14"
+ms.date: "10/14/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""

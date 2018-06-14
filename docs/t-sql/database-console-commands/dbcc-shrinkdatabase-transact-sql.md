@@ -88,6 +88,10 @@ The following table describes the columns in the result set.
 > The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not display rows for those files not shrunk.  
   
 ## Remarks  
+
+>[!NOTE]
+> Currently Azure SQL Data Warehouse does not support DBCC SHRINKDATABASE. Running this command is not recommended as this is an i/o intensive operation and can take your data warehouse offline. In addition, there will be costing implications to your data warehouse snapshots after running this command. 
+
 To shrink all data and log files for a specific database, execute the DBCC SHRINKDATABASE command. To shrink one data or log file at a time for a specific database, execute the [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) command.
   
 To view the current amount of free (unallocated) space in the database, run [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
@@ -101,9 +105,6 @@ Running DBCC SHRINKDATABASE without specifying either the NOTRUNCATE option or t
 The database being shrunk does not have to be in single user mode; other users can be working in the database when it is shrunk. This includes system databases.
   
 You cannot shrink a database while the database is being backed up. Conversely, you cannot backup a database while a shrink operation on the database is in process.
-
->[!NOTE]
-> Currently, Azure SQL Data Warehouse does not support DBCC SHRINKDATABASE with TDE enabled.
   
 ## How DBCC SHRINKDATABASE Works  
 DBCC SHRINKDATABASE shrinks data files on a per-file basis, but shrinks log files as if all the log files existed in one contiguous log pool. Files are always shrunk from the end.

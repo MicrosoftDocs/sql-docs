@@ -3,12 +3,9 @@ title: "Use the sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.technology: scripting
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 

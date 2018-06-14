@@ -2,7 +2,6 @@
 title: "ADO Event Instantiation: ADO and WFC | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.custom: ""
 ms.date: "02/15/2017"

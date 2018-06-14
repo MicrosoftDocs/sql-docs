@@ -1,6 +1,6 @@
 ---
 title: "DAX Properties | Microsoft Docs"
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: 
@@ -11,7 +11,8 @@ author: minewiskan
 manager: kfile
 ---
 # DAX Properties
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
    The DAX section of msmdsrv.ini contains settings used to control certain query behaviors in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], such as the upper limit on the number of rows returned in a DAX query result set.
 
   For very large rowsets, such as those returned in DirectQuery models, the default of one million rows could be insufficient. You'll know whether the limit needs adjusting if you get this error: "The result set of a query to external data source has exceeded the maximum allowed size of '1000000' rows."

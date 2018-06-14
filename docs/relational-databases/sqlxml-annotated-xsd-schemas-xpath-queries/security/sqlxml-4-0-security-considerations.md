@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQLXML 4.0 Security Considerations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

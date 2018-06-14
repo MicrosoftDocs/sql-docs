@@ -6,7 +6,7 @@ manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ---

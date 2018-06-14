@@ -28,7 +28,7 @@ The *May Public Preview* is focused on stabilization and bug fixes. This build c
 
 - Announcing Redgate SQL Search extension available in Extension Manager.
 - Community Localization available for 10 languages: German, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, Simplified Chinese and Traditional Chinese.
-- GDPR-compliant build has reduced telemetry collection, improved opt-out experience and in-product links to Privacy Statement.
+- Reduced telemetry collection, improved opt-out experience and in-product links to Privacy Statement.
 - Extension Manager has improved Marketplace experience to easily discover community extensions.
 - SQL Agent extension Jobs and Job History view improvement.
 - Updates for whoisactive and Server Reports extensions.

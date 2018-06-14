@@ -1,20 +1,20 @@
 ---
-title: "Connect to data sources and file shares with Windows Authentication | Microsoft Docs"
+title: "Connect to data and file shares with Windows Authentication | Microsoft Docs"
+description: Learn how to configure the SSIS Catalog on Azure SQL Database to run packages that use Windows Authentication to connect to data sources and file shares.
 ms.date: "02/05/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
 ---
-# Connect to on-premises data sources and Azure file shares with Windows Authentication
-This article describes how to configure the SSIS Catalog on Azure SQL Database to run packages that use Windows Authentication to connect to on-premises data sources and Azure file shares. You can use Windows authentication to connect to data sources in the same virtual network as the Azure SSIS Integration Runtime, both on premises and on Azure virtual machines and in Azure Files.
+# Connect to data sources and file shares with Windows Authentication in SSIS packages in Azure
+
+This article describes how to configure the SSIS Catalog on Azure SQL Database to run packages that use Windows Authentication to connect to data sources and file shares. You can use Windows authentication to connect to data sources in the same virtual network as the Azure SSIS Integration Runtime, both on premises, on Azure virtual machines, and in Azure Files.
 
 > [!WARNING]
 > If you don't provide valid domain credentials for Windows Authentication by running `catalog`.`set_execution_credential` as described in this article, packages that depend on Windows Authentication can't connect to data sources and fail at run time.
@@ -28,7 +28,7 @@ If one of your data sources is Azure Files, you can work around this limitation 
 ## Provide domain credentials for Windows Authentication
 To provide domain credentials that let packages use Windows Authentication to connect to on-premises data sources, do the following things:
 
-1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB). For more info, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
+1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB). For more info, see [Connect to the SSIS Catalog  (SSISDB) in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  With SSISDB as the current database, open a query window.
 
@@ -86,7 +86,7 @@ To connect to an on-premises SQL Server from a package running on Azure, you hav
 
 1.  In SQL Server Configuration Manager, enable the TCP/IP protocol.
 2.  Allow access through the Windows firewall. For more info, see [Configure the Windows Firewall to Allow SQL Server Access](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
-3.  To connect with Windows Authentication, make sure that the Azure-SSIS Integration Runtime belongs to a virtual network (VNet) that also includes the on-premises SQL Server.  For more info, see [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Then use `catalog.set_execution_credential` to provide credentials as described in this article.
+3.  To connect with Windows Authentication, make sure that the Azure-SSIS Integration Runtime belongs to a virtual network that also includes the on-premises SQL Server.  For more info, see [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Then use `catalog.set_execution_credential` to provide credentials as described in this article.
 
 ## Connect to an on-premises file share
 To check whether you can connect to an on-premises file share, do the following things:
@@ -133,4 +133,4 @@ To connect to a file share on an Azure file share, do the following things:
 ## Next steps
 - Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
 - Run a package. For more info, see [Run an SSIS package with SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Schedule a package. For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedule-packages.md).
+- Schedule a package. For more info, see [Schedule SSIS packages in Azure](ssis-azure-schedule-packages.md).

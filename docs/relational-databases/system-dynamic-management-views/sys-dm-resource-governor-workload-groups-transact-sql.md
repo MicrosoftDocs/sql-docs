@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: system-objects

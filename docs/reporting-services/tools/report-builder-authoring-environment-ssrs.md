@@ -48,7 +48,6 @@ manager: "kfile"
   
 ## See Also  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
- [Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)   
  [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

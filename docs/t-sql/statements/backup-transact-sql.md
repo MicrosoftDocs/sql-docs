@@ -721,10 +721,11 @@ When using backup compression with [Transparent Data Encryption (TDE)](../../rel
 Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this enables an optimized compression algorithm for TDE encrypted databases that first decrypts a page, compresses it and then encrypts it again. If using `MAXTRANSFERSIZE = 65536` (64 KB), backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  
-> The optimized compression algorithm for TDE encrypted databases is used automatically when:
-> * 
->  is used, in which case the default `MAXTRANSFERSIZE` is changed to 1048576 (1 MB), and is not forced to a lower value.
-> * The database has multiple data files, in which case the default `MAXTRANSFERSIZE` is changed to a multiple of 65536 (64 KB) is not changed to a lower value (such as `MAXTRANSFERSIZE = 65536`). 
+> There are some cases where the default `MAXTRANSFERSIZE` is greater than 64K:
+> * When the database has multiple data files created, it uses `MAXTRANSFERSIZE` > 64K
+> *	When performing backup to URL, the default `MAXTRANSFERSIZE = 1048576` (1MB)
+>   
+> Even if one of these conditions applies, you must explicitly set `MAXTRANSFERSIZE` greater than 64K in your backup command in order to get the new backup compression algorithm.
   
 By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   

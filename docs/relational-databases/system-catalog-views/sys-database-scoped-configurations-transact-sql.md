@@ -1,7 +1,7 @@
 ﻿---
 title: "sys.database_scoped_configurations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/16/2018"
+ms.date: "05/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "system-catalog-views"
@@ -35,6 +35,8 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 |**name**|**nvarchar(60)**|The name of the configuration option. For information about the possible configurations, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
 |**value**|**sqlvariant**|The value set for this configuration option for the primary replica.|  
 |**value_for_secondary**|**sqlvariant**|The value set for this configuration option for the secondary replicas.|  
+|**elevate_online**|**nvarchar(60)** |The db scoped default set for the online option for index operations |
+|**elevate_resumable**|nvarchar(60)|The db scoped default set for the resumable option for index operations| 
   
 ##  <a name="Permissions"></a> Permissions  
  Requires membership in the **public** role.  

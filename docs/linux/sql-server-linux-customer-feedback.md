@@ -5,13 +5,11 @@ author: annashres
 ms.author: anshrest 
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: ""
-ms.suite: "sql"
+ms.suite: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ---
 # Customer Feedback for SQL Server on Linux
 

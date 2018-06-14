@@ -3,8 +3,6 @@ title: "Security-Related Dynamic Management Views and Functions (Transact-SQL) |
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: system-objects

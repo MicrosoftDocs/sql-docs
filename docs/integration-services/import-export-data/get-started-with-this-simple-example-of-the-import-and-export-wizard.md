@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "02/15/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "import-export-data"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a

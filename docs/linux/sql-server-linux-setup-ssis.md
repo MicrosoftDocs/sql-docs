@@ -8,11 +8,10 @@ manager: craigg
 ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ---
 # Install SQL Server Integration Services (SSIS) on Linux
 

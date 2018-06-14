@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "12/20/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 

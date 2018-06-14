@@ -2,7 +2,6 @@
 title: "RDS Tutorial (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.custom: ""
 ms.date: "02/14/2017"

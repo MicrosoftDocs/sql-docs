@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Data Compression | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2017"

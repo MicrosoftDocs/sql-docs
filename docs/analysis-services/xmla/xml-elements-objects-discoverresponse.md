@@ -12,7 +12,7 @@ manager: kfile
 ---
 # XML Elements - Objects - DiscoverResponse
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contains the information returned by an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in response to a [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) method call.  
+  Contains the information returned by an instance of Analysis Services in response to a [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) method call.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -25,7 +25,7 @@ manager: kfile
 </DiscoverResponse>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|1-1: Required element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -43,7 +43,7 @@ manager: kfile
 ## Remarks  
  The **DiscoverResponse** element is the topmost element within the body of a SOAP response for the **Discover** method.  
   
-## See Also  
+## See also
  [ExecuteResponse Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)   
  [Objects &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   

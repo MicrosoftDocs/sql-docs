@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Graph processing with SQL Server and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"

@@ -3,11 +3,9 @@ title: "Uninstall an Existing Instance of SQL Server (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/27/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "instances of SQL Server, uninstalling"
   - "uninstalling SQL Server"
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: 74
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)

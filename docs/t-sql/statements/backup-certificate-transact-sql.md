@@ -78,7 +78,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  Is the password that is used to encrypt the private key before writing the key to the backup file. The password is subject to complexity checks.  
   
  *decryption_password*  
- Is the password that is used to decrypt the private key before backing up the key.  
+ Is the password that is used to decrypt the private key before backing up the key. This is not necessary if the certificate is encrypted by the master key. 
   
 ## Remarks  
  If the private key is encrypted with a password in the database, the decryption password must be specified.  

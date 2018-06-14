@@ -214,7 +214,7 @@ SQL Server Version  |Redistributable Install Link
     > Importing the asymmetric key is highly recommended for production scenarios because it allows the administrator to escrow the key in a key escrow system. If the asymmetric key is created in the vault, it cannot be escrowed because the private key can never leave the vault. Keys used to protect critical data should be escrowed. The loss of an asymmetric key will result in permanent data loss.  
 
     ### Create a new key
-    ##### Example:  
+    #### Example:  
     Alternatively, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected.  In this example, let’s create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  

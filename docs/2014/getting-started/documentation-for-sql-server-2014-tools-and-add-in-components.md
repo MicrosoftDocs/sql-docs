@@ -40,6 +40,6 @@ manager: "jhubbard"
 |[Power Pivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint is an Analysis Services server running in SharePoint mode.|  
   
 ## See Also  
- [SQL Server 2014 Resources](../root-toc/books-online-for-sql-server-2014.md)  
+ [SQL Server 2014 Resources](../2014-toc/books-online-for-sql-server-2014.md)  
   
   

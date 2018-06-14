@@ -32,8 +32,7 @@ manager: "jhubbard"
  Type the name of the new Oracle CDC Windows Service. You should not use long names, if possible. The characters / and \ cannot be used in the service name.  
   
 > [!NOTE]  
-  
- This option is not available when editing the service. You cannot change the name of a Windows service that already exists.  
+> This option is not available when editing the service. You cannot change the name of a Windows service that already exists.  
   
  **Description**  
  Type a description of the service to help identify it.  

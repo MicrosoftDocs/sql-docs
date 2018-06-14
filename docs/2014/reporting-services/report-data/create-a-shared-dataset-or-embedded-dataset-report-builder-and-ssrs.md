@@ -78,7 +78,6 @@ manager: "mblythe"
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-9.  
   
 ### To create a dataset from a SQL Server relational database  
   

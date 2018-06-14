@@ -45,8 +45,6 @@ manager: "jhubbard"
   
 -   **Configuration file parameters** -  
   
-    -  
-  
     -   \<configuration>  
   
         -   \<appSettings>  

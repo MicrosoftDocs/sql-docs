@@ -70,7 +70,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
       ```/etc/network/interfaces
       <...>
       # The primary network interface
-      auth eth0
+      auto eth0
       iface eth0 inet dhcp
       dns-nameservers **<AD domain controller IP address>**
       dns-search **<AD domain name>**

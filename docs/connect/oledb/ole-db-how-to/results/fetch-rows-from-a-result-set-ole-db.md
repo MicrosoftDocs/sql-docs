@@ -20,7 +20,7 @@ manager: craigg
 # Fetch Rows from a Result Set (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   This sample shows how to fetch rows from a result set. This sample is not supported on IA64.  
   

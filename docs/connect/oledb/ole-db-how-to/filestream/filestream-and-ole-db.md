@@ -18,7 +18,7 @@ manager: craigg
 # Filestream and OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   This section contains four samples that show how to use OLE DB Driver for SQL Server with the filestream feature:  
   

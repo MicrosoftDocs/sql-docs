@@ -18,7 +18,7 @@ manager: craigg
 # Read a FILESTREAM Column to File Using IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   This sample reads a filestream column to a file using the IBCPSession interface and writes a format file.  
   

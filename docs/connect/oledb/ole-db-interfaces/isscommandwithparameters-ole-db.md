@@ -26,7 +26,7 @@ manager: craigg
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **ISSCommandWithParameters** interface exposes support for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML and user-defined types (UDT). It is an optional interface that inherits from the core OLE DB interface **ICommandWithParameters**. To add to the three methods inherited from **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, and **SetParameterInfo**; **ISSCommandWithParameters** provides two new methods that are used to handle server-specific data types.  
+  **ISSCommandWithParameters** interface exposes support for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML and user-defined types (UDT). It's an optional interface that inherits from the core OLE DB interface **ICommandWithParameters**. In addition to the three methods inherited from **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, and **SetParameterInfo**; **ISSCommandWithParameters** provides two new methods that are used to handle server-specific data types.  
   
 > [!NOTE]  
 >  The **ISSCommandWithParameters** interface can be used when Service Components are used, but the Service Components won't use this interface.  

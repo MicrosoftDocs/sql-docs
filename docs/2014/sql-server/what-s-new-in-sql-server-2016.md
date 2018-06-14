@@ -87,7 +87,7 @@ manager: "jhubbard"
 
 
 ## Additional Information  
- [SQL Server 2014 Resources](../root-toc/books-online-for-sql-server-2014.md)  
+ [SQL Server 2014 Resources](../2014-toc/books-online-for-sql-server-2014.md)  
   
  [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/p/?linkID=296445)  
   

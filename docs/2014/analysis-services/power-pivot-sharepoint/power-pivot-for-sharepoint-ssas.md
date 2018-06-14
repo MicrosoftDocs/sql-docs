@@ -64,7 +64,7 @@ manager: "mblythe"
   
  [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot Gallery](../../root-toc/books-online-for-sql-server-2014.md)  
+ [PowerPivot Gallery](../../2014-toc/books-online-for-sql-server-2014.md)  
   
  [PowerPivot Data Access](power-pivot-data-access.md)  
   

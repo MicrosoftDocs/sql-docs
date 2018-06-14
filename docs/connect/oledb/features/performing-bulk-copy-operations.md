@@ -2,7 +2,7 @@
 title: "Performing Bulk Copy Operations | Microsoft Docs"
 description: "Performing bulk copy operations using OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb|features"
@@ -21,7 +21,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Performing Bulk Copy Operations
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk copy feature supports the transfer of large amounts of data into or out of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table or view. Data can also be transferred out by specifying a SELECT statement. The data can be moved between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and an operating-system data file, such as an ASCII file. The data file can have different formats; the format is defined to bulk copy in a format file. Optionally, data can be loaded into program variables and transferred to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using bulk copy functions and methods.  
   

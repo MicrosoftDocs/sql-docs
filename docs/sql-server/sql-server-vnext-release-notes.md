@@ -13,7 +13,7 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
-monikerRange: "= sql-server-atver15-seattle || = sqlallproducts-allversions"
+monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # SQL Server vNext Release Notes
 

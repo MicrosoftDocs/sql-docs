@@ -54,7 +54,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [Previous Versions](https://docs.microsoft.com/previous-versions/sql/)
 ::: moniker-end
 
-::: moniker range="= sql-server-atver15-seattle"
+::: moniker range="= sql-server-ver15"
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)     | [SQL Server vNext Release Notes](../sql-server/sql-server-vnext-release-notes.md)        |

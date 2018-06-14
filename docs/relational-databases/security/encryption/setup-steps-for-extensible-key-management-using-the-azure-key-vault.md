@@ -217,12 +217,7 @@ SQL Server Version  |Redistributable Install Link
 
     
     ##### Example:  
-    Alternatively, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected. 
-    
-    > [!NOTE]
-    >  SQL Server only supports 2048-bit RSA keys.
-    
-   In this example, let’s create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
+    Alternatively, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected.  In this example, let’s create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  

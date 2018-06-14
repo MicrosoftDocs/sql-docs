@@ -118,4 +118,3 @@
 ### [Lesson 8. Restore a database to Windows Azure Storage](lesson-7-restore-a-database-to-a-point-in-time.md)
 ### [Lesson 9. Restore a database from Windows Azure Storage](lesson-8-restore-as-new-database-from-log-backup.md)
 
-

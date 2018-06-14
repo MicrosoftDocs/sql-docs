@@ -1,5 +1,6 @@
 # [Tutorials for SQL Server 2014](tutorials-for-sql-server-2014.md)
 
+# [Tutorial: Writing Transact-SQL Statements +](../t-sql/tutorial-writing-transact-sql-statements.md)
 # [Data Mining Tutorials](../analysis-services/data-mining-tutorials-analysis-services.md)
 ## [Basic Data Mining Tutorial](basic-data-mining-tutorial.md)
 ### [Lesson 1: Preparing the Analysis Services Database](lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)
@@ -130,8 +131,6 @@
 ### [Tutorial: Creating Drillthrough and Main Reports](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)
 ### [Tutorial: Introducing Expressions](../reporting-services/tutorial-introducing-expressions.md)
 
-# [Replication Tutorials +](../relational-databases/replication/replication-tutorials.md)
-
 # [Enterprise Information Management Tutorials](enterprise-information-management-tutorials.md)
 ## [Enterprise Information Management using SSIS, MDS, and DQS Together [Tutorial]](enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)
 ### [Lesson 1: Creating the Suppliers DQS Knowledge Base](lesson-1-creating-the-suppliers-dqs-knowledge-base.md)
@@ -188,3 +187,4 @@
 #### [Task 16: Verifying with Master Data Manager](task-16-verifying-with-master-data-manager.md)
 #### [Task 17: Reviewing DQS Cleansing Project Created by the SSIS package](task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)
 ### [Conclusion](conclusion.md)
+

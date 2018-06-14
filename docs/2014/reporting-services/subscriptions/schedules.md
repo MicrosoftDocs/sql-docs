@@ -43,7 +43,6 @@ manager: "mblythe"
   
 -   [Effects of Stopping the Report Server Service](#bkmk_stoppingservice)  
   
--  
   
 ##  <a name="bkmk_whatyoucando"></a> What you can do with Schedules  
  You can use Report Manager in Native mode and SharePoint site administration pages in SharePoint mode to create and manage your schedules. You can:  

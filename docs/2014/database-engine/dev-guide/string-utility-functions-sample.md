@@ -91,7 +91,6 @@ manager: "jhubbard"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
--  
   
 ## Sample Code  
  The following are the code listings for this sample.  

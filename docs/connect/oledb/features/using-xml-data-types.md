@@ -2,7 +2,7 @@
 title: "Using XML Data Types | Microsoft Docs"
 description: "Using XML Data Types with OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb|features"
@@ -36,7 +36,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Using XML Data Types
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced an **xml** data type that enables you to store XML documents and fragments in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. The **xml** data type is a built-in data type in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and is in some ways similar to other built-in types, such as **int** and **varchar**. As with other built-in types, you can use the **xml** data type as a column type when creating a table; as a variable type, a parameter type, or a function-return type; or in CAST and CONVERT functions.  
   

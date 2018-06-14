@@ -12,7 +12,7 @@ ms.topic: "article"
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-monikerRange: "= sql-server-atver15-seattle || = sqlallproducts-allversions"
+monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server vNext
 

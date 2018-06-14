@@ -16,65 +16,36 @@ manager: craigg
 ---
 # Download and install sqlpackage
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
+sqlpackage runs on Windows, macOS, and Linux.
 
-Download and install the latest release, the *May Public Preview*:
+Download and install the latest .NET Framework release and macOS and Linux previews:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|May 7, 2018 |0.29.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|May 7, 2018 |0.29.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|May 7, 2018 |0.29.3|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=873386)|Jan 25, 2018 |17.4.1|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|May 9, 2018 |0.0.1|
+|Linux|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|May 9, 2018 |0.0.1|
 
-For details about the latest release, see the release notes.
+## Get sqlpackage for Windows
 
-## Get SQL Operations Studio (preview) for Windows
-
-This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip: 
+This release of sqlpackage includes a standard Windows installer experience, and a .zip: 
 
 **Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=873386).
-1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
+1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=873386).
+2. sqlpackage will be installed to the ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` folder.
 
+## Get sqlpackage (preview) for macOS
 
-**.zip file**
-
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=873387).
-2. Browse to the downloaded file and extract it.
-3. Run `\sqlops-windows\sqlops.exe`
-
-
-## Get SQL Operations Studio (preview) for macOS
-
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=873388).
+1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=873927).
 2. To expand the contents of the zip, double-click it.
-3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
 
-## Get SQL Operations Studio (preview) for Linux
+## Get sqlpackage (preview) for Linux
 
-1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=873391)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=873390)
+1. Download sqlpackage for Linux by using one of the installers or the tar.gz archive:
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)
-1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
-
-   **Debian Installation:**
-   ```bash
-   cd ~
-   sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
-
-   sqlops
-   ```
-
-   **rpm Installation:**
-   ```bash
-   cd ~
-   yum install ./Downloads/sqlops-linux-<version string>.rpm
-
-   sqlops
-   ```
+1. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    **tar.gz Installation:**
    ```bash 
@@ -97,28 +68,28 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
    **Redhat:** 
    ```bash
-   yum install libXScrnSaver
+   yum install libunwind 
    ```
 
    **Ubuntu:** 
    ```bash
-   sudo apt-get install libxss1
-
-   sudo apt-get install libgconf-2-4
-
    sudo apt-get install libunwind8
+   sudo apt-get install libicu52      # for 14.x
+   sudo apt-get install libicu55      # for 16.x
+   sudo apt-get install libicu57      # for 17.x
+   sudo apt-get install libicu60      # for 18.x
    ```
 
 
-## Uninstall SQL Operations Studio (preview)
+## Uninstall sqlpackage (preview)
 
-If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] using the Windows installer, then uninstall the same way you remove any Windows application.
+If you installed sqlpackage using the Windows installer, then uninstall the same way you remove any Windows application.
 
-If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with a .zip or other archive, then simply delete the files.
+If you installed sqlpackage with a .zip or other archive, then simply delete the files.
 
 ## Supported Operating Systems
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux, and is supported on the following platforms:
+sqlpackage runs on Windows, macOS, and Linux, and is supported on the following platforms:
 
 ### Windows
 - Windows 10 (64-bit)
@@ -140,15 +111,8 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-## Check for updates
-To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
-
 ## Next Steps
 
-See one of the following quickstarts to get started:
-- ???
-
-Contribute to [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
-- [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
+- Learn more about [sqlpackage](/sqlpackage.md)
 
 [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)

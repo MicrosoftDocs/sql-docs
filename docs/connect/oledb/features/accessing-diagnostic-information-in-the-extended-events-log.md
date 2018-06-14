@@ -2,7 +2,7 @@
 title: "Accessing Diagnostic Information in the Extended Events Log | Microsoft Docs"
 description: "Tracing OLE DB Driver for SQL Server and accessing diagnostic information in the extended events log"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb|features"
@@ -16,7 +16,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Accessing Diagnostic Information in the Extended Events Log
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Beginning in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], OLE DB Driver for SQL Server and data access tracing ([Data Access Tracing](http://go.microsoft.com/fwlink/?LinkId=125805)) have been updated to make it easier to get diagnostic information about connection failures from the connectivity ring buffer and application performance information from the extended events log.  
   

@@ -202,7 +202,7 @@ The Distribution Agent finds data in the distribution database and then applies 
 
     ![Error that indicates the login failed for the subscriber](media/troubleshooting-tran-repl-errors/login-failed.png)
     
-    If you're seeing this error, the login is missing on the subscriber. To resolve this error, see [Permissions for replication](/../../relational-databases/replication/security/security-role-requirements-for-replication.md).
+    If you're seeing this error, the login is missing on the subscriber. To resolve this error, see [Permissions for replication](../../relational-databases/replication/security/security-role-requirements-for-replication.md).
 
 9. After the login error is resolved, check Replication Monitor again. If all issues have been addressed, you should see a green arrow next to **Publication Name** and a status of **Running** under **All Subscriptions**. 
 
@@ -258,7 +258,7 @@ For more information, see [Enabling verbose logging for replication agents](http
 
 ## See also
 <br>[Transactional replication overview](../../relational-databases/replication/transactional/transactional-replication.md)
-<br>[Replication tutorials](/../../relational-databases/replication/replication-tutorials.md)
+<br>[Replication tutorials](../../relational-databases/replication/replication-tutorials.md)
 <br>[ReplTalk blog](https://blogs.msdn.microsoft.com/repltalk)
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]

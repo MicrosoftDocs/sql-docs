@@ -20,11 +20,11 @@ sqlpackage runs on Windows, macOS, and Linux.
 
 Download and install the latest .NET Framework release and macOS and Linux previews:
 
-|Platform|Download|Release date| Version |
-|:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=873386)|Jan 25, 2018 |17.4.1|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|May 9, 2018 |0.0.1|
-|Linux|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|May 9, 2018 |0.0.1|
+|Platform|Download|Release date|Version|Build|
+|:---|:---|:---|:---|:---|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=873386)|Jan 25, 2018|17.4.1|14.0.3917.1|
+|macOS (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|May 9, 2018 |0.0.1|15.0.4057.1|
+|Linux (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|May 9, 2018 |0.0.1|15.0.4057.1|
 
 ## Get sqlpackage for Windows
 
@@ -33,28 +33,35 @@ This release of sqlpackage includes a standard Windows installer experience, and
 **Installer**
 
 1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=873386).
-2. sqlpackage will be installed to the ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` folder.
+2. Open a new Command Prompt window, and run sqlpackage.exe
+    - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` folder
 
 ## Get sqlpackage (preview) for macOS
 
 1. Download [sqlpackage for macOS](https://go.microsoft.com/fwlink/?linkid=873927).
-2. To expand the contents of the zip, double-click it.
+2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
+   **.zip Installation:**
+   ```bash 
+   mv ~/Downloads/sqlpackage-linux-<version string> ~/sqlpackage 
+   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
+   source ~/.bash_profile
+   sqlpackage 
+   ``` 
 
 ## Get sqlpackage (preview) for Linux
 
-1. Download sqlpackage for Linux by using one of the installers or the tar.gz archive:
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)
-1. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
+1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=873926) by using one of the installers or the tar.gz archive:
+2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
-   **tar.gz Installation:**
+   **.zip Installation:**
    ```bash 
    cd ~ 
-   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
-   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   mkdir sqlpackage
+   unzip ~/Downloads/sqlpackage-linux-<version string>.zip ~/sqlpackage 
+   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bashrc
    source ~/.bashrc 
-   sqlops 
+   sqlpackage 
    ``` 
 
    > [!NOTE]
@@ -69,11 +76,14 @@ This release of sqlpackage includes a standard Windows installer experience, and
    **Redhat:** 
    ```bash
    yum install libunwind 
+   yum install libicu 
    ```
 
    **Ubuntu:** 
    ```bash
    sudo apt-get install libunwind8
+
+   # install the libicu library based on the Ubuntu version
    sudo apt-get install libicu52      # for 14.x
    sudo apt-get install libicu55      # for 16.x
    sudo apt-get install libicu57      # for 17.x
@@ -92,20 +102,20 @@ If you installed sqlpackage with a .zip or other archive, then simply delete the
 sqlpackage runs on Windows, macOS, and Linux, and is supported on the following platforms:
 
 ### Windows
-- Windows 10 (64-bit)
-- Windows 8.1 (64-bit)
-- Windows 8 (64-bit)
-- Windows 7 (SP1) (64-bit) - Requires [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
+- Windows 10
+- Windows 8.1 
+- Windows 8 
+- Windows 7 SP1 
 - Windows Server 2016
-- Windows Server 2012 R2 (64-bit)
-- Windows Server 2012 (64-bit)
-- Windows Server 2008 R2 (64-bit)
+- Windows Server 2012 R2
+- Windows Server 2012 
+- Windows Server 2008 R2
 
 ### macOS
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
-### Linux
+### Linux (x64)
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2

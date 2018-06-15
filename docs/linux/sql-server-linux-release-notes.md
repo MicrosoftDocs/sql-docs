@@ -210,6 +210,7 @@ The following features and services are not available on Linux at the time of th
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Distributed query with 3rd-party connections |
+| &nbsp; | Linked Servers to data sources other than SQL Server |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |

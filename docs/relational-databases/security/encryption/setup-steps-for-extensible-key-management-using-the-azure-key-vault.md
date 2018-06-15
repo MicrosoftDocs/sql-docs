@@ -3,12 +3,9 @@ title: "SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup S
 ms.custom: ""
 ms.date: "06/11/2018"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
 author: aliceku
-ms.author: edmaca
+ms.author: aliceku
 manager: craigg
 ---
 # SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps
@@ -166,12 +163,10 @@ SQL Server Version  |Redistributable Install Link
 5.  **Generate an Asymmetric Key in the Key Vault**  
   
      There are two ways to generate a key in Azure Key Vault: 1) Import an existing key or 2) create a new key.  
-           
-       
+                  
       > [!NOTE]
-        >  SQL Server only supports 2048-bit RSA keys.     
- 
-
+        >  SQL Server only supports 2048-bit RSA keys.
+        
     ### Best Practice:
     
     To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practice:
@@ -216,16 +211,8 @@ SQL Server Version  |Redistributable Install Link
     > Importing the asymmetric key is highly recommended for production scenarios because it allows the administrator to escrow the key in a key escrow system. If the asymmetric key is created in the vault, it cannot be escrowed because the private key can never leave the vault. Keys used to protect critical data should be escrowed. The loss of an asymmetric key will result in permanent data loss.  
 
     ### Create a new key
-
-    
-    ##### Example:  
-    Alternatively, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected. 
-    
-      > [!NOTE]
-        >  SQL Server only supports 2048-bit RSA keys.
-    
-    
-    In this example, let’s create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
+    #### Example:  
+    Alternatively, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected.  In this example, let’s create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -244,8 +231,7 @@ SQL Server Version  |Redistributable Install Link
     Id         : https://contosodevkeyvault.vault.azure.net:443/  
                  keys/ContosoRSAKey0/<guid>  
     ```  
-
-    > [!IMPORTANT]  
+ > [!IMPORTANT]  
     >  The key vault supports multiple versions of the same named key, but keys to be used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector should not be versioned or rolled. If the administrator wants to roll the key used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption, a new key with a different name should be created in the vault and used to encrypt the DEK.  
    
   
@@ -369,6 +355,4 @@ Now that you have completed the basic configuration, see how to [Use SQL Server 
   
 ## See Also  
  [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-[SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
-  
+[SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)

@@ -11,7 +11,6 @@ ms.reviewer: ""
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
-ms.component: "security"
 ms.tgt_pltfrm:
 ms.devlang: "azurecli, powershell"
 ms.topic: conceptual

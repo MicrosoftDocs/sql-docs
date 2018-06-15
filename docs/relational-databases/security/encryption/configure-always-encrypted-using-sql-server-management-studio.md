@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "11/30/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 

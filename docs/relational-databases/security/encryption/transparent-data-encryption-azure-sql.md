@@ -10,7 +10,6 @@ ms.reviewer: ""
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
-ms.component: "security"
 ms.tgt_pltfrm:
 ms.topic: conceptual
 ms.date: "05/08/2018"

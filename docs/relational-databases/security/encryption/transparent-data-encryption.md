@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,8 +19,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], transparent data encryption"
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 75
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

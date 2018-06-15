@@ -6,14 +6,11 @@ ms.author: mikeray
 manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux,mvc"
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.technology: linux
 ---
 # Configure a SQL Server container in Kubernetes for high availability
 
@@ -274,7 +271,7 @@ If you configured the container as described, you can connect with an applicatio
 
 You can use the following applications to connect to the SQL Server instance. 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssms)
+* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
 * [SSDT](http://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-use-ssdt)
 

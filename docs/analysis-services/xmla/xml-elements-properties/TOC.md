@@ -1,4 +1,4 @@
-# [XML Elements - Properties](xml-elements-properties.md)
+# [XMLA Elements - Properties](xml-elements-properties.md)
 
 # [AllowOverwrite Element (XMLA)](allowoverwrite-element-xmla.md)
 # [ApplyCompression Element (XMLA)](applycompression-element-xmla.md)

@@ -2,14 +2,12 @@
 title: "FOR Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,8 +25,7 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # SELECT - FOR Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -180,7 +177,7 @@ JSON
  Specifies that the results of a query are to be returned as an XML document. One of the following XML modes must be specified: RAW, AUTO, EXPLICIT. For more information about XML data and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
  RAW [ **('***ElementName***')** ]  
- Takes the query result and transforms each row in the result set into an XML element with a generic identifier \<row /> as the element tag. You can optionally specify a name for the row element. The resulting XML output uses the specified *ElementName* as the row element generated for each row. For more information, see [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md) and [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
+ Takes the query result and transforms each row in the result set into an XML element with a generic identifier \<row /> as the element tag. You can optionally specify a name for the row element. The resulting XML output uses the specified *ElementName* as the row element generated for each row. For more information, see [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).
   
  AUTO  
  Returns query results in a simple, nested XML tree. Each table in the FROM clause, for which at least one column is listed in the SELECT clause, is represented as an XML element. The columns listed in the SELECT clause are mapped to the appropriate element attributes. For more information, see [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md).  

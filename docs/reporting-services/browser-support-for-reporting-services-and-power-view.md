@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/02/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -27,7 +26,6 @@ caps.latest.revision: 121
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Browser Support for Reporting Services and Power View
 

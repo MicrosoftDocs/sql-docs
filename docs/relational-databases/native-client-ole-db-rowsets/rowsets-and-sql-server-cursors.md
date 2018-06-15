@@ -1,10 +1,9 @@
----
+﻿---
 title: "Rowsets and SQL Server Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-rowsets"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "cursors [OLE DB]"
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rowsets and SQL Server Cursors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,30 +1,14 @@
 ---
 title: "Programming AMO Security Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "programming [AMO]"
-  - "Analysis Management Objects, security"
-  - "AMO, security"
-ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Programming AMO Security Objects
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programming security objects or running applications that use AMO security objects requires being a member of the Server Administrator group or the Database Administrator group. Server Administrator and Database Administrator are an access levels supplied by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

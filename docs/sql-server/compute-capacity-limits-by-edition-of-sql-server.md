@@ -2,16 +2,15 @@
 title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: sql
 ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"
   - "number of processors supported"
@@ -20,8 +19,7 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 60
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Compute capacity limits by edition of SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,6 +98,7 @@ You might want to disable hyperthreading when the performance for each virtual p
  [Features supported by the editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Maximum capacity specifications for SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [Quickstart installation of SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-  
-  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

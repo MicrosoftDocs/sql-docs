@@ -1,10 +1,9 @@
----
+﻿---
 title: "bcp_readfmt | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-extensions-bulk-copy-functions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "bcp_readfmt function"
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 caps.latest.revision: 35
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

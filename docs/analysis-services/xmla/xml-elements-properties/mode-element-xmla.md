@@ -1,37 +1,14 @@
 ---
 title: "Mode Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Mode Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:xml-analysis#Mode"
-  - "microsoft.xml.analysis.mode"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#Mode"
-helpviewer_keywords: 
-  - "Mode element"
-ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Mode Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +25,7 @@ ms.workload: "Inactive"
 </Lock>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -56,7 +33,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|1-1: Required element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -71,7 +48,7 @@ ms.workload: "Inactive"
 |*CommitShared*|A shared lock is established on the specified object. Other shared locks can be created for the same object.<br /><br /> A shared lock prevents transactions containing write operations, such as an [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call running an [Alter](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) command, on a specified object, from committing until the shared lock is removed. A shared lock does not prevent transactions containing read operations, such as a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method call or an **Execute** method call running a [Statement](../../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) command, from committing.|  
 |*CommitExclusive*|An exclusive lock is established on the specified object. Other shared or exclusive locks cannot be created for the same object.<br /><br /> An exclusive lock prevents transactions containing either read or write operations on a specified object from committing until the exclusive lock is removed.|  
   
-## See Also  
+## See also
  [ID Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)   
  [Object Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

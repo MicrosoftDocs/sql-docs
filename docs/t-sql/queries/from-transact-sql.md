@@ -2,14 +2,12 @@
 title: "FROM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -39,8 +37,8 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: 97
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -364,7 +362,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  Is the alias name of the output table. *pivot_table_alias* must be specified.  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT \<unpivot_clause>  
  Specifies that the input table is narrowed from multiple columns in *column_list* into a single column called *pivot_column*. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  AS OF \<date_time>  

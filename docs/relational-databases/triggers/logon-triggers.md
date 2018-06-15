@@ -2,16 +2,15 @@
 title: "Logon Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/19/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "logon triggers"
   - "login triggers"
@@ -21,8 +20,7 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Logon Triggers
 [!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,23 +1,18 @@
 ---
-title: "Grant permissions"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-
+title: Grant T-SQL permissions - Parallel Data Warehouse | Microsoft Docs
+description: Grant T-SQL permissions for database operations in Parallel Data Warehouse.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Grant permissions
+# Grant T-SQL permissions for Parallel Data Warehouse
+Grant T-SQL permissions for database operations in Parallel Data Warehouse.
 
 ## Grant Permissions to Submit Database Queries
 This section describes how to grant permissions to database roles and users to query data on the SQL Server PDW appliance.  

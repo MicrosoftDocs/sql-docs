@@ -1,23 +1,17 @@
 ---
-title: "dwloader Command-Line Loader for Parallel Data Warehouse"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "**dwloader** is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table."
-ms.date: "11/04/2016"
-ms.topic: "article"
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 90
-
+title: dwloader Command-Line Loader - Parallel Data Warehouse | Microsoft Docs
+description: dwloader is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# dwloader Command-Line Loader
+
+# dwloader Command-Line Loader for Parallel Data Warehouse
 **dwloader** is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table. When loading rows, you can add all rows to the end of the table (*append mode* or *fastappend mode*), append new rows and update existing rows (*upsert mode*), or delete all existing rows before loading and then insert all rows into an empty table (*reload mode*).  
   
 **Process for loading data**  

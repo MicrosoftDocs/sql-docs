@@ -1,30 +1,14 @@
 ---
 title: "AMO Data Mining Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "data mining [AMO]"
-  - "AMO, data mining"
-  - "Analysis Management Objects, data mining"
-ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # AMO Data Mining Classes
   Data mining classes help you create, modify, delete, and process data mining objects. Working with data mining objects includes creating data mining structures, creating data mining models, and processing the models.  

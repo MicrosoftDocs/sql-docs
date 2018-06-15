@@ -6,16 +6,14 @@ ms.date: 02/23/2018
 ms.author: jroth 
 manager: craigg
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"
-ms.workload: "On Demand"
 ---
 # Active Directory authentication for SQL Server on Linux
 

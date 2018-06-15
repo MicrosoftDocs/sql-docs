@@ -2,14 +2,12 @@
 title: "ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,10 +23,9 @@ helpviewer_keywords:
   - "NEXT USED filegroups"
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)
 

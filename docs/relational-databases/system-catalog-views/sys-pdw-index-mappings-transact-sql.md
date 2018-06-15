@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.pdw_index_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -8,18 +8,17 @@ ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.component: "system-catalog-views"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 caps.latest.revision: 7
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_index_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

@@ -2,21 +2,18 @@
 title: "Choose a database engine upgrade method | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Choose a database engine upgrade method
 

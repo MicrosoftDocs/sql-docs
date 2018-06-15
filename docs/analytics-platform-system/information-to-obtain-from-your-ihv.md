@@ -1,23 +1,17 @@
 ---
-title: "Information to Obtain from Your IHV (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2bce301a-704c-4236-a0a1-851bd17e2b6c
-caps.latest.revision: 11
-
+title: Obtain information from IHV - Analytics Platform System | Microsoft Docs
+description: Information to obtain from your IHV about the Analytics Platform System appliance. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
+
+
 # Information to Obtain from Your IHV
 When your independent hardware vendor (IHV) delivers your new SQL Server PDW appliance to you, they will also deliver information on the appliance hardware and the configuration they have performed on your appliance. You will need this information to administer your appliance.  
   

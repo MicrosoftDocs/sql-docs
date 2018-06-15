@@ -1,10 +1,9 @@
----
+﻿---
 title: "Create a Bulk Copy Format File (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "bulk copy [ODBC], data files"
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Bulk Copy Format File (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,10 +1,9 @@
----
+﻿---
 title: "Commands Generating Multiple-Rowset Results | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-commands"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "multiple-rowset results"
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Commands Generating Multiple-Rowset Results
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

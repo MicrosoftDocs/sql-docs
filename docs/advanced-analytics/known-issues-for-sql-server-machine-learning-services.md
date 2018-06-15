@@ -1,22 +1,13 @@
 ---
-title: "Known issues in Machine Learning Services | Microsoft Docs"
-ms.date: "02/05/2018"
-ms.prod: "machine-learning-services"
-ms.prod_service: "machine-learning-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: 53
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "On Demand"
+title: Known issues in Machine Learning Services | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Known issues in Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +92,7 @@ This message is displayed if either of the following two statements is true,
 + You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 + You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 

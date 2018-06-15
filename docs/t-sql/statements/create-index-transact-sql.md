@@ -2,14 +2,12 @@
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -57,10 +55,10 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], creating"
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 caps.latest.revision: 223
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -105,10 +103,10 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
+
+### Syntax for SQL Server and Azure SQL Database
+
 ```  
--- Syntax for SQL Server and Azure SQL Database
-  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column [ ASC | DESC ] [ ,...n ] )   
     [ INCLUDE ( column_name [ ,...n ] ) ]  
@@ -164,14 +162,16 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
 <range> ::=   
 <partition_number_expression> TO <partition_number_expression>  
-  
-Backward Compatible Relational Index
+```
+
+### Backward Compatible Relational Index
 
 > [!IMPORTANT]
 > The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 > Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature. 
 > Use the syntax structure specified in <relational_index_option> instead.  
-  
+
+```  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )   
     [ WITH <backward_compatible_index_option> [ ,...n ] ]  
@@ -193,10 +193,9 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | DROP_EXISTING   
 }  
 ```  
-
+### Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON [ database_name . [ schema ] . | schema . ] table_name   
@@ -1030,4 +1029,3 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
  [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
  
-

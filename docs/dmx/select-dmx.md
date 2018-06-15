@@ -1,38 +1,14 @@
 ---
 title: "SELECT (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SELECT"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "browsing mining model [Analysis Services]"
-  - "TOP clause, SELECT"
-  - "FLATTENED option"
-  - "predictions [DMX]"
-  - "ORDER BY clause [DMX]"
-  - "SELECT statement [DMX]"
-  - "mining models [Analysis Services], browsing"
-  - "statements [DMX], SELECT statement"
-  - "WHERE clause, DMX"
-ms.assetid: 32d9e8fd-796b-4e1c-ae59-73cd6f645485
-caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

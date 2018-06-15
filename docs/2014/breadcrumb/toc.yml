@@ -1,0 +1,11 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+  - name: SQL
+    href: /sql/
+    homepage: /sql/index
+    items:
+    - name: Relational databases
+      href: /sql/relational-databases/
+      homepage: /sql/relational-databases/sqltoolsvsnativehelpers-framewindowvisible

@@ -1,37 +1,14 @@
 ---
 title: "return Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "return Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "microsoft.xml.analysis.return"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#return"
-  - "urn:schemas-microsoft-com:xml-analysis#return"
-helpviewer_keywords: 
-  - "return element"
-ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # return Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +27,7 @@ ms.workload: "Inactive"
 </DiscoverResponse>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -58,7 +35,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|1-1: Required element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -73,7 +50,7 @@ ms.workload: "Inactive"
 ## Remarks  
  The **return** element contains the data returned by the **Discover** and **Execute** methods. Typically, the **return** element contains a single **root** element that contains either the data returned by a successful **Discover** or **Execute** method call or an XML for Analysis (XMLA) exception returned by an unsuccessful method call. If the **Execute** method contains a **Batch** command that performs multiple operations, the **return** element contains a **results** element which, in turn, contains one **root** element for each command executed successfully or unsuccessfully by the **Batch** command.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

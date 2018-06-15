@@ -1,10 +1,9 @@
----
+﻿---
 title: "Using IRow::GetColumns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-rowsets"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "GetColumns method"
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using IRow::GetColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

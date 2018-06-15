@@ -1,25 +1,18 @@
 ---
-title: "Analytics Platform System high availability"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Describes how Analytics Platform System (APS) is architected for high availability."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
-caps.latest.revision: 9
-
+title: High availability in Analytics Platform System | Microsoft Docs
+description: Learn how Analytics Platform System (APS) is architected for high availability. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
 # Analytics Platform System high availability
-Describes how Analytics Platform System (APS) is architected for high availability.  
+Learn how Analytics Platform System (APS) is architected for high availability.  
   
 ## High Availability Architecture  
 ![Appliance architecture](media/appliance-architecture.png "Appliance architecture")  

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/18/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -19,7 +18,6 @@ caps.latest.revision: 9
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Lesson 9: Build and Run the Application
 After you create a data filter for the data table, your next step is to build and run the website application.  

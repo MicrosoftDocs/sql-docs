@@ -1,10 +1,9 @@
----
+﻿---
 title: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 caps.latest.revision: 27
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

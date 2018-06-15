@@ -1,25 +1,18 @@
 ---
-title: "Hardware Installation (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
-caps.latest.revision: 17
-
+title: Hardware installation - Analytics Platform System | Microsoft Docs
+description: This article describes how to move, unpack, and install the hardware for your SQL Server PDW appliance. This article is informational only and is intended to help you understand the process. Your appliance should be unpacked, installed, and verified before it is turned over to you. Customer participation is required for items such as data center access, electrical power, and Ethernet connections.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Hardware Installation
-This topic describes how to move, unpack, and install the hardware for your SQL Server PDW appliance. This topic is informational only and is intended to help you understand the process. Your appliance should be unpacked, installed, and verified before it is turned over to you. Customer participation is required for items such as data center access, electrical power, and Ethernet connections.  
+
+# Hardware installation for Analytics Platform System appliance
+This article describes how to move, unpack, and install the hardware for your SQL Server PDW appliance. This article is informational only and is intended to help you understand the process. Your appliance should be unpacked, installed, and verified before it is turned over to you. Customer participation is required for items such as data center access, electrical power, and Ethernet connections.  
   
 ## <a name="BeforeMoving"></a>Before You Move Any Components from the Loading Dock  
 Perform the following tasks before you move, unpack, or rack any of the appliance components.  

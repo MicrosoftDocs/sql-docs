@@ -2,16 +2,12 @@
 title: "Windows Server Failover Clustering with SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/18/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "Windows Server Failover Clustering, with SQL Server"
@@ -20,10 +16,9 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Windows Server Failover Clustering with SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +36,7 @@ ms.workload: "Active"
  A physical or logical entity that can be owned by a node, brought online and taken offline, moved between nodes, and managed as a cluster object. A cluster resource can be owned by only a single node at any point in time.  
   
  Role  
- A collection of cluster resources managed as a single cluster object to provide specific functinality. For SQL Server, a role will be either an Always On Availability Group (AG) or Always On Failover Cluster Instance (FCI). A role contains all of the cluster resources that are required for an AG or FCI. Failover and failback always act in context of roles. For an FCI, the role will contain an IP address resource, a network name resource, and the SQL Server resources. An AG role will contain the AG resource, and if a listener is configured, a networm name and an IP resource. 
+ A collection of cluster resources managed as a single cluster object to provide specific functionality. For SQL Server, a role will be either an Always On Availability Group (AG) or Always On Failover Cluster Instance (FCI). A role contains all of the cluster resources that are required for an AG or FCI. Failover and failback always act in context of roles. For an FCI, the role will contain an IP address resource, a network name resource, and the SQL Server resources. An AG role will contain the AG resource, and if a listener is configured, a network name and an IP resource. 
 
  Network name resource  
  A logical server name that is managed as a cluster resource. A network name resource must be used with an IP address resource. These entries may require objects in Active Directory Domain Services and/or DNS. 

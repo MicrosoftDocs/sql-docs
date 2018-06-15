@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server-web-service-net-framework-exception-handling"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -22,7 +21,6 @@ caps.latest.revision: 32
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # SoapException Errors Table
   The report server generates errors and error messages in the SOAP exception based on errors that occur in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The following table shows the errors that are accessible from methods through a **SoapException** in the Report Server Web service. It is organized by the method or methods that throw the exception.  

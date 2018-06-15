@@ -1,25 +1,13 @@
 ---
-title: "Create graphs and plots using SQL and R (walkthrough) | Microsoft Docs"
-ms.date: "11/10/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "On Demand"
+title: Create graphs and plots using SQL and R (walkthrough) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Create graphs and plots using SQL and R (walkthrough)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -105,8 +93,8 @@ Typically, database servers block Internet access. This can be inconvenient when
 
 ## Next lesson
 
-[Create data features using R and SQL](/walkthrough-create-data-features.md)
+[Create data features using R and SQL](walkthrough-create-data-features.md)
 
 ## Previous lesson
 
-[Summarize data using R](/walkthrough-view-and-summarize-data-using-r.md)
+[Summarize data using R](walkthrough-view-and-summarize-data-using-r.md)

@@ -1,33 +1,14 @@
 ---
 title: "Create a Time Dimension by Generating a Time Table | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "time dimensions [Analysis Services]"
-  - "dimensions [Analysis Services], time"
-  - "time periods [Analysis Services]"
-  - "range-based time dimensions [Analysis Services]"
-  - "server time dimensions [Analysis Services]"
-  - "calendars [Analysis Services]"
-  - "table-based time dimensions [Analysis Services]"
-ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create a Time Dimension by Generating a Time Table
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -22,7 +21,6 @@ caps.latest.revision: 15
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Dataset Properties Dialog Box, Options (Report Builder)
   Select **Options** on the **DatasetProperties** dialog box to change data options, such as collation options and treating subtotals as detail data, for the query. For more information about collations, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  

@@ -1,10 +1,9 @@
----
+﻿---
 title: "Logged vs. Unlogged Modifications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-text-image-columns"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "image columns [ODBC]"
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
 caps.latest.revision: 29
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Logged vs. Unlogged Modifications
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,15 +1,13 @@
----
+﻿---
 title: "USE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/28/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.service: ""
 ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,8 +24,8 @@ ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # USE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

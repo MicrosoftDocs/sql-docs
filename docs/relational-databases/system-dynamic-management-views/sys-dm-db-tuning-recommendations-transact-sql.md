@@ -1,16 +1,13 @@
----
+﻿---
 title: "sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
 ms.custom: ""
 ms.date: "07/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,8 +24,8 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 caps.latest.revision: 37
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,9 +103,10 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
  For more information about JSON functions that can be used to query values in the recommendation view, see [JSON Support](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
 ## Permissions  
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the `Server admin` or an `Azure Active Directory admin` account.  
-  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   

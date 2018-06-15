@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-builder"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -20,7 +19,6 @@ caps.latest.revision: 9
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Report Sections Dialog Box (Report Builder)
   When you open a report, Report Builder verifies that the report contains only one Report Definition Language (RDL) **\<Section>** element. Opening a report with multiple **\<Section>** elements is not supported.  

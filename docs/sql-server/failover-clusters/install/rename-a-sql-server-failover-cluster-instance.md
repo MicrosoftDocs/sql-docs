@@ -2,16 +2,12 @@
 title: "Rename a SQL Server Failover Cluster Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "clusters [SQL Server], virtual servers"
   - "renaming virtual servers"
@@ -19,10 +15,9 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], virtual servers"
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Rename a SQL Server Failover Cluster Instance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

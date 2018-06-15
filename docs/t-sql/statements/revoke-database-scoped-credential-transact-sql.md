@@ -1,17 +1,15 @@
----
+﻿---
 title: "REVOKE Database Scoped Credential (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "REVOKE DATABASE SCOPED CREDENTIAL"
   - "REVOKE_DATABASE_SCOPED_CREDENTIAL_TSQL"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "revoking permissions [SQL Server], database scoped credentials"
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 caps.latest.revision: 2
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # REVOKE Database Scoped Credential (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

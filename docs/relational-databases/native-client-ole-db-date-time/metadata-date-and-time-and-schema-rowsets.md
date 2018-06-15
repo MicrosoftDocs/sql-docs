@@ -1,10 +1,9 @@
----
+﻿---
 title: "Date and Time and Schema Rowsets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "date/time [OLE DB], schema rowsets"
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Metadata - Date and Time and Schema Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

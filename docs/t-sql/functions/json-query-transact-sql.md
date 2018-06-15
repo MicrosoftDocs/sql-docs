@@ -2,9 +2,8 @@
 title: "JSON_QUERY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "JSON_QUERY function"
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
+manager: craigg
 ---
 # JSON_QUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

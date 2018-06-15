@@ -1,10 +1,9 @@
----
+﻿---
 title: "Cursor Behaviors | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-cursors"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "ODBC cursors, cursor behaviors"
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Cursor Behaviors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

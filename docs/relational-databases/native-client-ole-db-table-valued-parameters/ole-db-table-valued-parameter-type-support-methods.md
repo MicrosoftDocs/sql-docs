@@ -1,10 +1,9 @@
----
+﻿---
 title: "OLE DB Table-Valued Parameter Type Support (Methods) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-ole-db-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), API support (methods)"
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # OLE DB Table-Valued Parameter Type Support (Methods)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

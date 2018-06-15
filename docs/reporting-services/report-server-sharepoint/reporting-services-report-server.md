@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-server-sharepoint"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -16,7 +15,6 @@ ms.topic: "get-started-article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Reporting Services report server

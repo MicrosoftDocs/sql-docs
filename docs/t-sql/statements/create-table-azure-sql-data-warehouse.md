@@ -1,4 +1,4 @@
----
+﻿---
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2017"
@@ -8,18 +8,17 @@ ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.component: "t-sql|statements"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 caps.latest.revision: 59
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

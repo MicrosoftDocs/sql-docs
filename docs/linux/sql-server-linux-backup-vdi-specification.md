@@ -6,15 +6,12 @@ ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.workload: "Inactive"
 ---
 # SQL Server on Linux VDI client SDK Specification
 

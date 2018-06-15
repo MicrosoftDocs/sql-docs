@@ -2,9 +2,8 @@
 title: "FILESTREAM Support (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "native-client|ODBC"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "ODBC, FILESTREAM support"
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # FILESTREAM Support (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

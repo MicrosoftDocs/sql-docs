@@ -1,30 +1,14 @@
 ---
 title: "Tabular Modeling (1200 compatibility level) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/10/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-keywords: 
-  - "Analysis Services"
-  - "Tabular Model"
-  - "Tutorial"
-  - "SSAS"
-ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Active"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Tabular Modeling (1200 compatibility level)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

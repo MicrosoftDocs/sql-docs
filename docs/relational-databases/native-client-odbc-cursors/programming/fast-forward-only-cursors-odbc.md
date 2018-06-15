@@ -1,10 +1,9 @@
----
+﻿---
 title: "Fast Forward-Only Cursors (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-cursors"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "ODBC cursors, fast forward-only"
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Fast Forward-Only Cursors (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server-web-service"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -31,7 +30,6 @@ caps.latest.revision: 47
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Passing Device Information Settings to Rendering Extensions
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], device information settings are used to pass rendering parameters to a rendering extension. Settings in the Report Server Web service are passed as a **DeviceInfo** XML element and processed by the report server. Because device information settings have default values, they are considered optional arguments in the rendering process. However, you can use device information settings to customize rendering and to override the default values that are supplied by the server.  

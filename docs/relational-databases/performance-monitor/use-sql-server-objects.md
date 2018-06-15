@@ -2,16 +2,15 @@
 title: "Use SQL Server Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "performance-monitor"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "server performance [SQL Server], objects for monitoring"
   - "database monitoring [SQL Server], objects for monitoring"
@@ -34,10 +33,9 @@ helpviewer_keywords:
   - "performance counters [SQL Server], listed"
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 caps.latest.revision: 56
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Use SQL Server Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

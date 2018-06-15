@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "custom-report-items"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -24,7 +23,6 @@ caps.latest.revision: 22
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Custom Report Items
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a rich set of tools for building and publishing enterprise reports, managing security and subscriptions, and extending the reporting functionality through a comprehensive API. Reports are defined using an XML-based language called Report Definition Language (RDL). RDL provides a set of instructions that describe layout, query information, and item types for a report. It is possible to extend RDL by writing a custom report item. The custom report item consists of a run-time component, which is called by the report processor at run time, and a design-time component, which allows the custom report item to be available in Report Designer.  

@@ -1,35 +1,14 @@
 ---
 title: "Mining Structures (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attributes [data mining]"
-  - "mining structures [Analysis Services], about mining structures"
-  - "mining structures [Analysis Services]"
-  - "data mining [Analysis Services], structure"
-  - "Analysis Services objects, data mining objects"
-  - "data mining [Analysis Services], models"
-  - "algorithms [data mining]"
-  - "data mining [Analysis Services], objects"
-  - "mining models [Analysis Services]"
-  - "mining models [Analysis Services], about data mining models"
-ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 77
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Mining Structures (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

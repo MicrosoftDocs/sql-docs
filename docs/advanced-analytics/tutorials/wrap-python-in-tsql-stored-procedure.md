@@ -1,24 +1,13 @@
 ---
-title: "Wrap Python code in a stored procedure | Microsoft Docs"
-titleSuffix: "SQL Server"
-ms.custom: ""
-ms.date: "02/28/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2017"
-dev_langs: 
-  - "Python"
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+title: Wrap Python code in a stored procedure | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Wrap Python code in a stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,10 +27,10 @@ Although it is possible to set up a remote client and run Python code using Visu
 2. Create a new database for this project, and change the context of your **Query** window to use the new database.
 
     ```sql
-    CREATE DATABASE sqlpy;
-    GO;
-    USE sqlpy;
-    GO;
+    CREATE DATABASE sqlpy
+    GO
+    USE sqlpy
+    GO
     ```
 
     > [!TIP] 

@@ -1,31 +1,14 @@
 ---
 title: "Data Mining Extensions (DMX) Syntax Elements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "Data Mining Extensions [Analysis Services], syntax elements"
-  - "syntax elements [DMX]"
-  - "statements [DMX], syntax elements"
-  - "DMX [Analysis Services], syntax elements"
-ms.assetid: 25e45fa4-6409-47e0-a888-4af26d1c69b0
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Extensions (DMX) Syntax Elements
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

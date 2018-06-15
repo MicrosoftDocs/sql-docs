@@ -79,7 +79,7 @@
           - name: Views
             tocHref: /sql/relational-databases/views/
             topicHref: /sql/relational-databases/views/views
-          - name: Stored Procedures
+          - name: Stored Procedures and OLE
             tocHref: /sql/relational-databases/stored-procedures/
             topicHref: /sql/relational-databases/stored-procedures/stored-procedures-database-engine
           - name: Search
@@ -103,7 +103,7 @@
           - name: Blob
             tocHref: /sql/relational-databases/blob/
             topicHref: /sql/relational-databases/blob/binary-large-object-blob-data-sql-server
-          - name: Data-Tier Applications
+          - name: Data-tier Applications
             tocHref: /sql/relational-databases/data-tier-applications/
             topicHref: /sql/relational-databases/data-tier-applications/data-tier-applications
           - name: Backup and Restore
@@ -115,7 +115,7 @@
           - name: Data Compression
             tocHref: /sql/relational-databases/data-compression/
             topicHref: /sql/relational-databases/data-compression/data-compression
-          - name: Service Broker
+          - name: Event Notifications
             tocHref: /sql/relational-databases/service-broker/
             topicHref: /sql/relational-databases/service-broker/event-notifications
           - name: CLR Integration
@@ -135,7 +135,7 @@
               - name: Bulk Copy Functions
                 tocHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/
                 topicHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions
-              - name: Native Client ODBC API
+              - name: API
                 tocHref: /sql/relational-databases/native-client-odbc-api/
                 topicHref: /sql/relational-databases/native-client-odbc-api/odbc-api-implementation-details
           - name: SQLXML
@@ -202,7 +202,7 @@
         - name: Security
           tocHref: /sql/relational-databases/security/
           topicHref: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-        - name: Command-Prompt Utility Reference
+        - name: Utility Reference
           tocHref: /sql/tools/
           topicHref: /sql/tools/command-prompt-utility-reference-database-engine
           items:
@@ -283,7 +283,7 @@
         - name: Service
           tocHref: /sql/integration-services/service/
           topicHref: /sql/integration-services/service/integration-services-service-ssis-service
-        - name: Catalog
+        - name: Server and Catalog
           tocHref: /sql/integration-services/catalog/
           topicHref: /sql/integration-services/catalog/integration-services-ssis-server-and-catalog
         - name: Packages
@@ -354,7 +354,7 @@
         - name: Reports
           tocHref: /sql/reporting-services/reports/
           topicHref: /sql/reporting-services/reports/reporting-services-reports-ssrs
-        - name: Subscriptions
+        - name: Subscriptions and Schedules
           tocHref: /sql/reporting-services/subscriptions/
           topicHref: /sql/reporting-services/subscriptions/subscriptions-and-delivery-reporting-services
         - name: Security

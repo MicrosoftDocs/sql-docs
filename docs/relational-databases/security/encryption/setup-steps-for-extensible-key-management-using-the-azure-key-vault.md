@@ -3,12 +3,9 @@ title: "SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup S
 ms.custom: ""
 ms.date: "06/11/2018"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
 author: aliceku
-ms.author: edmaca
+ms.author: aliceku
 manager: craigg
 ---
 # SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps

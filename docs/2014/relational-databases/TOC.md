@@ -4,6 +4,7 @@
 ## [In-Memory OLTP (In-Memory Optimization) +](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 ## [Indexes (Database Engine) +](indexes/indexes.md)
 ## [Partitioned Tables and Indexes +](partitions/partitioned-tables-and-indexes.md)
+## [Replication +](replication/sql-server-replication.md)
 ## [Views +](views/views.md)
 ## [Stored Procedures +](stored-procedures/stored-procedures-database-engine.md)
 ## [Search](../database-engine/search-sql-server.md)

@@ -21,6 +21,8 @@
 ### [Configure IIS 7 for Web Synchronization](configure-iis-7-for-web-synchronization.md)
 ## [Security and Protection +](security/security-and-protection-replication.md)
 ## [Administration +](administration/administration-replication.md)
+## [Developer's Guide: How-to Topics](developer-s-guide-how-to-topics-replication.md)
+### [Developer's Guide (Replication) +](concepts/replication-developer-documentation.md)
 ## [Monitoring +](monitor/monitoring-replication-overview.md)
 ## [Publish Data and Database Objects +](publish/publish-data-and-database-objects.md)
 # [Errors and Events Reference +](errors-events/errors-events-replication.md)

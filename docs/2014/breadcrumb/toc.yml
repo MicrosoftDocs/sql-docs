@@ -121,6 +121,40 @@
           - name: CLR Integration
             tocHref: /sql/relational-databases/clr-integration/
             topicHref: /sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts
+          - name: Replication
+            tocHref: /sql/relational-databases/replication/
+            topicHref: /sql/relational-databases/replication/sql-server-replication
+            items:
+            - name: Administration
+              tocHref: /sql/relational-databases/replication/administration/
+              topicHref: /sql/relational-databases/replication/administration/administration-replication
+            - name: Agents
+              tocHref: /sql/relational-databases/replication/agents/
+              topicHref: /sql/relational-databases/replication/agents/replication-agents
+            - name: Developer's Guide - Replication
+              tocHref: /sql/relational-databases/replication/concepts/
+              topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
+            - name: Errors and Events
+              tocHref: /sql/relational-databases/replication/errors-events/
+              topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
+            - name: Merge
+              tocHref: /sql/relational-databases/replication/merge/
+              topicHref: /sql/relational-databases/replication/merge/merge-replication
+            - name: Monitor
+              tocHref: /sql/relational-databases/replication/monitor/
+              topicHref: /sql/relational-databases/replication/monitor/monitoring-replication-overview
+            - name: Non-SQL
+              tocHref: /sql/relational-databases/replication/non-sql/
+              topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
+            - name: Publish
+              tocHref: /sql/relational-databases/replication/publish/
+              topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
+            - name: Transactional
+              tocHref: /sql/relational-databases/replication/transactional/
+              topicHref: /sql/relational-databases/replication/transactional/transactional-replication
+            - name: Security
+              tocHref: /sql/relational-databases/replication/security/
+              topicHref: /sql/relational-databases/replication/security/security-and-protection-replication
           - name: Native Client Programming
             tocHref: /sql/relational-databases/native-client/
             topicHref: /sql/relational-databases/native-client/sql-server-native-client-programming
@@ -301,37 +335,6 @@
       - name: Data Quality Services
         tocHref: /sql/data-quality-services/
         topicHref: /sql/data-quality-services/data-quality-services
-      - name: Replication
-        tocHref: /sql/relational-databases/replication/
-        topicHref: /sql/relational-databases/replication/sql-server-replication
-        items:
-        - name: Transactional
-          tocHref: /sql/relational-databases/replication/transactional/
-          topicHref: /sql/relational-databases/replication/transactional/transactional-replication
-        - name: Merge
-          tocHref: /sql/relational-databases/replication/merge/
-          topicHref: /sql/relational-databases/replication/merge/merge-replication
-        - name: Non-SQL
-          tocHref: /sql/relational-databases/replication/non-sql/
-          topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
-        - name: Agents
-          tocHref: /sql/relational-databases/replication/agents/
-          topicHref: /sql/relational-databases/replication/agents/replication-agents
-        - name: Security
-          tocHref: /sql/relational-databases/replication/security/
-          topicHref: /sql/relational-databases/replication/security/security-and-protection-replication
-        - name: Administration
-          tocHref: /sql/relational-databases/replication/administration/
-          topicHref: /sql/relational-databases/replication/administration/administration-replication
-        - name: Monitor
-          tocHref: /sql/relational-databases/replication/monitor/
-          topicHref: /sql/relational-databases/replication/monitor/monitoring-replication-overview
-        - name: Publish
-          tocHref: /sql/relational-databases/replication/publish/
-          topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-        - name: Errors and Events
-          tocHref: /sql/relational-databases/replication/errors-events/
-          topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
       - name: Reporting Services
         tocHref: /sql/reporting-services/
         topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
@@ -419,9 +422,6 @@
         - name: XMLA
           tocHref: /sql/analysis-services/xmla/
           topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
-      - name: Developer's Guide - Replication
-        tocHref: /sql/relational-databases/replication/concepts/
-        topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
       - name: Install SQL Server
         tocHref: /sql/database-engine/install-windows/
         topicHref: /sql/database-engine/install-windows/installation-for-sql-server

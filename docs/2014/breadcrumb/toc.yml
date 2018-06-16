@@ -6,7 +6,7 @@
     tocHref: /sql/
     topicHref: /sql/index
     items:
-    - name: SQL Server 2014
+    - name: SQL 2014
       tocHref: /sql/2014-toc/
       topicHref: /sql/2014-toc/books-online-for-sql-server-2014
       items:
@@ -57,139 +57,24 @@
         - name: Performance
           tocHref: /sql/relational-databases/performance/
           topicHref: /sql/relational-databases/performance/monitor-and-tune-for-performance
-        - name: Database Features
-          tocHref: /sql/relational-databases/
-          topicHref: /sql/relational-databases/database-features
-          items:
-          - name: Databases
-            tocHref: /sql/relational-databases/databases/
-            topicHref: /sql/relational-databases/databases/databases
-          - name: Tables
-            tocHref: /sql/relational-databases/tables/
-            topicHref: /sql/relational-databases/tables/tables
-          - name: In-Memory OLTP
-            tocHref: /sql/relational-databases/in-memory-oltp/
-            topicHref: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
-          - name: Indexes
-            tocHref: /sql/relational-databases/indexes/
-            topicHref: /sql/relational-databases/indexes/indexes
-          - name: Partitions
-            tocHref: /sql/relational-databases/partitions/
-            topicHref: /sql/relational-databases/partitions/partitioned-tables-and-indexes
-          - name: Views
-            tocHref: /sql/relational-databases/views/
-            topicHref: /sql/relational-databases/views/views
-          - name: Stored Procedures and OLE
-            tocHref: /sql/relational-databases/stored-procedures/
-            topicHref: /sql/relational-databases/stored-procedures/stored-procedures-database-engine
-          - name: Search
-            tocHref: /sql/relational-databases/search/
-            topicHref: /sql/relational-databases/search/full-text-search
-          - name: User-Defined Functions
-            tocHref: /sql/relational-databases/user-defined-functions/
-            topicHref: /sql/relational-databases/user-defined-functions/user-defined-functions
-          - name: Statistics
-            tocHref: /sql/relational-databases/statistics/
-            topicHref: /sql/relational-databases/statistics/statistics
-          - name: Triggers
-            tocHref: /sql/relational-databases/triggers/
-            topicHref: /sql/relational-databases/triggers/ddl-triggers
-          - name: XML
-            tocHref: /sql/relational-databases/xml/
-            topicHref: /sql/relational-databases/xml/xml-data-sql-server
-          - name: Spatial
-            tocHref: /sql/relational-databases/spatial/
-            topicHref: /sql/relational-databases/spatial/spatial-data-sql-server
-          - name: Blob
-            tocHref: /sql/relational-databases/blob/
-            topicHref: /sql/relational-databases/blob/binary-large-object-blob-data-sql-server
-          - name: Data-tier Applications
-            tocHref: /sql/relational-databases/data-tier-applications/
-            topicHref: /sql/relational-databases/data-tier-applications/data-tier-applications
-          - name: Backup and Restore
-            tocHref: /sql/relational-databases/backup-restore/
-            topicHref: /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
-          - name: Bulk Import and Export
-            tocHref: /sql/relational-databases/import-export/
-            topicHref: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
-          - name: Data Compression
-            tocHref: /sql/relational-databases/data-compression/
-            topicHref: /sql/relational-databases/data-compression/data-compression
-          - name: Event Notifications
-            tocHref: /sql/relational-databases/service-broker/
-            topicHref: /sql/relational-databases/service-broker/event-notifications
-          - name: CLR Integration
-            tocHref: /sql/relational-databases/clr-integration/
-            topicHref: /sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts
-          - name: Replication
-            tocHref: /sql/relational-databases/replication/
-            topicHref: /sql/relational-databases/replication/sql-server-replication
-            items:
-            - name: Administration
-              tocHref: /sql/relational-databases/replication/administration/
-              topicHref: /sql/relational-databases/replication/administration/administration-replication
-            - name: Agents
-              tocHref: /sql/relational-databases/replication/agents/
-              topicHref: /sql/relational-databases/replication/agents/replication-agents
-            - name: Developer's Guide - Replication
-              tocHref: /sql/relational-databases/replication/concepts/
-              topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
-            - name: Errors and Events
-              tocHref: /sql/relational-databases/replication/errors-events/
-              topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
-            - name: Merge
-              tocHref: /sql/relational-databases/replication/merge/
-              topicHref: /sql/relational-databases/replication/merge/merge-replication
-            - name: Monitor
-              tocHref: /sql/relational-databases/replication/monitor/
-              topicHref: /sql/relational-databases/replication/monitor/monitoring-replication-overview
-            - name: Non-SQL
-              tocHref: /sql/relational-databases/replication/non-sql/
-              topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
-            - name: Publish
-              tocHref: /sql/relational-databases/replication/publish/
-              topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-            - name: Transactional
-              tocHref: /sql/relational-databases/replication/transactional/
-              topicHref: /sql/relational-databases/replication/transactional/transactional-replication
-            - name: Security
-              tocHref: /sql/relational-databases/replication/security/
-              topicHref: /sql/relational-databases/replication/security/security-and-protection-replication
-          - name: Native Client Programming
-            tocHref: /sql/relational-databases/native-client/
-            topicHref: /sql/relational-databases/native-client/sql-server-native-client-programming
-            items:
-            - name: OLE DB
-              tocHref: /sql/relational-databases/native-client/ole-db/
-              topicHref: /sql/relational-databases/native-client/ole-db/sql-server-native-client-ole-db
-            - name: ODBC
-              tocHref: /sql/relational-databases/native-client/odbc/
-              topicHref: /sql/relational-databases/native-client/odbc/sql-server-native-client-odbc
-              items:
-              - name: Bulk Copy Functions
-                tocHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/
-                topicHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions
-              - name: API
-                tocHref: /sql/relational-databases/native-client-odbc-api/
-                topicHref: /sql/relational-databases/native-client-odbc-api/odbc-api-implementation-details
-          - name: SQLXML
-            tocHref: /sql/relational-databases/sqlxml/
-            topicHref: /sql/relational-databases/sqlxml/sqlxml-4-0-programming-concepts
-          - name: Extended Stored Procedures Programming
-            tocHref: /sql/relational-databases/extended-stored-procedures-programming/
-            topicHref: /sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming
-          - name: Express LocalDB Error Messages
-            tocHref: /sql/relational-databases/express-localdb-error-messages/
-            topicHref: /sql/relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages
-          - name: Express LocalDB Instance APIs
-            tocHref: /sql/relational-databases/express-localdb-instance-apis/
-            topicHref: /sql/relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis
-          - name: SMO
-            tocHref: /sql/relational-databases/server-management-objects-smo/
-            topicHref: /sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide
-          - name: WMI Provider
-            tocHref: /sql/relational-databases/wmi-provider-configuration/
-            topicHref: /sql/relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management
+        - name: SQLXML
+          tocHref: /sql/relational-databases/sqlxml/
+          topicHref: /sql/relational-databases/sqlxml/sqlxml-4-0-programming-concepts
+        - name: Extended Stored Procedures Programming
+          tocHref: /sql/relational-databases/extended-stored-procedures-programming/
+          topicHref: /sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming
+        - name: Express LocalDB Error Messages
+          tocHref: /sql/relational-databases/express-localdb-error-messages/
+          topicHref: /sql/relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages
+        - name: Express LocalDB Instance APIs
+          tocHref: /sql/relational-databases/express-localdb-instance-apis/
+          topicHref: /sql/relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis
+        - name: SMO
+          tocHref: /sql/relational-databases/server-management-objects-smo/
+          topicHref: /sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide
+        - name: WMI Provider
+          tocHref: /sql/relational-databases/wmi-provider-configuration/
+          topicHref: /sql/relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management
         - name: SSMS
           tocHref: /sql/ssms/
           topicHref: /sql/ssms/sql-server-management-studio-ssms
@@ -335,6 +220,121 @@
       - name: Data Quality Services
         tocHref: /sql/data-quality-services/
         topicHref: /sql/data-quality-services/data-quality-services
+      - name: Relational Database Features
+        tocHref: /sql/relational-databases/
+        topicHref: /sql/relational-databases/database-features
+        items:
+        - name: Databases
+          tocHref: /sql/relational-databases/databases/
+          topicHref: /sql/relational-databases/databases/databases
+        - name: Tables
+          tocHref: /sql/relational-databases/tables/
+          topicHref: /sql/relational-databases/tables/tables
+        - name: In-Memory OLTP
+          tocHref: /sql/relational-databases/in-memory-oltp/
+          topicHref: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
+        - name: Indexes
+          tocHref: /sql/relational-databases/indexes/
+          topicHref: /sql/relational-databases/indexes/indexes
+        - name: Partitions
+          tocHref: /sql/relational-databases/partitions/
+          topicHref: /sql/relational-databases/partitions/partitioned-tables-and-indexes
+        - name: Views
+          tocHref: /sql/relational-databases/views/
+          topicHref: /sql/relational-databases/views/views
+        - name: Stored Procedures and OLE
+          tocHref: /sql/relational-databases/stored-procedures/
+          topicHref: /sql/relational-databases/stored-procedures/stored-procedures-database-engine
+        - name: Search
+          tocHref: /sql/relational-databases/search/
+          topicHref: /sql/relational-databases/search/full-text-search
+        - name: User-Defined Functions
+          tocHref: /sql/relational-databases/user-defined-functions/
+          topicHref: /sql/relational-databases/user-defined-functions/user-defined-functions
+        - name: Statistics
+          tocHref: /sql/relational-databases/statistics/
+          topicHref: /sql/relational-databases/statistics/statistics
+        - name: Triggers
+          tocHref: /sql/relational-databases/triggers/
+          topicHref: /sql/relational-databases/triggers/ddl-triggers
+        - name: XML
+          tocHref: /sql/relational-databases/xml/
+          topicHref: /sql/relational-databases/xml/xml-data-sql-server
+        - name: Spatial
+          tocHref: /sql/relational-databases/spatial/
+          topicHref: /sql/relational-databases/spatial/spatial-data-sql-server
+        - name: Blob
+          tocHref: /sql/relational-databases/blob/
+          topicHref: /sql/relational-databases/blob/binary-large-object-blob-data-sql-server
+        - name: Data-tier Applications
+          tocHref: /sql/relational-databases/data-tier-applications/
+          topicHref: /sql/relational-databases/data-tier-applications/data-tier-applications
+        - name: Backup and Restore
+          tocHref: /sql/relational-databases/backup-restore/
+          topicHref: /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
+        - name: Bulk Import and Export
+          tocHref: /sql/relational-databases/import-export/
+          topicHref: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+        - name: Data Compression
+          tocHref: /sql/relational-databases/data-compression/
+          topicHref: /sql/relational-databases/data-compression/data-compression
+        - name: Event Notifications
+          tocHref: /sql/relational-databases/service-broker/
+          topicHref: /sql/relational-databases/service-broker/event-notifications
+        - name: CLR Integration
+          tocHref: /sql/relational-databases/clr-integration/
+          topicHref: /sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts
+        - name: Replication
+          tocHref: /sql/relational-databases/replication/
+          topicHref: /sql/relational-databases/replication/sql-server-replication
+          items:
+          - name: Administration
+            tocHref: /sql/relational-databases/replication/administration/
+            topicHref: /sql/relational-databases/replication/administration/administration-replication
+          - name: Agents
+            tocHref: /sql/relational-databases/replication/agents/
+            topicHref: /sql/relational-databases/replication/agents/replication-agents
+          - name: Developer's Guide - Replication
+            tocHref: /sql/relational-databases/replication/concepts/
+            topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
+          - name: Errors and Events
+            tocHref: /sql/relational-databases/replication/errors-events/
+            topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
+          - name: Merge
+            tocHref: /sql/relational-databases/replication/merge/
+            topicHref: /sql/relational-databases/replication/merge/merge-replication
+          - name: Monitor
+            tocHref: /sql/relational-databases/replication/monitor/
+            topicHref: /sql/relational-databases/replication/monitor/monitoring-replication-overview
+          - name: Non-SQL
+            tocHref: /sql/relational-databases/replication/non-sql/
+            topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
+          - name: Publish
+            tocHref: /sql/relational-databases/replication/publish/
+            topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
+          - name: Transactional
+            tocHref: /sql/relational-databases/replication/transactional/
+            topicHref: /sql/relational-databases/replication/transactional/transactional-replication
+          - name: Security
+            tocHref: /sql/relational-databases/replication/security/
+            topicHref: /sql/relational-databases/replication/security/security-and-protection-replication
+        - name: Native Client Programming
+          tocHref: /sql/relational-databases/native-client/
+          topicHref: /sql/relational-databases/native-client/sql-server-native-client-programming
+          items:
+          - name: OLE DB
+            tocHref: /sql/relational-databases/native-client/ole-db/
+            topicHref: /sql/relational-databases/native-client/ole-db/sql-server-native-client-ole-db
+          - name: ODBC
+            tocHref: /sql/relational-databases/native-client/odbc/
+            topicHref: /sql/relational-databases/native-client/odbc/sql-server-native-client-odbc
+            items:
+            - name: Bulk Copy Functions
+              tocHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/
+              topicHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions
+            - name: API
+              tocHref: /sql/relational-databases/native-client-odbc-api/
+              topicHref: /sql/relational-databases/native-client-odbc-api/odbc-api-implementation-details
       - name: Reporting Services
         tocHref: /sql/reporting-services/
         topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports

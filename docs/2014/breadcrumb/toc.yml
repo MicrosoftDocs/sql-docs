@@ -6,7 +6,7 @@
     tocHref: /sql/
     topicHref: /sql/index
     items:
-    - name: SQL Server 2014
+    - name: SQL 2014
       tocHref: /sql/2014-toc/
       topicHref: /sql/2014-toc/books-online-for-sql-server-2014
       items:

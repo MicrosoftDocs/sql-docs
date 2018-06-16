@@ -4,7 +4,6 @@
 ## [Analysis Services +](../analysis-services/analysis-services.md)
 ## [Integration Services +](../integration-services/sql-server-integration-services.md)
 ## [Data Quality Services +](../data-quality-services/data-quality-services.md)
-## [Replication +](../relational-databases/replication/sql-server-replication.md)
 ## [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 ## [Master Data Services +](../master-data-services/master-data-services.md)
 ## [SQL Server Configuration Manager Help +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
@@ -21,8 +20,6 @@
 # [Upgrade Advisor](../sql-server/install/sql-server-2014-upgrade-advisor.md)
 
 # [Tutorials for SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
-
-
 
 # [Case Study: Building an Enterprise Ecosystem with Microsoft Dynamics ERP and SQL Server 2014 Replication for Scalability and Performance](case-study-building-an-enterprise-ecosystem.md)
 # [SQL Server Index Design Guide](sql-server-index-design-guide.md)

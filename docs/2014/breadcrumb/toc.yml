@@ -57,24 +57,24 @@
         - name: Performance
           tocHref: /sql/relational-databases/performance/
           topicHref: /sql/relational-databases/performance/monitor-and-tune-for-performance
-          - name: SQLXML
-            tocHref: /sql/relational-databases/sqlxml/
-            topicHref: /sql/relational-databases/sqlxml/sqlxml-4-0-programming-concepts
-          - name: Extended Stored Procedures Programming
-            tocHref: /sql/relational-databases/extended-stored-procedures-programming/
-            topicHref: /sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming
-          - name: Express LocalDB Error Messages
-            tocHref: /sql/relational-databases/express-localdb-error-messages/
-            topicHref: /sql/relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages
-          - name: Express LocalDB Instance APIs
-            tocHref: /sql/relational-databases/express-localdb-instance-apis/
-            topicHref: /sql/relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis
-          - name: SMO
-            tocHref: /sql/relational-databases/server-management-objects-smo/
-            topicHref: /sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide
-          - name: WMI Provider
-            tocHref: /sql/relational-databases/wmi-provider-configuration/
-            topicHref: /sql/relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management
+        - name: SQLXML
+          tocHref: /sql/relational-databases/sqlxml/
+          topicHref: /sql/relational-databases/sqlxml/sqlxml-4-0-programming-concepts
+        - name: Extended Stored Procedures Programming
+          tocHref: /sql/relational-databases/extended-stored-procedures-programming/
+          topicHref: /sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming
+        - name: Express LocalDB Error Messages
+          tocHref: /sql/relational-databases/express-localdb-error-messages/
+          topicHref: /sql/relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages
+        - name: Express LocalDB Instance APIs
+          tocHref: /sql/relational-databases/express-localdb-instance-apis/
+          topicHref: /sql/relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis
+        - name: SMO
+          tocHref: /sql/relational-databases/server-management-objects-smo/
+          topicHref: /sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide
+        - name: WMI Provider
+          tocHref: /sql/relational-databases/wmi-provider-configuration/
+          topicHref: /sql/relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management
         - name: SSMS
           tocHref: /sql/ssms/
           topicHref: /sql/ssms/sql-server-management-studio-ssms

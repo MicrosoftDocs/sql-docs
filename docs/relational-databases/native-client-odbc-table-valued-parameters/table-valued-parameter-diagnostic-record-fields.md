@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), diagnostic records"
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-errors"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "errors [OLE DB], SQL Server message results"
   - "OLE DB error handling, SQL Server message results"
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

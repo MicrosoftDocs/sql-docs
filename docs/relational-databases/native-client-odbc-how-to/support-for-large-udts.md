@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0

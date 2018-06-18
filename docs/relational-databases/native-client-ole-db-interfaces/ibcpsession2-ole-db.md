@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IBCPSession2 interface"
 ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

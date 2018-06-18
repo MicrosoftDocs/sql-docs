@@ -22,9 +22,9 @@ Download and install the latest release, the *June Public Preview*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|June 19, 2018 |0.29.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|June 19, 2018 |0.29.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|June 19, 2018 |0.29.3|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|June 19, 2018 |0.30.5|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|June 19, 2018 |0.30.5|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|June 19, 2018 |0.30.5|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

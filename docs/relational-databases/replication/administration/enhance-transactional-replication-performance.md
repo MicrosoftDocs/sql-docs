@@ -36,7 +36,7 @@ manager: craigg
   
 -   Minimize transaction size in your application design.  
   
-     By default, transactional replication propagates changes according to transaction boundaries. If transactions are smaller, the Distribution agent is less likely to resent a transaction due to network issues. If the agent is required to resend a transaction, the amount of data sent is smaller. 
+     By default, transactional replication propagates changes according to transaction boundaries. If transactions are smaller, the Distribution agent is less likely to resend a transaction due to network issues. If the agent is required to resend a transaction, the amount of data sent is smaller. 
 
   
 ## Distributor Configuration  
@@ -72,7 +72,7 @@ manager: craigg
 ## Distribution Agent and Log Reader Agent Parameters  
 Agent profile parameters are often adjusted to increase throughput of the Log Reader and Distribution Agent with high traffic OLTP systems. 
 
-Testing was conducted to determine the best values to improve performance for the Log Reader and Distribution Agent. This testing concluded that workload was a determining factor for which values worked in which situation, and as such, there isn't a single value adjustment that will improve performance for every situation. 
+Testing was conducted to determine the best values to improve performance for the Log Reader and Distribution Agent. This testing concluded that workload was a determining factor for which values worked in which situation, and as such, there isn't a single value adjustment that improves performance for every situation. 
 
 The findings: 
 - For a *Log Reader Agent* with workloads of smaller transactions (fewer than 500 commands), a higher value of **ReadBatchSize** may benefit throughput. However, for workloads with large transactions, changing this value will not improve performance. 
@@ -106,7 +106,7 @@ The **-PollingInterval** parameter specifies how often the transaction log of a 
 The **–MaxCmdsInTran** parameter specifies the maximum number of statements grouped into a transaction as the Log Reader writes commands to the distribution database. Using this parameter allows the Log Reader Agent and Distribution Agent to divide large transactions (consisting of many commands) at the Publisher into several smaller transactions when applying commands at the Subscriber. Specifying this parameter can reduce contention at the Distributor and reduce latency between the Publisher and Subscriber. Because the original transaction is applied in smaller units, the Subscriber can access rows of a large logical Publisher transaction prior to the end of the original transaction, breaking strict transactional atomicity. The default is **0**, which preserves the transaction boundaries of the Publisher. This parameter does not apply to Oracle Publishers.  
   
    > [!WARNING]  
-   >  **MaxCmdsInTran** was not designed to be always turned on. It exists to work around cases where someone accidentally performed a large number of DML operations in a single transaction (causing delay in distribution of commands until the entire transaction is in distribution database, locks being held, etc.). If you routinely fall into this situation, you should review your applications and find ways to reduce the transaction size.  
+   >  **MaxCmdsInTran** was not designed to be always turned on. It exists to work around cases where someone accidentally performed a large number of DML operations in a single transaction (causing delay in distribution of commands until the entire transaction is in distribution database, locks being held, etc.). If you routinely fall into this situation,review your applications and find ways to reduce the transaction size.  
   
 ### Distribution Agent
 

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-data-source-objects"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sessions [OLE DB]"
   - "SQL Server Native Client OLE DB provider, sessions"
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

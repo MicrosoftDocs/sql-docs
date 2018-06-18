@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-queries"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, statements"
   - "ODBC applications, statements"
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg

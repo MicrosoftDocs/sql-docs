@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.crypt_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

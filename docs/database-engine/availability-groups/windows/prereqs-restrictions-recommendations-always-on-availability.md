@@ -165,7 +165,9 @@ manager: craigg
     -   If a given thread is idle for a while, it is released back into the general [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] thread pool. Normally, an inactive thread is released after ~15 seconds of inactivity. However, depending on the last activity, an idle thread might be retained longer.  
 
     - A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. Redo threads are released after ~15 seconds of inactivity. 
-
+    
+    > [!NOTE]
+    > Databases are chosen to go single-threaded based on their ascending database ID. As such, the database creation order should be considered for SQL Server instances that host more availability group databases than available worker threads. For example, on a system with 32 or more CPU cores, all databases starting with the 7th database that joined the availability group will be in serial redo mode irrespective of the actual redo workload for each database. Databases that require parallel redo should be added to the availability group first.    
   
 -   In addition, availability groups use unshared threads, as follows:  
   

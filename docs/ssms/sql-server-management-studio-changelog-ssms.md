@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/09/2018"
+ms.date: "06/19/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -21,11 +21,61 @@ manager: craigg
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
 
-## [SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-Release number: 17.7<br>
+
+## [SSMS 17.8](download-sql-server-management-studio-ssms.md)
+
+Build number: 14.0.?????.0<br>
+Release date: June 19, 2018
+
+### What's new
+
+**General SSMS**
+
+Database Properties | FileGroups:
+
+This improvement exposes the "AUTOGROW_ALL_FILES" configuration option for Filegroups. This new config option is added under the Database Properties > Filegroups window in the form of a new column (Autogrow All Files) of checkboxes for each available Filegroup (except for Filestream and Memory Optimized Filegroups). The user can enable/disable AUTOGROW_ALL_FILES for a particular Filegroup by toggling the corresponding Autogrow_All_Files checkbox. Correspondingly, the AUTOGROW_ALL_FILES option is properly scripted when scripting the database for CREATE / generating scripts for the database (SQL2016 and above).
+	
+SQL Editor:
+
+- Improved experience with Intellisense in Azure SQL Database when the user doesn't have master access.
+
+Scripting:
+
+- General performance improvements, especially over high-latency connections.
+	
+
+### Bug fixes
+
+**General SSMS**
+	
+Maintenance Plans:
+
+- Fixed an issue when editing maintenance plans with Sql Authentication where "Notify Operator Task" was failing when using SQL authentication.
+	
+Scripting:
+
+- Fixed an issue where PostProcess actions in SMO lead to resource exhaustion and SQL login failures
+	
+SMO:
+
+- Fixed an issue where Table.Alter() fails if adding a column with a default constraint and the table already has data. For details, see [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
+	
+Always Encrypted:
+
+- Fixed an issue (in DacFx) which was causing a lock timeout error when enabling Always Encrypted on a partitioned table
+	
+
+
+
+
+## ![download](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
+
 Build number: 14.0.17254.0<br>
 Release date: May 09, 2018
+
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+
 
 ### What's new
 

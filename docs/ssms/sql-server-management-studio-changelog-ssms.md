@@ -66,7 +66,9 @@ Always Encrypted:
 - Fixed an issue (in DacFx) which was causing a lock timeout error when enabling Always Encrypted on a partitioned table
 	
 
+## Previous SSMS releases
 
+Download previous SSMS versions by clicking the title links in the following sections.
 
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
@@ -222,9 +224,7 @@ Database Mail:
 > [!WARNING]
 > There is a known issue where SSMS 17.6 becomes unstable and crashes when using [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md). If you use Maintenance Plans, do not install SSMS 17.6. Downgrade to SSMS 17.5 if you already installed 17.6 and this issue is affecting you. 
 
-## Previous SSMS releases
 
-Download previous SSMS versions by clicking the title links in the following sections.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Generally available | Build number: 14.0.17224.0

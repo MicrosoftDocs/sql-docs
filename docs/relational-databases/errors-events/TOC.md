@@ -4,7 +4,7 @@
 # [Database Engine Error Severities](database-engine-error-severities.md)  
 
 
-# [Native Client Error 50000](sql-server-native-client-error-mssqlserver-50000.md)
+
 # MSSQL Errors
 ## Errors -1 to 950
 ### [-1](mssqlserver-1-database-engine-error.md)
@@ -318,4 +318,5 @@
 ### [41368](mssqlserver-41368-database-engine-error.md)
 ### [41396](mssqlserver-41396-database-engine-error.md)
 ### [41399](mssqlserver-41399-database-engine-error.md)
+## [Native Client Error 50000](sql-server-native-client-error-mssqlserver-50000.md)
 

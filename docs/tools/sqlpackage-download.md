@@ -22,7 +22,7 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 
 |Platform|Download|Release date|Version|Build|
 |:---|:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=873386)|Jan 25, 2018|17.4.1|14.0.3917.1|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=875508)|Jan 25, 2018|17.4.1|14.0.3917.1|
 |macOS (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|May 9, 2018 |0.0.1|15.0.4057.1|
 |Linux (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|May 9, 2018 |0.0.1|15.0.4057.1|
 
@@ -32,7 +32,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
 **Installer**
 
-1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=873386).
+1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=875508).
 2. Open a new Command Prompt window, and run sqlpackage.exe
     - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` folder
 

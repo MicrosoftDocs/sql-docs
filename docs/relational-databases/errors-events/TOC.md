@@ -3,8 +3,10 @@
 # [Understanding Database Engine Errors](understanding-database-engine-errors.md)  
 # [Database Engine Error Severities](database-engine-error-severities.md)  
 
+
+# [Native Client Error 50000](sql-server-native-client-error-mssqlserver-50000.md)
 # MSSQL Errors
-## MSSQL Errors -1 to 950
+## Errors -1 to 950
 ### [-1](mssqlserver-1-database-engine-error.md)
 ### [-2](mssqlserver-neg2-database-engine-error.md)
 ### [2](mssqlserver-2-database-engine-error.md)
@@ -37,7 +39,7 @@
 ### [945](mssqlserver-945-database-engine-error.md)
 ### [948](mssqlserver-948-database-engine-error.md)
 
-## MSSQL Errors 1100 to 1950
+## Errors 1100 to 1950
 ### [1101](mssqlserver-1101-database-engine-error.md)
 ### [1105](mssqlserver-1105-database-engine-error.md)
 ### [1203](mssqlserver-1203-database-engine-error.md)
@@ -56,7 +58,7 @@
 ### [1807](mssqlserver-1807-database-engine-error.md)
 ### [1904](mssqlserver-1904-database-engine-error.md)
 
-## MSSQL Errors 2000 to 2850
+## Errors 2000 to 2850
 ### [2020](mssqlserver-2020-database-engine-error.md)
 ### [2501](mssqlserver-2501-database-engine-error.md)
 ### [2508](mssqlserver-2508-database-engine-error.md)
@@ -88,7 +90,7 @@
 ### [2596](mssqlserver-2596-database-engine-error.md)
 ### [2814](mssqlserver-2814-database-engine-error.md)
 
-## MSSQL Errors 3000 to 4850
+## Errors 3000 to 4850
 ### [3151](mssqlserver-3151-database-engine-error.md)
 ### [3156](mssqlserver-3156-database-engine-error.md)
 ### [3159](mssqlserver-3159-database-engine-error.md)
@@ -116,7 +118,7 @@
 ### [4186](mssqlserver-4186-database-engine-error.md)
 ### [4846](mssqlserver-4846-database-engine-error.md)
 
-## MSSQL Errors 5000 to 8000
+## Errors 5000 to 8000
 ### [5228](mssqlserver-5228-database-engine-error.md)
 ### [5229](mssqlserver-5229-database-engine-error.md)
 ### [5231](mssqlserver-5231-database-engine-error.md)
@@ -163,7 +165,7 @@
 ### [7995](mssqlserver-7995-database-engine-error.md)
 
 
-## MSSQL Errors 8400 to 9999
+## Errors 8400 to 9999
 ### [8443](mssqlserver-8443-database-engine-error.md)
 ### [8525](mssqlserver-8525-database-engine-error.md)
 ### [8601](mssqlserver-8601-database-engine-error.md)
@@ -193,7 +195,7 @@
 ### [9790(mssqlserver-9790-database-engine-error.md)
 ### [9955(mssqlserver-9955-database-engine-error.md)
 
-## MSSQL Errors 10,000 to 12,000
+## Errors 10,000 to 12,000
 ### [10001](mssqlserver-10001-database-engine-error.md)
 ### [10003](mssqlserver-10003-database-engine-error.md)
 ### [10060](mssqlserver-10060-database-engine-error.md)
@@ -224,7 +226,7 @@
 ### [11001](mssqlserver-11001-database-engine-error.md)
 ### [11409](mssqlserver-11409-database-engine-error.md)
 
-## MSSQL Errors 12,3000 to 16,000
+## Errors 12,3000 to 16,000
 ### [12300](mssqlserver-12300-database-engine-error.md)
 ### [12301](mssqlserver-12301-database-engine-error.md)
 ### [12302](mssqlserver-12302-database-engine-error.md)
@@ -243,7 +245,7 @@
 ### [15599](mssqlserver-15599-database-engine-error.md)
 ### [15661](mssqlserver-15661-database-engine-error.md)
 
-## MSSQL Errors 17,000 to 19,000
+## Errors 17,000 to 19,000
 ### [17053](mssqlserver-17053-database-engine-error.md)
 ### [17065](mssqlserver-17065-database-engine-error.md)
 ### [17066](mssqlserver-17066-database-engine-error.md)
@@ -272,7 +274,7 @@
 ### [18456](mssqlserver-18456-database-engine-error.md)
 ### [18752](mssqlserver-18752-database-engine-error.md)
 
-## MSSQL Errors 20,000 to 34,000
+## Errors 20,000 to 34,000
 ### [20557](mssqlserver-20557-database-engine-error.md)
 ### [20572](mssqlserver-20572-database-engine-error.md)
 ### [20574](mssqlserver-20574-database-engine-error.md)
@@ -299,7 +301,7 @@
 ### [33128](mssqlserver-33128-database-engine-error.md)
 ### [33129](mssqlserver-33129-database-engine-error.md)
 
-## MSSQL Errors 41,000 to 41,400
+## Errors 41,000 to 41,400
 ### [41030](mssqlserver-41030-database-engine-error.md)
 ### [41301](mssqlserver-41301-database-engine-error.md)
 ### [41302](mssqlserver-41302-database-engine-error.md)
@@ -317,4 +319,3 @@
 ### [41396](mssqlserver-41396-database-engine-error.md)
 ### [41399](mssqlserver-41399-database-engine-error.md)
 
-## [Native Client Error 50000](sql-server-native-client-error-mssqlserver-50000.md)

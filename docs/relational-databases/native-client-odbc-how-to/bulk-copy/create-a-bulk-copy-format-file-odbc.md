@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [ODBC], file formats"
   - "bulk copy [ODBC], data files"
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

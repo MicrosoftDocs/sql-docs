@@ -19,6 +19,7 @@ ms.author: "yanacai"
 ms.reviewer: "douglasl"
 manager: craigg
 ---
+
 # Azure Data Lake Analytics Task
 
 The Azure Data Lake Analytics Task lets users submit U-SQL jobs to Azure Data Lake Analytics service. [Azure Data Lake Analytics (ADLA)](https://azure.microsoft.com/services/data-lake-analytics/).
@@ -35,47 +36,47 @@ Use the **General** page to configure the Azure Data Lake Analytics Task and pro
 
 ### Basic Configuration
 
-- **Name:** Specifies the name of the task.
-- **Description:** Specifies the description of the task.
+- **Name:** Specifies the name of the Azure Data Lake Analytics task.
+- **Description:** Specifies the description of the Azure Data Lake Analytics task.
 
 ### U-SQL Configuration
 
-U-SQL configuration has tow settings: **SourceType** and dynamic options based on **SourceType** value. 
+U-SQL configuration has two settings: **SourceType** and dynamic options based on **SourceType** value. 
 
-- **SourceTpye:** Specifies the source type of the query. This property has the options listed in the following table.
+- **SourceType:** Specifies the source of the U-SQL script. The script will be submitted to an Azure Data Lake Analytics account during SSIS package execution. This property has 3 options listed in the following table.
 
 |Value|Description|  
 |-----------|-----------------|  
-|**DirectInput**|Set the source to U-SQL statement. Selecting this value displays the dynamic option, **USQLStatement**.|  
-|**FileConnection**|Select a file that contains a U-SQL statement. Selecting this option displays the dynamic option, **FileConnection**.|  
-|**Variable**|Set the source to a variable that defines the U-SQL statement. Selecting this value displays the dynamic option, **SourceVariable**.|
+|**DirectInput**|Specifies the U-SQL script through the inline editor. Selecting this value displays the dynamic option, **USQLStatement**.|  
+|**FileConnection**|Specifies a local .usql file that contains the U-SQL script. Selecting this option displays the dynamic option, **FileConnection**.|  
+|**Variable**|Specifies an SSIS variable that contains the U-SQL script. Selecting this value displays the dynamic option, **SourceVariable**.|
 
-- **SourceType Dynamic Options:** Add the script content for the query. 
+- **SourceType Dynamic Options:** Specifies the script content for the U-SQL query. 
 
 |SourceType|Dynamic Options|  
 |-----------|-----------------|  
-|**SourceType = DirectInput**|Type the U-SQL statement to submit in the option box, or click the browse button (...) to type the U-SQL statement in the Enter U-SQL Query dialog box.|  
-|**SourceType = FileConnection**|Select an existing file connection manager, or click <**New connection...**> to create a new connection manager. **Related Article:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+|**SourceType = DirectInput**|Type the U-SQL query to be submitted in the option box directly, or click the browse button (...) to type the U-SQL query in the **Enter U-SQL Query** dialog box.|  
+|**SourceType = FileConnection**|Select an existing file connection manager, or click <**New connection...**> to create a new file connection. **Related Article:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
 |**SourceType = Variable**|Select an existing variable, or click \<**New variable...**> to create a new variable. **Related Article:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)|
 
 
 ### Job Configuration
 Job configuration specifies U-SQL job submission properties.
 
-- **AzureDataLakeAnalyticsConnection:** Specifies the Azure Data Lake Analytics account connection to submit U-SQL script. Choose the connection from a list of defined connection managers. To create a new connection, select <**New connection**>. Related article: [Azure Data Lake Analytics Connection Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
+- **AzureDataLakeAnalyticsConnection:** Specifies the Azure Data Lake Analytics account where the U-SQL script will be submitted. Choose the connection from a list of defined connection managers. To create a new connection, select <**New connection**>. Related article: [Azure Data Lake Analytics Connection Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
 
-- **JobName:** Specifies the name of U-SQL job. 
-- **AnalyticsUnits:** Specifies the Analytics Unit count for U-SQL job.
-- **Priority:** Specifies the Priority for U-SQL job.
-- **RuntimeVersion:** Specifies the Runtime Version for U-SQL job. It is set to "default" by default.
-- **Synchronous:** Specifies waiting job execution completed or not. It is set to True by default.
+- **JobName:** Specifies the name of the U-SQL job. 
+- **AnalyticsUnits:** Specifies the Analytics Unit count of the U-SQL job.
+- **Priority:** Specifies the Priority of the U-SQL job. Priority can be set from 0 to 1000, the lower the number, the higher the priority.
+- **RuntimeVersion:** Specifies the Azure Data Lake Analytics runtime version of the U-SQL job. It is set to "default" by default. Usually you don't need to change this property.
+- **Synchronous:** A Boolean value specifies if the task waits the job execution completes or not. Set to Ture, the task will be marked as succeed after job completes. Set to False, the task will be marked as succeed after job passes the Preparation phase.
 
 |Value|Description|
 |-----------|-----------------|
-|True|The task execution result is based on U-SQL job execution result. Job succeeds --> Task succeeds; Job fails --> Task fails; Task succeeds or fails --> Task completes.|
-|False|The task execution result is based on U-SQL job submission result. Job submission succeeds and passed Preparing phase --> Task succeeds; Job submission fails or job fails at Preparing phase --> Task fails; Task succeeds or fails --> Task completes.|
+|True|The task result is based on the U-SQL job execution result. Job succeeds --> Task succeeds; Job fails --> Task fails; Task succeeds or fails --> Task completes.|
+|False|The task result is based on the U-SQL job submission and preparation result. Job submission succeeds and passes the Preparation phase --> Task succeeds; Job submission fails or job fails at the Preparation phase --> Task fails; Task succeeds or fails --> Task completes.|
 
-- **TimeOut:** Specifies a time-out value for job execution with second as the unit. A cancellation will be sent out if a job is time-out. If a job is time-out, the task is failed. TimeOut property is not available if **Synchronous** is set to **false**.
+- **TimeOut:** Specifies a time-out time in seconds for job execution. The job will be cancelled and the task will be marked as failed after the job is time-out. TimeOut property is not available if Synchronous is set to False. TimeOut property is not available if **Synchronous** is set to **false**.
 
 ## Parameter Mapping Page Configuration
 
@@ -83,7 +84,7 @@ Use the **Parameter Mapping** page of the **Azure Data Lake Analytics Task Edito
 
 - **Variable Name:** After you have added a parameter mapping by clicking **Add**, select a system or user-defined variable from the list or click \<**New variable...**> to add a new variable by using the **Add Variable** dialog box. **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)  
 
-- **Parameter Name:** Provide a parameter/variable name in U-SQL script. The first character of the parameter name is the @ sign, specific names like @Param1. 
+- **Parameter Name:** Provide a parameter/variable name in U-SQL script. Make sure the the parameter name starts with the @ sign, like @Param1. 
 
 Here is an example of how to pass parameters to U-SQL script.
 

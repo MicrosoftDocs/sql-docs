@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "05/08/2018"
+ms.date: "06/19/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -17,6 +17,31 @@ manager: craigg
 # SQL Operations Studio (preview) release notes
 
 **[Download the May Public Preview](download.md)**
+
+
+## June 2018 (JUne Public Preview)
+
+release date: June 19, 2018  
+version: 0.30.5
+
+The *June Public Preview* contains the following highlights:  
+
+- Edit Data Filtering and Sorting: Edit data on a table opens the top 200 rows by default. To modify the query, click on the "Show SQL Pane" toolbar button to open the query pane. The query can be modified in the SQL editor pane to filter or sort the resultset.
+- Insiders builds now have the in-progress Profiler extension preview available to install instead of including Profiler by default
+- The new SQL Data Warehouse extension includes rich customizable dashboard widgets surfacing insights to your data warehouse. This unlocks key scenarios around managing and tuning your data warehouse to ensure it is optimized for consistent performance.
+- Fix GitHub Issues 
+  - Feature request ([issue 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): Please make the results grid auto-fit column width to data, and/or   remember manual changes if the same query is re-run.
+  - Fix [issue 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): Should show add message and add account account button when linked account is empty.
+  - Fix [issue 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): Linked account tab is broken when the view is collapsed.
+  - Fix [issue 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): SQL Tools Service crashes when opening .sql file from disk.
+  - Fix [issue 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): Missing SQL keyword "BETWEEN".
+  - Fix [issue 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH' keyword crashes SQL Tools Service.
+  - Fix [issue 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): "New Profiler" context menu option in Object Explorer does nothing.
+  - Fix [issue 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): Query editor "Explain" query plan is broken.
+
+
+
+
 
 
 ## May 2018 (May Public Preview)

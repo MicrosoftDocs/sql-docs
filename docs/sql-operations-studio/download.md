@@ -2,7 +2,7 @@
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "05/08/2018"
+ms.date: "06/19/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -18,13 +18,13 @@ manager: craigg
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
-Download and install the latest release, the *May Public Preview*:
+Download and install the latest release, the *June Public Preview*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|May 7, 2018 |0.29.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|May 7, 2018 |0.29.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|May 7, 2018 |0.29.3|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|June 19, 2018 |0.29.3|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|June 19, 2018 |0.29.3|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|June 19, 2018 |0.29.3|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

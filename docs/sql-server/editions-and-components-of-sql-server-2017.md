@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2017"

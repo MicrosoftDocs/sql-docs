@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.Replication.TracerToken.TracerTokenId*
+  commentId: P:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId
+  href: https://msdn.microsoft.com/library/ms155336(v=sql.120).aspx
+  name: TracerTokenId
+  name.vb: TracerTokenId
+  fullName: TracerToken.TracerTokenId
+  fullName.vb: TracerToken.TracerTokenId

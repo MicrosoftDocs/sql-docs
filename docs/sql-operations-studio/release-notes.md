@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "06/19/2018"
+ms.date: "06/20/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -21,8 +21,8 @@ manager: craigg
 
 ## June 2018 (June Public Preview)
 
-release date: June 19, 2018  
-version: 0.30.5
+release date: June 20, 2018  
+version: 0.30.6
 
 The *June Public Preview* contains the following highlights:  
 

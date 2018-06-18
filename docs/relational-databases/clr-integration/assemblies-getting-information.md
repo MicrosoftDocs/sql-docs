@@ -8,7 +8,6 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 

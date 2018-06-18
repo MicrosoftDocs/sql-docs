@@ -1161,6 +1161,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/troubleshooters/replication/troubleshoot-tran-repl-errors.md",
+            "redirect_url": "/sql/relational-databases/replication/troubleshoot-tran-repl-errors",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/t-sql/statements/alter-statements-transact-sql.md",
             "redirect_url": "/sql/t-sql/statements/statements",
             "redirect_document_id": false

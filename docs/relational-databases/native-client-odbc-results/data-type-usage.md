@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-results"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data types"
   - "data types [ODBC], about data types"
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg

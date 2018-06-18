@@ -5,11 +5,9 @@ ms.date: "02/05/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -88,7 +86,7 @@ To connect to an on-premises SQL Server from a package running on Azure, you hav
 
 1.  In SQL Server Configuration Manager, enable the TCP/IP protocol.
 2.  Allow access through the Windows firewall. For more info, see [Configure the Windows Firewall to Allow SQL Server Access](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
-3.  To connect with Windows Authentication, make sure that the Azure-SSIS Integration Runtime belongs to a virtual network (VNet) that also includes the on-premises SQL Server.  For more info, see [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Then use `catalog.set_execution_credential` to provide credentials as described in this article.
+3.  To connect with Windows Authentication, make sure that the Azure-SSIS Integration Runtime belongs to a virtual network that also includes the on-premises SQL Server.  For more info, see [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Then use `catalog.set_execution_credential` to provide credentials as described in this article.
 
 ## Connect to an on-premises file share
 To check whether you can connect to an on-premises file share, do the following things:

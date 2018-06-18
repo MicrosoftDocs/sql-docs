@@ -10,7 +10,6 @@ ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.component: dma
 ms.date: 04/30/2018
 ---
 # New and Recently Updated: Data Migration Assistant (DMA) for SQL Server

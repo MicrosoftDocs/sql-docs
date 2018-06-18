@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/14/2018"
+ms.date: "06/13/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -72,6 +72,7 @@ SQL Server Management Studio 17.7 Upgrade Package (upgrades 17.x to 17.7):<br>
 
 > [!NOTE]
 > The SQL Server PowerShell module is now a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
+
 ## SQL Server Management Studio
 
 
@@ -132,7 +133,8 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 The following are issues and limitations with this 17.7 release:
 
-Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
+- Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
+- Some latency in XEvents viewer may be observed. This is a [known issue in the .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Please, consider upgrading to NetFx 4.7.2.
 
 
 ## Uninstall and reinstall SSMS

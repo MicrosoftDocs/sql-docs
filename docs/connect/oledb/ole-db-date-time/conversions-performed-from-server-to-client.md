@@ -2,10 +2,10 @@
 title: "Conversions Performed from Server to Client | Microsoft Docs"
 description: "Conversions performed from server to client"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-date-time"
+ms.component: "oledb|ole-db-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -18,7 +18,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Conversions Performed from Server to Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   This article describes date/time conversions performed between [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later) and a client application written with OLE DB Driver for SQL Server.  
   

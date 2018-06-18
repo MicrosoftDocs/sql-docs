@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "native-client-odbc-text-image-columns"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -24,7 +23,6 @@ helpviewer_keywords:
   - "ODBC data types, text columns"
   - "image columns [ODBC]"
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

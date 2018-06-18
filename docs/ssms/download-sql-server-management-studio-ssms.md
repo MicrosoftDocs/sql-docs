@@ -84,9 +84,9 @@ Version 17.8 includes:
 
 **General SSMS**
 
-Database Properties | FileGroups:
+Database Properties:
 
-This improvement exposes the "AUTOGROW_ALL_FILES" configuration option for Filegroups. This new config option is added under the Database Properties > Filegroups window in the form of a new column (Autogrow All Files) of checkboxes for each available Filegroup (except for Filestream and Memory Optimized Filegroups). The user can enable/disable AUTOGROW_ALL_FILES for a particular Filegroup by toggling the corresponding Autogrow_All_Files checkbox. Correspondingly, the AUTOGROW_ALL_FILES option is properly scripted when scripting the database for CREATE / generating scripts for the database (SQL2016 and above).
+- This improvement exposes the "AUTOGROW_ALL_FILES" configuration option for Filegroups. This new config option is added under the Database Properties > Filegroups window in the form of a new column (Autogrow All Files) of checkboxes for each available Filegroup (except for Filestream and Memory Optimized Filegroups). The user can enable/disable AUTOGROW_ALL_FILES for a particular Filegroup by toggling the corresponding Autogrow_All_Files checkbox. Correspondingly, the AUTOGROW_ALL_FILES option is properly scripted when scripting the database for CREATE / generating scripts for the database (SQL2016 and above).
 	
 SQL Editor:
 

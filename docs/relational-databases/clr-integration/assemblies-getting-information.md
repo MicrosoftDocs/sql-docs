@@ -7,7 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology
+ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 

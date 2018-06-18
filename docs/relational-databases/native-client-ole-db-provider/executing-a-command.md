@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-provider"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "OLE DB extensions for XML"
   - "SQL Server Native Client OLE DB provider, command execution"
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg

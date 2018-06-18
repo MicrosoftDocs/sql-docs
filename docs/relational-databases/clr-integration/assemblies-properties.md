@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: reference
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.assemblies.general.f1"

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [ODBC], API support"
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

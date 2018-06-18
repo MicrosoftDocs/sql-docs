@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: reference
 ms.topic: "reference"
 helpviewer_keywords: 
   - "managed code [SQL Server]"

@@ -3,12 +3,10 @@ title: "SQL Server Audit Records | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "security"
+ms.prod_service: security
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

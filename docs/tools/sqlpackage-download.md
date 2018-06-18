@@ -123,6 +123,6 @@ sqlpackage runs on Windows, macOS, and Linux, and is supported on the following 
 
 ## Next Steps
 
-- Learn more about [sqlpackage](/sqlpackage.md)
+- Learn more about [sqlpackage](sqlpackage.md)
 
 [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)

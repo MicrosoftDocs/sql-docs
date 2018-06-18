@@ -6,9 +6,9 @@
 
 
 # MSSQL Errors
-## Errors -1 to 950
-### [-1](mssqlserver-1-database-engine-error.md)
+## Errors -2 to 950
 ### [-2](mssqlserver-neg2-database-engine-error.md)
+### [-1](mssqlserver-1-database-engine-error.md)
 ### [2](mssqlserver-2-database-engine-error.md)
 ### [53](mssqlserver-53-database-engine-error.md)
 ### [102](mssqlserver-102-database-engine-error.md)

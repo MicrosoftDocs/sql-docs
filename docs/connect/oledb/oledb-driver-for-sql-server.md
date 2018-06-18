@@ -1,6 +1,6 @@
 ---
-title: "OLE DB Driver for SQL Server | Microsoft Docs"
-description: "OLE DB Driver for SQL Server"
+title: "Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
+description: "Microsoft OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -23,7 +23,7 @@ author: "pmasl"
 ms.author: "Pedro.Lopes"
 manager: craigg
 ---
-# OLE DB Driver for SQL Server
+# Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]

@@ -33,24 +33,24 @@ Returns a row for each classified item in the database.
 |-----------------|---------------|-----------------|  
 |**class**|**int**|Identifies the class of the item on which the classification exists|  
 |**class_desc**|**varchar(16)**|A description of the class of the item on which the classification exists|  
-|**major_id**|**int**|ID of the item on which the classification exists.<br><br>If class is 0, major_id is always 0.<br>If class is 1, 2, or 7 major_id is object_id.|  
+|**major_id**|**int**|ID of the item on which the classification exists.<br \><br \>If class is 0, major_id is always 0.<br>If class is 1, 2, or 7 major_id is object_id.|  
 |**minor_id**|**int**|Secondary ID of the item on which the classification exists, interpreted according to its class.<br><br>If class = 1, minor_id is the column_id (if column), else 0 (if object).<br>If class = 2, minor_id is the parameter_id.<br>If class = 7, minor_id is the index_id. |  
 |**label**|**sysname**|The label (human readable) assigned for the sensitivity classification|  
-|**label_id**|**sysname**|An id associated with the label which can be used by an information protection system such as Azure Information Protection (AIP)|  
+|**label_id**|**sysname**|An ID associated with the label, which can be used by an information protection system such as Azure Information Protection (AIP)|  
 |**information_type**|**sysname**|The information type (human readable) assigned for the sensitivity classification|  
-|**information_type_id**|**sysname**|An id associated with the information type which can be used by an information protection system such as Azure Information Protection (AIP)|  
+|**information_type_id**|**sysname**|An ID associated with the information type, which can be used by an information protection system such as Azure Information Protection (AIP)|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## Remarks  
 
-- This view provides visibility into the classification state of the database, and can be used for managing the database classifications, as well as for generating reports.
+- This view provides visibility into the classification state of the database. It can be used for managing the database classifications, as well as for generating reports.
 - Currently only classification of database columns is supported. Consequently:
     - **class** - will always have the value 1 (representing a column)
     - **class_desc** - will always have the value *OBJECT_OR_COLUMN*
     - **major_id** - represents the ID of the table containing the classified column, corresponding with sys.all_objects.object_id
     - **minor_id** - represents the ID of the column on which the classification exists, corresponding with sys.all_columns.column_id
 
-## Examples  
+## Examples
 
 ### A. Listing all classified columns and their corresponding classification
 
@@ -71,6 +71,6 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [ADD SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/docs-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [Getting started with SQL Information Protection](http://aka.ms/sqlip)

@@ -26,6 +26,8 @@ helpviewer_keywords:
   - "classification [SQL]"
   - "labels [SQL]"
   - "information types"
+  - "data classification"
+
 ---
 # DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 

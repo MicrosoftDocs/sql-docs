@@ -24,7 +24,9 @@ helpviewer_keywords:
   - "classification [SQL]"
   - "labels [SQL]"
   - "information types"
+  - "data classification"
 ---
+
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
 Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.  
@@ -85,7 +87,7 @@ Is an identifier associated with the information type. This is often used by cen
 - The system view [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) can be used to retrieve the sensitivity classification information for a database.
 
 
-## Permissions  
+## Permissions
 
 Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFACTION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
 
@@ -113,7 +115,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ## See Also  
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/docs-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 

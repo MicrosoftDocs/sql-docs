@@ -8,8 +8,9 @@ ms.prod_service: "integration-services"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
 # Lift and shift SQL Server Integration Services workloads to the cloud

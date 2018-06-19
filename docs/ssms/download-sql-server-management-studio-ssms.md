@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/19/2018"
+ms.date: "06/21/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -134,6 +134,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 The following are issues and limitations with this 17.8 release:
 
+- Clicking the *Script* button after modifying any filegroup property in the *Properties* window, generates two scripts – one script with a *USE <database>* statement, and a second script with a *USE master* statement.  The script with *USE master* is generated in error and should be discarded. Run the script that contains the *USE <database>* statement.
 - Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
 - Some latency in XEvents viewer may be observed. This is a [known issue in the .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Please, consider upgrading to NetFx 4.7.2.
 

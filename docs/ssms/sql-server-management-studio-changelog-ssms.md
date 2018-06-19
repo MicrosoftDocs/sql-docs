@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/19/2018"
+ms.date: "06/21/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -26,7 +26,7 @@ This article provides details about updates, improvements, and bug fixes for the
 ## [SSMS 17.8](download-sql-server-management-studio-ssms.md)
 
 Build number: 14.0.?????.0<br>
-Release date: June 19, 2018
+Release date: June 21, 2018
 
 ### What's new
 
@@ -34,7 +34,7 @@ Release date: June 19, 2018
 
 Database Properties:
 
-- This improvement exposes the "AUTOGROW_ALL_FILES" configuration option for Filegroups. This new config option is added under the Database Properties > Filegroups window in the form of a new column (Autogrow All Files) of checkboxes for each available Filegroup (except for Filestream and Memory Optimized Filegroups). The user can enable/disable AUTOGROW_ALL_FILES for a particular Filegroup by toggling the corresponding Autogrow_All_Files checkbox. Correspondingly, the AUTOGROW_ALL_FILES option is properly scripted when scripting the database for CREATE / generating scripts for the database (SQL2016 and above).
+- This improvement exposes the **AUTOGROW_ALL_FILES** configuration option for Filegroups. This new config option is added under the Database Properties > Filegroups window in the form of a new column (Autogrow All Files) of checkboxes for each available Filegroup (except for Filestream and Memory Optimized Filegroups). The user can enable/disable AUTOGROW_ALL_FILES for a particular Filegroup by toggling the corresponding Autogrow_All_Files checkbox. Correspondingly, the **AUTOGROW_ALL_FILES** option is properly scripted when scripting the database for CREATE / generating scripts for the database (SQL2016 and above).
 	
 SQL Editor:
 
@@ -65,6 +65,14 @@ Always Encrypted:
 
 - Fixed an issue (in DacFx) which was causing a lock timeout error when enabling Always Encrypted on a partitioned table
 	
+
+### Known issues
+
+- Clicking the *Script* button after modifying any filegroup property in the *Properties* window, generates two scripts – one script with a *USE <database>* statement, and a second script with a *USE master* statement.  The script with *USE master* is generated in error and should be discarded. Run the script that contains the *USE <database>* statement.
+- Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
+- Some latency in XEvents viewer may be observed. This is a [known issue in the .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Please, consider upgrading to NetFx 4.7.2.
+
+
 
 ## Previous SSMS releases
 

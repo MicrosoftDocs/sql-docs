@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -38,8 +38,8 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
     
-MIN ( [ ALL | DISTINCT ] expression )  
-   OVER ( [ partition_by_clause ] order_by_clause )  
+MIN ( [ ALL | DISTINCT ] expression )
+   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
   
 ```  

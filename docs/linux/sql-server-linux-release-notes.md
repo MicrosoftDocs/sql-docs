@@ -41,7 +41,7 @@ The following table lists the release history for SQL Server 2017.
 
 | Release | Version | Release date |
 |-----|-----|-----|
-| [CU7](#CU8) | 14.0.3029.16 | 6-2018 |
+| [CU8](#CU8) | 14.0.3029.16 | 6-2018 |
 | [CU7](#CU7) | 14.0.3026.27 | 5-2018 |
 | [CU6](#CU6) | 14.0.3025.34 | 4-2018 |
 | [CU5](#CU5) | 14.0.3023.8 | 3-2018 |

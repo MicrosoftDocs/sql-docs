@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: System.Exception
+  commentId: T:System.Exception
+  href: https://msdn.microsoft.com/library/system.exception.aspx
+  name: Exception
+  name.vb: Exception
+  fullName: System.Exception
+  fullName.vb: System.Exception

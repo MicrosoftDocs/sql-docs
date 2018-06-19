@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -1042,7 +1040,7 @@ manager: craigg
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|This buffer has been orphaned. The buffer manager has shut down, leaving an outstanding buffer and no cleanup will occur for the buffer. There is a potential for memory leaks and other problems.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|Attempt to find the input column named "%1" failed with error code 0x%2!8.8X!. The input column specified was not found in the input column collection.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|Attempt to find the input column with lineage ID %1!d! failed with error code 0x%2!8.8X!. The input column was not found in the input column collection.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|The expression contains unrecognized token "%1". If "%1" is a variable, it should be expressed as "@%1". The specified token is not valid. If the token is intended to be a variable name, it should be prefixed with the @ symbol.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|The expression contains unrecognized token "%1". If "%1" is a variable, it should be expressed as "\@%1". The specified token is not valid. If the token is intended to be a variable name, it should be prefixed with the @ symbol.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|The expression contains unrecognized token "#%1!d!".|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|The variable "%1" was not found in the Variables collection. The variable might not exist in the correct scope.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Attempt to parse the expression "%1" failed. The expression might contain an invalid token, an incomplete token, or an invalid element. It might not be well-formed, or might be missing part of a required element such as a parenthesis.|  
@@ -2076,8 +2074,8 @@ manager: craigg
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|Task failed to execute operation "%1".|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|File/Process "%1" is not in path.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|The subject is empty.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|The address in the "To" line is malformed. It is either missing the "@" symbol or is not valid.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|The address in the "From" line is malformed. It is either missing the "@" symbol or is not valid.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|The address in the "To" line is malformed. It is either missing the "\@" symbol or is not valid.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|The address in the "From" line is malformed. It is either missing the "\@" symbol or is not valid.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|The two XML documents are different.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD Validation will use the DTD file defined in the DOCTYPE line in the XML document. It will not use what is assigned to the property "%1".|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|Task failed to validate "%1".|  

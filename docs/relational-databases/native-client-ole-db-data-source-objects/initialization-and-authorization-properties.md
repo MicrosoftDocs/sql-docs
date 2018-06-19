@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-data-source-objects"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, authorization properties"
   - "initialization properties [OLE DB]"
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg

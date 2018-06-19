@@ -27,7 +27,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-This function returns a **datetimeoffset** value for the specified date and time arguments. The returned value has a precision specified by the precision argument, and an offset as specified by the offset arguments.  
+Returns a **datetimeoffset** value for the specified date and time arguments. The returned value has a precision specified by the precision argument, and an offset as specified by the offset arguments.  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -38,6 +38,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## Arguments  
+
 *year*  
 An integer expression that specifies a year.  
   
@@ -72,6 +73,7 @@ An integer literal value that specifies the precision of the **datetimeoffset** 
 **datetimeoffset(** *precision* **)**  
   
 ## Remarks  
+
 `DATETIMEOFFSETFROMPARTS` returns a fully initialized **datetimeoffset** data type. The offset arguments represent the time zone offset. For omitted offset arguments, `DATETIMEOFFSETFROMPARTS` assumes a time zone offset of `00:00` - in other words, no time zone offset. For specified offset arguments, `DATETIMEOFFSETFROMPARTS` expects values for both arguments, and both values positive or negative. If *minute_offset* has a value and *hour_offset* has no value, `DATETIMEOFFSETFROMPARTS` will raise an error. `DATETIMEOFFSETFROMPARTS` will raise an error if the other arguments have invalid values. If at least one required arguments has a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will return `NULL`. However, if the *precision* argument has a `NULL` value, then `DATETIMEOFFSETFROMPARTS` will raise an error.  
   
 The *fractions* argument depends on the precision argument. For example, for a precision value of 7, each fraction represents 100 nanoseconds; for a precision of 3, each fraction represents a millisecond. For a precision value of zero, the value of fractions must also be zero; otherwise, `DATETIMEOFFSETFROMPARTS` will raise an error.  
@@ -80,7 +82,7 @@ This function supports remoting to [!INCLUDE[ssCurrent](../../includes/sscurrent
   
 ## Examples  
   
-### A. Simple example without fractions of a second  
+### A. An example without fractions of a second  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
@@ -97,6 +99,7 @@ Result
 ```  
   
 ### B. Example with fractions of a second  
+
 This example shows the use of the *fractions* and *precision* parameters:  
 
 1. When *fractions* has a value of 5, and *precision* has a value of 1, the value of *fractions* represents 5/10 of a second.  

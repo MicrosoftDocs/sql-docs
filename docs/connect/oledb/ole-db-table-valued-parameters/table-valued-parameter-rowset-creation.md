@@ -2,10 +2,10 @@
 title: "Table-Valued Parameter Rowset Creation | Microsoft Docs"
 description: "Static and dynamic Table-Valued Parameter rowset creation"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-table-valued-parameters"
+ms.component: "oledb|ole-db-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -18,7 +18,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Table-Valued Parameter Rowset Creation
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Although consumers can provide any rowset object for table-valued parameters, typical rowset objects are implemented against back-end data stores, and therefore provide limited performance. For this reason, the OLE DB Driver for SQL Server enables consumers to create a specialized rowset object on top of in-memory data. This special, in-memory rowset object is a new COM object called a table-valued parameter rowset. It provides functionality similar to parameter sets.  
   

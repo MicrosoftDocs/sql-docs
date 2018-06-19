@@ -213,7 +213,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT TOP(10)WITH TIES  
+SELECT TOP(10) PERCENT WITH TIES  
 pp.FirstName, pp.LastName, e.JobTitle, e.Gender, r.Rate  
 FROM Person.Person AS pp   
     INNER JOIN HumanResources.Employee AS e  

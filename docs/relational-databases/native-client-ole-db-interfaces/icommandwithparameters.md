@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 66644c70-def7-46d8-8c47-b883292a0288

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-commands"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, stored procedures"
   - "stored procedures [OLE DB], command syntax"
 ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg

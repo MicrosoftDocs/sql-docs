@@ -1,4 +1,4 @@
-﻿---
+---
 title: "LAST_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
@@ -36,7 +36,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-201
   
 ```  
   
-LAST_VALUE ( [scalar_expression )   
+LAST_VALUE ( [ scalar_expression ] )   
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
   

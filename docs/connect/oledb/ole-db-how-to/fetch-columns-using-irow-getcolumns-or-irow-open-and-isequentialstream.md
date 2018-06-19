@@ -2,10 +2,10 @@
 title: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream | Microsoft Docs"
 description: "Fetch columns using IRow::GetColumns (or IRow::Open) and ISequentialStream"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-how-to"
+ms.component: "oledb|ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -20,7 +20,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Large data can be bound or retrieved using the **ISequentialStream** interface. For bound columns, the status flag DBSTATUS_S_TRUNCATED indicates that the data is truncated.  
   

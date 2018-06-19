@@ -2,10 +2,10 @@
 title: "Service Principal Names (SPNs) in Client Connections (OLE DB) | Microsoft Docs"
 description: "Service Principal Names (SPNs) in client connections (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db"
+ms.component: "oledb|ole-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -16,7 +16,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Service Principal Names (SPNs) in Client Connections (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
   This topic describes OLE DB properties and member functions that support service principal names (SPNs) in client applications. For more information about SPNs in client applications, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../oledb/features/service-principal-name-spn-support-in-client-connections.md). For a sample, see [Integrated Kerberos Authentication &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  

@@ -29,9 +29,10 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "data classification"
-
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Drops sensitivity classification metadata from one or more database columns.
 

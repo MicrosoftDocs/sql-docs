@@ -27,9 +27,11 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "data classification"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.  
 

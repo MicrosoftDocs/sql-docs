@@ -26,8 +26,10 @@ helpviewer_keywords:
   - "classification [SQL]"
   - "labels [SQL]"
   - "information types"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Returns a row for each classified item in the database.
 

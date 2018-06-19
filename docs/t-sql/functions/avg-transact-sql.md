@@ -1,4 +1,4 @@
-﻿---
+---
 title: "AVG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -38,7 +38,7 @@ This function returns the average of the values in a group. It ignores null valu
   
 ```sql
 AVG ( [ ALL | DISTINCT ] expression )  
-   OVER ( [ partition_by_clause ] order_by_clause )    
+   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
   
 ## Arguments  

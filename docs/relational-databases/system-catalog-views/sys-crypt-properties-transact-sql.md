@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.crypt_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -33,8 +33,8 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifies class of thing on which property exists.<br /><br /> 1 = Object or column|  
-|**class_desc**|**nvarchar(60)**|Description of the class of thing on which property exists.<br /><br /> OBJECT_OR_COLUMN|  
+|**class**|**tinyint**|Identifies class of thing on which property exists.<br /><br /> 1 = Object or column<br /> 5 = Assembly|  
+|**class_desc**|**nvarchar(60)**|Description of the class of thing on which property exists.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|ID of thing on which property exists, interpreted according to class|  
 |**thumbprint**|**varbinary(32)**|SHA-1 hash of the certificate or asymmetric key used.|  
 |**crypt_type**|**char(4)**|Encryption type.<br /><br /> SPVC = Encrypted by certificate private key<br /><br /> SPVA = Encrypted by asymmetric private key<br /><br /> CPVC = Counter signature by certificate private key<br /><br /> CPVA = Counter signature by asymmetric  key|  

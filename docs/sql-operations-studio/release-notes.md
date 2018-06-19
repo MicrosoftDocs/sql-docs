@@ -26,9 +26,12 @@ version: 0.30.6
 
 The *June Public Preview* contains the following highlights:  
 
-- Edit Data Filtering and Sorting: Edit data on a table opens the top 200 rows by default. To modify the query, click on the "Show SQL Pane" toolbar button to open the query pane. The query can be modified in the SQL editor pane to filter or sort the resultset.
-- Insiders builds now have the in-progress Profiler extension preview available to install instead of including Profiler by default.
-- The new SQL Data Warehouse extension includes rich customizable dashboard widgets surfacing insights to your data warehouse. This unlocks key scenarios around managing and tuning your data warehouse to ensure it is optimized for consistent performance.
+- **SQL Server Profiler for SQL Operations Studio *Preview*** extension initial release.
+- The new **SQL Data Warehouse** extension includes rich customizable dashboard widgets surfacing insights to your data warehouse. This unlocks key scenarios around managing and tuning your data warehouse to ensure it is optimized for consistent performance.
+- **Edit Data "Filtering and Sorting"** support.
+- **SQL Server Agent for SQL Operations Studio *Preview*** extension enhancements for Jobs and Job History views.
+- Improved **Wizard & Dialog UI Builder Framework** extensibility APIs.
+- Update VS Code Platform source code integrating [March 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) and [April 2018 (1.23)](https://code.visualstudio.com/updates/v1_23) releases.
 - Fix GitHub Issues:
   - Feature request ([issue 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): Please make the results grid auto-fit column width to data, and/or   remember manual changes if the same query is re-run.
   - Fix [issue 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): Should show add message and add account account button when linked account is empty.
@@ -40,8 +43,7 @@ The *June Public Preview* contains the following highlights:
   - Fix [issue 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): Query editor "Explain" query plan is broken.
 
 
-
-
+For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 ## May 2018 (May Public Preview)
@@ -66,8 +68,6 @@ The *May Public Preview* is focused on stabilization and bug fixes. This build c
    - Fix [issue 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent extension and the status bar
    - Fix [issue 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent Don´t resize after change windows size
 
-
-For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 

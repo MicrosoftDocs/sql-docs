@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.MessageBox
+  commentId: N:Microsoft.SqlServer.MessageBox
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.messagebox(v=sql.120).aspx
+  name: Microsoft.SqlServer.MessageBox
+  name.vb: Microsoft.SqlServer.MessageBox
+  fullName: Microsoft.SqlServer.MessageBox
+  fullName.vb: Microsoft.SqlServer.MessageBox

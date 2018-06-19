@@ -226,7 +226,7 @@ GO
 ```  
   
 ### D. Creating a self-signed certificate  
- The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ```  
 CREATE CERTIFICATE Shipping04   

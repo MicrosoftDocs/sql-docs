@@ -89,7 +89,7 @@ ALTER CERTIFICATE certificate_name
   
  When the private key of a certificate that already exists in the database is imported from a file, the private key will be automatically protected by the database master key. To protect the private key with a password, use the ENCRYPTION BY PASSWORD phrase.  
   
- The REMOVE PRIVATE KEY option will delete the private key of the certificate from the database. You can do this when the certificate will be used to verify signatures or in [!INCLUDE[ssSB](../../includes/sssb-md.md)] scenarios that do not require a private key. Do not remove the private key of a certificate that protects a symmetric key.  
+ The REMOVE PRIVATE KEY option will delete the private key of the certificate from the database. You can remove the private key when the certificate will be used to verify signatures or in [!INCLUDE[ssSB](../../includes/sssb-md.md)] scenarios that do not require a private key. Do not remove the private key of a certificate that protects a symmetric key.  
   
  You do not have to specify a decryption password when the private key is encrypted by using the database master key.  
   

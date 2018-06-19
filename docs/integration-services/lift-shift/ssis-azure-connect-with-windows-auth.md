@@ -8,8 +8,9 @@ ms.prod_service: "integration-services"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
 # Connect to data sources and file shares with Windows Authentication in SSIS packages in Azure

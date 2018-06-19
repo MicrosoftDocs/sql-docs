@@ -5,8 +5,9 @@ ms.date: "11/27/2017"
 ms.topic: conceptual
 ms.prod: sql  
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
 # Open and save files on premises and in Azure with SSIS packages deployed in Azure

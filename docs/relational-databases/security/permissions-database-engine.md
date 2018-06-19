@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Permissions (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"

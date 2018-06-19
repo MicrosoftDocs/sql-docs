@@ -3,7 +3,6 @@ title: "Configure SQL Server on a Server Core Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "Server Core Installation [SQL Server]"
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: 14
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure SQL Server on a Server Core Installation

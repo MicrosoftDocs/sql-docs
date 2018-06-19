@@ -1,10 +1,9 @@
-﻿---
+---
 title: "datetimeoffset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -129,7 +128,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-If the conversion is to **time(n)**, the our, minute, second, and fractional seconds are copied. The time zone value is truncated. When the precision of the **datetimeoffset(n)** value is greater than the precision of the **time(n)** value, the value is rounded up. The following code shows the results of converting a `datetimeoffset(4)` value to a `time(3)` value.
+If the conversion is to **time(n)**, the hour, minute, second, and fractional seconds are copied. The time zone value is truncated. When the precision of the **datetimeoffset(n)** value is greater than the precision of the **time(n)** value, the value is rounded up. The following code shows the results of converting a `datetimeoffset(4)` value to a `time(3)` value.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  

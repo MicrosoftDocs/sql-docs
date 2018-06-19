@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "05/08/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

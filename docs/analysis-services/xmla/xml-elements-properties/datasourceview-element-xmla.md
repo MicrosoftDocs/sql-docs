@@ -28,7 +28,7 @@ manager: kfile
 </Batch>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -36,7 +36,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -44,11 +44,11 @@ manager: kfile
 |Child elements|[DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [DataSourceViewID](../../../analysis-services/scripting/properties/datasourceviewid-element-assl.md)|  
   
 ## Remarks  
- The **DataSourceView** element represents an out-of-line binding to a data source view, used by the **Batch** or **Process** command to temporarily override the data source view binding for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects processed by the command.  
+ The **DataSourceView** element represents an out-of-line binding to a data source view, used by the **Batch** or **Process** command to temporarily override the data source view binding for Analysis Services objects processed by the command.  
   
  For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

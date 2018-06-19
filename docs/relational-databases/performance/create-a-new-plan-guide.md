@@ -3,12 +3,9 @@ title: "Create a New Plan Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-plan-guides"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 

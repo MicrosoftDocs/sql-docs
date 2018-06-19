@@ -2,10 +2,10 @@
 title: "Display Column and Catalog Metadata for Sparse Columns (OLE DB) | Microsoft Docs"
 description: "Display column and catalog metadata for sparse columns (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-how-to"
+ms.component: "oledb|ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -16,7 +16,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Display Column and Catalog Metadata for Sparse Columns (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   This sample creates a table with three columns: a sparse column, a column that is not a sparse column, and a columnset column. The sample then displays OLE DB flags showing the column and catalog metadata for the non-sparse column and the columnset column.  
   

@@ -7,11 +7,10 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ---
 # Operate Red Hat Enterprise Linux shared disk cluster for SQL Server

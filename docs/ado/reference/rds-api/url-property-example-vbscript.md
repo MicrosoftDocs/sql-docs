@@ -6,8 +6,7 @@ ms.date: "01/19/2017"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: sql  
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 

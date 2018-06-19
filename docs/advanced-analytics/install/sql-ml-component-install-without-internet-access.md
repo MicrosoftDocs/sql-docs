@@ -67,6 +67,12 @@ Microsoft R Open     |no change; use previous|
 Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
 Microsoft Python Open     |no change; use previous|
 Microsoft Python Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
+**SQL Server 2017 CU7** |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server      |no change; use previous|
+Microsoft Python Open     |no change; use previous|
+Microsoft Python Server    |no change; use previous|
+
 
 ### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
 

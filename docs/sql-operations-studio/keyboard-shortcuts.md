@@ -4,7 +4,7 @@ description: Learn how to create and customize keyboard shortcuts in SQL Operati
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
 ms.prod: sql
-ms.reviewer: "alayu; erickang; sstein"
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos

@@ -3,7 +3,6 @@ title: "Failover Policy for Failover Cluster Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -12,9 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "flexible failover policy"
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 45
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Failover Policy for Failover Cluster Instances

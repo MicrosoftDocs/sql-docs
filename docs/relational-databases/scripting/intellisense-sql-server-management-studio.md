@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.technology: scripting
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91

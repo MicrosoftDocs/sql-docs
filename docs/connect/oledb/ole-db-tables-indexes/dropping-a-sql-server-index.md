@@ -2,10 +2,10 @@
 title: "Dropping a SQL Server Index | Microsoft Docs"
 description: "Dropping a sql server index using OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-tables-indexes"
+ms.component: "oledb|ole-db-tables-indexes"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -23,6 +23,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Dropping a SQL Server Index
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The OLE DB Driver for SQL Server exposes the **IIndexDefinition::DropIndex** function. This allows consumers to remove an index from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table.  
   

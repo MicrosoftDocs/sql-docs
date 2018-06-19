@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|xml"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -128,7 +127,7 @@ GO
 ```  
   
 ### C. Inserting attributes into a document  
- The following example illustrates how attributes are inserted in a document.First, a document is assigned to an **xml** type variable. Then, a series of **insert** XML DML statements is used to insert attributes into the document. After each attribute insertion, the SELECT statement displays the result.  
+ The following example illustrates how attributes are inserted in a document. First, a document is assigned to an **xml** type variable. Then, a series of **insert** XML DML statements is used to insert attributes into the document. After each attribute insertion, the SELECT statement displays the result.  
   
 ```  
 USE AdventureWorks;  

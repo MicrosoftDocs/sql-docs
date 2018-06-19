@@ -3,8 +3,6 @@ title: "Remove a Secondary Database from a Log Shipping Configuration (SQL Serve
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: "log-shipping"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -18,8 +16,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], secondary databases"
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 caps.latest.revision: 19
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Remove a Secondary Database from a Log Shipping Configuration (SQL Server)

@@ -3,12 +3,9 @@ title: "Audit Fulltext Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "event-classes"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a

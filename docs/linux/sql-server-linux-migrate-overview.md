@@ -7,10 +7,9 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: "sql-linux"
 ---

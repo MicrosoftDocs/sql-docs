@@ -2,10 +2,10 @@
 title: "Initialization and Authorization Properties | Microsoft Docs"
 description: "Initialization and authorization properties"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-data-source-objects"
+ms.component: "oledb|ole-db-data-source-objects"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -22,7 +22,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Initialization and Authorization Properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The OLE DB Driver for SQL Server interprets OLE DB initialization and authorization properties as follows:  
   

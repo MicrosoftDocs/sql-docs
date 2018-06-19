@@ -3,18 +3,15 @@ title: "Navigate SQL Server PowerShell Paths | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "powershell"
-ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: scripting
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Navigate SQL Server PowerShell Paths

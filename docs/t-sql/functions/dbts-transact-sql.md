@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -27,7 +26,7 @@ manager: craigg
 # &#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Returns the value of the current **timestamp** data type for the current database. This timestamp is guaranteed to be unique in the database.
+This function returns the value of the current **timestamp** data type for the current database. The current database will have a guaranteed unique timestamp value.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -41,12 +40,12 @@ Returns the value of the current **timestamp** data type for the current databas
 **varbinary**
   
 ## Remarks  
-@@DBTS returns the last-used timestamp value of the current database. A new timestamp value is generated when a row with a **timestamp** column is inserted or updated.
+@@DBTS returns the last-used timestamp value of the current database. An insert or update of a row with a **timestamp** column generates a new timestamp value.
   
-The @@DBTS function is not affected by changes in the transaction isolation levels.
+Changes to the transaction isolation levels do  not affect the @@DBTS function.
   
 ## Examples  
-The following example returns the current **timestamp** from the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+This example returns the current **timestamp** from the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
 ```sql
 USE AdventureWorks2012;  

@@ -68,12 +68,6 @@ Now that you've wrapped the R function in a stored procedure, you can easily cal
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
-## Related resources
-
-+ Would you like to install more R packages, to get more advanced statistical functions? See [Installing and managing R packages](../r/installing-and-managing-r-packages.md).
-
-+ To help you convert your standalone R code to a format that can be easily parameterized using SQL Server stored procedures, the Microsoft R team has provided a new R package, **sqlrutils**. For more information, see [How to Create a stored procedure using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
-
 ## Use R utility functions for troubleshooting
 
 By default, an installation of R includes the `utils` package, which provides a variety of utility functions for investigating the current R environment. This can be useful if you are finding discrepancies in the way your R code performs in SQL Server and in outside environments.

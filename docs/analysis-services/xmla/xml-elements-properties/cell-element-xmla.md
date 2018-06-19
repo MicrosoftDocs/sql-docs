@@ -27,7 +27,7 @@ manager: kfile
 </UpdateCells>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -35,7 +35,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -51,7 +51,7 @@ manager: kfile
 ## Remarks  
  For more information about updating cells, see [Updating Cells &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

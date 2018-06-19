@@ -1,10 +1,9 @@
-﻿---
+---
 title: "ISNUMERIC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -50,15 +49,15 @@ ISNUMERIC ( expression )
  **int**  
   
 ## Remarks  
- ISNUMERIC returns 1 when the input expression evaluates to a valid numeric data type; otherwise it returns 0. Valid numeric data types include the following:  
-  
-|||  
-|-|-|  
-|**int**|**numeric**|  
-|**bigint**|**money**|  
-|**smallint**|**smallmoney**|  
-|**tinyint**|**float**|  
-|**decimal**|**real**|  
+ ISNUMERIC returns 1 when the input expression evaluates to a valid numeric data type; otherwise it returns 0. Valid [numeric data types](../../t-sql/data-types/numeric-types.md) include the following:  
+
+|||
+|-|-|
+| [Exact Numerics](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**, **int**, **smallint**, **tinyint**, **bit** |
+| [Fixed Precision](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**, **numeric** |
+| [Approximate](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**, **real** |
+| [Monetary Values](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**, **smallmoney** |
+
   
 > [!NOTE]  
 >  ISNUMERIC returns 1 for some characters that are not numbers, such as plus (+), minus (-), and valid currency symbols such as the dollar sign ($). For a complete list of currency symbols, see [money and smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  

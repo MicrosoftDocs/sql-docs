@@ -1,14 +1,12 @@
-﻿---
+---
 title: "Errors | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-errors"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "OLE DB error handling, about error handling"
   - "OLE DB error handling"
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg

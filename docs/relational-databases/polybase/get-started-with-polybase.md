@@ -7,7 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: database
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 helpviewer_keywords: 
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Hadoop import, PolyBase getting started"
   - "Hadoop export, Polybase getting started"
 caps.latest.revision: 78
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg 
 ---
 # Get started with PolyBase

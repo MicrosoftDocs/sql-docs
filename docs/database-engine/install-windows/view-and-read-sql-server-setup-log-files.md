@@ -3,7 +3,6 @@ title: "View and Read SQL Server Setup Log Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2016"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -19,15 +18,27 @@ helpviewer_keywords:
   - "logs [SQL Server], Setup"
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 54
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View and Read SQL Server Setup Log Files
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server Setup creates log files in a timestamped log folder within %programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log by default. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is executed in unattended mode, the logs are created within %temp%\sqlsetup*.log. All files in the logs folder are archived into the Log\*.cab file in their respective log folder.  
+SQL Server Setup creates log files in a dated and time-stamped folder within **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** by default, where *nnn* are numbers that correspond to the version of SQL that's being installed. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is executed in unattended mode, the logs are created within %temp%\sqlsetup*.log. All files in the log folder are archived into the Log\*.cab file in their respective log folder.  
+
+   | File           | Path |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **MSI Log Files** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **For unattended installations** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -41,9 +52,9 @@ SQL Server Setup creates log files in a timestamped log folder within %programfi
 3.  User-requested action: allows the user to select and customize features
   
 
-This workflow produces a single summary log, and either a single Detail log for an RTM installation, or two Detail logs for when media is slipstreamed.
+This workflow produces a single summary log, and either a single detail log for a base SQL Server installation, or two detail logs for when update, such as a service pack, is installed along with the base installation. 
   
-Datastore files contain a snapshot of the state of all the configuration objects that are being tracked by the setup process, and are useful for troubleshooting configuration errors. XML dump files are created for each execution phase and are saved in the Datastore log subfolder under the time-stamped log folder. 
+Additionally, there are datastore files that contain a snapshot of the state of all the configuration objects that are being tracked by the setup process, and are useful for troubleshooting configuration errors. XML dump files are created for each execution phase and are saved in the Datastore log subfolder under the time-stamped log folder. 
 
 The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup log files.  
   
@@ -125,6 +136,8 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 ### Location  
 The SystemConfigurationCheck_Report.htm is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## See also  
  [Install SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

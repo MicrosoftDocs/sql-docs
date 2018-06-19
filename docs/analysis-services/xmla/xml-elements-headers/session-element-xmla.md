@@ -12,7 +12,7 @@ manager: kfile
 ---
 # Session Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Uses the SOAP header in a SOAP request message to identify an existing, explicit session on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Uses the SOAP header in a SOAP request message to identify an existing, explicit session on an instance of Analysis Services.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -34,7 +34,7 @@ manager: kfile
 </soap:Envelope>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -42,7 +42,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -66,7 +66,7 @@ manager: kfile
   
  If a **Session** element is not sent as part of a SOAP request, the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance implicitly begins a session for the duration of the **Discover** or **Execute** method call, and then ends that session once the method call has completed.  
   
-## See Also  
+## See also
  [EndSession Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
  [Managing Connections and Sessions &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [Headers &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  

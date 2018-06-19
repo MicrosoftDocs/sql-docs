@@ -1,20 +1,17 @@
-﻿---
+---
 title: "Executing Queries How-to Topics (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "queries [ODBC]"
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

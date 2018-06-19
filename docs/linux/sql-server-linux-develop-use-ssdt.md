@@ -1,16 +1,16 @@
 ---
 title: Develop and Deploy SQL Server databases for Linux  | Microsoft Docs
 description: 
-author: erickangMSFT 
-ms.author: erickang 
-manager: jroth
+author: rothja 
+ms.author: jroth 
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
+
 ms.component: ""
 ms.suite: "sql"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: "sql-linux"
 ---

@@ -3,12 +3,9 @@ title: "View the Windows application log (Windows) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -112,7 +112,7 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
   
 ## <a name="bkmk_publishreport"></a>To Publish the Report to the Report Server (Optional)  
   
-1.  An optional step is to publish the completed report to the native mode report server so you can view the report from Report Manager.  
+1.  An optional step is to publish the completed report to the native mode report server so you can view the report in the web portal.  
   
 2.  Click the **Project** menu and then click **tutorial Properties...**  
   

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Client-side and Server-side Formatting (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

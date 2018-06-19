@@ -4,7 +4,7 @@ description: This quickstart shows how to use SQL Operations Studio (preview) to
 ms.custom: "tools|sos"
 ms.date: "03/08/2018"
 ms.prod: sql
-ms.reviewer: "alayu; erickang; sstein"
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos

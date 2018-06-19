@@ -129,7 +129,7 @@ Data Classification:
 
 **Integration Services (IS)**
 
-- Added support to deploy packages to a [SQL Database Managed Instance](docs/ssms/https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+- Added support to deploy packages to a [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 
 
 

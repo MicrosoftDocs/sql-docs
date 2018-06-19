@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "tsql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -46,10 +45,9 @@ helpviewer_keywords:
   - "index rebuild [SQL Server]"
   - "index reorganize [SQL Server]"
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
-author: edmacauley
-ms.author: edmaca
-manager: craigg 
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER INDEX (Transact-SQL)

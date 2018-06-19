@@ -12,7 +12,7 @@ manager: kfile
 ---
 # BeginSession Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Uses a SOAP header in a SOAP request message to start a new session on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Uses a SOAP header in a SOAP request message to start a new session on an instance of Analysis Services.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -33,7 +33,7 @@ manager: kfile
 </soap:Envelope>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -41,7 +41,7 @@ manager: kfile
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -53,7 +53,7 @@ manager: kfile
   
  If the **BeginSession** header element is not sent, a session is not explicitly started. If a session is not explicitly started, transactions on that session cannot be managed. In other words, you cannot use the following XML for Analysis (XMLA) commands: [BeginTransaction](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md), and [RollbackTransaction](../../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md). All XMLA methods and commands executed on an implicitly started session are considered to be atomic transactions.  
   
-## See Also  
+## See also
  [EndSession Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
  [Session Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)   
  [Managing Connections and Sessions &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

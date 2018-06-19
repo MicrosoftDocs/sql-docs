@@ -1,8 +1,6 @@
 ---
 title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "03/01/2018"
 ms.reviewer: ""

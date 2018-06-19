@@ -1,10 +1,9 @@
-﻿---
+---
 title: "Communicating with SQL Server (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-communication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

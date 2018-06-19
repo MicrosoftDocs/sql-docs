@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, API support for table-valued parameters"
   - "table-valued parameters (ODBC), API support"
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

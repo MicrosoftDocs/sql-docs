@@ -1,14 +1,12 @@
-﻿---
+---
 title: "BLOBs and OLE Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-blobs"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, BLOBs"
   - "large data, OLE objects"
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg

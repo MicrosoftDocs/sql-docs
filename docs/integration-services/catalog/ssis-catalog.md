@@ -1,14 +1,12 @@
 ---
 title: "SSIS Catalog | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/30/2018"
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "service"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -24,7 +22,12 @@ manager: craigg
 
 # SSIS Catalog
   The **SSISDB** catalog is the central point for working with [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) projects that you’ve deployed to the [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server operations.  
-  
+ 
+> [!NOTE]
+> This article describes the SSIS Catalog in general, and the SSIS Catalog running on premises. You can also create the SSIS Catalog in Azure SQL Database, and deploy and run SSIS packages in Azure. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Although you can also run SSIS packages on Linux, the SSIS Catalog is not supported on Linux. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+ 
  The objects that are stored in the **SSISDB** catalog include projects, packages, parameters, environments, and operational history.  
   
  You inspect objects, settings, and operational data that are stored in the **SSISDB** catalog, by querying the views in the **SSISDB** database. You manage the objects by calling stored procedures in the **SSISDB** database or by using the UI of the **SSISDB** catalog. In many cases, the same task can be performed in the UI or by calling a stored procedure.  

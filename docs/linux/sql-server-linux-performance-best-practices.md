@@ -7,11 +7,10 @@ manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ---
 
 # Performance best practices and configuration guidelines for SQL Server 2017 on Linux

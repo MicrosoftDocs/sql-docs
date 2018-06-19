@@ -1,10 +1,9 @@
-﻿---
+---
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -113,7 +112,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *schema_name*  
  The name of the schema to which the table or view belongs.  
   
- *table_or view_name*  
+ *table_or_view_name*  
  The name of the table or view from which the rows are to be removed.  
   
  A table variable, within its scope, also can be used as a table source in a DELETE statement.  

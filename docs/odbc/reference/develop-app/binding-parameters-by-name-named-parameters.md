@@ -36,7 +36,7 @@ Certain DBMSs allow an application to specify the parameters to a stored procedu
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- In this procedure, the first parameter, @title_id, has a default value of 1. An application can use the following code to invoke this procedure such that it specifies only one dynamic parameter. This parameter is a named parameter with the name "@quote".  
+ In this procedure, the first parameter, @title_id, has a default value of 1. An application can use the following code to invoke this procedure such that it specifies only one dynamic parameter. This parameter is a named parameter with the name "\@quote".  
   
 ```  
 // Prepare the procedure invocation statement.  

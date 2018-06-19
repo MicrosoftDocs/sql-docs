@@ -1,10 +1,9 @@
-﻿---
+---
 title: "Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -44,6 +43,7 @@ Data Manipulation Language (DML) affect the information stored in the database. 
 - BULK INSERT
 - DELETE
 - INSERT
+- UPDATE
 - MERGE
 - TRUNCATE TABLE
 

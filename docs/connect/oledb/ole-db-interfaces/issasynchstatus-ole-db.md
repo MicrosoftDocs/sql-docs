@@ -2,10 +2,10 @@
 title: "ISSAsynchStatus (OLE DB) | Microsoft Docs"
 description: "ISSAsynchStatus (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-interfaces"
+ms.component: "oledb|ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -22,7 +22,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # ISSAsynchStatus (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **ISSAsynchStatus** interface exposes support for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asynchronous operations. It is an optional interface that inherits from the core OLE DB interface **IDBAsynchStatus**. In addition to the **Abort** and **GetStatus** methods inherited from **IDBAsynchStatus**, **ISSAsynchStatus** provides one new method that is used to wait until an asynchronous operation has completed or a time-out occurs.  
   

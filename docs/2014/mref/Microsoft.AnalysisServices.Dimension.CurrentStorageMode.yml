@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.AnalysisServices.Dimension.CurrentStorageMode*
+  commentId: P:Microsoft.AnalysisServices.Dimension.CurrentStorageMode*
+  href: https://msdn.microsoft.com/library/microsoft.analysisservices.dimension.currentstoragemode(v=sql.120).aspx
+  name: CurrentStorageMode
+  name.vb: CurrentStorageMode
+  fullName: Microsoft.AnalysisServices.Dimension.CurrentStorageMode*
+  fullName.vb: Microsoft.AnalysisServices.Dimension.CurrentStorageMode*

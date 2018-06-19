@@ -7,11 +7,10 @@ ms.author: meetb
 manager: craigg
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 
 helpviewer_keywords: 
   - "Linux, encrypted connections"

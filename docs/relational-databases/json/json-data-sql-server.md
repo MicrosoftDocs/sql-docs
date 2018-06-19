@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2018"
@@ -28,7 +28,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 
 JSON is a popular textual data format that's used for exchanging data in modern web and mobile applications. JSON is also used for storing unstructured data in log files or NoSQL databases such as Microsoft Azure Cosmos DB. Many REST web services return results that are formatted as JSON text or accept data that's formatted as JSON. For example, most Azure services, such as Azure Search, Azure Storage, and Azure Cosmos DB, have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between webpages and web servers by using AJAX calls. 
 
-JSON functions in SQL Server enable you to combine NoSQL and relational concepts in the same database. Now you can combine classic relational columns with columns that contain documents formatted as JSON text in the same table, parse and import JSON documents in relational structures, or format relational data to JSON text. You see see how JSON functions connect relational and NoSQL concepts in SQL Server and Azure SQL Database in the following video:
+JSON functions in SQL Server enable you to combine NoSQL and relational concepts in the same database. Now you can combine classic relational columns with columns that contain documents formatted as JSON text in the same table, parse and import JSON documents in relational structures, or format relational data to JSON text. You see how JSON functions connect relational and NoSQL concepts in SQL Server and Azure SQL Database in the following video:
 
 *JSON as a bridge between NoSQL and relational worlds*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
@@ -63,10 +63,11 @@ The next sections discuss the key capabilities that SQL Server provides with its
 ### Extract values from JSON text and use them in queries
 If you have JSON text that's stored in database tables, you can read or modify values in the JSON text by using the following built-in functions:  
     
--   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) extracts a scalar value from a JSON string.
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) extracts an object or an array from a JSON string.
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) tests whether a string contains valid JSON.
--   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) changes a value in a JSON string.
+-   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) tests whether a string contains valid JSON.
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) extracts a scalar value from a JSON string.
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) extracts an object or an array from a JSON string.
+-   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) changes a value in a JSON string.
+
 
 **Example**
   
@@ -94,8 +95,8 @@ If you must modify parts of JSON text, you can use the [JSON_MODIFY (Transact-SQ
   
 ```sql  
 DECLARE @json NVARCHAR(MAX);
-SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}';
-SET @json = JSON_MODIFY(@jsonInfo,'$.info.address[1].town','London');
+SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}}';
+SET @json = JSON_MODIFY(@json,'$.info.address[1].town','London');
 SELECT modifiedJson = @json;
 ```  
 **Results**  

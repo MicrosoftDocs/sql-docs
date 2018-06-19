@@ -7,7 +7,7 @@ ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 f1_keywords: 
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
 caps.latest.revision: 26
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # PolyBase Guide

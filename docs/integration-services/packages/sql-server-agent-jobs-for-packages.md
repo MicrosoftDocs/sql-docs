@@ -1,14 +1,12 @@
 ---
 title: "SQL Server Agent Jobs for Packages | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "packages"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -24,7 +22,12 @@ manager: craigg
 ---
 # SQL Server Agent Jobs for Packages
   You can automate and schedule the execution of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. You can schedule packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, and are stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system.  
-  
+ 
+> [!NOTE]
+> This article describes how to schedule SSIS packages in general, and how to schedule packages on premises. You can also run and schedule SSIS packages on the following platforms:
+> - **The Microsoft Azure cloud**. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) and [Schedule the execution of an SSIS package in Azure](../lift-shift/ssis-azure-schedule-packages.md).
+> - **Linux**. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md) and [Schedule SQL Server Integration Services package execution on Linux with cron](../../linux/sql-server-linux-schedule-ssis-packages.md).
+
 ## Sections in This Topic  
  This topic contains the following sections:  
   

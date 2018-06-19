@@ -1,21 +1,18 @@
-﻿---
+---
 title: "Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [ODBC]"
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -1,30 +1,17 @@
 ---
 title: "LinRegIntercept (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "LINREGINTERCEPT"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "LinRegIntercept function"
-ms.assetid: 6ef2527d-e519-4b66-b67e-131c5831234e
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # LinRegIntercept (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Calculates the linear regression of a set and returns the value of the x-intercept in the regression line, y = ax + b.  
   

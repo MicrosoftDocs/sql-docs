@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -73,7 +72,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
  The followng example returns the security identification number (SID) for the current security context.  
   
 ```  
-SELECT SUSER_SID('sa');  
+SELECT SUSER_SID();  
 ```  
   
 ### B. Using SUSER_SID with a specific login  

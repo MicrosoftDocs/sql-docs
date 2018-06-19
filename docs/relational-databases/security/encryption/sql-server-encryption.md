@@ -1,14 +1,12 @@
-﻿---
+---
 title: "SQL Server Encryption | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], about cryptography"
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -74,7 +73,7 @@ AS condition_expression
 ## Remarks  
  CREATE RULE cannot be combined with other [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a single batch. Rules do not apply to data already existing in the database at the time the rules are created, and rules cannot be bound to system data types.  
   
- A rule can be created only in the current database. After you create a rule, execute **sp_bindrule** to bind the rule to a column or to alias data type. A rule must be compatible with the column data type. For example, "@value LIKE A%" cannot be used as a rule for a numeric column. A rule cannot be bound to a **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR user-defined type, or **timestamp**column. A rule cannot be bound to a computed column.  
+ A rule can be created only in the current database. After you create a rule, execute **sp_bindrule** to bind the rule to a column or to alias data type. A rule must be compatible with the column data type. For example, "\@value LIKE A%" cannot be used as a rule for a numeric column. A rule cannot be bound to a **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR user-defined type, or **timestamp**column. A rule cannot be bound to a computed column.  
   
  Enclose character and date constants with single quotation marks (') and precede binary constants with 0x. If the rule is not compatible with the column to which it is bound, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] returns an error message when a value is inserted, but not when the rule is bound.  
   

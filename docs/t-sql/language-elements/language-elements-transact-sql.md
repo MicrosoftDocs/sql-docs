@@ -1,10 +1,9 @@
-﻿---
+---
 title: "Language Elements (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql

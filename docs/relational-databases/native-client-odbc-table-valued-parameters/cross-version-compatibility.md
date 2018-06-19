@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), cross-version compatibility"
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

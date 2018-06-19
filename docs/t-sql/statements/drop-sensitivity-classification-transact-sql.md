@@ -4,6 +4,7 @@ ms.date: "06/17/2018"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: "sql-database"
+ms.service: "sql-database"
 ms.technology: t-sql
 ms.suite: "sql"
 ms.tgt_pltfrm: ""

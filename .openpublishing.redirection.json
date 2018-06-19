@@ -3722,6 +3722,21 @@
         "source_path": "docs/relational-databases/security/microsoft-sql-and-the-gdpr-requirements.md",
         "redirect_url": "/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/integration-services/connection-manager/connect-to-an-excel-workbook.md",
+        "redirect_url": "/sql/integration-services/load-data-to-from-excel-with-ssis",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/integration-services/connection-manager/connect-to-an-access-database.md",
+        "redirect_url": "/sql/integration-services/connection-manager/integration-services-ssis-connections",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/integration-services/connection-manager/connect-to-a-dbase-or-other-dbf-file.md",
+        "redirect_url": "/sql/integration-services/connection-manager/integration-services-ssis-connections",
+        "redirect_document_id": false
       }
       
     ]

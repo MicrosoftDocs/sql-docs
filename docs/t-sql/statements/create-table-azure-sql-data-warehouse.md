@@ -6,7 +6,6 @@ ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
-ms.component: "t-sql|statements"
 ms.suite: "sql"
 ms.technology: t-sql
 ms.tgt_pltfrm: ""

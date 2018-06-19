@@ -5,11 +5,9 @@ ms.date: "05/01/2018"
 ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 

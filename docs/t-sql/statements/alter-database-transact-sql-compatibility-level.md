@@ -136,7 +136,7 @@ From an application perspective, the goal should still be to upgrade to the late
 For more details, including the recommended workflow for upgrading database compatibility level, see the [Best Practices for upgrading Database Compatibility Level](#best-practices-for-upgrading-database-compatibility-evel) later in the article.  
   
 > [!IMPORTANT]
-> Discontinued functionality introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not protected by compatibility level. This refers to fucntionality that was removed from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
+> Discontinued functionality introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not protected by compatibility level. This refers to functionality that was removed from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > 
 > For example, the `FASTFIRSTROW` hint was discontinued in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and replaced with the `OPTION (FAST n )` hint. Setting the database compatibility level to 110 will not restore the discontinued hint.
 > For more information on discontinued functionality, see [Discontinued Database Engine Functionality in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Discontinued Database Engine Functionality in SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Discontinued Database Engine Functionality in SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)), and [Discontinued Database Engine Functionality in SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).

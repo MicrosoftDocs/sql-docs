@@ -31,7 +31,7 @@ SQL Server 2017
 
 For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
 
-## R Script runtime error (SQL Server 2017 CU5-CU7 Regression)
+### R Script runtime error (SQL Server 2017 CU5-CU7 Regression)
 
 For SQL Server 2017, in cumulative updates 5 through 7, there is a regression in the **rlauncher.config** file where the temp directory file path includes a space. This regression is corrected in CU8.
 

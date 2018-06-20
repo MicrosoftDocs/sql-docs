@@ -251,8 +251,8 @@ For more information about the components and procedures described in this artic
 [Working with Excel Files with the Script Task](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### About the SQL Server Import and Export Wizard
-[Connect to an Excel Data Source](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Connect to an Excel Data Source](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md?view=sql-server-2017)  
+[Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md?view=sql-server-2017)
 
 ### Other articles
-[Import data from Excel to SQL Server or Azure SQL Database](../../relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[Import data from Excel to SQL Server or Azure SQL Database](../../relational-databases/import-export/import-data-from-excel-to-sql.md?view=sql-server-2017)  

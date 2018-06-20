@@ -45,14 +45,21 @@ The error you will see when running R script includes the following messages:
 
 **Workaround**
 
-Apply CU8 when it becomes available. Alternatively, you can recreate **rlauncher.config** by running **registerrext** with uninstall/install. The following example shows the default instance. You can replace "MSSQL14.MSSQLSERVER" with a named instance, if applicable:
+Apply CU8 when it becomes available. Alternatively, you can recreate **rlauncher.config** by running **registerrext** with uninstall/install on an elevated command prompt. 
+
+```text
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /uninstall /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /install /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+```
+
+The following example shows the commands with the default instance "MSSQL14.MSSQLSERVER" installed into "C:\Program Files\Microsoft SQL Server\":
 
 ```text
 "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /uninstall /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
 
 "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /install /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
 ```
-
 
 ### Unable to install SQL Server machine learning features on a domain controller
 

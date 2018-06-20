@@ -1,1 +1,1 @@
-![Download](../ssdt/media/download.png)[Download OLE DB Driver](https://go.microsoft.com/fwlink/?linkid=871294)
+![Download](../ssdt/media/download.png)[Download OLE DB Driver](../connect/oledb/download-oledb-driver-for-sql-server.md)

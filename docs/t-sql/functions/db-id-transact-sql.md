@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -48,6 +47,9 @@ The name of the database whose database ID number `DB_ID` will return. If the ca
   
 ## Return types
 **int**
+
+## Remarks
+`DB_ID` may only be used to return the database identifier of the current database in Azure SQL Database. NULL is returned if the specified database name is other than the current database.
   
 ## Permissions  
 If the caller of `DB_ID` does not own a specific non-**master** or non-**tempdb** database, `ALTER ANY DATABASE` or `VIEW ANY DATABASE` server-level permissions at minimum are required to see the corresponding `DB_ID` row. For the **master** database, `DB_ID` needs `CREATE DATABASE` permission at minimum. The database to which the caller connects will always appear in **sys.databases**.

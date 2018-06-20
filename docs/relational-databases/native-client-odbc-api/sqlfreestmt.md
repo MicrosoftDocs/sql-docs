@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "11/23/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-api"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

@@ -1,10 +1,9 @@
-﻿---
+---
 title: "STDEV (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -38,8 +37,8 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-STDEV ( [ ALL | DISTINCT ] expression )   
-   OVER ( [ partition_by_clause ] order_by_clause )    
+STDEV ( [ ALL | DISTINCT ] expression )
+   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
   
 ```  

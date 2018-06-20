@@ -1,10 +1,9 @@
 ﻿---
 title: "ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/12/2017"
+ms.date: "06/18/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -30,7 +29,7 @@ manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Changes the private key used to encrypt a certificate, or adds one if none is present. Changes the availability of a certificate to [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -53,7 +52,7 @@ ALTER CERTIFICATE certificate_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -90,7 +89,7 @@ ALTER CERTIFICATE certificate_name
   
  When the private key of a certificate that already exists in the database is imported from a file, the private key will be automatically protected by the database master key. To protect the private key with a password, use the ENCRYPTION BY PASSWORD phrase.  
   
- The REMOVE PRIVATE KEY option will delete the private key of the certificate from the database. You can do this when the certificate will be used to verify signatures or in [!INCLUDE[ssSB](../../includes/sssb-md.md)] scenarios that do not require a private key. Do not remove the private key of a certificate that protects a symmetric key.  
+ The REMOVE PRIVATE KEY option will delete the private key of the certificate from the database. You can remove the private key when the certificate will be used to verify signatures or in [!INCLUDE[ssSB](../../includes/sssb-md.md)] scenarios that do not require a private key. Do not remove the private key of a certificate that protects a symmetric key.  
   
  You do not have to specify a decryption password when the private key is encrypted by using the database master key.  
   

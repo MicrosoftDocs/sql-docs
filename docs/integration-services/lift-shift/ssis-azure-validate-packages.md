@@ -7,9 +7,10 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: integration-services  - "integration-services"
-author: "douglaslMS"
-ms.author: "douglasl"
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
 # Validate SQL Server Integration Services (SSIS) packages deployed to Azure

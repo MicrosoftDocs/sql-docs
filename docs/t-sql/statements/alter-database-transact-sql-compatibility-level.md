@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -133,10 +132,10 @@ To upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to 
 The *database compatibility level* setting affects behaviors only for the specified database, not for the entire server. Database compatibility level provides only partial backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 Starting with compatibility mode 130, any new query plan affecting features have been intentionally added only to the new compatibility level. This has been done in order to minimize the risk during upgrades that arise from performance degradation due to query plan changes.   
 From an application perspective, the goal should still be to upgrade to the latest compatibility level at some point in time, in order to inherit some of the new features, as well as performance improvements done in the query optimizer space, but to do so in a controlled way. Use the lower compatibility level as a safer migration aid to work around version differences, in the behaviors that are controlled by the relevant compatibility level setting. 
-For more details, including the recommended workflow for upgrading database compatibility level, see the [Best Practices for upgrading Database Compatibility Level](#best-practices-for-upgrading-database-compatibility-evel) later in the article.  
+For more details, including the recommended workflow for upgrading database compatibility level, see the [Best Practices for upgrading Database Compatibility Level](#best-practices-for-upgrading-database-compatibility-level) later in the article.  
   
 > [!IMPORTANT]
-> Discontinued functionality introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not protected by compatibility level. This refers to fucntionality that was removed from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
+> Discontinued functionality introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not protected by compatibility level. This refers to functionality that was removed from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > 
 > For example, the `FASTFIRSTROW` hint was discontinued in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and replaced with the `OPTION (FAST n )` hint. Setting the database compatibility level to 110 will not restore the discontinued hint.
 > For more information on discontinued functionality, see [Discontinued Database Engine Functionality in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Discontinued Database Engine Functionality in SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Discontinued Database Engine Functionality in SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)), and [Discontinued Database Engine Functionality in SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).

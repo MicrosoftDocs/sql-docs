@@ -7,9 +7,10 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: integration-services  - "integration-services"
-author: "douglaslMS"
-ms.author: "douglasl"
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
 # Lift and shift SQL Server Integration Services workloads to the cloud
@@ -63,6 +64,8 @@ For info about the prerequisites for the Azure-SSIS Integration Runtime, see [De
 
 **Improve performance**. For more info, see [Configure the Azure-SSIS Integration Runtime for high performance](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
 
+**Reduce costs**. To reduce costs, run the Azure-SSIS IR only when you need it. For more info, see [How to schedule starting and stopping of an Azure SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime).
+
 ## Design packages
 
 You continue to **design and build packages** on-premises in SSDT, or in Visual Studio with SSDT installed.
@@ -77,7 +80,7 @@ For info about how to connect to files and file shares, see [Open and save files
 
 When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to various **Azure** data sources and to **Excel and Access** files, in addition to the data sources supported by the built-in components.
 
-You can also install additional components - for example, you can install a driver that's not installed by default. For more info, see [Custom setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md).
+You can also install additional components - for example, you can install a driver that's not installed by default. For more info, see [Custom setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 If you're an ISV, you can update the installation of your licensed components to make them available on Azure. For more info, see [Develop paid or licensed custom components for the Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components).
 

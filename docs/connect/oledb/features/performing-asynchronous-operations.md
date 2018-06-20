@@ -2,7 +2,7 @@
 title: "Performing Asynchronous Operations | Microsoft Docs"
 description: "Performing asynchronous operations with OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb|features"
@@ -25,7 +25,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Performing Asynchronous Operations
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] allows applications to perform asynchronous database operations. Asynchronous processing enables methods to return immediately without blocking on the calling thread. This allows much of the power and flexibility of multithreading, without requiring the developer to explicitly create threads or handle synchronization. Applications request asynchronous processing when initializing a database connection, or when initializing the result from the execution of a command.  
   

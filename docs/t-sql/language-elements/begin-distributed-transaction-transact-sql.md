@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "11/29/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql

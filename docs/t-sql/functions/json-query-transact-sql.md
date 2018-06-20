@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-json"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "JSON, querying"
   - "JSON_QUERY function"
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
-caps.latest.revision: 19
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl

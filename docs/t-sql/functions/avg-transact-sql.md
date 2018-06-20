@@ -1,10 +1,9 @@
-﻿---
+---
 title: "AVG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -39,7 +38,7 @@ This function returns the average of the values in a group. It ignores null valu
   
 ```sql
 AVG ( [ ALL | DISTINCT ] expression )  
-   OVER ( [ partition_by_clause ] order_by_clause )    
+   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
   
 ## Arguments  

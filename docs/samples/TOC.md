@@ -1,4 +1,5 @@
 # [Samples Overview](sql-samples-where-are.md)
+# [All Github Samples + ](https://github.com/Microsoft/sql-server-samples/tree/master/samples)
 # AdventureWorks
 ## [Install and configure](adventureworks-install-configure.md)
 
@@ -16,4 +17,3 @@
 ### [ETL workflow](wide-world-importers-perform-etl.md)
 
 ## [New and updated articles](new-updated-samples.md) 
-# [Code Samples on GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples)

@@ -18,6 +18,7 @@ The following version of the Microsoft OLE DB Driver for SQL Server is available
  * [Microsoft OLE DB Driver 18.0 for SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)
 
 ## See also
+[Release notes for the Microsoft OLE DB Driver for SQL Server](release-notes-for-oledb-driver-for-sql-server.md)  
 [System Requirements for OLE DB Driver for SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  
 [When to use OLE DB Driver for SQL Server](when-to-use-oledb-driver-for-sql-server.md)  
 [Installing OLE DB Driver for SQL Server](applications/installing-oledb-driver-for-sql-server.md)

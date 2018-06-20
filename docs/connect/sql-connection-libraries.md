@@ -8,7 +8,7 @@ ms.prod_service: connectivity
 ms.technology: "dbe-data-tier-apps"
 ms.custom: ""
 ms.topic: article
-ms.date: 04/10/2018
+ms.date: 06/18/2018
 ms.author: genemi
 ---
 # Connection modules for Microsoft SQL databases
@@ -46,7 +46,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Language | Download the SQL driver |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core, for Windows](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js driver, install instructions](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |

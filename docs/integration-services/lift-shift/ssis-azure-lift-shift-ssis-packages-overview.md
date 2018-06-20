@@ -8,8 +8,9 @@ ms.prod_service: "integration-services"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
 # Lift and shift SQL Server Integration Services workloads to the cloud
@@ -62,6 +63,8 @@ For info about the prerequisites for the Azure-SSIS Integration Runtime, see [De
 -   The maximum parallel executions per node.
 
 **Improve performance**. For more info, see [Configure the Azure-SSIS Integration Runtime for high performance](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
+
+**Reduce costs**. To reduce costs, run the Azure-SSIS IR only when you need it. For more info, see [How to schedule starting and stopping of an Azure SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime).
 
 ## Design packages
 

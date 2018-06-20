@@ -13,7 +13,7 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], failover"
 ms.assetid: 
 caps.latest.revision: 
-author: "allanhirt"
+author: "MashaMSFT"
 ms.reviewer: "mikeray"
 ms.author: mathoma
 manager: craigg

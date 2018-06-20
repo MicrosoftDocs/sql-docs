@@ -29,7 +29,7 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 
 Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
 
-- Database engine - Intelligent query processor
+- Database engine - Intelligent query processing
 - SQL Server on Linux
   - Replication support
   - Active Directory Impersonation
@@ -37,27 +37,26 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - SQL Server Machine Learning Services - High availability with Windows Server failover cluster
 - Security 
   - Always Encrypted with enclaves
-  - Database scoped default setting for online and resumeable DDL operations 
+  - Database scoped default setting for online and resumable DDL operations 
 
 
 Continue reading for more details about these features.
 
 ## Database Engine
 
-### Intelligent query processor 
+### Intelligent query processing 
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. 
 
-  <!-- 
-  To enable the public preview of row mode memory grant feedback, enable database compatibility level 150 for the database you are connected to when executing the query.
-  
-  **IsMemoryGrantFeedbackAdjusted** and **LastRequestedMemory** attributes are added to the `MemoryGrantInfo` query plan XML element. These execution plan attributes provide better visibility into the current state of a memory grant feedback operation for both row and batch mode. **IsMemoryGrantFeedbackAdjusted** attribute allows you to check the state of memory grant feedback for the statement within an actual query execution plan. **LastRequestedMemory** attribute shows the granted memory in Kilobytes (KB) from the prior query execution.-->
+- **Approximate COUNT DISTINCT** returns the approximate number of unique non-null values in a group. This function is designed for use in big data scenarios and is optimized for the following conditions:
+  - Access of data sets that are millions of rows or higher AND
+  - Aggregation of a column or columns that have a large number of distinct values
+  - Responsiveness is more critical than absolute precision.
+  In this case, `APPROXIMATE_COUNT_DISTINCT` yields results typically within 2% of the precise answer in a small fraction of the time.
 
-- **Approximate COUNT DISTINCT**
+- **Batch mode on rowstores** targets analytic queries. These queries are characterized as scanning many rows, and doing significant aggregations, sorts, and group-by operations across these rows. Batch mode has been reserved for queries which involve Columnstore indexes in previous releases. Performing scans and calculations on batches of 900 – 1000 rows at a time rather than row by row is much more efficient for queries where these sorts of operations are common.  For queries that can take advantage of it, batch mode can easily make queries execute many times faster than the same query against the same data in row mode.
 
-- **Batch mode on rowstores**
-
-- **Scalar UDF inlining** automatically transforms scalar user defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans.
+- **Scalar UDF inlining** automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations.
 
@@ -72,7 +71,7 @@ Continue reading for more details about these features.
 
   CTP 2.0 does not support configuration of replication with the user interface. Use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
   
-- **Always On Availability Group on Docker containers with Kubernetes**. Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including an **mssql-server container** and a container for a health monitoring agent. An additional **AG agent container** is deployed to each pod of the StatefulSet  to automatically create and monitor the availability group and fail over in case of health issues.
+- **Always On Availability Group on Docker containers with Kubernetes**. Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor. 
 
 - **Active Directory impersonation**
 

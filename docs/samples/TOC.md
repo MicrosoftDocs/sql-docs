@@ -1,5 +1,6 @@
 # [Samples Overview](sql-samples-where-are.md)
 # [All Github Samples + ](https://github.com/Microsoft/sql-server-samples/tree/master/samples)
+
 # AdventureWorks
 ## [Install and configure](adventureworks-install-configure.md)
 
@@ -13,7 +14,6 @@
 ### [Database catalog](wide-world-importers-dw-database-catalog.md)
 ### [Install and configure](wide-world-importers-dw-install-configure.md)
 ### [SQL Server features](wide-world-importers-dw-use-of-sql-server-features.md)
-### [Generate data](wide-world-importers-generate-data.md)
-### [ETL workflow](wide-world-importers-perform-etl.md)
-
-## [New and updated articles](new-updated-samples.md) 
+##[Generate data](wide-world-importers-generate-data.md)
+##[ETL workflow](wide-world-importers-perform-etl.md)
+#[New and updated articles](new-updated-samples.md)

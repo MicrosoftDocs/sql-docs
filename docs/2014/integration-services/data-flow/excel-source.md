@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 ## Related Tasks  
 
--   [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](load-data-to-from-excel-with-ssis.md)
+-   [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
 
 -   [Map Query Parameters to Variables in a Data Flow Component](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   

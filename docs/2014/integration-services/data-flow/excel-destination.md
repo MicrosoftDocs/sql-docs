@@ -95,7 +95,7 @@ manager: "jhubbard"
   
 ## Related Tasks  
   
--   [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](load-data-to-from-excel-with-ssis.md)  
+-   [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
   
 -   [Loop through Excel Files and Tables by Using a Foreach Loop Container](../control-flow/foreach-loop-container.md)  
   

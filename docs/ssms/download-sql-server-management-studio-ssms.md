@@ -47,8 +47,8 @@ SSMS 17.x is the latest generation of *SQL Server Management Studio* and provide
 **Version Information**
 
 Release number: 17.8<br>
-Build number: 14.0.17254.0<br>
-Release date: June 19, 2018
+Build number: 14.0.17276.0<br>
+Release date: June 21, 2018
 
 The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 17*, and has a new icon: 
@@ -96,6 +96,10 @@ Scripting:
 
 - General performance improvements, especially over high-latency connections.
 	
+**Analysis Servics (AS)**
+
+- Analysis Services client libraries and data providers updated to the latest version, which added support for the new Azure Government AAD authority (login.microsoftonline.us).
+
 
 ## Supported SQL offerings
 

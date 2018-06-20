@@ -25,7 +25,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## [SSMS 17.8](download-sql-server-management-studio-ssms.md)
 
-Build number: 14.0.?????.0<br>
+Build number: 14.0.17276.0<br>
 Release date: June 21, 2018
 
 ### What's new
@@ -44,6 +44,11 @@ Scripting:
 
 - General performance improvements, especially over high-latency connections.
 	
+**Analysis Servics (AS)**
+
+- Analysis Services client libraries and data providers updated to the latest version, which added support for the new Azure Government AAD authority (login.microsoftonline.us).
+
+
 
 ### Bug fixes
 
@@ -65,6 +70,12 @@ Always Encrypted:
 
 - Fixed an issue (in DacFx) which was causing a lock timeout error when enabling Always Encrypted on a partitioned table
 	
+
+**Analysis Services (AS)**
+
+- Fixed an issue that occurred when modifying an OAuth datasource in a Tabular Analysis Services 1400-level compatibility model, which caused the changes in the OAuth tokens to not get updated in the data source.
+- Fixed a crash in SSMS that may have occurred when using some invalid data source credentials or editing data sources that didn't support Change Data Source migration in Power Query (for example, Oracle) in Analysis Services Tabular 1400-level compatibility models.
+
 
 ### Known issues
 

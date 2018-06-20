@@ -86,7 +86,7 @@
 #### [Create for read-scale only]()
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
 #### [Configure cross-platform (Windows and Linux)](sql-server-linux-availability-group-cross-platform.md)
-### [Containers with Kubernetes](sql-server-linaux-containter-ha-overview.md)
+### [Containers with Kubernetes](sql-server-linux-containter-ha-overview.md)
 #### [Configure with shared disk](tutorial-sql-server-containers-kubernetes.md)
 #### [Configure with availability group](tutorial-sql-server-ag-kubernetes.md)
 ##### [Failover replica]()

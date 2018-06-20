@@ -130,6 +130,13 @@ To upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to 
 
 ## Using Compatibility Level for Backward Compatibility  
 The *database compatibility level* setting affects behaviors only for the specified database, not for the entire server. Database compatibility level provides only partial backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+
+> [!TIP]
+> Because *database compatibility level* is a database-level setting, an application running on a newer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] while using an older database compatibility level, can still leverage server-level enhancements without any requirement for application changes.
+>
+> These include rich monitoring and troubleshooting improvements, with new [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) and [Extended Events](../../relational-databases/extended-events/extended-events.md). And also improved scalability, for example with [Automatic Soft-NUMA
+](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+
 Starting with compatibility mode 130, any new query plan affecting features have been intentionally added only to the new compatibility level. This has been done in order to minimize the risk during upgrades that arise from performance degradation due to query plan changes.   
 From an application perspective, the goal should still be to upgrade to the latest compatibility level at some point in time, in order to inherit some of the new features, as well as performance improvements done in the query optimizer space, but to do so in a controlled way. Use the lower compatibility level as a safer migration aid to work around version differences, in the behaviors that are controlled by the relevant compatibility level setting. 
 For more details, including the recommended workflow for upgrading database compatibility level, see the [Best Practices for upgrading Database Compatibility Level](#best-practices-for-upgrading-database-compatibility-level) later in the article.  

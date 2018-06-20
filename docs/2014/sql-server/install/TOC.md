@@ -134,7 +134,6 @@
 ### [Upgrading will change the SQL Server Agent User Proxy Account to the temporary UpgradedProxyAccount](upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)
 
 # [Setup and Servicing Installation](setup-and-servicing-installation.md)
-## [About the SQL Server License Terms](about-the-sql-server-license-terms.md)
 ## [Licensing Considerations for SQL Server](licensing-considerations-for-sql-server.md)
 # [Overview of SQL Server Setup Documentation](overview-of-sql-server-setup-documentation.md)
 # [SQL Server 2014 Setup User Interface](sql-server-2014-setup-user-interface.md)
@@ -209,9 +208,8 @@
 ## [Verify Uninstall Options](verify-uninstall-options.md)
 
 # [SQL Server Servicing Installation](sql-server-servicing-installation.md)
-## [Installing Updates from the Command Prompt](installing-updates-from-the-command-prompt.md)
+## [Installing Updates from the Command Prompt](../../database-engine/install-windows/installing-updates-from-the-command-prompt.md)
 ## [How to: Validate Successful Installation of a SQL Server Update](how-to-validate-successful-installation-of-a-sql-server-update.md)
-## [Getting SQL Server Assistance](getting-sql-server-assistance.md)
 ## [Overview of SQL Server Servicing Installation](overview-of-sql-server-servicing-installation.md)
 ## [Welcome](welcome.md)
 ## [License terms](license-terms.md)

@@ -89,7 +89,7 @@ Follow the below steps to attach the datafile for your database using SQL Server
 3. Select **Add** and navigate to the .MDF file you want to attach. 
 1. Select the file and click **OK**. 
     1. The database you selected should be displayed in the bottom window. If the file is listed as "not found",  select the ellipses next to the file name and update the path to the correct path. 
-    1. If you only have the datafile (.mdf), and not the log file (.ldf), then highlight the .ldf in the bottom window and select **Remove**. This will create a new log file. 
+    1. If you only have the data file (.mdf), and not the log file (.ldf), then highlight the .ldf in the bottom window and select **Remove**. This will create a new log file. 
 1. Select **OK** to attach the file. After the file is attached, you will have the AdventureWorks database installed on your SQL Server instance.  
 
 For more information on attaching database files, see [Attach a database](../relational-databases/databases/attach-a-database.md). 
@@ -97,8 +97,7 @@ For more information on attaching database files, see [Attach a database](../rel
 ## Install to Azure SQL Database
 
 
-If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server.
-   - See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes
+If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server. See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes
 
 1. Connect to your Azure Portal.
 1. Select **Create a resource** in the top left of the navigation pane. 

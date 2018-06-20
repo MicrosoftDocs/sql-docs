@@ -77,7 +77,7 @@ To restore a backup to a SQL Server instance, you can use Management Studio.
 3. Select **Device** and click on the button **...**
 4. In the dialog **Select backup devices**, click **Add**, navigate to the database backup in the filesystem of the server, and select the backup. Click **OK**.
 5. If needed, change the target location for the data and log files, in the **Files** pane. Note that it is best practice to place data and log files on different drives.
-6. Click **OK**. This will initiate the database restore. After it completes, you will have the database WideWorldImporters installed on your SQL Server instance.
+6. Click **OK**. This will initiate the database restore. After it completes, you will have the database AdventureWorks database installed on your SQL Server instance.
 
 For more information on restoring a SQL Server database, see [Restore a database backup using SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
@@ -99,7 +99,7 @@ For more information on attaching database files, see [Attach a database](../rel
 
 To import a bacpac into a new SQL Database, you can use Management Studio.
 
-1. (optional) If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server.
+1. (optional) If you do not yet have a SQL Server in Azure, navigate to the Azure portal, and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server.
    - See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes
 2. Open SQL Server Management Studio and connect to your server in Azure.
 3. Right-click on the **Databases** node, and select **Import Data-Tier Application**.

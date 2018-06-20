@@ -95,7 +95,9 @@ manager: "jhubbard"
  For information about looping through a group of Excel files, see [Loop through Excel Files and Tables by Using a Foreach Loop Container](../control-flow/foreach-loop-container.md).  
   
 ## Related Tasks  
-  
+
+-   [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](load-data-to-from-excel-with-ssis.md)
+
 -   [Map Query Parameters to Variables in a Data Flow Component](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
 -   [Set the Properties of a Data Flow Component](set-the-properties-of-a-data-flow-component.md)  

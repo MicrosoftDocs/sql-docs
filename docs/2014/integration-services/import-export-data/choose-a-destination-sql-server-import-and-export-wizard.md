@@ -29,9 +29,6 @@ manager: "jhubbard"
  Choose the data provider that matches the data storage format of the destination. There may be more than one provider available for your data source. For example, with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, the .NET Framework Data Provider for SQL Server, or the Microsoft OLE DB Provider for SQL Server.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, the data source requires a different data source provider than earlier versions of Excel or Access. For more information, see [Connect to an Excel Workbook](../connection-manager/connect-to-an-excel-workbook.md) and [Connect to an Access Database](../connection-manager/connect-to-an-access-database.md).  
-  
-> [!NOTE]  
 >  To save data to an ODBC destination, select the .NET Framework Data Provider for ODBC.  
   
  The **Data Source** property has a variable number of options, which change depending on the providers installed on the computer. The following tables list the options for some commonly used destinations. For other providers, see the provider-specific documentation.  

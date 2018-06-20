@@ -53,6 +53,7 @@
 ### [Complete the Wizard (SSIS Package Upgrade Wizard)](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ### [Upgrading the Packages (SSIS Package Upgrade Wizard)](upgrading-the-packages-ssis-package-upgrade-wizard.md)
 ## [SQL Server Import and Export Wizard +](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+## [Import from or export to Excel](load-data-to-from-excel-with-ssis.md)
 ## [Troubleshooting Tools for Package Development +](troubleshooting/troubleshooting-tools-for-package-development.md)
 ## [Events Logged by an Integration Services Package](performance/events-logged-by-an-integration-services-package.md)
 ## [View Log Entries in the Log Events Window](view-log-entries-in-the-log-events-window.md)

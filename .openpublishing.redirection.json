@@ -3737,7 +3737,22 @@
         "source_path": "docs/integration-services/connection-manager/connect-to-a-dbase-or-other-dbf-file.md",
         "redirect_url": "/sql/integration-services/connection-manager/integration-services-ssis-connections",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/2014/integration-services/connection-manager/connect-to-an-excel-workbook.md",
+        "redirect_url": "/sql/integration-services/load-data-to-from-excel-with-ssis?view=sql-server-2014",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/2014/integration-services/connection-manager/connect-to-an-access-database.md",
+        "redirect_url": "/sql/integration-services/connection-manager/integration-services-ssis-connections?view=sql-server-2014",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/2014/integration-services/connection-manager/connect-to-a-dbase-or-other-dbf-file.md",
+        "redirect_url": "/sql/integration-services/connection-manager/integration-services-ssis-connections?view=sql-server-2014",
+        "redirect_document_id": false
       }
-      
+     
     ]
 }

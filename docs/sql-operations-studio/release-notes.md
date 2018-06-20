@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "05/08/2018"
+ms.date: "06/20/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -16,7 +16,34 @@ manager: craigg
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download the May Public Preview](download.md)**
+**[Download the June Public Preview](download.md)**
+
+
+## June 2018 (June Public Preview)
+
+release date: June 20, 2018  
+version: 0.30.6
+
+The *June Public Preview* contains the following highlights:  
+
+- **SQL Server Profiler for SQL Operations Studio *Preview*** extension initial release.
+- The new **SQL Data Warehouse** extension includes rich customizable dashboard widgets surfacing insights to your data warehouse. This unlocks key scenarios around managing and tuning your data warehouse to ensure it is optimized for consistent performance.
+- **Edit Data "Filtering and Sorting"** support.
+- **SQL Server Agent for SQL Operations Studio *Preview*** extension enhancements for Jobs and Job History views.
+- Improved **Wizard & Dialog UI Builder Framework** extensibility APIs.
+- Update VS Code Platform source code integrating [March 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) and [April 2018 (1.23)](https://code.visualstudio.com/updates/v1_23) releases.
+- Fix GitHub Issues:
+  - Feature request ([issue 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): Please make the results grid auto-fit column width to data, and/or   remember manual changes if the same query is re-run.
+  - Fix [issue 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): Should show add message and add account account button when linked account is empty.
+  - Fix [issue 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): Linked account tab is broken when the view is collapsed.
+  - Fix [issue 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): SQL Tools Service crashes when opening .sql file from disk.
+  - Fix [issue 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): Missing SQL keyword "BETWEEN".
+  - Fix [issue 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH' keyword crashes SQL Tools Service.
+  - Fix [issue 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): "New Profiler" context menu option in Object Explorer does nothing.
+  - Fix [issue 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): Query editor "Explain" query plan is broken.
+
+
+For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 ## May 2018 (May Public Preview)
@@ -41,8 +68,6 @@ The *May Public Preview* is focused on stabilization and bug fixes. This build c
    - Fix [issue 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent extension and the status bar
    - Fix [issue 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent Don´t resize after change windows size
 
-
-For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 

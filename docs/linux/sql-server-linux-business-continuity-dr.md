@@ -1,7 +1,7 @@
 ﻿---
 title: Disaster recovery for SQL Server on Linux | Microsoft Docs
 description: 
-author: "allanhirt"
+author: "MikeRayMSFT"
 ms.author: mihaelab 
 ms.reviewer: "mikeray"
 manager: craigg

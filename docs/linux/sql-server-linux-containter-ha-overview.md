@@ -41,15 +41,13 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 
 ## Containerized SQL Server availability group
 
-SQL Server vNext supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [operator](http://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster.
+SQL Server vNext supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](http://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
 
->[ART REQUESTED(User Story 1280181: Art Request - Kubernetes Cluster SQL Server)](https://mseng.visualstudio.com/TechnicalContent/_workitems/edit/1280181)
+>[AG in Kubernetes Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
-For more information about the operator, and how it supports availability groups, keep reading!
+In the image above, a four-node kubernetes cluster host an availability group with three replicas. One node contains a Kubernetes [deployment](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployment describes the desired state for the SQL Server container on each cluster node. The description includes settings for the SQL Server container, the availability group agent, and the the health agent. These three items exist in a Kubernetes [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). The pod belongs to a Kubernetes [StatefulSet](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Each StatefulSet is configured on one node.
 
-### SQL Server agent operator
-
-The SQL Server agent operator helps package, deploy, and manage the availability group in a Kubernetes environment. Kubernetes hosts the SQL Server instances in Docker containers.
+### SQL Server Kubernetes operator
 
 After you deploy the operator it registers a custom SQL Server resource. Use the operator to deploy this resource.  Each resource corresponds to an instance of SQL Server and includes specific properties like `sapassword` and `monitoring policy`. The operator parses the resource and deploys a Kubernetes StatefulSet.
 

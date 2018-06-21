@@ -27,8 +27,8 @@
 ## [Setup and Servicing Installation +](../sql-server/install/setup-and-servicing-installation.md)
 # [Configuration Manager Help +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
 
-## [Index Design Guide](sql-server-index-design-guide.md)
-## [Transaction Locking and Row Versioning Guide](sql-server-transaction-locking-and-row-versioning-guide.md)
-## [Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management.md)
-## [Case Study: Building an Enterprise Ecosystem with Microsoft Dynamics ERP and SQL Server 2014 Replication for Scalability and Performance](case-study-building-an-enterprise-ecosystem.md)
+# [Index Design Guide](sql-server-index-design-guide.md)
+# [Transaction Locking and Row Versioning Guide](sql-server-transaction-locking-and-row-versioning-guide.md)
+# [Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management.md)
+# [Case Study: Building an Enterprise Ecosystem with Microsoft Dynamics ERP and SQL Server 2014 Replication for Scalability and Performance](case-study-building-an-enterprise-ecosystem.md)
 

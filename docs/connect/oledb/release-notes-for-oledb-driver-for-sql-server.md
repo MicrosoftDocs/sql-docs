@@ -9,6 +9,8 @@ author: David-Engel
 ms.author: v-daveng
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.

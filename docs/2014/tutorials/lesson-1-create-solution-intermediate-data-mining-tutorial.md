@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "tutorials [Data Mining]"
 ms.assetid: d8e3f89f-091c-434e-8f67-639f073edcdf
 caps.latest.revision: 25
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: "minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ---
 # Lesson 1: Creating the Intermediate Data Mining Solution (Intermediate Data Mining Tutorial)
   In the Basic Data Mining tutorial, you created an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project that contains a simple data mining solution based on the new [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database.  

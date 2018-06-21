@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "neural network model [Analysis Services]"
 ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 caps.latest.revision: 22
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: "minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ---
 # Lesson 5: Building Neural Network and Logistic Regression Models (Intermediate Data Mining Tutorial)
   

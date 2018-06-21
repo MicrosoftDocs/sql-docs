@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 caps.latest.revision: 23
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: "minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ---
 # Time Series Predictions using Updated Data (Intermediate Data Mining Tutorial)
     

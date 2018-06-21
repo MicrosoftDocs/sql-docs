@@ -12,7 +12,7 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
 caps.latest.revision: 
-author: "allanhirt"
+author: "MashaMSFT"
 ms.author: mathoma
 manager: craigg
 ---

@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 caps.latest.revision: 16
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: "minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ---
 # Lesson 2: Adding Mining Models to the Time Series Mining Structure
   In this lesson, you will add a new mining model to the mining structure that you just created in [Lesson 1: Creating a Time Series Mining Model and Mining Structure](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  

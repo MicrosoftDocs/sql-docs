@@ -35,7 +35,7 @@ In both cases, the Lookup transformation will utilize the OLE DB connection mana
   
 1.  In the **SSIS Toolbox**, expand **Common**, and then drag **Lookup** onto the design surface of the **Data Flow** tab. Place Lookup directly below the **Extract Sample Currency Data** source.  
   
-2.  Click the **Extract Sample Currency Data** flat file source and drag the green arrow onto the newly added **Lookup** transformation to connect the two components.  
+2.  Click the **Extract Sample Currency Data** flat file source and drag the blue arrow onto the newly added **Lookup** transformation to connect the two components.  
   
 3.  On the **Data Flow** design surface, click **Lookup** in the **Lookup** transformation, and change the name to **Lookup Currency Key**.  
   

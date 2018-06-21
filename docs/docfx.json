@@ -101,7 +101,7 @@
         "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
 
         "advanced-analytics/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "analysis-services/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
+        "analysis-services/**/*.md": ">= sql-analysis-services-2016 || >= sql-server-2016 || = sqlallproducts-allversions",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016 || = sqlallproducts-allversions",
         "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "database-engine/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",

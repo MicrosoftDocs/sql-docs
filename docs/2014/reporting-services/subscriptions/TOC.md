@@ -6,6 +6,7 @@
 ## [Create, Modify, and Delete a Data-Driven Subscription](create-modify-and-delete-data-driven-subscriptions.md)
 ## [Use an External Data Source for Subscriber Data](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)
 # [Create and Manage Subscriptions for Native Mode Report Servers](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+## [Create, Modify, and Delete Standard Subscriptions](../create-manage-subscriptions-native-mode-report-servers.md)
 ## [Use My Subscriptions](use-my-subscriptions-native-mode-report-server.md)
 ## [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md)
 ## [Control Report Distribution](../control-report-distribution.md)

@@ -69,7 +69,8 @@
 ## [SQL Server Management Objects (SMO) Programming Guide +](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [Windows Management Instrumentation](../database-engine/dev-guide/windows-management-instrumentation.md)
 ## [WMI Provider for Configuration Management Concepts +](wmi-provider-configuration/wmi-provider-for-configuration-management.md)
-
+## [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)
+### [FrameWindowVisible](sqltoolsvsnativehelpers-framewindowvisible.md)
 # [Database Engine Tutorials](database-engine-tutorials.md)
 ## [Tutorial: Getting Started with the Database Engine](tutorial-getting-started-with-the-database-engine.md)
 ### [Lesson 1: Connecting to the Database Engine](lesson-1-connecting-to-the-database-engine.md)

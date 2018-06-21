@@ -14,7 +14,7 @@ helpviewer_keywords:
 - "Automatic seeding [SQL Server], secondary replica"
 ms.assetid: 
 caps.latest.revision: 
-author: "allanhirt"
+author: "MashaMSFT"
 ms.author: mathoma
 manager: craigg
 ---

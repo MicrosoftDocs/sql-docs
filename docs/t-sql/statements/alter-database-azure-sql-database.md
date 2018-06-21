@@ -446,7 +446,7 @@ ALTER DATABASE db1 FAILOVER
   
 ## See also
   
-[CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-azure-sql-database.md)   
+[CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldb)   
  [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

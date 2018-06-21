@@ -639,7 +639,7 @@ For **SWITCH** restriction when using replication, see [Replicate Partitioned Ta
   
  If *partition_scheme_name* is specified, the rules for [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) apply. The table should already be partitioned for row data, and its partition scheme must use the same partition function and columns as the FILESTREAM partition scheme.  
   
- *filestream_filegroup_name* specifies the name of a FILESTREAM filegroup. The filegroup must have one file that is defined for the filegroup by using a [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement, or an error is raised.  
+ *filestream_filegroup_name* specifies the name of a FILESTREAM filegroup. The filegroup must have one file that is defined for the filegroup by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement, or an error is raised.  
   
  **"**default**"** specifies the FILESTREAM filegroup with the DEFAULT property set. If there is no FILESTREAM filegroup, an error is raised.  
   

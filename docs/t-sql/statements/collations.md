@@ -155,16 +155,16 @@ Chiapas
 ```  
   
 ### B. Additional examples  
- For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver&view=sql-server-2017#examples) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column) example **V. Changing column collation**.  
+ For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) example **V. Changing column collation**.  
   
 ## See Also  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
- [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
- [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
+ [Collation Precedence](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Constants](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)     
+ [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [Table data type](../../t-sql/data-types/table-transact-sql.md)     
   
   

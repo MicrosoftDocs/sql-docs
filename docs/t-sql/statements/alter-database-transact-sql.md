@@ -34,9 +34,17 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 # ALTER DATABASE (Transact-SQL)
 
-Modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
+Modifies a database. Where application, this statement can also be used to add or remove files and filegroups from a database, change the attributes of a database or its files and filegroups, change the database collation, and set database options. Database snapshots, where applicable, cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
    
- Because of its length, the ALTER DATABASE syntax is separated into the following topics:  
+Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+
+Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
+
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+
+
+# [SQL Server](#tab/sqlserver)
+
   
  ALTER DATABASE  
  The current topic provides the syntax for changing the name and the collation of a database.  
@@ -124,15 +132,15 @@ ALTER DATABASE { database_name  | CURRENT }
   
  When creating databases with other than the default collation, the data in the database always respects the specified collation. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], when creating a contained database, the internal catalog information is maintained using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default collation, **Latin1_General_100_CI_AS_WS_KS_SC**.  
   
- For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+ For more information about the Windows and SQL collation names, see [COLLATE](~/t-sql/statements/collations.md).  
   
  **\<delayed_durability_option> ::=**  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- For more information see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).  
+ For more information see [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).  
   
  **\<file_and_filegroup_options>::=**  
- For more information, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+ For more information, see [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
 ## Remarks  
  To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
@@ -246,19 +254,21 @@ GO
 ```  
   
 ## See Also  
-- [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-azure-sql-database.md)  
-- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
-- [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
-- [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
-- [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
-- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
-- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
-- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
-- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
-- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
-- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
-- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
-- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
-- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
+- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
+- [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+- [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)   
+- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+- [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+- [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+- [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+- [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [System Databases](../../relational-databases/databases/system-databases.md)  
   
+# [SQL Database](#tab/sqldb)
+# [SQL Data Warehouse](#tab/sqldw)
+# [SQL Parallel Data Warehouse](#tab/sqlpdw)

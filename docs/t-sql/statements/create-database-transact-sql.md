@@ -44,9 +44,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 # CREATE DATABASE
 
-Creates a new database. 
+Creates a new database. Where applicable, this statement can also be used to specific files and filegroups, create a database snapshot, create a database copy, or attach database files to create a database from the detached files of another database. 
 
-Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version.
+Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 

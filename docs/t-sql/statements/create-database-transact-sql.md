@@ -53,6 +53,8 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 # [SQL Server](#tab/sqlserver)
 
+## Overview
+
 In SQL Server, this statement creates a new database and the files used and their filegroups. It can also be used to create a database snapshot, or attach database files to create a database from the detached files of another database. 
 
 
@@ -856,6 +858,8 @@ GO
 
 # [SQL Database](#tab/sqldb)
 
+## Overview
+
 In Azure SQL Database, this statement can be used with an Azure SQL logical server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another logical server.
 
 This statement can also be used with Azure SQL Database Managed Instance to create a database. When creating a database on a Managed Instance, you specify the database name, collation, maximum size, edition, and service objective. 
@@ -1189,6 +1193,8 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 # [SQL Data Warehouse](#tab/sqldw)
 
+## Overview
+
 In Azure SQL Data Warehouse, this statement can be used with an Azure SQL logical server to create a SQL Data Warehouse database. With this statement, you specify the database name, collation, maximum size, edition, and service objective.
 
 ## Syntax  
@@ -1287,6 +1293,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 [DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
 # [SQL Parallel Data Warehouse](#tab/sqlpdw)
+
+## Overview
 
 In Parallel Data Warehouse, this statement is used to create a new database on a Parallel Data Warehouse appliance. Use this statement to create all files associated with an appliance database and to set maximum size and auto-growth options for the database tables and transaction log.
 

@@ -72,7 +72,7 @@
 ## [sql:relationship and the Key Ordering Rule (SQLXML 4.0)](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md)
 ## [sql:mapped (SQLXML 4.0)](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md)
 ## [sql:limit-field and sql:limit-value (SQLXML 4.0)](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)
-## [Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)
+## [sql:overflow-field (SQLXML 4.0)](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)
 ## [Other Annotations (SQLXML 4.0)](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md)
 ## [SQL Server XML Bulk Load Object Model (SQLXML 4.0)](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)
 ## [XML Bulk Load Examples (SQLXML 4.0)](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)

@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 caps.latest.revision: 28
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: "minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ---
 # Comparing Predictions for Forecasting Models (Intermediate Data Mining Tutorial)
   In the previous steps of this tutorial, you created multiple time series models:  

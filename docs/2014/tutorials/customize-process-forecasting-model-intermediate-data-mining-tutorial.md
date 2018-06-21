@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 caps.latest.revision: 24
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: "minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ---
 # Customizing and Processing the Forecasting Model (Intermediate Data Mining Tutorial)
   The [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm provides parameters that affect how a model is created, and how time data is analyzed. Changing these properties can significantly affect how the mining model makes predictions.  

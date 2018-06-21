@@ -27,7 +27,7 @@
 ## [Developer's Guide (Reporting Services) +](../reporting-services/reporting-services-developer-documentation.md)
 
 # [Installation for SQL Server 2014 +](../database-engine/install-windows/installation-for-sql-server.md)
+## [Upgrade Advisor +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
+## [Setup and Servicing Installation +](../sql-server/install/setup-and-servicing-installation.md)
 # [Configuration Manager Help +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
 
-# [Setup and Servicing Installation](../sql-server/install/setup-and-servicing-installation.md)
-# [Upgrade Advisor](../sql-server/install/sql-server-2014-upgrade-advisor.md)

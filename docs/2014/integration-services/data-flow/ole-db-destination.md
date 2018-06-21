@@ -28,9 +28,6 @@ manager: "jhubbard"
 # OLE DB Destination
   The OLE DB destination loads data into a variety of OLE DB-compliant databases using a database table or view or an SQL command. For example, the OLE DB source can load data into tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
   
-> [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../connection-manager/connect-to-an-excel-workbook.md).  
-  
  The OLE DB destination provides five different data access modes for loading data:  
   
 -   A table or view. You can specify an existing table or view, or you create a new table.  

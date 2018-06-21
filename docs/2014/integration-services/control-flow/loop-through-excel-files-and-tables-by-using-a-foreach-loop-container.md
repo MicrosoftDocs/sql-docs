@@ -89,6 +89,7 @@ manager: "jhubbard"
 9. Create tasks in the Foreach Loop container that use the Excel connection manager to perform the same operations on each Excel table in the specified workbook. If you use a Script Task to examine the enumerated table name or to work with each table, remember to add the string variable to the ReadOnlyVariables property of the Script task.  
   
 ## See Also  
+ [Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
  [Configure a Foreach Loop Container](foreach-loop-container.md)   
  [Add or Change a Property Expression](../expressions/add-or-change-a-property-expression.md)   
  [Excel Connection Manager](../connection-manager/excel-connection-manager.md)   

@@ -155,7 +155,7 @@ Chiapas
 ```  
   
 ### B. Additional examples  
- For additional examples that use **COLLATE**, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column) example **V. Changing column collation**.  
+ For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver&view=sql-server-2017#examples) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column) example **V. Changing column collation**.  
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    

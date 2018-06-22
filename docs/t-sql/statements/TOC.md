@@ -18,9 +18,6 @@
 ## [CRYPTOGRAPHIC PROVIDER](alter-cryptographic-provider-transact-sql.md)  
 
 ## [DATABASE](alter-database-transact-sql.md)
-## [DATABASE (Azure SQL Database)](alter-database-azure-sql-database.md)  
-## [DATABASE (Azure SQL Data Warehouse)](alter-database-azure-sql-data-warehouse.md)  
-## [DATABASE (Parallel Data Warehouse)](alter-database-parallel-data-warehouse.md)  
 ## [DATABASE AUDIT SPECIFICATION](alter-database-audit-specification-transact-sql.md)
 ## [DATABASE compatibility level](alter-database-transact-sql-compatibility-level.md)  
 ## [DATABASE database mirroring](alter-database-transact-sql-database-mirroring.md)  

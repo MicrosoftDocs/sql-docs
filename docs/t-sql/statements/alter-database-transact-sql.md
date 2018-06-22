@@ -344,104 +344,7 @@ ALTER DATABASE { database_name }
   | <termination>  
   | <temporal_history_retention>  
 }  
-  
-<auto_option> ::= 
-{  
-    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] } 
-  | AUTO_SHRINK { ON | OFF } 
-  | AUTO_UPDATE_STATISTICS { ON | OFF } 
-  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
-}  
-
-<change_tracking_option> ::=  
-{  
-  CHANGE_TRACKING 
-   { 
-       = OFF  
-     | = ON [ ( <change_tracking_option_list > [,...n] ) ] 
-     | ( <change_tracking_option_list> [,...n] )  
-   }  
-}  
-
-   <change_tracking_option_list> ::=  
-   {  
-       AUTO_CLEANUP = { ON | OFF } 
-     | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
-   }  
-
-<cursor_option> ::= 
-{  
-    CURSOR_CLOSE_ON_COMMIT { ON | OFF } 
-}  
-  
-<db_encryption_option> ::=  
-  ENCRYPTION { ON | OFF }  
-  
-<db_update_option> ::=  
-  { READ_ONLY | READ_WRITE }  
-  
-<db_user_access_option> ::=  
-  { RESTRICTED_USER | MULTI_USER }  
-  
-<delayed_durability_option> ::=  DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
-  
-<parameterization_option> ::=  
-  PARAMETERIZATION { SIMPLE | FORCED }  
-  
-<query_store_options> ::=  
-{  
-  QUERY_STORE 
-  {  
-    = OFF 
-    | = ON [ ( <query_store_option_list> [,... n] ) ]  
-    | ( < query_store_option_list> [,... n] )  
-    | CLEAR [ ALL ]  
-  }  
-} 
-  
-<query_store_option_list> ::=  
-{  
-  OPERATION_MODE = { READ_WRITE | READ_ONLY } 
-  | CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = number )  
-  | DATA_FLUSH_INTERVAL_SECONDS = number 
-  | MAX_STORAGE_SIZE_MB = number 
-  | INTERVAL_LENGTH_MINUTES = number 
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]  
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]  
-  | MAX_PLANS_PER_QUERY = number  
-}  
-  
-<snapshot_option> ::=  
-{  
-    ALLOW_SNAPSHOT_ISOLATION { ON | OFF }  
-  | READ_COMMITTED_SNAPSHOT {ON | OFF }  
-  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT {ON | OFF }  
-}  
-<sql_option> ::= 
-{  
-    ANSI_NULL_DEFAULT { ON | OFF }   
-  | ANSI_NULLS { ON | OFF }   
-  | ANSI_PADDING { ON | OFF }   
-  | ANSI_WARNINGS { ON | OFF }   
-  | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 100 | 110 | 120 | 130 | 140 }  
-  | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
-  | NUMERIC_ROUNDABORT { ON | OFF }   
-  | QUOTED_IDENTIFIER { ON | OFF }   
-  | RECURSIVE_TRIGGERS { ON | OFF }   
-}  
-  
-<termination>  ::=   
-{  
-    ROLLBACK AFTER integer [ SECONDS ]   
-  | ROLLBACK IMMEDIATE   
-  | NO_WAIT  
-}  
-
-<temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
-```  
-  
- For full descriptions of the set options, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+```
   
 ## Syntax for database in a Managed Instance  
 
@@ -626,17 +529,7 @@ The ALTER DATABASE statement must run in autocommit mode (the default transactio
   
 Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
-The procedure cache is also flushed in the following scenarios:  
-  
-- A database has the AUTO_CLOSE database option set to ON. When no user connection references or uses the database, the background task tries to close and shut down the database automatically.  
-  
-- You run several queries against a database that has default options. Then, the database is dropped.  
-  
-- You successfully rebuild the transaction log for a database.  
-  
-- You restore a database backup.  
-  
-- You detach a database.  
+The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.    
   
 ## Viewing Database Information  
 

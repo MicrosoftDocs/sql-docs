@@ -34,19 +34,22 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 # ALTER DATABASE (Transact-SQL)
 
-Modifies a database. Where application, this statement can also be used to add or remove files and filegroups from a database, change the attributes of a database or its files and filegroups, change the database collation, and set database options. Database snapshots, where applicable, cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
-   
-Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+Modifies a database. 
 
 Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-
 # [SQL Server](#tab/sqlserver)
   
+## Overview
+
+In SQL Server, this statement modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
+   
+Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+
 ALTER DATABASE  
- The current topic provides the syntax for changing the name and the collation of a database.  
+The current topic provides the syntax for changing the name and the collation of a database.  
   
 [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 Provides the syntax for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
@@ -62,12 +65,6 @@ Provides the syntax for the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] opti
   
 [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
 Provides the syntax for the SET options of ALTER DATABASE that are related to database compatibility levels.  
-  
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
- 
-For Azure SQL Database, see [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-For Azure SQL Data Warehouse, see [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
-For Parallel Data Warehouse, see [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
   
 ## Syntax  
   
@@ -214,7 +211,7 @@ Requires ALTER permission on the database.
 ### A. Changing the name of a database  
 The following example changes the name of the `AdventureWorks2012` database to `Northwind`.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -227,7 +224,7 @@ The following example creates a database named `testdb` with the `SQL_Latin1_Gen
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 USE master;  
 GO  
   
@@ -258,7 +255,30 @@ GO
   
 # [SQL Database](#tab/sqldb)
 
-## Syntax  
+## Overview
+
+In Azure SQL Database, use this statement to modify a database on a logical server or in a Managed Instance. 
+- With a database on a logical server, use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, and add or remove the database as a secondary in a geo-replication relationship.
+- With a database in a Managed Instance, use this statement to ...
+
+Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+
+ALTER DATABASE  
+The current topic provides the syntax for changing the name and the collation of a database.  
+  
+[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
+Provides the syntax for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
+  
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+Provides the syntax for changing the attributes of a database by using the SET options of ALTER DATABASE.  
+  
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
+Provides the syntax for the SET options of ALTER DATABASE that are related to database compatibility levels.  
+
+
+## Syntax for databases with a logical server 
+
+###   
   
 ```  
 -- Azure SQL Database Syntax  
@@ -426,6 +446,8 @@ ALTER DATABASE { database_name }
   
  For full descriptions of the set options, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
+## Syntax for database in a Managed Instance  
+
 ## Arguments  
 
 *database_name*  
@@ -440,7 +462,7 @@ MODIFY NAME **=***new_database_name*
 
 Renames the database with the name specified as *new_database_name*. The following example changes the name of a database `db1` to `db2`:   
 
-```  
+```sql  
 ALTER DATABASE db1  
     MODIFY Name = db2 ;  
 ```    
@@ -451,7 +473,7 @@ Changes the service tier of the database. Support for 'premiumrs' has been remov
 
 The following example changes edition to `premium`:
   
-```  
+```sql  
 ALTER DATABASE current 
     MODIFY (EDITION = 'premium');
 ``` 
@@ -697,6 +719,10 @@ ALTER DATABASE db1 FAILOVER
 
 # [SQL Data Warehouse](#tab/sqldw)
 
+## Overview
+
+Modifies the name, maximum size, or service objective for a database.
+
 ## Syntax  
   
 ```  
@@ -744,9 +770,8 @@ Specifies the performance level. For more information about service objectives f
 ## Permissions  
 Requires these permissions:  
   
--   Server-level principal login (the one created by the provisioning process), or  
-  
--   Member of the `dbmanager` database role.  
+- Server-level principal login (the one created by the provisioning process), or  
+- Member of the `dbmanager` database role.  
   
 The owner of the database cannot alter the database unless the owner is a member of the `dbmanager` role.  
   
@@ -771,26 +796,26 @@ Before you run these examples, make sure the database you are altering is not th
 
 ### A. Change the name of the database  
 
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 MODIFY NAME = Northwind;  
 ```  
   
 ### B. Change max size for the database  
   
-```  
+```sql  
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );  
 ```  
   
 ### C. Change the performance level  
   
-```  
+```sql  
 ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
 ### D. Change the max size and the performance level  
   
-```  
+```sql  
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
@@ -800,6 +825,10 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 
 # [SQL Parallel Data Warehouse](#tab/sqlpdw)
+
+## Overview
+
+Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in Parallel Data Warehouse. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The topic also describes syntax related to setting database options in Parallel Data Warehouse.
 
 ## Syntax  
   
@@ -825,73 +854,72 @@ ALTER DATABASE database_name
 ```  
   
 ## Arguments  
- *database_name*  
- The name of the database to be modified. To display a list of databases on the appliance, use [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+*database_name*  
+The name of the database to be modified. To display a list of databases on the appliance, use [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
- AUTOGROW = { ON | OFF }  
- Updates the AUTOGROW option. When AUTOGROW is ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automatically increases the allocated space for replicated tables, distributed tables, and the transaction log as necessary to accommodate growth in storage requirements. When AUTOGROW is OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] returns an error if replicated tables, distributed tables, or the transaction log exceeds the maximum size setting.  
+AUTOGROW = { ON | OFF }  
+Updates the AUTOGROW option. When AUTOGROW is ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automatically increases the allocated space for replicated tables, distributed tables, and the transaction log as necessary to accommodate growth in storage requirements. When AUTOGROW is OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] returns an error if replicated tables, distributed tables, or the transaction log exceeds the maximum size setting.  
   
- REPLICATED_SIZE = *size* [GB]  
- Specifies the new maximum gigabytes per Compute node for storing all of the replicated tables in the database being altered. If you are planning for appliance storage space, you will need to multiply REPLICATED_SIZE by the number of Compute nodes in the appliance.  
+REPLICATED_SIZE = *size* [GB]  
+Specifies the new maximum gigabytes per Compute node for storing all of the replicated tables in the database being altered. If you are planning for appliance storage space, you will need to multiply REPLICATED_SIZE by the number of Compute nodes in the appliance.  
   
- DISTRIBUTED_SIZE = *size* [GB]  
- Specifies the new maximum gigabytes per database for storing all of the distributed tables in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
+DISTRIBUTED_SIZE = *size* [GB]  
+Specifies the new maximum gigabytes per database for storing all of the distributed tables in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
   
- LOG_SIZE = *size* [GB]  
- Specifies the new maximum gigabytes per database for storing all of the transaction logs in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
+LOG_SIZE = *size* [GB]  
+Specifies the new maximum gigabytes per database for storing all of the transaction logs in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
   
- ENCRYPTION { ON | OFF }  
- Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] when [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ENCRYPTION { ON | OFF }  
+Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] when [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
- SET AUTO_CREATE_STATISTICS { ON | OFF }
- When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a histogram in an existing statistics object.
+SET AUTO_CREATE_STATISTICS { ON | OFF }
+When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a histogram in an existing statistics object.
 
- Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
+Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
- For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics)
+For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics)
 
- SET AUTO_UPDATE_STATISTICS { ON | OFF } 
- When the automatic update statistics option, AUTO_UPDATE_STATISTICS, is ON, the query optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. Statistics become out-of-date after operations insert, update, delete, or merge change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
+SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+When the automatic update statistics option, AUTO_UPDATE_STATISTICS, is ON, the query optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. Statistics become out-of-date after operations insert, update, delete, or merge change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
- Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
+Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
- For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
+For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
 
 
- SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
- The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the CREATE STATISTICS statement.
+SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
+The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the CREATE STATISTICS statement.
 
- Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
+Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
- For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
+For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
 
-  
 ## Permissions  
- Requires the ALTER permission on the database.  
+Requires the ALTER permission on the database.  
   
 ## Error Messages
 If auto-stats is disabled and you try to alter the statistics settings, PDW gives the error "This option is not supported in PDW." The system administrator can enable auto-stats by enabling the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
 
 ## General Remarks  
- The values for REPLICATED_SIZE, DISTRIBUTED_SIZE, and LOG_SIZE can be greater than, equal to, or less than the current values for the database.  
+The values for REPLICATED_SIZE, DISTRIBUTED_SIZE, and LOG_SIZE can be greater than, equal to, or less than the current values for the database.  
   
 ## Limitations and Restrictions  
- Grow and shrink operations are approximate. The resulting actual sizes can vary from the size parameters.  
+Grow and shrink operations are approximate. The resulting actual sizes can vary from the size parameters.  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not perform the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.  
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not perform the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.  
 
 The statistics settings only work if the administrator has enable auto-stats.  If you are an administrator, use the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) to enable or disable auto-stats. 
   
 ## Locking Behavior  
- Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) statement on the database.  
+Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) statement on the database.  
   
 ## Performance  
- Shrinking a database can take a large amount of time and system resources, depending on the size of the actual data within the database, and the amount of fragmentation on disk. For example, shrinking a database could take serveral hours or more.  
+Shrinking a database can take a large amount of time and system resources, depending on the size of the actual data within the database, and the amount of fragmentation on disk. For example, shrinking a database could take serveral hours or more.  
   
 ## Determining Encryption Progress  
- Use the following query to determine progress of database transparent data encryption as a percent:  
+Use the following query to determine progress of database transparent data encryption as a percent:  
   
-```  
+```sql  
 WITH  
 database_dek AS (  
     SELECT ISNULL(db_map.database_id, dek.database_id) AS database_id,  
@@ -933,22 +961,22 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
- For a comprehensive example demonstrating all the steps in implementing TDE, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+For a comprehensive example demonstrating all the steps in implementing TDE, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### A. Altering the AUTOGROW setting  
- Set AUTOGROW to ON for database `CustomerSales`.  
+Set AUTOGROW to ON for database `CustomerSales`.  
   
-```  
+```sql  
 ALTER DATABASE CustomerSales  
     SET ( AUTOGROW = ON );  
 ```  
   
 ### B. Altering the maximum storage for replicated tables  
- The following example sets the replicated table storage limit to 1 GB for the database `CustomerSales`. This is the storage limit per Compute node.  
+The following example sets the replicated table storage limit to 1 GB for the database `CustomerSales`. This is the storage limit per Compute node.  
   
-```  
+```sql  
 ALTER DATABASE CustomerSales  
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
@@ -956,7 +984,7 @@ ALTER DATABASE CustomerSales
 ### C. Altering the maximum storage for distributed tables  
  The following example sets the distributed table storage limit to 1000 GB (one terabyte) for the database `CustomerSales`. This is the combined storage limit across the appliance for all of the Compute nodes, not the storage limit per Compute node.  
   
-```  
+```sql  
 ALTER DATABASE CustomerSales  
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
@@ -964,7 +992,7 @@ ALTER DATABASE CustomerSales
 ### D. Altering the maximum storage for the transaction log  
  The following example updates the database `CustomerSales` to have a maximum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log size of 10 GB for the appliance.  
   
-```  
+```sql  
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  

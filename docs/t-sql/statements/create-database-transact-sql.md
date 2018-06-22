@@ -50,7 +50,6 @@ Click one of the following tabs for the syntax, arguments, remarks, permissions,
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-
 # [SQL Server](#tab/sqlserver)
 
 ## Overview
@@ -864,7 +863,7 @@ In Azure SQL Database, this statement can be used with an Azure SQL logical serv
 
 This statement can also be used with Azure SQL Database Managed Instance to create a database. When creating a database on a Managed Instance, you specify the database name, collation, maximum size, edition, and service objective. 
 
-## Syntax for databases with a logical server 
+## Syntax for databases on a logical server 
 
 ### Create a database
 ```  
@@ -907,7 +906,7 @@ CREATE DATABASE database_name
 [;] 
 ```  
 
-## Syntax for databases with a Managed Instance
+## Syntax for databases in a Managed Instance
 
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  

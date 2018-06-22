@@ -4,7 +4,7 @@ description: Describes how SQL Server customer feedback is collected and configu
 author: annashres 
 ms.author: anshrest 
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.suite: sql
@@ -17,7 +17,7 @@ ms.technology: linux
 
 By default, Microsoft SQL Server collects information about how its customers are using the application. Specifically, SQL Server collects information about the installation experience, usage, and performance. This information helps Microsoft improve the product to better meet customer needs. For example, Microsoft collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use SQL Server, and determine whether features should be added to the product to better serve customers.
 
-This document provides details about what kinds of information are collected and about how to configure Microsoft SQL Server on Linux to send that collected information to Microsoft. SQL Server 2017 includes a privacy statement that explains what information we do and do not collect from users. Please read the privacy statement.
+This document provides details about what kinds of information are collected and about how to configure Microsoft SQL Server on Linux to send that collected information to Microsoft. SQL Server 2017 includes a privacy statement that explains what information we do and do not collect from users. For more information, see the [privacy statement](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 Specifically, Microsoft does not send any of the following types of information through this mechanism:
 
@@ -34,6 +34,9 @@ SQL Server 2017 always collects and sends information about the installation exp
 
 This option lets you change if SQL Server sends feedback to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
 
+> [!IMPORTANT]
+> You can not turn off customer feedback for free editions of SQL Server, Express and Developer.
+
 ### On Red Hat, SUSE, and Ubuntu
 
 1. Run the mssql-conf script as root with the **set** command for **telemetry.customerfeedback**. The following example turns off customer feedback by specifying **false**.
@@ -49,7 +52,7 @@ This option lets you change if SQL Server sends feedback to Microsoft or not. By
    ```
    
 ### On Docker
-To disable Customer Feedback on docker you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
+To disable Customer Feedback on docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
 
 1. Add an `mssql.conf` file with the lines `[telemetry]` and `customerfeedback = false` in the host directory:
  
@@ -105,7 +108,7 @@ This option enables Local Audit and lets you set the directory where the Local A
    ```
    
 ### On Docker
-To enable Local Audit on docker you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
+To enable Local Audit on docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
 
 1. The target directory for new Local Audit logs will be in the container. Create a target directory for new Local Audit logs in the host directory on your machine. The following example creates a new **/audit** directory:
 

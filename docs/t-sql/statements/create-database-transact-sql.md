@@ -910,23 +910,10 @@ CREATE DATABASE database_name
 
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
-{  
-   (<edition_options> [, ...n]) 
-}  
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }  ]
 [;]  
-   
-<edition_options> ::= 
-{  
-
-  MAXSIZE = { 8 TB }  
-  | ( EDITION = {  'GeneralPurpose' } 
-  | SERVICE_OBJECTIVE = 
-    {  'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
-        'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_40' |
-    }  ) 
-}  
 ```
+> [!IMPORTANT]
+> To add files or set containment for a database in a Managed Instance, use the [ALTER DATABASE](alter-database-transact-sql?view=sqlallproducts-allversions&tabs=sqldb) statement.
   
 ## Arguments  
   

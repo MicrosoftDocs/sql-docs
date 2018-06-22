@@ -51,7 +51,7 @@ manager: craigg
   
 ##  Glossary of backup terms
  **back up** [verb]  
- Copies the data or log records from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database or its transaction log to a backup device, such as a disk, to create a data backup or log backup.  
+ The process of creating a **backup [noun]** by copying data records from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  database, or log records from its transaction log.  
   
  **backup** [noun]  
  A copy of data that can be used to restore and recover the data after a failure. Backups of a database can also be used to restore a copy the database to a new location.  

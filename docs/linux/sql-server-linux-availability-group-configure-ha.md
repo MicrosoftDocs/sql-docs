@@ -7,11 +7,10 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 
 ---
 # Configure SQL Server Always On Availability Group for high availability on Linux

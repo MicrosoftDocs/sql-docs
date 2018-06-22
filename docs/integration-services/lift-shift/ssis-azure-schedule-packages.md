@@ -1,41 +1,38 @@
 ---
 title: "Schedule SSIS packages in Azure | Microsoft Docs"
-ms.date: "05/09/2018"
+description: Provides an overview of the available methods for scheduling the execution of SSIS packages deployed to Azure SQL Database.
+ms.date: "05/29/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
-author: "douglaslMS"
-ms.author: "douglasl"
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
-# Schedule the execution of an SSIS package in Azure
-You can schedule the execution of packages stored in the SSISDB Catalog database on an Azure SQL Database server by choosing one of the following scheduling options:
--   [The Schedule option in SQL Server Management Studio (SSMS)](#ssms)
--   [The Azure Data Factory Execute SSIS Package activity](#execute)
--   [The Azure Data Factory SQL Server Stored Procedure activity](#storedproc)
--   [SQL Database elastic jobs](#elastic)
--   [SQL Server Agent](#agent)
+# Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure
 
-## <a name="ssms"></a> Schedule a package with the SSMS
+You can schedule the execution of SSIS packages deployed to the SSISDB Catalog on an Azure SQL Database server by choosing one of the methods described in this article. You can schedule a package directly, or schedule a package indirectly as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
 
-In SQL Server Management Studio (SSMS), you can right-click on a package deployed to the SSIS Catalog database, SSISDB, and select **Schedule** to open the **New schedule** dialog box. For more info, see [Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md).
+- Schedule a package directly
+
+  - [Schedule with the Schedule option in SQL Server Management Studio (SSMS)](#ssms)
+
+  - [SQL Database elastic jobs](#elastic)
+
+  - [SQL Server Agent](#agent)
+
+- [Schedule a package indirectly as part of an Azure Data Factory pipeline](#activity)
+
+
+## <a name="ssms"></a> Schedule a package with SSMS
+
+In SQL Server Management Studio (SSMS), you can right-click on a package deployed to the SSIS Catalog database, SSISDB, and select **Schedule** to open the **New schedule** dialog box. For more info, see [Schedule SSIS packages in Azure with SSMS](ssis-azure-schedule-packages-ssms.md).
 
 This feature requires SQL Server Management Studio version 17.7 or higher. To get the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
-
-## <a name="execute"></a> Schedule a package with the Execute SSIS Package activity
-
-For info about how to schedule an SSIS package by using the Execute SSIS Package activity in Azure Data Factory, see [Run an SSIS package using SSIS activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
-
-## <a name="storedproc"></a> Schedule a package with the Stored Procedure activity
-
-For info about how to schedule an SSIS package by using the Stored Procedure activity in Azure Data Factory, see [Run an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
-
-For Data Factory version 1, see [Run an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="elastic"></a> Schedule a package with SQL Database Elastic Jobs
 
@@ -83,7 +80,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
 	@schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="agent"></a> Schedule a package with SQL Server Agent
+## <a name="agent"></a> Schedule a package with SQL Server Agent on premises
+
+For more info about SQL Server Agent, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).
 
 ### Prerequisite - Create a linked server
 
@@ -153,7 +152,24 @@ To schedule a package with SQL Server Agent on premises, create a job with a job
 
 6.  Finish configuring and scheduling the job.
 
-## Next steps
-For more info about SQL Server Agent, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).
+## <a name="activity"></a> Schedule a package as part of an Azure Data Factory pipeline
 
-For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+You can schedule a package indirectly by using a trigger to run an Azure Data Factory pipeline that runs an SSIS package.
+
+To schedule a Data Factory pipeline, use one of the following triggers:
+
+- [Schedule trigger](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+
+- [Tumbling window trigger](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+
+- [Event-based trigger](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+
+To run an SSIS package as part of a Data Factory pipeline, use one of the following activities:
+
+- [Execute SSIS Package activity](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+
+- [Stored Procedure activity](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+
+## Next steps
+
+Review the options for running SSIS packages deployed to Azure. For more info, see [Run SSIS packages in Azure](ssis-azure-run-packages.md).

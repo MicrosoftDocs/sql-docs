@@ -25,7 +25,7 @@ manager: kfile
 </Database>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -33,7 +33,7 @@ manager: kfile
 |Default value|ReadWrite|  
 |Cardinality|0-1: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -50,7 +50,7 @@ manager: kfile
 |*ReadOnly*|No changes or updates can be applied to the database.|  
 |*ReadWrite*|Changes and updates can be applied to the database.|  
   
-## See Also  
+## See also
  [Attach Element](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Attach and Detach Analysis Services Databases](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Move an Analysis Services Database](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

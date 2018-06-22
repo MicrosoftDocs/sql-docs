@@ -5,8 +5,6 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-sybase"
 ms.technology: ssma
 ms.tgt_pltfrm: ""
 ms.topic: conceptual

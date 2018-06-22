@@ -1,10 +1,9 @@
-﻿---
+---
 title: "+ (Addition) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -74,7 +73,7 @@ GO
   
 SET NOCOUNT ON  
 DECLARE @startdate datetime, @adddays int;  
-SET @startdate = ''January 10, 1900 12:00 AM';  
+SET @startdate = 'January 10, 1900 12:00 AM';  
 SET @adddays = 5;  
 SET NOCOUNT OFF;  
 SELECT @startdate + 1.25 AS 'Start Date',   

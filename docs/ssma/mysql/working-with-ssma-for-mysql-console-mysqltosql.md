@@ -1,8 +1,6 @@
 ---
 title: "Working with SSMA for MySQL Console (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""

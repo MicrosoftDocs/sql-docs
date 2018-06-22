@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-error-messages"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "messages [ODBC], native error numbers"
   - "errors [ODBC], native error numbers"
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg

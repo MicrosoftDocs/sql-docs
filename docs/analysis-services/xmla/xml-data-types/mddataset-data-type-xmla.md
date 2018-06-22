@@ -29,14 +29,14 @@ manager: kfile
 </root>  
 ```  
   
-## Data Type Characteristics  
+## Data type characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|[Resultset](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
 |Derived data types|None|  
   
-## Data Type Relationships  
+## Data type relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -49,7 +49,7 @@ manager: kfile
   
  For basic information about the OLE DB for OLAP dataset structures, refer to "MDDataSet Data Type Mapping to OLE DB" in the XML for Analysis 1.1 specification. For a full XML Schema definition language (XSD) sample of the **MDDataSet** data type, refer to "Appendix D: MDDataSet Example" of the XML for Analysis 1.1 specification.  
   
-## See Also  
+## See also
  [XML Data Types &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

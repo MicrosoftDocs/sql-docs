@@ -3,7 +3,6 @@ title: "Add Enhanced Database Failover to an Availability Group (SQL Server) | M
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -14,9 +13,9 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], failover"
 ms.assetid: 
 caps.latest.revision: 
-author: "allanhirt"
+author: "MashaMSFT"
 ms.reviewer: "mikeray"
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
 ---
 # Add enhanced database failover to an availability group (SQL Server)

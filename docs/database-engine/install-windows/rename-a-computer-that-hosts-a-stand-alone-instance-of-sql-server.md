@@ -3,7 +3,6 @@ title: "Rename a Computer that Hosts a Stand-Alone Instance of SQL Server | Micr
 ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "dropping remote logins"
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Rename a Computer that Hosts a Stand-Alone Instance of SQL Server

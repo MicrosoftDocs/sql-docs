@@ -1,10 +1,9 @@
-﻿---
+---
 title: "UPDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -138,7 +137,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *schema_name*  
  Is the name of the schema to which the table or view belongs.  
   
- *table_or view_name*  
+ *table_or_view_name*  
  Is the name of the table or view from which the rows are to be updated. The view referenced by *table_or_view_name* must be updatable and reference exactly one base table in the FROM clause of the view. For more information about updatable views, see [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  

@@ -1,10 +1,9 @@
-﻿---
+---
 title: "DATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -27,7 +26,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Returns a **datetime** value for the specified date and time.
+This function returns a **datetime** value for the specified date and time arguments.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -39,33 +38,33 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
   
 ## Arguments  
 *year*  
-Integer expression specifying a year.
+An integer expression that specifies a year.
   
 *month*  
-Integer expression specifying a month.
+An integer expression that specifies a month.
   
 *day*  
-Integer expression specifying a day.
+An integer expression that specifies a day.
   
 *hour*  
-Integer expression specifying hours.
+An integer expression that specifies hours.
   
 *minute*  
-Integer expression specifying minutes.
+An integer expression that specifies minutes.
   
 *seconds*  
-Integer expression specifying seconds.
+An integer expression that specifies seconds.
   
 *milliseconds*  
-Integer expression specifying milliseconds.
+An integer expression that specifies milliseconds.
   
 ## Return types
 **datetime**
   
 ## Remarks  
-**DATETIMEFROMPARTS** returns a fully initialized **datetime** value. If the arguments are not valid, then an error is raised. If required arguments are null, then a null is returned.
+`DATETIMEFROMPARTS` returns a fully initialized **datetime** value. `DATETIMEFROMPARTS` will raise an error if at least one required argument has an invalid value. `DATETIMEFROMPARTS` returns null if at least one required argument has a null value.
   
-This function is capable of being remoted to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not be remoted to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This function supports remoting to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not support remoting to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## Examples  
   

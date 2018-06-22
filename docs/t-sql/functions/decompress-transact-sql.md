@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "11/30/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -24,7 +23,7 @@ manager: craigg
 # DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Decompress input expression using GZIP algorithm. Result of the compression is byte array (VARBINARY(MAX) type).  
+This function will decompress an input expression value, using the GZIP algorithm. `DECOMPRESS` will return a byte array (VARBINARY(MAX) type).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -36,17 +35,17 @@ DECOMPRESS ( expression )
   
 ## Arguments  
  *expression*  
- Is a **varbinary(***n***)**, **varbinary(max)**, or **binary(***n***)**. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+A **varbinary(***n***)**, **varbinary(max)**, or **binary(***n***)** value. See [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) for more information.  
   
 ## Return Types  
- Returns the data type of **varbinary(max)** type. The input argument is decompressed using the ZIP algorithm. The user should explicitly cast result to a target type if needed.  
+A value of data type **varbinary(max)**. `DECOMPRESS` will use the ZIP algorithm to decompress the input argument. The user should explicitly cast result to a target type if necessary.  
   
 ## Remarks  
   
 ## Examples  
   
 ### A. Decompress Data at Query Time  
- The following example shows how to show compress data from a table:  
+This example shows how to return compressed table data:  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -55,10 +54,10 @@ FROM player;
 ```  
   
 ### B. Display Compressed Data Using Computed Column  
- The following example shows how to create a table to store decompressed data:  
+This example shows how to create a table for decompressed data storage:  
   
 ```  
-CREATE TABLE (  
+CREATE TABLE example_table (  
     _id int primary key identity,  
     name nvarchar(max),  
     surname nvarchar(max),  

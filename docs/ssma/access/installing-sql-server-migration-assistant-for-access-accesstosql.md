@@ -1,8 +1,6 @@
 ---
 title: "Installing SQL Server Migration Assistant for Access (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""
@@ -42,7 +40,7 @@ Before you install SSMA, make sure that your system meets the following requirem
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.  
   
--   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework version 4.0 or a later version. The .NET Framework version 4.0 is available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] product disc, and by using information in the [Microsoft .NET Guide](https://docs.microsoft.com/en-us/dotnet/framework/).
+-   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework version 4.0 or a later version. The .NET Framework version 4.0 is available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] product disc, and by using information in the [Microsoft .NET Guide](https://docs.microsoft.com/dotnet/framework/).
   
 -   Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/SQL Azure DB to which you will be migrating database objects and data.  
   

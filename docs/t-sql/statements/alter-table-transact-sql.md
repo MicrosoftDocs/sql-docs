@@ -1,10 +1,9 @@
 ﻿---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "06/01/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -255,7 +254,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
       } 
     | { SPLIT | MERGE } RANGE (boundary_value)  
     | SWITCH [ PARTITION source_partition_number  
-        TO target_table_name [ PARTITION target_partition_number ]  
+        TO target_table_name [ PARTITION target_partition_number ] [ WITH ( TRUNCATE_TARGET_PARTITION = ON | OFF )
 }  
 [;]  
   
@@ -313,7 +312,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   Associated with a default definition. However, the length, precision, or scale of a column can be changed if the data type is not changed.  
   
-The data type of **text**, **ntext** and **image** columns can be changed only in the following ways:  
+The data type of **text**, **ntext, and **image** columns can be changed only in the following ways:  
   
 -   **text** to **varchar(max)**, **nvarchar(max)**, or **xml**  
   
@@ -321,7 +320,7 @@ The data type of **text**, **ntext** and **image** columns can be changed only i
   
 -   **image** to **varbinary(max)**  
   
-Some data type changes may cause a change in the data. For example, changing an **nchar** or **nvarchar** column to **char** or **varchar** may cause the conversion of extended characters. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reducing the precision or scale of a column may cause data truncation.  
+Some data type changes may cause a change in the data. For example, changing a nchar** or **nvarchar** column to **char** or **varchar** may cause the conversion of extended characters. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reducing the precision or scale of a column may cause data truncation.  
   
 > [!NOTE]
 > The data type of a column of a partitioned table cannot be changed.  

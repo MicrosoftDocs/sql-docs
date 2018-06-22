@@ -3,7 +3,6 @@ title: "Supported Version and Edition Upgrades | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2016"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "cross-language support"
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: 148
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Supported Version and Edition Upgrades

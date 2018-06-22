@@ -3,8 +3,6 @@ title: "Database Related Dynamic Management Views (Transact-SQL) | Microsoft Doc
 ms.custom: ""
 ms.date: "05/18/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: system-objects

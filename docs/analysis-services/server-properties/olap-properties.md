@@ -1,6 +1,6 @@
 ---
 title: "OLAP Properties | Microsoft Docs"
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: 
@@ -12,6 +12,7 @@ manager: kfile
 ---
 # OLAP Properties
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the OLAP server properties listed in the following tables. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Applies to:** Multidimensional server mode only  
@@ -238,12 +239,13 @@ manager: kfile
   
 -   Affects all databases on the server. **DimensionPropertyCachesize** is a server-wide property. Changing this property affects all databases running on the current instance.  
   
- Approach for estimating dimension cache requirements:  
+Approach for estimating dimension cache requirements:  
   
 1.  Start by increasing the size by a large number to determine whether there is a benefit to increasing the dimension cache size. For example, you might want to double the default value as an initial step.  
   
 2.  If a performance improvement is evident, incrementally reduce the value until you reach a balance between performance and memory utilization.  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] support.  
   

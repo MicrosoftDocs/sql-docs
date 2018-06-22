@@ -1,7 +1,7 @@
 ---
-title: "Configuration and administration of a SQL Server Reporting Services report server | Microsoft Docs"
+title: "Configuration and administration of a report server (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: "05/24/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "report-server-sharepoint"
@@ -16,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ---
-# Configuration and administration of a SQL Server Reporting Services report server
+# Configuration and administration of a SQL Server Reporting Services (SSRS) report server
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -42,8 +42,6 @@ Use the following sections to help you understand concepts, deployment scenarios
     -   [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
     -   [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
-  
-    -   [Cache Refresh Options &#40;Report Manager&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
 -   [Reporting Services Site Collection Features](../../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md)  
   

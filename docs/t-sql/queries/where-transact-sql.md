@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -51,7 +50,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ### A. Finding a row by using a simple equality  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -61,7 +60,7 @@ WHERE LastName = 'Smith' ;
 ### B. Finding rows that contain a value as part of a string  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -71,7 +70,7 @@ WHERE LastName LIKE ('%Smi%');
 ### C. Finding rows by using a comparison operator  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -81,7 +80,7 @@ WHERE EmployeeKey  <= 500;
 ### D. Finding rows that meet any of three conditions  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -91,7 +90,7 @@ WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;
 ### E. Finding rows that must meet several conditions  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -101,7 +100,7 @@ WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';
 ### F. Finding rows that are in a list of values  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -111,7 +110,7 @@ WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');
 ### G. Finding rows that have a value between two values  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  

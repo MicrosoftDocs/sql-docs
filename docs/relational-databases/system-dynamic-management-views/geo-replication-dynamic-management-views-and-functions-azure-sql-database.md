@@ -5,7 +5,6 @@ ms.date: "11/24/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.component: "dmv's"
 ms.suite: "sql"
 ms.technology: system-objects
 ms.tgt_pltfrm: ""

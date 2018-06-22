@@ -4,14 +4,14 @@ description: This tutorial demonstrates how to enable the five slowest queries s
 ms.custom: "tools|sos"
 ms.date: "03/15/2018"
 ms.prod: sql
-ms.reviewer: "alayu; erickang; sstein"
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
-author: "erickangMSFT"
-ms.author: "erickang"
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 

@@ -2,10 +2,10 @@
 title: "Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB) | Microsoft Docs"
 description: "Send data to a FILESTREAM column using IRowsetFastUpload (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-how-to"
+ms.component: "oledb|ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -16,7 +16,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   This sample uses the IRowsetFastUpload interface to send between 4MB and 4GB of data to a filestream column.  
   

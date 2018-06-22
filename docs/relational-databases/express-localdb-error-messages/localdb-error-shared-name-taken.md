@@ -3,12 +3,9 @@ title: "LOCALDB_ERROR_SHARED_NAME_TAKEN | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: f679fe4e-0ed1-4e2c-8fe1-e6b3d55c8d42

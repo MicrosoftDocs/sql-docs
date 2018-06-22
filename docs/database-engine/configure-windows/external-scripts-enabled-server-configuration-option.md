@@ -53,7 +53,7 @@ RECONFIGURE WITH OVERRIDE;
 
 You must restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make this change effective.
 
-For more information, see [Set up SQL Server Machine Learning](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+For more information, see [Set up SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
 
 ## See also
 

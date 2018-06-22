@@ -41,7 +41,7 @@ manager: craigg
 |**sql_message_id**|**int**|ID of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message returned if the job failed.|  
 |**sql_severity**|**int**|Severity of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
 |**message**|**nvarchar(4000)**|Text, if any, of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
-|**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled|  
+|**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled<br /><br /> **4** = In Progress|  
 |**run_date**|**int**|Date the job or step started execution. For an In Progress history, this is the date/time the history was written.|  
 |**run_time**|**int**|Time the job or step started.|  
 |**run_duration**|**int**|Elapsed time in the execution of the job or step in **HHMMSS** format.|  

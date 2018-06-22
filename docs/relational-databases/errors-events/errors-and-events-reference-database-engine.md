@@ -3,8 +3,6 @@ title: "Errors and Events Reference (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/03/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "errors-events"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: supportability

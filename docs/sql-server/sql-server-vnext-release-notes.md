@@ -13,8 +13,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
+monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # SQL Server vNext Release Notes
+
+[!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
+
 This article describes limitations and known issues for the SQL Server vNext Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
 

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "modifying login accounts"
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 caps.latest.revision: 68
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

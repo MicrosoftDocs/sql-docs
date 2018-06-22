@@ -913,7 +913,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```
 > [!IMPORTANT]
-> To add files or set containment for a database in a Managed Instance, use the [ALTER DATABASE](alter-database-transact-sql?view=sqlallproducts-allversions&tabs=sqldb) statement.
+> To add files or set containment for a database in a Managed Instance, use the [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldb) statement.
   
 ## Arguments  
   

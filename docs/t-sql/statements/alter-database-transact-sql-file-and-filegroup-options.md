@@ -657,7 +657,7 @@ GO
 
 Use this statement with a database in Azure SQL Database Managed Instance.
 
-## Syntax
+## Syntax for databases in a Managed Instance
 
 ```  
 ALTER DATABASE database_name   
@@ -680,7 +680,6 @@ ALTER DATABASE database_name
 (  
     NAME = logical_file_name    
     [ , NEWNAME = new_logical_name ]   
-    [ , FILENAME = {'os_file_name' | 'filestream_path' | 'memory_optimized_data_path' } ]   
     [ , SIZE = size [ KB | MB | GB | TB ] ]   
     [ , MAXSIZE = { max_size [ KB | MB | GB | TB ] | UNLIMITED } ]   
     [ , FILEGROWTH = growth_increment [ KB | MB | GB | TB| % ] ]   
@@ -690,7 +689,6 @@ ALTER DATABASE database_name
 <add_or_modify_filegroups>::=  
 {  
     | ADD FILEGROUP filegroup_name   
-        [ CONTAINS FILESTREAM | CONTAINS MEMORY_OPTIMIZED_DATA ]  
     | REMOVE FILEGROUP filegroup_name   
     | MODIFY FILEGROUP filegroup_name  
         { <filegroup_updatability_option>  
@@ -730,9 +728,6 @@ Removes the logical file description from an instance of [!INCLUDE[ssNoVersion](
 *logical_file_name*  
 Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file.  
   
-> [!WARNING]  
-> Removing a database file that has FILE_SNAPSHOT backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). 
-  
 MODIFY FILE  
 Specifies the file that should be modified. Only one \<filespec> property can be changed at a time. NAME must always be specified in the \<filespec> to identify the file to be modified. If SIZE is specified, the new size must be larger than the current file size.  
   
@@ -741,23 +736,6 @@ To modify the logical name of a data file or log file, specify the logical file 
 ```sql  
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )   
 ```  
-  
-To move a data file or log file to a new location, specify the current logical file name in the `NAME` clause and specify the new path and operating system file name in the `FILENAME` clause. For example:  
-  
-```sql  
-MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )  
-```  
-  
-When you move a full-text catalog, specify only the new path in the FILENAME clause. Do not specify the operating-system file name.  
-  
-For more information, see [Move Database Files](../../relational-databases/databases/move-database-files.md).  
-  
-For a FILESTREAM filegroup, NAME can be modified online. FILENAME can be modified online; however, the change does not take effect until after the container is physically relocated and the server is shutdown and then restarted.  
-  
-You can set a FILESTREAM file to OFFLINE. When a FILESTREAM file is offline, its parent filegroup will be internally marked as offline; therefore, all access to FILESTREAM data within that filegroup will fail.  
-  
-> [!NOTE]  
->  \<add_or_modify_files> options are not available in a Contained Database.
   
 **\<filespec>::=**  
   

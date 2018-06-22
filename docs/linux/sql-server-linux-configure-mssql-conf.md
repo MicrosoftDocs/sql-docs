@@ -109,7 +109,7 @@ The **telemetry.customerfeedback** setting changes whether SQL Server sends feed
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md) and the [SQL Server Privacy Statement](https://aka.ms/sqlprivacystatement).
+For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md) and the [SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a id="datadir"></a> Change the default data or log directory location
 

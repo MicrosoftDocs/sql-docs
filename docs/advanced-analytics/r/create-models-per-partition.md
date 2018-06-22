@@ -1,5 +1,5 @@
 ---
-title: Create partition-based models (SQL Server Machine Learning Services) | Microsoft Docs
+title: Create, train and score partition-based models (SQL Server Machine Learning Services) | Microsoft Docs
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,8 +10,7 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 ---
----
-# Create partition-based models in SQL Server Machine Learning Services
+# Create partition-based models on SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
 **(Not for production workloads)**
@@ -29,19 +28,20 @@ You can run this operation in parallel by combining `partition_by` with `@parall
 
 When the scenario is training, one advantage is that any arbitrary training script, even those using non-Microsoft-rx algorithms, can be parallelized by also using the @parallel parameter. Typically, you would have to use RevoScaleR algorithms (with the rx prefix) to obtain parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions not specifically engineered with that capability.
 
-## R Example
-
-
 ## Sample data
 
 This example uses the [NYC Taxi and Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. Data is stored in five partitions, resulting in five individual models. 
 
 Make sure you have enough memory. If memory is insufficient, you can stream the data using the rowsPerRead parameter.
 
+## R Example
+
+The following example uses R and RevoScaleR functions to create, train, and score using logistic regression.
+
 ### Train models
 
 Create a stored procedure that trains models on each partition of the data, using parallelism for faster time to completion.
-You can also use non-Rx functions to train per partition
+You can also use non-Rx functions to train per partition.
  
 ```sql
 USE [nyctaxiDB]
@@ -221,6 +221,10 @@ go
 select * from prediction_results;
 ```
 
+## Python example
+
+TBD
+
 ## Next steps
 
-To apply this technique to your own data, review instructions on how to structure partitioned data sets, call external scripts in stored procedures, and use the RevoScaleR `rx` functions.
+To apply this technique to your own data, review the guidance on how to structure partitioned data sets, call external scripts in stored procedures, and use the RevoScaleR or revoscalepy `rx` functions.

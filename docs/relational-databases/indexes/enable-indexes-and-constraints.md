@@ -74,7 +74,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the table or view. If using DBCC DBREINDEX, eser must either own the table or be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
+ Requires ALTER permission on the table or view. If using DBCC DBREINDEX, user must either own the table; or be a member of the **sysadmin** fixed server role; or the **db_ddladmin** and **db_owner** fixed database roles.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

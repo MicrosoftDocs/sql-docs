@@ -135,7 +135,7 @@ manager: craigg
     |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-#### To start, stop, pause, resume, or restart the an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
+#### To start, stop, pause, resume, or restart an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
 1.  Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, using the instructions above.  
   

@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1ce2b3e3-108a-4f7e-985f-a20b816d0da7
 caps.latest.revision: 26
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: "minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ---
 # Understanding the Requirements for a Time Series Model (Intermediate Data Mining Tutorial)
   When you are preparing data for use in a forecasting model, you must ensure that your data contains a column that can be used to identify the steps in the time series. That column will be designated as the `Key Time` column. Because it is a key, the column must contain unique numeric values.  

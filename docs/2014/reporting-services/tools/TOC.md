@@ -53,6 +53,7 @@
 ### [Server Properties (History Page)](server-properties-history-page.md)
 ### [Server Properties (Logging Page)](server-properties-logging-page.md)
 ### [Server Properties (Security Page)](server-properties-security-page-reporting-services.md)
+### [Server Properties (Advanced Page)](server-properties-advanced-page-reporting-services.md)
 ### [System Role Properties](system-role-properties-management-studio.md)
 ### [User Role Properties](user-role-properties-management-studio.md)
 # [Report Builder](report-builder-authoring-environment-ssrs.md)

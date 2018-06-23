@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to  configure
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ""
@@ -92,7 +92,10 @@ For a list of supported collations, run the [sys.fn_helpcollations](../relationa
 
 ## <a id="customerfeedback"></a> Configure customer feedback
 
-The **telemetry.customerfeedback** setting changes whether SQL Server sends feedback to Microsoft or not. By default, this value is set to **true**. To change the value, run the following commands:
+The **telemetry.customerfeedback** setting changes whether SQL Server sends feedback to Microsoft or not. By default, this value is set to **true** for all editions. To change the value, run the following commands:
+
+> [!IMPORTANT]
+> You can not turn off customer feedback for free editions of SQL Server, Express and Developer.
 
 1. Run the mssql-conf script as root with the **set** command for **telemetry.customerfeedback**. The following example turns off customer feedback by specifying **false**.
 
@@ -106,7 +109,7 @@ The **telemetry.customerfeedback** setting changes whether SQL Server sends feed
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md).
+For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md) and the [SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a id="datadir"></a> Change the default data or log directory location
 

@@ -23,9 +23,6 @@ manager: "jhubbard"
   Use the **Connection Manager** page of the **OLE DB Destination Editor** dialog box to select the OLE DB connection for the destination. This page also lets you select a table or view from the database.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](connection-manager/connect-to-an-excel-workbook.md).  
-  
-> [!NOTE]  
 >  The `CommandTimeout` property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  To learn more about the OLE DB destination, see [OLE DB Destination](data-flow/ole-db-destination.md).  

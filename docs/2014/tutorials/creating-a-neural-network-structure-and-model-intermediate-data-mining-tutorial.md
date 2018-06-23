@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "EQUAL_AREAS method"
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 caps.latest.revision: 28
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: "minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ---
 # Creating a Neural Network Structure and Model (Intermediate Data Mining Tutorial)
   To create a data mining model, you must first use the Data Mining Wizard to create a new mining structure based on the new data source view. In this task you will use the wizard to create a mining structure, and at the same time create an associated mining model that is based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm.  

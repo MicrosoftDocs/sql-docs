@@ -3,12 +3,9 @@ title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2017"
 ms.prod: sql
-ms.prod_service: sql
-ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "server-general"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

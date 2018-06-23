@@ -3,12 +3,9 @@ title: "What's New in SQL Server 2016"
 ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
-ms.prod_service: sql
-ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "server-general"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "SQL Server 2008 what's new"
   - "what's new [SQL Server]"
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 224
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # What's new in SQL Server 2016

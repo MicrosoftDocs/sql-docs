@@ -5,13 +5,12 @@ ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: ""
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
 helpviewer_keywords: 
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server privacy supplement

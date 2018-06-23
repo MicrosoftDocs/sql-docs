@@ -32,7 +32,7 @@ In this tutorial, you will:
 
 You will need a Kubernetes cluster with four nodes. For instructions, refer to [Tutorial: Deploy an Azure Kubernetes Service (AKS) cluster](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster).
 
-Install [`kubctl` CLI](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster#install-the-kubectl-cli). 
+Install [`kubctl`](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster#install-the-kubectl-cli). 
 
 ## Configure 
 
@@ -316,7 +316,7 @@ After deployment, only AG membership list and post-init T-SQL script can be upda
 ## Create the Kubernetes secret to store the masterkey password and the sa password
 
 ```azurecli
-kubectl create secret generic sql-secrets --from-literal=sapassword='MyC0m9l&xP@ssw0rd' --from-literal=masterkeypassword='MyC0m9l&xP@ssw0rd2'
+kubectl create secret generic sql-secrets --from-literal=sapassword="MyC0m9l&xP@ssw0rd" --from-literal=masterkeypassword="MyC0m9l&xP@ssw0rd2"
 ```
 
 ## Configure the deployment manifest
@@ -457,7 +457,6 @@ spec:
     type: sqlservr
     role.ag.mssql.microsoft.com/ag1: primary
   type: LoadBalancer
-
 ```
 
 Save the file, for example `sqlservers.yaml`.

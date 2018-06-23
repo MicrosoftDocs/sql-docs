@@ -47,10 +47,12 @@ SQL Server vNext supports availability groups on containers in a Kubernetes. For
 
 In the image above, a four-node kubernetes clusters host an availability group with three replicas. The solution includes the following components:
 
-* A Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployment includes the operator and a configuration map. These provide the container image, software, and instructions required to deploy SQL Server instances for the availability group. 
+* A Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployment includes the operator and a configuration map. These provide the container image, software, and instructions required to deploy SQL Server instances for the availability group.
+
 * Three nodes, each hosting a [*StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a [*pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Each pod contains:
   * A SQL Server container running one instance of SQL Server.
   * An availability group agent. 
+
 * Two [*ConfigMaps*](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) related to the availability group. The ConfigMaps provide information about:
   * The deployment for the operator.
   * The availability group.
@@ -63,7 +65,7 @@ To deploy an availability group in Kubernetes:
 
 1. Create the Kubernetes cluster
 
-   For an availability group, create at least three nodes. In samples, a fourth node hosts the operator.
+   For an availability group, create at least three nodes for SQL Server plus a node for the operator.
 
 1. Deploy the operator
 
@@ -71,7 +73,7 @@ To deploy an availability group in Kubernetes:
 
 1. Deploy the StatefulSet
 
-   The operator listens for instructions to deploy the StatefulSet. It automatically creates the instances of SQL Server on three separate nodes and configures the availability group with an external cluster manager. 
+   The operator listens for instructions to deploy the StatefulSet. It automatically creates the instances of SQL Server on three separate nodes and configures the availability group with an external cluster manager.
 
 1. Create the databases and attach them to the availability group
 

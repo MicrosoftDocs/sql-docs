@@ -47,15 +47,35 @@ SQL Server vNext supports availability groups on containers in a Kubernetes. For
 
 In the image above, a four-node kubernetes clusters host an availability group with three replicas.
 
-* One node contains a Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployent includes the operator and a configuration map. Together these provide the container image, software, and instructions required to deploy SQL Server containers for an availability group. 
+* One node contains a Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployment includes the operator and a configuration map. Together these provide the container image, software, and instructions required to deploy SQL Server instances for the availability group. 
 * The other three nodes each contain a [*StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a [*pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). 
 * The pod contains the SQL Server container and an availability group agent. The SQL Server container runs one instance of SQL Server.
-* The Kubernetes cluster has two [*ConfigMaps*](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) describes the deployment.
-   * One ConfigMap provides information to the deployment for the operator.
+* The Kubernetes cluster has two [*ConfigMaps*](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) related to the availability group.
+   * One ConfigMap provides information about the deployment for the operator.
    * The other ConfigMap provides information about the availability group.
-* The cluster stores [*secrets*](http://kubernetes.io/docs/concepts/configuration/secret/) for the passwords, certificates, keys, and other sensitive information. 
+* The cluster stores [*secrets*](http://kubernetes.io/docs/concepts/configuration/secret/) for the passwords, certificates, keys, and other sensitive information.
 
-### SQL Server Kubernetes operator
+## Deploy the availability group in Kubernetes
+
+To deploy an availability group in Kubernetes:
+
+1. Create the Kubernetes cluster
+
+   For an availability group, create at least three nodes. In samples, a fourth node hosts the operator.
+
+1. Deploy the operator
+
+1. Configure the storage
+
+1. Deploy the StatefulSet
+
+   The operator listens for instructions to deploy the StatefulSet. It automatically creates the instances of SQL Server on 3 separate nodes and configures the availability group with an external cluster manager. 
+
+1. Create the databases and attach them to the availability group
+
+For detailed steps, see [Configure a SQL Server Always On availability group in Kubernetes for high availability](tutorial-sql-server-ag-kubernetes.md).
+
+## SQL Server Kubernetes operator
 
 After you deploy the operator it registers a custom SQL Server resource. Use the operator to deploy this resource.  Each resource corresponds to an instance of SQL Server and includes specific properties like `sapassword` and `monitoring policy`. The operator parses the resource and deploys a Kubernetes StatefulSet.
 
@@ -85,25 +105,25 @@ The code for the operator, agents and SQL Server is packaged in a Docker image c
 
 * `mssql-server-k8s-init-sql`
   
-    This Kubernetes [job](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) applies a desired state configuration to a SQL Server instance. The job is created by the operator every time a SqlServer resource is created or updated. It ensures that the target SQL Server instance corresponding to the custom resource has the desired configuration described in the resource. 
+    This Kubernetes [job](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) applies a desired state configuration to a SQL Server instance. The job is created by the operator every time a SqlServer resource is created or updated. It ensures that the target SQL Server instance corresponding to the custom resource has the desired configuration described in the resource.
 
     For example, if any of the following settings are required, it completes them:
-    * Update the SA password
-    * Creates the SQL login for the agents
-    * Creates the DBM endpoint 
-       
+  * Update the SA password
+  * Creates the SQL login for the agents
+  * Creates the DBM endpoint
+
 * `mssql-server-k8s-rotate-creds`
   
     This Kubernetes job implements the rotate credentials task. Create this job to request updates to the SA password, agent SQL login password, DBM cert, etc. The SA password is specified as the job parameters. The others are auto-generated.
 
  *`mssql-server-k8s-failover`
    
-   A Kubernetes job that implements the manual failover workflow
+   A Kubernetes job that implements the manual failover workflow.
 
 ### Notes
 
 To deploy an AG in Kubernetes, define a SqlServer resource with the names of one or more AGs that the instance should be a part of.
 
-Regardless of the AG configuration, The operator will always deploy the health monitoring container as well as the AG health container. If the SqlServer resource does not list any AG, the operator will still deploy these containers.
+Regardless of the AG configuration, The operator will always deploy the AG monitor. If the SqlServer resource does not list any AG, the operator will still deploy these containers.
 
-The version for the operator image is identical to the version for the SQL Server image `https://coreos.com/blog/introducing-operators.html 
+The version for the operator image is identical to the version for the SQL Server image. 

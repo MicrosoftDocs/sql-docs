@@ -47,10 +47,13 @@ SQL Server vNext supports availability groups on containers in a Kubernetes. For
 
 In the image above, a four-node kubernetes clusters host an availability group with three replicas.
 
-* One node contains a Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployent includes the operator and a configuration map. Together these provide the containers, software, and instructions required to deploy SQL Server containers for an availability group. 
-* The other three nodes each contain a [StatefulSet](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a SQL Server container, an availability group agent, and a health agent in a Kubernetes [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). 
-*  
- The pod belongs to a Kubernetes [StatefulSet](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Each StatefulSet is configured on one node. A Kubernetes [ConfigMap](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) describes the deployment. A separate ConfigMap describes the availability group. Each of the SQL Server nodes, and the availability group use Kubernetes [secrets] to store credentials and certificates required by the availability group. 
+* One node contains a Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployent includes the operator and a configuration map. Together these provide the container image, software, and instructions required to deploy SQL Server containers for an availability group. 
+* The other three nodes each contain a [*StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a [*pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). 
+* The pod contains the SQL Server container and an availability group agent. The SQL Server container runs one instance of SQL Server.
+* The Kubernetes cluster has two [*ConfigMaps*](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) describes the deployment.
+   * One ConfigMap provides information to the deployment for the operator.
+   * The other ConfigMap provides information about the availability group.
+* The cluster stores [*secrets*](http://kubernetes.io/docs/concepts/configuration/secret/) for the passwords, certificates, keys, and other sensitive information. 
 
 ### SQL Server Kubernetes operator
 
@@ -60,44 +63,40 @@ The StatfulSet contains:
 
 * mssql-server container
 
-* health monitor agent conainer
+* AG Agent container
 
-* AG Agent container to each pod
+The code for the operator, agents and SQL Server is packaged in a Docker image called `mssql-server-k8s-agents`. This image contains following binaries:
 
-The StatefulSet includes the following Kubernetes components:
-
-* `mssql-server-k8s-agents` image contains following binaries:
-
-  * `mssql-server-k8s-operator`
+* `mssql-server-k8s-operator`
 
     This process is deployed as a separate Kubernetes deployment. It registers the custom Kubernetes [custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) called `SqlServer` (sqlservers.mssql.microsoft.com). Then it listens for such resources being created or updated in the Kubernetes cluster. For every such event, it creates or updates the Kubernetes resources for the corresponding instance (i.e. StatefulSet, mssql-server-k8s-init-sql job).
 
-  * `mssql-server-k8s-sqlhealth-agent`
+* `mssql-server-k8s-sqlhealth-agent`
 
     This web server serves Kubernetes [liveness probes](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) to determine the health of a SQL Server instance. Monitors the health of the local SQL Server instance by calling `sp_server_diagnostics` and comparing the results with your monitor policy.
 
-  * `mssql-server-k8s-ag-agent-supervisor`
+* `mssql-server-k8s-ag-agent-supervisor`
   
     This process spawns `mssql-server-k8s-ag-agent` processes as child processes and terminates them as necessary, based on which AGs the local SQL Server instance is meant to be part of.
 
-  * `mssql-server-k8s-ag-agent`
+* `mssql-server-k8s-ag-agent`
   
     This process monitors the health of an AG replica on a single SQL Server instance and performs failovers.
 
-  * `mssql-server-k8s-init-sql`
+* `mssql-server-k8s-init-sql`
   
     This Kubernetes [job](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) applies a desired state configuration to a SQL Server instance. The job is created by the operator every time a SqlServer resource is created or updated. It ensures that the target SQL Server instance corresponding to the custom resource has the desired configuration described in the resource. 
 
-    For example if any of the following settings are required, it completes them:
-      * Update the SA password
-      * Creates the SQL login for the agents
-      * Creates the DBM endpoint 
+    For example, if any of the following settings are required, it completes them:
+    * Update the SA password
+    * Creates the SQL login for the agents
+    * Creates the DBM endpoint 
        
-  * `mssql-server-k8s-rotate-creds`
+* `mssql-server-k8s-rotate-creds`
   
     This Kubernetes job implements the rotate credentials task. Create this job to request updates to the SA password, agent SQL login password, DBM cert, etc. The SA password is specified as the job parameters. The others are auto-generated.
 
-   *`mssql-server-k8s-failover`
+ *`mssql-server-k8s-failover`
    
    A Kubernetes job that implements the manual failover workflow
 

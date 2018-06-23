@@ -13,9 +13,9 @@ ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
-# SQL Server container high availabilty 
+# SQL Server container high availability 
 
-SQL Server workoads on containers can provide high availability with container orchestration through [Kubernetes](http://kubernetes.io/).
+SQL Server workloads on containers can provide high availability with container orchestration through [Kubernetes](http://kubernetes.io/).
 
 Two deployment patterns on Kubernetes can provide high availability for SQL Server.
 
@@ -23,7 +23,7 @@ Two deployment patterns on Kubernetes can provide high availability for SQL Serv
 
 * [A SQL Server Always On availability group hosted on SQL Server containers in Kubernetes](tutorial-sql-server-ag-kubernetes.md).
 
-## SQL Server contianer with persistent storage
+## SQL Server container with persistent storage
 
 Kubernetes 1.6 and later has support for [storage classes](http://kubernetes.io/docs/concepts/storage/storage-classes/), [persistent volume claims](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), and the [Azure disk volume type](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). You can create and manage your SQL Server instances natively in Kubernetes. The example in this article shows how to create a [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) to achieve a high availability configuration similar to a shared disk failover cluster instance. In this configuration, Kubernetes plays the role of the cluster orchestrator. When a SQL Server instance in a container fails, the orchestrator bootstraps another instance of the container that attaches to the same persistent storage.
 
@@ -45,15 +45,17 @@ SQL Server vNext supports availability groups on containers in a Kubernetes. For
 
 ![AG in Kubernetes Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
-In the image above, a four-node kubernetes clusters host an availability group with three replicas.
+In the image above, a four-node kubernetes clusters host an availability group with three replicas. The solution includes the following components:
 
-* One node contains a Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployment includes the operator and a configuration map. Together these provide the container image, software, and instructions required to deploy SQL Server instances for the availability group. 
-* The other three nodes each contain a [*StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a [*pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). 
-* The pod contains the SQL Server container and an availability group agent. The SQL Server container runs one instance of SQL Server.
-* The Kubernetes cluster has two [*ConfigMaps*](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) related to the availability group.
-   * One ConfigMap provides information about the deployment for the operator.
-   * The other ConfigMap provides information about the availability group.
-* The cluster stores [*secrets*](http://kubernetes.io/docs/concepts/configuration/secret/) for the passwords, certificates, keys, and other sensitive information.
+* A Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployment includes the operator and a configuration map. These provide the container image, software, and instructions required to deploy SQL Server instances for the availability group. 
+* Three nodes, each hosting a [*StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a [*pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Each pod contains:
+  * A SQL Server container running one instance of SQL Server.
+  * An availability group agent. 
+* Two [*ConfigMaps*](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) related to the availability group. The ConfigMaps provide information about:
+  * The deployment for the operator.
+  * The availability group.
+
+In addition, the cluster stores [*secrets*](http://kubernetes.io/docs/concepts/configuration/secret/) for the passwords, certificates, keys, and other sensitive information.
 
 ## Deploy the availability group in Kubernetes
 
@@ -69,7 +71,7 @@ To deploy an availability group in Kubernetes:
 
 1. Deploy the StatefulSet
 
-   The operator listens for instructions to deploy the StatefulSet. It automatically creates the instances of SQL Server on 3 separate nodes and configures the availability group with an external cluster manager. 
+   The operator listens for instructions to deploy the StatefulSet. It automatically creates the instances of SQL Server on three separate nodes and configures the availability group with an external cluster manager. 
 
 1. Create the databases and attach them to the availability group
 
@@ -77,7 +79,7 @@ For detailed steps, see [Configure a SQL Server Always On availability group in 
 
 ## SQL Server Kubernetes operator
 
-After you deploy the operator it registers a custom SQL Server resource. Use the operator to deploy this resource.  Each resource corresponds to an instance of SQL Server and includes specific properties like `sapassword` and `monitoring policy`. The operator parses the resource and deploys a Kubernetes StatefulSet.
+After you deploy the operator, it registers a custom SQL Server resource. Use the operator to deploy this resource.  Each resource corresponds to an instance of SQL Server and includes specific properties like `sapassword` and `monitoring policy`. The operator parses the resource and deploys a Kubernetes StatefulSet.
 
 The StatfulSet contains:
 
@@ -85,11 +87,11 @@ The StatfulSet contains:
 
 * AG Agent container
 
-The code for the operator, agents and SQL Server is packaged in a Docker image called `mssql-server-k8s-agents`. This image contains following binaries:
+The code for the operator, AG agent, and SQL Server is packaged in a Docker image called `mssql-server-k8s-agents`. This image contains following binaries:
 
 * `mssql-server-k8s-operator`
 
-    This process is deployed as a separate Kubernetes deployment. It registers the custom Kubernetes [custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) called `SqlServer` (sqlservers.mssql.microsoft.com). Then it listens for such resources being created or updated in the Kubernetes cluster. For every such event, it creates or updates the Kubernetes resources for the corresponding instance (i.e. StatefulSet, mssql-server-k8s-init-sql job).
+    This process is deployed as a separate Kubernetes deployment. It registers the custom Kubernetes [custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) called `SqlServer` (sqlservers.mssql.microsoft.com). Then it listens for such resources being created or updated in the Kubernetes cluster. For every such event, it creates or updates the Kubernetes resources for the corresponding instance (for example the StatefulSet, or `mssql-server-k8s-init-sql` job).
 
 * `mssql-server-k8s-sqlhealth-agent`
 

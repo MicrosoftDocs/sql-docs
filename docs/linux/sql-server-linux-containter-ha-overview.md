@@ -43,9 +43,14 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 
 SQL Server vNext supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](http://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
 
->[AG in Kubernetes Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
+![AG in Kubernetes Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
-In the image above, a four-node kubernetes cluster host an availability group with three replicas. One node contains a Kubernetes [deployment](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployment describes the desired state for the SQL Server container on each cluster node. The description includes settings for the SQL Server container, the availability group agent, and the the health agent. These three items exist in a Kubernetes [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). The pod belongs to a Kubernetes [StatefulSet](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Each StatefulSet is configured on one node.
+In the image above, a four-node kubernetes clusters host an availability group with three replicas.
+
+* One node contains a Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployent includes the operator and a configuration map. Together these provide the containers, software, and instructions required to deploy SQL Server containers for an availability group. 
+* The other three nodes each contain a [StatefulSet](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a SQL Server container, an availability group agent, and a health agent in a Kubernetes [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). 
+*  
+ The pod belongs to a Kubernetes [StatefulSet](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Each StatefulSet is configured on one node. A Kubernetes [ConfigMap](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) describes the deployment. A separate ConfigMap describes the availability group. Each of the SQL Server nodes, and the availability group use Kubernetes [secrets] to store credentials and certificates required by the availability group. 
 
 ### SQL Server Kubernetes operator
 

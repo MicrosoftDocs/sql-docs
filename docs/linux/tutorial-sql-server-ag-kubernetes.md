@@ -128,14 +128,6 @@ kubectl describe pv
 
 The operator is deployed as an one-replica Kubernetes deployment.
 
-### Create an imagePullSecrets secret in Kubernetes
-
-This enables access to pull from the private preview registry where the `mssql-server` and `mssql-server-k8s-agents` images are. The credentials for the Docker registry (username, password and email) are provided to you in the EAP dashboard.
-
-```azurecli
-kubectl create secret docker-registry private-registry-key --docker-username="dockerUser" --docker-password="xxxxxx" --docker-email="username@example.com" --docker-server="private-repo.microsoft.com"
-```
-
 ### Configure the deployment manifest
 
 In this step, create a manifest to describe the operator container based on the mssql-server-k8s-agents Docker image. The manifest also describes the operator and SQL Server controller permissions. The controller runs inside the operator container and manages the SqlServer custom resource.

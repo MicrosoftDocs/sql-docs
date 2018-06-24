@@ -38,11 +38,15 @@ Install [`kubctl`](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernete
 
 ## Create storage
 
+In Kubernetes, a [*persistent volume*](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) is a piece of storage in the cluster. A *persistent volume claim* (PVC) is a request for storage by a user.
+
+In Azure Kubernetes Service (AKS), you [create a persistent volume claim](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) to automatically provision storage based on a storage class.
+
+The following section shows how to create the PVC for this example.
+
 ### Define the storage
 
-Create a manifest file to define the storage class and the persistent volume claim for each of the 3 SQL Server instances that will be part of the AG. The Kubernetes cluster uses this manifest to create the persistent storage.
-
-The following yaml file example, defines a storage class and persistent volume claims. The storage class provisioner is `azure-disk` because this Kubernetes cluster is in Azure. The persistent volume claims are `mssql-data-1`, `mssql-data-2`, `mssql-data-3`. The persistent volume claim metadata includes an annotation connecting it back to the storage class.
+Create a file named `pvc.yaml`, and copy in the following manifest.
 
 ```yaml
 kind: StorageClass
@@ -94,20 +98,20 @@ spec:
       storage: 8Gi
 ```
 
-Save the file `pvc.yaml`.
+Create the PVC with the [kubectl apply](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply) command.
 
-### Create the persistent volume claims in Kubernetes
-
-```azurecli
-kubectl apply -f <Path to pvc.yaml file>
+```azure-cli
+kubectl apply -f pvc.yaml
 ```
 
-Kubernetes creates the persistent volumes automatically as Azure managed storage accounts, and binds them to the persistent volume claims. 
+Kubernetes creates the persistent volumes automatically as Azure managed storage accounts, and binds them to the persistent volume claims.
 
 ### Verify the persistent volume claim
 
+To see all of the PVCs in a Kubernetes cluster, run `kubectl describe pvc`.
+
 ```azurecli
-kubectl describe pvc <PersistentVolumeClaim>
+kubectl describe pvc
 ```
 
 In the preceding step, the persistent volume claim is named `mssql-data-<x>` where `<x>` is a number. For example, `mssql-data-1`. To see metadata about the persistent volume claim for the SQL Server instance `mssql-data-1`, run the following command: 

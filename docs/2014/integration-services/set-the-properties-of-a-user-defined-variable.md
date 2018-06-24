@@ -16,7 +16,7 @@ ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Properties of a User-Defined Variable
   To set the properties of a user-defined variable in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], you can use one of the following features:  

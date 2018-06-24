@@ -15,7 +15,7 @@ ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Policies Dialog Box
   Use this dialog box to view the policies that are effective for this target. This dialog box shows relevant policies, their policy categories, and information about the policies.  

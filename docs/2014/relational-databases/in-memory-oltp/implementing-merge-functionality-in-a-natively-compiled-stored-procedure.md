@@ -13,7 +13,7 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Implementing MERGE Functionality
   A database may need to perform either an insert of an update, depending on whether a particular row already exists in the database.  

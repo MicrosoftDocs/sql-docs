@@ -16,7 +16,7 @@ ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open Solutions from Source Control
   You can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to open solutions directly from source control. When you do this, the Studio environment creates a copy of the latest version of the solution files at the location you specify.  

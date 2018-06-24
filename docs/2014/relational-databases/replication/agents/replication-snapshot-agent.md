@@ -18,7 +18,7 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 caps.latest.revision: 40
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replication Snapshot Agent
   The Replication Snapshot Agent is an executable file that prepares snapshot files containing schema and data of published tables and database objects, stores the files in the snapshot folder, and records synchronization jobs in the distribution database.  

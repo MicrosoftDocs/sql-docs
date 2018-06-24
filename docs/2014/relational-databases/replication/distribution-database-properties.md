@@ -17,7 +17,7 @@ ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Distribution Database Properties
   The **Distribution Database Properties** dialog box allows you to view a number of properties and to set the transaction retention period and history retention period for the database.  

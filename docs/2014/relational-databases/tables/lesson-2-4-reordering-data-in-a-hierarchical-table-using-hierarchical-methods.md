@@ -15,7 +15,7 @@ ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 caps.latest.revision: 20
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reordering Data in a Hierarchical Table Using Hierarchical Methods
   Reorganizing a hierarchy is a common maintenance task. In this task, we will use an UPDATE statement with the [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) method to first move a single row to a new location in the hierarchy. Then we will move an entire sub-tree to a new location.  

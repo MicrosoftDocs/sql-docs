@@ -15,7 +15,7 @@ ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Facet Properties Dialog Box, Dependent Conditions Page
   Use this dialog box to display a list of conditions that currently reference this Policy-Based Management facet.  

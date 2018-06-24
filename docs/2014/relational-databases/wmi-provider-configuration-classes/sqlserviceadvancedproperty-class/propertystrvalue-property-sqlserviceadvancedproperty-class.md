@@ -22,7 +22,7 @@ ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # PropertyStrValue Property (SqlServiceAdvancedProperty Class)
   Gets the string value of the advanced property.  

@@ -15,7 +15,7 @@ ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Objects
   Limits the object selection dialog boxes to the types of objects you want to see.  

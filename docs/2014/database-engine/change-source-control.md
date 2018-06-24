@@ -17,7 +17,7 @@ ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change Source Control
   Creates and manages the connections and bindings that link a locally saved solution or project to a source control database folder.  

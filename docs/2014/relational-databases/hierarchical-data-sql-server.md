@@ -20,7 +20,7 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Hierarchical Data (SQL Server)
   The built-in `hierarchyid` data type makes it easier to store and query hierarchical data. `hierarchyid` is optimized for representing trees, which are the most common type of hierarchical data.  

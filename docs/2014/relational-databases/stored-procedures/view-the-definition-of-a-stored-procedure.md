@@ -18,7 +18,7 @@ ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # View the Definition of a Stored Procedure
     

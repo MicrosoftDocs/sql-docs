@@ -17,7 +17,7 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: craigg
 ---
 # Cardinality Estimation (SQL Server)
   The cardinality estimation logic, called the cardinality estimator, is re-designed in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to improve the quality of query plans, and therefore to improve query performance. The new cardinality estimator incorporates assumptions and algorithms that work well on modern OLTP and data warehousing workloads. It is based on in-depth cardinality estimation research on modern workloads, and our learnings over the past 15 years of improving the SQL Server cardinality estimator. Feedback from customers shows that while most queries will benefit from the change or remain unchanged, a small number might show regressions compared to the previous cardinality estimator.  

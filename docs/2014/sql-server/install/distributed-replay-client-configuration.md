@@ -13,7 +13,7 @@ ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Distributed Replay Client Configuration
   Use the **Distributed Replay Client Configuration** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify the users you want to grant administrative permissions to for the Distributed Replay client service.  

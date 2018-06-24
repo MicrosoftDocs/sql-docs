@@ -18,7 +18,7 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Copy Package Objects
   This topic describes how to copy control flow items, data flow items, and connection managers within a package or between packages.  

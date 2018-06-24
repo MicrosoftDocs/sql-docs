@@ -13,7 +13,7 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 caps.latest.revision: 27
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Step 4: Adding Package Configurations
   In this task, you will add a configuration to each package. Configurations update the values of package properties and package objects at run time.  

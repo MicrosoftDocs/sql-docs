@@ -18,7 +18,7 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 caps.latest.revision: 52
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQLSetStmtAttr
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not support the mixed (keyset/dynamic) cursor model. Attempts to set the keyset size using SQL_ATTR_KEYSET_SIZE will fail if the value set is not equal to 0.  

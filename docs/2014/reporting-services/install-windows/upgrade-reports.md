@@ -22,7 +22,7 @@ ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 caps.latest.revision: 65
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Upgrade Reports
   Report definition (.rdl) files are automatically upgraded in the following ways:  

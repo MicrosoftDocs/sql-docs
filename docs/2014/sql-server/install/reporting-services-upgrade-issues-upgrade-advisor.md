@@ -18,7 +18,7 @@ ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 caps.latest.revision: 42
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reporting Services Upgrade Issues (Upgrade Advisor)
   The following topics describe the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] issues that might affect your upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The topics describe actions that you can take to mitigate the effect of these changes on your environment.  

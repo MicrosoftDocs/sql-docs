@@ -15,7 +15,7 @@ ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive
   The following query specifies the `ELEMENTS` directive to generate element-centric XML from the query result.  

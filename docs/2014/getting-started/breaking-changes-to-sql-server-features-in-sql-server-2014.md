@@ -19,7 +19,7 @@ ms.assetid: 73ab6859-9605-419e-bd78-798f68cc66f8
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Breaking Changes to SQL Server Features in SQL Server 2014
   This topic describes breaking changes in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these changes when you upgrade, and they might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

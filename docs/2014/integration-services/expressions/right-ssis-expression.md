@@ -15,7 +15,7 @@ ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # RIGHT (SSIS Expression)
   Returns the specified number of characters from the rightmost portion of the given character expression.  

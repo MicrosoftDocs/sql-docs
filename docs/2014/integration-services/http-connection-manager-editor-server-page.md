@@ -17,7 +17,7 @@ ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # HTTP Connection Manager Editor (Server Page)
   Use the **Server** tab of the **HTTP Connection Manager Editor** dialog box to configure the HTTP Connection Manager by specifying properties such as the URL and security credentials. An HTTP connection enables a package to access a Web server by using HTTP to send or receive files. After configuring the HTTP Connection Manager, you can also test the connection.  

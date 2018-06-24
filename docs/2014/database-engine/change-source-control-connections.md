@@ -16,7 +16,7 @@ ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change Source Control Connections
   The first time you add or open a solution from source control, your source control provider creates an association between the root folder of the local solution directory and its corresponding server folder.  

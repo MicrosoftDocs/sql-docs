@@ -20,7 +20,7 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transact-SQL Debugger Information
   Every time that the debugger pauses execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, you can use the various debugger windows to view the current execution state.  

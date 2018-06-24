@@ -13,7 +13,7 @@ ms.assetid: 59417a54-55f1-4468-ba41-368aa852c2d4
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Schedule the Policies
   In this task, you will schedule the best practices policies that you imported in the previous task.  

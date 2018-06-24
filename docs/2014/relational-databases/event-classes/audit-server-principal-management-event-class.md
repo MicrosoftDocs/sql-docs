@@ -17,7 +17,7 @@ ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Server Principal Management Event Class
   The **Audit Server Principal Management** event class occurs when server principals are created, altered, or dropped.  

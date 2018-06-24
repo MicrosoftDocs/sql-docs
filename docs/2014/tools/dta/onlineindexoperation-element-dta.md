@@ -17,7 +17,7 @@ ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
 caps.latest.revision: 13
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # OnlineIndexOperation Element (DTA)
   Specifies whether the indexes, indexed views, or partitions that Database Engine Tuning Advisor recommends can be created online.  

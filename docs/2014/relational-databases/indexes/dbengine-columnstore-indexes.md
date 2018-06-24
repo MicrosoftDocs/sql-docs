@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: craigg
 ---
 # Columnstore Indexes 
 See [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md) and [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).

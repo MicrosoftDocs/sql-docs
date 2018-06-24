@@ -15,7 +15,7 @@ ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Finish
   The **Finish** page summarizes the wizard process. Click **Finish** to close the wizard and generate all of the tables you defined in the Create CDC Instance wizard.  

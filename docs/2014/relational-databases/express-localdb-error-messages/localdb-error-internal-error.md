@@ -14,7 +14,7 @@ ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOCALDB_ERROR_INTERNAL_ERROR
     

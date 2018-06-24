@@ -19,7 +19,7 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Apply Transaction Log Backups (SQL Server)
   The topic is relevant only for the full recovery model or bulk-logged recovery model.  

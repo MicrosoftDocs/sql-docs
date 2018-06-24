@@ -15,7 +15,7 @@ ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
   Use the **Fixed and Changing Attribute Options** dialog box to specify how to respond to changes in fixed and changing attributes.  

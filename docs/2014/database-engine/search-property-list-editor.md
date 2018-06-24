@@ -15,7 +15,7 @@ ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Search Property List Editor
   Use this dialog box to add or delete search properties in a search property list.  

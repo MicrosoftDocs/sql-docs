@@ -16,7 +16,7 @@ ms.assetid: 029f9895-7232-4149-9362-3ab1a4133d21
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # The Microsoft Full-Text Engine for SQL Server will not load unsigned third-party components by default
   By default, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not load components that are not signed by [!INCLUDE[msCoName](../../includes/msconame-md.md)].  

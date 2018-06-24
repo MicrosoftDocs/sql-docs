@@ -13,7 +13,7 @@ ms.assetid: 830ec9a5-68fd-4454-a935-4957abf8a052
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Behavior Changes to Management Tools Features in SQL Server 2014
   This topic describes behavior changes to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Tools features. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as compared to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

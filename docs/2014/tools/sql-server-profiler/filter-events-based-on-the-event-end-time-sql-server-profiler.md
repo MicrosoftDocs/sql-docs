@@ -18,7 +18,7 @@ ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Filter Events Based on the Event End Time (SQL Server Profiler)
   This topic describes how to filter trace events based on the event ending time by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

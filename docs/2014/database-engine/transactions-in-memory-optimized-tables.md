@@ -13,7 +13,7 @@ ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transactions in Memory-Optimized Tables
   Row versioning on disk-based tables (using SNAPSHOT isolation or READ_COMMITTED_SNAPSHOT) provides a form of optimistic concurrency control. Readers and writers do not block each other. With memory-optimized tables, writers do not block writers. With row versioning on disk-based tables, one transaction locks the row and concurrent transactions attempting to update the row are blocked. There is no locking with memory-optimized tables. Instead, if two transactions attempt to update the same row, a write/write conflict (error 41302) will occur.  

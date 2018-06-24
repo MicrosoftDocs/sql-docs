@@ -23,7 +23,7 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Row Sampling Transformation
   The Row Sampling transformation is used to obtain a randomly selected subset of an input dataset. You can specify the exact size of the output sample, and specify a seed for the random number generator.  

@@ -15,7 +15,7 @@ ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Target Servers (Download Instructions Tab)
   Use this page to display and update the download instructions for one or more target servers.  

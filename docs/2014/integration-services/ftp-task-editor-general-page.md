@@ -17,7 +17,7 @@ ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # FTP Task Editor (General Page)
   Use the **General** page of the **FTP Task Editor** dialog box to specify the FTP connection manager that connects to the FTP server that the task communicates with. You can also name and describe the FTP task.  

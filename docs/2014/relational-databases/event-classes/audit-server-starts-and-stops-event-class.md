@@ -17,7 +17,7 @@ ms.assetid: 8ddb55af-c77b-4d07-b803-a97320c0804e
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Server Starts and Stops Event Class
   The **Audit Server Starts and Stops** event class occurs when the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service state is modified.  

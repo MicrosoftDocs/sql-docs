@@ -17,7 +17,7 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Table Column Properties (SQL Server Management Studio)
   These properties appear in the bottom pane of Table Designer. Unless otherwise noted, you can edit these properties in the Properties window when the column is selected. The **Column Properties** can be displayed in categories or alphabetically. Many properties only appear or can only be changed for certain data types.  

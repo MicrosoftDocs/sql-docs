@@ -18,7 +18,7 @@ ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove a SQL Server Failover Cluster Instance (Setup)
   Use this procedure to uninstall a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustered instance.  

@@ -17,7 +17,7 @@ ms.assetid: 780fde57-3970-4063-a634-04879b6ef141
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Server Object Take Ownership Event Class
   The **Audit Server Object Take Ownership** event class occurs when the owner is changed for objects in server scope.  

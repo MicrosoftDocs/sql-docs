@@ -19,7 +19,7 @@ ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Objects Event Category
   The **Objects** event category contains general objects events.  

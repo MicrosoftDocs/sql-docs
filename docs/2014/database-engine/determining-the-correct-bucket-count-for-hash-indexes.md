@@ -13,7 +13,7 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Determining the Correct Bucket Count for Hash Indexes
   You must specify a value for the `BUCKET_COUNT` parameter when you create the memory-optimized table. This topic makes recommendations for determining the appropriate value for the `BUCKET_COUNT` parameter. If you cannot determine the correct bucket count, use a nonclustered index instead.  An incorrect `BUCKET_COUNT` value, especially one that is too low, can significantly impact workload performance, as well as recovery time of the database. It is better to overestimate the bucket count.  

@@ -15,7 +15,7 @@ ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect to Windows Azure Storage
   Use the **Windows Azure Storage Connection** dialog to specify a storage account and validate your connection to Windows Azure.  

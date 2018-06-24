@@ -19,7 +19,7 @@ ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
 caps.latest.revision: 36
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Snapshots for Merge Publications with Parameterized Filters
   When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. First, a schema snapshot is created that contains all objects required by replication and the schema of the published objects, but not the data. Then, each subscription is initialized with a snapshot that includes the objects and schema from the schema snapshot and the data that belongs to the subscription's partition. If more than one subscription receives a given partition (in other words, they receive the same schema and data), the snapshot for that partition is created only once; multiple subscriptions are initialized from the same snapshot. For more information about parameterized row filters, see [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  

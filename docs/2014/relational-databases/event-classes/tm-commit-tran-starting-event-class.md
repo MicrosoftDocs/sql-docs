@@ -17,7 +17,7 @@ ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # TM: Commit Tran Starting Event Class
   The TM: Commit Tran Starting event class indicates that a COMMIT TRANSACTION request is starting. The request is sent from the client through the transaction management interface. The EventSubClass column indicates if a new transaction will be started after the current transaction is committed.  

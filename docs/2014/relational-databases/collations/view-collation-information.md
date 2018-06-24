@@ -15,7 +15,7 @@ ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Collation Information
     

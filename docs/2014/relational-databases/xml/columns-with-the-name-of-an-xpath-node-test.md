@@ -16,7 +16,7 @@ ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Columns with the Name of an XPath Node Test
   If the column name is one of the XPath node tests, the content is mapped as shown in the following table. When the column name is an XPath node test, the content is mapped to the corresponding node. If the SQL type of the column is `xml`, an error is returned.  

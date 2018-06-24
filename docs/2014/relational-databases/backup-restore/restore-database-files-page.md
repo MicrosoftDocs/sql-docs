@@ -16,7 +16,7 @@ ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Restore Database (Files Page)
   Use the **Files** page of the **Restore Database** dialog box to manage the specific files you have chosen to restore within the database.  

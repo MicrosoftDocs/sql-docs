@@ -19,7 +19,7 @@ ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View or Change the Properties of a Connection in a Project
   The properties of a connection saved in a project can be viewed and some can be modified.  

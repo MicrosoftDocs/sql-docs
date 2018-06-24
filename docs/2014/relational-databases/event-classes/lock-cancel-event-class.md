@@ -17,7 +17,7 @@ ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lock:Cancel Event Class
   The **Lock:Cancel** event class indicates that acquisition of a lock on a resource has been canceled; for example, due to a query being canceled.  

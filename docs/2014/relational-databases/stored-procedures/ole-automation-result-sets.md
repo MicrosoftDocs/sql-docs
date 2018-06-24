@@ -20,7 +20,7 @@ ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # OLE Automation Result Sets
   If an OLE Automation property or method returns data in an array with one or two dimensions, the array is returned to the client as a result set:  

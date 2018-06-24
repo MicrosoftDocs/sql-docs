@@ -37,7 +37,7 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 caps.latest.revision: 82
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage Metadata When Making a Database Available on Another Server Instance (SQL Server)
   This topic is relevant in the following situations:  

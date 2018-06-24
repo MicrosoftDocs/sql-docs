@@ -17,7 +17,7 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add a Database Mirroring Witness Using Windows Authentication (Transact-SQL)
   To set up a witness for a database, the database owner assigns a Database Engine instance to the role of witness server. The witness server instance can run on the same computer as the principal or mirror server instance, but this substantially reduces the robustness of automatic failover.  

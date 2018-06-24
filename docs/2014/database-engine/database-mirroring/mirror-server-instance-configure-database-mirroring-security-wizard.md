@@ -15,7 +15,7 @@ ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Mirror Server Instance (Configure Database Mirroring Security Wizard)
   Use this page to specify information about the server instance with the mirror database.  

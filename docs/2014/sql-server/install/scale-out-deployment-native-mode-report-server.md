@@ -15,7 +15,7 @@ ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Scale-out Deployment (Native Mode Report Server)
   Use the **Scale-out Deployment** page in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to view the initialization status for a scale-out deployment or to join a report server to a scale-out deployment. A *scale-out deployment* refers to two or more report server instances that share a single report server database.  

@@ -13,7 +13,7 @@ ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 caps.latest.revision: 4
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Capture Logon Trigger Event Data
   To capture XML data about LOGON events for use inside logon triggers, use the [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) function. The LOGON event returns the following event data schema:  

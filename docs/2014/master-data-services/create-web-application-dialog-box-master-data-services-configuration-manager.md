@@ -15,7 +15,7 @@ ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Web Application Dialog Box (Master Data Services Configuration Manager)
   Use the **Create Web Application** dialog box to create the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application. This web application is created in the site that you selected on the **Web Configuration** page.  

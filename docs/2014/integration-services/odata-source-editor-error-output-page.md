@@ -15,7 +15,7 @@ ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # OData Source Editor (Error Output Page)
   Use the **Error Output** page of the **OData Source Editor** dialog box to select error handling options and to set properties on error output columns.  

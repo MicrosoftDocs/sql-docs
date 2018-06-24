@@ -16,7 +16,7 @@ ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)
   This dialog box notifies you that the designer cannot parse the SQL statement in the SQL pane.  

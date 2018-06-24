@@ -15,7 +15,7 @@ ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 caps.latest.revision: 27
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Full-Text Index Properties (General Page)
   **To view or change the modifiable properties of a full-text index**  

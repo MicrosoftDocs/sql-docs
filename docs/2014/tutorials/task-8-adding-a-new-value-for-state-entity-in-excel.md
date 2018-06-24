@@ -15,7 +15,7 @@ ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 8: Adding a New Value for State Entity in Excel
   In this task, you add a value for the State entity in Excel and publish the change to the MDS server.  

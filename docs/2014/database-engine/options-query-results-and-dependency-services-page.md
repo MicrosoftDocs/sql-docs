@@ -15,7 +15,7 @@ ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
 caps.latest.revision: 6
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Query Results and Dependency Services Page)
   Use this page to specify the server to connect for Dependency Services. Dependency Services enables you to extract information about dependencies between [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects stored on different servers. You view object dependencies by using the **Object Dependencies** dialog box in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  

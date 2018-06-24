@@ -15,7 +15,7 @@ ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Server Properties (Misc Server Settings Page)
   Use this page to view or modify your server settings.  

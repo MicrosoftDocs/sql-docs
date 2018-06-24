@@ -16,7 +16,7 @@ ms.assetid: 7f4fbbef-2696-4911-903b-63f6d9e4484a
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove statements that modify column-level permissions on system objects
   The Upgrade Advisor detected nonstandard column-level permissions on system objects. These permission changes will not be maintained when you upgrade. Additionally, column-level permissions on system objects are no longer supported. Remove statements from your applications that set column-level permissions on system objects.  

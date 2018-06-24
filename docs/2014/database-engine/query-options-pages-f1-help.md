@@ -15,7 +15,7 @@ ms.assetid: fad98caa-8a29-4b88-8464-f60a5c4fc00e
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Query Options Pages F1 Help
   This section contains the F1 Help topics for the **Query Options** pages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

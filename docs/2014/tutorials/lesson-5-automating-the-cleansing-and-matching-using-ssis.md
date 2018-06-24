@@ -15,7 +15,7 @@ ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 5: Automating the Cleansing and Matching using SSIS
   In Lesson 1, you built the Suppliers knowledge base and used it to cleanse data in Lesson 2 and match data in Lesson 3 using the tool **DQS Client**. In a real world scenario, you may have to pull data from a source that DQS does not support or you want to automate the cleansing and matching process without having to use the **DQS Client** tool. SQL Server Integration Services (SSIS) has components that you can use to integrate data from various heterogeneous sources and a **[HYPERLINK "http://msdn.microsoft.com/library/ee677619.aspx" \t "_blank" DQS Cleansing Transform](http://msdn.microsoft.com/library/ee677619.aspx)** component to invoke the cleansing functionality exposed by DQS. Currently, DQS does not expose matching functionality for SSIS to use, but you can use the **[Fuzzy Grouping Transform](http://msdn.microsoft.com/library/ms141764.aspx)** to identify duplicates in the data.  

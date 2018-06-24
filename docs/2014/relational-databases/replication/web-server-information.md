@@ -15,7 +15,7 @@ ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Web Server Information
   Web server information is required to use the Web synchronization option for merge replication. For information about configuring Web synchronization, see [Configure Web Synchronization](configure-web-synchronization.md).  

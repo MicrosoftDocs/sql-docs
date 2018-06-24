@@ -16,7 +16,7 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 38
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure SQL Server to Use Soft-NUMA (SQL Server)
 Modern processors have multiple to many cores per socket. Each socket is represented, usually, as a single NUMA node. The SQL Server database engine partitions various internal structures and partitions service threads per NUMA node. With processors containing 10 or more cores per socket, using software NUMA (soft-NUMA) to split hardware NUMA nodes generally increases scalability and performance.   

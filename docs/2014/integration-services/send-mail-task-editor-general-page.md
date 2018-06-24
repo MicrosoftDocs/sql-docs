@@ -17,7 +17,7 @@ ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Send Mail Task Editor (General Page)
   Use the **General page** of the **Send Mail Task Editor** dialog box to name and describe the Send Mail task.  

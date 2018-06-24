@@ -17,7 +17,7 @@ ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # TransactionLog Event Class
   Use the TransactionLog event class to monitor activity in the transaction logs in an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

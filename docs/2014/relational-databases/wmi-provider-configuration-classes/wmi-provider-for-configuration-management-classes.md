@@ -23,7 +23,7 @@ ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # WMI Provider for Configuration Management Classes
   The Windows Management Instrumentation (WMI) provider for Configuration Management provides functionality for the following classes:  

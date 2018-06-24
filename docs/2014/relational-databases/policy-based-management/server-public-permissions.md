@@ -15,7 +15,7 @@ ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Server public Permissions
   This rule determines whether the public server role has server permissions. Every login that is created on the server is a member of the public server role. If this condition is met, every login on the server will have server permissions.  

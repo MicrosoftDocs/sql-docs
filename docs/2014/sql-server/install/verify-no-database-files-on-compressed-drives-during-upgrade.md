@@ -15,7 +15,7 @@ ms.assetid: 63be6853-c54a-42b2-ae1a-db2175f1d28e
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Verify that no database files are on compressed drives during the upgrade process
   Upgrade Advisor detected database files on a compressed drive. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot create or upgrade databases on compressed drives.  

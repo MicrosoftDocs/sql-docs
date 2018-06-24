@@ -16,7 +16,7 @@ ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Annotations (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], annotations are comments that you enter to provide details about transactions.  

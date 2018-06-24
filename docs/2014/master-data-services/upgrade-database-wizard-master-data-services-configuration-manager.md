@@ -13,7 +13,7 @@ ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Upgrade Database Wizard (Master Data Services Configuration Manager)
   Use the **Upgrade Database Wizard** to upgrade a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  

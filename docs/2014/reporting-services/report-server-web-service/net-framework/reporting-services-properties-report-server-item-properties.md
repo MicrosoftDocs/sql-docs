@@ -19,7 +19,7 @@ ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: 44
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Report Server Item Properties
   Item properties are properties that are specific to items in the report server database. Such items include reports, linked reports, folders, resources, models, and data sources.  

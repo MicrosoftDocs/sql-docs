@@ -17,7 +17,7 @@ ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # WMI Event Watcher Task Editor (General Page)
   Use the **General** page of the **WMI Event Watcher Task Editor** dialog box to name and describe the WMI Event Watcher task.  

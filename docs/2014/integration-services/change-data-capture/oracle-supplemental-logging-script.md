@@ -13,7 +13,7 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Oracle Supplemental Logging Script
   This dialog box shows the script the Oracle supplemental logging script.  

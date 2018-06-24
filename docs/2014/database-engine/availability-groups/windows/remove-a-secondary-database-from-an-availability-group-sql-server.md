@@ -19,7 +19,7 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 caps.latest.revision: 21
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove a Secondary Database from an Availability Group (SQL Server)
   This topic describes how to remove a secondary database from an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

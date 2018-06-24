@@ -15,7 +15,7 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change Data Capture and Other SQL Server Features
   This topic describes how the following features interact with change data capture:  

@@ -13,7 +13,7 @@ ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 caps.latest.revision: 15
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Analysis Server Properties (Advanced Tab)
   This service is the Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. If custom properties are defined, they appear on this tab, with their values.  

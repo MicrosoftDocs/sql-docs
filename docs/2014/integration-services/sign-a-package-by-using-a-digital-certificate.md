@@ -17,7 +17,7 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Sign a Package by Using a Digital Certificate
   This topic describes how to sign an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package with a digital certificate. You can use a digital signature, together with other settings, to prevent a package that is not valid from loading and running.  

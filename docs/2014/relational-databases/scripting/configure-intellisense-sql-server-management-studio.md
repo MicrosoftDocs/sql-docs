@@ -17,7 +17,7 @@ ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 caps.latest.revision: 28
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure IntelliSense (SQL Server Management Studio)
   Most [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options are on by default. You can turn off an IntelliSense option and instead invoke it through a menu command or keystroke combination.  

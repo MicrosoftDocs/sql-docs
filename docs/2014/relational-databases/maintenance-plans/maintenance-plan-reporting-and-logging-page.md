@@ -15,7 +15,7 @@ ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Maintenance Plan (Reporting and Logging Page)
   Use the **Reporting and Logging** dialog box to configure the reports and logs that are generated when maintenance plans are executed.  

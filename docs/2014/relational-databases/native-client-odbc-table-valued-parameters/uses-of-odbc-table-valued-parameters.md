@@ -17,7 +17,7 @@ ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Uses of ODBC Table-Valued Parameters
   This topic discusses the primary user scenarios for using table-valued parameters with ODBC:  

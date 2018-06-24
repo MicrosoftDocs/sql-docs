@@ -18,7 +18,7 @@ ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Numeric Data Formats
   Fast parse provides a fast, simple, locale-insensitive set of routines for parsing data. Fast parse supports only a limited set of formats for integer data types.  

@@ -16,7 +16,7 @@ ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Invalid Characters and Escape Rules
   This topic describes how invalid XML characters are handled by the FOR XML clause, and lists the escape rules for characters that are invalid in XML names.  

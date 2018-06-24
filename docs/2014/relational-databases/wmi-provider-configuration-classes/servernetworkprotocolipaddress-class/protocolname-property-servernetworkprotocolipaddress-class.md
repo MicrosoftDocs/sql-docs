@@ -22,7 +22,7 @@ ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ProtocolName Property (ServerNetworkProtocolIPAddress Class)
   Gets the name of the server network protocol that references the IP address.  

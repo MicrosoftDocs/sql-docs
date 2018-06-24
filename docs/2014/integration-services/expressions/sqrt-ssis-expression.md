@@ -16,7 +16,7 @@ ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQRT (SSIS Expression)
   Returns the square root of a numeric expression.  

@@ -17,7 +17,7 @@ ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Find a Value or Data Column While Tracing (SQL Server Profiler)
   This topic describes how to search for a specific value or data column in the trace output while the trace is running by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

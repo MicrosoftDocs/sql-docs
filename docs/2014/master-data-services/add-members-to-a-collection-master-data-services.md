@@ -15,7 +15,7 @@ ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Members to a Collection (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can add leaf and consolidated members to a collection.  

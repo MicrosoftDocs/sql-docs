@@ -16,7 +16,7 @@ ms.assetid: 2985efc1-4b14-46c3-abbd-a656b159f23c
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Verify all filegroups are writeable during the upgrade process
   Upgrade Advisor detected a database that has one or more read-only filegroups. All databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must have filegroups set to READ_WRITE before upgrading.  

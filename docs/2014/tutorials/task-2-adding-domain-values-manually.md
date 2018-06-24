@@ -15,7 +15,7 @@ ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 2: Adding Domain Values Manually
   In this task, you add a value for the **Country** domain manually. See [Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx) topic for more details about the fields on this page.  

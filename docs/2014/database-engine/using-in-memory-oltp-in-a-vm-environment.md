@@ -13,7 +13,7 @@ ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 caps.latest.revision: 8
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using In-Memory OLTP in a VM Environment
   Server virtualization can help you lower IT capital and operational costs and attain greater IT efficiency with improved application provisioning, maintenance, availability, and backup/recovery processes. With recent technological advances, complex database workloads can be more readily consolidated using virtualization. This topic covers best practices for using [!INCLUDE[hek_1](../includes/hek-1-md.md)] in a virtualized environment.  

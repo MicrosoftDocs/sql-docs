@@ -15,7 +15,7 @@ ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
 caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Fast Parse
   Fast parse provides a fast, simple set of routines for parsing data. These routines are not locale-sensitive and they support only a subset of date, time, and integer formats.  

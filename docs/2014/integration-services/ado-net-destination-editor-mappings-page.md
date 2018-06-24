@@ -15,7 +15,7 @@ ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # ADO NET Destination Editor (Mappings Page)
   Use the **Mappings** page of the **ADO NET Destination Editor** dialog box to map input columns to destination columns.  

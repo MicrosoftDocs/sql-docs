@@ -15,7 +15,7 @@ ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Log Shipping Transaction Log Backup Settings
   Use this dialog box to configure and modify the transaction log backup settings for a log shipping configuration.  

@@ -16,7 +16,7 @@ ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Table Dialog Box (Query and View Designers) (Visual Database Tools)
   This dialog box lets you add tables, views, user-defined functions, or synonyms to a query or view.  

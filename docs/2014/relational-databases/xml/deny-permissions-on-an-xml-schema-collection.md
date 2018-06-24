@@ -15,7 +15,7 @@ ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 caps.latest.revision: 33
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deny Permissions on an XML Schema Collection
   Permission can be denied to either create a new XML schema collection or use an existing one.  

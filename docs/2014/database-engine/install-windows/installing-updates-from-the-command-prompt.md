@@ -13,7 +13,7 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Installing Updates from the Command Prompt
   Test and modify installation scripts to meet the needs of your organization.  

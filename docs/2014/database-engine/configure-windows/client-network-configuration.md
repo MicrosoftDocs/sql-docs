@@ -21,7 +21,7 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 caps.latest.revision: 38
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Client Network Configuration
   Client software enables client computers to connect to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a network. A "client" is a front-end application that uses the services provided by a server such as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. The computer that hosts this application is referred to as the *client computer*.  

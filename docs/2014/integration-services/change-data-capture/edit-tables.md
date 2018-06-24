@@ -15,7 +15,7 @@ ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Edit Tables
   Use the **Tables** tab to make changes to the tables and columns that you selected from the Oracle source database. This tab has the following elements:  

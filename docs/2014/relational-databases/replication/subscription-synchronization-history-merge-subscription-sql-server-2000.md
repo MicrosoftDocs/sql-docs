@@ -15,7 +15,7 @@ ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Subscription, Synchronization History (Merge Subscription, SQL Server 2000)
   The **Synchronization History** tab displays detailed information on the Merge Agent, including status, history, informational messages, and any error messages.  

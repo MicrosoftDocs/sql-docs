@@ -13,7 +13,7 @@ ms.assetid: ee19dbb2-6fd7-4b9b-9ea6-36c6faeedf10
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Progress (Uninstall)
   Use the Progress (Uninstall) page to monitor the Setup progess.  

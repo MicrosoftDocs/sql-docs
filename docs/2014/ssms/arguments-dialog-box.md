@@ -16,7 +16,7 @@ ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Arguments Dialog Box
   The **Arguments** dialog box specifies new or existing arguments for a tool. This dialog box appears when you launch an external tool that has the **Prompt for arguments** option selected in the **External Tools** dialog box.  

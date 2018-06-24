@@ -13,7 +13,7 @@ ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
 caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Hash Indexes
   Indexes are used as entry points for memory-optimized tables. Reading rows from a table requires an index to locate the data in memory.  

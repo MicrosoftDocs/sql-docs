@@ -15,7 +15,7 @@ ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 caps.latest.revision: 27
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Publication Information, All Subscriptions (Merge Publication)
   The **All Subscriptions** tab displays information on all subscriptions to the selected merge publication.  

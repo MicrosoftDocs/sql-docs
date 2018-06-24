@@ -13,7 +13,7 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create the Off By Default Policy
   This task creates a condition named Mail Off that is based on the Surface Area Configuration facet. Then, it creates a policy named Off By Default.  

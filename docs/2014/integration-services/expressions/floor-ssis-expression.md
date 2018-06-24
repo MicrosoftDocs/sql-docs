@@ -16,7 +16,7 @@ ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # FLOOR (SSIS Expression)
   Returns the largest integer that is less than or equal to a numeric expression.  

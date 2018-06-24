@@ -18,7 +18,7 @@ ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Profiler - Source Table-Database Engine Tuning Advisor - Select Workload Table
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] and [!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor use this dialog box to select tables.  

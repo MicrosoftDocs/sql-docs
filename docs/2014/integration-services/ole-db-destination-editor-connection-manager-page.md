@@ -17,7 +17,7 @@ ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 caps.latest.revision: 81
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # OLE DB Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **OLE DB Destination Editor** dialog box to select the OLE DB connection for the destination. This page also lets you select a table or view from the database.  

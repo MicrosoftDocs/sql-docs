@@ -22,7 +22,7 @@ ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Bulk Import Large-Object Data by using the OPENROWSET Bulk Rowset Provider (SQL Server)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET Bulk Rowset Provider enables you to bulk import a data file as large-object data.  

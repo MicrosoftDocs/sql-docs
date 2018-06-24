@@ -18,7 +18,7 @@ ms.assetid: e298dea0-b5ef-4907-a745-cfad9793653f
 caps.latest.revision: 38
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specify Interactive Conflict Resolution for Merge Articles
   This topic describes how to specify interactive conflict resolution for merge articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

@@ -13,7 +13,7 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 9. Restore a database from Windows Azure Storage
   In this lesson, you will learn how to restore a database backup file from Windows Azure Storage to a database, which either resides on-premises or in a virtual machine in Windows Azure. To follow this lesson, you do not need to complete Lesson 4, 5, 6, 7, and 8.  

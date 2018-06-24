@@ -15,7 +15,7 @@ ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reduce Noise in CPU Utilization Policies (SQL Server Utility)
   Use the following strategies to reduce reporting noise and unwanted violations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource utilization policies.  

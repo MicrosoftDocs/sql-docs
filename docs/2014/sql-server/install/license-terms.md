@@ -13,7 +13,7 @@ ms.assetid: 36f7da07-f008-4b02-922b-4a28ca93018e
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # License terms
   Use the License Terms page to accept the license terms for this release.  

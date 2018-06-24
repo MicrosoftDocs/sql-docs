@@ -25,7 +25,7 @@ ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
   This topic is relevant only for databases that contain marked transactions and that use the full or bulk-logged recovery models.  

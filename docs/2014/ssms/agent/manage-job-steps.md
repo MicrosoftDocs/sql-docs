@@ -27,7 +27,7 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage Job Steps
   A job step is an action that the job takes on a database or a server. Every job must have at least one job step. Job steps can be:  

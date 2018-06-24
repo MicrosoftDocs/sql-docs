@@ -15,7 +15,7 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 7: Adding DQS Cleansing Transform to the Data Flow
   In this task, you add DQS Cleansing Transform to the data flow to cleanse the input supplier data by using DQS. See **[DQS Cleansing Transform](http://msdn.microsoft.com/library/ee677619.aspx)** for more details about the transform.  

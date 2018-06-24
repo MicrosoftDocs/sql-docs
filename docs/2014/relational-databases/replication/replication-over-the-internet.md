@@ -18,7 +18,7 @@ ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 caps.latest.revision: 30
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replication over the Internet
   Replicating data over the Internet allows remote, disconnected users to access data when they need it using a connection to the Internet. Replicate data over the Internet using:  

@@ -15,7 +15,7 @@ ms.assetid: 422872b7-b0cd-466d-a6bf-2e2c8a2f8da5
 caps.latest.revision: 4
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Validation Rules for Data-tier Application Wizards
   This topic will be updated with corrective action for validation rules in Data-tier Application Wizards.  

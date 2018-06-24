@@ -19,7 +19,7 @@ ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Altering an Assembly
   Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can be updated from a more recent version using the ALTER ASSEMBLY statement. To update an assembly, use the ALTER ASSEMBLY statement with the following syntax:  

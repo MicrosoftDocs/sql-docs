@@ -17,7 +17,7 @@ ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # FTP Connection Manager Editor
   Use the **FTP Connection Manager Editor** dialog box to specify properties for connecting to an FTP server.  

@@ -17,7 +17,7 @@ ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Arrange Tables in Diagrams (Visual Database Tools)
   You can quickly arrange the tables in a database diagram to see each table and relationship clearly.  

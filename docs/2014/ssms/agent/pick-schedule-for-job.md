@@ -17,7 +17,7 @@ ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Pick Schedule for Job
   Use this dialog to pick an existing schedule for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.  

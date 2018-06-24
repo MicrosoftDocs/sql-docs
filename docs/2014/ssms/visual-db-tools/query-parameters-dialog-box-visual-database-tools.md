@@ -16,7 +16,7 @@ ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Query Parameters Dialog Box (Visual Database Tools)
   This dialog allows you to enter values for the parameters defined in the query. This dialog box appears when you execute a query that contains parameters that require end-user input at run time.  

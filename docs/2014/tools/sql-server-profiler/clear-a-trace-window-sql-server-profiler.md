@@ -16,7 +16,7 @@ ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Clear a Trace Window (SQL Server Profiler)
   This topic describes how to clear the trace window for a trace that is running by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

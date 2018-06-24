@@ -20,7 +20,7 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 caps.latest.revision: 44
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Web Synchronization for Merge Replication
   Web synchronization for merge replication lets you replicate data by using the HTTPS protocol, and is useful for the following scenarios:  

@@ -18,7 +18,7 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 35
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Contained Databases
   A*contained database* is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] helps user to isolate their database from the instance in 4 ways.  

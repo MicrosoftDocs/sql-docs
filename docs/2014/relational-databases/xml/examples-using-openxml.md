@@ -29,7 +29,7 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: 35
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Examples: Using OPENXML
   The examples in this topic show how OPENXML is used to create a rowset view of an XML document. For information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). The examples show all aspects of OPENXML, but do not specify metaproperties in OPENXML. For more information about how to specify metaproperties in OPENXML, see [Specify Metaproperties in OPENXML](specify-metaproperties-in-openxml.md).  

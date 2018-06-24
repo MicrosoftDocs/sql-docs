@@ -13,7 +13,7 @@ ms.assetid: 614f07b5-f221-4013-9f8d-22964cf42270
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Troubleshoot SQL Server Resource Health (SQL Server Utility)
   Troubleshooting resource health issues identified by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP might include mitigating overutilized CPU on a computer or on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or mitigating overutilized CPU for a data-tier application. Other issues might include resolving overutilized file space for database files or resolving overutilization of allocated disk space on a storage volume.  

@@ -15,7 +15,7 @@ ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Retrieving Product Model Information as XML
   The following query returns product model information. `RAW` mode is specified in the `FOR XML` clause.  

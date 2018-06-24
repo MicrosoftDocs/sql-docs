@@ -17,7 +17,7 @@ ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View the Extended Events Equivalents to SQL Trace Event Classes
   If you want to use Extended Events to collect event data that is equivalent to SQL Trace event classes and columns, it is useful to understand how the SQL Trace events map to Extended Events events and actions.  

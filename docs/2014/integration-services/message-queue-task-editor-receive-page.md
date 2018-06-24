@@ -17,7 +17,7 @@ ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Message Queue Task Editor (Receive Page)
   Use the **Receive** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to receive [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) messages.  

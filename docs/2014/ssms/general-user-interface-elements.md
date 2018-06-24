@@ -16,7 +16,7 @@ ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # General User Interface Elements
   The **Editor**, the **Properties** window, and the **Toolbox** are some of the basic elements of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

@@ -15,7 +15,7 @@ ms.assetid: 20f624c2-0036-4f44-a2a8-a041af0a0966
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Licensing Considerations for SQL Server
   For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] licensing options, see [this Microsoft SQL Server Web site](http://www.microsoft.com/sqlserver/sql-server-2014.aspx).  

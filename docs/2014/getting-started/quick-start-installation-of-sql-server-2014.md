@@ -24,7 +24,7 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 caps.latest.revision: 48
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Quick-Start Installation of SQL Server 2014
     

@@ -22,7 +22,7 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 caps.latest.revision: 45
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # File Restores (Simple Recovery Model)
   This topic is relevant only for simple-model databases that contain at least one read-only secondary filegroup.  

@@ -15,7 +15,7 @@ ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: 24
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Filter Table Rows
   The **Filter Table Rows** page allows you to:  

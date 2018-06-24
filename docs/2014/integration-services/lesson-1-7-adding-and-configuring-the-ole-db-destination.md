@@ -13,7 +13,7 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 caps.latest.revision: 24
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Step 7: Adding and Configuring the OLE DB Destination
   Your package now can extract data from the flat file source and transform that data into a format that is compatible with the destination. The next task is to actually load the transformed data into the destination. To load the data, you must add an OLE DB destination to the data flow. The OLE DB destination can use a database table, view, or an SQL command to load data into a variety of OLE DB-compliant databases.  

@@ -17,7 +17,7 @@ ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Fuzzy Lookup Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Fuzzy Lookup Transformation Editor** dialog box to set parameters for the fuzzy lookup.  

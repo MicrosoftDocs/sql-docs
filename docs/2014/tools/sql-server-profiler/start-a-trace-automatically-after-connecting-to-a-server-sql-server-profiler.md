@@ -17,7 +17,7 @@ ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Start a Trace Automatically after Connecting to a Server (SQL Server Profiler)
   This topic describes how to start traces automatically after connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

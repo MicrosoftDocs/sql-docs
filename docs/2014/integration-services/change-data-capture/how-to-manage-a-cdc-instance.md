@@ -13,7 +13,7 @@ ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # How to Manage a CDC Instance
   This procedure describes how to use the CDC Designer Console to manage CDC instance operations at runtime.  

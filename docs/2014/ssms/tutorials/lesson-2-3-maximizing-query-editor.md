@@ -13,7 +13,7 @@ ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Maximizing Query Editor
   Programmers frequently ask, "How can I get more room to write my code?" The answer is that there are two ways, both easy: maximize the Query Editor window and hide your unused tool windows.  

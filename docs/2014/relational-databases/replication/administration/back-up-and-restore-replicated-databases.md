@@ -28,7 +28,7 @@ ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: 39
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Back Up and Restore Replicated Databases
   Replicated databases require special attention with regards to backing up and restoring data. This topic provides introductory information and links to further information on backup and restore strategies for each type of replication.  

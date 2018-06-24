@@ -15,7 +15,7 @@ ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Master Data Services Server Configuration Page (Configuration Manager)
   Use the **Server Configuration** page to view configuration information for the local server computer.  

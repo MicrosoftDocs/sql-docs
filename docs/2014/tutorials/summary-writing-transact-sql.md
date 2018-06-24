@@ -13,7 +13,7 @@ ms.assetid: e159c3a3-564e-4487-a538-b608dc29c235
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Summary: Writing Transact-SQL
   Query Editor is a significant step towards a more sophisticated authoring environment in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] development. You can easily switch the Query Editor to full-screen mode to view your code or quickly switch your connection to another server. A good place to look for additional features is in the **Options** dialog box, available from the **Tools** menu.  

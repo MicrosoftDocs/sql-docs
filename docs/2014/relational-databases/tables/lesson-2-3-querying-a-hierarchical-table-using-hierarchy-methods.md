@@ -15,7 +15,7 @@ ms.assetid: 3b4f7dae-65b5-4d8d-8641-87aba9aa692d
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Querying a Hierarchical Table Using Hierarchy Methods
   Now that the HumanResources.EmployeeOrg table is fully populated, this task will show you how to query the hierarchy using some of the hierarchical methods.  

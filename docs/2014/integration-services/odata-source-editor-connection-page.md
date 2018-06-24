@@ -15,7 +15,7 @@ ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # OData Source Editor (Connection Page)
   Use the **Connection** page of the **OData Source Editor** dialog box to select the OData connection manager for the OData source. This page also lets you specify a collection or a resource path and any query options to indicate what data needs to be retrieved from the OData source. To learn more about the OData source, see [OData Source](data-flow/odata-source.md).  

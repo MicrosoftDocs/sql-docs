@@ -16,7 +16,7 @@ ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # ISNULL (SSIS Expression)
   Returns a Boolean result based on whether an expression is null.  

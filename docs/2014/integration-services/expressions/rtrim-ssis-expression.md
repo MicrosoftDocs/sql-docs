@@ -16,7 +16,7 @@ ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # RTRIM (SSIS Expression)
   Returns a character expression after removing trailing spaces.  

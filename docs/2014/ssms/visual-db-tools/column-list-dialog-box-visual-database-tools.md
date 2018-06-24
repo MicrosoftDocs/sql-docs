@@ -15,7 +15,7 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Column List Dialog Box (Visual Database Tools)
   When writing queries, it can be useful to see a list of columns available in your selected table-valued objects.  

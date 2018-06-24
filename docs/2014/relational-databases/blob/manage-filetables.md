@@ -16,7 +16,7 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage FileTables
   Describes common administrative tasks for managing FileTables.  

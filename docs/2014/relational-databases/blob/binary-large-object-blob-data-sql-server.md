@@ -15,7 +15,7 @@ ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 caps.latest.revision: 38
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Binary Large Object (Blob) Data (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides solutions for storing files and documents in the database or on remote storage devices.  

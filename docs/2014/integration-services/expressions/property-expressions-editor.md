@@ -17,7 +17,7 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Property Expressions Editor
   Use the **Property Expressions Editor** dialog box to create, edit, or delete the property expressions that update property values.  

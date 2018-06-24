@@ -13,7 +13,7 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 caps.latest.revision: 43
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Start SQL Server Management Studio
   To begin this tutorial, let's take a look at [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

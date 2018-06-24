@@ -13,7 +13,7 @@ ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Subscribe to and Check the Finance Name Policy
   In this task, you will configure the Finance database to subscribe to the Finance policy category. Then, you will test the Finance Name policy.  

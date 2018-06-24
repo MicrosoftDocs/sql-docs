@@ -20,7 +20,7 @@ ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Exclude Duplicate Rows (Visual Database Tools)
   If you want to see only unique values in a result set, you can specify that you want to exclude duplicates from the result set.  

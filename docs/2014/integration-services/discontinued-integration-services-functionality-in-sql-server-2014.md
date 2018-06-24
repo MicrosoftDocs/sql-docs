@@ -16,7 +16,7 @@ ms.assetid: 5ee40ceb-37b9-47a9-b90d-ce1de74b10f7
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Discontinued Integration Services Functionality in SQL Server 2014
   This topic describes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] features that are no longer available in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

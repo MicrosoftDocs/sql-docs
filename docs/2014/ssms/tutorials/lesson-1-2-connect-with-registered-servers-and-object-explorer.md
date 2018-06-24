@@ -13,7 +13,7 @@ ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 caps.latest.revision: 49
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect with Registered Servers and Object Explorer
   This tutorial demonstrates the use of Registered Servers and Object Explorer.  

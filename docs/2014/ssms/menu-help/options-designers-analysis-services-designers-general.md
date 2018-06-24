@@ -15,7 +15,7 @@ ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Designers-Analysis Services Designers-General)
   Use the **Designers**, **Maintenance Plans**, **Analysis Services**, **General** page to determine the default behavior of the Analysis Services Designers.  

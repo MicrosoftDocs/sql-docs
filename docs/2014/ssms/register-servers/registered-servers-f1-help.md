@@ -17,7 +17,7 @@ ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Registered Servers F1 Help
   This section contains the F1 Help topics for the Registered Servers component in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

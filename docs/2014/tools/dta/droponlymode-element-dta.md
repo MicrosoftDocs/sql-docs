@@ -17,7 +17,7 @@ ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 caps.latest.revision: 13
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # DropOnlyMode Element (DTA)
   Specifies that Database Engine Tuning Advisor should only consider dropping existing indexes, indexed views, or partitions during the tuning session. No new physical design structures are considered when this tuning option is specified.  

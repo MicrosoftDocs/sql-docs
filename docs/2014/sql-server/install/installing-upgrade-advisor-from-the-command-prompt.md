@@ -18,7 +18,7 @@ ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Installing Upgrade Advisor from the Command Prompt
   You can install Upgrade Advisor either by using the Setup Wizard or from the command prompt. By using the command prompt you can perform unattended and automated installations.  

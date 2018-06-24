@@ -16,7 +16,7 @@ ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Row Compression Implementation
   This topic summarizes how [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements row compression. This summary provides basic information to help you plan the storage space that you need for your data.  

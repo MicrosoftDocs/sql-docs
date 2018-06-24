@@ -13,7 +13,7 @@ ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 caps.latest.revision: 32
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Save Scripts as Projects or Solutions
   Developers familiar with [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio will welcome Solution Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The scripts that support your business can be grouped into script projects, and the script projects can be managed together as a solution. When scripts are placed in script projects and solutions they can be opened together as a group, or saved together to a source control product such as Visual SourceSafe. Script projects include the connection information for the scripts to execute properly, and can include non-script files such as a supporting text file.  

@@ -18,7 +18,7 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # tempdb Database
   The **tempdb** system database is a global resource that is available to all users connected to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is used to hold the following:  

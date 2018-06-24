@@ -17,7 +17,7 @@ ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Piecemeal Restore of Only Some Filegroups (Full Recovery Model)
   This topic is relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases under the full recovery model that contain multiple files or filegroups.  

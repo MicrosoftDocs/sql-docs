@@ -18,7 +18,7 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Running Upgrade Advisor (Command Prompt)
   Use the **UpgradeAdvisorWizardCmd** utility to run Upgrade Advisor from the command prompt. You can choose to receive results in XML format or in a file with comma-separated values.  

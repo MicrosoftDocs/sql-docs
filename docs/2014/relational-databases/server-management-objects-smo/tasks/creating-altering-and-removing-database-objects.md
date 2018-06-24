@@ -19,7 +19,7 @@ ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Working with Database Objects
   The stages of SMO object creation are as follows:  

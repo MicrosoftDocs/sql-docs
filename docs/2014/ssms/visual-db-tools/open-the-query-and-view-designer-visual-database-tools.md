@@ -18,7 +18,7 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open the Query and View Designer (Visual Database Tools)
   The Query and View Designer opens when you open the definition of a view, show the results for a query or view, or create or open a query. It consists of four separate panes:  

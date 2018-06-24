@@ -17,7 +17,7 @@ ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Broker:Message Classify Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Message Classify** event when Service Broker determines the routing for a message.  

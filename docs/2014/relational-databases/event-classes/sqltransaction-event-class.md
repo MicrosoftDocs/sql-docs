@@ -17,7 +17,7 @@ ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQLTransaction Event Class
   Use the SQLTransaction event class to monitor when transactions begin and are completed, especially when you test applications, triggers, or stored procedures.  

@@ -15,7 +15,7 @@ ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Error Output
   Use the **Configure Error Output** dialog box to configure error handling options for data flow transformations that support an error output.  

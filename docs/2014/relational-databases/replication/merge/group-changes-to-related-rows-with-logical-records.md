@@ -17,7 +17,7 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: 55
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Group Changes to Related Rows with Logical Records
     

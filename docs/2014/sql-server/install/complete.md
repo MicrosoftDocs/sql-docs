@@ -13,7 +13,7 @@ ms.assetid: 95a14506-db11-490f-b5c3-61dea7fd247c
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Complete
   The Complete page confirms your installation status.  

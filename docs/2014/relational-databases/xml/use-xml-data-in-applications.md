@@ -28,7 +28,7 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 caps.latest.revision: 26
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use XML Data in Applications
   This topic describes the options that are available to you for working with the `xml` data type in your application. The topic includes information about the following:  

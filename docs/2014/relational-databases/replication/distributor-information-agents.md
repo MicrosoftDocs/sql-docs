@@ -15,7 +15,7 @@ ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Distributor Information, Agents
   The **Agents** tab displays information about the agents and maintenance jobs that are associated with the Publisher and Subscriber.  

@@ -15,7 +15,7 @@ ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 6: Verify that the Domain-Based Attribute is Created using Master Data Manager
   In this task, you verify that the **State** entity is created in **MDS** and the **State** attribute of the **Supplier** entity is a domain-based attribute that depends on the **State** entity by using **Master Data Manager**.  

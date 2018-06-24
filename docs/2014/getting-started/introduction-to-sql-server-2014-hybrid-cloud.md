@@ -13,7 +13,7 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Introduction to SQL Server 2014 Hybrid Cloud
  Most applications have some key challenges, such as high efficiency, business value, complex hardware configurations, massive peaks on demand, and complying with industry and corporate regulations. Considering all these factors and building an enterprise-grade technology can be very challenging. Microsoft Hybrid Cloud Strategy provides support for traditional, private cloud, public cloud, and hybrid cloud environments to overcome these key challenges. 

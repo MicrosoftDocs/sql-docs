@@ -15,7 +15,7 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Page Setup Dialog Box
   You can customize your page design by selecting options in the **Page Setup** dialog box. The availability of some options depends on the languages that are installed and enabled for editing.  

@@ -18,7 +18,7 @@ ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Print Code and Results
   When you print a query or file, colorized elements print in color if your printer supports color printing and color printing is enabled in the printer setup.  

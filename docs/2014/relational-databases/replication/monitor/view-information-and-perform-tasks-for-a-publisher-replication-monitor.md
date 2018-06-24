@@ -17,7 +17,7 @@ ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
 caps.latest.revision: 36
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Information and Perform Tasks for a Publisher (Replication Monitor)
   Replication Monitor provides the following tabs that display information about the selected Publisher:  

@@ -13,7 +13,7 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Start the sqlcmd Utility
   To begin using `sqlcmd`, you must first launch the utility and connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can connect to either a default or named instance. The first step is to start the `sqlcmd` utility.  

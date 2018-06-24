@@ -13,7 +13,7 @@ ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 caps.latest.revision: 3
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change the Order of Attributes
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the order of attributes.  

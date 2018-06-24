@@ -13,7 +13,7 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Guidelines for Transaction Isolation Levels with Memory-Optimized Tables
   In many scenarios, you must specify the transaction isolation level. Transaction isolation for memory-optimized tables differs from disk-based tables.  

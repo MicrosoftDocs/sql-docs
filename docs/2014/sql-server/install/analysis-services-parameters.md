@@ -15,7 +15,7 @@ ms.assetid: 52083ddb-d677-49fc-ad59-285743f4921d
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Analysis Services Parameters
   To analyze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you must specify an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and provide information about how to connect to that instance.  

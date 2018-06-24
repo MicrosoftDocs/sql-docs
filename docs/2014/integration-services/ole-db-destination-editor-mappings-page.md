@@ -17,7 +17,7 @@ ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # OLE DB Destination Editor (Mappings Page)
   Use the **Mappings** page of the **OLE DB Destination Editor** dialog box to map input columns to destination columns.  

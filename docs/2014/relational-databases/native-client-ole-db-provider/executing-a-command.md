@@ -20,7 +20,7 @@ ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Executing a Command
   After the connection to a data source is established, the consumer calls the **IDBCreateSession::CreateSession** method to create a session. The session acts as a command, rowset, or transaction factory.  

@@ -21,7 +21,7 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 caps.latest.revision: 52
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using Large Value Types
   Before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], working with large value data types required special handling. Large value data types are those that exceed the maximum row size of 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a **max** specifier for **varchar**, **nvarchar** and **varbinary** data types to allow storage of values as large as 2^31 -1 bytes. Table columns and [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables may specify **varchar(max)**, **nvarchar(max)** or **varbinary(max)** data types.  

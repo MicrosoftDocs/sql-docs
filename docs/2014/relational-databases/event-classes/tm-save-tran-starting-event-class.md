@@ -17,7 +17,7 @@ ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # TM: Save Tran Starting Event Class
   The TM: Save Tran Starting event class indicates that a SAVE TRANSACTION request is starting. The request is sent from the client through a transaction management interface.  

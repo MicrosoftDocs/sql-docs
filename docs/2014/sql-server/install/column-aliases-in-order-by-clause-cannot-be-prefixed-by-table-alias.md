@@ -15,7 +15,7 @@ ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Column aliases in ORDER BY clause cannot be prefixed by table alias
   In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later, column aliases in the ORDER BY clause cannot be prefixed by the table alias.  

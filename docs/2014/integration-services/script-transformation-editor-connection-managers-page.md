@@ -17,7 +17,7 @@ ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Script Transformation Editor (Connection Managers Page)
   Use the **Connection Managers** page of the **Script Transformation Editor** to specify any connections that will be used by the script.  

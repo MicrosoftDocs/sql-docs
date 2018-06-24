@@ -16,7 +16,7 @@ ms.assetid: b9e36569-616d-4e47-9140-0978a9bfe923
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Solutions to Source Control
   When you add a solution to source control, you usually want to add the entire solution and all the projects it contains. You can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to add a solution to source control.  

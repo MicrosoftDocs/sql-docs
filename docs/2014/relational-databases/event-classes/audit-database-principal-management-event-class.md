@@ -17,7 +17,7 @@ ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Database Principal Management Event Class
   The **Audit Database Principal Management** event class occurs when principals, such as users, are created, altered, or dropped from a database.  

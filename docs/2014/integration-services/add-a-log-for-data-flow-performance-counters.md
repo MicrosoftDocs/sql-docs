@@ -17,7 +17,7 @@ ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add a Log for Data Flow Performance Counters
   This procedure describes how to add a log for the performance counters that the data flow engine provides.  

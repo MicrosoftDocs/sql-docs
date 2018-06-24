@@ -13,7 +13,7 @@ ms.assetid: e3ad4cad-d9eb-4824-802c-90f747b32507
 caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # In-Memory OLTP Code Samples
   This section contains code samples that demonstrate In-Memory OLTP:  

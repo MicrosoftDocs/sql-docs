@@ -15,7 +15,7 @@ ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Alert Properties (History Page)
   Use this page to view and modify the history of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts.  

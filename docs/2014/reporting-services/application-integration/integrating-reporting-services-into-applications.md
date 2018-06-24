@@ -20,7 +20,7 @@ ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
 caps.latest.revision: 56
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Integrating Reporting Services into Applications
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is an open and extensible reporting platform designed to provide developers with a comprehensive set of APIs for developing solutions.  

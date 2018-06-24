@@ -15,7 +15,7 @@ ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 8: Adding Conditional Split Transform to Split Cleansing Output
   In this transform, you add a Conditional Split Transform to the data flow. The Conditional Split transformation can route rows to different outputs based on the content of the data. For this tutorial, you use the **Record Status** output column from the DQS Cleansing transform. You will upload only correct or corrected records to MDS server in this tutorial. Therefore you check if the **Record Status** is **Correct** or **Corrected**, and combine the records before uploading the records to MDS.  

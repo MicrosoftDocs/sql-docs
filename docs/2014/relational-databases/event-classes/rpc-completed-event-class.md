@@ -19,7 +19,7 @@ ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # RPC:Completed Event Class
   The RPC:Completed event class indicates that a remote procedure call has been completed.  

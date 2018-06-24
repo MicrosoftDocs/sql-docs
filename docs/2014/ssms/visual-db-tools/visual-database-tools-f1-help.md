@@ -15,7 +15,7 @@ ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Visual Database Tools F1 Help
   These topics discuss the commands and options in the dialog boxes and properties windows for Visual Database Tools elements such as the Table Properties window, and the Column Properties tab.  

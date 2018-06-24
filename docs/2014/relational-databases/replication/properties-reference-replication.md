@@ -15,7 +15,7 @@ ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Properties Reference (Replication)
   This section of the documentation provides information on the following replication wizards and dialog boxes:  

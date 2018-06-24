@@ -13,7 +13,7 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Buffer Pool Extension
   Introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the buffer pool extension provides the seamless integration of a nonvolatile random access memory (that is, solid-state drive) extension to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] buffer pool to significantly improve I/O throughput. The buffer pool extension is not available in every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  

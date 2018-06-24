@@ -16,7 +16,7 @@ ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove references to deprecated system stored procedures
   Upgrade Advisor detected statements that reference undocumented system stored procedures and extended stored procedures that are no longer available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Statements that reference these objects will fail. Do not use undocumented system objects or APIs as the functionality might change or be removed without notification in a future release.  

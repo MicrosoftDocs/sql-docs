@@ -13,7 +13,7 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create an Encrypted Backup
   This topic describes the steps necessary to create an encrypted backup using Transact-SQL.  

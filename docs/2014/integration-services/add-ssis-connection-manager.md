@@ -17,7 +17,7 @@ ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add SSIS Connection Manager
   Use the **Add SSIS Connection Manager** dialog box to select the type of connection to add to a package.  

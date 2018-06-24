@@ -16,7 +16,7 @@ ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Properties of a Precedence Constraint
   To set properties on precedence constraints, you can use one of these tools:  

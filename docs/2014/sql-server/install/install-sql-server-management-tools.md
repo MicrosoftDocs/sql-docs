@@ -15,7 +15,7 @@ ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Install SQL Server Management Tools
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management tools include the following components:  

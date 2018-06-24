@@ -15,7 +15,7 @@ ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Choose Search Folders Dialog Box (Visual Studio)
   Allows you to assemble, save, and revise your own named sets of search folders, and to specify the order in which they are searched. To display this dialog box, select the **Browse (...)** button beside the **Look in** dropdown list on the Find in Files or Replace in Files, Find and Replace Window.  

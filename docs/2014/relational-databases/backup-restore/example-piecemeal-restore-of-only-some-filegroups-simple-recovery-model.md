@@ -17,7 +17,7 @@ ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Piecemeal Restore of Only Some Filegroups (Simple Recovery Model)
   This topic is relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases under the simple recovery model that contain a read-only filegroup.  

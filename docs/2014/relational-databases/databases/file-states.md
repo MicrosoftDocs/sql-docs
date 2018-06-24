@@ -31,7 +31,7 @@ ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # File States
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the state of a database file is maintained independently from the state of the database. A file is always in one specific state, such as ONLINE or OFFLINE. To view the current state of a file, use the [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) or [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) catalog view. If the database is offline, the state of the files can be viewed from the [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) catalog view.  

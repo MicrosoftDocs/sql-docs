@@ -13,7 +13,7 @@ ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Management Tools Backward Compatibility
   Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

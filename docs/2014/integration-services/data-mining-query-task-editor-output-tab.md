@@ -17,7 +17,7 @@ ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Mining Query Task Editor (Output Tab)
   Use the **Output** tab of the **Data Mining Query Task Editor** dialog box to specify the destination of the prediction query.  

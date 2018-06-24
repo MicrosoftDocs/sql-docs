@@ -13,7 +13,7 @@ ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 caps.latest.revision: 17
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deployment Checklist: Multi-Server Installation of PowerPivot for SharePoint 2010
   This checklist guides you through the steps for adding [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint to a three-tier SharePoint 2010 farm that you build from the ground up. A three-tier farm includes database, application, and web tiers. Adding [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] to this topology requires that you run SQL Server Setup to install [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] on the application tier. PowerPivot program files are added to the web tier, but only as a post-installation task when you the deploy web application solution. Although there are deployment steps, there is no separate installation step on either the web tier or data tier that you need to perform. The only installation step that you need to perform is installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] on the application servers.  

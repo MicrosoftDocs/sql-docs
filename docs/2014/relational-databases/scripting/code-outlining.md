@@ -16,7 +16,7 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Code Outlining
   You can use the outlining feature in the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] query editors to selectively hide code when you edit queries. This enables you to more easily view the code you are working on, especially in large query files.  

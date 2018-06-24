@@ -28,7 +28,7 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 caps.latest.revision: 57
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Compare Typed XML to Untyped XML
   You can create variables, parameters, and columns of the `xml` type. You can optionally associate a collection of XML schemas with a variable, parameter, or column of `xml` type. In this case, the `xml` data type instance is called *typed*. Otherwise, the XML instance is called *untyped*.  

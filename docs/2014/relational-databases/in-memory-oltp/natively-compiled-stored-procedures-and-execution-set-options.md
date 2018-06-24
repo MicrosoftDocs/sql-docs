@@ -13,7 +13,7 @@ ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Natively Compiled Stored Procedures and Execution Set Options
   Session options are fixed in atomic blocks. A stored procedure's execution is not affected by a session's SET options. However, certain SET options, such as SET NOEXEC and SET SHOWPLAN_XML, cause stored procedures (including natively compiled stored procedures) to not execute.  

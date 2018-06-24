@@ -15,7 +15,7 @@ ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 caps.latest.revision: 9
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Column Names with the Path Specified as data()
   If the path specified as column name is "data()", the value is treated as an atomic value in the generated XML. A space character is added to the XML if the next item in the serialization is also an atomic value. This is useful when you are creating list typed element and attribute values. The following query retrieves the product model ID, name, and list of products in that product model.  

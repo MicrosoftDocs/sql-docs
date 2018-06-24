@@ -17,7 +17,7 @@ ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Discard Changes Made to Diagrams (Visual Database Tools)
   You can discard changes in your database diagram that you do not want to save in the database.  

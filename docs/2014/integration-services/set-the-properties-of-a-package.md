@@ -19,7 +19,7 @@ ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Properties of a Package
   This procedure describes how to configure package properties by using the **Properties** window.  

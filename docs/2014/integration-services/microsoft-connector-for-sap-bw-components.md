@@ -13,7 +13,7 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Microsoft Connector 1.1 for SAP BW Components
   This section contains topics that describe the three components of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW:  

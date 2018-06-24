@@ -15,7 +15,7 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 caps.latest.revision: 42
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Other Database Engine Upgrade Issues
   The following upgrade issues cannot be detected by the current version of Upgrade Advisor. Review the issues listed below to evaluate their potential impact to your systems.  

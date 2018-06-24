@@ -13,7 +13,7 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 8. Restore a database to Windows Azure Storage
   In this lesson, you will learn how to create a backup file locally and then restore it to Windows Azure Storage. Note that you can have your database either on either on-premises or in a virtual machine in Windows Azure. To follow this lesson, you do not need to complete Lesson 4, 5, 6, and 7.  

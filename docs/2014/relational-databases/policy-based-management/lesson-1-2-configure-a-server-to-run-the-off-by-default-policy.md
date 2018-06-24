@@ -13,7 +13,7 @@ ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure a Server to Run the Off By Default Policy
   Now you have a policy named Off By Default. In this task, you will check to see whether your server complies with the requirements of this policy.  

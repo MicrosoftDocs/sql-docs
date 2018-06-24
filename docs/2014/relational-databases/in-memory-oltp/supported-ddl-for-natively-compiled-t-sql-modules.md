@@ -13,7 +13,7 @@ ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 caps.latest.revision: 7
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Supported Constructs on Natively Compiled Stored Procedures
   This topic lists the supported constructs on natively compiled stored procedures.  

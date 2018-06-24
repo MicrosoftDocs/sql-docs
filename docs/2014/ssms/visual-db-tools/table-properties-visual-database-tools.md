@@ -16,7 +16,7 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Table Properties (Visual Database Tools)
   These properties appear in the Properties window when you right click in Table Designer and select Properties. Unless otherwise noted, you can edit these properties in the Properties window when the table is selected.  

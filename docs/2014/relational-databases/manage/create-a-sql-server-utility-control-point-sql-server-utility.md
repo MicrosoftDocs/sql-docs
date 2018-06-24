@@ -23,7 +23,7 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a SQL Server Utility Control Point (SQL Server Utility)
   An enterprise can have multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utilities, and each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility can manage many instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and data-tier applications. Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility has one and only one utility control point (UCP). You must create a new UCP for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Each managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and every data-tier application is a member of one and only one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, and is managed by a single UCP.  

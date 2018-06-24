@@ -17,7 +17,7 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Schedule a Job
   This topic describes how to schedule a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.  

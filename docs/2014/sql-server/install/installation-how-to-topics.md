@@ -16,7 +16,7 @@ ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Installation How-to Topics
   Use the following topics to install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

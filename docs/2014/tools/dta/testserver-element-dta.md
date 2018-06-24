@@ -17,7 +17,7 @@ ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 caps.latest.revision: 11
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # TestServer Element (DTA)
   Specifies the test server to use when tuning a production server.  

@@ -15,7 +15,7 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 caps.latest.revision: 58
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure an Oracle Publisher
   Publications from Oracle Publishers are created in the same way typical snapshot and transactional publications are created, but prior to creating a publication from an Oracle Publisher, you must complete the following steps (steps one, three, and four are described in detail in this topic.):  

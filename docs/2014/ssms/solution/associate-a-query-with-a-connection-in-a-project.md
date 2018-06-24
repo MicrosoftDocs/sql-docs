@@ -18,7 +18,7 @@ ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Associate a Query with a Connection in a Project
   If a query was created without a connection, or if a query is moved from one project to another it will not be associated with a connection in the current project.  

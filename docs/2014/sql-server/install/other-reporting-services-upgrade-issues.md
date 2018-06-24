@@ -23,7 +23,7 @@ ms.assetid: 42dd2f06-1de9-449e-ab9d-f4ef25f8b728
 caps.latest.revision: 42
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Other Reporting Services Upgrade Issues
   This topic describes known issues you may experience upgrading [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] functionality. **These issues are not detected by Upgrade Advisor.** For additional information, see [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445)  

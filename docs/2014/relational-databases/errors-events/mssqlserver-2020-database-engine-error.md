@@ -15,7 +15,7 @@ ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_2020
     

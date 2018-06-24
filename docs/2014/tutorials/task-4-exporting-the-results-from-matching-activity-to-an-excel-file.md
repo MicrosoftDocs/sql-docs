@@ -15,7 +15,7 @@ ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 4: Exporting the Results from Matching Activity to an Excel File
   In this task, you export the results from the matching activity to an Excel file.  

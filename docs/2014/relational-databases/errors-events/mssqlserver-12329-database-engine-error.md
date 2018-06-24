@@ -15,7 +15,7 @@ ms.assetid: 43f90287-36d5-46c2-ac91-a37202dcf6d3
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_12329
     

@@ -16,7 +16,7 @@ ms.assetid: 7c95f545-731a-4743-9acb-0b325ef9b98b
 caps.latest.revision: 36
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specify Snapshot Format (SQL Server Management Studio)
   Specify snapshot format on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  

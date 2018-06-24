@@ -17,7 +17,7 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Analysis Services Connection Manager Dialog Box UI Reference
   Use the **Add Analysis Services Connection Manager** dialog box to create a connection to a server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], or to edit connection properties.  

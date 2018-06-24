@@ -15,7 +15,7 @@ ms.assetid: 091def94-6c9c-4afc-92dc-4c2f4c2cafa0
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Confirm Delete Page
   Use the **Confirm Delete** page to indicate whether [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] displays a confirmation message when you delete certain components.  

@@ -20,7 +20,7 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Recordset Destination
   The Recordset destination creates and populates an in-memory ADO recordset. The shape of the recordset is defined by the input to the Recordset destination at design time.  

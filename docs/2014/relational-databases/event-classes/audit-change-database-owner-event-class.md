@@ -17,7 +17,7 @@ ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 caps.latest.revision: 30
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Change Database Owner Event Class
   The **Audit Change Database Owner** event class occurs when you use the ALTER AUTHORIZATION statement to change the owner of a database, and the permissions required to do that are checked.  

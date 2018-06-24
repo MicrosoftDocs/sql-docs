@@ -17,7 +17,7 @@ ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Merge Transformation Editor
   Use the **Merge Transformation Editor** to specify columns from two sorted sets of data to be merged.  

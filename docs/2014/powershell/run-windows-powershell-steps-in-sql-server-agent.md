@@ -13,7 +13,7 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 9
 author: "mgblythe"
 ms.author: "mblythe"
-manager: "jhubbard"
+manager: craigg
 ---
 # Run Windows PowerShell Steps in SQL Server Agent
   Use SQL Server Agent to run SQL Server PowerShell scripts at schedule times.  

@@ -17,7 +17,7 @@ ms.assetid: 4ff3aa04-0f1a-49e2-a43d-7251bab4a458
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Prepare SQL Event Class
   The Prepare SQL event class indicates that SqlClient, ODBC, OLE DB, or DB-Library has prepared a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements for use.  

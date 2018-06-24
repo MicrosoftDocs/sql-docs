@@ -15,7 +15,7 @@ ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Credential - Authenticate to Azure Storage
   Use the **Backup to URL – Create Credential** dialog box to create a new SQL Credential.  

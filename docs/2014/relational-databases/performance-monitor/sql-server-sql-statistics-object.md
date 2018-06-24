@@ -16,7 +16,7 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: 30
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server, SQL Statistics Object
   The **SQLServer:SQL Statistics** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor compilation and the type of requests sent to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Monitoring the number of query compilations and recompilations and the number of batches received by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gives you an indication of how quickly [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is processing user queries and how effectively the query optimizer is processing the queries.  

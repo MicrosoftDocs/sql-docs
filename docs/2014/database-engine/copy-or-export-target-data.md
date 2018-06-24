@@ -13,7 +13,7 @@ ms.assetid: 3c44b821-7a0e-4c96-8994-cba4e6337bdc
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Copy or Export Target Data
   You can copy your target data and you can also export your target data to a .CSV file.  

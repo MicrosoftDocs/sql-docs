@@ -16,7 +16,7 @@ ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Technical Reference (Integration Services)
   Find the tools, languages, and programming reference documentation for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

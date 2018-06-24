@@ -13,7 +13,7 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Are you upgrading from SQL Server 2005?
   The end of extended support for SQL Server 2005 is one reason to upgrade now to a newer version of SQL Server and to Azure SQL Database. Upgrading enables you to maintain security and compliance, achieve breakthrough performance, and optimize your data platform infrastructure.  

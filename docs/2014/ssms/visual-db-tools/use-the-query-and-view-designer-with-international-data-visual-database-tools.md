@@ -25,7 +25,7 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use the Query and View Designer with International Data (Visual Database Tools)
   You can use the [Query and View Designer](visual-database-tools.md) with data in any language and in any version of the Windows operating system. The following guidelines outline the differences you will notice and provide information about managing data in international applications.  

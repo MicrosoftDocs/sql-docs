@@ -22,7 +22,7 @@ ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # FileName Property (ClientNetLibInfo Class)
   Gets the file name of the client network library file.  

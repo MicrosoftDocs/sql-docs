@@ -17,7 +17,7 @@ ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Group Rows in Query Results (Visual Database Tools)
   If you want to create subtotals or show other summary information for subsets of a table, you create groups using an aggregate query. Each group summarizes the data for all the rows in the table that have the same value.  

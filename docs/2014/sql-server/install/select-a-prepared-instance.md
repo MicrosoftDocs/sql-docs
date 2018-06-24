@@ -13,7 +13,7 @@ ms.assetid: ba0d57b5-87cc-43f0-bfbb-f06123c546bd
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Select a Prepared Instance
   Use the **Select Prepared Instance** page to specify the prepared instance you want to complete.  

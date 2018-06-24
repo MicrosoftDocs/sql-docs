@@ -19,7 +19,7 @@ ms.assetid: 07a4d94b-df0e-4662-9604-221664762ee8
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Confirm Upgrade Advisor Settings
   On this page, you can review the selected Upgrade Advisor Analysis Wizard options and parameters you entered. After you have reviewed the options and parameters, click **Run** to start the analysis.  

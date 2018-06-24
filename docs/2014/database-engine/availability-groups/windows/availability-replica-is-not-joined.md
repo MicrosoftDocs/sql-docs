@@ -17,7 +17,7 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 caps.latest.revision: 12
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Availability replica is not joined
     

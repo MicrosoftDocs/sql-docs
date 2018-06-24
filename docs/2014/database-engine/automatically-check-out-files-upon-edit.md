@@ -16,7 +16,7 @@ ms.assetid: afa9f637-3d14-4d64-be51-0e8167e21d2b
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Automatically Check Out Files Upon Edit
   You can configure [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to check out a file automatically when you begin editing it.  

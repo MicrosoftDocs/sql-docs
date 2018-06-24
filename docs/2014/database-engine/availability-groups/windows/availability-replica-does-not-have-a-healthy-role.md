@@ -17,7 +17,7 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 caps.latest.revision: 11
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Availability replica does not have a healthy role
     

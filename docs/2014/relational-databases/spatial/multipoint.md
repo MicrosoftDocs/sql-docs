@@ -15,7 +15,7 @@ ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 caps.latest.revision: 15
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MultiPoint
   A `MultiPoint` is a collection of zero or more points. The boundary of a `MultiPoint` instance is empty.  

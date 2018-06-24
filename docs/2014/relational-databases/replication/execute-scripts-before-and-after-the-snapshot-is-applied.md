@@ -18,7 +18,7 @@ ms.assetid: 9a6872c2-9bed-477f-9d2f-332d640edcf2
 caps.latest.revision: 34
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Execute Scripts Before and After the Snapshot Is Applied
   You can specify scripts to execute at the Subscriber before or after the snapshot is applied. Scripts can be used for a variety of reasons, such as creating logins and schemas (object owners) at each Subscriber.  

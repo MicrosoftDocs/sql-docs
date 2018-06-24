@@ -17,7 +17,7 @@ ms.assetid: 3e3de528-c3f8-413f-a6b9-d324ca95ad8e
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Database Management Event Class
   The **Audit Database Management** event class occurs when a database is created, altered, or dropped.  

@@ -20,7 +20,7 @@ ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Edit Rows in the Results Pane (Visual Database Tools)
   In many cases, you can edit the data in the [Results Pane](visual-database-tools.md). For more detailed information about changing data see [Rules for Updating Results &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) and [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md).  

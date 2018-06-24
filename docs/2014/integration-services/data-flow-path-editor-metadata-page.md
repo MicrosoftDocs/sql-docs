@@ -17,7 +17,7 @@ ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Flow Path Editor (Metadata Page)
   Use the **Metadata** page of the **Data Flow Path Editor** dialog box to view the metadata of the path columns.  

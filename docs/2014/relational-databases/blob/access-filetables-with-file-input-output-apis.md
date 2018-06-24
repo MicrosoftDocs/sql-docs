@@ -15,7 +15,7 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Access FileTables with File Input-Output APIs
   Describes how file system I/O works on a FileTable.  

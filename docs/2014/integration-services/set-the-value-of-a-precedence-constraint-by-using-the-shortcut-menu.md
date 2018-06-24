@@ -15,7 +15,7 @@ ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Value of a Precedence Constraint by Using the Shortcut Menu
   This procedure describes how to set a value for a precedence constraint by using the shortcut menu.  

@@ -13,7 +13,7 @@ ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server 2014 Upgrade Advisor
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor analyzes the configuration of installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, and then generates a report of issues that you must address to assure a successful upgrade.  

@@ -17,7 +17,7 @@ ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SP:CacheInsert Event Class
   The SP:CacheInsert event class indicates that the stored procedure has been inserted into the procedure cache.  

@@ -15,7 +15,7 @@ ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 59
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Back Up Database (General Page)
   Use the **General** page of the **Back Up Database** dialog box to view or modify settings for a database back up operation.  

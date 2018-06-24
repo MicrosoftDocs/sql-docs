@@ -19,7 +19,7 @@ ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Filter Information (Transact-SQL)
   This topic describes how to use built-in functions to view trace filter information.  

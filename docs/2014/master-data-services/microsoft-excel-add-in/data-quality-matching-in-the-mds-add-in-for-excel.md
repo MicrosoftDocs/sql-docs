@@ -13,7 +13,7 @@ ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Quality Matching in the MDS Add-in for Excel
   Over time, you will want to add more data to the MDS repository. Before adding data, it can be useful to compare the new data to the data that’s already managed in MDS, to ensure you are not adding duplicate or inaccurate data.  

@@ -13,7 +13,7 @@ ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 16
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Install Analysis Services in Tabular Mode
   If you are installing Analysis Services to use the new tabular modeling features, you must install Analysis Services in a server mode that supports that type of model. The server mode is Tabular, and it is configured during installation.  

@@ -25,7 +25,7 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 caps.latest.revision: 70
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # What&#39;s New in SQL Server 2014
   This topic summarizes detailed links to new features in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and summarizes services packs for [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  

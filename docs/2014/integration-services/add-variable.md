@@ -17,7 +17,7 @@ ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Variable
   Use the **Add Variable** dialog box to specify the properties of a new variable.  

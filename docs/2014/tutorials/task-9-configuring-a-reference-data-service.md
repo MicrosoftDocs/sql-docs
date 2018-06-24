@@ -15,7 +15,7 @@ ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 9: Configuring a Reference Data Service
   In this task, you configure DQS to use a Reference Data Service on Windows Azure Marketplace. In the next task, you will configure the **Address Validation** domain to use this service. At runtime, during cleansing activity, DQS passes the values of domains in the **Address Validation** domain to the service for cleansing. See [Configure DQS to Use Reference Data](http://msdn.microsoft.com/library/hh213070.aspx) for more details.  

@@ -15,7 +15,7 @@ ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Evaluate Policies Dialog Box, Evaluation Results Page
   Use this dialog box to view policy evaluation results, and to apply Policy-Based Management policies to a set of targets that does not comply with the policies.  

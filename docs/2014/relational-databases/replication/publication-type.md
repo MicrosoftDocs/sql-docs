@@ -15,7 +15,7 @@ ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 caps.latest.revision: 20
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Publication Type
   Replication provides the following types of publications:  

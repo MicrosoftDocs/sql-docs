@@ -16,7 +16,7 @@ ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 caps.latest.revision: 44
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Database Engine
   The [!INCLUDE[ssDE](../includes/ssde-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications within your enterprise.  

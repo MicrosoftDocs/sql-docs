@@ -16,7 +16,7 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 caps.latest.revision: 34
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set or Change the Server Collation
   The server collation acts as the default collation for all system databases that are installed with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and also any newly created user databases. The server collation is specified during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. For more information, see [Collation and Unicode Support](collation-and-unicode-support.md).  

@@ -13,7 +13,7 @@ ms.assetid: 39f76bc7-94e6-4dbc-bfa5-d56f4430bb26
 caps.latest.revision: 15
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deployment Topologies for SQL Server BI Features in SharePoint
   This topic describes common topologies for installing the SQL Server Business Intelligence features [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] in SharePoint 2010 and SharePoint 2013 environments. For example single server and three tier installations.  

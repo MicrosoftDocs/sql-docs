@@ -16,7 +16,7 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # System Settings (Master Data Services)
   For all web applications and web services associated with a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, you can configure system settings.  

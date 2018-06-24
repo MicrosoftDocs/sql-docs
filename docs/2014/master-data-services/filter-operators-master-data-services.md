@@ -13,7 +13,7 @@ ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Filter Operators (Master Data Services)
   When filtering a list of members, the following operators are available.  

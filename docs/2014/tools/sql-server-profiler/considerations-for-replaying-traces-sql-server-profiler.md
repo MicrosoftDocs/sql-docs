@@ -16,7 +16,7 @@ ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Considerations for Replaying Traces (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] cannot replay the following kinds of traces:  

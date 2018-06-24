@@ -17,7 +17,7 @@ ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Choose Name Dialog Box (Visual Database Tools)
   This dialog box appears when you choose **Save \<TableName**> , **Save \<DiagramName>**, or **Save \<ViewName>** from the **File** menu.  

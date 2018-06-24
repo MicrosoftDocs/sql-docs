@@ -16,7 +16,7 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # LineString
   A `LineString` is a one-dimensional object representing a sequence of points and the line segments connecting them.  

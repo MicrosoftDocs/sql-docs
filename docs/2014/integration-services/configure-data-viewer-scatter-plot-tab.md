@@ -17,7 +17,7 @@ ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Data Viewer (Scatter Plot Tab)
   Use the **Scatter Plot (x,y)** tab of the **Configure Data Viewer** dialog box to specify two columns to plot against each other. A scatter chart plots the data values from two numeric columns against each other. Each data record becomes one point in the plot. The chart reflects the contents of one buffer only.  

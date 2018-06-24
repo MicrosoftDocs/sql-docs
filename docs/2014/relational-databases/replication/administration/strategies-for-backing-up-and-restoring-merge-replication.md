@@ -18,7 +18,7 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: 47
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Strategies for Backing Up and Restoring Merge Replication
   For merge replication, back up the following databases regularly:  

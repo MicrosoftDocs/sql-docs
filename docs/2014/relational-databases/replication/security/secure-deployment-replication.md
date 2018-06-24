@@ -16,7 +16,7 @@ ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Secure Deployment (Replication)
   This section provides information to help you better secure replication.  

@@ -16,7 +16,7 @@ ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete a Subscription View (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a subscription view when it is no longer needed. Deleting a subscription view in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] removes the view from the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  

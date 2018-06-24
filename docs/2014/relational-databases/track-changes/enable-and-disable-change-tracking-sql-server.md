@@ -20,7 +20,7 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 caps.latest.revision: 33
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Enable and Disable Change Tracking (SQL Server)
   This topic describes how to enable and disable change tracking for a database and a table.  

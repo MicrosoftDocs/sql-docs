@@ -20,7 +20,7 @@ ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data in Data Flows
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of data types that are used in data flows.  

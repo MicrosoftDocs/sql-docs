@@ -17,7 +17,7 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # SSIS Toolbox
   All components that are installed on the local machine, including third-party components built for SQL Server 2008 and 2008 R2, now automatically appear in the new **SSIS Toolbox**. When you install additional components, right-click inside the toolbox and then click **Refresh Toolbox** to add the components.  

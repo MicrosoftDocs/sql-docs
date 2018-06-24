@@ -15,7 +15,7 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open Log File Viewer
   You can use Log File Viewer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to access information about errors and events that are captured in the following logs:  

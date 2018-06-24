@@ -13,7 +13,7 @@ ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
 caps.latest.revision: 24
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Summary: Basic Navigation
   The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] design surface can be customized to your personal preference and work requirements.  

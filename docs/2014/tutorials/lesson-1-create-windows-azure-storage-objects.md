@@ -13,7 +13,7 @@ ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 1: Create Windows Azure Storage Objects
   Before you can create [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups on cloud storage, you must first create a storage account, and then a blob container. Lesson 1 walks you through the steps of Logging into the Windows Azure Management Portal, creating a storage account and a blob container.  

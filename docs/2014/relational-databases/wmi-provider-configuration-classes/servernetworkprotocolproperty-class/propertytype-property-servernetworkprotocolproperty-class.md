@@ -22,7 +22,7 @@ ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # PropertyType Property (ServerNetworkProtocolProperty Class)
   Gets the type of property.  

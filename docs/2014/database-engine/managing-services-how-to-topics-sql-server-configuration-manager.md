@@ -15,7 +15,7 @@ ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Managing Services How-to Topics (SQL Server Configuration Manager)
   The [!INCLUDE[ssDE](../includes/ssde-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent run on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating systems as services. For more information about services, see [Manage the Database Engine Services](configure-windows/manage-the-database-engine-services.md).  

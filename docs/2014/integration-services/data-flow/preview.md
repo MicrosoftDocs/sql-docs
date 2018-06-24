@@ -13,7 +13,7 @@ ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Preview
   Use the **Preview** dialog box to preview the data that the SAP BW source will extract.  

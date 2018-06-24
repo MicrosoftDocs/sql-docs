@@ -18,7 +18,7 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Import and Export Packages (SSIS Service)
     

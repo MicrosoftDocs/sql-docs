@@ -15,7 +15,7 @@ ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Publication Properties, Filter Rows
   The **Filter Rows** page of the **Publication Properties** dialog allows you to add, edit, or delete:  

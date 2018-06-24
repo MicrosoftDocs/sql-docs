@@ -15,7 +15,7 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 44
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Collection
   The Data Collector is a component of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that collects different sets of data. Data collection either runs constantly or on a user-defined schedule. The data collector stores the collected data in a relational database known as the management data warehouse.  

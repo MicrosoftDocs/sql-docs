@@ -15,7 +15,7 @@ ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # ADO NET Destination Editor (Error Output Page)
   Use the **Error Output** page of the **ADO NET Destination Editor** dialog box to specify error handling options.  

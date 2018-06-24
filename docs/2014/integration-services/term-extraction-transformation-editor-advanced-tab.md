@@ -17,7 +17,7 @@ ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Term Extraction Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Extraction Transformation Editor** dialog box to specify properties for the extraction such as frequency, length, and whether to extract words or phrases.  

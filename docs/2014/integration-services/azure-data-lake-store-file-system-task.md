@@ -16,7 +16,7 @@ ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
 caps.latest.revision: 3
 author: "Lingxi-Li"
 ms.author: "lingxl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Azure Data Lake Store File System Task
 The **Azure Data Lake Store File System Task** enables users to perform various file system operations on [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/).

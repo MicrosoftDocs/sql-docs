@@ -17,7 +17,7 @@ ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 caps.latest.revision: 13
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # TuningTimeInMin Element (DTA)
   Specifies the maximum length of a tuning session in minutes.  

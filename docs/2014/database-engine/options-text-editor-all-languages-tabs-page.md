@@ -15,7 +15,7 @@ ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Text Editor - All Languages -Tabs Page)
   Use this dialog box to set the tabbing behavior in all five of the editors in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To display these options, click **Options** on the **Tools** menu. Select the **Text Editor** folder, expand the **All Languages** folder and then click **Tabs**.  

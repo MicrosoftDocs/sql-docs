@@ -15,7 +15,7 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Save and Execute Package (SQL Server Import and Export Wizard)
   Use the **Save and Execute Package** dialog box to run the package immediately, save it to run later, or both.  

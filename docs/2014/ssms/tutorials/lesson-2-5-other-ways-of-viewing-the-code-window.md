@@ -13,7 +13,7 @@ ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Other Ways of Viewing the Code Window
   The Code Window can be configured to display multiple code windows in several ways.  

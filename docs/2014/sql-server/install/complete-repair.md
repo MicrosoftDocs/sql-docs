@@ -13,7 +13,7 @@ ms.assetid: 64d55acc-b164-4796-a3a0-ea84b812181d
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Complete - Repair
   Use the **Complete - Repair** page to verify that the repair has completed.  

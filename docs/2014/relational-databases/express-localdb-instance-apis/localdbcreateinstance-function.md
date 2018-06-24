@@ -20,7 +20,7 @@ ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LocalDBCreateInstance Function
   Creates a new SQL Server Express LocalDB instance.  

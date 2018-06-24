@@ -16,7 +16,7 @@ ms.assetid: 5f73fb9d-86bb-4d9e-8a8e-37b59d735df3
 caps.latest.revision: 10
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reporting Services SharePoint Mode Upgrade (SSRS)
   Use the **Reporting Services SharePoint Mode** page to confirm the upgrade of all shared features. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode is an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared feature and will be upgraded with all of the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard does not support upgrading only one shared feature. All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features are upgraded at the same time.  

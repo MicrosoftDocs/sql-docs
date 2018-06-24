@@ -13,7 +13,7 @@ ms.assetid: 766fca7b-6cef-4ce4-97ee-6854f8034717
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Complete - Prepare Image
   Use the **Complete** page to verify that image preparation is complete.  

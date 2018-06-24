@@ -13,7 +13,7 @@ topic_type:
   - "apiref"
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Assembly Load Event Class
   See [assembly-load-event-class](../../database-engine/assembly-load-event-class.md).  

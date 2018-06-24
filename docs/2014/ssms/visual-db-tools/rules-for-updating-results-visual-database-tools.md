@@ -18,7 +18,7 @@ ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Rules for Updating Results (Visual Database Tools)
   In many cases, you can update the result set displayed in the [Results Pane](visual-database-tools.md). However, in some cases you cannot.  

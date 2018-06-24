@@ -15,7 +15,7 @@ ms.assetid: 6c83737d-0531-4fd9-88f6-2da5a150532d
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_17083
     

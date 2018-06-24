@@ -16,7 +16,7 @@ ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # LTRIM (SSIS Expression)
   Returns a character expression after removing leading spaces.  

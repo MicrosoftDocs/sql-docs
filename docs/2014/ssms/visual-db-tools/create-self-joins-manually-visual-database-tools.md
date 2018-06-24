@@ -17,7 +17,7 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Self-Joins Manually (Visual Database Tools)
   You can join a table to itself even if the table does not have a reflexive relationship in the database. For example, you can use a self-join to find pairs of authors living in the same city.  

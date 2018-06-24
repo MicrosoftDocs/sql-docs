@@ -17,7 +17,7 @@ ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SP:Starting Event Class
   The SP:Starting event class indicates that a stored procedure is beginning execution.  

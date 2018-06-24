@@ -14,7 +14,7 @@ ms.assetid: f679fe4e-0ed1-4e2c-8fe1-e6b3d55c8d42
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOCALDB_ERROR_SHARED_NAME_TAKEN
     

@@ -18,7 +18,7 @@ ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Source Control Basics
   Source control refers to a system in which a central piece of server software stores and tracks file versions, and also controls access to files. A typical source control system includes a source control provider and two or more source control clients.  

@@ -13,7 +13,7 @@ ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Save a Shortcut Query File (MDS Add-in for Excel)
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], save a shortcut query file when you frequently need to access the same set of data.  

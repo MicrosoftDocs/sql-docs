@@ -22,7 +22,7 @@ ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ProtocolName Property (ClientNetworkProtocolProperty Class)
   Gets the name of the protocol that owns the current property referenced by the [PropertyIdx Property (ClientNetworkProtocolProperty Class)](clientnetworkprotocolproperty-class.md) value.  

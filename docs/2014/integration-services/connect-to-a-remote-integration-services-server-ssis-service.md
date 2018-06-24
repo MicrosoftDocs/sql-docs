@@ -18,7 +18,7 @@ ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect to a Remote Integration Services Server (SSIS Service)
     

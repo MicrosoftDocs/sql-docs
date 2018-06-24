@@ -23,7 +23,7 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Term Lookup Transformation
   The Term Lookup transformation matches terms extracted from text in a transformation input column with terms in a reference table. It then counts the number of times a term in the lookup table occurs in the input data set, and writes the count together with the term from the reference table to columns in the transformation output. This transformation is useful for creating a custom word list based on the input text, complete with word frequency statistics.  

@@ -15,7 +15,7 @@ ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Distribution Database
   The distribution database stores metadata and history data for all types of replication, and transactions for transactional replication.  

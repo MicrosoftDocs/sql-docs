@@ -15,7 +15,7 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 24
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Work with Directories and Paths in FileTables
   Describes the directory structure in which the files are stored in FileTables.  

@@ -15,7 +15,7 @@ ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 12: Adding Derived Column Transform to Add Columns Required by MDS
   In this task, you add the Derive Column Transform to the data flow. You add two derived columns, **ImportType** and **BatchTag**, to the records passed to this transform. You should add these columns before uploading the data to staging tables in MDS. These two are required columns for the staging tables in MDS. See [Leaf Member Staging Tables](http://msdn.microsoft.com/library/ee633854.aspx) for more details.  

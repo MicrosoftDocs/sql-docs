@@ -18,7 +18,7 @@ ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Rename Solutions and Project Items
   You can rename a solution and its project items in Solution Explorer.  

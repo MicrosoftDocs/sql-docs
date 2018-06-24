@@ -15,7 +15,7 @@ ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: 85
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Properties (Mirroring Page)
   Access this page from the principal database, and use it to configure and to modify the properties of database mirroring for a database. Also use it to launch the Configure Database Mirroring Security Wizard, to view the status of a mirroring session, and to pause or remove the database mirroring session.  

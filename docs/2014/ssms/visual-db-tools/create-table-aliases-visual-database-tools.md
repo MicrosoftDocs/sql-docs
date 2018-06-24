@@ -16,7 +16,7 @@ ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Table Aliases (Visual Database Tools)
   Aliases can make it easier to work with table names. Using aliases is helpful when:  

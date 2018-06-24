@@ -21,7 +21,7 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use FOR XML Results in Application Code
   By using FOR XML clauses with SQL queries, you can retrieve and even cast query results as XML data. This functionality allows you to do the following when FOR XML query results can be used in XML application code:  

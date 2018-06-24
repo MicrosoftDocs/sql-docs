@@ -15,7 +15,7 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Welcome to SQL Server Import and Export Wizard
   Use the **SQL Server Import and Export Wizard** to copy and transform data between supported data sources and destinations.  

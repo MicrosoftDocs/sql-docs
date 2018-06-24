@@ -15,7 +15,7 @@ ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 caps.latest.revision: 13
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Technical Reference (Replication)
   This section contains links to technical reference documentation for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication.  

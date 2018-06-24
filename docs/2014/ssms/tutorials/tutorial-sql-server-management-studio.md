@@ -25,7 +25,7 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Tutorial: SQL Server Management Studio
   The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tutorial introduces you to the integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presents a graphical interface for configuring, monitoring, and administering instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also allows you to deploy, monitor, and upgrade the data-tier components used by your applications, such as databases and data warehouses. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] also provides [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, and XML language editors for editing and debugging scripts.  

@@ -21,7 +21,7 @@ ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete Rows in the Results Pane (Visual Database Tools)
   Delete rows in the Results pane if you want to delete records in the database. If you want to delete all of the rows you can use a Delete query. For more information see [Create Delete Queries &#40;Visual Database Tools&#41;](visual-database-tools.md). If you only want to remove rows from the Results pane, change the criteria for the query. For more information see [Specify Search Criteria &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  

@@ -17,7 +17,7 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Profiling Task and Viewer
   The Data Profiling task provides data profiling functionality inside the process of extracting, transforming, and loading data. By using the Data Profiling task, you can achieve the following benefits:  

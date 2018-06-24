@@ -18,7 +18,7 @@ ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Save Changes
   Warns you that changes to the items listed will not be saved unless you click **Yes**.  

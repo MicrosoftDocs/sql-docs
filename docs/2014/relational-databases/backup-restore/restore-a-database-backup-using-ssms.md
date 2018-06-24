@@ -22,7 +22,7 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: 73
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Restore a Database Backup (SQL Server Management Studio)
   This topic explains how to restore a full database backup.  

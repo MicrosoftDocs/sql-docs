@@ -15,7 +15,7 @@ ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set Up FILESTREAM on a Failover Cluster
   This topic describes how to enable FILESTREAM on a failover cluster. Before you try this procedure, you should understand [failover clustering](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) and have FILESTREAM enabled. For information about how to enable FILESTREAM, see [Enable and Configure FILESTREAM](enable-and-configure-filestream.md).  

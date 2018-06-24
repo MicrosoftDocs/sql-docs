@@ -13,7 +13,7 @@ ms.assetid: f6473409-121a-414d-8fe9-ea9aea6cb7eb
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # After upgrade, Full-Text Search will not allow predicates in OUTPUT INTO expression
   Full-text predicates are not allowed in the OUTPUT clause when the database compatibility level is set to 100 or higher.  

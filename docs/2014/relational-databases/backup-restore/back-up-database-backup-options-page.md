@@ -16,7 +16,7 @@ ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: 61
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Back Up Database (Backup Options Page)
   Use the  **Backup Options** page of the **Back Up Database** dialog box to view or modify database backup options.  

@@ -17,7 +17,7 @@ ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # XML Source Editor (Columns Page)
   Use the **Columns** node of the **XML Source Editor** dialog box to map an output column to an external (source) column.  

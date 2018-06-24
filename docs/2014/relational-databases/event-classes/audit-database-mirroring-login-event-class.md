@@ -19,7 +19,7 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 15
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Database Mirroring Login Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an **Audit Database Mirroring Login** event to report audit messages related to database mirroring transport security.  

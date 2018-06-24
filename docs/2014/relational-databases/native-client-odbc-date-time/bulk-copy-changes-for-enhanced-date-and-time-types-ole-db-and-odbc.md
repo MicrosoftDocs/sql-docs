@@ -17,7 +17,7 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)
   This topic describes the date/time enhancements to support bulk copy functionality. The information in this topic is valid for both OLE DB and ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

@@ -17,7 +17,7 @@ ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transfer Logins Task Editor (General Page)
   Use the **General** page of the **Transfer Logins Task Editor** dialog box to name and describe the Transfer Logins task. For more information about this task, see [Transfer Logins Task](control-flow/transfer-logins-task.md).  

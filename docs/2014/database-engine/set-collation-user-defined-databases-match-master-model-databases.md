@@ -15,7 +15,7 @@ ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Collation of User-defined Databases to Match Those of the master and model Databases
   This rule checks whether user-defined databases are defined by using a database collation that is the same as the collation for master or model.  

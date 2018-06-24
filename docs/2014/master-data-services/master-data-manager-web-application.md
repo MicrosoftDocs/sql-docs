@@ -13,7 +13,7 @@ ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Master Data Manager Web Application
   The [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application is used primarily by administrators to perform administrative tasks. For example, only administrators can create models, business rules, or versions of data. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  

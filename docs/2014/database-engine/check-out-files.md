@@ -17,7 +17,7 @@ ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Check Out Files
   Unless you have configured the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment to permit checked-in files to be edited, you must check out a file before you can modify it. When you check out a file, a copy of the file version is copied to your local disk, and the read-only attribute of the file is removed.  

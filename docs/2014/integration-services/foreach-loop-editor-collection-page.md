@@ -15,7 +15,7 @@ ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Foreach Loop Editor (Collection Page)
   Use the **Collection** pageof the **Foreach Loop Editor** dialog box to specify the enumerator type and configure the enumerator.  

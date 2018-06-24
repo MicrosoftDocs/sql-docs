@@ -13,7 +13,7 @@ ms.assetid: 33fa3b75-3257-44e1-919e-3d2ff12accbc
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Feature Selection (Uninstall)
   Use the Feature Selection — Uninstall page to select features to remove from the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

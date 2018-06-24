@@ -18,7 +18,7 @@ ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Fail Over to a Log Shipping Secondary (SQL Server)
   Failing over to a log shipping secondary is useful if the primary server instance fails or requires maintenance.  

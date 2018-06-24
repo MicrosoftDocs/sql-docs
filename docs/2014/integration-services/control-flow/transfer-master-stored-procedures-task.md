@@ -17,7 +17,7 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transfer Master Stored Procedures Task
   The Transfer Master Stored Procedures task transfers one or more user-defined stored procedures between **master** databases on instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To transfer a stored procedure from the **master** database, the owner of the procedure must be dbo.  

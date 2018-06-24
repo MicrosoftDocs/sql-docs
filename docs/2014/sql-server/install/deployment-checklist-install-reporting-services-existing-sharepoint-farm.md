@@ -13,7 +13,7 @@ ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deployment Checklist: Install Reporting Services into an Existing SharePoint Farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint report servers can be installed into a new SharePoint Farm or into an existing SharePoint farm. This topic describes the possible scenarios and best practices for installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into and existing SharePoint farm.  

@@ -19,7 +19,7 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Broker Event Category
   The **Broker** event category contains general Service Broker events.  

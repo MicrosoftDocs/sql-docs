@@ -15,7 +15,7 @@ ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # New Search Property List
   Use this dialog box to create a search property list.  

@@ -15,7 +15,7 @@ ms.assetid: e9a55dab-7c4e-4e09-97da-9f3a108e22c9
 caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reporting Services Parameters
   To analyze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you must specify an instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and provide information about how to connect to that instance.  

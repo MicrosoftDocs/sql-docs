@@ -15,7 +15,7 @@ ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Full-Text Catalog Properties (Population Schedule Page)
   Use this dialog box to add or modify schedules that determine when the full-text catalog will be populated or repopulated.  

@@ -20,7 +20,7 @@ ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ISQLServerErrorInfo::GetErrorInfo (OLE DB)
   Returns a pointer to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider SSERRORINFO structure containing the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error details.  

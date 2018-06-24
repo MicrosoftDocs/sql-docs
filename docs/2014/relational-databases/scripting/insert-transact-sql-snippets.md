@@ -17,7 +17,7 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 caps.latest.revision: 6
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Insert Transact-SQL Snippets
   A [!INCLUDE[tsql](../../includes/tsql-md.md)] code snippet is a template you can use as a starting point when writing new [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.  

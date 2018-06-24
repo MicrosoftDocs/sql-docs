@@ -17,7 +17,7 @@ ms.assetid: de47ea98-135e-4730-900e-dac629848798
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Flat File Connection Manager Editor (Preview Page)
   Use the **Preview** node of the **Flat File Connection Manager Editor** dialog box to view the contents of the source file in a tabular format.  

@@ -15,7 +15,7 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 caps.latest.revision: 9
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Distributor Information, Publications
   The **Publications** tab provides summary information for all publications at the Distributor that is selected in the left pane.  

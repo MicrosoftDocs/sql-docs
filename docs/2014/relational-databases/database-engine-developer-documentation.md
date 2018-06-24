@@ -17,7 +17,7 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Developer&#39;s Guide (Database Engine)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a rich set of tools for developing, administering, and controlling database applications.  

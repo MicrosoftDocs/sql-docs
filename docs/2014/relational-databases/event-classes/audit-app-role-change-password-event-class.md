@@ -17,7 +17,7 @@ ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit App Role Change Password Event Class
   The **Audit App Role Change Password** event class occurs whenever a password is changed for an application role.  

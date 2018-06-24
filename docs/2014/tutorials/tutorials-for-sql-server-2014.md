@@ -20,7 +20,7 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 30
 author: "mgblythe"
 ms.author: "mblythe"
-manager: "jhubbard"
+manager: craigg
 ---
 # Tutorials for SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] introduces many new technologies and features.  

@@ -16,7 +16,7 @@ ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server, Workload Group Stats Object
   The SQLServer:Workload Group Stats object contains performance counters that report information about Resource Governor workload group statistics.  

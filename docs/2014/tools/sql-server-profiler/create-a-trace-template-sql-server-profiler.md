@@ -17,7 +17,7 @@ ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a Trace Template (SQL Server Profiler)
   This topic describes how to create a new trace template by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

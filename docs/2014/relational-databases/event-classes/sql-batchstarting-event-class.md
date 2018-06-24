@@ -17,7 +17,7 @@ ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL:BatchStarting Event Class
   The SQL:BatchStarting event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is starting.  

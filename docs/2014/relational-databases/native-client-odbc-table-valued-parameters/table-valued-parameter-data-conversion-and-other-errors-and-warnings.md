@@ -17,7 +17,7 @@ ms.assetid: edd45234-59dc-4338-94fc-330e820cc248
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Table-Valued Parameter Data Conversion and Other Errors and Warnings
   Table-valued parameter column values can be converted between client and server data types in the same way as other column and parameter values. But because a table-valued parameter can contain multiple columns and multiple rows, it is important to be able to identify the actual value where the error occurred.  

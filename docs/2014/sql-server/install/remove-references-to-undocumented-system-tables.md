@@ -16,7 +16,7 @@ ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove references to undocumented system tables
   Many system tables that were undocumented in prior releases have changed or no longer exist; therefore, using these tables may cause errors after upgrading. Because Upgrade Advisor looks for references to system table names, it will report references to any user tables that have the same names as system tables.  

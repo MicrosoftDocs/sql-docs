@@ -18,7 +18,7 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 caps.latest.revision: 26
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specify Parameters
   By specifying procedure parameters, calling programs are able to pass values into the body of the procedure. Those values can be used for a variety of purposes during procedure execution. Procedure parameters can also return values to the calling program if the parameter is marked as an OUTPUT parameter.  

@@ -15,7 +15,7 @@ ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete Operator
   Use this page to delete an operator.  

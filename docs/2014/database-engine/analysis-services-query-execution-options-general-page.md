@@ -15,7 +15,7 @@ ms.assetid: c534a0e2-5c35-46c2-a7e8-b1964850bd0e
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Analysis Services Query Execution Options (General Page)
   Use this page to specify the options for displaying the results of a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] query.  

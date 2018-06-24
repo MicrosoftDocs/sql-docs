@@ -16,7 +16,7 @@ ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOG (SSIS Expression)
   Returns the base-10 logarithm of a numeric expression.  

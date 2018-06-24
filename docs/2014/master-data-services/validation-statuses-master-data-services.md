@@ -13,7 +13,7 @@ ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Validation Statuses (Master Data Services)
   In the **Version Management** functional area, on the **Validate Version** page, the following statuses are possible.  

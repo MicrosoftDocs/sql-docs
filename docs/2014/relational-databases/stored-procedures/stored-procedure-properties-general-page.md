@@ -16,7 +16,7 @@ ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Stored Procedure Properties (General Page)
   Displays information about a stored procedure. All information is read-only.  

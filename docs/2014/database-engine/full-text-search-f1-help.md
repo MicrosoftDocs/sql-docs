@@ -13,7 +13,7 @@ ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
 caps.latest.revision: 27
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Full-Text Search F1 Help
   This section provides topics about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Full-Text Search dialog boxes in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To access a user interface topic, press F1 or click **Help** while the dialog box is open.  

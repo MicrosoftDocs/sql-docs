@@ -15,7 +15,7 @@ ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove statements that drop system objects
   Upgrade Advisor detected statements that drop system objects. System objects, including extended stored procedures, are deployed in the read-only **resource** database (mssqlsystemresource) and cannot be dropped. Modify your applications to either revoke or deny EXECUTE permission on system objects.  

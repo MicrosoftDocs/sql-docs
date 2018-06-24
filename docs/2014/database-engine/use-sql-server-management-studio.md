@@ -17,7 +17,7 @@ ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 caps.latest.revision: 50
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is an integrated environment for accessing, configuring, managing, administering, and developing all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS combines a broad group of graphical tools with a number of rich script editors to provide access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to developers and administrators of all skill levels.  

@@ -15,7 +15,7 @@ ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Witness Server Instance (Configure Database Mirroring Security Wizard)
   Use this page to specify information about the server instance that is to serve as the witness for the session.  

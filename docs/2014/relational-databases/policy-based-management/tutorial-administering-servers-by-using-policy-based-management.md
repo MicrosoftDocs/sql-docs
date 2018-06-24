@@ -16,7 +16,7 @@ ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Tutorial: Administering Servers by Using Policy-Based Management
   Welcome to the Administering Servers by Using Policy-Based Management Policies tutorial. This tutorial is intended for users who are familiar with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] but new to the Policy-Based Management.  

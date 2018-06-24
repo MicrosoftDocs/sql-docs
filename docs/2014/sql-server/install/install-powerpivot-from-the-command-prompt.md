@@ -13,7 +13,7 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Install PowerPivot from the Command Prompt
   You can run Setup from the command line to install SQL Server PowerPivot for SharePoint. You must include the `/ROLE` parameter in your command and exclude the `/FEATURES` parameter.  

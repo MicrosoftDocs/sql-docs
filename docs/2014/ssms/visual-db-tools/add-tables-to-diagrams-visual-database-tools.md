@@ -16,7 +16,7 @@ ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Tables to Diagrams (Visual Database Tools)
   You can add a table to your database diagram to edit its structure or relate it to other tables in your diagram. You can either add existing database tables to a diagram or insert a new table that has not yet been defined in the database.  

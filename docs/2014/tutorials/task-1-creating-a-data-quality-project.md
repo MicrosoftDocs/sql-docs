@@ -15,7 +15,7 @@ ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 1: Creating a Data Quality Project
   In this task, you create a Data Quality Project for cleansing the supplier data in an Excel file against the Suppliers knowledge base you created earlier in this tutorial.  

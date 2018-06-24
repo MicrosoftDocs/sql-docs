@@ -15,7 +15,7 @@ ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Operator Properties: New Operator (Notifications Page)
   Use this page to set the alerts and jobs that notify the operator.  

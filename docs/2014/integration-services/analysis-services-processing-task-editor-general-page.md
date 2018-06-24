@@ -17,7 +17,7 @@ ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Analysis Services Processing Task Editor (General Page)
   Use the **General** pageof the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  

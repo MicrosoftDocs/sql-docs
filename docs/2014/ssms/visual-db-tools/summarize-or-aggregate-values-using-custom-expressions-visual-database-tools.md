@@ -16,7 +16,7 @@ ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Summarize or Aggregate Values Using Custom Expressions (Visual Database Tools)
   In addition to using aggregate functions to aggregate data, you can create custom expressions to produce aggregate values. You can use custom expressions in place of aggregate functions anywhere in an aggregate query.  

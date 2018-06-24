@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Errors and Events (Replication)
   For cause and resolution information for a number of errors related to replication, see [Errors and Events Reference (Replication)](../errors-and-events-reference-replication.md).  

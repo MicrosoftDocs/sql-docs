@@ -13,7 +13,7 @@ ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Alter an Extended Events Session
   After you create an Extended Events session, you can alter it according to your needs using the **SQL Server Extended Events Wizard**.  

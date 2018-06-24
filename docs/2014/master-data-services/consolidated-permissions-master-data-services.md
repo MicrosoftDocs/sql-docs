@@ -18,7 +18,7 @@ ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Consolidated Permissions (Master Data Services)
   Consolidated permissions apply to the attribute values for all consolidated members of an entity.  

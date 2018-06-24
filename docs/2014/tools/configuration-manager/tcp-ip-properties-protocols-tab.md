@@ -15,7 +15,7 @@ ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 36
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # TCP - IP Properties (Protocols Tab)
   Use the **TCP/IP Properties** dialog box to configure the options for the TCP/IP protocol. Click **TCP/IP** in the left pane, to show individual IP address configurations in the details pane.  

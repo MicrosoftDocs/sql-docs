@@ -13,7 +13,7 @@ ms.assetid: 65cc22ce-53e9-49dc-8f40-cbf0159c9e54
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Ready to Repair
   The Ready to Repair page provides a summary of the repair process by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  

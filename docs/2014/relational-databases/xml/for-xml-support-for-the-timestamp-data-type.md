@@ -15,7 +15,7 @@ ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # FOR XML Support for the timestamp Data Type
   In the FOR XML transformation, **timestamp** type values are treated as **varbinary(8)** data and will always be base 64 encoded. The XSD or XDR schema, if requested, reflects this type.  

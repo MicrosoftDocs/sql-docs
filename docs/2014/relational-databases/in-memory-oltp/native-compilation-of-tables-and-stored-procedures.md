@@ -13,7 +13,7 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Native Compilation of Tables and Stored Procedures
   In-Memory OLTP introduces the concept of native compilation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can natively compile stored procedures that access memory-optimized tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is also able to natively compile memory-optimized tables. Native compilation allows faster data access and more efficient query execution than interpreted (traditional) [!INCLUDE[tsql](../../includes/tsql-md.md)]. Native compilation of tables and stored procedures produce DLLs.  

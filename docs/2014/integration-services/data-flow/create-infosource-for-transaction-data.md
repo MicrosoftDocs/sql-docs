@@ -13,7 +13,7 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create InfoSource for Transaction Data
   Use the **Create InfoSource for Transaction Data** dialog box to create a new InfoSource for transaction data in the SAP Netweaver BW system.  

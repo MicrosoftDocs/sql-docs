@@ -17,7 +17,7 @@ ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Select Variables
   Use the **Select Variables** dialog box to specify the variables to use in a send message operation in the Message Queue task. The **Available Variables** list includes system and user-defined variables that are in the scope of the Message Queue task or its parent container. The task uses the variables in the **Selected Variables** list.  

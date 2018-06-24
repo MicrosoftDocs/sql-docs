@@ -16,7 +16,7 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: 8
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ---
 # Policy Evaluation Result (AlwaysOn)
   Use the **Policy Evaluation Result** page of the AlwaysOn Dashboard to view any current policy issues.  

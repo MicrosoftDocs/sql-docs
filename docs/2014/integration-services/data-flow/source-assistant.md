@@ -15,7 +15,7 @@ ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Source Assistant
   The Source Assistant component helps create a source component and connection manager. The component is located in the **Favorites** section of the SSIS Toolbox.  

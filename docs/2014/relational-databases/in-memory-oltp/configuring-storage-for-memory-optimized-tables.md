@@ -13,7 +13,7 @@ ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configuring Storage for Memory-Optimized Tables
   You need to configure storage capacity and input/output operations per second (IOPS).  

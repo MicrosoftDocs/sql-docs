@@ -13,7 +13,7 @@ ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connecting with Query Editor
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permits you to write or edit code while disconnected from the server. This can be useful when the server is not available or when you want to conserve scarce server or network resources. You can also change the connection of Query Editor to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without opening a new Query Editor window or retyping your code.  

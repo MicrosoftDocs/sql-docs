@@ -13,7 +13,7 @@ ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Perform an On-Demand Evaluation by Using Registered Servers
   You can perform an on-demand evaluation of best practices policies against one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using Registered Servers. You can use either local server groups or a central management server.  

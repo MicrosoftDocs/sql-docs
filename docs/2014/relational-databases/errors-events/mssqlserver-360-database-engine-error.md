@@ -15,7 +15,7 @@ ms.assetid: e2b7c1b2-3679-4206-9b25-6bd55ef96a2c
 caps.latest.revision: 11
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_360
     

@@ -18,7 +18,7 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 caps.latest.revision: 41
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replication Programming Concepts
   Before developing an application that uses replication functionalities, you should follow the following general planning steps:  

@@ -18,7 +18,7 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: 7
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Report Server URLs  (SSRS Configuration Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], URLs are used to access the Report Server Web service and Report Manager. Before you can use either application, you must configure at least one URL each for the Web service and Report Manager. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides default values for both application URLs that work well in most deployment scenarios, including side-by-side deployments with other Web services and applications.  

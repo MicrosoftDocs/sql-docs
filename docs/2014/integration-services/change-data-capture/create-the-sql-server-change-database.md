@@ -15,7 +15,7 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create the SQL Server Change Database
   When you start the New Instance wizard, the Create CDC Database page opens. Use the Create CDC Database page to provide information about the new CDC instance and create a new Change database.  

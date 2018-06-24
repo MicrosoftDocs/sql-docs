@@ -18,7 +18,7 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Installing SMO
   If you want to develop an application that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), you should select the Client Tools SDK when you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To install the Client Tooks SDK without installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], install Shared Management Objects from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature pack. If you want to ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects is installed on a computer that will run your application, you can use the Shared Management Objects .msi in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] feature pack.  

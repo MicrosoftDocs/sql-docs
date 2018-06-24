@@ -17,7 +17,7 @@ ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Trace Table Properties (Events Selection Tab)
   Use the **Events Selection** tab of the **Trace Table Properties** dialog box to view the events and data column properties of the trace or to remove events or columns from the trace.  

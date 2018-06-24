@@ -16,7 +16,7 @@ ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Project Properties
   You can view properties associated with your projects in the Properties window.  

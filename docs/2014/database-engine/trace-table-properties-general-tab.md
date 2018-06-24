@@ -17,7 +17,7 @@ ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Trace Table Properties (General Tab)
   Use the **General** tab of the **Trace Table Properties** dialog box to view the properties of a trace table.  

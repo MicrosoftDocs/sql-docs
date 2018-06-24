@@ -13,7 +13,7 @@ ms.assetid: 5b615023-3c76-4b95-bbd0-9c39f3353f4b
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Browser (SQL Server Configuration Manager)
   This is the service that supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  

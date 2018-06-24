@@ -13,7 +13,7 @@ ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 4
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Generate Scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides two mechanisms for generating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. You can create scripts for multiple objects by using the **Generate and Publish Scripts Wizard.**. You can also generate a script for individual objects or multiple objects by using the **Script as** menu in **Object Explorer**.  

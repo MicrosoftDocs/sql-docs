@@ -16,7 +16,7 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Query Properties (Visual Database Tools)
   These properties appear in the Properties window when you have a query open in Query and View Designer. Unless otherwise noted, you can edit these properties in the Properties window.  

@@ -15,7 +15,7 @@ ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure a Package to Use Transactions
   When you configure a package to use transactions, you have two options:  

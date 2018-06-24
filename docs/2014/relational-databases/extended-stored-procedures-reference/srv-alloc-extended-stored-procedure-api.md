@@ -24,7 +24,7 @@ ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # srv_alloc (Extended Stored Procedure API)
     

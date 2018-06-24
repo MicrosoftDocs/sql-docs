@@ -17,7 +17,7 @@ ms.assetid: 88ee6090-b2f5-4dc5-997a-1d45fa7e3e84
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Profiler - Destination Table
   Use the **Destination Table** dialog box to specify a table where you wish to store the trace.  

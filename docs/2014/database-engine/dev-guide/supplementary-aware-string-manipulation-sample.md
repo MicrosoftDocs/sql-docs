@@ -14,7 +14,7 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Supplementary-Aware String Manipulation Sample
   This sample for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demonstrates supplementary character aware string processing. This sample shows the implementation of five Transact-SQL string functions that provide the same string manipulation functions as the built-in functions, but with additional supplementary character-aware capability to handle both Unicode and supplementary character strings. The five functions are lens(), `lefts(), rights(), subs()` and `replace_s()` which are equivalent to the built-in functions `LEN(), LEFT(), RIGHT(), SUBSTRING()` and `REPLACE()` string functions.  

@@ -15,7 +15,7 @@ ms.assetid: 5ecce26b-99df-4109-8e51-d150d369dff7
 caps.latest.revision: 12
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Client certificates on the report server web site (Upgrade Advisor)
   Upgrade Advisor detected one or more client certificates on the IIS Web site that hosts the report server or Report Manager virtual directories.  

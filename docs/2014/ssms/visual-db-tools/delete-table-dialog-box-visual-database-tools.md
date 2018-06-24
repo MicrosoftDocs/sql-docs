@@ -16,7 +16,7 @@ ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete Table Dialog Box (Visual Database Tools)
   This dialog box allows you to specify the table from which to delete records. This dialog box appears if more than one table is displayed in the Diagram pane when you change the type of a query to a DELETE query.  

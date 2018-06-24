@@ -16,7 +16,7 @@ ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set a Maximum Table Size for a Trace Table (SQL Server Profiler)
   This topic describes how to set a maximum table size for trace tables by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

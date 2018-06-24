@@ -17,7 +17,7 @@ ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Send Mail Task Editor (Mail Page)
   Use the **Mail** page of the **Send Mail Task Editor** dialog box to specify recipients, message type, and priority for a message. You can also attach files to the message. The message text can be a string you provide, a file connection to a file that contains the text, or the name of a variable that contains the text.  

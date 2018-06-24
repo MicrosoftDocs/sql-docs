@@ -16,7 +16,7 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # DATEPART (SSIS Expression)
   Returns an integer representing a datepart of a date.  

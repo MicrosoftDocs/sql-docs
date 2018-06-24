@@ -17,7 +17,7 @@ ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Improve Access to Trace Data
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] uses space in the **temp** directory to improve access to trace data. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] requires at least 10 megabytes (MB) of free space. If free space drops below 10 MB while you are using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], all [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] functions stop.  

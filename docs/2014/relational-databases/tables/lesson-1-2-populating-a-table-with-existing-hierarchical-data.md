@@ -15,7 +15,7 @@ ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Populating a Table with Existing Hierarchical Data
   This task creates a new table and populates it with the data in the **EmployeeDemo** table. This task has the following steps:  

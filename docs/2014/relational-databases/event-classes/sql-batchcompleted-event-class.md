@@ -17,7 +17,7 @@ ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL:BatchCompleted Event Class
   The SQL:BatchCompleted event class indicates that the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch has completed.  

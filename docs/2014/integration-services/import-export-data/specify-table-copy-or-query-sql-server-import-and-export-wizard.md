@@ -15,7 +15,7 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specify Table Copy or Query (SQL Server Import and Export Wizard)
   Use the **Specify Table Copy or Query** page to specify how to copy data. You can use a graphical interface to select the existing database objects you want to copy, or you can use Transact-SQL to create a more complex query.  

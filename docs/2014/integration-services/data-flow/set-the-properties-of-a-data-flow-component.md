@@ -15,7 +15,7 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Properties of a Data Flow Component
   To set the properties of data flow components, which include sources, destinations, and transformations, use one of the following features:  

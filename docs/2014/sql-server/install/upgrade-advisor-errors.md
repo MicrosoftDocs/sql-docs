@@ -15,7 +15,7 @@ ms.assetid: a493a459-e7ea-4629-a14c-684d8c57e310
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Upgrade Advisor Errors
   Upgrade Advisor errors may appear in the Report Viewer. Such errors are linked to this Help topic.  

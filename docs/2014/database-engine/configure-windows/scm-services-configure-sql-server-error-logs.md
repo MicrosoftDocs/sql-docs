@@ -15,7 +15,7 @@ ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure SQL Server Error Logs
   This topic describes how to view or modify the way [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error logs are recycled.  

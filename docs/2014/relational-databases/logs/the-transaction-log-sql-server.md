@@ -17,7 +17,7 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 caps.latest.revision: 58
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # The Transaction Log (SQL Server)
   Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database has a transaction log that records all transactions and the database modifications made by each transaction. The transaction log must be truncated on a regular basis to keep it from filling up. However, some factors can delay log truncation, so monitoring log size is important. Some operations can be minimally logged to reduce their impact on transaction log size.  

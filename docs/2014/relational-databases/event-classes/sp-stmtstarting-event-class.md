@@ -17,7 +17,7 @@ ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SP:StmtStarting Event Class
   The SP:StmtStarting event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement within a stored procedure has started.  

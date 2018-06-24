@@ -17,7 +17,7 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 caps.latest.revision: 35
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Validate Partition Information for a Merge Subscriber
   When you define a parameterized row filter for a merge publication, you use a function that references Subscriber information, such as the Subscriber's login name. By default, replication validates Subscriber information based on that function before each synchronization and whenever a snapshot is applied at the Subscriber. The validation process ensures that data is partitioned correctly for each Subscriber. Validation behavior is controlled by the **validate_subscriber_info** publication property, which can be changed using [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) or on the **Subscription Options** page of the **Publication Properties** dialog box. For more information about changing publication properties, see [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  

@@ -17,7 +17,7 @@ ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 caps.latest.revision: 31
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transparent Data Encryption with Azure SQL Database
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] transparent data encryption (preview) helps protect against the threat of malicious activity by performing real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.  

@@ -15,7 +15,7 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Environment: Fonts and Colors Page)
   The **Options** dialog box lets you establish a custom font and color scheme for various user interface elements in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. On the **Tools** menu, click **Options,** expand the **Environment** folder, and select **Fonts and Colors**.  

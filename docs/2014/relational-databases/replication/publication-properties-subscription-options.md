@@ -15,7 +15,7 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 caps.latest.revision: 38
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Publication Properties, Subscription Options
   The **Subscription Options** page of the **Publication Properties** dialog box allows you to view and set publication level properties associated with subscriptions. The properties are grouped into the following categories:  

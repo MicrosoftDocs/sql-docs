@@ -13,7 +13,7 @@ ms.assetid: 0c9f7f83-9972-4545-9ac7-1bb98201115c
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove SQL Server Failover Cluster Node
   Use the Remove Failover Cluster Node page to identify the computer to remove as a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] failover cluster node.  

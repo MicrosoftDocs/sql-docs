@@ -18,7 +18,7 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 caps.latest.revision: 46
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lock:Escalation Event Class
   The **Lock:Escalation** event class indicates that a finer-grained lock has been converted to a coarser-grained lock; for example, a row lock that is converted to an object lock. The escalation event class is Event ID 60.  

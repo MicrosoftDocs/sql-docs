@@ -13,7 +13,7 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 caps.latest.revision: 26
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Initial Configuration (PowerPivot for SharePoint)
   Use the steps in this topic to configure an initial installation of PowerPivot for SharePoint. The easiest way to configure an initial installation is to use the PowerPivot Configuration tool. It automates all of the configuration steps that are described below.  

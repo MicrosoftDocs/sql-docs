@@ -15,7 +15,7 @@ ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Enumeration Facets
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects XML schemas with types that have pattern facets or enumerations that violate those facets.  

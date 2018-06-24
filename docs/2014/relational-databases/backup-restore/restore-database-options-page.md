@@ -15,7 +15,7 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: 67
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Restore Database (Options Page)
   Use the **Options** page of the **Restore Database** dialog box to modify the behavior and outcome of the restore operation.  

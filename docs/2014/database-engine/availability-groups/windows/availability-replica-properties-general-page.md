@@ -15,7 +15,7 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Availability Replica Properties (General Page)
   Use this dialog box to viewthe properties of an availability replica.  

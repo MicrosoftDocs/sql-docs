@@ -18,7 +18,7 @@ ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Row Sampling Transformation Editor (Sampling Page)
   Use the **Row Sampling Transformation Editor** dialog box to split a portion of an input into a sample using a specified number of rows. This transformation divides the input into two separate outputs.  

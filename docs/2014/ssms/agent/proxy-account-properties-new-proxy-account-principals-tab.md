@@ -15,7 +15,7 @@ ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Proxy Account Properties and New Proxy Account (Principals Tab)
   Use this page to view or change the principals that can use a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account in job steps.  

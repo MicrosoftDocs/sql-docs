@@ -20,7 +20,7 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 caps.latest.revision: 46
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Secure the Publisher
   The following replication agents connect to the Publisher:  

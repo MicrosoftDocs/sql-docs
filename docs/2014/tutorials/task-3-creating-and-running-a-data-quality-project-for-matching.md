@@ -15,7 +15,7 @@ ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 3: Creating and Running a Data Quality Project for Matching
   In this task, you create a Data Quality Project for the matching activity and run the matching process on cleansed supplier data to remove any duplicates in the data.  

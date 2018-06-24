@@ -15,7 +15,7 @@ ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change a User&#39;s Email Address (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the email address that notifications are sent to, and the default format of notification emails.  

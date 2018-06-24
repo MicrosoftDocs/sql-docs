@@ -21,7 +21,7 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure a Windows Firewall for Access to the SSIS Service
     

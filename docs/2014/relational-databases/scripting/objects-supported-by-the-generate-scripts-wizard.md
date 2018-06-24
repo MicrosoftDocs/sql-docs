@@ -13,7 +13,7 @@ ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 caps.latest.revision: 5
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Objects Supported by the Generate Scripts Wizard
   The Generate and Publish Scripts wizard supports a subset of the objects supported by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

@@ -15,7 +15,7 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Tables to a CDC Instance
   Use the Table Selection dialog box to add additional tables from the Oracle source to the CDC instance. The tables selected are added to the list in the **Tables** tab of the Properties editor.  

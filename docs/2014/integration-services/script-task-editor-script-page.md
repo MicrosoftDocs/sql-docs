@@ -17,7 +17,7 @@ ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Script Task Editor (Script Page)
   Use the **Script** page of the **Script Task Editor** dialog box to set script properties and specify variables that can be accessed by the script.  

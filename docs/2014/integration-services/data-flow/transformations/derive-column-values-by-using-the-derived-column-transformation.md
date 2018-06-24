@@ -18,7 +18,7 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Derive Column Values by Using the Derived Column Transformation
   To add and configure a Derived Column transformation, the package must already include at least one Data Flow task and one source.  

@@ -13,7 +13,7 @@ ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Cause and Resolution of Database Engine Errors
   This topic contains cause and resolution information for a number of errors related to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  

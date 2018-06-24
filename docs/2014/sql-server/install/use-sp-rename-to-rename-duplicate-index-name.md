@@ -19,7 +19,7 @@ ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use sp_rename to rename duplicate index name
   Upgrade Advisor has detected duplicate table or view index names. Rename the indexes to remove duplicates before upgrading.  

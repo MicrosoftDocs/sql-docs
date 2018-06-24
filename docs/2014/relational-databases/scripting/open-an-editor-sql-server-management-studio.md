@@ -13,7 +13,7 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open an Editor (SQL Server Management Studio)
   This topic describes how to open the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query, MDX, DMX, or XML/A editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. When opened, each editor window appears as a tab in the central pane of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  

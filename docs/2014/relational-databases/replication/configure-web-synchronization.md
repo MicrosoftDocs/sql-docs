@@ -26,7 +26,7 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: 73
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Web Synchronization
   The Web synchronization option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Merge Replication enables data replication using the HTTPS protocol over the Internet. To use Web synchronization, you first need to perform the following configuration actions:  

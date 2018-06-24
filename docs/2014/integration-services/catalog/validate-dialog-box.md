@@ -16,7 +16,7 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Validate Dialog Box
   Use the **Validate** dialog box to check for common problems in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a project or package.  

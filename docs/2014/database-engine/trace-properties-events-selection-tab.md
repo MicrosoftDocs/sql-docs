@@ -17,7 +17,7 @@ ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Trace Properties (Events Selection Tab)
   Use the **Events Selection** tab of the **Trace Properties** dialog box to view or specify traced events and data columns.  

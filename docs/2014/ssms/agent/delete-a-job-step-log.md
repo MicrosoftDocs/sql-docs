@@ -18,7 +18,7 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete a Job Step Log
   This topic describes how to delete a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step log.  

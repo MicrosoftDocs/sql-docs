@@ -15,7 +15,7 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change Data Capture Designer for Oracle by Attunity
   The CDC Designer Console is used to develop and maintain Oracle CDC Instances. The CDC Designer Console is a Microsoft Management Console snap-in that contains the following elements:  

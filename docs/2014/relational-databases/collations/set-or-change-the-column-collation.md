@@ -16,7 +16,7 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set or Change the Column Collation
   You can override the database collation for `char`, `varchar`, `text`, `nchar`, `nvarchar`, and `ntext` data by specifying a different collation for a specific column of a table and using one of the following:  

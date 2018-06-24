@@ -24,7 +24,7 @@ ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # srv_rpcname (Extended Stored Procedure API)
     

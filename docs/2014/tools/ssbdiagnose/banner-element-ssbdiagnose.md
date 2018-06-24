@@ -17,7 +17,7 @@ ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Banner Element (ssbdiagnose)
   Identifies which utility generated the **ssbdiagnose** output XML file.  

@@ -13,7 +13,7 @@ ms.assetid: fdbdd223-c3cb-4d88-a96c-c5d362030c83
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Post Uninstall
   Use the Post Uninstall page to verify that the operation completed successfully.  

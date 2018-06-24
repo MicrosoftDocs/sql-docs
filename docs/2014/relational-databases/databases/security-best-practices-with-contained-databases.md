@@ -15,7 +15,7 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Security Best Practices with Contained Databases
   Contained databases have some unique threats that should be understood and mitigated by [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] administrators. Most of the threats are related to the `USER WITH PASSWORD` authentication process, which moves the authentication boundary from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] level to the database level.  

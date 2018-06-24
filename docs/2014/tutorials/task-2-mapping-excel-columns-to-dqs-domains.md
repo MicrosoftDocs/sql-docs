@@ -15,7 +15,7 @@ ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 2: Mapping Excel Columns to DQS Domains
     

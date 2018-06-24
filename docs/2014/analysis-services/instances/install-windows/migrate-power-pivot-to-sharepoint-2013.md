@@ -13,7 +13,7 @@ ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Migrate PowerPivot to SharePoint 2013
   

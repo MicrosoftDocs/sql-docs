@@ -18,7 +18,7 @@ ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Parameters and Return Codes in the Execute SQL Task
   SQL statements and stored procedures frequently use `input` parameters, `output` parameters, and return codes. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the Execute SQL task supports the `Input`, `Output`, and `ReturnValue` parameter types. You use the `Input` type for input parameters, `Output` for output parameters, and `ReturnValue` for return codes.  

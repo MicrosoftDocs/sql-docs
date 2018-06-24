@@ -15,7 +15,7 @@ ms.assetid: 38afa421-2599-404f-8ba6-172668c6325e
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Cluster Security Policy
   Use the Cluster Security Policy page to configure the security policy for your failover cluster instance.  

@@ -16,7 +16,7 @@ ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Properties of a Data Collector
   This topic discusses how you can configure the properties of a data collector.  

@@ -19,7 +19,7 @@ ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Restore a Database to a Marked Transaction (SQL Server Management Studio)
   When a database is in the restoring state, you can use the **Restore Transaction Log** dialog box to restore the database to a marked transaction in the available log backups.  

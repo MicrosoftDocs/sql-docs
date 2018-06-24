@@ -15,7 +15,7 @@ ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 2: Preparing the Snapshot Folder
   In this lesson, you will learn to configure the snapshot folder that is used to create and store the publication snapshot.  

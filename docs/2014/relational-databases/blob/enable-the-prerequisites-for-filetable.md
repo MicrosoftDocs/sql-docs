@@ -15,7 +15,7 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Enable the Prerequisites for FileTable
   Describes how to enable the prerequisites for creating and using FileTables.  

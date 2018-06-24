@@ -13,7 +13,7 @@ ms.assetid: ea88d736-849e-4368-b55d-06aeee097bf3
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Script a Table
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can create scripts to select, insert, update, and delete tables, and to create, alter, drop, or execute stored procedures.  

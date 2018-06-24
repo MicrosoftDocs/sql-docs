@@ -15,7 +15,7 @@ ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Check Constraint Expression Dialog Box (Visual Database Tools)
   When you attach a check constraint to a table or column, you must include an SQL expression. Type the check constraint expression in the box provided.  

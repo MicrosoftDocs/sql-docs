@@ -15,7 +15,7 @@ ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 2: Uploading Supplier Data to MDS using MDS Add-in for Excel
   In this task, you publish the cleansed and supplier data to **MDS** using the **MDS Add-in for Excel**. You create an entity named **Supplier** in the **Suppliers** model you created in the previous lesson. The entity will have an attribute for each column in the Excel file. The Code and Name attributes of the Supplier entity correspond to the **SupplierID** and **Supplier Name** columns in Excel.  

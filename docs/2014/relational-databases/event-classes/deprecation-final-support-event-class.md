@@ -18,7 +18,7 @@ ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deprecation Final Support Event Class
   The **Deprecation Final Support** event class occurs when you use a feature that will be removed from the next major release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For greatest longevity of your applications, do not use features that cause the **Deprecation Final Support** event class or the **Deprecation Announcement** event class. Modify applications that use final deprecation features as soon as possible.  

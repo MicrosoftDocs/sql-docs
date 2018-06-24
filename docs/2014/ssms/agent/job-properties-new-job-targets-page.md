@@ -15,7 +15,7 @@ ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Job Properties: New Job (Targets Page)
   Use this page to manage the target servers for the job.  

@@ -13,7 +13,7 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures
   This topic discusses how you can monitor the performance of natively compiled stored procedures  

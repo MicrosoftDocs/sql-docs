@@ -17,7 +17,7 @@ ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Start Database Mirroring Monitor (SQL Server Management Studio)
   The Database Mirroring Monitor is part of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Monitor, which is launched from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

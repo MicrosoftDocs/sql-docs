@@ -15,7 +15,7 @@ ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Text Editor - XML - Miscellaneous Page)
   The **Options** dialog box lets you change the autocompletion and schema settings for the XML Editor. These settings are available when, on the **Tools** menu, you click **Options**, expand the **Text Editor** folder, click **XML** and then click **Miscellaneous** .  

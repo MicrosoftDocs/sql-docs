@@ -17,7 +17,7 @@ ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Excel Source Editor (Error Output Page)
   Use the **Error Output** page of the **Excel Source Editor** dialog box to select error handling options and to set properties on error output columns.  

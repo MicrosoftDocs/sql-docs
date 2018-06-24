@@ -13,7 +13,7 @@ ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Fulltext Event Class
   The **Audit Fulltext** event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to and communicates with the full-text filter daemon process.  

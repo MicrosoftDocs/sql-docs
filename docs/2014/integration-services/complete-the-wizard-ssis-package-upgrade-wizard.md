@@ -15,7 +15,7 @@ ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Complete the Wizard (SSIS Package Upgrade Wizard)
   Use the **Complete the Wizard** page to review and confirm the package upgrade options that you have selected. This is the last wizard page from which you can go back and change options for this session of the wizard.  

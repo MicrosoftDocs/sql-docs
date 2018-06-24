@@ -15,7 +15,7 @@ ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # CDC Source Editor (Columns Page)
   Use the **Columns** page of the **CDC Source Editor** dialog box to map an output column to each external (source) column.  

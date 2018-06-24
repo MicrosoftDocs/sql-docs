@@ -21,7 +21,7 @@ ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Schedule Traces
   There are two ways to schedule tracing in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can:  

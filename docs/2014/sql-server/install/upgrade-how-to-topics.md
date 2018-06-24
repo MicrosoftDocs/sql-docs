@@ -16,7 +16,7 @@ ms.assetid: 2055865c-f25e-4113-b7e4-2b8ba426335b
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Upgrade How-to Topics
   The topics in this section describe how to upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone instance.  

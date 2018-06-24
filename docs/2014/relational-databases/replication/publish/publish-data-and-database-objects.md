@@ -44,7 +44,7 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Publish Data and Database Objects
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  

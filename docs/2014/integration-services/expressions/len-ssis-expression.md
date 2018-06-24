@@ -16,7 +16,7 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # LEN (SSIS Expression)
   Returns the number of characters in a character expression. If the string includes leading and trailing blanks, the function includes them in the count. LEN returns identical values for the same string of single and double byte characters.  

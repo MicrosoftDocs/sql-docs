@@ -13,7 +13,7 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 3: Create a SQL Server Credential
   In this lesson, you will create a credential to store security information used to access the Windows Azure storage account.  

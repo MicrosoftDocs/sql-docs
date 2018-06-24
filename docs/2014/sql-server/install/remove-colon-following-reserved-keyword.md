@@ -15,7 +15,7 @@ ms.assetid: 4f23f7e4-7b4d-4e19-86c9-7527bb8b107d
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove colon following reserved keyword
   The Upgrade Advisor detected a script that contains a colon (:) following a reserved keyword. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this syntax is ignored and the statements execute successfully. Now, this syntax causes the statement to fail when the database compatibility mode is set to 100 or later.  

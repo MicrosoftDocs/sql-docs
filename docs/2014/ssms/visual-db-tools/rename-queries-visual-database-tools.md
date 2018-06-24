@@ -16,7 +16,7 @@ ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Rename Queries (Visual Database Tools)
   You can rename any query that is not currently open for editing. The following procedure assumes that the query you want to rename is closed.  

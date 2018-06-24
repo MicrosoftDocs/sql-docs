@@ -17,7 +17,7 @@ ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # WMI Data Reader Task Editor (General Page)
   Use the **General** page of the **WMI Data Reader Task Editor** dialog box to name and describe the WMI Data Reader task.  

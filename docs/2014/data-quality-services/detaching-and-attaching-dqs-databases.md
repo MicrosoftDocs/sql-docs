@@ -13,7 +13,7 @@ ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Detaching and Attaching DQS Databases
   This topic describes how to detach and attach the DQS databases.  

@@ -17,7 +17,7 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 caps.latest.revision: 30
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Get Information About DDL Triggers
   The catalog views listed in this section can be used to get information about DDL Triggers.  

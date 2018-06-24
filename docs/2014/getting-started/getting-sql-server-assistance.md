@@ -44,7 +44,7 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Getting SQL Server Assistance
   There are three principal sources of information from [!INCLUDE[msCoName](../includes/msconame-md.md)] about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  

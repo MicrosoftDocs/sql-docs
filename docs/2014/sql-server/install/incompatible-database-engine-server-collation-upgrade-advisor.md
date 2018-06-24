@@ -13,7 +13,7 @@ ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 caps.latest.revision: 8
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Incompatible Database Engine Server Collation (Upgrade Advisor)
   Upgrade Advisor detected [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is using an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that is configured to use an incompatible server collation.  

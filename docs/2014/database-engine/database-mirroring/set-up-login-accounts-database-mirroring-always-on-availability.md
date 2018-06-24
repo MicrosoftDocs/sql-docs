@@ -16,7 +16,7 @@ ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 caps.latest.revision: 19
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups (SQL Server)
   For two server instances to connect to each other's [database mirroring endpoint](the-database-mirroring-endpoint-sql-server.md) point, the login account of each instance requires access to the other instance. Also, each login account requires connect permission to the Database Mirroring endpoint of the other instance.  

@@ -13,7 +13,7 @@ ms.assetid: 748ad91c-0d25-491d-af85-8f96d4447579
 caps.latest.revision: 3
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server 2014 Setup User Interface
   The content in this section describes the installation user interface for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

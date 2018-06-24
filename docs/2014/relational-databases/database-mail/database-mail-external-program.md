@@ -17,7 +17,7 @@ ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Mail External Program
   The Database Mail external executable is **DatabaseMail.exe**, located in the **MSSQL\Binn directory** of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Database Mail uses Service Broker activation to start the external program when there are e-mail messages to be processed. Database Mail starts one instance of the external program. The external program runs in the security context of the service account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

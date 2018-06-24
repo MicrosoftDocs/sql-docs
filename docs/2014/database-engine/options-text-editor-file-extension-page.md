@@ -15,7 +15,7 @@ ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Text Editor - File Extension Page)
   Use the **Options** dialog box to specify how all files with certain file extensions are handled by [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For each extension that you enter, you can select an editor. Thus, you can choose the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editor in which documents of a certain type will open. To open the file extension options, click **Options** on the **Tools** menu, expand **Text Editor**, and then click **File Extension**.  

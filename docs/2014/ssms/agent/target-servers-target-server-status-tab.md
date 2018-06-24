@@ -15,7 +15,7 @@ ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Target Servers (Target Server Status Tab)
   Use this page to view the status of the target servers for this master server.  

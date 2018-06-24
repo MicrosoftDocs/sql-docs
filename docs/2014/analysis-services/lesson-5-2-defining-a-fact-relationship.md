@@ -13,7 +13,7 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: craigg
 ---
 # Defining a Fact Relationship
   Users sometimes want to be able to dimension measures by data items that are in the fact table or to query the fact table for specific additional related information, such as invoice numbers or purchase order numbers related to specific sales facts. When you define a dimension based on such a fact table item, the dimension is called a *fact dimension*. Fact dimensions are also known as degenerate dimensions. Fact dimensions are useful for grouping together related fact table rows, such as all the rows that are related to a particular invoice number. Although you can put this information in a separate dimension table in the relational database, creating a separate dimension table for the information provides no benefit because the dimension table would grow at the same rate as the fact table, and would just create duplicate data and unnecessary complexity.  

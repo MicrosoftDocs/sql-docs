@@ -17,7 +17,7 @@ ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Removing Database Mirroring (SQL Server)
   The database owner can manually stop a database mirroring session at any time, at either partner.  

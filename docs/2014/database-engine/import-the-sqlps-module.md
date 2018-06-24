@@ -13,7 +13,7 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 9
 author: "mgblythe"
 ms.author: "mblythe"
-manager: "jhubbard"
+manager: craigg
 ---
 # Import the SQLPS Module
   The recommended way to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from PowerShell is to import the `sqlps` module into a Windows PowerShell 2.0 environment. The module loads and registers the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-ins and manageability assemblies.  

@@ -13,7 +13,7 @@ ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage Full-Text Indexes
      

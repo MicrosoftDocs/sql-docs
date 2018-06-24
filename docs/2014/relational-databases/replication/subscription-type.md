@@ -15,7 +15,7 @@ ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Subscription Type
   Merge replication offers two subscription types: server and client (referred to in previous versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as global and local, respectively). Subscribers with a server subscription can:  

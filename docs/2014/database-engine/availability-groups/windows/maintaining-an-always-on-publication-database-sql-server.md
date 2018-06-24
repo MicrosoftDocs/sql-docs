@@ -16,7 +16,7 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ---
 # Maintaining an AlwaysOn Publication Database (SQL Server)
   This topic discusses special considerations for maintaining a publication database when you use AlwaysOn availability groups.  

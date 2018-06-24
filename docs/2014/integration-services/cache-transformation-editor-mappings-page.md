@@ -15,7 +15,7 @@ ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Cache Transformation Editor (Mappings Page)
   Use the **Mappings** page of the **Cache Transformation Editor** to map the input columns in the Cache Transform transformation to destination columns in the Cache connection manager.  

@@ -15,7 +15,7 @@ ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 caps.latest.revision: 7
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Encryption Keys (SSRS Native Mode)
   Use the Encryption Keys page to manage the symmetric key that is used to encrypt and decrypt data in a report server. Managing the encryption keys is an important part of report server configuration. The symmetric key is created and applied automatically when you create the report server database. Create a backup copy of the symmetric key so that you can perform routine maintenance operations. The following maintenance tasks require that you have a valid copy of the symmetric key:  

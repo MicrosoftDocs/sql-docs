@@ -15,7 +15,7 @@ ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Make Changes to the Tables Selected for Capturing Changes
   In this dialog box, you can select specific columns from the selected table to capture changes from. You can also edit the **Security Role** and **Capture Instance** information.  

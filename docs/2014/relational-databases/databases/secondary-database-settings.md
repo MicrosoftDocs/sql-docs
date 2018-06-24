@@ -15,7 +15,7 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 31
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Secondary Database Settings
   Use this dialog box to configure and to modify the properties of a secondary database in the log shipping configuration.  

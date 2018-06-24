@@ -18,7 +18,7 @@ ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Changes to the storage format for types xs:dateTime, xs:date, and xs:time
   The XMLDATETIME rule identifies whether or not your databases contain typed XML data that will become invalid after upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

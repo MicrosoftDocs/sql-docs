@@ -17,7 +17,7 @@ ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 caps.latest.revision: 44
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Optimize Parameterized Filter Performance with Precomputed Partitions
   Precomputed partitions is a performance optimization that can be used with filtered merge publications. Precomputed partitions is also a requirement for using logical records on filtered publications. For more information about logical records, see [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md).  

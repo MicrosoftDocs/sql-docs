@@ -15,7 +15,7 @@ ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Client Applications for FILESTREAM Data
   You can use Win32 to read and write data to a FILESTREAM BLOB. The following steps are required:  

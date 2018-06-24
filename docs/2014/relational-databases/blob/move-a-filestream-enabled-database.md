@@ -15,7 +15,7 @@ ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Move a FILESTREAM-Enabled Database
   This topic shows how to move a FILESTREAM-enabled database.  

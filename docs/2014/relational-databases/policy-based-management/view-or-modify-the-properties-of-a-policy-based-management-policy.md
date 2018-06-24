@@ -16,7 +16,7 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View or Modify the Properties of a Policy-Based Management Policy
   This topic describes how to view or modify a Policy-Based Management policy's properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

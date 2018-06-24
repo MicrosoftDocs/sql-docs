@@ -13,7 +13,7 @@ ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
 caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using Try..Catch in Natively Compiled Stored Procedures
   You can use try..catch blocks inside a natively compiled stored procedure. The following constructs are supported:  

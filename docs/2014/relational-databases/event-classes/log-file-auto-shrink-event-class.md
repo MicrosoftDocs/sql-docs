@@ -17,7 +17,7 @@ ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Log File Auto Shrink Event Class
   The **Log File Auto Shrink** event class indicates that the log file shrank automatically. This event is not triggered if the log file shrinks because of an explicit ALTER DATABASE statement.  

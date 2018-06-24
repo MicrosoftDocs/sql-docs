@@ -16,7 +16,7 @@ ms.assetid: 7dcb6514-db5c-49eb-8b5a-2c766ce39aa7
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Exclude Files from Source Control
   If the solution you are working on contains files that do not require source control services, you can use the **Exclude from Source Control** command to exclude the file from source control. When you do this, the file remains in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe database, but it is no longer checked in or out with the project.  

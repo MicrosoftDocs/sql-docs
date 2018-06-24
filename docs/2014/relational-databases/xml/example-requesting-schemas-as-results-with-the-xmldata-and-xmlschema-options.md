@@ -16,7 +16,7 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options
   The following query returns the XML-DATA schema that describes the document structure.  

@@ -17,7 +17,7 @@ ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Flat File Connection Manager Editor (General Page)
   Use the **General** page of the **Flat File Connection Manager Editor** dialog box to select a file and data format. A flat file connection enables a package to connect to a text file.  

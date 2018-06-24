@@ -16,7 +16,7 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Extended Events
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events has a highly scalable and highly configurable architecture that allows users to collect as much or as little information as is necessary to troubleshoot or identify a performance problem.  

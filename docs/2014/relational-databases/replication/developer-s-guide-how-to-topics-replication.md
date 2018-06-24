@@ -14,7 +14,7 @@ ms.assetid: c6c15ae6-da52-4638-93d3-61c7242e8a0b
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Developer&#39;s Guide: How-to Topics (Replication)
   This topic provides links to information about how to programmatically perform replication-related tasks.  

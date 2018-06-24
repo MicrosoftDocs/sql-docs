@@ -16,7 +16,7 @@ ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # FOR XML Support for Various SQL Server Data Types
   The topics in this section describe FOR XML support for data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -11,7 +11,7 @@ ms.assetid: a3b70885-47d7-4bd0-b28b-5a44947ae83c
 caps.latest.revision: 4
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # backup checksum default
   Use the backup checksum default setting to enable or disable backup checksum during backup and restore.  

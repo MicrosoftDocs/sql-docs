@@ -16,7 +16,7 @@ ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Execute Package Dialog Box
   Use the **Execute Package** dialog box to run a package that is stored on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  

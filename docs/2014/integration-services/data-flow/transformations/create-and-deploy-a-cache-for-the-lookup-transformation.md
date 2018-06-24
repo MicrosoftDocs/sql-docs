@@ -17,7 +17,7 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create and Deploy a Cache for the Lookup Transformation
   You can create and deploy a cache file (.caw) for the Lookup transformation. The reference dataset is stored in the cache file.  

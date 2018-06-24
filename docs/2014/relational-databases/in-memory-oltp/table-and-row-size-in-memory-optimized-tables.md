@@ -13,7 +13,7 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Table and Row Size in Memory-Optimized Tables
   A memory-optimized table consists of a collection of rows and indexes that contain pointers to rows. In a memory-optimized table, rows cannot be longer than 8,060 bytes. Understanding the size of a memory-optimized table will help you understand if your computer has enough memory.  

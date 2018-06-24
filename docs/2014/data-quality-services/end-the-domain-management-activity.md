@@ -13,7 +13,7 @@ ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # End the Domain Management Activity
   This topic describes how to complete, close, or cancel the domain management activity in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Domain management is not performed by a wizard, so the controls described below can used from any of the pages of the domain management activity.  

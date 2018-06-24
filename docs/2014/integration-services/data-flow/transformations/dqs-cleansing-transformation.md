@@ -16,7 +16,7 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # DQS Cleansing Transformation
   The DQS Cleansing transformation uses Data Quality Services (DQS) to correct data from a connected data source, by applying approved rules that were created for the connected data source or a similar data source. For more information about data correction rules, see [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). For more information DQS, see [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  

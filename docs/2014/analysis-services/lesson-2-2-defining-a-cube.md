@@ -13,7 +13,7 @@ ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: craigg
 ---
 # Defining a Cube
   The Cube Wizard helps you define the measure groups and dimensions for a cube. In the following task, you will use the Cube Wizard to build a cube.  

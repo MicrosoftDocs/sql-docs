@@ -24,7 +24,7 @@ ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Handling Database Concurrency Issues in Updategrams (SQLXML 4.0)
   Like other database update mechanisms, updategrams must deal with concurrent updates to data in a multiuser environment. Updategrams use the Optimistic Concurrency Control, which uses comparison of select field data as snapshots to ensure that the data to be updated has not been altered by another user application since it was read from the database. Updategrams include these snapshot values in the **\<before>** block of the updategrams. Before updating the database, the updategram checks the values that are specified in the **\<before>** block against the values currently in the database to ensure that the update is valid.  

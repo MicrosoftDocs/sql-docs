@@ -13,7 +13,7 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # How to Manage a Local CDC Service
   This procedure describes how to use the CDC Service Configuration Console to manage specific CDC services.  

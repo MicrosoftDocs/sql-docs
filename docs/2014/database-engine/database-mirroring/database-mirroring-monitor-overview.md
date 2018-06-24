@@ -17,7 +17,7 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Mirroring Monitor Overview
   If you have the correct permissions, you can use Database Mirroring Monitor to monitor any subset of the mirrored databases on a server instance. Monitoring enables you to verify whether and how well data is flowing in the database mirroring session. Database Mirroring Monitor is also useful for troubleshooting the cause of reduced data flow.  

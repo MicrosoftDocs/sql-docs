@@ -22,7 +22,7 @@ ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Mirroring States (SQL Server)
   During a database mirroring session, the mirrored database is always in a specific state (the *mirroring state*). The state of the database reflects the communication status, data flow, and the difference in data between the partners. The database mirroring session adopts the same state as the principal database.  

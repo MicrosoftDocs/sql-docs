@@ -16,7 +16,7 @@ ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create XML Indexes
   This topic describes how to create primary and secondary XML indexes.  

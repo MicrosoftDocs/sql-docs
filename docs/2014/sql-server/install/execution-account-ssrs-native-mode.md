@@ -15,7 +15,7 @@ ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 caps.latest.revision: 8
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Execution Account (SSRS Native Mode)
   Use this page to configure an account to use for unattended processing. This account is used under special circumstances when other sources of credentials are not available:  

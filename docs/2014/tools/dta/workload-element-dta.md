@@ -17,7 +17,7 @@ ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Workload Element (DTA)
   Specifies the workload to be used for a tuning session.  

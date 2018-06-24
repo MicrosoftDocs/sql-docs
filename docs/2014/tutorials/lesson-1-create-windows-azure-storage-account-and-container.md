@@ -13,7 +13,7 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 1: Create Windows Azure Storage Account and Container
   Before you can start storing SQL Server data files in Windows Azure Storage, you must first create a Windows Azure Storage account and a blob container, and a shared access signature. Lesson 1 walks you through the steps of logging into the Windows Azure Management Portal, creating a storage account, a blob container, and a shared access signature.  

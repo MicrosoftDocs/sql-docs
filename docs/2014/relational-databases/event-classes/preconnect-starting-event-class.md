@@ -17,7 +17,7 @@ ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # PreConnect:Starting Event Class
   The PreConnect:Starting event class indicates when a LOGON trigger or the Resource Governor classifier function starts execution.  

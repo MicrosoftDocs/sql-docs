@@ -15,7 +15,7 @@ ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 caps.latest.revision: 9
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Specifying the CDATA Directive
   If the directive is set to **CDATA**, the contained data is not entity encoded, but is put in the CDATA section. The **CDATA** attributes must be nameless.  

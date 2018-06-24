@@ -14,7 +14,7 @@ ms.assetid: f97333ad-e2ab-4d26-9395-741ba25f2c28
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Managing text and image Columns How-to Topics (ODBC)
   The Microsoft® SQL Server™ ODBC driver supports using text and image parameters and retrieving data from text, ntext, and image columns in result sets.  

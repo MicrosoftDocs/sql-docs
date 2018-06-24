@@ -15,7 +15,7 @@ ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Publication Information, All Subscriptions (Transactional Publication)
   The **All Subscriptions** tab displays information on all subscriptions to the selected transactional publication.  

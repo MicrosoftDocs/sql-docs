@@ -17,7 +17,7 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 caps.latest.revision: 15
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
   This topic describes how to administer and monitor change data capture.  

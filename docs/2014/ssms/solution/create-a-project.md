@@ -18,7 +18,7 @@ ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a Project
   You can create one or more projects within an existing solution.  

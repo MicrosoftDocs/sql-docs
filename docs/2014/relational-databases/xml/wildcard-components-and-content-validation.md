@@ -16,7 +16,7 @@ ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Wildcard Components and Content Validation
   Wildcard components are used to increase flexibility in what is allowed to appear in a content model. These components are supported in the XSD language in the following ways:  

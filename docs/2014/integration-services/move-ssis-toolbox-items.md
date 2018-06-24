@@ -13,7 +13,7 @@ ms.assetid: 3e3ef600-9331-453b-80ad-b2d18e6082be
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Move SSIS Toolbox Items
   The new SSIS Toolbox includes new categories and the ability to organize items according to your preferences. An information window at the bottom of the toolbox provides a description of a selected toolbox item and a link to a Books Online topic.  

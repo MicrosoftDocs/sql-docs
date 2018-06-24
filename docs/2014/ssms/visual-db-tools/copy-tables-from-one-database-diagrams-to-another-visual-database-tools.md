@@ -16,7 +16,7 @@ ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Copy Tables from One Database Diagrams to Another (Visual Database Tools)
   You can copy a table from one database diagram to another in the same database.  

@@ -13,7 +13,7 @@ ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # SSIS Package Format
   In the current release of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], significant changes were made to the package format (.dtsx file) to make it easier to read the format and to compare packages. You can also more reliably merge packages that don’t contain conflicting changes or changes stored in binary format.  

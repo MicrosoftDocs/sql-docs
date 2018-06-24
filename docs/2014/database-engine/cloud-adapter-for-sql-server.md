@@ -16,7 +16,7 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Cloud Adapter for SQL Server
   The Cloud Adapter service is created as part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provisioning on a Windows Azure VM. The Cloud Adapter service generates a self-signed SSL certificate as part of its first run, and then runs as a **Local System** account. It generates a configuration file that is used to configure itself. The Cloud Adapter also creates a Windows Firewall rule to allow its incoming TCP connections at default port 11435.  

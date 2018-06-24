@@ -16,7 +16,7 @@ ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Save Queries (Visual Database Tools)
   Save your query when you want to work with it later. Note that running your query does not save your changes.  

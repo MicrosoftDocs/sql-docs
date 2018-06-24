@@ -18,7 +18,7 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 23
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use the Add Database to Availability Group Wizard (SQL Server Management Studio)
   Use the Add Database to Availability Group Wizard to help you add one or more databases to an existing AlwaysOn availability group.  

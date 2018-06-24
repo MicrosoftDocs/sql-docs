@@ -17,7 +17,7 @@ ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
 caps.latest.revision: 28
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # disallow results from triggers Server Configuration Option
   Use the **disallow results from triggers** option to control whether triggers return result sets. Triggers that return result sets may cause unexpected behavior in applications that are not designed to work with them.  

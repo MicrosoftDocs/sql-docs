@@ -16,7 +16,7 @@ ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Show Diagram Properties (Visual Database Tools)
   You can display properties for a database diagram in the Properties window.  

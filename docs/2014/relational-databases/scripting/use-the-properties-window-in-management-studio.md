@@ -17,7 +17,7 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use the Properties Window in Management Studio
   The Properties window describes the state of an item in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], such as a connection or a Showplan operator, and information about database objects such as tables, views, and designers.  

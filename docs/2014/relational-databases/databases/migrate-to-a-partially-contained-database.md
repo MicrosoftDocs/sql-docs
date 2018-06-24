@@ -15,7 +15,7 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Migrate to a Partially Contained Database
   This topic discusses how to prepare to change to the partially contained database model and then provides the migration steps.  

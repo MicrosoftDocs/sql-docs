@@ -22,7 +22,7 @@ ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Determining the Characteristics of a Result Set (ODBC)
   Metadata is data that describes other data. For example, result set metadata describes the characteristics of a result set, such as the number of columns in the result set, the data types of those columns, their names, precision, and nullability.  

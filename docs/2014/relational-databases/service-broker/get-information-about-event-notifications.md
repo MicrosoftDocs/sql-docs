@@ -17,7 +17,7 @@ ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Get Information About Event Notifications
   The following catalog views are available to query metadata about event notifications.  

@@ -13,7 +13,7 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # A Guide to Query Processing for Memory-Optimized Tables
   In-Memory OLTP introduces memory-optimized tables and natively compiled stored procedures in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This article gives an overview of query processing for both memory-optimized tables and natively compiled stored procedures.  

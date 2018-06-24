@@ -15,7 +15,7 @@ ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the AUTO_SHRINK Database Option to OFF
   This rule checks whether the AUTO_SHRINK database option is set to OFF. Frequently shrinking and expanding a database can lead to physical fragmentation.  

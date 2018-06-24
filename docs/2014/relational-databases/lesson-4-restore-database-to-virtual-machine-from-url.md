@@ -13,7 +13,7 @@ ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 5. (Optional) Encrypt your database using TDE
   As an optional step, you can encrypt the newly created database. Transparent data encryption (TDE) performs real-time I/O encryption and decryption of the data and log files. This kind of encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. For more information, see [Transparent Data Encryption &#40;TDE&#41;](security/encryption/transparent-data-encryption.md) and [Move a TDE Protected Database to Another SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  

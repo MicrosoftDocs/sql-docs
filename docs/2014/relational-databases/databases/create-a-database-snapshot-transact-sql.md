@@ -15,7 +15,7 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 52
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a Database Snapshot (Transact-SQL)
   The only way to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshot is to use [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not support the creation of database snapshots.  

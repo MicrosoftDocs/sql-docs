@@ -17,7 +17,7 @@ ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Showplan All Event Class
   The Showplan All event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an SQL statement. The information included is a subset of the information available in the Showplan XML Statistics Profile or Showplan XML event class.  

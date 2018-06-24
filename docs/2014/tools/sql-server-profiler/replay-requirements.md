@@ -18,7 +18,7 @@ ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replay Requirements
   In order to replay trace data with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or the Distributed Replay Utility, a specific set of event classes and columns must be captured in the trace. These settings are enabled by default if the **TSQL_Replay** trace template is used to configure a trace that is later used for replay. This topic describes these settings and other replay requirements.  

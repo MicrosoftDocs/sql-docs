@@ -15,7 +15,7 @@ ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Job Properties: New Job (Notifications Page)
   Use this page to set actions for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to perform when the job completes.  

@@ -13,7 +13,7 @@ ms.assetid: 958f5d4c-d9c1-4b38-83c3-ebac60e2a9b6
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Web Assistant stored procedures have been removed
   Upgrade Advisor detected the use of Web Assistant stored procedures.  

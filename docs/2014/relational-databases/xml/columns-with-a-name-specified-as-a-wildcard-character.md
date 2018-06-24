@@ -15,7 +15,7 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Columns with a Name Specified as a Wildcard Character
   If the column name specified is a wildcard character (\*), the content of that column is inserted as if there is no column name specified. If this column is a non-`xml` type column, the column content is inserted as a text node, as shown in the following example:  

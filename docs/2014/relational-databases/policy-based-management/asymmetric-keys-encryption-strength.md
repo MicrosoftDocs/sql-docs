@@ -15,7 +15,7 @@ ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Asymmetric Keys Encryption Strength
   This rule checks whether asymmetric keys were created by using 1024-bit or stronger encryption.  

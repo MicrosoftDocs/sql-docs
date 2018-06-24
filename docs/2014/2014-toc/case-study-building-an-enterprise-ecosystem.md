@@ -11,7 +11,7 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 caps.latest.revision: 16
 author: "jhubbard"
 ms.author: "v-ambake"
-manager: "jhubbard"
+manager: craigg
 ---
 # Case Study: Building an Enterprise Ecosystem with Microsoft Dynamics ERP and SQL Server 2014 Replication for Scalability and Performance
   **Summary:** This paper covers the following scenarios:  

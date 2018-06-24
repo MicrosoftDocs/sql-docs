@@ -13,7 +13,7 @@ ms.assetid: 282f261e-cb00-4c31-af4b-faeee0445ee4
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Ready to Upgrade
   Use the **Ready to Upgrade** page to view the specified options for this upgrade.  

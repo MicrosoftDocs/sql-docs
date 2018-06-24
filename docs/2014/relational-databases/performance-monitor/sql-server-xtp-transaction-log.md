@@ -13,7 +13,7 @@ ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # XTP Transaction Log
   The XTP Transaction Log performance object contains counters related to XTP transaction logging in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

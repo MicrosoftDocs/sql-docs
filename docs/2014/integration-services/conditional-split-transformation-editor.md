@@ -17,7 +17,7 @@ ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Conditional Split Transformation Editor
   Use the **Conditional Split Transformation Editor** dialog box to create expressions, set the order in which expressions are evaluated, and name the outputs of a conditional split. This dialog box includes mathematical, string, and date/time functions and operators that you can use to build expressions. The first condition that evaluates as true determines the output to which a row is directed.  

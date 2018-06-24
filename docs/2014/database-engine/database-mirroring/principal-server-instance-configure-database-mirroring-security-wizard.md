@@ -15,7 +15,7 @@ ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Principal Server Instance (Configure Database Mirroring Security Wizard)
   Use this page to specify information about the server instance of the principal database. The principal database is the copy of the database that begins the mirroring session. After the session has begun, the principal database is the copy of the database that accepts user changes. (When a failover occurs, the principal and mirroring roles are swapped; therefore, the initial principal database might not remain the principal database.)  

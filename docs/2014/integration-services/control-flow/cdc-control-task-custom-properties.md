@@ -13,7 +13,7 @@ ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # CDC Control Task Custom Properties
   The following table describes the custom properties of the CDC Control task. All properties are read/write.  

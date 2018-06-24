@@ -18,7 +18,7 @@ ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View the Log Shipping Report (SQL Server Management Studio)
   This topic explains how to view the Transaction Log Shipping Status report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can run a status report at a monitor server, primary server, or secondary server. To see the  most complete information about your log shipping configuration, view the report at the monitor server instance.  

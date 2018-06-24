@@ -17,7 +17,7 @@ ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Agent Profiles
   Use the **Agent Profiles** dialog box to manage agent profiles. Agent profiles provide a convenient way to manage the runtime parameters for each agent. Each agent has a default profile, and some agents have additional predefined profiles. For example, the Merge Agent has a "slow link" profile designed for low bandwidth connections. Predefined profiles are sufficient for most applications, but you can also create user-defined profiles, allowing you to customize agent behavior.  

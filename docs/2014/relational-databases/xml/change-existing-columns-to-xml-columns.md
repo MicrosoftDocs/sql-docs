@@ -15,7 +15,7 @@ ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change Existing Columns to XML Columns
   The ALTER TABLE statement supports the `xml` data type. For example, you can alter any string type column to the `xml` data type. Note that in these cases, the documents contained in the column must be well formed. Also, if you are changing the type of the column from string to typed xml, the documents in the column are validated against the specified XSD schemas.  

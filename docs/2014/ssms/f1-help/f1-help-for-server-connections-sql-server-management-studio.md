@@ -19,7 +19,7 @@ ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # F1 Help for Server Connections (SQL Server Management Studio)
   This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

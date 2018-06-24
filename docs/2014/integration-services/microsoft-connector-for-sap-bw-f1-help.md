@@ -13,7 +13,7 @@ ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Microsoft Connector 1.1 for SAP BW F1 Help
   This section contains the F1 Help topics for the three components of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. These topics are also available from the user interface by pressing the F1 key, or by clicking Help on wizard pages and dialog boxes.  

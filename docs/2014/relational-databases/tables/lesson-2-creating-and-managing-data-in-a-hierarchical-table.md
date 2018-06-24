@@ -15,7 +15,7 @@ ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 2: Creating and Managing Data in a Hierarchical Table
   In Lesson 1, you modified an existing table to use the `hierarchyid` data type, and populated the `hierarchyid` column with the representation of the existing data. In this lesson, you will start with a new table, and insert data by using the hierarchical methods. Then, you will query and manipulate the data by using the hierarchical methods.  

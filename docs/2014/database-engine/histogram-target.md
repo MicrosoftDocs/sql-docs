@@ -17,7 +17,7 @@ ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Histogram Target
   The histogram target groups occurrences of a specific event type based on event data. The groupings of events are counted based on a specified event column or action. You can use the histogram target to troubleshoot performance issues. By identifying which events are occurring most frequently, you can find "hotspots" that indicate a potential cause of a performance problem.  

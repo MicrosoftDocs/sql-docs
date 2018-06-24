@@ -22,7 +22,7 @@ ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Executing Templates That Contain XPath Queries (SQLXMLOLEDB Provider)
   This example shows how to use the following SQLXMLOLEDB Provider-specific properties:  

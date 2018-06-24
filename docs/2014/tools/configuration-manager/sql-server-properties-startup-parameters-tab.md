@@ -13,7 +13,7 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: 9
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Properties (Startup Parameters Tab)
   Use this dialog box to add or remove startup parameters for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Startup parameters can have a large effect on the [!INCLUDE[ssDE](../../includes/ssde-md.md)] performance. Before adding or changing startup parameters, see the topic "Using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Startup Options" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  

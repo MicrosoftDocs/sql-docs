@@ -16,7 +16,7 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 caps.latest.revision: 24
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Install and Configure Semantic Search
   Describes the prerequisites for statistical semantic search and how to install or check them.  

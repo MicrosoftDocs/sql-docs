@@ -17,7 +17,7 @@ ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Single Table Quick Profile Form (Data Profiling Task)
   Use the **Single Table Quick Profile Form** to configure the Data Profiling task quickly to profile a single table or view by using default settings.  

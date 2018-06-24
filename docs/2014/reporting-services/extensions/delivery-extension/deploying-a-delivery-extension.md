@@ -18,7 +18,7 @@ ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 caps.latest.revision: 43
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deploying a Delivery Extension
   Delivery extensions supply their configuration information in the form of an XML configuration file. The XML file conforms to the XML schema defined for delivery extensions. Delivery extensions provide infrastructure for setting and modifying the configuration file.  

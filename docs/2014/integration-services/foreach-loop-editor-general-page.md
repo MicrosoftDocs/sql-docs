@@ -15,7 +15,7 @@ ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Foreach Loop Editor (General Page)
   Use the **General** page of the **Foreach Loop Editor** dialog box to name and describe a Foreach Loop container that uses a specified enumerator to repeat a workflow for each member in a collection.  

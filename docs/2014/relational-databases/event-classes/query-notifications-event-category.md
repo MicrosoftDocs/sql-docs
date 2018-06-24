@@ -17,7 +17,7 @@ ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Query Notifications Event Category
   The **Query Notifications** event category contains event classes that report information that developers and administrators can use to monitor and troubleshoot query notifications.  

@@ -18,7 +18,7 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 caps.latest.revision: 46
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create an Updatable Subscription to a Transactional Publication (Management Studio)
 

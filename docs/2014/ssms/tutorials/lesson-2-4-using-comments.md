@@ -13,7 +13,7 @@ ms.assetid: 0e9e6eab-0343-4840-9690-1736552ce371
 caps.latest.revision: 27
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using Comments
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] allows you to easily comment out a portion of your script.  

@@ -15,7 +15,7 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Find Key Phrases in Documents with Semantic Search
   Describes how to find the key phrases in documents or text columns that are configured for statistical semantic indexing.  

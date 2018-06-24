@@ -13,7 +13,7 @@ ms.assetid: e49d0919-c2ff-44ae-8ca7-1f3084720eba
 caps.latest.revision: 3
 author: "HeidiSteen"
 ms.author: "heidist"
-manager: "jhubbard"
+manager: craigg
 ---
 # Verify or Troubleshoot SQL Server BI Feature Installation Problems
   This section includes information for verifying an installation or troubleshooting errors that arise during installation.  

@@ -24,7 +24,7 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: 33
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Publication and Subscription Status in Replication Monitor
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions:  

@@ -26,7 +26,7 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 caps.latest.revision: 1952
 author: "HeidiSteen"
 ms.author: "heidist"
-manager: "jhubbard"
+manager: craigg
 ---
 # Glossary
   

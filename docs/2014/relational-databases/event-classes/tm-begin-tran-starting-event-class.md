@@ -17,7 +17,7 @@ ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # TM: Begin Tran Starting Event Class
   The TM: Begin Tran Starting event class indicates that a BEGIN TRANSACTION request is starting. The request is sent from the client through the transaction management interface.  

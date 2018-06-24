@@ -16,7 +16,7 @@ ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # - (Negate) (SSIS Expression)
   Negates a numeric expression.  

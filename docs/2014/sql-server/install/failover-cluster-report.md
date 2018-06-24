@@ -13,7 +13,7 @@ ms.assetid: c72d2cf6-f82e-42b3-b5f0-a9728a2c1636
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Failover cluster report
   Use the Failover Cluster Report page to view report results from the Setup system scan for this operation.  

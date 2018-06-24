@@ -17,7 +17,7 @@ ms.assetid: 8db31e78-e03b-44e6-a307-a1349f52b0c6
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add an Annotation to a Package
   This procedure describes how to add an annotation to a package.  

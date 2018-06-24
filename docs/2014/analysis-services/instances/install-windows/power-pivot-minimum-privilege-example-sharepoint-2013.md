@@ -13,7 +13,7 @@ ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 caps.latest.revision: 7
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example of a Minimum-Privilege Configuration for PowerPivot for SharePoint 2013
   This topic describes an example PowerPivot for SharePoint 2013 configuration with minimum privileges. The configuration utilizes a different account for each of the three components and each account has the minimum level of privileges.  

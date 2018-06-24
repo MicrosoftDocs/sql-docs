@@ -15,7 +15,7 @@ ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 caps.latest.revision: 9
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Specifying the ELEMENT Directive
   This retrieves employee information and generates element-centric XML as shown in the following:  

@@ -17,7 +17,7 @@ ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # StorageBoundInMB Element (DTA)
   Specifies the maximum space in megabytes that can be consumed by the Database Engine Tuning Advisor tuning recommendation (index and partitioning set).  

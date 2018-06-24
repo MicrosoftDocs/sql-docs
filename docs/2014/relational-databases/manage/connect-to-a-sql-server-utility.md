@@ -13,7 +13,7 @@ ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect to a SQL Server Utility
   Before you can connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, you must create a utility control point (UCP). For more information, see [SQL Server Utility Features and Tasks](sql-server-utility-features-and-tasks.md).  

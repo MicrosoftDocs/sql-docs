@@ -16,7 +16,7 @@ ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 caps.latest.revision: 4
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Organize Jobs
   Job categories help you organize your jobs for easy filtering and grouping. For example, you can organize all your database backup jobs in the Database Maintenance category. You can also create your own job categories.  

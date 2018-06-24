@@ -17,7 +17,7 @@ ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Mount Tape Event Class
   The Mount Tape event class occurs when a tape mount request is received. Use this event class to monitor tape mount requests and their success or failure.  

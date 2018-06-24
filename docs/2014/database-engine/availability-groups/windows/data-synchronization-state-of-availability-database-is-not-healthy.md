@@ -17,7 +17,7 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data synchronization state of availability database is not healthy
     

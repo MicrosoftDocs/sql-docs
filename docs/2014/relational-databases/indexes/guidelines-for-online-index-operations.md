@@ -20,7 +20,7 @@ ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 62
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Guidelines for Online Index Operations
   When you perform online index operations, the following guidelines apply:  

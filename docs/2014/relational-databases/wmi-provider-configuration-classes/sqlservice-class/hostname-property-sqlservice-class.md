@@ -22,7 +22,7 @@ ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # HostName Property (SqlService Class)
   Gets the host name of the service.  

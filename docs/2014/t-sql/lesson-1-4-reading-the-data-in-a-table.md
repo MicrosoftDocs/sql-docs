@@ -15,7 +15,7 @@ ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 caps.latest.revision: 13
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reading the Data in a Table (Tutorial)
   Use the SELECT statement to read the data in a table. The SELECT statement is one of the most important [!INCLUDE[tsql](../includes/tsql-md.md)] statements, and there are many variations in the syntax. For this tutorial, you will work with five simple versions.  

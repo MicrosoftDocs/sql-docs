@@ -17,7 +17,7 @@ ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # After upgrade, new reserved keywords cannot be used as identifiers
   Upgrade Advisor detected the use of words that are reserved keywords. A reserved keyword cannot be used as an identifier or object name unless the name is delimited.  

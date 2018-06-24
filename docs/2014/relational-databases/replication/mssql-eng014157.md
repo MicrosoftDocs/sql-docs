@@ -15,7 +15,7 @@ ms.assetid: 1a0890cf-d977-43e0-a2ba-9c5ff1a8f856
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQL_ENG014157
     

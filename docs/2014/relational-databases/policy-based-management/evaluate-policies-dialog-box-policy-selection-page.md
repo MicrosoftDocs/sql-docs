@@ -15,7 +15,7 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Evaluate Policies Dialog Box, Policy Selection Page
   Use this dialog box to evaluate Policy-Based Management policies. By selecting the **Evaluation Results** page, you can apply policies to the items in a target set that do not comply with the policies.  

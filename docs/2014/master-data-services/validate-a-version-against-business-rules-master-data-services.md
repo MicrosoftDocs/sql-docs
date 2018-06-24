@@ -18,7 +18,7 @@ ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Validate a Version against Business Rules (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], validate a version to apply business rules to all members in the model version.  

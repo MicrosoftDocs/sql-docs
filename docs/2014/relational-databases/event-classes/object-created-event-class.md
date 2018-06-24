@@ -17,7 +17,7 @@ ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Object:Created Event Class
   The Object:Created event class indicates that an object has been created, for example, by the CREATE INDEX, CREATE TABLE, or CREATE DATABASE statements.  

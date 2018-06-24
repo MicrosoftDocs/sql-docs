@@ -16,7 +16,7 @@ ms.assetid: d52773fd-0e13-44a2-a5f2-69d6974bb08f
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Overview of Upgrade Advisor
   This section provides an overview to the upgrade process, and information to help you understand and use the Upgrade Advisor Analysis Wizard and Upgrade Advisor Report Viewer.  

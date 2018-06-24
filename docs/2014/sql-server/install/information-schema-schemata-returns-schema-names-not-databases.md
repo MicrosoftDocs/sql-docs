@@ -15,7 +15,7 @@ ms.assetid: 4337b643-910d-47d7-bea8-f4052066b9a2
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # INFORMATION_SCHEMA.SCHEMATA returns schema names in a database, not databases in an instance
   Upgrade Advisor detected statements that reference the INFORMATION_SCHEMA.SCHEMATA view. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this view returned all databases in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later, the view returns all schemas in a database.  

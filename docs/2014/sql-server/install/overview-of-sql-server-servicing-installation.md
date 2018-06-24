@@ -13,7 +13,7 @@ ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Overview of SQL Server Servicing Installation
   You can apply an update to any installed [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] component with a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servicing update. If the version level of an existing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] component is later than the update version level, the Setup program will exclude it from the update. For more information on applying a servicing update, see [Install SQL Server 2014 Servicing Updates](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  

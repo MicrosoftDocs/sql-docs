@@ -16,7 +16,7 @@ ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Fetch Rows from a Result Set (OLE DB)
   This sample shows how to fetch rows from a result set. This sample is not supported on IA64.  

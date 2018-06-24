@@ -13,7 +13,7 @@ ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deprecated SQL Server Features in SQL Server 2014
   This topic describes the deprecated features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  

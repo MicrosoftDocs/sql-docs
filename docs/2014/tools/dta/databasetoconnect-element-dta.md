@@ -17,7 +17,7 @@ ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # DatabaseToConnect Element (DTA)
   Specifies the first database to which Database Engine Tuning Advisor connects when tuning a workload.  

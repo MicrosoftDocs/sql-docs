@@ -13,7 +13,7 @@ ms.assetid: fd22d285-0816-43de-ae1d-b7c49147614e
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Repair Progress
   Use the **Repair Progress** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to monitor the status of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repair.  

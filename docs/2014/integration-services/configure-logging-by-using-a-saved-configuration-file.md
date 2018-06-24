@@ -16,7 +16,7 @@ ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Logging by Using a Saved Configuration File
   This procedure describes how to configure logging for new containers in a package by loading a previously saved logging configuration file.  

@@ -16,7 +16,7 @@ ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Require Attribute Values (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], require attribute values when you want to ensure your master data is complete.  

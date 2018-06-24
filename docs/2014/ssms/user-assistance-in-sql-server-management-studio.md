@@ -16,7 +16,7 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # User Assistance in SQL Server Management Studio
   User assistance is available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] through the Help menu and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. The Help menu in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offers several different routes to information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It also provides access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] community and MSDN Online resources not previously available from within the Help environment. In addition, the Help environment is now configurable to launch either within the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment or in an associated external window of its own.  

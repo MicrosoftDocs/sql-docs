@@ -13,7 +13,7 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Destination Custom Properties
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination has both custom properties and the properties common to all data flow components.  

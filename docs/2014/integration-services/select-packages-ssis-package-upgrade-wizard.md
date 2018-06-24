@@ -15,7 +15,7 @@ ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Select Packages (SSIS Package Upgrade Wizard)
   Use the **Select Packages** page to select the packages to upgrade. This page lists the packages that are stored in the location that was specified on the **Select Source Location** page of the wizard.  

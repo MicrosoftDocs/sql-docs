@@ -17,7 +17,7 @@ ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Format Files for Importing or Exporting Data (SQL Server)
   When you bulk import data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a *format file* to store all the format information that is required to bulk export or bulk import data. This includes format information for each field in a data file relative to that table.  

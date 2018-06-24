@@ -15,7 +15,7 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Access the CDC Designer Console
   You can access the CDC Designer Console from the computer where you installed the console. For more information about installation, see Installation.  

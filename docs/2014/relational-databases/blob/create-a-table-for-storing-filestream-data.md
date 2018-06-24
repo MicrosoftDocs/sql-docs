@@ -15,7 +15,7 @@ ms.assetid: 029c3059-5c83-43e2-a859-9027031b7de1
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a Table for Storing FILESTREAM Data
   This topic shows how to create a table for storing FILESTREAM data.  

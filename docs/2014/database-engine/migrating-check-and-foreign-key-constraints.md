@@ -13,7 +13,7 @@ ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 caps.latest.revision: 9
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Migrating Check and Foreign Key Constraints
   Check and foreign key constraints are not supported in [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. These constructs are usually used to enforce logical data integrity in the schema and can be important to maintaining the functional correctness of applications.  

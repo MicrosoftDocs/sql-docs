@@ -16,7 +16,7 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Maintenance Plan (Subplan Properties)
   Use the **Maintenance Plan (Subplan Properties)** dialog box to specify a name, description, and schedule for a maintenance plan subplan. Click **Subplan Properties** on the maintenance plan **Design** tab or double-click a subplan in the designer grid to display this dialog box.  

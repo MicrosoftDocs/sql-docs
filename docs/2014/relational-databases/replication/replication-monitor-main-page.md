@@ -15,7 +15,7 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replication Monitor, Main Page
   Replication Monitor allows you to track the status and performance of publications and subscriptions across a replication topology. The following topics provide more information:  

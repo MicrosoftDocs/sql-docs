@@ -16,7 +16,7 @@ ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure a For Loop Container
   This procedure describes how to configure a For Loop container by using the **For Loop Editor** dialog box.  

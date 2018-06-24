@@ -18,7 +18,7 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add or Delete a Task or a Container in a Control Flow
   When you are working in the control flow designer, the Toolbox in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lists the tasks that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides for building control flow in a package. For more information about the Toolbox, see [SSIS Toolbox](../ssis-toolbox.md).  

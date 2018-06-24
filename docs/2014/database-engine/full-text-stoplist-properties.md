@@ -16,7 +16,7 @@ ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Full-Text Stoplist Properties
   Use this dialog box to add or delete individual stopwords, delete all stopwords for a specific language, or clear the current stoplist. A stopword is a commonly used word that is included in a stoplist. The stopwords in a stoplist are omitted from full-text indexing for tables that use the stoplist. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/full-text-search.md).  

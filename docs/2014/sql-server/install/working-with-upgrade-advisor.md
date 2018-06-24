@@ -17,7 +17,7 @@ ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Working with Upgrade Advisor
   To help ensure that your upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is successful, Upgrade Advisor provides a central console to identify issues to address in your installations before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

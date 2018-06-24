@@ -15,7 +15,7 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Tutorial: Preparing the Server for Replication
   It is important to plan for security before you configure your replication topology. This tutorial shows you how to better secure a replication topology as well as how to configure distribution, which is the first step in replicating data. You must complete this tutorial before any of the others.  

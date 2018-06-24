@@ -16,7 +16,7 @@ ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Table Dialog Box (Database Designer) (Visual Database Tools)
   Lets you add tables in Database Designer.  

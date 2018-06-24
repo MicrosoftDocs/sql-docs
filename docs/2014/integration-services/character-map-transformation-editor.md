@@ -17,7 +17,7 @@ ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Character Map Transformation Editor
   Use the **Character Map Transformation Editor** dialog box to select the string functions to apply to column data and to specify whether mapping is an in-place change or added as a new column.  

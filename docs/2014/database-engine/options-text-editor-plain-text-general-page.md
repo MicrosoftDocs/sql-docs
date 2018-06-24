@@ -15,7 +15,7 @@ ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Text Editor - Plain Text - General Page)
   Use this dialog box to change the general editing behavior of the Text Editor, which is used to edit a document not associated with a particular development language. To display these settings, click **Options** on the **Tools** menu, expand **Text Editor**, expand **Plain Text,** and then click **General**.  

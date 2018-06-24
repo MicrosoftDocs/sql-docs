@@ -20,7 +20,7 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 66
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Improve the Performance of Full-Text Indexes
   Performance for full-text indexing and full-text queries is influenced by hardware resources, such as memory, disk speed, CPU speed, and machine architecture.  

@@ -17,7 +17,7 @@ ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # TM: Rollback Tran Starting Event Class
   The TM: Rollback Tran Starting event class indicates that a ROLLBACK TRANSACTION request is starting. The client sends the request through the transaction management interface. The EventSubClass column indicates if a new transaction will be started after the current transaction is rolled back.  

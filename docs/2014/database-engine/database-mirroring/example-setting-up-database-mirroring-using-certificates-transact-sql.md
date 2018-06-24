@@ -18,7 +18,7 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 48
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)
   This example shows all the stages required to create a database mirroring session using certificate-based authentication. The examples in this topic use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Unless you can guarantee that your network is secure, we recommend that you use encryption for database mirroring connections.  

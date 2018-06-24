@@ -15,7 +15,7 @@ ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Raw File Destination Editor (Connection Manager Page)
   Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  

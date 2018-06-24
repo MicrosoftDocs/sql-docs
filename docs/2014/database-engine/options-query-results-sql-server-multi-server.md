@@ -16,7 +16,7 @@ ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 caps.latest.revision: 9
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Query Results-SQL Server-Multi-Server)
   When you are querying multiple servers at the same time, use this page to specify the options for displaying result sets. Merge results combines the result sets from all servers into a single result set. When merging results, the first server to respond sets the schema for the result set. To merge the result sets, the query must return the same number of columns with the same column names from each server. When merging results, a message is displayed for each server that does not match the schema (column count and column names) that is returned by the first server to return results.  

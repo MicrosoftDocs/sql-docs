@@ -15,7 +15,7 @@ ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_17128
     

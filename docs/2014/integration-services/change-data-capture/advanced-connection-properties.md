@@ -13,7 +13,7 @@ ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Advanced Connection Properties
   Use the **Advanced Connection Properties** dialog box to add more connection parameters to the connection string.  

@@ -17,7 +17,7 @@ ms.assetid: 30ac38b8-0c14-474c-b245-d2b8393d2f36
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Select Template Name
   Use the **Select Template Name** dialog box to select an existing [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] trace template to export to a file on the operating system. You can also use this dialog box to select or enter a different name to save a trace template as when editing an existing trace template. To access this dialog box when exporting a template, on the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Export Template**. To access this dialog box when changing the name of a template, on the **File** menu, point to **Templates**, point to **Edit Template**, and then click **Save As**.  

@@ -17,7 +17,7 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 56
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Web Service Task
   The Web Service task executes a Web service method. You can use the Web Service task for the following purposes:  

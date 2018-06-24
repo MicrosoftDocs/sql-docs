@@ -15,7 +15,7 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 caps.latest.revision: 22
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Publication Information, Agents (Snapshot Publication)
   The **Agents** tab displays summary information on the Snapshot Agent for the selected publication.  

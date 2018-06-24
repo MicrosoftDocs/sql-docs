@@ -13,7 +13,7 @@ ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Guidelines for Retry Logic for Transactions on Memory-Optimized Tables
   There are error conditions that occur with transactions that access memory-optimized tables.  

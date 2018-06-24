@@ -13,7 +13,7 @@ ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: craigg
 ---
 # Defining a Dimension
   In the following task, you will use the Dimension Wizard to build a Date dimension.  

@@ -15,7 +15,7 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Microsoft Replication Conflict Viewer (Merge Replication)
   The Replication Conflict Viewer allows you to view any conflicts that have occurred during replication synchronization. Conflicts occur when the same data is modified at two separate servers, for example, at a Publisher and Subscriber, or at two different Subscribers. Replication automatically resolves conflicts using the conflict resolver you selected when the article was created. However, the Replication Conflict Viewer allows you to choose a different resolution for the conflict when necessary. The following conflicts can occur:  

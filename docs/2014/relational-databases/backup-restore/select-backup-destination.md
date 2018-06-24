@@ -15,7 +15,7 @@ ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Select Backup Destination
   Use the **Select Backup Destination** dialog box to select a device as your backup destination. A backup destination can be either a disk or a logical backup device.  

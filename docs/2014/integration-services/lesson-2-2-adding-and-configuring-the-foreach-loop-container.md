@@ -13,7 +13,7 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 caps.latest.revision: 36
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Step 2: Adding and Configuring the Foreach Loop Container
   In this task, you will add the ability to loop through a folder of flat files and apply the same data flow transformation used in Lesson 1 to each of those flat files. You do this by adding and configuring a Foreach Loop container to the control flow.  

@@ -17,7 +17,7 @@ ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Debug a Package by Setting Breakpoints on a Task or a Container
   This procedure describes how to set breakpoints in a package, a task, a For Loop container, a Foreach Loop container, or a Sequence container.  

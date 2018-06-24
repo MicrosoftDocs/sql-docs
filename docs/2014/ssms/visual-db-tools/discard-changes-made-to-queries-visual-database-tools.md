@@ -17,7 +17,7 @@ ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Discard Changes Made to Queries (Visual Database Tools)
   You can discard changes made to a query definition prior to saving them. Once they have been saved, they cannot be returned to a previous state.  

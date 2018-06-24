@@ -22,7 +22,7 @@ ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SystemStore Property (SecurityCertificate Class)
   Gets the system store for the security certificate.  

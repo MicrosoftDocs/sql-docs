@@ -13,7 +13,7 @@ ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Install and Uninstall OData Source Component
   This topic provides instructions for installing or removing OData Source Component on your computer.  

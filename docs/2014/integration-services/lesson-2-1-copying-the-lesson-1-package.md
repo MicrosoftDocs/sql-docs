@@ -13,7 +13,7 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 caps.latest.revision: 32
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Step 1: Copying the Lesson 1 Package
   In this task, you will create a copy of the Lesson 1.dtsx package that you created in Lesson 1. If you did not complete Lesson 1, you can add the completed lesson 1 package that is included with the tutorial to the project, and then copy it instead. You will use this new copy throughout the rest of Lesson 2.  

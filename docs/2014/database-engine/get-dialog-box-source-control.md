@@ -17,7 +17,7 @@ ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Get Dialog Box (Source Control)
   Retrieves a read-only copy of the selected item from the source control database to your working folder, or another folder that you specify.  

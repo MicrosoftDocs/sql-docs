@@ -23,7 +23,7 @@ ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Keep Nulls or Use Default Values During Bulk Import (SQL Server)
   By default, when data is imported into a table, the **bcp** command and BULK INSERT statement observe any defaults that are defined for the columns in the table. For example, if there is a null field in a data file, the default value for the column is loaded instead. The **bcp** command and BULK INSERT statement both allow you to specify that nulls values be retained.  

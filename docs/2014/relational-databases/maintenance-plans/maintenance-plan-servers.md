@@ -16,7 +16,7 @@ ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Maintenance Plan (Servers)
   Use the **Servers** dialog box to select the servers where you want to run the maintenance plan.  

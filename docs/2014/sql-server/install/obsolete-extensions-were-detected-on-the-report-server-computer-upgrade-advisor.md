@@ -15,7 +15,7 @@ ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
 caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Obsolete extensions were detected on the report server computer (Upgrade Advisor)
   Upgrade Advisor detected one or more rendering extensions that are no longer available in the current release.  

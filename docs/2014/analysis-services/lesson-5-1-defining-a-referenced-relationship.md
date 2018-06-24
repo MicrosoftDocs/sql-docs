@@ -13,7 +13,7 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: craigg
 ---
 # Defining a Referenced Relationship
   Up to this point in the tutorial, each cube dimension that you defined was based on a table that was directly linked to the fact table for a measure group by a primary key to foreign key relationship. In the tasks in this topic, you link the **Geography** dimension to the fact table for reseller sales through the **Reseller** dimension, which is called a *reference dimension*. This enables users to dimension reseller sales by geography. For more information, see [Define a Referenced Relationship and Referenced Relationship Properties](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  

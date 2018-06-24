@@ -16,7 +16,7 @@ ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Stop a Trace (SQL Server Profiler)
   This topic describes how to stop a trace that is running by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

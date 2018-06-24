@@ -13,7 +13,7 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports Windows PowerShell, which is a powerful scripting shell that lets administrators and developers automate server administration and application deployment. The Windows PowerShell language supports more complex logic than [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, giving [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] administrators the ability to build robust administration scripts. Windows PowerShell scripts can also be used to administer other [!INCLUDE[msCoName](../includes/msconame-md.md)] server products. This gives administrators a common scripting language across servers.  

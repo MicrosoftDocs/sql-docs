@@ -17,7 +17,7 @@ ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # User Error Message Event Class
   The User Error Message event class displays the error message as seen by the user in the case of an error or exception. The error message text appears in the TextData field.  

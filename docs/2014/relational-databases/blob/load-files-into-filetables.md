@@ -17,7 +17,7 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Load Files into FileTables
   Describes how to load or migrate files into FileTables.  

@@ -17,7 +17,7 @@ ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9
 caps.latest.revision: 27
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # FT:Crawl Aborted Event Class
   The **FT:Crawl Aborted** event class indicates that an exception has been encountered during a full-text crawl. The error usually causes the full-text crawl to stop. Check the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log or the crawl log for more detailed error information.  

@@ -13,7 +13,7 @@ ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a User-Defined Role
     

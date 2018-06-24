@@ -17,7 +17,7 @@ ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Modify a SQL Server Agent Master Job
   The following topics describe how to modify a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent master job.  

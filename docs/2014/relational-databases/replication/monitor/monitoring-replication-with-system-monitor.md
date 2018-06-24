@@ -17,7 +17,7 @@ ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Monitoring Replication with System Monitor
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows System Monitor allows you to use graphs, charts, and reports to gauge the efficiency of your computer, and identify and troubleshoot possible problems (such as unbalanced resource use, insufficient hardware, or poor program design), and plan for additional hardware needs. For more information, see [Monitor Resource Usage &#40;System Monitor&#41;](../../performance-monitor/monitor-resource-usage-system-monitor.md).  

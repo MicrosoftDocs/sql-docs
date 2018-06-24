@@ -18,7 +18,7 @@ ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open, View, and Print a Deadlock File (SQL Server Management Studio)
   When [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] generates a deadlock, you can capture and save the deadlock information to a file. After you have saved the deadlock file, you can open it in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view or print.  

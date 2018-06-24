@@ -16,7 +16,7 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 caps.latest.revision: 74
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Establish a Database Mirroring Session Using Windows Authentication (Transact-SQL)
     

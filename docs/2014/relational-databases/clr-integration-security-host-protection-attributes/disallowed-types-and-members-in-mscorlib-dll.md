@@ -17,7 +17,7 @@ ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Disallowed Types and Members in mscorlib.dll
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) programming disallows the use of a type or member that has a `HostProtectionAttribute` that specifies a `System.Security.Permissions.HostProtectionResource` enumeration with a value of `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, or `UI`. The following table lists the members and types of the mscorlib.dll assembly whose Host Protection Attribute (HPA) values are disallowed.  

@@ -15,7 +15,7 @@ ms.assetid: b586b736-344b-4e42-83ee-96f66ad433a5
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # New or Edit Server Registration (General Tab) (SSIS)
   Use this tab to specify options when registering [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

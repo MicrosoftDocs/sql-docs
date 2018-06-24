@@ -13,7 +13,7 @@ ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 1: Evaluate Best Practices on an On-Demand Basis
   By using the on-demand (or "ad hoc") method of policy evaluation, you can quickly evaluate best practices policies to determine whether an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] meets best practices guidelines and recommendations.  

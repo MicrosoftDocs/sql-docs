@@ -15,7 +15,7 @@ ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Flow Tab
   Use the **Data Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to create data flows in a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  

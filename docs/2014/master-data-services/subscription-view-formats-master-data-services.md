@@ -13,7 +13,7 @@ ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Subscription View Formats (Master Data Services)
   Based on the entity or derived hierarchy you select, the following formats are available for your subscription view.  

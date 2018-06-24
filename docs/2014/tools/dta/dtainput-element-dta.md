@@ -17,7 +17,7 @@ ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 caps.latest.revision: 13
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # DTAInput Element (DTA)
   Contains the definition of XML input for Database Engine Tuning Advisor.  

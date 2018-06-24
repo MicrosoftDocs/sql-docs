@@ -16,7 +16,7 @@ ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # How Extended Stored Procedures Work
     

@@ -17,7 +17,7 @@ ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Subscription Validation Options (Merge Subscriptions)
   Use the **Subscription Validation Options** dialog box to specify whether validation should use a row count only or a row count and a binary checksum.  

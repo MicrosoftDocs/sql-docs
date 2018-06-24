@@ -19,7 +19,7 @@ ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Components of SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client contains the following components:  

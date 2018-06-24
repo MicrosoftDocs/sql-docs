@@ -16,7 +16,7 @@ ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 caps.latest.revision: 55
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # About the SQL Server License Terms
   The [!INCLUDE[msCoName](../includes/msconame-md.md)] Software License Terms are copied to the local computer when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed. When multiple instances of the same edition and language of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are installed on the same computer, a single copy of the license terms will apply to all instances of that edition and language. The files are written to: %ProgramFiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ or %ProgramFiles(x86)%\ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\\.  

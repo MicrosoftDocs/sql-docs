@@ -13,7 +13,7 @@ ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 caps.latest.revision: 41
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Install Reporting Services SharePoint Mode for SharePoint 2010
   The procedures in this topic guide you through a single server installation of a Reporting Services report server in SharePoint mode. The steps include running the SQL Server installation wizard as well as additional configuration tasks that use SharePoint 2010 central administration. The topic can also be used for individual procedures for an existing installation, for example to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For information on adding additional [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers to an existing farm, see [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Add an Additional Reporting Services Web Front-end to a Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  

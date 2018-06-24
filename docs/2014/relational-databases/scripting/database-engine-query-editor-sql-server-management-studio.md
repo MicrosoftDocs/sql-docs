@@ -25,7 +25,7 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 caps.latest.revision: 46
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Engine Query Editor (SQL Server Management Studio)
   Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor to create and run scripts containing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The editor also supports running scripts that contain **sqlcmd** commands.  

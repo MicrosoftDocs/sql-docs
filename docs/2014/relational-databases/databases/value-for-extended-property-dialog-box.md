@@ -18,7 +18,7 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Value for Extended Property Dialog Box
   Use the **Value for** *\<property name>* dialog box to enter or view a value. This is a common dialog box that can be opened from several locations.  

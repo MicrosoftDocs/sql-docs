@@ -13,7 +13,7 @@ ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 caps.latest.revision: 4
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open and Configure Object Explorer
   Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure Obect Explorer options by using **Options** on the **Tools** menu.  

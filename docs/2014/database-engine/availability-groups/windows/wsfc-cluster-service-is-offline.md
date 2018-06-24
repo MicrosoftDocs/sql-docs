@@ -17,7 +17,7 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 caps.latest.revision: 14
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # WSFC cluster service is offline
     

@@ -16,7 +16,7 @@ ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 caps.latest.revision: 36
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Monitoring Replication
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor is a graphical tool that allows you to monitor the overall health of a replication topology. Replication Monitor provides detailed information on the status and performance of publications and subscriptions, allowing you to answer common questions, such as:  

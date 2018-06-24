@@ -17,7 +17,7 @@ ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Partition Processing Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Partition Processing Destination Editor** dialog box to map input columns to partition columns.  

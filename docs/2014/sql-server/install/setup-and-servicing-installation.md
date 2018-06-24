@@ -13,7 +13,7 @@ ms.assetid: 6df72a78-6b36-4bc1-948e-04b4ebe46094
 caps.latest.revision: 3
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Setup and Servicing Installation
   This section contains the following content:  

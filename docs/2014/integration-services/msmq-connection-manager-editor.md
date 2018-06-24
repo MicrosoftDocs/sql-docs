@@ -17,7 +17,7 @@ ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSMQ Connection Manager Editor
   Use the **MSMQ Connection Manager** dialog box to specify the path to a Message Queuing (also known as MSMQ) message queue.  

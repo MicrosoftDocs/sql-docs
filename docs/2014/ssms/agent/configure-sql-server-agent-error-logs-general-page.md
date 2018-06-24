@@ -15,7 +15,7 @@ ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure SQL Server Agent Error Logs (General Page)
   Use this screen to view and update settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent error logging.  

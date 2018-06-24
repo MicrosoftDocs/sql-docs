@@ -14,7 +14,7 @@ ms.assetid: 2414167c-33cb-4103-8105-994cbda29b9d
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
     

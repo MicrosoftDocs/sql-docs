@@ -21,7 +21,7 @@ ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SMO Namespaces
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) has various namespaces. The different namespaces represent different areas of functionality within SMO.  

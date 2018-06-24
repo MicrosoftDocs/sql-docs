@@ -16,7 +16,7 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 caps.latest.revision: 58
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Frequently Asked Questions for Replication Administrators
   The following questions and answers provide guidance on a variety of tasks faced by administrators of replicated databases.  

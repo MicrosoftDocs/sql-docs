@@ -13,7 +13,7 @@ ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # SAP BW Connection Manager Editor
   Use the **SAP BW Connection Manager Editor** to specify the properties to use to connect to an SAP Netweaver BW version 7 system.  

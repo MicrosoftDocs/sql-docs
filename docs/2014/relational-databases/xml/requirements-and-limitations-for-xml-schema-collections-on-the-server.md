@@ -27,7 +27,7 @@ ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: 83
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Requirements and Limitations for XML Schema Collections on the Server
   The XML schema definition language (XSD) validation has some limitations regarding SQL columns that use the `xml` data type. The following table provides details about those limitations and guidelines for modifying your XSD schema so it can work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The topics in this section provide additional information about specific limitations and guidance for working with them.  

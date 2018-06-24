@@ -18,7 +18,7 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect Clients to a Database Mirroring Session (SQL Server)
   To connect to a database mirroring session, a client can use either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When configured for a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database, these data access providers both fully support database mirroring. For information about programming considerations for using a mirrored database, see [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). In addition, the current principal server instance must be available and the login of the client must have been created on the server instance. For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Client connections to a database mirroring session do not involve the witness server instance, if one exists.  

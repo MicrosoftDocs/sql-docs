@@ -19,7 +19,7 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Creating a Valid Connection String Using TCP IP
   To create a valid connection string using TCP/IP, you must:  

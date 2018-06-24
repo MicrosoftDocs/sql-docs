@@ -16,7 +16,7 @@ ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 caps.latest.revision: 33
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Color Coding in Query Editors
   The text entered in the code editors is assigned a category; each category is identified by a color. The colors help you quickly find text in your code. For example, comments stand out in dark green. The following table lists the most common colors. You can view the whole list of colors and their categories, and configure a custom color scheme by using the **Tools**, **Options** menu. For more information about how to change the default colors, see [Change Font Color, Size, and Style](change-font-color-size-and-style.md).  

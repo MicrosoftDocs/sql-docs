@@ -19,7 +19,7 @@ ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 caps.latest.revision: 46
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Prerequisites for Minimal Logging in Bulk Import
   For a database under the full recovery model, all row-insert operations that are performed by bulk import are fully logged in the transaction log. Large data imports can cause the transaction log to fill rapidly if the full recovery model is used. In contrast, under the simple recovery model or bulk-logged recovery model, minimal logging of bulk-import operations reduces the possibility that a bulk-import operation will fill the log space. Minimal logging is also more efficient than full logging.  

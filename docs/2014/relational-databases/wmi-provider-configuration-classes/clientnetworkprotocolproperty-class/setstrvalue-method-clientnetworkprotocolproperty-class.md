@@ -22,7 +22,7 @@ ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SetStrValue Method (ClientNetworkProtocolProperty Class)
   Sets the string value of the current property referenced by the [PropertyIdx Property (ClientNetworkProtocolProperty Class)](clientnetworkprotocolproperty-class.md) value.  

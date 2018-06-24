@@ -15,7 +15,7 @@ ms.assetid: 64205466-6d37-49d2-bac2-d3368c1210a1
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Late-Breaking Upgrade Issues
   Detection logic may have been added or changed after the documentation was complete. If you reached this topic from the Upgrade Advisor Report Viewer, or if you want to see any late-breaking items, check the readme file installed with Upgrade Advisor for additional information.  

@@ -16,7 +16,7 @@ ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open a Template
   You can open a template from Template Explorer.  

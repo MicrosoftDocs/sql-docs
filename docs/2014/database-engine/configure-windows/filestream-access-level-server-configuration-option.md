@@ -16,7 +16,7 @@ ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # filestream access level Server Configuration Option
   Use the filestream_access_level option to change the FILESTREAM access level for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

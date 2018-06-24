@@ -15,7 +15,7 @@ ms.assetid: fc6cc258-72f5-4593-8edb-9f5bc66de9db
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 17: Reviewing DQS Cleansing Project Created by the SSIS package
   In this task, you open the DQS project created by the SSIS package in DQS Client, review the results from the cleansing process, and optionally perform interactive cleansing and export the results.  

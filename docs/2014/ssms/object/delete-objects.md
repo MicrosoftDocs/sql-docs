@@ -17,7 +17,7 @@ ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete Objects
   Use this dialog box to delete a database or database object.  

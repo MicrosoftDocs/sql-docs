@@ -15,7 +15,7 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Properties (General Page)
   Use this page to view or modify properties for the selected database.  

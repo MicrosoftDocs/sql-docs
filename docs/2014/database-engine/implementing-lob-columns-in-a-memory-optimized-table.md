@@ -13,7 +13,7 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Implementing LOB Columns in a Memory-Optimized Table
   Memory-optimized tables do not have off-row or large object (LOB) storage, and the row size limit is 8060 bytes. Storing large binary or character string values can be done in two ways:  

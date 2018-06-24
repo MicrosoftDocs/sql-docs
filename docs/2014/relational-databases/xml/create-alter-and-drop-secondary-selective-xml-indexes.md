@@ -13,7 +13,7 @@ ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 caps.latest.revision: 7
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create, Alter, and Drop Secondary Selective XML Indexes
   Describes how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.  

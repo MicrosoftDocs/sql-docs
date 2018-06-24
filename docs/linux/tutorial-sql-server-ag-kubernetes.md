@@ -128,13 +128,11 @@ kubectl describe pv
 
 `kubectl` returns metadata about the persistent volumes that were automatically created and bound to the persistent volume claims.
 
-## Deploy the operator, SQL Server instances, and health agents
+## Deploy the operator
 
-The operator is deployed as an one-replica Kubernetes deployment.
+The operator is deployed as a one-replica Kubernetes deployment.
 
-### Configure the deployment manifest
-
-In this step, create a manifest to describe the operator container based on the mssql-server-k8s-agents Docker image. The manifest also describes the operator and SQL Server controller permissions. The controller runs inside the operator container and manages the SqlServer custom resource.
+Create a file named `operator.yaml`, and copy in the following manifest.
 
 ```yaml
 ---
@@ -272,15 +270,13 @@ spec:
       - name: private-registry-key
 ```
 
-Save the file, for example `operator.yaml`.
+Create the operator with the `kubectl apply` command.
 
-### Create the operator deployment
-
-```azurecli
-kubectl apply -f <Path to operator.yaml file>
+```azure-cli
+kubectl apply -f operator.yaml
 ```
 
-### Create the SQL Server AG Deployment
+## Create the SQL Server AG Deployment
 
 The following example illustrates a SQL Server deployment in an AG configuration. This deployment will result in 3 StatefulSets with one pod each. Every pod will include 3 containers, one for each of the following items:
 
@@ -309,15 +305,23 @@ Optionally, provide additional parameters like the example below (or use the spe
 
 After deployment, only AG membership list and post-init T-SQL script can be updated. Other properties cannot be updated - the resource must be deleted and recreated. Credentials for the auto-generated users can be rotated using a `mssql-server-k8s-rotate-creds` job.
 
-## Create the Kubernetes secret to store the masterkey password and the sa password
+## Create the secrets
+
+To create Kubernetes secrets to store the passwords for the SQL Server SA account and the SQL Server master key, run the following command.
 
 ```azurecli
 kubectl create secret generic sql-secrets --from-literal=sapassword="MyC0m9l&xP@ssw0rd" --from-literal=masterkeypassword="MyC0m9l&xP@ssw0rd2"
 ```
 
-## Configure the deployment manifest
+In a production environment use a different, complex password.
+
+## Deploy the availability group
 
 In this step, create a manifest to describe the SQL Server container based on the mssql-server image, the health agent and AG agent containers based on the mssql-server-k8s-agents Docker image.
+
+Create a file named `sqlservers.yaml`.
+
+Copy the manifest below into the file.
 
 ```yaml
 ---
@@ -455,35 +459,51 @@ spec:
   type: LoadBalancer
 ```
 
-Save the file, for example `sqlservers.yaml`.
-
-### Create the SQL Server deployment 
+To deploy the SQL Server instances and create the availability group, run the following command.
 
 ```azurecli
-kubectl apply -f <Path to sqlservers.yaml file>
+kubectl apply -f sqlservers.yaml
 ```
 
 ##  Connect to the SQL Server instance hosting the primary replica
 
 The configuration file also deploys an `ag1-primary` service that provides a selector that points to the SQL Server instance hosting the primary replica. Use the external IP address of the service as target server, `sa` account and the password you created earlier in the `mssql secret`. Use the password that you configured as the Kubernetes secret.
 
-## Connect to the SQL Server instance hosting secondary replicas
-Similarly, we provide built-in selectors that point to sync, async secondary replicas or both:
+The `sqlservers.yaml` manifest file defines a load balancer service named `ag1-primary` that connects to the availability group primary replica. Use `kubectl get services` to get this IP address.
+
+For example:
+
+![Get service example](media\tutorial-sql-server-ag-containers-kubernetes\KubernetesGetServices.png)
+
+In the image above, `ag1-primary` service has an external IP address of `104.42-50.138`. To connect to SQL Server with SQL authentication, use the `sa` account, the value for `sapassword` from the secret you created, and this IP address.
+
+For example:
+
+```cmd
+sqlcmd -S 104.42.50.138 -U sa -P "MyC0m9l&xP@ssw0rd"
+```
+
+![Connect with sqlcmd](media\tutorial-sql-server-ag-containers-kubernetes\sqlcmdConnect.png)
+
+## Create listener services for secondary replicas
+
+To create services for secondary replicas, create a file named `listenerServices.yaml`.
+
+Copy the manifest below into the file. 
 
 ```yaml
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: ag1-secondary
+  name: ag1-primary
 spec:
   ports:
   - name: tds
     port: 1433
   selector:
     type: sqlservr
-    matchExpressions:
-    - {key: role.ag.mssql.microsoft.com/ag1, operator: In, values: ["secondary-sync", "secondary-async", "secondary-config"]}
+    role.ag.mssql.microsoft.com/ag1: primary
   type: LoadBalancer
 
 ---
@@ -500,6 +520,7 @@ spec:
     role.ag.mssql.microsoft.com/ag1: secondary-sync
   type: LoadBalancer
 
+
 ---
 apiVersion: v1
 kind: Service
@@ -513,7 +534,22 @@ spec:
     type: sqlservr
     role.ag.mssql.microsoft.com/ag1: secondary-async
   type: LoadBalancer
-```
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ag1-secondary-config
+spec:
+  ports:
+  - name: tds
+    port: 1433
+  selector:
+    type: sqlservr
+    role.ag.mssql.microsoft.com/ag1: secondary-config
+  type: LoadBalancer
+  ```
 
 ## Verify failure and recovery
 

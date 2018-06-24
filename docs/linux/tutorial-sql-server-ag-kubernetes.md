@@ -551,6 +551,12 @@ spec:
   type: LoadBalancer
   ```
 
+To create the Kubernetes services and for the secondary replicas, run the following command.
+
+```azurecli
+kubectl apply -f secondaryListeners.yaml
+```
+
 ## Verify failure and recovery
 
 To verify failure detection and failover you can delete the pod hosting the primary replica. Do the following steps:
@@ -578,7 +584,6 @@ To verify failure detection and failover you can delete the pod hosting the prim
 Replace `<podName>` with the value returned from the previous step for pod name. 
 
 Kubernetes automatically fails over to one of the available sync secondary replicas as well as recreates the deleted pod.
-
 
 ## Summary
 

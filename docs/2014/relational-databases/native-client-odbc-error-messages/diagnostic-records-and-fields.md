@@ -24,7 +24,7 @@ ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Diagnostic Records and Fields
   Diagnostic records are associated with ODBC environment, connection, statement, or descriptor handles. When any ODBC function raises a return code other than SQL_SUCCESS or SQL_INVALID_HANDLE, the handle called by the function has associated diagnostic records that contain informational or error messages. These records are retained until another function is called using that handle, at which time they are discarded. There is no limit to the number of diagnostic records that can be associated with a handle at any one time.  

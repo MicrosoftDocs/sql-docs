@@ -3,9 +3,7 @@ title: "SQL Server 2014 Release Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2018"
 ms.prod: sql
-ms.prod_service: sql
-ms.component: "sql-non-specified"
-ms.technology: "server-general"
+ms.technology: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""

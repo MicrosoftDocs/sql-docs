@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "concatenation [Integration Services]"
   - "+ (concatenate operator)"
@@ -17,7 +17,7 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # + (Concatenate) (SSIS Expression)
   Concatenates two expressions into one expression.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.maint.maintplanproperties.reporting.f1"
   - "sql12.swb.maint.maintplanproperties.completebackup.f1"
@@ -16,7 +16,7 @@ ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Maintenance Plans Node (Object Explorer)
   This section contains the F1 Help for the **Maintenance Plans** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

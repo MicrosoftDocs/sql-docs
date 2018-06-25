@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.conndatasource.f1"
 ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.updatetable"
   - "vdtsql.chm:69643"
@@ -16,7 +16,7 @@ ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Update Table Dialog Box (Visual Database Tools)
   This dialog box allows you to specify the table to be updated.  

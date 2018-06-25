@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 71bae511-956d-4f23-bfa8-bfcc563b3e11
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Ready to Complete Image
   The **Ready to Complete Image** page provides a summary of configuration settings that are applied to the configuration of the prepared instance.  

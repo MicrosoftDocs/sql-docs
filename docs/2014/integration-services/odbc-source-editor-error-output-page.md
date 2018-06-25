@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcsource.errorhandling.f1"
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # ODBC Source Editor (Error Output Page)
   Use the **Error Output** page of the **ODBC Source Editor** dialog box to select error handling options.  

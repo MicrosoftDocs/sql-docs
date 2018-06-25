@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "parallel redo [SQL Server]"
   - "role switching [SQL Server]"
@@ -20,7 +20,7 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Estimate the Interruption of Service During Role Switching (Database Mirroring)
   During a role switch, the amount of time that database mirroring will be out of service depends on the type of role switching and the cause of the role switch.  

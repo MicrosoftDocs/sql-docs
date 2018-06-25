@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensionwizard.timefrequency.f1"
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [Analysis Services], storage location"
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292

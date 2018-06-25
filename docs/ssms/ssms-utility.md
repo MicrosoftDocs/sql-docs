@@ -7,8 +7,7 @@ ms.prod_service: "sql-tools"
 ms.component: "ssms"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

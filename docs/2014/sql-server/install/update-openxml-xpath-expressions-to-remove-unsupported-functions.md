@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENXML queries"
 ms.assetid: b459abaf-8787-4b65-9231-ae30e5469fd0
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Update OPENXML XPath expressions to remove unsupported functions
   Upgrade Advisor detected the use of XPath functionality. You may be affected by changes in XPath functionality for OPENXML features after you upgrade.  

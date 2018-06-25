@@ -22,7 +22,7 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # bcp_gettypename
   Returns the SQL type name for a specified BCP type token.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Installation"
 helpviewer_keywords: 
@@ -18,7 +18,7 @@ ms.assetid: 4dd5d5b7-01b7-4b51-9589-764f69bdb7ae
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Ready to Install
   The Ready to Install page provides a summary of features to be installed or changed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  

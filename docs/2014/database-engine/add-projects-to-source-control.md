@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "adding projects"
   - "projects [SQL Server Management Studio], adding"
@@ -16,7 +16,7 @@ ms.assetid: fd4616b2-a564-4a66-ac53-d1f5cba213c2
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Projects to Source Control
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] solutions can host multiple script projects. How you add a project to source control depends upon whether the solution to which the project belongs is under source control. If the solution is under source control, checking in the solution automatically adds the project to source control. For more information about checking in solutions, see [Check In Files](../../2014/database-engine/check-in-files.md).  

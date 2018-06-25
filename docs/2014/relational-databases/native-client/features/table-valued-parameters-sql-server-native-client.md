@@ -17,7 +17,7 @@ ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Table-Valued Parameters (SQL Server Native Client)
   Table-valued parameters were introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide functionality similar to parameter arrays, but they offer more flexibility and closer integration with [!INCLUDE[tsql](../../../includes/tsql-md.md)], and can frequently improve performance. Table-valued parameters can also participate in set-based operations, whereas parameter arrays cannot.  

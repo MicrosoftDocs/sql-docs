@@ -2,18 +2,15 @@
 title: "SQL Data Warehouse Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod_service: "sql-data-warehouse"
 ms.service: sql-data-warehouse
-ms.component: "system-stored-procedures"
+ms.component: system-objects
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
-caps.latest.revision: 4
 author: ronortloff
 ms.author: rortloff
 manager: craigg

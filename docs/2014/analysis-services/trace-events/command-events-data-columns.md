@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Command Events event category"
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c

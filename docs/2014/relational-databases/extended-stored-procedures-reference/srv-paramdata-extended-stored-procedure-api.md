@@ -24,7 +24,7 @@ ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # srv_paramdata (Extended Stored Procedure API)
     

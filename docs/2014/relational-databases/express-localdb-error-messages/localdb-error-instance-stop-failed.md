@@ -14,7 +14,7 @@ ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_STOP_FAILED
     

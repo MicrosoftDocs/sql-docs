@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.selectsmoenumeration.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Select SMO Enumeration Dialog Box
   Use the **Select SMO Enumeration** dialog box to specify the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) object on the specified instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to enumerate, and to select the enumeration type.  

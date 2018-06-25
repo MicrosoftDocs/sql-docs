@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.histogram.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Data Viewer (Histogram Tab)
   Use the **Histogram** tab of the **Configure Data Viewer** dialog box to specify the column to display. A histogram displays data values from one numeric column as a distribution of the values. The chart reflects the contents of one buffer only.  

@@ -16,7 +16,7 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use Microsoft Distributed Transaction Coordinator (ODBC)
     

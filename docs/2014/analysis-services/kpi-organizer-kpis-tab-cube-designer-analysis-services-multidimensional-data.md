@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.kpiorganizerpane.f1"
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376

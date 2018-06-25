@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Statistics object"
   - "SQLAgent:Statistics"
@@ -16,7 +16,7 @@ ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Agent, Statistics Object
   The SQL Server Agent **Statistics** performance object contains performance counters that report information about SQL Server Agent.  

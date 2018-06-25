@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.schemarestrictions.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Schema Restrictions Dialog Box
   Use the **Schema Restrictions** dialog box to set the schema restrictions to apply to the Foreach ADO.NET Schema Rowset enumerator.  

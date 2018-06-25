@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.edittracetemplateproperties.general.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Edit Trace Template Properties (General Tab)
   Use the **General** tab of the **Trace Template Properties** dialog box to view or edit existing trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Edit Template**.  

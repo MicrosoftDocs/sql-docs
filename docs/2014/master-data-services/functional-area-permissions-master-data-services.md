@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "functional area permissions [Master Data Services], about functional area permissions"
   - "functional area permissions [Master Data Services]"
@@ -17,7 +17,7 @@ ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Functional Area Permissions (Master Data Services)
   You can assign permission to each of the functional areas of the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface (UI). There are five functional areas:  

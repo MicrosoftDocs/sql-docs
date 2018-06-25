@@ -17,7 +17,7 @@ ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Retrieve Result Set Information (ODBC)
     

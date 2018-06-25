@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interrupted restore operation"
   - "restoring databases [SQL Server], restarting interrupted operation"
@@ -20,7 +20,7 @@ ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Restart an Interrupted Restore Operation (Transact-SQL)
   This topic explains how to restart an interrupted restore operation.  

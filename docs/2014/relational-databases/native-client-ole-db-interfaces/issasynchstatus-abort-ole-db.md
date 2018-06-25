@@ -20,7 +20,7 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ISSAsynchStatus::Abort (OLE DB)
   Cancels an asynchronously executing operation.  

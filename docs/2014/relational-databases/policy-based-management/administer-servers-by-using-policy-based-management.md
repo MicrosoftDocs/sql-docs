@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "facet See facets"
   - "Declarative Management Framework See Policy-Based Management"
@@ -23,7 +23,7 @@ ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 75
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Administer Servers by Using Policy-Based Management
   Policy-Based Management is a system for managing one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] policy administrators use Policy-Based Management, they use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create policies to manage entities on the server, such as the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], databases, or other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects.  

@@ -19,7 +19,7 @@ ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 caps.latest.revision: 35
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Rendering and Execution Methods
   You can use these methods to manage item execution and caching, and report rendering.  

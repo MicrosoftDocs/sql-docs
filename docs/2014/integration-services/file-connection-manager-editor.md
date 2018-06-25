@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fileconnectionmanager.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # File Connection Manager Editor
   Use the **File Connection Manager Editor** dialog box to specify the properties used to connect to a file or a folder.  

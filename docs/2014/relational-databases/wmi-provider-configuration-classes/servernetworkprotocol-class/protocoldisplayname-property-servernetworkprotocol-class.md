@@ -22,7 +22,7 @@ ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ProtocolDisplayName Property (ServerNetworkProtocol Class)
   Gets the display name of the server network protocol.  

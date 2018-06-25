@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "exporting data"
   - "mapping files [Integration Services]"
@@ -26,7 +26,7 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 caps.latest.revision: 87
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Import and Export Wizard
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard offers the simplest method to create a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that copies data from a source to a destination.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcsource.columns.f1"
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # ODBC Source Editor (Columns Page)
   Use the **Columns** page of the **ODBC Source Editor** dialog box to map an output column to each external (source) column.  

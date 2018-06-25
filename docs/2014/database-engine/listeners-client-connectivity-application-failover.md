@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
   - "read-only routing"
@@ -20,7 +20,7 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server)
   This topic contains information about considerations for [!INCLUDE[ssHADR](../includes/sshadr-md.md)] client connectivity and application-failover functionality.  

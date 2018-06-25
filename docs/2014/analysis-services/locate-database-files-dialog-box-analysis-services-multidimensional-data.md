@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.localdbfilesdialog.f1"
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5

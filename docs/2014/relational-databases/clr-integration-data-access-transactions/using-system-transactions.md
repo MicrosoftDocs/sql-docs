@@ -21,7 +21,7 @@ ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using System.Transactions
   The `System.Transactions` namespace provides a transaction framework that is fully integrated with ADO.NET and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language runtime (CLR) integration. The `System.Transactions.TransactionScope` class makes a code block transactional by implicitly enlisting connections in a distributed transaction. You must call the `Complete` method at the end of the code block marked by the `TransactionScope`. The `Dispose` method is invoked when program execution leaves a code block, causing the transaction to be discontinued if the `Complete` method is not called. If an exception has been thrown that causes the code to leave scope, the transaction is considered to be discontinued.  

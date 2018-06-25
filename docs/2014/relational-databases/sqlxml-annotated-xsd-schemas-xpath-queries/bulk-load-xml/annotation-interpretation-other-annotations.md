@@ -25,7 +25,7 @@ ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Other Annotations (SQLXML 4.0)
   In addition to the annotations discussed in the previous topics in this section, XML Bulk Load interprets these other annotations, as follows:  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "point of failure [SQL Server]"
   - "restoring databases [SQL Server], point of failure"
@@ -17,7 +17,7 @@ ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Restore a Database to the Point of Failure Under the Full Recovery Model (Transact-SQL)
   This topic explains how to restore to the point of failure. The topic is relevant only for databases that are using the full or bulk-logged recovery models.  

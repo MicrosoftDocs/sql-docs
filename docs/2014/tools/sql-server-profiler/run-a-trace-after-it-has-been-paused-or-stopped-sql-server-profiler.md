@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], restarting"
   - "traces [SQL Server], stopping"
@@ -18,7 +18,7 @@ ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler)
   This topic describes how to start a trace again after it has been paused or stopped by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

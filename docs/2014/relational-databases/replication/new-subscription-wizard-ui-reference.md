@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "New Subscription Wizard"
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # New Subscription Wizard (UI Reference)
   This section provides information on the following pages of the New Subscription Wizard:  

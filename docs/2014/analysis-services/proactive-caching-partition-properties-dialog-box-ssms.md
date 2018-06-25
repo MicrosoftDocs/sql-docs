@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.partitionproperties.proactivecaching.f1"
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5

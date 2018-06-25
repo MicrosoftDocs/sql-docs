@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitionsourcedialog.f1"
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b

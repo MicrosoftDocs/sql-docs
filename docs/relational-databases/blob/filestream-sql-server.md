@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "01/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "blob"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

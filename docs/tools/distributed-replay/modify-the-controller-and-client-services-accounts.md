@@ -3,16 +3,12 @@ title: "Modify the Controller and Client Services Accounts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "distributed-replay"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-caps.latest.revision: 29
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg

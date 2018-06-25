@@ -1,4 +1,4 @@
-﻿---
+---
 title: "RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2016"

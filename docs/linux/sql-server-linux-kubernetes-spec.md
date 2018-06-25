@@ -99,3 +99,38 @@ This article explains the parameters in the specification.
 * `sqlServerPod`
   * Optional
   * **Description** Pod spec with overrides for the SQL Server StatefulSet pod. Used when you use a private image. For more information, see [Kubernetes pods](http://kubernetes.io/docs/concepts/workloads/pods/pod/).
+
+* `initSQLPod`
+  * Optional
+  * **Description** Pod spec with overrides for the init-sql job pod. Used when you use a private image.
+
+* `connectionTimeoutSec`
+  * Optional
+  * **Description** Connection timeout in seconds for the AG agents to connect to SQL Server. Minimum: 1 second. Default: 30 seconds.
+
+* `queryCommandTimeoutSec`
+  * Optional
+  * **Description** The generic SQL query command timeout in seconds for waiting for data from a query. Minimum: 1. Default value: 10.
+  
+* `joinCommandTimeoutSec`
+  * Optional
+  * **Description** The sql query command timeout in seconds for waiting for data from a longer `ALTER AVAILABILITY GROUP <group_name> JOIN;`. Minimum: 1. Default value: 60. Recommended minimum is 60.
+
+* `transientDBHealthTimeoutSec`
+  * Optional
+  * **Description** Timeout in seconds to wait for transient database states to come online after becoming the primary before triggering a failover. Minimum: 1. Default: 180. Used when `db_failover` is `ON`. Kubernetes Availability Group is always created with this setting `ON`, it can be updated to `OFF`.`
+
+* `sqlPostInitScript`
+  * Optional
+  * **Description** Post initialization sql script to run. This is a custom SQL script that runs after every update of the [Kubernetes custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/). For example, resource create, resource change property, or resource upgrade.
+
+* `availabilityGroups` 
+  * Optional
+  * **Description** List of availability groups the server is a part of and the server replica mode.
+  * **Example**
+
+   ```yaml
+     availabilityGroups:
+      name: <availabilityGroupName>
+       availabilityMode: <synchronousCommit | asynchronousCommit | configurationOnly> 
+   ``` 

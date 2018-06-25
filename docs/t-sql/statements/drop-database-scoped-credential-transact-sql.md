@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

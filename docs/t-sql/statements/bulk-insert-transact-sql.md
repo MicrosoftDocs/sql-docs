@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "file importing [SQL Server]"
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # BULK INSERT (Transact-SQL)

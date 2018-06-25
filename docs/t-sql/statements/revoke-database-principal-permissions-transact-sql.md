@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "application roles [SQL Server], permissions"
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # REVOKE Database Principal Permissions (Transact-SQL)

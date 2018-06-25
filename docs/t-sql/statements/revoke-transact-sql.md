@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "dropping permissions"
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

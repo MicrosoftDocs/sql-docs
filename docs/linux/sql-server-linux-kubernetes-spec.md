@@ -90,7 +90,7 @@ This article explains the parameters in the specification.
 
 * `pid`
   * Optional
-  * **Description** The SQL Server edition or product key. Defaults to Developer edition. See [Environment variables](sql-server-linux-configure-environment-variables).
+  * **Description** The SQL Server edition or product key. Defaults to Developer edition. See [Environment variables](sql-server-linux-configure-environment-variables.md).
 
 * `monitorPolicy`
   * Optional 

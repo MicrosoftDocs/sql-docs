@@ -16,7 +16,7 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use Cursors (ODBC)
     

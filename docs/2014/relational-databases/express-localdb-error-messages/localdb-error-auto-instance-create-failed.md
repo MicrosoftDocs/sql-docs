@@ -14,7 +14,7 @@ ms.assetid: ca7d2c05-2bde-4284-bb17-aa7fd8d7b20a
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
     

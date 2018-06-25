@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "physical design structures [SQL Server]"
   - "command prompt utilities [SQL Server], dta"
@@ -23,7 +23,7 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # dta Utility
   The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  

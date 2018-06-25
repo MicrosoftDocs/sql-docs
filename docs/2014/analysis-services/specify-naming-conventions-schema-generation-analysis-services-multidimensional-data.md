@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.schemagenwizard.namingconventions.f1"
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b

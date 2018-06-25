@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Key Management"
   - "Extensible Key Management"
@@ -17,7 +17,7 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: 45
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Extensible Key Management (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides data encryption capabilities together with *Extensible Key Management* (EKM), using the *Microsoft Cryptographic API* (MSCAPI) provider for encryption and key generation. Encryption keys for data and key encryption are created in transient key containers, and they must be exported from a provider before they are stored in the database. This approach enables key management that includes an encryption key hierarchy and key backup, to be handled by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.httpconnection.proxy.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # HTTP Connection Manager Editor (Proxy Page)
   Use the **Proxy** tab of the **HTTP Connection Manager Editor** dialog box to configure the HTTP Connection Manager to use a proxy server. An HTTP connection enables a package to access a Web server by using HTTP to send or receive files.  

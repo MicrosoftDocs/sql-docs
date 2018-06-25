@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.connexcelfile.f1"
 ms.assetid: 126f7d6b-d270-40e7-b23e-8d114f87065b

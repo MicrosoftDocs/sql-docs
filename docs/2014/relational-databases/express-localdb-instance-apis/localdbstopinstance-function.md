@@ -20,7 +20,7 @@ ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LocalDBStopInstance Function
   Stops the specified SQL Server Express LocalDB instance from running.  

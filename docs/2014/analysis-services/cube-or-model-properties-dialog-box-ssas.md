@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.cubeproperties.f1"
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249

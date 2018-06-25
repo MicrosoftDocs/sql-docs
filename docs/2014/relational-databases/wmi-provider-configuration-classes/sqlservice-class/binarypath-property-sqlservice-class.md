@@ -22,7 +22,7 @@ ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # BinaryPath Property (SqlService Class )
   Gets the binary path of the service.  

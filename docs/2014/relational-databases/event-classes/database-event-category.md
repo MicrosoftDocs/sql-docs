@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -19,7 +19,7 @@ ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Event Category
   The **Database** event category contains event classes to monitor the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 2: Creating a Subscription to the Merge Publication
   In this lesson, you will create the subscription using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You will then set permissions on the subscription database and manually generate the filtered data snapshot for the new subscription. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Merge Replication](lesson-1-publishing-data-using-merge-replication.md).  

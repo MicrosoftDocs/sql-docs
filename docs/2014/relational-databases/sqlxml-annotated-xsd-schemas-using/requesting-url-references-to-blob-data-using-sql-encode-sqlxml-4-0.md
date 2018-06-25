@@ -23,7 +23,7 @@ ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Requesting URL References to BLOB Data Using sql:encode (SQLXML 4.0)
   In an annotated XSD schema, when an attribute (or element) is mapped to a BLOB column in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the data is returned in Base 64-encoded format within XML.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "result sets [Integration Services]"
   - "Execute SQL task [Integration Services]"
@@ -16,7 +16,7 @@ ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Result Sets in the Execute SQL Task
   In an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package, whether a result set is returned to the Execute SQL task depends on the type of SQL command that the task uses. For example, a SELECT statement typically returns a result set, but an INSERT statement does not.  

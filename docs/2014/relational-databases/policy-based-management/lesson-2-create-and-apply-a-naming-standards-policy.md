@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 2: Create and Apply a Naming Standards Policy
   Some types of Policy-Based Management policies can create triggers to enforce future compliance with the policy. In this lesson, you create a policy that enforces a naming standard for tables. Then, you test the policy by trying to create a table that violates the policy.  

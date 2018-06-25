@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.replconflictviewer.definefilters.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Define Filters
   The **Define Filters** dialog box allows you to define filters that you then apply to data conflicts to see a subset of the conflicts in the grid. To define a filter, choose an operator from the **Operator** drop-down list box and then enter a value. For example, to show only those conflicts in which the conflict loser is server **ReplTest1**, select **Equal to** from the **Operator** drop-down list box and enter **ReplTest1** in the first **Value** column.  

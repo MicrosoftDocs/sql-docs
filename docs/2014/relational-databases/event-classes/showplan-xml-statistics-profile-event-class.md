@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Showplan XML Statistics Profile Event Class
   The Showplan XML Statistics Profile event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an SQL statement. Include the Showplan XML Statististics Profile event class to identify the Showplan operators on [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

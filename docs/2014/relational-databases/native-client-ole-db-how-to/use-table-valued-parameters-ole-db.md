@@ -14,7 +14,7 @@ ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use Table-Valued Parameters (OLE DB)
   This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later. This sample does the following:  

@@ -22,7 +22,7 @@ ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # NumberOfProps Property (ClientNetworkProtocol Class)
   Gets the number of properties of the client network protocol specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](clientnetworkprotocol-class.md).  

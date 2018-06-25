@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], opening"
   - "command prompt utilities [SQL Server], sqlwb"
@@ -19,7 +19,7 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Ssms Utility
   The **Ssms**utility opens [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. If specified, **Ssms** also establishes a connection to a server, and opens queries, scripts, files, projects, and solutions.  

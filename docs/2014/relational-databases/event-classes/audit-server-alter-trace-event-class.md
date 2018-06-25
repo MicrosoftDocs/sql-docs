@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Server Alter Trace Event Class
   The **Audit Server Alter Trace** event class occurs for all statements that check for the ALTER TRACE permission. Statements that check for ALTER TRACE include those used to create or configure a trace, or to set a filter on a trace.  

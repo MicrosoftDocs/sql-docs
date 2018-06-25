@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], managing"
   - "semantic search [SQL Server], monitoring"
@@ -16,7 +16,7 @@ ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage and Monitor Semantic Search
   Describes the process of semantic indexing and the tasks related to managing and monitoring the indexes.  

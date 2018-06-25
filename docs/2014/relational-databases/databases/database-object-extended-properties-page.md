@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.common.extendedproperties.f1"
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Object (Extended Properties Page)
   Extended properties allow you to add custom properties to database objects. Use this page to view or modify extended properties for the selected object. The **Extended Properties** page is the same for all types of database objects.  

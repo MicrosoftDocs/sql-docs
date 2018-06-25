@@ -19,7 +19,7 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)
   This sample shows the use of IRowsetFastLoad for bulk copying of records into a table.  

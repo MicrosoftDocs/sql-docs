@@ -5,17 +5,16 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], using with other features"
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # FileTable Compatibility with Other SQL Server Features
   Describes how FileTables work with other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65538"
   - "vdt.ppg.relationships"
@@ -19,7 +19,7 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Modify Foreign Key Relationships
   You can modify the foreign key side of a relationship in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modifying a table’s foreign key changes which columns are related to columns in the primary key table.  

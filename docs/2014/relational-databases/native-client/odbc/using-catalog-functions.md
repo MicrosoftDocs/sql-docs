@@ -21,7 +21,7 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using Catalog Functions
   All databases have a structure containing the data stored in the database. A definition of this structure, along with other information such as permissions, is stored in a catalog (implemented as a set of system tables), also known as a data dictionary.  

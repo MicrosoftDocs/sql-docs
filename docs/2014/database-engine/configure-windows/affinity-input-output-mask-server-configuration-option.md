@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "affinity I/O mask option"
   - "processor affinity [SQL Server]"
@@ -18,7 +18,7 @@ ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # affinity Input-Output mask Server Configuration Option
   To carry out multitasking, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 and Windows Server 2003 sometimes move process threads among different processors. Although efficient from an operating system point of view, this activity can reduce [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance under heavy system loads, as each processor cache is repeatedly reloaded with data. Assigning processors to specific threads can improve performance under these conditions by eliminating processor reloads; such an association between a thread and a processor is called processor affinity.  

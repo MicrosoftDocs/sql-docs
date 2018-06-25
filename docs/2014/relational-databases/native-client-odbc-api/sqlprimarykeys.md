@@ -18,7 +18,7 @@ ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQLPrimaryKeys
   A table might have a column or columns that can serve as unique row identifiers, and tables created without a PRIMARY KEY constraint return an empty result set to SQLPrimaryKeys. The ODBC function [SQLSpecialColumns](sqlspecialcolumns.md) reports row identifier candidates for tables without primary keys.  

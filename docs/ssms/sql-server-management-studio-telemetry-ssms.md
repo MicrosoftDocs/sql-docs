@@ -18,7 +18,7 @@ manager: craigg
 ---
 # Local Audit for SSMS Usage Feedback Collection
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage data to Microsoft. SSMS may collect standard computer information and information about use and performance that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. We do not collect your name, address or other contact information. For details, see the [SQL Server Privacy Statement](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).
+SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage data to Microsoft. SSMS may collect standard computer information and information about use and performance that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. We do not collect your name, address or other contact information. For details, see the [SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## Audit feature usage data
 

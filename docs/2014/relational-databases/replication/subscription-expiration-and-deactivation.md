@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Distributors [SQL Server replication], distribution retention period"
   - "subscriptions [SQL Server replication], expiration"
@@ -23,7 +23,7 @@ ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 caps.latest.revision: 44
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Subscription Expiration and Deactivation
   Subscriptions can be deactivated or can expire if they are not synchronized within a specified *retention period*. The action that occurs depends on the type of replication and the retention period that is exceeded.  

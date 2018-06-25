@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.querybuilder.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Query Builder
   Use the **Query Builder** dialog box to create a query for use in the Execute SQL task, the OLE DB source and the OLE DB destination, and the Lookup transformation.  

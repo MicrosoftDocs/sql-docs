@@ -10,12 +10,12 @@ ms.technology:
   - "integration-services"
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 7: Viewing Updates Made using Master Data Manager in Excel
   In this task, you verify that you see the updated data from MDS in Excel.  

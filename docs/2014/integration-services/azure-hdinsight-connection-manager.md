@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.DTS.DESIGNER.AFPHDICM.F1"
   - "SQL11.DTS.DESIGNER.AFPHDICM.F1"
@@ -16,7 +16,7 @@ ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
 caps.latest.revision: 2
 author: "Lingxi-Li"
 ms.author: "lingxl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Azure HDInsight Connection Manager
 The **Azure HDInsight Connection Manager** enables an SSIS package to connect to an Azure HDInsight cluster.

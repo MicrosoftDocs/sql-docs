@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3d2814a4-318a-45ed-b093-1e852fab561f
 caps.latest.revision: 6
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Direct Browsing to Report Server (Upgrade Advisor)
   Upgrade Advisor detected your current installation of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is browsing directly to the report server virtual directory.  

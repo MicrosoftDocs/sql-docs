@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installing SQL Server, command prompt"
   - "installation scripts [SQL Server]"
@@ -87,7 +87,7 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 caps.latest.revision: 223
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Install SQL Server 2014 from the Command Prompt
   Before you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, review [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  

@@ -19,7 +19,7 @@ ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Disconnecting from an Instance of SQL Server
   Manually closing and disconnecting [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) objects is not required. Connections are opened and closed as required.  

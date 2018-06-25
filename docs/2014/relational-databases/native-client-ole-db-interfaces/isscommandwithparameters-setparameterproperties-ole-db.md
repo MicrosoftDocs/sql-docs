@@ -20,7 +20,7 @@ ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ISSCommandWithParameters::SetParameterProperties (OLE DB)
   Sets the parameter properties on a per parameter basis by ordinal, or sets bulk parameter properties by specifying an array of SSPARAMPROPS structures.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG014162 error"
 ms.assetid: a15eef3f-219f-45d3-8286-6a864c85a723
 caps.latest.revision: 11
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQL_ENG014162
     

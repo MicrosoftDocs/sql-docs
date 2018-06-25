@@ -3,8 +3,6 @@ title: "Tutorials for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
 ms.prod: sql
-ms.prod_service: sql
-ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: performance

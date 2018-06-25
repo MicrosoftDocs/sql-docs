@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
 caps.latest.revision: 4
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Engine Cross-Instance Features
   This section contains the tools and tasks associated with managing and monitoring servers and database instances.  

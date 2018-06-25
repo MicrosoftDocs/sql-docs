@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "opening queries"
   - "queries [SQL Server], opening"
@@ -16,7 +16,7 @@ ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open Queries (Visual Database Tools)
   You can open an existing query in Query and View Designer by using the **Open** command.  

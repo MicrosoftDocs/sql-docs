@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # OData Connection Manager
   An OData connection manager enables a package to connect to an OData source. An OData Source component connects to an OData source using an OData connection manager and consumes data from the service. See [OData Source](../data-flow/odata-source.md)section for detailed information including the installation instructions for these components.  

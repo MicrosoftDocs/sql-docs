@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.holdout.f1"
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5

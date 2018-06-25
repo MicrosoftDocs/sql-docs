@@ -16,7 +16,7 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Core SQLXML Security Considerations
   The following are security guidelines for using SQLXML for data access.  

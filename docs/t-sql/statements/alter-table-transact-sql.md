@@ -59,8 +59,8 @@ helpviewer_keywords:
   - "table changes [SQL Server]"
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 caps.latest.revision: 281
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

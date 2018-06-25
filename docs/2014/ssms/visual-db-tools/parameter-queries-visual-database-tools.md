@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "parameter queries [SQL Server]"
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Parameter Queries (Visual Database Tools)
   In some cases you want to create a query that you can use many times, but with a different value each time. For example, you might frequently run a query to find all the `title_ids` written by one author. You could run the same query for each request, except that the author's ID or name would be different each time.  

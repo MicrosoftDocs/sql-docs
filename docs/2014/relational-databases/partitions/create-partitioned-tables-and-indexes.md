@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.createpartition.partitionscheme.f1"
   - "sql12.swb.createpartition.selectoutput.f1"
@@ -31,7 +31,7 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 33
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Partitioned Tables and Indexes
   You can create a partitioned table or index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database. Partitioning can make large tables and indexes more manageable and scalable.  

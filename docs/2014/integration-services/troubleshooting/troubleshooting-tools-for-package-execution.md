@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services packages, troubleshooting"
   - "SSIS packages, troubleshooting"
@@ -19,7 +19,7 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Troubleshooting Tools for Package Execution
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  

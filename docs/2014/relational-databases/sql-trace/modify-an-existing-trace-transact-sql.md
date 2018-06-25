@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], modifying"
   - "modifying traces"
@@ -16,7 +16,7 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Modify an Existing Trace (Transact-SQL)
   This topic describes how to use stored procedures to modify an existing trace.  

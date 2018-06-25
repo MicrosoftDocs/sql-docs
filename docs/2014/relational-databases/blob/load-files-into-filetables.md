@@ -5,10 +5,9 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], migrating files"
   - "FileTables [SQL Server], bulk loading"
@@ -17,7 +16,7 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Load Files into FileTables
   Describes how to load or migrate files into FileTables.  

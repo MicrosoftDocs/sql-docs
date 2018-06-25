@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

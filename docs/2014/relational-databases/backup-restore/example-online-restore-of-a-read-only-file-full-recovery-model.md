@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full recovery model [SQL Server], RESTORE example"
   - "online restores [SQL Server], full recovery model"
@@ -17,7 +17,7 @@ ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Online Restore of a Read-Only File (Full Recovery Model)
   This topic is relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases under the full recovery model that contain multiple files or filegroups.  

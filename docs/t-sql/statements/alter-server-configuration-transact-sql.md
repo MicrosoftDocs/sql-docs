@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "setting process affinity"
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 caps.latest.revision: 72
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER SERVER CONFIGURATION (Transact-SQL)

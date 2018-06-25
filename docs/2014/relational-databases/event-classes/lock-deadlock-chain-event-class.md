@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lock:Deadlock Chain Event Class
   The Lock:Deadlock Chain event class is produced for each participant in a deadlock.  

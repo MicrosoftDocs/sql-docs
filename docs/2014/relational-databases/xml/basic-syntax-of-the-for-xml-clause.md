@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "BINARY BASE64 directive"
   - "ROOT directive"
@@ -19,7 +19,7 @@ ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 caps.latest.revision: 36
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Basic Syntax of the FOR XML Clause
   The FOR XML mode can be RAW, AUTO, EXPLICIT, or PATH. It determines the shape of the resulting XML.  

@@ -18,7 +18,7 @@ ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQLBindCol
   As a general rule, consider the implications of using **SQLBindCol** to cause data conversion. Binding conversions are client processes, so, for example, retrieving a floating-point value bound to a character column causes the driver to perform the float-to-character conversion locally when a row is fetched. The [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT function can be used to place the cost of data conversion on the server.  

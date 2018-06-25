@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.security.DA.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 caps.latest.revision: 24
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Distribution Agent Security
   The **Distribution Agent Security** dialog box allows you to specify the Windows account under which the Distribution Agent runs. The Distribution Agent runs at the Distributor for push subscriptions and at the Subscriber for pull subscriptions. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account is also referred to as the *process account*, because the agent process runs under this account. Additional options available in the dialog box depend on how you access it:  

@@ -22,7 +22,7 @@ ms.assetid: 0175ce3c-e07e-4710-a2f9-a26dface6eb3
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # PropertyName Property (ServerNetworkProtocolProperty Class)
   Gets the name of the current referenced property.  

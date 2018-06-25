@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.databaseproperties.files.f1"
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: 40
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Properties (Files Page)
   Use this page to create a new database, or view or modify properties for the selected database. This topic applies to the **Database Properties (Files Page)** for existing databases, and to the **New Database (General Page)**.  

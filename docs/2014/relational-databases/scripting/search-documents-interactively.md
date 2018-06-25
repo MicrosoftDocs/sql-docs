@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interactive searches [SQL Server Management Studio]"
   - "searches [SQL Server Management Studio], interactive"
@@ -17,7 +17,7 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Search Documents Interactively
   Using the **Find and Replace** dialog box, you can search one or more open files or windows and move through the search matches one by one. This technique allows you to review each individual search match in the context of the text around the match. You also have the option of performing bulk find operations and reviewing search matches in report format using the **Find and Replace** dialog box.  

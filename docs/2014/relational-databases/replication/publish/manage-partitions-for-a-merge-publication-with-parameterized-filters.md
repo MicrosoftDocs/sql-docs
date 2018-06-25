@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "partitions [SQL Server replication]"
   - "merge replication partitions [SQL Server replication], SQL Server Management Studio"
@@ -17,7 +17,7 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage Partitions for a Merge Publication with Parameterized Filters
   This topic describes how to manage partitions for a merge publication with parameterized filters in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO). Parameterized row filters can be used to generate nonoverlapping partitions. These partitions can be restricted so that only one subscription receives a given partition. In these cases, a large number of subscribers will result in a large number of partitions, which in turn requires an equal number of partitioned snapshots. For more information, see [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  

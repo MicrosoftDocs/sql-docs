@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.perspectives.perspectivespane.f1"
 ms.assetid: 85d4f696-b429-409c-a679-2ee867f3a589

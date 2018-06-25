@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], custom reports"
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use Custom Reports with Object Explorer Node Properties
   Custom reports can execute in the context of a selected Object Explorer node if the custom reports reference the report parameters of that node. This enables a custom report to use the current context, for example the current database, or a database or server object.  

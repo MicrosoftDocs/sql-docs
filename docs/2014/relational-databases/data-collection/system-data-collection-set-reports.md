@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data collector [SQL Server], server activity"
   - "server activity [SQL Server]"
@@ -23,7 +23,7 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # System Data Collection Set Reports
   The data collector provides an historical report for each of the System Data collection sets. Each of the following reports uses data that is stored in the management data warehouse:  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic joins"
   - "self-joins"
@@ -17,7 +17,7 @@ ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Self-Joins Automatically (Visual Database Tools)
   If a table has a reflexive relationship in the database, you can join it to itself automatically.  

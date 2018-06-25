@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "pattern restrictions"
   - "canonical forms"
@@ -16,7 +16,7 @@ ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Canonical Forms and Pattern Restrictions
   The XSD pattern facet allows for the restriction of the lexical space of simple types. When a pattern restriction is put on a type for which there is more than one possible lexical representation, some values could cause unexpected behavior upon validation.  

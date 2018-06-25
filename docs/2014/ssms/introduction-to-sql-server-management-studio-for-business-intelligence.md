@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio for Integration Services"
   - "SQL Server Management Studio for Reporting Services"
@@ -17,7 +17,7 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 caps.latest.revision: 28
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Introduction to SQL Server Management Studio for Business Intelligence
   To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Although all three business intelligence technologies rely on [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the administrative tasks associated with each of these technologies are slightly different.  

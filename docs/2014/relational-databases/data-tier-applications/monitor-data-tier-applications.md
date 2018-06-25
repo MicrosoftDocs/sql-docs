@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring [SQL Server], data-tier applications"
   - "monitoring server performance [SQL Server], DACs"
@@ -17,7 +17,7 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Monitor Data-tier Applications
   A data-tier application (DAC) can be monitored from the **Utility Explorer** and **Object Explorer** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), along with system views and tables. In addition, all objects in the database contained in the DAC can be monitored using standard database and [!INCLUDE[ssDE](../../includes/ssde-md.md)] monitoring techniques.  

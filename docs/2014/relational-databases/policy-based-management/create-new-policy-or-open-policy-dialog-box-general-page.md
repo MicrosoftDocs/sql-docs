@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dmf.newgroup.f1"
   - "sql12.swb.dmf.policy.f1"
@@ -17,7 +17,7 @@ ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create New Policy or Open Policy Dialog Box, General Page
   Use this dialog box to create a new Policy-Based Management policy or modify an existing policy. Use the **Against targets** and **Server restriction** areas as a filter to limit policies to a subset of all possible targets. For conditions to be used as target filters, they must be defined on a physical facet, must not contain functions, and must not contain the LIKE operator. When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  

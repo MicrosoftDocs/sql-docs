@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], SQL Server Management Studio"
   - "saving connections"
@@ -18,7 +18,7 @@ ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect to Any SQL Server Component from SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to connect to:  

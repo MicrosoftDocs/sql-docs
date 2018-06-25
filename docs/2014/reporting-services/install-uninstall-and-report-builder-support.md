@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "administering Report Builder"
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416

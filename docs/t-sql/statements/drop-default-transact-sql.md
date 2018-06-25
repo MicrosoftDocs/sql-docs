@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "defaults [SQL Server], removing"
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP DEFAULT (Transact-SQL)

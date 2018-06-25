@@ -14,7 +14,7 @@ ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOCALDB_ERROR_INVALID_INSTANCE_NAME
     

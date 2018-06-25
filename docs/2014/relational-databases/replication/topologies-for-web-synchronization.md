@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Web synchronization, topologies"
   - "IIS server configuration [SQL Server replication]"
@@ -16,7 +16,7 @@ ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 caps.latest.revision: 30
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Topologies for Web Synchronization
   You can choose from a variety of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web synchronization replication topologies. Common ways to configure Web synchronization include:  

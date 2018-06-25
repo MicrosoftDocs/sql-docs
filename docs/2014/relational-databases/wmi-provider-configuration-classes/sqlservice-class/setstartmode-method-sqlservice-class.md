@@ -22,7 +22,7 @@ ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SetStartMode Method (SqlService Class)
   Modifies the start mode of the service instance.  

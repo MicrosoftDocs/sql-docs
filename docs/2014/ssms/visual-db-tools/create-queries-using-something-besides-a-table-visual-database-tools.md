@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined functions [SQL Server], queries"
   - "queries [SQL Server], creating"
@@ -16,7 +16,7 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Queries using Something Besides a Table (Visual Database Tools)
   Whenever you write a retrieval query, you articulate what columns you want, what rows you want, and where the query processor should find the original data. Typically, this original data consists of a table or several tables joined together. But the original data can come from sources other than tables. In fact, it can come from views, queries, synonyms, or user-defined functions that return a table.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
   - "database mirroring [SQL Server], endpoint"
@@ -18,7 +18,7 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 58
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specify a Server Network Address (Database Mirroring)
   Setting up a database mirroring session requires a server network address for each of the server instances. The server network address of a server instance must unambiguously identify the instance by providing a system address and the number of the port on which the instance is listening.  

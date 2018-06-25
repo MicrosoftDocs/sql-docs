@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.browseforservers.f1"
   - "sql12.dqs.connecttoserver.f1"
@@ -16,7 +16,7 @@ ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Run the Data Quality Client Application
   You can use [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) by running [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], and logging on to a [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  

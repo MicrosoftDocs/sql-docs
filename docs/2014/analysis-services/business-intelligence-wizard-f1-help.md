@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Business Intelligence Wizard"
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb

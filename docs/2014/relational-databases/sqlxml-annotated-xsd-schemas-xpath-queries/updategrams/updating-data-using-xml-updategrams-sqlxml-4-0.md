@@ -30,7 +30,7 @@ ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Updating Data Using XML Updategrams (SQLXML 4.0)
   When you update existing data, you must specify both the **\<before>** and **\<after>** blocks. The elements specified in the **\<before>** and **\<after>** blocks describe the desired change. The updategram uses the element(s) that are specified in the **\<before>** block to identify the existing record(s) in the database. The corresponding element(s) in the **\<after>** block indicate how the records should look after executing the update operation. From this information, the updategram creates an SQL statement that matches the **\<after>** block. The updategram then uses this statement to update the database.  

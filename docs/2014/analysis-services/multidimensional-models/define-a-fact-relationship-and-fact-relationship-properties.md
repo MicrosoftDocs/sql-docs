@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "fact dimensions [Analysis Services]"
 ms.assetid: d8e41724-da77-4ac1-bc42-956b5d91ea5d

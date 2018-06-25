@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], upgrade issues"
 ms.assetid: 9a154455-c68f-4403-a3a7-b90f4d35eecb
 caps.latest.revision: 10
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # IP address restriction detected (Upgrade Advisor)
   Upgrade Advisor detected one or more IP address restrictions on the IIS Web site that hosts the report server or Report Manager virtual directories. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not provide native support for IP address restrictions.  

@@ -19,7 +19,7 @@ ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 caps.latest.revision: 44
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Calling Methods
   Methods perform specific tasks related to the object, such as issuing a `Checkpoint` on a database or requesting an enumerated list of logons for the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "feature selection, Setup"
 helpviewer_keywords: 
@@ -18,7 +18,7 @@ ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 caps.latest.revision: 86
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Feature Selection
   Use the check boxes on the **Feature Selection** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation wizard to select components for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  

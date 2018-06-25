@@ -14,7 +14,7 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use Date and Time Types
   This sample shows how to initialize the date/time data structures that were added in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. It then prepares the input values, binds parameters, and executes the query. For more information about using these types, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  

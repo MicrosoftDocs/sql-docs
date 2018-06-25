@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DML triggers, nested"
   - "nested triggers option"
@@ -17,7 +17,7 @@ ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Nested AFTER trigger fires even when trigger nesting is OFF
   Upgrade Advisor detected an AFTER trigger nested inside an INSTEAD OF trigger that is defined on one or more tables. Nested AFTER triggers may fire even when the `nested triggers` server configuration option is set to 0.  

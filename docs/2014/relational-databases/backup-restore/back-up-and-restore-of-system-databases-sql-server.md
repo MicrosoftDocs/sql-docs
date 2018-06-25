@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "system databases [SQL Server], backing up and restoring"
   - "restoring system databases [SQL Server]"
@@ -19,7 +19,7 @@ ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Back Up and Restore of System Databases (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains a set of system-level databases, s*ystem databases*, which are essential for the operation of a server instance. Several of the system databases must be backed up after every significant update. The system databases that you must always back up include **msdb**, **master**, and **model**. If any database uses replication on the server instance, there is a **distribution** system database that you must also back up. Backups of these system databases let you restore and recover the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system in the event of system failure, such as the loss of a hard disk.  

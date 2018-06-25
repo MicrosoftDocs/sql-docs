@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xsd:simpleType declarations"
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 caps.latest.revision: 13
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Values for &lt;xsd:simpleType&gt; Declarations
   The following table outlines the restrictions that are applied, based on all recognized XSD simple type enumerations.  

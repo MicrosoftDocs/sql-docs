@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting attribute groups [Master Data Services]"
   - "attribute groups [Master Data Services], deleting"
@@ -16,7 +16,7 @@ ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete an Attribute Group (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete an attribute group when you no longer need the tab to display in the **Explorer** functional area of [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  

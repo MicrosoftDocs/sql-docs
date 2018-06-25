@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [SQL Server], command prompt"
   - "QUIT command"
@@ -26,7 +26,7 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # osql Utility
   The **osql** utility allows you to enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements, system procedures, and script files. This utility uses ODBC to communicate with the server.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # EventLog Event Class
   The EventLogevent class indicates that events have been logged in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log.  

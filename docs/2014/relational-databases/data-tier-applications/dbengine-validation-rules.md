@@ -8,10 +8,10 @@ ms.suite: ""
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Validation Rules for Data-tier Application Wizards
 See [Validation Rules for Data-tier Application Wizards](../../database-engine/validation-rules-for-data-tier-application-wizards.md).

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newsubwizard.subproperties.subscriber.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 caps.latest.revision: 24
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Subscription Properties - Subscriber
   The **Subscription Properties** dialog box at the Subscriber allows you to view and set properties for pull subscriptions.  

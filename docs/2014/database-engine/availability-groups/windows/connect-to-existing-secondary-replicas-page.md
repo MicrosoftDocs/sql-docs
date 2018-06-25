@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.addreplicawizard.connecttoreplicas.f1"
   - "sql12.swb.adddatabasewizard.connecttoreplicas.f1"
@@ -16,7 +16,7 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 caps.latest.revision: 5
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect to Existing Secondary Replicas Page (Add Replica Wizard and Add Databases Wizard)
   This help topic describes the options of the **Connect to Existing Secondary Replicas** page. This topic is used by the [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

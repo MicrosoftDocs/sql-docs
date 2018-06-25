@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.semiadditivememberdetection.f1"
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c

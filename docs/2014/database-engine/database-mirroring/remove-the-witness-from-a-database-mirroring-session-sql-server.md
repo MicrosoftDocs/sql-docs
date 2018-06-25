@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "witness [SQL Server], turning off"
   - "witness [SQL Server], removing"
@@ -17,7 +17,7 @@ ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove the Witness from a Database Mirroring Session (SQL Server)
   This topic describes how to remove a witness from a database mirroring session in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. At any time during a database mirroring session, the database owner can turn off the witness for a database mirroring session.  

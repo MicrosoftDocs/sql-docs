@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-dml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "triggers [SQL Server], about triggers"
   - "DML triggers, about DML triggers"
@@ -17,7 +17,7 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 26
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # DML Triggers
   DML triggers is a special type of stored procedure that automatically takes effect when a data manipulation language (DML) event takes place that affects the table or view defined in the trigger. DML events include INSERT, UPDATE, or DELETE statements. DML triggers can be used to enforce business rules and data integrity, query other tables, and include complex [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. The trigger and the statement that fires it are treated as a single transaction, which can be rolled back from within the trigger. If a severe error is detected (for example, insufficient disk space), the entire transaction automatically rolls back.  

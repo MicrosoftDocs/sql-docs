@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "pausing traces"
   - "temporarily stopping traces"
@@ -18,7 +18,7 @@ ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Pause a Trace (SQL Server Profiler)
   Pausing a trace prevents further event data from being captured until the trace is restarted.  

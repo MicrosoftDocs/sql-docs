@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "log files [SQL Server], size"
   - "data files [SQL Server], size"
@@ -18,7 +18,7 @@ ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Verify autogrow is turned on for all data and log files during the upgrade process
   Upgrade Advisor detected data or log files that are not set to autogrow. New and enhanced features require additional disk space for user databases and the **tempdb** system database. To ensure resources can accommodate size increases during upgrade and subsequent production operations, we recommend setting autogrow to ON for all user data and log files and the **tempdb** data and log files before upgrading.  

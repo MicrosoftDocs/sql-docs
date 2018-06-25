@@ -16,7 +16,7 @@ ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Creating, Altering, and Removing Schemas
   The <xref:Microsoft.SqlServer.Management.Smo.Schema> object represents an ownership context for database object. The <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Database> object represents a collection of <xref:Microsoft.SqlServer.Management.Smo.Schema> objects.  

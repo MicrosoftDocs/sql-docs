@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a6457a2c-18ca-4ffb-97d4-e72a80d57b45
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Welcome
   Installation rules scan the computer where the update will be installed.  

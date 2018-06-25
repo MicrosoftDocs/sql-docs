@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubewizard.datasourceselection.f1"
 ms.assetid: a79cd87f-2a55-4020-90f7-9ee627379588

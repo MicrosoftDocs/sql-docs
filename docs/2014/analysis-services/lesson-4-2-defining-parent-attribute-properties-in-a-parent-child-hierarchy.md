@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: craigg
 ---
 # Defining Parent Attribute Properties in a Parent-Child Hierarchy
   A parent-child hierarchy is a hierarchy in a dimension that is based on two table columns. Together, these columns define the hierarchical relationships among the members of the dimension. The first column, called the *member key column*, identifies each dimension member. The other column, called the *parent column*, identifies the parent of each dimension member. The **NamingTemplate** property of a parent attribute determines the name of each level in the parent-child hierarchy, and the **MembersWithData** property determines whether data for parent members should be displayed.  

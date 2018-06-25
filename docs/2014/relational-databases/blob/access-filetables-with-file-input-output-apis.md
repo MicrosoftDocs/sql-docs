@@ -5,17 +5,16 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], accessing files with file APIs"
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Access FileTables with File Input-Output APIs
   Describes how file system I/O works on a FileTable.  

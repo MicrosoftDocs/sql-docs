@@ -16,7 +16,7 @@ ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using the WebForms ReportViewer Control
   To view reports deployed to a report server or reports that exist on the local file system, you can use the WebForms ReportViewer control to render them in a Web application.  

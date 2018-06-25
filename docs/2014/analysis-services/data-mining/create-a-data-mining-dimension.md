@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], dimensions"
 ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a

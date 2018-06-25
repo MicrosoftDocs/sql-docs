@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlmobileconnection.connection.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Compact Edition Connection Manager Editor (Connection Page)
   Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database.  

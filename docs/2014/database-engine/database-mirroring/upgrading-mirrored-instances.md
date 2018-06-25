@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading SQL Server, rolling upgrade of mirrored databases"
   - "database mirroring [SQL Server], upgrading system"
@@ -17,7 +17,7 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Minimize Downtime for Mirrored Databases When Upgrading Server Instances
   When upgrading server instances to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can reduce downtime for each mirrored database to only a single manual failover by performing a sequential upgrade, known as a *rolling upgrade*. A rolling upgrade is a multi-stage process that in its simplest form involves upgrading the server instance that is currently acting as the mirror server in a mirroring session, then manually failing over the mirrored database, upgrading the former principal server, and resuming mirroring. In practice, the exact process will depend on the operating mode and the number and layout of mirroring session running on the server instances that you are upgrading.  

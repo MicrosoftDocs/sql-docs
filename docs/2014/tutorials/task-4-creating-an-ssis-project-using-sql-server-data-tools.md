@@ -10,12 +10,12 @@ ms.technology:
   - "integration-services"
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 4: Creating an SSIS Project using SQL Server Data Tools
   In this task, you create an SSIS project by using **SQL Server Data Tools** to automate cleansing and matching supplier data.  

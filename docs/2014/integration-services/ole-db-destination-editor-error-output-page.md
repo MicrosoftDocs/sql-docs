@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbdestadapter.errorhandling.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # OLE DB Destination Editor (Error Output Page)
   Use the **Error Output** page of the **OLE DB Destination Editor** dialog box to specify error handling options.  

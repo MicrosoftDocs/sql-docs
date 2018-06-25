@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deployment of Projects and Packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports two deployment models, the project deployment model and the package deployment model. The project deployment model enables you to deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  

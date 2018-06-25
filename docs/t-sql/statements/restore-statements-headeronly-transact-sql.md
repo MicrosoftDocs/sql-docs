@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "backup header information [SQL Server]"
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 caps.latest.revision: 95
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

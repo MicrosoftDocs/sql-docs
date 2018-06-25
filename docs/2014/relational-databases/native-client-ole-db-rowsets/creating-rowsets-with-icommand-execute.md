@@ -19,7 +19,7 @@ ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Creating Rowsets with ICommand::Execute
   For rowsets created by using the **ICommand::Execute** method, the properties that you want in the resulting rowset can constrain the text of the command. This is especially critical for consumers that support dynamic command text.  

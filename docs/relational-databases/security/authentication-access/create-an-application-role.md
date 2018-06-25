@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "application roles [SQL Server], creating"
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

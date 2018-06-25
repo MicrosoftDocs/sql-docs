@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.lookuptransformation.advanced.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lookup Transformation Editor (Advanced Page)
   Use the **Advanced** page of the **Lookup Transformation Editor** dialog box to configure partial caching and to modify the SQL statement for the Lookup transformation.  

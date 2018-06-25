@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.slicesourcecube.f1"
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec

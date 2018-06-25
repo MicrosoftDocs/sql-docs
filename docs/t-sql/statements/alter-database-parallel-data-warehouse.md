@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---

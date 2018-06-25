@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], designing"
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09

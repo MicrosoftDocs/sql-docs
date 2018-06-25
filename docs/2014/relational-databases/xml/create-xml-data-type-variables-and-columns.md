@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xml data type [SQL Server], variables"
   - "xml data type [SQL Server], columns"
@@ -16,7 +16,7 @@ ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create XML Data Type Variables and Columns
   The `xml` data type is a built-in data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is somewhat similar to other built-in types such as `int` and `varchar`. As with other built-in types, you can use the `xml` data type as a column type when you create a table as a variable type, a parameter type, a function-return type, or in [CAST and CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  

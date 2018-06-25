@@ -26,7 +26,7 @@ ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Fetching Result Data
   An ODBC application has three options for fetching result data.  

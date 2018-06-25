@@ -16,7 +16,7 @@ ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Assembly Properties (General Page)
   Use this page to view or modify properties for the assembly.  

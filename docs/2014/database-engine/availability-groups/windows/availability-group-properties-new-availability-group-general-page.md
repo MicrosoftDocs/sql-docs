@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.availabilitygroupproperties.general.f1"
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: 14
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Availability Group Properties and New Availability Group (General Page)
   This topic applies to the **General** tab of both the **New Availability Group** dialog box and the **Availability Group Properties** dialog box.  The **New Availability Group** dialog box enables you to create a new availability group without using the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. The **Availability Group Properties** dialog box enables you to view and alter the configuration of an existing availability group.  

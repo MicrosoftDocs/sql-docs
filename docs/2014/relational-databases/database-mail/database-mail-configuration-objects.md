@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.sqlimail.manageexistingaccount.f1"
   - "sql12.swb.sqlimail.addaccounttoprofile.f1"
@@ -35,7 +35,7 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Mail Configuration Objects
   Database Mail has two configuration objects: The database configuration objects provide a way for you to configure the settings that Database mail should use when sending an email from your database application or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

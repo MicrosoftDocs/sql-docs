@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.agdashboard.agp3autofailover.issues.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 caps.latest.revision: 10
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Availability group is not ready for automatic failover
     

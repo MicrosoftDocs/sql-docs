@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 28
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # PowerPivot for SharePoint 2013 Installation
   The procedures in this topic guide you through a single server installation of a [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in SharePoint deployment mode. The steps include running the SQL Server installation wizard as well as configuration tasks that use SharePoint 2013 Central Administration.  

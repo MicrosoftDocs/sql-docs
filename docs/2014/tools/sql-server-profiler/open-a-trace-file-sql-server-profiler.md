@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "opening trace files"
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open a Trace File (SQL Server Profiler)
   This topic describes how to open a trace file by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [SQL Server Agent]"
   - "security [SQL Server Agent], enabling alert job step tokens"
@@ -19,7 +19,7 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use Tokens in Job Steps
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent allows you to use tokens in [!INCLUDE[tsql](../../includes/tsql-md.md)] job step scripts. Using tokens when you write your job steps gives you the same flexibility that variables provide when you write software programs. After you insert a token in a job step script, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent replaces the token at run time, before the job step is executed by the [!INCLUDE[tsql](../../includes/tsql-md.md)] subsystem.  

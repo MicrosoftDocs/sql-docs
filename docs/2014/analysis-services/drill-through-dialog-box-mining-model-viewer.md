@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.drillthrough.f1"
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10

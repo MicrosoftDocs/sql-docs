@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 2cc9f6ff-de36-4e94-bd04-59f5c45c4911
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove calls to the deprecated DBCC CONCURRENCYVIOLATION command
   Upgrade Advisor detected the use of the DBCC CONCURRENCYVIOLATION command. This command is no longer available. Executing this command returns error 2526.  

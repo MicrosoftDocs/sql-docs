@@ -20,7 +20,7 @@ ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 caps.latest.revision: 45
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # CLR User-Defined Functions
   User-defined functions are routines that can take parameters, perform calculations or other actions, and return a result. Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], you can write user-defined functions in any [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework programming language, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  

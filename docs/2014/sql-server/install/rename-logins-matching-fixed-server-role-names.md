@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined login names [SQL Server]"
   - "fixed server roles [SQL Server]"
@@ -18,7 +18,7 @@ ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Rename logins matching fixed server role names
   Upgrade Advisor detected one or more user-defined login names that match the names of fixed server roles. Fixed server role names are reserved. Rename the login before you upgrade.  

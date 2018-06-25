@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.datatypechangerequired"
   - "vdtsql.chm:65545"
@@ -16,7 +16,7 @@ ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Type Change Required Dialog Box (Visual Database Tools)
   Appears when you change the data type, length, scale, precision, or collation of a column that participates in a relationship.  

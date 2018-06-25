@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-stored-procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "removing stored procedures"
   - "stored procedures [SQL Server], deleting"
@@ -17,7 +17,7 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete a Stored Procedure
     

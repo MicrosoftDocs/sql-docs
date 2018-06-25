@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [XML in SQL Server]"
   - "XML [SQL Server], ADO"
@@ -28,7 +28,7 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 caps.latest.revision: 26
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use XML Data in Applications
   This topic describes the options that are available to you for working with the `xml` data type in your application. The topic includes information about the following:  

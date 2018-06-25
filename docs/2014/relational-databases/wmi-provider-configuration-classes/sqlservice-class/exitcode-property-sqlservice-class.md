@@ -22,7 +22,7 @@ ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ExitCode Property (SqlService Class)
   Gets or sets the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 error code that defines problems encountered when starting and stopping the service.  

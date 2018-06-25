@@ -10,12 +10,12 @@ ms.technology:
   - "integration-services"
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 6: Importing Values from the Cleanse Supplier List Project
   In this task, you import the data quality knowledge gathered during the cleansing process. See [Importing Cleansing Project Values into a Domain](http://msdn.microsoft.com/library/hh479581.aspx) topic for more details. You also export the knowledge base into a DQS file before publishing the updated **Suppliers** knowledge base.  

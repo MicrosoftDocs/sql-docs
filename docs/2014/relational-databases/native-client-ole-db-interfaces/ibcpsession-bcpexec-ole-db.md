@@ -20,7 +20,7 @@ ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # IBCPSession::BCPExec (OLE DB)
   Performs the bulk copy operation.  

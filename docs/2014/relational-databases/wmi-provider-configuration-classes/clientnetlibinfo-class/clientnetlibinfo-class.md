@@ -22,7 +22,7 @@ ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ClientNetLibInfo Class
   The [ClientNetLibInfo Class](clientnetlibinfo-class.md) represents information about the client network library.  

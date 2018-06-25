@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.mds.configmanager.webconfigpg.f1"
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
   Use the **Web Configuration** page to create a new website or to create a new website or web application. After you select a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, you can specify the application's [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database and enable Data Quality Services.  

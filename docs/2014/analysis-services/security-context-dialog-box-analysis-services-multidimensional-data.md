@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.browsecube.securitycontext.f1"
 ms.assetid: 238a4a4b-84bd-4b3d-9f02-f3adf57fa3af

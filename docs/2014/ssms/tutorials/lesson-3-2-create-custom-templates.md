@@ -5,19 +5,18 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tql"
   - "templates [Transact-SQL], creating"
   - "templates [Transact-SQL]"
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Create Custom Templates
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] comes with templates for many common tasks, but the real power of templates lies in the ability to create a custom template for a complex script that you must create frequently. In this practice you will create a simple script with few parameters, but templates are useful for long, repetitive scripts, too.  

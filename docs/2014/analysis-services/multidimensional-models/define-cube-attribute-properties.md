@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cubes [Analysis Services], defining"
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99

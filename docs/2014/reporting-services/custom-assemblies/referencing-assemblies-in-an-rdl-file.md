@@ -20,7 +20,7 @@ ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 caps.latest.revision: 35
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Referencing Assemblies in an RDL File
   To support the use of custom code assemblies in report definition files, two Report Definition Language (RDL) elements are included in the RDL specification: the **CodeModules** element and the **Classes** element.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.setdimensionwritebackcapability.selectdimension.f1"
 ms.assetid: 85ed1433-81f9-468a-a14d-60c6f82bee76

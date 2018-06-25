@@ -22,7 +22,7 @@ ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # PropertyNumValue Property (SqlServiceAdvancedProperty Class)
   Gets the numeric value of the advanced property.  

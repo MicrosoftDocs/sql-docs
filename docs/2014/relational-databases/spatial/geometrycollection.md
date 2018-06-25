@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "GeomCollection geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
@@ -16,7 +16,7 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # GeometryCollection
   A `GeometryCollection` is a collection of zero or more `geometry` or `geography` instances. A `GeometryCollection` can be empty.  

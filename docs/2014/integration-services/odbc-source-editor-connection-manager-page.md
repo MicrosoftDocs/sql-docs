@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcsource.connection.f1"
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # ODBC Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **ODBC Source Editor** dialog box to select the ODBC connection manager for the source. This page also lets you select a table or view from the database.  

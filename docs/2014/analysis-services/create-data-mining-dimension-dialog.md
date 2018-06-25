@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeldesigner.createdmdimension.f1"
 ms.assetid: a6ed550c-9fae-453d-948a-b3a1f4dbdffa

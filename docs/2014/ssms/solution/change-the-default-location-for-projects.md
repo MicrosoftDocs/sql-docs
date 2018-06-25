@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], default locations"
   - "default project locations"
@@ -16,7 +16,7 @@ ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change the Default Location for Projects
   The default location for files and projects is the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projects folder in your My Documents folder.  

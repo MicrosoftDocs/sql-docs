@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"
@@ -19,7 +19,7 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 caps.latest.revision: 119
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ---
 # Overview of AlwaysOn Availability Groups (SQL Server)
   This topic introduces the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] concepts that are central for configuring and managing one or more availability groups in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For a summary of the benefits offered by availability groups and an overview of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] terminology, see [AlwaysOn Availability Groups &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).  

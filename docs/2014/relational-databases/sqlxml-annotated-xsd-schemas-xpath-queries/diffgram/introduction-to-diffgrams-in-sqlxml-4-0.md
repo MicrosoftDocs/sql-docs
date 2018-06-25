@@ -17,7 +17,7 @@ ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Introduction to DiffGrams in SQLXML 4.0
   This topic provides a brief introduction to DiffGrams.  

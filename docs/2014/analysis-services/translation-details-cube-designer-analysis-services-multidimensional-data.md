@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.translations.translationspane.translationdetails.f1"
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975

@@ -14,7 +14,7 @@ ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
     

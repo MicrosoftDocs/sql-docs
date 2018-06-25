@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "maximum file size for traces"
   - "size [SQL Server], trace files"
@@ -16,7 +16,7 @@ ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set a Maximum File Size for a Trace File (SQL Server Profiler)
   Use the following procedure to set the maximum file size for a trace file.  

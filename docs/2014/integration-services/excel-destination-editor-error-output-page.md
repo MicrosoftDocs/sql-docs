@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.exceldestadapter.erroroutput.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Excel Destination Editor (Error Output Page)
   Use the **Advanced** page of the **Excel Destination Editor** dialog box to specify options for error handling.  

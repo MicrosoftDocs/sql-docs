@@ -19,7 +19,7 @@ ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Accessing SQLXML Functionality in the .NET Environment
   This example shows:  

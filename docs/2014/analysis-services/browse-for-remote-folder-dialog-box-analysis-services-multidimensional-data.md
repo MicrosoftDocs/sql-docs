@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.browseforremotepartition.f1"
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7

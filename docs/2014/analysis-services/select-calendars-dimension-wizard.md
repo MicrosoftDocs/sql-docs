@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensionwizard.serverSpecialCalendars.f1"
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af

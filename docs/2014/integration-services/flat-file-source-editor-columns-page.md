@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.flatfilesourceadapter.columns.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Flat File Source Editor (Columns Page)
   Use the **Columns** node of the **Flat File Source Editor** dialog box to map an output column to each external (source) column.  

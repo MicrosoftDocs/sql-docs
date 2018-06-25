@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "diagrams [SQL Server], deleting"
   - "deleting database diagrams"
@@ -18,7 +18,7 @@ ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete a Database Diagram (Visual Database Tools)
   When you no longer need a database diagram, you can delete it.  

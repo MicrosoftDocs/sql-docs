@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "installation progress, Setup"
 helpviewer_keywords: 
@@ -18,7 +18,7 @@ ms.assetid: 326f675a-bead-48d3-9088-539e9f9c3fc9
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Installation Progress
   Use the **Installation Progress** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to monitor the status of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  

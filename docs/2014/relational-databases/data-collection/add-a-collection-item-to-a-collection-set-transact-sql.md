@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "collection items [SQL Server]"
   - "collection sets [SQL Server], adding items"
@@ -16,7 +16,7 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add a Collection Item to a Collection Set (Transact-SQL)
   You can add a collection item to an existing collection set using the stored procedures that are provided with the data collector.  

@@ -15,7 +15,7 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Developer Reference for SQL Server 2014
   The following features and technologies allow you to develop applications that access data in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  

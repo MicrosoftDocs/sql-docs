@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.registerserver.general.analysisservices.f1"
 ms.assetid: ca6aed42-8940-4f41-beb7-619e084cd850
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # New or Edit Server Registration (General Tab) (Analysis Services - Multidimensional Data)
   Use this tab to specify options when registering an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

@@ -8,10 +8,10 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Collation of User-defined Databases to Match Those of the master and model Databases
 See [Set the Collation of User-defined Databases to Match Those of the master and model Databases](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md).

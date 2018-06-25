@@ -22,7 +22,7 @@ ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Dependencies Property (SqlService Class)
   Gets a list of services that are dependent on the referenced service.  

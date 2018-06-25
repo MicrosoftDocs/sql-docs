@@ -18,7 +18,7 @@ ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQLConfigDataSource
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific keyword/value pairs for data source configuration attribute strings.  

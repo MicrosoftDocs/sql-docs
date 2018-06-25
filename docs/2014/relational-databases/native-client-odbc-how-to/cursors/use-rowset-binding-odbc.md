@@ -16,7 +16,7 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use Rowset Binding (ODBC)
     

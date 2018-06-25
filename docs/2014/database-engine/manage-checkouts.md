@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "source controls [SQL Server Management Studio], checkouts"
   - "checkouts [SQL Server Management Studio]"
@@ -17,7 +17,7 @@ ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage Checkouts
   After a file has been added to source control, you must check out the file before you can modify it. When you check a file out of source control, the source control provider creates a copy of the latest version on your local disk and removes the read-only attribute of the file. In some circumstances you might need to edit a file without checking out the file. For more information about editing a file without checking the file out, see [Edit Checked-In Files](../../2014/database-engine/edit-checked-in-files.md).  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server], analysis progress status"
   - "analyzing system [Upgrade Advisor], progress information"
@@ -20,7 +20,7 @@ ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Upgrade Advisor Progress
   Upgrade Advisor analysis starts with a dedicated analyzer that performs an analysis of each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component that you selected. As components are analyzed, progress is reported in the **Progress** dialog box.  

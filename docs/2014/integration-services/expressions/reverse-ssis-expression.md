@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "REVERSE function"
   - "reverse character expressions"
@@ -16,7 +16,7 @@ ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # REVERSE (SSIS Expression)
   Returns a character expression in reverse order.  

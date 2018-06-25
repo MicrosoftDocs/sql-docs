@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.configdbmsecurwiz.inclwitness.f1"
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Include Witness Server (Configure Database Mirroring Security Wizard)
   Use this page to specify whether you want to include a witness server in this security configuration for database mirroring.  

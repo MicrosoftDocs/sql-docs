@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.choosetableforinsertfrom"
   - "vdtsql.chm:69642"
@@ -16,7 +16,7 @@ ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Choose Target Table for Insert Results Dialog Box (Visual Database Tools)
   Allows you to specify the table to which rows of data will be added as the result of an INSERT RESULTS query. This dialog box appears when you start an INSERT RESULTS query.  

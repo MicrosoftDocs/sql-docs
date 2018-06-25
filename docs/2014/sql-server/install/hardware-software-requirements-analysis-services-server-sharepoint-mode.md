@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: fb86ca0a-518c-4c61-ae78-7680c57fae1f
 caps.latest.revision: 17
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Hardware and Software Requirements for Analysis Services Server in SharePoint Mode (SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] supports both SharePoint 2010 and SharePoint 2013. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 runs outside the SharePoint farm though it can be installed on SharePoint servers. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 runs on application servers in a SharePoint 2010 farm and uses SharePoint features and infrastructure to support server operations. To install [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] for either version of SharePoint use the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation wizard. Following the installation, complete the following:  

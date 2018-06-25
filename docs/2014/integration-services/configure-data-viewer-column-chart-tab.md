@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.columnchart.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Data Viewer (Column Chart Tab)
   Use the **Column Chart** tab of the **Configure Data Viewer** dialog box to specify a column to display as bars in a chart. The number of bars shows the number of discrete data values in the column, and the height of the bar shows the number of instances of each value. The chart reflects the contents of one buffer only.  

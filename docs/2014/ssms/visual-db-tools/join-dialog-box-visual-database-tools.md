@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.ppg.joinline"
   - "vdtsql.chm:69638"
@@ -16,7 +16,7 @@ ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Join Dialog Box (Visual Database Tools)
   Use this dialog box to specify options for joining tables. To access this dialog, in the **Design** pane select a join line. Then in the **Properties** window click **Join Condition And Type**, and click the ellipses **(…)** that appear to the right of the property.  

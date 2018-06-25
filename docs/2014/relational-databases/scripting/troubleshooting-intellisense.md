@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "unavailable options [IntelliSense]"
   - "IntelliSense [SQL Server], troubleshooting"
@@ -18,7 +18,7 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 caps.latest.revision: 40
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Troubleshooting IntelliSense (SQL Server Management Studio)
   There are certain cases when the IntelliSense options might not work as you expect.  

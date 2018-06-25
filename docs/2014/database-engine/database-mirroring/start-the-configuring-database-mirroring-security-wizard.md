@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], security"
   - "Configuring Database Mirroring Security Wizard"
@@ -16,7 +16,7 @@ ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Start the Configuring Database Mirroring Security Wizard (SQL Server Management Studio)
   The Configure Database Mirroring Security Wizard can be used to initially configure security settings at all or some server instances involved in mirroring. This wizard works in conjunction with the **Mirroring** page of the **Database Properties** dialog box.  

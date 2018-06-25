@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.copymaptransformation.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Copy Column Transformation Editor
   Use the **Copy Column Transformation Editor** dialog box to select columns to copy and to assign names for the new output columns.  

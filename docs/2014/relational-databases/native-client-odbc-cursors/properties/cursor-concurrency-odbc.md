@@ -18,7 +18,7 @@ ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Cursor Concurrency (ODBC)
   Cursor operations, like cursor types, are affected by the concurrency options set by the application. Concurrency options are set using the SQL_ATTR_CONCURRENCY option of [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). The concurrency types are:  

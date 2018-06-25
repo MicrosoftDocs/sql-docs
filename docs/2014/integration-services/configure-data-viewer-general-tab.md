@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.general.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Data Viewer (General Tab)
   A data viewer displays the data as it moves through the path that connects two data flow components during package execution.  

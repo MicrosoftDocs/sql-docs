@@ -22,7 +22,7 @@ ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Version Property (ClientNetLibInfo Class)
   Gets the version of the client network library file.  

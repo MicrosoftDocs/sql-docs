@@ -22,7 +22,7 @@ ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # RemoveCertificate Method (SInstance Class)
   Removes the current security certificate from the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

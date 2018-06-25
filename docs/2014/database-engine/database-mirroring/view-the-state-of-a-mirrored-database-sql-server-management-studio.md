@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "states [SQL Server], database mirroring"
   - "database mirroring [SQL Server], states"
@@ -16,7 +16,7 @@ ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View the State of a Mirrored Database (SQL Server Management Studio)
   During a database mirroring session, you can view the status on the **Mirroring** page of the **Database Properties** dialog box.  

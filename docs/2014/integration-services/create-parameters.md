@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.paramterwindow.f1"
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99

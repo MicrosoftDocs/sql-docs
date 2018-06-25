@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "readme [Upgrade Advisor]"
 ms.assetid: 64205466-6d37-49d2-bac2-d3368c1210a1

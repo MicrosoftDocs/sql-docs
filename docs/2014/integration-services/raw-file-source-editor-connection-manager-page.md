@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.rawfilesourceconnectionmanager.f1"
 ms.assetid: ea79c73d-37fc-44fd-bc6e-bcefc23235c9

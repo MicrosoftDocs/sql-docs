@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.selectcaselevelcolumn.f1"
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.SSBQUEUEPROPERTIES.GENERAL.F1"
   - "SQL12.SWB.SSBREMSVCBINDPROPERTIES.GENERAL.F1"

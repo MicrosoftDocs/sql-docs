@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.scaleoutdeployment.F1"
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c

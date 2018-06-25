@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [XML in SQL Server], null default value"
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c

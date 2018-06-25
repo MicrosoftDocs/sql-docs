@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FINDSTRING function"
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d

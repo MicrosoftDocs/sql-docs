@@ -6,7 +6,7 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sending feedback to Microsoft"
   - "errors [SQL Server], feedback reporting"

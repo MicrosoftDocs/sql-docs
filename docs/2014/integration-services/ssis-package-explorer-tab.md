@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.treeview.f1"
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf

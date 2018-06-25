@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], configuring"

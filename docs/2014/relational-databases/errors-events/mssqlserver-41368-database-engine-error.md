@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "41368 (Database Engine error)"
 ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842

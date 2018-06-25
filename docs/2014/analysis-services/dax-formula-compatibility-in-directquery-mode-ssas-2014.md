@@ -9,7 +9,7 @@ ms.technology:
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2014"
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd

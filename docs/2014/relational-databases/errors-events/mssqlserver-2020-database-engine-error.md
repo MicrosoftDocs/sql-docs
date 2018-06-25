@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "2020 (Database Engine error)"
 ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081

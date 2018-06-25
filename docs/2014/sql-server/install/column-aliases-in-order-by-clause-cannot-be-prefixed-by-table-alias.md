@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "aliases [SQL Server], columns"
 ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2

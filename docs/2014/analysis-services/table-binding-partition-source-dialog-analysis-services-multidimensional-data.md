@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.partitions.partitiontableselection.f1"
 ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1

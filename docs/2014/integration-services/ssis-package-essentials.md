@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "package requirements"
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3

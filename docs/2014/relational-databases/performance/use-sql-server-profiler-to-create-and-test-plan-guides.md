@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-plan-guides"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "checking plan guides"
   - "plan guides [SQL Server], testing"

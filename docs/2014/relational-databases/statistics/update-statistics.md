@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-statistics"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "updating statistics"
   - "statistics [SQL Server], updating"

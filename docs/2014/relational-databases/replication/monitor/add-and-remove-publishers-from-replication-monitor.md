@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Replication Monitor, adding and removing Publishers"
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3

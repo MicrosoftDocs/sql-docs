@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user interface reference [SQL Server]"
 ms.assetid: 183b5cdd-962e-41ca-8064-ea44f622c77d

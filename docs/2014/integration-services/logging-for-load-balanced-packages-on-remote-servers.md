@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], remote packages"
 ms.assetid: fd571567-b625-4f9a-8b7e-42c5c588b11b

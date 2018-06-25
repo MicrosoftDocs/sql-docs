@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deployment [Reporting Services]"
 ms.assetid: 699d24eb-7756-4b41-9294-ef1a94b2f267

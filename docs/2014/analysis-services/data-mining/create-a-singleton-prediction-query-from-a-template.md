@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "singleton query predictions [DMX]"
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6

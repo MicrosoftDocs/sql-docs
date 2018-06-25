@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xp_sqlagent_proxy_account"
 ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 caps.latest.revision: 7
 author: "craigg-msft"

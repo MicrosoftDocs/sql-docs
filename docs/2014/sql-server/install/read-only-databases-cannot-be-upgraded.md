@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database cannot be upgraded"
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.publicationinfo.tracertokens.f1"
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f

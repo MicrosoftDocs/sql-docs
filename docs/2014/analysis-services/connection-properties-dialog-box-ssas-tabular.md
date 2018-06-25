@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.ssmsimbi.ConnectionProperties.F1"
 ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54

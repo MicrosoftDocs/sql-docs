@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "INFORMATION_SCHEMA.SCHEMATA view"
 ms.assetid: 4337b643-910d-47d7-bea8-f4052066b9a2

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "oraProp"
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7

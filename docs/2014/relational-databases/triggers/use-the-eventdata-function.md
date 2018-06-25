@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-ddl"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "EVENTDATA function"
   - "DDL triggers, EVENTDATA function"

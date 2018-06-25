@@ -10,7 +10,7 @@ ms.technology:
   - "integration-services"
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 caps.latest.revision: 6
 author: "douglaslMS"

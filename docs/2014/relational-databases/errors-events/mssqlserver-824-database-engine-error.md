@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "824 (Database Engine error)"
 ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "administrators [Master Data Services], changing"
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8

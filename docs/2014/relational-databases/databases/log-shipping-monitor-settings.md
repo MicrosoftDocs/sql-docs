@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.databaseproperties.logshipping.settings.monitor.f1"
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor [SQL Server], tutorials"
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb

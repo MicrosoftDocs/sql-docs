@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryResults.AnalysisServer.AnalysisServicesResulstsGeneral"
 ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sourceassistant.f1"
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3

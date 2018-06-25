@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.balanceddatadistributor.f1"
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10

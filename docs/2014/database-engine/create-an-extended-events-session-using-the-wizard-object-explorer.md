@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Sql12.ssms.XeWizard.Summary.f1"
   - "Sql12.ssms.XeWizard.SetSessionProperties.f1"

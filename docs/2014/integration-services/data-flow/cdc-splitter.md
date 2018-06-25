@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.cdcsplitter.f1"
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2

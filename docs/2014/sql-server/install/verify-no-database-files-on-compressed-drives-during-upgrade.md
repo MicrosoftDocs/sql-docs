@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compressed drives [SQL Server]"
 ms.assetid: 63be6853-c54a-42b2-ae1a-db2175f1d28e

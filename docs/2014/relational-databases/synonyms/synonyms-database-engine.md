@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-synonyms"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

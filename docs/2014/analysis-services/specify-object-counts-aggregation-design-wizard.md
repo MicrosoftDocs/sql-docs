@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagedesignwizard.calculatingobjectcounts.f1"
 ms.assetid: 305d9d79-d1ab-4704-a7b5-3283842b3996

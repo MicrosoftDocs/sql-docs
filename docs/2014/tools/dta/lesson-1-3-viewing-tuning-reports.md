@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tuning reports [SQL Server]"
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c

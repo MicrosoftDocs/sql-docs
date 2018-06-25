@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.roleproperties.selectroll.f1"
   - "sql12.swb.databaseuser.permissions.user.f1--May use common.permissions"

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newsubwizard.agentnameagentsecurity.f1"
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e

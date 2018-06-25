@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tasks [Integration Services], properties"
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b

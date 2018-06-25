@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
 caps.latest.revision: 16
 author: "craigg-msft"

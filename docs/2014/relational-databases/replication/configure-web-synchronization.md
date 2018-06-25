@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1"
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.CLIENTAUTH.F1"

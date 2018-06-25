@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.encryptionkeypanel.F1"
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147

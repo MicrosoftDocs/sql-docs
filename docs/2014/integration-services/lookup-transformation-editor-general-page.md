@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.lookuptransformation.general.f1"
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb

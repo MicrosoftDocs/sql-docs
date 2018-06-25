@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Queries Events event category"
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13

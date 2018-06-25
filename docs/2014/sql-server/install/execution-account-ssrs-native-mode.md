@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.executionaccount.F1"
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82

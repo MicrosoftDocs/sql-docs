@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server], about Upgrade Advisor"
   - "SQL Server Upgrade Advisor, about Upgrade Advisor"

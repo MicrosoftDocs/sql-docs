@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Slowly Changing Dimension Wizard"
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "0xFFFF character [SQL Server]"
 ms.assetid: b2c9c8cf-9194-45e0-be6b-2d5ec52e8153

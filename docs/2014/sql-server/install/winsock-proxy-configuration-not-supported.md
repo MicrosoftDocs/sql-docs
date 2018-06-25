@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Winsock proxy configuration [SQL Server]"
 ms.assetid: abf71f7b-8bd7-49d2-92f7-9ddf72924d8c

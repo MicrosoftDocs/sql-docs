@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reserved keywords"
 ms.assetid: 4f23f7e4-7b4d-4e19-86c9-7527bb8b107d

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-transaction-log"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], about"
   - "databases [SQL Server], transaction logs"

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Sql12.dts.designer.odatasource.columns.f1"
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696

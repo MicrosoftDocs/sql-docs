@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-plan-guides"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "TEMPLATE plan guide"
   - "PARAMETERIZATION FORCED option"

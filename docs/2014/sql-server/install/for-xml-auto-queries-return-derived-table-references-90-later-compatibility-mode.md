@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML AUTO [SQL Server]"
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d

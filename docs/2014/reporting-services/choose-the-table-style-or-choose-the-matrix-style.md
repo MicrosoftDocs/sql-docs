@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptwizard.choosetablestyle.f1"
 ms.assetid: e0026583-5744-4863-afa2-6e1585f9e8f3

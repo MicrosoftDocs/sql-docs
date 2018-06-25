@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.replicationutilities.specifysnapshotfolder.f1"
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9

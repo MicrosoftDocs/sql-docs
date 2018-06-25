@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.editfilter.f1"
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14

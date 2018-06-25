@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "trace flags [SQL Server], behavior changes"
 ms.assetid: d739df96-2659-4383-8e10-194657632526

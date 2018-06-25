@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "32043 (Database Engine error)"
 ms.assetid: a0c48ae3-4c8c-419c-afb5-579fcefac01d

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.clustering.discrimination.f1"
 ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f

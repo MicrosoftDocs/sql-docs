@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "4064 (Database Engine error)"
 ms.assetid: 32112b90-0a2f-4834-a027-756811732be7

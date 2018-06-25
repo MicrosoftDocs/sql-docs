@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "variables [Integration Services], adding"
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e

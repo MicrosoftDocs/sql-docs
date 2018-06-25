@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcdest.errorhandling.f1"
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3

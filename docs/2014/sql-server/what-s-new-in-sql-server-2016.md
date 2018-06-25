@@ -13,7 +13,7 @@ ms.technology:
   - "replication"
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "new features [SQL Server]"
   - "SQL Server, what's new"

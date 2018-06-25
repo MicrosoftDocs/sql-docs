@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-synonyms"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.synonym.general.f1"
 helpviewer_keywords: 

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Publication Properties dialog box"
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58

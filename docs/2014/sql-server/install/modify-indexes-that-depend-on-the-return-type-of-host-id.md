@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "HOST_ID function"
 ms.assetid: 47b4a4ff-3ec8-430c-8bb7-779a36d0e134

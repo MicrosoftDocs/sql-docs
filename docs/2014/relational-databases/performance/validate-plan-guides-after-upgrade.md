@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-plan-guides"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "plan guides [SQL Server], validating after upgrade"
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522

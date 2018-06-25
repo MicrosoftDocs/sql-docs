@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.query.grid.f1"
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95

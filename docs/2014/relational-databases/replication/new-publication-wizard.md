@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dbpublishingwizard.choosestoredprocedures.f1"
   - "sql12.swb.dbpublishingwizard.selectoutputloc.f1"

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "5250 (Database Engine error)"
 ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dbmmonitor.databasemirroringhistory.f1"
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3

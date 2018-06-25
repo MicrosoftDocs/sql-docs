@@ -3,16 +3,14 @@ title: "Behavior Changes to Management Tools Features in SQL Server 2014 | Micro
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
+ms.technology: ssms
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 830ec9a5-68fd-4454-a935-4957abf8a052
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Behavior Changes to Management Tools Features in SQL Server 2014

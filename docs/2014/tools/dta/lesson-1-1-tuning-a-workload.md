@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "workloads [SQL Server], tuning"
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e

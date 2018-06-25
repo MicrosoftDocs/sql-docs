@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-data-compression"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Unicode data compression"
   - "compression [SQL Server], Unicode data"

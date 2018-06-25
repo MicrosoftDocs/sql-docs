@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.browseservers.network.f1"
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb

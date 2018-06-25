@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-views"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "indexed views [SQL Server], creating"
   - "clustered indexes, views"

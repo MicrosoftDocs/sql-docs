@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "cluster disk selection"
 ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6

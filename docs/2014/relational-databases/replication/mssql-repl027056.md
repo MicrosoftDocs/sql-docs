@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_REPL027056 error"
 ms.assetid: 92d62f3c-b8ae-482e-a348-2e9a8ee9786e

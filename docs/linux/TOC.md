@@ -90,10 +90,9 @@
 #### [Configure with shared disk](tutorial-sql-server-containers-kubernetes.md)
 #### [Configure with availability group](tutorial-sql-server-ag-kubernetes.md)
 ##### [Configure SQL Server specification (YAML)](sql-server-linux-kubernetes-spec.md)
-##### [Add or remove databases]()
-##### [Connect to replica]()
-##### [Manage pods]()
-##### [Rotate certificates]()
+##### [Configure SQL Server Kubernetes operator](sql-server-linux-kubernetes-operator.md)
+##### [Failover primary replica with Kubernetes](sql-server-linux-kubernetes-failover-job.md)
+##### [Rotate credentials specification](sql-server-linux-kubernetes-rotate-credentials.md)
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)

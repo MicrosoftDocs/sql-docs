@@ -2136,6 +2136,76 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/powershell/technical-reference-ssas.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/add-rolemember-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/backup-asdatabase-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/invoke-ascmd-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/invoke-processasdatabase.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/invoke-processcube-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/invoke-processdimension-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/invoke-processpartition-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/invoke-processtable-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/merge-partition-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/new-restorefolder-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/new-restorelocation-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/remove-rolemember-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/restore-asdatabase-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
             "source_path":"docs/tools/sql-server-profiler/run-sql-server-profiler.md",
             "redirect_url":"/sql/tools/sql-server-profiler/start-sql-server-profiler",
             "redirect_document_id":false

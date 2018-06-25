@@ -52,7 +52,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
  **bigint**  
   
 ## Remarks  
- If two or more rows tie for a rank, each tied rows receives the same rank. For example, if the two top salespeople have the same SalesYTD value, they are both ranked one. The salesperson with the next highest SalesYTD is ranked number three, because there are two rows that are ranked higher. Therefore, the RANK function does not always return consecutive integers.  
+ If two or more rows tie for a rank, each tied row receives the same rank. For example, if the two top salespeople have the same SalesYTD value, they are both ranked one. The salesperson with the next highest SalesYTD is ranked number three, because there are two rows that are ranked higher. Therefore, the RANK function does not always return consecutive integers.  
   
  The sort order that is used for the whole query determines the order in which the rows appear in a result set.  
   

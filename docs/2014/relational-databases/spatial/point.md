@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Point geometry subtype [SQL Server]"
   - "geometry data type [SQL Server], spatial data"

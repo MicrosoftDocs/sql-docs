@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "configmgr-client"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 caps.latest.revision: 5
 author: "craigg-msft"

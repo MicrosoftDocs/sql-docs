@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1"
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba

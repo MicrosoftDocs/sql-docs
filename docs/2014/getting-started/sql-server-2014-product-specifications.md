@@ -15,7 +15,7 @@ ms.technology:
   - "reporting-services-native"
   - "reporting-services-sharepoint"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server, product specifications"
   - "components [SQL Server], product specifications"

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.choosehowtoimpdata.f1"
 ms.assetid: 17dc6903-c239-46aa-a3b0-6e3156accacc

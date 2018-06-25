@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Uninstall options, verify"
 ms.assetid: a5f353fa-1bb4-495c-bf86-77cfa5bc6c78

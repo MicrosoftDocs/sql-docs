@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sys user names [SQL Server]"
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5

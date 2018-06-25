@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-udf"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CLR functions [SQL Server]"
   - "user-defined functions [SQL Server], CLR"

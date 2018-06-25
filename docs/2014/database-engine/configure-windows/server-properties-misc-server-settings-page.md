@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.serverproperties.miscserversettings.f1"
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551

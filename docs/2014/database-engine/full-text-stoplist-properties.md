@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftstoplistproperties.general.f1"
   - "sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1"

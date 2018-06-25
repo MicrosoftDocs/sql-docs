@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dbmmonitor.warningsandalerts.f1"
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DBCC commands [SQL Server]"
 ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d

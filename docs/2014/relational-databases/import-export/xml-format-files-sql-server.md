@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-bulk-import-export"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "format files [SQL Server], XML format files"
   - "bulk importing [SQL Server], format files"

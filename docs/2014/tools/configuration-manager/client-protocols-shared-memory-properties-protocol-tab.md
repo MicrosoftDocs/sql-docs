@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "configmgr-client"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "shared memory [SQL Server]"
   - "client protocols [SQL Server]"

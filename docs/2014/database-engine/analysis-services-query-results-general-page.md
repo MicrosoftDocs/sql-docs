@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.asquery.resultgeneral.f1"
 ms.assetid: 68e967fd-ae8d-4f02-bfb3-9ce301276b73

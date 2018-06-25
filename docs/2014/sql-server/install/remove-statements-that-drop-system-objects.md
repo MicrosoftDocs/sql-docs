@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "drop system objects [SQL Server]"
 ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newsubwizard.subscriptiontype.f1"
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587

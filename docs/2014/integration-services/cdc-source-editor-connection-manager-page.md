@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.cdcsource.connection.f1"
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8

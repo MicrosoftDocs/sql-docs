@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database IDs [SQL Server]"
 ms.assetid: e0826010-8aa4-4ed7-8d32-2bebfeff9a71

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [Integration Services], configuring packages to use"
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7

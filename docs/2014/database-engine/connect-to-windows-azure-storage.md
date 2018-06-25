@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.windowsazurestorage.connect.f1"
 ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0

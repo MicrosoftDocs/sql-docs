@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.registerdacwizard.registerdac.f1"
   - "sql12.swb.registerdacwizard.summary.f1"

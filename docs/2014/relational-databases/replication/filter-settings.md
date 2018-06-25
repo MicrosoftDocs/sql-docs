@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.filtersettings.f1"
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311

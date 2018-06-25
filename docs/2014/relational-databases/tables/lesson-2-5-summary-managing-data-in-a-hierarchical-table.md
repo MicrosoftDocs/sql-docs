@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "managing data in a table"
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692

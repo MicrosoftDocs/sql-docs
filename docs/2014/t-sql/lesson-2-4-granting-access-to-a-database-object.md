@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "granting access to database objects"
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b

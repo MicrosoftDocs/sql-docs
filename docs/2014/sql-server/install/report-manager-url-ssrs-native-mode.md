@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rsconfigtool.reportmanagervirtualdirectory.f1"
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78

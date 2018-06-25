@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "desCons"
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3

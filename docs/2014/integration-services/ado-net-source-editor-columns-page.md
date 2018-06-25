@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetsource.columns.f1"
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9

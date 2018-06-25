@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.sqleditors.editorcontextsettings"
   - "VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar"

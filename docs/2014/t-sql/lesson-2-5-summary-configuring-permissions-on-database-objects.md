@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "configuring permissions on databases"
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e

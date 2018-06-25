@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.deploymentwizard.f1"
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4

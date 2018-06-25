@@ -14,7 +14,7 @@ ms.technology:
   - "reporting-services-native"
   - "reporting-services-sharepoint"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 caps.latest.revision: 126
 author: "JennieHubbard"

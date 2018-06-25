@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-statistics"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.statistics.details.f1"
 helpviewer_keywords: 

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-notifications"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], metadata"
   - "status information [SQL Server], event notifications"

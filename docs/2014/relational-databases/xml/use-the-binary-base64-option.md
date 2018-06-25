@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "AUTO FOR XML mode, BINARY BASE64 option"
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dacwizards.validation.f1"
 ms.assetid: 422872b7-b0cd-466d-a6bf-2e2c8a2f8da5

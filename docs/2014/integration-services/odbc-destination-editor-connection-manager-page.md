@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcdest.connection.f1"
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d

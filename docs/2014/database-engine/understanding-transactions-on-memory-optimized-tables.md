@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 caps.latest.revision: 7
 author: "stevestein"

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.cacheconnection.f1"
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c

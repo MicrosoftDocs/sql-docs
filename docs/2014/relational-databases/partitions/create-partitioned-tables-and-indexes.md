@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.createpartition.partitionscheme.f1"
   - "sql12.swb.createpartition.selectoutput.f1"

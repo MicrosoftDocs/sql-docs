@@ -4,18 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
+ms.service: sql-data-warehouse
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
-caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

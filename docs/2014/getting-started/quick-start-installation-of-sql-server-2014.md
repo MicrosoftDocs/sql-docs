@@ -15,7 +15,7 @@ ms.technology:
   - "reporting-services-native"
   - "reporting-services-sharepoint"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "quick start installation [SQL Server]"
   - "installation [SQL Server]"

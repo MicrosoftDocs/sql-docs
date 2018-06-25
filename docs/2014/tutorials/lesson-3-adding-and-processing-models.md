@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: cc29927a-c368-4b8a-bbd0-af89a9f54dc9
 caps.latest.revision: 16
 author: "minewiskan"

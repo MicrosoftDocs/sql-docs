@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.selectpackages.f1"
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8

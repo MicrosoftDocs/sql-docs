@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 caps.latest.revision: 3
 author: "douglaslM"

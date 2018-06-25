@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.errorlog.configure.f1"
 ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.backuptourl.createcred.f1"
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-dml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "triggers [SQL Server], about triggers"
   - "DML triggers, about DML triggers"

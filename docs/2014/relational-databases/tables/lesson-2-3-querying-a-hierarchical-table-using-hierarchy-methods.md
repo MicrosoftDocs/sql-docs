@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "HierarchyID"
 ms.assetid: 3b4f7dae-65b5-4d8d-8641-87aba9aa692d

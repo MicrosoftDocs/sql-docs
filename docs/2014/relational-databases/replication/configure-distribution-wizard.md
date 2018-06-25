@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Configure Distribution Wizard"
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7

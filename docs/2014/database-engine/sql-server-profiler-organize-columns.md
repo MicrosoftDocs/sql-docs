@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.organize.columns.f1"
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790

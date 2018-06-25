@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [SQL Server replication], non-SQL Server Subscribers"
   - "Oracle Subscribers [SQL Server replication]"

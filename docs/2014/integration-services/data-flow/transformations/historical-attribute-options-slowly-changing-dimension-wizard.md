@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.loaddimwizard.histattriboption.f1"
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e

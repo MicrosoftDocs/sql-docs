@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e49d0919-c2ff-44ae-8ca7-1f3084720eba
 caps.latest.revision: 3
 author: "HeidiSteen"

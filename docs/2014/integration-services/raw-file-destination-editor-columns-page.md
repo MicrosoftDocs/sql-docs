@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.rawfiledestinationcolumns.f1"
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9

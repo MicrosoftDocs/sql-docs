@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-plan-guides"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.designer.newplanguide.f1"
 helpviewer_keywords: 

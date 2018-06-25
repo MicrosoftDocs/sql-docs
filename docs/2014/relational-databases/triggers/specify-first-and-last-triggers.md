@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-dml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "first triggers [SQL Server]"
   - "last triggers"

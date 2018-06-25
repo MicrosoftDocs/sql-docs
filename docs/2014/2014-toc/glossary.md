@@ -17,7 +17,7 @@ ms.technology:
   - "reporting-services-native"
   - "reporting-services-sharepoint"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "definitions [SQL Server]"
   - "glossary [SQL Server]"

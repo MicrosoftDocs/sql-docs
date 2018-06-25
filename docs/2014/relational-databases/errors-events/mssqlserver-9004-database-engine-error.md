@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "9004 (Database Engine error)"
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16

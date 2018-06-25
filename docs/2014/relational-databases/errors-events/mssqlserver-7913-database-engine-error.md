@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "7913 (Database Engine error)"
 ms.assetid: 9d8ad456-b1a2-4f79-a252-657fbec9ad9b

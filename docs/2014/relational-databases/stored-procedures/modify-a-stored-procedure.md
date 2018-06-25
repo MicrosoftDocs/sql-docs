@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-stored-procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying stored procedures"
   - "editing stored procedures"

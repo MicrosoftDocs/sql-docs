@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.ssmsimbi.duplicateroles.f1"
 ms.assetid: 28658862-dce2-459f-8868-29ee31c879bb

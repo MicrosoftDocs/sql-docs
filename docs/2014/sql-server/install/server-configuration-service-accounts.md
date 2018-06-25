@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "service account configuration, SQL Server"
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f

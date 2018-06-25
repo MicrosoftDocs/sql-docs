@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dbdeployment.settings.f1"
   - "sql12.swb.dbdeployment.progress.f1"

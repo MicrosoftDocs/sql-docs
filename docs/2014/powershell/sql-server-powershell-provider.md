@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "PowerShell [SQL Server], provider"
   - "PowerShell [SQL Server], SQL Server PowerShell Provider"

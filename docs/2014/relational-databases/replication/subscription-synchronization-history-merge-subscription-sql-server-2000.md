@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.subscription.downlevelsynchhistory.f1"
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.restoreencryptionkey.F1"
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c

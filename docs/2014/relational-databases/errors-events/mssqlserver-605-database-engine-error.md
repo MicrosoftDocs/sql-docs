@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "605 (Database Engine error)"
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24

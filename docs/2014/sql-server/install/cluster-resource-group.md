@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Cluster Resource Group"
 ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540

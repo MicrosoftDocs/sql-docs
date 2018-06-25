@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configureerroroutput.f1"
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9

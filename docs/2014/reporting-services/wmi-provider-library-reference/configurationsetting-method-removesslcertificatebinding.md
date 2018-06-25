@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RemoveSSLCertificateBindings method"
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481

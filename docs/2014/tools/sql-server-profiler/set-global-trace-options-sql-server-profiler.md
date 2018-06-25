@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "global trace options [SQL Server]"
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9

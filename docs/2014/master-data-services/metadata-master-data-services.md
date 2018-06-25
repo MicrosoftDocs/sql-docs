@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined metadata [Master Data Services], about user-defined metadata"
   - "metadata [Master Data Services], about metadata"

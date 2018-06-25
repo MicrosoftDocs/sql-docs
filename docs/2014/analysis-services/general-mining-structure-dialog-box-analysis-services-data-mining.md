@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.miningstructuredialog.errorconfig.f1"
 ms.assetid: 2f7cedb6-9a83-49c4-9cc6-883d4f147a68

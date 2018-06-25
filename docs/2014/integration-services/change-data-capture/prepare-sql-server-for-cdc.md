@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "prepSqlSrv"
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2

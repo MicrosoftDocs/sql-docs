@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
   - "SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"

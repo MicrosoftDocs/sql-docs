@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SSMS.XEDISPLAY.GROUPING.F1"
   - "SQL12.SSMS.XEDISPLAY.AGGREGATION.F1"

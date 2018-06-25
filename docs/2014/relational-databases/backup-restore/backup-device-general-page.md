@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.backupdevice.general.f1"
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac

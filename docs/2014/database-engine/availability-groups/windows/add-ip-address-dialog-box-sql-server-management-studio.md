@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.availabilitygrouplistener.addipaddress.f1"
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c

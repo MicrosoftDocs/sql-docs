@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-udf"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "built-in functions [SQL Server]"
   - "nondeterministic functions"

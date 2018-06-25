@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "WITH ROWS in CREATE STATISTICS statement"
 ms.assetid: 197b2ecf-a1a3-4a3a-a523-a0ee919c1dde

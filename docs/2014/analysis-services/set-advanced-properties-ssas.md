@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.setadvancedprop.f1"
 ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c

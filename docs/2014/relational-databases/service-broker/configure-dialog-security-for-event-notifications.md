@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-notifications"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], security"
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1

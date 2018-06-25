@@ -14,7 +14,7 @@ ms.technology:
   - "replication"
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 73ab6859-9605-419e-bd78-798f68cc66f8
 caps.latest.revision: 31
 author: "JennieHubbard"

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "examining the current structure of the employee"
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6

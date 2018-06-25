@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SERVERPROPERTY function"
 ms.assetid: 833a2fc9-b480-4697-aa7b-9677e78ee0b4

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], altering"
   - "FileTables [SQL Server], dropping"

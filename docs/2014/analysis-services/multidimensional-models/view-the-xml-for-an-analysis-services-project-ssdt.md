@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [Analysis Services], viewing XML"
 ms.assetid: dd1a4bc6-57b5-47df-8619-09f921aa6351

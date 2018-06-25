@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "synchronous event counter target [SQL Server extended events]"
   - "targets [SQL Server extended events], synchronous event counter target"

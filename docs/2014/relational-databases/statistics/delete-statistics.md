@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-statistics"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "statistics [SQL Server], deleting"
   - "deleting statistics"

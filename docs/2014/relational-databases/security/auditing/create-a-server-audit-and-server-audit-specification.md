@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.SQLAUDIT.FILTER.F1"
   - "sql12.swb.sqlaudit.srvaudit.general.f1"

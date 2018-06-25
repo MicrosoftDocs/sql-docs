@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetdest.connection.f1"
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Manager [Reporting Services], default delivery extension"
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 33fa3b75-3257-44e1-919e-3d2ff12accbc
 caps.latest.revision: 7
 author: "JennieHubbard"

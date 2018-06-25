@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "signing policies [Integration Services]"
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a

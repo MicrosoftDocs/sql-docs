@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "views [XML in SQL Server]"
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], enabling"
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc

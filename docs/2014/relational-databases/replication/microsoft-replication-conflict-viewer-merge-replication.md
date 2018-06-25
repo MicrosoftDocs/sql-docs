@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.replconflictviewer.cvmerge.f1"
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923

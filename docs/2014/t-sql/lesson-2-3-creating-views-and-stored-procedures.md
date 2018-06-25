@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "creating views and stored procedures"
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8

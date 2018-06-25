@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.managedbackup.configure.f1"
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091

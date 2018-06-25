@@ -6,7 +6,7 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a3b70885-47d7-4bd0-b28b-5a44947ae83c
 caps.latest.revision: 4
 author: "JennieHubbard"

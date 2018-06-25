@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Options pages [SQL Server Management Studio]"
 ms.assetid: fad98caa-8a29-4b88-8464-f60a5c4fc00e

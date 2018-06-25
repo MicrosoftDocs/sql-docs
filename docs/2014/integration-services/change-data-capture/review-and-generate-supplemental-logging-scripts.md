@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "scripts"
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7

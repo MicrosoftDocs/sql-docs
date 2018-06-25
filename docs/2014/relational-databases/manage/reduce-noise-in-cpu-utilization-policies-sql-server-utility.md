@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.SWB.UE.ReduceNoise.F1"
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e

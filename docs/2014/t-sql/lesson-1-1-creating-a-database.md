@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorial creating a database"
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae

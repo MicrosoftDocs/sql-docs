@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dmf.facet.dependentconditions.f1"
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87

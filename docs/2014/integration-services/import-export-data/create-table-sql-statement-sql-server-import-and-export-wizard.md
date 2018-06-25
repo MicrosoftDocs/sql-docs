@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.createtablesql.f1"
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05

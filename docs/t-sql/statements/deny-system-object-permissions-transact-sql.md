@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], system objects"
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DENY System Object Permissions (Transact-SQL)

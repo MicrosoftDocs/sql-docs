@@ -24,7 +24,7 @@ ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # srv_message_handler (Extended Stored Procedure API)
     

@@ -19,7 +19,7 @@ ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 caps.latest.revision: 34
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Scheduling Methods
   You can use these methods to create and manage shared schedules for report execution and delivery, and to cache refresh plans utilized by the report server.  

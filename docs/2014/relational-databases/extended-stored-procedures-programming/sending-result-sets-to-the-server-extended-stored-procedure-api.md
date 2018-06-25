@@ -17,7 +17,7 @@ ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Sending Result Sets to the Server (Extended Stored Procedure API)
     

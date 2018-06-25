@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "HOST_ID function"
 ms.assetid: 47b4a4ff-3ec8-430c-8bb7-779a36d0e134
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Modify indexes that depend on the return type of HOST_ID
   The HOST_ID function now returns a `char(10)`.  

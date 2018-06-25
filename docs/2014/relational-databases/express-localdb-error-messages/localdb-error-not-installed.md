@@ -14,7 +14,7 @@ ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOCALDB_ERROR_NOT_INSTALLED
     

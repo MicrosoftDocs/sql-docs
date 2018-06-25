@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Troubleshooting SQL Server Managed  Backup to Windows Azure
   This topic describes the tasks and tools you can use to troubleshoot errors that may occur during [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] operations.  

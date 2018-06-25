@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.relquerydesginer.f1"
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec

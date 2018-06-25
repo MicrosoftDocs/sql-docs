@@ -22,7 +22,7 @@ ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SetStringValue Method (ServerNetworkProtocolProperty Class)
   Sets the string value of the referenced property.  

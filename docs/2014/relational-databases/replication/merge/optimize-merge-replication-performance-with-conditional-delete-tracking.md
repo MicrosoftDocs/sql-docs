@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "conditional delete tracking [SQL Server replication]"
   - "merge replication [SQL Server replication], conditional delete tracking"
@@ -17,7 +17,7 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 caps.latest.revision: 22
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Optimize Merge Replication Performance with Conditional Delete Tracking
     

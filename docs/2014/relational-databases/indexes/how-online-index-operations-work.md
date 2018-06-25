@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "online index operations"
   - "source indexes [SQL Server]"
@@ -20,7 +20,7 @@ ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 27
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # How Online Index Operations Work
   This topic defines the structures that exist during an online index operation and shows the activities associated with these structures.  

@@ -14,7 +14,7 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)
   This sample shows how to use IRowsetFastLoad to stream varying length BLOB data per row.  

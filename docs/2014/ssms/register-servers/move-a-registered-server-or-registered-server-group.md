@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "moving registered server or server group"
   - "Registered Servers [SQL Server], server groups"
@@ -19,7 +19,7 @@ ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Move a Registered Server or Registered Server Group (SQL Server Management Studio)
   This topic describes how to organize the servers in Registered Servers by moving a registered server or  server groups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Server groups can contain registered servers, or other server groups. Both servers and server groups can be moved from one server group to another.  

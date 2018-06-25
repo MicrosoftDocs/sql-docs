@@ -22,7 +22,7 @@ ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Size Property (ClientNetLibInfo Class)
   Gets the size of the client network library in kilobytes.  

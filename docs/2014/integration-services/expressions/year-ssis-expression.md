@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dates [Integration Services], YEAR"
   - "YEAR function"
@@ -16,7 +16,7 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # YEAR (SSIS Expression)
   Returns an integer that represents the year datepart of a date.  

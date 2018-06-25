@@ -14,7 +14,7 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Array Parameter Sample
   Sometimes it is useful to create, update, or delete a set of rows in a database. There are several approaches you could use to achieve that goal. One of them is to pass an array of information from a client to a common language runtime (CLR) integration stored procedure on the server by using a CLR integration user-defined data type. The nature of such user-defined data types limits the size of the data provided to the server to 8000 bytes. Therefore, this approach is not satisfactory for large or complex data. If the data that is being manipulated is small and simple, this approach can be much more efficient than calling a stored procedure for each row. By passing an array, the order of data is preserved for those applications where the order is significant.This sample contains the following:  

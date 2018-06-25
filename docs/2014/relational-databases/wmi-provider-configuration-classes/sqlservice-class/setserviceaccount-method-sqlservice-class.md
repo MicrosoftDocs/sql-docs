@@ -22,7 +22,7 @@ ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SetServiceAccount Method (SqlService Class)
   Attempts to change the user name and password that the service instance runs under.  

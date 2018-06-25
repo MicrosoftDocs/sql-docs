@@ -22,7 +22,7 @@ ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # GetNextOrderValue Method (ClientNetworkProtocol Class)
   Selects the protocol that is in the next position in the list of protocols.  

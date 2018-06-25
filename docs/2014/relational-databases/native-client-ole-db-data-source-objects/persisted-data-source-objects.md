@@ -19,7 +19,7 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Persisted Data Source Objects
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports persisted data source objects with the **IPersistFile** interface.  

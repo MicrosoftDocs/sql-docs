@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.partprocessingtransformation.advanced.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Partition Processing Destination Editor (Advanced Page)
   Use the **Advanced** page of the **Partition Processing Destination Editor** dialog box to configure error handling.  

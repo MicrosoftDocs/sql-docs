@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "managing data in a table"
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Summary: Managing Data in a Hierarchical Table
   The `hierarchyid` data type lets you easily create tables that reflect hierarchical data, and then create depth-first and breadth-first indexes to efficiently access the table. Use the hierarchical methods to query and manipulate the data.  

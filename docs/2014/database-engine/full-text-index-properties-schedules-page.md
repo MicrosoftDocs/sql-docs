@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1"
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 caps.latest.revision: 15
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Full-Text Index Properties (Schedules Page)
   Use this page to view and create schedules for running a SQL Server Agent job that starts an incremental population of updates to the base table of the full-text index. If the base table or view does not contain a column of the `timestamp` data type, a full population is performed.  

@@ -5,7 +5,6 @@ ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: ""
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "rothja"

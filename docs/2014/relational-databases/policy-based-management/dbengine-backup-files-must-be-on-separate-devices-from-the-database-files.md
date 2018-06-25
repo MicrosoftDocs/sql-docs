@@ -8,10 +8,10 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Backup Files Must Be on Separate Devices from the Database Files
 See [Backup Files Must Be on Separate Devices from the Database Files](../../database-engine/backup-files-must-be-on-separate-devices-from-the-database-files.md).

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Partition Wizard"
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859

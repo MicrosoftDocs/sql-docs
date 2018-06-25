@@ -14,7 +14,7 @@ ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 caps.latest.revision: 3
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Accessing the WMI Provider Programmatically
   This topic is under construction.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-notifications"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], metadata"
   - "status information [SQL Server], event notifications"
@@ -17,7 +17,7 @@ ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Get Information About Event Notifications
   The following catalog views are available to query metadata about event notifications.  

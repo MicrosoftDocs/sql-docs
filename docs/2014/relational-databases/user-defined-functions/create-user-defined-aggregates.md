@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-udf"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "aggregate functions [SQL Server], user-defined"
   - "user-defined functions [CLR integration]"
@@ -16,7 +16,7 @@ ms.assetid: c278b746-6323-4b32-b460-239915acc067
 caps.latest.revision: 28
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create User-defined Aggregates
   You can create a database object inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is programmed in a CLR assembly. Database objects that can leverage the rich programming model provided by the CLR include triggers, stored procedures, functions, aggregate functions, and types.  

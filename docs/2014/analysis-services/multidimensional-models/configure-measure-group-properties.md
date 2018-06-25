@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "properties [Analysis Services], measure groups"
 ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2

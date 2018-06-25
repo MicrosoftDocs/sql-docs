@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [Full-Text Search]"
   - "word breakers [Full-Text Search]"
@@ -16,7 +16,7 @@ ms.assetid: 8d06bda9-0bbf-4baa-b270-07b1c1f640eb
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Full-Text Search word breakers and filters significantly improved in SQL Server 2005 and SQL Server 2008
   The word breakers and filters were significantly changed. Additional improvements have been made to word breakers, including enhanced language coverage and reliability.  

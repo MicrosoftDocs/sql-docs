@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-transaction-log"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], full"
   - "troubleshooting [SQL Server], full transaction log"
@@ -21,7 +21,7 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 54
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. When the transaction log becomes full, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] issues a 9002 error. The log can fill when the database is online or in recovery. If the log fills while the database is online, the database remains online but can only be read, not updated. If the log fills during recovery, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] marks the database as RESOURCE PENDING. In either case, user action is required to make log space available.  

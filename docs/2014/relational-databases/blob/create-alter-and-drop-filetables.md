@@ -5,10 +5,9 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], altering"
   - "FileTables [SQL Server], dropping"
@@ -17,7 +16,7 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create, Alter, and Drop FileTables
   Describes how to create a new FileTable, or alter or drop an existing FileTable.  

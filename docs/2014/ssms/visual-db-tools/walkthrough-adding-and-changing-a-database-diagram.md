@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database diagrams [SQL Server], about database diagrams"
   - "database diagrams [SQL Server], designing"
@@ -17,7 +17,7 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Walkthrough: Adding and Changing a Database Diagram
   This walkthrough illustrates how to create and modify a database diagram and make changes to the database through the database diagrams component. You will see how to add tables to diagrams, create relationships between tables, create constraints and indexes on columns, and change the level of information you see for each table.  

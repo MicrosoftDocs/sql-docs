@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-dml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "first triggers [SQL Server]"
   - "last triggers"
@@ -19,7 +19,7 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specify First and Last Triggers
   You can specify that one of the AFTER triggers associated with a table be either the first AFTER trigger or the last AFTER trigger that is fired for each INSERT, DELETE, and UPDATE triggering actions. The AFTER triggers that are fired between the first and last triggers are executed in undefined order.  

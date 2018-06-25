@@ -22,7 +22,7 @@ ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # InstanceName Property (CInstance Class)
   Gets the name of the instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  

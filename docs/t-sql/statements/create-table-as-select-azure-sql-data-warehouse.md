@@ -5,9 +5,9 @@ ms.date: "10/07/2016"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
+ms.service: sql-data-warehouse
 ms.suite: "sql"
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 

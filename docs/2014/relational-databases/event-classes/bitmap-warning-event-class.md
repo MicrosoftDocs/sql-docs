@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Bitmap Warning Event Class
   The **Bitmap Warning** event class can be used to monitor bitmap filter usage in queries. The event subclass can be used to report when bitmap filters have been disabled in a query.  

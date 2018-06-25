@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transferdatabasetask.general.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transfer Database Task Editor (General Page)
   Use the **General** page of the **Transfer Database Task Editor** dialog box to name and describe the Transfer Database task. The Transfer Database task copies or moves a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server. For more information about this task, see [Transfer Database Task](control-flow/transfer-database-task.md).  

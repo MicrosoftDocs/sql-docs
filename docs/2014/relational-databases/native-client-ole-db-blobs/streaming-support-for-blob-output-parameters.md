@@ -16,7 +16,7 @@ ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Streaming Support for BLOB Output Parameters
   This topic contains a sample that shows streaming support for BLOB output parameters, which binds BLOB output parameters as ISequentialStreams.  

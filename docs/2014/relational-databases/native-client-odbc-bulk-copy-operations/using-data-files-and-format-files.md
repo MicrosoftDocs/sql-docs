@@ -21,7 +21,7 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using Data Files and Format Files
   The simplest bulk copy program does the following:  

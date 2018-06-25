@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Analysis Wizard"
 ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # How to: Run the Upgrade Advisor Analysis Wizard
   You start the Upgrade Advisor Analysis Wizard from the Upgrade Advisor start page. This topic describes how to run the Upgrade Advisor Analysis Wizard.  

@@ -8,10 +8,10 @@ ms.suite: ""
 ms.technology: 
   - "dbe-security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transparent Data Encryption with Azure SQL Database
 See [Transparent Data Encryption with Azure SQL Database](../../database-engine/transparent-data-encryption-with-azure-sql-database.md).

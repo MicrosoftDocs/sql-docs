@@ -17,7 +17,7 @@ ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Unloading an Extended Stored Procedure DLL
     

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "system stored procedures [SQL Server], XML"
   - "sp_xml_removedocument"
@@ -19,7 +19,7 @@ ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 caps.latest.revision: 26
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # XML System Stored Procedures
   SQL Server provides the following system stored procedures that are used together with OPENXML:  

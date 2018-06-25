@@ -21,7 +21,7 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Usage Scenarios and Examples for Common Language Runtime (CLR) Integration
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes sample applications, package samples, and numerous coding samples that you can use to learn about the programmability features of common language runtime (CLR) integration.  

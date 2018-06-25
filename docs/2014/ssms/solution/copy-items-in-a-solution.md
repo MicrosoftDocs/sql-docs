@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "copying items"
   - "projects [SQL Server Management Studio], copying"
@@ -17,7 +17,7 @@ ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Copy Items in a Solution
   You can copy items using Solution Explorer or Windows Explorer.  

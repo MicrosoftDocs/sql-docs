@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connecttors.connectionproperties.f1"
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect to Server (Connection Properties Page) Reporting Services
   Use this tab to view or specify options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] or registering [!INCLUDE[ssRS](../includes/ssrs-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssRS](../includes/ssrs-md.md)].  

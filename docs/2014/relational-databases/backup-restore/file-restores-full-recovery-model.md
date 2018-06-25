@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "file restores [SQL Server]"
   - "full recovery model [SQL Server], performing restores"
@@ -22,7 +22,7 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 caps.latest.revision: 42
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # File Restores (Full Recovery Model)
   This topic is relevant only for databases that contain multiple files or filegroups under the full or bulk-load recovery model.  

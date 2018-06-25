@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "create extended events session"
   - "extended events [SQL Server], create session"
@@ -16,7 +16,7 @@ ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create an Extended Events Session Using Query Editor
   You can create an Extended Events session by using the Query Editor, or you can create a session in Object Explorer. In Object Explorer, Extended Events provides two user interfaces you can use to create, modify, and view event session data — a wizard that guides you through the event session creation process, and a New Session UI that provides more advanced configuration options. You can create Extended Events sessions to diagnose SQL Server tracing, which enables you to resolve issues such as the following:  

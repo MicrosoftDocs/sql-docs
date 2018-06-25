@@ -24,7 +24,7 @@ ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # srv_pfieldex (Extended Stored Procedure API)
     

@@ -14,7 +14,7 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Unused Assembly Cleanup
   The `AssemblyCleanup` sample contains a .NET Stored Procedure that cleans-up unused assemblies in the current database by querying the metadata catalogs. Its only parameter, `visible_assemblies`, is used to specify whether unused visible assemblies should be dropped or not. A value of 'false' means by default only unused invisible assemblies will be dropped, otherwise all unused assemblies will be dropped. The set of unused assemblies are those assemblies that do not have any entry points defined (routines / types and aggregates) and there are no used assemblies referencing them directly or indirectly.  

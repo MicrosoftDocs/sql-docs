@@ -14,7 +14,7 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: 68
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Overview (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) are objects designed for programmatic management of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use SMO to build customized [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management applications. Although [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is a powerful and extensive application for managing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there might be times when you would be better served by an SMO application.  

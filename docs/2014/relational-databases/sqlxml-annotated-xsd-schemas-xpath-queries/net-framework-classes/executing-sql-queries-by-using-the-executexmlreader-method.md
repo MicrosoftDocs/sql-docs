@@ -20,7 +20,7 @@ ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Executing SQL Queries by Using the ExecuteXMLReader Method
   Instead of using the ExecuteToStream method, you can use the ExecuteXmlReader method of the SqlXmlCommand object to execute commands. This method returns an XmlReader object that can be used for further processing of the result (which in this example is printing the element or attribute names and the values).  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-notifications"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], target service"
   - "target service [SQL Server]"
@@ -17,7 +17,7 @@ ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 caps.latest.revision: 32
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Implement Event Notifications
   To implement an event notification, you must first create a target service to receive event notifications, and then create the event notification.  

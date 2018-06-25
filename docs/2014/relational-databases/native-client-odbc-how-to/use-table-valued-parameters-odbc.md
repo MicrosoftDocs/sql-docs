@@ -14,7 +14,7 @@ ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use Table-Valued Parameters (ODBC)
   This sample shows how to use table-valued parameters to insert multiple rows, with multiple columns, with one call to the server.  

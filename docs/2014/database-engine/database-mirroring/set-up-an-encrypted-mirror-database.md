@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cryptography [SQL Server], database mirroring"
   - "encryption [SQL Server], database mirroring"
@@ -19,7 +19,7 @@ ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set Up an Encrypted Mirror Database
 

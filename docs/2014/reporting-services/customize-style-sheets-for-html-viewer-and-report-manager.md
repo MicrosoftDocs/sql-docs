@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "style sheets [Reporting Services]"
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd

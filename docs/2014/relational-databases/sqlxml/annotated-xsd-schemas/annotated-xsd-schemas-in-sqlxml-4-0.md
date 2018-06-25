@@ -21,7 +21,7 @@ ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Annotated XSD Schemas in SQLXML 4.0
   This section provides information about using annotated XSD schemas in SQLXML 4.0. In previous versions of SQLXML, similar functionality was provided with XML-Data Reduced (XDR) schemas. This section also provides XDR information for legacy applications.  

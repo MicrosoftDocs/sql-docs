@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeldesigner.modifyconnections.f1"
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490

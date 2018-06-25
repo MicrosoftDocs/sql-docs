@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL:StmtStarting Event Class
   The SQL:StmtStarting event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has started.  

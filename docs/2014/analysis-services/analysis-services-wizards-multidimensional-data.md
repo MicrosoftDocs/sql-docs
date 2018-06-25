@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services wizards"
 ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287

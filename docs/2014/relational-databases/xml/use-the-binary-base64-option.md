@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "AUTO FOR XML mode, BINARY BASE64 option"
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 caps.latest.revision: 9
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use the BINARY BASE64 Option
   If the BINARY BASE64 option is specified in the query, the binary data is returned in base64 encoding format. By default, if the BINARY BASE64 option is not specified, AUTO mode supports URL encoding of binary data. That is, instead of binary data, a reference to a relative URL to the virtual root of the database where the query was executed is returned. This reference can be used to access the actual binary data in subsequent operations by using the SQLXML ISAPI dbobject query. The query must provide enough information, such as primary key columns, to identify the image.  

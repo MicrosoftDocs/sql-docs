@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transferjobstask.general.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transfer Jobs Task Editor (General Page)
   Use the **General** page of the **Transfer Jobs Task Editor** dialog box to name and describe the Transfer Jobs task. For more information about the Transfer Jobs task, see [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  

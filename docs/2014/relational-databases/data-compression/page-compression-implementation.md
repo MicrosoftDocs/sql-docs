@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-data-compression"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "page compression [Database Engine]"
   - "compression [SQL Server], page"
@@ -16,7 +16,7 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Page Compression Implementation
   This topic summarizes how the [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements page compression. This summary provides basic information to help you plan the storage space that you need for your data.  

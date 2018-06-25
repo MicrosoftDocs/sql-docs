@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "moving system databases"
   - "disaster recovery [SQL Server], moving database files"
@@ -30,7 +30,7 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 58
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Move System Databases
   This topic describes how to move system databases in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Moving system databases may be useful in the following situations:  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.dimensionintelligence.selectdimension.f1"
 ms.assetid: 3fe16614-bf5b-458a-9f30-67ebc8ac2a8e

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], dynamic filters"
   - "merge replication [SQL Server replication], dynamic filters"
@@ -23,7 +23,7 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: 68
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Parameterized Row Filters
   Parameterized row filters allow different partitions of data to be sent to different Subscribers without requiring multiple publications to be created (parameterized filters were referred to as dynamic filters in previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). A partition is a subset of the rows in a table; depending on the settings chosen when creating a parameterized row filter, each row in a published table can belong to one partition only (which produces nonoverlapping partitions) or to two or more partitions (which produces overlapping partitions).  

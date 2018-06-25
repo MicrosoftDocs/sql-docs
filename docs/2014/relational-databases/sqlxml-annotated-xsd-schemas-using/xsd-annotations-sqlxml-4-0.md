@@ -17,7 +17,7 @@ ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # XSD Annotations (SQLXML 4.0)
   The following table lists the XSD annotations that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and compares them with the XDR annotations that were introduced in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  

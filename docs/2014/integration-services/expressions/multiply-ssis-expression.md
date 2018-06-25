@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "* (multiply operator)"
   - "multiply operator (*)"
@@ -16,7 +16,7 @@ ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # * (Multiply) (SSIS Expression)
   Multiplies two numeric expressions.  

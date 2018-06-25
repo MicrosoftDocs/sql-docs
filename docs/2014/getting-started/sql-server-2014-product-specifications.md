@@ -15,7 +15,7 @@ ms.technology:
   - "reporting-services-native"
   - "reporting-services-sharepoint"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server, product specifications"
   - "components [SQL Server], product specifications"
@@ -25,7 +25,7 @@ ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server 2014 Product Specifications
   The topics in the following table provide product specification details for this release:  

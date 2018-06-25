@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, creating"
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76

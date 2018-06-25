@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Schema Object Take Ownership Event Class
   The **Audit Schema Object Take Ownership** event class occurs when the permissions to change the owner of schema object (such as a table, procedure, or function) is checked. This happens when the ALTER AUTHORIZATION statement is used to assign an owner to an object.  

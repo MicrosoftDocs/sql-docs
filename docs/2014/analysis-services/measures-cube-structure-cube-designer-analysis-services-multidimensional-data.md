@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.cubebuilder.measurespane.f1"
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617

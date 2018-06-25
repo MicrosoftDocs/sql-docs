@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], table schema"
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 caps.latest.revision: 7
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # FileTable Schema
   Describes the pre-defined and fixed schema of a FileTable.  

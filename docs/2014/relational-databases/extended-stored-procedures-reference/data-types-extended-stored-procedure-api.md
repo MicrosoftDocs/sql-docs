@@ -17,7 +17,7 @@ ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Types (Extended Stored Procedure API)
     

@@ -5,15 +5,14 @@ ms.date: "07/14/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
+ms.service: sql-data-warehouse
 ms.suite: "sql"
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -2,12 +2,11 @@
 title: "ALTER DATABASE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2018"
-ms.prod: ""
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
+ms.service: sql-data-warehouse
 ms.suite: "sql"
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 

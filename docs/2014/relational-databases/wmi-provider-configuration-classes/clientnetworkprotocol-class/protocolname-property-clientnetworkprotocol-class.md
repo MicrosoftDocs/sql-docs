@@ -22,7 +22,7 @@ ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ProtocolName Property (ClientNetworkProtocol Class)
   Gets the name of the current network protocol specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  

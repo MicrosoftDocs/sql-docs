@@ -20,7 +20,7 @@ ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LocalDBFormatMessage Function
   Returns the localized textual description for the specified SQL Server Express LocalDB error.  

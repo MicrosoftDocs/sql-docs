@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: 15
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Engine Instances (SQL Server)
   An instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is a copy of the `sqlservr.exe` executable that runs as an operating system service. Each instance manages several system databases and one or more user databases. Each computer can run multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Applications connect to the instance in order to perform work in a database managed by the instance.  

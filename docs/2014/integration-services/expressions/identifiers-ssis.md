@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "regular identifiers [Integration Services]"
   - "variables [Integration Services], expressions"
@@ -23,7 +23,7 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Identifiers (SSIS)
   In expressions, identifiers are columns and variables that are available to the operation. Expressions can use regular and qualified identifiers.  

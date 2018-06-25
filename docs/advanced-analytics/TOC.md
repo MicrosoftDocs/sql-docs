@@ -38,6 +38,7 @@
 # [Tutorials, samples, solutions](tutorials/machine-learning-services-tutorials.md)
 
 ## [R](tutorials/sql-server-r-tutorials.md)
+### [Create partition-based models](tutorial/r-tutorial-create-models-per-partition.md)
 ### [R: Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 #### [Working with inputs and outputs](tutorials/rtsql-working-with-inputs-and-outputs.md)
 #### [R and SQL data types and data objects](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
@@ -117,7 +118,6 @@
 ### [Load R objects using ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md)
 ### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)
 ### [Create multiple small models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)
-### [Create partition-based models](r/create-models-per-partition.md)
 ### [Use data from OLAP cubes in R](r/using-data-from-olap-cubes-in-r.md)
 ### [Create a stored procedure using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

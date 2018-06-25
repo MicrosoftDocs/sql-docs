@@ -317,9 +317,13 @@ In a production environment use a different, complex password.
 
 ## Deploy the availability group
 
-In this step, create a manifest to describe the SQL Server container based on the mssql-server image, the health agent and AG agent containers based on the mssql-server-k8s-agents Docker image.
+In this step, create a specification to deploy:
 
-Create a file named `sqlservers.yaml`.
+* Three SQL Server containers based on the mssql-server image
+* Three AG agent containers
+* A load balancer service for the availabiltiy group listener
+
+To create the specification, create a file named `sqlservers.yaml`.
 
 Copy the manifest below into the file.
 

@@ -89,7 +89,7 @@
 ### [Containers with Kubernetes](sql-server-linux-containter-ha-overview.md)
 #### [Configure with shared disk](tutorial-sql-server-containers-kubernetes.md)
 #### [Configure with availability group](tutorial-sql-server-ag-kubernetes.md)
-##### [Failover replica]()
+##### [Configure SQL Server specification (YAML)](sql-server-linux-kubernetes-spec.md)
 ##### [Add or remove databases]()
 ##### [Connect to replica]()
 ##### [Manage pods]()

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], database scoped credential"
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 caps.latest.revision: 2
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---

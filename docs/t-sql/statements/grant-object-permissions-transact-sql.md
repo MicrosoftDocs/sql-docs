@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "GRANT statement, objects"
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

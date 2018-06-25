@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing publication information"
   - "publications [SQL Server replication], viewing information"
@@ -17,7 +17,7 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 caps.latest.revision: 38
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Information and Perform Tasks for a Publication (Replication Monitor)
   Replication Monitor provides the following tabs that include information about the selected publication:  

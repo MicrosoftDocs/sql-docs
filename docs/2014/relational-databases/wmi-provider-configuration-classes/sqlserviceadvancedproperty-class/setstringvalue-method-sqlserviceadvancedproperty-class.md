@@ -22,7 +22,7 @@ ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SetStringValue Method (SqlServiceAdvancedProperty Class )
   Sets the string value of a property.  

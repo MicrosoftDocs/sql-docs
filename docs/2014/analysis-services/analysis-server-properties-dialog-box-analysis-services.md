@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1"
   - "SQL12.ASVS.SQLSERVERSTUDIO.SERVERPROPERTIES.F1"

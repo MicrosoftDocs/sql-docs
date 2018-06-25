@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.specifyordering.columnselection.f1"
 ms.assetid: bf25d649-f35a-458b-a8f4-9b159b3b2abe

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [Visual Database Tools]"
   - "Visual Database Tools [SQL Server], queries"
@@ -16,7 +16,7 @@ ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Perform Basic Operations with Queries (Visual Database Tools)
   The following fundamental operations apply to most or all queries.  

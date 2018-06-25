@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dmmtrainingtransformation.columns.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Mining Model Training Editor (Columns Tab)
   Use the **Columns** page of the **Data Mining Model Training Editor** dialog box to map input columns to columns in the mining structure.  

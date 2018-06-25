@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "time-out period [SQL Server database mirroring]"
   - "soft errors [SQL Server]"
@@ -21,7 +21,7 @@ ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 57
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Possible Failures During Database Mirroring
   Physical, operating system, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] problems can cause a failure in a database mirroring session. Database mirroring does not regularly check the components on which Sqlservr.exe relies to verify whether they are functioning correctly or have failed. However, for some types of failures, the affected component reports an error to Sqlservr.exe. An error reported by another component is called a *hard error*. To detect other failures that would otherwise go unnoticed, database mirroring implements its own time-out mechanism. When a mirroring time-out occurs, database mirroring assumes that a failure has occurred and declares a *soft error*. However, some failures that happen at the SQL Server instance level do not cause mirroring to time-out and can go undetected.  

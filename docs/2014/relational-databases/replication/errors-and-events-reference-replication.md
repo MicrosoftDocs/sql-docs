@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server replication], troubleshooting"
   - "troubleshooting [SQL Server replication], errors"
@@ -19,7 +19,7 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: 24
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Errors and Events Reference (Replication)
   This section of the documentation contains cause and resolution information for a number of errors related to replication.  

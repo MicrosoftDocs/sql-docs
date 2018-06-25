@@ -19,7 +19,7 @@ ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Client-side and Server-side Formatting (SQLXML 4.0)
   SQLXML provides two ways to format an XML document:  

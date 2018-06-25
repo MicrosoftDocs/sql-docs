@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.addnestedtable.selectmeasuregroup.f1"
 ms.assetid: 66194214-be3b-4df2-a676-216b986c8838

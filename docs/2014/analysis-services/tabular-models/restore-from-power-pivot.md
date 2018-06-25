@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql11.asvs.ssmsimbi.RestoreFromPP.f1"
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48

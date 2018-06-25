@@ -5,15 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
-caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Show the Object Explorer Details Page
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can show a report for each object selected in Object Explorer. This report, called the Object Explorer Details page, is created by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and opens in the document window.  

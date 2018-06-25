@@ -19,7 +19,7 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specifying a Node Test in the Location Path (SQLXML 4.0)
   A node test specifies the node type selected by the location step. Every axis (`child`, `parent`, `attribute`, or `self`) has a principal node type. For the `attribute` axis, the principal node type is **\<attribute>**. For the `parent`, `child`, and `self` axes, the principal node type is **\<element>**.  

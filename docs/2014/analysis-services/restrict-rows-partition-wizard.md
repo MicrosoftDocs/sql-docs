@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitionwizard.typefilterexpression.f1"
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca

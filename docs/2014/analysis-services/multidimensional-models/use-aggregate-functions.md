@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "aggregate functions [Analysis Services]"
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664

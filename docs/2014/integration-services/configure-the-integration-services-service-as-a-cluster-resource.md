@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure the Integration Services Service as a Cluster Resource
   For those customers who conclude that the advantages of configuring the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service as a cluster resource outweigh the disadvantages, this section contains the necessary configuration instructions. However, [!INCLUDE[msCoName](../includes/msconame-md.md)] does not recommend that the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service be configured as a cluster resource.  

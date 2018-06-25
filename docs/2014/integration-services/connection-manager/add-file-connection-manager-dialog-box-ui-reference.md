@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fileconnection.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add File Connection Manager Dialog Box UI Reference
   Use the **Add File Connection Manager** dialog box to define a connection to a group of files or folders.  

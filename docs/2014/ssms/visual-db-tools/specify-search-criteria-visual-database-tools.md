@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Designer [SQL Server], Criteria pane"
   - "queries [Visual Database Tools]"
@@ -25,7 +25,7 @@ ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specify Search Criteria (Visual Database Tools)
   You can use search criteria to restrict the number of rows returned by a query.  

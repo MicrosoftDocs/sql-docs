@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
 caps.latest.revision: 6
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Search (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides search features for text and documents that go beyond the functionality of the [!INCLUDE[tsql](../includes/tsql-md.md)]`LIKE` keyword.  

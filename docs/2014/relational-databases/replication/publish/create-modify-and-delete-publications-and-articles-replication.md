@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], creating"
   - "articles [SQL Server replication], defining"
@@ -16,7 +16,7 @@ ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: 35
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create, Modify, and Delete Publications and Articles (Replication)
   This section of the documentation contains procedural information about tasks related to creating publications and defining articles.  

@@ -20,7 +20,7 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 caps.latest.revision: 35
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replication Agent Executables Concepts
   Replication agents can be controlled programmatically in the following ways:  

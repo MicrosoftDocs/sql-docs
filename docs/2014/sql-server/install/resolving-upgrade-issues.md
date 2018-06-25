@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installing Upgrade Advisor"
   - "Upgrade Advisor [SQL Server], reference"
@@ -33,7 +33,7 @@ ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Resolving Upgrade Issues
   The topics in this section describe upgrade issues that can be detected as well as those that cannot be detected, but that might affect the upgrade or post-upgrade experience. The issues are organized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component.  

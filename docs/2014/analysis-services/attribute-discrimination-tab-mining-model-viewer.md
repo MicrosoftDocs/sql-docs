@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.naivebayse.discrimination.f1"
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7

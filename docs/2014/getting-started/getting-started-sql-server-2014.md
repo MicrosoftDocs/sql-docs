@@ -15,12 +15,12 @@ ms.technology:
   - "reporting-services-native"
   - "reporting-services-sharepoint"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Getting Started (SQL Server 2014)
   Find sources of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] information, system requirements, installation instructions, and more.  

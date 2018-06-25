@@ -19,7 +19,7 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Fetching BLOB Data Using IRow::Open and ISequentialStream
   **IRow::Open** supports only DBGUID_STREAM and DBGUID_NULL type of objects to be opened.  

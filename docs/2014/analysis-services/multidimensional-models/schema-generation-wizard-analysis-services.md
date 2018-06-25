@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "relational schema [Analysis Services]"
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19

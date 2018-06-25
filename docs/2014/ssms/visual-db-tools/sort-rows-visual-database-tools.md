@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sorting rows [SQL Server]"
   - "sorting query results [SQL Server]"
@@ -16,7 +16,7 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Sort Rows (Visual Database Tools)
   You can order the rows in a query result. That is, you can name a particular column or set of columns whose values determine the order of rows in the result set.  

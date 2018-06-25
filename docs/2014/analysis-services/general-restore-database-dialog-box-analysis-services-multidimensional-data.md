@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.restoredbdialog.f1"
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f

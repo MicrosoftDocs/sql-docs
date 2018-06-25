@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database IDs [SQL Server]"
 ms.assetid: e0826010-8aa4-4ed7-8d32-2bebfeff9a71
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Detach database ID 32767
   Upgrade Advisor detected a database with the database ID 32767. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later, this database ID is reserved. Detach the database before upgrading. You can attach the database after upgrading.  

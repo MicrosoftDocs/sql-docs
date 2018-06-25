@@ -2,8 +2,6 @@
 title: SQL Data Discovery & Classification | Microsoft Docs
 description: SQL Data Discovery & Classification
 documentationcenter: ''
-author: giladm
-manager: shaik
 ms.reviewer: carlrab
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
@@ -13,7 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-
+author: giladm
+manager: shaik
 ---
 # SQL Data Discovery and Classification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

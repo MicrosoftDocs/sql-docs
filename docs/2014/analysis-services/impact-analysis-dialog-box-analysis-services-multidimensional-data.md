@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.process.impactanalysisdialog.f1"
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6

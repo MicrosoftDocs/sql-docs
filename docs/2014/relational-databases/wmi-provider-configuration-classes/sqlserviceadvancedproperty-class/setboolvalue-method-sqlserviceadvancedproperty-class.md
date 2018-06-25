@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.setbreakpoints.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set Breakpoints
   Use the **Set Breakpoints** dialog box to specify the events on which to enable breakpoints and to control the behavior of the breakpoint.  

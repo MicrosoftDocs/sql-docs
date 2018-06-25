@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event classes [Analysis Services], notification events"
   - "Notification Events event category"

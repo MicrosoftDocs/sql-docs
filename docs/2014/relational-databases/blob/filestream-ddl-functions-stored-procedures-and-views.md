@@ -5,15 +5,14 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # FILESTREAM DDL, Functions, Stored Procedures, and Views
   Lists the Transact-SQL statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that support FILESTREAM.  

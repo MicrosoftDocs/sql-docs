@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "+ (add)"
   - "add operator (+)"
@@ -17,7 +17,7 @@ ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # + (Add) (SSIS)
   Adds two numeric expressions.  

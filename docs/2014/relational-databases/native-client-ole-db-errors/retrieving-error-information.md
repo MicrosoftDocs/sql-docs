@@ -21,7 +21,7 @@ ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Retrieving Error Information
   This example obtains information from the various error interfaces exposed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  

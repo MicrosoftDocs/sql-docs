@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connectionproperties.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connection Properties Dialog Box
   Use this dialog box to view the current connection properties. This dialog box is available when you click **View connection properties** in various Object Explorer dialog boxes. The properties displayed on this page are read-only.  

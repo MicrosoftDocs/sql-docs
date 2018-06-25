@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.paramterwindow.f1"
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Parameters
   You use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create project parameters and package parameters. The following procedures provide step-by-step instructions for creating package/project parameters.  

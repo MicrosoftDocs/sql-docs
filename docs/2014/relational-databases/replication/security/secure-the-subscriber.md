@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], security"
   - "Subscribers [SQL Server replication], security"
@@ -17,7 +17,7 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 caps.latest.revision: 35
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Secure the Subscriber
   Merge Agents and Distribution Agents connect to the Subscriber. These connections can be made under the context of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login or a Windows login. It is important to provide an appropriate login for these agents while following the principle of granting the minimal rights necessary and also protecting the storage of all passwords. For information about the permissions required for each agent, see [Replication Agent Security Model](replication-agent-security-model.md).  

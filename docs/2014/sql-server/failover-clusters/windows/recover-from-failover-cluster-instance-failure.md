@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "clusters [SQL Server], recovery from failure"
   - "failover clustering [SQL Server], recovery from failure"
@@ -18,7 +18,7 @@ ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 30
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Recover from Failover Cluster Instance Failure
   This topic describes how to recover from cluster failures by using the Failover Cluster Manager snap-in after a failover occurs in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The Failover Cluster Manager snap-in is the cluster management application for the Windows Serer Failover Clustering (WSFC) service.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.DATABASESTATES.F1"
 helpviewer_keywords: 
@@ -29,7 +29,7 @@ ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database States
   A database is always in one specific state. For example, these states include ONLINE, OFFLINE, or SUSPECT. To verify the current state of a database, select the **state_desc** column in the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) catalog view or the **Status** property in the [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) function.  

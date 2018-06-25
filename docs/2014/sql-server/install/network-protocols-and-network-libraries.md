@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "protocols [SQL Server]"
   - "configuration options [SQL Server], protocols"
@@ -24,7 +24,7 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Network Protocols and Network Libraries
   A server can listen on, or monitor, multiple network protocols at one time. However, each protocol must be configured. If a particular protocol is not configured, the server cannot listen on that protocol. After installation, you can change the protocol configurations using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  

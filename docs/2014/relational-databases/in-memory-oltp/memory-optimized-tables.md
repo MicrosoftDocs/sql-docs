@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
 caps.latest.revision: 65
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Memory-Optimized Tables
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In-Memory OLTP helps improve performance of OLTP applications through efficient, memory-optimized data access, native compilation of business logic, and lock- and latch free algorithms. The In-Memory OLTP feature includes memory-optimized tables and table types, as well as native compilation of [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures for efficient access to these tables.  

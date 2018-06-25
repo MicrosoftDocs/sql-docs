@@ -14,7 +14,7 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change a SQL Server Authentication User Password (OLE DB)
   This sample shows how to use OLE DB to change the password of a user account under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  

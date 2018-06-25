@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-udf"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CLR functions [SQL Server]"
   - "user-defined functions [SQL Server], CLR"
@@ -16,7 +16,7 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create CLR Functions
   You can create a database object inside an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is programmed in an assembly created in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR). Database objects that can leverage the rich programming model provided by the common language runtime include aggregate functions, functions, stored procedures, triggers, and types.  

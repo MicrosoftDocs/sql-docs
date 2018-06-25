@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-views"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], renaming"
   - "renaming views"
@@ -16,7 +16,7 @@ ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Rename Views
   You can rename a view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

@@ -17,7 +17,7 @@ ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SqlDataRecord Object
   The `SqlDataRecord` object represents a single row of data, along with its related metadata.  

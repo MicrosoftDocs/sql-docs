@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.asvs.dimensiondesigner.dbv.dataitemCollection.f1"
 helpviewer_keywords: 

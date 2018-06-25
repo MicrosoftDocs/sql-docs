@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3f083347-0fbb-4b19-a6fb-1818d545e281
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Backup, Restore, and Recovery of Memory-Optimized Tables
   Topics in this section:  

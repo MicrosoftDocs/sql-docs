@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tuning databases [SQL Server], memory"
   - "monitoring server performance [SQL Server], memory usage"
@@ -26,7 +26,7 @@ ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Monitor Memory Usage
   Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], readable secondary replicas"
@@ -20,7 +20,7 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 14
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # About Client Connection Access to Availability Replicas (SQL Server)
   In an AlwaysOn availability group, you can configure one or more availability replicas to allow read-only connections when running under the secondary role (that is, when running as a secondary replica). You can also configure each availability replica to allow or exclude read-only connections when running under the primary role (that is, when running as the primary replica).  

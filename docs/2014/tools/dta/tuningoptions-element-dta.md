@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # TuningOptions Element (DTA)
   Contains the tuning options for a specific tuning session.  

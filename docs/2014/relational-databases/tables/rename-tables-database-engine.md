@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "table renaming [SQL Server]"
   - "table names [SQL Server]"
@@ -18,7 +18,7 @@ ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Rename Tables (Database Engine)
   You can rename a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

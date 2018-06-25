@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], creating link attributes"
   - "creating link attributes [Master Data Services]"
@@ -16,7 +16,7 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a Link Attribute (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a link attribute when you want users to enter a hyperlink as an attribute value, such as http://www.contoso.com.  

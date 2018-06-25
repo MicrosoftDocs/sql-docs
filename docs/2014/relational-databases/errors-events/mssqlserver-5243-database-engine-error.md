@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "5243 (Database Engine error)"
 ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_5243
     

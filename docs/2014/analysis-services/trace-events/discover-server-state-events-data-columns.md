@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Discover Server State event category"
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19

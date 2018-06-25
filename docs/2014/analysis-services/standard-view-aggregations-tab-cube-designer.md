@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.aggregations.standard.f1"
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed

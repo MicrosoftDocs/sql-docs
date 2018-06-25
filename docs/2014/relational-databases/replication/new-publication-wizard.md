@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dbpublishingwizard.choosestoredprocedures.f1"
   - "sql12.swb.dbpublishingwizard.selectoutputloc.f1"
@@ -46,7 +46,7 @@ ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # New Publication Wizard
   This section provides information on the following pages of the New Publication Wizard:  

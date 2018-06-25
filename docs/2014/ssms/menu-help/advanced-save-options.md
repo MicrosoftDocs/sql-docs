@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vs.advancedsaveoptions"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Advanced Save Options
   Use this dialog box to select a language encoding scheme and to specify the characters to be inserted at the end of each line. To access the **Advanced Save Options** dialog box, on the **File** menu, click **Save** \<query name>**.sql As** to open the **Save File As** dialog box, click on the down arrow on the **Save** button, and then click **Save with Encoding**.  

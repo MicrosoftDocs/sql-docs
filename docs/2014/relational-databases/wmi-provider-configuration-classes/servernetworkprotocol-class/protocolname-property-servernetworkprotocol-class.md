@@ -22,7 +22,7 @@ ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ProtocolName Property (ServerNetworkProtocol Class)
   Gets the name of the server network protocol.  

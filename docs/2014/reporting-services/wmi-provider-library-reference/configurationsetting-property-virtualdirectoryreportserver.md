@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "VirtualDirectoryReportServer property"
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f

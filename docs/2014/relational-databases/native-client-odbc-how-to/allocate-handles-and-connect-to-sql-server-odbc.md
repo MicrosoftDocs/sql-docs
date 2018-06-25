@@ -18,7 +18,7 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Allocate Handles and Connect to SQL Server (ODBC)
     

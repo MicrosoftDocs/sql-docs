@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "firewall systems [SQL Server]"
   - "server message blocks [SQL Server]"
@@ -29,7 +29,7 @@ ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 caps.latest.revision: 48
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Security Considerations for a SQL Server Installation
   Security is important for every product and every business. By following simple best practices, you can avoid many security vulnerabilities. This topic discusses some security best practices that you should consider both before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Security guidance for specific features is included in the reference topics for those features.  

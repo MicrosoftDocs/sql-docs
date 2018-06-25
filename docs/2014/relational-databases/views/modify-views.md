@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-views"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], renaming"
   - "views [SQL Server], modifying"
@@ -18,7 +18,7 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Modify Views
   After you define a view, you can modify its definition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] without dropping and re-creating the view by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

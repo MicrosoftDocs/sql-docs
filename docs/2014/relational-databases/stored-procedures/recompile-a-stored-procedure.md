@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-stored-procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sp_recompile"
   - "WITH RECOMPILE clause"
@@ -18,7 +18,7 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 caps.latest.revision: 37
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Recompile a Stored Procedure
   This topic describes how to recompile a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. There are three ways to do this: `WITH RECOMPILE` option in the procedure definition or when the procedure is called, the `RECOMPILE` query hint on individual statements, or by using the `sp_recompile` system stored procedure. This topic describes using the WITH RECOMPILE option when creating a procedure definition and executing an existing procedure. It also describes using the sp_recompile system stored procedure to recompile an existing procedure.  

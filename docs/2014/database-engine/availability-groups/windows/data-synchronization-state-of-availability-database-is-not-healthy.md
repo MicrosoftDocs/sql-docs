@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.agdashboard.arp3datasynchealthy.issues.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data synchronization state of availability database is not healthy
     

@@ -20,7 +20,7 @@ ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specifying Boolean Operators in XPath Queries (SQLXML 4.0)
   The following example shows how Boolean operators are specified in XPath queries. The XPath query in this example is specified against the mapping schema contained in SampleSchema1.xml. For information about this sample schema, see [Sample Annotated XSD Schema for XPath Examples &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  

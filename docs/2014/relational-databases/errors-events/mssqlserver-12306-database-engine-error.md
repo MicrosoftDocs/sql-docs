@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "12306 (Database Engine error)"
 ms.assetid: 1f83d927-a215-4e43-98a9-4dab9d6e68bb
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_12306
     

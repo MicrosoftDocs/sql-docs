@@ -16,7 +16,7 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Process Results (ODBC)
     

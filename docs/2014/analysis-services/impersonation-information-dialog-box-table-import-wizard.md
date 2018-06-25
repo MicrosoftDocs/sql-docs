@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.impersonationinfo.f1"
 ms.assetid: bee7eee5-0650-41f1-a372-5076ae97a58c

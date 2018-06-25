@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.agdashboard.drp1notsuspended.issues.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Availability database is suspended
     

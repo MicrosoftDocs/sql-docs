@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "41349 (Database Engine error)"
 ms.assetid: dd365112-a36a-4ba1-888a-b3bc149775e6
 caps.latest.revision: 4
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_41349
     

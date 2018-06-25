@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: "markingmyname"

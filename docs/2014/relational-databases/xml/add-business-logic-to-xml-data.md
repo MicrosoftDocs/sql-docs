@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "business logic [XML]"
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Business Logic to XML Data
   Your business logic can be added to XML data in several ways:  

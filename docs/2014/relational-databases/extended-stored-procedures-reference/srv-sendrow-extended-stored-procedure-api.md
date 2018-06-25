@@ -24,7 +24,7 @@ ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # srv_sendrow (Extended Stored Procedure API)
     

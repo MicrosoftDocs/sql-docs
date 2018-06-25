@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"
 helpviewer_keywords: 
@@ -20,7 +20,7 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 50
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database
   This page provides links to help you locate the information that you need about security and protection in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  

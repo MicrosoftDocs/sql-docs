@@ -18,7 +18,7 @@ ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQLSetEnvAttr
   The [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250) defines how ODBC drivers should interpret the **SQLSetEnvAttr** attribute specifications from applications written to either the ODBC 2.*x* or ODBC 3.*x* API. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver complies with those rules.  

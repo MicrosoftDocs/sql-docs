@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], excluding rows"
   - "search criteria [SQL Server], WHERE clause"
@@ -24,7 +24,7 @@ ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Include or Exclude Rows (Visual Database Tools)
   To restrict the number of rows a SELECT query should return, you create search conditions or filter criteria. In SQL, search conditions appear in the WHERE clause of the statement, or if you are creating an aggregate query, in the HAVING clause.  

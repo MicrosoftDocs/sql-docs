@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftcatalogproperties.general.f1"
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 caps.latest.revision: 34
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Full-Text Catalog Properties (General Page)
   This section shows the options and functions available on the **General** page of the **Full-Text Catalog Properties** dialog box.  

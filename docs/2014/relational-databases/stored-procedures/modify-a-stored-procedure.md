@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-stored-procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying stored procedures"
   - "editing stored procedures"
@@ -17,7 +17,7 @@ ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Modify a Stored Procedure
     

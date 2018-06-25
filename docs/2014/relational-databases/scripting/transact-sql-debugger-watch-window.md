@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.watch"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 caps.latest.revision: 15
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Watch Window
   The **Watch** window displays information about the expressions that you have selected. There can be up to four watch windows: **Watch 1**, **Watch 2, Watch 3**, and **Watch 4**. The expressions are evaluated within the scope of the current call stack frame that is selected in the **Call Stack** window. You must be in debug mode to watch variables and expressions.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG003165 error"
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQL_ENG003165
     

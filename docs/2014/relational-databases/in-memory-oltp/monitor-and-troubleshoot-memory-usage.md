@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Monitor and Troubleshoot Memory Usage
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consumes memory in different patterns than disk-based tables. You can monitor the amount of memory allocated and used by memory-optimized tables and indexes in your database using the DMVs or performance counters provided for memory and the garbage collection subsystem.  This gives you visibility at both the system and database level and lets you prevent problems due to memory exhaustion.  

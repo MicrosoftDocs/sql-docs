@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
   - "change data capture [SQL Server], AlwaysOn Availability Groups"
@@ -18,7 +18,7 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication, change data capture (CDC), and change tracking (CT) are supported on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] helps provide high availability and additional database recovery capabilities.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "1101 (Database Engine error)"
 ms.assetid: d63b67d5-59f5-4f77-904e-5ba67f2dd850
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_1101
     

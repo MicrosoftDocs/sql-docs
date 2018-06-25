@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"
   - "number of processors supported"
@@ -17,7 +17,7 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Compute Capacity Limits by Edition of SQL Server
   This topic discusses compute capacity limits for different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and how they differ in physical and virtualized environments with hyperthreaded processors.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [SQL Server], aliases"
   - "aliases [SQL Server], columns"
@@ -16,7 +16,7 @@ ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Column Aliases (Visual Database Tools)
   You can create aliases for column names to make it easier to work with column names, calculations, and summary values. For example, you can create a column alias to:  

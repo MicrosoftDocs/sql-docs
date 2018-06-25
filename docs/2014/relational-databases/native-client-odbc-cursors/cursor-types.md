@@ -19,7 +19,7 @@ ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Cursor Types
   ODBC defines four cursor types supported by Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver. These cursors vary in their ability to detect changes to the result set and in the resources they consume, such as memory and space in **tempdb**. A cursor can detect changes to rows only when it tries to refetch those rows; there is no way for the data source to notify the cursor of changes to the currently fetched rows. A cursor's ability to detect changes that were not made through the cursor is also influenced by the transaction isolation level.  

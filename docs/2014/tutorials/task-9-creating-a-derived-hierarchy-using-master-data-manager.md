@@ -10,12 +10,12 @@ ms.technology:
   - "integration-services"
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 9: Creating a Derived Hierarchy using Master Data Manager
   In this task, you create a derived hierarchy by using Master Data Manager. This derived hierarchy is derived from the domain-based attribute relationships between the **Supplier** and **State** entities.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Distributed Replay"
   - "SQL Server Distributed Replay"
@@ -16,7 +16,7 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Distributed Replay
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay feature helps you assess the impact of future [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrades. You can also use it to help assess the impact of hardware and operating system upgrades, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tuning.  

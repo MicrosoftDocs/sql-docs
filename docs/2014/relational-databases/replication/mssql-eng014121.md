@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG014121 error"
 ms.assetid: c8595854-cce1-4566-ad64-d565555caded
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQL_ENG014121
     

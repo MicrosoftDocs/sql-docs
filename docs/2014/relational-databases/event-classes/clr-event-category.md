@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -19,7 +19,7 @@ ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # CLR Event Category
   The **CLR** event category includes event classes that are produced by the execution of [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) objects inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

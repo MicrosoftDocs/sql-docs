@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "3437 (Database Engine error)"
 ms.assetid: b38216e2-b650-43bd-97af-061d54f60031
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_3437
     

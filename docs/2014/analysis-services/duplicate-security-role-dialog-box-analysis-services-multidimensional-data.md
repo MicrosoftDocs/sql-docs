@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.duplicaterole.f1"
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee

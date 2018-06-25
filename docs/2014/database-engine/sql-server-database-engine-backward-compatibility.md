@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [SQL Server], Database Engine"
   - "backward compatibility [Database Engine]"
@@ -18,7 +18,7 @@ ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Database Engine Backward Compatibility
   Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

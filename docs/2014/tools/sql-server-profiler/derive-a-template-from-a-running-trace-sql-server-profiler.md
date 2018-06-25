@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "templates [SQL Server], traces"
   - "trace templates [SQL Server]"
@@ -16,7 +16,7 @@ ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Derive a Template from a Running Trace (SQL Server Profiler)
   This topic describes how to create a trace template from an existing trace while it is running by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "constraints [SQL Server], foreign keys"
   - "foreign keys [SQL Server], disabling constraints"
@@ -19,7 +19,7 @@ ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Disable Foreign Key Constraints with INSERT and UPDATE Statements
   You can disable a foreign key constraint during INSERT and UPDATE transactions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use this option if you know that new data will violate the existing constraint or if the constraint applies only to the data already in the database.  

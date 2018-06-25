@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replication upgrade issues"
   - "upgrading replication"
@@ -16,7 +16,7 @@ ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replication Upgrade Issues
   The following topics describe the replication issues that might affect your upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The topics describe actions that you can take to help reduce the effects of these changes on your environment.  

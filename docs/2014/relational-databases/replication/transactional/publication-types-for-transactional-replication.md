@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, publications"
 ms.assetid: ad66aa34-3e37-401e-a6a1-fc1514eb6d50
 caps.latest.revision: 31
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Publication Types for Transactional Replication
   Transactional replication offers three publication types:  

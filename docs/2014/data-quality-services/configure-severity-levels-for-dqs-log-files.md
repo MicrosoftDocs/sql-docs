@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.admin.config.log.f1"
 helpviewer_keywords: 
@@ -21,7 +21,7 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Severity Levels for DQS Log Files
   This topic describes how to configure severity levels for various activities and modules in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) by using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Severity levels define the intensity of events that occur in DQS. DQS events have the following severity levels, in the decreasing order of severity:  

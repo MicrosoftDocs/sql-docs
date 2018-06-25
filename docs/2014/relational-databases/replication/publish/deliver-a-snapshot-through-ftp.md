@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], FTP snapshots"
   - "FTP snapshots [SQL Server replication]"
@@ -17,7 +17,7 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 caps.latest.revision: 46
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deliver a Snapshot Through FTP
   This topic describes how to deliver a snapshot through FTP in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

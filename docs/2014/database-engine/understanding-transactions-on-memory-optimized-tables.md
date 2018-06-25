@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 caps.latest.revision: 7
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Understanding Transactions on Memory-Optimized Tables
   Transactions access memory-optimized tables using a form of optimistic, multi-version concurrency control. This means that there are different versions of the data. Each transaction operates on its own transactionally consistent version of the database, independent from other concurrently running transactions. In addition, transactions operate under the optimistic assumption that there will be no conflicts with other, concurrent, transactions. This avoids the need to use locks, but does require the system to detect conflicts and terminate one of the conflicting transactions. Conflicts can occur only for write-write transactions and for read-write transactions. If there is a write-write conflict, one write transaction is terminated.  

@@ -14,7 +14,7 @@ ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # LOCALDB_ERROR_INSUFFICIENT_BUFFER
     

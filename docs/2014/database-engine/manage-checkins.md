@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "checkins [SQL Server Management Studio]"
   - "checking in files"
@@ -17,7 +17,7 @@ ms.assetid: 293e60f3-15e3-4258-b73a-8baabe15c760
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage Checkins
   To make changes to a source-controlled file available to other users, you must check in the file. When you check in a file, the version you have created is copied to the source control provider, becomes the latest version of the file, and is generally available to users who have the appropriate permissions.  

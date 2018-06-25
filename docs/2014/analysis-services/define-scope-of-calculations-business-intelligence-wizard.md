@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.timeintelligence.selecttimehierarchy.f1"
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftcatalog.general.f1"
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 caps.latest.revision: 27
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # New Full-Text Catalog (General Page)
   Use this dialog box to create a new full-text catalog.  

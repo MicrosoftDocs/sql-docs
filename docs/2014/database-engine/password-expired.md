@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.passwordexpired.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Password Expired
   Appears when you connect to a server with [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, and the password you provided is correct but has expired. Also appears when you connect to a server with a new account that is created by using the **User must change password at next logon** option. Use the **Password Expired** dialog box to change the password for this [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication login.  

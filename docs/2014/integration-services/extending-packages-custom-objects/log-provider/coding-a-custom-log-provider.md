@@ -16,7 +16,7 @@ ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Coding a Custom Log Provider
   After you have created a class that inherits from the <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> base class, and applied the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> attribute to the class, you must override the implementation of the properties and methods of the base class to provide your custom functionality.  

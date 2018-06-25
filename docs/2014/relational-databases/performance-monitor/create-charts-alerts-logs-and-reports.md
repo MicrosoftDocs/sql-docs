@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "System Monitor [SQL Server], charts and reports"
   - "charts [SQL Server]"
@@ -22,7 +22,7 @@ ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 caps.latest.revision: 20
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Charts, Alerts, Logs, and Reports
   System Monitor lets you create charts, alerts, logs, and reports to monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

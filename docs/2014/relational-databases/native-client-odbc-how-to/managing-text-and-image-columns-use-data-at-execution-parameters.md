@@ -16,7 +16,7 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use Data-at-Execution Parameters (ODBC)
     

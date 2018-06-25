@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.process.batchsettingsdialog.f1"
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3

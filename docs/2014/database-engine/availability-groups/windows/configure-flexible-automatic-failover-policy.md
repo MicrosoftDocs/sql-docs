@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], flexible failover policy"
   - "Availability Groups [SQL Server], failover"
@@ -17,7 +17,7 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 caps.latest.revision: 22
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure the Flexible Failover Policy to Control Conditions for Automatic Failover (Always On Availability Groups)
   This topic describes how to configure the flexible failover policy for an AlwaysOn availability group by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A flexible failover policy provides granular control over the conditions that cause automatic failover for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  

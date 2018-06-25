@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic joins"
   - "joins [SQL Server], creating"
@@ -17,7 +17,7 @@ ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Join Tables Automatically (Visual Database Tools)
   When you add two or more tables to a query, the [Query and View Designer](visual-database-tools.md) attempts to determine if they are related. If they are, the Query and View Designer automatically puts join lines between the rectangles representing the tables or table-structured objects.  

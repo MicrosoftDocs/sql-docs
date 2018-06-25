@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidevstudio.assembly.registerassembly.f1"
 ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9

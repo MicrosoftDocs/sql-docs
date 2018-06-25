@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.restoredb.general.f1"
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: 85
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Restore Database (General Page)
   Use the **General** page to specify information about the target and source databases for a database-restore operation.  

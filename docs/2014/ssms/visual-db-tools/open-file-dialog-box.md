@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vs.openfile"
   - "vs.openproject"
@@ -16,7 +16,7 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Open File Dialog Box
   Use the **Open File** dialog box to open an existing file from disk. You can also use this dialog box to open an already opened file using different language encoding options.  

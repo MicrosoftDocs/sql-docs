@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "expressions [Reporting Services], about expressions"
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3

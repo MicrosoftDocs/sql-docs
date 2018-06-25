@@ -26,7 +26,7 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Autotranslation of Character Data
   Character data, such as ANSI character variables declared with SQL_C_CHAR or data stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the **char**, **varchar**, or **text** data types, can represent only a limited number of characters. Character data stored using one byte per character can only represent 256 characters. The values stored in SQL_C_CHAR variables are interpreted using the ANSI code page (ACP) of the client computer. The values stored using **char**, **varchar**, or **text** data types on the server are evaluated using the ACP of the server.  

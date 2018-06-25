@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server Management Studio], query associations"
   - "projects [SQL Server Management Studio], connections"
@@ -18,7 +18,7 @@ ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change the Connection Associated with a Query
   A query can be executed against several different servers or databases by changing the connection used by the query.  

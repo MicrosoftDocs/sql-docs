@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [SQL Server], replication"
   - "backward compatibility [SQL Server], replication"
@@ -17,7 +17,7 @@ ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 caps.latest.revision: 31
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Compatibility Level for Merge Publications
   This topic describes how to set the compatibility level for merge publications in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Merge replication uses the publication compatibility level to determine which features can be used by publications in a given database.  

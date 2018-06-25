@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 caps.latest.revision: 9
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Cross-Container Transactions
   Cross-container transactions are either implicit or explicit user transactions that include calls to natively-compiled stored procedures or operations on memory-optimized tables.  

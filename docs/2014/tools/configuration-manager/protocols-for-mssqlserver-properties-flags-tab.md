@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "configmgr-client"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQLSERVER property protocols"
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 caps.latest.revision: 31
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Protocols for MSSQLSERVER Properties (Flags Tab)
   When a certificate is installed on the server, use the **Flags** tab on the **Protocols for MSSQLSERVER Properties** dialog box to view or specify the protocol encryption and hide instance options. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be restarted to enable or disable the **ForceEncryption** setting.  

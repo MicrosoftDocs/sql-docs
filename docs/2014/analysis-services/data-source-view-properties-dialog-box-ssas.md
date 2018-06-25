@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.datasourceviewproperties.f1"
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7

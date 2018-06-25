@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.calculationexpression.freeform.f1"
 ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3

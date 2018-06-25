@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS packages, creating"
   - "Integration Services packages, creating"
@@ -18,7 +18,7 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Packages in SQL Server Data Tools
   The packages that you create in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] using [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer are saved to the file system. To save a package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to the package store, you need to save a copy of the package. For more information, see [Save a Copy of a Package](../../2014/integration-services/save-a-copy-of-a-package.md).  

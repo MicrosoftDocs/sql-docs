@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting database objects"
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deleting Database Objects
   To remove all traces of this tutorial, you could just delete the database. However, in this topic, you will go through the steps to reverse every action you took doing the tutorial.  

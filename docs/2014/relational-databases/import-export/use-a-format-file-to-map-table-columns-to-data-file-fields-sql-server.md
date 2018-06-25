@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-bulk-import-export"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "mapping columns to fields during import [SQL Server]"
   - "format files [SQL Server], mapping columns to fields"
@@ -16,7 +16,7 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use a Format File to Map Table Columns to Data-File Fields (SQL Server)
   A data file can contain fields arranged in a different order from the corresponding columns in the table. This topic presents both non-XML and XML format files that have been modified to accommodate a data file whose fields are arranged in a different order from the table columns. The modified format file maps the data fields to their corresponding table columns.  

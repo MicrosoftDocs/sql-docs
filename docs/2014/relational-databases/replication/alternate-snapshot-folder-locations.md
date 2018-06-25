@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], alternate folder locations"
   - "snapshot replication [SQL Server], alternate folder locations"
@@ -17,7 +17,7 @@ ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 caps.latest.revision: 35
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Alternate Snapshot Folder Locations
   Alternate snapshot locations enable you to store snapshot files in a location other than, or in addition to, the default location, which is typically located on the Distributor. Alternate locations can be on another server, on a network drive, or on removable media such as CD-ROMs or removable disks.  

@@ -17,7 +17,7 @@ ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Enabling CLR Integration
   The common language runtime (CLR) integration feature is off by default, and must be enabled in order to use objects that are implemented using CLR integration. To enable CLR integration, use the **clr enabled** option of the **sp_configure** stored procedure:  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IIS 7 server configuration [SQL Server replication]"
   - "Web synchronization, IIS 7 servers"
@@ -16,7 +16,7 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure IIS 7 for Web Synchronization
   The procedures in this topic will guide you through the process of manually configuring [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) version 7 and higher for use with Web synchronization for merge replication. 

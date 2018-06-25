@@ -21,7 +21,7 @@ ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # CLR Integration Code Access Security
   The common language runtime (CLR) supports a security model called code access security for managed code. In this model, permissions are granted to assemblies based on the identity of the code. For more information, see the "Code Access Security" section in the .NET Framework software development kit.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "job step token syntax [SQL Server Agent]"
   - "token syntax [SQL Server Agent]"
@@ -16,7 +16,7 @@ ms.assetid: c801e6da-0159-4bb0-9144-eb28b5127ff7
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Update token syntax in SQL Server Agent job steps
   The syntax that is used tokens in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps has changed.  

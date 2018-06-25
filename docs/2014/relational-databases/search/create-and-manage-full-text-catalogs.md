@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text catalogs [SQL Server], creating"
   - "full-text search [SQL Server], using SQL Server Management Studio"
@@ -16,7 +16,7 @@ ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create and Manage Full-Text Catalogs
   A full-text catalog is a virtual object that does not belong to any filegroup; it is a logical concept that refers to a group of full-text indexes.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "7711 (Database Engine error)"
 ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
 caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_7711
     

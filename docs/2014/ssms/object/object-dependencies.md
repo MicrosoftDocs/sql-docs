@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.common.objectdependencies.f1"
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Object Dependencies
   Some database objects have dependencies upon other database objects. For example, views and stored procedures depend upon the existence of tables that contain the data returned by the view or procedure. The **Object Dependencies (General Page)** for the current object lists both the database objects that must be present for the object to function properly and the objects that depend upon the selected object. An object that references another object in its definition and that definition is stored in the system catalog is called a *referencing entity*. An object that is referred to by another object is called a *referenced entity*.  

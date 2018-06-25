@@ -10,12 +10,12 @@ ms.technology:
   - "integration-services"
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 4: Setting Domain Rules
   In this task, you create a rule for the **Contact Email** domain to verify if the email address ends with **@adventure-works.com**. See [Creating a Domain Rule](http://msdn.microsoft.com/library/hh510397.aspx) topic for more details on the page.  

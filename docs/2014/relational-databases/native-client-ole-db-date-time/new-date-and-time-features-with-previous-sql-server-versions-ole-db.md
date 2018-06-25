@@ -16,7 +16,7 @@ ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # New Date and Time Features with Previous SQL Server Versions (OLE DB)
   This topic describes the expected behavior when a client application that uses enhanced date and time features communicates with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and when a client compiled with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sends commands to a server that supports enhanced date and time features.  

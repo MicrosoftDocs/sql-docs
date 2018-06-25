@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "suspended database maintenance plans"
   - "database maintenance plans [SQL Server Agent]"
@@ -17,7 +17,7 @@ ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database maintenance plans superseded
     

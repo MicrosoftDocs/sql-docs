@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user accounts [SQL Server], failover clustering"
   - "clusters [SQL Server], maintaining"
@@ -26,7 +26,7 @@ ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 caps.latest.revision: 34
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Failover Cluster Instance Administration and Maintenance
   Maintenance tasks like adding or removing nodes from an existing AlwaysOn Failover Cluster Instance (FCI) are accomplished using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup program. Other administration tasks like changing the IP address resource, recovering from certain FCI scenarios are accomplished using the Failover Cluster Manager snap-in, which is the management snap-in for the Windows Server Failover Clustering (WSFC) service.  

@@ -5,17 +5,16 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], FILESTREAM-enabled databases"
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a FILESTREAM-Enabled Database
   This topic shows how to create a database that supports FILESTREAM. Because FILESTREAM uses a special type of filegroup, when you create the database, you must specify the CONTAINS FILESTREAM clause for at least one filegroup.  

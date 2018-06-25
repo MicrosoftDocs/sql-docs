@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "846 (Database Engine error)"
 ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_846
     

@@ -5,15 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
-caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Select the Keyboard Shortcut Scheme
   Instead of the standard [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] keyboard scheme, you can configure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to use a keyboard scheme compatible with [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  

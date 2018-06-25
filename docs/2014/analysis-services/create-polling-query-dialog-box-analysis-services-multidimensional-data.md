@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.createpollingquerydialog.f1"
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a

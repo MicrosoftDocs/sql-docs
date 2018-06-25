@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.proxy.general.f1"
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Proxy Account Properties and New Proxy Account (General Page)
   Use this page to view or change the properties of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account.  

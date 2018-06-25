@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 31
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 2: Adding Looping
   In [Lesson 1: Creating the Project and Basic Package](lesson-1-create-a-project-and-basic-package-with-ssis.md), you created a package that extracted data from a single flat file source, transformed the data using Lookup transformations, and finally loaded the data into the **FactCurrency** fact table of the **AdventureWorksDW2012** sample database.  

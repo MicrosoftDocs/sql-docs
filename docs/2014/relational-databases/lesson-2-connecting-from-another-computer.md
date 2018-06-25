@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 2: Connecting from Another Computer
   To enhance security, the [!INCLUDE[ssDE](../includes/ssde-md.md)] of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express, and Evaluation editions cannot be accessed from another computer when initially installed. This lesson shows you how to enable the protocols, configure the ports, and configure the Windows Firewall for connecting from other computers.  

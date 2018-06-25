@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Text_Editor.SQL.Advanced"
 dev_langs: 
@@ -17,7 +17,7 @@ ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
 caps.latest.revision: 15
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Text Editor-Transact-SQL-IntelliSense)
   The **Options** dialog box lets you change the IntelliSense settings for the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor. These settings are available when, on the **Tools** menu, you click **Options**, expand the **Text Editor** folder, expand the **Transact-SQL** folder, and then click **Advanced**.  

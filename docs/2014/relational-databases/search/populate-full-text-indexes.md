@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index populations [full-text search]"
   - "incremental populations [full-text search]"
@@ -27,7 +27,7 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 74
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Populate Full-Text Indexes
   Creating and maintaining a full-text index involves populating the index by using a process called a *population* (also known as a *crawl*).  

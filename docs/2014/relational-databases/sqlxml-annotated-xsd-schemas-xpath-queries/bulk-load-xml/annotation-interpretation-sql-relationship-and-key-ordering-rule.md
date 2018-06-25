@@ -18,7 +18,7 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # sql:relationship and the Key Ordering Rule (SQLXML 4.0)
   Because XML Bulk Load generates records as their nodes enter into scope and sends those records to Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as their nodes exit scope, the data for the record must be present within the scope of the node.  

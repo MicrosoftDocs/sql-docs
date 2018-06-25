@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.agdashboard.drp2joined.issues.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 caps.latest.revision: 12
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Secondary database is not joined
     

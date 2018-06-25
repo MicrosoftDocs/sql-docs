@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "configmgr-client"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
 caps.latest.revision: 16
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Analysis Server Properties (Log On Tab)
   Use the **Log On** tab of the **Analysis Server Properties** dialog box to specify the account used by the [!INCLUDE[ssAS](../../includes/ssas-md.md)] service, and to start and stop the service.  

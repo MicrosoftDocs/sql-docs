@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.rg.properties_moveworkloadgroup.f1"
 helpviewer_keywords: 
@@ -18,7 +18,7 @@ ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Move a Workload Group
   You can move a Resource Governor workload group to a different resource pool by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Transact-SQL.  

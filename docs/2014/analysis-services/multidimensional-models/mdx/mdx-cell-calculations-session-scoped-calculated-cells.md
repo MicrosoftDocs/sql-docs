@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "session-scoped calculated members [MDX]"
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21

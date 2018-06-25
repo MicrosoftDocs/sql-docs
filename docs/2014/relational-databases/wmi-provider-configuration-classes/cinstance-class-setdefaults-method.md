@@ -22,7 +22,7 @@ ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SetDefaults Method (CInstance Class)
   Sets all the default values for the instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client with the option to overwrite existing data.  

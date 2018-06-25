@@ -18,7 +18,7 @@ ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Processing Stored Procedure Results
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures have four mechanisms used to return data:  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.restore.connectstorage.f1"
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect to Windows Azure Storage (Restore)
   The dialog box allows you to specify the connection to Windows Azure storage account information in order to retrieve the files storage in the Windows Azure storage account. After specifying the required information, click **Connect** to establish the connection to Windows Azure storage.  

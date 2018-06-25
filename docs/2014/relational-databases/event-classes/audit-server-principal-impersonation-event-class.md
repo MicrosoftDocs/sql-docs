@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Server Principal Impersonation Event Class
   The **Audit Server Principal Impersonation** event class occurs when there is an impersonation within server scope, such as EXECUTE AS \<*login*>.  

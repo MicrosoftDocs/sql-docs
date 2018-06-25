@@ -27,7 +27,7 @@ After you run the job, delete it. This also delets Kubernetes logs. If you do no
 
 * `MSSQL_K8S_NEW_PRIMARY`
   * Optional
-  * **Description**: The target of the failover. Accepts the target SQL Server pod name, IP address, StatefulSet name, server name, or host name. Additionally the `!` prefix will prevent failover to a  specified target. Example `!sql-1`.
+  * **Description**: The target of the failover. Accepts the target SQL Server pod name, IP address, StatefulSet name, server name, or host name. Additionally the `!` prefix prevents failover to a  specified target. Example `!sql-1`.
 
 * `FORCE_FAILOVER_ALLOW_DATA_LOSS` 
   * Optional
@@ -35,4 +35,4 @@ After you run the job, delete it. This also delets Kubernetes logs. If you do no
 
 * `MSSQL_K8S_NAMESPACE`
   * Optional
-  * **Description**: Kubernetes namespace of the availability group
+  * **Description**: Kubernetes namespace of the availability group.

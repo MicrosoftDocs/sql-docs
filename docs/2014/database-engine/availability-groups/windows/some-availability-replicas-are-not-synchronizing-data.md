@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.agdashboard.agp4synchronizing.issues.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 caps.latest.revision: 10
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Some availability replicas are not synchronizing data
     

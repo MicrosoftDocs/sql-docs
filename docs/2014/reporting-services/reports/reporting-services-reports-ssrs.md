@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, report creation"
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc

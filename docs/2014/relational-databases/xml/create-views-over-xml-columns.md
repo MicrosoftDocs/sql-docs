@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "views [XML in SQL Server]"
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create Views over XML Columns
   You can use an `xml` type column to create views. The following example creates a view in which the value from an `xml` type column is retrieved using the `value()` method of the `xml` data type.  

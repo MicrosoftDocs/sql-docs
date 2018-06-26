@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Event Session Data
   This topic describes using the display user interface to see and analyze extended event data:  

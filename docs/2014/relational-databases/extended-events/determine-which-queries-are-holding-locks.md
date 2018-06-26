@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], extended events"
   - "queries [SQL Server], holding locks"
@@ -19,7 +19,7 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Determine Which Queries Are Holding Locks
   Database administrators often need to identify the source of locks that are hindering database performance.  

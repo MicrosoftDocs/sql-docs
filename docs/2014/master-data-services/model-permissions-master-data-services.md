@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "models [Master Data Services], permissions"
   - "permissions [Master Data Services], models"
@@ -16,7 +16,7 @@ ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Model Permissions (Master Data Services)
   Model permissions apply to all entities, derived hierarchies, explicit hierarchies, and collections that exist within the model. Permissions assigned to the model can be overridden for any individual object.  

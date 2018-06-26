@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 caps.latest.revision: 29
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Schema Object Access Event Class
   The **Audit Schema Object Access** event class occurs when an object permission (such as SELECT) is used.  

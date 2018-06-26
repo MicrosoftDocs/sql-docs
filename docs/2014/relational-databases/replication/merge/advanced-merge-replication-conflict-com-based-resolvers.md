@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "COM-based resolvers [SQL Server replication]"
   - "custom resolvers [SQL Server replication]"
@@ -16,7 +16,7 @@ ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 caps.latest.revision: 37
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Microsoft COM-Based Resolvers
   All of the COM-based resolvers supplied with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] handle update conflicts, and where indicated, they also handle insert and delete conflicts. They all handle column tracking; most also handle row tracking. These and all other COM-based resolvers declare the types of conflict they can handle, and the Merge Agent uses the default resolver for all other conflict types.  

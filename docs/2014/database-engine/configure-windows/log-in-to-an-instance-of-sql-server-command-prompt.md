@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server], named instance of SQL Server"
   - "log ins [SQL Server]"
@@ -19,7 +19,7 @@ ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Log In to an Instance of SQL Server (Command Prompt)
   This topic describes how to test connectivity to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the **sqlcmd** utility.  

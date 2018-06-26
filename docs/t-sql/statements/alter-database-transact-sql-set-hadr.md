@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 

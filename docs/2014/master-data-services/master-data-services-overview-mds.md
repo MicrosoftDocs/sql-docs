@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Master Data Services, overview"
   - "Master Data Services"
@@ -16,7 +16,7 @@ ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Master Data Services Overview
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], the model is the highest level container in the structure of your master data. You create a model to manage groups of similar data, for example to manage online product data. A model contains one or more entities, and entities contain members that are the data records.  

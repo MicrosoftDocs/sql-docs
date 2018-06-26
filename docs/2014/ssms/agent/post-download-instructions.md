@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.target.post.f1"
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Post Download Instructions
   Use this page to specify download instructions for a target server.  

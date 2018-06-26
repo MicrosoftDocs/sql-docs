@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Backup to URL Best Practices and Troubleshooting
   This topic includes best practices and troubleshooting tips for SQL Server backup and restores to the Windows Azure Blob service.  

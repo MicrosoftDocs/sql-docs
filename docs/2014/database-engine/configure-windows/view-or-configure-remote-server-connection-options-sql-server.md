@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "remote servers [SQL Server], connection options"
   - "servers [SQL Server], remote"
@@ -17,7 +17,7 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 caps.latest.revision: 24
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # View or Configure Remote Server Connection Options (SQL Server)
   This topic describes how to view or configure remote server connection options at the server level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

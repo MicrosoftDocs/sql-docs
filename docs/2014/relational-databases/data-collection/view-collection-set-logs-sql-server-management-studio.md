@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], viewing"
   - "collection sets [SQL Server], viewing logs"
@@ -16,7 +16,7 @@ ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Collection Set Logs (SQL Server Management Studio)
   You can view all the collection set logs or individual collection set logs from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

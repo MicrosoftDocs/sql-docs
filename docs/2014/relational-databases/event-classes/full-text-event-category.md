@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -19,7 +19,7 @@ ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Full Text Event Category
   The **Full Text** event category contains general full-text events.  

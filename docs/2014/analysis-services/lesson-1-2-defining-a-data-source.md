@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: craigg
 ---
 # Defining a Data Source
   After you create an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, you generally start working with the project by defining one or more data sources that the project will use. When you define a data source, you are defining the connection string information that will be used to connect to the data source. For more information, see [Create a Data Source &#40;SSAS Multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  

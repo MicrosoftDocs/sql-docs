@@ -17,7 +17,7 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Prepare and Execute a Statement (ODBC)
     

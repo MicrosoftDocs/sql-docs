@@ -51,7 +51,7 @@ To deploy SSIS packages to Azure, you have to have one of the following versions
 For info about the prerequisites for the Azure-SSIS Integration Runtime, see [Deploy and run an SSIS package in Azure - Prerequisites](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure#prerequisites).
 
 > [!NOTE]
-> During this public preview, the Azure-SSIS Integration Runtime is not yet available in all regions. For info about the supported regions, see [Products available by region - Microsoft Azure](https://azure.microsoft.com/regions/services/).
+> The Azure-SSIS Integration Runtime is not yet available in all regions. For info about the supported regions, see [Products available by region - Microsoft Azure](https://azure.microsoft.com/regions/services/).
 
 ## Provision SSIS on Azure
 

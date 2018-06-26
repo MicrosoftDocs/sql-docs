@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [SQL Server], extended events"
   - "xe"
@@ -18,7 +18,7 @@ ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Find the Objects That Have the Most Locks Taken on Them
   Database administrators often need to identify the source of locks that are hindering database performance.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.restoretlog.options.f1"
   - "sql12.swb.restoretlog.general.f1"
@@ -22,7 +22,7 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Restore a Transaction Log Backup (SQL Server)
   This topic describes how to restore a transaction log backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

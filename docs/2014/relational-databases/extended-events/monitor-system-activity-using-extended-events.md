@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xe"
   - "extended events [SQL Server], monitoring system activity"
@@ -16,7 +16,7 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Monitor System Activity Using Extended Events
   This procedure illustrates how Extended Events can be used with Event Tracing for Windows (ETW) to monitor system activity. The procedure also shows how the CREATE EVENT SESSION, ALTER EVENT SESSION, and DROP EVENT SESSION statements are used.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "0xFFFF character [SQL Server]"
 ms.assetid: b2c9c8cf-9194-45e0-be6b-2d5ec52e8153
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # 0xFFFF character is not valid as an object identifier
   Upgrade Advisor has detected the 0xFFFF character in an object identifier. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later, objects such as databases, tables, and columns that contain this character in their identifiers cannot be referenced or renamed when the database compatibility mode is set to 90 or later. When you upgrade to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], user databases maintain their compatibility mode. Before you change the database compatibility mode to 90 or later, rename the object that contains the 0xFFFF character.  

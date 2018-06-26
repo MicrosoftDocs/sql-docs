@@ -16,7 +16,7 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # OLE DB Table-Valued Parameter Type Support
   This topic describes OLE DB type support for table-value parameters.  

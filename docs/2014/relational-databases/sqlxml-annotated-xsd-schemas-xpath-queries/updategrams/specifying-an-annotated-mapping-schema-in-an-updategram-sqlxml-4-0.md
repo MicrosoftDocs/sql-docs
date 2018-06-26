@@ -24,7 +24,7 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Specifying an Annotated Mapping Schema in an Updategram (SQLXML 4.0)
   This topic explains how the mapping schema (XSD or XDR) that is specified in an updategram is used to process the updates. In an updategram, you can provide the name of an annotated mapping schema to use in mapping the elements and attributes in the updategram to tables and columns in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. When a mapping schema is specified in an updategram, the element and attribute names that are specified in the updategram must map to the elements and attributes in the mapping schema.  

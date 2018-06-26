@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication], development"
   - "development security [SQL Server replication]"
@@ -16,7 +16,7 @@ ms.assetid: 2322d39c-6689-4fb6-b23b-eae51cbb0222
 caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Secure Development (Replication)
   This section provides information to help you plan for a more secure replication topology.  

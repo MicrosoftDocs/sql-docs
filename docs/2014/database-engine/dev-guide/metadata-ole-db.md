@@ -17,7 +17,7 @@ ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Metadata (OLE DB)
   This section describes parameter metadata, result set column metadata, and schema rowset metadata.  

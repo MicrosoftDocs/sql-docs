@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.configdbmsecurwiz.choosesrvrs.f1"
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Choose Servers to Configure (Configure Database Mirroring Security Wizard)
   Use this page to specify which server instances you want to configure now. You must select at least one server instance before continuing the wizard.  

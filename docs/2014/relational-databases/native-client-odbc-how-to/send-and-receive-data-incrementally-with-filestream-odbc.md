@@ -14,7 +14,7 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Send and Receive Data Incrementally with FILESTREAM (ODBC)
   This sample shows how to use the FILESTREAM feature to send and receive data incrementally with SQLPutData and SQLGetData.  

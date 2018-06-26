@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.clustering.diagram.f1"
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840

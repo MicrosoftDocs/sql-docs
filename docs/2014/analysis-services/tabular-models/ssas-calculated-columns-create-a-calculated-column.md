@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.as.daxref.CreataCalculatedColumn.f1"
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da

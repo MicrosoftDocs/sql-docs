@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextindexingwizard.selecttablecolumns.f1"
   - "sql12.swb.fulltextindexingwizard.welcome.f1"
@@ -26,7 +26,7 @@ ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use the Full-Text Indexing Wizard
   The Full-Text Indexing Wizard walks you through a series of steps designed to help you create a full-text index.  

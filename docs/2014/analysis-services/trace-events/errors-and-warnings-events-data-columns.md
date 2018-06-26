@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Errors and Warnings event category [SQL Server]"
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1

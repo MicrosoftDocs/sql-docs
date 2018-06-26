@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.scriptcomponentdetails.f1"
 helpviewer_keywords: 
@@ -20,7 +20,7 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Script Component
   The Script component hosts script and enables a package to include and run custom script code. You can use the Script component in packages for the following purposes:  

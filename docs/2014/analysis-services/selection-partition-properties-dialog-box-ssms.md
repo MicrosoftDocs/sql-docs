@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.partitionproperties.selection.f1"
 ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c

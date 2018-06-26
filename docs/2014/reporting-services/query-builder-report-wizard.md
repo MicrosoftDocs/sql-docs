@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1"
   - "sql12.rtp.rptwizard.querybuilder.f1"

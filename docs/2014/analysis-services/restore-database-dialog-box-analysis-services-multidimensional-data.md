@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.Restore.f1"
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806

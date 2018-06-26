@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.datarefreshprogressdb.f1"
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b

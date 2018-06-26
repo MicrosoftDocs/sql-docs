@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "articles [SQL Server replication], dropping"
   - "deleting articles"
@@ -19,7 +19,7 @@ ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 caps.latest.revision: 33
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Articles to and Drop Articles from a Publication (SQL Server Management Studio)
   Initially add articles to a publication when you create it in the New Publication Wizard. For more information about using this wizard, see [Create a Publication](create-a-publication.md).  

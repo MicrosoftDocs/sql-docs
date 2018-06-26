@@ -5,17 +5,16 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], moving a FILESTREAM-enabled database"
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Move a FILESTREAM-Enabled Database
   This topic shows how to move a FILESTREAM-enabled database.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full recovery model [SQL Server], RESTORE example"
   - "offline restores [SQL Server]"
@@ -17,7 +17,7 @@ ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Example: Offline Restore of Primary and One Other Filegroup (Full Recovery Model)
   This topic is relevant only for databases under the full recovery model that contain multiple filegroups.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, security"
   - "agents [SQL Server replication], security"
@@ -23,7 +23,7 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 caps.latest.revision: 70
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replication Agent Security Model
   The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md).  

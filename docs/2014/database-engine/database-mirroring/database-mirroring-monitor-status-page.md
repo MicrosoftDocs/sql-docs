@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dbmmonitor.status.f1"
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Database Mirroring Monitor (Status Page)
   This read-only page displays the most recent mirroring status for the principal and mirror server instances of the database currently selected in the navigation tree. If information about an instance is currently unavailable, some of the cells in the **Status** grid corresponding to that instance are grayed out and display **Unknown**.  

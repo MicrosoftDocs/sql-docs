@@ -20,7 +20,7 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Adding Tasks Programmatically
   Tasks can be added to the following types of objects in the run-time engine:  

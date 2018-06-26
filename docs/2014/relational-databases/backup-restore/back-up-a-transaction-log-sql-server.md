@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction log backups [SQL Server], SQL Server Management Studio"
   - "backups [SQL Server], creating"
@@ -17,7 +17,7 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 caps.latest.revision: 44
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Back Up a Transaction Log (SQL Server)
   This topic describes how to back up a transaction log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  

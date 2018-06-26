@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65556"
   - "vdt.dlgbox.validationwarnings"
@@ -16,7 +16,7 @@ ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Validation Warnings Dialog Box (Visual Database Tools)
   This dialog box appears if you attempt to save modifications with potentially damaging side effects, or if the database commit operation is likely to fail. This dialog box indicates what those side effects might be or why the commit operation might fail. It gives you the chance to continue with the modification or cancel the operation.  

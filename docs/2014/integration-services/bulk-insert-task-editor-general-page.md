@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.bulkinserttask.general.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Bulk Insert Task Editor (General Page)
   Use the **General** page of the **Bulk Insert Task Editor** dialog box to name and describe the Bulk Insert task.  

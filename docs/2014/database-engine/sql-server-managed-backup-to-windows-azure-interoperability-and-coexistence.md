@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence
   This topic describes [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] interoperability and coexistence with several features in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features include the following: AlwaysOn Availability Groups, Database Mirroring, Backup Maintenance Plans, Log Shipping, Ad hoc backups, Detach Database, and Drop Database.  

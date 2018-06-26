@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server replication], join"
   - "publications [SQL Server replication], join filters"
@@ -18,7 +18,7 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 caps.latest.revision: 37
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Join Filters
   A join filter allows a table to be filtered based on how a related table in the publication is filtered. Typically a parent table is filtered using a parameterized filter; then one or more join filters are defined in much the same way that you define a join between tables. The join filters extend the parameterized filter so that the data in the related tables is only replicated if it matches the join filter clause.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.selectminingtechnique.f1"
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services service, configuring"
   - "Integration Services service, properties"
@@ -16,7 +16,7 @@ ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Properties of the Integration Services Service
     

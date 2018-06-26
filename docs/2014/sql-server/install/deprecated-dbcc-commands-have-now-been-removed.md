@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DBCC commands [SQL Server]"
 ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deprecated DBCC commands have now been removed
   The following table lists the DBCC commands that were announced as deprecated in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. These commands were removed from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. You should update applications and scripts to remove references to these deprecated commands.  

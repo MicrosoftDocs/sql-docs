@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 caps.latest.revision: 7
 author: "markingmyname"
 ms.author: "maghan"
-manager: "jhubbard"
+manager: craigg
 ---
 # Checklists for Installing BI Features with SharePoint
   This section provides checklists for installing SQL Server BI features in different combinations or in scale-out topologies. If you already know how to run a Setup program to install a BI feature, a checklist is the next step towards understanding the recommended installation order, and whether additional configuration changes are required to enable feature integration scenarios.  

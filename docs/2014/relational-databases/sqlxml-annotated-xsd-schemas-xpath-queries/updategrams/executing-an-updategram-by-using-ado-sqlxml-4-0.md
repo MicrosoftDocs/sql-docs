@@ -18,7 +18,7 @@ ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Executing an Updategram by Using ADO (SQLXML 4.0)
   This [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic application uses ADO to establish a connection to an instance of Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and execute an updategram. The updategram updates the last name of a specific employee. This example uses the AdventureWorks sample database.  

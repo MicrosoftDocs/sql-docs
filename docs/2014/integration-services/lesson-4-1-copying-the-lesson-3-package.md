@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 caps.latest.revision: 26
 author: "douglaslM"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Step 1: Copying the Lesson 3 Package
   In this task, you will create a copy of the Lesson 3.dtsx package that you created in Lesson 3. Alternatively, if you did not complete lesson 3, you can add the completed lesson 3 package that is included with the tutorial to the project, and then make a copy of it to work with. You will use this new copy throughout the rest of Lesson 4.  

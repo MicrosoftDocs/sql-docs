@@ -20,7 +20,7 @@ ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using Cursors (ODBC)
   ODBC supports a cursor model that allows:  

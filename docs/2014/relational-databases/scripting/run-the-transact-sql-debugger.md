@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, sysadmin requirement"
   - "Transact-SQL debugger, supported versions"
@@ -23,7 +23,7 @@ ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 7
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Run the Transact-SQL Debugger
   You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you open a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. Then, you can run your [!INCLUDE[tsql](../../includes/tsql-md.md)] code in debug mode until you stop the debugger. You can set options to customize how the debugger runs.  

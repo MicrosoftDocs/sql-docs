@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, propagation methods"
   - "propagating data changes [SQL Server replication]"
@@ -16,7 +16,7 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 caps.latest.revision: 37
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Propagation Method for Data Changes to Transactional Articles
   This topic describes how to set the propagation method for data changes to transactional articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

@@ -21,7 +21,7 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Information in Error Interfaces
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider reports some error and status information in the OLE DB-defined error interfaces **IErrorInfo**, **IErrorRecords**, and **ISQLErrorInfo**.  

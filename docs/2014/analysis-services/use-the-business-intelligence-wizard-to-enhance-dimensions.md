@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Business Intelligence enhancements [Analysis Services]"
 ms.assetid: 12d995d1-75ca-4890-bf4b-a2656910b8d0

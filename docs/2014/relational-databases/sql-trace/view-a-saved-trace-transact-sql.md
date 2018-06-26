@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], viewing"
   - "displaying traces"
@@ -17,7 +17,7 @@ ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View a Saved Trace (Transact-SQL)
   This topic describes how to use built-in functions to view a saved trace.  

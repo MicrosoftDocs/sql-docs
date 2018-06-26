@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "foreign keys [SQL Server], deleting"
   - "removing foreign keys"
@@ -17,7 +17,7 @@ ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 caps.latest.revision: 14
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Delete Foreign Key Relationships
   You can delete a foreign key constraint in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Deleting a foreign key constraint removes the requirement to enforce referential integrity.  

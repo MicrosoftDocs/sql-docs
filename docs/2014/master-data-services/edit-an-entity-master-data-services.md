@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "entities [Master Data Services], changing name"
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Change an Entity Name (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of an entity.  

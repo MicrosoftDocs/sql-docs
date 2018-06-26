@@ -22,7 +22,7 @@ ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # GetCurrentCertificate Method (SecurityCertificate Class)
   Gets the current security certificate.  

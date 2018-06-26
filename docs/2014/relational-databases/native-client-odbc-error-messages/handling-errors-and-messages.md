@@ -23,7 +23,7 @@ ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Handling Errors and Messages
   When an application calls an ODBC function, the driver executes the function and returns diagnostic information in two ways: A return code indicates the overall success or failure of an ODBC function, and diagnostic records provide detailed information about the function. Diagnostic records include a header record and status records. At least one diagnostic record, the header record, is returned even if the function succeeds.  

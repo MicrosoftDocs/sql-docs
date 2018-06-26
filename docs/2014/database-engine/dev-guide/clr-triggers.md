@@ -29,7 +29,7 @@ ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 caps.latest.revision: 67
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # CLR Triggers
   Because of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integration with the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR), you can use any [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] language to create CLR triggers. This section covers information specific to triggers implemented with CLR integration. For a complete discussion of triggers, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  

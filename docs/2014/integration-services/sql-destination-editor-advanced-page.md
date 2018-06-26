@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlserverdestadapter.advanced.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Destination Editor (Advanced Page)
   Use the **Advanced** page of the **SQL Destination Editor** dialog box to specify advanced bulk insert options.  

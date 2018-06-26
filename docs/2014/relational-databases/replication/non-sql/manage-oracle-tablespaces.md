@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle publishing [SQL Server replication], managing tablespaces"
   - "tablespaces [SQL Server replication]"
@@ -16,7 +16,7 @@ ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 caps.latest.revision: 32
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage Oracle Tablespaces
   A tablespace is a unit of database storage that is roughly equivalent to a file group in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tablespaces allow storage and management of database objects within individual groups. For more information, see the Oracle documentation.  

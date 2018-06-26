@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.calculatedmemberbuilderdialog.f1"
 ms.assetid: 73b89a9f-f403-4ab8-99f7-e3ceb870c260

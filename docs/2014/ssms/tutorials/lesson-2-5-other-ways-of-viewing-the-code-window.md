@@ -5,15 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
-caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Other Ways of Viewing the Code Window
   The Code Window can be configured to display multiple code windows in several ways.  

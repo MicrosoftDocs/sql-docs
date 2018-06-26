@@ -14,7 +14,7 @@ ms.assetid: e26fbc87-9483-4a2e-99f1-bf52a58360db
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configuring the SQL Server ODBC Driver How-to Topics
   Before using ODBC applications with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later, you must know how to upgrade the version of the catalog stored procedures on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and add, delete, and test data sources.  

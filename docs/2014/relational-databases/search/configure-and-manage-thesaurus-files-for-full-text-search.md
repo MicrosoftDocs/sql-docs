@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes [SQL Server], thesaurus files"
   - "thesaurus [full-text search], configuring"
@@ -17,7 +17,7 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 caps.latest.revision: 82
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], full-text queries can search for synonyms of user-specified terms through the use of a thesaurus. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *thesaurus* defines a set of synonyms for a specific language. System administrators can define two forms of synonyms: expansion sets and replacement sets. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. Thesaurus matching occurs for all [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) and [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) queries and for any [CONTAINS](/sql/t-sql/queries/contains-transact-sql) and [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) queries that specify the FORMSOF THESAURUS clause.  

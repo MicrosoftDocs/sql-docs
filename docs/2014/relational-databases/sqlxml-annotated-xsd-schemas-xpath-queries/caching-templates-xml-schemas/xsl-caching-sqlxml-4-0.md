@@ -18,7 +18,7 @@ ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # XSL Caching (SQLXML 4.0)
   Caching XSL style sheets improves performance. Upon its first execution, an XSL style sheet remains in memory if XSL caching is set to ON; this improves performance for subsequent processing. The default setting is ON.  

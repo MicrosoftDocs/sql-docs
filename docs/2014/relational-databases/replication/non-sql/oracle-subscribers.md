@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [SQL Server replication], non-SQL Server Subscribers"
   - "Oracle Subscribers [SQL Server replication]"
@@ -19,7 +19,7 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: 55
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Oracle Subscribers
   Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports push subscriptions to Oracle through the Oracle OLE DB provider supplied by Oracle.  

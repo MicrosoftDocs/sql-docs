@@ -16,7 +16,7 @@ ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Conversions Performed from Client to Server
   This topic describes date/time conversions performed between a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later).  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-security"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.DATABASEUSER.GENERAL.F1"
   - "sql12.swb.user.securables.f1"
@@ -26,7 +26,7 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 25
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a Database User
   This topic describes how to create a database user mapped to a login in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The database user is the identity of the login when it is connected to a database. The database user can use the same name as the login, but that is not required. This topic assumes that a login already exists in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For information about how to create a login, see [Create a Login](create-a-login.md).  

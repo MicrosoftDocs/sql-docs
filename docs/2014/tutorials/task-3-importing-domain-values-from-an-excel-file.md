@@ -10,12 +10,12 @@ ms.technology:
   - "integration-services"
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 3: Importing Domain Values from an Excel File
   In this task, you import values for the **State** domain from a worksheet of an Excel file.  

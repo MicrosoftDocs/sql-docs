@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Text_Editor.XML.General"
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 caps.latest.revision: 20
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Text Editor - XML - General Page)
   Use this dialog to change the general editing behavior of the XML Editor, which is used to edit XML documents. To display these settings, click **Options** on the **Tools** menu, expand the **XML** subfolder, and then click **General**.  

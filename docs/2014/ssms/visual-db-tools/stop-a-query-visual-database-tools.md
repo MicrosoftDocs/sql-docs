@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ending queries [SQL Server]"
   - "stopping queries"
@@ -17,7 +17,7 @@ ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Stop a Query (Visual Database Tools)
   If you see that the query is taking too long or is not returning the results you expect, you can stop the query if it has not already finished.  

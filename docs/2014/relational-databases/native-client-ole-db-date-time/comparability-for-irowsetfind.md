@@ -16,7 +16,7 @@ ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Comparability for IRowsetFind
   For date/time types only, IRowsetFind supports the following comparisons:  

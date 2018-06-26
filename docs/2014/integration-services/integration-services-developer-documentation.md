@@ -22,7 +22,7 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 caps.latest.revision: 76
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Developer&#39;s Guide (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a completely rewritten object model, which has been enhanced with many features that make extending and programming packages easier, more flexible, and more powerful. Developers can extend and program almost every aspect of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  

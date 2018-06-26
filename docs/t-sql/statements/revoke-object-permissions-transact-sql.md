@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "object permissions [SQL Server], revoking"
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # REVOKE Object Permissions (Transact-SQL)

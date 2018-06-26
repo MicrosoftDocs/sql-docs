@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IsSharePointIntegrated property"
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056

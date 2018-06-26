@@ -14,7 +14,7 @@ ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB)
   This sample shows uses an ISequentialStream interface in an ICommandText interface to retrieve a single record from a Filestream column.  

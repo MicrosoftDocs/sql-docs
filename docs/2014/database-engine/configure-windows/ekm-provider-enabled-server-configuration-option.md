@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "external encryption provider"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
 caps.latest.revision: 12
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # EKM provider enabled Server Configuration Option
   The `EKM provider enabled` option controls Extensible Key Management device support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default this option is off.  

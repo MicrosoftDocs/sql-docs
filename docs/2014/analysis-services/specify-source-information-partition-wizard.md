@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitionwizard.specifydsvandfacttables.f1"
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b

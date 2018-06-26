@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "current date"
   - "GETDATE function"
@@ -17,7 +17,7 @@ ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # GETDATE (SSIS Expression)
   Returns the current date of the system in a DT_DBTIMESTAMP format. The GETDATE function takes no arguments.  

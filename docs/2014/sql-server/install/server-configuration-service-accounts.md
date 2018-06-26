@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "service account configuration, SQL Server"
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Server Configuration - Service Accounts
   Use the Server Configuration page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to assign login accounts to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services configured on this page depend on the features you have selected to install.  

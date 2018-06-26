@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1"
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25

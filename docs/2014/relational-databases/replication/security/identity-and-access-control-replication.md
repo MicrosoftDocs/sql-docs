@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "access controls [SQL Server replication]"
   - "security [SQL Server replication], identity and access control"
@@ -18,7 +18,7 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 caps.latest.revision: 7
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Identity and Access Control (Replication)
   Authentication is the process by which an entity (typically a computer in this context) verifies that another entity, also called a *principal*, (typically another computer or user) is who or what it claims to be. Authorization is the process by which an authenticated principal is given access to resources, such as a file in the file system, or a table in a database.  

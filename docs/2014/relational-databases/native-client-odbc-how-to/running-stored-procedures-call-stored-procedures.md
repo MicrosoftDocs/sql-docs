@@ -16,7 +16,7 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Call Stored Procedures (ODBC)
   When a SQL statement calls a stored procedure using the ODBC CALL escape clause, the Microsoft® SQL Server™ driver sends the procedure to SQL Server using the remote stored procedure call (RPC) mechanism. RPC requests bypass much of the statement parsing and parameter processing in SQL Server and are faster than using the Transact-SQL EXECUTE statement.  

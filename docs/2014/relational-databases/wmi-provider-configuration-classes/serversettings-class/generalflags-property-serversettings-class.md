@@ -22,7 +22,7 @@ ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # GeneralFlags Property (ServerSettings Class)
   Gets the general flags associated with the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

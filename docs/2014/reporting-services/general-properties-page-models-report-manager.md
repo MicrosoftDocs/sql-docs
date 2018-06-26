@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.modelproperties.general.f1"
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8

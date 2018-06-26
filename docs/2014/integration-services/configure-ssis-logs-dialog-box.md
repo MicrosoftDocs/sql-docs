@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredtslogs.loggingdetails.f1"
   - "sql12.dts.designer.configuredtslogs.providersandlogs.f1"
@@ -19,7 +19,7 @@ ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure SSIS Logs Dialog Box
   Use the **Configure SSIS Logs** dialog box to define logging options for a package.  

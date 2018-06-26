@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [Integration Services], parameter mapping"
   - "parameterized SQL commands [Integration Services]"
@@ -20,7 +20,7 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Map Query Parameters to Variables in an Execute SQL Task
   This topic describes how to use a parameterized SQL statement in the Execute SQL task and create mappings between variables and the parameters in the SQL statement.  

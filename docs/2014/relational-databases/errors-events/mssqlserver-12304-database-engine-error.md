@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "12304 (Database Engine error)"
 ms.assetid: a2c252c2-e815-4ac8-a101-7af5b32e3233
 caps.latest.revision: 4
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # MSSQLSERVER_12304
     

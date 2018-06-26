@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "pairing target [SQL Server extended events]"
   - "event pairing target"
@@ -17,7 +17,7 @@ ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Event Pairing Target
   The event pairing target matches two events using one or more columns of data that are present in each event. Many events come in pairs, for example, lock acquires and lock releases. After an event sequence is paired, both events are discarded. Discarding matched sets allows for easy detection of lock acquisitions that have not been released.  

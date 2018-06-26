@@ -14,7 +14,7 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # String Utility Functions Sample
   The String Utilities sample contains a streaming table-valued function written in Visual C# and Visual Basic, which splits a comma-separated string into a table with one column. It also contains an aggregate function that converts a string column to a comma-separated string.  Also implemented are a scalar function and a table-valued function that provide regular expression replacement and regular expression searching functionality.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Broker:Connection Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Connection** event to report the status of a transport connection managed by Service Broker.  

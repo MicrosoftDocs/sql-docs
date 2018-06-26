@@ -35,7 +35,7 @@ ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # XML Bulk Load Examples (SQLXML 4.0)
   The following examples illustrate the XML Bulk Load functionality in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Each example provides an XSD schema and its equivalent XDR schema.  

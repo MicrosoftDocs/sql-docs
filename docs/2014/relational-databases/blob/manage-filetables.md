@@ -5,10 +5,9 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], security"
   - "FileTables [SQL Server], managing access"
@@ -16,7 +15,7 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 23
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage FileTables
   Describes common administrative tasks for managing FileTables.  

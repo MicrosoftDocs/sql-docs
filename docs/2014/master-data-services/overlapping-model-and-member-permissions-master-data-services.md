@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "models [Master Data Services], effective permissions"
   - "permissions [Master Data Services], model and member overlaps"
@@ -17,7 +17,7 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Overlapping Model and Member Permissions (Master Data Services)
   Permission assigned to a member can overlap with permission assigned to a model object. When overlaps occur, the more restrictive permission takes effect.  

@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 caps.latest.revision: 9
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Publish a Database (SQL Server Management Studio)
   You can use the **Generate and Publish Scripts Wizard** to publish an entire database or individual database objects to a Web hosting provider.  

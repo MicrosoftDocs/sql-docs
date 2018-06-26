@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "synchronization [SQL Server replication], subscriptions"
   - "subscriptions [SQL Server replication], synchronizing"
@@ -17,7 +17,7 @@ ms.assetid: cbe13120-8dd9-4309-88dd-07a801c68f5f
 caps.latest.revision: 34
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Synchronize Subscriptions (Replication)
   Subscriptions are synchronized by replication agents. The Distribution Agent synchronizes subscriptions to transactional and snapshot publications, and the Merge Agent synchronizes subscriptions to merge publications. You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], replication stored procedures, and Replication Management Objects (RMO) to synchronize subscriptions and to control synchronization behavior. The following topics describe how synchronize subscriptions and specify synchronization options.  

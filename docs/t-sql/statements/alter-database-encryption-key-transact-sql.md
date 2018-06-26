@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ALTER DATABASE ENCRYPTION KEY"
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)

@@ -18,7 +18,7 @@ ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create a Visual Basic SMO Project in Visual Studio .NET
   This section describes how to build a simple SMO console application.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.process.incrementalupdate.f1"
 ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5

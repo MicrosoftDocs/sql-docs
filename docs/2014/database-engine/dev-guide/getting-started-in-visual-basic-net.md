@@ -18,7 +18,7 @@ ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Getting Started in Visual Basic .NET
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET in one of the managed programming languages that is supported by the common runtime library in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Many of the samples in this documentation are written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. You can use [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] and [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] to develop SMO applications.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Dimension Wizard"
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f

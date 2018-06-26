@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Server Properties F1 Help
   This section contains the F1 Help topics for the **Server Properties** pages in SQL Server Management Studio.  

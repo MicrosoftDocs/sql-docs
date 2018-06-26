@@ -20,7 +20,7 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Performing Distributed Transactions
   The Microsoft Distributed Transaction Coordinator (MS DTC) allows applications to extend transactions across two or more instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. It also allows applications to participate in transactions managed by transaction managers that comply with the Open Group DTP XA standard.  

@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: craigg
 ---
 # Modifying the Product Dimension
   In the tasks in this topic, you use a named calculation to provide more descriptive names for the product lines, define a hierarchy in the Product dimension, and specify the (All) member name for the hierarchy. You also group attributes into display folders.  

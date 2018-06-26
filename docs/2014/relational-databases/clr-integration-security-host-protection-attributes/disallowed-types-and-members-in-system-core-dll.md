@@ -14,7 +14,7 @@ ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Disallowed Types and Members in System.Core.dll
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) programming disallows the use of a type or member that has a `HostProtectionAttribute` that specifies a `System.Security.Permissions.HostProtectionResource` enumeration with a value of `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, or `UI`. The following table lists the members and types of the System.Core.dll assemblies whose Host Protection Attribute (HPA) values are disallowed.  

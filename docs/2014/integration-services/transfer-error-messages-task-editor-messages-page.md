@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transfererrormessagestask.errormessages.F1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transfer Error Messages Task Editor (Messages Page)
   Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] user-defined error messages from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another. For more information about this task, see [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

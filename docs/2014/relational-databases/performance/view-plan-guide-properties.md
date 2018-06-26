@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-plan-guides"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.planguideprop.general.f1"
 helpviewer_keywords: 
@@ -18,7 +18,7 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Plan Guide Properties
   You can view the properties of plan guides in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]  

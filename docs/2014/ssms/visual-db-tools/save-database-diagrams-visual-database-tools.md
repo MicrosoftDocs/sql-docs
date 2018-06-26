@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "saving database diagrams"
   - "database diagrams [SQL Server], saving"
@@ -17,7 +17,7 @@ ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Save Database Diagrams (Visual Database Tools)
   By saving a database diagram, you can save all the changes you made to it, including any changes you made to the tables, columns, and other database objects.  

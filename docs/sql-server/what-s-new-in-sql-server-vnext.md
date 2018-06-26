@@ -47,7 +47,7 @@ Continue reading for more details about these features.
 ### Intelligent query processing 
 
 - Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute:
-```sql
+```
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
 ```
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.

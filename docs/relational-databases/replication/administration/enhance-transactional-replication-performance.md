@@ -82,7 +82,7 @@ The findings:
     - Increasing **SubscriptionStreams** value does help in the overall throughput of the Distribution Agent, since multiple connections to the Subscriber apply batches of changes in parallel. However, depending on the number of processors and other metadata conditions (such as primary key, foreign keys, unique constraints, and indexes) the higher value of SubscriptionStreams might actually have an adverse effect. Additionally, if a stream fails to execute or commit, the Distribution Agent falls back to using a single stream to retry the failed batches.
 
 
-For more information about this testing, see [Testing workloads with different agent parameters](https://blogs.msdn.microsoft.com/repltalk).
+For more information about this testing, see the blog [Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/).
 
 
 ### Log Reader Agent

@@ -24,7 +24,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 
 ## [SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
-*A bug was discovered in 17.8 related to provisioning SQL databases, so SSMS 17.8.1 replaces 17.8*
+*A bug was discovered in 17.8 related to provisioning SQL databases, so SSMS 17.8.1 replaces 17.8.*
 
 
 Build number: 14.0.17277.0<br>

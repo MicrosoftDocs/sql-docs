@@ -38,8 +38,8 @@
 # [Tutorials, samples, solutions](tutorials/machine-learning-services-tutorials.md)
 
 ## [R](tutorials/sql-server-r-tutorials.md)
-### [Create partition-based models](tutorial/r-tutorial-create-models-per-partition.md)
-### [R: Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
+### [Create partition-based models](tutorials/r-tutorial-create-models-per-partition.md)
+### [R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 #### [Working with inputs and outputs](tutorials/rtsql-working-with-inputs-and-outputs.md)
 #### [R and SQL data types and data objects](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
 #### [Using R functions with SQL Server data](tutorials/rtsql-using-r-functions-with-sql-server-data.md)

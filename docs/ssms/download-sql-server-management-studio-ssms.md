@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/21/2018"
+ms.date: "06/26/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -39,16 +39,16 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 17.x is the latest generation of *SQL Server Management Studio* and provides support for SQL Server 2017.
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8](https://go.microsoft.com/fwlink/?linkid=875673)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8 Upgrade Package (upgrades 17.x to 17.8)](https://go.microsoft.com/fwlink/?linkid=875675)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1 Upgrade Package (upgrades 17.x to 17.8.1)](https://go.microsoft.com/fwlink/?linkid=875804)**
 
 
 **Version Information**
 
-Release number: 17.8<br>
-Build number: 14.0.17276.0<br>
-Release date: June 21, 2018
+Release number: 17.8.1<br>
+Build number: 14.0.17277.0<br>
+Release date: June 26, 2018
 
 The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 17*, and has a new icon: 
@@ -64,11 +64,11 @@ If a computer contains side by side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 17.8:<br>
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=875673&clcid=0x40a)
+SQL Server Management Studio 17.8.1:<br>
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
-SQL Server Management Studio 17.8 Upgrade Package (upgrades 17.x to 17.8):<br>
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=875675&clcid=0x40a)
+SQL Server Management Studio 17.8.1 Upgrade Package (upgrades 17.x to 17.8.1):<br>
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
 
 > [!NOTE]
 > The SQL Server PowerShell module is now a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
@@ -78,9 +78,9 @@ SQL Server Management Studio 17.8 Upgrade Package (upgrades 17.x to 17.8):<br>
 
 ## New in this Release
 
-SSMS 17.8 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
+SSMS 17.8.1 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
 
-Version 17.8 includes:
+Version 17.8.1 includes:
 
 **General SSMS**
 

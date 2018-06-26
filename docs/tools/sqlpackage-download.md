@@ -7,7 +7,7 @@ ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
-ms.component: sos
+ms.component: sqlpackage
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "pensivebrian"
@@ -22,9 +22,11 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 
 |Platform|Download|Release date|Version|Build|
 |:---|:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=875508)|Jan 25, 2018|17.4.1|14.0.3917.1|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=875508)|June 22, 2018|17.8|14.0.4079.2|
 |macOS (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|May 9, 2018 |0.0.1|15.0.4057.1|
 |Linux (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|May 9, 2018 |0.0.1|15.0.4057.1|
+
+For details about the latest release, see the [release notes](release-notes.md).
 
 ## Get sqlpackage for Windows
 

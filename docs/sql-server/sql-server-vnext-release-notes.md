@@ -1,7 +1,7 @@
 ---
 title: "SQL Server vNext Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2018"
+ms.date: "07/16/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,30 +19,42 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
-This article describes limitations and known issues for the SQL Server vNext Community Technology Preview (CTP) releases. For related information, see:
+This article describes limitations and known issues for the [!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
 
-**Try SQL Server vNext!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server vNext to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+**Try [!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] !**
+- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download [!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server vNext on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 1.4 (March 2018)
+## CTP 2.0 (July 2018)
+
+[!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of (../includes/sssqlv15-md.md)].
+
+### SQL Graph
+
+**Issue and customer impact**: Tools which have dependency on DacFx like import-export will not work for the new graph features - Edge Constraints, Merge DML and Derived Tables/Views. Scripting in SSMS may not work. 
+
+**Workaround**: Writing T-SQL scripts and running them against the server using SSMS or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using t-sql scripts. 
+
+**Applies To**:  [!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] CTP 2.0.
 
 ### Master Data Services (MDS)
-**Issue and customer impact:** In the Master Data Services (MDS) portal, the Silverlight components on the following pages have been replaced with HTML controls:
--   Function Explore
-    -   Entities
-    -   Entity Dependencies
-    -   Hierarchies
--   Function System Administration 
-    -   Manage Derived Hierarchies - Edit Derived Hierarchy - Preview 
+
+**Issue and customer impact**: In the Master Data Services (MDS) portal, the Silverlight components on the following pages have been replaced with HTML controls:
+
+- Function Explore
+  - Entities
+  - Entity Dependencies
+  - Hierarchies
+- Function System Administration
+  - Manage Derived Hierarchies - Edit Derived Hierarchy - Preview
 
 On the modified **Explore** pages, the operators `Matches` and `Does not match` are not supported for filtering grid data in the function **Filter**. Support for these operators will be restored in later CTP releases.
 
-**Workaround:** No workaround is available.
+**Workaround**: No workaround is available.
 
-**Applies to:** Windows
+**Applies to**: Windows
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

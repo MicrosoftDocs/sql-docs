@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], managing"
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b

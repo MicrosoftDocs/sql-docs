@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Index Element (DTA)
   Contains information about an index that you want to create or drop for a user-specified configuration.  

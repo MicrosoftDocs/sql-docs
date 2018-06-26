@@ -17,7 +17,7 @@ ms.assetid: 05018a4d-2339-4ecf-8769-414ec781c535
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Preparing to Use SMO
   This section contains information about getting started using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). The following list will help you to locate information about syntax styles in the documentation, system requirements for programming in SMO, files and version numbers, a description of what's new in SMO, and an installation guide.  

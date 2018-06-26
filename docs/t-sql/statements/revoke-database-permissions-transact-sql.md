@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "REVOKE statement, databases"
 ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cdc schema"
   - "change data capture"
@@ -16,7 +16,7 @@ ms.assetid: 6a84aa25-0f31-4be3-b2dd-4f249b8254ae
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove the cdc schema if you plan to enable change data capture
   A database already contains a cdc schema. If you plan to enable change data capture after upgrade, you must first drop this cdc schema. When you enable a database for change data capture, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will create a new schema named cdc.  

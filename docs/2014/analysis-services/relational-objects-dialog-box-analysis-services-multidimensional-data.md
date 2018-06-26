@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.relationalobjectsdialog.f1"
 ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052

@@ -3,11 +3,6 @@ title: Development SQL Server partners | Microsoft Docs
 description: Lists of third-party partners with development solutions for Server.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: 
-ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.devlang: NA
 ms.topic: article
@@ -17,7 +12,8 @@ ms.date: 17/09/2017
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.author: mikeray
-
+author: MikeRayMSFT
+manager: craigg
 ---
 # SQL Server development partners
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

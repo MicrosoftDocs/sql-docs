@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL:StmtCompleted Event Class
   The SQL:StmtCompleted event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has completed.  

@@ -28,7 +28,7 @@ ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Hiding Elements and Attributes by Using sql:hide
   When an XPath query is executed against an XSD schema, the resulting XML document has elements and attributes that are specified in the schema. You can specify that some elements and attributes be hidden in the schema by using the `sql:hide` annotation. This is useful when the selection criteria of the query require particular elements or attributes in the schema, but you do not want them returned in the XML document that is generated.  

@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 474e910a-6abb-4e28-acc2-055338c011d4
 caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Remove UDT&#39;s named after the reserved ORDPATH data type
   Upgrade Advisor detected a user-defined type (UDT) that is named after a term reserved for the `ORDPATH` data type.  

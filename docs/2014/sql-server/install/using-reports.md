@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying reports"
   - "overriding reports"
@@ -38,7 +38,7 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Using Reports
   A separate report is generated for each component, and, where necessary, each instance, that the Upgrade Advisor Analysis Wizard analyzes on a server. The report provides details about known issues that affect an upgrade. It also provides links to information and suggested actions for addressing the identified issues.  

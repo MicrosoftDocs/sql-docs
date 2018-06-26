@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, peer-to-peer replication"
   - "peer-to-peer transactional replication, conflict detection"
@@ -16,7 +16,7 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: 18
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Conflict Detection in Peer-to-Peer Replication
   Peer-to-peer transactional replication lets you insert, update, or delete data at any node in a topology and have data changes propagated to the other nodes. Because you can change data at any node, data changes at different nodes could conflict with each other. If a row is modified at more than one node, it can cause a conflict or even a lost update when the row is propagated to other nodes.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.aboutsqlserverworkbench.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # About SQL Server Management Studio
   Use this dialog box to view or copy information about your installation of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Evaluation editions list the number of days remaining until the product expires.  

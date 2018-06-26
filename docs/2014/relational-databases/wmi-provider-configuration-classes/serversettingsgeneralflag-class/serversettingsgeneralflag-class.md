@@ -22,7 +22,7 @@ ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ServerSettingsGeneralFlag Class
   The [ServerSettingsGeneralFlag Class](serversettingsgeneralflag-class.md) represents the general flag settings on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

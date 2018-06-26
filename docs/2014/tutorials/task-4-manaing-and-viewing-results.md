@@ -10,12 +10,12 @@ ms.technology:
   - "integration-services"
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 4: Manaing and Viewing Results
   In this task, you review the results of computer-assisted cleansing and also perform interactive cleansing on the supplier data. See [Interactive Cleansing Stage](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) for more details.  

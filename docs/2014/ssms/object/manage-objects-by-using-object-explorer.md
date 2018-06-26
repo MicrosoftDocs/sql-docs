@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.SQLSERVEROBJECTEXPLORER.DHELP"
 helpviewer_keywords: 
@@ -19,7 +19,7 @@ ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Manage Objects by Using Object Explorer
   You can use Object Explorer to manage objects such as databases, tables and stored procedures.  

@@ -20,7 +20,7 @@ ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ISSAbort::Abort (OLE DB)
   Cancels the current rowset plus any batched commands associated with the current command.  

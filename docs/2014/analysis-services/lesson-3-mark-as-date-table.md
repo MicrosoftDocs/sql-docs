@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 4: Mark as Date Table
   In Lesson 2: Add Data, you imported a dimension table named DimDate. You then renamed the DimDate table, in Lesson 3: Rename Columns, to simply, Date. While in your model this table is now named Date, it can also be known as a *Date table*, in that it contains date and time data.  

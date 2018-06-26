@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [Integration Services], creating"
   - "Integration Services projects, creating"
@@ -18,7 +18,7 @@ ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Development of an Integration Services Project
   You add [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages to projects. To create and work with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, you must install the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] environment. For more information, see [Install Integration Services](install-windows/install-integration-services.md).  

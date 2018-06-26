@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagesettingsdialog.f1"
 ms.assetid: 58b26088-f4b1-4962-b824-3e360e955671

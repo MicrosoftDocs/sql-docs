@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Manager [Reporting Services], configuring"
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a

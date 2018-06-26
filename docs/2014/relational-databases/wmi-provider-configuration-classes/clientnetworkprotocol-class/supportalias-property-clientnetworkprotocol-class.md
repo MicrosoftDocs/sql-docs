@@ -22,7 +22,7 @@ ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # SupportAlias Property (ClientNetworkProtocol Class)
   Gets the Boolean property that specifies whether the current network protocol specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](clientnetworkprotocol-class.md) support aliases.  

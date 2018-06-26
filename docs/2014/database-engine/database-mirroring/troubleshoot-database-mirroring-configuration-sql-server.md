@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
   - "endpoints [SQL Server], database mirroring"
@@ -18,7 +18,7 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 caps.latest.revision: 68
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Troubleshoot Database Mirroring Configuration (SQL Server)
   This topic provides information to help you troubleshoot problems in setting up a database mirroring session.  

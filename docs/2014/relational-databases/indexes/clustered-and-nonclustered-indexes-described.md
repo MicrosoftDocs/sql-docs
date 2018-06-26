@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "query optimizer [SQL Server], index usage"
   - "index concepts [SQL Server]"
@@ -16,7 +16,7 @@ ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 caps.latest.revision: 35
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Clustered and Nonclustered Indexes Described
   An index is an on-disk structure associated with a table or view that speeds retrieval of rows from the table or view. An index contains keys built from one or more columns in the table or view. These keys are stored in a structure (B-tree) that enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to find the row or rows associated with the key values quickly and efficiently.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "content queries [DMX]"
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0

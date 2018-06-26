@@ -18,7 +18,7 @@ ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Introduction to the SQLXMLOLEDB Provider (SQLXML 4.0)
   The SQLXMLOLEDB Provider is an OLE DB provider that exposes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML functionality through ActiveX Data Objects (ADO). However, the provider can execute commands only in the "write to an output stream" mode of ADO. The SQLXMLOLEDB Provider is not a rowset provider. When you execute a command, you must specify the adExecuteStream flag, which directs ADO to use the output stream that you have specified.  

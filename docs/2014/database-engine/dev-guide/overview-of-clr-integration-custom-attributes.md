@@ -20,7 +20,7 @@ ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Overview of CLR Integration Custom Attributes
   The common language runtime (CLR) of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] allows the use of descriptive keywords, called attributes. These attributes provide additional information for many elements, such as methods and classes. The attributes are saved in the assembly with the metadata of the object, and can be used to describe your code to other development tools or to affect runtime behavior inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

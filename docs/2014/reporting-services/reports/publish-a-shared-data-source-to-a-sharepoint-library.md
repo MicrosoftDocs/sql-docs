@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], publishing to a SharePoint library"
   - "SharePoint integration [Reporting Services], publishing to a library"

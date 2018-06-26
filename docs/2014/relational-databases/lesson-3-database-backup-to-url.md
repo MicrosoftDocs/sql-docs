@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Lesson 4: Create a database in Windows Azure Storage
   In this lesson, you will learn how to create a database using the SQL Server Data Files in Windows Azure feature. Note that before this lesson, you must complete the Lesson 1, 2, and 3. Lesson 3 is a very important step because you need to store the information about your Windows Azure storage container and its associated policy name and SAS key in the SQL Server credential store before Lesson 4.  

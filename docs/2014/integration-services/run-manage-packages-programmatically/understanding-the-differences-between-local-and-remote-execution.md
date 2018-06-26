@@ -18,7 +18,7 @@ ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Understanding the Differences between Local and Remote Execution
   Package developers and administrators should be aware that there are restrictions related to where an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package runs.  

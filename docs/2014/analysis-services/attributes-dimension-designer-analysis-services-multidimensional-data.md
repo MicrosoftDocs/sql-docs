@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.asvs.dimensiondesigner.dbv.attributespane.f1"
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5

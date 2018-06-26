@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Transactions"
   - "Transactions object"
@@ -16,7 +16,7 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 caps.latest.revision: 27
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server, Transactions Object
   The **Transactions** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor the number of transactions active in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], and the effects of those transactions on resources such as the snapshot isolation row version store in **tempdb**. Transactions are logical units of work; a set of operations that must either all succeed or all be erased from a database in order to maintain the logical integrity of the data. All modifications of data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are made in transactions.  

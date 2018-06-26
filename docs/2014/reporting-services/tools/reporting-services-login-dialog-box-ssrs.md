@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.reportservicelogin.f1"
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733

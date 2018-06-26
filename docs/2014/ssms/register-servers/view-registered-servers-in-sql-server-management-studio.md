@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying Registered Servers"
   - "viewing Registered Servers"
@@ -17,7 +17,7 @@ ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Registered Servers in SQL Server Management Studio
   This topic describes how to view registered servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

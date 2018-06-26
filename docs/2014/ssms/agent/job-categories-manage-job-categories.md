@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.job.categories.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Job Categories: Manage Job Categories
   Use the **Job Categories** dialog box to add or delete job categories. Built-in job categories cannot be deleted.  

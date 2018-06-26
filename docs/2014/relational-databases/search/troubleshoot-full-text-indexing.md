@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [full-text search]"
   - "troubleshooting [SQL Server], full-text search"
@@ -17,7 +17,7 @@ ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 caps.latest.revision: 43
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Troubleshoot Full-Text Indexing
      

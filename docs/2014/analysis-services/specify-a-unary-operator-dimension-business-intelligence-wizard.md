@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.acctintelligence.addcustomaggregation.selectdimension.f1"
 ms.assetid: 0c8ce9ce-f5ce-4bea-830d-05836ea17112

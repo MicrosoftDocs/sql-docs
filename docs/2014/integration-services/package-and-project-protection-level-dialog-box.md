@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.packageprotectionlevel.f1"
   - "sql12.ssis.bids.projectprotectionlevel.f1"
@@ -18,7 +18,7 @@ ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Package and Project Protection Level Dialog Box
   Use the **Package Protection Level** dialog box to update the protection level of a package. The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only.  

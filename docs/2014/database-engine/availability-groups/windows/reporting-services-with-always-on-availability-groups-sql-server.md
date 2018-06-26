@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
@@ -16,7 +16,7 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reporting Services with AlwaysOn Availability Groups (SQL Server)
   This topic contains information about configuring [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The three scenarios for using [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] are databases for report data sources, report server databases, and report design. The supported functionality and required configuration is different for the three scenarios.  

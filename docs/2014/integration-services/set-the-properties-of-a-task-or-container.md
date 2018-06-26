@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tasks [Integration Services], properties"
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Set the Properties of a Task or Container
   You can set most properties of tasks and containers by using the **Properties** window. The exceptions are properties of task collections and properties that are too complex to set by using the **Properties** window. For example, you cannot configure the enumerator that the Foreach Loop container uses in the **Properties** window. You must use a task or container editor to set these complex properties. Most task and container editors have multiple nodes and each node contains related properties. The name of the node indicates the subject of the properties that the node contains.  

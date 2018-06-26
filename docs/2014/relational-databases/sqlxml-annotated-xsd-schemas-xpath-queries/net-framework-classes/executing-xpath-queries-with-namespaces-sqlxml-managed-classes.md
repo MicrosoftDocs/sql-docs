@@ -22,7 +22,7 @@ ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Executing XPath Queries with Namespaces (SQLXML Managed Classes)
   XPath queries can include namespaces. If the schema elements are namespace-qualified (use a target namespace), the XPath queries against the schema must specify the namespace.  

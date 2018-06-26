@@ -25,7 +25,7 @@ ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Introduction to Annotated XSD Schemas (SQLXML 4.0)
   You can create XML views of relational data by using the XML Schema Definition (XSD) language. These views can then be queried by using XML Path language (XPath) queries. This is similar to creating views by using CREATE VIEW statements and then specifying SQL queries against the view.  

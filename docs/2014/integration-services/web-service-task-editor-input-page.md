@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.webservicestask.input.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Web Service Task Editor (Input Page)
   Use the **Input** page of the **Web Service Task Editor** dialog box to specify the Web Service, the Web method, and the values to provide to the Web method as input. The values can be provided either by typing strings directly in the Value column, or by selecting variables in the Value column.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MINIMUM_DEPENDENCY_PROBABILITY parameter"
   - "MAXIMUM_INPUT_ATTRIBUTES parameter"

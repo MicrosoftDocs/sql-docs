@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], Business Intelligence enhancements"
   - "Business Intelligence enhancements [Analysis Services], custom aggregations"

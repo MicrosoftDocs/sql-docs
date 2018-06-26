@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Aggregation Design Wizard"
 ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d

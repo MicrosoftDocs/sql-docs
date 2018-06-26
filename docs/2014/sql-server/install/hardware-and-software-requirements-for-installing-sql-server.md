@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Setup [SQL Server], software"
   - "software [SQL Server]"
@@ -48,7 +48,7 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 caps.latest.revision: 302
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Hardware and Software Requirements for Installing SQL Server 2014
 

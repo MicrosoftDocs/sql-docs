@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Upgrade Advisor, how-to topics"
   - "Upgrade Advisor [SQL Server], how-to topics"
@@ -16,7 +16,7 @@ ms.assetid: d73bf759-58f7-4789-af49-ac8ca94f913d
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Upgrade Advisor How-to Topics
   This section contains common procedures for using Upgrade Advisor.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dimprocessingtransformation.mappings.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Dimension Processing Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Dimension Processing Destination Editor** dialog box to map input columns to dimension columns.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # TM: Save Tran Completed Event Class
   The TM: Save Tran Completed event class indicates that a SAVE TRANSACTION request has completed. The request was sent from the client through the transaction management interface.  

@@ -22,7 +22,7 @@ ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # InstanceName Property (ClientSettings Class)
   Gets the name of the instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  

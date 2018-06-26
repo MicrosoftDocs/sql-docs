@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MultiLineString geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
@@ -16,7 +16,7 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # MultiLineString
   A `MultiLineString` is a collection of zero or more `geometry` or **geographyLineString** instances.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [Integration Services], items"
   - "Integration Services projects, items"
@@ -20,7 +20,7 @@ ms.assetid: ba0bf4d1-c974-4c64-b916-3db2be854cde
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add an Item to an Integration Services Project
   This procedure describes how to add new and existing items to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  

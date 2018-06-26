@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2014"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 670e1ea0-ffda-4d84-b4cd-f15a331035b9
 caps.latest.revision: 3
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create an Updatable Subscription to a Transactional Publication Using Transact-SQL
 

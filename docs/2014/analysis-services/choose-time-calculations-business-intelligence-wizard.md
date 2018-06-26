@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.timeintelligence.addintelligence.f1"
 ms.assetid: f363fbf5-c51f-42ee-8ab4-86ab35cab597

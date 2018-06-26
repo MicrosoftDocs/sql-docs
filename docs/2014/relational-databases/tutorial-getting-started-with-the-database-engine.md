@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorials [connecting]"
   - "tutorials [Database Engine]"
@@ -19,7 +19,7 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Tutorial: Getting Started with the Database Engine
   Welcome to the Getting Started with the [!INCLUDE[ssDE](../includes/ssde-md.md)] tutorial. This tutorial is intended for users who are new to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and who have installed [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. This brief tutorial helps you get started using the [!INCLUDE[ssDE](../includes/ssde-md.md)].  

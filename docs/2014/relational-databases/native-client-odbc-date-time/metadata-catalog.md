@@ -17,7 +17,7 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Catalog Metadata
   This topic describes the column metadata returned by `SQLColumns` and `SQLProcedureColumns`, and the data type metadata returned by `SQLGetTypeInfo`.  

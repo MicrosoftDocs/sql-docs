@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/21/2018"
+ms.date: "06/26/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -23,10 +23,12 @@ This article provides details about updates, improvements, and bug fixes for the
 
 
 
-## [SSMS 17.8](download-sql-server-management-studio-ssms.md)
+## [SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+A bug was discovered in 17.8 (related to provisioning SQL databases) so 17.8.1 replaces it.
 
-Build number: 14.0.17276.0<br>
-Release date: June 21, 2018
+Build number: 14.0.17277.0<br>
+Release date: June 26, 2018
+
 
 ### What's new
 
@@ -694,9 +696,9 @@ Generally available | Build number: 14.0.17099.0
     - Assorted Intellisense improvements
   - Universal Authentication
     - Allows users to specify a username and no password and the Azure Login Dialog will handle the connection
-  - SSMS PQ Integration: 
-    - Scripting of structured data sources works 
-    - Viewing and Editing of structured data sources in PQ UI
+  - SSMS PQ Integration: 
+    - Scripting of structured data sources works 
+    - Viewing and Editing of structured data sources in PQ UI
 - New "Add Unique Constraint" template
 - Showplan
 	- Show max instead of sum across the threads in properties window for elapsed time
@@ -708,8 +710,8 @@ Generally available | Build number: 14.0.17099.0
   - Introduced functionality in Showplan Comparison feature to find significant differences in Cardinality Estimation between matching nodes of two query plans and perform basic analysis of the possible root causes
 - Removed Configuration Manager from Registered Servers explorer
 - Enable reading audit logs from Azure blob storage
-- Added Parameterization for Always Encrypted, please refer to [this page](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) for more details 
-- AAD Universal auth connection to Azure SQL DB supports custom tenant id 
+- Added Parameterization for Always Encrypted, please refer to [this page](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) for more details 
+- AAD Universal auth connection to Azure SQL DB supports custom tenant id 
 - Generate scripts for Azure SQL Database, now scripts full text, rules, and database
 - Branding fixes in splash screens for SSMS and Profiler
 - Removed Utility Control Point UI from SSMS
@@ -782,9 +784,9 @@ Generally available | Build number: 14.0.17099.0
 - Fixed issue were SQL PowerShell was not able to connect legacy SQL instances (2014 and older). [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
 - Fixed an issue that was causing SSMS to crash when failing to import registered servers.
 - Fixed an issue that was causing SSMS to crash if a user has certain permissions an a database. 
-- SSMS - tables disappear from design surface while reviewing views. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
+- SSMS - tables disappear from design surface while reviewing views. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
 - The table scrollbar does not allow the user to scroll the table content, only the up/down Arrow allow this. Its also possible to scroll the table content after trying to scroll using the scrollbar which is a bug. [Connect Item](
-http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
+http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
 - Registered Servers not displaying icons after refreshing the root node.
 - Script button for Create Database on Azure v12 servers executes script then displays message "No action to be scripted".
 - SSMS Connect to Server dialog does not clear "Additional Properties" tab for each new connection.
@@ -850,11 +852,11 @@ The following issues were fixed this release:
 * *Open recent* menu doesn't show recently saved files. [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 
 * SSMS is slow when right-clicking an index for a table (over a remote (Internet) connection). [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
- 
+ 
 * Fixed an issue with the SQL Designer scrollbar. [Connect ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
-* Context menu for tables momentarily hangs 
- 
+* Context menu for tables momentarily hangs 
+ 
 * SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"

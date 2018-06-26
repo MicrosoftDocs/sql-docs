@@ -20,7 +20,7 @@ AdventureWorks download links and installation instructions.
 
 ## Prerequisites
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (or higher) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). For the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
+- [SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). For the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). For the best results use the June 2016 release or later.
  
 ## Github links
@@ -39,16 +39,6 @@ Direct links to the OLTP versions of AdventureWorks can be found below:
 - [AdventureWorks2012.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)
 - [AdventureWorks2008R2.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)
 
-
-## Lightweight downloads
-
-Direct links to the  lightweight versions of AdventureWorks can be found below:
-
-- [AdventureWorksLT2017.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)
-- [AdventureWorksLT2016.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2016.bak)
-- [AdventureWorksLT2014.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2014.bak)
-- [AdventureWorksLT2012.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2012.bak)
-- [AdventureWorksLT2008R2.bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-lt.bak)
 
 ## Data Warehouse downloads
 
@@ -73,7 +63,7 @@ Follow the below steps to restore a backup of your database using SQL Server Man
 
 1. Open SQL Server Management Studio and connect to the target SQL Server instance.
 2. Right-click on the **Databases** node, and select **Restore Database**.
-3. Select **Device** and click on the button **...**
+3. Select **Device** and click the ellipses (**...**)
 4. In the dialog **Select backup devices**, click **Add**, navigate to the database backup in the filesystem of the server, and select the backup. Click **OK**.
 5. If needed, change the target location for the data and log files, in the **Files** pane. Note that it is best practice to place data and log files on different drives.
 6. Click **OK**. This will initiate the database restore. After it completes, you will have the AdventureWorks database installed on your SQL Server instance.
@@ -88,7 +78,7 @@ Follow the below steps to attach the datafile for your database using SQL Server
 2. Right-click on the **Databases** node, and select **Attach**.
 3. Select **Add** and navigate to the .MDF file you want to attach. 
 1. Select the file and click **OK**. 
-    1. The database you selected should be displayed in the bottom window. If the file is listed as "not found",  select the ellipses next to the file name and update the path to the correct path. 
+    1. The database you selected should be displayed in the bottom window. If the file is listed as "not found",  select the ellipses (**...**) next to the file name and update the path to the correct path. 
     1. If you only have the data file (.mdf), and not the log file (.ldf), then highlight the .ldf in the bottom window and select **Remove**. This will create a new log file. 
 1. Select **OK** to attach the file. After the file is attached, you will have the AdventureWorks database installed on your SQL Server instance.  
 
@@ -99,7 +89,7 @@ For more information on attaching database files, see [Attach a database](../rel
 
 If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server. See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes
 
-1. Connect to your Azure Portal.
+1. Connect to your Azure portal.
 1. Select **Create a resource** in the top left of the navigation pane. 
 1. Select **Databases** and then select **SQL Database**. 
 1. Fill in the requested information.

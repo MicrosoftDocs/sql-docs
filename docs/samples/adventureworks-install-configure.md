@@ -87,7 +87,7 @@ For more information on attaching database files, see [Attach a database](../rel
 ## Install to Azure SQL Database
 
 
-If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server. See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes
+If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server. See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes.
 
 1. Connect to your Azure portal.
 1. Select **Create a resource** in the top left of the navigation pane. 

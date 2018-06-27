@@ -15,7 +15,7 @@ ms.technology: linux
 
 # SQL Server Always On availability group Kubernetes specification
 
-To configure an Always On availability group on Kubernetes, create a specification. The specification is a .yaml file.  See an example of the specification in [this tutorial](tutorial-sql-server-ag-kubernetes.md).
+To configure an Always On availability group on Kubernetes, create a specification. The specification is a `.yaml` file.  See an example of the specification in [this tutorial](tutorial-sql-server-ag-kubernetes.md).
 
 This article explains the parameters in the specification.
 
@@ -45,7 +45,7 @@ This article explains the parameters in the specification.
 
 * `masterKeyPassword` 
   * Required
-  * **Description**:  The server master key password for sql server. Used and for db mirroring certificates, logins and passwords. It is regeneratable. You can change it post-deployment. DB mirroring logins are generated automatically as well.
+  * **Description**:  The server master key password for sql server. Used and for db mirroring certificates, logins, and passwords. It is regeneratable. You can change it post-deployment. DB mirroring logins are generated automatically as well.
   * **Example**
 
    ```yaml
@@ -106,23 +106,26 @@ This article explains the parameters in the specification.
 
 * `connectionTimeoutSec`
   * Optional
-  * **Description**: Connection timeout in seconds for the AG agents to connect to SQL Server. Minimum: 1 second. Default: 30 seconds.
+  * **Description**: Connection time out in seconds for the AG agents to connect to SQL Server. Minimum: 1 second. Default: 30 seconds.
 
 * `queryCommandTimeoutSec`
   * Optional
-  * **Description**: The generic SQL query command timeout in seconds for waiting for data from a query. Minimum: 1. Default value: 10.
+  * **Description**: The generic SQL query command time out in seconds for waiting for data from a query. Minimum: 1. Default value: 10.
   
 * `joinCommandTimeoutSec`
   * Optional
-  * **Description**: The sql query command timeout in seconds for waiting for data from a longer `ALTER AVAILABILITY GROUP <group_name> JOIN;`. Minimum: 1. Default value: 60. Recommended minimum is 60.
+  * **Description**: The sql query command time out in seconds for waiting for data from a longer `ALTER AVAILABILITY GROUP <group_name> JOIN;`. Minimum: 1. Default value: 60. Recommended minimum is 60.
 
 * `transientDBHealthTimeoutSec`
   * Optional
-  * **Description**: Timeout in seconds to wait for transient database states to come online after becoming the primary before triggering a failover. Minimum: 1. Default: 180. Used when `db_failover` is `ON`. Kubernetes Availability Group is always created with this setting `ON`, it can be updated to `OFF`.`
+  * **Description**: Time out in seconds to wait for transient database states to come online after becoming the primary before triggering a failover. Minimum: 1. Default: 180. Used when `db_failover` is `ON`. Kubernetes Availability Group is always created with this setting `ON`, it can be updated to `OFF`.`
 
 * `sqlPostInitScript`
   * Optional
-  * **Description**: Post initialization sql script to run. This is a custom SQL script that runs after every update of the [Kubernetes custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/). For example, resource create, resource change property, or resource upgrade.
+  * **Description**: Post initialization script to run after every update of the [Kubernetes custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/). Operations that use the post initialization script include:
+    * resource create
+    * resource change property
+    * resource upgrade
 
 * `availabilityGroups` 
   * Optional
@@ -135,6 +138,12 @@ This article explains the parameters in the specification.
        availabilityMode: <synchronousCommit | asynchronousCommit | configurationOnly> 
    ``` 
 
-   ## Example
-   
+## Example
+
+The following sample is a completed `.yaml` file for the SQL Server availability group StatefulSet in Kubernetes.
+
    [!INCLUDE[kubernetes-ag-sql-statefulset-yaml](../includes/kubernetes-ag-sql-statefulset-yaml.md)]
+
+## Next steps
+
+[SQL Server availability group on Kubernetes cluster](sql-server-ag-kubernetes.md)

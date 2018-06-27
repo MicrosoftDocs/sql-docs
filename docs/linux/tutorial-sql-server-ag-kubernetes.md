@@ -233,7 +233,7 @@ To demonstrate this process, do the following steps:
    Either connect to the primary replica using the external IP and query `@@servername` or use `kubectl` to get the appropriate pod. This command will return the name of the pod that includes the container running the primary replica of the AG:
 
    ```azurecli
-   kubectl get pod -o json | jq '.items[] | select(.metadata.annotations["role.ag.mssql.microsoft.com/ag1"] == "primary") | .metadata.name' -r
+   kubectl get pods --selector="role.ag.mssql.microsoft.com/ag1"="primary" --output=jsonpath={.items..metadata.name}
    ```
 
 3. Delete the pod.

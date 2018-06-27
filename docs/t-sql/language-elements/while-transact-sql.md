@@ -1,4 +1,4 @@
-﻿---
+---
 title: "WHILE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -120,7 +120,6 @@ WHILE ( SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300
 BEGIN  
     UPDATE dbo.DimProduct  
         SET ListPrice = ListPrice * 2;  
-    SELECT MAX ( ListPrice) FROM dbo.DimProduct  
     IF ( SELECT MAX (ListPrice) FROM dbo.DimProduct) > $500  
         BREAK;  
 END  

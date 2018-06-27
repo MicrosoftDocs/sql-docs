@@ -48,7 +48,7 @@ The Kubernetes cluster rotates the credentials as a job.
 
 * `MSSQL_K8S_STATEFULSET_NAME `
   * Required
-  * **Description**: The name of the SQL Server StatefulSet, the same as the custom resource name .
+  * **Description**: The name of the SQL Server StatefulSet, the same as the custom resource name.
 
 * `MSSQL_K8S_NAMESPACE`
   * Optional
@@ -68,7 +68,7 @@ The Kubernetes cluster rotates the credentials as a job.
 
 ## Example 
 
-The following example of a manifest is a `.yaml` file that creates a job to rotate the credentials of all of the instances of SQL Sever that participate in an availability group.
+The following example of a manifest is a `.yaml` file that creates a job to rotate the credentials of all of the instances of SQL Server that participate in an availability group.
 
 ```yaml
 ---

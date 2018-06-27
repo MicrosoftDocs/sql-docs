@@ -100,7 +100,6 @@
 ### [3313](mssqlserver-3313-database-engine-error.md)
 ### [3314](mssqlserver-3314-database-engine-error.md)
 ### [3413](mssqlserver-3413-database-engine-error.md)
-### [3937](mssqlserver-3937-database-engine-error.md)
 ### [3414](mssqlserver-3414-database-engine-error.md)
 ### [3417](mssqlserver-3417-database-engine-error.md)
 ### [3431](mssqlserver-3431-database-engine-error.md)

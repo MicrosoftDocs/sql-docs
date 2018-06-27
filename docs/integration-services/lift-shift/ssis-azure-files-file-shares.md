@@ -1,7 +1,7 @@
 ---
 title: "Open and save files with SSIS packages deployed in Azure | Microsoft Docs"
 description: Learn how to open and save files on premises and in Azure when you lift and shift SSIS packages that use local file systems into SSIS in Azure
-ms.date: "11/27/2017"
+ms.date: "06/27/2018"
 ms.topic: conceptual
 ms.prod: sql  
 ms.technology: integration-services
@@ -13,9 +13,6 @@ manager: craigg
 # Open and save files on premises and in Azure with SSIS packages deployed in Azure
 
 This article describes how to open and save files on premises and in Azure when you lift and shift SSIS packages that use local file systems into SSIS in Azure.
-
-> [!IMPORTANT]
-> Currently, the SSIS Catalog (SSISDB) only supports a single set of access credentials. As a result, you can't use different sets of credentials in a single to connect to multiple on-premises file shares and Azure Files shares.
 
 ## Save temporary files
 If you need to store and process temporary files during a single package execution, packages can use the current working directory (`.`) or temporary folder (`%TEMP%`) of your Azure-SSIS Integration Runtime nodes.

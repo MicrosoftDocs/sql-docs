@@ -1,9 +1,10 @@
 ---
-title: "What&#39;s new in SQL Server Machine Learning Services | Microsoft Docs"
+title: What's new in SQL Server Machine Learning Services | Microsoft Docs
+ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/02/2018  
+ms.date: 06/25/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -13,6 +14,16 @@ manager: cgronlun
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform and the data science, analytics, and supervised learning you want to implement over your data. 
+
+## New in SQL Server vNext
+
+This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about other features in this release, see [What's new in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
+
+| Release | Date | Feature update |
+|---------|------|----------------|
+| CTP 2.0 | July 2018 | Failover cluster support. You can install SQL Server 2018 Machine Learning Services (In-Database) on a Windows failover cluster to meet your requirements for redundancy and uptime in the event your primary server fails over. SQL Server Setup provides a workflow for install features in a failover cluster, and SQL Server Machine Learning Services (In-Database) is now included in that workflow. |
+| CTP 2.0 | July 2018 | One of the more common approaches for executing R or Python code on SQL data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure. In this CTP release, SQL Server vNext adds new parameters to process partitions. Individual models are generated for each partition, with the external script executing once for every partition. To learn more, see [Tutorial: Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md). |
+| CTP 2.0 | July 2018 | Linux platform support for SQL Server vNext Machine Learning Services (In-Database) with R integration. Python parity is projected for an upcoming CTP release. |
 
 ## New in SQL Server 2017
 

@@ -46,7 +46,13 @@ Continue reading for more details about these features.
 
 ### Intelligent query processing 
 
-- **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. 
+- Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute:
+
+   ```sql
+   ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
+   ```
+
+- **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
 
 - **Approximate COUNT DISTINCT** returns the approximate number of unique non-null values in a group. This function is designed for use in big data scenarios and is optimized for the following conditions:
   - Access of data sets that are millions of rows or higher AND
@@ -54,11 +60,19 @@ Continue reading for more details about these features.
   - Responsiveness is more critical than absolute precision.
   In this case, `APPROXIMATE_COUNT_DISTINCT` yields results typically within 2% of the precise answer in a small fraction of the time.
 
-- **Batch mode on rowstores** targets analytic queries. These queries are characterized as scanning many rows, and doing significant aggregations, sorts, and group-by operations across these rows. Batch mode has been reserved for queries which involve Columnstore indexes in previous releases. Performing scans and calculations on batches of 900 – 1000 rows at a time rather than row by row is much more efficient for queries where these sorts of operations are common.  For queries that can take advantage of it, batch mode can easily make queries execute many times faster than the same query against the same data in row mode.
+- **Batch mode on rowstores** targets analytic queries. These queries are characterized as scanning many rows, and doing significant aggregations, sorts, and group-by operations across these rows. Batch mode has been reserved for queries which involve Columnstore indexes in previous releases. Performing scans and calculations on batches of 900 – 1000 rows at a time rather than row by row is much more efficient for queries where these sorts of operations are common.  For queries that can take advantage of it, batch mode can easily make queries execute many times faster than the same query against the same data in row mode. This feature is enabled by default under database compatibility level 150.
 
-- **Scalar UDF inlining** automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans.
+- **Scalar UDF inlining** automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
-- **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations.
+- **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
+
+## SQL Graph
+
+- **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
+
+- **Derived Tables and Views support for graph tables** allow you to put together multiple graph objects (node or edge tables) into a single object (node or edge) with the help of `UNION ALL` operator in a derived table or view. With the help of views or derived tables created on node or edge tables, users can now use a single `MATCH` query to identify heterogeneously connected data points in their database. For example, find all the relationships that two people in a graph share with each other or find all the entities that a given person in the graph is connected to.
+
+- **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
 
 ## SQL Server on Linux
 

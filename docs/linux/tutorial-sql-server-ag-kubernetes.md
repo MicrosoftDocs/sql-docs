@@ -26,13 +26,13 @@ In this tutorial, you learn how to:
 
 This tutorial demonstrates the architecture in [Azure Kubernetes Service (AKS)](http://docs.microsoft.com/azure/aks/). If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
-This diagram represents the solution that you will complete with this tutorial:
+This diagram represents the solution that you make in this tutorial:
 
 ![kubernetes-ag-cluster](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 ### Deployment methodology for Kubernetes
 
-For each step in this task, you will create a manifest and then deploy the manifest to the cluster. The manifest is a .yaml file with the description of the Kubernetes objects that you deploy. The objects include storage, operators, pods, containers, and services.
+Several of the steps in this article create a manifest and then deploy the manifest to the cluster. The manifest is a .yaml file with the description of the Kubernetes objects that you deploy. The objects include storage, operators, pods, containers, and services.
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ To create the storage, create a manifest that describes:
 * The [*Storage Class*](http://kubernetes.io/docs/concepts/storage/storage-classes/)
 * Three [*Persistent Volume Claims*](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) as Azure disks
 
-To create the manifiest for the storage, make a file named `pvc.yaml`, and copy in the following .yaml code.
+To create the manifest for the storage, make a file named `pvc.yaml`, and copy in the following `.yaml` code.
 
 [!INCLUDE[ag-pvc-manifest](../includes/kubernetes-ag-pvc-yaml.md)]
 
@@ -119,7 +119,7 @@ The next step creates the SQL Server instances and the availability group in one
 * SQL Server instance based on the `mssql-server` image
 * AG agent
 
-In addition, the deployment describes a load balancer service for the availabiltiy group listener
+In addition, the deployment describes a load balancer service for the availability group listener
 
 For more information about the contents of the deployment file, see [Configure SQL Server specification (YAML)](sql-server-linux-kubernetes-spec.md).
 
@@ -145,7 +145,7 @@ After deployment, only AG membership list and post-init T-SQL script can be upda
 
 ## Connect to the SQL Server instance hosting the primary replica
 
-The `sqlservers.yaml` describes a Kubernetes service name `ag1-primary`. `ag1-primary` creates an Azure load balancer that point the SQL Server instance hosting the primary replica. Use the external IP address of the service as target server, `sa` account and the password you created earlier in the `mssql secret`.
+The `sqlservers.yaml` describes a Kubernetes service name `ag1-primary`. `ag1-primary` creates an Azure load balancer that point the SQL Server instance hosting the primary replica. Use the external IP address of the service as target server, `sa` as account, and the password you created earlier in the `mssql secret` for the password.
 
 Use `kubectl get services` to get this IP address.
 
@@ -167,7 +167,7 @@ sqlcmd -S 104.42.50.138 -U sa -P "MyC0m9l&xP@ssw0rd"
 
 You can also connect with [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 
-To verify your connection to the SQL Server instance hosting the primary replica run the following query:
+To verify your connection, to the SQL Server instance hosting the primary replica run the following query:
 
 ```sql
 SELECT @@SERVERNAME;
@@ -175,7 +175,7 @@ SELECT @@SERVERNAME;
 
 The query returns the name of the SQL Server instance that hosts the primary replica.
 
-At this point, the Kubernetes cluster has three instances of SQL Server in docker containers. An availability group spans all three instances of SQL Server, but no database is in the availability group. The next step is to add an a database to availability group.
+At this point, the Kubernetes cluster has three instances of SQL Server in docker containers. An availability group spans all three instances of SQL Server, but no database is in the availability group. The next step is to add a database to the availability group.
 
 ## Add a database to the availability group
 
@@ -248,7 +248,7 @@ Kubernetes automatically fails over to one of the available sync secondary repli
 
 ## Clean up resources
 
-When no longer needed, delete the reosurce group and all related resources. Run the following command:
+When no longer needed, delete the resource group and all related resources. Run the following command:
 >[!WARNING]
 >This command completely deletes everythin in the resource group. None of the components of the Kubernetes cluster will be available after you delete the resource group.
 

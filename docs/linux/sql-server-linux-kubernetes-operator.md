@@ -62,3 +62,7 @@ This article explains the operator global environment variables.
   The following example describes a deployment for the `mssql-operator`.
 
   [!INCLUDE[kubernetes-ag-operator-yaml](../includes/kubernetes-ag-operator-yaml.md)]
+
+  ## Next steps
+
+[SQL Server availability group on Kubernetes cluster](sql-server-ag-kubernetes.md)

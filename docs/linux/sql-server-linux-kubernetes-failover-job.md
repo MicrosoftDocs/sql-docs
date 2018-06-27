@@ -13,13 +13,13 @@ ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
-# SQL Server Always On availability group Kubernetes failover job environment variables
+# Fail over - SQL Server availability group on Kubernetes
 
 To fail over an Always On availability group primary replica to a different node in Kubernetes, use a job. This article identifies the environment variables for this job.
 
-## Create a manifest file to describe the failover
+## Create a manifest file to describe the job
 
-The following example of a manifest file describes a manual failover job for an availabiltiy group on a Kubernetes replica. Copy the contents of the example into a new file called `manualFailover.yaml`.
+The following example of a manifest file describes a job to do a manual fail over job for an availabiltiy group on a Kubernetes replica. Copy the contents of the example into a new file called `manualFailover.yaml`.
 
 ```yaml
 ---
@@ -113,4 +113,6 @@ After you run the job, delete it. The job object in Kubernetes remains after com
   * Optional
   * **Description**: Kubernetes namespace of the availability group.
 
-  ## Next steps
+## Next steps
+
+[SQL Server availability group on Kubernetes cluster](sql-server-ag-kubernetes.md)

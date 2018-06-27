@@ -5339,7 +5339,6 @@ manager: craigg
 |	13388	|	10	|	No	|	Key Flags	|
 |	13389	|	10	|	No	|	Key Name	|
 |	13390	|	10	|	No	|	Key Type	|
-
 |	13400	|	10	|	No	|	Extended stored procedure API will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.	|
 |	13401	|	10	|	No	|	Non-ANSI '*=' and '=*' outer join operators will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use ANSI outer joins instead.	|
 |	13402	|	10	|	No	|	The ability to INSERT NULL values into TIMESTAMP columns will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use DEFAULT instead.	|
@@ -5512,7 +5511,7 @@ manager: craigg
 |	14201	|	10	|	No	|	0 (all steps) ..	|
 |	14202	|	10	|	No	|	before or after @active_start_time	|
 |	14203	|	10	|	No	|	sp_helplogins [excluding Windows NT groups]	|
-|	14204	|	10	|	No	|	0 (non-idle), 1 (executing), 2 (waiting for thread), 3 (between retries), 4 (idle), 5 (suspended), 7 (performing completion actions)	|
+|	14204	|	10	|	No	|	0 (non-idle), 1 (executing), 2 (waiting for thread), 3 (between retries), 4 (idle), 5 (suspended), 7 (performing completion actions|
 |	14205	|	10	|	No	|	(unknown)	|
 |	14206	|	10	|	No	|	0..n seconds	|
 |	14207	|	10	|	No	|	-1 [no maximum], 0..n	|
@@ -6399,7 +6398,8 @@ manager: craigg
 
 ## Errors 16,000 to 17,999
 
-
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	16901	|	16	|	No	|	%hs: This feature has not been implemented yet.	|
 |	16902	|	16	|	No	|	%ls: The value of the parameter %ls is invalid.	|
 |	16903	|	16	|	No	|	The "%ls" procedure was called with an incorrect number of parameters.	|

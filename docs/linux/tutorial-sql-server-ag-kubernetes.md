@@ -330,7 +330,6 @@ az group delete --name <MyResourceGroup>
 
 To run the command above, replace `<MyResourceGroup>` with the name of your resource group. 
 
-
 Azure deletes the resource group.
 
 ## Summary

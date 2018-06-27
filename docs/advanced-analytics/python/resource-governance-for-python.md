@@ -1,19 +1,16 @@
 ---
-title: "Resource Governance for Python | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Resource governance for Python in SQL Server Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Resource Governance for Python
+# Resource governance for Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Because Python is enabled through the the same extensibility architecture that was implemented for the R language in SQL Server 2016, you can use existing tools in SQL Server such as Resource Governor, DMVs, and extended events, to monitor the execution of Python scripts in SQL Server.
 
@@ -22,7 +19,7 @@ Resource governance in particular is important because analyzing large amounts o
 This section provides information about how you can manage resources used by the Python runtime and monitor use of resources by Python scripts jobs executing in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 > [!NOTE]
-> Python support is a new feature in SQL Server vNext and is in prerelease. Look for more information soon.
+> Python support is a new feature in SQL Server 2017 and is in prerelease. Look for more information soon.
 > In general, you can monitor any external script, including one that runs Python, using the same framework that was provided for resource governance of R scripts in SQL Server 2016.
 
 ## What is Resource Governance?
@@ -42,7 +39,7 @@ You can use [Resource Governor](../../relational-databases/resource-governor/res
 
 ## How to Use Resource Governor to Manage Python Execution
 
-In general, you manage resources allocated to any external script job, by creating an *external resource pool* and assigning workloads to the pool. An external resource pool is a new type of resource pool introduced in SQL Server 2016, to help manage the R runtime and other processes external to the database engine. It can be used to monitor Python jobs beginning with SQL Server vNext.
+In general, you manage resources allocated to any external script job, by creating an *external resource pool* and assigning workloads to the pool. An external resource pool is a new type of resource pool introduced in SQL Server 2016, to help manage the R runtime and other processes external to the database engine. It can be used to monitor Python jobs beginning with SQL Server 2017.
 
 There are three types of default resource pools:
 
@@ -56,7 +53,7 @@ For a good introduction to terminology and general concepts, see [Resource Gover
 
 ## Resource Management using Resource Governor
 
-If you are new to Resource Governor, see this topic for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [How To: Create a Resource Pool for R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
+If you are new to Resource Governor, see this article for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [How To: Create a Resource Pool for R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 You can use the *external resource pool* mechanism to manage the resources used by the following supported executables:
 

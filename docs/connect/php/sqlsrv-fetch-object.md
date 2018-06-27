@@ -2,13 +2,13 @@
 title: "sqlsrv_fetch_object | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_fetch_object"
 apitype: "NA"
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "retrieving data, as an object"
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -87,7 +87,7 @@ If the results returned by this query are retrieved with **sqlsrv_fetch_object**
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## Example  
-The following example retrieves each row of a result set as a PHP object. The example assumes that the SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example retrieves each row of a result set as a PHP object. The example assumes that the SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -136,7 +136,7 @@ The following example retrieves each row of a result set as an instance of the *
   
 -   The private property *UnitPrice* is populated with the value of the *UnitPrice* field.  
   
-The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -241,6 +241,8 @@ If the results returned by this query are retrieved with **sqlsrv_fetch_object**
   
 ## See Also  
 [Retrieving Data](../../connect/php/retrieving-data.md)  
+
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
   

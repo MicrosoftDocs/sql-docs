@@ -1,26 +1,17 @@
 ---
 title: "Grant server admin rights to an  Analysis Services instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "administrator rights [Analysis Services]"
-  - "server-wide administrative permissions [Analysis Services]"
-ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Grant server admin rights to an  Analysis Services instance
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Members of the Server administrator role within an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] have unrestricted access to all [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects and data in that instance. A user must be a member of the Server administrator role to perform any server-wide task, such as creating or processing a database, modifying server properties, or launching a trace (other than for processing events).  
   
  Role membership is established when [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is installed. The user running the Setup program can add him or herself to the role, or add another user. You must specify at least one administrator before Setup will allow you to continue.  
@@ -56,7 +47,7 @@ manager: "erikre"
 5.  In the **Enter the object names to select** text box, type the name of the computer and click **Check Names** to verify the computer account is found in the current Locations. If the computer account is not found, verify the computer name and the correct domain the computer is a member of.  
   
 ## NT Service\SSASTelemetry account  
- **NT Service/SSASTelemetry** is a low-privileged machine account created during setup and used exclusively to run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementation of the Customer Experience Improvement Program (CEIP) service. This service requires admin rights on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance to run several discover commands. See [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) and [Microsoft SQL Server Privacy Statement](http://msdn.microsoft.com/library/57769f4a-5689-49a1-8298-e3c0db5106f8) for more information.  
+ **NT Service/SSASTelemetry** is a low-privileged machine account created during setup and used exclusively to run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementation of the Customer Experience Improvement Program (CEIP) service. This service requires admin rights on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance to run several discover commands. See [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) and [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) for more information.  
   
 ## See Also  
  [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   

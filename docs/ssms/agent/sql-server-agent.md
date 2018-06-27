@@ -2,13 +2,14 @@
 title: "SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.suite: "sql"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, about SQL Server Agent"
   - "automatic administration steps"
@@ -16,9 +17,15 @@ ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)].  
   
 **In This Topic**  
@@ -107,7 +114,7 @@ An *operator* defines contact information for an individual responsible for the 
 > [!IMPORTANT]  
 > The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
-To send notifications to operators by using e-mail or pagers, you must configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent to use Database Mail. For more information, see [Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
+To send notifications to operators by using e-mail or pagers, you must configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent to use Database Mail. For more information, see [Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
   
 You can define an operator as the alias for a group of individuals. In this way, all members of that alias are notified at the same time. For more information, see [Operators](../../ssms/agent/operators.md).  
   
@@ -118,7 +125,7 @@ You can define an operator as the alias for a group of individuals. In this way,
 Members of the **SQLAgentUserRole**, **SQLAgentReaderRole**, and **SQLAgentOperatorRole** fixed database roles in **msdb**, and members of the **sysadmin** fixed server role have access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. A user that does not belong to any of these roles cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. For more information on the roles used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### Subsystems  
-A subsystem is a predefined object that represents functionality that is available to a job step. Each proxy has access to one or more subsystems. Subsystems provide security because they delimit access to the functionality that is available to a proxy. Each job step runs in the context of a proxy, except for [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps. [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps use the EXECUTE AS command to set the security context.  
+A subsystem is a predefined object that represents functionality that is available to a job step. Each proxy has access to one or more subsystems. Subsystems provide security because they delimit access to the functionality that is available to a proxy. Each job step runs in the context of a proxy, except for [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps. [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps use the EXECUTE AS command to set the security context to the owner of the Job.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] defines the subsystems listed in the following table:  
   
@@ -169,9 +176,9 @@ Use the following tasks to get started with [!INCLUDE[ssNoVersion](../../include
 |Describes considerations for specifying an account for the SQL Server Agent service.|[Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |Describes how to use the SQL Server Agent error log.|[SQL Server Agent Error Log](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Describes how to use performance objects.|[Use Performance Objects](../../ssms/agent/use-performance-objects.md)|  
-|Describes the Maintenance Plan Wizard, which is a utility that you can use to help create jobs, alerts, and operators to automate administration of an instance of SQL Server.|[Use the Maintenance Plan Wizard](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|Describes the Maintenance Plan Wizard, which is a utility that you can use to help create jobs, alerts, and operators to automate administration of an instance of SQL Server.|[Use the Maintenance Plan Wizard](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |Describes how to automate administrative tasks using SQL Server Agent.|[Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## See Also  
-[Surface Area Configuration](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[Surface Area Configuration](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

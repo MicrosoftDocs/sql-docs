@@ -1,14 +1,14 @@
 ---
 title: "SetObjectOwner Method | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "_Catalog::SetObjectOwner"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SetObjectOwner method [ADOX]"
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SetObjectOwner Method
 Specifies the owner of an object in a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md).  

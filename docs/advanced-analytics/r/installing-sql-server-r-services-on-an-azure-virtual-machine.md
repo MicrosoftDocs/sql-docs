@@ -1,99 +1,88 @@
 ---
-title: "Installing SQL Server R Services on an Azure Virtual Machine | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Install SQL Server machine learning features on an Azure virtual machine | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Installing SQL Server R Services on an Azure Virtual Machine
+# Install SQL Server machine learning features on an Azure virtual machine
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-If you deploy an Azure virtual machine that includes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can now select R Services as a feature to be added to the instance when the VM is created. 
+We recommend using the [Data Science virtual machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), but if you want a VM that has just SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services, this article guides you through the steps.
 
+## Create a virtual machine on Azure
 
-
-+ [Create a new VM with SQL Server 2016 and R Services](#new)
-+ [Add R Services to an existing virtual machine with SQL Server 2016](#existing)
-
-## <a name="new"></a>Create a new SQL Server 2016 Enterprise Virtual Machine with R Services Enabled
-
-1. In the Azure Portal, click VIRTUAL MACHINES and then click NEW.
-2. Select SQL Server 2016 Enterprise Edition.
+1. In the Azure portal in the left-side list, click **Virtual machines** and then click **Add**.
+2. Search for SQL Server 2017 Enterprise Edition or SQL Server 2016 Enterprise Edition.
 3. Configure the server name and account permissions, and select a pricing plan.
-4. On Step 4 in the VM setup wizard, in **SQL Server Settings**, locate **R Services (Advanced Analytics)** and click **Enable**.
+4. In **SQL Server Settings** (Step 4 in the VM setup wizard), locate **Machine Learning Services (Advanced Analytics)** (or **R Services** for SQL Server 2016) and click **Enable**.
 5. Review the summary presented for validation and click **OK**.
-6. When the virtual machine is ready, connect to it, and open SQL Server Management Studio, which is pre-installed. R Services is ready to run. 
+6. When the virtual machine is ready, connect to it, and open SQL Server Management Studio, which is pre-installed. Machine learning is ready to run.
 7. To verify this, you can open a new query window and run a simple statement such as this one, which uses R to generate a sequence of numbers from 1 to 10.
-   ```
-    execute sp_execute_external_script
+
+    ```
+    EXEC sp_execute_external_script
     @language = N'R'
     , @script = N' OutputDataSet <- as.data.frame(seq(1, 10, ));'
     , @input_data_1 = N'   ;'
     WITH RESULT SETS (([Sequence] int NOT NULL));
-   ```
-6. If you will be connecting to the instance from a remote data science client, complete [additional steps](#additional-steps) as necessary.
+    ```
 
+6. If you plan to connect to the instance from a remote data science client, complete [additional steps](#additional-steps) as necessary.
 
-## Additional Steps  
+### Disable machine learning features on a SQL Server VM
 
-Some additional steps might be needed to use R Services if you expect remote clients to access the server as a remote SQL Server compute context.
+You can also enable or disable the feature on an existing SQL Server virtual machine at any time.
 
-### <a name="firewall"></a>Unblock the firewall  
-  
-You must change a firewall rule on the virtual machine to ensure that you can access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance from a remote data science client.  Otherwise, you might not be able to use compute contexts that require use of the virtual machine's workspace. 
+1. Open the virtual machine blade.
+2. Click **Settings**, and select **SQL Server configuration**.
+3. Make changes to features and apply.
 
-By default, the firewall on the Azure virtual machine includes a rule that blocks network access for local R user accounts.  
-  
-To enable access to R Services from remote data science clients:
+### <a name="existing"></a>Add R Services to an existing SQL Server 2016 Enterprise VM
+
+If you created an Azure virtual machine that included SQL Server without machine learning, you can add the feature by following these steps:
+
+1. Re-run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup and add the feature on the **Server Configuration** page of the wizard.
+2. Enable execution of external scripts and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
+3. (Optional) Configure database access for R worker accounts, if needed for remote script execution.
+4. (Optional) Modify a firewall rule on the Azure virtual machine, if you intend to allow R script execution from remote data science clients. For more information, see [Unblock firewall](#firewall).
+5. Install or enable required network libraries. For more information, see [Add network protocols](#network).
+
+## Additional steps
+
+Some additional steps are required if you expect remote clients to access the server as a remote SQL Server compute context.
+
+### <a name="firewall"></a>Unblock the firewall
+
+By default, the firewall on the Azure virtual machine includes a rule that blocks network access for local user accounts.
+
+You must disable this rule to ensure that you can access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance from a remote data science client.  Otherwise, your machine learning code cannot execute in compute contexts that use the virtual machine's workspace.
+
+To enable access from remote data science clients:
+
 1. On the virtual machine, open Windows Firewall with Advanced Security.
 2. Select **Outbound Rules**
-3. Disable the following rule:  
+3. Disable the following rule:
   
-     `Block network access for R local user accounts in SQL Server instance MSSQLSERVER`  
+     `Block network access for R local user accounts in SQL Server instance MSSQLSERVER`
   
 ### Enable ODBC callbacks for remote clients
 
-If you expect that R clients calling the server will need to issue ODBC queries as part of their R solutions, you must ensure that the Launchpad can make ODBC calls on behalf of the remote client. To do this, you must allow the SQL worker accounts that are used by Launchpad to log into the instance.
-   For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md). 
+If you expect that clients calling the server will need to issue ODBC queries as part of their machine learning solutions, you must ensure that the Launchpad can make ODBC calls on behalf of the remote client. To do this, you must allow the SQL worker accounts that are used by Launchpad to log into the instance.
+   For more information, see [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
-### <a name="network"></a>Add network protocols  
-  
+### <a name="network"></a>Add network protocols
+
 + Enable Named Pipes
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] uses the Named Pipes protocol for connections between the client and server computers, and for some internal connections. If Named Pipes is not enabled, you must install and enable it on both the Azure virtual machine, and on any data science clients that connect to the server.  
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] uses the Named Pipes protocol for connections between the client and server computers, and for some internal connections. If Named Pipes is not enabled, you must install and enable it on both the Azure virtual machine, and on any data science clients that connect to the server.
   
 + Enable TCP/IP
 
-  TCP/IP is required for loopback connections to SQL Server R Services. If you get the following error, enable TCP/IP on the virtual machine that supports the instance
-DBNETLIB; SQL Server does not exist or access denied.
+  TCP/IP is required for loopback connections. If you get the following error, enable TCP/IP on the virtual machine that supports the instance:
 
-## How to disable R Services on an instance
-
-You can also enable or disable the feature on an existing virtual machine at any time. 
-
-1. Open the virtual machine blade
-2. Click **Settings**, and select **SQL Server configuration**.
-
-
-## <a name="existing"></a>Add SQL Server R Services to an existing  SQL Server 2016 Enterprise virtual machine
-
-If you created an Azure VM with SQL Server 2016 that did not include R Services, you can add the feature by following these steps:
-
-1. Re-run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup and add the feature on the **Server Configuration** page of the wizard.
-2. Enable execution of external scripts and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see see [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
-3. (Optional) Configure database access for R worker accounts, if needed for remote script execution.
-   For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md). 
-3. (Optional) Modify a firewall rule on the Azure virtual machine, if you intend to allow R script execution from remote data science clients. For more information, see [Unblock firewall](#firewall).
-4. Install or enable required network libraries. For more information, see [Add network protocols](#network).
-
-## See Also
-[Set Up Sql Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)
+  "DBNETLIB; SQL Server does not exist or access denied"

@@ -2,13 +2,13 @@
 title: "SQLCancel Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLCancel"
 apilocation: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SQLCancel function [ODBC]"
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLCancel Function
 **Conformance**  

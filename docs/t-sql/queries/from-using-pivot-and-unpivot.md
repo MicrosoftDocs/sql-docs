@@ -1,12 +1,12 @@
----
+﻿---
 title: "Using PIVOT and UNPIVOT | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,14 +24,15 @@ helpviewer_keywords:
   - "rotating columns"
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # FROM - Using PIVOT and UNPIVOT
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  You can use the `PIVOT` and `UNPIVOT` relational operators to change a table-valued expression into another table. `PIVOT rotates a table-valued expression by turning the unique values from one column in the expression into multiple columns in the output, and performs aggregations where they are required on any remaining column values that are wanted in the final output. `UNPIVOT` performs the opposite operation to PIVOT by rotating columns of a table-valued expression into column values.  
+  You can use the `PIVOT` and `UNPIVOT` relational operators to change a table-valued expression into another table. `PIVOT` rotates a table-valued expression by turning the unique values from one column in the expression into multiple columns in the output, and performs aggregations where they are required on any remaining column values that are wanted in the final output. `UNPIVOT` performs the opposite operation to PIVOT by rotating columns of a table-valued expression into column values.  
   
  The syntax for `PIVOT` provides is simpler and more readable than the syntax that may otherwise be specified in a complex series of `SELECT...CASE` statements. For a complete description of the syntax for `PIVOT`, see [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
@@ -76,15 +77,14 @@ GROUP BY DaysToManufacture;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DaysToManufacture          AverageCost`  
-  
- `0                          5.0885`  
-  
- `1                          223.88`  
-  
- `2                          359.1082`  
-  
- `4                          949.4105`  
+ ```
+ DaysToManufacture AverageCost
+ ----------------- -----------
+ 0                 5.0885
+ 1                 223.88
+ 2                 359.1082
+ 4                 949.4105
+ ```
   
  No products are defined with three `DaysToManufacture`.  
   
@@ -107,9 +107,11 @@ FOR DaysToManufacture IN ([0], [1], [2], [3], [4])
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Cost_Sorted_By_Production_Days    0         1         2           3       4`  
-  
- `AverageCost                       5.0885    223.88    359.1082    NULL    949.4105`  
+```
+Cost_Sorted_By_Production_Days 0           1           2           3           4         
+------------------------------ ----------- ----------- ----------- ----------- -----------
+AverageCost                    5.0885      223.88      359.1082    NULL        949.4105
+```
   
 ## Complex PIVOT Example  
  A common scenario where `PIVOT` can be useful is when you want to generate cross-tabulation reports to summarize data. For example, suppose you want to query the `PurchaseOrderHeader` table in the `AdventureWorks2014` sample database to determine the number of purchase orders placed by certain employees. The following query provides this report, ordered by vendor.  
@@ -132,17 +134,15 @@ ORDER BY pvt.VendorID;
   
  Here is a partial result set.  
   
- `VendorID    Emp1        Emp2        Emp3        Emp4        Emp5`  
-  
- `1492        2           5           4           4           4`  
-  
- `1494        2           5           4           5           4`  
-  
- `1496        2           4           4           5           5`  
-  
- `1498        2           5           4           4           4`  
-  
- `1500        3           4           4           5           4`  
+```
+VendorID    Emp1        Emp2        Emp3        Emp4        Emp5  
+----------- ----------- ----------- ----------- ----------- -----------
+1492        2           5           4           4           4
+1494        2           5           4           5           4
+1496        2           4           4           5           5
+1498        2           5           4           4           4
+1500        3           4           4           5           4
+```
   
  The results returned by this subselect statement are pivoted on the `EmployeeID` column.  
   
@@ -183,31 +183,21 @@ GO
   
  Here is a partial result set.  
   
- `VendorID   Employee   Orders`  
-  
- `---------- ---------- ------`  
-  
- `1          Emp1       4`  
-  
- `1          Emp2       3`  
-  
- `1          Emp3       5`  
-  
- `1          Emp4       4`  
-  
- `1          Emp5       4`  
-  
- `2          Emp1       4`  
-  
- `2          Emp2       1`  
-  
- `2          Emp3       5`  
-  
- `2          Emp4       5`  
-  
- `2          Emp5       5`  
-  
- `...`  
+```
+VendorID    Employee    Orders
+----------- ----------- ------
+1            Emp1       4
+1            Emp2       3 
+1            Emp3       5
+1            Emp4       4
+1            Emp5       4
+2            Emp1       4
+2            Emp2       1
+2            Emp3       5
+2            Emp4       5
+2            Emp5       5
+...
+```
   
  Notice that `UNPIVOT` is not the exact reverse of `PIVOT`. `PIVOT` performs an aggregation and, therefore, merges possible multiple rows into a single row in the output. `UNPIVOT` does not reproduce the original table-valued expression result because rows have been merged. Besides, null values in the input of `UNPIVOT` disappear in the output, whereas there may have been original null values in the input before the `PIVOT` operation.  
   

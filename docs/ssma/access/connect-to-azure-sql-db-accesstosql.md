@@ -1,24 +1,22 @@
 ---
 title: "Connect To Azure SQL DB (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.custom: ""
+ms.prod: sql
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
+ms.topic: conceptual
+applies_to:
   - "Azure SQL Database"
   - "SQL Server"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Connect to SQL Azure dialog box"
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 caps.latest.revision: 17
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: Shamikg
+ms.author: Shamikg
+manager: craigg
 ---
 # Connect To Azure SQL DB (AccessToSQL)
 Use the Connect to SQL Azure dialog box to connect to the SQL Azure database that you want to migrate.  

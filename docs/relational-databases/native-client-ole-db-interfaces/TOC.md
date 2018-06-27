@@ -1,3 +1,5 @@
+# [SQL Server Native Client (OLE DB) Interfaces](sql-server-native-client-ole-db-interfaces.md)
+
 # [IBCPSession (OLE DB)](ibcpsession-ole-db.md)
 # [IBCPSession::BCPColFmt (OLE DB)](ibcpsession-bcpcolfmt-ole-db.md)
 # [IBCPSession::BCPColumns (OLE DB)](ibcpsession-bcpcolumns-ole-db.md)
@@ -25,4 +27,3 @@
 # [ISSCommandWithParameters (OLE DB)](isscommandwithparameters-ole-db.md)
 # [ISSCommandWithParameters::GetParameterProperties (OLE DB)](isscommandwithparameters-getparameterproperties-ole-db.md)
 # [ISSCommandWithParameters::SetParameterProperties (OLE DB)](isscommandwithparameters-setparameterproperties-ole-db.md)
-# [SQL Server Native Client (OLE DB) Interfaces](sql-server-native-client-ole-db-interfaces.md)

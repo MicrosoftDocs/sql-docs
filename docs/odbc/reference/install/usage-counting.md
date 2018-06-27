@@ -2,13 +2,13 @@
 title: "Usage Counting | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "usage counts [ODBC]"
   - "file usage counts [ODBC]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "subkeys [ODBC], usage counts"
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Usage Counting
 > [!NOTE]  

@@ -1,14 +1,14 @@
 ---
 title: "Performance Counters | Microsoft Docs"
-ms.custom: ""
+ms.custom: supportability
 ms.date: "08/27/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], performance counters"
   - "performance counters [Integration Services]"
@@ -19,7 +19,7 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Performance Counters
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installs a set of performance counters that you can use to monitor the performance of the data flow engine. For example, you can watch the "Buffers spooled" counter to determine whether data buffers are being written to disk temporarily while a package is running. This swapping reduces performance and indicates that the computer has insufficient memory.  
@@ -52,13 +52,13 @@ manager: "jhubbard"
   
  In the following example, the function returns statistics for a running execution with an ID of 34.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
  In the following example, the function returns statistics for all the executions running on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  
@@ -115,5 +115,5 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  You must start the Performance Logs and Alerts service using a local account or a domain account that is a member of the Administrators group.  
 
 ## See Also  
- [Execution of Projects and Packages](https://msdn.microsoft.com/library/ms141708.aspx)
+ [Execution of Projects and Packages](../packages/run-integration-services-ssis-packages.md)
  [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

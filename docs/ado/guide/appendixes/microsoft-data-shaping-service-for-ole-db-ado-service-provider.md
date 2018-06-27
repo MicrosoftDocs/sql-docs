@@ -1,22 +1,22 @@
 ---
 title: "Microsoft Data Shaping Service for OLE DB (ADO Service Provider) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
-ms.custom: "H1Hack27Feb2017"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], data shaping service for OLE DB"
   - "data shaping service for OLE DB [ADO]"
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft Data Shaping Service for OLE DB Overview
 > [!IMPORTANT]

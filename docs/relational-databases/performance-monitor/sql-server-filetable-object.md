@@ -2,22 +2,25 @@
 title: "SQL Server, FileTable Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:FileTable"
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server, FileTable Object
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 The **SQLServer:FileTable** performance object provides counters for statistics associated with FileTable and non-transacted access.
 
 This following table describes the SQL Server **FileTable** performance objects.

@@ -1,14 +1,13 @@
 ---
 title: "Executing the SSMA Console (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016 Preview"
 helpviewer_keywords: 
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "Script File Commands,Project Commands"
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 caps.latest.revision: 43
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Executing the SSMA Console (OracleToSQL)
@@ -667,7 +666,7 @@ convert-sql-statement
   
 -   `write-summary-report-to` specifies the path where the report will be generated. If only the folder path is mentioned, then file by name **ConvertSQLReport.XML** is created. (optional attribute)  
   
-    Report creation has 2 further sub-categories, viz..,:  
+    Report creation has 2 further sub-categories, viz.:  
   
     -   report-errors (="true/false", with default as "false" (optional attributes)).  
   

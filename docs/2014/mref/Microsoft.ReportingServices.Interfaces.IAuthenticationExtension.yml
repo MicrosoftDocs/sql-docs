@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.ReportingServices.Interfaces.IAuthenticationExtension
+  commentId: T:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension
+  href: https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension(v=sql.120).aspx
+  name: IAuthenticationExtension
+  name.vb: IAuthenticationExtension
+  fullName: Microsoft.ReportingServices.Interfaces.IAuthenticationExtension
+  fullName.vb: Microsoft.ReportingServices.Interfaces.IAuthenticationExtension

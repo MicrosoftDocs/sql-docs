@@ -1,7 +1,7 @@
+# [Installing SSMA for MySQL (MySqlToSql)](installing-ssma-for-mysql-mysqltosql.md)
 # [Project Settings (GUI)  (MySQLToSQL)](project-settings-gui-mysqltosql.md)
 # [Conversion Settings (MySQLToSQL)](conversion-settings-mysqltosql.md)
 # [Installing SSMA for MySQL Client (MySQLToSQL)](installing-ssma-for-mysql-client-mysqltosql.md)
-# [Installing SSMA for MySQL (MySqlToSql)](installing-ssma-for-mysql-mysqltosql.md)
 # [Executing the SSMA Console (MySQLToSQL)](executing-the-ssma-console-mysqltosql.md)
 # [Creating the Server Connection Files (MySQLToSQL)](creating-the-server-connection-files-mysqltosql.md)
 # [SQL Modes (MySQLToSQL)](sql-modes-mysqltosql.md)

@@ -1,36 +1,17 @@
 ---
 title: "Analysis Services Scripting Language (ASSL for XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Analysis Services Scripting Language Reference"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "ASSL, reference"
-  - "scripting languages [Analysis Services]"
-  - "Analysis Services Scripting Language, reference"
-  - "ODL [Analysis Services Scripting Language]"
-  - "XML [Analysis Services Scripting Language]"
-  - "scripts [Analysis Services Scripting Language]"
-  - "object definition language [Analysis Services Scripting Language]"
-ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Analysis Services Scripting Language (ASSL for XMLA)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Applications communicate with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] using XML commands and object descriptions. Analysis Services Scripting Language (ASSL) represents the object definition language portion of this XML dialect.  
   
  This reference section contains syntax and usage information for each element in the ASSL schema.  

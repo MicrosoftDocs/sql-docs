@@ -1,35 +1,24 @@
 ---
 title: "Commands (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "commands [XML for Analysis]"
-  - "XML for Analysis, commands"
-  - "XMLA, commands"
-ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
-caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # XML Elements - Commands
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   This reference section contains XML for Analysis (XMLA) elements that can be used within the **Command** element during an **Execute** method call.  
   
 |Element|Description|  
 |-------------|-----------------|  
-|[Alter Element (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contains Analysis Services Scripting Language (ASSL) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method to alter objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Backup Element](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Backs up a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database to a backup file.|  
-|[Batch Element](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Performs one or more XML for Analysis (XMLA) commands as a batch operation, either sequentially or in parallel, on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Alter Element (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contains Analysis Services Scripting Language (ASSL) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method to alter objects on an instance of Analysis Services.|  
+|[Backup Element](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Backs up a Analysis Services database to a backup file.|  
+|[Batch Element](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Performs one or more XML for Analysis (XMLA) commands as a batch operation, either sequentially or in parallel, on an instance of Analysis Services.|  
 |[BeginTransaction Element](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Begins a transaction on the current session with an Analysis Services instance.|  
 |[Cancel Element](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|Cancels a currently running command on an Analysis Services instance.|  
 |[ClearCache Element](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md)|Clears the memory cache for the specified object on an Analysis Services instance.|  

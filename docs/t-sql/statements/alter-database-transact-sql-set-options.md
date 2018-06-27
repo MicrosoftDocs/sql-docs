@@ -1,14 +1,13 @@
 ---
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/04/2017"
-ms.prod: "sql-non-specified"
+ms.custom: ""
+ms.date: "6/01/2018"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -26,29 +25,31 @@ helpviewer_keywords:
   - "checksums [SQL Server]"
   - "automatic tuning"
   - "SQL plan regression correction"
+  - "auto_create_statistics"
+  - "auto_update_statistics"
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 caps.latest.revision: 159
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ALTER DATABASE SET Options (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  This topic contains the ALTER DATABASE syntax that is related to setting database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For other ALTER DATABASE syntax, see the following topics.  
+  This article contains the ALTER DATABASE syntax that is related to setting database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For other ALTER DATABASE syntax, see the following topics.  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
--   [ALTER DATABASE &#40;Azure SQL Database&#41;](https://msdn.microsoft.com/library/mt574871.aspx) 
+-   [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-azure-sql-database.md) 
 
 -   [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
   
 -   [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
   
- Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
+> Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -194,7 +195,8 @@ SET
     | INTERVAL_LENGTH_MINUTES = number   
     | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]  
     | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]  
-    | MAX_PLANS_PER_QUERY = number  
+    | MAX_PLANS_PER_QUERY = number
+    | WAIT_STATS_CAPTURE_MODE = [ ON | OFF ]
 }  
   
 <recovery_option> ::=   
@@ -239,7 +241,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -266,11 +268,10 @@ SET
   
  `CURRENT` performs the action in the current database. `CURRENT` is not supported for all options in all contexts. If `CURRENT` fails, provide the database name.  
   
- **\<auto_option> ::=**  
+ **\<auto_option> ::=**
   
  Controls automatic options.  
-  
- AUTO_CLOSE { ON | OFF }  
+ <a name="auto_close"></a> AUTO_CLOSE { ON | OFF }  
  ON  
  The database is shut down cleanly and its resources are freed after the last user exits.  
   
@@ -293,8 +294,8 @@ SET
 >  Database mirroring requires AUTO_CLOSE OFF.  
   
  When the database is set to AUTOCLOSE = ON, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and higher, for each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
-  
- AUTO_CREATE_STATISTICS { ON | OFF }  
+ 
+ <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }  
  ON  
  The query optimizer creates statistics on single columns in query predicates, as necessary, to improve query plans and query performance. These single-column statistics are created when the query optimizer compiles queries. The single-column statistics are created only on columns that are not already the first column of an existing statistics object.  
   
@@ -312,7 +313,7 @@ SET
   
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- AUTO_SHRINK { ON | OFF }  
+ <a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }  
  ON  
  The database files are candidates for periodic shrinking.  
   
@@ -328,9 +329,9 @@ SET
  The status of this option can be determined by examining the is_auto_shrink_on column in the sys.databases catalog view or the IsAutoShrink property of the DATABASEPROPERTYEX function.  
   
 > [!NOTE]  
->  The AUTO_SHRINK option is not available in a Contained Database.  
+> The AUTO_SHRINK option is not available in a Contained Database.  
   
- AUTO_UPDATE_STATISTICS { ON | OFF }  
+ <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }  
  ON  
  Specifies that the query optimizer updates statistics when they are used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.  
   
@@ -349,7 +350,7 @@ SET
   
  For more information, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
   
- AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
+ <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
  ON  
  Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are asynchronous. The query optimizer does not wait for statistics updates to complete before it compiles queries.  
   
@@ -366,40 +367,40 @@ SET
   
  For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
   
- **\<automatic\_tuning\_option> ::=**  
- **Applies to**: [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  .  
+ <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
+ **Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
 
  Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.  
   
- FORCE\_LAST\_GOOD\_PLAN = { ON | **OFF** }  
+ FORCE_LAST_GOOD_PLAN = { ON | OFF }  
  ON  
  The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
 
  OFF  
- The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view.
+ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.
 
  **\<change_tracking_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
  Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this topic.  
   
  ON  
  Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.  
   
- AUTO_CLEANUP = { **ON** | OFF }  
+ AUTO_CLEANUP = { ON | OFF }  
  ON  
  Change tracking information is automatically removed after the specified retention period.  
   
  OFF  
  Change tracking data is not removed from the database.  
   
- CHANGE_RETENTION =*retention_period* { **DAYS** | HOURS | MINUTES }  
+ CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }  
  Specifies the minimum period for keeping change tracking information in the database. Data is removed only when the AUTO_CLEANUP value is ON.  
   
  *retention_period* is an integer that specifies the numerical component of the retention period.  
   
- The default retention period is 2 days. The minimum retention period is 1 minute.  
+ The default retention period is 2 days. The minimum retention period is 1 minute. The default retention type is DAYS.  
   
  OFF  
  Disables change tracking for the database. You must disable change tracking on all tables before you can disable change tracking off the database.  
@@ -410,7 +411,7 @@ SET
   
  Controls database containment options.  
   
- CONTAINMENT **=** { NONE | PARTIAL}  
+ CONTAINMENT = { NONE | PARTIAL}  
  NONE  
  The database is not a contained database.  
   
@@ -418,7 +419,7 @@ SET
  The database is a contained database. Setting database containment to partial will fail if the database has replication, change data capture, or change tracking enabled. Error checking stops after one failure. For more information about contained databases, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 > [!NOTE]  
->  Containment cannot be configured in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Containment is not explicitly designated, but [!INCLUDE[ssSDS](../../includes/sssds-md.md)] can use contained features such as contained database users.  
+> Containment cannot be configured in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Containment is not explicitly designated, but [!INCLUDE[ssSDS](../../includes/sssds-md.md)] can use contained features such as contained database users.  
   
  **\<cursor_option> ::=**  
   
@@ -431,12 +432,12 @@ SET
  OFF  
  Cursors remain open when a transaction is committed; rolling back a transaction closes any cursors except those defined as INSENSITIVE or STATIC.  
   
- Connection-level settings that are set by using the SET statement override the default database setting for CURSOR_CLOSE_ON_COMMIT. By default, ODBC and OLE DB clients issue a connection-level SET statement setting CURSOR_CLOSE_ON_COMMIT to OFF for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
+ Connection-level settings that are set by using the SET statement override the default database setting for CURSOR_CLOSE_ON_COMMIT. By default, ODBC, and OLE DB clients issue a connection-level SET statement setting CURSOR_CLOSE_ON_COMMIT to OFF for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).  
   
  The status of this option can be determined by examining the is_cursor_close_on_commit_on column in the sys.databases catalog view or the IsCloseCursorsOnCommitEnabled property of the DATABASEPROPERTYEX function.  
   
  CURSOR_DEFAULT { LOCAL | GLOBAL }  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controls whether cursor scope uses LOCAL or GLOBAL.  
   
@@ -452,13 +453,13 @@ SET
   
  **\<database_mirroring>**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  For the argument descriptions, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **\<date_correlation_optimization_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controls the date_correlation_optimization option.  
   
@@ -478,7 +479,7 @@ SET
  Controls the database encryption state.  
   
  ENCRYPTION {ON | OFF}  
- Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md).  
+ Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  When encryption is enabled at the database level all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to **READ ONLY**, the database encryption operation will fail.  
   
@@ -486,7 +487,7 @@ SET
   
  **\<db_state_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controls the state of the database.  
   
@@ -500,7 +501,7 @@ SET
  The database is marked READ_ONLY, logging is disabled, and access is limited to members of the sysadmin fixed server role. EMERGENCY is primarily used for troubleshooting purposes. For example, a database marked as suspect due to a corrupted log file can be set to the EMERGENCY state. This could enable the system administrator read-only access to the database. Only members of the sysadmin fixed server role can set a database to the EMERGENCY state.  
   
 > [!NOTE]  
->  **Permissions:** ALTER DATABASE permission for the subject database is required to change a database to the offline or emergency state. The server level ALTER ANY DATABASE permission is required to move a database from offline to online.  
+> **Permissions:** ALTER DATABASE permission for the subject database is required to change a database to the offline or emergency state. The server level ALTER ANY DATABASE permission is required to move a database from offline to online.  
   
  The status of this option can be determined by examining the state and state_desc columns in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the Status property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function. For more information, see [Database States](../../relational-databases/databases/database-states.md).  
   
@@ -522,16 +523,16 @@ SET
  To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.  
   
 > [!NOTE]  
->  On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.  
+> On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.  
   
  **\<db_user_access_option> ::=**  
   
  Controls user access to the database.  
   
  SINGLE_USER  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Specifies that only one user at a time can access the database. If SINGLE_USER is specified and there are other users connected to the database the ALTER DATABASE statement will be blocked until all users disconnect from the specified database. To override this behavior, see the WITH \<termination> clause.  
+ Specifies that only one user at a time can access the database. If SINGLE_USER is specified and there are other users connected to the database, the ALTER DATABASE statement will be blocked until all users disconnect from the specified database. To override this behavior, see the WITH \<termination> clause.  
   
  The database remains in SINGLE_USER mode even if the user that set the option logs off. At that point, a different user, but only one, can connect to the database.  
   
@@ -568,7 +569,7 @@ MULTI_USER
   
  **\<external_access_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controls whether the database can be accessed by external resources, such as objects from another database.  
   
@@ -580,7 +581,7 @@ MULTI_USER
  Database cannot participate in cross-database ownership chaining.  
   
 > [!IMPORTANT]  
->  The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will recognize this setting when the cross db ownership chaining server option is 0 (OFF). When cross db ownership chaining is 1 (ON), all user databases can participate in cross-database ownership chains, regardless of the value of this option. This option is set by using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+> The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will recognize this setting when the cross db ownership chaining server option is 0 (OFF). When cross db ownership chaining is 1 (ON), all user databases can participate in cross-database ownership chains, regardless of the value of this option. This option is set by using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  To set this option, requires CONTROL SERVER permission on the database.  
   
@@ -647,12 +648,12 @@ MULTI_USER
  FULL  
  Full non-transactional access to FILESTREAM data in FileTables is enabled.  
   
- DIRECTORY_NAME = *<directory_name>*  
+ DIRECTORY_NAME = *\<directory_name>*  
  A windows-compatible directory name. This name should be unique among all the database-level directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of collation settings. This option must be set before creating a FileTable in this database.  
   
  **\<HADR_options> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  See [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
@@ -670,7 +671,7 @@ MULTI_USER
   
  This setting is ON for all system databases. **tempdb** is the only system database that supports OFF.  
   
- **\<parameterization_option> ::=**  
+ **\<PARAMETERIZATION_option> ::=**  
   
  Controls the parameterization option.  
   
@@ -685,21 +686,21 @@ MULTI_USER
   
  **\<query_store_options> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
-  
-> [!IMPORTANT]  
->  This is currently a preview feature. To use the Query Store you must acknowledge and agree that implementation of Query Store is subject to the preview terms in your license agreement (e.g. the Enterprise Agreement, Microsoft Azure Agreement, or Microsoft Online Subscription Agreement), as well as any applicable [Supplemental Terms of Use for Microsoft Azure Preview](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Controls if the query store is enabled in this database, and also controls removing the contents of the query store.  
   
--   ON enables the query store.  
+ON  
+ Enables the query store.  
   
--   OFF disables the query store.  
+OFF  
+ Disables the query store.  This is the default value.   
   
--   CLEAR remove the contents of the query store.  
+CLEAR  
+ Remove the contents of the query store.  
   
- OPERATION_MODE  
+OPERATION_MODE  
  Describes the operation mode of the query store. Valid values are READ_ONLY and READ_WRITE. In READ_WRITE mode, the query store collects and persists query plan and runtime execution statistics information. In READ_ONLY mode, information can be read from the query store, but new information is not added. If the maximum allocated space of the query store has been exhausted, the query store will change is operation mode to READ_ONLY.  
   
  CLEANUP_POLICY  
@@ -717,20 +718,25 @@ MULTI_USER
  SIZE_BASED_CLEANUP_MODE  
  Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
- OFF – size based cleanup won’t be automatically activated. 
+ OFF  
+ Size based cleanup won’t be automatically activated. 
   
- AUTO – size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
+ AUTO  
+ Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
   
  SIZE_BASED_CLEANUP_MODE is type **nvarchar**.  
   
  QUERY_CAPTURE_MODE  
  Designates the currently active query capture mode:  
   
- ALL – all queries are captured. This is the default configuration value.  This is the default configuration value for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+ ALL 
+ All queries are captured. This is the default configuration value.  This is the default configuration value for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
   
- AUTO – capture relevant queries based on execution count and resource consumption.  This is the default configuration value for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+ AUTO 
+ Capture relevant queries based on execution count and resource consumption.  This is the default configuration value for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- NONE – stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss to capture important queries.  
+ NONE 
+ Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss to capture important queries.  
   
  QUERY_CAPTURE_MODE is type **nvarchar**.  
   
@@ -753,7 +759,7 @@ MULTI_USER
  A simple backup strategy that uses minimal log space is provided. Log space can be automatically reused when it is no longer required for server failure recovery. For more information, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
 > [!IMPORTANT]  
->  The simple recovery model is easier to manage than the other two models but at the expense of greater data loss exposure if a data file is damaged. All changes since the most recent database or differential database backup are lost and must be manually reentered.  
+> The simple recovery model is easier to manage than the other two models but at the expense of greater data loss exposure if a data file is damaged. All changes since the most recent database or differential database backup are lost and must be manually reentered.  
   
  The default recovery model is determined by the recovery model of the **model** database. For more information about selecting the appropriate recovery model, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -767,9 +773,9 @@ MULTI_USER
  Incomplete pages cannot be detected by the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!IMPORTANT]  
->  The syntax structure TORN_PAGE_DETECTION ON | OFF will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this syntax structure in new development work, and plan to modify applications that currently use the syntax structure. Use the PAGE_VERIFY option instead.  
+> The syntax structure TORN_PAGE_DETECTION ON | OFF will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this syntax structure in new development work, and plan to modify applications that currently use the syntax structure. Use the PAGE_VERIFY option instead.  
   
- PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
+<a name="page_verify"></a> PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
  Discovers damaged database pages caused by disk I/O path errors. Disk I/O path errors can be the cause of database corruption problems and are generally caused by power failures or disk hardware failures that occur at the time the page is being written to disk.  
   
  CHECKSUM  
@@ -788,7 +794,7 @@ MULTI_USER
 -   When a user or system database is upgraded to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version, the PAGE_VERIFY value (NONE or TORN_PAGE_DETECTION) is retained. We recommend that you use CHECKSUM.  
   
     > [!NOTE]  
-    >  In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the tempdb database and cannot be modified. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, the default value for the tempdb database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the tempdb database.  
+    > In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the tempdb database and cannot be modified. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, the default value for the tempdb database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the tempdb database.  
   
 -   TORN_PAGE_DETECTION may use fewer resources but provides a minimal subset of the CHECKSUM protection.  
   
@@ -800,29 +806,29 @@ MULTI_USER
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824.  
   
- For more information about checksum, torn page, read-retry, error messages 823 and 824, and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I/O auditing features, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkId=47160).  
+ For more information about error messages 823, 824 and 825, see [How to troubleshoot a Msg 823 error in SQL Server](http://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server](http://support.microsoft.com/help/2015756) and [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](http://support.microsoft.com/help/2015757).
   
- The current setting of this option can be determined by examining the page_verify_option column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the IsTornPageDetectionEnabled property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
+ The current setting of this option can be determined by examining the *page_verify_option* column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the *IsTornPageDetectionEnabled* property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
- **\<remote_data_archive_option> ::=**  
+**\<remote_data_archive_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
- REMOTE_DATA_ARCHIVE = { ON ( SERVER = <server_name> , { CREDENTIAL = <db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT =  ON | OFF } )| OFF  
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT =  ON | OFF } )| OFF
  ON  
  Enables Stretch Database for the database. For more info, including additional prerequisites, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
  **Permissions**. Enabling Stretch Database for a database or a table requires db_owner permissions. Enabling Stretch Database for a database also requires CONTROL DATABASE permissions.  
   
- SERVER = \<server_name>  
+SERVER = \<server_name>  
  Specifies the address of the Azure server. Include the `.database.windows.net` portion of the name. For example, `MyStretchDatabaseServer.database.windows.net`.  
   
- CREDENTIAL = \<db_scoped_credential_name>  
+CREDENTIAL = \<db_scoped_credential_name>  
  Specifies the database scoped credential that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to connect to the Azure server. Make sure the credential exists before you run this command. For more info, see [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
- FEDERATED_SERVICE_ACCOUNT =  ON | OFF  
+FEDERATED_SERVICE_ACCOUNT =  ON | OFF  
  You can use a federated service account for the on premises SQL Server to communicate with the remote Azure server when the following conditions are all true.  
   
 -   The service account under which the instance of SQL Server is running is a domain account.  
@@ -842,7 +848,7 @@ MULTI_USER
   
  Disabling Stretch does not remove the remote database. If you want to delete the remote database, you have to drop it by using the Azure management portal.  
   
- **\<service_broker_option> ::=**  
+**\<service_broker_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -1009,7 +1015,7 @@ MULTI_USER
   
  The status of this option can be determined by examining the is_arithabort_on column in the sys.databases catalog view or the IsArithmeticAbortEnabled property of the DATABASEPROPERTYEX function.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
  For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1242,7 +1248,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### E. Enabling the query store  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  The following example enables the query store and configures query store parameters.  
   
@@ -1250,11 +1256,11 @@ SET CHANGE_TRACKING = OFF;
 ALTER DATABASE AdventureWorks2012  
 SET QUERY_STORE = ON   
     (  
-      OPERATION_MODE = READ_ONLY   
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 5 )  
-    , DATA_FLUSH_INTERVAL_SECONDS = 2000   
-    , MAX_STORAGE_SIZE_MB = 10   
-    , INTERVAL_LENGTH_MINUTES = 10   
+      OPERATION_MODE = READ_WRITE   
+    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )  
+    , DATA_FLUSH_INTERVAL_SECONDS = 900   
+    , MAX_STORAGE_SIZE_MB = 1024   
+    , INTERVAL_LENGTH_MINUTES = 60   
     );  
 ```  
   
@@ -1270,6 +1276,6 @@ SET QUERY_STORE = ON
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   

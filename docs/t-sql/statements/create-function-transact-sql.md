@@ -1,12 +1,12 @@
 ---
 title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/06/2017"
-ms.prod: "sql-non-specified"
+ms.date: "06/25/2018"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -36,12 +36,12 @@ helpviewer_keywords:
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 caps.latest.revision: 162
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # CREATE FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:  
   
@@ -62,7 +62,10 @@ manager: "jhubbard"
 -   Use an inline function as a filter predicate for a security policy  
   
 > [!NOTE]  
->  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure SQL Database.  
+>  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure SQL Database.
+
+> [!NOTE]  
+>  For Azure SQL Data Warehouse, see the [CREATE FUNCTION (SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016) article.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -103,7 +106,7 @@ RETURNS TABLE
 ```  
   
 ```  
--- Transact-SQL Multistatement Table-valued Function Syntax  
+-- Transact-SQL Multi-Statement Table-Valued Function Syntax  
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
     [ = default ] [READONLY] }   
@@ -332,10 +335,10 @@ RETURNS return_data_type
  *select_stmt*  
  Is the single SELECT statement that defines the return value of an inline table-valued function.  
   
- ORDER (<order_clause>)  
+ ORDER (\<order_clause>) 
  Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "Guidance on Using Sort Order," later in this topic.  
   
- EXTERNAL NAME <method_specifier> *assembly_name*.*class_name*.*method_name*  
+ EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* 
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the assembly and method to which the created function name shall refer.  
@@ -361,10 +364,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  This option is not available in a contained database.  
   
- *\<*table_type_definition*>* ( { <column_definition> <column_constraint>    | <computed_column_definition> }    [ <table_constraint> ] [ ,...*n* ] )  
+ *\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) 
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.  
   
- < clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) 
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.  
@@ -384,7 +387,7 @@ RETURNS return_data_type
  EXECUTE AS  
  EXECUTE AS is required for natively compiled, scalar user-defined functions.  
   
- **<function_option>::= and <clr_function_option>::=**  
+ **\<function_option>::= and \<clr_function_option>::=** 
   
  Specifies that the function will have one or more of the following options.  
   
@@ -419,7 +422,7 @@ RETURNS return_data_type
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
   
- If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in <method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions.  
+ If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in \<method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions. 
   
  EXECUTE AS Clause  
  Specifies the security context under which the user-defined function is executed. Therefore, you can control which user account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the function.  
@@ -429,7 +432,7 @@ RETURNS return_data_type
   
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
- **< column_definition >::=**  
+ **\< column_definition >::=** 
   
  Defines the table data type. The table declaration includes column definitions and constraints. For CLR functions, only *column_name* and *data_type* can be specified.  
   
@@ -465,7 +468,7 @@ RETURNS return_data_type
  *increment*  
  Is the integer value to add to the *seed* value for successive rows in the table.  
   
- **< column_constraint >::= and < table_constraint>::=**  
+ **\< column_constraint >::= and \< table_constraint>::=** 
   
  Defines the constraint for a specified column or table. For CLR functions, the only constraint type allowed is NULL. Named constraints are not allowed.  
   
@@ -533,7 +536,7 @@ RETURNS return_data_type
 ## Data Types  
  If parameters are specified in a CLR function, they should be [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types as defined previously for *scalar_parameter_data_type*. For information about comparing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types to CLR integration data types or [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime data types, see [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
- For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reference the correct method when it is overloaded in a class, the method indicated in <method_specifier> must have the following characteristics:  
+ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reference the correct method when it is overloaded in a class, the method indicated in \<method_specifier> must have the following characteristics: 
   
 -   Receive the same number of parameters as specified in [ ,...*n* ].  
   
@@ -541,7 +544,7 @@ RETURNS return_data_type
   
 -   Use parameter types that are compatible with those specified in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] function.  
   
- If the return data type of the CLR function specifies a table type (RETURNS TABLE), the return data type of the method in <method_specifier> should be of type **IEnumerator** or **IEnumerable**, and it is assumed that the interface is implemented by the creator of the function. Unlike [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, CLR functions cannot include PRIMARY KEY, UNIQUE, or CHECK constraints in <table_type_definition>. The data types of columns specified in <table_type_definition> must match the types of the corresponding columns of the result set returned by the method in <method_specifier> at execution time. This type-checking is not performed at the time the function is created.  
+ If the return data type of the CLR function specifies a table type (RETURNS TABLE), the return data type of the method in \<method_specifier> should be of type **IEnumerator** or **IEnumerable**, and it is assumed that the interface is implemented by the creator of the function. Unlike [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, CLR functions cannot include PRIMARY KEY, UNIQUE, or CHECK constraints in \<table_type_definition>. The data types of columns specified in \<table_type_definition> must match the types of the corresponding columns of the result set returned by the method in \<method_specifier> at execution time. This type-checking is not performed at the time the function is created. 
   
  For more information about how to program CLR functions, see [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
@@ -665,7 +668,7 @@ RETURNS return_data_type
   
  Here is the function call. Notice that `DATEFIRST` is set to `1`.  
   
-```  
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -691,7 +694,7 @@ SELECT dbo.ISOweek(CONVERT(DATETIME,'12/26/2004',101)) AS 'ISO Week';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```   
+``` 
 ISO Week  
 ----------------  
 52  
@@ -700,7 +703,7 @@ ISO Week
 ### B. Creating an inline table-valued function  
  The following example returns an inline table-valued function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It returns three columns `ProductID`, `Name` and the aggregate of year-to-date totals by store as `YTD Total` for each product sold to the store.  
   
-```  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -715,16 +718,18 @@ RETURN
     GROUP BY P.ProductID, P.Name  
 );  
 GO  
-```  
+```
+
  To invoke the function, run this query.    
-```  
+
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### C. Creating a multi-statement table-valued function  
  The following example creates the table-valued function `fn_FindReports(InEmpID)` in the AdventureWorks2012 database. When supplied with a valid employee ID, the function returns a table that corresponds to all the employees that report to the employee either directly or indirectly. The function uses a recursive common table expression (CTE) to produce the hierarchical list of employees. For more information about recursive CTEs, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -770,11 +775,11 @@ GO
 ```  
   
 ### D. Creating a CLR function  
- The example creates CLR function `len`_`s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.  
+ The example creates CLR function `len_s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.  
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -798,7 +803,7 @@ GO
   
 ### E. Displaying the definition of [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions  
   
-```  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   
@@ -819,4 +824,5 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
   
-  
+ 
+

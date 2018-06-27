@@ -1,23 +1,17 @@
 ---
 title: "Configure Power Pivot Service Accounts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Power Pivot Service Accounts
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installation includes two services that support server operations. The **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** service is a Windows service that provides [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data processing and query support on an application server. The login account for this service is always specified during SQL Server Setup when you install Analysis Services in SharePoint integrated mode.  
   
  A second account must be specified for the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application, a shared web service that runs under an application pool identity in a SharePoint farm. This account is specified when you configure a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installation using either the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration tool or PowerShell.  

@@ -1,23 +1,31 @@
 ---
 title: "Microsoft ActiveX Data Objects (ADO) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/15/2017"
+ms.date: "07/25/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.prod: "sql-non-specified"
-ms.technology: "drivers"
+ms.suite: "sql"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, about"
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft ActiveX Data Objects (ADO)
-ActiveX Data Objects (ADO) consists of the following components:  
+
+ADO is used in C++ programs to connect to SQL Server. Of course, it also works to connect to Azure SQL Database in the cloud.
+
+Each section in this article describes a component of ADO.
+
+> [!NOTE]
+> ADO.NET is different than ADO. ADO.NET, and many other SQL connection drivers and their languages, are discussed starting at [SQL Server Drivers](../connect/sql-connection-libraries.md).
+
   
 ## ADO  
  Microsoft ActiveX Data Objects (ADO) enable your client applications to access and manipulate data from a variety of sources through an OLE DB provider. Its primary benefits are ease of use, high speed, low memory overhead, and a small disk footprint. ADO supports key features for building client/server and Web-based applications.  

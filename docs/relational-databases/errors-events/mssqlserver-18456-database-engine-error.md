@@ -1,23 +1,23 @@
 ---
 title: "MSSQLSERVER_18456 | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2017"
-ms.prod: "sql-server-2016"
+ms.date: "06/09/2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "18456 (Database Engine error)"
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_18456
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## Details  
   
@@ -70,6 +70,11 @@ To increase security, the error message that is returned to the client deliberat
 |11|Login is valid, but server access failed. One possible cause of this error is when the Windows user has access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the local administrators group, but Windows is not providing administrator credentials. To connect, start the connecting program using the **Run as administrator** option, and then add the Windows user to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a specific login.|  
 |12|Login is valid login, but server access failed.|  
 |18|Password must be changed.|  
+|38, 46|Could not find database requested by user.|
+|102 - 111|AAD failure.|
+|122 - 124|Failure due to empty user name or password.|
+|126|Database requested by user does not exist.|
+|132 - 133|AAD failure.|
   
 Other error states exist and signify an unexpected internal processing error.  
   

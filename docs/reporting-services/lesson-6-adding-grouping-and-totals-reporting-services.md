@@ -2,11 +2,13 @@
 title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,7 +17,7 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 56
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ---
 # Lesson 6: Adding Grouping and Totals (Reporting Services)
 In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
@@ -110,7 +112,7 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
   
 ## <a name="bkmk_publishreport"></a>To Publish the Report to the Report Server (Optional)  
   
-1.  An optional step is to publish the completed report to the native mode report server so you can view the report from Report Manager.  
+1.  An optional step is to publish the completed report to the native mode report server so you can view the report in the web portal.  
   
 2.  Click the **Project** menu and then click **tutorial Properties...**  
   

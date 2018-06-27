@@ -1,25 +1,17 @@
 ---
 title: "Notification Events Event Category | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "event classes [Analysis Services], notification events"
-  - "Notification Events event category"
-  - "notification events [Analysis Services]"
-ms.assetid: 5f215a7a-dab8-458c-b846-2d261e957849
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: trace-events
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Notification Events Event Category
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The Notification Events event category has the event classes described in the following table.  
   
 |Event Class|Event Id|Description|  

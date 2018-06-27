@@ -1,47 +1,33 @@
 ---
 title: "Memory Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LowMemoryLimit property"
-  - "MinimumAllocatedMemory property"
-  - "MidMemoryPrice property"
-  - "MemoryHeapType property"
-  - "memory [Analysis Services]"
-  - "DefaultPagesCountToReuse property"
-  - "TotalMemoryLimit property"
-  - "SessionMemoryLimit property"
-  - "VirtualMemoryLimit property"
-  - "WaitCountIfHighMemory property"
-  - "HighMemoryPrice property"
-  - "HeapTypeForObjects property"
-ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: 
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Memory Properties
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preallocates a modest amount of memory at start up so that requests can be handled immediately. Additional memory is allocated as query and processing workloads increase. 
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preallocates a modest amount of memory at startup so that requests can be handled immediately. Additional memory is allocated as query and processing workloads increase. 
   
   By specifying configuration settings, you can control the thresholds at which memory is released. For example, the **HardMemoryLimit** setting specifies a self-imposed out-of-memory condition (by default, this threshold is not enabled), where new requests are rejected outright until more resources become available.
+
+To learn more about maximum memory utilized per Analysis Services instance by edition, see [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- **Applies to:** Multidimensional and Tabular server mode, unless noted otherwise.  
+ The following settings apply to both tabular and multidimensional server mode unless noted otherwise.  
  
 ## Default memory configuration
 
-Under the default configuration, each Analysis Services instance allocates a small amount of RAM (40 to 50 MB) at start up, even if the instance is idle. 
+Under the default configuration, each Analysis Services instance allocates a small amount of RAM (40MB to 50 MB) at startup, even if the instance is idle. 
 
 Recall that configuration settings are per instance. If you are running multiple instances of Analysis Services, such as a tabular and multidimensional instance on the same hardware, each instance will allocate its own memory independently of other instances.
 
-The table below briefly describes the more commonly used memory settings (with more detail in the reference section). These are the settings you should configure if Analysis Services is competing for memory with other applications on the same server:
+The table below briefly describes the more commonly used memory settings (with more detail in the reference section). You should configure these setting only if Analysis Services is competing for memory with other applications on the same server:
 
 Setting | Description
 --------|------------
@@ -57,14 +43,17 @@ The following properties apply to both tabular and multidimensional modes unless
  Values between 1 and 100 represent percentages of **Total Physical Memory** or **Virtual Address Space**, whichever is less. Values over 100 represent memory limits in bytes.
   
  **LowMemoryLimit**  
- A signed 64-bit double-precision floating-point number property that defines the first threshold at which Analysis Services begins releasing memory for low priority objects, such as an infrequently used cache. Once the memory is allocated, the server does not release memory below this limit. The default value is 65; which indicates the low memory limit is 65% of physical memory or the virtual address space, whichever is less.  
+ A signed 64-bit double-precision floating-point number property that defines the first threshold at which Analysis Services begins releasing memory for low-priority objects, such as an infrequently used cache. Once the memory is allocated, the server does not release memory below this limit. The default value is 65; which indicates the low memory limit is 65% of physical memory or the virtual address space, whichever is less.  
   
  **TotalMemoryLimit**  
- Defines a threshold that when reached, causes the server to deallocate memory to make room for other requests. When this limit is reached, the instance will start to slowly clear memory out of caches by closing expired sessions and unloading unused calculations. The default value 80% of physical memory or the virtual address space, whichever is less. Note that **TotalMemoryLimit** must always be less than **HardMemoryLimit**  
+ Defines a threshold that when reached, causes the server to deallocate memory to make room for other requests. When this limit is reached, the instance will start to slowly clear memory out of caches by closing expired sessions and unloading unused calculations. The default value 80% of physical memory or the virtual address space, whichever is less. **TotalMemoryLimit** must always be less than **HardMemoryLimit**  
   
  **HardMemoryLimit**  
- Specifies a memory threshold after which the instance aggressively terminates active user sessions to reduce memory usage. All terminated sessions will receive an error about being cancelled by memory pressure. The default value, zero (0), means the **HardMemoryLimit** will be set to a midway value between **TotalMemoryLimit** and the total physical memory of the system; if the physical memory of the system is larger than the virtual address space of the process, then virtual address space will be used instead to calculate **HardMemoryLimit**.  
-  
+ Specifies a memory threshold after which the instance aggressively terminates active user sessions to reduce memory usage. All terminated sessions will receive an error about being canceled by memory pressure. The default value, zero (0), means the **HardMemoryLimit** will be set to a midway value between **TotalMemoryLimit** and the total physical memory of the system; if the physical memory of the system is larger than the virtual address space of the process, then virtual address space will be used instead to calculate **HardMemoryLimit**.  
+
+**QueryMemoryLimit**   
+Azure Analysis Services only. An advanced property to control how much memory can be used by temporary results during a query. Applies only to DAX measures and queries. MDX queries against Multidimensional mode servers do not use this limit. It does not account for general memory allocations used by the query. Specified in percentage. The default value of 0 means no limit is specified.
+
  **VirtualMemoryLimit**  
   An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] support.  
   
@@ -80,7 +69,7 @@ Setting  |Description
   
 When set to 1, processing is less likely to fail due to memory constraints because the server will try to page to disk using the method that you specified. Setting the **VertiPaqPagingPolicy** property does not guarantee that memory errors will never happen. Out of memory errors can still occur under the following conditions:  
   
--   There is not enough memory for all dictionaries. During processing, Analysis Services locks the dictionaries for each column in memory, and all of these together cannot be more than the value specified for **VertiPaqMemoryLimit**.  
+-   There is not enough memory for all dictionaries. During processing, the server locks the dictionaries for each column in memory, and all of these together cannot be more than the value specified for **VertiPaqMemoryLimit**.  
   
 -   There is insufficient virtual address space to accommodate the process.  
   
@@ -138,5 +127,3 @@ When set to 1, processing is less likely to fail due to memory constraints becau
 ## See Also  
  [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)
-  

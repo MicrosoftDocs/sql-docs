@@ -2,13 +2,14 @@
 title: "Design Queries and Views How-to Topics (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.suite: "sql"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "• vs.solutionexplorer.file.query"
   - "vs.solutionexplorer.file.query"
@@ -24,9 +25,11 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Design Queries and Views How-to Topics (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The Query and View Designer can help you create and maintain the data retrieval and data manipulation portions of your application.  
   
 ## In This Section  

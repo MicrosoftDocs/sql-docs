@@ -1,34 +1,14 @@
 ---
 title: "Canceling Commands (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "connections [XML for Analysis]"
-  - "associated connections [XML for Analysis]"
-  - "XML for Analysis, canceling"
-  - "associated sessions [XML for Analysis]"
-  - "canceling connections"
-  - "canceling commands"
-  - "canceling sessions"
-  - "SPID"
-  - "XMLA, canceling"
-  - "server process IDs [XML for Analysis]"
-  - "sessions [XML for Analysis]"
-ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Canceling Commands (XMLA)
   Depending on the administrative permissions of the user issuing the command, the [Cancel](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) command in XML for Analysis (XMLA) can cancel a command on a session, a session, a connection, a server process, or an associated session or connection.  

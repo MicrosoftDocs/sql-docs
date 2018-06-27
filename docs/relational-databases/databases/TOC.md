@@ -25,7 +25,6 @@
 ## [Use the Copy Database Wizard](use-the-copy-database-wizard.md)  
 ## [Copy Databases with Backup and Restore](copy-databases-with-backup-and-restore.md)  
 ## [Publish a Database (SQL Server Management Studio)](publish-a-database-sql-server-management-studio.md)  
-## [Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
 # [Database Detach and Attach](database-detach-and-attach-sql-server.md)  
 ## [Move a Database Using Detach and Attach (Transact-SQL)](move-a-database-using-detach-and-attach-transact-sql.md)  
 ## [Upgrade a Database Using Detach and Attach (Transact-SQL)](upgrade-a-database-using-detach-and-attach-transact-sql.md)  

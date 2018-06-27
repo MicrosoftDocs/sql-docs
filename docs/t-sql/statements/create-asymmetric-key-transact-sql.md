@@ -1,12 +1,12 @@
 ---
 title: "CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/07/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,12 +24,12 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates an asymmetric key in the database.  
   
@@ -89,7 +89,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  ASSEMBLY *Assembly_Name*  
  Specifies the name of an assembly from which to load the public key.  
   
- ENCRYPTION BY *<key_name_in_provider>*  
+ENCRYPTION BY *\<key_name_in_provider>*
  Specifies how the key is encrypted. Can be a certificate, password, or asymmetric key.  
   
  KEY_NAME ='*key_name_in_provider*'  

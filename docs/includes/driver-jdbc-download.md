@@ -1,1 +1,0 @@
-![Download](/Image/download.png)[Download JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=245496)

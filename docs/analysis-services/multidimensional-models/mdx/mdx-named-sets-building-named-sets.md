@@ -1,30 +1,17 @@
 ---
 title: "Building Named Sets in MDX (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Multidimensional Expressions [Analysis Services], named sets"
-  - "named sets [MDX]"
-  - "sets [MDX]"
-  - "MDX [Analysis Services], named sets"
-  - "queries [MDX], named sets"
-  - "set expressions [MDX]"
-ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Named Sets - Building Named Sets
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A set expression can be a lengthy and complex declaration, and therefore be difficult to follow or understand. Or, a set expression may be used so frequently that repeatedly defining the set becomes burdensome. To help make working with a lengthy, complex or commonly used expression easier, Multidimensional Expressions (MDX) lets you such an expression as a *named set*.  
   
  Basically, a named set is a set expression to which an alias has been assigned. A named set can incorporate any members or functions that can ordinarily be incorporated into a set. Because MDX treats the named set alias as a set expression, you can use that alias anywhere a set expression is accepted.  

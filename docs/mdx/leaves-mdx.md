@@ -1,28 +1,17 @@
 ---
 title: "Leaves (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "LEAVES"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "Leaves function"
-ms.assetid: 09f908aa-1b2d-4af9-8c8d-c023915241b2
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Leaves (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Returns a set composed of all attributes (optionally limited to those belonging to a specific dimension). For each attribute x in the return set, if x is the granularity attribute or is directly or indirectly related to the granularity attribute, the granularity is set on attribute x without affecting the slice. The **Leaves** function is designed for use inside a SCOPE statement or at the left side of an assignment.  
   

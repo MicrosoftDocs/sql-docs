@@ -2,11 +2,12 @@
 title: "managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,12 +22,12 @@ helpviewer_keywords:
   - "fn_get_current_xevent_settings"
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 caps.latest.revision: 11
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # managed_backup.fn_get_current_xevent_settings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Returns 1 row for each Extended Event type supported by Smart Admn.  
   
@@ -36,7 +37,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   

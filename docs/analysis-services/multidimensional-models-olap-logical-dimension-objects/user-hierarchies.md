@@ -1,39 +1,17 @@
 ---
 title: "User Hierarchies | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "members [Analysis Services], hierarchies"
-  - "dimensions [Analysis Services], hierarchies"
-  - "user hierarchies [Analysis Services]"
-  - "hierarchies [Analysis Services], multilevel"
-  - "hierarchies [Analysis Services], attribute"
-  - "attributes [Analysis Services], hierarchies"
-  - "parent-child hierarchies [Analysis Services]"
-  - "hierarchies [Analysis Services], user"
-  - "ragged hierarchies [Analysis Services]"
-  - "balanced hierarchies [Analysis Services]"
-  - "hierarchies [Analysis Services]"
-  - "OLAP objects [Analysis Services], hierarchies"
-  - "multilevel hierarchies [Analysis Services]"
-  - "unbalanced hierarchies [Analysis Services]"
-ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # User Hierarchies
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   User-defined hierarchies are user-defined hierarchies of attributes that are used in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to organize the members of a dimension into hierarchical structures and provide navigation paths in a cube. For example, the following table defines a dimension table for a time dimension. The dimension table supports three attributes, named Year, Quarter, and Month.  
   
 |Year|Quarter|Month|  

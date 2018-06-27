@@ -1,3 +1,5 @@
+# [TMSL Reference - Commands](tmsl-reference-commands.md)
+
 # [Alter command (TMSL)](alter-command-tmsl.md)
 # [Attach command (TMSL)](attach-command-tmsl.md)
 # [Backup command (TMSL)](backup-command-tmsl.md)
@@ -10,4 +12,3 @@
 # [Restore command (TMSL)](restore-command-tmsl.md)
 # [Sequence command (TMSL)](sequence-command-tmsl.md)
 # [Synchronize command (TMSL)](synchronize-command-tmsl.md)
-# [TMSL Reference - Commands](tmsl-reference-commands.md)

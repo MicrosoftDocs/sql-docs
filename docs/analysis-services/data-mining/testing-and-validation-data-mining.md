@@ -1,40 +1,17 @@
 ---
 title: "Testing and Validation (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "testing data mining models"
-  - "comparing mining models"
-  - "continuous attribute charts"
-  - "data mining [Analysis Services], models"
-  - "charts [Analysis Services]"
-  - "predictive modeling [Analysis Services]"
-  - "mining models [Analysis Services], validating"
-  - "validating data mining models"
-  - "viewing mining accuracy"
-  - "confidence scores [data mining]"
-  - "displaying mining accuracy"
-  - "predictions [Analysis Services], comparing mining models"
-  - "scoring [data mining]"
-  - "lift charts [Analysis Services]"
-  - "classification matrix [Analysis Services]"
-  - "CRISP-DM"
-  - "accuracy testing [data mining]"
-ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: 61
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Testing and Validation (Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Validation is the process of assessing how well your mining models perform against real data. It is important that you validate your mining models by understanding their quality and characteristics before you deploy them into a production environment.  
   
  This section introduces some basic concepts related to model quality, and describes the strategies for model validation that are provided in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For an overview of how model validation fits into the larger data mining process, see [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md).  
@@ -86,7 +63,7 @@ manager: "jhubbard"
 |------------|-----------|  
 |Learn how to set up a testing data set using a wizard or DMX commands|[Training and Testing Data Sets](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
 |Learn how to test the distribution and representativeness of the data in a mining structure|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Learn about the accuracy chart types provided in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Lift Chart &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Profit Chart &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Scatter Plot &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Learn about the accuracy chart types provided.|[Lift Chart &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Profit Chart &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Scatter Plot &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Learn how to create a classification matrix, sometimes called a confusion matrix, for assessing the number of true and false positives and negatives.|[Classification Matrix &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## See Also  

@@ -2,11 +2,11 @@
 title: "DENY Schema Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,25 +18,21 @@ helpviewer_keywords:
   - "DENY statement, schemas"
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # DENY Schema Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Denies permissions on a schema.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 DENY permission  [ ,...n ] } ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]   
     [ CASCADE ]  
@@ -54,41 +50,27 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
  Specifies the principal to which the permission is being denied. *database_principal* can be one of the following:  
   
 -   Database user  
-  
 -   Database role  
-  
 -   Application role  
-  
 -   Database user mapped to a Windows login  
-  
 -   Database user mapped to a Windows group  
-  
 -   Database user mapped to a certificate  
-  
 -   Database user mapped to an asymmetric key  
-  
 -   Database user not mapped to a server principal  
   
- CASCADE  
+CASCADE  
  Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
   
- *denying_principal*  
- Specifies a principal from which the principal executing this query derives its right to deny the permission. *denying_principa*l can be one of the following:  
+*denying_principal*  
+ Specifies a principal from which the principal executing this query derives its right to deny the permission. *denying_principal* can be one of the following:  
   
 -   Database user  
-  
 -   Database role  
-  
 -   Application role  
-  
 -   Database user mapped to a Windows login  
-  
 -   Database user mapped to a Windows group  
-  
 -   Database user mapped to a certificate  
-  
 -   Database user mapped to an asymmetric key  
-  
 -   Database user not mapped to a server principal  
   
 ## Remarks  

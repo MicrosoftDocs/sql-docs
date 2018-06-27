@@ -1,12 +1,13 @@
----
+﻿---
 title: "Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
+ms.suite: "sql"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -21,9 +22,11 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can limit rows that are returned from a database query on the basis of some limiting value. The **sql:limit-field** and **sql:limit-value** annotations are used to identify the database column that contains limiting values and to specify a specific limiting value to be used to filter the data returned.  
   
  The **sql:limit-field** annotation is used to identify a column that contains a limiting value; it is allowed on each mapped element or attribute.  

@@ -2,13 +2,13 @@
 title: "SQLSetParam Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLSetParam"
 apilocation: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SQLSetParam function [ODBC]"
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLSetParam Function
 **Conformance**  

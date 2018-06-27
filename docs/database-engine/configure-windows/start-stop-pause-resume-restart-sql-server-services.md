@@ -1,15 +1,14 @@
 ---
 title: "Start, Stop, Pause, Resume, Restart SQL Server Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "02/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Configuration Manager, start and stop services"
   - "stopping SQL Server Agent"
@@ -42,11 +41,14 @@ helpviewer_keywords:
   - "Management Studio [SQL Server], starting or stopping services"
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Start, Stop, Pause, Resume, Restart SQL Server Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ > For content related to previous versions of SQL Server, see [Start  Stop  Pause  Resume  Restart the Database Engine  SQL Server Agent  or SQL Server Browser Service](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx).
+
   This topic describes how to start, stop, pause, resume, or restart the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager,  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** commands from a command prompt, [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
   
 -   **Before you begin:**  
@@ -133,7 +135,7 @@ manager: "jhubbard"
     |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-#### To start, stop, pause, resume, or restart the an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
+#### To start, stop, pause, resume, or restart an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
 1.  Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, using the instructions above.  
   
@@ -266,13 +268,13 @@ manager: "jhubbard"
   
 -   To wait for currently running [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and stored procedures to finish, and then stop the [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute the following statement.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   To stop the [!INCLUDE[ssDE](../../includes/ssde-md.md)] immediately, execute the following statement.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

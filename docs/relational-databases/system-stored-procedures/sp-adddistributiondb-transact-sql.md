@@ -1,10 +1,12 @@
 ---
 title: "sp_adddistributiondb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "04/30/2018"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -18,12 +20,12 @@ helpviewer_keywords:
   - "sp_adddistributiondb"
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new distribution database and installs the Distributor schema. The distribution database stores procedures, schema, and metadata used in replication. This stored procedure is executed at the Distributor on the master database in order to create the distribution database, and install the necessary tables and stored procedures required to enable the replication distribution.  
   
@@ -47,7 +49,9 @@ sp_adddistributiondb [ @database= ] 'database'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @createmode= ] createmode ]  
-    [ , [ @from_scripting = ] from_scripting ]  
+    [ , [ @from_scripting = ] from_scripting ] 
+    [ , [ @deletebatchsize_xact = ] deletebatchsize_xact ] 
+    [ , [ @deletebatchsize_cmd = ] deletebatchsize_cmd ] 
 ```  
   
 ## Arguments  
@@ -101,6 +105,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
  [ **@from_scripting =** ] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ 
+ [ **@deletebatchsize_xact=**] *deletebatchsize_xact*  
+ Specifies the batch size to be used during cleanup of expired transactions from the MSRepl_Transactions tables. *deletebatchsize_xact* is **int**, with a default of 5000. This parameter was first introduced in SQL Server 2017, followed by releases in SQL Server 2012 SP4 and SQL Server 2016 SP2.  
+
+ [ **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
+ Specifies the batch size to be used during cleanup of expired commands from the MSRepl_Commands tables. *deletebatchsize_cmd* is **int**, with a default of 2000. This parameter was first introduced in SQL Server 2017, followed by releases in SQL Server 2012 SP4 and SQL Server 2016 SP2. 
+ 
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

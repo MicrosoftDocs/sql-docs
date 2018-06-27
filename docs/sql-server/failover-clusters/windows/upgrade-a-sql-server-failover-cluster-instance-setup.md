@@ -2,13 +2,12 @@
 title: "Upgrade a SQL Server Failover Cluster Instance (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.suite: "sql"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading clusters"
   - "clusters [SQL Server], upgrading"
@@ -16,12 +15,12 @@ helpviewer_keywords:
   - "clusters [SQL Server], creating"
   - "failover clustering [SQL Server], upgrading"
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: 63
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Upgrade a SQL Server Failover Cluster Instance (Setup)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] failover cluster by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup UI or from a command prompt.  
   
  For local installations, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read permissions on the remote share.  

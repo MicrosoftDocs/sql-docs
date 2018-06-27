@@ -1,14 +1,13 @@
 ---
 title: "Find Databases Wizard (Verify Selection) (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "Find Databases Wizard"
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Find Databases Wizard (Verify Selection) (AccessToSQL)
 The Verify Selection page of the Find Databases Wizard lists the files to be added to SSMA. If the list of files is incorrect, click **Back** to modify the list. Otherwise, click **Finish** to add the files.  

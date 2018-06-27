@@ -1,14 +1,15 @@
----
+﻿---
 title: "Populate Full-Text Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.suite: "sql"
+ms.technology: search
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index populations [full-text search]"
   - "incremental populations [full-text search]"
@@ -25,11 +26,13 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], populations"
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 78
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Populate Full-Text Indexes
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Creating and maintaining a full-text index involves populating the index by using a process called a *population* (also known as a *crawl*).  
   
 ##  <a name="types"></a> Types of population  
@@ -50,7 +53,7 @@ To create a full-text index without populating it immediately, specify the `CHAN
 ### Example - Create a full-text index without running a full population  
  The following example creates a full-text index on the `Production.Document` table of the `AdventureWorks` sample database. This example uses `WITH CHANGE_TRACKING OFF, NO POPULATION` to delay the initial full population.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -69,7 +72,7 @@ GO
 ### Example - Run a full population on a table  
  The following example runs a full population on the `Production.Document` table of the `AdventureWorks` sample database.  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -102,7 +105,7 @@ There are two types of change tracking:
     **Example - Alter a full-text index to use automatic change tracking**  
     The following example changes the full-text index of the `HumanResources.JobCandidate` table of the `AdventureWorks` sample database to use change tracking with automatic population.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -122,7 +125,7 @@ There are two types of change tracking:
     **Example - Create a full-text index with manual change tracking**  
     The following example creates a full-text index that will use change tracking with manual population on the `HumanResources.JobCandidate` table of the `AdventureWorks` sample database.  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -136,7 +139,7 @@ There are two types of change tracking:
     **Example - Run a manual population**  
     The following example runs a manual population on the change-tracked full-text index of the `HumanResources.JobCandidate` table of the `AdventureWorks` sample database.  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  

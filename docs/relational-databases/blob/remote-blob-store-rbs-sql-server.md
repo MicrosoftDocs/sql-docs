@@ -2,24 +2,24 @@
 title: "Remote Blob Store (RBS) (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
+ms.suite: "sql"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Remote Blob Store (RBS) [SQL Server]"
   - "RBS (Remote Blob Store) [SQL Server]"
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Remote Blob Store (RBS) (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB Store (RBS) is an optional add-on component that lets database administrators store binary large objects in commodity storage solutions instead of directly on the main database server.  
   
@@ -30,12 +30,12 @@ manager: "jhubbard"
 ## Why RBS?  
   
 ### Optimized database storage and performance  
- Storing BLOBs in the database can consume large amounts of file space and expensive server resources. RBS transfers the BLOBs to a dedicated storage solution you choose and stores references to thr BLOBs in the database. This frees server storage for structured data, and frees server resources for database operations.  
+ Storing BLOBs in the database can consume large amounts of file space and expensive server resources. RBS transfers the BLOBs to a dedicated storage solution you choose and stores references to the BLOBs in the database. This frees server storage for structured data, and frees server resources for database operations.  
   
 ### Efficient BLOB management  
  Several RBS features support stored BLOBs management:  
   
--   BLOBS are managed with ACID (atomic consistency isolation durable) transactions.  
+-   BLOBS are managed with ACID (atomic, consistent, isolatable, durable) transactions.  
   
 -   BLOBs are organized into collections.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
  A number of third-party storage solution vendors have developed RBS providers that conform to these standard APIs and support BLOB storage on various storage platforms.  
   
 ## RBS Requirements  
- RBS requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise for the main database server in which the BLOB metadata is stored.  However, if you use the supplied FILESTREAM provider, you can store the BLOBs themselves on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. To connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS requires at least ODBC driver version 11 for [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] and ODBC Driver version 13 for [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Drivers are available at [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).   
+ - RBS requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise for the main database server in which the BLOB metadata is stored.  However, if you use the supplied FILESTREAM provider, you can store the BLOBs themselves on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. To connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS requires at least ODBC driver version 11 for [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] and ODBC Driver version 13 for [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Drivers are available at [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).    
   
  RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
   

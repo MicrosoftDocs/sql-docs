@@ -2,13 +2,13 @@
 title: "SQLBulkOperations Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLBulkOperations"
 apilocation: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SQLBulkOperations function [ODBC]"
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLBulkOperations Function
 **Conformance**  

@@ -1,14 +1,14 @@
 ---
 title: "Deploy Integration Services (SSIS) Projects and Packages | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.bids.converttolegacydeployment.f1"
   - "sql13.ssis.deploymentwizard.f1"
@@ -21,7 +21,7 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Deploy Integration Services (SSIS) Projects and Packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports two deployment models, the project deployment model and the legacy package deployment model. The project deployment model enables you to deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
@@ -29,8 +29,13 @@ manager: "jhubbard"
 For more information about the legacy package deployment model, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.  
-  
+>  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. With this deployment model, you were not able to deploy one or more packages without deploying the whole project. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the package deployment model, which lets you deploy one or more packages without deploying the whole project.  
+
+> [!NOTE]
+> This article describes how to deploy SSIS packages in general, and how to deploy packages on premises. You can also deploy SSIS packages to the following platforms:
+> - **The Microsoft Azure cloud**. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+> - **Linux**. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+
 ## Compare Project Deployment Model and legacy Package Deployment Model  
  The type of deployment model that you choose for a project determines which development and administrative options are available for that project. The following table shows the differences and similarities between using the project deployment model and using the package deployment model.  
   
@@ -48,7 +53,7 @@ For more information about the legacy package deployment model, see [Legacy Pack
 |Packages are run in a separate Windows process.|Packages are run in a separate Windows process.|  
 |SQL Server Agent is used to schedule package execution.|SQL Server Agent is used to schedule package execution.|  
   
- The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.   
+ The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.   
   
 ## Features of Project Deployment Model  
  The following table lists the features that are available to projects developed only for the project deployment model.  
@@ -63,7 +68,28 @@ For more information about the legacy package deployment model, see [Legacy Pack
   
 ## Project Deployment  
  At the center of the project deployment model is the project deployment file (.ispac extension). The project deployment file is a self-contained unit of deployment that includes only the essential information about the packages and parameters in the project. The project deployment file does not capture all of the information contained in the Integration Services project file (.dtproj extension). For example, additional text files that you use for writing notes are not stored in the project deployment file and thus are not deployed to the catalog.  
-  
+
+## Permissions Required to Deploy SSIS Projects and Packages
+
+If you change the SSIS service account from the default, you may have to give additional permissions to the non-default service account before you can deploy packages successfully. If the non-default service account doesn't have the required permissions, you may see the following error message.
+
+*A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.*
+
+This error is typically the result of missing DCOM permissions. To fix the error, do the following things.
+
+1.  Open the **Component Services** console (or run Dcomcnfg.exe).
+2.  In the **Component Services** console, expand **Component Services** > **Computers** > **My Computer** > **DCOM Config**.
+3.  In the list, locate **Microsoft SQL Server Integration Services xx.0** for the version of SQL Server that you're using. For example, SQL Server 2016 is version 13.
+4.  Right-click and select **Properties**.
+5.  In the **Microsoft SQL Server Integration Services 13.0 Properties** dialog box, select the **Security** tab.
+6.  For each of the three sets of permissions - Launch and Activation, Access, and Configuration - select **Customize**, then select **Edit** to open the **Permission** dialog box.
+7.  In the **Permission** dialog box, add the non-default service account and grant **Allow** permissions as required. Typically, an account has **Local Launch** and **Local Activation** permissions.
+8.  Click **OK** twice, then close the **Component Services** console.
+
+For more info about the error described in this section and about the permissions required by the SSIS service account, see the following blog post.  
+[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+
 ## Deploy Projects to Integration Services Server
   In the current release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server enables you to manage packages, run packages, and configure runtime values for packages by using environments.  
   
@@ -72,11 +98,11 @@ For more information about the legacy package deployment model, see [Legacy Pack
   
  To deploy a project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, complete the following tasks:  
   
-1.  Create an SSISDB catalog, if you haven’t already. For more information, see [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+1.  Create an SSISDB catalog, if you haven’t already. For more information, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard** . For more information, see the instructions below: [To convert a project to the project deployment model](#convert)  
   
-    -   If you created the project in [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], by default the project uses the project deployment model.  
+    -   If you created the project in [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] or later, by default the project uses the project deployment model.  
   
     -   If you created the project in an earlier release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], after you open the project file in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convert the project to the project deployment model.  
   
@@ -119,7 +145,7 @@ For more information about the legacy package deployment model, see [Legacy Pack
   
      -or-  
   
-     From the command prompt, run **isdeploymentwizard.exe** from **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn**. On 64-bit computers, there is also a 32-bit version of the tool in **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**.  
+     From the command prompt, run **isdeploymentwizard.exe** from **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. On 64-bit computers, there is also a 32-bit version of the tool in **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  On the **Select Source** page, click **Project deployment file** to select the deployment file for the project.  
   
@@ -130,7 +156,7 @@ For more information about the legacy package deployment model, see [Legacy Pack
 3.  Complete the wizard. 
 
 ## Deploy Packages to Integration Services Server
-  The Incremental Package Deployment feature introduced in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] lets you deploy one or more packages to an existing or new project without deploying the whole project.  
+  The Incremental Package Deployment feature introduced in  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] lets you deploy one or more packages to an existing or new project without deploying the whole project.  
   
 ###  <a name="DeployWizard"></a> Deploy packages by using the Integration Services Deployment Wizard  
   
@@ -245,7 +271,7 @@ static void Main()
   
 2.  If the project and all packages pass the compatibility test, then click **OK** to convert the package.  
   
-> **NOTE:** To convert a project to the project deployment model, use the **Integration Services Project Conversion Wizard**. For more information, see [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTE:** To convert a project to the project deployment model, use the **Integration Services Project Conversion Wizard**. For more information, see [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## Integration Services Deployment Wizard
   The **Integration Services Deployment Wizard** supports two deployment models:
@@ -313,7 +339,7 @@ Launch the wizard by either:
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
   
- You can query views for a list of server environments, environment references, and environment variables. You can also call stored to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ You can query views for a list of server environments, environment references, and environment variables. You can also call stored to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### To create and use a server environment  
   
@@ -333,13 +359,13 @@ Launch the wizard by either:
   
     3.  Enter the **Value** for the environment variable.  
   
-         For information about the rules for environment variable names, see the **Environment Variable** section in [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         For information about the rules for environment variable names, see the **Environment Variable** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
     4.  Indicate whether the variable contains sensitive value, by selecting or clearing the **Sensitive** checkbox.  
   
          If you select **Sensitive**, the variable value does not display in the **Value** field.  
   
-         Sensitive values are encrypted in the SSISDB catalog. For more information about the encryption, see [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Sensitive values are encrypted in the SSISDB catalog. For more information about the encryption, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 6.  On the **Permissions** page, grant or deny permissions for selected users and roles by doing the following.  
   

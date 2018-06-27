@@ -1,14 +1,14 @@
 ---
 title: "WillConnect Event (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "WillConnect"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "WillConnect event [ADO]"
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # WillConnect Event (ADO)
 The **WillConnect** event is called before a connection starts.  

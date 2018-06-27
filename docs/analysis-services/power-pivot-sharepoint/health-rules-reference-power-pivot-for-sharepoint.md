@@ -1,23 +1,17 @@
 ---
 title: "Health Rules Reference (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Health Rules Reference (Power Pivot for SharePoint)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This reference topic describes the SharePoint health rules that are added by a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint installation. These rules are used to report problems with server health, availability, or configuration of a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] service application or its associated [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
  The following table lists the rules in the order in which they appear on the Health Analyzer Rule Definitions page in SharePoint Central Administration. Configurable rules are those for which you can change the thresholds at which the rule is triggered. For more information, see [Configure Power Pivot Health Rules](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md). Auto Repair indicates that there is a built-in remedy that you can click from within the Problem reports page to resolve the issue.  

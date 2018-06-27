@@ -1,22 +1,22 @@
 ---
 title: "ReadyState Property (RDS) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: sql  
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "ReadyState property [ADO]"
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ReadyState Property (RDS)
 Indicates the progress of a [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object as it retrieves data into its [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

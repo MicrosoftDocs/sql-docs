@@ -1,3 +1,4 @@
+# [SQL Server Management Studio Menu Help](sql-server-management-studio-menu-help.md)
 # [Properties Window F1 Help (Management Studio)](properties-window-f1-help-management-studio.md)
 # [Options (Environment - Fonts and Colors Page)](options-environment-fonts-and-colors-page.md)
 # [Options (Environment - Help - General Page)](options-environment-help-general-page.md)
@@ -14,7 +15,6 @@
 # [Windows Dialog Box (Microsoft Document Explorer Help)](windows-dialog-box-microsoft-document-explorer-help.md)
 # [Advanced Save Options](advanced-save-options.md)
 # [Save As](save-as.md)
-# [SQL Server Management Studio Menu Help](sql-server-management-studio-menu-help.md)
 # [Customize (Toolbars Page)](customize-toolbars-page.md)
 # [Options (Designers - Maintenance Plans Page)](options-designers-maintenance-plans-page.md)
 # [Choose Search Folders Dialog Box (Visual Studio)](choose-search-folders-dialog-box-visual-studio.md)

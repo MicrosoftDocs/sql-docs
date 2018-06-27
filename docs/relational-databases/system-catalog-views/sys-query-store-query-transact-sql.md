@@ -1,12 +1,13 @@
----
+﻿---
 title: "sys.query_store_query (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,12 +22,13 @@ helpviewer_keywords:
   - "sys.query_store_query catalog view"
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.query_store_query (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Contains  information about the query and its associated overall aggregated runtime execution statistics.  
   
@@ -43,7 +45,7 @@ manager: "jhubbard"
 |**query_parameterization_type_desc**|**nvarchar(60)**|Textual description for the parameterization type.|  
 |**initial_compile_start_time**|**datetimeoffset**|Compile start time.|  
 |**last_compile_start_time**|**datetimeoffset**|Compile start time.|  
-|**last_execution_time**|**datetimeoffset**|Execution time.|  
+|**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|  
 |**last_compile_batch_sql_handle**|**varbinary(64)**|Handle of the last SQL batch in which query was used last time. It can be provided as input to [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) to get the full text of the batch.|  
 |**last_compile_batch_offset_start**|**bigint**|Information that can be provided to sys.dm_exec_sql_text along with last_compile_batch_sql_handle.|  
 |**last_compile_batch_offset_end**|**bigint**|Information that can be provided to sys.dm_exec_sql_text along with last_compile_batch_sql_handle.|  

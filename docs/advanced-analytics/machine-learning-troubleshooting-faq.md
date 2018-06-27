@@ -1,59 +1,52 @@
 ---
-title: "Troubleshooting and FAQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/11/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Troubleshooting and FAQ for machine learning in SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 05/31/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 
-# Troubleshooting and FAQ
+# Troubleshoot machine learning in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-> [!NOTE] 
-> SQL Server vNext has brought lots of changes! 
-> We are in the process of reorganizing content related to setup and configuration, as well as troubleshooting. 
-> 
-> This section will include links to troubleshooting resources such as these:
-> 
-> + How to resolve problems with Launchpad
-> + Reasons why Python or R script won't run
-> + Common errors related to external scripts
-> + Upgrading from older versions or pre-release versions 
-> 
-> In the meantime, please see these topics:
+Use this page as a starting point for working through known issues.
 
-**Known issues**
+**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R and Python)
 
-+ [Setup FAQ](../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md)
-+ [Known Issues](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
+## Known issues
 
-**Step-by-step setup and configuration**
+The following articles describe known issues with the current and previous releases:
 
-+ [Set up R Services or Machine Learning Services with R](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
-+ [Set up Machine Learning Services with Python](../advanced-analytics/python/setup-python-machine-learning-services.md)
-+ [Use SqlBindR to Upgrade an Instance of R services](../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Known issues for R Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
++ [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
++ [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
 
-**Perform an offline install or automated install**
+## How to gather system information
 
-+ [Unattended Installation of R Services](../advanced-analytics/r/unattended-installs-of-sql-server-r-services.md) 
-+ [Unattended Installation of Machine Learning Services with Python](../advanced-analytics/python/unattended-installs-of-sql-server-python-services.md)
-+ [Installing Machine Learning Components without Internet Access](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
+If you have encountered an error, or need to understand an issue in your environment, it is important that you collect related information systematically. The following article provides a list of information that facilitates self-help troubleshooting, or a request for technical support.
 
-**Modify your configuration**
++ [Data collection for machine learning troubleshooting](data-collection-ml-troubleshooting-process.md)
 
-+ [Modify the User Account Pool for SQL Server R Services](../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)  
-+ [Configure and Manage Advanced Analytics Extensions](../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)  
+## Setup and configuration guides
 
- **Related tools**
+Start here if you have not set up machine learning with SQL Server, or if you want to add the feature:
 
-+ [Set up Microsoft Machine Learning Server Standalone](../advanced-analytics/r/create-a-standalone-r-server.md)
-+ [Set up R Server on an Azure VM](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-+ [Install R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
-+ [Get R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)
++ [Install SQL Server 2017 Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
++ [Install SQL Server 2017 Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md)
++ [Install SQL Server 2016 R Services (In-Database)](install/sql-r-services-windows-install.md)
++ [Install SQL Server 2016 R Server (Standalone)](install/sql-r-standalone-windows-install.md)
++ [Command prompt setup](install/sql-ml-component-commandline-install.md)
++ [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
+
+### Configuration
+
+The following articles contain information about defaults, and how to customize the configuration for machine learning on an instance:
+
++ [Modify the user account pool for SQL Server R Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
++ [Configure and manage advanced analytics extensions](r/configure-and-manage-advanced-analytics-extensions.md)  
++ [How to create a resource pool](r/how-to-create-a-resource-pool-for-r.md)
++ [Optimization for R workloads](r/operationalizing-your-r-code.md)

@@ -1,12 +1,12 @@
----
+﻿---
 title: "DENY Search Property List Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,12 +18,13 @@ helpviewer_keywords:
   - "search property lists [SQL Server], permissions"
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # DENY Search Property List Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Denies permissions on a search property list.  
  
@@ -33,7 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DENY permission [ ,...n ] ON  
         SEARCH PROPERTY LIST :: search_property_list_name  
     TO database_principal [ ,...n ] [ CASCADE ]  
@@ -44,48 +44,34 @@ DENY permission [ ,...n ] ON
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   
- ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ON SEARCH PROPERTY LIST **::***search_property_list_name*  
  Specifies the search property list on which the permission is being denied. The scope qualifier :: is required.  
   
- *database_principal*  
+*database_principal*  
  Specifies the principal to which the permission is being denied. The principal can be one of the following:  
   
 -   database user  
-  
 -   database role  
-  
 -   application role  
-  
 -   database user mapped to a Windows login  
-  
 -   database user mapped to a Windows group  
-  
 -   database user mapped to a certificate  
-  
 -   database user mapped to an asymmetric key  
-  
 -   database user not mapped to a server principal.  
   
- CASCADE  
+CASCADE  
  Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
   
- *denying_principal*  
+*denying_principal*  
  Specifies a principal from which the principal executing this query derives its right to deny the permission. The principal can be one of the following:  
   
 -   database user  
-  
 -   database role  
-  
 -   application role  
-  
 -   database user mapped to a Windows login  
-  
 -   database user mapped to a Windows group  
-  
 -   database user mapped to a certificate  
-  
 -   database user mapped to an asymmetric key  
-  
 -   database user not mapped to a server principal.  
   
 ## Remarks  

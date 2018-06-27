@@ -1,14 +1,14 @@
 ---
 title: "Run Integration Services (SSIS) Packages | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecute.f1"
   - "sql13.ssis.ssms.executepackage.f1"
@@ -24,10 +24,15 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Run Integration Services (SSIS) Packages
   To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you can use one of several tools depending on where those packages are stored. The tools are listed in the table below.  
+
+> [!NOTE]
+> This article describes how to run SSIS packages in general, and how to run packages on premises. You can also run SSIS packages on the following platforms:
+> - **The Microsoft Azure cloud**. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) and [Run an SSIS package in Azure](../lift-shift/ssis-azure-run-packages.md).
+> - **Linux**. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
   
  To store a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you use the project deployment model to deploy the project to the server. For information, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
@@ -37,7 +42,7 @@ manager: "jhubbard"
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**SQL Server Data Tools**|No|No<br /><br /> However, you can add an existing package to a project from the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, which includes the msdb database. Adding an existing package to the project in this manner makes a local copy of the package in the file system.|Yes|  
 |**SQL Server Management Studio, when you are connected to an instance of the Database Engine that hosts the Integration Services server**<br /><br /> For more information, see [Execute Package Dialog Box](#execute_package_dialog)|Yes|No<br /><br /> However, you can import a package to the server from these locations.|No<br /><br /> However, you can import a package to the server from the file system.|
-|**SQL Server Management Studio, when you are connected to an instance of the Database Engine that hosts the Integration Services server that is enabled as Scale Out Master**<br /><br /> For more information, see [Run packages in Scale Out](../../integration-services/integration-services-ssis-scale-out.md#run_scale_out)|Yes|No|No|
+|**SQL Server Management Studio, when you are connected to an instance of the Database Engine that hosts the Integration Services server that is enabled as Scale Out Master**<br /><br /> For more information, see [Run packages in Scale Out](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|Yes|No|No|
 |**SQL Server Management Studio, when it is connected to the Integration Services service that manages the SSIS Package Store**|No|Yes|No<br /><br /> However, you can import a package to the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store from the file system.|  
 |**dtexec**<br /><br /> For more information, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md).|Yes|Yes|Yes|  
 |**dtexecui**<br /><br /> For more information, see [Execute Package Utility &#40;DtExecUI&#41; UI Reference](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|No|Yes|Yes|  

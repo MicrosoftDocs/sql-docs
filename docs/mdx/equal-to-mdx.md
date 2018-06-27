@@ -1,29 +1,17 @@
 ---
 title: "= (Equal To) (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "="
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "equals operator (=)"
-  - "= (equals operator)"
-ms.assetid: 5e1f3b58-a646-4fc1-a3f1-19090a5437b7
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # = (Equal To) (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Performs a comparison operation that determines whether the value of one Multidimensional Expressions (MDX) expression is equal to the value of another MDX expression.  
   

@@ -1,12 +1,12 @@
 ---
 title: "GO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/26/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/27/2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 applies_to: 
@@ -22,24 +22,23 @@ helpviewer_keywords:
   - "GO command"
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # SQL Server Utilities Statements - GO
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides commands that are not [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, but are recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code Editor. These commands can be used to facilitate the readability and execution of batches and scripts.  
   
   GO signals the end of a batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities.  
-  
-
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
+  
 GO [count]  
 ```  
   
@@ -54,17 +53,11 @@ GO [count]
   
  A [!INCLUDE[tsql](../../includes/tsql-md.md)] statement cannot occupy the same line as a GO command. However, the line can contain comments.  
   
- Users must follow the rules for batches. For example, any execution of a stored procedure after the first statement in a batch must include the EXECUTE keyword. 
+ Users must follow the rules for batches. For example, any execution of a stored procedure after the first statement in a batch must include the EXECUTE keyword. The scope of local (user-defined) variables is limited to a batch, and cannot be referenced after a GO command.  
   
 ```  
-SELECT @@VERSION;  
-sp_who  
+USE AdventureWorks2012;  
 GO  
-```   
- 
- The scope of local (user-defined) variables is limited to a batch, and cannot be referenced after a `GO` command.  
-  
-```  
 DECLARE @MyMsg VARCHAR(50)  
 SELECT @MyMsg = 'Hello, World.'  
 GO -- @MyMsg is not valid after this GO ends the batch.  
@@ -72,9 +65,13 @@ GO -- @MyMsg is not valid after this GO ends the batch.
 -- Yields an error because @MyMsg not declared in this batch.  
 PRINT @MyMsg  
 GO  
-```   
-
-
+  
+SELECT @@VERSION;  
+-- Yields an error: Must be EXEC sp_who if not first statement in   
+-- batch.  
+sp_who  
+GO  
+```  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications can send multiple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for execution as a batch. The statements in the batch are then compiled into a single execution plan. Programmers executing ad hoc statements in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities, or building scripts of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to run through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities, use GO to signal the end of a batch.  
   
@@ -92,7 +89,7 @@ GO;
 ```  
   
 ## Examples  
- The following example creates two batches. The first batch contains only a `USE``AdventureWorks2012` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  
+ The following example creates two batches. The first batch contains only a `USE AdventureWorks2012` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  
   
 ```  
 USE AdventureWorks2012;  

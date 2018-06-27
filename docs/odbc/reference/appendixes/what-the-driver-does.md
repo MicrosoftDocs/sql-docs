@@ -2,13 +2,13 @@
 title: "What the Driver Does | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scrollable cursors [ODBC]"
   - "cursors [ODBC], backward compatibility"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "block cursors [ODBC]"
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # What the Driver Does
 The following table summarizes what functions and statement attributes an ODBC 3*.x* driver should implement for block and scrollable cursors.  

@@ -2,13 +2,13 @@
 title: "dtutil Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "verifying packages"
   - "checking packages"
@@ -28,7 +28,7 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 caps.latest.revision: 114
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # dtutil Utility
   The **dtutil** command prompt utility is used to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. The utility can copy, move, delete, or verify the existence of a package. These actions can be performed on any [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is stored in one of three locations: a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system. If the utility accesses a package that is stored in **msdb**, the command prompt may require a user name and a password. If the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, the command prompt requires both a user name and a password. If the user name is missing, **dtutil** tries to log on to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Windows Authentication. The storage type of the package is identified by the **/SQL**, **/FILE**, and **/DTS** options.  
@@ -75,8 +75,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```dos
 dtutil /option [value] [/option [value]]...  
 ```  
   
@@ -134,19 +133,19 @@ dtutil /option [value] [/option [value]]...
 ### Copy Examples  
  To copy a package that is stored in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Windows Authentication to the SSIS Package Store, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL srcPackage /COPY DTS;destFolder\destPackage   
 ```  
   
  To copy a package from a location on the File system to another location and give the copy a different name, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\myPackages\mypackage.dtsx /COPY FILE;c:\myTestPackages\mynewpackage.dtsx  
 ```  
   
  To copy a package on the local file system to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hosted on another computer, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\sourcepkg.dtsx /DestServer <servername> /COPY SQL;destpkgname  
 ```  
   
@@ -154,13 +153,13 @@ dtutil /FILE c:\sourcepkg.dtsx /DestServer <servername> /COPY SQL;destpkgname
   
  To create a new ID for a package after it is copied, use the following syntax:  
   
-```  
+```dos
 dtutil /I /FILE copiedpkg.dtsx   
 ```  
   
  To create a new ID for all the packages in a specific folder, use the following syntax:  
   
-```  
+```dos
 for %%f in (C:\test\SSISPackages\*.dtsx) do dtutil.exe /I /FILE %%f  
 ```  
   
@@ -169,13 +168,13 @@ for %%f in (C:\test\SSISPackages\*.dtsx) do dtutil.exe /I /FILE %%f
 ### Delete Examples  
  To delete a package that is stored in the **msdb** database on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses Windows Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL delPackage /DELETE  
 ```  
   
  To delete a package that is stored in the **msdb** database on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL delPackage /SOURCEUSER srcUserName /SOURCEPASSWORD #8nGs*w7F /DELETE  
 ```  
   
@@ -184,27 +183,27 @@ dtutil /SQL delPackage /SOURCEUSER srcUserName /SOURCEPASSWORD #8nGs*w7F /DELETE
   
  To delete a package that is stored in the SSIS Package Store, use the following syntax:  
   
-```  
+```dos
 dtutil /DTS delPackage.dtsx /DELETE  
 ```  
   
  To delete a package that is stored in the file system, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\delPackage.dtsx /DELETE  
 ```  
   
 ### Exists Examples  
  To determine whether a package exists in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses Windows Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL srcPackage /EXISTS  
 ```  
   
  To determine whether a package exists in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, use the following syntax:  
   
-```  
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+```dos
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  
@@ -212,26 +211,26 @@ dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS
   
  To determine whether a package exists in the local package store, use the following syntax:  
   
-```  
+```dos
 dtutil /DTS srcPackage.dtsx /EXISTS  
 ```  
   
  To determine whether a package exists in the local file system, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\srcPackage.dtsx /EXISTS  
 ```  
   
 ### Move Examples  
  To move a package that is stored in the SSIS Package Store to the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses Windows Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /DTS srcPackage.dtsx /MOVE SQL;destPackage  
 ```  
   
  To move a package that is stored in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication to the **msdb** database on another local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD $Hj45jhd@X /MOVE SQL;destPackage /DESTUSER destUserName /DESTPASSWORD !38dsFH@v  
 ```  
   
@@ -240,20 +239,20 @@ dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD $Hj45jhd@X /MOVE 
   
  To move a package that is stored in the SSIS Package Store, use the following syntax:  
   
-```  
+```dos
 dtutil /DTS srcPackage.dtsx /MOVE DTS;destPackage.dtsx  
 ```  
   
  To move a package that is stored in the file system, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\srcPackage.dtsx /MOVE FILE;c:\destPackage.dtsx  
 ```  
   
 ### Sign Examples  
  To sign a package that is stored in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses Windows Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819873a91f919  
 ```  
   
@@ -267,7 +266,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 ### Encrypt Examples  
  The following sample encrypts the file-based PackageToEncrypt.dtsx to the file-based EncryptedPackage.dts using full package encryption, with a password. The password that is used for the encryption is *EncPswd*.  
   
-```  
+```dos
 dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd  
 ```  
   

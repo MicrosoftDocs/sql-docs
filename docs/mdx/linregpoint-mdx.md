@@ -1,28 +1,17 @@
 ---
 title: "LinRegPoint (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "LINREGPOINT"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "LinRegPoint function"
-ms.assetid: 28298d7c-2b8a-4423-ae52-9c2d6f0f0064
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # LinRegPoint (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Calculates the linear regression of a set, and returns the value of the *y-intercept* in the regression line, y = ax + b for a particular value of x.  
   

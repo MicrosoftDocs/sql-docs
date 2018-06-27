@@ -1,28 +1,17 @@
 ---
 title: "Define a Default Member | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "default members"
-  - "attributes [Analysis Services], default members"
-  - "members [Analysis Services], default"
-  - "DefaultMember property"
-ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Attribute Properties - Define a Default Member
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The default member of an attribute hierarchy is used to evaluate expressions when an attribute hierarchy is not included in a query. The default member is ignored whenever a query includes an attribute hierarchy or user hierarchy that contains the attribute that sources the attribute hierarchy. This is because the member specified in the query is used.  
   
  The default member for an attribute hierarchy is set by specifying an attribute member as the **DefaultMember** property value for the attribute hierarchy. You can set this property on the Dimension Structure tab in Dimension Designer, or in the cube's calculation script on the Calculation tab in Cube Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You can also specify the **DefaultMember** property for a security role (overriding the default member set on the dimension) on the Dimension Data tab when defining dimension security. To avoid name resolution problems, define the default member in the cube's MDX script in the following situations: if the cube refers to a database dimension more than once, if the dimension in the cube has a different name than the dimension in the database, or if you want to have different default members in different cubes.  

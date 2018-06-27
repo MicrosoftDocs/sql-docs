@@ -1,42 +1,17 @@
 ---
 title: "Microsoft Association Algorithm | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MinimumProbability property"
-  - "itemsets [Analysis Services]"
-  - "MaximumItemsetCount property"
-  - "MinimumSupport property"
-  - "OPTIMIZED_PREDICTION_COUNT"
-  - "OptimizedPredictionCount property"
-  - "MaximumSupport property"
-  - "MINIMUM_PROBABILITY"
-  - "algorithms [data mining]"
-  - "association algorithms [Analysis Services]"
-  - "rules [Data Mining]"
-  - "association rules"
-  - "MinimumItemsetSize property"
-  - "market basket analysis [Analysis Services]"
-  - "associations [Analysis Services]"
-  - "MINIMUM_SUPPORT"
-  - "MAXIMUM_SUPPORT"
-  - "MINIMUM_ITEMSET_SIZE"
-  - "MaximumItemsetSize property"
-ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Association Algorithm
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm is an algorithm that is often used for recommendation engines. A recommendation engine recommends items to customers based on items they have already bought, or in which they have indicated an interest. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm is also useful for market basket analysis.   
   
  Association models are built on datasets that contain identifiers both for individual cases and for the items that the cases contain. A group of items in a case is called an *itemset*. An association model consists of a series of itemsets and the rules that describe how those items are grouped together within the cases. The rules that the algorithm identifies can be used to predict a customer's likely future purchases, based on the items that already exist in the customer's shopping cart. The following diagram shows a series of rules in an itemset.  

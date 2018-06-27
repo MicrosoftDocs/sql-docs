@@ -2,22 +2,22 @@
 title: "Implementing Assemblies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.suite: "sql"
+ms.technology: reference
 ms.topic: "reference"
 helpviewer_keywords: 
   - "assemblies [CLR integration], implementing"
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Assemblies - Implementing
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic provides information about the following areas to help you implement and work with assemblies in the database:  
   
 -   Creating assemblies  

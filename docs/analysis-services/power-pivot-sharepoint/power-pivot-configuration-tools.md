@@ -1,23 +1,17 @@
 ---
 title: "Power Pivot Configuration Tools | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Power Pivot Configuration Tools
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Configure, repair, or remove a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] with the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tools.  
   
  The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup Wizard does not install [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tools for SharePoint. The configuration tools will be available for download in a future release of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

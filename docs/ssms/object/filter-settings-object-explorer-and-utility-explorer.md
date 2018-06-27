@@ -2,13 +2,14 @@
 title: "Filter Settings (Object Explorer and Utility Explorer) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.suite: "sql"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.filtersettings.f1"
   - "sql13.ag.job.filtersettings.f1"
@@ -16,9 +17,10 @@ ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Filter Settings (Object Explorer and Utility Explorer)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use this dialog box to specify a filter. A filter allows you to configure Object Explorer and Utility Explorer to display only items that meet specific criteria. For example, you can use a filter to show only jobs with names that contain the word "Maintenance." The header for the **Filter Settings** dialog box contains the name of the server, and it may contain the name of the database.  
   
 ## UIElement List  

@@ -2,13 +2,13 @@
 title: "SQLWritePrivateProfileString Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLWritePrivateProfileString"
 apilocation: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SQLWritePrivateProfileString [ODBC]"
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLWritePrivateProfileString Function
 **Conformance**  

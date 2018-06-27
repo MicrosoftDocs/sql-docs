@@ -1,12 +1,12 @@
 ---
 title: "DENY Service Broker Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.date: "06/09/2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -24,12 +24,12 @@ helpviewer_keywords:
   - "services [Service Broker], permissions"
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # DENY Service Broker Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Denies permissions on a [!INCLUDE[ssSB](../../includes/sssb-md.md)] contract, message type, remote service binding, route, or service.  
   
@@ -38,7 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DENY permission  [ ,...n ] ON  
     {    
        [ CONTRACT :: contract_name ]   
@@ -75,41 +74,27 @@ DENY permission  [ ,...n ] ON
  Specifies the principal to which the permission is being denied. One of the following:  
   
 -   Database user  
-  
 -   Database role  
-  
 -   Application role  
-  
 -   Database user mapped to a Windows login  
-  
 -   Database user mapped to a Windows group  
-  
 -   Database user mapped to a certificate  
-  
 -   Database user mapped to an asymmetric key  
-  
 -   Database user not mapped to a server principal  
   
- CASCADE  
+CASCADE  
  Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
   
- *denying_principal*  
+*denying_principal*  
  Specifies a principal from which the principal executing this query derives its right to deny the permission. One of the following:  
   
 -   Database user  
-  
 -   Database role  
-  
 -   Application role  
-  
 -   Database user mapped to a Windows login  
-  
 -   Database user mapped to a Windows group  
-  
 -   Database user mapped to a certificate  
-  
 -   Database user mapped to an asymmetric key  
-  
 -   Database user not mapped to a server principal  
   
 ## Remarks  

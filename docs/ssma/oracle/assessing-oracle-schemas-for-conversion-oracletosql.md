@@ -1,20 +1,19 @@
 ---
 title: "Assessing Oracle Schemas for Conversion (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Analyzing Conversion Problems"
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Assessing Oracle Schemas for Conversion (OracleToSQL)

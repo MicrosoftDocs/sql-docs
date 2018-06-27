@@ -1,30 +1,17 @@
 ---
 title: "CALL Statement (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CALL"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "voids [MDX]"
-  - "stored procedures [MDX]"
-  - "CALL statement"
-ms.assetid: b534a20b-924c-43b8-832d-24e57d50425c
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Manipulation - CALL
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Runs a stored procedure that returns a void either in the current scope or optionally on a specified cube.  
   
@@ -55,7 +42,7 @@ CALL SP_Name
  If a cube is not specified, the statement runs the stored procedure on the current cube.  
   
 > [!NOTE]  
->  If the stored procedure is not registered on the client, the **CALL** statement attempts to call the stored procedure from an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+>  If the stored procedure is not registered on the client, the **CALL** statement attempts to call the stored procedure from an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## See Also  
  [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   

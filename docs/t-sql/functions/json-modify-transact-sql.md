@@ -1,23 +1,22 @@
 ---
 title: "JSON_MODIFY (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
-caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
+manager: craigg
 ---
 # JSON_MODIFY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Updates the value of a property in a JSON string and returns the updated JSON string.  
   
@@ -25,7 +24,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -89,7 +88,7 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
   
  **Query**  
   
-```tsql  
+```sql  
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -147,7 +146,7 @@ PRINT @info
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -177,7 +176,7 @@ PRINT @info
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
 
 PRINT @product
@@ -211,7 +210,7 @@ PRINT @product
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
 
 PRINT @stats
@@ -239,7 +238,7 @@ PRINT @stats
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -267,7 +266,7 @@ PRINT @info
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -294,7 +293,7 @@ PRINT @info
 ### Example - Update a JSON column  
  The following example updates the value of a property in a table column that contains JSON.  
   
-```tsql  
+```sql  
 UPDATE Employee
 SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
 WHERE EmployeeID=17

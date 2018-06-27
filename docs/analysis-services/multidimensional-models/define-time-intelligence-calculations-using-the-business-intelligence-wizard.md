@@ -1,36 +1,17 @@
 ---
 title: "Define Time Intelligence Calculations using the Business Intelligence Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "period over period growth [Analysis Services]"
-  - "parallel period comparisons [Analysis Services]"
-  - "Business Intelligence enhancements [Analysis Services], time intelligence"
-  - "time views [Analysis Services]"
-  - "hierarchies [Analysis Services], time"
-  - "time periods [Analysis Services]"
-  - "moving averages"
-  - "time [Analysis Services]"
-  - "period to date [Analysis Services]"
-  - "calculations [Analysis Services], time"
-  - "time hierarchies [Analysis Services]"
-  - "time intelligence [Analysis Services]"
-ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Define Time Intelligence Calculations using the Business Intelligence Wizard
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The time intelligence enhancement is a cube enhancement that adds time calculations (or time views) to a selected hierarchy. This enhancement supports the following categories of calculations:  
   
 -   Period to date.  

@@ -3,8 +3,7 @@
 # [Conversion](data-type-conversion-database-engine.md)  
 # [Precedence](data-type-precedence-transact-sql.md)  
 # [Synonyms](data-type-synonyms-transact-sql.md)  
-# [Precision, Scale, and Length](precision-scale-and-length-transact-sql.md)  
-# [bit](bit-transact-sql.md)  
+# [Precision, Scale, and Length](precision-scale-and-length-transact-sql.md)    
 # [cursor](cursor-transact-sql.md)  
 # [Date and time](date-and-time-types.md)  
 ## [date](date-transact-sql.md)  
@@ -27,6 +26,7 @@
 ## [Write (Database Engine)](write-database-engine.md)  
 
 # [Numeric](numeric-types.md)  
+## [bit](bit-transact-sql.md)
 ## [decimal and numeric](decimal-and-numeric-transact-sql.md)  
 ## [float and real](float-and-real-transact-sql.md)  
 ## [int, bigint, smallint, and tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  
@@ -40,8 +40,8 @@
 ## [nchar and nvarchar](nchar-and-nvarchar-transact-sql.md)  
 ## [ntext, text, and image](ntext-text-and-image-transact-sql.md)  
 
-# [Spatial geography](../spatial-geography/index.md)
-# [Spatial geometry](../spatial-geometry/index.md)
+# [Spatial geography](../../t-sql/spatial-geography/spatial-types-geography.md)
+# [Spatial geometry](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
 
 # [sql_variant](sql-variant-transact-sql.md)  
 
@@ -49,4 +49,4 @@
 
 # [uniqueidentifier](uniqueidentifier-transact-sql.md)  
 
-# [XML](../xml/index.md)
+# [XML](../../t-sql/xml/xml-transact-sql.md)

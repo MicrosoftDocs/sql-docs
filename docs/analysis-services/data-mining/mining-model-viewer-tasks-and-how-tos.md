@@ -1,29 +1,17 @@
 ---
 title: "Mining Model Viewer Tasks and How-tos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mining models [Analysis Services], viewing"
-  - "displaying mining models"
-  - "viewing mining models"
-  - "mining models [Analysis Services], how-to topics"
-  - "Mining Model Viewer [Analysis Services], how-to topics"
-  - "Mining Model Viewer [Analysis Services]"
-ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Mining Model Viewer Tasks and How-tos
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contains several tools that you can use to explore mining models. The following topics provide step-by-step instructions on how to complete tasks that are specific to using the **Mining Model Viewer** tab in the designer.  
   
 ## In This Section  

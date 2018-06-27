@@ -1,32 +1,28 @@
 ---
-title: "Security Overview (SQL Server R Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
----
-# Security Overview (SQL Server R Services)
+title: Security for SQL Server machine learning and R | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
 
-This topic describes the overall security architecture that is used to connect the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] database engine and related components to the R runtime. Examples of the security process are provided for two common scenarios for using R in an enterprise environment:
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+---
+# Security for SQL Server machine learning and R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This article describes the overall security architecture that is used to connect the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] database engine and related components to the R runtime. Examples of the security process are provided for these common scenarios for using R in an enterprise environment:
 
 + Executing RevoScaleR functions in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] from a data science client
 + Running R directly from [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] using stored procedures
 
-## Security Overview
+## Security overview
 
-A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] login or Windows user account is required to run R scripts that use SQL Server data or that run with SQL Server as the compute context. This requirement applies to both [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] and SQL Server vNext Machine Learning Services. 
+A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] login or Windows user account is required to run R scripts that use SQL Server data or that run with SQL Server as the compute context. This requirement applies to both [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] and SQL Server 2017 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)].
 
 The login or user account identifies the *security principal*, who might need multiple levels of access, depending on the R script requirements:
+
 + Permission to access the database where R is enabled
 + Permissions to read data from secured objects such as tables
 + The ability to write new data to a table, such as a model, or scoring results
@@ -49,7 +45,7 @@ After the login or Windows user account has been provisioned and given the neces
 
 Hence, all R jobs that are initiated from a remote client must specify the login or user information as part of the connection string.
 
-## Interaction of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Security and LaunchPad Security
+## Interaction of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] security and Launchpad security
 
 When an R script is executed in the context of the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer, the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service gets an available worker account (a local user account) from a pool of worker accounts established for external process and uses that worker account to perform the related tasks. 
 
@@ -59,23 +55,27 @@ After mapping to a worker account, [!INCLUDE[rsql_launchpad_md](../../includes/r
 
 When all [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] operations are completed, the user worker account is marked as free and returned to the pool.
 
-For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], see [New Components in SQL Server to Support R Integration](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md).
+For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], see [Components in SQL Server to support R integration](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md).
 
-> [!NOTE]
-For Launchpad to manage the worker accounts and execute R jobs, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions; otherwise R Services might not work. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced, which prevent the worker accounts from connecting to SQL Server to perform R jobs.  
+### Implied authentication
 
-## Security of Worker Accounts
+**Implied authentication** is the term used for the process under which SQL Server gets the user credentials and then executes all external script tasks on behalf of the users, assuming the user has the correct permissions in the database. Implied authentication is particularly important if the R script needs to make an ODBC call outside the SQL Server database. For example, the code might retrieve a shorter list of factors from a spreadsheet or other source.
 
-The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the lifetime of the SQL query that runs the R script. 
+For such loopback calls to succeed, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced.
+
+![Implied authentication for R](media/implied-auth-rsql.png)
+
+## Security of worker accounts
+
+The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the lifetime of the SQL query that runs the R script.
 
 Parallel queries from the same login are mapped to the same user worker account.
 
 The directories used for the processes are managed by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] using RLauncher, and directories are access-restricted. The worker account cannot access any files in folders above its own, but it can read, write, or delete children under the session working folder that was created for the SQL query with the R script.
 
-For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).
+For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-
-## Security Isolation for Multiple External Scripts
+## Security isolation for multiple external scripts
 
 The isolation mechanism is based on on physical user accounts. As satellite processes are started for a specific language runtime, each satellite task uses the worker account specified by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. If a task requires multiple satellites, for example, in the case of parallel queries, a single worker account is used for all related tasks.
 
@@ -83,5 +83,6 @@ No worker account can see or manipulate files used by other worker accounts.
  
 If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
 
-## See Also
-[Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
+## See also
+
+[Architecture overview for SQL Server machine learning](../../advanced-analytics/r/architecture-overview-sql-server-r.md)

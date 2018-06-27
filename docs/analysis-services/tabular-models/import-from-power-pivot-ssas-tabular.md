@@ -1,26 +1,18 @@
 ---
-title: "Import from Power Pivot (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.importfromppt.f1"
-ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Import from Power Pivot | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Import from Power Pivot (SSAS Tabular)
-  This topic describes how to create a new tabular model project by importing the metadata and data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook by using the Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] project template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+# Import from Power Pivot 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  This article describes how to create a new tabular model project by importing the metadata and data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook by using the Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] project template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## Create a new Tabular Model from a Power Pivot for Excel file  
  When creating a new tabular model project by importing from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, the metadata that defines the structure of the workbook is used to create and define the structure of the tabular model project in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Objects such as tables, columns, measures, and relationships are retained and will appear in the tabular model project as they are in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook. No changes are made to the .xlsx workbook file.  
@@ -47,7 +39,7 @@ manager: "erikre"
 4.  In the **Open** dialog box, select the [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] file that contains the model metadata and data you want to import, and then click **Open**.  
   
 ## See Also  
- [Workspace Database &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
- [Copy and Paste Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
+ [Workspace Database](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
+ [Copy and Paste Data](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   

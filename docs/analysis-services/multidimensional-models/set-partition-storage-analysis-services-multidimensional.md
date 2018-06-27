@@ -1,38 +1,17 @@
 ---
 title: "Set Partition Storage (Analysis Services - Multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "low latency MOLAP"
-  - "standard storage [Analysis Services]"
-  - "hybrid OLAP"
-  - "automatic MOLAP"
-  - "relational OLAP"
-  - "multidimensional OLAP"
-  - "scheduled MOLAP [Analysis Services]"
-  - "partitions [Analysis Services], storage"
-  - "HOLAP"
-  - "MOLAP"
-  - "real time ROLAP"
-  - "real time HOLAP"
-  - "ROLAP"
-  - "medium latency MOLAP"
-ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Set Partition Storage (Analysis Services - Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several standard storage configurations for storage modes and caching options. These provide commonly used configurations for update notification, latency, and rebuilding data.  
   
  You can specify partition storage in the Partitions tab of the cube in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], or on the partition property page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

@@ -1,28 +1,17 @@
 ---
 title: "User Hierarchy Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "properties [Analysis Services], multilevel hierarchy"
-  - "hierarchies [Analysis Services], multilevel"
-  - "multilevel hierarchies [Analysis Services]"
-ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # User Hierarchies - Properties
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The following table describes the properties of a user-defined hierarchy.  
   
 |Property|Description|  

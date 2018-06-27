@@ -1,21 +1,20 @@
 ---
 title: "Loading Converted Database Objects into SQL Server (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Synchronization, Securing Objects in SQL Server"
   - "Synchronization,Scripting Objects"
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Loading Converted Database Objects into SQL Server (OracleToSQL)

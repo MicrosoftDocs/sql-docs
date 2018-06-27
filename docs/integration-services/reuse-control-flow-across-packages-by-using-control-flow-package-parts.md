@@ -1,15 +1,14 @@
 ---
 title: "Reuse Control Flow across Packages by Using Control Flow Package Parts | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.toolboxcontrolflowtemplate.f1"
   - "sql13.dts.designer.addcopyexistingtemplate.f1"
@@ -19,7 +18,7 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reuse Control Flow across Packages by Using Control Flow Package Parts
   Save a commonly used control flow task or container to a standalone part file - a “.dtsxp” file - and reuse it multiple times in one or more packages by using control flow package parts. This reusability makes SSIS packages easier to design and maintain.  

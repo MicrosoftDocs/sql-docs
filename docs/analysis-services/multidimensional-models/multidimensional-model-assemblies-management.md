@@ -1,34 +1,17 @@
 ---
 title: "Multidimensional Model Assemblies Management | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permissions [Analysis Services], assemblies"
-  - "calling user-defined functions"
-  - "user impersonation [Analysis Services]"
-  - "impersonation [Analysis Services]"
-  - "Data Mining Extensions [Analysis Services], assemblies"
-  - "MDX [Analysis Services], assemblies"
-  - "user-defined functions [Analysis Services]"
-  - "Analysis Services objects, assemblies"
-  - "assemblies [Analysis Services]"
-  - "application domains [Analysis Services]"
-ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Multidimensional Model Assemblies Management
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supplies lots of intrinsic functions for use with the Multidimensional Expressions (MDX) and Data Mining Extensions (DMX) languages, designed to accomplish everything from standard statistical calculations to traversing members in a hierarchy. But, as with any other complex and robust product, there is always the need to extend the functionality of such a product further.  
   
  Therefore, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lets you add assemblies to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance or database. Assemblies let you create external, user-defined functions using any common language runtime (CLR) language, such as Microsoft Visual Basic .NET or Microsoft Visual C#. You can also use Component Object Model (COM) Automation languages such as Microsoft Visual Basic or Microsoft Visual C++.  

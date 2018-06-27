@@ -1,33 +1,17 @@
 ---
 title: "Analysis Services Scripting Language XML Data Types (ASSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Analysis Services Scripting Language XML Data Types"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "ASSL, data types"
-  - "Analysis Services Scripting Language, data types"
-  - "data types [Analysis Services Scripting Language]"
-ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Analysis Services Scripting Language XML Data Types (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This reference section contains syntax and usage information for each element that acts as a type in the Analysis Services Scripting Language (ASSL) schema.  
   
  Although the ASSL schema contains only XML elements, from a developer's point of view, the elements described in this section correspond to types, such as **Binding** and **Permission**, which are used to define the child elements and properties of other objects.  

@@ -1,24 +1,24 @@
 ---
 title: "ALTER INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.date: "05/01/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # ALTER INDEX (Selective XML Indexes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Modifies an existing selective XML index. The ALTER INDEX statement changes one or more of the following items:  
   
@@ -35,7 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER INDEX index_name  
     ON <table_object>   
     [WITH XMLNAMESPACES ( <xmlnamespace_list> )]  
@@ -112,7 +111,7 @@ identifier
  *index_name*  
  Is the name of the existing index to alter.  
   
- *<table_object>*  
+ *\<table_object>*  
  Is the table that contains the XML column to index. Use one of the following formats:  
   
 -   `database_name.schema_name.table_name`  
@@ -123,18 +122,18 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** <xmlnamespace_list> **)**]  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
  Is the list of namespaces used by the paths to index. For information about the syntax of the WITH XMLNAMESPACES clause, see [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- FOR **(** <promoted_node_path_action_list> **)**  
+ FOR **(** \<promoted_node_path_action_list> **)**  
  Is the list of indexed paths to add or remove.  
   
 -   **ADD a path.** When you ADD a path, you use the same syntax that is used to create paths with the CREATE SELECTIVE XML INDEX statement. For information about the paths that you can specify in the CREATE or ALTER statement, see [Specify Paths and Optimization Hints for Selective XML Indexes](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
 -   **REMOVE a path.** When you REMOVE a path, you provide the name that was given to the path when it was created.  
   
- [WITH **(** <index_options> **)**]  
- You can only specify <index_options> when you use ALTER INDEX without the FOR clause. When you use ALTER INDEX to add or remove paths in the index, the index options are not valid arguments. For information about the index options, see [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ [WITH **(** \<index_options> **)**]  
+ You can only specify \<index_options> when you use ALTER INDEX without the FOR clause. When you use ALTER INDEX to add or remove paths in the index, the index options are not valid arguments. For information about the index options, see [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## Remarks  
   
@@ -149,7 +148,7 @@ identifier
 ## Examples  
  The following example shows an ALTER INDEX statement. This statement adds the path `'/a/b/m'` to the XQuery part of the index and deletes the path `'/a/b/e'` from the SQL part of the index created in the example in the topic [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md). The path to delete is identified by the name that was given to it when it was created.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -161,7 +160,7 @@ FOR
   
  The following example shows an ALTER INDEX statement that specifies index options. Index options are permitted because the statement does not use a FOR clause to add or remove paths.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 PAD_INDEX = ON;  

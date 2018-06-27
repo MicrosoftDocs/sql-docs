@@ -1,1 +1,1 @@
-![Download](../ssdt/media/download.png)[Download .Net Driver](https://msdn.microsoft.com/vstudio/aa496123.aspx)
+![Download](../ssdt/media/download.png)[Download .Net Driver](http://www.microsoft.com/net/download/)

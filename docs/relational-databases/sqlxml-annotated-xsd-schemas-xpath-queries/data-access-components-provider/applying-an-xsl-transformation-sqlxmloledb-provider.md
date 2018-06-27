@@ -1,12 +1,13 @@
----
+﻿---
 title: "Applying an XSL Transformation (SQLXMLOLEDB Provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
+ms.suite: "sql"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,9 +20,11 @@ ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Applying an XSL Transformation (SQLXMLOLEDB Provider)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In this sample ADO application, an SQL query is executed, and an XSL transformation is applied to the result. Setting the ClientSideXML property to True enforces the processing of the rowset on the client side. The command dialect is set to {5d531cb2-e6ed-11d2-b252-00c04f681b71}, because the SQL query is specified in a template and this dialect must be specified when executing a template. The xsl property specifies the XSL file to use to apply the transformation. The value of Base Path property is used to search for the XSL file. If you specify a path in the value of the xsl property, the path is relative to the path that is specified in the Base Path property.  
   
  This example shows how to use the following SQLXMLOLEDB Provider-specific properties:  

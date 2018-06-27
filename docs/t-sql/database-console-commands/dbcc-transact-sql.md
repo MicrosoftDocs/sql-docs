@@ -1,12 +1,12 @@
 ---
 title: "DBCC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2015"
-ms.prod: "sql-non-specified"
+ms.date: "11/14/2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -37,61 +37,50 @@ helpviewer_keywords:
   - "informational statements [SQL Server]"
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  The [!INCLUDE[tsql](../../includes/tsql-md.md)] programming language provides DBCC statements that act as Database Console Commands for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+The [!INCLUDE[tsql](../../includes/tsql-md.md)] programming language provides DBCC statements that act as Database Console Commands for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
- Database Console Command statements are grouped into the following categories.  
+Database Console Command statements are grouped into the following categories.
   
 |Command category|Perform|  
-|----------------------|-------------|  
+|---|---|
 |Maintenance|Maintenance tasks on a database, index, or filegroup.|  
 |Miscellaneous|Miscellaneous tasks such as enabling trace flags or removing a DLL from memory.|  
 |Informational|Tasks that gather and display various types of information.|  
 |Validation|Validation operations on a database, table, index, catalog, filegroup, or allocation of database pages.|  
   
- DBCC commands take input parameters and return values. All DBCC command parameters can accept both Unicode and DBCS literals.  
+DBCC commands take input parameters and return values. All DBCC command parameters can accept both Unicode and DBCS literals.
   
 ## DBCC Internal Database Snapshot Usage  
- The following DBCC commands operate on an internal read-only database snapshot that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates. This prevents blocking and concurrency problems when these commands are executed. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
+The following DBCC commands operate on an internal read-only database snapshot that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates. This prevents blocking and concurrency problems when these commands are executed. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).
+- DBCC CHECKALLOC
+- DBCC CHECKCATALOG
+- DBCC CHECKDB
+- DBCC CHECKFILEGROUP
+- DBCC CHECKTABLE
+
+When you execute one of these DBCC commands, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates a database snapshot and brings it to a transactionally consistent state. The DBCC command then runs the checks against this snapshot. After the DBCC command is completed, this snapshot is dropped.
   
-|||  
-|-|-|  
-|DBCC CHECKALLOC|DBCC CHECKDB|  
-|DBCC CHECKCATALOG|DBCC CHECKFILEGROUP|  
-|DBCC CHECKTABLE||  
+Sometimes an internal database snapshot is not required or cannot be created. When this occurs, the DBCC command executes against the actual database. If the database is online, the DBCC command uses table-locking to ensure the consistency of the objects that it is checking. This behavior is the same as if the WITH TABLOCK option were specified.
   
- When you execute one of these DBCC commands, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates a database snapshot and brings it to a transactionally consistent state. The DBCC command then runs the checks against this snapshot. After the DBCC command is completed, this snapshot is dropped.  
-  
- Sometimes an internal database snapshot is not required or cannot be created. When this occurs, the DBCC command executes against the actual database. If the database is online, the DBCC command uses table-locking to ensure the consistency of the objects that it is checking. This behavior is the same as if the WITH TABLOCK option were specified.  
-  
- An internal database snapshot is not created when a DBCC command is executed:  
-  
+An internal database snapshot is not created when a DBCC command is executed:
 -   Against **master**, and the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running in single-user mode.  
-  
 -   Against a database other than **master**, but the database has been put in single-user mode by using the ALTER DATABASE statement.  
-  
 -   Against a read-only database.  
-  
 -   Against a database that has been set in emergency mode by using the ALTER DATABASE statement.  
-  
 -   Against **tempdb**. In this case, a database snapshot cannot be created because of internal restrictions.  
-  
 -   Using the WITH TABLOCK option. In this case, DBCC honors the request by not creating a database snapshot.  
   
- The DBCC commands use table locks instead of the internal database snapshots when the command is executed against the following:  
-  
+The DBCC commands use table locks instead of the internal database snapshots when the command is executed against the following:
 -   A read-only filegroup  
-  
 -   An FAT file system  
-  
 -   A volume that does not support 'named streams'  
-  
 -   A volume that does not support 'alternate streams'  
   
 > [!NOTE]  
@@ -101,9 +90,9 @@ manager: "jhubbard"
 >  DBCC CHECKDB fails when it is run against **master** if an internal database snapshot cannot be created.  
   
 ## Progress Reporting for DBCC Commands  
- The **sys.dm_exec_requests** catalog view contains information about the progress and the current phase of execution of the DBCC CHECKDB, CHECKFILEGROUP, and CHECKTABLE commands. The **percent_complete** column indicates the percentage complete of the command, and the **command** column reports the current phase of the execution of the command.  
+The **sys.dm_exec_requests** catalog view contains information about the progress and the current phase of execution of the DBCC CHECKDB, CHECKFILEGROUP, and CHECKTABLE commands. The **percent_complete** column indicates the percentage complete of the command, and the **command** column reports the current phase of the execution of the command.
   
- The definition of a unit of progress depends on the current phase of execution of the DBCC command. Sometimes progress is reported at the granularity of a database page, in other phases it is reported at the granularity of a single database or allocation repair. The following table describes each phase of execution, and the granularity at which the command reports progress.  
+The definition of a unit of progress depends on the current phase of execution of the DBCC command. Sometimes progress is reported at the granularity of a database page, in other phases it is reported at the granularity of a single database or allocation repair. The following table describes each phase of execution, and the granularity at which the command reports progress.
   
 |Execution phase|Description|Progress reporting granularity|  
 |---------------------|-----------------|------------------------------------|  
@@ -152,6 +141,6 @@ manager: "jhubbard"
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2.|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
   

@@ -1,39 +1,17 @@
 ---
 title: "Microsoft Time Series Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ARTXP"
-  - "HISTORICAL_MODEL_GAP parameter"
-  - "AUTO_DETECT_PERIODICITY parameter"
-  - "time series algorithms [Analysis Services]"
-  - "ARIMA"
-  - "INSTABILITY_SENSITIVITY parameter"
-  - "PERIODICITY_HINT parameter"
-  - "MAXIMUM_SERIES_VALUE parameter"
-  - "time series [Analysis Services]"
-  - "MINIMUM_SUPPORT parameter"
-  - "HISTORIC_MODEL_COUNT parameter"
-  - "FORECAST_METHOD parameter"
-  - "MISSING_VALUE_SUBSTITUTION parameter"
-  - "MINIMUM_SERIES_VALUE parameter"
-  - "COMPLEXITY_PENALTY parameter"
-  - "PREDICTION_SMOOTHING parameter"
-ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Time Series Algorithm Technical Reference
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm includes two separate algorithms for analyzing time series:  
   
 -   The ARTXP algorithm, which was introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], is optimized for predicting the next likely value in a series.  

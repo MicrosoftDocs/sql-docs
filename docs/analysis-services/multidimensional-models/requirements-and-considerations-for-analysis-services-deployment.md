@@ -1,34 +1,17 @@
 ---
 title: "Requirements and Considerations for Analysis Services Deployment | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "memory [Analysis Services]"
-  - "scalability [Analysis Services]"
-  - "space [Analysis Services]"
-  - "Analysis Services deployments, requirements"
-  - "deploying [Analysis Services], requirements"
-  - "disk space [Analysis Services]"
-  - "requirements [Analysis Services]"
-  - "processors [Analysis Services]"
-  - "system requirements [Analysis Services]"
-  - "availability [Analysis Services]"
-ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Requirements and Considerations for Analysis Services Deployment
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The performance and availability of a solution depends on many factors, including the capabilities of the underlying hardware, the topology of your server deployment, the characteristics of your solution (for example, having partitions distributed across multiple servers or using ROLAP storage that requires direct access to the relational engine), service level agreements, and the complexity of your data model.  
   
 ## Memory and Processor Requirements  

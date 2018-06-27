@@ -1,22 +1,16 @@
 ---
-title: "Working with R Data Types | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/31/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: 16
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Working with R data types in SQL Server Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# R Libraries and R Data Types
+# R libraries and R data types
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic describes the R libraries that are included and the data types that are supported in the following products:
 
@@ -27,18 +21,16 @@ This topic also lists unsupported data types, and lists the data type conversion
 
 ## R Libraries
 
-Both products, R Services and Machine Learning Services with R, are aligned with specific releases of Microsoft R Open. For example, the latest release, SQL Server vNext Machine Learning Services, is built on Microsoft R Open 3.3.3.
+Both products, R Services and Machine Learning Services with R, are aligned with specific releases of Microsoft R Open. For example, the latest release, SQL Server 2017 Machine Learning Services, is built on Microsoft R Open 3.3.3.
 
 To view the R version associated with a particular instance of SQL Server, open RGui.
 
 1. For the default instance, the path would be as follows: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 2. A message is displayed that lists the R distribution and the Microsoft R Open version number.
 
-To find the version of R included in a particular version of Microsoft R Server, see the [R Server Release Notes](https://msdn.microsoft.com/microsoft-r/notes/r-server-notes).
+To find the version of R included in a particular version of Microsoft R Server, see [R Server - What’s New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Additional information about recent releases can be found in the [R Server - What’s New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) notes.
-
-Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](../r/r-package-management-for-sql-server-r-services.md).
+Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## R and SQL Data Types
 
@@ -76,7 +68,7 @@ The following table shows the changes in data types and values when data from [!
 
 ## Data types not supported by R
 
-Of the categories of data types supported by the [SQL Server type system](https://msdn.microsoft.com/library/ms187752.aspx), the following types are likely to pose problems when passed to R code:
+Of the categories of data types supported by the [SQL Server type system](../../t-sql/data-types/data-types-transact-sql.md), the following types are likely to pose problems when passed to R code:
 
 + Data types listed in the **Other** section of the SQL type system topic: **cursor**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
 + All spatial types
@@ -107,7 +99,7 @@ In general, whenever you have any doubt about how a particular data type or data
 
 When retrieving data from a database for use in R code, you should always eliminate columns that cannot be used in R, as well as columns that are not useful for analysis, such as GUIDS (uniqueidentifier), timestamps and other columns used for auditing, or lineage informatioh created by ETL processes. 
 
-Note that inclusion of unnecessary columns can greatly reduce the performance of R code, especially if high cardinality columns are used as factors. Therefore, we recommend that you use SQL Server system stored procedures and information views to get the data types for a given table in advance, and eliminate or convert incompatible columns. For more information, see [Information Schema Views in Transact-SQL](https://msdn.microsoft.com/library/ms186778.aspx)
+Note that inclusion of unnecessary columns can greatly reduce the performance of R code, especially if high cardinality columns are used as factors. Therefore, we recommend that you use SQL Server system stored procedures and information views to get the data types for a given table in advance, and eliminate or convert incompatible columns. For more information, see [Information Schema Views in Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
 If a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type is not supported by R, but you need to use the columns of data in the R script, we recommend that you use the [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) functions to ensure that the data type conversions are performed as intended before using the data in your R script.  
 

@@ -1,28 +1,17 @@
 ---
 title: "View Attributes in a Tree, List or Grid in Dimension Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Attribute pane formats [Analysis Services]"
-  - "attributes [Analysis Services], Dimension Builder Attribute Pane"
-  - "formats [Analysis Services], Attribute pane"
-  - "modifying Attribute pane format"
-ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # View Attributes in Dimension Designer
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This procedure describes how to change the way that attributes are displayed in the Dimension Designer.  
   
 ### To change the format of the Attributes pane in Dimension Designer  

@@ -1,6 +1,10 @@
-# [Execute queries +](../../relational-databases/native-client-odbc-how-to/execute-queries/index.md?toc=%2fsql%2frelational-databases%2fnative-client-odbc-how-to%2fexecute-queries%2ftoc.json)
-# [Cursors +](../../relational-databases/native-client-odbc-how-to/cursors/index.md?toc=%2fsql%2frelational-databases%2fnative-client-odbc-how-to%2fcursors%2ftoc.json)
-# [Bulk copy +](../../relational-databases/native-client-odbc-how-to/bulk-copy/index.md?toc=%2fsql%2frelational-databases%2fnative-client-odbc-how-to%2fbulk-copy%2ftoc.json)
+# [ODBC How-to Topics](odbc-how-to-topics.md)
+
+# Subareas
+## [Execute queries +](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)
+## [Cursors +](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)
+## [Bulk copy +](../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)
+
 # [Allocate Handles and Connect to SQL Server (ODBC)](allocate-handles-and-connect-to-sql-server-odbc.md)
 # [Call SQLColumns on a Table with Sparse Columns](call-sqlcolumns-on-a-table-with-sparse-columns.md)
 # [Configuring the SQL Server ODBC Driver - Add a Data Source](configuring-the-sql-server-odbc-driver-add-a-data-source.md)
@@ -9,7 +13,6 @@
 # [How to: Insert Rows into Geography Column (ODBC)](how-to-insert-rows-into-geography-column-odbc.md)
 # [Managing text and image Columns - Use Data-at-Execution Columns](managing-text-and-image-columns-use-data-at-execution-columns.md)
 # [Managing text and image Columns - Use Data-at-Execution Parameters](managing-text-and-image-columns-use-data-at-execution-parameters.md)
-# [ODBC How-to Topics](odbc-how-to-topics.md)
 # [Process ODBC Errors (ODBC)](process-odbc-errors-odbc.md)
 # [Processing Results - Process Results](processing-results-process-results.md)
 # [Processing Results - Retrieve Result Set Information](processing-results-retrieve-result-set-information.md)

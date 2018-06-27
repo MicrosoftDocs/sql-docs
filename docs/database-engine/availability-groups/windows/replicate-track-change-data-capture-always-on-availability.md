@@ -1,14 +1,13 @@
 ---
 title: "Replication, Change Tracking, & Change Data Capture - Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/18/2017"
-ms.prod: "sql-server-2016"
+ms.date: "04/25/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.suite: "sql"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
   - "change data capture [SQL Server], AlwaysOn Availability Groups"
@@ -16,12 +15,12 @@ helpviewer_keywords:
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Replication, change tracking, & change data capture - Always On availability groups
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication, change data capture (CDC), and change tracking (CT) are supported on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] helps provide high availability and additional database recovery capabilities.  
   
@@ -90,7 +89,7 @@ manager: "jhubbard"
   
      The following example creates the capture job.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -102,7 +101,7 @@ manager: "jhubbard"
   
      To ensure that appropriate cleanup occurs at the new primary database, a local cleanup job should always be created. The following example creates the cleanup job.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -128,7 +127,7 @@ manager: "jhubbard"
   
      Use the following query to determine whether an availability group listener name has been defined for the availability group hosting a CDC database. The query will return the availability group listener name if one has been created.  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -144,7 +143,7 @@ manager: "jhubbard"
   
      The following query can be used to determine whether read-only intent is needed to connect to a readable secondary replica.  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -156,7 +155,7 @@ manager: "jhubbard"
   
      When **sp_addlinkedserver** is used to create a linked server to access the secondary, the *@datasrc* parameter is used for the availability group listener name or the explicit server name, and the *@provstr* parameter is used to specify read-only intent.  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -198,8 +197,6 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
   
     -   Pull subscription: The publisher, distributor, and subscriber databases must be on at least [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. This is because the merge agent on the subscriber must understand how an availability group can fail over to its secondary.  
   
--   Placing the distribution database on an availability group is not supported.  
-  
 -   The Publisher instances satisfy all the prerequisites required to participate in an Always On availability group. For more information see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### Restrictions  
@@ -215,7 +212,7 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
   
  *Failover to the replica database is a manual procedure. Automatic failover is not provided.  
   
- **The Distributor database is not supported for use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or database mirroring.  
+ **The Distributor database is not supported for use with database mirroring.  
   
 ### Considerations  
   

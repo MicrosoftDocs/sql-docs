@@ -1,26 +1,20 @@
 ---
-title: "Python interoperability | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Python interoperability with SQL Server Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Python Interoperability
+# Python interoperability with SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes the Python components that are installed if you enable the feature **Machine Learning Services (In-Database)** and select Python as the language.
+This article describes the Python components that are installed if you enable the feature **Machine Learning Services (In-Database)** and select Python as the language.
 
-> [!NOTE]
-> Support for Python is a pre-release feature and is still under development.
-
-## Python Components
+## Python components
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] does not modify the Python executables. The Python runtime is installed independently of SQL tools, and is executed outside of the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] process.
 
@@ -28,11 +22,11 @@ The distribution that is associated with a specific [!INCLUDE[ssNoVersion_md](..
 
 For example, if you installed Machine Learning Services with the Python option on the default instance, look under:
 
-`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER`
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 Installation of SQL Server 2017 Machine Learning Services adds the Anaconda distribution of Python. Specifically, the Anaconda 3 installers are used, based on the Anaconda 4.3 branch. The expected Python level for SQL Server 2017 is Python 3.5.
 
-## New in This Release
+## New Python packages in this release
 
 For a list of packages supported by the Anaconda distribution, see the Continuum analytics site: [Anaconda package list](https://docs.continuum.io/anaconda/pkg-docs)
 
@@ -40,9 +34,9 @@ Machine Learning Services in SQL Server 2017 also includes the new **revoscalepy
 
 This library provides functionality equivalent to that of the **RevoScaleR** package for Microsoft R. In other words, it supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. For more information about RevoScaleR, see [Distributed and parallel computing with ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing).
 
-Because support for Python is a pre-release feature and still under development, the **revoscalepy** library currently includes only a subset of the RevoScaleR functionality. 
+The [microsoftml for Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) package is installed as part of SQL Server Machine Learning when you add Python to your installation. This package contains many machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. for details, see [Using the MicrosoftML package with SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package).
 
-Future additions might include the [Microsoft Cognitive Toolkit](https://www.microsoft.com/research/product/cognitive-toolkit/). Formerly known as CNTK, this library supports a variety of neural network models, including convolutional networks (CNN), recurrent networks (RNN), and Long Short Term Memory networks (LSTM).
+Microsoftml and revoscalepy are tightly coupled; data sources used in microsoftml are defined as revoscalepy objects. Compute context limitations in revoscalepy transfer to microsoftml. Namely, all functionality is available for local operations, but switching to a remote compute context requires RxInSqlServer.
 
 ## Using Python in SQL Server
 
@@ -69,4 +63,4 @@ As part of the installation of Machine Learning Services with Python, you must c
 
 ## See Also
 
-[Python Libraries and Data Types](python-libraries-and-data-types.md)
+[Python libraries and data types](python-libraries-and-data-types.md)

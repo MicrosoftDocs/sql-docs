@@ -1,12 +1,12 @@
 ---
 title: "Binding Relational Data Inside XML Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/26/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -22,16 +22,12 @@ ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Binding Relational Data Inside XML Data
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   You can specify [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md) against an **xml** data type variable or column. For example, the [query&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/query-method-xml-data-type.md) executes the specified XQuery against an XML instance. When you construct XML in this manner, you may want to bring in a value from a non-XML type column or a Transact-SQL variable. This process is referred to as binding relational data inside XML.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  To bind the non-XML relational data inside XML, the SQL Server Database Engine provides the following pseudo-functions:  
   
@@ -43,7 +39,7 @@ manager: "jhubbard"
   
  You cannot use these functions to reference data in columns or variables of the **xml**, CLR user-defined types, datetime, smalldatetime, **text**, **ntext**, **sql_variant**, and **image** types.  
   
- Also, this binding is for read-only purposes. That is, you cannot write data in columns that use these functions. For example, sql:variable("@x")="*some expression"* is not allowed.  
+ Also, this binding is for read-only purposes. That is, you cannot write data in columns that use these functions. For example, sql:variable("\@x")="*some expression"* is not allowed.  
   
 ## Example: Cross-domain Query Using sql:variable()  
  This example shows how **sql:variable()** can enable an application to parameterize a query. The ISBN is passed in by using a SQL variable @isbn. By replacing the constant with **sql:variable()**, the query can be used to search for any ISBN and not just the one whose ISBN is 0-7356-1588-2.  

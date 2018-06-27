@@ -2,13 +2,13 @@
 title: "Integration Services (SSIS) Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.connectionmanager.f1"
   - "sql13.dts.designer.adddtsconnection.f1"
@@ -26,7 +26,7 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 caps.latest.revision: 92
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Integration Services (SSIS) Connections
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages use connections to perform different tasks and to implement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] features:  
@@ -81,8 +81,8 @@ A connection manager can be created at the package level or at the project level
 |----------|-----------------|-----------|  
 |ADO|Connects to ActiveX Data Objects (ADO) objects.|[ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Connects to a data source by using a .NET provider.|[ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
-|CACHE|Reads data from the data flow or from a cache file (.caw), and can save data to the cache file.|[Cache Connection Manager](../../integration-services/data-flow/transformations/cache-connection-manager.md)|  
-|DQS|Connects to a Data Quality Services server and a Data Quality Services database on the server.|[DQS Cleansing Connection Manager](../../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md)|  
+|CACHE|Reads data from the data flow or from a cache file (.caw), and can save data to the cache file.|[Cache Connection Manager](../../integration-services/connection-manager/cache-connection-manager.md)|  
+|DQS|Connects to a Data Quality Services server and a Data Quality Services database on the server.|[DQS Cleansing Connection Manager](../../integration-services/connection-manager/dqs-cleansing-connection-manager.md)|  
 |EXCEL|Connects to an Excel workbook file.|[Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |FILE|Connects to a file or a folder.|[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)|  
 |FLATFILE|Connect to data in a single flat file.|[Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)|  
@@ -135,7 +135,7 @@ A connection manager can be created at the package level or at the project level
   
  At run time, the correct version is used, and it does not matter that you specified the 32-bit version of the provider at design time. The 64-bit version of the provider can be run even if the package is run in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Both versions of the provider have the same ID. To specify whether the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime uses an available 64-bit version of the provider, you set the Run64BitRuntime property of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. If the Run64BitRuntime property is set to **true**, the runtime finds and uses the 64-bit provider; if Run64BitRuntime is **false**, the runtime finds and uses the 32-bit provider. For more information about properties you can set on [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects, see [Integration Services &(SSIS) and Studio Environments](https://msdn.microsoft.com/library/ms140028.aspx).  
+  Both versions of the provider have the same ID. To specify whether the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime uses an available 64-bit version of the provider, you set the Run64BitRuntime property of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. If the Run64BitRuntime property is set to **true**, the runtime finds and uses the 64-bit provider; if Run64BitRuntime is **false**, the runtime finds and uses the 32-bit provider. For more information about properties you can set on [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects, see [Integration Services &(SSIS) and Studio Environments](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## Add a connection manager
 ###  <a name="wizard"></a> Add a connection manager when you create a package  

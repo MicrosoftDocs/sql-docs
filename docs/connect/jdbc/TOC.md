@@ -1,7 +1,7 @@
-# [JDBC Code Samples +](./code-samples/index.md)
-# [JDBC Reference +](./reference/index.md?toc=%2fsql%2fconnect%2fjdbc%2freference%2ftoc.json)
-
 # [Microsoft JDBC Driver for SQL Server](microsoft-jdbc-driver-for-sql-server.md)
+
+# [JDBC Code Samples +](../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)
+# [JDBC Reference +](../../connect/jdbc/reference/datetimeoffset-class.md)
 
 # [Getting Started with the JDBC Driver](getting-started-with-the-jdbc-driver.md)
 ## [Step 1: Configure development environment for Java development](step-1-configure-development-environment-for-java-development.md)
@@ -19,12 +19,14 @@
 ## [Finding Additional JDBC Driver Information](finding-additional-jdbc-driver-information.md)
 ## [Microsoft JDBC Driver for SQL Server Support Matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [Frequently Asked Questions (FAQ) for JDBC Driver](frequently-asked-questions-faq-for-jdbc-driver.md)
+## [Feature dependencies of Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [Securing JDBC Driver Applications](securing-jdbc-driver-applications.md)
 ## [Securing Connection Strings](securing-connection-strings.md)
 ## [Validating User Input](validating-user-input.md)
 ## [Application Security](application-security.md)
 ## [Using SSL Encryption](using-ssl-encryption.md)
+## [FIPS Mode](../../connect/jdbc/fips-mode.md)
 ### [Understanding SSL Support](understanding-ssl-support.md)
 ### [Connecting with SSL Encryption](connecting-with-ssl-encryption.md)
 ### [Configuring the Client for SSL Encryption](configuring-the-client-for-ssl-encryption.md)
@@ -35,6 +37,7 @@
 ## [Working with Statements and Result Sets](working-with-statements-and-result-sets.md)
 ## [Using Adaptive Buffering](using-adaptive-buffering.md)
 ## [Sparse Columns](sparse-columns.md)
+## [Prepared Statement Metadata Caching for the JDBC Driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 # [Diagnosing Problems with the JDBC Driver](diagnosing-problems-with-the-jdbc-driver.md)
 ## [Handling Errors](handling-errors.md)
@@ -62,6 +65,7 @@
 # [Compliance and Legal for the JDBC SQL Driver](compliance-and-legal-for-the-jdbc-sql-driver.md)
 ## [JDBC 4.1 Compliance for the JDBC Driver](jdbc-4-1-compliance-for-the-jdbc-driver.md)
 ## [JDBC 4.2 Compliance for the JDBC Driver](jdbc-4-2-compliance-for-the-jdbc-driver.md)
+## [JDBC 4.3 Compliance for the JDBC Driver](jdbc-4-3-compliance-for-the-jdbc-driver.md)
 
 # [Programming Guide for JDBC SQL Driver](programming-guide-for-jdbc-sql-driver.md)
 ## [Connecting to SQL Server with the JDBC Driver](connecting-to-sql-server-with-the-jdbc-driver.md)
@@ -124,3 +128,5 @@
 ### [Configuring How java.sql.Time Values are Sent to the Server](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
 ### [Using SQL Escape Sequences](using-sql-escape-sequences.md)
 ### [Using Statements with Stored Procedures](using-statements-with-stored-procedures.md)
+### [Azure Key Vault sample version 6.0.0](azure-key-vault-sample-version-6.0.0.md)
+### [Azure Key Vault sample version 6.2.2](azure-key-vault-sample-version-6.2.2.md)

@@ -1,20 +1,22 @@
 ---
 title: "RsReportServer.config Configuration File | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "06/12/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.component: "report-server"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # RsReportServer.config Configuration File
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** file stores settings that are used by the Report Server Web service and background processing. All [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications run within a single process that reads configuration settings stored in the RSReportServer.config file. Both Native mode and SharePoint mode report servers use the RSReportServer.config, however the two modes do not use all of the same settings in the configuration file. The SharePoint mode version of the file is smaller as many of the settings for SharePoint mode are stored in SharePoint configuration databases rather than the file. This topic describes the default configuration file that is installed for Native mode and SharePoint mode and some of the important settings and behaviors that are controlled by the configuration file.  
@@ -67,10 +69,11 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |**LogonUser, LogonDomain, LogonCred**|Stores the domain, user name, and password of a domain account that is used by a report server to connect to a report server database. Values for **LogonUser**, **LogonDomain**, and **LogonCred** are created when the report server connection is configured to use a domain account. For more information about a report server database connection, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
 |**InstanceID**|An identifier for the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. This value specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name. By default, this value is **MSRS12***\<instancename>*. Do not modify this setting. The following is an example of the complete value: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> The following is an example of SharePoint mode:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|An identifier for the report server installation that Setup creates. This value is set to a GUID. Do not modify this setting.|N|  
-|**SecureConnectionLevel**|Specifies the degree to which Web service calls must us Secure Sockets Layer (SSL). This setting is used for both the Report Server Web service and the web portal. This value is set when you configure a URL to use HTTP or HTTPS in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. Valid values range from 0 through 3, where 0 is least secure. For more information, see [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) and [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
+|**SecureConnectionLevel**|Specifies the degree to which Web service calls must us Secure Sockets Layer (SSL). This setting is used for both the Report Server Web service and the web portal. This value is set when you configure a URL to use HTTP or HTTPS in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. In SQL Server 2008 R2, SecureConnectionLevel is made an on/off switch. For earlier versions than SQL Server 2008 R2 the valid values range are from 0 through 3, where 0 is least secure. For more information, see [ConfigurationSetting Method - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) and [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|
 |**DisableSecureFormsAuthenticationCookie**|Default value is False.<br /><br /> Specifies whether to disable the forcing of the cookie used for form and custom authentication to be marked secure. Starting with SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will automatically mark forms authentication cookies used with custom authentication extensions, as a secure cookie when sent to the client. By changing this property, report server administrators and custom security extension authors can revert to the previous behavior which allowed the custom security extension author to determine whether to mark the cookie as a secure cookie. It is recommended that secure cookies are used for forms authentication to help prevent network sniffing and replay attacks.|N|  
 |**CleanupCycleMinutes**|Specifies the number of minutes after which old sessions and expired snapshots are removed from the report server databases. Valid values range from 0 to maximum integer. The default is 10. Setting the value to 0 disables the database clean up the process.|N,S|  
 |**MaxActiveReqForOneUser**|Specifies the maximum number of reports that one user can process at the same time. Once the limit is reached, further report processing requests are denied. Valid values are 1 to a maximum integer. The default is 20.<br /><br /> Note that most requests process very quickly so it is unlikely that a single user will have more than 20 open connections at any given time. If users are opening more than 15 process-intensive reports at the same time, you might need to increase this value.<br /><br /> This setting is ignored for report servers that run in SharePoint integrated mode.|N,S|  
+|**MaxActiveReqForAnonymous**|Specifies the maximum number of anonymous requests that can be in process at the same time. Once the limit is reached, further processing requests are denied. Valid values are 1 to a maximum integer. The default is 200.
 |**DatabaseQueryTimeout**|Specifies the number of seconds after which a connection to the report server database times out. This value is passed to the System.Data.SQLClient.SQLCommand.CommandTimeout property. Valid values range from 0 to 2147483647. The default is 120. A value of 0 specifies an unlimited wait time and therefore is not recommended.|N|  
 |**AlertingCleanupCycleMinutes**|The default is 20.<br /><br /> Determines how often the clean up of temporary data stored in the Alerting database occurs.|S|  
 |**AlertingDataCleanupMinutes**|The default is 360.<br /><br /> Determines how long session data used for creating or editing an alert definition is retained within the Alerting database. Default is 6 hours.|S|  
@@ -176,7 +179,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Specifies the URL of the report server that the web portal connects to. Only modify this value if you are configuring the web portal to connect to a report server in another instance or on a remote computer.|N,S|  
-|**ReportBuilderTrustLevel**|Do not modify this value; it is not configurable. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions, Report Builder runs only in **FullTrust**. For more information, see [Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md) . For more information about discontinuing partial trust mode, see [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
+|**ReportBuilderTrustLevel**|Do not modify this value; it is not configurable. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions, Report Builder runs only in **FullTrust**. For more information about discontinuing partial trust mode, see [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
 |**PageCountMode**|For the web portal only, this setting specifies whether the report server calculates a page count value before the report is rendered, or as the report is viewed. Valid values are **Estimate** (default) and **Actual**. Use **Estimate** to calculate page count information as the user views the report. Initially, the page count is set to 2 (for the current page plus one additional page), but adjusts upwards as the user pages through the report. Use **Actual** if you want to calculate page count in advance before the report is displayed. **Actual** is provided for backward compatibility. Note that if you set **PageCountMode** to **Actual**, the entire report must be processed to get a valid page count, increasing wait time before the report is displayed.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (RSReportServer.config file) Native Mode  
@@ -615,7 +618,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			</Extension>
 			<Extension Name="RPL" Type="Microsoft.ReportingServices.Rendering.RPLRendering.RPLRenderer,Microsoft.ReportingServices.RPLRendering" Visible="false" LogAllExecutionRequests="false"/>
 		</Render>
-		\<!--
+		<!--
         For the SQLPDW extension to work, install the SQL Server PDW Client Tools on the report server.
         NOTE: The SQLPDW extension is deprecated. It supports old versions of SQL Server Parallel Data Warehouse (PDW).        
         To connect to Analytics Platform System, use the SQL (SQL Server) extension.        

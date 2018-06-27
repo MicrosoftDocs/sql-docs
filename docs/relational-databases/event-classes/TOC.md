@@ -8,7 +8,7 @@
 ## [Broker:Forwarded Message Sent Event Class](broker-forwarded-message-sent-event-class.md)  
 ## [Broker:Forwarded Message Dropped Event Class](broker-forwarded-message-dropped-event-class.md)  
 ## [Broker:Message Classify Event Class](broker-message-classify-event-class.md)  
-## [Broker:Message Drop Event Class](broker-message-drop-event-class.md)  
+## [Broker:Message Undeliverable Event Class](broker-message-drop-event-class.md)  
 ## [Broker:Remote Message Ack Event Class](broker-remote-message-ack-event-class.md)  
 # [Cursors Event Category](cursors-event-category.md)  
 ## [CursorClose Event Class](cursorclose-event-class.md)  

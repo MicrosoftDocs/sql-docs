@@ -1,20 +1,25 @@
-Multiple OPS docsets publish from the sql-docs-pr repository and more coming.
-See the contributor-guide  folder for information on how to get permissions and setup your authoring environment.
+## Microsoft Open Source Code of Conduct
 
-**\docs-msdn\analytics-platforms-system**
-- Content for the  Microsoft Analytics Platform System (APS)
-- Publishing live to MSDN
-- [OPS Docset](https://ops.microsoft.com/#/sites/MSDN.Modern/docsets/analytics-platform-system)
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-**\docs\**
-- Content for SQL Server on Linux, SQL Tools, and SQL Drivers.  Future home of SQL Server 2016 content
-- published live to docs.microsoft.com
-- [Linux](https://docs.microsoft.com/en-us/sql/linux/)
-- [SQL Server Management Studio (SSM)](https://docs.microsoft.com/en-us/sql/ssms)
-- [SQL Server Data tools (SSDT](https://docs.microsoft.com/en-us/sql/ssdt)
-- [ADO .Net](https://docs.microsoft.com/en-us/sql/ado)
-- [ODBC](https://docs.microsoft.com/en-us/sql/odbc)
-- [SQL Drivers - JDBC, PHP, Ruby ...](https://docs.microsoft.com/en-us/sql/connect)
-- [SQL Server Samples](https://docs.microsoft.com/en-us/sql/sample)
-- [SQL Server Migration Assistant (SSMA)](https://docs.microsoft.com/en-us/sql/ssma)
-- [SQL Server release notes](https://docs.microsoft.com/en-us/sql/release-notes)
+# Microsoft SQL Server Technical Documentation
+
+You've found the GitHub repository that houses the source for the SQL Server technical documentation published on [https://docs.microsoft.com](https://docs.microsoft.com).
+
+## Contribute to documentation
+
+Anyone can submit changes to the SQL Server documentation. For more information, see [How to contribute to SQL Server Documentation](https://aka.ms/editsqldocs).
+
+### Minor corrections
+Minor corrections or clarifications you submit for documentation and code examples in this repo are covered by the [docs.microsoft.com Terms of Use](https://docs.microsoft.com/legal/termsofuse).
+
+### Larger submissions
+If you submit a pull request with significant changes to documentation and code examples or new content, we'll send a comment in GitHub asking you to submit an online Contribution License Agreement (CLA) if you are not an employee of Microsoft. We need you to complete the online form before we can accept your pull request.
+
+## Next steps
+
+Explore the following resources:
+
+- [How to contribute to SQL Server Documentation](https://aka.ms/editsqldocs)
+- [SQL Server documentation home](https://docs.microsoft.com/sql/index)

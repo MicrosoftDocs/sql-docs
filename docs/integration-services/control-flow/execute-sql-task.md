@@ -1,20 +1,19 @@
 ---
 title: "Execute SQL Task | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
+ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executesqltask.f1"
-  - "sql13.dts.designer.executesqltask.general.f1"
-  - "sql13.dts.designer.executesqltask.parametermapping.f1"
-  - "sql13.dts.designer.executesqltask.resultset.f1"
+ms.topic: conceptual
+f1_keywords:
+- "sql13.dts.designer.executesqltask.f1"
+- "sql13.dts.designer.executesqltask.general.f1"
+- "sql13.dts.designer.executesqltask.parametermapping.f1"
+- "sql13.dts.designer.executesqltask.resultset.f1"
 helpviewer_keywords: 
   - "Transact-SQL statements, SSIS"
   - "statements [Integration Services]"
@@ -24,7 +23,7 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 115
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Execute SQL Task
   The Execute SQL task runs SQL statements or stored procedures from a package. The task can contain either a single SQL statement or multiple SQL statements that run sequentially. You can use the Execute SQL task for the following purposes:  

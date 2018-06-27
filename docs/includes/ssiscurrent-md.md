@@ -1,1 +1,1 @@
- SQL Server 2016 Integration Services (SSIS) 
+ SQL Server 2017 Integration Services (SSIS) 

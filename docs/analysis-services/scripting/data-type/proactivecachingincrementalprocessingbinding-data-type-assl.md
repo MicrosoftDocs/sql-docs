@@ -1,31 +1,17 @@
 ---
 title: "ProactiveCachingIncrementalProcessingBinding Data Type (ASSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "ProactiveCachingIncrementalProcessingBinding Data Type"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "ProactiveCachingIncrementalProcessingBinding data type"
-ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # ProactiveCachingIncrementalProcessingBinding Data Type (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a derived data type that represents a binding to the [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) element about the status of the process of rebuilding the cache.  
   
 ## Syntax  

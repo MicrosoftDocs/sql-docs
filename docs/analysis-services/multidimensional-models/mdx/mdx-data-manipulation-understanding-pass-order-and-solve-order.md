@@ -1,31 +1,17 @@
 ---
 title: "Understanding Pass Order and Solve Order (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "evaluation order [MDX]"
-  - "calculation order [MDX]"
-  - "SOLVE_ORDER property"
-  - "queries [MDX], solve orders"
-  - "solve orders [MDX]"
-  - "pass orders [MDX]"
-  - "expressions [MDX], solve orders"
-ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Manipulation - Understanding Pass Order and Solve Order
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   When a cube is calculated as the result of an MDX script, it can go through many stages of computation depending on the use of various calculation-related features. Each of these stages is referred to as a calculation pass.  
   
  A calculation pass can be referred to by an ordinal position, called the calculation pass number. The count of calculation passes that are required to fully compute all the cells of a cube is referred to as the calculation pass depth of the cube.  

@@ -1,38 +1,18 @@
 ---
 title: "Execute Method (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Execute Method"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "EXECUTE"
-  - "urn:schemas-microsoft-com:xml-analysis#"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#"
-  - "microsoft.xml.analysis.execute"
-  - "urn:schemas-microsoft-com:xml-analysis#Execute"
-helpviewer_keywords: 
-  - "Execute method"
-ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # XML Elements - Methods - Execute
-  Sends XML for Analysis (XMLA) commands to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. This includes requests involving data transfer, such as retrieving or updating data on the server.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Sends XML for Analysis (XMLA) commands to an instance of Analysis Services. This includes requests involving data transfer, such as retrieving or updating data on the server.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -49,7 +29,7 @@ manager: "erikre"
 </Execute>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -57,7 +37,7 @@ manager: "erikre"
 |Default value|None|  
 |Cardinality|0-1: Optional element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -88,7 +68,7 @@ manager: "erikre"
 </Execute>  
 ```  
   
-## See Also  
+## See also
  [XML Data Types &#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
  [Discover Method &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Methods &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   

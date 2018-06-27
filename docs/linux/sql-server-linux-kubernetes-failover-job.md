@@ -19,7 +19,7 @@ To fail over an Always On availability group primary replica to a different node
 
 ## Create a manifest file to describe the job
 
-The following example of a manifest file describes a job to do a manual fail over job for an availabiltiy group on a Kubernetes replica. Copy the contents of the example into a new file called `manualFailover.yaml`.
+The following example of a manifest file describes a job to manually fail over job for an availability group on a Kubernetes replica. Copy the contents of the example into a new file called `manualFailover.yaml`.
 
 ```yaml
 ---
@@ -93,7 +93,7 @@ When you run the job, the AG agents will elect a new leader and move the primary
 kubectl apply -f manualFailover.yaml
 ```
 
-After you run the job, delete it. The job object in Kubernetes remains after completion so you can view its status. You have to manually delete old jobs after noting their status. Deleting the job also deletes the Kubernetes logs. If you do not delete the job, future failover jobs will fail unless you change the job name and the pod selector. For more information see [Jobs - Run to Completion](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
+After you run the job, delete it. The job object in Kubernetes remains after completion so you can view its status. You have to manually delete old jobs after noting their status. Deleting the job also deletes the Kubernetes logs. If you do not delete the job, future failover jobs will fail unless you change the job name and the pod selector. For more information, see [Jobs - Run to Completion](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
 
 ## Failover job environment variables
 

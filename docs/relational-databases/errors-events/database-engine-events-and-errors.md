@@ -9056,9 +9056,6 @@ manager: craigg
 |	[41368](mssqlserver-41368-database-engine-error.md)	|	16	|	No	|	Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT).	|
 |	[41396](mssqlserver-41396-database-engine-error.md)	|	16	|	No	|	The sort operation exceeded the buffer limit. The stored procedure execution was aborted. Consult SQL Server Books Online for more information.	|
 |	[41399](mssqlserver-41399-database-engine-error.md)	|	16	|	No	|	The sort operation is too complex. Consult SQL Server Books Online for more information.	|
-
-
-
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 

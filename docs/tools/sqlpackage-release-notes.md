@@ -16,7 +16,7 @@ manager: kenvh
 ---
 # sqlpackage release notes
 
-**[Download the latest version](sql-package-download.md)**
+**[Download the latest version](sqlpackage-download.md)**
 
 ## sqlpackage 17.8
 

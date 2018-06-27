@@ -15,36 +15,37 @@ ms.author: "broneill"
 manager: "craigg"
 ---
 # SqlPackage.exe
+
 **SqlPackage.exe** is a command line utility that automates the following database development tasks:  
   
--   [Extract](#help-for-the-extract-action): Creates a database snapshot (.dacpac) file from a live SQL Server or Azure SQL Database.  
+- [Extract](#help-for-the-extract-action): Creates a database snapshot (.dacpac) file from a live SQL Server or Azure SQL Database.  
   
--   [Publish](#publish-parameters-properties-and-sqlcmd-variables): Incrementally updates a database schema to match the schema of a source .dacpac file. If the database does not exist on the server, the publish operation will create it. Otherwise, an existing database will be updated.  
+- [Publish](#publish-parameters-properties-and-sqlcmd-variables): Incrementally updates a database schema to match the schema of a source .dacpac file. If the database does not exist on the server, the publish operation will create it. Otherwise, an existing database will be updated.  
   
--   [Export](#export-parameters-and-properties): Exports a live database - including database schema and user data - from SQL Server or Azure SQL Database to a BACPAC package (.bacpac file).  
+- [Export](#export-parameters-and-properties): Exports a live database - including database schema and user data - from SQL Server or Azure SQL Database to a BACPAC package (.bacpac file).  
   
--   [Import](#import-parameters-and-properties): Imports the schema and table data from a BACPAC package into a new user database in an instance of SQL Server or Azure SQL Database.  
+- [Import](#import-parameters-and-properties): Imports the schema and table data from a BACPAC package into a new user database in an instance of SQL Server or Azure SQL Database.  
   
--   [DeployReport](#deployreport-parameters-and-properties): Creates an XML report of the changes that would be made by a publish action.  
+- [DeployReport](#deployreport-parameters-and-properties): Creates an XML report of the changes that would be made by a publish action.  
   
--   [DriftReport](#driftreport-parameters): Creates an XML report of the changes that have been made to a registered database since it was last registered.  
+- [DriftReport](#driftreport-parameters): Creates an XML report of the changes that have been made to a registered database since it was last registered.  
   
--   [Script](#script-parameters-and-properties): Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.  
+- [Script](#script-parameters-and-properties): Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.  
   
 The **SqlPackage.exe** command line allows you to specify these actions along with action specific parameters and properties.  
 
-**[Download the latest version](sql-package-download.md)**. For details about the latest release, see the [release notes](sqlpackage-release-notes.md).
+**[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](sqlpackage-release-notes.md).
   
-## Command Line Syntax  
+## Command Line Syntax
+
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
-```  
+```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
-```  
+```
   
-   
- 
-### Help for the Extract action.
+### Help for the Extract action
+
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|Specifies the action to be performed. |
@@ -65,7 +66,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/TenantId:**|**/tid**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com or live.com. If this parameter is omitted, the default tenant id for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 
-### Properties specific to the Extract action:
+### Properties specific to the Extract action
+
 |Property|Value|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
@@ -84,11 +86,12 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|TableData=(STRING)|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier.|
 |**/p:**|VerifyExtraction=(BOOLEAN)|Specifies whether the extracted dacpac should be verified.|
 
-## Publish Parameters, Properties, and SQLCMD Variables  
-A SqlPackage.exe publish operation incrementally updates the schema of a target database to match the structure of a source database. Publishing a deployment package that contains user data for all or a subset of tables will update the table data in addition to the schema. Note that data deployment will overwrite the schema and data in existing tables of the target database. Data deployment will not change existing schema or data in the target database for tables not included in the deployment package.  
-  
+## Publish Parameters, Properties, and SQLCMD Variables
 
-### Help for Publish action.
+A SqlPackage.exe publish operation incrementally updates the schema of a target database to match the structure of a source database. Publishing a deployment package that contains user data for all or a subset of tables will update the table data in addition to the schema. Note that data deployment will overwrite the schema and data in existing tables of the target database. Data deployment will not change existing schema or data in the target database for tables not included in the deployment package.  
+
+### Help for Publish action
+
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Publish|Specifies the action to be performed. |
@@ -122,7 +125,8 @@ A SqlPackage.exe publish operation incrementally updates the schema of a target 
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/Variables:**|**/v**|{PropertyName}={Value}|Specifies a name value pair for an action specific variable;{VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error will result if a value is not provided for every variable. |
 
-### Properties specific to the Publish action:
+### Properties specific to the Publish action
+
 |Property|Value|Description|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifies additional deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.|
@@ -212,17 +216,21 @@ A SqlPackage.exe publish operation incrementally updates the schema of a target 
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Specifies whether collation compatibility is verified.|
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifies whether checks should be performed before publishing that will stop the publish action if issues are present that might block successful publishing. For example, your publish action might stop if you have foreign keys on the target database that do not exist in the database project, and that will cause errors when you publish.|
 |
-### SQLCMD Variables  
+
+### SQLCMD Variables
+
 The following table describes the format of the option that you can use to override the value of a SQL command (**sqlcmd**) variable used during a publish action. The values of variable specified on the command line override other values assigned to the variable (for example, in a publish profile).  
   
 |Parameter|Default|Description|  
 |-------------|-----------|---------------|  
 |**/Variables:{PropertyName}={Value}**||Specifies a name value pair for an action specific variable; {VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error will result if a value is not provided for every variable.|  
   
-## Export Parameters and Properties  
+## Export Parameters and Properties
+
 A SqlPackage.exe Export action exports a live database from SQL Server or Azure SQL Database to a BACPAC package (.bacpac file). By default, data for all tables will be included in the .bacpac file. Optionally, you can specify only a subset of tables for which to export data. Validation for the Export action ensures Azure SQL Database compatibility for the complete targeted database even if a subset of tables is specified for the export.  
   
-### Help for Export action.
+### Help for Export action
+
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Export|Specifies the action to be performed. |
@@ -243,7 +251,8 @@ A SqlPackage.exe Export action exports a live database from SQL Server or Azure 
 |**/TenantId:**|**/tid**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com or live.com. If this parameter is omitted, the default tenant id for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 
-### Properties specific to the Export action:
+### Properties specific to the Export action
+
 |Property|Value|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
@@ -252,10 +261,12 @@ A SqlPackage.exe Export action exports a live database from SQL Server or Azure 
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Specifies what the target engine version is expected to be. This affects whether to allow objects supported by Azure SQL Database servers with V12 capabilities, such as memory-optimized tables, in the generated bacpac.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Specifies whether the supported full-text document types for MicrosoftAzure SQL Database v12 should be verified.|
   
-## Import Parameters and Properties  
+## Import Parameters and Properties
+
 A SqlPackage.exe Import action imports the schema and table data from a BACPAC package - .bacpac file – into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database, the target database cannot contain any user-defined schema objects.  
   
-### Help for command actions.
+### Help for command actions
+
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Import|Specifies the action to be performed. |
@@ -286,10 +297,12 @@ Properties specific to the Import action:
 |**/p:**|ImportContributors=(STRING)|Specifies the deployment contributors which should run when the bacpac is imported. This should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies how elements are stored when building the database model. Forperformance reasons the default is InMemory. For very large databases,File backed storage is required.|
   
-## DeployReport Parameters and Properties  
+## DeployReport Parameters and Properties
+
 A **SqlPackage.exe** report action creates an XML report of the changes that would be made by a publish action.  
   
 ### Help for DeployReport action
+
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|Specifies the action to be performed. |
@@ -322,7 +335,8 @@ A **SqlPackage.exe** report action creates an XML report of the changes that wou
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/Variables:**|**/v**|{PropertyName}={Value}|Specifies a name value pair for an action specific variable; {VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error will result if a value is not provided for every variable. |
 
-## Properties specific to the DeployReport action:
+## Properties specific to the DeployReport action
+
 |Property|Value|Description|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifies additional deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.|
@@ -413,10 +427,11 @@ A **SqlPackage.exe** report action creates an XML report of the changes that wou
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Specifies whether collation compatibility is verified.| 
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifies whether checks should be performed before publishing that will stop the publish action if issues are present that might block successful publishing. For example, your publish action might stop if you have foreign keys on the target database that do not exist in the database project, and that will cause errors when you publish. |
   
-## DriftReport Parameters  
+## DriftReport Parameters
+
 A **SqlPackage.exe** report action creates an XML report of the changes that have been made to the registered database since it was last registered.  
   
-### Help for DriftReport action.
+### Help for DriftReport action
 
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
@@ -437,10 +452,12 @@ A **SqlPackage.exe** report action creates an XML report of the changes that hav
 |**/TenantId:**|**/tid**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com or live.com. If this parameter is omitted, the default tenant id for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 
-## Script Parameters and Properties  
+## Script Parameters and Properties
+
 A **SqlPackage.exe** script action creates a Transact-SQL incremental update script that updates the schema of a target database to match the schema of a source database.  
   
-### Help for the Script action.
+### Help for the Script action
+
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Script|Specifies the action to be performed. |
@@ -473,8 +490,7 @@ A **SqlPackage.exe** script action creates a Transact-SQL incremental update scr
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/Variables:**|**/v**|{PropertyName}={Value}|Specifies a name value pair for an action specific variable;{VariableName}={Value}. The DACPAC file contains the list of valid SQLCMD variables. An error will result if a value is not provided for every variable. |
 
-
-### Properties specific to the Script action:
+### Properties specific to the Script action
 
 |Property|Value|Description|
 |---|---|---|

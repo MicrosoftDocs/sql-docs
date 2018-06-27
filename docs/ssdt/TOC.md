@@ -7,8 +7,6 @@
 # [SQL Server Tools](sql-server-tools.md)
 # [License Terms - SSDT](sql-server-data-tools-license-terms.md)
 # [License Terms - SSDT (VS 2017)](sql-server-data-tools-license-terms-vs2017.md)
-
-
 # [Project-Oriented Offline Database Development](project-oriented-offline-database-development.md)
 ## [Import into a Database Project](import-into-a-database-project.md)
 ## [Add Database Reference Dialog Box](add-database-reference-dialog-box.md)
@@ -26,11 +24,9 @@
 ## [How to: Change Target Platform and Publish a Database Project](how-to-change-target-platform-and-publish-a-database-project.md)
 ## [How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform](how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)
 ## [How to: Specify Predeployment or Postdeployment Scripts](how-to-specify-predeployment-or-postdeployment-scripts.md)
-
 # [Project-Oriented Database Development using Command-Line Tools](project-oriented-database-development-using-command-line-tools.md)
 ## [SqlPackage.exe](../tools/sqlpackage.md)
 ## [Using MSDeploy with dbSqlPackage Provider](using-msdeploy-with-dbsqlpackage-provider.md)
-
 # [Connected Database Development](connected-database-development.md)
 ## [How to: Connect to a Database and Browse Existing Objects](how-to-connect-to-a-database-and-browse-existing-objects.md)
 ## [How to: Create Database Objects Using Table Designer](how-to-create-database-objects-using-table-designer.md)
@@ -42,7 +38,6 @@
 ## [How to: Delete Objects and Resolve Dependencies](how-to-delete-objects-and-resolve-dependencies.md)
 ## [How to: Clone an Existing Database](how-to-clone-an-existing-database.md)
 ## [Extract, Publish, and Register .dacpac Files](extract-publish-and-register-dacpac-files.md)
-
 # [Compare and Synchronize Data in One or More Tables with Data in a Reference Database](compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)
 ## [How to: Compare and Synchronize the Data of Two Databases](how-to-compare-and-synchronize-the-data-of-two-databases.md)
 ## [How to: View Data Differences](how-to-view-data-differences.md)
@@ -53,11 +48,9 @@
 ## [How to: Execute a Partial Query](how-to-execute-a-partial-query.md)
 ## [How to: Debug Stored Procedures](how-to-debug-stored-procedures.md)
 ## [Analyze Script Performance](analyze-script-performance.md)
-
 # [Manage Tables, Relationships, and Fix Errors](manage-tables-relationships-and-fix-errors.md)
 ## [How to: Use the Table Designer to Manage Tables and Relationships](how-to-use-the-table-designer-to-manage-tables-and-relationships.md)
 ## [How to: Fix Errors](how-to-fix-errors.md)
-
 # [Verifying Database Code by Using SQL Server Unit Tests](verifying-database-code-by-using-sql-server-unit-tests.md)
 ## [Walkthrough: Creating and Running a SQL Server Unit Test](walkthrough-creating-and-running-a-sql-server-unit-test.md)
 ## [Creating and Defining SQL Server Unit Tests](creating-and-defining-sql-server-unit-tests.md)
@@ -85,7 +78,6 @@
 ### [Walkthrough: Using a Custom Test Condition to Verify the Results of a Stored Procedure](walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)
 ### [How to: Upgrade a Visual Studio 2010 Custom Test Condition from a Previous Release to SQL Server Data Tools](how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)
 ## [Troubleshooting SQL Server Database Unit Testing Issues](troubleshooting-sql-server-database-unit-testing-issues.md)
-
 # [Extending the Database Features](extending-the-database-features.md)
 ## [Customize Database Build and Deployment by Using Build and Deployment Contributors](use-deployment-contributors-to-customize-database-build-and-deployment.md)
 ### [Walkthrough: Extend Database Project Build to Generate Model Statistics](walkthrough-extend-database-project-build-to-generate-model-statistics.md)

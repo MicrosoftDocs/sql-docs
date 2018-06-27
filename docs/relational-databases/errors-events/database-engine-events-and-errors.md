@@ -22,16 +22,16 @@ manager: craigg
 | :------ | :------| :------| :----------------------------- |
 |	[-2](mssqlserver-neg2-database-engine-error.md)	|		|		|	Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. (Microsoft SQL Server, Error: -2).	|
 |	[-1](mssqlserver-1-database-engine-error.md)	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server 2005, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: SQL Network Interfaces, error: 28 - Server doesn't support requested protocol) (Microsoft SQL Server, Error: -1).	|
-|	2	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider)	|
+|	[2](mssqlserver-2-database-engine-error.md)	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider)	|
 |	21	|	20	|	No	|	Warning: Fatal error %d occurred at %S_DATE. Note the error and time, and contact your system administrator.	|
-|	53	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider).	|
+|	[53](mssqlserver-53-database-engine-error.md)	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider).	|
 |	101	|	15	|	No	|	Query not allowed in Waitfor.	|
-|	102	|	15	|	No	|	Incorrect syntax near '%.*ls'.	|
+|	[102](mssqlserver-102-database-engine-error.md)	|	15	|	No	|	Incorrect syntax near '%.*ls'.	|
 |	103	|	15	|	No	|	The %S_MSG that starts with '%.*ls' is too long. Maximum length is %d.	|
 |	104	|	15	|	No	|	ORDER BY items must appear in the select list if the statement contains a UNION, INTERSECT or EXCEPT operator.	|
 |	105	|	15	|	No	|	Unclosed quotation mark after the character string '%.*ls'.	|
 |	106	|	16	|	No	|	Too many table names in the query. The maximum allowable is %d.	|
-|	107	|	15	|	No	|	The column prefix '%.*ls' does not match with a table name or alias name used in the query.	|
+|	[107](mssqlserver-107-database-engine-error.md)	|	15	|	No	|	The column prefix '%.*ls' does not match with a table name or alias name used in the query.	|
 |	108	|	15	|	No	|	The ORDER BY position number %ld is out of range of the number of items in the select list.	|
 |	109	|	15	|	No	|	There are more columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.	|
 |	110	|	15	|	No	|	There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.	|
@@ -60,7 +60,7 @@ manager: craigg
 |	134	|	15	|	No	|	The variable name '%.*ls' has already been declared. Variable names must be unique within a query batch or stored procedure.	|
 |	135	|	15	|	No	|	Cannot use a BREAK statement outside the scope of a WHILE statement.	|
 |	136	|	15	|	No	|	Cannot use a CONTINUE statement outside the scope of a WHILE statement.	|
-|	137	|	15	|	No	|	Must declare the scalar variable "%.*ls".	|
+|	[137](mssqlserver-137-database-engine-error.md)	|	15	|	No	|	Must declare the scalar variable "%.*ls".	|
 |	138	|	15	|	No	|	Correlation clause in a subquery not permitted.	|
 |	139	|	15	|	No	|	Cannot assign a default value to a local variable.	|
 |	140	|	15	|	No	|	Can only use IF UPDATE within a CREATE TRIGGER statement.	|
@@ -128,8 +128,8 @@ manager: craigg
 |	204	|	20	|	Yes	|	Normalization error in node %ls.	|
 |	205	|	16	|	No	|	All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists.	|
 |	206	|	16	|	No	|	Operand type clash: %ls is incompatible with %ls	|
-|	207	|	16	|	No	|	Invalid column name '%.*ls'.	|
-|	208	|	16	|	No	|	Invalid object name '%.*ls'.	|
+| [207](mssqlserver-207-database-engine-error.md)	|	16	|	No	|	Invalid column name '%.*ls'.	|
+|	[208](mssqlserver-208-database-engine-error.md)	|	16	|	No	|	Invalid object name '%.*ls'.	|
 |	209	|	16	|	No	|	Ambiguous column name '%.*ls'.	|
 |	210	|	16	|	No	|	Conversion failed when converting datetime from binary/varbinary string.	|
 |	211	|	23	|	Yes	|	Possible schema corruption. Run DBCC CHECKCATALOG.	|
@@ -155,7 +155,7 @@ manager: craigg
 |	231	|	11	|	No	|	No such default. ID = %ld, database ID = %d.	|
 |	232	|	16	|	No	|	Arithmetic overflow error for type %ls, value = %f.	|
 |	233	|	16	|	No	|	The column '%.*ls' in table '%.*ls' cannot be null.	|
-|	233	|		|		|	A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 233)	|
+|	[233](mssqlserver-233-database-engine-error.md)	|		|		|	A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 233)	|
 |	234	|	16	|	No	|	There is insufficient result space to convert a money value to %ls.	|
 |	235	|	16	|	No	|	Cannot convert a char value to money. The char value has incorrect syntax.	|
 |	236	|	16	|	No	|	The conversion from char data type to money resulted in a money overflow error.	|
@@ -274,7 +274,7 @@ manager: craigg
 |	357	|	15	|	No	|	The target table '%.*ls' of the INSERT statement cannot have any enabled rules when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement. Found rule '%ls'.	|
 |	358	|	15	|	No	|	The target table '%.*ls' of the MERGE statement cannot have any enabled rules. Found rule '%ls'.	|
 |	359	|	15	|	No	|	The target '%.*ls' of an OUTPUT INTO clause has an index with the ignore_dup_key option and cannot be used when an OUTPUT clause is also used.	|
-|	360	|	15	|	No	|	The target column list of an INSERT, UPDATE, or MERGE statement cannot contain both a sparse column and the column set that contains the sparse column. Rewrite the statement to include either the sparse column or the column set, but not both.	|
+|	[360](mssqlserver-360-database-engine-error.md)	|	15	|	No	|	The target column list of an INSERT, UPDATE, or MERGE statement cannot contain both a sparse column and the column set that contains the sparse column. Rewrite the statement to include either the sparse column or the column set, but not both.	|
 |	361	|	16	|	No	|	The number of target columns that are specified in an INSERT, UPDATE, or MERGE statement exceeds the maximum of %d. This total number includes identity, timestamp, and columns that have default values. To correct this error, change the query to target a sparse column set instead of single sparse columns.	|
 |	401	|	16	|	No	|	Unimplemented statement or expression %ls.	|
 |	402	|	16	|	No	|	The data types %s and %s are incompatible in the %s operator.	|
@@ -370,7 +370,7 @@ manager: craigg
 |	507	|	16	|	No	|	Invalid argument for SET ROWCOUNT. Must be a non-null non-negative integer.	|
 |	509	|	11	|	No	|	User name '%.*ls' not found.	|
 |	510	|	16	|	No	|	Cannot create a worktable row larger than allowable maximum. Resubmit your query with the ROBUST PLAN hint.	|
-|	511	|	16	|	No	|	Cannot create a row of size %d which is greater than the allowable maximum row size of %d.	|
+|	[511](mssqlserver-511-database-engine-error.md)	|	16	|	No	|	Cannot create a row of size %d which is greater than the allowable maximum row size of %d.	|
 |	512	|	16	|	No	|	Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.	|
 |	513	|	16	|	No	|	A column insert or update conflicts with a rule imposed by a previous CREATE RULE statement. The statement was terminated. The conflict occurred in database '%.*ls', table '%.*ls', column '%.*ls'.	|
 |	515	|	16	|	No	|	Cannot insert the value NULL into column '%.*ls', table '%.*ls'; column does not allow nulls. %ls fails.	|
@@ -443,18 +443,18 @@ manager: craigg
 |	597	|	16	|	No	|	The execution of in-proc data access is being terminated due to errors in the User Datagram Protocol (UDP).	|
 |	598	|	16	|	No	|	An error occurred while executing CREATE/ALTER DB. Please look at the previous error for more information.	|
 |	599	|	16	|	No	|	%.*ls: The length of the result exceeds the length limit (2GB) of the target large type.	|
-|	601	|	12	|	No	|	Could not continue scan with NOLOCK due to data movement.	|
+|	[601](mssqlserver-601-database-engine-error.md)	|	12	|	No	|	Could not continue scan with NOLOCK due to data movement.	|
 |	602	|	21	|	Yes	|	Could not find an entry for table or index with partition ID %I64d in database %d. This error can occur if a stored procedure references a dropped table, or metadata is corrupted. Drop and re-create the stored procedure, or execute DBCC CHECKDB.	|
 |	603	|	21	|	Yes	|	Could not find an entry for table or index with object ID %d (partition ID %I64d) in database %d. This error can occur if a stored procedure references a dropped table, or metadata is corrupted. Drop and re-create the stored procedure, or execute DBCC CHECKDB.	|
-|	605	|	21	|	Yes	|	Attempt to fetch logical page %S_PGID in database %d failed. It belongs to allocation unit %I64d not to %I64d.	|
+|	[605](mssqlserver-605-database-engine-error.md)	|	21	|	Yes	|	Attempt to fetch logical page %S_PGID in database %d failed. It belongs to allocation unit %I64d not to %I64d.	|
 |	606	|	21	|	Yes	|	Metadata inconsistency. Filegroup id %ld specified for table '%.*ls' does not exist. Run DBCC CHECKDB or CHECKCATALOG.	|
 |	608	|	16	|	Yes	|	No catalog entry found for partition ID %I64d in database %d. The metadata is inconsistent. Run DBCC CHECKDB to check for a metadata corruption.	|
 |	609	|	16	|	No	|	BTree is not empty when waking up on RowsetBulk.	|
 |	610	|	16	|	Yes	|	Invalid header value from a page. Run DBCC CHECKDB to check for a data corruption.	|
-|	611	|	16	|	No	|	Cannot insert or update a row because total variable column size, including overhead, is %d bytes more than the limit.	|
+|	[611](mssqlserver-611-database-engine-error.md)	|	16	|	No	|	Cannot insert or update a row because total variable column size, including overhead, is %d bytes more than the limit.	|
 |	613	|	21	|	No	|	Could not find an entry for worktable rowset with partition ID %I64d in database %d.	|
 |	615	|	21	|	Yes	|	Could not find database ID %d, name '%.*ls'. The database may be offline. Wait a few minutes and try again.	|
-|	617	|	20	|	Yes	|	Descriptor for object ID %ld in database ID %d not found in the hash table during attempt to unhash it. A work table is missing an entry. Rerun the query. If a cursor is involved, close and reopen the cursor.	|
+|	[617](mssqlserver-617-database-engine-error.md)	|	20	|	Yes	|	Descriptor for object ID %ld in database ID %d not found in the hash table during attempt to unhash it. A work table is missing an entry. Rerun the query. If a cursor is involved, close and reopen the cursor.	|
 |	622	|	16	|	No	|	The filegroup "%.*ls" has no files assigned to it. Tables, indexes, text columns, ntext columns, and image columns cannot be populated on this filegroup until a file is added.	|
 |	627	|	16	|	No	|	Cannot use SAVE TRANSACTION within a distributed transaction.	|
 |	628	|	16	|	No	|	Cannot issue SAVE TRANSACTION when there is no active transaction.	|
@@ -479,10 +479,10 @@ manager: craigg
 |	683	|	22	|	No	|	An internal error occurred while trying to convert between variable-length and fixed-length decimal formats. Run DBCC CHECKDB to check for any database corruption.	|
 |	684	|	22	|	No	|	An internal error occurred while attempting to convert between compressed and uncompressed storage formats. Run DBCC CHECKDB to check for any corruption.	|
 |	685	|	22	|	No	|	An internal error occurred while attempting to retrieve a backpointer for a heap forwarded record.	|
-|	701	|	19	|	Yes	|	There is insufficient system memory in resource pool '%ls' to run this query.	|
+|	[701](mssqlserver-701-database-engine-error.md)	|	19	|	Yes	|	There is insufficient system memory in resource pool '%ls' to run this query.	|
 |	708	|	10	|	Yes	|	Server is running low on virtual address space or machine is running low on virtual memory. Reserved memory used %d times since startup. Cancel query and re-run, decrease server load, or cancel other applications.	|
 |	801	|	20	|	Yes	|	A buffer was encountered with an unexpected status of 0x%x.	|
-|	802	|	17	|	No	|	There is insufficient memory available in the buffer pool.	|
+|	[802](mssqlserver-802-database-engine-error.md)	|	17	|	No	|	There is insufficient memory available in the buffer pool.	|
 |	803	|	10	|	Yes	|	simulated failure (DEBUG only)	|
 |	805	|	10	|	Yes	|	restore pending	|
 |	806	|	10	|	Yes	|	audit failure (a page read from disk failed to pass basic integrity checks)	|
@@ -490,26 +490,26 @@ manager: craigg
 |	808	|	10	|	Yes	|	insufficient bytes transferred	|
 |	821	|	20	|	Yes	|	Could not unhash buffer at 0x%p with a buffer page number of %S_PGID and database ID %d with HASHED status set. The buffer was not found. %S_PAGE. Contact Technical Support.	|
 |	822	|	21	|	Yes	|	Could not start I/O operation for request %S_BLKIOPTR. Contact Technical Support.	|
-|	823	|	24	|	Yes	|	The operating system returned error %ls to SQL Server during a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and system event log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.	|
-|	824	|	24	|	Yes	|	SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.	|
-|	825	|	10	|	Yes	|	A read of the file '%ls' at offset %#016I64x succeeded after failing %d time(s) with error: %ls. Additional messages in the SQL Server error log and system event log may provide more detail. This error condition threatens database integrity and must be corrected. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.	|
+|	[823](mssqlserver-823-database-engine-error.md)	|	24	|	Yes	|	The operating system returned error %ls to SQL Server during a %S_MSG at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log and system event log may provide more detail. This is a severe system-level error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.	|
+|	[824](mssqlserver-824-database-engine-error.md)	|	24	|	Yes	|	SQL Server detected a logical consistency-based I/O error: %ls. It occurred during a %S_MSG of page %S_PGID in database ID %d at offset %#016I64x in file '%ls'. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.	|
+|	[825](mssqlserver-825-database-engine-error.md)	|	10	|	Yes	|	A read of the file '%ls' at offset %#016I64x succeeded after failing %d time(s) with error: %ls. Additional messages in the SQL Server error log and system event log may provide more detail. This error condition threatens database integrity and must be corrected. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.	|
 |	826	|	10	|	Yes	|	incorrect pageid (expected %d:%d; actual %d:%d)	|
 |	829	|	21	|	Yes	|	Database ID %d, Page %S_PGID is marked RestorePending, which may indicate disk corruption. To recover from this state, perform a restore.	|
 |	830	|	10	|	No	|	stale page (a page read returned a log sequence number (LSN) (%u:%u:%u) that is older than the last one that was written (%u:%u:%u))	|
 |	831	|	20	|	No	|	Unable to deallocate a kept page.	|
 |	832	|	24	|	Yes	|	A page that should have been constant has changed (expected checksum: %08x, actual checksum: %08x, database %d, file '%ls', page %S_PGID). This usually indicates a memory failure or other hardware or OS corruption.	|
-|	833	|	10	|	No	|	SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file '%ls' in database '%ls' (%d). The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x	|
-|	844	|	10	|	No	|	Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait.	|
-|	845	|	17	|	No	|	Time-out occurred while waiting for buffer latch type %d for page %S_PGID, database ID %d.	|
-|	846	|	10	|	No	|	A time-out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit Id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Not continuing to wait.	|
-|	847	|	10	|	Yes	|	Timeout occurred while waiting for latch: class '%ls', id %p, type %d, Task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait.	|
+|	[833](mssqlserver-833-database-engine-error.md)	|	10	|	No	|	SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file '%ls' in database '%ls' (%d). The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x	|
+|	[844](mssqlserver-844-database-engine-error.md)	|	10	|	No	|	Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait.	|
+|	[845](mssqlserver-845-database-engine-error.md)	|	17	|	No	|	Time-out occurred while waiting for buffer latch type %d for page %S_PGID, database ID %d.	|
+|	[846](mssqlserver-846-database-engine-error.md)	|	10	|	No	|	A time-out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit Id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Not continuing to wait.	|
+|	[847](mssqlserver-847-database-engine-error.md)	|	10	|	Yes	|	Timeout occurred while waiting for latch: class '%ls', id %p, type %d, Task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait.	|
 |	848	|	10	|	Yes	|	Using large pages for buffer pool.	|
 |	849	|	10	|	Yes	|	Using locked pages for buffer pool.	|
 |	850	|	10	|	Yes	|	%I64u MB of large page memory allocated.	|
 |	851	|	10	|	No	|	the page is in an OFFLINE file which cannot be read	|
 |	902	|	16	|	No	|	To change the %ls, the database must be in state in which a checkpoint can be executed.	|
 |	904	|	16	|	No	|	Database %ld cannot be autostarted during server shutdown or startup.	|
-|	905	|	21	|	Yes	|	Database '%.*ls' cannot be started in this edition of SQL Server because it contains a partition function '%.*ls'. Only Enterprise edition of SQL Server supports partitioning.	|
+|	[905](mssqlserver-905-database-engine-error.md)	|	21	|	Yes	|	Database '%.*ls' cannot be started in this edition of SQL Server because it contains a partition function '%.*ls'. Only Enterprise edition of SQL Server supports partitioning.	|
 |	907	|	16	|	No	|	The database "%ls" has inconsistent database or file metadata.	|
 |	908	|	10	|	Yes	|	Filegroup %ls in database %ls is unavailable because it is %ls. Restore or alter the filegroup to be available.	|
 |	909	|	21	|	Yes	|	Database '%.*ls' cannot be started in this edition of SQL Server because part or all of object '%.*ls' is enabled with data compression or vardecimal storage format. Data compression and vardecimal storage format are only supported on SQL Server Enterprise Edition.	|
@@ -519,7 +519,7 @@ manager: craigg
 |	913	|	22	|	Yes	|	Could not find database ID %d. Database may not be activated yet or may be in transition. Reissue the query once the database is available. If you do not think this error is due to a database that is transitioning its state and this error continues to occur, contact your primary support provider. Please have available for review the Microsoft SQL Server error log and any additional information relevant to the circumstances when the error occurred.	|
 |	914	|	21	|	No	|	Script level upgrade for database '%.*ls' failed because upgrade step '%.*ls' was aborted before completion. If the abort happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.	|
 |	915	|	21	|	No	|	Unable to obtain the current script level for database '%.*ls'. If the error happened during startup of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that script upgrade may run to completion.	|
-|	916	|	14	|	No	|	The server principal "%.*ls" is not able to access the database "%.*ls" under the current security context.	|
+|	[916](mssqlserver-916-database-engine-error.md)	|	14	|	No	|	The server principal "%.*ls" is not able to access the database "%.*ls" under the current security context.	|
 |	917	|	21	|	No	|	An upgrade script batch failed to execute for database '%.*ls' due to compilation error. Check the previous error message for the line which caused compilation to fail.	|
 |	918	|	21	|	No	|	Failed to load the engine script metadata from script DLL '%.*ls'. The error code reported by Windows was %d. This is a serious error condition, which usually indicates a corrupt or incomplete installation. Repairing the SQL Server instance may help resolve this error.	|
 |	919	|	10	|	No	|	User '%.*ls' is changing database script level entry %d to a value of %d.	|
@@ -529,7 +529,7 @@ manager: craigg
 |	923	|	14	|	No	|	Database '%.*ls' is in restricted mode. Only the database owner and members of the dbcreator and sysadmin roles can access it.	|
 |	924	|	14	|	No	|	Database '%.*ls' is already open and can only have one user at a time.	|
 |	925	|	19	|	Yes	|	Maximum number of databases used for each query has been exceeded. The maximum allowed is %d.	|
-|	926	|	14	|	No	|	Database '%.*ls' cannot be opened. It has been marked SUSPECT by recovery. See the SQL Server errorlog for more information.	|
+|	[926](mssqlserver-926-database-engine-error.md)	|	14	|	No	|	Database '%.*ls' cannot be opened. It has been marked SUSPECT by recovery. See the SQL Server errorlog for more information.	|
 |	927	|	14	|	No	|	Database '%.*ls' cannot be opened. It is in the middle of a restore.	|
 |	928	|	20	|	Yes	|	During upgrade, database raised exception %d, severity %d, state %d, address %p. Use the exception number to determine the cause.	|
 |	929	|	20	|	Yes	|	Unable to close a database that is not currently open. The application should reconnect and try again. If this action does not correct the problem, contact your primary support provider.	|
@@ -542,10 +542,10 @@ manager: craigg
 |	942	|	14	|	No	|	Database '%.*ls' cannot be opened because it is offline.	|
 |	943	|	14	|	No	|	Database '%.*ls' cannot be opened because its version (%d) is later than the current server version (%d).	|
 |	944	|	10	|	No	|	Converting database '%.*ls' from version %d to the current version %d.	|
-|	945	|	16	|	No	|	Database '%.*ls' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.	|
+|	[945](mssqlserver-945-database-engine-error.md)	|	16	|	No	|	Database '%.*ls' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.	|
 |	946	|	14	|	No	|	Cannot open database '%.*ls' version %d. Upgrade the database to the latest version.	|
 |	947	|	16	|	Yes	|	Error while closing database '%.*ls'. Check for previous additional errors and retry the operation.	|
-|	948	|	20	|	Yes	|	The database '%.*ls' cannot be opened because it is version %d. This server supports version %d and earlier. A downgrade path is not supported.	|
+|	[948](mssqlserver-948-database-engine-error.md)	|	20	|	Yes	|	The database '%.*ls' cannot be opened because it is version %d. This server supports version %d and earlier. A downgrade path is not supported.	|
 |	949	|	16	|	No	|	tempdb is skipped. You cannot run a query that requires tempdb	|
 |	950	|	20	|	Yes	|	Database '%.*ls' cannot be upgraded because its non-release version (%d) is not supported by this version of SQL Server. You cannot open a database that is incompatible with this version of sqlservr.exe. You must re-create the database.	|
 |	951	|	10	|	No	|	Database '%.*ls' running the upgrade step from version %d to version %d.	|
@@ -671,8 +671,8 @@ manager: craigg
 |	1097	|	15	|	No	|	Cannot use If UPDATE within this CREATE TRIGGER statement.	|
 |	1098	|	15	|	No	|	The specified event type(s) is/are not valid on the specified target object.	|
 |	1099	|	15	|	No	|	The ON clause is not valid for this statement.	|
-|	1101	|	17	|	Yes	|	Could not allocate a new page for database '%.*ls' because of insufficient disk space in filegroup '%.*ls'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.	|
-|	1105	|	17	|	Yes	|	Could not allocate space for object '%.*ls'%.*ls in database '%.*ls' because the '%.*ls' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.	|
+|	[1101](mssqlserver-1101-database-engine-error.md)	|	17	|	Yes	|	Could not allocate a new page for database '%.*ls' because of insufficient disk space in filegroup '%.*ls'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.	|
+|	[1105](mssqlserver-1105-database-engine-error.md)	|	17	|	Yes	|	Could not allocate space for object '%.*ls'%.*ls in database '%.*ls' because the '%.*ls' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.	|
 |	1119	|	16	|	No	|	Removing IAM page %S_PGID failed because someone else is using the object that this IAM page belongs to.	|
 |	1121	|	17	|	No	|	Space allocator cannot allocate page in database %d.	|
 |	1122	|	14	|	No	|	Table error: Page %S_PGID. Test (%hs) failed. Address 0x%x is not aligned.	|
@@ -686,9 +686,9 @@ manager: craigg
 |	1130	|	10	|	Yes	|	Error while allocating extent for a worktable. Extent %S_PGID in TEMPDB may have been lost.	|
 |	1131	|	10	|	Yes	|	Failed to truncate AppendOnlyStorageUnit 0x%p. Will retry next time. This is an informational message only. No user action is required.	|
 |	1202	|	16	|	No	|	The database-principal '%.*ls' does not exist or user is not a member.	|
-|	1203	|	20	|	Yes	|	Process ID %d attempted to unlock a resource it does not own: %.*ls. Retry the transaction, because this error may be caused by a timing condition. If the problem persists, contact the database administrator.	|
-|	1204	|	19	|	Yes	|	The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users. Ask the database administrator to check the lock and memory configuration for this instance, or to check for long-running transactions.	|
-|	1205	|	13	|	No	|	Transaction (Process ID %d) was deadlocked on %.*ls resources with another process and has been chosen as the deadlock victim. Rerun the transaction.	|
+|	[1203](mssqlserver-1203-database-engine-error.md)	|	20	|	Yes	|	Process ID %d attempted to unlock a resource it does not own: %.*ls. Retry the transaction, because this error may be caused by a timing condition. If the problem persists, contact the database administrator.	|
+|	[1204](mssqlserver-1204-database-engine-error.md)	|	19	|	Yes	|	The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users. Ask the database administrator to check the lock and memory configuration for this instance, or to check for long-running transactions.	|
+|	[1205](mssqlserver-1205-database-engine-error.md)	|	13	|	No	|	Transaction (Process ID %d) was deadlocked on %.*ls resources with another process and has been chosen as the deadlock victim. Rerun the transaction.	|
 |	1206	|	18	|	No	|	The Microsoft Distributed Transaction Coordinator (MS DTC) has cancelled the distributed transaction.	|
 |	1207	|	10	|	Yes	|	Can't allocate %u locks on startup, reverting to %u and turning on dynamic lock allocation. Maximum allowed memory usage at startup is %I64u KB.	|
 |	1208	|	21	|	Yes	|	Could not allocate initial %u lock blocks during startup. Can not start the server.	|
@@ -699,7 +699,7 @@ manager: craigg
 |	1214	|	17	|	Yes	|	Internal Error. There are too many parallel transactions.	|
 |	1220	|	17	|	No	|	No more lock classes available from transaction.	|
 |	1221	|	20	|	Yes	|	The Database Engine is attempting to release a group of locks that are not currently held by the transaction. Retry the transaction. If the problem persists, contact your support provider.	|
-|	1222	|	16	|	No	|	Lock request time out period exceeded.	|
+|	[1222](mssqlserver-1222-database-engine-error.md)	|	16	|	No	|	Lock request time out period exceeded.	|
 |	1223	|	16	|	No	|	Cannot release the application lock (Database Principal: '%.*ls', Resource: '%.*ls') because it is not currently held.	|
 |	1224	|	16	|	No	|	An invalid application lock resource was passed to %ls.	|
 |	1225	|	16	|	No	|	An invalid application lock mode was passed to %ls.	|
@@ -707,12 +707,12 @@ manager: craigg
 |	1227	|	16	|	No	|	An invalid application lock time-out was passed to %ls.	|
 |	1228	|	16	|	No	|	An invalid parameter "%ls" was passed to the application lock function or procedure.	|
 |	1230	|	16	|	No	|	An invalid database principal was passed to %ls.	|
-|	1401	|	21	|	Yes	|	Startup of the database-mirroring master thread routine failed for the following reason: %ls. Correct the cause of this error, and restart the SQL Server service.	|
+|	[1401](mssqlserver-1401-database-engine-error.md)	|	21	|	Yes	|	Startup of the database-mirroring master thread routine failed for the following reason: %ls. Correct the cause of this error, and restart the SQL Server service.	|
 |	1402	|	20	|	Yes	|	Witness did not find an entry for database mirroring GUID {%.8x-%.4x-%.4x-%.2x%.2x-%.2x%.2x%.2x%.2x%.2x%.2x}. A configuration mismatch exists. Retry the command, or reset the witness from one of the database mirroring partners.	|
 |	1403	|	16	|	Yes	|	The witness for the mirroring session received error response %d (state %d) from server instance %.*ls for database %.*ls. For more information about the error, refer to the error log on this server instance and the partner server instance.	|
 |	1404	|	16	|	No	|	The command failed because the database mirror is busy. Reissue the command later.	|
 |	1405	|	16	|	No	|	The database "%.*ls" is already enabled for database mirroring.	|
-|	1406	|	16	|	No	|	Unable to force service safely. Remove database mirroring and recover database "%.*ls" to gain access.	|
+|	[1406](mssqlserver-1406-database-engine-error.md)	|	16	|	No	|	Unable to force service safely. Remove database mirroring and recover database "%.*ls" to gain access.	|
 |	1407	|	16	|	No	|	The remote copy of database "%.*ls" is not related to the local copy of the database.	|
 |	1408	|	16	|	No	|	The remote copy of database "%.*ls" is not recovered far enough to enable database mirroring.	|
 |	1409	|	16	|	No	|	Database mirroring cannot be enabled for the remote copy of database "%.*ls". Restore database logs to the remote copy.	|
@@ -724,7 +724,7 @@ manager: craigg
 |	1415	|	16	|	No	|	The database mirroring operation for database "%.*ls" failed. The requested operation could not be performed.	|
 |	1416	|	16	|	No	|	Database "%.*ls" is not configured for database mirroring.	|
 |	1417	|	16	|	No	|	Database mirroring has been disabled by the administrator for database "%.*ls".	|
-|	1418	|	16	|	No	|	The server network address "%.*ls" can not be reached or does not exist. Check the network address name and that the ports for the local and remote endpoints are operational.	|
+|	[1418](mssqlserver-1418-database-engine-error.md)	|	16	|	No	|	The server network address "%.*ls" can not be reached or does not exist. Check the network address name and that the ports for the local and remote endpoints are operational.	|
 |	1419	|	16	|	No	|	The remote copy of database "%.*ls" cannot be opened. Check the database name and ensure that it is in the restoring state, and then reissue the command.	|
 |	1420	|	16	|	No	|	Database mirroring was unable to obtain the network hostname. Operating system error %ls encountered. Verify the network configuration.	|
 |	1421	|	16	|	Yes	|	Communications to the remote server instance '%.*ls' failed to complete before its timeout. The ALTER DATABASE command may have not completed. Retry the command.	|
@@ -763,12 +763,12 @@ manager: craigg
 |	1454	|	17	|	Yes	|	Database mirroring will be suspended. Server instance '%.*ls' encountered error %d, state %d, severity %d when it was acting as a mirroring partner for database '%.*ls'. The database mirroring partners might try to recover automatically from the error and resume the mirroring session. For more information, view the error log for additional error messages.	|
 |	1455	|	16	|	No	|	The database mirroring service cannot be forced for database "%.*ls" because the database is not in the correct state to become the principal database.	|
 |	1456	|	16	|	Yes	|	The ALTER DATABASE command could not be sent to the remote server instance '%.*ls'. The database mirroring configuration was not changed. Verify that the server is connected, and try again.	|
-|	1457	|	23	|	Yes	|	Synchronization of the mirror database, '%.*ls', was interrupted, leaving the database in an inconsistent state. The ALTER DATABASE command failed. Ensure that the principal database, if available, is back up and online, and then reconnect the mirror server instance and allow the mirror database to finish synchronizing.	|
+|	[1457](mssqlserver-1457-database-engine-error.md)	|	23	|	Yes	|	Synchronization of the mirror database, '%.*ls', was interrupted, leaving the database in an inconsistent state. The ALTER DATABASE command failed. Ensure that the principal database, if available, is back up and online, and then reconnect the mirror server instance and allow the mirror database to finish synchronizing.	|
 |	1458	|	17	|	Yes	|	The principal copy of the '%.*ls' database encountered error %d, status %d, severity %d while sending page %S_PGID to the mirror. Database mirroring has been suspended. Try to resolve the error condition, and resume mirroring.	|
 |	1459	|	24	|	Yes	|	An error occurred while accessing the database mirroring metadata. Drop mirroring (ALTER DATABASE database_name SET PARTNER OFF) and reconfigure it.	|
 |	1460	|	16	|	No	|	The database "%.*ls" is already configured for database mirroring on the remote server. Drop database mirroring on the remote server to establish a new partner.	|
-|	1461	|	10	|	No	|	Database mirroring successfully repaired physical page %S_PGID in database "%.*ls" by obtaining a copy from the partner.	|
-|	1462	|	16	|	No	|	Database mirroring is disabled due to a failed redo operation. Unable to resume.	|
+|	[1461](mssqlserver-1461-database-engine-error.md)	|	10	|	No	|	Database mirroring successfully repaired physical page %S_PGID in database "%.*ls" by obtaining a copy from the partner.	|
+|	[1462](mssqlserver-1462-database-engine-error.md)	|	16	|	No	|	Database mirroring is disabled due to a failed redo operation. Unable to resume.	|
 |	1463	|	16	|	No	|	Database mirroring is not available in the edition of this SQL Server instance. See books online for more details on feature support in different SQL Server editions.	|
 |	1464	|	16	|	No	|	Database mirroring cannot be enabled for the remote copy of database "%.*ls" because the database is not in a recovering state. The remote database must be restored using WITH NORECOVERY.	|
 |	1465	|	16	|	No	|	Database mirroring cannot be enabled because the "%.*ls" database is not in full recovery mode on both partners.	|
@@ -795,7 +795,7 @@ manager: craigg
 |	1489	|	10	|	No	|	Database Mirroring is disabled on this server due to error %d. Check the errorlog and configuration for more information.	|
 |	1499	|	16	|	Yes	|	Database mirroring error: status %u, severity %u, state %u, string %.*ls.	|
 |	1501	|	20	|	Yes	|	Sort failure. Contact Technical Support.	|
-|	1505	|	16	|	No	|	The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name '%.*ls' and the index name '%.*ls'. The duplicate key value is %ls.	|
+|	[1505](mssqlserver-1505-database-engine-error.md)	|	16	|	No	|	The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name '%.*ls' and the index name '%.*ls'. The duplicate key value is %ls.	|
 |	1509	|	20	|	Yes	|	Row comparison failed during sort because of an unknown data type on a key column. Metadata might be corrupt. Contact Technical Support.	|
 |	1510	|	17	|	No	|	Sort failed. Out of space or locks in database '%.*ls'.	|
 |	1511	|	20	|	Yes	|	Sort cannot be reconciled with transaction log.	|
@@ -881,11 +881,12 @@ manager: craigg
 |	1789	|	16	|	No	|	Cannot use CHECKSUM(*) in a computed column definition.	|
 |	1790	|	16	|	No	|	The name of a user-defined table type cannot start with a number (#) sign.	|
 |	1791	|	16	|	No	|	A DEFAULT constraint cannot be created on the column '%.*ls' in the table '%.*ls' because the column is a sparse column or sparse column set. Sparse columns or sparse column sets cannot have a DEFAULT constraint.	|
+| [1793](mssqlserver-1793-database-engine-error.md) | 16   | No  | Cannot drop index '%.*ls' since a partition scheme is not specified for FILESTREAM data.
 |	1801	|	16	|	No	|	Database '%.*ls' already exists. Choose a different database name.	|
 |	1802	|	16	|	No	|	CREATE DATABASE failed. Some file names listed could not be created. Check related errors.	|
-|	1803	|	17	|	No	|	The CREATE DATABASE statement failed. The primary file must be at least %d MB to accommodate a copy of the model database.	|
+|	[1803](mssqlserver-1803-database-engine-error.md)	|	17	|	No	|	The CREATE DATABASE statement failed. The primary file must be at least %d MB to accommodate a copy of the model database.	|
 |	1806	|	16	|	No	|	CREATE DATABASE failed. The default collation of database '%.*ls' cannot be set to '%.*ls'.	|
-|	1807	|	17	|	No	|	Could not obtain exclusive lock on database '%.*ls'. Retry the operation later.	|
+|	[1807](mssqlserver-1807-database-engine-error.md)	|	17	|	No	|	Could not obtain exclusive lock on database '%.*ls'. Retry the operation later.	|
 |	1810	|	16	|	No	|	The model database must be updatable before a new database can be created.	|
 |	1812	|	16	|	No	|	CREATE DATABASE failed. COLLATE clause cannot be used with the FOR ATTACH option.	|
 |	1813	|	16	|	No	|	Could not open new database '%.*ls'. CREATE DATABASE is aborted.	|
@@ -924,7 +925,7 @@ manager: craigg
 |	1849	|	16	|	No	|	CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABSE to add FILESTREAM filegroups and files.	|
 |	1901	|	16	|	No	|	Cannot create index or statistics '%.*ls' on view '%.*ls' because key column '%.*ls' is imprecise, computed and not persisted. Consider removing reference to column in view index or statistics key or changing column to be precise. If column is computed in base table consider marking it PERSISTED there.	|
 |	1902	|	16	|	No	|	Cannot create more than one clustered index on %S_MSG '%.*ls'. Drop the existing clustered index '%.*ls' before creating another.	|
-|	1904	|	16	|	No	|	The %S_MSG '%.*ls' on table '%.*ls' has %d column names in %S_MSG key list. The maximum limit for index or statistics key column list is %d.	|
+|	[1904](mssqlserver-1904-database-engine-error.md)	|	16	|	No	|	The %S_MSG '%.*ls' on table '%.*ls' has %d column names in %S_MSG key list. The maximum limit for index or statistics key column list is %d.	|
 |	1907	|	16	|	No	|	Cannot recreate index '%.*ls'. The new index definition does not match the constraint being enforced by the existing index.	|
 |	1908	|	16	|	No	|	Column '%.*ls' is partitioning column of the index '%.*ls'. Partition columns for a unique index must be a subset of the index key.	|
 |	1909	|	16	|	No	|	Cannot use duplicate column names in %S_MSG. Column name '%.*ls' listed more than once.	|
@@ -1014,7 +1015,7 @@ manager: craigg
 |	2011	|	16	|	No	|	Index hints cannot be specified within a schema-bound object.	|
 |	2013	|	10	|	No	|	Warning: 'is_ms_shipped' property is turned off for %S_MSG '%.*ls' because you do not have permission to create or alter an object with this property.	|
 |	2014	|	16	|	No	|	Remote access is not allowed from within a schema-bound object.	|
-|	2020	|	16	|	No	|	The dependencies reported for entity "%.*ls" do not include references to columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity. Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.	|
+|	[2020](mssqlserver-2020-database-engine-error.md)	|	16	|	No	|	The dependencies reported for entity "%.*ls" do not include references to columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity. Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.	|
 |	2101	|	14	|	No	|	Cannot %S_MSG a server level %S_MSG for user '%.*ls' since there is no login corresponding to the user.	|
 |	2102	|	16	|	No	|	Cannot %S_MSG %S_MSG '%.*ls' since there is no user for login '%.*ls' in database '%.*ls'.	|
 |	2103	|	15	|	No	|	Cannot %S_MSG trigger '%.*s' because its schema is different from the schema of the target table or view.	|
@@ -1196,24 +1197,24 @@ manager: craigg
 |	2397	|	16	|	No	|	%sIdentifiers may not contain more than %u characters	|
 |	2398	|	16	|	No	|	%sDuplicate id value found: '%ls'	|
 |	2399	|	16	|	No	|	%sAn attribute cannot have a value of type '%ls', a simple type was expected	|
-|	2501	|	16	|	No	|	Cannot find a table or object with the name "%.*ls". Check the system catalog.	|
+|	[2501](mssqlserver-2501-database-engine-error.md)	|	16	|	No	|	Cannot find a table or object with the name "%.*ls". Check the system catalog.	|
 |	2502	|	16	|	No	|	Memory object list dump failed due to temporary inconsistency in the memory object structure. Please try again.	|
 |	2503	|	10	|	No	|	Successfully deleted the physical file '%ls'.	|
 |	2504	|	16	|	No	|	Could not delete the physical file '%ls'. The DeleteFile system function returned error %ls.	|
 |	2505	|	16	|	No	|	The device '%.*ls' does not exist. Use sys.backup_devices to show available devices.	|
 |	2506	|	16	|	No	|	Could not find a table or object name '%.*ls' in database '%.*ls'.	|
 |	2507	|	16	|	No	|	The CONCAT_NULL_YIELDS_NULL option must be set to ON to run DBCC CHECKCONSTRAINTS.	|
-|	2508	|	16	|	No	|	The %.*ls count for object "%.*ls", index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) is incorrect. Run DBCC UPDATEUSAGE.	|
+|	[2508](mssqlserver-2508-database-engine-error.md)	|	16	|	No	|	The %.*ls count for object "%.*ls", index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls) is incorrect. Run DBCC UPDATEUSAGE.	|
 |	2509	|	16	|	No	|	DBCC CHECKCONSTRAINTS failed due to an internal query error.	|
 |	2510	|	16	|	No	|	DBCC %ls error: %ls.	|
-|	2511	|	16	|	No	|	Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Keys out of order on page %S_PGID, slots %d and %d.	|
-|	2512	|	16	|	No	|	Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Duplicate keys on page %S_PGID slot %d and page %S_PGID slot %d.	|
+|	[2511](mssqlserver-2511-database-engine-error.md)	|	16	|	No	|	Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Keys out of order on page %S_PGID, slots %d and %d.	|
+|	[2512](mssqlserver-2512-database-engine-error.md)	|	16	|	No	|	Table error: Object ID %d, index ID %d, partition ID %I64d, alloc unit ID %I64d (type %.*ls). Duplicate keys on page %S_PGID slot %d and page %S_PGID slot %d.	|
 |	2514	|	16	|	No	|	A DBCC PAGE error has occurred: %ls.	|
-|	2515	|	16	|	No	|	The page %S_PGID, object ID %d, index ID %d, partition ID %I64d, allocation unit ID %I64d (type %.*ls) has been modified, but is not marked as modified in the differential backup bitmap.	|
-|	2516	|	16	|	Yes	|	Repair has invalidated the differential bitmap for database %.*ls. The differential backup chain is broken. You must perform a full database backup before you can perform a differential backup.	|
+|	[2515](mssqlserver-2515-database-engine-error.md)	|	16	|	No	|	The page %S_PGID, object ID %d, index ID %d, partition ID %I64d, allocation unit ID %I64d (type %.*ls) has been modified, but is not marked as modified in the differential backup bitmap.	|
+|	[2516](mssqlserver-2516-database-engine-error.md)	|	16	|	Yes	|	Repair has invalidated the differential bitmap for database %.*ls. The differential backup chain is broken. You must perform a full database backup before you can perform a differential backup.	|
 |	2517	|	16	|	Yes	|	Bulk-logging has been turned on for database %.*ls. To ensure that all data has been secured, run backup log operations again.	|
-|	2518	|	10	|	No	|	Object ID %ld (object "%.*ls"): Computed columns and CLR types cannot be checked for this object because the common language runtime (CLR) is disabled.	|
-|	2519	|	10	|	No	|	Computed columns and CLR types cannot be checked for object ID %ld (object "%.*ls") because the internal expression evaluator could not be initialized.	|
+|	[2518](mssqlserver-2518-database-engine-error.md)	|	10	|	No	|	Object ID %ld (object "%.*ls"): Computed columns and CLR types cannot be checked for this object because the common language runtime (CLR) is disabled.	|
+|	[2519](mssqlserver-2519-database-engine-error.md)	|	10	|	No	|	Computed columns and CLR types cannot be checked for object ID %ld (object "%.*ls") because the internal expression evaluator could not be initialized.	|
 |	2520	|	16	|	No	|	Could not find database '%.*ls'. The database either does not exist, or was dropped before a statement tried to use it. Verify if the database exists by querying the sys.databases catalog view.	|
 |	2521	|	16	|	No	|	Could not find database ID %d. The database ID either does not exist, or the database was dropped before a statement tried to use it. Verify if the database ID exists by querying the sys.databases catalog view.	|
 |	2522	|	16	|	No	|	Unable to process index %.*ls of table %.*ls because filegroup %.*ls is invalid.	|

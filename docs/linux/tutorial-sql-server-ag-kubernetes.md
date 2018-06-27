@@ -216,78 +216,6 @@ The following sample shows the availability group with replicas on three nodes c
 
 ![AG1 Dashboard](./media/tutorial-sql-server-ag-containers-kubernetes/ssms_AG1.png)
 
-## Create listener services for secondary replicas
-
-To create services for secondary replicas, create a file named `listenerServices.yaml`.
-
-Copy the manifest below into the file. 
-
-```yaml
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: ag1-primary
-spec:
-  ports:
-  - name: tds
-    port: 1433
-  selector:
-    type: sqlservr
-    role.ag.mssql.microsoft.com/ag1: primary
-  type: LoadBalancer
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: ag1-secondary-sync
-spec:
-  ports:
-  - name: tds
-    port: 1433
-  selector:
-    type: sqlservr
-    role.ag.mssql.microsoft.com/ag1: secondary-sync
-  type: LoadBalancer
-
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: ag1-secondary-async
-spec:
-  ports:
-  - name: tds
-    port: 1433
-  selector:
-    type: sqlservr
-    role.ag.mssql.microsoft.com/ag1: secondary-async
-  type: LoadBalancer
-
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: ag1-secondary-config
-spec:
-  ports:
-  - name: tds
-    port: 1433
-  selector:
-    type: sqlservr
-    role.ag.mssql.microsoft.com/ag1: secondary-config
-  type: LoadBalancer
-  ```
-
-To create the Kubernetes services and for the secondary replicas, run the following command.
-
-```azurecli
-kubectl apply -f secondaryListeners.yaml
-```
-
 ## Verify failure and recovery
 
 To verify failure detection and failover you can delete the pod hosting the primary replica. Kubernetes will elect a new primary replica and redirect the listener. Then it will recreate the deleted pod. 
@@ -348,3 +276,4 @@ In this tutorial, you learned how to:
 
 > [!div class="nextstepaction"]
 >[Introduction to Kubernetes](http://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
+>[Create listener services for secondary replicas](sql-server-linux-kubernetes-secondary-replica-listeners.md)

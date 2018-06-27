@@ -94,6 +94,7 @@
 ##### [Configure SQL Server Kubernetes operator](sql-server-linux-kubernetes-operator.md)
 ##### [Failover primary replica with Kubernetes](sql-server-linux-kubernetes-failover-job.md)
 ##### [Rotate credentials specification](sql-server-linux-kubernetes-rotate-credentials.md)
+##### [Create listener services for secondary replicas](sql-server-linux-kubernetes-secondary-replica-listeners.md)
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)

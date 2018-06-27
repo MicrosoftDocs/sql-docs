@@ -16,18 +16,18 @@ manager: cgronlun
 
 **(Not for production workloads)**
 
-In SQL Server vNext CTP 2.0, partition-based modeling is the ability to create and train models over stratified data that naturally segments into a given classification scheme. Classic examples include data that slices by geography, date, time, gender, age, but you could use any arbitrary value if it is useful in your analysis. 
+In SQL Server vNext CTP 2.0, partition-based modeling is the ability to create and train models over stratified data that naturally segments into a given classification scheme. Common examples include partitioning by geographic region, by date and time, by age or gender, and so forth. Given the existence of partitioned data, you can execute script over the entire data set, with the ability to model, train, and score over partitioned data that remains intact over all these operations. 
 
-In this tutorial, learn about partitioned models using the NYC taxi sample data and R script:
+In this tutorial, learn about partitioned models using the classic NYC taxi sample data and R script:
 
 > [!div class="checklist"]
-> * Partition and order data based on a payment_type column, which segments fares by their payment method
-> * Create and train models on each partition using sample data
-> * Predict the probability of a tip outcomes on a per-fare basis using sample data reserved for that purpose
+> * Partition and order data based on a payment_type column, which segments fare data into five partitions based on payment method
+> * Create and train models on each partition and store the objects in the database
+> * Predict the probability of tip outcomes over each partition, using sample data reserved for that purpose
 
 Partition-based modeling is enabled through [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Using this system stored procedure and a few new parameters, you can partition and order data programmatically in R, without having to create and manage "micro" models manually. Once partitioned data sets are established, you can call familiar R functions to create and train models used for future predictions.
 
-New parameters on `sp_execute_external_script` that enable partition-based models include the following:
+New parameters on `sp_execute_external_script` that enable partition-based models include:
 
 | Parameter | Usage |
 |-----------|-------|
@@ -36,7 +36,7 @@ New parameters on `sp_execute_external_script` that enable partition-based model
 
 ## Prerequisites
  
-To complete this tutorial, you must have SQL Server, sample data, and a tool for T-SQL query execution such as SQL Server Management Studio. Make sure you have enough memory. If memory is insufficient, you can stream the data using the rowsPerRead parameter.
+To complete this tutorial, you must have SQL Server, sample data, and a tool for T-SQL query execution such as SQL Server Management Studio. Make sure you have enough memory. If memory is insufficient, you can stream the data using the rowsPerRead parameter on an rx data source.
 
 ### Tools for query execution
 

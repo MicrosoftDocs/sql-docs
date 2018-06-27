@@ -62,7 +62,10 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
      To continue, click **Next**.  
 
-4.  On the License Terms page, review the license agreement and, if you agree, select the **I accept the license terms** check box, and then click **Next**. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  On the License Terms page, review the license agreement and, if you agree, select the **I accept the license terms** check box, and then click **Next**.  
+
+  >[!NOTE]
+  > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [Privacy statement](https://privacy.microsoft.com/en-us/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  In the Global Rules window, the setup procedure will automatically advance to the Product Updates window if there are no rule errors.  
   

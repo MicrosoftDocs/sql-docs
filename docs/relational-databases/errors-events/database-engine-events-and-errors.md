@@ -17,12 +17,11 @@ manager: craigg
 
 # Datbase Engine Errors
 
-## Errors
+## Errors -2 to 999
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
-|	Error	|	Severity	|	Event logged	|	Description (message text)	|
-|	-1	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server 2005, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: SQL Network Interfaces, error: 28 - Server doesn't support requested protocol) (Microsoft SQL Server, Error: -1).	|
 |	-2	|		|		|	Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. (Microsoft SQL Server, Error: -2).	|
+|	-1	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server 2005, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: SQL Network Interfaces, error: 28 - Server doesn't support requested protocol) (Microsoft SQL Server, Error: -1).	|
 |	2	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider)	|
 |	21	|	20	|	No	|	Warning: Fatal error %d occurred at %S_DATE. Note the error and time, and contact your system administrator.	|
 |	53	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider).	|
@@ -499,7 +498,7 @@ manager: craigg
 |	830	|	10	|	No	|	stale page (a page read returned a log sequence number (LSN) (%u:%u:%u) that is older than the last one that was written (%u:%u:%u))	|
 |	831	|	20	|	No	|	Unable to deallocate a kept page.	|
 |	832	|	24	|	Yes	|	A page that should have been constant has changed (expected checksum: %08x, actual checksum: %08x, database %d, file '%ls', page %S_PGID). This usually indicates a memory failure or other hardware or OS corruption.	|
-|	833	|	10	|	No	|	SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d). The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x	|
+|	833	|	10	|	No	|	SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file '%ls' in database '%ls' (%d). The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x	|
 |	844	|	10	|	No	|	Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait.	|
 |	845	|	17	|	No	|	Time-out occurred while waiting for buffer latch type %d for page %S_PGID, database ID %d.	|
 |	846	|	10	|	No	|	A time-out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit Id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Not continuing to wait.	|
@@ -571,6 +570,11 @@ manager: craigg
 |	971	|	10	|	No	|	The resource database has been detected in two different locations. Attaching the resource database in the same directory as sqlservr.exe at '%.*ls' instead of the currently attached resource database at '%.*ls'.	|
 |	972	|	17	|	No	|	Could not use database '%d' during procedure execution.	|
 |	973	|	10	|	Yes	|	Database %ls was started . However, FILESTREAM is not compatible with the READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION options. Either remove the FILESTREAM files and the FILESTREAM filegroups, or set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 1000 to 1999
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	1001	|	16	|	No	|	Line %d: Length or precision specification %d is invalid.	|
 |	1002	|	16	|	No	|	Line %d: Specified scale %d is invalid.	|
 |	1003	|	15	|	No	|	Line %d: %ls clause allowed only for %ls.	|
@@ -996,6 +1000,11 @@ manager: craigg
 |	1997	|	16	|	No	|	Could not convert the XML or spatial index '%.*ls' to a relational index by using the DROP_EXISTING option. Drop the XML or spatial index and create a relational index with the same name.	|
 |	1998	|	10	|	No	|	Warning: Clustered index '%.*ls' on view '%.*ls' referencing table '%.*ls' was disabled as a result of disabling the index '%.*ls'.	|
 |	1999	|	16	|	No	|	Column '%.*ls' in table '%.*ls' is of a type that is invalid for use as included column in an index.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 2000 to 2999
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	2002	|	16	|	No	|	Cannot create a procedure for replication with group number greater than one.	|
 |	2003	|	16	|	No	|	Procedures with a group number cannot have parameters of XML or CLR types. Parameter '%.*ls' of procedure '%.*ls' has type '%ls'.	|
 |	2004	|	16	|	No	|	Procedure '%.*ls' has already been created with group number %d. Create procedure with an unused group number.	|
@@ -1361,6 +1370,11 @@ manager: craigg
 |	2812	|	16	|	No	|	Could not find stored procedure '%.*ls'.	|
 |	2813	|	16	|	No	|	%.*ls is not supported on this edition of SQL Server.	|
 |	2814	|	10	|	No	|	A possible infinite recompile was detected for SQLHANDLE %hs, PlanHandle %hs, starting offset %d, ending offset %d. The last recompile reason was %d.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 3000 - 3999
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	3002	|	16	|	No	|	Cannot BACKUP or RESTORE a database snapshot.	|
 |	3003	|	10	|	No	|	This BACKUP WITH DIFFERENTIAL will be based on more than one file backup. All those file backups must be restored before attempting to restore this differential backup.	|
 |	3004	|	16	|	No	|	The primary filegroup cannot be backed up as a file backup because the database is using the SIMPLE recovery model. Consider taking a partial backup by specifying READ_WRITE_FILEGROUPS.	|
@@ -1796,6 +1810,11 @@ manager: craigg
 |	3997	|	16	|	No	|	A transaction that was started in a MARS batch is still active at the end of the batch. The transaction is rolled back.	|
 |	3998	|	16	|	No	|	Uncommittable transaction is detected at the end of the batch. The transaction is rolled back.	|
 |	3999	|	17	|	Yes	|	Failed to flush the commit table to disk in dbid %d due to error %d. Check the errorlog for more information.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 4000 to 4999
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	4001	|	10	|	No	|	Client sends a sp_reset_connection while there is still pending requests, server is disconnecting.	|
 |	4002	|	16	|	No	|	The incoming tabular data stream (TDS) protocol stream is incorrect. The stream ended unexpectedly.	|
 |	4004	|	16	|	No	|	Unicode data in a Unicode-only collation or ntext data cannot be sent to clients using DB-Library (such as ISQL) or ODBC version 3.7 or earlier.	|
@@ -2253,6 +2272,12 @@ manager: craigg
 |	4997	|	16	|	No	|	Cannot enable change tracking on table '%.*ls'. Change tracking requires a primary key on the table. Create a primary key on the table before enabling change tracking.	|
 |	4998	|	16	|	No	|	Change tracking is not enabled on table '%.*ls'.	|
 |	4999	|	16	|	No	|	Cannot enable change tracking on table '%.*ls'. Change tracking does not support a primary key of type timestamp on a table.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 5000 to 5999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	5001	|	16	|	No	|	User must be in the master database.	|
 |	5002	|	16	|	No	|	Database '%.*ls' does not exist. Verify the name in sys.databases and try the operation again.	|
 |	5003	|	16	|	No	|	Database mirroring cannot be enabled while the database has offline files.	|
@@ -2623,6 +2648,12 @@ manager: craigg
 |	5852	|	10	|	No	|	The AccessCheckResult bucket count must be less than %d.	|
 |	5854	|	10	|	No	|	The AccessCheckResult bucket count must be less than %d.	|
 |	5904	|	17	|	Yes	|	Unable to issue checkpoint: there are not enough locks available. Background checkpoint process will remain suspended until locks are available. To free up locks, list transactions and their locks, and terminate transactions with the highest number of locks.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+# Errors 6000 to 6999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	6001	|	10	|	No	|	SHUTDOWN is waiting for %d process(es) to complete.	|
 |	6004	|	10	|	No	|	User does not have permission to perform this action.	|
 |	6005	|	10	|	No	|	SHUTDOWN is in progress.	|
@@ -3113,6 +3144,11 @@ manager: craigg
 |	6997	|	16	|	No	|	Invalid definition for element '%s'. An element which has a fixed value may not also be nillable.	|
 |	6998	|	16	|	No	|	Invalid type definition: Type or content model '%s' is too complicated. It may be necessary to reduce the number of enumerations or the size of the content model.	|
 |	6999	|	16	|	No	|	Invalid definition for element or attribute '%s'. Value constraints on components of type QName are not supported in this release.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 7000 to 7999
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	7000	|	16	|	No	|	OPENXML document handle parameter must be of data type int.	|
 |	7001	|	16	|	No	|	OPENXML flags parameter must be of data type int.	|
 |	7002	|	16	|	No	|	OPENXML XPath must be of a string data type, such as nvarchar.	|

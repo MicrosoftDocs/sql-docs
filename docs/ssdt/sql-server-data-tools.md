@@ -42,8 +42,5 @@ The following topics and sections discuss how SSDT can help you do database deve
 |[DAC Framework Compatibility](../ssdt/dac-framework-compatibility.md)|Describes compatibility issues with DAC framework.|  
 |[API Reference](http://msdn.microsoft.com/library/jj863457(VS.103).aspx)|Topics in this section describe classes, interfaces, and value types that SQL Server Data Tools exposes.|  
   
-## For More Information  
-You can visit the [SSDT Developer Center](http://msdn.microsoft.com/en-us/data/tools.aspx) and [team blog](http://blogs.msdn.com/b/ssdt/) on MSDN for the latest SQL Server Data Tools news and updates.  
-  
-The [SSDT Forum](http://social.msdn.microsoft.com/Forums/en-us/ssdt/threads) is a great place for you to ask questions and get feedback from SQL Server professionals.  
+
   

@@ -29,7 +29,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 ## CTP 2.0 (July 2018)
 
-[!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of (../includes/sssqlv15-md.md)].
+[!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)].
 
 ### SQL Graph
 

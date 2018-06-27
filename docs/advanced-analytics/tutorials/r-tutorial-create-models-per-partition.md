@@ -16,23 +16,23 @@ manager: cgronlun
 
 **(Not for production workloads)**
 
-Partition-based modeling is the ability to create and train models over stratified data that naturally segments into a given classification scheme. Classic examples include data that slices by geography, date, time, gender, age, but you could use any arbitrary value if it is useful in your analysis. 
+In SQL Server vNext CTP 2.0, partition-based modeling is the ability to create and train models over stratified data that naturally segments into a given classification scheme. Classic examples include data that slices by geography, date, time, gender, age, but you could use any arbitrary value if it is useful in your analysis. 
 
-In this tutorial, learn the following tasks using sample data and R script:
+In this tutorial, learn about partitioned models using the NYC taxi sample data and R script:
 
 > [!div class="checklist"]
-> * Partition and order data based on a column
-> * Create and train models on each partition using sample data. The model calculates the probability of getting a tip.
-> * Predict the probability of a tip using sample data reserved for that purpose
+> * Partition and order data based on a payment_type column, which segments fares by their payment method
+> * Create and train models on each partition using sample data
+> * Predict the probability of a tip outcomes on a per-fare basis using sample data reserved for that purpose
 
-Partition-based modeling is enabled through [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Using `sp_execute_external_script` and a few new parameters, you can partition and order data programmatically in R, without having to manually create and manage "micro" data and models on an individual basis. Once partitioned data sets are established, you can call familiar R functions to create and train models used for future predictions.
+Partition-based modeling is enabled through [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Using this system stored procedure and a few new parameters, you can partition and order data programmatically in R, without having to create and manage "micro" models manually. Once partitioned data sets are established, you can call familiar R functions to create and train models used for future predictions.
 
-New parameters on `sp_execute_external_script` for partition-based models include the following:
+New parameters on `sp_execute_external_script` that enable partition-based models include the following:
 
 | Parameter | Usage |
 |-----------|-------|
 | **input_data_1_partition_by_columns** | Specifies which columns to partition by. |
-| **input_data_1_order_by_columns** | Specifes which columns to order by.  |
+| **input_data_1_order_by_columns** | Specifies which columns to order by.  |
 
 ## Prerequisites
  
@@ -87,17 +87,14 @@ You can run this operation in parallel by combining `partition_by` with `@parall
 > [!Tip]
 > For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions not specifically engineered with that capability.
 
- 
-```sql
-USE [nyctaxiDB]
-GO
-```
-
 Create a stored procedure that trains models on each partition of the data, using parallelism for faster time to completion.
 You can also use non-Rx functions to train per partition.
 
 
 ```sql
+USE [nyctaxiDB]
+GO
+
 CREATE OR ALTER procedure [dbo].[train_rxLogIt_per_partition] (
 	@input_query nvarchar(max)
 )
@@ -112,13 +109,12 @@ begin
 		@language = N'R'
 		, @script = N'
 	
-	# We need to make sure that the InputDataSet is not empty. 
-	# When executing in parallel mode, it could be that one thread is getting zero data, which will give an error
+	# Make sure InputDataSet is not empty. In parallel mode, if one thread gets zero data, an error occurs
 	if (nrow(InputDataSet) > 0) {
 	# Define the connection string
 	connStr <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", database_name, ";Trusted_Connection=true;", sep="");
 	
-	# build classification model to predict tipped or not
+	# build classification model to predict a tip outcome
 	duration <- system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet))[3];
 
 	# First, serialize a model and put it into a database table
@@ -187,14 +183,12 @@ select * from ml_models.
 
 You can use the same parameters for scoring. The following sample contains an R script that will score using the correct model for the partition it is currently processing.
 
-```sql
-USE [nyctaxiDB]
-GO
-```
-
 As before, create a stored procedure to wrap your R code.
 
 ```sql
+USE [nyctaxiDB]
+GO
+
 -- Stored procedure that scores per partition. 
 -- Depending on the partition being processed, a model specific to that partition will be used
 CREATE OR ALTER procedure [dbo].[predict_per_partition] 
@@ -298,7 +292,7 @@ select * from prediction_results;
 
 ## Next steps
 
-To apply [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) amd this technique to your own data, review the guidance on how to structure partitioned data sets, call external scripts in stored procedures, and use the RevoScaleR or revoscalepy `rx` functions.
+To apply [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) and this technique to your own data, review the guidance on how to structure partitioned data sets, call external scripts in stored procedures, and use the RevoScaleR or revoscalepy `rx` functions.
 
 ## Old intro
 
@@ -309,7 +303,7 @@ One of the more common approaches for executing R or Python code on SQL data is 
 | Parameter | Usage |
 |-----------|-------|
 | **input_data_1_partition_by_columns** | Specifies which columns to partition by. |
-| **input_data_1_order_by_columns** | Specifes which columns to order by.  |
+| **input_data_1_order_by_columns** | Specifies which columns to order by.  |
 
 Partitions are an organizational mechanism for stratified data that naturally segments into a given classification scheme. Common examples include partitioning by geographic region, by date and time, by age or gender, and so forth. Given the existence of partitioned data, you might want to execute script over the entire data set, with the ability to model, train, and score partitions that remain intact over all these operations. Calling `sp_execute_external_script` with the new parameters allows you to do just that.
 

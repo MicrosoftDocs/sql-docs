@@ -103,6 +103,17 @@ You can control the resources used by external scripts by configuring an externa
 
 Monitor script execution using [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
+## SQL Server vNext partition modeling
+
+In SQL Server vNext, currently in public preview, you can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide. You can then order the result set based on another parameter available for that purpose. The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**.
+
+The parameters are passed as inputs to `sp_execute_external_script` to process partitions with the external script executing once for every partition. 
+
+You can execute script in parallel by specifying `@parallel=1`. If the input query can be parallelized, you should set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows, but if you want to handle this explicitly, this script includes the parameter as a demonstration.
+
+> [!Tip]
+> For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameters in SQL Server vNext, you can parallelize a script that calls functions not specifically engineered with that capability.
+
 ## Streaming execution for R and Python scripts  
 
 Streaming allows the R or Python script to work with more data than can fit in memory. To control the number of rows passed during streaming, specify an integer value for the parameter, `@r_rowsPerRead` in the `@params` collection.  For example, if you are training a model that uses very wide data, you could adjust the value to read fewer rows, to ensure that all rows can be sent in one chunk of data. You might also use this parameter to manage the number of rows being read and processed at one time, to mitigate server performance issues. 
@@ -110,7 +121,7 @@ Streaming allows the R or Python script to work with more data than can fit in m
 Both the `@r_rowsPerRead` parameter for streaming and the `@parallel` argument should be considered hints. For the hint to be applied, it must be possible to generate a SQL query plan that includes parallel processing. If this is not possible, parallel processing cannot be enabled.  
   
 > [!NOTE]  
->  Streaming and parallel processing are supported only in Enterprise Edition. You can include the parameters in your queries in Standard Edition without raising an error, but the parameters have no effect and R scripts run in a single process.  
+>  Streaming and parallel processing are supported only in Enterprise Edition. You can include the parameters in your queries in Standard Edition without raising an error, but the parameters have no effect and R scripts run in a single process.
   
 ## Restrictions  
 

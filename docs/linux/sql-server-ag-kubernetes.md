@@ -103,8 +103,6 @@ The code for the operator, AG agent, and SQL Server is packaged in a Docker imag
 
 ### Notes
 
-To deploy an AG in Kubernetes, define a SqlServer resource with the names of one or more AGs that the instance should be a part of.
-
-Regardless of the AG configuration, The operator will always deploy the AG monitor. If the SqlServer resource does not list any AG, the operator will still deploy these containers.
+Regardless of the AG configuration, The operator will always deploy the AG monitor. If the SqlServer resource does not list any AG, the operator will still deploy this container.
 
 The version for the operator image is identical to the version for the SQL Server image. 

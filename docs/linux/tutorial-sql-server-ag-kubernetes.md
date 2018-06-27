@@ -16,12 +16,13 @@ ms.technology: linux
 
 In this tutorial, you learn how to:  
 
-> [!div class="checklist"] 
-> * Configure storage
+> [!div class="checklist"]
+> * Create storage
 > * Deploy the SQL Server operator to a Kubernetes cluster 
+> * Create Kubernetes secrets
 > * Deploy SQL Server instances and health agents
-> * Configure the availability group
 > * Connect to the primary replica
+> * Add a database to the availability group
 
 This tutorial demonstrates the architecture in [Azure Kubernetes Service (AKS)](http://docs.microsoft.com/azure/aks/). If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
@@ -113,9 +114,9 @@ In a production environment use a different, complex password.
 
 ## Create the SQL Server AG Deployment
 
-The next step creates the SQL Server instances and the availability group in one Kubernetes deployment. After you apply this deployment to the cluster, the operator will deploy the SQL Server instances as Docker containers. This deployment will result in three StatefulSets with one pod each. Every pod will include two containers.
+The next step creates the SQL Server instances and the availability group in one Kubernetes deployment. After you apply this deployment to the cluster, the operator will deploy the SQL Server instances as Docker containers. This deployment will result in three StatefulSets with one pod each. Every pod will include two containers:
 
-* SQL Server instance in a container based on the `mssql-server` image
+* SQL Server instance based on the `mssql-server` image
 * AG agent
 
 In addition, the deployment describes a load balancer service for the availabiltiy group listener
@@ -144,15 +145,17 @@ After deployment, only AG membership list and post-init T-SQL script can be upda
 
 ## Connect to the SQL Server instance hosting the primary replica
 
-The configuration file also deploys an `ag1-primary` service that provides a selector that points to the SQL Server instance hosting the primary replica. Use the external IP address of the service as target server, `sa` account and the password you created earlier in the `mssql secret`. Use the password that you configured as the Kubernetes secret.
+The `sqlservers.yaml` describes a Kubernetes service name `ag1-primary`. `ag1-primary` creates an Azure load balancer that point the SQL Server instance hosting the primary replica. Use the external IP address of the service as target server, `sa` account and the password you created earlier in the `mssql secret`.
 
-The `sqlservers.yaml` manifest file defines a load balancer service named `ag1-primary` that connects to the availability group primary replica. Use `kubectl get services` to get this IP address.
+Use `kubectl get services` to get this IP address.
 
 For example:
 
 ![Get service example](media\tutorial-sql-server-ag-containers-kubernetes\KubernetesGetServices.png)
 
-In the image above, `ag1-primary` service has an external IP address of `104.42-50.138`. To connect to SQL Server with SQL authentication, use the `sa` account, the value for `sapassword` from the secret you created, and this IP address.
+In the image above, `ag1-primary` service has an external IP address of `104.42-50.138`. 
+
+To connect to SQL Server with SQL authentication, use the `sa` account, the value for `sapassword` from the secret you created, and this IP address.
 
 For example:
 
@@ -160,7 +163,58 @@ For example:
 sqlcmd -S 104.42.50.138 -U sa -P "MyC0m9l&xP@ssw0rd"
 ```
 
-![Connect with sqlcmd](media\tutorial-sql-server-ag-containers-kubernetes\sqlcmdConnect.png)
+![Connect with sqlcmd](./media/tutorial-sql-server-ag-containers-kubernetes/sqlcmdConnect.png)
+
+You can also connect with [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
+
+To verify your connection to the SQL Server instance hosting the primary replica run the following query:
+
+```sql
+SELECT @@SERVERNAME;
+```
+
+The query returns the name of the SQL Server instance that hosts the primary replica.
+
+At this point, the Kubernetes cluster has three instances of SQL Server in docker containers. An availability group spans all three instances of SQL Server, but no database is in the availability group. The next step is to add an a database to availability group.
+
+## Add a database to the availability group
+
+To add a database to the availability group:
+
+1. Create a database
+
+  ```sql
+  CREATE DATABASE [DemoDB]
+  ```
+
+1. Take a full backup of the database to start the transaction log chain
+
+  ```sql
+  BACKUP DATABASE [DemoDB] 
+  TO  DISK = N'/var/opt/mssql/data/DemoDB.bak' 
+    WITH NOFORMAT, 
+    NOINIT,  
+    NAME = N'DemoDB-Full Database Backup', 
+    SKIP, 
+    NOREWIND, 
+    NOUNLOAD,  
+    STATS = 10;
+  GO
+  ```
+
+1. Add the database to the availability group
+
+  ```sql
+  ALTER AVAILABILITY GROUP ag1 ADD DATABASE [DemoDB]; 
+  ```
+
+The replica is automatically configured with automatic seeding mode so the availability group seeds the database onto the secondary replicas.
+
+In SQL Server Management Studios, you can connect to the primary replica and see the availability group in the dashboard.
+
+The following sample shows the availability group with replicas on three nodes configured in the dashboard.
+
+![AG1 Dashboard](./media/tutorial-sql-server-ag-containers-kubernetes/ssms_AG1.png)
 
 ## Create listener services for secondary replicas
 
@@ -236,7 +290,9 @@ kubectl apply -f secondaryListeners.yaml
 
 ## Verify failure and recovery
 
-To verify failure detection and failover you can delete the pod hosting the primary replica. Do the following steps:
+To verify failure detection and failover you can delete the pod hosting the primary replica. Kubernetes will elect a new primary replica and redirect the listener. Then it will recreate the deleted pod. 
+
+To demonstrate this process, do the following steps:
 
 1. List the pod running SQL Server.
 
@@ -262,11 +318,34 @@ Replace `<podName>` with the value returned from the previous step for pod name.
 
 Kubernetes automatically fails over to one of the available sync secondary replicas as well as recreates the deleted pod.
 
+## Clean up resources
+
+When no longer needed, delete the reosurce group and all related resources. Run the following command:
+>[!WARNING]
+>This command completely deletes everythin in the resource group. None of the components of the Kubernetes cluster will be available after you delete the resource group.
+
+```azurecli
+az group delete --name <MyResourceGroup>
+```
+
+To run the command above, replace `<MyResourceGroup>` with the name of your resource group. 
+
+
+Azure deletes the resource group.
+
 ## Summary
+
+In this tutorial, you learned how to:  
+
+> [!div class="checklist"]
+> * Create storage
+> * Deploy the SQL Server operator to a Kubernetes cluster 
+> * Create Kubernetes secrets
+> * Deploy SQL Server instances and health agents
+> * Connect to the primary replica
+> * Add a database to the availability group
 
 ## Next steps
 
 > [!div class="nextstepaction"]
 >[Introduction to Kubernetes](http://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
-
-

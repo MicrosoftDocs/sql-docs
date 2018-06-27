@@ -4807,12 +4807,12 @@ manager: craigg
 |	[10737](mssqlserver-10737-database-engine-error.md)	|	15	|	No	|	A full-text stoplist statement must be terminated by a semi-colon (;).	|
 |	10738	|	15	|	No	|	In an ALTER TABLE REBUILD or ALTER INDEX REBUILD statement, when a partition is specified in a DATA_COMPRESSION clause, PARTITION=ALL must be specified. The PARTITION=ALL clause is used to reinforce that all partitions of the table or index will be rebuilt, even if only a subset is specified in the DATA_COMPRESSION clause.	|
 |	[10770](mssqlserver-10770-database-engine-error.md)	|	15	|	No	|	The number of row value expressions in the INSERT statement exceeds the maximum allowed number of %d row values.	|
-|	[10771](mssqlserver-10771-database-engine-error.md)	|	15	|	No	|	The *construct* '*feature*' is not yet implemented with memory optimized tables.	|
-|	[10772](mssqlserver-10772-database-engine-error.md)	|	15	|	No	|	The *construct* '*feature*' is not supported with natively compiled stored procedures.	|
-|	[10773](mssqlserver-10773-database-engine-error.md)	|	15	|	No	|	The *construct* '*feature*' is not yet implemented with natively compiled stored procedures.	|
-|	[10785](mssqlserver-10785-database-engine-error.md)	|	15	|	No	|	The *construct* '*feature*' is not supported with an active transaction that accesses memory optimized tables or natively compiled stored procedures.	|
-|	[10787](mssqlserver-10787-database-engine-error.md)	|	15	|	No	|	The *construct* '*feature*' is not supported with a hash index.	|
-|	[10794](mssqlserver-10794-database-engine-error.md)	|	15	|	No	|	The *construct* '*feature*' is not supported with *construct*.	|
+|	[10771](mssqlserver-10771-database-engine-error.md)	|		|		|	The *construct* '*feature*' is not yet implemented with memory optimized tables.	|
+|	[10772](mssqlserver-10772-database-engine-error.md)	|		|		|	The *construct* '*feature*' is not supported with natively compiled stored procedures.	|
+|	[10773](mssqlserver-10773-database-engine-error.md)	|		|		|	The *construct* '*feature*' is not yet implemented with natively compiled stored procedures.	|
+|	[10785](mssqlserver-10785-database-engine-error.md)	|		|		|	The *construct* '*feature*' is not supported with an active transaction that accesses memory optimized tables or natively compiled stored procedures.	|
+|	[10787](mssqlserver-10787-database-engine-error.md)	|		|		|	The *construct* '*feature*' is not supported with a hash index.	|
+|	[10794](mssqlserver-10794-database-engine-error.md)	|		|		|	The *construct* '*feature*' is not supported with *construct*.	|
 |	10900	|	16	|	No	|	The insert column list used in the MERGE statement cannot contain multi-part identifiers. Use single part identifiers instead.	|
 |	10901	|	16	|	No	|	Failed to configure resource governor during startup. Check SQL Server error log for specific error messages or check the consistency of master database by running DBCC CHECKCATALOG('master').	|
 |	10902	|	16	|	No	|	User does not have permission to alter the resource governor configuration.	|
@@ -5035,16 +5035,16 @@ manager: craigg
 |	12025	|	10	|	No	|	Could not find required binary spatial method in a condition	|
 |	12026	|	10	|	No	|	Could not find required comparison predicate	|
 |	12100	|	16	|	No	|	ALTER DATABASE failed because FILESTREAM filegroups cannot be added to a database that has either the READ_COMMITTED_SNAPSHOT or the ALLOW_SNAPSHOT_ISOLATION option set to ON. To add FILESTREAM filegroups, you must set READ_COMMITTED_SNAPSHOT and ALLOW_SNAPSHOT_ISOLATION to OFF.	|
-|	[12300](mssqlserver-12300-database-engine-error.md)	|	10	|	No	|	Computed columns are not supported with '*construct*'.	|
-|	[12301](mssqlserver-12301-database-engine-error.md)	|	10	|	No	|	Nullable columns in the index key are not supported with '*construct*'.	|
-|	[12302](mssqlserver-12302-database-engine-error.md)	|	10	|	No	|	Updating columns that are part of the PRIMARY KEY constraint is not supported with '*construct*'.	|
-|	[12303](mssqlserver-12303-database-engine-error.md)	|	10	|	No	|	The 'number' clause is not supported with '*construct*'.	|
-|	[12304](mssqlserver-12304-database-engine-error.md)	|	10	|	No	|	Using a memory optimized table type that uses the IDENTITY property with any of its columns is not supported when using the type outside the context of a natively compiled stored procedure.	|
-|	[12305](mssqlserver-12305-database-engine-error.md)	|	10	|	No	|	Inline table variables are not supported with '*construct*'.	|
-|	[12306](mssqlserver-12306-database-engine-error.md)	|	10	|	No	|	Cursors are not supported with '*construct*'.	|
-|	[12307](mssqlserver-12307-database-engine-error.md)	|	10	|	No	|	Default values for parameters in '*construct*' must be constants.	|
-|	[12308](mssqlserver-12308-database-engine-error.md)	|	10	|	No	|	Table-valued functions are not supported with '*construct*'.	|
-|	[12329](mssqlserver-12329-database-engine-error.md)	|	10	|	No	|	The data types char(n) and varchar(n) using a collation that has a code page other than 1252 are not supported with  *construct*.	|
+|	[12300](mssqlserver-12300-database-engine-error.md)	|		|		|	Computed columns are not supported with '*construct*'.	|
+|	[12301](mssqlserver-12301-database-engine-error.md)	|		|		|	Nullable columns in the index key are not supported with '*construct*'.	|
+|	[12302](mssqlserver-12302-database-engine-error.md)	|		|		|	Updating columns that are part of the PRIMARY KEY constraint is not supported with '*construct*'.	|
+|	[12303](mssqlserver-12303-database-engine-error.md)	|		|		|	The 'number' clause is not supported with '*construct*'.	|
+|	[12304](mssqlserver-12304-database-engine-error.md)	|		|		|	Using a memory optimized table type that uses the IDENTITY property with any of its columns is not supported when using the type outside the context of a natively compiled stored procedure.	|
+|	[12305](mssqlserver-12305-database-engine-error.md)	|		|		|	Inline table variables are not supported with '*construct*'.	|
+|	[12306](mssqlserver-12306-database-engine-error.md)	|		|		|	Cursors are not supported with '*construct*'.	|
+|	[12307](mssqlserver-12307-database-engine-error.md)	|		|		|	Default values for parameters in '*construct*' must be constants.	|
+|	[12308](mssqlserver-12308-database-engine-error.md)	|		|		|	Table-valued functions are not supported with '*construct*'.	|
+|	[12329](mssqlserver-12329-database-engine-error.md)	|		|		|	The data types char(n) and varchar(n) using a collation that has a code page other than 1252 are not supported with  *construct*.	|
 |	12980	|	16	|	No	|	Supply either %s or %s to identify the log entries.	|
 |	12981	|	16	|	No	|	You must specify %s when creating a subplan.	|
 |	12982	|	16	|	No	|	Supply either %s or %s to identify the plan or sub-plan to be run.	|
@@ -6481,8 +6481,8 @@ manager: craigg
 |	17068	|	10	|	No	|	PrintStack Request	|
 |	17069	|	10	|	Yes	|	%s	|
 |	17070	|	16	|	Yes	|	Clustered instances are not supported on this edition of SQL Server.	|
-|	[17083](mssqlserver-17083-database-engine-error.md)	|	16	|	Yes	|	The body of a natively compiled stored procedure must be an ATOMIC block.	|
-|	[17084](mssqlserver-17084-database-engine-error.md)|	16	|	Yes	|	The WITH clause of BEGIN ATOMIC statement must specify a value for the option '%ls'.	|
+|	[17083](mssqlserver-17083-database-engine-error.md)	|		|		|	The body of a natively compiled stored procedure must be an ATOMIC block.	|
+|	[17084](mssqlserver-17084-database-engine-error.md)|		|		|	The WITH clause of BEGIN ATOMIC statement must specify a value for the option '%ls'.	|
 |	17101	|	10	|	Yes	|	(c) 2005 Microsoft Corporation.	|
 |	17102	|	16	|	Yes	|	Failed to initialize Distributed COM (CoInitializeEx returned %lx). Heterogeneous queries and remote procedure calls are disabled. Check the DCOM configuration using Component Services in Control Panel.	|
 |	17103	|	10	|	Yes	|	All rights reserved.	|
@@ -8054,13 +8054,13 @@ manager: craigg
 |	21867	|	16	|	No	|	ALTER TABLE SWITCH statement failed. The table '%s' belongs to a publication which does not allow switching of partitions	|
 |	21868	|	16	|	No	|	ALTER TABLE SWITCH statement failed. The statement is not allowed because one or more of the tables in this statement is an article with a different destination table or owner.	|
 |	21869	|	16	|	No	|	Cannot add filter between proposed parent article '%s' and proposed child article '%s' since this would introduce a cycle in the filter relationships. The proposed parent is already being filtered by the child.	|
-|	[21871](mssqlserver-21871-database-engine-error.md)	|	16	|	No	|	Publisher %s of database %s has not been redirected.	|
+|	[21871](mssqlserver-21871-database-engine-error.md)	|		|		|	Publisher %s of database %s has not been redirected.	|
 |	21879	|	16	|	No	|	Unable to query the redirected server '%s' for original publisher '%s' and publisher database '%s' to determine the name of the remote server; Error %d, Error message '%s'.	|
-|	[21889](mssqlserver-21889-database-engine-error.md)	|	16	|	No	|	The SQL Server instance '%s' is not a replication publisher. Run **sp_adddistributor** on SQL Server instance '%s' with distributor '%s' in order to enable the instance to host the publishing database '%s'. Make certain to specify the same login and password as that used for the original publisher.	|
-|	[21892](mssqlserver-21892-database-engine-error.md)	|	16	|	No	|	Unable to query sys.availability_replicas at the availability group primary associated with virtual network name '%s' for the server names of the member replicas: error = %d, error message = %s.'	|
-|	[21893](mssqlserver-21893-database-engine-error.md)	|	16	|	No	|	The subscribers ( %s ) of original publisher '%s' do not appear as remote servers at redirected publisher '%s'. Run **sp_addlinkedserver** at the redirected publisher to add these subscribers as remote servers.	|
-|	[21898](mssqlserver-21898-database-engine-error.md)	|	16	|	No	|	The publisher '%s' uses distribution database '%s' and not '%s' which is required in order to host the publishing database '%s'. Run **sp_changedistpublisher** at distributor '%s' to change the distribution database used by the publisher to '%s'.	|
-|	[21899](mssqlserver-21899-database-engine-error.md)	|	16	|	No	|	The query at the redirected publisher '%s' to determine whether there were sysserver entries for the subscribers of the original publisher '%s' failed with error '%d', error message '%s'.	|
+|	[21889](mssqlserver-21889-database-engine-error.md)	|		|		|	The SQL Server instance '%s' is not a replication publisher. Run **sp_adddistributor** on SQL Server instance '%s' with distributor '%s' in order to enable the instance to host the publishing database '%s'. Make certain to specify the same login and password as that used for the original publisher.	|
+|	[21892](mssqlserver-21892-database-engine-error.md)	|		|		|	Unable to query sys.availability_replicas at the availability group primary associated with virtual network name '%s' for the server names of the member replicas: error = %d, error message = %s.'	|
+|	[21893](mssqlserver-21893-database-engine-error.md)	|		|		|	The subscribers ( %s ) of original publisher '%s' do not appear as remote servers at redirected publisher '%s'. Run **sp_addlinkedserver** at the redirected publisher to add these subscribers as remote servers.	|
+|	[21898](mssqlserver-21898-database-engine-error.md)	|		|		|	The publisher '%s' uses distribution database '%s' and not '%s' which is required in order to host the publishing database '%s'. Run **sp_changedistpublisher** at distributor '%s' to change the distribution database used by the publisher to '%s'.	|
+|	[21899](mssqlserver-21899-database-engine-error.md)	|		|		|	The query at the redirected publisher '%s' to determine whether there were sysserver entries for the subscribers of the original publisher '%s' failed with error '%d', error message '%s'.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 22,000 to 22,999
@@ -8966,8 +8966,8 @@ manager: craigg
 |	33122	|	16	|	No	|	This command requires a database encryption scan on database '%.*ls'. However, the database has changes from previous encryption scans that are pending log backup. Take a log backup and retry the command.	|
 |	33123	|	16	|	No	|	Cannot drop or alter the database encryption key since it is currently in use on a mirror. Retry the command after all the previous reencryption scans have propagated to the mirror or after mirroring is disabled.	|
 |	33124	|	10	|	No	|	Database encryption scan for database '%.*ls' cannot complete since one or more files are offline. Bring the files online to run the scan to completion.	|
-|	[33128](mssqlserver-33128-database-engine-error.md)	|	16	|	No	|	Encryption failed. Key uses deprecated algorithm '%.*ls' which is no longer supported.	|
-|	[33129](mssqlserver-33129-database-engine-error.md)	|	16	|	No	|	Cannot use ALTER_LOGIN with the DISABLE argument to deny access to a Windows group.	|
+|	[33128](mssqlserver-33128-database-engine-error.md)	|		|		|	Encryption failed. Key uses deprecated algorithm '%.*ls' which is no longer supported.	|
+|	[33129](mssqlserver-33129-database-engine-error.md)	|		|		|	Cannot use ALTER_LOGIN with the DISABLE argument to deny access to a Windows group.	|
 |	33201	|	17	|	No	|	An error occurred in reading from the audit file or file-pattern: '%s'. The SQL service account may not have Read permission on the files, or the pattern may be returning one or more corrupt files.	|
 |	33202	|	17	|	No	|	SQL Server Audit could not write to file '%s'.	|
 |	33203	|	17	|	No	|	SQL Server Audit could not write to the event log.	|
@@ -9040,22 +9040,22 @@ manager: craigg
 |	35010	|	16	|	No	|	An invalid value %d was passed in for parameter @server_type.	|
 |	35011	|	16	|	No	|	The @server_name parameter cannot be a relative name.	|
 |	35012	|	16	|	No	|	You cannot add a shared registered server with the same name as the Configuration Server.	|
-|	[41030](mssqlserver-41030-database-engine-error.md)	|	16	|	No	|	Failed to open the Windows Server Failover Clustering registry subkey '%.*ls' (Error code %d).  The parent key is the cluster root key.  The WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. If the corresponding availability group has been dropped, this error is expected. For information about this error code, see "System Error Codes" in the Windows Development documentation.	|
-|	[41301](mssqlserver-41301-database-engine-error.md)	|	16	|	No	|	A previous transaction that the current transaction took a dependency on has aborted, and the current transaction can no longer commit.|	|
-|	[41302](mssqlserver-41302-database-engine-error.md)	|	16	|	No	|	The current transaction attempted to update a record that has been updated since this transaction started. The transaction was aborted.	|
-|	[41305](mssqlserver-41305-database-engine-error.md)	|	16	|	No	|	The current transaction failed to commit due to a repeatable read validation failure.	|
-|	[41307](mssqlserver-41307-database-engine-error.md)	|	16	|	No	|	The row size limit of *number* bytes for memory optimized tables has been exceeded. Please simplify the table definition.	|
-|	[41325](mssqlserver-41325-database-engine-error.md)	|	16	|	No	|	The current transaction failed to commit due to a serializable validation failure.	|
-|	[41332](mssqlserver-41332-database-engine-error.md)	|	16	|	No	|	Memory optimized tables and natively compiled stored procedures cannot be accessed or created when the session TRANSACTION ISOLATION LEVEL is set to SNAPSHOT.	|
-|	[41333](mssqlserver-41333-database-engine-error.md)	|	16	|	No	|	The following transactions must access memory optimized tables and natively compiled stored procedures under snapshot isolation: RepeatableRead transactions, Serializable transactions, and transactions that access tables that are not memory optimized in RepeatableRead or Serializable isolation.	|
-|	[41342](mssqlserver-41342-database-engine-error.md)	|	16	|	No	|	The model of the processor on the system does not support creating *construct*. This error typically occurs with older processors.|
-|	[41349](mssqlserver-41349-database-engine-error.md)	|	16	|	No	|	Warning: Encryption was enabled for a database that contains one or more memory optimized tables with durability SCHEMA_AND_DATA. The data in these memory optimized tables will not be encrypted.	|
-|	[41350](mssqlserver-41350-database-engine-error.md)	|	16	|	No	|	Warning: A memory optimized table with durability SCHEMA_AND_DATA was created in a database that is enabled for encryption. The data in the memory optimized table will not be encrypted.	|
-|	[41359](mssqlserver-41359-database-engine-error.md)	|	16	|	No	|	A query that accesses memory optimized tables using the READ COMMITTED isolation level, cannot access disk based tables when the database option READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT).	|
-|	[41365](mssqlserver-41365-database-engine-error.md)	|	16	|	No	|	Merge request for transaction range '%ld, %ld' on database %.*ls was not scheduled. The checkpoint files representing the range are either not available for merge or part of an ongoing merge.	|
-|	[41368](mssqlserver-41368-database-engine-error.md)	|	16	|	No	|	Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT).	|
-|	[41396](mssqlserver-41396-database-engine-error.md)	|	16	|	No	|	The sort operation exceeded the buffer limit. The stored procedure execution was aborted. Consult SQL Server Books Online for more information.	|
-|	[41399](mssqlserver-41399-database-engine-error.md)	|	16	|	No	|	The sort operation is too complex. Consult SQL Server Books Online for more information.	|
+|	[41030](mssqlserver-41030-database-engine-error.md)	|		|		|	Failed to open the Windows Server Failover Clustering registry subkey '%.*ls' (Error code %d).  The parent key is the cluster root key.  The WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. If the corresponding availability group has been dropped, this error is expected. For information about this error code, see "System Error Codes" in the Windows Development documentation.	|
+|	[41301](mssqlserver-41301-database-engine-error.md)	|		|		|	A previous transaction that the current transaction took a dependency on has aborted, and the current transaction can no longer commit.|	|
+|	[41302](mssqlserver-41302-database-engine-error.md)	|		|		|	The current transaction attempted to update a record that has been updated since this transaction started. The transaction was aborted.	|
+|	[41305](mssqlserver-41305-database-engine-error.md)	|		|		|	The current transaction failed to commit due to a repeatable read validation failure.	|
+|	[41307](mssqlserver-41307-database-engine-error.md)	|		|		|	The row size limit of *number* bytes for memory optimized tables has been exceeded. Please simplify the table definition.	|
+|	[41325](mssqlserver-41325-database-engine-error.md)	|		|		|	The current transaction failed to commit due to a serializable validation failure.	|
+|	[41332](mssqlserver-41332-database-engine-error.md)	|		|		|	Memory optimized tables and natively compiled stored procedures cannot be accessed or created when the session TRANSACTION ISOLATION LEVEL is set to SNAPSHOT.	|
+|	[41333](mssqlserver-41333-database-engine-error.md)	|		|		|	The following transactions must access memory optimized tables and natively compiled stored procedures under snapshot isolation: RepeatableRead transactions, Serializable transactions, and transactions that access tables that are not memory optimized in RepeatableRead or Serializable isolation.	|
+|	[41342](mssqlserver-41342-database-engine-error.md)	|		|		|	The model of the processor on the system does not support creating *construct*. This error typically occurs with older processors.|
+|	[41349](mssqlserver-41349-database-engine-error.md)	|		|		|	Warning: Encryption was enabled for a database that contains one or more memory optimized tables with durability SCHEMA_AND_DATA. The data in these memory optimized tables will not be encrypted.	|
+|	[41350](mssqlserver-41350-database-engine-error.md)	|		|		|	Warning: A memory optimized table with durability SCHEMA_AND_DATA was created in a database that is enabled for encryption. The data in the memory optimized table will not be encrypted.	|
+|	[41359](mssqlserver-41359-database-engine-error.md)	|		|		|	A query that accesses memory optimized tables using the READ COMMITTED isolation level, cannot access disk based tables when the database option READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT).	|
+|	[41365](mssqlserver-41365-database-engine-error.md)	|		|		|	Merge request for transaction range '%ld, %ld' on database %.*ls was not scheduled. The checkpoint files representing the range are either not available for merge or part of an ongoing merge.	|
+|	[41368](mssqlserver-41368-database-engine-error.md)	|		|		|	Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT).	|
+|	[41396](mssqlserver-41396-database-engine-error.md)	|		|		|	The sort operation exceeded the buffer limit. The stored procedure execution was aborted. Consult SQL Server Books Online for more information.	|
+|	[41399](mssqlserver-41399-database-engine-error.md)	|		|		|	The sort operation is too complex. Consult SQL Server Books Online for more information.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 

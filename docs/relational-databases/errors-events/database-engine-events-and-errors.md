@@ -20,8 +20,8 @@ manager: craigg
 ## Errors -2 to 999
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
-|	-2	|		|		|	Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. (Microsoft SQL Server, Error: -2).	|
-|	-1	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server 2005, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: SQL Network Interfaces, error: 28 - Server doesn't support requested protocol) (Microsoft SQL Server, Error: -1).	|
+|	[-2](mssqlserver-neg2-database-engine-error.md)	|		|		|	Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. (Microsoft SQL Server, Error: -2).	|
+|	[-1](mssqlserver-1-database-engine-error.md)	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server 2005, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: SQL Network Interfaces, error: 28 - Server doesn't support requested protocol) (Microsoft SQL Server, Error: -1).	|
 |	2	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider)	|
 |	21	|	20	|	No	|	Warning: Fatal error %d occurred at %S_DATE. Note the error and time, and contact your system administrator.	|
 |	53	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider).	|
@@ -3587,6 +3587,11 @@ manager: craigg
 |	7997	|	16	|	No	|	'%.*ls' does not contain an identity column.	|
 |	7998	|	16	|	No	|	Checking identity information: current identity value '%.*hs', current column value '%.*hs'.	|
 |	7999	|	16	|	No	|	Could not find any index named '%.*ls' for table '%.*ls'.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 8000 to 8999
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	8001	|	16	|	No	|	The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Meta-information is invalid for the Sql Variant parameter.	|
 |	8002	|	16	|	No	|	The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter %d ("%.*ls"): Data type 0x%02X (XML) has an invalid database or schema specified.	|
 |	8003	|	16	|	No	|	The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Too many parameters were provided in this RPC request. The maximum is %d.	|
@@ -4088,6 +4093,12 @@ manager: craigg
 |	8997	|	16	|	No	|	Service Broker Msg %d, State %d: %.*ls	|
 |	8998	|	16	|	No	|	Page errors on the GAM, SGAM, or PFS pages prevent allocation integrity checks in database ID %d pages from %S_PGID to %S_PGID. See other errors for cause.	|
 |	8999	|	10	|	No	|	Database tempdb allocation errors prevent further %ls processing.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 9000 to 9999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	9001	|	10	|	Yes	|	The log for database '%.*ls' is not available. Check the event log for related error messages. Resolve any errors and restart the database.	|
 |	9002	|	17	|	Yes	|	The transaction log for database '%.*ls' is full. To find out why space in the log cannot be reused, see the log_reuse_wait_desc column in sys.databases	|
 |	9003	|	20	|	Yes	|	The log scan number %S_LSN passed to log scan in database '%.*ls' is not valid. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication. Otherwise, restore from backup if the problem results in a failure during startup.	|
@@ -4570,6 +4581,12 @@ manager: craigg
 |	9984	|	10	|	No	|	Informational: Full-text %ls population paused for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d').	|
 |	9998	|	16	|	No	|	The column '%.*ls' cannot be added to a full-text index. Full-text indexes are limited to 1024 columns. When you create a full-text index, add fewer columns.	|
 |	9999	|	16	|	No	|	The column '%.*ls' in the table '%.*ls' cannot be used for full-text search because it is a sparse column set.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 10,000 to 10,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	10000	|	16	|	No	|	Unknown provider error.	|
 |	10001	|	16	|	No	|	The provider reported an unexpected catastrophic failure.	|
 |	10002	|	16	|	No	|	The provider did not implement the functionality.	|
@@ -4817,6 +4834,12 @@ manager: craigg
 |	10982	|	16	|	Yes	|	Resource governor reconfiguration succeeded.	|
 |	10983	|	16	|	No	|	Failed to run resource governor classifier user-defined function. See previous errors in SQL Server error log from session ID %ld for details. Classifier elapsed time: %I64u ms.	|
 |	10984	|	16	|	No	|	Resource governor '%ls' operation was canceled by user.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 11,000 to 12,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	11000	|	16	|	No	|	Unknown status code for this column.	|
 |	11001	|	16	|	No	|	Non-NULL value successfully returned.	|
 |	11001	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: TCP Provider, error: 0 - No such host is known.) (.Net SqlClient Data Provider	|
@@ -5008,6 +5031,12 @@ manager: craigg
 |	12980	|	16	|	No	|	Supply either %s or %s to identify the log entries.	|
 |	12981	|	16	|	No	|	You must specify %s when creating a subplan.	|
 |	12982	|	16	|	No	|	Supply either %s or %s to identify the plan or sub-plan to be run.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 13,000 to 13,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	13001	|	16	|	No	|	file name	|
 |	13002	|	16	|	No	|	audit	|
 |	13003	|	16	|	No	|	audit specification	|
@@ -5293,6 +5322,7 @@ manager: craigg
 |	13388	|	10	|	No	|	Key Flags	|
 |	13389	|	10	|	No	|	Key Name	|
 |	13390	|	10	|	No	|	Key Type	|
+
 |	13400	|	10	|	No	|	Extended stored procedure API will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.	|
 |	13401	|	10	|	No	|	Non-ANSI '*=' and '=*' outer join operators will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use ANSI outer joins instead.	|
 |	13402	|	10	|	No	|	The ability to INSERT NULL values into TIMESTAMP columns will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use DEFAULT instead.	|
@@ -5303,6 +5333,12 @@ manager: craigg
 |	13407	|	10	|	No	|	FASTFIRSTROW hint will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use OPTION (FAST n) instead.	|
 |	13408	|	10	|	No	|	%ls will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.	|
 |	13409	|	10	|	No	|	Collation '%ls' will be removed in a future version of SQL Server. Avoid using this collation in new development work, and plan to modify applications that currently use it.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+# Errors 14,000 to 14,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	14002	|	16	|	No	|	Could not find the 'Sync' subsystem with the task ID %ld.	|
 |	14003	|	16	|	No	|	You must supply a publication name.	|
 |	14004	|	16	|	No	|	%s must be in the current database.	|
@@ -5829,6 +5865,12 @@ manager: craigg
 |	14712	|	16	|	No	|	Only dbo or members of dc_admin can install or upgrade instmdw.sql. Contact an administrator with sufficient permissions to perform this operation.	|
 |	14713	|	21	|	No	|	A management data warehouse cannot be installed to SQL Server Express Edition.	|
 |	14714	|	16	|	No	|	Attempting to upgrade a Management Data Warehouse of newer version '%s' with an older version '%s'. Upgrade aborted.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 15,000 to 15,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	15001	|	16	|	No	|	Object '%ls' does not exist or is not a valid object for this operation.	|
 |	15002	|	16	|	No	|	The procedure '%s' cannot be executed within a transaction.	|
 |	15003	|	16	|	No	|	Only members of the %s role can execute this stored procedure.	|
@@ -6336,6 +6378,11 @@ manager: craigg
 |	15660	|	16	|	No	|	Compressing XML index is not supported by the stored procedure sp_estimate_data_compression_savings.	|
 |	15661	|	16	|	No	|	Compressing temporary tables is not supported by the stored procedure sp_estimate_data_compression_savings.	|
 |	15662	|	16	|	No	|	Compressing tables with sparse columns or column sets is not supported by the stored procedure sp_estimate_data_compression_savings.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 16,000 to 17,999
+
+
 |	16901	|	16	|	No	|	%hs: This feature has not been implemented yet.	|
 |	16902	|	16	|	No	|	%ls: The value of the parameter %ls is invalid.	|
 |	16903	|	16	|	No	|	The "%ls" procedure was called with an incorrect number of parameters.	|
@@ -6583,6 +6630,12 @@ manager: craigg
 |	17891	|	10	|	Yes	|	Resource Monitor (0x%lx) Worker 0x%p appears to be non-yielding on Node %ld. Memory freed: %I64d KB. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.	|
 |	17892	|	20	|	Yes	|	Logon failed for login '%.*ls' due to trigger execution.%.*ls	|
 |	17894	|	10	|	Yes	|	Dispatcher (0x%lx) from dispatcher pool '%.*ls' Worker 0x%p appears to be non-yielding on Node %ld. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 18,000 to 18,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	18002	|	20	|	Yes	|	Exception happened when running extended stored procedure '%.*ls' in the library '%.*ls'. SQL Server is terminating process %d. Exception type: %ls; Exception code: 0x%lx.	|
 |	18052	|	16	|	No	|	Error: %d, Severity: %d, State: %d.	|
 |	18053	|	16	|	No	|	Error: %d, Severity: %d, State: %d. (Params:%ls). The error is printed in terse mode because there was error during formatting. Tracing, ETW, notifications etc are skipped.	|
@@ -6797,6 +6850,13 @@ manager: craigg
 |	18856	|	16	|	No	|	Agent '%s' is retrying after an error. %d retries attempted. See agent job history in the Jobs folder for more details.	|
 |	18857	|	16	|	No	|	The subscription to this publication is not active yet. No user action is required.	|
 |	18896	|	16	|	No	|	Failed to compare delete and insert log record for column ID %ld with table ID %ld	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+
+## Errors 19,000 to 20,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	19030	|	10	|	Yes	|	SQL Trace ID %d was started by login "%s".	|
 |	19031	|	10	|	Yes	|	SQL Trace stopped. Trace ID = '%d'. Login Name = '%s'.	|
 |	19032	|	10	|	Yes	|	SQL Trace was stopped due to server shutdown. Trace ID = '%d'. This is an informational message only; no user action is required.	|
@@ -7219,6 +7279,12 @@ manager: craigg
 |	20815	|	10	|	No	|	Distribution agent profile enabled for the processing LOB data using OLEDB streaming.	|
 |	20816	|	10	|	No	|	Peer-To-Peer publishers are only supported on Enterprise class editions of SQL Server. This instance is %s.	|
 |	20817	|	16	|	No	|	An error occurred during the execution of '%ls'. A call to '%ls' failed with error code: '%ld', return code: '%d'.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 21,000 to 21,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	21000	|	16	|	No	|	Cannot subscribe to an inactive publication.	|
 |	21001	|	16	|	No	|	Cannot add a Distribution Agent at the Subscriber for a push subscription.	|
 |	21002	|	16	|	No	|	The Distribution Agent for this subscription already exists (%s).	|
@@ -7969,6 +8035,12 @@ manager: craigg
 |	21867	|	16	|	No	|	ALTER TABLE SWITCH statement failed. The table '%s' belongs to a publication which does not allow switching of partitions	|
 |	21868	|	16	|	No	|	ALTER TABLE SWITCH statement failed. The statement is not allowed because one or more of the tables in this statement is an article with a different destination table or owner.	|
 |	21869	|	16	|	No	|	Cannot add filter between proposed parent article '%s' and proposed child article '%s' since this would introduce a cycle in the filter relationships. The proposed parent is already being filtered by the child.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 22,000 to 22,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	22101	|	16	|	No	|	The value supplied for the change_columns argument of CHANGE_TRACKING_IS_COLUMN_IN_MASK function is not valid. The value must be a bitmask returned by the CHANGETABLE(CHANGES ...) function.	|
 |	22102	|	16	|	No	|	The arguments supplied are not valid for the CHANGES option of the CHANGETABLE function.	|
 |	22103	|	16	|	No	|	The arguments supplied are not valid for the VERSION option of the CHANGETABLE function.	|
@@ -8218,6 +8290,12 @@ manager: craigg
 |	22997	|	16	|	No	|	The Change Data Capture '%s' job does not exist in the system table 'msdb.dbo.cdc_jobs'. Use the stored procedure 'sys.sp_cdc_add_job' to add the Change Data Capture job.	|
 |	22998	|	16	|	No	|	The value specified for the parameter @continuous must be 0 or 1.	|
 |	22999	|	16	|	No	|	The value specified for the parameter @pollinginterval must be null or 0 when the stored procedure 'sys.sp_cdc_scan' is not being run in continuous mode.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 23,000 to 25,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	23003	|	17	|	No	|	The WinFS share permissions have become corrupted {Error: %ld}. Please try setting the share permissions again.	|
 |	23100	|	16	|	No	|	Invalid input parameter(s).	|
 |	23101	|	16	|	No	|	Access is denied.	|
@@ -8401,6 +8479,12 @@ manager: craigg
 |	25827	|	16	|	No	|	The operating system returned error %d while creating the file '%ls'. Verify that the path exists and that the SQL Server startup account has access to the location.	|
 |	25833	|	16	|	No	|	Counter target could not add package "%ls" to the list of packages to count. Events from this package will not be counted.	|
 |	25834	|	16	|	No	|	Ring Buffer target could not add package "%ls" to the package occurrence list. Events from this package will not be kept based on occurrence number.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 26,000 to 27,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	26010	|	10	|	Yes	|	The server could not load the certificate it needs to initiate an SSL connection. It returned the following error: %#x. Check certificates to make sure they are valid.	|
 |	26011	|	16	|	Yes	|	The server was unable to initialize encryption because of a problem with a security library. The security library may be missing. Verify that security.dll exists on the system.	|
 |	26012	|	16	|	Yes	|	The server has attempted to initialize SSL encryption when it has already been initialized. This indicates a problem with SQL Server. Contact Technical Support.	|
@@ -8510,6 +8594,12 @@ manager: craigg
 |	27063	|	16	|	No	|	An auxiliary Fuzzy Lookup table maintenance table name is null. Maintenance cannot proceed.	|
 |	27064	|	16	|	No	|	The row deleted from the reference table could not be located in the reference table copy.	|
 |	27065	|	16	|	No	|	Fuzzy Lookup Table Maintenance is not installed or the Error Tolerant Index is corrupt.	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 28,000 to 30,999
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	28000	|	16	|	No	|	The decrypted session key has an unexpected size.	|
 |	28001	|	16	|	No	|	A corrupted message has been received. It contains invalid flags. This occurred in the message with Conversation ID '%.*ls', Initiator: %d, and Message sequence number: %I64d.	|
 |	28002	|	16	|	No	|	Cannot start service broker manager. Operating system error: %ls.	|
@@ -8682,6 +8772,12 @@ manager: craigg
 |	30097	|	10	|	No	|	The fulltext catalog upgrade failed because of an inconsistency in metadata between sys.master_files and sys.fulltext_catalogs for the catalog ID %d in database ID %d. Try to reattach this database. If this fails, then the catalog will need to be dropped or recreated before attach.	|
 |	30098	|	10	|	No	|	An internal query to load data for a crawl on database '%.*ls' and table '%.*ls' failed with error code %d. Check the sql error code for more information about the condition causing this failure. The crawl needs to be restarted after this condition is removed.	|
 |	30099	|	17	|	No	|	Fulltext internal error	|
+|	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
+
+## Errors 31,000 to 36,000
+
+| Error| Severity | Event Logged | Description|
+| :------ | :------| :------| :----------------------------- |
 |	31001	|	16	|	No	|	The session '%s' already exists. Use a different session name.	|
 |	31002	|	16	|	No	|	This operation can be performed only by the owner of the session.	|
 |	31003	|	16	|	No	|	User does not have enough permissions to tune one or more of the databases specified.	|

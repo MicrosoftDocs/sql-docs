@@ -38,9 +38,9 @@ Build: 14.0.3917.1
 
 The release includes the following fixes:
 
-- When importing a Azure SQL Database .bacpac to an on-premise instance, fixed errors due to 'Database master keys without password are not supported in this version of SQL Server'.
+- When importing an Azure SQL Database .bacpac to an on-premise instance, fixed errors due to 'Database master keys without password are not supported in this version of SQL Server'.
 - Database catalog collation support.
-- Fixed an unresolved pseudo columns for graph tables.
+- Fixed an unresolved pseudo column error for graph tables.
 - Added ThreadMaxStackSize command-line parameter to parse TSQL with a large number of nested statements.
 - Fixed using the SchemaCompareDataModel with SQL authentication to compare schemas.
 

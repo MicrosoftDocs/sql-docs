@@ -1,7 +1,6 @@
 # [Overview](errors-and-events-reference-database-engine.md)  
 # [Understanding Database Engine Errors](understanding-database-engine-errors.md)  
 # [Database Engine Error Severities](database-engine-error-severities.md)  
-
 # [MSSQL Errors](database-engine-events-and-errors.md)
 ## Errors -2 to 950
 ### [-2](mssqlserver-neg2-database-engine-error.md)

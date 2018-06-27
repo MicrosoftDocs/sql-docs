@@ -17,13 +17,13 @@ ms.technology: linux
 
 To fail over an Always On availability group primary replica to a different node in Kubernetes, use a job. This article identifies the environment variables for this job.
 
-After you run the job, delete it. This also delets Kubernetes logs. If you do not delete the job, future failover jobs will fail undless you change the job name and the pod selector.
+After you run the job, delete it. The job object in Kubernetes remains after completion so you can view its status. You have to manually delete old jobs after noting their status. Deleting the job also deletes the Kubernetes logs. If you do not delete the job, future failover jobs will fail unless you change the job name and the pod selector. For more information see [Jobs - Run to Completion](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
 
 ## Failover job environment variables
 
 * `MSSQL_K8S_AG_NAME`
   * Optional
-  * **Description**: The availability group to failover.
+  * **Description**: The availability group name.
 
 * `MSSQL_K8S_NEW_PRIMARY`
   * Optional

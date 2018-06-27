@@ -38,7 +38,8 @@
 # [Tutorials, samples, solutions](tutorials/machine-learning-services-tutorials.md)
 
 ## [R](tutorials/sql-server-r-tutorials.md)
-### [R: Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
+### [Create partition-based models](tutorials/r-tutorial-create-models-per-partition.md)
+### [R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 #### [Working with inputs and outputs](tutorials/rtsql-working-with-inputs-and-outputs.md)
 #### [R and SQL data types and data objects](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
 #### [Using R functions with SQL Server data](tutorials/rtsql-using-r-functions-with-sql-server-data.md)
@@ -116,7 +117,7 @@
 ### [How to perform real-time or native scoring](r/how-to-do-realtime-scoring.md)
 ### [Load R objects using ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md)
 ### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)
-### [Creating multiple models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)
+### [Create multiple small models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)
 ### [Use data from OLAP cubes in R](r/using-data-from-olap-cubes-in-r.md)
 ### [Create a stored procedure using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

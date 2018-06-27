@@ -56,7 +56,7 @@ manager: craigg
 
 -   Minor changes have occurred to warnings and errors. Warnings and errors returned by the server now retain the same severity when passed to OLE DB Driver for SQL Server. You should ensure you have thoroughly tested your application if you depend on trapping particular warnings and errors.  
 
--   OLE DB Driver for SQL Server has stricter error checking than MDAC, which means that some applications that do not conform strictly to the OLE DB specifications may behave differently. For example, the SQLOLEDB provider did not enforce the rule that parameter names must start with '@' for result parameters, but the OLE DB Driver for SQL Server does.  
+-   OLE DB Driver for SQL Server has stricter error checking than MDAC, which means that some applications that do not conform strictly to the OLE DB specifications may behave differently. For example, the SQLOLEDB provider did not enforce the rule that parameter names must start with '\@' for result parameters, but the OLE DB Driver for SQL Server does.  
 
 -   OLE DB Driver for SQL Server behaves differently from MDAC regarding failed connections. For example, MDAC returns cached property values for a connection that has failed, whereas OLE DB Driver for SQL Server reports an error to the calling application.  
 

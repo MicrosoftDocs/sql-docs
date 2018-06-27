@@ -134,3 +134,7 @@ This article explains the parameters in the specification.
       name: <availabilityGroupName>
        availabilityMode: <synchronousCommit | asynchronousCommit | configurationOnly> 
    ``` 
+
+   ## Example
+   
+   [!INCLUDE[kubernetes-ag-sql-statefulset-yaml](../includes/kubernetes-ag-sql-statefulset-yaml.md)]

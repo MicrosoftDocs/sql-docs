@@ -57,6 +57,9 @@ In the image above, a four-node kubernetes clusters host an availability group w
   * The deployment for the operator.
   * The availability group.
 
+ * [*Persistent volumes*](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) are pieces of storage. A *persistent volume claim* (PVC) is a request for storage by a user. Each container is affiliated with a PVC for the data and log storage. In Azure Kubernetes Service (AKS), you [create a persistent volume claim](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) to automatically provision storage based on a storage class.
+
+
 In addition, the cluster stores [*secrets*](http://kubernetes.io/docs/concepts/configuration/secret/) for the passwords, certificates, keys, and other sensitive information.
 
 ## Deploy the availability group in Kubernetes

@@ -56,3 +56,9 @@ This article explains the operator global environment variables.
   * Optional
   * **Description**: Period that secondary replicas poll if the leader lease has expired. 
   * **Default**: 1
+
+  ## Example
+
+  The following example describes a deployment for the `mssql-operator`.
+
+  [!INCLUDE[kubernetes-ag-operator-yaml](../includes/kubernetes-ag-operator-yaml.md)]

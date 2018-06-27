@@ -89,7 +89,7 @@
 #### [Configure cross-platform (Windows and Linux)](sql-server-linux-availability-group-cross-platform.md)
 ### [Containers with Kubernetes](sql-server-linux-containter-ha-overview.md)
 #### [Configure with shared disk](tutorial-sql-server-containers-kubernetes.md)
-#### [Configure with availability group](tutorial-sql-server-ag-kubernetes.md)
+#### [Configure with availability group](sql-server-ag-kubernetes.md)
 ##### [Configure SQL Server specification (YAML)](sql-server-linux-kubernetes-spec.md)
 ##### [Configure SQL Server Kubernetes operator](sql-server-linux-kubernetes-operator.md)
 ##### [Failover primary replica with Kubernetes](sql-server-linux-kubernetes-failover-job.md)

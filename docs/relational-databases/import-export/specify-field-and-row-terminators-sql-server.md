@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Specify Field and Row Terminators (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"

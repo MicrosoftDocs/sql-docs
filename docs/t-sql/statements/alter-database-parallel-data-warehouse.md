@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "06/27/2018"
 ms.prod: sql
 ms.prod_service: "pdw"
 ms.reviewer: ""
@@ -14,18 +14,39 @@ caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The topic also describes syntax related to setting database options in Parallel Data Warehouse. 
+Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The topic also describes syntax related to setting database options in Parallel Data Warehouse. 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+::: moniker range="= aps-pdw-2016 || = sqlallproducts-allversions"
+## Syntax for APS 2016-AU6
+
+```
+-- Parallel Data Warehouse  
+ALTER DATABASE database_name    
+    SET ( <set_database_options>   | <db_encryption_option> )  
+[;]  
   
-## Syntax  
+<set_database_options> ::=   
+{  
+    AUTOGROW = { ON | OFF }  
+    | REPLICATED_SIZE = size [GB]  
+    | DISTRIBUTED_SIZE = size [GB]  
+    | LOG_SIZE = size [GB]
+}  
   
-```  
+<db_encryption_option> ::=  
+    ENCRYPTION { ON | OFF }  
+```
+::: moniker-end
+::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+## Syntax starting in APS 2016-AU7
+
+```
 -- Parallel Data Warehouse  
 ALTER DATABASE database_name    
     SET ( <set_database_options>   | <db_encryption_option> )  
@@ -44,8 +65,9 @@ ALTER DATABASE database_name
   
 <db_encryption_option> ::=  
     ENCRYPTION { ON | OFF }  
-```  
-  
+```
+::: moniker-end
+
 ## Arguments  
  *database_name*  
  The name of the database to be modified. To display a list of databases on the appliance, use [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
@@ -65,6 +87,7 @@ ALTER DATABASE database_name
  ENCRYPTION { ON | OFF }  
  Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] when [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
+::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
  SET AUTO_CREATE_STATISTICS { ON | OFF }
  When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a histogram in an existing statistics object.
 
@@ -79,14 +102,13 @@ ALTER DATABASE database_name
 
  For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
 
-
  SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
  The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the CREATE STATISTICS statement.
 
  Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
  For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
-
+::: moniker-end
   
 ## Permissions  
  Requires the ALTER permission on the database.  
@@ -102,8 +124,10 @@ If auto-stats is disabled and you try to alter the statistics settings, PDW give
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not perform the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.  
 
+::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 The statistics settings only work if the administrator has enable auto-stats.  If you are an administrator, use the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) to enable or disable auto-stats. 
-  
+::: moniker-end
+
 ## Locking Behavior  
  Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) statement on the database.  
   
@@ -191,6 +215,7 @@ ALTER DATABASE CustomerSales
     SET ( LOG_SIZE = 10 GB );  
 ```  
 
+::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 ### E. Check for current statistics values
 
 The following query returns the current statistics values for all databases. The value 1 means the feature is on, and a 0 means the feature is off.
@@ -213,9 +238,9 @@ ALTER DATABASE CustomerSales
 ALTER DATABASE CustomerSales
     SET AUTO_UPDATE_STATISTICS_ASYNC ON;
 ```
-  
+::: moniker-end
+
 ## See Also  
  [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
-  
-  
+

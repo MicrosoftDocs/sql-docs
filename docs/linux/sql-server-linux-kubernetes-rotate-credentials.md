@@ -40,32 +40,6 @@ To rotate the credentials:
 
 The Kubernetes cluster rotates the credentials as a job.
 
-## Environment variables
-
-* `MSSQL_K8S_SA_PASSWORD`
-  * Required
-  * **Description**: The current `sa` password of the SQL Server instance.
-
-* `MSSQL_K8S_STATEFULSET_NAME `
-  * Required
-  * **Description**: The name of the SQL Server StatefulSet, the same as the custom resource name.
-
-* `MSSQL_K8S_NAMESPACE`
-  * Optional
-  * **Description**: Kubernetes namespace of the availability group.
-
-* `MSSQL_ROTATE_CERT` 
-  * Optional
-  * **Description**: Boolean to rotate the database mirroring endpoint certificate.
-
-* `MSSQL_K8S_MASTER_KEY_PASSWORD`
-  * Optional
-  * **Description**: The master key password.
-
-* `MSSQL_K8S_NEW_SA_PASSWORD`
-  * Optional
-  * **Description**: The new `sa` password the SQL Server instance. 
-
 ## Example 
 
 The following example of a manifest is a `.yaml` file that creates a job to rotate the credentials of all of the instances of SQL Server that participate in an availability group.
@@ -162,6 +136,32 @@ spec:
               name: new-sql-secrets
               key: sapassword
 ```
+
+## Environment variables
+
+* `MSSQL_K8S_SA_PASSWORD`
+  * Required
+  * **Description**: The current `sa` password of the SQL Server instance.
+
+* `MSSQL_K8S_STATEFULSET_NAME `
+  * Required
+  * **Description**: The name of the SQL Server StatefulSet, the same as the custom resource name.
+
+* `MSSQL_K8S_NAMESPACE`
+  * Optional
+  * **Description**: Kubernetes namespace of the availability group.
+
+* `MSSQL_ROTATE_CERT` 
+  * Optional
+  * **Description**: Boolean to rotate the database mirroring endpoint certificate.
+
+* `MSSQL_K8S_MASTER_KEY_PASSWORD`
+  * Optional
+  * **Description**: The master key password.
+
+* `MSSQL_K8S_NEW_SA_PASSWORD`
+  * Optional
+  * **Description**: The new `sa` password the SQL Server instance. 
 
 ## Next steps
 

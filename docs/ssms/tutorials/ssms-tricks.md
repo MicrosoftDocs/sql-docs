@@ -18,6 +18,9 @@ helpviewer_keywords:
   - "tutorials [SQL Server Management Studio]"
   - "Transact-SQL tutorials"
   - "SQL Server Management Studio [SQL Server], tutorials"
+  - "Find SQL Server Instance"
+  - "find instance name"
+  - "find sql server instance name"
 ---
 
 # Tutorial: Additional tips and tricks for using SSMS

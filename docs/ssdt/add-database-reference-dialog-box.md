@@ -44,11 +44,11 @@ After you select the database you want to reference, you can specify the expecte
   
 References can be resolved for objects in one of the following locations:  
   
--   In the referencing database.  
+- In the referencing database.  
   
--   In a database other than the referencing database, but on the same server.  
+- In a database other than the referencing database, but on the same server.  
   
--   In a database other than the referencing database, on a different server.  
+- In a database other than the referencing database, on a different server.  
   
 Specify a database name. If you chose **System database**, you shouldn’t modify the system database literal. If you chose **Database projects in the current solution**, the default name of the database is based on the name of the database in the project.  
   

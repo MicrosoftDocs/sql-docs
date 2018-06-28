@@ -9,7 +9,7 @@ ms.topic: "conceptual"
 ms.date: "06/27/2018"
 ms.author: "murshedz"
 ms.reviewer: "martinle"
-monikerRange: >= aps-pdw-2016-au7 || = sqlallproducts-allversions
+monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 ---
 #Appliance Feature Switch
 The **Feature Switch** page displays information about the two feature switches that are introduced in Analytics Platform System 2016-AU7. Use this page to update or enable/disable features and settings in Analytics Platform System. Changing feature switch values requires a service restart.

@@ -97,12 +97,16 @@ The code for the operator, AG agent, and SQL Server is packaged in a Docker imag
   
     This Kubernetes job implements the rotate credentials task. Create this job to request updates to the SA password, agent SQL login password, DBM cert, etc. The SA password is specified as the job parameters. The others are auto-generated.
 
- *`mssql-server-k8s-failover`
-   
+* `mssql-server-k8s-failover`
+
    A Kubernetes job that implements the manual failover workflow.
 
 ### Notes
 
-Regardless of the AG configuration, The operator will always deploy the AG monitor. If the SqlServer resource does not list any AG, the operator will still deploy this container.
+Regardless of the AG configuration, The operator will always deploy the AG agent. If the SqlServer resource does not list any AG, the operator will still deploy this container.
 
-The version for the operator image is identical to the version for the SQL Server image. 
+The version for the operator image is identical to the version for the SQL Server image.
+
+## Next steps
+
+> [SQL Server shared storage solution](tutorial-sql-server-containers-kubernetes.md)

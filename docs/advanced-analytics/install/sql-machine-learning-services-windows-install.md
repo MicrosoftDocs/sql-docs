@@ -1,5 +1,5 @@
 ---
-title: Install SQL Server 2017 Machine Learning Services (In-Database) on Windows | Microsoft Docs
+title: Install SQL Server Machine Learning Services (In-Database) on Windows | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +9,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Install SQL Server 2017 Machine Learning Services (In-Database) on Windows 
+# Install SQL Server Machine Learning Services (In-Database) on Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The Machine Learning Services component of SQL Server adds in-database predictive analytics, statistical analysis, visualization, and machine learning algorithms. Function libraries are available in R and Python and run as external script on a database engine instance. 
@@ -18,20 +18,21 @@ This article explains how to install the machine learning component by running t
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ SQL Server 2017 setup is required if you want to install Machine Learning Services with language support for R, Python, or both. If instead you have SQL Server 2016 installation media, you can  install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) to get R language support.
+- SQL Server 2017 (or greater) setup is required if you want to install Machine Learning Services with language support for R, Python, or both. If instead you have SQL Server 2016 installation media, you can  install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) to get R language support.
 
-+ A database engine instance is required. You cannot install just R or Python features, athough you can add them incrementally to an existing instance.
+- A database engine instance is required. You cannot install just R or Python features, although you can add them incrementally to an existing instance.
 
-+ Do not install Machine Learning Services on a failover cluster. The security mechanism used for isolating R and Python processes is not compatible with a Windows Server failover cluster environment.
+- Do not install Machine Learning Services on a SQL Server 2017 failover cluster instance. 
+    - On SQL Server vNext, installing Machine Learning Services on a failover cluster is supported. 
 
-+ Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
+- Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
-+ Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running an in-database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
+- Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running an in-database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
 
-+ Side-by-side installation with other versions of R and Python is supported but not recommended. It's supported because SQL Server instance uses its own copies of the open-source R and Anaconda distributions. But it's not recommended because running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
+- Side-by-side installation with other versions of R and Python is supported but not recommended. It's supported because SQL Server instance uses its own copies of the open-source R and Anaconda distributions. But it's not recommended because running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
     
-  + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
-  + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
+  - You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
+  - R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
   
 > [!IMPORTANT]
 > After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run R and Python jobs on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.

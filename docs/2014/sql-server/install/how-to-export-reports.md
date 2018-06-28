@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "flat-file report versions [Upgrade Advisor]"
   - "exporting reports, steps"
@@ -20,7 +20,7 @@ ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # How to: Export Reports
   Upgrade Advisor Report Viewer enables you to export a flat-file version of the report. This enables you to work with the information in a spreadsheet or word processing document, or to e-mail the information to other people.  

@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
 caps.latest.revision: 33
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: "minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ---
 # Modifying and Processing the Market Basket Model (Intermediate Data Mining Tutorial)
   Before you process the association mining model that you created, you must change the default values of two of the parameters: *Support* and *Probability*.  

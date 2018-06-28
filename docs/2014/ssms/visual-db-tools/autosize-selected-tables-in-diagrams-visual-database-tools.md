@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic database diagram table sizing"
   - "size [SQL Server], tables"
@@ -18,7 +18,7 @@ ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Autosize Selected Tables in Diagrams (Visual Database Tools)
   You can quickly fit tables in your diagram to the smallest size that shows all fields.  

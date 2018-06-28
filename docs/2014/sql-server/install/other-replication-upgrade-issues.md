@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "system tables [SQL Server], replication"
   - "passwords [SQL Server replication]"
@@ -20,7 +20,7 @@ ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Other Replication Upgrade Issues
   This topic covers a number of upgrade issues that are not reported by Upgrade Advisor.  

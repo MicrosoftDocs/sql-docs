@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], viewing properties"
   - "viewing project properties"
@@ -16,7 +16,7 @@ ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Project Properties
   You can view properties associated with your projects in the Properties window.  

@@ -14,7 +14,7 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # What&#39;s New in SQL Server Native Client
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] installs [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. There is no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  

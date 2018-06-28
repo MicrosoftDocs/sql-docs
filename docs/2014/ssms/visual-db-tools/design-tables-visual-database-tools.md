@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], Table Designer"
   - "Table Designer, designing tables"
@@ -16,7 +16,7 @@ ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Design Tables (Visual Database Tools)
   Table Designer devotes an entire window to the design of an individual table. The topics in this section explain how to use Table Designer to create and modify database tables.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.synchdbwizard.finish.f1"
 ms.assetid: 1c88608a-5408-4ac0-aea8-5abb977f32ca

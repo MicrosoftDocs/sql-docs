@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle publishing [SQL Server replication], data type mapping"
   - "data types [SQL Server replication], Oracle publishing"
@@ -17,7 +17,7 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: 46
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Type Mapping for Oracle Publishers
   Oracle data types and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types do not always match exactly. Where possible, the matching data type is selected automatically when publishing an Oracle table. In cases that a single data type mapping is not clear, alternative data type mappings are provided. For information about how to select alternative mappings, see the "Specifying Alternative Data Type Mappings" section later in this topic.  

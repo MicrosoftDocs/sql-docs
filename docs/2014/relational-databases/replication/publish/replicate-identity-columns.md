@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "identities [SQL Server replication]"
   - "identity values [SQL Server replication]"
@@ -20,7 +20,7 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Replicate Identity Columns
   When you assign an IDENTITY property to a column, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatically generates sequential numbers for new rows inserted in the table containing the identity column. For more information, see [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Because identity columns might be included as a part of the primary key, it is important to avoid duplicate values in the identity columns. To use identity columns in a replication topology that has updates at more than one node, each node in the replication topology must use a different range of identity values, so that duplicates do not occur.  

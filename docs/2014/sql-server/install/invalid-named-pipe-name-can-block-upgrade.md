@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "invalid named pipes [SQL Server]"
   - "named pipes"
@@ -16,7 +16,7 @@ ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Invalid named pipe name can block upgrade
   Upgrade fails if the named pipes protocol is incorrectly configured.  

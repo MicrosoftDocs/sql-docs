@@ -18,7 +18,7 @@ ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Getting Information About Assemblies
   The following catalog views and functions can be queried for metadata about assemblies.  

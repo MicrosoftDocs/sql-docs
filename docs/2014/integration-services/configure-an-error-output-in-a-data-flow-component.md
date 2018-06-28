@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [Integration Services], data flow components"
   - "components [Integration Services], data flow"
@@ -17,7 +17,7 @@ ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure an Error Output in a Data Flow Component
   Many data flow components support error outputs, and depending on the component, [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides different ways to configure an error output. In addition to configuring an error output, you can also configure the columns of an error output. This includes configuring the **ErrorCode** and **ErrorColumn** columns that are added by the component.  

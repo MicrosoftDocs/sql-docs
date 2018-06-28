@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services, what's new"
   - "what's new [Integration Services]"
@@ -16,7 +16,7 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 caps.latest.revision: 112
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # What&#39;s New (Integration Services)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is unchanged from the previous release.  

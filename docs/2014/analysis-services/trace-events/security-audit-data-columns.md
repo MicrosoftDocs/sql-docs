@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Security Audit event category [SQL Server]"
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7

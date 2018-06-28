@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "e-mail [Master Data Services], configuring"
   - "notifications [Master Data Services], configuring notifications"
@@ -16,7 +16,7 @@ ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Configure Email Notifications (Master Data Services)
   Configure notification emails when you want [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to send email messages automatically.  

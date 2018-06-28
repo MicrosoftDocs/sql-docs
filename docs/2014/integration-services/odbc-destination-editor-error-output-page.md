@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcdest.errorhandling.f1"
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # ODBC Destination Editor (Error Output Page)
   Use the **Error Output** page of the **ODBC Destination Editor** dialog box to select error handling options.  

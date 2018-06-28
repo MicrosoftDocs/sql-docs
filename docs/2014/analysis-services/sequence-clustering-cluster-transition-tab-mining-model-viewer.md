@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.sequenceclustering.transition.f1"
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97

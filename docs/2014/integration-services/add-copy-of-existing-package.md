@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.addcopyexistingpackage.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Add Copy of Existing Package
   Use the **Add Copy of Existing Package** dialog box to add a copy of a package stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the file system, or the SSIS Package Store to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  

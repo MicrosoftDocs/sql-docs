@@ -16,7 +16,7 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Guidelines and Limitations of SQLXML 4.0
   Remember the following when working with SQLXML 4.0:  

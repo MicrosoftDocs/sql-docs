@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "query designers [Reporting Services]"
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835

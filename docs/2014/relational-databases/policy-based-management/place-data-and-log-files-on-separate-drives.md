@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: 6cbedc27-4d77-44ad-bed2-c23b628475a7
 caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Place Data and Log Files on Separate Drives
   This rule checks whether data and log files are placed on separate logical drives. Placing both data and log files on the same device can cause contention for that device and result in poor performance. Placing the files on separate drives allows the I/O activity to occur at the same time for both the data and log files.  

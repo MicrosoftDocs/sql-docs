@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.aggregationdesignwizard.reviewusage.f1"
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745

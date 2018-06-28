@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-bulk-import-export"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk importing [SQL Server], planning"
   - "bulk importing [SQL Server], from a CSV file"
@@ -19,7 +19,7 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 caps.latest.revision: 50
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Prepare Data for Bulk Export or Import (SQL Server)
   This section discusses the considerations involved in planning for bulk-export operations and the requirements for bulk-import operations.  

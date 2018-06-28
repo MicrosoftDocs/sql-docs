@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "search conditions [SQL Server], combining"
   - "precedence [SQL Server], Criteria pane"
@@ -19,7 +19,7 @@ ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Combine Conditions When OR Has Precedence (Visual Database Tools)
   To link conditions with OR and give them precedence over conditions linked with AND, you must repeat the AND condition for each OR condition.  

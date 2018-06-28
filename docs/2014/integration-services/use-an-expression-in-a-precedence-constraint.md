@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "precedence constraints [Integration Services], adding expressions"
   - "expressions [Integration Services], adding"
@@ -16,7 +16,7 @@ ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Use an Expression in a Precedence Constraint
   This procedure describes how to add an expression to a precedence constraint by using the **Precedence Constraint Editor** dialog box. Before you can add an expression to a precedence constraint, the package must include at least two executables, either tasks or containers, and they must be connected by a precedence constraint.  

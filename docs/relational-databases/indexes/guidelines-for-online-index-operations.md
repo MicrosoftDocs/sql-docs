@@ -23,7 +23,7 @@ ms.suite: "sql"
 ms.prod_service: "table-view-index, sql-database"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Guidelines for Online Index Operations
+# Guidelines for online index operations
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   When you perform online index operations, the following guidelines apply:  
@@ -61,7 +61,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
  An online operation cannot be performed when an index contains a column of the large object type, and in the same transaction there are update operations before this online operation. To work around this issue, place the online operation outside the transaction or place it before any updates in the transaction.  
   
-## Disk Space Considerations  
+## Disk space considerations  
  Online index operations require more disk space requirements than offline index operations. 
  - During index creation and index rebuild operations, additional space is required for the index being built (or rebuilt). 
  - In addition, disk space is required for the temporary mapping index. This temporary index is used in online index operations that create, rebuild, or drop a clustered index.
@@ -69,7 +69,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 
 For more information, see [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
-## Performance Considerations  
+## Performance considerations  
  Although online index operations permit concurrent user update activity, the index operations will take longer if the update activity is very heavy. Typically, online index operations will be slower than equivalent offline index operations regardless of the concurrent update activity level.  
   
  Because both the source and target structures are maintained during the online index operation, the resource usage for insert, update, and delete transactions is increased, potentially up to double. This could cause a decrease in performance and greater resource usage, especially CPU time, during the index operation. Online index operations are fully logged.  
@@ -82,32 +82,34 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
   
  Online index rebuilding may increase fragmentation when it is allowed to run with `MAX DOP > 1` and `ALLOW_PAGE_LOCKS = OFF` options. For more information, see [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
   
-## Transaction Log Considerations  
+## Transaction log considerations  
  Large-scale index operations, performed offline or online, can generate large data loads that can cause the transaction log to quickly fill. To make sure that the index operation can be rolled back, the transaction log cannot be truncated until the index operation has been completed; however, the log can be backed up during the index operation. Therefore, the transaction log must have sufficient space to store both the index operation transactions and any concurrent user transactions for the duration of the index operation. For more information, see [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
-## Resumable Index Rebuild Considerations
+## Resumable index considerations
 
 > [!NOTE]
-> The resumable index option applies to SQL Server (Starting with SQL Server 2017) and SQL Database. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+> The resumable index option applies to SQL Server (Starting with SQL Server 2017) (index rebuild only) and SQL Database (create non-clustered index and index rebuild). See [Create Index](../../t-sql/statements/create-index-transact-sql.md) (currently in public preview for SQL Database only) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
-When you perform resumable online index rebuild the following guidelines apply:
--	Managing, planning and extending of index maintenance windows. You can pause and restart an index rebuild operation multiple times to fit your maintenance windows.
-- Recovering from index rebuild failures (such as database failovers or running out of disk space).
+When you perform resumable online index create or rebuild, the following guidelines apply:
+-	Managing, planning and extending of index maintenance windows. You can pause and restart an index create or rebuild operation multiple times to fit your maintenance windows.
+- Recovering from index create or rebuild failures (such as database failovers or running out of disk space).
 - When an index operation is paused, both the original index and the the newly created one require disk space and need to be updated during DML operations.
 
-- Enables truncation of transaction logs during an index rebuild operation (this operation cannot be performed for a regular online index operation).
+- Enables truncation of transaction logs during an index create or rebuild operation.
 - SORT_IN_TEMPDB=ON option is not supported
 
 > [!IMPORTANT]
-> Resumable rebuild does not require you to keep open a long running transaction, allowing log truncation during this operation and a better log space management. With the new design, we managed to keep necessary data in a database together with all references required to restart the resumable operation.
+> Resumable index create or rebuild does not require you to keep open a long running transaction, allowing log truncation during this operation and a better log space management. With the new design, we managed to keep necessary data in a database together with all references required to restart the resumable operation.
 
-Generally, there is no performance difference between resumable and non-resumable online index rebuild. When you update a resumable index while an index rebuild operation is paused:
+Generally, there is no performance difference between resumable and non-resumable online index rebuild. For create resumable index, there is a constant overhead that causes a small performance difference between resumable and non-resumable index create. This difference is mostly noticeable only for smaller tables.
+
+When you update a resumable index while an index operation is paused:
 - For read-mostly workloads, the performance impact is insignificant. 
 - For update-heavy workloads, you may experience some throughput degradation (our testing shows less than 10% degradation).
 
-Generally, there is no difference in defragmentation quality between resumable and non-resumable online index rebuild.
+Generally, there is no difference in defragmentation quality between resumable and non-resumable online index create or rebuild.
 
-## Online Default Options 
+## Online default options 
 
 > [!IMPORTANT]
 > These options are in public preview.
@@ -120,7 +122,7 @@ Both ELEVATE_ONLINE and ELEVATE_RESUMABLE only apply to DDL statements that supp
 > [!NOTE]
 > ELEVATE_ONLINE and ELEVATE_RESUMABLE does not apply to XML index operations. 
  
-## Related Content  
+## Related content  
  [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  
   
  [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  

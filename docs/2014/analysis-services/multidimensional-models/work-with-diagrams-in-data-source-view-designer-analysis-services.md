@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.diagramorganizerpane.f1"
   - "sql12.asvs.dsvdesigner.findtable.f1"

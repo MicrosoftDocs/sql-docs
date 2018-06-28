@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "metadata [Integration Services]"
   - "paths [Integration Services], metadata"
@@ -16,7 +16,7 @@ ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # View Path Metadata in the Data Flow Path Editor
   Paths connect two data flow components. Before you can view path metadata, the data flow must contain at least two connected data flow components. For more information, see [Add or Delete a Component in a Data Flow](data-flow/add-or-delete-a-component-in-a-data-flow.md) and [Connect Components in a Data Flow](data-flow/connect-components-in-a-data-flow.md).  

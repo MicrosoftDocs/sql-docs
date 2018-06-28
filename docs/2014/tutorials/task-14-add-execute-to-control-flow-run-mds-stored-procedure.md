@@ -10,12 +10,12 @@ ms.technology:
   - "integration-services"
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Task 14: Adding Execute SQL Task to Control Flow to Run the Stored Procedure for MDS
   After loading data into the staging tables of MDS, you run a stored procedure associated with that table to load the data from staging into the appropriate tables in the MDS database. This stored procedure has two required parameters that you need to pass: LogFlag and VersionName. LogFlag specifies whether transactions are logged during the staging process and VersionName represents the version of the model. See [Staged Stored Procedure](http://msdn.microsoft.com/library/hh231028.aspx) topic for more details.  

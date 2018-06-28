@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dimprocessingtransformation.advanced.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Dimension Processing Destination Editor (Advanced Page)
   Use the **Advanced** page of the **Dimension Processing Destination Editor** dialog box to configure error handling.  

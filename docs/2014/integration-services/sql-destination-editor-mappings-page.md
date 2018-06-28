@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlserverdestadapter.mappings.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Destination Editor (Mappings Page)
   Use the **Mappings** page of the **SQL Destination Editor** dialog box to map input columns to destination columns.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dmquerytask.miningmodel.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Data Mining Query Task Editor (Mining Model Tab)
   Use the **Mining Model** tab of the **Data Mining Query Task** dialog box to specify the mining structure and mining model to use.  

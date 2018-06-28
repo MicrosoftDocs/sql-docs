@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], executing"
   - "executing queries [SQL Server]"
@@ -16,7 +16,7 @@ ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Run Queries (Visual Database Tools)
   When you have finished designing your query, you can run it.  

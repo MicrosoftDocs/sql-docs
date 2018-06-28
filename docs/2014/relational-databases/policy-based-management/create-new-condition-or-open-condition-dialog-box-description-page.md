@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dmf.policy.description.f1"
   - "sql12.swb.dmf.condition.description.f1"
@@ -16,7 +16,7 @@ ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Create New Condition or Open Condition Dialog Box, Description Page
   Use this dialog box to add a description to a Policy-Based Management condition.  

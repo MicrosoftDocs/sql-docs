@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -19,7 +19,7 @@ ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # User-Configurable Event Category
   The **User-Configurable** event category contains the **User-Configurable** event classes.  

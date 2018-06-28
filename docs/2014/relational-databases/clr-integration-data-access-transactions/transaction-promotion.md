@@ -19,7 +19,7 @@ ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Transaction Promotion
   Transaction *promotion* describes a lightweight, local transaction that can be automatically promoted to a fully distributable transaction as needed. When a managed stored procedure is invoked within a database transaction on the server, the common language runtime (CLR) code is run in the context of a local transaction.  If a connection to a remote server is opened within a database transaction, the connection to the remote server is enlisted into the distributed transaction and the local transaction is automatically promoted to a distributed transaction. So, transaction promotion minimizes the overhead of distributed transactions by deferring the creation of a distributed transaction until it is needed. Transaction promotion is automatic, if it has been enabled using the `Enlist` keyword, and does not require intervention from the developer. The .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides support for transaction promotion, handled through the classes in the .NET Framework `System.Data.SqlClient` namespace.  

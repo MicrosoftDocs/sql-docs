@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
 caps.latest.revision: 31
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Audit Add Member to DB Role Event Class
   The **Audit Add Member to DB Role** event class occurs whenever a login is added to or removed from a database role. This event class is used with the **sp_addrolemember**, **sp_changegroup**, and **sp_droprolemember** stored procedures.  

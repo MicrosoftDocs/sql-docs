@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagedesignwizard.finish.f1"
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe

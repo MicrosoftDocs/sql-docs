@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.enablecustommemberformula.selectacolumn.f1"
 ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Sql12.dts.designer.odatasource.columns.f1"
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # OData Source Editor (Columns Page)
   Use the **Columns** page of the **OData Source Editor** dialog box to select external (source) columns to be included in the output and map them to output columns.  

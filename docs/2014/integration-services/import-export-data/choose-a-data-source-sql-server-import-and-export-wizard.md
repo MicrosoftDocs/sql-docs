@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.chooseadatasource.f1"
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)
   Use the **Choose a Data Source** page to specify the source of the data that you want to copy.  
@@ -27,9 +27,6 @@ manager: "jhubbard"
 ## Options  
  **Data Source**  
  Choose the data provider that matches the data storage format of the source. There may be more than one provider available for your data source. For example, with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, the .NET Framework Data Provider for SQL Server, or the Microsoft OLE DB Provider for SQL Server.  
-  
-> [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, the data source requires a different data source provider than earlier versions of Excel or Access. For more information, see [Connect to an Excel Workbook](../connection-manager/connect-to-an-excel-workbook.md) and [Connect to an Access Database](../connection-manager/connect-to-an-access-database.md).  
   
  The **Data Source** property has a variable number of options, which depend on the providers installed on the computer. The following tables list the options for some frequently used destinations. For other providers, see the provider-specific documentation.  
   

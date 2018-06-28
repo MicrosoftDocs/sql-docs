@@ -18,7 +18,7 @@ ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
 caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Updategram Security Considerations (SQLXML 4.0)
   The following are security guidelines for using updategrams:  

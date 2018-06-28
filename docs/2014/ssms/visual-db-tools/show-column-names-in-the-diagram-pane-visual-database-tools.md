@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "column names [SQL Server]"
   - "queries [SQL Server], columns"
@@ -18,7 +18,7 @@ ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # Show Column Names in the Diagram Pane (Visual Database Tools)
   You can choose to hide or show the column names of tables in the **Diagram Pane** of the Query and View Designer.  

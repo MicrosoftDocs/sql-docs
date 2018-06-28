@@ -22,7 +22,7 @@ ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # FlagName Property (ServerSettingsGeneralFlag Class)
   Gets the name of the flag.  

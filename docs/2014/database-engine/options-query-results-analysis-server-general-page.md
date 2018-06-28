@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryResults.AnalysisServer.AnalysisServicesResulstsGeneral"
 ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 caps.latest.revision: 22
 author: "HeidiSteen"
 ms.author: "heidist"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Query Results-Analysis Server-General Page)
   Use this page to determine the default behavior of the query result window for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] queries. To display these settings, select **Options** from the **Tools** menu. Within the **Query Results** folder expand the **Analysis Server** subfolder, and then choose **General**.  

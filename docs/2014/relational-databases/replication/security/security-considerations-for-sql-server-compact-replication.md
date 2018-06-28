@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication], SQL Server Compact"
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 caps.latest.revision: 30
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ---
 # Security Considerations for SQL Server Compact Replication
   Securing connectivity between an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] involves properly configuring security for both Microsoft Internet Information Services (IIS) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "MAXSIZE SQL Database"
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
 caps.latest.revision: 62
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

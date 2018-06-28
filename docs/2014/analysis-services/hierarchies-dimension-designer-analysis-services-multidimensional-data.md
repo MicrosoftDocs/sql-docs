@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.asvs.dimensiondesigner.dbv.hierarchieslevelspane.f1"
 ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68

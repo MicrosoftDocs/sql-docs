@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fileextractortransformation.errorhandling.f1"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # Export Column Transformation Editor (Error Output Page)
   Use the **Error Output** page of the **Export Column Transformation Editor** dialog box to specify how to handle errors.  

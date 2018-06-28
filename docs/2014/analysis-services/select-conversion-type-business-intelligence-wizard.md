@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.currencyconversion.conversiontype.f1"
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692

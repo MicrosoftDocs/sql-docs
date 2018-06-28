@@ -22,7 +22,7 @@ ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # ProtocolDisplayName Property (ClientNetLibInfo Class)
   Gets or sets the name used to display the protocol.  

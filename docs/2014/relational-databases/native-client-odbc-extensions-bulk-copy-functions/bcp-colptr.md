@@ -22,7 +22,7 @@ ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: craigg
 ---
 # bcp_colptr
   Sets the program variable data address for the current copy into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

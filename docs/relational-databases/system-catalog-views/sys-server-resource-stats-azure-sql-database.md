@@ -28,7 +28,7 @@ manager: craigg
 # sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Returns CPU usage, io and storage data for an Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, io utilization and managed instance SKU. Historical data is retained for approximately 14 days.
+Returns CPU usage, IO, and storage data for an Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and managed instance SKU. Historical data is retained for approximately 14 days.
 
 The **sys.server_resource_stats** view has different definitions depending on the version of the Azure SQL managed instance that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.
  
@@ -59,7 +59,7 @@ The **sys.server_resource_stats** view has different definitions depending on th
  This view is available to all user roles with permissions to connect to the **master** database.  
   
 ## Remarks  
- The data returned by **sys.server_resource_stats** are total used in bytes or megabtyes (stated in column names) other than avg_cpu, which is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
+ The data returned by **sys.server_resource_stats** are expressed as the total used in either bytes or megabytes (stated in column names) other than avg_cpu, which is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
  
 ## Examples  
  The following example returns all databases that are averaging at least 80% of compute utilization over the last one week.  

@@ -1,7 +1,7 @@
 ﻿---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/04/2018"
+ms.date: "06/289/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -22,6 +22,30 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## SSDT for Visual Studio 2017 (15.7.1)
+Build number: 14.0.16167.0  
+Release date: June 28, 2018  
+  
+### What's New?
+
+**SSIS:**
+
+- Add support for new Azure Government AAD authority (login.microsoftonline.us) for use with AS Tasks.
+- Fix an issue that AS processing task UI will show “Method not found” when target server version is SQLServer2016.
+- Fix an issue that some pipeline components cannot be executed when target server version is SQLServer2012.
+
+**Installer:**
+
+- Filter the VS instance list to exclude the instances that cannot install SSDT.
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- When installing SSDT on Windows 10 and choosing “Install new SQL Server Data Tools for Visual Studio 2017 instance”, the installation will fail on “The requested metafile operation is not supported”. Please reboot the machine and launch SSDT installer again to continue the installation.
+
+
 
 ## SSDT for Visual Studio 2017 (15.7.0)
 Build number: 14.0.16165.0  

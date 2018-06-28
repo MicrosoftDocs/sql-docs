@@ -18,6 +18,9 @@ helpviewer_keywords:
   - "tutorials [SQL Server Management Studio]"
   - "Transact-SQL tutorials"
   - "SQL Server Management Studio [SQL Server], tutorials"
+  - "Find SQL Server Instance"
+  - "find instance name"
+  - "find sql server instance name"
 ---
 
 # Tutorial: Additional tips and tricks for using SSMS
@@ -196,7 +199,7 @@ The error log is a file that contains details about things that occur in your SQ
 
 6. Open the errorlog.log file in Notepad. 
 
-## <a name="determine-sql-server-name"></a>Find your SQL Server name
+## <a name="determine-sql-server-name"></a>Find SQL Server instance name
 You have a few options for finding the name of your SQL server before and after you connect to SQL Server.  
 
 ### Before you connect to SQL Server

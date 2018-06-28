@@ -196,7 +196,7 @@ The error log is a file that contains details about things that occur in your SQ
 
 6. Open the errorlog.log file in Notepad. 
 
-## <a name="determine-sql-server-name"></a>Find your SQL Server name
+## <a name="determine-sql-server-name"></a>Find SQL Server instance name
 You have a few options for finding the name of your SQL server before and after you connect to SQL Server.  
 
 ### Before you connect to SQL Server

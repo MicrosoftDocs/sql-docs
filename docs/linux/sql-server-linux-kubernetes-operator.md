@@ -19,6 +19,12 @@ An Always On availability group on Kubernetes requires an operator. The operator
 
 This article explains the operator global environment variables.
 
+## Example
+
+The following example describes a deployment for the `mssql-operator`.
+
+[!INCLUDE[kubernetes-ag-operator-yaml](../includes/kubernetes-ag-operator-yaml.md)]
+
 ## Global environment variables
 
 * `MSSQL_K8S_POD_NAMESPACE` 
@@ -57,11 +63,6 @@ This article explains the operator global environment variables.
   * **Description**: Period that secondary replicas poll if the leader lease has expired. 
   * **Default**: 1
 
-  ## Example
-
-  The following example describes a deployment for the `mssql-operator`.
-
-  [!INCLUDE[kubernetes-ag-operator-yaml](../includes/kubernetes-ag-operator-yaml.md)]
 
   ## Next steps
 

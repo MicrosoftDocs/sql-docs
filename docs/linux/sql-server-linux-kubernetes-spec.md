@@ -13,11 +13,23 @@ ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
-# SQL Server Always On availability group Kubernetes specification
+# SQL Server Always On availability group - Kubernetes specification
 
-To configure an Always On availability group on Kubernetes, create a specification. The specification is a `.yaml` file.  See an example of the specification in [this tutorial](tutorial-sql-server-ag-kubernetes.md).
+To configure an Always On availability group on Kubernetes, create a specification. The specification is a `.yaml` file.  
 
-This article explains the parameters in the specification.
+This article shows how to create the specification, and explains the parameters the parameters. See an example of the of the end-to-end deployment in [this tutorial](tutorial-sql-server-ag-kubernetes.md).
+
+## Create a manifest file for the specification
+
+The following example of a manifest file describes a Kubernetes specification for SQL Server. Copy the contents of the example into a new file named `sqlservers.yaml` to create the SQL Server availability group StatefulSet in Kubernetes.
+
+[!INCLUDE[kubernetes-ag-sql-statefulset-yaml](../includes/kubernetes-ag-sql-statefulset-yaml.md)]
+
+To deploy the SQL Server instances and create the availability group, run the following command.
+
+```azurecli
+kubectl apply -f sqlservers.yaml
+```
 
 ## Parameters
 
@@ -136,13 +148,7 @@ This article explains the parameters in the specification.
      availabilityGroups:
       name: <availabilityGroupName>
        availabilityMode: <synchronousCommit | asynchronousCommit | configurationOnly> 
-   ``` 
-
-## Example
-
-The following sample is a completed `.yaml` file for the SQL Server availability group StatefulSet in Kubernetes.
-
-   [!INCLUDE[kubernetes-ag-sql-statefulset-yaml](../includes/kubernetes-ag-sql-statefulset-yaml.md)]
+   ```
 
 ## Next steps
 

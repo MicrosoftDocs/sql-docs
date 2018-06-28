@@ -45,7 +45,7 @@ Several of the steps in this article create a manifest and then deploy the manif
 
 * A Kubernetes cluster with four nodes. For instructions, refer to [Tutorial: Deploy an Azure Kubernetes Service (AKS) cluster](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster).
 
-* Install [`kubctl`](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster#install-the-kubectl-cli).
+* Install [`kubectl`](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster#install-the-kubectl-cli).
 
 ## Create storage
 
@@ -60,7 +60,7 @@ To create the manifest for the storage, make a file named `pvc.yaml`, and copy i
 
 Next, apply the manifest to the Kubernetes cluster. The following example applies the manifest:
 
-```azure-cli
+```azurecli
 kubectl apply -f pvc.yaml
 ```
 
@@ -98,7 +98,7 @@ To deploy the operator, create a file named `operator.yaml`, and copy in the fol
 
 Deploy the operator with the `kubectl apply` command.
 
-```azure-cli
+```azurecli
 kubectl apply -f operator.yaml
 ```
 

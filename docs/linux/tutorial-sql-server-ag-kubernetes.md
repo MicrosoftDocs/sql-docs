@@ -250,7 +250,7 @@ Kubernetes automatically fails over to one of the available sync secondary repli
 
 When no longer needed, delete the resource group and all related resources. Run the following command:
 >[!WARNING]
->This command completely deletes everythin in the resource group. None of the components of the Kubernetes cluster will be available after you delete the resource group.
+>This command completely deletes everything in the resource group. None of the components of the Kubernetes cluster will be available after you delete the resource group.
 
 ```azurecli
 az group delete --name <MyResourceGroup>

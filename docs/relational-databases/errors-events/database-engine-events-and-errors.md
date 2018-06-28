@@ -1,7 +1,7 @@
 ---
 title: "Database Engine Events and Errors | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "06/27/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -15,17 +15,19 @@ ms.author: mathoma
 manager: craigg
 ---
 
-# Datbase Engine Errors
+# Database Engine Errors
+The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view. 
+
 
 ## Errors -2 to 999
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	[-2](mssqlserver-neg2-database-engine-error.md)	|		|		|	Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. (Microsoft SQL Server, Error: -2).	|
 |	[-1](mssqlserver-1-database-engine-error.md)	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server 2005, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: SQL Network Interfaces, error: 28 - Server doesn't support requested protocol) (Microsoft SQL Server, Error: -1).	|
-|	[2](mssqlserver-2-database-engine-error.md)	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider)	|
+|	[2](mssqlserver-2-database-engine-error.md)	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) (.Net SqlClient Data Provider)	|
 |	21	|	20	|	No	|	Warning: Fatal error %d occurred at %S_DATE. Note the error and time, and contact your system administrator.	|
-|	[53](mssqlserver-53-database-engine-error.md)	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server ) (.Net SqlClient Data Provider).	|
-|	101	|	15	|	No	|	Query not allowed in Waitfor.	|
+|	[53](mssqlserver-53-database-engine-error.md)	|		|		|	An error has occurred while establishing a connection to the server. When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) (.Net SqlClient Data Provider).	|
+|	101	|	15	|	No	|	Query not allowed in Wait for.	|
 |	[102](mssqlserver-102-database-engine-error.md)	|	15	|	No	|	Incorrect syntax near '%.*ls'.	|
 |	103	|	15	|	No	|	The %S_MSG that starts with '%.*ls' is too long. Maximum length is %d.	|
 |	104	|	15	|	No	|	ORDER BY items must appear in the select list if the statement contains a UNION, INTERSECT or EXCEPT operator.	|
@@ -260,9 +262,9 @@ manager: craigg
 |	343	|	15	|	No	|	Unknown object type '%.*ls' used in a CREATE, DROP, or ALTER statement.	|
 |	344	|	16	|	No	|	Remote function reference '%.*ls' is not allowed, and the column name '%.*ls' could not be found or is ambiguous.	|
 |	345	|	16	|	No	|	Function '%.*ls' is not allowed in the OUTPUT clause, because it performs user or system data access, or is assumed to perform this access. A function is assumed by default to perform data access if it is not schemabound.	|
-|	346	|	15	|	No	|	The parameter "%.*ls" can not be declared READONLY since it is not a table-valued parameter.	|
+|	346	|	15	|	No	|	The parameter "%.*ls" cannot be declared READONLY since it is not a table-valued parameter.	|
 |	347	|	16	|	No	|	The table-valued parameter "%.*ls" cannot be declared as an OUTPUT parameter.	|
-|	348	|	16	|	No	|	The table variable "%.*ls" can not be passed to a stored procedure with the OUTPUT option.	|
+|	348	|	16	|	No	|	The table variable "%.*ls" cannot be passed to a stored procedure with the OUTPUT option.	|
 |	349	|	16	|	No	|	The procedure "%.*ls" has no parameter named "%.*ls".	|
 |	350	|	16	|	No	|	The column "%.*ls" does not have a valid data type. A column cannot be of a user-defined table type.	|
 |	351	|	16	|	No	|	Column, parameter, or variable %.*ls. : Cannot find data type %.*ls.	|
@@ -425,7 +427,7 @@ manager: craigg
 |	576	|	16	|	No	|	Cannot create a row that has sparse data of size %d which is greater than the allowable maximum sparse data size of %d.	|
 |	577	|	16	|	No	|	The value provided for the timeout is not valid. Timeout must be a valid integer between 0 and 2147483647.	|
 |	578	|	16	|	No	|	Insert Exec not allowed in WAITFOR queries.	|
-|	579	|	16	|	No	|	Can not execute WAITFOR query with snapshot isolation level.	|
+|	579	|	16	|	No	|	Cannot execute WAITFOR query with snapshot isolation level.	|
 |	582	|	16	|	No	|	Offset is greater than the length of the column to be updated in write.	|
 |	583	|	16	|	No	|	Negative offset or length in write.	|
 |	584	|	16	|	No	|	Select Into not allowed in WAITFOR queries.	|

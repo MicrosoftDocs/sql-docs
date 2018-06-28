@@ -64,5 +64,6 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 
 ## Next steps
 
->[Configure a SQL Server container in Kubernetes for high availability](tutorial-sql-server-containers-kubernetes.md)
->[Configure a SQL Server Always On availability group on Docker containers in Kubernetes with Azure Kubernetes Service (AKS)](tutorial-sql-server-ag-kubernetes.md)
+[Configure a SQL Server container in Kubernetes for high availability](tutorial-sql-server-containers-kubernetes.md)
+
+[Configure a SQL Server Always On availability group on Docker containers in Kubernetes with Azure Kubernetes Service (AKS)](tutorial-sql-server-ag-kubernetes.md)

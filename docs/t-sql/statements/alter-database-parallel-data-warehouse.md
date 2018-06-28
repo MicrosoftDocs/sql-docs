@@ -76,16 +76,16 @@ ALTER DATABASE database_name
  The name of the database to be modified. To display a list of databases on the appliance, use [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  AUTOGROW = { ON | OFF }  
- Updates the AUTOGROW option. When AUTOGROW is ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automatically increases the allocated space for replicated tables, distributed tables, and the transaction log as necessary to accommodate growth in storage requirements. When AUTOGROW is OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] returns an error if replicated tables, distributed tables, or the transaction log exceeds the maximum size setting.  
+ Updates the AUTOGROW option. When AUTOGROW is ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automatically increases the amount of space set aside for replicated tables, distributed tables, and the transaction log, when more space is needed. When AUTOGROW is OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] returns an error if replicated tables, distributed tables, or the transaction log sizes are larger than the largest amount allowed by the size setting.  
   
  REPLICATED_SIZE = *size* [GB]  
- Specifies the new maximum gigabytes per Compute node for storing all of the replicated tables in the database being altered. If you are planning for appliance storage space, you will need to multiply REPLICATED_SIZE by the number of Compute nodes in the appliance.  
+ Specifies the new max gigabytes per Compute node. A node is used for storing all of the replicated tables in the database being altered. If you are planning for appliance storage space, you will need to multiply REPLICATED_SIZE by the number of Compute nodes in the appliance.  
   
  DISTRIBUTED_SIZE = *size* [GB]  
- Specifies the new maximum gigabytes per database for storing all of the distributed tables in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
+ Specifies the new max gigabytes per database for storing all of the distributed tables in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
   
  LOG_SIZE = *size* [GB]  
- Specifies the new maximum gigabytes per database for storing all of the transaction logs in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
+ Specifies the new max gigabytes per database for storing all of the transaction logs in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
   
  ENCRYPTION { ON | OFF }  
  Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] when [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
@@ -94,7 +94,7 @@ ALTER DATABASE database_name
  SET AUTO_CREATE_STATISTICS { ON | OFF }
  When this setting is ON, the query optimizer automatically creates statistics on individual columns in the query predicate. The optimizer thereby improves the cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a histogram in an existing statistics object.
 
- The default is ON for new databases created after upgrading to APS AU7. The default is OFF for databases created prior to the upgrade. 
+ The default is ON for new databases created after upgrading to APS AU7. The default is OFF for databases that are created before the upgrade is applied. 
 
  For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics)
 
@@ -121,7 +121,7 @@ ALTER DATABASE database_name
  Requires the ALTER permission on the database.  
   
 ## Error Messages
-If auto-stats is disabled and you try to alter the statistics settings, PDW gives an error. The error says "This option is not supported in PDW." The system administrator can enable auto-stats by enabling the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
+If auto-stats is disabled, and you try to alter the statistics settings, PDW gives an error. The error says "This option is not supported in PDW." The system administrator can enable auto-stats by enabling the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
 
 ## General Remarks  
  The values for REPLICATED_SIZE, DISTRIBUTED_SIZE, and LOG_SIZE can be greater than, equal to, or less than the current values for the database.  
@@ -129,7 +129,7 @@ If auto-stats is disabled and you try to alter the statistics settings, PDW give
 ## Limitations and Restrictions  
  Grow and shrink operations are approximate. The resulting actual sizes can vary from the size parameters.  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not perform the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not handle the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will still exist.  
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 The statistics settings only work if the administrator has enable auto-stats.  If you are an administrator, use the feature switch [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) to enable or disable auto-stats. 

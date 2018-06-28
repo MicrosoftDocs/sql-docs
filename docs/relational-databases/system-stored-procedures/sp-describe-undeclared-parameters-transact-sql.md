@@ -1,7 +1,7 @@
 ﻿---
 title: "sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "system-stored-procedures"
@@ -33,7 +33,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 ## Syntax  
   
-```  
+```sql
   
 sp_describe_undeclared_parameters   
     [ @tsql = ] 'Transact-SQL_batch'   
@@ -121,7 +121,7 @@ sp_describe_undeclared_parameters
   
  After this step, if any expression (other than a call to a UDF) has two arguments without data types, type deduction fails with an error. For example, the following all produce errors:  
   
-```  
+```sql
 SELECT * FROM t1 WHERE @p1 = @p2  
 SELECT * FROM t1 WHERE c1 = @p1 + @p2  
 SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)  
@@ -129,9 +129,9 @@ SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)
   
  The following example does not produce an error:  
   
-```  
+```sql
 SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)  
-```  
+```
   
  **Step 2**  
   
@@ -167,7 +167,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      If E(@p) = @p and TT(@p) exists, i.e., if @p is directly an argument to one of the expressions listed at the beginning of step 2, the type deduction algorithm deduces the data type of @p to be TT(@p). For example:  
   
-    ```  
+    ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
     ```  
   
@@ -175,7 +175,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      As a special case, if @p is an argument to a \<, >, \<=, or >= operator, simple deduction rules do not apply. The type deduction algorithm will use the general deduction rules explained in the next section. For example, if c1 is a column of data type char(30), consider the following two queries:  
   
-    ```  
+    ```sql
     SELECT * FROM t WHERE c1 = @p  
     SELECT * FROM t WHERE c1 > @p  
     ```  
@@ -215,7 +215,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      For example:  
   
-    ```  
+    ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
@@ -223,7 +223,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 2.  If multiple data types tie for the smallest number of conversions, the data type with greater precedence is used. For example  
   
-    ```  
+    ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
@@ -253,7 +253,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ## Examples  
  The following example returns information such as the expected data type for the undeclared `@id` and `@name` parameters.  
   
-```  
+```sql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  
@@ -263,7 +263,7 @@ WHERE object_id = @id OR name = @name'
   
  When the `@id` parameter is provided as a `@params` reference, the `@id` parameter is omitted from the result set and only the `@name` parameter is described.  
   
-```  
+```sql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  
@@ -275,6 +275,4 @@ WHERE object_id = @id OR NAME = @name',
 ## See Also  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
-  
-  
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

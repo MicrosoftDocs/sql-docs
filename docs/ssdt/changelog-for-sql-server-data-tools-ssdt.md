@@ -1,7 +1,7 @@
 ﻿---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/289/2018"
+ms.date: "06/29/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -26,7 +26,7 @@ For detailed posts about what's new and changed, see [the SSDT Team blog](https:
 
 ## SSDT for Visual Studio 2017 (15.7.1)
 Build number: 14.0.16167.0  
-Release date: June 28, 2018  
+Release date: June 29, 2018  
   
 ### What's New?
 

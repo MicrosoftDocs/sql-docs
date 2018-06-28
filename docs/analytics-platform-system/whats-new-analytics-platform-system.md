@@ -30,27 +30,37 @@ Query hints HASH and ORDER GROUP are now supported. For more information, see [H
 APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.
 
 ### Known Issues
-With APS AU7 software, we are packaging and providing the Intel BIOS update that fixes “speculative execution side-channel attacks” (aka. Spectre and Meltdown vulnerabilities). Though packaged together, the BIOS update is installed manually and not part of the APS AU7 software install. Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI) and Indirect Branch Prediction mitigation (IBP) on various SQL workloads in various environments and found significant degradation on some workloads. We recommend that you test the performance effect of enabling BIOS update before you deploy them in a production environment. If the performance effect of enabling these features is too high for an existing application, you can consider whether isolating your APS Appliance from untrusted code running is a better mitigation for your application. See SQL Server guidance [here](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+With APS AU7 software, an Intel BIOS update is provided which fixes a problem described as *speculative execution side-channel attacks*. The attacks aim to exploit what are called *Spectre and Meltdown vulnerabilities*. Although packaged together with APS, the BIOS update is installed manually, and not as part of the APS AU7 software install.
+
+Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of the following configurations on various SQL workloads in various environments. The measurements found significant degradation on some workloads:
+
+- Kernel Virtual Address Shadowing (KVAS)
+- Kernel Page Table Indirection (KPTI)
+- Indirect Branch Prediction mitigation (IBP)
+
+Based on the results, the recommendation is that you test the performance effect of enabling BIOS update before you deploy them in a production environment. If the performance effect of enabling these features is too high for your application, consider whether a better mitigation is to isolate your APS Appliance from any untrusted code that is running. See SQL Server guidance [here](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
 ::: moniker range="= aps-pdw-2016 || = sqlallproducts-allversions"
 
 ## APS 2016-AU6
-These are the new features for APS 2016-AU6:
+This section described the new features for APS 2016-AU6.
 
 ### SQL Server 2016
 
-APS AU6 runs on the latest SQL Server 2016 release and uses the default database compatibility level 130.  SQL Server 2016 makes it possible to support some of the  new features such as secondary indexes for clustered columnstore indexes and Kerberos for PolyBase. 
+APS AU6 runs on the latest SQL Server 2016 release, and uses the default database compatibility level 130. SQL Server 2016 enables support for new features such as:
 
+- Secondary indexes for clustered columnstore indexes.
+- Kerberos for PolyBase.
 
 ### T-SQL
 APS AU6 supports these T-SQL compatibility improvements.  These additional language elements make it easier to migrate from SQL Server and other data sources. 
 
-- [Column-level SQL collations][] are now supported in addition to Windows collations.
+- [Column-level SQL collations][] are now supported, in addition to Windows collations.
 - [Nonclustered indexes on clustered columnstore indexes][] improve performance of queries that search for specific values in the clustered columnstore index. 
 - [SELECT...INTO][] 
 - [sp_spaceused()][] displays the disk space used or reserved in a table or database.
-- [Wide tables][] support is the same as SQL Server 2016. The previous limit of 32K for the row size no longer exists. 
+- [Wide tables][] support is the same as SQL Server 2016. The previous limit of 32 K for the row size no longer exists. 
 
 **Data types**
 

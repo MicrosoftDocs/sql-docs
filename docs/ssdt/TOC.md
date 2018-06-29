@@ -1,3 +1,4 @@
+# [SQL Server Data Tools (SSDT)](sql-server-data-tools.md)
 # [Download SSDT](download-sql-server-data-tools-ssdt.md)
 # [New and updated articles](new-updated-ssdt.md)
 # [Changelog for SSDT](changelog-for-sql-server-data-tools-ssdt.md)

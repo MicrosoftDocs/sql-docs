@@ -1,7 +1,7 @@
 ---
 title: "Deploy and run SSIS packages in Azure | Microsoft Docs"
 description: Learn how you can move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Microsoft Azure cloud.
-ms.date: "06/07/2018"
+ms.date: "06/29/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -15,9 +15,9 @@ manager: craigg
 ---
 # Lift and shift SQL Server Integration Services workloads to the cloud
 You can now move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Azure cloud.
--   Store and manage SSIS projects and packages in the SSIS Catalog (SSISDB) on Azure SQL Database or SQL Database Managed Instance (Preview).
--   Run packages in an instance of the Azure-SSIS Integration Runtime, a component of Azure Data Factory.
--   Use familiar tools such as SQL Server Management Studio (SSMS) for common tasks.
+-   Deploy and manage SSIS projects and packages in the SSIS Catalog (SSISDB) on Azure SQL Database or SQL Database Managed Instance (Preview).
+-   Run packages on Azure in an instance of the Azure-SSIS Integration Runtime, a component of Azure Data Factory.
+-   Do common tasks with familiar tools such as SQL Server Management Studio (SSMS).
 
 ## Benefits
 Moving your on-premises SSIS workloads to Azure has the following potential benefits:
@@ -26,21 +26,17 @@ Moving your on-premises SSIS workloads to Azure has the following potential bene
 -   **Increase scalability** with the ability to specify multiple cores per node (scale up) and multiple nodes per cluster (scale out).
 
 ## Architecture overview
-The following table highlights the differences between SSIS on premises and SSIS on Azure. The most significant difference is the separation of storage from runtime. Azure Data Factory hosts the runtime engine for SSIS packages on Azure. The runtime engine is called the Azure-SSIS Integration Runtime (Azure-SSIS IR). For more info, see [Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
+The following table highlights the differences between SSIS on premises and SSIS on Azure.
 
-| Storage | Runtime | Scalability |
-|---|---|---|
-| On premises (SQL Server) | SSIS runtime hosted by SQL Server | SSIS Scale Out (in SQL Server 2017 and later)<br/><br/>Custom solutions (in prior versions of SQL Server) |
-| On Azure (SQL Database or SQL Database Managed Instance (Preview)) | Azure-SSIS Integration Runtime, a component of Azure Data Factory | Scaling options for the Azure-SSIS Integration Runtime |
-| | | |
+The most significant difference is the separation of storage from runtime. Azure Data Factory hosts the runtime engine for SSIS packages on Azure. The runtime engine is called the Azure-SSIS Integration Runtime (Azure-SSIS IR). For more info, see [Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
+
+| Location | Storage | Runtime | Scalability |
+|---|---|---|---|
+| On premises | SQL Server | SSIS runtime hosted by SQL Server | SSIS Scale Out (in SQL Server 2017 and later)<br/><br/>Custom solutions (in prior versions of SQL Server) |
+| On Azure | SQL Database or SQL Database Managed Instance (Preview) | Azure-SSIS Integration Runtime, a component of Azure Data Factory | Scaling options for the Azure-SSIS Integration Runtime |
+| | | | |
 
 You only have to provision the Azure-SSIS IR one time. After that, you can use familiar tools such as SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) to deploy, configure, run, monitor, schedule, and manage packages.
-
-## Version support
-
-You can deploy a package created with any version of SSIS to Azure. When you deploy a package to Azure, if there are no validation errors, the package is automatically upgraded to the latest package format. In other words, it is always upgraded to the latest version of SSIS.
-
-The deployment process validates packages to ensure that they can run on the Azure-SSIS Integration Runtime. For more info, see [Validate SSIS packages deployed to Azure](ssis-azure-validate-packages.md).
 
 ## Prerequisites
 
@@ -51,7 +47,7 @@ To deploy SSIS packages to Azure, you have to have one of the following versions
 For info about the prerequisites for the Azure-SSIS Integration Runtime, see [Deploy and run an SSIS package in Azure - Prerequisites](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure#prerequisites).
 
 > [!NOTE]
-> The Azure-SSIS Integration Runtime is not yet available in all regions. For info about the supported regions, see [Products available by region - Microsoft Azure](https://azure.microsoft.com/regions/services/).
+> The Azure-SSIS Integration Runtime is not yet available in all Azure regions. For info about the supported regions, see [Products available by region - Microsoft Azure](https://azure.microsoft.com/regions/services/).
 
 ## Provision SSIS on Azure
 
@@ -110,11 +106,17 @@ To deploy projects on Azure, you can use one of several familiar tools and scrip
 
 For a deployment example that uses SSMS and the Integration Services Deployment Wizard, see [Deploy and run an SSIS package in Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
+### Version support
+
+You can deploy a package created with any version of SSIS to Azure. When you deploy a package to Azure, if there are no validation errors, the package is automatically upgraded to the latest package format. In other words, it is always upgraded to the latest version of SSIS.
+
+The deployment process validates packages to ensure that they can run on the Azure-SSIS Integration Runtime. For more info, see [Validate SSIS packages deployed to Azure](ssis-azure-validate-packages.md).
+
 ### Run packages
 
-For an overview of the methods that you can use to run SSIS packages deployed to Azure, see [Run an SSIS package in Azure](ssis-azure-run-packages.md).
+To run SSIS packages deployed in Azure, you can use a variety of methods. For more info, see [Run an SSIS package in Azure](ssis-azure-run-packages.md).
 
-## Pass runtime values with environments
+### Pass package parameters at runtime
 
 To pass one or more runtime values to packages that you run as part of an Azure Data Factory pipeline, create SSIS execution environments in SSISDB with SQL Server Management Studio (SSMS). In each environment, create variables and assign values that correspond to the parameters for your projects or packages. Configure your SSIS packages in SSMS to associate those environment variables with your project or package parameters. When you run the packages in a Data Factory pipeline, switch between environments by specifying different environment paths on the Settings tab of the Execute SSIS Package activity UI.
 
@@ -129,8 +131,7 @@ To monitor running packages in SSMS, you can use the following reporting tools i
 To monitor the Azure-SSIS Integration Runtime, see [Monitor the Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ## Schedule packages
-To schedule the execution of packages stored in Azure SQL Database, you can use a variety of tools. For more info, see [Schedule SSIS packages in Azure
-](ssis-azure-schedule-packages.md).
+To schedule the execution of packages deployed in Azure, you can use a variety of tools. For more info, see [Schedule SSIS packages in Azure](ssis-azure-schedule-packages.md).
 
 ## Next steps
 To get started with SSIS workloads on Azure, see the following articles:

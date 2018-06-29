@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2018"
+ms.date: "07/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -46,7 +46,8 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.7.1) ](https://go.microsoft.com/fwlink/?linkid=875613) 
 
 > [!IMPORTANT]
-> When installing SSDT on Windows 10 and choosing **Install new SQL Server Data Tools for Visual Studio 2017 instance**, please uncheck any checkbox and install the new instance first. After the new instance is installed, please reboot the computer and launch the SSDT installer again to continue the installation.  
+> - Before installing SSDT for Visual Studio 2017 (15.7.1), uninstall "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed, and close all VS instances.
+> - When installing SSDT on Windows 10 and choosing **Install new SQL Server Data Tools for Visual Studio 2017 instance**, please uncheck any checkbox and install the new instance first. After the new instance is installed, please reboot the computer and launch the SSDT installer again to continue the installation.  
 
 
 
@@ -54,7 +55,7 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
   
 Release number: 15.7.1  
 Build number: 14.0.16167.0  
-Release date: June 29, 2018  
+Release date: July 02, 2018  
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

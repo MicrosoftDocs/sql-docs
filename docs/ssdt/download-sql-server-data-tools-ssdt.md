@@ -46,8 +46,8 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.7.1) ](https://go.microsoft.com/fwlink/?linkid=875613) 
 
 > [!IMPORTANT]
-> - Before installing SSDT for Visual Studio 2017 (15.7.1), uninstall "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed, and close all VS instances.
-> - When installing SSDT on Windows 10 and choosing **Install new SQL Server Data Tools for Visual Studio 2017 instance**, please uncheck any checkbox and install the new instance first. After the new instance is installed, please reboot the computer and launch the SSDT installer again to continue the installation.  
+> - Before installing SSDT for Visual Studio 2017 (15.7.1), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
+> - When installing SSDT on Windows 10 and choosing **Install new SQL Server Data Tools for Visual Studio 2017 instance**, please clear any checkbox and install the new instance first. After the new instance is installed, please reboot the computer and open the SSDT installer again to continue the installation.  
 
 
 

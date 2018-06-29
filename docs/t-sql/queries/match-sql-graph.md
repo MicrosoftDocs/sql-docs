@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"

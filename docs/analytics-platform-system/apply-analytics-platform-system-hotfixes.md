@@ -1,25 +1,18 @@
 ---
-title: "Apply Analytics Platform System Hotfixes (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
-caps.latest.revision: 25
-
+title: Apply Analytics Platform System hotfixes | Microsoft Docs
+description: This article discusses how to apply hotfixes to the Analytics Platform System software.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Apply Analytics Platform System Hotfixes
-This topic discusses how to apply hotfixes to the Analytics Platform System software.  
+
+# Apply Analytics Platform System hotfixes
+This article discusses how to apply hotfixes to the Analytics Platform System software.  
   
 ## Before You Begin  
   

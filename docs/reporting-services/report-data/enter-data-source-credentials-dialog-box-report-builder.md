@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -21,7 +20,6 @@ caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)
   Use the **Enter Data Source Credentials** dialog box to provide your credentials so that you can retrieve data from the data source.  

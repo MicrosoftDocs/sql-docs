@@ -2,14 +2,11 @@
 title: "SqlDataRecord Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: reference
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,8 +16,7 @@ ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 caps.latest.revision: 25
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SqlDataRecord Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

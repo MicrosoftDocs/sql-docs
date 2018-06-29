@@ -2,14 +2,10 @@
 title: "CLR Integration and Transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: reference
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -23,8 +19,7 @@ ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 caps.latest.revision: 19
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # CLR Integration and Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,35 +1,14 @@
 ---
 title: "Measures Element (ASSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Measures Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "Measures"
-helpviewer_keywords: 
-  - "Measures element"
-ms.assetid: d2107112-f620-4fd7-a05f-bb2606b4be18
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Measures Element (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

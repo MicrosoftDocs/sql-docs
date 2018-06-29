@@ -2,14 +2,10 @@
 title: "Collation and CLR Integration Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: reference
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,8 +16,7 @@ ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
 caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Collation and CLR Integration Data Types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

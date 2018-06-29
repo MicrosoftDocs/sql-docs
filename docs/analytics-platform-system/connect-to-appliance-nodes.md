@@ -1,25 +1,18 @@
 ---
-title: "Connect to Appliance Nodes (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
-caps.latest.revision: 19
-
+title: Connect to appliance Nodes - Analytics Platform System | Microsoft Docs
+description: This article explains the various ways to connect to each node in the Analytics Platform System appliance.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Connect to Appliance Nodes
-This topic explains the various ways to connect to each node in the Analytics Platform System appliance.  
+
+# Connect to appliance nodes in Analytics Platform System
+This article explains the various ways to connect to each node in the Analytics Platform System appliance.  
   
 ## Connecting with Hadoop  
 Before using Hadoop with SQL Server PDW, ask your appliance administrator to install the Java Runtime Environment onto SQL Server PDW. For instructions, see [Configure PolyBase Connectivity to External Data &#40;Analytics Platform System&#41;](configure-polybase-connectivity-to-external-data.md) in the Appliance Operations Guide.  

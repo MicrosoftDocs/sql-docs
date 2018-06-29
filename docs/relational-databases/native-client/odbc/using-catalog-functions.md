@@ -1,10 +1,9 @@
----
+﻿---
 title: "Using Catalog Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client|ODBC"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "functions [ODBC]"
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 caps.latest.revision: 36
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using Catalog Functions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

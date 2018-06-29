@@ -4,8 +4,6 @@ ms.custom: ""
 ms.date: "12/20/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.service: ""
-ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
@@ -21,7 +19,6 @@ caps.latest.revision: 35
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Install Reporting Services 2016 in SharePoint mode
 

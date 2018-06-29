@@ -1,25 +1,14 @@
 ---
 title: "Determine the Server Mode of an Analysis Services Instance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Determine the Server Mode of an Analysis Services Instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +47,7 @@ ms.workload: "On Demand"
  [Install Analysis Services in Multidimensional and Data Mining Mode](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Power Pivot for SharePoint 2010 Installation](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
+ [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-models-ssas.md)   
  [Multidimensional Model Solutions ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Mining Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   

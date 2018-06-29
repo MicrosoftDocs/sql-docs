@@ -102,8 +102,8 @@
 ## [Data Mining](data-mining-tutorials-analysis-services.md)  
 
 # How-to
-## [Tabular modeling](../analysis-services/tabular-models/tabular-models-ssas.md)
-## [Multidimensional modeling](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [Tabular models](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [Multidimensional models](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
 ## [Data mining](../analysis-services/data-mining/data-mining-ssas.md)
 ## [Power Pivot for Sharepoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
 ## [Manage servers](../analysis-services/instances/analysis-services-instance-management.md)
@@ -130,10 +130,11 @@
 ## [Analysis Services samples](analysis-services-samples.md)
 
 # Reference
+## [PowerShell Reference for Analysis Services](../analysis-services/powershell/analysis-services-powershell-reference.md)  
+## [PowerShell Reference for Power Pivot for SharePoint](../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
 ## [Data Analysis Expressions (DAX) on MSDN](https://msdn.microsoft.com/library/gg413422.aspx)
 ## [Data Mining Extensions (DMX)](../dmx/data-mining-extensions-dmx-reference.md)
 ## [Multidimensional Expressions (MDX)](../mdx/analysis-services-language-reference.md)
-## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)
-## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
+## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)  
 ## [Server properties](../analysis-services/server-properties/server-properties-in-analysis-services.md)
 ## [XML for Analysis (XMLA)](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)

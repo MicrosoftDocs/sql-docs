@@ -2,14 +2,12 @@
 title: "dbo.sysjobactivity (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,8 +23,7 @@ ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

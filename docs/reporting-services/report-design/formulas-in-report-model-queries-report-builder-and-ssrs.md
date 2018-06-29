@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-design"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
@@ -20,7 +19,6 @@ caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Formulas in Report Model Queries (Report Builder and SSRS)
   Formulas are calculations performed on values in a report that use a report model as a data source. You define formulas in the **Define Formula Dialog Box** in the Report Model Query Designer when you define a query for a report model data source. A formula can contain functions, operators, constants, and references to fields or entities. Formulas allow you to combine, aggregate, filter, and evaluate both numeric and text data. You can create formulas and save them as new fields or you can modify the formulas of existing fields.  

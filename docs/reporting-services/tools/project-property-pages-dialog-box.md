@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/30/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "tools"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -22,7 +21,6 @@ caps.latest.revision: 35
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Project Property Pages Dialog Box

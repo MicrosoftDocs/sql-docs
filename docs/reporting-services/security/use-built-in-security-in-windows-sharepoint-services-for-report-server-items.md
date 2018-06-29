@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], SharePoint integrated mode"
   - "SharePoint integration [Reporting Services], permissions"
@@ -22,7 +21,6 @@ caps.latest.revision: 14
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Use Built-in Security in Windows SharePoint Services for Report Server Items
   SharePoint provides built-in security features that you can use to access report server items from SharePoint sites and libraries. If you already assigned site and list permissions to users, those same users will have access to report server items and operations immediately after you configure the integration settings between SharePoint and a report server.  

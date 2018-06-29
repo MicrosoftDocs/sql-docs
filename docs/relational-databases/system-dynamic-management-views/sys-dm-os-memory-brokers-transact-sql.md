@@ -2,14 +2,10 @@
 title: "sys.dm_os_memory_brokers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +19,9 @@ helpviewer_keywords:
   - "sys.dm_os_memory_brokers dynamic management view"
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +38,7 @@ ms.workload: "Inactive"
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|ID of the resource pool if it is associated with a Resource Governor pool.|  
-|**memory_broker_type**|**nvarchar(60)**|Type of memory broker. There are currently three types of memory brokers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], listed below with their descriptions.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Memory that is allocated for use by cached objects.<br /><br /> **MEMORYBROKER_FOR_STEAL** : Memory that is stolen from the buffer pool. This memory is not available for reuse by other components until it is freed by the current owner.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Memory reserved for future use by currently executing requests.|  
+|**memory_broker_type**|**nvarchar(60)**|Type of memory broker. There are currently three types of memory brokers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], listed below with their descriptions.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Memory that is allocated for use by cached objects (Not Buffer Pool cache).<br /><br /> **MEMORYBROKER_FOR_STEAL** : Memory that is stolen from the buffer pool. This memory is not available for reuse by other components until it is freed by the current owner.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Memory reserved for future use by currently executing requests.|  
 |**allocations_kb**|**bigint**|Amount of memory, in kilobytes (KB), that has been allocated to this type of broker.|  
 |**allocations_kb_per_sec**|**bigint**|Rate of memory allocations in kilobytes (KB) per second. This value can be negative for memory deallocations.|  
 |**predicted_allocations_kb**|**bigint**|Predicted amount of allocated memory by the broker. This is based on the memory usage pattern.|  
@@ -54,8 +49,9 @@ ms.workload: "Inactive"
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  s  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
   
 ## See Also  
 

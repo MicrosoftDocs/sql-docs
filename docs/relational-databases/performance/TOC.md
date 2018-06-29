@@ -2,9 +2,10 @@
 # [Performance Center for SQL Server Database Engine and Azure SQL Database](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 # [Configuring Storage Spaces with a NVDIMM-N write-back cache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
-# [Adaptive Query Processing](adaptive-query-processing.md)
 # [Automatic Tuning](../automatic-tuning/automatic-tuning.md)
 # [Cardinality Estimation](cardinality-estimation-sql-server.md)  
+# [Intelligent Query Processing](intelligent-query-processing.md)
+## [Adaptive Query Processing](adaptive-query-processing.md)
 
 # [Monitor and Tune for Performance](monitor-and-tune-for-performance.md)  
 ## [Monitor SQL Server Components](monitor-sql-server-components.md)  

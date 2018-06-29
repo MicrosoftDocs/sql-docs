@@ -2,14 +2,12 @@
 title: "GetFileNamespacePath (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,8 +21,7 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +54,9 @@ ms.workload: "Inactive"
   
 |Value|Description|  
 |-----------|-----------------|  
-|**0**|Returns the server name converted to NetBIOS format, for example:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> This is the default value.|  
-|**1**|Returns the server name without conversion, for example:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
-|**2**|Returns the complete server path, for example:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDB`|  
+|**0**|Returns the server name converted to NetBIOS format, for example:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> This is the default value.|  
+|**1**|Returns the server name without conversion, for example:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
+|**2**|Returns the complete server path, for example:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## Return Type  
  **nvarchar(max)**  
@@ -79,7 +76,7 @@ ms.workload: "Inactive"
  To keep code and applications independent of the current computer and database, avoid writing code that relies on absolute file paths. Instead, get the complete path for a file at run time by using the **FileTableRootPath** and **GetFileNamespacePath** functions together, as shown in the following example. By default, the **GetFileNamespacePath** function returns the relative path of the file under the root path for the database.  
   
 ```sql  
-USE MyDocumentDB;  
+USE MyDocumentDatabase;  
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  
   
@@ -98,7 +95,7 @@ WHERE Name = N’document.docx’;
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
 WHERE Name = N’document.docx’;  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDB\MyFileTable\MyDocDirectory\document.docx”  
+-- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
 WHERE Name = N’document.docx’;  
 ```  

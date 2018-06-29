@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "subscriptions"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "time zones [Reporting Services]"
   - "clocks [Reporting Services]"
@@ -23,7 +22,6 @@ caps.latest.revision: 22
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Change Time Zones and Clock Settings on a Report Server
   A report server always uses the local time of the computer on which it is installed. You cannot configure it to use a different time zone. If a client application points to a report server in a different time zone, the report server time zone is used to execute a scheduled operation. In Report Manager and SharePoint management pages, the time zone is indicated on each scheduling page so that you know exactly when a scheduled operation will occur. For example, the page for creating custom schedules will note “Times are expressed in (UTC-08:00) Pacific time (US and Canada).”  

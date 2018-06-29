@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/12/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "application-integration"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -22,7 +21,6 @@ caps.latest.revision: 25
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Using the WebForms ReportViewer Control
   To view reports deployed to a report server or reports that exist on the local file system, you can use the WebForms ReportViewer control to render them in a Web application.  

@@ -1,25 +1,14 @@
 ---
 title: "Lesson 5: Defining Relationships Between Dimensions and Measure Groups | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 5: Defining Relationships Between Dimensions and Measure Groups
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

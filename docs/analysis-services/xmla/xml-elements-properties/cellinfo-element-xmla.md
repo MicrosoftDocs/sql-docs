@@ -1,37 +1,14 @@
 ---
 title: "CellInfo Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "CellInfo Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "microsoft.xml.analysis.cellinfo"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#CellInfo"
-  - "urn:schemas-microsoft-com:xml-analysis#CellInfo"
-helpviewer_keywords: 
-  - "CellInfo element"
-ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # CellInfo Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +27,7 @@ ms.workload: "Inactive"
 </OlapInfo>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -58,7 +35,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|1-1: Required element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -92,7 +69,7 @@ ms.workload: "Inactive"
 </OlapInfo>  
 ```  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -6,15 +6,12 @@ ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.workload: "Active"
 ---
 # Install sqlcmd and bcp the SQL Server command-line tools on Linux
 

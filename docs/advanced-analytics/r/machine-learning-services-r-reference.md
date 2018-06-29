@@ -1,20 +1,13 @@
 ---
-title: "API reference for SQL Server Machine Learning Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/31/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: API reference for SQL Server Machine Learning Services | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 
 # API reference for SQL Server Machine Learning Services
@@ -35,7 +28,7 @@ For the most part, SQL Server consumes the same R and Python libraries that are 
 
     Scalable algorithms that support remote compute contexts and multiple data sources.
 
-+ [MicrosoftML](https://docs.microsoft.com/machine-learning-serverr-reference/microsoftml/microsoftml-package)
++ [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 
     Fast, scalable machine learning algorithms and transforms for R. Requires RevoScaleR.
 

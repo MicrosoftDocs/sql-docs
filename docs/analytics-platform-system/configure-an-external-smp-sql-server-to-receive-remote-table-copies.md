@@ -1,26 +1,19 @@
 ---
-title: "Configure External SMP SQL Server to Receive Remote Table Copies (PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
-caps.latest.revision: 13
-
+title: Configure SQL Server to receive remote table copies - Parallel Data Warehouse | Microsoft Docs
+description: Describes how to configure an external SMP SQL Server instance to receive remote table copies from Parallel Data Warehouse. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Configure an External SMP SQL Server to Receive Remote Table Copies
-Describes how to configure an external SQL Server instance to receive remote table copies from SQL Server PDW.  
-  
+
+# Configure an external SMP SQL Server to receive remote table copies - Parallel Data Warehouse
+Describes how to configure an external SQL Server instance to receive remote table copies from Parallel Data Warehouse.  
+
 This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md).  
   
 ## Before You Begin  

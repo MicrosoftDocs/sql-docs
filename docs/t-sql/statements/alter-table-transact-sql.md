@@ -1,15 +1,12 @@
----
+﻿---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
-ms.prod: "sql-non-specified"
+ms.date: "06/01/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -62,10 +59,10 @@ helpviewer_keywords:
   - "table changes [SQL Server]"
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 caps.latest.revision: 281
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -257,7 +254,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
       } 
     | { SPLIT | MERGE } RANGE (boundary_value)  
     | SWITCH [ PARTITION source_partition_number  
-        TO target_table_name [ PARTITION target_partition_number ]  
+        TO target_table_name [ PARTITION target_partition_number ] [ WITH ( TRUNCATE_TARGET_PARTITION = ON | OFF )
 }  
 [;]  
   
@@ -315,7 +312,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   Associated with a default definition. However, the length, precision, or scale of a column can be changed if the data type is not changed.  
   
-The data type of **text**, **ntext** and **image** columns can be changed only in the following ways:  
+The data type of **text**, **ntext, and **image** columns can be changed only in the following ways:  
   
 -   **text** to **varchar(max)**, **nvarchar(max)**, or **xml**  
   
@@ -323,7 +320,7 @@ The data type of **text**, **ntext** and **image** columns can be changed only i
   
 -   **image** to **varbinary(max)**  
   
-Some data type changes may cause a change in the data. For example, changing an **nchar** or **nvarchar** column to **char** or **varchar** may cause the conversion of extended characters. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reducing the precision or scale of a column may cause data truncation.  
+Some data type changes may cause a change in the data. For example, changing a nchar** or **nvarchar** column to **char** or **varchar** may cause the conversion of extended characters. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reducing the precision or scale of a column may cause data truncation.  
   
 > [!NOTE]
 > The data type of a column of a partitioned table cannot be changed.  
@@ -409,7 +406,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
  Specifies the ROWGUIDCOL property is added to or dropped from the specified column. ROWGUIDCOL indicates that the column is a row GUID column. Only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column, and the ROWGUIDCOL property can be assigned only to a **uniqueidentifier** column. ROWGUIDCOL cannot be assigned to a column of a user-defined data type.  
   
- ROWGUIDCOL does not enforce uniqueness of the values that are stored in the column and does not automatically generate values for new rows that are inserted into the table. To generate unique values for each column, either use the NEWID function on INSERT statements or specify the NEWID function as the default for the column.  
+ ROWGUIDCOL does not enforce uniqueness of the values that are stored in the column and does not automatically generate values for new rows that are inserted into the table. To generate unique values for each column, either use the NEWID or NEWSEQUENTIALID function on INSERT statements or specify the NEWID or NEWSEQUENTIALID function as the default for the column.  
   
  [ {ADD | DROP} PERSISTED ]  
  Specifies that the PERSISTED property is added to or dropped from the specified column. The column must be a computed column that is defined with a deterministic expression. For columns specified as PERSISTED, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] physically stores the computed values in the table and updates the values when any other columns on which the computed column depends are updated. By marking a computed column as PERSISTED, you can create indexes on computed columns defined on expressions that are deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  

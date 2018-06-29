@@ -2,10 +2,9 @@
 title: "PREDICT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|queries"
+ms.component: t-sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -20,7 +19,8 @@ helpviewer_keywords:
   - "PREDICT clause"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "craigg"
+manager: craigg
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

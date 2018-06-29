@@ -1,23 +1,17 @@
 ---
-title: "Backup Server Capacity Planning Worksheet (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "This capacity planning worksheet helps you to determine the requirements for a backup server for performing SQL Server PDW database backup and restore operations."
-ms.date: "01/05/2017"
-ms.topic: "article"
-ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
-caps.latest.revision: 6
-
+title: Backup server capacity planning - Parallel Data Warehouse | Microsoft Docs
+description: This capacity planning worksheet helps you to determine the requirements for a backup server for performing Parallel Data Warehouse database backup and restore operations. Use this to create your plan for purchasing new or provisioning existing backup servers.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Backup server capacity planning worksheet
+
+# Backup server capacity planning worksheet - Parallel Data Warehouse
 This capacity planning worksheet helps you to determine the requirements for a backup server for performing SQL Server PDW database backup and restore operations. Use this to create your plan for purchasing new or provisioning existing backup servers.  
   
 This worksheet is a supplement to the instructions in [Acquire and Configure a Backup Server](acquire-and-configure-backup-server.md).  

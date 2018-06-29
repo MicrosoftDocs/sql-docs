@@ -2,16 +2,13 @@
 title: "Tail-Log Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up [SQL Server], tail of log"
   - "transaction log backups [SQL Server], tail-log backups"
@@ -21,10 +18,9 @@ helpviewer_keywords:
   - "backups [SQL Server], tail-log backups"
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Tail-Log Backups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

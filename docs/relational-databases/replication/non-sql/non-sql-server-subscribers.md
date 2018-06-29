@@ -2,16 +2,15 @@
 title: "Non-SQL Server Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], non-SQL Server Subscribers"
   - "heterogeneous data sources, non-SQL Server Subscribers"
@@ -26,8 +25,7 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 caps.latest.revision: 55
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

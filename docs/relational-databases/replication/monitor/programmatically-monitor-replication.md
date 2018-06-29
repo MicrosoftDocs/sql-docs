@@ -2,16 +2,15 @@
 title: "Programmatically Monitor Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -34,8 +33,7 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Programmatically Monitor Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

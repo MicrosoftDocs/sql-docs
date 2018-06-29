@@ -1,17 +1,13 @@
----
+﻿---
 title: "Search Documents Using Results Lists | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-scripting"
+ms.prod: sql
+ms.technology: scripting
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "searches [SQL Server Management Studio], result lists"
   - "result list searches [SQL Server Management Studio]"
@@ -19,10 +15,10 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], search multiple files"
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Search Documents Using Results Lists
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

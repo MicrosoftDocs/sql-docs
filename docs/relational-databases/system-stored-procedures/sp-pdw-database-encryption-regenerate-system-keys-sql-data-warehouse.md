@@ -1,25 +1,23 @@
----
+﻿---
 title: "sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "system-stored-procedures"
+ms.service: sql-data-warehouse
+ms.component: system-objects
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: bb13e323-a984-4462-8b6d-6019c38ddd9d
-caps.latest.revision: 8
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

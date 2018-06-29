@@ -8,10 +8,12 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 
 ms.component: ssrs
-ms.date: 02/03/2018
+ms.date: 04/28/2018
 ---
 # New and Recently Updated: Reporting Services for SQL Server
 
@@ -25,7 +27,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
+- *Date range of updates:* &nbsp; **2018-02-03** &nbsp; -to- &nbsp; **2018-04-28**
 - *Subject area:* &nbsp; **Reporting Services for SQL Server**.
 
 
@@ -38,7 +40,7 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [How to find the product key for SQL Server 2017 Reporting Services](install-windows/find-reporting-services-product-key-ssrs.md)
+***There are no new articles to list, this time.***
 
 
 
@@ -64,13 +66,92 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Change log for SQL Server Reporting Services](#TitleNum_1)
+2. [Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site](#TitleNum_2)
 
 
 
 
 &nbsp;
 
-***No articles in this area were updated recently, this time.***
+&nbsp;
+
+<a name="TitleNum_1"/>
+
+### 1. &nbsp; [Change log for SQL Server Reporting Services](change-log-sql-server-reporting-services.md)
+
+*Updated: 2018-04-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+
+<!-- Source markdown line 28.  ms.author= "edugonz".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 025d58c01310215df423e7c3848e929b935bcfff 89310524b904dfba41e301cf1323b9a2a5e05064  (PR=575  ,  Filename=change-log-sql-server-reporting-services.md  ,  Dirpath=docs\reporting-services\  ,  MergeCommitSha40=98b04e2388872d1c7b8d819438c150c4ff2df94c) -->
+
+
+
+
+- *Version 14.0.600.744, Released: April 25, 2018*
+    - Bug Fixes:
+        - Data Driven Subscription page does not show the Delivery Option once it is created
+        - Upgrading SSRS 2012 to SSRS 2017 results in RSManagement throwing an exception every few seconds
+        - Cannot change defaults values for multi-value parameters in IE11
+        - Schedules are empty whenever shared schedule is executed
+
+- *Version 14.0.600.689, Released: February 28, 2018*
+    - Bug Fixes:
+        - Report Parameter visibility in a linked report is reverted after editing its properties
+        - URL Parameter rc:Toolbar=false doesn't work in Express edition
+        - Having expressions in Textbox with CanGrow property set to false is resulting in values not showing
+        - Added "Learn more" link for product key in setup
+        - Web portal with custom forms authentication is ignoring sliding expiration cookie
+        - Export to Word creates unequal row height if row content is empty
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### 2. &nbsp; [Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site](report-server-sharepoint/deploy-report-viewer-web-part.md)
+
+*Updated: 2018-04-10* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
+
+<!-- Source markdown line 154.  ms.author= "maghan".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 42b763a610d378a7cedc9b5778bc5048d65fa730 ce7e2619689fd50be51a2689b07e3137470d9adf  (PR=5481  ,  Filename=deploy-report-viewer-web-part.md  ,  Dirpath=docs\reporting-services\report-server-sharepoint\  ,  MergeCommitSha40=31e0b2ebfc08c0b57870ac412fbd49bf3a1dffb8) -->
+
+
+
+**Troubleshoot**
+
+
+* Error when uninstalling SSRS if you have SharePoint integrated mode configured:
+
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
+
+    Solution:
+    1. Remove the Report Viewer web part
+    2. Uninstall SSRS
+    3. Reinstall the Report Viewer web part
+
+* Error when trying to upgrade SharePoint if you have SharePoint integrated mode configured:
+
+    Could not load file or assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified. 00000000-0000-0000-0000-000000000000
+
+    Solution:
+    1. Remove the Report Viewer web part
+    2. Uninstall SSRS
+    3. Reinstall the Report Viewer web part
+
 
 
 
@@ -82,40 +163,36 @@ This compact list provides links to all the updated articles that are listed in 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### Subject areas that *do* have new or recently updated articles
 
-
-- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (11+6): &nbsp; &nbsp;**Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (18+0): &nbsp; &nbsp;**Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (218+14): **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (14+0): &nbsp; &nbsp;**Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (3+2): &nbsp; &nbsp; **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+3): &nbsp; &nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (7+10): &nbsp; &nbsp;**Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (2+3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (5+2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 
 #### Subject areas that do *not* have any new or recently updated articles
 
-
-- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
-
 

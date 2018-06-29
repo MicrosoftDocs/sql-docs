@@ -2,14 +2,11 @@
 title: "UPDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -43,8 +40,8 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 caps.latest.revision: 91
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -140,7 +137,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *schema_name*  
  Is the name of the schema to which the table or view belongs.  
   
- *table_or view_name*  
+ *table_or_view_name*  
  Is the name of the table or view from which the rows are to be updated. The view referenced by *table_or_view_name* must be updatable and reference exactly one base table in the FROM clause of the view. For more information about updatable views, see [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  

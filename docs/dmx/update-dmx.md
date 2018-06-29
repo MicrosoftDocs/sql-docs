@@ -1,33 +1,14 @@
 ---
 title: "UPDATE (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "UPDATE"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "NODE_CAPTION column"
-  - "mining models [Analysis Services], content changes"
-  - "modifying mining model content"
-  - "UPDATE statement [SQL Server], DMX"
-ms.assetid: 8a2b0942-c490-410c-b1cf-ff2e0fd8e24b
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

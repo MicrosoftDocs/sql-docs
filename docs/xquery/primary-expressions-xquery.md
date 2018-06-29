@@ -2,9 +2,8 @@
 title: "Primary Expressions (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: sql
 ms.component: "xquery"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -27,8 +26,7 @@ ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 caps.latest.revision: 20
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Primary Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

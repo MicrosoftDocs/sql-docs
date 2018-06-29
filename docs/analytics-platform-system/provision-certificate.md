@@ -1,24 +1,17 @@
 ---
-title: "PDW Certificate Provisioning (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "The PDW Certificate Provisioning page of the Analytics Platform System Configuration Manager imports or removes the certificate used by PDW."
-ms.date: "01/05/2017"
-ms.topic: "article"
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-
+title: Certificate provisioning - Analytics Platform System | Microsoft Docs
+description: Certificate provisioning in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# PDW Certificate Provisioning
+# Certificate provisioning in Analytics Platform System
 The **PDW Certificate Provisioning** page of the Analytics Platform System**Configuration Manager** imports or removes the certificate used by PDW. 
 
 Using, a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), and Integration Services loads. 

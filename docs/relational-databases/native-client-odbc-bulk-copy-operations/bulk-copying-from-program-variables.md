@@ -1,10 +1,9 @@
----
+﻿---
 title: "Bulk Copying from Program Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "native-client-odbc-bulk-copy-operations"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "program variables [ODBC]"
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Bulk Copying from Program Variables
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

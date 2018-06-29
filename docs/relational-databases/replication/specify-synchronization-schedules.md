@@ -2,16 +2,15 @@
 title: "Specify Synchronization Schedules | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], synchronizing"
   - "scheduling synchronization [SQL Server replication]"
@@ -21,8 +20,7 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: 40
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Specify Synchronization Schedules
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

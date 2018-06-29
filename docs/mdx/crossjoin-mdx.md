@@ -1,32 +1,17 @@
 ---
 title: "Crossjoin (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CROSSJOIN"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "Crossjoin function"
-ms.assetid: 503b8376-d244-4855-8f44-a749764162e4
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "On Demand"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Crossjoin (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Returns the cross product of one or more sets.  
   

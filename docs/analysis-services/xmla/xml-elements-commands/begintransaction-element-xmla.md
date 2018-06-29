@@ -1,41 +1,18 @@
 ---
 title: "BeginTransaction Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "BeginTransaction Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:xml-analysis#BeginTransaction"
-  - "microsoft.xml.analysis.begintransaction"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#BeginTransaction"
-helpviewer_keywords: 
-  - "BeginTransaction command"
-ms.assetid: fca122fc-b57c-4ba6-849b-ca8c93cf64e9
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # BeginTransaction Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Begins a transaction on the current session with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Begins a transaction on the current session with an instance of Analysis Services.  
   
 ## Syntax  
   
@@ -46,7 +23,7 @@ ms.workload: "Inactive"
 </Command>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -54,7 +31,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -68,7 +45,7 @@ ms.workload: "Inactive"
   
  If there are no explicitly specified active transactions on the current session, every command issued on the current session is executed inside an implicitly defined transaction. The implicit transaction is committed if the command succeeds, or rolled back if the command fails.  
   
-## See Also  
+## See also
  [Cancel Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)   
  [CommitTransaction Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md)   
  [RollbackTransaction Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md)   

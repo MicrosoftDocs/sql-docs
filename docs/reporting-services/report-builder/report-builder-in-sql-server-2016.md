@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/30/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-builder"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -23,7 +22,6 @@ caps.latest.revision: 35
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Report Builder in SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] is a tool for authoring paginated reports, for business users who prefer to work in a stand-alone environment instead of using Report Designer in Visual Studio.  When you design a paginated report, you're creating a report definition that specifies where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes the report definition you have specified, retrieves the data, and combines it with the report layout to generate the report. You can preview your report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] and publish your report to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode, where others can run it.  

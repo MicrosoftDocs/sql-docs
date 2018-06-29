@@ -1,15 +1,12 @@
----
+﻿---
 title: "sys.dm_io_cluster_shared_drives (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +20,10 @@ helpviewer_keywords:
   - "sys.dm_io_cluster_shared_drives dynamic management view"
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
 caps.latest.revision: 30
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

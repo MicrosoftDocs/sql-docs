@@ -6,15 +6,12 @@ ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 
-ms.workload: "On Demand"
 ---
 # Configure SQL Server Always On Availability Group for high availability on Linux
 

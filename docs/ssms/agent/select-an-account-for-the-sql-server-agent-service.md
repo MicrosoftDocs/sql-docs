@@ -1,17 +1,15 @@
----
+﻿---
 title: "Select an Account for the SQL Server Agent Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "roles [SQL Server], SQL Server Agent"
   - "SQL Server Agent, accounts"
@@ -27,11 +25,15 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Select an Account for the SQL Server Agent Service
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent runs as a specified user account. You select an account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager, where you can choose from the following options:  
   
 -   **Built-in account**. You can choose from a list of the following built-in Windows service accounts:  

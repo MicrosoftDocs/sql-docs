@@ -1,15 +1,12 @@
----
+﻿---
 title: "ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -19,10 +16,10 @@ helpviewer_keywords:
   - "GetParameterProperties method"
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 caps.latest.revision: 29
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

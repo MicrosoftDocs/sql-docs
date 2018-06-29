@@ -1,17 +1,15 @@
----
+﻿---
 title: "Limit Search Results with RANK | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.component: "search"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "row ranking [full-text search]"
   - "relevance ranking values [full-text search]"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "per-row rank values [full-text search]"
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Limit Search Results with RANK
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

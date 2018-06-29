@@ -6,15 +6,12 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 
-ms.workload: "On Demand"
 ---
 # Configure SQL Server settings with environment variables on Linux
 
@@ -48,6 +45,7 @@ You can use several different environment variables to configure SQL Server 2017
 | **MSSQL_AGENT_ENABLED** | Enable SQL Server Agent. For example, 'true' is enabled and 'false' is disabled. By default, agent is disabled.  |
 | **MSSQL_MASTER_DATA_FILE** | Sets the location of the master database data file. |
 | **MSSQL_MASTER_LOG_FILE** | Sets the location of the master database log file. |
+| **MSSQL_ERROR_LOG_FILE** | Sets the location of the errorlog files. |
 
 
 ## Example: initial setup

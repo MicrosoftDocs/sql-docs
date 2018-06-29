@@ -3,8 +3,8 @@ title: "Quickstart: Connect and query SQL Server using SQL Operations Studio (pr
 description: This quickstart shows how to use SQL Operations Studio (preview) to connect to SQL Server and run a query
 ms.custom: "tools|sos"
 ms.date: "03/08/2018"
-ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sstein"
+ms.prod: sql
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,7 +13,6 @@ ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

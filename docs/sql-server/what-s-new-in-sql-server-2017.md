@@ -1,23 +1,18 @@
----
+﻿---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "server-general"
+ms.technology: install
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: 71
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -125,5 +120,7 @@ For more information, see [What's new in SQL Server Machine Learning Services](~
 - Find out [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

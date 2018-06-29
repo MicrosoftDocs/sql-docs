@@ -1,27 +1,13 @@
 ---
-title: "SQL Server Machine Learning Services Tutorials | Microsoft Docs"
-ms.date: "12/14/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-  - "SQL Server 2017"
-dev_langs: 
-  - "Python"
-  - "R"
-ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: 32
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "On Demand"
+title: SQL Server Machine Learning Services Tutorials | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Tutorials for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

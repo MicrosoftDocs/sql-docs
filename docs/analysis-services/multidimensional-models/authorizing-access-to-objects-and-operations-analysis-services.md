@@ -1,34 +1,14 @@
 ---
 title: "Authorizing access to objects and operations (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.general.f1"
-  - "sql13.asvs.roledesignerdialog.membership.f1"
-helpviewer_keywords: 
-  - "access rights [Analysis Services], users"
-  - "permissions [Analysis Services], users"
-  - "security [Analysis Services], user access"
-  - "user access rights [Analysis Services]"
-  - "granting permissions [Analysis Services], users"
-ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Authorizing access to objects and operations (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

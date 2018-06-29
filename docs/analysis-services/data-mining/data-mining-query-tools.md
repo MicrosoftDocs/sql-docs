@@ -1,32 +1,14 @@
 ---
 title: "Data Mining Query Tools | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "predictions [Analysis Services], DMX prediction queries"
-  - "predictions [DMX]"
-  - "DMX [Analysis Services], prediction queries"
-  - "prediction queries [DMX]"
-  - "predictions [Analysis Services]"
-  - "queries [DMX], prediction queries"
-  - "mining models [Analysis Services], DMX"
-ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 51
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Query Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -1,33 +1,14 @@
 ---
 title: "Data Sources in Multidimensional Models | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "metadata [Analysis Services]"
-  - "Analysis Services objects, data sources"
-  - "storing data [Analysis Services], data sources"
-  - "data sources [Analysis Services], about data sources"
-  - "security [Analysis Services], data sources"
-  - "data sources [Analysis Services]"
-  - "storage [Analysis Services], data sources"
-ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
-caps.latest.revision: 45
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Sources in Multidimensional Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

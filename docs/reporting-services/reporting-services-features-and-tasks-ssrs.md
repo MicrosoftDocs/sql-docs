@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "12/18/2015"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -21,7 +20,6 @@ caps.latest.revision: 42
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Reporting Services Features and Tasks (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foundational content is organized by reports and report features, report server features, and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] product features.  

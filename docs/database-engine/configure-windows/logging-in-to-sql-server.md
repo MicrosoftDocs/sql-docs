@@ -2,16 +2,13 @@
 title: "Logging In to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server, logging in"
   - "services [SQL Server], logging in"
@@ -25,10 +22,9 @@ helpviewer_keywords:
   - "logins [SQL Server]"
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Logging In to SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ ms.workload: "Active"
 |Connection to a default instance that is not listening on the default TCP port, by specifying the port that is being used, in this case 2828. (This is not necessary if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is listening on the default port (1433).)|APPHOST,2828|  
 |Connection to a named instance on a designated TCP port, in this case 2828. (This is often necessary if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is not running on the host computer.)|APPHOST,2828|  
 |Connection to a default instance that is not listening on the default TCP port, by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28,2828|  
-|Connection to a named instance by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28,2828|  
+|Connection to a named instance by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Connecting to default instance by name, forcing a TCP connection.|tcp:APPHOST|  
 |Connecting to named instance by name, forcing a TCP connection.|tcp:APPHOST\SQLEXPRESS|  
 |Connecting to a default instance by specifying a named pipe name.|\\\APPHOST\pipe\unit\app|  

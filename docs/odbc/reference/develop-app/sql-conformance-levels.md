@@ -2,16 +2,13 @@
 title: "SQL Conformance Levels | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "conformance levels [ODBC], SQL"
   - "SQL conformance levels [ODBC]"
@@ -19,10 +16,9 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], conformance levels"
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQL Conformance Levels
 The level of SQL-92 grammar supported by a driver is indicated by the value returned by a call to **SQLGetInfo** with the SQL_SQL_CONFORMANCE information type. This indicates whether the driver conforms to the Entry, FIPS Transitional, Intermediate, or Full levels defined in SQL-92.  

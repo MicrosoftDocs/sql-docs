@@ -2,21 +2,19 @@
 title: "SQL Server Always On availability group deployment patterns | Microsoft Docs"
 ms.custom: "sql-linux"
 ms.date: "10/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: database-engine
+ms.technology: linux
 ms.tgt_pltfrm: ""
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # High availability and data protection for availability group configurations
 

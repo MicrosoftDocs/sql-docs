@@ -1,26 +1,18 @@
 ---
-title: "Backup and loading hardware overview for APS PDW"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "To deploy your end-to-end data warehousing solution on Analytics Platform System (APS) with SQL Server Parallel Data Warehouse (PDW), you need to create a plan for backing up the data warehouse and loading data."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
-caps.latest.revision: 9
-
-
+title: Backup and loading hardware - Parallel Data Warehouse
+description: To deploy your end-to-end data warehousing solution on Analytics Platform System (APS) with Parallel Data Warehouse (PDW), you need to create a plan for backing up the data warehouse and loading data. Use this guidance to acquire and configure backup and loading servers that will meet your business requirements.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Backup and loading hardware overview
-To deploy your end-to-end data warehousing solution on Analytics Platform System (APS) with SQL Server Parallel Data Warehouse (PDW), you need to create a plan for backing up the data warehouse and loading data. Use this guidance to acquire and configure backup and loading servers that will meet your business requirements.  
+# Backup and loading hardware overview - Parallel Data Warehouse
+To deploy your end-to-end data warehousing solution on Analytics Platform System (APS) with Parallel Data Warehouse (PDW), you need to create a plan for backing up the data warehouse and loading data. Use this guidance to acquire and configure backup and loading servers that will meet your business requirements.  
   
 ## Acquire and configure backup servers  
 ![Backup process](media/backup-process.png "Backup process")  

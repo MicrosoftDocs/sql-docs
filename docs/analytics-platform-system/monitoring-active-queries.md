@@ -1,25 +1,18 @@
 ---
-title: "Monitoring Active Queries (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
-caps.latest.revision: 7
-
+title: Monitor active queries - Parallel Data Warehouse | Microsoft Docs
+description: Use the Admin Console and Parallel Data Warehouse system views to monitor active queries on Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Monitoring Active Queries
-This topic shows how to use the Admin Console and the SQL Server PDW system views to monitor active queries. See [Monitor the Appliance by Using the Admin Console](monitor-the-appliance-by-using-the-admin-console.md) and [System Views](tsql-system-views.md) for information on these tools.  
+
+# Monitoring active queries - Parallel Data Warehouse
+This article shows how to use the Admin Console and the SQL Server PDW system views to monitor active queries. See [Monitor the Appliance by Using the Admin Console](monitor-the-appliance-by-using-the-admin-console.md) and [System Views](tsql-system-views.md) for information on these tools.  
   
 ## Prerequisites  
 Regardless of the method used to monitor active queries, the login must have the permissions described in “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console](grant-permissions.md#grant-permissions-to-use-the-admin-console).  

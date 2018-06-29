@@ -1,35 +1,14 @@
 ---
 title: "Filter Element (Trace) (ASSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Filter Element (Trace)"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "filter"
-helpviewer_keywords: 
-  - "Filter element"
-ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
+ms.topic: reference
+author: minewiskan
+ms.author: owend
+manager: kfile
 ---
 # Filter Element (Trace) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

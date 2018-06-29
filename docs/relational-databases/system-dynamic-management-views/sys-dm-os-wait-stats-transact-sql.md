@@ -1,15 +1,12 @@
 ---
 title: "sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2018"
-ms.prod: "sql-non-specified"
+ms.date: "04/23/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +20,10 @@ helpviewer_keywords:
   - "sys.dm_os_wait_stats dynamic management view"
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 caps.latest.revision: 111
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,10 +42,11 @@ Returns information about all the waits encountered by threads that executed. Yo
 |signal_wait_time_ms|**bigint**|Difference between the time that the waiting thread was signaled and when it started running.|  
 |pdw_node_id|**int**|The identifier for the node that this distribution is on. <br/> **Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## Permissions  
+## Permissions
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
-  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ##  <a name="WaitTypes"></a> Types of Waits  
  **Resource waits** 
  Resource waits occur when a worker requests access to a resource that is not available because the resource is being used by some other worker or is not yet available. Examples of resource waits are locks, latches, network and disk I/O waits. Lock and latch waits are waits on synchronization objects  
@@ -168,8 +166,8 @@ This command resets all counters to 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Occurs with parallel query plans when a consumer thread waits for a producer thread to send rows. This is a normal part of parallel query execution. <br /> **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Occurs with parallel query plans when synchronizing the query processor exchange iterator, and when producing and consuming rows. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism.<br /> **Note:** In [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET only refers to synchronizing the query processor exchange iterator, and to producing rows for consumer threads. Consumer threads are tracked separately in the CXCONSUMER wait type.| 
+|CXCONSUMER |Occurs with parallel query plans when a consumer thread waits for a producer thread to send rows. This is a normal part of parallel query execution. <br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Occurs with parallel query plans when synchronizing the query processor exchange iterator, and when producing and consuming rows. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism.<br /> **Note:** Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET only refers to synchronizing the query processor exchange iterator, and to producing rows for consumer threads. Consumer threads are tracked separately in the CXCONSUMER wait type.| 
 |CXROWSET_SYNC |Occurs during a parallel range scan.| 
 |DAC_INIT |Occurs while the dedicated administrator connection is initializing.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -788,7 +786,7 @@ This command resets all counters to 0.
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_CACHE_ACCESS |Occurs during synchronization on a replication article cache. During these waits, the replication log reader stalls, and data definition language (DDL) statements on a published table are blocked.| 
 |REPL_HISTORYCACHE_ACCESS |TBD| 
-|REPL_SCHEMA_ACCESS |Occurs during synchronization of replication schema version information. This state exists when DDL statements are executed on the replicated object, and when the log reader builds or consumes versioned schema based on DDL occurrence.| 
+|REPL_SCHEMA_ACCESS |Occurs during synchronization of replication schema version information. This state exists when DDL statements are executed on the replicated object, and when the log reader builds or consumes versioned schema based on DDL occurrence. Contention can be seen on this wait type if you have many published databases on a single publisher with transactional replication and the published databases are very active.| 
 |REPL_TRANFSINFO_ACCESS |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_TRANHASHTABLE_ACCESS |TBD| 
 |REPL_TRANTEXTINFO_ACCESS |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

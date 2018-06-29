@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/18/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -19,7 +18,6 @@ caps.latest.revision: 13
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Lesson 7: Add Drillthrough Action on Parent Report
 After you add a ReportViewer control to the website application, your next step is to add a drillthrough action on the parent report.  

@@ -2,15 +2,11 @@
 title: "Overview of CLR Integration | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: reference
 ms.topic: "reference"
 helpviewer_keywords: 
   - "common language runtime [SQL Server], about CLR integration"
@@ -24,8 +20,7 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 caps.latest.revision: 50
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # CLR Integration - Overview
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

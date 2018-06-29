@@ -36,6 +36,7 @@
 ## [sys.resource_stats](sys-resource-stats-azure-sql-database.md)  
 ## [sys.resource_usage](sys-resource-usage-azure-sql-database.md)  
 ## [dbo.server_quotas](dbo-server-quotas-azure-sql-database.md)  
+## [sys.server_resource_stats](sys-server-resource-stats-azure-sql-database.md)
 
 # [CLR Assembly](clr-assembly-catalog-views-transact-sql.md)  
 ## [sys.assemblies](sys-assemblies-transact-sql.md)  
@@ -221,7 +222,7 @@
 ## [sys.query_store_query](sys-query-store-query-transact-sql.md)  
 ## [sys.query_store_query_text](sys-query-store-query-text-transact-sql.md)  
 ## [sys.query_store_runtime_stats](sys-query-store-runtime-stats-transact-sql.md)  
-## [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md) 
+## [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md)
 ## [sys.query_store_runtime_stats_interval](sys-query-store-runtime-stats-interval-transact-sql.md)  
 
 # [Scalar Types](scalar-types-catalog-views-transact-sql.md)  
@@ -254,6 +255,7 @@
 ## [sys.securable_classes](sys-securable-classes-transact-sql.md)  
 ## [sys.security_policies](sys-security-policies-transact-sql.md)  
 ## [sys.security_predicates](sys-security-predicates-transact-sql.md)  
+## [sys.sensitivity_classifications](sys-sensitivity-classifications-transact-sql.md)
 ## [sys.server_audits](sys-server-audits-transact-sql.md)  
 ## [sys.server_audit_specifications](sys-server-audit-specifications-transact-sql.md)  
 ## [sys.server_audit_specification_details](sys-server-audit-specification-details-transact-sql.md)  

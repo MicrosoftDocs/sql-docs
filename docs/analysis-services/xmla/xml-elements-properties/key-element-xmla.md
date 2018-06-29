@@ -1,37 +1,14 @@
 ---
 title: "Key Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Key Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#Key"
-  - "urn:schemas-microsoft-com:xml-analysis#Key"
-  - "microsoft.xml.analysis.key"
-helpviewer_keywords: 
-  - "Key element"
-ms.assetid: 09d3cd48-49f7-4b58-b8bb-ca75b81bb02f
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Key Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +25,7 @@ ms.workload: "Inactive"
 </Keys>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -56,7 +33,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -66,7 +43,7 @@ ms.workload: "Inactive"
 ## Remarks  
  The data type used by this element should match the data type of the appropriate key column of the specified attribute. If **Key** elements are not specified for a parent **Attribute** element, the **AttributeName** and **Name** elements specified in the parent **Attribute** element are used to identify the attribute member to be modified.  
   
-## See Also  
+## See also
  [Attribute Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)   
  [AttributeName Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)   
  [Drop Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   

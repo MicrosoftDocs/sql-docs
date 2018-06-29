@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-design"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rtp.rptdesigner.categorygroupproperties.general.f1"
   - "10403"
@@ -27,7 +26,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Filter, Group, and Sort Data (Report Builder and SSRS)
   In a report, expressions are used to help control, organize, and sort report data. By default, as you create datasets and design the report layout, properties of report items are set automatically to expressions based on the dataset fields, parameters, and other items that appear in the Report Data pane. You can also add an interactive sort button to a table or matrix cell to enable a user to interactively change the row sort order for groups or rows within groups.  

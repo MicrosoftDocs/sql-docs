@@ -1,32 +1,14 @@
 ---
 title: "Document and Script an Analysis Services Database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML for Analysis, scripts"
-  - "XMLA, scripts"
-  - "scripts [Analysis Services], databases"
-  - "documenting databases"
-  - "databases [Analysis Services], documenting"
-  - "databases [Analysis Services], scripts"
-ms.assetid: 125044e2-8d36-4733-8743-8bb68ff9aa4e
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Document and Script an Analysis Services Database
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

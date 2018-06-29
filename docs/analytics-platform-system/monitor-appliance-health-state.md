@@ -1,25 +1,18 @@
 ---
-title: "Monitor Appliance Health State (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-
+title: Monitor appliance health - Analytics Platform System
+description: How to monitor the state of an Analytics Platform System appliance by using the Admin Console, or by directly querying the Parallel Data Warehouse dynamic management views. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
+
 # Monitor Appliance Health State
-This topic explains how to monitor the state of a SQL Server PDW appliance by using the Admin Console, or by directly querying the SQL Server PDW Dynamic Management Views.  
+This article explains how to monitor the state of an Analytics Platform System appliance by using the Admin Console, or by directly querying the Parallel Data Warehouse dynamic management views. 
   
 ## To Monitor the Appliance State  
 A system administrator can use the Admin Console or the SQL Server PDW Dynamic Management Views (DMVs) to retrieve the full hierarchy of nodes, components, and software. The following diagram gives a high level understanding of the components that SQL Server PDW monitors.  

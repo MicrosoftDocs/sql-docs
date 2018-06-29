@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-design"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
@@ -20,7 +19,6 @@ caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Report Parts (Report Builder and SSRS)
   Report items such as tables, matrices, charts, and images can be published as *report parts*. Report parts are paginated report items that have been published separately to a report server and that can be reused in other paginated reports. Report parts have an .rsc file extension.  

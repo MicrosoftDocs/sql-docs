@@ -21,17 +21,17 @@ This article describes the connection information that you have to provide, and 
 The following sections contain the information you need to use Excel successfully with SSIS, and to understand and troubleshoot common problems:
 
 1.  The [tools](#tools) you can use.
-1. 
-1.  The [files](#files-you-need) you need.
 
-2.  The connection information that you have to provide, and the settings that you have to configure, when you load data from or to Excel.
+2.  The [files](#files-you-need) you need.
+
+3.  The connection information that you have to provide, and the settings that you have to configure, when you load data from or to Excel.
     -   [Specify Excel](#specify-excel) as your data source.
     -   Provide the [Excel file name and path](#excel-file).
     -   Select the [Excel version](#excel-version).
     -   Specify whether the [first row contains column names](#first-row).
     -   Provide the [worksheet or range that contains the data](#sheets-ranges).
 
-3.  Known issues and limitations.
+4.  Known issues and limitations.
     -   Issues with [data types](#issues-types).
     -   Issues with [importing](#issues-importing).
     -   Issues with [exporting](#issues-exporting).

@@ -31,7 +31,7 @@ The following table highlights the differences between SSIS on premises and SSIS
 The most significant difference is the separation of storage from runtime. Azure Data Factory hosts the runtime engine for SSIS packages on Azure. The runtime engine is called the Azure-SSIS Integration Runtime (Azure-SSIS IR). For more info, see [Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
 
 | Location | Storage | Runtime | Scalability |
-|---|---|---|
+|---|---|---|---|
 | On premises | SQL Server | SSIS runtime hosted by SQL Server | SSIS Scale Out (in SQL Server 2017 and later)<br/><br/>Custom solutions (in prior versions of SQL Server) |
 | On Azure | SQL Database or SQL Database Managed Instance (Preview) | Azure-SSIS Integration Runtime, a component of Azure Data Factory | Scaling options for the Azure-SSIS Integration Runtime |
 | | | | |

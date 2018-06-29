@@ -1,5 +1,5 @@
 ---
-title: SQL Server container high availability
+title: High availability for SQL Server containers
 description: This article introduces high availability for SQL Server containers
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,7 +13,7 @@ ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
-# SQL Server container high availability
+# High availability for SQL Server containers
 
 SQL Server workloads on containers can provide high availability with container orchestration through [Kubernetes](http://kubernetes.io/).
 

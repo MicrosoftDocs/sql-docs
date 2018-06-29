@@ -13,10 +13,10 @@ ms.reviewer: "martinle"
 # What's new in Analytics Platform System, a scale-out MPP data warehouse
 See what’s new in the latest Appliance Updates for Microsoft® Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
-::: moniker range="= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 
-## APS 2016-AU7
-APS 2016-AU6 is a prerequisite to upgrade to AU7. The following are new in APS AU7:
+## APS AU7
+APS 2016 is a prerequisite to upgrade to AU7. The following are new in APS AU7:
 
 ### Auto-create and auto-update statistics
 APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](appliance-feature-switch.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) statement.
@@ -32,18 +32,12 @@ APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configur
 ### Known Issues
 With APS AU7 software, an Intel BIOS update is provided which fixes a problem described as *speculative execution side-channel attacks*. The attacks aim to exploit what are called *Spectre and Meltdown vulnerabilities*. Although packaged together with APS, the BIOS update is installed manually, and not as part of the APS AU7 software install.
 
-Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of the following configurations on various SQL workloads in various environments. The measurements found significant degradation on some workloads:
-
-- Kernel Virtual Address Shadowing (KVAS)
-- Kernel Page Table Indirection (KPTI)
-- Indirect Branch Prediction mitigation (IBP)
-
-Based on the results, the recommendation is that you test the performance effect of enabling BIOS update before you deploy them in a production environment. If the performance effect of enabling these features is too high for your application, consider whether a better mitigation is to isolate your APS Appliance from any untrusted code that is running. See SQL Server guidance [here](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI) and Indirect Branch Prediction mitigation (IBP) on various SQL workloads in various environments. The measurements found significant degradation on some workloads. Based on the results, the recommendation is that you test the performance effect of enabling BIOS update before you deploy them in a production environment. See SQL Server guidance [here](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
-::: moniker range="= aps-pdw-2016 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
 
-## APS 2016-AU6
+## APS 2016
 This section described the new features for APS 2016-AU6.
 
 ### SQL Server 2016

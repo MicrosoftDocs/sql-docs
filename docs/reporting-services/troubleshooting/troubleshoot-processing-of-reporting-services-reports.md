@@ -51,6 +51,6 @@ In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull.md)
   
   
 ## See Also  
-[Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+[Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
 

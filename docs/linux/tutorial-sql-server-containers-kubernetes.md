@@ -1,5 +1,5 @@
 ---
-title: Configure a SQL Server container in Kubernetes for high availability | Microsoft Docs
+title: Configure a SQL Always On Availability Group with Azure Kubernetes Services (AKS) | Microsoft Docs
 description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Container Service.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,7 +12,7 @@ ms.suite: "sql"
 ms.custom: "sql-linux,mvc"
 ms.technology: linux
 ---
-# Configure a SQL Server container in Kubernetes for high availability
+# Configure a SQL Always On Availability Group with Azure Kubernetes Services (AKS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

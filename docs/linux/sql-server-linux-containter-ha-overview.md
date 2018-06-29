@@ -1,5 +1,5 @@
 ---
-title: SQL Server container high availability
+title: High availability for SQL Server containers
 description: This article introduces high availability for SQL Server containers
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,7 +13,7 @@ ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
-# SQL Server container high availability
+# High availability for SQL Server containers
 
 SQL Server workloads on containers can provide high availability with container orchestration through [Kubernetes](http://kubernetes.io/).
 
@@ -64,5 +64,6 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 
 ## Next steps
 
->[Configure a SQL Server container in Kubernetes for high availability](tutorial-sql-server-containers-kubernetes.md)
->[Configure a SQL Server Always On availability group on Docker containers in Kubernetes with Azure Kubernetes Service (AKS)](tutorial-sql-server-ag-kubernetes.md)
+[Configure a SQL Server container in Kubernetes for high availability](tutorial-sql-server-containers-kubernetes.md)
+
+[Configure a SQL Server Always On availability group on Docker containers in Kubernetes with Azure Kubernetes Service (AKS)](tutorial-sql-server-ag-kubernetes.md)

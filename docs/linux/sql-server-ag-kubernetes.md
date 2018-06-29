@@ -1,5 +1,5 @@
 ---
-title: SQL Server availability group on Kubernetes cluster
+title: Always On availability groups for SQL Server containers
 description: This article introduces availability groups on SQL Server containers
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,7 +13,7 @@ ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
-# Containerized SQL Server availability group
+# Always On availability groups for SQL Server containers
 
 SQL Server vNext supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](http://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
 

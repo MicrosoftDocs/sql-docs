@@ -6,16 +6,16 @@ manager: "craigg"
 ms.prod: "sql"
 ms.technology: "data-warehouse"
 ms.topic: "conceptual"
-ms.date: "04/24/2018"
+ms.date: "06/27/2018"
 ms.author: "murshedz"
 ms.reviewer: martinle
+monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 ---
-
 # Configure auto statistics
 
 Learn how to configure Parallel Data Warehouse to use auto statistics for creating and updating statistics automatically.  Use this capability to improve query plans, and therefore improve query performance.
 
-**Applies to:** APS (starting with AU7)
+**Applies to:** APS (starting with 2016-AU7)
 
 ## What are statistics?
 Statistics for query optimization are objects that contain statistical information about the distribution of values in one or more columns of a table. The query optimizer uses these statistics to estimate the cardinality, or number of rows, in the query result. These cardinality estimates enable the query optimizer to create a high-quality query plan. As an example, in APS, the MPP query optimizer uses cardinality estimates to choose to shuffle or replicate the smaller of two tables used in a join clause and in doing so improve query performance.  For more information, see [Statistics](../relational-databases/statistics/statistics.md) and [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)

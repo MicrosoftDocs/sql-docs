@@ -17,7 +17,7 @@ ms.technology: linux
 
 Create and manage your SQL Server instances natively in Kubernetes.
 
-[Deploy SQL Server to docker containers](tutorial-sql-server-ag-kubernetes.md) managed by [Kubernetes](https://kubernetes.io/). In Kubernetes, a container with a SQL Server instance can automatically recover in case a cluster node fails. For more robust availability, configure SQL Server Always On availability group with SQL Server instances in containers on a Kubernetes cluster. This article compares the two solutions.
+[Deploy SQL Server to docker containers](sql-server-linux-configure-docker.md) managed by [Kubernetes](https://kubernetes.io/). In Kubernetes, a container with a SQL Server instance can automatically recover in case a cluster node fails. For more robust availability, configure SQL Server Always On availability group with SQL Server instances in containers on a Kubernetes cluster. This article compares the two solutions.
 
 ## Container with SQL Server instance on Kubernetes
 

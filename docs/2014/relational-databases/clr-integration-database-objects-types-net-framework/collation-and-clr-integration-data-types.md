@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "collations [CLR integration]"
 ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Collation and CLR Integration Data Types

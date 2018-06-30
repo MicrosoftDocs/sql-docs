@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "AggregationInstanceMeasure data type"
 ms.assetid: 3250970a-a67d-486c-b205-038f1bd1770f
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AggregationInstanceMeasure Data Type (ASSL)
   Defines a primitive data type that represents information about a measure used by an aggregation instance.  

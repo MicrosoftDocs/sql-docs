@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "terminators [SQL Server]"
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Specify Field and Row Terminators (SQL Server)

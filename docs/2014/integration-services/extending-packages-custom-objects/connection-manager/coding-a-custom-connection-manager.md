@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "custom connection managers [Integration Services], coding"
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Coding a Custom Connection Manager

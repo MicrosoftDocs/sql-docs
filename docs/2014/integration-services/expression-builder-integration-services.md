@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "tools [Integration Services], Expression Builder"
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Expression Builder (Integration Services)

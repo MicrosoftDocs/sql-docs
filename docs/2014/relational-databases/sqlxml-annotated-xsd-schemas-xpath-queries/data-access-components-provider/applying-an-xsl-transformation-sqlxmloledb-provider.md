@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "XSL Transformations [SQLXML]"
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Applying an XSL Transformation (SQLXMLOLEDB Provider)

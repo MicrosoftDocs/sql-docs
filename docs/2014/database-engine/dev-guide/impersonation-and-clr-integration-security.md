@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "context [CLR integration]"
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Impersonation and CLR Integration Security

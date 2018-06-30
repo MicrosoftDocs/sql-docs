@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DrillThroughAction data type"
 ms.assetid: e212d575-a0d7-4548-92b4-33542ef59034
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DrillThroughAction Data Type (ASSL)
   Defines a derived data type that represents a drillthrough action.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Transact-SQL statements"
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Overview of Transact-SQL Statements for AlwaysOn Availability Groups (SQL Server)

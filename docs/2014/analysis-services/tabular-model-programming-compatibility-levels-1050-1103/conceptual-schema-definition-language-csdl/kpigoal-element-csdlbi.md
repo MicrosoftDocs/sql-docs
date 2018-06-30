@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: fd8afbe7-b57d-4b47-862d-eb7b2489c327
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # KpiGoal Element (CSDLBI)
   The KpiGoal element provides a reference to the column that is used to define the goal for a Key performance Indicator (KPI).  

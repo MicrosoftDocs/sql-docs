@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], recompiling"
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Recompile a Stored Procedure

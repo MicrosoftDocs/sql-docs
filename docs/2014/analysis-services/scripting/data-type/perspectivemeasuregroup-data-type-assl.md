@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "PerspectiveMeasureGroup data type"
 ms.assetid: 5927120d-f30e-4f87-8523-6d17012817d7
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PerspectiveMeasureGroup Data Type (ASSL)
   Defines a primitive data type that represents information about a measure group in a [Perspective](../objects/perspective-element-assl.md) element.  

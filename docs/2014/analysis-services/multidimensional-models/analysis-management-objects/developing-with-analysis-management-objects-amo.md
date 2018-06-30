@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "AMO, programming"
 ms.assetid: 91354fc9-22da-4724-b97f-3b1e7b0e69d3
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Developing with Analysis Management Objects (AMO)
   Analysis Management Objects (AMO) is the complete library of programmatically accessed objects that enables an application to manage a running instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. This section explains AMO concepts, focusing on major objects, how and when to use them, and the way they are interrelated. For more information about specific objects or classes, see the <xref:Microsoft.AnalysisServices>.  

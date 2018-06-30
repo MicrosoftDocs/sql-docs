@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "server availability [SQL Server]"
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 caps.latest.revision: 80
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # High Availability Solutions (SQL Server)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "XMLA, objects"
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Processing Objects (XMLA)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], processing is the step or series of steps that turn data into information for business analysis. Processing is different depending on the type of object, but processing is always part of turning data into information.  

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "ExceptionMessageBox class, samples"
 ms.assetid: ff5f79f0-401f-498a-8218-860f5ab46652
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Exception Message Box Reference

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DBSCHEMA_PROVIDER_TYPES rowset"
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DBSCHEMA_PROVIDER_TYPES Rowset
   Identifies the (base) data types supported by the data provider.  

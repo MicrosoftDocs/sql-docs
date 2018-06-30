@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, creating"
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Create Packages in SQL Server Data Tools

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "importing data"
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Bulk Import and Export of Data (SQL Server)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: c27761e6-75ed-4ee4-a236-0cbc42e500a1
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Default Trace Log Files Disabled

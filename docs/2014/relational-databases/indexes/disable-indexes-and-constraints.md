@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "indexed views [SQL Server], disabled indexes"
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Disable Indexes and Constraints

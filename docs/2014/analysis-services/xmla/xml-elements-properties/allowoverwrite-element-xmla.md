@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "AllowOverwrite element"
 ms.assetid: e7e92481-5f29-47f2-9efd-4e5e60c002bb
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AllowOverwrite Element (XMLA)
   Determines whether the parent [Backup](../xml-elements-commands/backup-element-xmla.md) or [Restore](../xml-elements-commands/restore-element-xmla.md) command attempts to overwrite the target file or database.  

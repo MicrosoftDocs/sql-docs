@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 caps.latest.revision: 24
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Report History Page (Report Manager)
   Use the Report History page to view report snapshots that are generated and stored over time. Depending on options that are set on the report server, report history may contain only the more recent snapshots.  

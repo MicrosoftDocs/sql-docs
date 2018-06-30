@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "LName element"
 ms.assetid: 2c8c2fa9-cb2d-44ea-b253-5e6ff61f1b66
 caps.latest.revision: 14
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # LName Element (XMLA)
   Contains information about unique level names for the parent [HierarchyInfo](hierarchyinfo-element-xmla.md) or [Member](member-element-xmla.md) element.  

@@ -9,8 +9,8 @@ ms.technology:
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "barbkess"
-ms.author: "barbkess"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Columnstore Indexes 

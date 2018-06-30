@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "SessionID element"
 ms.assetid: 18220e00-76cf-48f6-9465-200465a0c553
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SessionID Element (XMLA)
   Identifies an active session on which to execute the parent [Cancel](../xml-elements-commands/cancel-element-xmla.md) element.  

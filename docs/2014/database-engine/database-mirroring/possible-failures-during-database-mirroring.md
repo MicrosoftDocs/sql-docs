@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "failed database mirroring sessions [SQL Server]"
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Possible Failures During Database Mirroring

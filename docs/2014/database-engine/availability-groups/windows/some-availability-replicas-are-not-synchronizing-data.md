@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 caps.latest.revision: 10
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Some availability replicas are not synchronizing data

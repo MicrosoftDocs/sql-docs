@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "BackColor element"
 ms.assetid: 9024d131-74cc-4815-833a-f8cae57b7453
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # BackColor Element (ASSL)
   Describes color-related display characteristics of the parent element.  

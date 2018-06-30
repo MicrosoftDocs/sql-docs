@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 23
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Use the Add Database to Availability Group Wizard (SQL Server Management Studio)

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Lesson 13: Analyze in Excel

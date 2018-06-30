@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.restoredb.options.f1"
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Restore Database (Options Page)

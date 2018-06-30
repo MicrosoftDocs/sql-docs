@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "PATINDEX function"
 ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Large constants are typed as large-value types in 90 or later compatibility modes

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "login packet (bad)"
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_17832

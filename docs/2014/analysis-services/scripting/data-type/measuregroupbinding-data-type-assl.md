@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MeasureGroupBinding data type"
 ms.assetid: 47e83eec-e0bc-4118-9a0f-5bfdd6218297
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MeasureGroupBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to a [MeasureGroup](../objects/group-element-assl.md) element.  

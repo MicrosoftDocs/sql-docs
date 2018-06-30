@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.p2pwizard.LRA.f1"
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Log Reader Agent Security (Peer-to-Peer Replication)

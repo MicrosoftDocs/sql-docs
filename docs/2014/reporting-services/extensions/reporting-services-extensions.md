@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "extensions [Reporting Services]"
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 44
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Reporting Services Extensions

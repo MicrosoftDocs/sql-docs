@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, introduction"
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Transact-SQL Debugger

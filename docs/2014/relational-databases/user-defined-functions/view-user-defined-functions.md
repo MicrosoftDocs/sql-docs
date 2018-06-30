@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "status information [SQL Server], user-defined functions"
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # View User-defined Functions

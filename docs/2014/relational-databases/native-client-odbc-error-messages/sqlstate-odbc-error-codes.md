@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "errors [ODBC], cause information"
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLSTATE (ODBC Error Codes)

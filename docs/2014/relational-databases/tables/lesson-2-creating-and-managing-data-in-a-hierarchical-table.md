@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Lesson 2: Creating and Managing Data in a Hierarchical Table

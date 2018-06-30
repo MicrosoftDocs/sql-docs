@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "KeyDuplicate element"
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # KeyDuplicate Element (ASSL)
   Determines how [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] handles a duplicate key error if it encounters one during processing.  

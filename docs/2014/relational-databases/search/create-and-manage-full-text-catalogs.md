@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], using SQL Server Management Studio"
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Create and Manage Full-Text Catalogs

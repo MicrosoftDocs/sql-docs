@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Name element"
 ms.assetid: caf2af86-5f9c-4e14-8168-f3a79248b4fe
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Name Element (ASSL)
   Contains the name of the parent element.  

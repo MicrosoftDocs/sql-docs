@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.migrationwizard.f1"
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services Project Conversion Wizard

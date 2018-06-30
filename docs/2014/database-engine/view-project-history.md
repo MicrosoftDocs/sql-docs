@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "historical information [SQL Server], projects"
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # View Project History

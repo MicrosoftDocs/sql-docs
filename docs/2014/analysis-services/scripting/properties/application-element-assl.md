@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Application element"
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Application Element (ASSL)
   Identifies the application associated with an [Action](../objects/action-element-assl.md) element.  

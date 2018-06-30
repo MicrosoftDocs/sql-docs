@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], getting assistance"
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Technical Reference (Database Engine)

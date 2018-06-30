@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "format files [SQL Server]"
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Format Files for Importing or Exporting Data (SQL Server)

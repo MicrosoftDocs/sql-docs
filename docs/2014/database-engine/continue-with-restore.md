@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.continuerestore.f1"
 ms.assetid: 987ac05f-57c0-49a9-9903-9889717aae4f
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Continue with Restore

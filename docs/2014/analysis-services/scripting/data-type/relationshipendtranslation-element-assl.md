@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
 caps.latest.revision: 4
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # RelationshipEndTranslation Element (ASSL)
   Defines a primitive data type that represents a localized translation for a [RelationshipEnd](relationshipend-data-type-assl.md) element.  

@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "Progress Reports event category"
 ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Progress Reports Data Columns
   The Progress Reports event category has the following event classes:  

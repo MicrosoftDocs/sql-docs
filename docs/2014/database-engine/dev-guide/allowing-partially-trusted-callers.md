@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "partially trusted callers [CLR integration]"
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Allowing Partially Trusted Callers

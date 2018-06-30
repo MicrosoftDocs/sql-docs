@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Value for Extended Property dialog box"
 ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Value for Extended Property Dialog Box

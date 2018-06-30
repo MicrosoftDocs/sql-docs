@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ClientSideXml property"
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)

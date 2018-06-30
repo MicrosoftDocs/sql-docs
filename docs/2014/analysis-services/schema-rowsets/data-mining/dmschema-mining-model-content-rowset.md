@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DMSCHEMA_MINING_MODEL_CONTENT rowset"
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DMSCHEMA_MINING_MODEL_CONTENT Rowset
   Allows the client application to browse the content of a data mining model. Client applications can use the special tree operation restrictions described at the end of this topic to navigate the content of the mining model.  

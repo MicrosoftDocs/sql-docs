@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "EventID element"
 ms.assetid: a6b2ee50-1753-496c-af5c-206d63f2542b
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # EventID Element (ASSL)
   Uniquely identifies an [Event](../objects/event-element-assl.md) element that is to be captured as part of a [Trace](../objects/trace-element-assl.md) element.  

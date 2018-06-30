@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "targets [SQL Server extended events], synchronous event counter target"
 ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Event Counter Target

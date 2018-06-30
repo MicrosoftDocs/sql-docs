@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Lesson 4: Perform a Restore From a Full Database Backup

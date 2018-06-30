@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.cubeeditor.cubebuilder.measurespane.f1"
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Measures (Cube Structure Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Measures** pane to manipulate measure groups and members on the **Cube Structure** tab in Cube Designer.  

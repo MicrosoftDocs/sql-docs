@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "MSSQL_ENG004929 error"
 ms.assetid: 1d9b1d88-1fbf-4089-b392-687d3b0220ca
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQL_ENG004929

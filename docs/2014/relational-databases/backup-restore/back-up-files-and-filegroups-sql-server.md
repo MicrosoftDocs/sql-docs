@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], backing up"
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Back Up Files and Filegroups (SQL Server)

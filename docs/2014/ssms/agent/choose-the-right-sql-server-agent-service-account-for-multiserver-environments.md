@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "multiserver environments [SQL Server], SQL Server Agent service account behavior"
 ms.assetid: a07e2f38-281c-495b-965b-13fad03ba548
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Choose the Right SQL Server Agent Service Account for Multiserver Environments

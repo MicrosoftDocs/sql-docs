@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 851ad331-aefd-4277-a5e5-e32a8f5c5e22
 caps.latest.revision: 6
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DefaultDetailsPosition Element (XML)
   Contains information about the position of the element in a collection of elements.  

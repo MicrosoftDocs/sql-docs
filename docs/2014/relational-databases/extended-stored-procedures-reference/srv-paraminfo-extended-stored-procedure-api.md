@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_paraminfo"
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_paraminfo (Extended Stored Procedure API)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server)

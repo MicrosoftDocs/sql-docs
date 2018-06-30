@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.biwizard.summary.f1"
 ms.assetid: c0d5fc7c-2fcf-4d13-b75c-84620667b9b7
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Completing the Wizard (Business Intelligence Wizard)
   Use the **Completing the Wizard** page to review the changes that will be made when the Business Intelligence Wizard is finished.  

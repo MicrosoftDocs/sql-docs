@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Publication Properties dialog box"
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication Properties  - &lt;Publication&gt;

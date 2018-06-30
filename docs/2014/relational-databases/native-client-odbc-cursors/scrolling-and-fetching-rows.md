@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "ODBC cursors, scrolling rows"
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Scrolling and Fetching Rows

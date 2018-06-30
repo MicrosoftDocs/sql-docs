@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_rpcowner"
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_rpcowner (Extended Stored Procedure API)

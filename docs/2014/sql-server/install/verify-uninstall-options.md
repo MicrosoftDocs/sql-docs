@@ -13,8 +13,8 @@ f1_keywords:
   - "Uninstall options, verify"
 ms.assetid: a5f353fa-1bb4-495c-bf86-77cfa5bc6c78
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Verify Uninstall Options

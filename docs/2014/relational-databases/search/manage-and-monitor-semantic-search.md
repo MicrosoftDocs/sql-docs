@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "semantic search [SQL Server], monitoring"
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Manage and Monitor Semantic Search

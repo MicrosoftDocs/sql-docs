@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "OLE DB error handling"
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Errors

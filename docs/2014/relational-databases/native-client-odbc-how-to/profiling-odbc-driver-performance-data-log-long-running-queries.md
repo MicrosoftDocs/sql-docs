@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "queries [ODBC]"
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Log Long-Running Queries (ODBC)

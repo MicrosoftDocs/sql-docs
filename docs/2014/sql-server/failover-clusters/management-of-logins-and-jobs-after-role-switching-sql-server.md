@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "role switching [SQL Server]"
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Management of Logins and Jobs After Role Switching (SQL Server)

@@ -16,8 +16,8 @@ f1_keywords:
   - "sql12.swb.newagwizard.summary.f1"
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 caps.latest.revision: 11
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Summary Page (AlwaysOn Availability Group Wizards)

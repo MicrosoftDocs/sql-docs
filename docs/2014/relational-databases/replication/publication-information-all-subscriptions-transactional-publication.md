@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.publicationinfo.allsubscriptions.tran.f1"
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 caps.latest.revision: 29
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication Information, All Subscriptions (Transactional Publication)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "restore sequences [SQL Server], piecemeal"
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Example: Piecemeal Restore of Only Some Filegroups (Full Recovery Model)

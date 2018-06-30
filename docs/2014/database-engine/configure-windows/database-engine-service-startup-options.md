@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "starting SQL Server, options"
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: 75
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Database Engine Service Startup Options

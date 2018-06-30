@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], data formats"
 ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Data Formats for Bulk Import or Bulk Export (SQL Server)

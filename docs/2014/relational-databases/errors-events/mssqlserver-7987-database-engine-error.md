@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "7987 (Database Engine error)"
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_7987

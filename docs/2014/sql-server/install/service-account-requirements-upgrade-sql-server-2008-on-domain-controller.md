@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "local service accounts"
 ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Service account requirements for upgrading to SQL Server 2008 on a domain controller

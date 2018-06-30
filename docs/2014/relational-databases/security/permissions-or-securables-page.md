@@ -17,8 +17,8 @@ f1_keywords:
   - "sql12.swb.SecurableAndEffectivePermission.f1"
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Permissions or Securables Page

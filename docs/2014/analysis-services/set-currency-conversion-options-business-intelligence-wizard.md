@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.biwizard.currencyconversion.calculationsettings.f1"
 ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Set Currency Conversion Options (Business Intelligence Wizard)
   Use the **Set Currency Conversion** page to define currency conversion calculations for a measure group that contains exchange rates.  

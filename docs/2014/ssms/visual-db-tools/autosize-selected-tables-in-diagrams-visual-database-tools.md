@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "autosizing objects in database diagrams"
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Autosize Selected Tables in Diagrams (Visual Database Tools)

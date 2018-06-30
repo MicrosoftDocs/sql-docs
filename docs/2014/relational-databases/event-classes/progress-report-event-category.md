@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server event classes, Progress Report event category"
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Progress Report Event Category

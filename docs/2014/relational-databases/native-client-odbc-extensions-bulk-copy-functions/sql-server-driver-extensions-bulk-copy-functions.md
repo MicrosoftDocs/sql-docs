@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "functions [ODBC]"
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Bulk Copy Functions

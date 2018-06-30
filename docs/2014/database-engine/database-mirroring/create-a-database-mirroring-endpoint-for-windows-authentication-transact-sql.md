@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)

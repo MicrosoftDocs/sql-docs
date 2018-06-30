@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "pausing database mirroring"
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Pause or Resume a Database Mirroring Session (SQL Server)

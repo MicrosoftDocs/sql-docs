@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "replication [SQL Server], synchronization"
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: 39
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Specify Synchronization Schedules

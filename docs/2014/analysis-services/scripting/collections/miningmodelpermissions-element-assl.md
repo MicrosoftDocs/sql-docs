@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MiningModelPermissions element"
 ms.assetid: 6cbcf029-9627-4839-9fc5-15e58e1ba0c3
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MiningModelPermissions Element (ASSL)
   Contains the collection of permissions for a [MiningModel](../objects/miningmodel-element-assl.md) element.  

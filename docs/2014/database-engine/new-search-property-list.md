@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.spl.newsearchpropertylist.f1"
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # New Search Property List

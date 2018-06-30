@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "target servers [SQL Server], enlisting"
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Enlist a Target Server to a Master Server

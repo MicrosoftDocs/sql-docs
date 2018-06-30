@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "data quality project,open"
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Manage (Open, Unlock, Rename, and Delete) a Data Quality Project

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Kpis element"
 ms.assetid: da4e32a0-1416-4d32-8b7f-7d74be23c9d4
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Kpis Element (ASSL)
   Contains the collection of key performance indicators ([Kpi](../objects/kpi-element-assl.md) elements) associated with the parent element.  

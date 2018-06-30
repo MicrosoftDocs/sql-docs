@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "download-only articles"
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Specify That a Merge Table Article is Download-Only

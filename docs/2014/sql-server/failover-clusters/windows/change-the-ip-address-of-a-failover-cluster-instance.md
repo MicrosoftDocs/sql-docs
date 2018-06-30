@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], IP addresses"
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 caps.latest.revision: 32
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Change the IP Address of a Failover Cluster Instance

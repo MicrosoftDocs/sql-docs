@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Report Viewer Web Part [Reporting Services]"
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Customize the Report Viewer Web Part
   You can use the Report Viewer Web Part to view reports that run on a report server that is configured for SharePoint integration. Reports that you can display include report definition (.rdl) files and Report Builder reports. Reports open in the Report Viewer Web Part in a new page automatically, but you can also add a Report Viewer Web Part to an existing Web page or site if you want a particular report to always be visible on that page.  

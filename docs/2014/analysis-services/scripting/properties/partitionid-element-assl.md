@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "PartitionID element"
 ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PartitionID Element (ASSL)
   Associates a [Partition](../objects/partition-element-assl.md) element with a parent element, binding, or out-of-line binding.  

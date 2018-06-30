@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "exception message box [SQL Server]"
 ms.assetid: d8ecc67a-ef33-4d44-8ae6-eaacb8ca3e74
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Deploying an Exception Message Box Application

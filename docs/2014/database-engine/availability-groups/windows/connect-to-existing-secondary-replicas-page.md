@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.adddatabasewizard.connecttoreplicas.f1"
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 caps.latest.revision: 5
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Connect to Existing Secondary Replicas Page (Add Replica Wizard and Add Databases Wizard)

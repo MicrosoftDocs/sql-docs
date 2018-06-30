@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "marked transactions [SQL Server], restoring"
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Restore a Database to a Marked Transaction (SQL Server Management Studio)

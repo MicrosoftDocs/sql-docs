@@ -9,8 +9,8 @@ ms.technology:
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Set the Collation of User-defined Databases to Match Those of the master and model Databases

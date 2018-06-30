@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Set the Max Degree of Parallelism Option for Optimal Performance

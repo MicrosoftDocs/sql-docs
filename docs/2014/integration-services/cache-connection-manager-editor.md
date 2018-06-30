@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.cacheconnection.f1"
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Cache Connection Manager Editor

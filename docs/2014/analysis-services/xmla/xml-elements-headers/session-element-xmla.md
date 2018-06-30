@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Session element"
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
 caps.latest.revision: 15
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Session Element (XMLA)
   Uses the SOAP header in a SOAP request message to identify an existing, explicit session on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

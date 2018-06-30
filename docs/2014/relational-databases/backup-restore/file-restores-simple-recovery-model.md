@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "file restores [SQL Server], Transact-SQL restore sequence"
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # File Restores (Simple Recovery Model)

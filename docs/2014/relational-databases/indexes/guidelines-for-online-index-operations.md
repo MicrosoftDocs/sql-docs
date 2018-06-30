@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "transaction logs [SQL Server], indexes"
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 62
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Guidelines for Online Index Operations

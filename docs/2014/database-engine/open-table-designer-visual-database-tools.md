@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Table Designer, opening"
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Open Table Designer (Visual Database Tools)

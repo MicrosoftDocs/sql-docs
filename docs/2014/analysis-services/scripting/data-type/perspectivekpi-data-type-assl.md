@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "PerspectiveKpi data type"
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PerspectiveKpi Data Type (ASSL)
   Defines a primitive data type that represents information about a key performance indicator (KPI) in a [Perspective](../objects/perspective-element-assl.md) element.  

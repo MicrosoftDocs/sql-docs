@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Trace Table Properties dialog box"
 ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Trace Table Properties (Events Selection Tab)

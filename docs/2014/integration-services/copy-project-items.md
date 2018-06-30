@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "data source views [Integration Services], copying"
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Copy Project Items

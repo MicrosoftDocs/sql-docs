@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Profiler, help"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Profiler F1 Help

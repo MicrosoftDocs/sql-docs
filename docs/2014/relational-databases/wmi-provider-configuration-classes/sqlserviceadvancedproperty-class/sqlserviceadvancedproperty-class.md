@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SqlServiceAdvancedProperty class"
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SqlServiceAdvancedProperty Class

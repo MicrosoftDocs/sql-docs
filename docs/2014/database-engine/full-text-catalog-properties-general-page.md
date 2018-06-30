@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.fulltextsearch.ftcatalogproperties.general.f1"
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full-Text Catalog Properties (General Page)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Distribution element"
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Distribution Element (ASSL)
   Contains a provider-specific value that describes how scalar values are distributed within a column of a [MiningStructure](../objects/miningstructure-element-assl.md) element.  

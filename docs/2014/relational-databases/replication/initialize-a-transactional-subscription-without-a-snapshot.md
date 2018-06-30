@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "initializing subscriptions [SQL Server replication], without snapshots"
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 caps.latest.revision: 36
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Initialize a Transactional Subscription Without a Snapshot

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "compatibility [SQL Server replication]"
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 caps.latest.revision: 52
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Backward Compatibility

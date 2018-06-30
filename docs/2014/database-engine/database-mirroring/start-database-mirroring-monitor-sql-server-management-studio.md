@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Start Database Mirroring Monitor (SQL Server Management Studio)

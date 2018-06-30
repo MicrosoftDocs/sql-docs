@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "AttributeName element"
 ms.assetid: 4dc8260b-522e-46d9-9bd8-22a5a0068982
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeName Element (XMLA)
   Contains the name of an attribute represented by the parent [Attribute](attribute-element-xmla.md) element.  

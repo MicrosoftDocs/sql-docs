@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Isolation element"
 ms.assetid: 28c98c6f-668e-4547-8d25-127cc3995a7d
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Isolation Element (ASSL)
   Indicates the isolation level for an element that is derived from the [DataSource](../data-type/datasource-data-type-assl.md) data type.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "custom report items, deploying"
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 caps.latest.revision: 25
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # How to: Deploy a Custom Report Item

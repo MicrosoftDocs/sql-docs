@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "attributes [Master Data Services]"
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Attributes (Master Data Services)

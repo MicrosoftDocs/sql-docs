@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Execute SQL Task Editor"
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Execute SQL Task Editor (Result Set Page)

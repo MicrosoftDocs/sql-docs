@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], server management"
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Manage and Monitor Full-Text Search for a Server Instance

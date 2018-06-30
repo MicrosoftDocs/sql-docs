@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "identity [Replication]"
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 caps.latest.revision: 7
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Identity and Access Control (Replication)

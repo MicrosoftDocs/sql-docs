@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubeAttribute data type"
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubeAttribute Data Type (ASSL)
   Defines a primitive data type that represents an attribute associated with a [Cube](../objects/cube-element-assl.md) element.  

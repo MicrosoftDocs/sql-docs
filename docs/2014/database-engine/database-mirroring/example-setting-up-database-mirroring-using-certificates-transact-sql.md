@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)

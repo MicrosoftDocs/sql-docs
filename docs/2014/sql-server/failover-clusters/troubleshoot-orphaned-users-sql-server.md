@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "users [SQL Server], orphaned"
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Troubleshoot Orphaned Users (SQL Server)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "QuickWatch Dialog [Transact-SQL]"
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # QuickWatch Dialog Box

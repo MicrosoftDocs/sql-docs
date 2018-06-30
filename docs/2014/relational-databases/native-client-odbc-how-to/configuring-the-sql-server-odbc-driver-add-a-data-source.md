@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data sources [ODBC]"
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Add a Data Source (ODBC)

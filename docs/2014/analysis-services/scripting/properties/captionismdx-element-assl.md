@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CaptionIsMdx element"
 ms.assetid: 7569a75e-b3e0-4332-97d3-585abc546ada
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CaptionIsMdx Element (ASSL)
   Defines whether the caption for the [Action](../objects/action-element-assl.md) element is a Multidimensional Expressions (MDX) expression.  

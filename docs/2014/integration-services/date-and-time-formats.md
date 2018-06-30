@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "date and time formats for fast parse"
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Date and Time Formats

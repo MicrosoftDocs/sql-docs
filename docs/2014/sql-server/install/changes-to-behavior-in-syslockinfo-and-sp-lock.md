@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "sp_lock"
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Changes to behavior in syslockinfo and sp_lock

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "replaying traces"
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Replay a Trace Table (SQL Server Profiler)

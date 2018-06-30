@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "PartitionID element"
 ms.assetid: 19f06454-9719-488e-aeb6-3fc879313351
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PartitionID Element (XMLA)
   Identifies a partition within a parent element that contains an object reference.  

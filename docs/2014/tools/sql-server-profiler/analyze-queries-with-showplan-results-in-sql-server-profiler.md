@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Profiler, Showplan results"
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Analyze Queries with SHOWPLAN Results in SQL Server Profiler

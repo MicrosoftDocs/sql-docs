@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.dbmmonitor.warningsandalerts.f1"
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Database Mirroring Monitor (Warnings Page)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "xVelocity, columnstore indexes"
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 50
-author: "barbkess"
-ms.author: "barbkess"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Columnstore Indexes Described

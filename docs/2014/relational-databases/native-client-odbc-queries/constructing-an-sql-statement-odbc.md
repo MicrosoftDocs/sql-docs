@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ODBC applications, statements"
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Constructing an SQL Statement (ODBC)

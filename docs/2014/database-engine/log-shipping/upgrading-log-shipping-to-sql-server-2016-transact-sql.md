@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], upgrading"
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Log Shipping to SQL Server 2014 (Transact-SQL)

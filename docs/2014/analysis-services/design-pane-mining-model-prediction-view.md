@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.dm.miningmodeleditor.prediction.design.f1"
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Design Pane (Mining Model Prediction View)
   The **Design** pane contains the Prediction Query Builder, which you can use to build data mining predictions. You can design prediction queries that use tables of input data from a data source view, to generate bulk predictions, or you can create singleton prediction queries, which let you provide individual values.  

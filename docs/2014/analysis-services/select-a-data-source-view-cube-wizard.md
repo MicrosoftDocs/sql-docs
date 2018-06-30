@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.cubewizard.datasourceselection.f1"
 ms.assetid: a79cd87f-2a55-4020-90f7-9ee627379588
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select a Data Source View (Cube Wizard)
   Use the **Select a Data Source View** page to select the data source view for the empty cube.  

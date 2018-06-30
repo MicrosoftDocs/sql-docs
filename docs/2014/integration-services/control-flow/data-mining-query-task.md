@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Data Mining Query task [Integration Services]"
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Data Mining Query Task

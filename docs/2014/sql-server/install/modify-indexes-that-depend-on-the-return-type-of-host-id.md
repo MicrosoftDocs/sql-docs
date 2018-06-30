@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "HOST_ID function"
 ms.assetid: 47b4a4ff-3ec8-430c-8bb7-779a36d0e134
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Modify indexes that depend on the return type of HOST_ID

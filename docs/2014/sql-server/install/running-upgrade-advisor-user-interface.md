@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQL Server Upgrade Advisor, running"
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Running Upgrade Advisor (User Interface)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "managed code [SQL Server], CLR integration"
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Common Language Runtime (CLR) Integration Overview

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "backups [AMO]"
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Programming AMO Complementary Classes and Methods
   This topic contains the following sections:  

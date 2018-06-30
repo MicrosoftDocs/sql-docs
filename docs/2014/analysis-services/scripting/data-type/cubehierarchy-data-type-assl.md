@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubeHierarchy data type"
 ms.assetid: cd633409-0c14-4dd9-97cc-3d30e25df24f
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubeHierarchy Data Type (ASSL)
   Defines a primitive data type that represents information about a [Hierarchy](../objects/hierarchy-element-assl.md) element in a [Cube](../objects/cube-element-assl.md) element.  

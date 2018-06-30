@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "data retrieval [ADOMD.NET], about retrieving data"
 ms.assetid: 88358189-28aa-4bc7-8dda-5a92e3a012b8
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Retrieving Data from an Analytical Data Source
   Once you make a connection and create the query, you can retrieve any data. In ADOMD.NET, you can retrieve data using three different objects (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, and <xref:System.Xml.XmlReader>) by calling one of the `Execute` methods of the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> object.  

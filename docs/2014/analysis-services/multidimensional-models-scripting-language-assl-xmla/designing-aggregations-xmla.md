@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "iterative aggregation process [XMLA]"
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Designing Aggregations (XMLA)
   Aggregation designs are associated with the partitions of a particular measure group to make sure that the partitions use the same structure when storing aggregations. Using the same storage structure for partitions lets you to easily define partitions that can be later merged using the [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) command. For more information about aggregation designs, see [Aggregations and Aggregation Designs](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

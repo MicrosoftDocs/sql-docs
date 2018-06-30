@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Analysis Services, installing"
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 caps.latest.revision: 47
-author: "HeidiSteen"
-ms.author: "heidist"
+author: heidisteen
+ms.author: heidist
 manager: craigg
 ---
 # Install Analysis Services in Multidimensional and Data Mining Mode

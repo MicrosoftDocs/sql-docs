@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "PerspectiveAttribute data type"
 ms.assetid: bf4d45c1-e48d-4ada-bbab-49c3ac74948d
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PerspectiveAttribute Data Type (ASSL)
   Defines a primitive data type that represents information about an attribute in a [PerspectiveDimension](dimension-data-type-assl.md) element.  

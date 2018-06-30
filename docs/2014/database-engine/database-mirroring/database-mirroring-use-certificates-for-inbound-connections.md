@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections (Transact-SQL)

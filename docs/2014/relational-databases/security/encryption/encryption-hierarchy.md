@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "hierarchies [SQL Server], encryption"
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 caps.latest.revision: 40
-author: "craigg-msft"
-ms.author: "craigg"
+author: aliceku
+ms.author: aliceku
 manager: craigg
 ---
 # Encryption Hierarchy

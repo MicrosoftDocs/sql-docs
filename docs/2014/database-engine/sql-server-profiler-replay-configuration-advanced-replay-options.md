@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Replay Configuration dialog box"
 ms.assetid: b4eb34f7-3af6-4a44-ba7e-2b8430ec3cd7
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Profiler - Replay Configuration (Advanced Replay Options)

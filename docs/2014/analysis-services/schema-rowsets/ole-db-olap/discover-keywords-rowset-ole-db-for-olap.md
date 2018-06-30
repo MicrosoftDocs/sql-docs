@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DISCOVER_KEYWORDS rowset"
 ms.assetid: 70cc680d-9530-469b-8a61-4e6779aec17a
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_KEYWORDS Rowset (OLE DB for OLAP)
   Enumerates a list of words reserved by the provider.  

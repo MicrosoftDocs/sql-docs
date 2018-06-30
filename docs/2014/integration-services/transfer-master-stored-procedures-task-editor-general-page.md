@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transfer Stored Procedures Task Editor"
 ms.assetid: fa1abd4c-e2be-427f-be53-860e49c97227
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Transfer Master Stored Procedures Task Editor (General Page)

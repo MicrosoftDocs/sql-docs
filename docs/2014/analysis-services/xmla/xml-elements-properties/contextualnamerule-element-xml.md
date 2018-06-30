@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: eb567ef8-f412-4d34-837a-75e53b88b3ce
 caps.latest.revision: 7
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ContextualNameRule Element (XML)
   Provides a hint on the best way to construct a composite name for the attribute.  

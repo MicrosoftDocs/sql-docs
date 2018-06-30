@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Traces element"
 ms.assetid: 7ca2c7d1-fda3-4c76-9e32-fd9b5dda56e9
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Traces Element (ASSL)
   Contains the collection of [Trace](../objects/trace-element-assl.md) elements associated with a [Server](../objects/server-element-assl.md) element.  

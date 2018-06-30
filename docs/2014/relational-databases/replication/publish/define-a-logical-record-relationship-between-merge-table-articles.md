@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "logical records [SQL Server replication]"
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: 43
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Define a Logical Record Relationship Between Merge Table Articles

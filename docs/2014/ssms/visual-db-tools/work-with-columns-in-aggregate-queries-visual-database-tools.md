@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "WHERE clause, query summary results"
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Work with Columns in Aggregate Queries (Visual Database Tools)

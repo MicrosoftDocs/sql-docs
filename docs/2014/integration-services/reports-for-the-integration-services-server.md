@@ -13,8 +13,8 @@ f1_keywords:
   - "SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1"
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Reports for the Integration Services Server

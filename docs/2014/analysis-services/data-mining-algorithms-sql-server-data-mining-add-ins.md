@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "time series [data mining]"
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Algorithms (SQL Server Data Mining Add-ins)
   The Data Mining Add-ins for Office supports creation of analytical models using the following data mining algorithms. All algorithms are based on well-known machine learning methods and have been implemented by Microsoft Research.  

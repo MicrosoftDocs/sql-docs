@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 8dda2ef7-202a-454b-93f9-a2b29c2d277c
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_TRACE_DEFINITION_PROVIDERINFO Rowset
   Returns basic information about the trace provider, such as its name and description.  

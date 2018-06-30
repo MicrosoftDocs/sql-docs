@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.mds.configmanager.dbpg.f1"
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Database Configuration Page (Master Data Services Configuration Manager)

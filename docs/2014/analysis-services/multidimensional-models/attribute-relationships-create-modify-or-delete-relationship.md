@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "member properties [Analysis Services], creating"
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create, Modify, or Delete an Attribute Relationship
   You can create, modify, or delete an attribute relationship between attributes in a dimension by using the **Attribute Relationships** tab of Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

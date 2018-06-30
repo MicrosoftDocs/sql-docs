@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MeasureGroupID element"
 ms.assetid: 3b075f86-dbbc-4285-8d2d-61fa722181c7
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MeasureGroupID Element (ASSL)
   Associates a [MeasureGroup](../objects/group-element-assl.md) with the parent element, binding, or out-of-line binding.  

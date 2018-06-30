@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Derived Column Transformation Editor"
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Derived Column Transformation Editor

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "KeyColumns element"
 ms.assetid: 03f3ad21-25cb-4afd-9287-cbf942ac1ad9
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # KeyColumns Element (ASSL)
   Contains the collection of [KeyColumn](../objects/column-element-assl.md) element definitions for a parent object.  

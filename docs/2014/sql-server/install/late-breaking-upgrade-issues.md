@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "readme [Upgrade Advisor]"
 ms.assetid: 64205466-6d37-49d2-bac2-d3368c1210a1
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Late-Breaking Upgrade Issues

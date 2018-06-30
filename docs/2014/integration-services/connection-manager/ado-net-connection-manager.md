@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "connections [Integration Services], ADO.NET"
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # ADO.NET Connection Manager

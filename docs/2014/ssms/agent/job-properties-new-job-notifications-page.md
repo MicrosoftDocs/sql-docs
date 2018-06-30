@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.job.notifications.f1"
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Job Properties: New Job (Notifications Page)

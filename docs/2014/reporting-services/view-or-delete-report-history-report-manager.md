@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "report snapshots [Reporting Services], creating"
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # View or Delete Report History (Report Manager)
   Report history is kept with the report upon which it is based. Any user who has permission to view a report can view its history.  

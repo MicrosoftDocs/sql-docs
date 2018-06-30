@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "edge tables"
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Examples: Using OPENXML

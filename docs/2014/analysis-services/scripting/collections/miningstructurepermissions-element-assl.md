@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MiningStructurePermissions element"
 ms.assetid: 4db9a9b2-8525-441f-a202-fd253282f540
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MiningStructurePermissions Element (ASSL)
   Contains the collection of permissions on a [MiningStructure](../objects/miningstructure-element-assl.md) element.  

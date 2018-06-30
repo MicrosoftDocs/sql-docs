@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.backupdatabase.general.f1"
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Back Up Database (General Page)

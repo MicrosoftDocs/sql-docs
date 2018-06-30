@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "analyzing system [Upgrade Advisor], Database Engine"
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Parameters

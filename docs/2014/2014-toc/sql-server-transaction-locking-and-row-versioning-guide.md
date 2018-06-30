@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 caps.latest.revision: 17
-author: "barbkess"
-ms.author: "barbkess"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # SQL Server Transaction Locking and Row Versioning Guide

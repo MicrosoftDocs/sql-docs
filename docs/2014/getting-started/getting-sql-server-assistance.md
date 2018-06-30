@@ -42,8 +42,8 @@ helpviewer_keywords:
   - "SQL Server Solution Center"
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Getting SQL Server Assistance

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLProcedures function"
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLProcedures

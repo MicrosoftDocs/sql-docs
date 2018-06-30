@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "PowerShell [SQL Server], help"
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 caps.latest.revision: 18
-author: "mgblythe"
-ms.author: "mblythe"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Get Help SQL Server PowerShell

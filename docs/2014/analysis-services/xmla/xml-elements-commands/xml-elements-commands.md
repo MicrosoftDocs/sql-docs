@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "XMLA, commands"
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
 caps.latest.revision: 14
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Commands (XMLA)
   This reference section contains XML for Analysis (XMLA) elements that can be used within the `Command` element during an `Execute` method call.  

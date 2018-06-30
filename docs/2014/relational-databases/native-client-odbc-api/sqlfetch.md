@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLFetch function"
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLFetch

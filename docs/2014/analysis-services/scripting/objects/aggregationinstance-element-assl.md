@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "AggregationInstance element"
 ms.assetid: 2e77e9e1-9f2c-4df4-9aa6-5b7b911016a3
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AggregationInstance Element (ASSL)
   Defines an aggregation instance for a partition.  

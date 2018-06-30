@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "detaching databases [SQL Server]"
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Detach a Database

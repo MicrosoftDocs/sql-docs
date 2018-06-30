@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, fetching"
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Fetching Rows

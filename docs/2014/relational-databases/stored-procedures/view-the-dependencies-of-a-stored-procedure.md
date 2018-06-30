@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "viewing stored procedure dependencies"
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View the Dependencies of a Stored Procedure

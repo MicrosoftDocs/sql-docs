@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "managed code [SQL Server], samples"
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Usage Scenarios and Examples for Common Language Runtime (CLR) Integration

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], PRIMARY KEY constraint"
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create Nonclustered Indexes

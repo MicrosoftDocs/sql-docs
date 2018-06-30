@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database evolution [SQL Server]"
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Issues of Database Evolution (Visual Database Tools)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "client protocols [SQL Server]"
 ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Client Protocols - Shared Memory Properties (Protocol Tab)

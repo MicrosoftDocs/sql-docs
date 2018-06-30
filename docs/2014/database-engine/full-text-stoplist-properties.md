@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1"
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full-Text Stoplist Properties

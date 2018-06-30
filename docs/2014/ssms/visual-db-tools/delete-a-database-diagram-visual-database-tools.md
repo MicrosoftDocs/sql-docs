@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "removing database diagrams"
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete a Database Diagram (Visual Database Tools)

@@ -13,7 +13,7 @@ f1_keywords:
   - "accMsDes"
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 caps.latest.revision: 8
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

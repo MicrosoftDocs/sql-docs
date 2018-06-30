@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "replication [SQL Server], agents and profiles"
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Agent Security Model

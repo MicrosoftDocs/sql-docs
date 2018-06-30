@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "F1 Help [Reporting Services]"
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 caps.latest.revision: 27
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Feature Reference (Reporting Services)

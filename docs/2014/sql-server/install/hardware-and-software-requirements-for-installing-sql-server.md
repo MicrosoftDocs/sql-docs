@@ -46,7 +46,7 @@ helpviewer_keywords:
   - "localized SQL Server versions"
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 caps.latest.revision: 302
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

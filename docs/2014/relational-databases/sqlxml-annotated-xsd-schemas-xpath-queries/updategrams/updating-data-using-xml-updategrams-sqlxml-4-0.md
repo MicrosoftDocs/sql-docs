@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "record updates [SQLXML]"
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 caps.latest.revision: 27
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Updating Data Using XML Updategrams (SQLXML 4.0)

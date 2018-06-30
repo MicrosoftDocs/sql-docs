@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 34
-author: stevestein
-ms.author: sstein
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Supported Constructs in Natively Compiled Stored Procedures

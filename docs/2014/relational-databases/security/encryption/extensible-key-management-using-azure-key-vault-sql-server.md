@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Transparent Data Encryption, using EKM and key vault"
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
+author: aliceku
+ms.author: aliceku
 manager: craigg
 ---
 # Extensible Key Management Using Azure Key Vault (SQL Server)

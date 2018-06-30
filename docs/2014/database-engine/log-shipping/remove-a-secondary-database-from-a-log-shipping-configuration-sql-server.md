@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "log shipping [SQL Server], secondary databases"
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 caps.latest.revision: 18
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

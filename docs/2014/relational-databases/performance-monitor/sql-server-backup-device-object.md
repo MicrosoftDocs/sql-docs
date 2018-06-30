@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Backup Device object"
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 caps.latest.revision: 18
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 11
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Tutorial: Creating a Matrix Report (Report Builder)

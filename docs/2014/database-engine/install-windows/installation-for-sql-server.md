@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "initial installation [SQL Server]"
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 29
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_setutype"
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_setutype (Extended Stored Procedure API)

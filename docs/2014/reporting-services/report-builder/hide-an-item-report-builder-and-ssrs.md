@@ -14,8 +14,8 @@ f1_keywords:
   - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Hide an Item (Report Builder and SSRS)

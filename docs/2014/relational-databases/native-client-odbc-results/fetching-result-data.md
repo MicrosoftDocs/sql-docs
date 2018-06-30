@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "SQLGetData function"
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Fetching Result Data

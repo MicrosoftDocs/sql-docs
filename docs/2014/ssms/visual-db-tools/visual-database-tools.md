@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 caps.latest.revision: 5
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Visual Database Tools

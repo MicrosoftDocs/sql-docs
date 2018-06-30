@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Rendering Report Items (Report Builder and SSRS)

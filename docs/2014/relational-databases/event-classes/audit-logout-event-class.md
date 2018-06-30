@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Audit Logout event class"
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Audit Logout Event Class

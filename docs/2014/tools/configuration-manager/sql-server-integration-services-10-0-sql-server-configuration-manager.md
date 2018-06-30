@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3136f7ae-b3f1-4932-a5da-95175907671c
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Integration Services 10.0 (SQL Server Configuration Manager)

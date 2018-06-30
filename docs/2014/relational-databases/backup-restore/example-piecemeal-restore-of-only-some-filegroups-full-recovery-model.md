@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "restore sequences [SQL Server], piecemeal"
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 caps.latest.revision: 30
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

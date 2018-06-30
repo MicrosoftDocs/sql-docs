@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 caps.latest.revision: 16
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # SQLXML Is Not Installed in SQL Server

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 10
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Report Design Tips (Report Builder and SSRS)

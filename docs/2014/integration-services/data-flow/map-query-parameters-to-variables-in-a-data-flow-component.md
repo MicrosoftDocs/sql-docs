@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "variables [Integration Services], mapping parameters to"
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 caps.latest.revision: 32
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

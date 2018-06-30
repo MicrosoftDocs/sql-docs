@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
 caps.latest.revision: 5
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # RGDI Device Information Settings

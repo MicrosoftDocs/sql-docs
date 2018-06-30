@@ -18,8 +18,8 @@ f1_keywords:
   - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Maps (Report Builder and SSRS)

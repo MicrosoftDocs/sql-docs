@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "granting access to database objects"
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Granting Access to a Database Object

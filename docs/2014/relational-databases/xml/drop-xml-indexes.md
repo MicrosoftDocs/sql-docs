@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], dropping"
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Drop XML Indexes

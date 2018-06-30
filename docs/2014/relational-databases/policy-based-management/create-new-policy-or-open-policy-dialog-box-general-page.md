@@ -15,7 +15,7 @@ f1_keywords:
   - "sql12.swb.dmf.policy.filter.f1"
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: 41
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

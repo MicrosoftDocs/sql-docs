@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 caps.latest.revision: 6
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Remove Steps from a SQL Server Agent Master Job

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "dimensions [Analysis Services], processing"
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 caps.latest.revision: 39
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

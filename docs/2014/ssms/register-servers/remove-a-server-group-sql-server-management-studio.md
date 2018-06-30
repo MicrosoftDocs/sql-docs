@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "groups [SQL Server], server"
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
 caps.latest.revision: 22
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Remove a Server Group (SQL Server Management Studio)

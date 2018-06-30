@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "File connection manager"
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 caps.latest.revision: 50
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

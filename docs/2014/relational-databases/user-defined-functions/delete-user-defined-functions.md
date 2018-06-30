@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 caps.latest.revision: 7
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Delete User-defined Functions

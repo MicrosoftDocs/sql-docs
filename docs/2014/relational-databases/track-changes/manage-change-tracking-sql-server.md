@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server], managing"
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Manage Change Tracking (SQL Server)

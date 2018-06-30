@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "wizard [DAC], extract"
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: 19
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Extract a DAC From a Database

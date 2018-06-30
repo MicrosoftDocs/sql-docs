@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Add Publisher dialog box"
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add Publisher

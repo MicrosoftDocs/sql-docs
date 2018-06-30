@@ -14,8 +14,8 @@ f1_keywords:
   - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Understanding Groups (Report Builder and SSRS)

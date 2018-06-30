@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "format files [SQL Server], creating"
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 caps.latest.revision: 54
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Create a Format File (SQL Server)

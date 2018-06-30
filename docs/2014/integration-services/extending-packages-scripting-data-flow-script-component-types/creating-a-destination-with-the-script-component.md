@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "input columns [Integration Services]"
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 caps.latest.revision: 56
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

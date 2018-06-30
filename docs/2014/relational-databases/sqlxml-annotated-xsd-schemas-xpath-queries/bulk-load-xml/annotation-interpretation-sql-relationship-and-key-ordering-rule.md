@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "relationship annotation"
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 caps.latest.revision: 22
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # sql:relationship and the Key Ordering Rule (SQLXML 4.0)

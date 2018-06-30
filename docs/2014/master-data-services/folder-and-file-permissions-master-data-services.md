@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "files [Master Data Services]"
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 caps.latest.revision: 7
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 robots: noindex,nofollow
 ---

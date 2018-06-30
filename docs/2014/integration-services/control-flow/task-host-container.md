@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Task Host container"
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 caps.latest.revision: 44
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

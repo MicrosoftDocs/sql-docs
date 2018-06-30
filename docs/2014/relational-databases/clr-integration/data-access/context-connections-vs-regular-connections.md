@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "regular connections [CLR integration]"
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 caps.latest.revision: 13
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Regular vs. Context Connections

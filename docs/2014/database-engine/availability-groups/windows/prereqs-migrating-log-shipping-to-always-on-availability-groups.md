@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups (SQL Server)

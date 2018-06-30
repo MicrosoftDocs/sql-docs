@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ServerNetworkProtocol class"
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ServerNetworkProtocol Class

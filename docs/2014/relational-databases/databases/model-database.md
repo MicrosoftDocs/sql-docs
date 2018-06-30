@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "model database [SQL Server]"
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # model Database

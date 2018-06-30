@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 caps.latest.revision: 26
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Remove a Primary Database from an Availability Group (SQL Server)

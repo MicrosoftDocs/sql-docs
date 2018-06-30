@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.alert.history.f1"
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 caps.latest.revision: 18
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Alert Properties (History Page)

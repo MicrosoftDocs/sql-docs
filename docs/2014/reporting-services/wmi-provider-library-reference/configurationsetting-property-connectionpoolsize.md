@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ConnectionPoolSize property"
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 caps.latest.revision: 17
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # ConnectionPoolSize Property (WMI MSReportServer_ConfigurationSetting)

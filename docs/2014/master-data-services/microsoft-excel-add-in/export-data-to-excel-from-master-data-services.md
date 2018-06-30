@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 caps.latest.revision: 12
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Load Data from MDS into Excel

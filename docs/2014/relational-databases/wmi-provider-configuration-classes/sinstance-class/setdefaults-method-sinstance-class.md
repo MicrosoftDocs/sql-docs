@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SetDefaults method"
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SetDefaults Method (SInstance Class)

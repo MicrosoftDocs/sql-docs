@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "job steps [Analysis Services]"
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 caps.latest.revision: 30
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create an ActiveX Script Job Step

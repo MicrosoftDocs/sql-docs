@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 caps.latest.revision: 5
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # View All Annotations or Transactions for a Member (MDS Add-in for Excel)

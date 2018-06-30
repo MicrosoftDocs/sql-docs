@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "SQL Server Integration Services control flow elements"
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 caps.latest.revision: 44
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

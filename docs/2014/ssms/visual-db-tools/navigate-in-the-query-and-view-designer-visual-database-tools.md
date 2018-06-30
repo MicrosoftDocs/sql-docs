@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "keyboard shortcuts [Visual Database Tools]"
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Navigate in the Query and View Designer (Visual Database Tools)

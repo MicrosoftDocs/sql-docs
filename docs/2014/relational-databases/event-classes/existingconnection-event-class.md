@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "ExistingConnection event class"
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # ExistingConnection Event Class

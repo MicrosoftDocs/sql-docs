@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "event classes [SQL Server], Scans event category"
 ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 caps.latest.revision: 22
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Scans Event Category

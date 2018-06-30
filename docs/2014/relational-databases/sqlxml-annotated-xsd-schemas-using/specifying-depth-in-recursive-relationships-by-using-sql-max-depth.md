@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "recursive joins [SQLXML]"
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 caps.latest.revision: 25
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Specifying Depth in Recursive Relationships by Using sql:max-depth

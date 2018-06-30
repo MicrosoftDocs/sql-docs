@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "PropertyIndex property"
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 caps.latest.revision: 33
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # PropertyIndex Property (SqlServiceAdvancedProperty Class)

@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "datasets [Integration Services], merging"
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 caps.latest.revision: 42
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -25,7 +25,7 @@ helpviewer_keywords:
   - ".jpeg files"
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 caps.latest.revision: 40
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

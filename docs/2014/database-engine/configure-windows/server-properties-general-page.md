@@ -15,8 +15,8 @@ f1_keywords:
   - "sql12.swb.serverproperties.activedirectory.f1"
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Server Properties (General Page) - SQL Server Management Studio

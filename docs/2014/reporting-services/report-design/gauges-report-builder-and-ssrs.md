@@ -159,8 +159,8 @@ f1_keywords:
   - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: 10
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Gauges (Report Builder and SSRS)

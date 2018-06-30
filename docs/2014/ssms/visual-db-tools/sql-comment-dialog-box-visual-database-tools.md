@@ -13,8 +13,8 @@ f1_keywords:
   - "vdt.dlgbox.sqlcomment"
 ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Comment Dialog Box (Visual Database Tools)

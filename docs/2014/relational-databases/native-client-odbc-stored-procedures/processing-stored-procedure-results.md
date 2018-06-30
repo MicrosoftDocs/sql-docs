@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "stored procedures [ODBC], results"
 ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Processing Stored Procedure Results

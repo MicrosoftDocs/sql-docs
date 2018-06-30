@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLCancel function"
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
 caps.latest.revision: 5
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLCancel

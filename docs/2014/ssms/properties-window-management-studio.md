@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "modifying properties"
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 caps.latest.revision: 20
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Properties Window (Management Studio)

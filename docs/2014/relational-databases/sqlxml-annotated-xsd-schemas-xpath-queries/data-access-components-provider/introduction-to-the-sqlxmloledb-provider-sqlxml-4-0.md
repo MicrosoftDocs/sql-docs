@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider"
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 caps.latest.revision: 16
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Introduction to the SQLXMLOLEDB Provider (SQLXML 4.0)

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], moving a FILESTREAM-enabled database"
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 caps.latest.revision: 10
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Move a FILESTREAM-Enabled Database

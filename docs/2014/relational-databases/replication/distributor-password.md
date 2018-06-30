@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.configuredistributionwizard.distributorpassword.f1"
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Distributor Password

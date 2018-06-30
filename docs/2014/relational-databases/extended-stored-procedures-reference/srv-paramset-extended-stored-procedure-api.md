@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_paramset"
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_paramset (Extended Stored Procedure API)

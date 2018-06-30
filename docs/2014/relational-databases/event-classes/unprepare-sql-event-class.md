@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Unprepare SQL event class"
 ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Unprepare SQL Event Class

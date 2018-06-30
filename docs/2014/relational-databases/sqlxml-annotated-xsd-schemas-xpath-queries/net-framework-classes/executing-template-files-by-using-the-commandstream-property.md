@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "CommandStream property"
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Executing Template Files by Using the CommandStream Property

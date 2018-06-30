@@ -14,8 +14,8 @@ f1_keywords:
   - "vdtsql.chm:69638"
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Join Dialog Box (Visual Database Tools)

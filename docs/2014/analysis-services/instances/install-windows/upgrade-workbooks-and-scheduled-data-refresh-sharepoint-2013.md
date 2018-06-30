@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 18
-author: markingmyname
-ms.author: maghan
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)

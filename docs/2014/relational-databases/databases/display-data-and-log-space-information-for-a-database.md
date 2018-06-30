@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "data space [SQL Server]"
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Display Data and Log Space Information for a Database

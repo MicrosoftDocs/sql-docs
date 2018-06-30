@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "collection sets [SQL Server], viewing logs"
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 caps.latest.revision: 13
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View Collection Set Logs (SQL Server Management Studio)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "inserting and updating data"
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Inserting and Updating Data in a Table (Tutorial)

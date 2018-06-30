@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "EXPLICIT FOR XML mode"
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Example: Constructing Siblings with EXPLICIT Mode

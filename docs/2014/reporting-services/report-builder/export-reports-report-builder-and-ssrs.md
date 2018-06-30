@@ -13,8 +13,8 @@ f1_keywords:
   - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: 18
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Exporting Reports (Report Builder and SSRS)

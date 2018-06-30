@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 caps.latest.revision: 7
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # LOCALDB_ERROR_INSUFFICIENT_BUFFER

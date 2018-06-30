@@ -13,8 +13,8 @@ f1_keywords:
   - "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 5
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # SharePoint List Query Designer (Report Builder)

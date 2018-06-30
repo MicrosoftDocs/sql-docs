@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "filters [full-text search]"
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Configure and Manage Filters for Search

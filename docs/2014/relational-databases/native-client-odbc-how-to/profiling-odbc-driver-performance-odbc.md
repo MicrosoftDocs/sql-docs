@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 caps.latest.revision: 8
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Profiling ODBC Driver Performance How-to Topics (ODBC)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "custom result sets [CLR integration]"
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 caps.latest.revision: 25
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SqlDataRecord Object

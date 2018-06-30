@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
 caps.latest.revision: 22
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

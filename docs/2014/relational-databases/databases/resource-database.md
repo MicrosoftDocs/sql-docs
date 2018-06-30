@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Resource database [SQL Server]"
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Resource Database

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Expressions Page dialog box"
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 caps.latest.revision: 15
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

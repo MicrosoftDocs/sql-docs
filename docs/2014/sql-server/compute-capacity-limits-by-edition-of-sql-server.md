@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "maximum number of processors supported"
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Compute Capacity Limits by Edition of SQL Server

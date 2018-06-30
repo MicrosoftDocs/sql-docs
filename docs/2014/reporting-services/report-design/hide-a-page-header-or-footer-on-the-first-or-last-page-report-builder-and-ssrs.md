@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 caps.latest.revision: 5
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Hide a Page Header or Footer on the First or Last Page (Report Builder and SSRS)

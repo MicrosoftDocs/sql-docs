@@ -20,8 +20,8 @@ f1_keywords:
   - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Formatting Numbers and Dates (Report Builder and SSRS)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Deadlock event class"
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 caps.latest.revision: 39
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Lock:Deadlock Event Class

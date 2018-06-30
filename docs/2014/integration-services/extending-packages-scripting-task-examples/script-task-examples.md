@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "SSIS Script task, examples"
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 caps.latest.revision: 25
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

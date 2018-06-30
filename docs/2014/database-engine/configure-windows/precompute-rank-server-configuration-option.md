@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "FREETEXTTABLE function (Transact-SQL)"
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # precompute rank Server Configuration Option

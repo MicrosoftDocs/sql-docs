@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "integrated Web browsers [SQL Server Management Studio]"
 ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
 caps.latest.revision: 19
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Management Studio Web Browser

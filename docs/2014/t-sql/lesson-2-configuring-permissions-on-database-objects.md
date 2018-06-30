@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "database permissions"
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Lesson 2: Configuring Permissions on Database Objects

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "lexical representation"
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Requirements and Limitations for XML Schema Collections on the Server

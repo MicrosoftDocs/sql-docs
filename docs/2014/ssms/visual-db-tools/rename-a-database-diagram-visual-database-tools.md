@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], renaming"
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 caps.latest.revision: 13
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Rename a Database Diagram (Visual Database Tools)

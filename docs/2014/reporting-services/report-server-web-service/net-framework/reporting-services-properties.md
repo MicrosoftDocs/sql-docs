@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "properties [Reporting Services]"
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 caps.latest.revision: 33
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Reporting Services Properties

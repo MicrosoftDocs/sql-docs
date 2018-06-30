@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "Integration Services, (See also Integration Services packages)"
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 56
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

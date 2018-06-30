@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "square values"
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 caps.latest.revision: 29
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

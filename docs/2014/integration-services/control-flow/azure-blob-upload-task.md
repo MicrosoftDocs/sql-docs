@@ -14,7 +14,7 @@ f1_keywords:
   - "sql11.dts.designer.afpblobuptask.f1"
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 caps.latest.revision: 12
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

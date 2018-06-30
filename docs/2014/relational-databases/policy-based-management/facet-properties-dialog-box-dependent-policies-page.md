@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.dmf.facet.dependentpolicies.f1"
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 caps.latest.revision: 12
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

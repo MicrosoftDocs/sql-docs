@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "backing up transaction logs [SQL Server], SQL Server Management Studio"
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 caps.latest.revision: 44
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

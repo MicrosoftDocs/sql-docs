@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "~ (bitwise NOT)"
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 caps.latest.revision: 31
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

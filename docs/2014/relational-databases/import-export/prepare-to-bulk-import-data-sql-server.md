@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "OPENROWSET function, BCP guidelines"
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 33
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Prepare to Bulk Import Data (SQL Server)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.replicationutilities.specifysnapshotfolder.f1"
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Snapshot Folder

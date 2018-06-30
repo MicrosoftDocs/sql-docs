@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server]"
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Full-Text Search

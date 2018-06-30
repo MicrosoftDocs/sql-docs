@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "updating slowly changing dimensions"
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 caps.latest.revision: 55
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

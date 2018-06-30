@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "BLOBs, fetching"
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream

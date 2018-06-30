@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_pfieldex"
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_pfieldex (Extended Stored Procedure API)

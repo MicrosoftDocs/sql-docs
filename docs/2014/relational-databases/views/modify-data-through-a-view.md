@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "modifying data [SQL Server], views"
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Modify Data Through a View

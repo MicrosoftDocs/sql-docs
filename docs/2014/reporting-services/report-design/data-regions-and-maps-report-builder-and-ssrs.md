@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data regions"
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 caps.latest.revision: 12
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Data Regions and Maps (Report Builder and SSRS)

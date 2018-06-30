@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "MainPipe object"
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
 caps.latest.revision: 46
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

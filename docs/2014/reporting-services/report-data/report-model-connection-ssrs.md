@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 caps.latest.revision: 10
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Model Connection (SSRS)

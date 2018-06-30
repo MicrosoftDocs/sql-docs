@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Lesson 1: Create a New Web Site

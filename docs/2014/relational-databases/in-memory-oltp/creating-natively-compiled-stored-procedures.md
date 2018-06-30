@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 caps.latest.revision: 13
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Creating Natively Compiled Stored Procedures

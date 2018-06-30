@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Agent Properties (Advanced Tab)

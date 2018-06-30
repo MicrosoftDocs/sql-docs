@@ -16,7 +16,7 @@ f1_keywords:
   - "sql12.dqs.dqproject.interactivecleansing.f1"
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 caps.latest.revision: 24
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

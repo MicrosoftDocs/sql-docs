@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), diagnostic records"
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
 caps.latest.revision: 6
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Table-Valued Parameter Diagnostic Record Fields

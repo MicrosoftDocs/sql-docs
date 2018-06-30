@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "session timeout [SQL Server]"
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 caps.latest.revision: 24
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Change the Session-Timeout Period for an Availability Replica (SQL Server)

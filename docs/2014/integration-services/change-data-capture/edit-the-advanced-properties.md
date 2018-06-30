@@ -13,7 +13,7 @@ f1_keywords:
   - "advanced"
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 caps.latest.revision: 6
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

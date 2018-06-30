@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Report Data pane"
 ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
 caps.latest.revision: 27
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Data Pane

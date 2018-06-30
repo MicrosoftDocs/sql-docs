@@ -13,8 +13,8 @@ f1_keywords:
   - "vs.lookin"
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 caps.latest.revision: 7
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Choose Search Folders Dialog Box (Visual Studio)

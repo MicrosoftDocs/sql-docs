@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "report toolbar [Reporting Services]"
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: 32
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # HTML Viewer and the Report Toolbar

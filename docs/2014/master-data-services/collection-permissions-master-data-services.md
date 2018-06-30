@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], collections"
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 caps.latest.revision: 5
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Collection Permissions (Master Data Services)

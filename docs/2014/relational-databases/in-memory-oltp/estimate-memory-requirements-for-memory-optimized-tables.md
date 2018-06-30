@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables

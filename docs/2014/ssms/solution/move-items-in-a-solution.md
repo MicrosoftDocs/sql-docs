@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "relocating items"
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 caps.latest.revision: 20
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Move Items in a Solution

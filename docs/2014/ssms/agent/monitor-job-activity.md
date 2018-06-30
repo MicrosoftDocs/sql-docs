@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "current activity"
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 caps.latest.revision: 14
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Monitor Job Activity

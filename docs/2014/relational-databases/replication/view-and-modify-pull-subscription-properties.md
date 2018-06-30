@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "modifying subscriptions, SQL Server Management Studio"
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View and Modify Pull Subscription Properties

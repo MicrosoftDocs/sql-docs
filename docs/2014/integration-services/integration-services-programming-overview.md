@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "languages [Integration Services]"
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 caps.latest.revision: 39
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

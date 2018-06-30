@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "statistical information [SMO]"
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 caps.latest.revision: 37
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Creating and Updating Statistics

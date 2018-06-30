@@ -24,8 +24,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.reportbody.border.f1"
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Formatting Lines, Colors, and Images (Report Builder and SSRS)

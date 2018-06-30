@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "database backups [SQL Server], about backing up databases"
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 caps.latest.revision: 45
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

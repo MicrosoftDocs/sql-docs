@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "adding groups [Master Data Services]"
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 caps.latest.revision: 6
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Add a Group (Master Data Services)

@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "events [Integration Services], about events"
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 caps.latest.revision: 50
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

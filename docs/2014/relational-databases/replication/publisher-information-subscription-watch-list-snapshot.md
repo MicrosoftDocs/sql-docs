@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.publisherinfo.subscriptionssummary.snapshot.f1"
 ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publisher Information, Subscription Watch List (Snapshot Publication, SQL Server 2005 and Later)

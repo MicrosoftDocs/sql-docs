@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "column sets"
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Use Column Sets

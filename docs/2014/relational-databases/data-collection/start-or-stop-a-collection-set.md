@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "collection sets [SQL Server], starting"
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 caps.latest.revision: 19
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Start or Stop a Collection Set

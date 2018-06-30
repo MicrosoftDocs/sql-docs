@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "schemas [SQLXML]"
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 caps.latest.revision: 10
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Annotated XSD Schemas in SQLXML 4.0

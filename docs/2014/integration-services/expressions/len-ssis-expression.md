@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "number of characters"
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 caps.latest.revision: 36
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

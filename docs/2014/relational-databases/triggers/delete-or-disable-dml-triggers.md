@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DML triggers, removing"
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Delete or Disable DML Triggers

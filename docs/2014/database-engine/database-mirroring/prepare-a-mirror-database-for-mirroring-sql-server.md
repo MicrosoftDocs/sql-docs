@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "mirror database [SQL Server]"
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: 41
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Prepare a Mirror Database for Mirroring (SQL Server)

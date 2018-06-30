@@ -20,8 +20,8 @@ f1_keywords:
   - "sql12.swb.failoverwixard.progress.f1"
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: 11
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Progress Page (AlwaysOn Availability Group Wizards)

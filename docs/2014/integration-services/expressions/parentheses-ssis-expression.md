@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "parentheses operator ()"
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 caps.latest.revision: 36
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

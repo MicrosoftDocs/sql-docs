@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Data File Auto Shrink event class"
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Data File Auto Shrink Event Class

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "indexes [full-text search]"
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Use Full-Text Search with XML Columns

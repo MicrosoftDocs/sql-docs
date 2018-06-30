@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "resource pool [SQL Server]"
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 15
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

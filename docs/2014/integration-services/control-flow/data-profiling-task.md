@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "profiling data"
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

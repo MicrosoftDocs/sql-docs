@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "terminology"
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 caps.latest.revision: 13
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Report Authoring Concepts (Report Builder and SSRS)

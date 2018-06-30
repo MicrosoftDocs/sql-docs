@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.dmf.condition.referencingpolicies.f1"
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 caps.latest.revision: 20
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

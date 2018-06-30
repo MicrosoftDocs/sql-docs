@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "CEILING function [SSIS]"
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 caps.latest.revision: 28
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

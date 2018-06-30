@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "DTExecUI utility"
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

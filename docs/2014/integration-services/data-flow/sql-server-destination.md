@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "bulk load [Integration Services]"
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 caps.latest.revision: 64
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

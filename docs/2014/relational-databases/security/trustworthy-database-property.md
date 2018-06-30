@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "TRUSTWORTHY database property"
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # TRUSTWORTHY Database Property

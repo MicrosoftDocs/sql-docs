@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "BCPColFmt method"
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 caps.latest.revision: 24
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # IBCPSession::BCPColFmt (OLE DB)

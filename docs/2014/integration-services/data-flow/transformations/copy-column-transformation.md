@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Copy Column transformation"
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 caps.latest.revision: 36
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

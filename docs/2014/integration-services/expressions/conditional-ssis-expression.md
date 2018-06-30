@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "?: (conditional operator)"
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

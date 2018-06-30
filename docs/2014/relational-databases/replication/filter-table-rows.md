@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.filtertablerows.f1"
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Filter Table Rows

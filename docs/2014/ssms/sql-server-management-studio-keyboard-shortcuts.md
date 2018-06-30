@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "accelerator keys"
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 caps.latest.revision: 82
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Management Studio Keyboard Shortcuts

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "high-availability mode [SQL Server]"
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 caps.latest.revision: 35
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Quorum: How a Witness Affects Database Availability (Database Mirroring)

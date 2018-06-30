@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "restoring [SQL Server], piecemeal restore scenario"
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: 73
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

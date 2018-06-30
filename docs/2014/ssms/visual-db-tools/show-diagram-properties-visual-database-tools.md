@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "diagrams [SQL Server], properties"
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 caps.latest.revision: 9
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Show Diagram Properties (Visual Database Tools)

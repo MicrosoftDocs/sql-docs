@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Results pane"
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Rules for Updating Results (Visual Database Tools)

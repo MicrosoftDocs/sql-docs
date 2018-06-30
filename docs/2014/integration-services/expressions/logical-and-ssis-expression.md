@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "logical AND (&&)"
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 caps.latest.revision: 33
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "passing parameters [Reporting Services]"
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 caps.latest.revision: 62
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Analysis Services Connection Type for DMX (SSRS)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLGetStmtAttr function"
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 caps.latest.revision: 43
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLGetStmtAttr

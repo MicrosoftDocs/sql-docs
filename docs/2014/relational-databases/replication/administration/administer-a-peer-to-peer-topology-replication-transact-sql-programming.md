@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "transactional replication, peer-to-peer replication"
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Administer a Peer-to-Peer Topology (Replication Transact-SQL Programming)

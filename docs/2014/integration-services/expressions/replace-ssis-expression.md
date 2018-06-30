@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "REPLACE function"
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 caps.latest.revision: 41
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

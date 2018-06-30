@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "database objects [CLR integration], security"
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Impersonation and Credentials for Connections

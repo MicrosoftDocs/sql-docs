@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Cross-Database Queries

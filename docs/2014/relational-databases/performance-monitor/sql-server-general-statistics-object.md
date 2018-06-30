@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "General Statistics object"
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, General Statistics Object

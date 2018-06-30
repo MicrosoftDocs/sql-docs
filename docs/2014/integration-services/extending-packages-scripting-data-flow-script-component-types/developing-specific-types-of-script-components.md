@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Script component [Integration Services], examples"
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 caps.latest.revision: 11
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

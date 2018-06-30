@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.pubproperties.internetsynchronization.f1"
 ms.assetid: 8e0198c3-5e4e-418c-9920-78ccbbfc1323
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication Properties, FTP Snapshot and Internet

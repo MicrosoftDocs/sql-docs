@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], annotations"
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 caps.latest.revision: 15
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # XSD Annotations (SQLXML 4.0)

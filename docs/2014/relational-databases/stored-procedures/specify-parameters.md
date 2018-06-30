@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "input parameters [SQL Server]"
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Specify Parameters

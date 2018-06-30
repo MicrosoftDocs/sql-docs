@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.common.extendedproperties.f1"
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Object (Extended Properties Page)

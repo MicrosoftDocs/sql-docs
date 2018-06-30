@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.dmf.evalpoliciesresults.f1"
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 caps.latest.revision: 15
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

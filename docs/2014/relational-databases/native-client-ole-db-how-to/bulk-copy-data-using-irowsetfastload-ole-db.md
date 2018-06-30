@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 caps.latest.revision: 20
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)

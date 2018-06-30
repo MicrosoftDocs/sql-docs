@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "models [Master Data Services], deleting models"
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 4
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Delete a Model (Master Data Services)

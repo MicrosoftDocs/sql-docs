@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "custom objects [Integration Services]"
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 caps.latest.revision: 44
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

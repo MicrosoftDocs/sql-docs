@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "MERGE statement [SQL Server]"
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 caps.latest.revision: 22
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

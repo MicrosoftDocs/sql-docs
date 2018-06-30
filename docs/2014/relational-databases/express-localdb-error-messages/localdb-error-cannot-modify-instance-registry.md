@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: bb14e3c5-5349-47e8-8e6b-16ff26dfb368
 caps.latest.revision: 7
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY

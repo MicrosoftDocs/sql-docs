@@ -14,7 +14,7 @@ f1_keywords:
   - "sql12.ssis.ssms.isprojectvalidate.f1"
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 caps.latest.revision: 6
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

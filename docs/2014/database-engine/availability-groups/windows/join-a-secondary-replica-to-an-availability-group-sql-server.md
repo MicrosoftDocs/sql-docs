@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 caps.latest.revision: 39
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Join a Secondary Replica to an Availability Group (SQL Server)

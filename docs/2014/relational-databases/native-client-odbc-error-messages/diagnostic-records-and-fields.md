@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "status information [ODBC]"
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Diagnostic Records and Fields

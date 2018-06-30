@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "axes [SQLXML]"
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Specifying an Axis (SQLXML 4.0)

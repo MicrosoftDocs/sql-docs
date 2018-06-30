@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "FeatureSet element"
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # FeatureSet Element (DTA)

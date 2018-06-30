@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.backupdevice.contents.f1"
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: 36
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "counters [Integration Services]"
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 caps.latest.revision: 36
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

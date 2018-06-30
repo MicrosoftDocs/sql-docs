@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "predefined events [Integration Services]"
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 caps.latest.revision: 49
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

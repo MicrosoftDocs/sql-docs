@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "correct data"
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 caps.latest.revision: 33
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

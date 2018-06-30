@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "partitioned indexes [SQL Server], about partitioned indexes"
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Partitioned Tables and Indexes

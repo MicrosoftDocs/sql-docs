@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "processing objects [Integration Services]"
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 caps.latest.revision: 51
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

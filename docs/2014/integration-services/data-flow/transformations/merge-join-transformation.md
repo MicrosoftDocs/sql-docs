@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "joins [SQL Server], SSIS"
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 caps.latest.revision: 54
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

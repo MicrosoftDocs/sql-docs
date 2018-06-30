@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Policy-Based Management, view facet properties"
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 caps.latest.revision: 7
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

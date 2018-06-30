@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "view dependencies"
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Get Information About a View

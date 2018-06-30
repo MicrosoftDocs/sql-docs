@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "expressions [Reporting Services], examples"
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 97
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Expression Examples (Report Builder and SSRS)

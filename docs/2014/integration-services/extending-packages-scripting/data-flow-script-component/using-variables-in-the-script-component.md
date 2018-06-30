@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Script component [Integration Services], using variables"
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 caps.latest.revision: 12
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

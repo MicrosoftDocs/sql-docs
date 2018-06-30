@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: 8
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Formatting Axis Labels on a Chart (Report Builder and SSRS)

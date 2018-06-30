@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "SqlInt32 data type"
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 caps.latest.revision: 69
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Mapping CLR Parameter Data

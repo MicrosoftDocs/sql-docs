@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "WITH XMLNAMESPACES clause"
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Add Namespaces to Queries with WITH XMLNAMESPACES

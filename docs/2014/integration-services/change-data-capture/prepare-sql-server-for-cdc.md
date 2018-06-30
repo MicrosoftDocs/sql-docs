@@ -13,7 +13,7 @@ f1_keywords:
   - "prepSqlSrv"
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 caps.latest.revision: 7
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

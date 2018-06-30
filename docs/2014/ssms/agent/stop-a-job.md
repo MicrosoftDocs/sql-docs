@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "stopping jobs"
 ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 caps.latest.revision: 34
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Stop a Job

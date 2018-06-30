@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "DeleteEncryptionKey method"
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 caps.latest.revision: 20
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # DeleteEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "RBS (Remote Blob Store) [SQL Server]"
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Remote Blob Store (RBS) (SQL Server)

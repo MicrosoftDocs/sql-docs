@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "log shipping [SQL Server], viewing reports"
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: 17
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

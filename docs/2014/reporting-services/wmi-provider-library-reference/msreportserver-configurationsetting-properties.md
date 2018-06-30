@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "MSReportServer_ConfigurationSetting class"
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 caps.latest.revision: 45
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # MSReportServer_ConfigurationSetting Properties

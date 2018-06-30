@@ -31,7 +31,7 @@ helpviewer_keywords:
   - "similarity thresholds [Integration Services]"
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

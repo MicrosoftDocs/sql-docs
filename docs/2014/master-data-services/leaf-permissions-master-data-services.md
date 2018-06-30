@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "attributes [Master Data Services], leaf member attribute permissions"
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 caps.latest.revision: 6
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Leaf Permissions (Master Data Services)

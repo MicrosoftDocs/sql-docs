@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "user-defined functions [OLE DB]"
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Execute a User-Defined Function and Process Return Code (OLE DB)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "context [CLR integration]"
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 caps.latest.revision: 54
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SqlContext Object

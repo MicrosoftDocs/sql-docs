@@ -14,7 +14,7 @@ f1_keywords:
   - "sql12.swb.restoredb.files.f1"
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: 15
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

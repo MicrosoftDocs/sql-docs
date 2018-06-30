@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "trailing blanks"
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 caps.latest.revision: 38
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

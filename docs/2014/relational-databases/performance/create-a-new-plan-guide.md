@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "plan guides [SQL Server]. creating"
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 16
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

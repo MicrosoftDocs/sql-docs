@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "updating custom assemblies"
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 caps.latest.revision: 46
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Deploying a Custom Assembly

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Transparent Data Encryption, using EKM"
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
+author: aliceku
+ms.author: aliceku
 manager: craigg
 ---
 # Enable TDE Using EKM

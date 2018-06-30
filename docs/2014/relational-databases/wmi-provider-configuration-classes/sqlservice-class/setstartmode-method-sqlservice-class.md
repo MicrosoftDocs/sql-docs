@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SetStartMode method"
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 caps.latest.revision: 35
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SetStartMode Method (SqlService Class)

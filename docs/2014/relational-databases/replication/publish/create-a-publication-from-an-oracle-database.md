@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], configuring"
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create a Publication from an Oracle Database

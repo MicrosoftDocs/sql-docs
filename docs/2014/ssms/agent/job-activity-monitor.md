@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.ag.jobactivitymonitor.alljobs.f1"
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 caps.latest.revision: 20
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Job Activity Monitor

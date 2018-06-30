@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "starting Import and Export Wizard"
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 caps.latest.revision: 67
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Resource Governor, templates"
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 caps.latest.revision: 14
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

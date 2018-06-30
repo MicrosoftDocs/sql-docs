@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "data flow [Integration Services], data options"
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 caps.latest.revision: 41
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

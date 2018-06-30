@@ -14,7 +14,7 @@ f1_keywords:
   - "sql12.ssis.ssms.packageproperties.f1"
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 26
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

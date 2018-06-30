@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "management tools, upgrading"
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 caps.latest.revision: 17
-author: mashamsft
-ms.author: mathoma
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Upgrade SQL Server Management Tools

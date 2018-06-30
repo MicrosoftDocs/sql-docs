@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_wsendmsg"
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_wsendmsg (Extended Stored Procedure API)

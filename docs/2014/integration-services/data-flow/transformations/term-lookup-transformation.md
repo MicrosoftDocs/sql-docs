@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "Term Lookup transformation"
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

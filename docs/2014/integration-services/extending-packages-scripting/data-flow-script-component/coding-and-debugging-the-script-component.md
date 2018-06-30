@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "VSTA"
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 caps.latest.revision: 64
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

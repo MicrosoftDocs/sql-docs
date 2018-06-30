@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "firewall systems [Database Engine], multi-homed computer"
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 22
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.mds.configmanager.createapp.f1"
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 8
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create Web Application Dialog Box (Master Data Services Configuration Manager)

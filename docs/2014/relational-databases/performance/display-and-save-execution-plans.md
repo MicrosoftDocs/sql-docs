@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "tuning queries [SQL Server]"
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 caps.latest.revision: 23
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "walkthroughs [Integration Services]"
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 caps.latest.revision: 37
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

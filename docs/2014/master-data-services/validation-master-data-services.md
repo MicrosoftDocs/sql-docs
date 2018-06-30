@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 caps.latest.revision: 10
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Validation (Master Data Services)

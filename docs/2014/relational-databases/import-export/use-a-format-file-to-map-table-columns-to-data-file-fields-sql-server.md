@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "format files [SQL Server], mapping columns to fields"
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 caps.latest.revision: 36
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Use a Format File to Map Table Columns to Data-File Fields (SQL Server)

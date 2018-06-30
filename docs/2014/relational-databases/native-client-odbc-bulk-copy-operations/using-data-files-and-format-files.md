@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "bulk copy [ODBC], data files"
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using Data Files and Format Files

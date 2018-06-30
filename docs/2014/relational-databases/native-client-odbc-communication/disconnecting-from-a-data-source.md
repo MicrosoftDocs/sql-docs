@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, connections"
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Disconnecting from a Data Source

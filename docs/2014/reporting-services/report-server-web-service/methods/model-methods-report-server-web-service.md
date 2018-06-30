@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 caps.latest.revision: 3
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Model Methods

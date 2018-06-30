@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "overwriting files"
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 caps.latest.revision: 28
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

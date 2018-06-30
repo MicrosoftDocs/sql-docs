@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "change data capture [SQL Server], Integration Services and"
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 caps.latest.revision: 39
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

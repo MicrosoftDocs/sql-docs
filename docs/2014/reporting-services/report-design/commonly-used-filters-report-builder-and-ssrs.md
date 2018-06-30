@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "valid values [Reporting Services]"
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 caps.latest.revision: 36
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Commonly Used Filters (Report Builder and SSRS)

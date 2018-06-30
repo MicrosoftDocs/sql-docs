@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dta.general.f1"
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Database Engine Tuning Advisor

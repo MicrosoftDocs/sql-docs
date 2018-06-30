@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], functionality"
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Introduction to Using XPath Queries (SQLXML 4.0)

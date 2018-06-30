@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 caps.latest.revision: 29
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

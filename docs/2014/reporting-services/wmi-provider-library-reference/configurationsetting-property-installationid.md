@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "InstanceID property"
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 caps.latest.revision: 37
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # InstallationID Property (WMI MSReportServer_ConfigurationSetting)

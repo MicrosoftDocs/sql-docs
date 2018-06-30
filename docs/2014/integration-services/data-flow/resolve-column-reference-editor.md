@@ -14,7 +14,7 @@ f1_keywords:
   - "sql12.dts.designer.resolvereferences.preview.F1"
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 caps.latest.revision: 4
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Modify the Controller and Client Services Accounts

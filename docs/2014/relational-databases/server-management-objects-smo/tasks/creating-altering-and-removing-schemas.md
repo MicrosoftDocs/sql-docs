@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "schemas [SMO]"
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: 34
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Creating, Altering, and Removing Schemas

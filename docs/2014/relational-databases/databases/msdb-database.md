@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "msdb database [SQL Server]"
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # msdb Database

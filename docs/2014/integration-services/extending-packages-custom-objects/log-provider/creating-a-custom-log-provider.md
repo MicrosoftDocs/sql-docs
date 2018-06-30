@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "custom log providers [Integration Services], creating"
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 caps.latest.revision: 57
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

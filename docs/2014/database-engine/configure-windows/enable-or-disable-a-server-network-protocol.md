@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "connections [SQL Server], enabling remote using Configuration Manager"
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Enable or Disable a Server Network Protocol

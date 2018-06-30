@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "loading data flow results"
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 caps.latest.revision: 64
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

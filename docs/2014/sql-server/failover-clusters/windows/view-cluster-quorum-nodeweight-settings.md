@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 caps.latest.revision: 16
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

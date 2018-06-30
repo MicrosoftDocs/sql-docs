@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Buffer Node object"
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server:Buffer Node

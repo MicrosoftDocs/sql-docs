@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "files [Reporting Services], uploading"
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 caps.latest.revision: 41
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Upload a File or Report (Report Manager)

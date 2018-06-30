@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "logs [SQL Server], Setup"
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 50
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

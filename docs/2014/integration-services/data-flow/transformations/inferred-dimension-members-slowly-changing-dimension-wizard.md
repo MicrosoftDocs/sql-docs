@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.loaddimwizard.inferrdim.f1"
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 caps.latest.revision: 19
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

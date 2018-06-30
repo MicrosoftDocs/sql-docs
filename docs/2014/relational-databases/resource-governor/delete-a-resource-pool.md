@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "resource pools [SQL Server], delete"
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 caps.latest.revision: 8
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

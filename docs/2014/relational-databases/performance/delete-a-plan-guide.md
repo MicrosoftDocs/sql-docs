@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "plan guides [SQL Server], deleting"
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 caps.latest.revision: 6
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

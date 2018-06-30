@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DML triggers, multirow"
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Create DML Triggers to Handle Multiple Rows of Data

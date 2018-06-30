@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ODBC data sources"
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 caps.latest.revision: 27
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQL Server Native Client ODBC Data Sources

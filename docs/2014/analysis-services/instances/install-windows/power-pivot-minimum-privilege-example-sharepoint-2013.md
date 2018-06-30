@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 caps.latest.revision: 7
-author: markingmyname
-ms.author: maghan
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Example of a Minimum-Privilege Configuration for PowerPivot for SharePoint 2013

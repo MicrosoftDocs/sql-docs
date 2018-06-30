@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "expressions [Reporting Services], about expressions"
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 57
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Expression Uses in Reports (Report Builder and SSRS)

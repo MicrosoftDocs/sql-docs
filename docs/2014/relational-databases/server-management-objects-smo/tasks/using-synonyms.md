@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "synonyms [SMO]"
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 caps.latest.revision: 47
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Using Synonyms

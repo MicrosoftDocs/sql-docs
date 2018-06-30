@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "output columns [Integration Services]"
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 30
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

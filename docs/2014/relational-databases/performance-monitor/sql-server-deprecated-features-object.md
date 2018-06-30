@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Deprecated Features object"
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, Deprecated Features Object

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL queries [SQLXML]"
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Executing SQL Queries (SQLXMLOLEDB Provider)

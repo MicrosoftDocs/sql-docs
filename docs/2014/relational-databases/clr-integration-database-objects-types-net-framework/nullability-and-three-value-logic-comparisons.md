@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SqlBoolean data type"
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 caps.latest.revision: 39
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Nullability and Three-Value Logic Comparisons

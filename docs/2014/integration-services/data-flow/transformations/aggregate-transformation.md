@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "large data, SSIS transformations"
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 caps.latest.revision: 59
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

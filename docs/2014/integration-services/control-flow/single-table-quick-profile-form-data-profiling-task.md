@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Data Profiling Task Editor"
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 caps.latest.revision: 20
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

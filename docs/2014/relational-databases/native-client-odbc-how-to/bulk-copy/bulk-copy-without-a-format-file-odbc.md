@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 caps.latest.revision: 15
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Bulk Copy Without a Format File (ODBC)

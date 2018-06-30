@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "removing alerts"
 ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
 caps.latest.revision: 26
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Disable or Reactivate an Alert

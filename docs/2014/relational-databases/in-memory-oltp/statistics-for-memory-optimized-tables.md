@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Statistics for Memory-Optimized Tables

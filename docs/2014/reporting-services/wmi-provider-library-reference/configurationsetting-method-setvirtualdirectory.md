@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SetVirtualDirectory method"
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 caps.latest.revision: 11
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # SetVirtualDirectory Method (WMI MSReportServer_ConfigurationSetting)

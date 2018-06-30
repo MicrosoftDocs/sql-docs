@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "upgrading replicated databases"
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 caps.latest.revision: 71
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

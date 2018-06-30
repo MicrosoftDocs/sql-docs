@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "errors [Integration Services], data flow outputs"
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 65
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

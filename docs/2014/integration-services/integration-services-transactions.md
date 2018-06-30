@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "transactions [Integration Services]"
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 caps.latest.revision: 50
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

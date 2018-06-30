@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ReencryptSecureInformation method"
 ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 caps.latest.revision: 18
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # ReencryptSecureInformation Method (WMI MSReportServer_ConfigurationSetting)

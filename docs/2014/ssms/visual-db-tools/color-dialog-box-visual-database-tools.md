@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptions.FontsAndColors.ColorPicker"
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 caps.latest.revision: 8
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Color Dialog Box (Visual Database Tools)

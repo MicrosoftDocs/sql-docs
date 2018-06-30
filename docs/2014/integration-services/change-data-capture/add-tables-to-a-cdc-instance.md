@@ -13,7 +13,7 @@ f1_keywords:
   - "addTabs"
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 caps.latest.revision: 8
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

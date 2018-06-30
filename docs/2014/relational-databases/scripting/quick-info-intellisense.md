@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "identifier declarations [IntelliSense]"
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Quick Info (IntelliSense)

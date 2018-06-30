@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Results pane"
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 caps.latest.revision: 9
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete Rows in the Results Pane (Visual Database Tools)

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "database monitoring [SQL Server], baselines"
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 caps.latest.revision: 21
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

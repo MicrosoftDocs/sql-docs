@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Add Copy of Existing Package dialog box"
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 caps.latest.revision: 12
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

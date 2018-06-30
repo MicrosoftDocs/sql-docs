@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Full-Text Search DDL, Functions, Stored Procedures, and Views

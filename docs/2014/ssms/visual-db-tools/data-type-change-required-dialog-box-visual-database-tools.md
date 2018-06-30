@@ -14,8 +14,8 @@ f1_keywords:
   - "vdtsql.chm:65545"
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 caps.latest.revision: 12
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Data Type Change Required Dialog Box (Visual Database Tools)

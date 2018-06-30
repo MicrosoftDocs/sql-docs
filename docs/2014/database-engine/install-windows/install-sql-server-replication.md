@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "command prompt [SQL Server replication]"
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 caps.latest.revision: 40
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

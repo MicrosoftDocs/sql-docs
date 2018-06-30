@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLColAttribute function"
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 caps.latest.revision: 52
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLColAttribute

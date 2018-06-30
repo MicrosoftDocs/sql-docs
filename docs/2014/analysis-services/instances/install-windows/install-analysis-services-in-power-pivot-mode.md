@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 28
-author: markingmyname
-ms.author: maghan
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # PowerPivot for SharePoint 2013 Installation

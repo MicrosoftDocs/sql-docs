@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Windows System Monitor [SQL Server], starting"
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 caps.latest.revision: 16
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

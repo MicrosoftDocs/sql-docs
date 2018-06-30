@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "autostart SQL Server Agent"
 ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
 caps.latest.revision: 24
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Autostart SQL Server Agent (SQL Server Management Studio)

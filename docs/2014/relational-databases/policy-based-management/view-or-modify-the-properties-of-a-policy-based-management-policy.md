@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Policy-Based Management, view policies"
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 caps.latest.revision: 8
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "devices [SQL Server]"
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 89
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

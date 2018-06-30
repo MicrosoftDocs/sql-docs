@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Build a Query in the Relational Query Designer (Report Builder and SSRS)

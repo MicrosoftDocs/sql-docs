@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "business logic [XML]"
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Add Business Logic to XML Data

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 caps.latest.revision: 8
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "custom report items"
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 caps.latest.revision: 17
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Convert CRI Dialog Box (Report Builder)

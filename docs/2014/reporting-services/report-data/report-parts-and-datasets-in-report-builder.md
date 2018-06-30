@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Parts and Datasets in Report Builder

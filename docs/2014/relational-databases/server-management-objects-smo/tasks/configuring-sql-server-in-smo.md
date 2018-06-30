@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "configuration options [SMO]"
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 caps.latest.revision: 40
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Configuring SQL Server in SMO

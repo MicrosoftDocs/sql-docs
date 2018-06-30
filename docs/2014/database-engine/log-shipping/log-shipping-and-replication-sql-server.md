@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "log shipping [SQL Server], replication and"
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: 29
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

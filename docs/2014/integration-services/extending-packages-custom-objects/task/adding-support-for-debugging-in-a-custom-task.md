@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "debugging [Integration Services], custom tasks"
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 caps.latest.revision: 44
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

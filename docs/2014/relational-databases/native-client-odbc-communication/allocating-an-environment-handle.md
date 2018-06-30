@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "environment handles [SQLNCLI]"
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Allocating an Environment Handle

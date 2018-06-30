@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "TVFs [CLR integration]"
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 caps.latest.revision: 86
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # CLR Table-Valued Functions

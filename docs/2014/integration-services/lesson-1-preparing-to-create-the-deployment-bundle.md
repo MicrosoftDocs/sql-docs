@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 caps.latest.revision: 19
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "RIGHT function"
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

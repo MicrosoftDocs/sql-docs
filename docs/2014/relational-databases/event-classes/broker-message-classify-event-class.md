@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Broker:Message Classify event class"
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 caps.latest.revision: 24
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Broker:Message Classify Event Class

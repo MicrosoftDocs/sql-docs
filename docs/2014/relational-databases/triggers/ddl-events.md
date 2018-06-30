@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "events [SQL Server], DDL"
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # DDL Events

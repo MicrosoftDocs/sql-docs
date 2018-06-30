@@ -34,8 +34,8 @@ f1_keywords:
   - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 caps.latest.revision: 10
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Change Map Legends, Color Scale, and Associated Rules (Report Builder and SSRS)

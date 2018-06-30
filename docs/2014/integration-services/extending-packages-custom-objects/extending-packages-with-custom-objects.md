@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 caps.latest.revision: 34
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

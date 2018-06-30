@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Lesson 2: Add Data

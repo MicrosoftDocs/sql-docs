@@ -24,8 +24,8 @@ f1_keywords:
   - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: 5
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Page Headers and Footers (Report Builder and SSRS)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "indexes [SMO]"
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 caps.latest.revision: 49
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Creating, Altering, and Removing Indexes

@@ -14,8 +14,8 @@ f1_keywords:
   - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Embed an Image in a Report (Report Builder and SSRS)

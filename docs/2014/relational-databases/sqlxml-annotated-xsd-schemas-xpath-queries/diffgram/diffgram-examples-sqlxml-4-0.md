@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "parentID annotation"
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 caps.latest.revision: 22
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # DiffGram Examples (SQLXML 4.0)

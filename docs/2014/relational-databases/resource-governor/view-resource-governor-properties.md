@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Resource Governor, properties"
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 26
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

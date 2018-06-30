@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_rpcnumber"
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_rpcnumber (Extended Stored Procedure API)

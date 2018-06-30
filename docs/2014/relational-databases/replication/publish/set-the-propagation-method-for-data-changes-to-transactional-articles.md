@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "propagating data changes [SQL Server replication]"
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Set the Propagation Method for Data Changes to Transactional Articles

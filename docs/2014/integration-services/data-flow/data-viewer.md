@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Data Viewer dialog box"
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 caps.latest.revision: 12
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "HPAs [CLR integration]"
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 caps.latest.revision: 59
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # CLR Hosted Environment

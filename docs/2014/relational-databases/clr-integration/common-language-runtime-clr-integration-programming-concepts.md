@@ -18,8 +18,8 @@ helpviewer_keywords:
   - ".NET Framework [SQL Server]"
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 caps.latest.revision: 56
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Common Language Runtime (CLR) Integration Programming Concepts

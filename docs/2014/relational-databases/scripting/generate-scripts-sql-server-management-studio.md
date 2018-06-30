@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 4
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Generate Scripts (SQL Server Management Studio)

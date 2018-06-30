@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Remove Columns from Query Results (Visual Database Tools)

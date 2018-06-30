@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "databases [SQL Server], moving"
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Move System Databases

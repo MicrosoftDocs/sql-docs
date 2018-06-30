@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "IsInitialized property"
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 caps.latest.revision: 17
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # IsInitialized Property (WMI MSReportServer_ConfigurationSetting)

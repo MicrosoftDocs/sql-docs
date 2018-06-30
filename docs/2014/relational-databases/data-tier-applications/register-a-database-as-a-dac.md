@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], register"
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Register a Database As a DAC

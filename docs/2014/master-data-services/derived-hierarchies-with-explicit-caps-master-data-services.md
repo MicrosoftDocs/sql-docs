@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "derived hierarchies, derived hierarchies with explicit caps"
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 caps.latest.revision: 6
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Derived Hierarchies with Explicit Caps (Master Data Services)

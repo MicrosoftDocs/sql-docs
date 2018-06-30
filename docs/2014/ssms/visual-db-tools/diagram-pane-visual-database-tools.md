@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Diagram pane [Visual Database Tools]"
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Diagram Pane (Visual Database Tools)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Browser service"
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 caps.latest.revision: 59
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Browser Service

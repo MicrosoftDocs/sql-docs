@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.impexpwizard.providesourcequery.f1"
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 caps.latest.revision: 32
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

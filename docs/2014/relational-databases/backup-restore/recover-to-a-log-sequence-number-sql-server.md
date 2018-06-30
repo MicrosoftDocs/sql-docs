@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "database restores [SQL Server], point in time"
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 caps.latest.revision: 38
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

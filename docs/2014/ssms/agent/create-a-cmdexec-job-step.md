@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "CmdExec jobs"
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 caps.latest.revision: 35
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a CmdExec Job Step

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c77871ec-c2f4-4e4a-9a10-5aeb4ae70507
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Browser Properties (Log On Tab)

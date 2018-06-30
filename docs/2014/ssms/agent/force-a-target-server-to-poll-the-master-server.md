@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "target servers [SQL Server], polling the master server"
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 caps.latest.revision: 29
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Force a Target Server to Poll the Master Server

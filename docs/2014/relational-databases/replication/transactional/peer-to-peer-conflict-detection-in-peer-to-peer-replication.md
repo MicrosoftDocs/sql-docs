@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "peer-to-peer transactional replication, conflict detection"
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Conflict Detection in Peer-to-Peer Replication

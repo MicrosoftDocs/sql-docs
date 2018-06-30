@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "databases [SQL Server], backups"
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 caps.latest.revision: 84
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

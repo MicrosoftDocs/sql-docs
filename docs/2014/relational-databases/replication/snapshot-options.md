@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "snapshots [SQL Server replication], options"
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Snapshot Options

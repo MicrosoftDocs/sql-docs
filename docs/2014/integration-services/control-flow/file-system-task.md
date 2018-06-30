@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "File System task [Integration Services]"
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 caps.latest.revision: 57
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Job Categories dialog box"
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Job Categories: Manage Job Categories

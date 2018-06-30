@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], unique"
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete Unique Constraints

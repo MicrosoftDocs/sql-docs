@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, execution shutdowns"
 ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
 caps.latest.revision: 25
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Set Job Execution Shutdown (SQL Server Management Studio)

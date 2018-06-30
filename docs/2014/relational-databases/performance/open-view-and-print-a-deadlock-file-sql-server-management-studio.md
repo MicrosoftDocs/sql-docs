@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "printing deadlock files"
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 caps.latest.revision: 14
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

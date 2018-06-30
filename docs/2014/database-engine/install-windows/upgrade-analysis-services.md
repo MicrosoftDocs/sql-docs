@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SSAS, upgrading"
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 63
-author: markingmyname
-ms.author: maghan
+author: Minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Upgrade Analysis Services

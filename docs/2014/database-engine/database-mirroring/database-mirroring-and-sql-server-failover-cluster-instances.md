@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "high-availability mode [SQL Server]"
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 caps.latest.revision: 40
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Database Mirroring and SQL Server Failover Cluster Instances

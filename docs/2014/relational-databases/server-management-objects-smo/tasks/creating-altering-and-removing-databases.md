@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "databases [SMO], deleting"
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 caps.latest.revision: 38
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Creating, Altering, and Removing Databases

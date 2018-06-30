@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "Script task [Integration Services], printers"
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 caps.latest.revision: 31
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

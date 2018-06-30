@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "custom connection managers [Integration Services]"
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 caps.latest.revision: 21
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

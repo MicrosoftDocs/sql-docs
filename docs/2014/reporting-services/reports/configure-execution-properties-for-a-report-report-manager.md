@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], execution options"
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 caps.latest.revision: 40
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Configure Execution Properties for a Report  (Report Manager)

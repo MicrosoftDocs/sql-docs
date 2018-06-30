@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.impexpwizard.specifytablecopyorquery.f1"
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 caps.latest.revision: 43
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

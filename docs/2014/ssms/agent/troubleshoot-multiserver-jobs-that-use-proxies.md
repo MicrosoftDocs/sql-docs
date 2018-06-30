@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], multiserver jobs using proxies"
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 caps.latest.revision: 18
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Troubleshoot Multiserver Jobs That Use Proxies

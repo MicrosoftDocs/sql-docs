@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "WMI Provider for Server Events, WQL"
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 caps.latest.revision: 36
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Using WQL with the WMI Provider for Server Events

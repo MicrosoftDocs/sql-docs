@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XMLDATA option"
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Generate an Inline XSD Schema

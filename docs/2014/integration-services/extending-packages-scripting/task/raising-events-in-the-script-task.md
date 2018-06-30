@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "Script task [Integration Services], events"
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 caps.latest.revision: 54
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

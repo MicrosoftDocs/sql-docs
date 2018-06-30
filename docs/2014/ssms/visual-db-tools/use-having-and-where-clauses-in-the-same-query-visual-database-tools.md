@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "excluding rows"
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)

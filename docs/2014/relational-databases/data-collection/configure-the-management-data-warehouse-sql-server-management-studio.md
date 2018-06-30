@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "management data warehouse, configuring"
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 26
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure the Management Data Warehouse (SQL Server Management Studio)

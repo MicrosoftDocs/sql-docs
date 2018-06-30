@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "TM: Save Tran Completed event class"
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # TM: Save Tran Completed Event Class

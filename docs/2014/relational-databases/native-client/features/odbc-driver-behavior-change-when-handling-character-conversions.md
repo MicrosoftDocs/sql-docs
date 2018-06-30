@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 caps.latest.revision: 5
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # ODBC Driver Behavior Change When Handling Character Conversions

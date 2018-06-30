@@ -14,7 +14,7 @@ f1_keywords:
   - "sql11.dts.designer.afpdelcltask.f1"
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 caps.latest.revision: 10
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

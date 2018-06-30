@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "IsSharePointIntegrated property"
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
 caps.latest.revision: 11
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # IsSharePointIntegrated Property (WMI)

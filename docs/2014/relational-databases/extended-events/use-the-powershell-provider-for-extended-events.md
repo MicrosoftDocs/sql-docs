@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "PowerShell [SQL Server], extended events"
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 13
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use the PowerShell Provider for Extended Events

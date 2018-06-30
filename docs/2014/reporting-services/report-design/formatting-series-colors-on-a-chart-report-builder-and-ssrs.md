@@ -16,8 +16,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.seriesproperties.borders.f1"
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Formatting Series Colors on a Chart (Report Builder and SSRS)

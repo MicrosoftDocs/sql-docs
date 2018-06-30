@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "views [SQL Server], indexed views"
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 77
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Indexed Views

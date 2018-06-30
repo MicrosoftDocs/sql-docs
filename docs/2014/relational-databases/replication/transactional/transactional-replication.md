@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "transactional replication"
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Transactional Replication

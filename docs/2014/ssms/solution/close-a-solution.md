@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "closing solutions"
 ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
 caps.latest.revision: 22
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Close a Solution

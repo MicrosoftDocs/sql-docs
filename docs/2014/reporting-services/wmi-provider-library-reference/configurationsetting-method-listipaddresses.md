@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ListIPAddresses method"
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 caps.latest.revision: 12
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # ListIPAddresses Method (WMI MSReportServer_ConfigurationSetting)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), statement attribute"
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
 caps.latest.revision: 16
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Statement Attributes that Affect Table-Valued Parameters

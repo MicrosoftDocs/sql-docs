@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, stored procedures"
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 caps.latest.revision: 38
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Calling a Stored Procedure (OLE DB)

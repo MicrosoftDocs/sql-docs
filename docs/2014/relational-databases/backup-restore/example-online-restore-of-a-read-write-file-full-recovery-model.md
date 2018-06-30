@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "restore sequences [SQL Server], online"
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 caps.latest.revision: 32
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "VirtualDirectoryReportServer property"
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 caps.latest.revision: 9
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # VirtualDirectoryReportServer Property (WMI MSReportServer_ConfigurationSetting)

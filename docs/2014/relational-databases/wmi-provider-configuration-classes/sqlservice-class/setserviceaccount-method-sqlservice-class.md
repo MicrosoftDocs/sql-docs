@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SetServiceAccount method"
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 caps.latest.revision: 36
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SetServiceAccount Method (SqlService Class)

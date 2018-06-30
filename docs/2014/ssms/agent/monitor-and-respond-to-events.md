@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "responding to events automatically"
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 caps.latest.revision: 25
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Monitor and Respond to Events

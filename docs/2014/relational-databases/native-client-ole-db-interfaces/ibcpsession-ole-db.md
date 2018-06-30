@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "IBCPSession interface"
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
 caps.latest.revision: 27
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # IBCPSession (OLE DB)

@@ -14,8 +14,8 @@ f1_keywords:
   - "swb.agdashboard.policyeval.f1"
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: 8
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Policy Evaluation Result (AlwaysOn)

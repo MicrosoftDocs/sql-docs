@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "parameters [Reporting Services], queries"
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 caps.latest.revision: 47
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Associate a Query Parameter with a Report Parameter (Report Builder and SSRS)

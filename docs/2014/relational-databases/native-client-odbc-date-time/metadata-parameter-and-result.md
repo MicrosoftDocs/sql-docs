@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "metadata [ODBC]"
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 caps.latest.revision: 27
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Parameter and Result Metadata

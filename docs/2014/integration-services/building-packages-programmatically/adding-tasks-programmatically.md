@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "adding package tasks"
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 caps.latest.revision: 53
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Memory Manager object"
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, Memory Manager Object

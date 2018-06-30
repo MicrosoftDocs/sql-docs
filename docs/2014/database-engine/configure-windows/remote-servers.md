@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "remote access option"
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Remote Servers

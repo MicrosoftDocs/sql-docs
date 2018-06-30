@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "RAW mode, with XMLDATA and XMLSCHEMA"
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options

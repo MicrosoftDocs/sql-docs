@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data sources [Reporting Services], embedded"
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 caps.latest.revision: 43
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Configure Data Source Properties for a Report  (Report Manager)

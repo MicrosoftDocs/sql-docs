@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Auto Stats event class"
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 caps.latest.revision: 34
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Auto Stats Event Class

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Resource Governor, backup compression"
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: 24
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "destinations [Integration Services], Partition Processing"
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 caps.latest.revision: 43
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

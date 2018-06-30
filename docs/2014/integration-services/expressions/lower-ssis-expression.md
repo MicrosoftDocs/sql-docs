@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "lowercase characters"
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 caps.latest.revision: 33
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

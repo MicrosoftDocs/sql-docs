@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Showplan Text (Unencoded) event class"
 ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Showplan Text (Unencoded) Event Class

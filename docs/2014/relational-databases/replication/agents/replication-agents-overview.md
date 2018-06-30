@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "Snapshot Agent"
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Agents Overview

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "incremental load [Integration Services],creating function"
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

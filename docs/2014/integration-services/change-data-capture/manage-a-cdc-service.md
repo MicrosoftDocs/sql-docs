@@ -13,7 +13,7 @@ f1_keywords:
   - "manSer"
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 caps.latest.revision: 5
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

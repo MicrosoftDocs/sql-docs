@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # CompoundCurve

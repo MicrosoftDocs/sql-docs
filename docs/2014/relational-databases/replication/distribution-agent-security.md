@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Distribution Agent Security dialog box"
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Distribution Agent Security

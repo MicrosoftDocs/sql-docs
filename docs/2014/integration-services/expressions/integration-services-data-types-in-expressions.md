@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "data types [Integration Services], expressions"
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

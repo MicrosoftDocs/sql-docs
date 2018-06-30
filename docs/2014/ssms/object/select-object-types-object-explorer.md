@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.common.selectobjecttypes.f1"
 ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
 caps.latest.revision: 14
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Select Object Types (Object Explorer)

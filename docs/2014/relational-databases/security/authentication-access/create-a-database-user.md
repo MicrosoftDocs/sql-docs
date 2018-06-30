@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "mapping database users"
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Create a Database User

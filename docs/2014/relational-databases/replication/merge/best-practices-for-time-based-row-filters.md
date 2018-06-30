@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "best practices"
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Best Practices for Time-Based Row Filters

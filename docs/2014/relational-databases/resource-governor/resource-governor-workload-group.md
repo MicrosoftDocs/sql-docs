@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "workload groups [SQL Server], overview"
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 caps.latest.revision: 5
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

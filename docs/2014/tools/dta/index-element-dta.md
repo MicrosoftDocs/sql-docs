@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Index element (DTA)"
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Index Element (DTA)

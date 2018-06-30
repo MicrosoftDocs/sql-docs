@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "CreateSSLCertificateBinding"
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 caps.latest.revision: 14
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)

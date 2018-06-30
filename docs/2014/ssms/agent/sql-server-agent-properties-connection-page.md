@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.agent.connection.f1"
 ms.assetid: d6a677ff-60ad-47ba-a0cb-df4193b165e0
 caps.latest.revision: 18
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Agent Properties (Connection Page)

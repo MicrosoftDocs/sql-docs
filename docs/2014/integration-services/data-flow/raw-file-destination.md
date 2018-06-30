@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "Raw File destination"
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

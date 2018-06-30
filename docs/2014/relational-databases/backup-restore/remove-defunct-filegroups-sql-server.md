@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "unrestored filegroups"
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 caps.latest.revision: 26
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

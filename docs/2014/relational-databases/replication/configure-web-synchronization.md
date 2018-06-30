@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "Web synchronization, configuring"
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: 73
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure Web Synchronization

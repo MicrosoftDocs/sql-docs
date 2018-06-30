@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "disabling distribution"
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Disable Publishing and Distribution

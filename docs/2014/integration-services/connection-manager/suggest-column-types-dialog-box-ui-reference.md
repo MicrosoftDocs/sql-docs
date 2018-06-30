@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.designer.suggestdatatypes.f1"
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 caps.latest.revision: 24
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

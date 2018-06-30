@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sqlcmd utility, about sqlcmd utility"
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 caps.latest.revision: 47
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use the sqlcmd Utility

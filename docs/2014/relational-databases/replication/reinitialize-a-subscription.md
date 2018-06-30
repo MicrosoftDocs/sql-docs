@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "reinitializing subscriptions"
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Reinitialize a Subscription

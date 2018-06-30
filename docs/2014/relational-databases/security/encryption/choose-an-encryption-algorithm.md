@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "algorithms [SQL Server encryption]"
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
+author: aliceku
+ms.author: aliceku
 manager: craigg
 ---
 # Choose an Encryption Algorithm

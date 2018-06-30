@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "recording attempts"
 ms.assetid: 5a8d73a6-c4f6-4967-ba11-ecbcfc90b9cc
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # c2 audit mode Server Configuration Option

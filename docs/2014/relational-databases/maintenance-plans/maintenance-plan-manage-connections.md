@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.maint.connections.f1"
 ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 caps.latest.revision: 13
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

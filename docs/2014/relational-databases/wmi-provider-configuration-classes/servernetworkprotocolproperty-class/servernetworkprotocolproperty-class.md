@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ServerNetworkProtocolProperty class"
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ServerNetworkProtocolProperty Class

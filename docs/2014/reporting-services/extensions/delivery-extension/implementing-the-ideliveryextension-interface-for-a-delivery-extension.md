@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "IDeliveryExtension interface"
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 caps.latest.revision: 36
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Implementing the IDeliveryExtension Interface for a Delivery Extension

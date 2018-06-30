@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Update Statistics task [Integration Services]"
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 caps.latest.revision: 44
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

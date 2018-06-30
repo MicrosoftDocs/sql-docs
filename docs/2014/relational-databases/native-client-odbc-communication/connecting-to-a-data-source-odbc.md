@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, connections"
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 caps.latest.revision: 36
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Connecting to a Data Source (ODBC)

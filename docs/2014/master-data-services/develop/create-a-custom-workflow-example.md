@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 caps.latest.revision: 5
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Custom Workflow Example (Master Data Services)

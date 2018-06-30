@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 caps.latest.revision: 8
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Previous Function (Report Builder and SSRS)

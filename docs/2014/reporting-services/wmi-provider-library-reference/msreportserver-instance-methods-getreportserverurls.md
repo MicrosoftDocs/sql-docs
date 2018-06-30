@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "GetReportServerUrls method"
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 caps.latest.revision: 11
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # GetReportServerUrls Method (WMI MSReportServer_Instance)

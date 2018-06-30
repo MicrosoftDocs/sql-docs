@@ -13,7 +13,7 @@ f1_keywords:
   - "f1Help"
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 caps.latest.revision: 6
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "data flow components [Integration Services], logging"
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 caps.latest.revision: 22
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

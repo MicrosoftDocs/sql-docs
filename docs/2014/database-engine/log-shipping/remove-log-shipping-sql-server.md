@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "deleting log shipping"
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 caps.latest.revision: 17
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

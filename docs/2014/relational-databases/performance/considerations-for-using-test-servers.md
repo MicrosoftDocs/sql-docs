@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "offload tuning overhead [SQL Server]"
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Considerations for Using Test Servers

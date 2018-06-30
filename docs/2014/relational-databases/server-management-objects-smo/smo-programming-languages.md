@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "development environments [SMO]"
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Programming Languages

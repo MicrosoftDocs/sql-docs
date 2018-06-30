@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "metadata [SQL Server], permissions"
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Metadata Visibility Configuration

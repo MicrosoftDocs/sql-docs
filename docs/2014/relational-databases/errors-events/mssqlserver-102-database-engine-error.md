@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "102 (Database Engine error)"
 ms.assetid: 264dc1a2-c8a0-4c89-b5f6-951baf950299
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_102

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQLNCLI, system requirements"
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 caps.latest.revision: 60
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # System Requirements for SQL Server Native Client

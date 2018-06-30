@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], associating file extensions"
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Associate File Extensions to a Code Editor

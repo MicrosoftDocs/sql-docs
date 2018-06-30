@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "property expressions [Integration Services]"
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

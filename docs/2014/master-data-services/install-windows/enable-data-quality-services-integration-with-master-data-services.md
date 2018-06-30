@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
 caps.latest.revision: 4
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Enable Data Quality Services Integration with Master Data Services

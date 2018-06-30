@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Subscription Properties dialog box"
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Subscription Properties - Subscriber

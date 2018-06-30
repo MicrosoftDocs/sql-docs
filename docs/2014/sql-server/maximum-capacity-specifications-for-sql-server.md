@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], capacity specifications"
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 caps.latest.revision: 76
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Maximum Capacity Specifications for SQL Server

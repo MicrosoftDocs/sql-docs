@@ -14,8 +14,8 @@ f1_keywords:
   - "vdtsql.chm:65544"
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
 caps.latest.revision: 15
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Save Change Script Dialog Box (Visual Database Tools)

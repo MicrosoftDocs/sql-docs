@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "PropertyValType property"
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # PropertyValType Property (ClientNetworkProtocolProperty Class)

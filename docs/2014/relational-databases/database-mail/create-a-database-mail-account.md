@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "accounts [Database Mail]"
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 caps.latest.revision: 25
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Database Mail Account

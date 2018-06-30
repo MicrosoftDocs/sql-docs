@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "groups [Reporting Services], expressions"
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 caps.latest.revision: 23
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Group Expression Examples (Report Builder and SSRS)

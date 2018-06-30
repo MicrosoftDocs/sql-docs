@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "security [Integration Services], protection levels"
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 caps.latest.revision: 44
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

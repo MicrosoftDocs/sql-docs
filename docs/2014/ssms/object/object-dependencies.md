@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.common.objectdependencies.f1"
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 caps.latest.revision: 26
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Object Dependencies

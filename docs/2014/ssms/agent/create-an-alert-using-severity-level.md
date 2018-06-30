@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "alerts [SQL Server], severity levels"
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 caps.latest.revision: 29
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create an Alert Using Severity Level

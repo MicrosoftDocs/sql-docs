@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "data flow components [Integration Services], method execution sequence"
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 caps.latest.revision: 57
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SQL Server Management Studio Support for In-Memory OLTP

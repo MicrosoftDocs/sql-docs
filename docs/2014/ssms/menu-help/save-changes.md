@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Save Changes dialog box"
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 caps.latest.revision: 19
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Save Changes

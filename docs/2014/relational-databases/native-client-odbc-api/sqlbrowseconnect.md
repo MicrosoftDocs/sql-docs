@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLBrowseConnect function"
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 caps.latest.revision: 55
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLBrowseConnect

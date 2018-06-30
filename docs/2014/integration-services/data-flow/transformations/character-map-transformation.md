@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Character Map transformation [Integration Services]"
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 caps.latest.revision: 41
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "clickthrough reports, customizing"
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 caps.latest.revision: 28
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Clickthrough Reports (SSRS)

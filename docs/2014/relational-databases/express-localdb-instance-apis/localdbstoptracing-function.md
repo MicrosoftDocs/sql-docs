@@ -18,8 +18,8 @@ topic_type:
   - "apiref"
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 caps.latest.revision: 10
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # LocalDBStopTracing Function

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "data types [ODBC], about data types"
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Data Type Usage

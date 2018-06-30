@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 caps.latest.revision: 5
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Searching for Reports and Other Items (Report Builder  and SSRS)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Log File Viewer"
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Log File Viewer F1 Help

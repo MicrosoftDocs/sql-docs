@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Lookup transformation [Integration Services]"
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 caps.latest.revision: 16
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

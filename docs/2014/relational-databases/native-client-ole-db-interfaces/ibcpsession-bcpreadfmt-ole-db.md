@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "BCPReadFmt method"
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 caps.latest.revision: 26
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # IBCPSession::BCPReadFmt (OLE DB)

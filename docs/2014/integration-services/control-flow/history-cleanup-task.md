@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "History Cleanup task [Integration Services]"
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 caps.latest.revision: 43
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "custom foreach enumerators [Integration Services], developing custom user interface"
 ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
 caps.latest.revision: 21
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

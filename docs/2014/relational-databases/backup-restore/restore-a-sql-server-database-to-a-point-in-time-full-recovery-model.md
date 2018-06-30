@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], point in time"
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

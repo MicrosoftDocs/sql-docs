@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "RemoveURL method"
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 caps.latest.revision: 13
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # RemoveURL Method (WMI MSReportServer_ConfigurationSetting)

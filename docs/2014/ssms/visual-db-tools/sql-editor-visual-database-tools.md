@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "View Designer, SQL Editor"
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 caps.latest.revision: 12
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Editor (Visual Database Tools)

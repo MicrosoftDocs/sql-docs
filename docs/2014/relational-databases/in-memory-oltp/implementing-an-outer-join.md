@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Implementing an Outer Join

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Supported Data Types

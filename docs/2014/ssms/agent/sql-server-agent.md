@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "automatic administration steps"
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: 28
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Agent

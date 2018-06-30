@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.Distributor.commonjobs..f1"
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Distributor Information, Agents

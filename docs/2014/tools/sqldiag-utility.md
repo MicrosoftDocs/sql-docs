@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], diagnostic collection"
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQLdiag Utility

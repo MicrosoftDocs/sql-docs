@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], code"
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 caps.latest.revision: 41
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Add Code to a Report (SSRS)

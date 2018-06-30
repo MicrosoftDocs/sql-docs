@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "large data, OLE objects"
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 caps.latest.revision: 42
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # BLOBs and OLE Objects

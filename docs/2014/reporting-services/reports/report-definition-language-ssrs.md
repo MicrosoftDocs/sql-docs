@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], definitions"
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: 52
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Definition Language (SSRS)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], file storage types"
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Specify File Storage Type by Using bcp (SQL Server)

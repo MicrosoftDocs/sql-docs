@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 caps.latest.revision: 5
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)

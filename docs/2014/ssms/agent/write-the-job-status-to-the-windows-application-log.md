@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "logs [SQL Server], jobs"
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 caps.latest.revision: 27
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Write the Job Status to the Windows Application Log

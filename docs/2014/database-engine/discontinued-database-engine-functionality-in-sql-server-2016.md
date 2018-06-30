@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "SET DISABLE_DEF_CNST_CHK"
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 caps.latest.revision: 93
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Discontinued Database Engine Functionality in SQL Server 2014

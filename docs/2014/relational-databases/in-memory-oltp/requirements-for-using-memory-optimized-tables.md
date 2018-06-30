@@ -13,8 +13,8 @@ applies_to:
   - "SQL Server 2014"
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 53
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Requirements for Using Memory-Optimized Tables

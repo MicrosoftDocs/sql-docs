@@ -14,8 +14,8 @@ f1_keywords:
   - "swb.nativecompilationwizard.f1"
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Native Compilation Advisor

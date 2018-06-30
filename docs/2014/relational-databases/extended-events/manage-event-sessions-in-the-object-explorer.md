@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Manage Event Sessions in the Object Explorer

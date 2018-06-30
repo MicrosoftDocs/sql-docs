@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "database backups [SQL Server], properties"
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
 caps.latest.revision: 21
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

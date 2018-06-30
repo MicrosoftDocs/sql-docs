@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "query designers, text-based"
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Text-based Query Designer User Interface (Report Builder)

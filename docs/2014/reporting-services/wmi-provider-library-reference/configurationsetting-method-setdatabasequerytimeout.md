@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SetDatabaseQueryTimeout method"
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 caps.latest.revision: 19
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # SetDatabaseQueryTimeout Method (WMI MSReportServer_ConfigurationSetting)

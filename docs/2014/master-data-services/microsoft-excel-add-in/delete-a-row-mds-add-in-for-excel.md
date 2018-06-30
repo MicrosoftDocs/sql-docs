@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 caps.latest.revision: 5
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Delete a Row (MDS Add-in for Excel)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "application roles [SQL Server], creating"
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Create an Application Role

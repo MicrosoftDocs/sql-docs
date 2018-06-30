@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "CursorExecute event class"
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # CursorExecute Event Class

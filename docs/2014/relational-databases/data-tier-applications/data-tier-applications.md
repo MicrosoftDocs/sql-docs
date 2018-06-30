@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "wizard [DAC]"
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 26
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Data-tier Applications

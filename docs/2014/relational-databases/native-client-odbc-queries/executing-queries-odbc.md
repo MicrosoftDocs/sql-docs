@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "queries [ODBC]"
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Executing Queries (ODBC)

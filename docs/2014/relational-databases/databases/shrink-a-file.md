@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "file size [SQL Server]"
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Shrink a File

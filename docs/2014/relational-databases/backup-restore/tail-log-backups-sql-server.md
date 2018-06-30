@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "backups [SQL Server], tail-log backups"
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "execution at client vs. execution at server [CLR integration]"
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 caps.latest.revision: 49
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Overview of CLR Integration

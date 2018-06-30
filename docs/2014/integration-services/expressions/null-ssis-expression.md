@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "null values [Integration Services]"
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 caps.latest.revision: 30
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

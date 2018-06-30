@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "directory operations [Integration Services]"
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 caps.latest.revision: 50
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

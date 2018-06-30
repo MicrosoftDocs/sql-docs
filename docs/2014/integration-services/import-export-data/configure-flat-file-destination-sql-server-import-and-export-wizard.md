@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.impexpwizard.configureflatfiledest.f1"
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 caps.latest.revision: 30
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

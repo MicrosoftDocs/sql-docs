@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "unpack DAC"
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 caps.latest.revision: 10
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Unpack a DAC Package

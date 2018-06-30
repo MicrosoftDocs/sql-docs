@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "duplicate data [Integration Services]"
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 caps.latest.revision: 50
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

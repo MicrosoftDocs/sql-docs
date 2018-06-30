@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "file backups [SQL Server], related features"
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

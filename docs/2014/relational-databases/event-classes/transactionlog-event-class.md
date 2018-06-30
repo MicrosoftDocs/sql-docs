@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "TransactionLog event class"
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 caps.latest.revision: 33
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # TransactionLog Event Class

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "column order, change"
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Change Column Order in a Table

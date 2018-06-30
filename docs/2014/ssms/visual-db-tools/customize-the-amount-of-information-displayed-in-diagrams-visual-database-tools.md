@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "custom table views [SQL Server]"
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)

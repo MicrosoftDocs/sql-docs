@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sorting query results [SQL Server]"
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 caps.latest.revision: 9
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Sort and Group Query Results (Visual Database Tools)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.databaseproperties.options.f1"
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 65
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Properties (Options Page)

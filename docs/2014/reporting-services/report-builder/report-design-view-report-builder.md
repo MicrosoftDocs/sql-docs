@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "overview of Report Builder"
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: 20
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Report Design View (Report Builder)

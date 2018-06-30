@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "simple recovery model [SQL Server], RESTORE examples"
 ms.assetid: 9834b14a-4e56-4654-b190-c2a38624b6b4
 caps.latest.revision: 26
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

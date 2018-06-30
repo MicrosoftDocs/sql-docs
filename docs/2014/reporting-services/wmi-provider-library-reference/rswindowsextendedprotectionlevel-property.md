@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 caps.latest.revision: 5
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # RSWindowsExtendedProtectionLevel Property (WMI MSReportServer_ConfigurationSetting)

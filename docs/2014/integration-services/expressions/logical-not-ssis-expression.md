@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "! (logical Not)"
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 caps.latest.revision: 35
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

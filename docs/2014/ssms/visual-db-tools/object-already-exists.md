@@ -14,8 +14,8 @@ f1_keywords:
   - "vdtsql.chm:98845"
 ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 caps.latest.revision: 9
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Object Already Exists

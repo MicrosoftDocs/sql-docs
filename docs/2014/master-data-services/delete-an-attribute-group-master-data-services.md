@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "attribute groups [Master Data Services], deleting"
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Delete an Attribute Group (Master Data Services)

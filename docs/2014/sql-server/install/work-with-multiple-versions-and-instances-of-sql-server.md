@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "editions [SQL Server], side-by-side installations"
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 caps.latest.revision: 63
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

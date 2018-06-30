@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 caps.latest.revision: 7
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Connecting to a Azure SQL Database Using SQL Server Native Client

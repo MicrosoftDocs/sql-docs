@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "rows [OLE DB]"
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 caps.latest.revision: 19
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Retrieve Rows Using Bookmarks (OLE DB)

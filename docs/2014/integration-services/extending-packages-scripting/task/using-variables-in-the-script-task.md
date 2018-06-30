@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "variables [Integration Services], Script task"
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 caps.latest.revision: 62
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

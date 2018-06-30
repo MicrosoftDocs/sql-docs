@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "incremental load [Integration Services],preparing query"
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

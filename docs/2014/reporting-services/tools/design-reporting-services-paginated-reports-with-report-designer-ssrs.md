@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Report Designer [Reporting Services], report creation"
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Design Reports with Report Designer (SSRS)

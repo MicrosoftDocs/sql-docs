@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Transfer Error Messages task [Integration Services]"
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

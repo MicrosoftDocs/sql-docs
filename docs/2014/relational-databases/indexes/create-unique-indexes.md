@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "unique indexes, design guidelines"
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create Unique Indexes

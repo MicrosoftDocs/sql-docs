@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Durability for Memory-Optimized Tables

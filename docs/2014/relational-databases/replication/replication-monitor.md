@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Replication Monitor, help"
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Monitor

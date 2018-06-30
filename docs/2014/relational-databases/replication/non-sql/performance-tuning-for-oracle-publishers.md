@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], performance tuning"
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Performance Tuning for Oracle Publishers

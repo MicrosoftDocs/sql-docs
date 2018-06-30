@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 caps.latest.revision: 7
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Business Rule Conditions (Master Data Services)

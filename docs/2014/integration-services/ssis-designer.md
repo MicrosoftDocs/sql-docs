@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Integration Services, SSIS Designer"
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 caps.latest.revision: 54
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

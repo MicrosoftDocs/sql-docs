@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Domains"
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 caps.latest.revision: 48
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

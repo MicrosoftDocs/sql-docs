@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: 0d1f361f-336c-4571-99d1-f4813b2d9fc4
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Creating a Table Using the hierarchyid Data Type

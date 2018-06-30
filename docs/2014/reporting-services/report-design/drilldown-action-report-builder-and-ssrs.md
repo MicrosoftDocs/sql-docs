@@ -41,8 +41,8 @@ f1_keywords:
   - "10053"
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 caps.latest.revision: 8
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Drilldown Action (Report Builder and SSRS)

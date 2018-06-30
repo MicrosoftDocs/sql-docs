@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Variable selection"
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 caps.latest.revision: 15
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

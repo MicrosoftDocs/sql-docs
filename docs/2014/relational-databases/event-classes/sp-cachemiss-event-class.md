@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SP:CacheMiss event class"
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 caps.latest.revision: 38
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SP:CacheMiss Event Class

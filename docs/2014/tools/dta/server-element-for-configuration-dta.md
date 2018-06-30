@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Server element"
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Server Element for Configuration (DTA)

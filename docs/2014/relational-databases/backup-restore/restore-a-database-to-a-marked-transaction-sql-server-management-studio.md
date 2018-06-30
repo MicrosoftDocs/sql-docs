@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "marked transactions [SQL Server], restoring"
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 caps.latest.revision: 19
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

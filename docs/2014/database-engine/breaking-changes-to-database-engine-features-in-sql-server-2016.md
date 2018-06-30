@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "breaking changes [SQL Server]"
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 caps.latest.revision: 143
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Breaking Changes to Database Engine Features in SQL Server 2014

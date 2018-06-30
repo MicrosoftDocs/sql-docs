@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "remote login timeout option"
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure the remote login timeout Server Configuration Option

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "statistical information [ODBC]"
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 caps.latest.revision: 35
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Profiling ODBC Driver Performance

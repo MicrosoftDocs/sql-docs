@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "max full-text crawl range option"
 ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # max full-text crawl range Server Configuration Option

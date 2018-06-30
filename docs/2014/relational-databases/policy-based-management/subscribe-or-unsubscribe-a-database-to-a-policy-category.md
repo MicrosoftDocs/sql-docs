@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.dmf.groupsubscription.f1"
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 caps.latest.revision: 20
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

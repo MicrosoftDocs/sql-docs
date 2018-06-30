@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "XML Bulk Load [SQLXML], security"
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 caps.latest.revision: 24
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Bulk Load Security Considerations (SQLXML 4.0)

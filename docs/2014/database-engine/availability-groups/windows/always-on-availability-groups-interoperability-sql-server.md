@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 caps.latest.revision: 18
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Always On Availability Groups: Interoperability (SQL Server)

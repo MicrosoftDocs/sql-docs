@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: 14
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # FILESTREAM and FileTable with AlwaysOn Availability Groups (SQL Server)

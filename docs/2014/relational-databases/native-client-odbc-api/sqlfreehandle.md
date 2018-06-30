@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLFreeHandle function"
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLFreeHandle

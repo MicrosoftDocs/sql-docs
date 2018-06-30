@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Toolbox [SQL Server Management Studio]"
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: 20
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, expressions"
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Custom Code and Assembly References in Expressions in Report Designer (SSRS)

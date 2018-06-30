@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "logs [SQL Server], Windows application logs"
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Monitoring the Error Logs

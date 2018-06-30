@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.publicationtype.f1"
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication Type

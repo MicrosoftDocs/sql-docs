@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLGetInfo function"
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 caps.latest.revision: 42
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLGetInfo

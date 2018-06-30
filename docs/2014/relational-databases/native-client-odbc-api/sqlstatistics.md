@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLStatistics function"
 ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLStatistics

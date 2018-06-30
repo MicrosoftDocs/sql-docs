@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), API support (methods)"
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 caps.latest.revision: 10
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # OLE DB Table-Valued Parameter Type Support (Methods)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Delete Objects dialog box"
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 caps.latest.revision: 24
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete Objects

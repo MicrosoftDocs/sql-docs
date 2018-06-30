@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "data types [Integration Services], converting"
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 caps.latest.revision: 50
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

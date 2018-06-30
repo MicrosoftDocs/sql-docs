@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.dmf.exportaspolicy.f1"
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 caps.latest.revision: 19
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

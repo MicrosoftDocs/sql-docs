@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Report Server Web service"
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 caps.latest.revision: 46
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Server Web Service

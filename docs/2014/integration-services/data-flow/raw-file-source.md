@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Raw File source"
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 caps.latest.revision: 42
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

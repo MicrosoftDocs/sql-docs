@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "remote packages [Integration Services]"
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 caps.latest.revision: 41
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

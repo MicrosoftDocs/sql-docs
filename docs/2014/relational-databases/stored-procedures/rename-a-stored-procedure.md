@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "renaming stored procedures"
 ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Rename a Stored Procedure

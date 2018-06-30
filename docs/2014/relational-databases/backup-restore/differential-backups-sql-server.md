@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "differential backups, about"
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 caps.latest.revision: 60
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

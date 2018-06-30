@@ -14,7 +14,7 @@ f1_keywords:
   - "sql12.dqs.dm.testdomainrule.f1"
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: 27
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

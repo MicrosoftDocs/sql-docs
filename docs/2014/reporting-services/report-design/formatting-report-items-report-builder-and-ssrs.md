@@ -13,8 +13,8 @@ f1_keywords:
   - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Formatting Report Items (Report Builder and SSRS)

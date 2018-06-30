@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dqs.kb.openkb.f1"
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 caps.latest.revision: 18
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

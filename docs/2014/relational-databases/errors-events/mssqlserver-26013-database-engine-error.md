@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "26013 (Database Engine error)"
 ms.assetid: 7362fca4-b005-4872-bdfa-a3e32f834db8
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_26013

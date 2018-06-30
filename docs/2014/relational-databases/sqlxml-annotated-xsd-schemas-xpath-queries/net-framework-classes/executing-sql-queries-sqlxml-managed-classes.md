@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQL queries [SQLXML]"
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 caps.latest.revision: 22
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Executing SQL Queries (SQLXML Managed Classes)

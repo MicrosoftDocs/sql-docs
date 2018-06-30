@@ -18,8 +18,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 10
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Indicators (Report Builder and SSRS)

@@ -14,8 +14,8 @@ f1_keywords:
   - "vdtsql.chm:65561"
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Collation Dialog Box (Visual Database Tools)

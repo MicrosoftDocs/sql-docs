@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio dialog box"
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 caps.latest.revision: 22
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # About SQL Server Management Studio

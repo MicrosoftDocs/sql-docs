@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], mapping data types"
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Data Type Coercions and the sql:datatype Annotation (SQLXML 4.0)

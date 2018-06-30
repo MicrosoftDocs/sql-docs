@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.configuredistributionwizard.distributiondatabase.f1"
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Distribution Database

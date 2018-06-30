@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "audits [SQL Server], actions"
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # SQL Server Audit Action Groups and Actions

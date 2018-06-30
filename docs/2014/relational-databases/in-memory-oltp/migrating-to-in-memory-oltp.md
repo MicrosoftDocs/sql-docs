@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Migrating to In-Memory OLTP

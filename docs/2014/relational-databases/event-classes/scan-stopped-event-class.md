@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Scan:Stopped event class"
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Scan:Stopped Event Class

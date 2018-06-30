@@ -36,8 +36,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.tablix.filter.f1"
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 9
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Tables, Matrices, and Lists (Report Builder and SSRS)

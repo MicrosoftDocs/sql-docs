@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "Integration Services packages, log providers"
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 caps.latest.revision: 19
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "SQL Server Agent [Integration Services]"
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 caps.latest.revision: 43
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

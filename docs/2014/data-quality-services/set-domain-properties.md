@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dqs.dm.domainproperties.f1"
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 caps.latest.revision: 20
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

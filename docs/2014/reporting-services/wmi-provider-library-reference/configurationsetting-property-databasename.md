@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "DatabaseName property"
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
 caps.latest.revision: 36
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # DatabaseName Property (WMI MSReportServer_ConfigurationSetting)

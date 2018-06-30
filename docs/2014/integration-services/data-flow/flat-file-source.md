@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Flat File source"
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 caps.latest.revision: 50
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

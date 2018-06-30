@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "cursors [OLE DB]"
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Rowsets and SQL Server Cursors

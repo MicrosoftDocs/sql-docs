@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "MS DTC, about distributed transaction support"
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 caps.latest.revision: 27
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Supporting Distributed Transactions

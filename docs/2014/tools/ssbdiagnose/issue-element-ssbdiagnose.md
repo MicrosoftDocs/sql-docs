@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "ssbdiagnose"
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Issue Element (ssbdiagnose)

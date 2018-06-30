@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "GETUTCDATE function"
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 caps.latest.revision: 31
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "estimating cardinality"
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 caps.latest.revision: 8
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

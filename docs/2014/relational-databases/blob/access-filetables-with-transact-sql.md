@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "FileTables [SQL Server], accessing files with T-SQL"
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Access FileTables with Transact-SQL

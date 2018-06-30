@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], references"
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 caps.latest.revision: 42
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Add an Assembly Reference to a Report (SSRS)

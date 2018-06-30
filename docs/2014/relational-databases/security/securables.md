@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "server securables [SQL Server]"
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Securables

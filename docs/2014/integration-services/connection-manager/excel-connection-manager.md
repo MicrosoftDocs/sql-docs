@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "connection managers [Integration Services], Excel"
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 caps.latest.revision: 39
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

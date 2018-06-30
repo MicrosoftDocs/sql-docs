@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SP:Recompile event class"
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 caps.latest.revision: 43
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SP:Recompile Event Class

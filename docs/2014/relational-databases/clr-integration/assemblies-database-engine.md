@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "managed code [SQL Server], assemblies"
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 caps.latest.revision: 27
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Assemblies (Database Engine)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "context [CLR integration]"
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 caps.latest.revision: 13
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Context Connection

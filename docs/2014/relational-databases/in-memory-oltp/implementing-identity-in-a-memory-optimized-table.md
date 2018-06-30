@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Implementing IDENTITY in a Memory-Optimized Table

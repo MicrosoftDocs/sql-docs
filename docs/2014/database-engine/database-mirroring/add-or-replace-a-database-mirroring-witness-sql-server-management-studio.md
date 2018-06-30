@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], witness"
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 caps.latest.revision: 15
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Add or Replace a Database Mirroring Witness (SQL Server Management Studio)

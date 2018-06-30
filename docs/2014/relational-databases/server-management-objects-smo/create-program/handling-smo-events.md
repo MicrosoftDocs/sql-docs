@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "events [SMO], about events"
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 caps.latest.revision: 46
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Handling SMO Events

@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
 caps.latest.revision: 7
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_STOP_FAILED

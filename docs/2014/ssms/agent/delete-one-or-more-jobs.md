@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "removing jobs"
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 caps.latest.revision: 29
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete One or More Jobs

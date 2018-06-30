@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "events [SQL Server], Showplan XML"
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 caps.latest.revision: 19
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

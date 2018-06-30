@@ -13,8 +13,8 @@ f1_keywords:
   - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # 3D, Bevel, and Other Effects in a Chart (Report Builder and SSRS)

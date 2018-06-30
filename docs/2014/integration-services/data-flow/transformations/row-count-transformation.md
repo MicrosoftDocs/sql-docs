@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "counting rows"
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 caps.latest.revision: 42
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

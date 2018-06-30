@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "database backups [SQL Server], SQL Server Management Studio"
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

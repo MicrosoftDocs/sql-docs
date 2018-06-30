@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "For Loop containers"
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 caps.latest.revision: 53
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

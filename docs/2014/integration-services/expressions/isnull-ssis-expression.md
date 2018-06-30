@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "ISNULL function"
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 caps.latest.revision: 28
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

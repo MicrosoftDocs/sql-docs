@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "System.Transactions namespace"
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 caps.latest.revision: 16
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Using System.Transactions

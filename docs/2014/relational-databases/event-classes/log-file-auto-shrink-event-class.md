@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Log File Auto Shrink event class"
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Log File Auto Shrink Event Class

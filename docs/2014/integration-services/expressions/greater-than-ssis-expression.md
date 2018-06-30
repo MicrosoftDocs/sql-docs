@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "> (greater than operator)"
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 caps.latest.revision: 47
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

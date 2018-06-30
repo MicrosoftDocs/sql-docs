@@ -28,8 +28,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1"
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 12
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Add, Change, or Delete a Map or Map Layer (Report Builder and SSRS)

@@ -18,8 +18,8 @@ topic_type:
   - "apiref"
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 caps.latest.revision: 9
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # LocalDBShareInstance Function

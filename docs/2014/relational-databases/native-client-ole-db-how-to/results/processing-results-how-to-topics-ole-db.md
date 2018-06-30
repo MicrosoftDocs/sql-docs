@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "OLE DB, processing results"
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 caps.latest.revision: 8
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Processing Results How-to Topics (OLE DB)

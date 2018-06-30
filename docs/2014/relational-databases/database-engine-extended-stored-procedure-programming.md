@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Extended Stored Procedure API [SQL Server]"
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
 caps.latest.revision: 37
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Database Engine Extended Stored Procedure Programming

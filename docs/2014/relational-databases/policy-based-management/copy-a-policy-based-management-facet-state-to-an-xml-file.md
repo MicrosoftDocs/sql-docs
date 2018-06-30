@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Policy-Based Management, copy facet state to XML file"
 ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd
 caps.latest.revision: 6
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

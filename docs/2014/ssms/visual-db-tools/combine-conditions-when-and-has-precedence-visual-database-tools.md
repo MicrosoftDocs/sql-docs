@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "AND, Criteria pane"
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Combine Conditions When AND Has Precedence (Visual Database Tools)

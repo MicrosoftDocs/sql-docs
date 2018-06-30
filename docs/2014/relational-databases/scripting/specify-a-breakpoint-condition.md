@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, breakpoint conditions"
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Specify a Breakpoint Condition

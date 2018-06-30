@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 caps.latest.revision: 9
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Empty and Null Data Points in Charts (Report Builder and SSRS)

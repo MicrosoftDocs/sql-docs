@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "updateable transactional subscriptions, SSMS"
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create an Updatable Subscription to a Transactional Publication (Management Studio)

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Script component [Integration Services], logging"
 ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
 caps.latest.revision: 13
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

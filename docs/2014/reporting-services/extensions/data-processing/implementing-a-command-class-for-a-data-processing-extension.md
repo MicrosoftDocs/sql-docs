@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "commands [Reporting Services]"
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 caps.latest.revision: 34
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Implementing a Command Class for a Data Processing Extension

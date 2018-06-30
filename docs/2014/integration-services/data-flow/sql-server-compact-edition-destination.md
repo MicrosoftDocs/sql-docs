@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "inserting data"
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 caps.latest.revision: 56
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

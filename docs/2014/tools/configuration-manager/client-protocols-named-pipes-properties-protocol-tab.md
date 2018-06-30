@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "client protocols [SQL Server]"
 ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Client Protocols - Named Pipes Properties (Protocol Tab)

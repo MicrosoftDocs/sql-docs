@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "restoring [SQL Server], files"
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 caps.latest.revision: 24
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

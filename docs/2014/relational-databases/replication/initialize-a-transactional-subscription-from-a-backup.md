@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Initialize a Transactional Subscription from a Backup (Replication Transact-SQL Programming)

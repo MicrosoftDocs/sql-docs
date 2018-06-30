@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Audit Broker Conversation event class"
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 caps.latest.revision: 24
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Audit Broker Conversation Event Class

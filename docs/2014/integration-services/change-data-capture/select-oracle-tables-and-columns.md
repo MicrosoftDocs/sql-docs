@@ -13,7 +13,7 @@ f1_keywords:
   - "selTabCol"
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 caps.latest.revision: 5
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

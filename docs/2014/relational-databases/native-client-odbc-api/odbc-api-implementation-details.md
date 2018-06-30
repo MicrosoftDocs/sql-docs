@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "functions [ODBC]"
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 caps.latest.revision: 42
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # ODBC API Implementation Details

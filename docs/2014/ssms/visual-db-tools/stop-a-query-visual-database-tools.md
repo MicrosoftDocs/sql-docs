@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "queries [SQL Server], stopping"
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Stop a Query (Visual Database Tools)

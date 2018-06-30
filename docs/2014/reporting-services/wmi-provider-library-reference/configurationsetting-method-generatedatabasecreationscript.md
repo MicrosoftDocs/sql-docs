@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "GenerateDatabaseCreationScript method"
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 caps.latest.revision: 25
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # GenerateDatabaseCreationScript Method (WMI MSReportServer_ConfigurationSetting)

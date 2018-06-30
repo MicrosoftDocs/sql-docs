@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], debugging"
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 caps.latest.revision: 45
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Debugging CLR Database Objects

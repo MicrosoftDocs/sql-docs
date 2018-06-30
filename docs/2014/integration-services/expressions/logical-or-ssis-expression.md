@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "|| (logical OR)"
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 caps.latest.revision: 33
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

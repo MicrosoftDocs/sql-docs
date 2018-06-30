@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "full-text queries [SQL Server], proximity"
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Deprecated Full-Text Search Features in SQL Server 2014

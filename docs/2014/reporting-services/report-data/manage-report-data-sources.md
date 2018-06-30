@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "data sources [Reporting Services], managing"
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: 51
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Manage Report Data Sources

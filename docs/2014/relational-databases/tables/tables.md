@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "table components [SQL Server]"
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Tables

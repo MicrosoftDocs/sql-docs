@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "RAW mode, renaming <row> example"
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Example: Renaming the &lt;row&gt; Element

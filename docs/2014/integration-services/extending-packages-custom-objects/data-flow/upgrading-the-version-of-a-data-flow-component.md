@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "upgrading data flow components [Integration Services]"
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
 caps.latest.revision: 25
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

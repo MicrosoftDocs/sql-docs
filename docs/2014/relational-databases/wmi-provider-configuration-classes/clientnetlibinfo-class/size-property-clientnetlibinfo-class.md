@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Size property"
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Size Property (ClientNetLibInfo Class)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "removing job category"
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 caps.latest.revision: 28
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete a Job Category

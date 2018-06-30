@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Resource Governor, workload group alter"
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 caps.latest.revision: 14
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

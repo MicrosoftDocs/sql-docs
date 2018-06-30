@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "FlagName property"
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # FlagName Property (ServerSettingsGeneralFlag Class)

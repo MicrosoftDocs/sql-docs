@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "external metadata [Integration Services]"
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 caps.latest.revision: 35
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

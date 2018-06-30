@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Name property"
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # SqlXmlParameter Object (SQLXML Managed Classes)

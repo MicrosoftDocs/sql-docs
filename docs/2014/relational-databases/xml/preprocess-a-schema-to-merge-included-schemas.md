@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "XML schemas [SQL Server]"
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Preprocess a Schema to Merge Included Schemas

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Policy-Based Management, evaluate policy"
 ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
 caps.latest.revision: 6
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

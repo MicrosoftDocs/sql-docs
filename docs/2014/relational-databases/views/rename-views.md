@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "renaming views"
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Rename Views

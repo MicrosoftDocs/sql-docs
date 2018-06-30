@@ -28,8 +28,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.legendtitleproperties.general.f1"
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 caps.latest.revision: 8
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Formatting the Legend on a Chart (Report Builder and SSRS)

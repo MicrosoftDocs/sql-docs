@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "connection managers [Integration Services], SMO"
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 caps.latest.revision: 21
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

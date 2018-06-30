@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "updategrams [SQLXML], about updategrams"
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Guidelines and Limitations of XML Updategrams (SQLXML 4.0)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "saving tables"
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 caps.latest.revision: 9
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Save Selected Tables on a Diagram (Visual Database Tools)

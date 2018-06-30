@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "SSIS Script task, Foreach loops"
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 caps.latest.revision: 32
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

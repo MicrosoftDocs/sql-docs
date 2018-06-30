@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Grouping Pane dialog box"
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 caps.latest.revision: 21
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Grouping Pane

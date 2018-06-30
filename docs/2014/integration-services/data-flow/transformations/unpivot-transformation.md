@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "datasets [Integration Services], normalized data"
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 caps.latest.revision: 45
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

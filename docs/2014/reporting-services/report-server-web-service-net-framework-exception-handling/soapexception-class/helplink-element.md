@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SoapException class"
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 caps.latest.revision: 30
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # HelpLink Element

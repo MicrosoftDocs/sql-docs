@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "null values [SQLXML]"
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Passing Parameters to Updategrams (SQLXML 4.0)

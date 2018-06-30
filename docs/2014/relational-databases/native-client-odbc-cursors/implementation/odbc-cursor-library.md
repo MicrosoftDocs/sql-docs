@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL_CUR_USE_ODBC option"
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # ODBC Cursor Library

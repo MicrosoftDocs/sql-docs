@@ -18,8 +18,8 @@ topic_type:
   - "apiref"
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 caps.latest.revision: 14
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # LocalDBFormatMessage Function

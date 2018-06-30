@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "prediction queries [Integration Services]"
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 caps.latest.revision: 42
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

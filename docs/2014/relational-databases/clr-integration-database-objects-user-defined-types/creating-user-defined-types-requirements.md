@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "UDTs [CLR integration], Native serialization"
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # User-Defined Type Requirements

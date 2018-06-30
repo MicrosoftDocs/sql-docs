@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "relocating packages"
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 caps.latest.revision: 111
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Find in Files dialog box"
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Find in Files

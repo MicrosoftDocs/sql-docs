@@ -15,7 +15,7 @@ f1_keywords:
   - "sql12.dqs.kb.importselect.f1"
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: 25
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "data updates [SQL Server], OLE DB"
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Updating Data in Rowsets

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "white space [XML in SQL Server]"
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Create Instances of XML Data

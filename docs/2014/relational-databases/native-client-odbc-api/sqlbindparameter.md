@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLBindParameter function"
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 caps.latest.revision: 46
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLBindParameter

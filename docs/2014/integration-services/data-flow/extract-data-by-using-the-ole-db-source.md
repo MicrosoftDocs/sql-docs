@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "OLE DB source [Integration Services]"
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 22
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

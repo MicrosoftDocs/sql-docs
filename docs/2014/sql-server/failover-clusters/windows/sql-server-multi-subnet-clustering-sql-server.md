@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "failover clustering [SQL Server]"
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 caps.latest.revision: 51
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

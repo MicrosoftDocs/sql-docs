@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 caps.latest.revision: 30
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Solutions (SQL Server Management Studio)

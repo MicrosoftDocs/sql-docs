@@ -13,8 +13,8 @@ f1_keywords:
   - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 caps.latest.revision: 10
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Chart Types (Report Builder and SSRS)

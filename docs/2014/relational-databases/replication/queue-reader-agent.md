@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Queue Reader Agent dialog box"
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Queue Reader Agent

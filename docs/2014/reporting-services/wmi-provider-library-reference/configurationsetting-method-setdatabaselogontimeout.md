@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SetDatabaseLogonTimeout method"
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
 caps.latest.revision: 19
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # SetDatabaseLogonTimeout Method (WMI MSReportServer_ConfigurationSetting)

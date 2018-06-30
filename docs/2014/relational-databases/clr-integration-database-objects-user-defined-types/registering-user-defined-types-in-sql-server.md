@@ -35,8 +35,8 @@ helpviewer_keywords:
   - "ADD FILE clause"
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 caps.latest.revision: 25
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Registering User-Defined Types in SQL Server

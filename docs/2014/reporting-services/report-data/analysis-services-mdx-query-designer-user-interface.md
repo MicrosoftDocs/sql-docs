@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "query designers [Reporting Services]"
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 caps.latest.revision: 35
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Analysis Services MDX Query Designer User Interface

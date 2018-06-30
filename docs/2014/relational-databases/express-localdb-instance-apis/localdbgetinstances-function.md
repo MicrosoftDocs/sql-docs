@@ -18,8 +18,8 @@ topic_type:
   - "apiref"
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 caps.latest.revision: 13
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # LocalDBGetInstances Function

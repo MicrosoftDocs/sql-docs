@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "errors [ODBC], native error numbers"
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
 caps.latest.revision: 34
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Native Error Numbers

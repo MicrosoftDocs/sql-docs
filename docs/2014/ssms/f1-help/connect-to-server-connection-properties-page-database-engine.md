@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.connecttosqlserver.connectionproperties.f1"
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 caps.latest.revision: 27
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Connect to Server (Connection Properties Page) Database Engine

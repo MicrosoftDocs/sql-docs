@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "queries [Reporting Services], data mining prediction"
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 caps.latest.revision: 17
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Retrieve Data from a Data Mining Model (DMX) (SSRS)

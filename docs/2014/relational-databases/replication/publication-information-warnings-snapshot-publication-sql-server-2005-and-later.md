@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.publicationinfo.warningsandagents.snapshot.f1"
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)

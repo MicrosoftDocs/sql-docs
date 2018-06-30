@@ -13,8 +13,8 @@ f1_keywords:
   - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Report Builder Options Dialog Box, Settings (Report Builder)

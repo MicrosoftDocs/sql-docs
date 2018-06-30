@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "EXP function"
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 caps.latest.revision: 34
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

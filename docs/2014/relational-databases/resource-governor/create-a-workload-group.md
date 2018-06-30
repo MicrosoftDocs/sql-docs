@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "workload groups [SQL Server], create"
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 caps.latest.revision: 13
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

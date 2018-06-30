@@ -43,8 +43,8 @@ helpviewer_keywords:
   - "Publish Database Wizard"
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Generate and Publish Scripts Wizard

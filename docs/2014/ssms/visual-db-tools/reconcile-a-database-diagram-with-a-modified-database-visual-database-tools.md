@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], reconciling changes"
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Reconcile a Database Diagram with a Modified Database (Visual Database Tools)

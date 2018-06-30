@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "GetDatabaseVersionDisplayName method"
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 caps.latest.revision: 15
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # GetDatabaseVersionDisplayName Method (WMI)

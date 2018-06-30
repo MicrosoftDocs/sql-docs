@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "output columns [SQL Server]"
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Reorder Output Columns (Visual Database Tools)

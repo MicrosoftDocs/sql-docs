@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "scripts [Integration Services], about scripting"
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 caps.latest.revision: 38
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

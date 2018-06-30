@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "aliases [SQL Server], shared memory"
 ms.assetid: 5fff42e8-377f-4b40-b0c8-b02393f8a1af
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Creating a Valid Connection String Using Shared Memory Protocol

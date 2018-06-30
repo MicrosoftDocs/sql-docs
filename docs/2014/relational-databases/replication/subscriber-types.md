@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.subscribertypes.f1"
 ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Subscriber Types

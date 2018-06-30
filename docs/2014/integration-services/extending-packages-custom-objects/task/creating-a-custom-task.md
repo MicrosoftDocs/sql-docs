@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "custom tasks [Integration Services], creating"
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 caps.latest.revision: 38
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

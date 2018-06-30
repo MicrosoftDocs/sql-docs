@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newsubwizard.agentlocation.f1"
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &lt;AgentName&gt; Agent Location

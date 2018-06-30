@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Populating a Hierarchical Table Using Hierarchical Methods

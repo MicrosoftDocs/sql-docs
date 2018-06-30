@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 caps.latest.revision: 9
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Integration Management Functional Area (Master Data Manager)

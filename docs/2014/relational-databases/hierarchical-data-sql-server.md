@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "hierarchical queries [SQL Server], using hierarchyid data type"
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Hierarchical Data (SQL Server)

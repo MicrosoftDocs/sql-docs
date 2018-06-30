@@ -42,7 +42,7 @@ helpviewer_keywords:
   - "Character Map transformation custom properties [Integration Services]"
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "PDF [Reporting Services]"
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 caps.latest.revision: 41
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # PDF Device Information Settings

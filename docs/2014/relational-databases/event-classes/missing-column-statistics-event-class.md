@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Missing Column Statistics event class"
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Missing Column Statistics Event Class

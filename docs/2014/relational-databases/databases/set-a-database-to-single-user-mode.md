@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "single-user mode [SQL Server], database option"
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Set a Database to Single-user Mode

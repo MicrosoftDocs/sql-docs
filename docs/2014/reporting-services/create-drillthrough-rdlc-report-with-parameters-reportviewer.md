@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 caps.latest.revision: 8
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Create a Drillthrough (RDLC) Report with Parameters using ReportViewer (SSRS Tutorial)

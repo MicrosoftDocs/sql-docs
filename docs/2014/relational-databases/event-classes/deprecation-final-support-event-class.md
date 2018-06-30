@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "deprecation [SQL Server], events final support"
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 caps.latest.revision: 26
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Deprecation Final Support Event Class

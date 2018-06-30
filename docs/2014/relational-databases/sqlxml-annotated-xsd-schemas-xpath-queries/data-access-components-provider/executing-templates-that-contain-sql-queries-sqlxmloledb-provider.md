@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQL queries [SQLXML]"
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Executing Templates That Contain SQL Queries (SQLXMLOLEDB Provider)

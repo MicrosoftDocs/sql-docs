@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: 9
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Hyperion Essbase Connection Type (SSRS)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "size [SQL Server], databases"
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Increase the Size of a Database

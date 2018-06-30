@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "queries [Integration Services], about queries in packages"
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 caps.latest.revision: 57
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

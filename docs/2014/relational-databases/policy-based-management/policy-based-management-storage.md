@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Policy-Based Management, storage"
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 caps.latest.revision: 11
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

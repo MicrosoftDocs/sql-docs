@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], full backups"
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 caps.latest.revision: 37
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

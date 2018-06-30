@@ -21,8 +21,8 @@ f1_keywords:
   - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Charts (Report Builder and SSRS)

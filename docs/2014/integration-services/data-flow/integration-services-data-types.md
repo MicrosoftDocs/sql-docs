@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQL Server Integration Services, data types"
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 97
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

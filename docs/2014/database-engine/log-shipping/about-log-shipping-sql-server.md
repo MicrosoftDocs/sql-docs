@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "primary servers [SQL Server]"
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 63
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

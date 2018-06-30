@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "collection sets [SQL Server], adding items"
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 caps.latest.revision: 20
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add a Collection Item to a Collection Set (Transact-SQL)

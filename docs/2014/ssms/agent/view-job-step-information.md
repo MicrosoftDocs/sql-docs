@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "viewing job step information"
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 caps.latest.revision: 21
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View Job Step Information

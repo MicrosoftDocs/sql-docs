@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "MONTH function"
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 caps.latest.revision: 38
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

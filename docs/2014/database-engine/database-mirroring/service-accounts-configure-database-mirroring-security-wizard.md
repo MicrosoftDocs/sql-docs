@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.configdbmsecurwiz.serviceaccounts.f1"
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 caps.latest.revision: 32
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Service Accounts (Configure Database Mirroring Security Wizard)

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "data flow components [Integration Services], run-time methods"
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 caps.latest.revision: 21
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "updating package properties"
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 caps.latest.revision: 17
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

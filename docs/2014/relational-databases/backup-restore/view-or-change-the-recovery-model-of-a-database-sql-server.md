@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "modifying database recovery models"
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 caps.latest.revision: 36
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

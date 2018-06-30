@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "packages [Integration Services], roles"
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
 caps.latest.revision: 16
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

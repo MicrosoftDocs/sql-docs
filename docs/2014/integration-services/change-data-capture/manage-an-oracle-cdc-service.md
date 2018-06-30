@@ -13,7 +13,7 @@ f1_keywords:
   - "createSrv"
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 caps.latest.revision: 7
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

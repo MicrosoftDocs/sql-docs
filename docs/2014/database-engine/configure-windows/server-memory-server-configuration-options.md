@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Server Memory Server Configuration Options

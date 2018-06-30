@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "cursors [ODBC], about ODBC cursors"
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # How Cursors Are Implemented

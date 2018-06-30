@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "data types [SQL Server], columns"
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Modify Columns (Database Engine)

@@ -13,7 +13,7 @@ f1_keywords:
   - "connOra"
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 caps.latest.revision: 4
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

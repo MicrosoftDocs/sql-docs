@@ -21,8 +21,8 @@ f1_keywords:
   - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: 13
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Vary Polygon, Line, and Point Display by Rules and Analytical Data (Report Builder and SSRS)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "IpAddressName property"
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # IpAddressName Property (ServerNetworkProtocolIPAddress Class)

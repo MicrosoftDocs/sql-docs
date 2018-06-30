@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "EditionID property"
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
 caps.latest.revision: 9
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # EditionID Property (WMI MSReportServer_Instance)

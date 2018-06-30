@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 caps.latest.revision: 9
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Types of Queries (Visual Database Tools)

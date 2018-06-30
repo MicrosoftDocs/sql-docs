@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Web Service task [Integration Services]"
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 56
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

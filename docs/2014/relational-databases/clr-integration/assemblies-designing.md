@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], designing"
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Designing Assemblies

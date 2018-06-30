@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "saving queries"
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Save Queries (Visual Database Tools)

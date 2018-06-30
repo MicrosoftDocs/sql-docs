@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "DDL triggers, implementing"
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Implement DDL Triggers

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "UCP"
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: 10
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

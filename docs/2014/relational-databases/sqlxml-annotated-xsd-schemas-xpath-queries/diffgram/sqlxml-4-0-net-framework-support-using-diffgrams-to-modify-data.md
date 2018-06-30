@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "record deletions [SQLXML]"
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Using DiffGrams to Modify Data in SQLXML 4.0

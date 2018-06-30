@@ -52,8 +52,8 @@ f1_keywords:
   - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Formatting a Chart (Report Builder and SSRS)

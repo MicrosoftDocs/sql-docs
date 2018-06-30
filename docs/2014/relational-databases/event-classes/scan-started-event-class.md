@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Scan:Started event class"
 ms.assetid: 9a0cc475-e6ee-430c-975c-73716d81d563
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Scan:Started Event Class

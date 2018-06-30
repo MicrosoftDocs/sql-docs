@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SMO [SQL Server], capture mode"
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 caps.latest.revision: 36
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Using Capture Mode

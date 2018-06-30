@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "creating text attributes [Master Data Services]"
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 caps.latest.revision: 5
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Text Attribute (Master Data Services)

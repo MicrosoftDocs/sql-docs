@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "BusinessLogicModule class"
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Debug a Business Logic Handler (Replication Programming)

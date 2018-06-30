@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Transactions event category [SQL Server]"
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
 caps.latest.revision: 27
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Transactions Event Category

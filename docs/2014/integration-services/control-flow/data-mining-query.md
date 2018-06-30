@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.designer.dataminingquery.f1"
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 caps.latest.revision: 22
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -15,7 +15,7 @@ f1_keywords:
   - "sql12.dts.designer.toolboxfavorites.F1"
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 caps.latest.revision: 12
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

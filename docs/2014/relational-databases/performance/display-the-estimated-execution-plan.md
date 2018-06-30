@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "custom zoom [SQL Server]"
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 caps.latest.revision: 25
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "command preparation [SQL Server Native Client]"
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Preparing Commands

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "default language option"
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure the default language Server Configuration Option

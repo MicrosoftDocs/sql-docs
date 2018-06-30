@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "database restores [SQL Server], scenarios"
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: 44
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

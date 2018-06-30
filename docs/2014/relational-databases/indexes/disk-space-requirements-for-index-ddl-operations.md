@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "temporary disk space [SQL Server]"
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Disk Space Requirements for Index DDL Operations

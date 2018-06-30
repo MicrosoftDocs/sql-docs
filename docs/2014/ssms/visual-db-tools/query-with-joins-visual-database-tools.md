@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "joins [SQL Server], queries"
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Query with Joins (Visual Database Tools)

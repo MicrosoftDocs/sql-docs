@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "historical information [SQL Server], jobs"
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 caps.latest.revision: 26
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Resize the Job History Log

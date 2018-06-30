@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "event classes [SQL Server], QN:Dynamics"
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # QN:Dynamics Event Class

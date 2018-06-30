@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 26
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.rectangleproperties.general.f1"
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Add a Rectangle or Container (Report Builder and SSRS)

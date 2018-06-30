@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "group query conditions [SQL Server]"
 ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Specify Conditions for Groups (Visual Database Tools)

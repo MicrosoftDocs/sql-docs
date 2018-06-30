@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ODBC cursors, positioned updates"
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Positioned Updates (ODBC)

@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Designers.Analysis_Services_Designers.General"
 ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 caps.latest.revision: 12
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Options (Designers-Analysis Services Designers-General)

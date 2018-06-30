@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], damaged databases"
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 caps.latest.revision: 28
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

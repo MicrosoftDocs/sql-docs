@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 caps.latest.revision: 10
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)

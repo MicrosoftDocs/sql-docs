@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "inactive subscriptions [Reporting Services]"
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: 33
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Monitor Reporting Services Subscriptions

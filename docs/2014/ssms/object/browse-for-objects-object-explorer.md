@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.common.browseobjects.f1"
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 caps.latest.revision: 19
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Browse for Objects (Object Explorer)

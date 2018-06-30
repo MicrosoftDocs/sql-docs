@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "PolicyAdministratorRole role"
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 75
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

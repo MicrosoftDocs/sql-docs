@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "creating database objects"
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Summary: Creating Database Objects

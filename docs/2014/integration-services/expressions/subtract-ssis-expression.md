@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "subtract operator (-)"
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 caps.latest.revision: 32
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "proxy accounts [SQL Server Agent]"
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 caps.latest.revision: 24
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Configure a User to Create and Manage SQL Server Agent Jobs

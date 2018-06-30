@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "independent agents [SQL Server replication]"
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Agent Administration

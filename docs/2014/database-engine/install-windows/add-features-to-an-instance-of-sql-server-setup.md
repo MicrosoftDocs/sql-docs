@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "adding features to SQL Server"
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 caps.latest.revision: 28
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "leftmost character of expression"
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 caps.latest.revision: 22
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

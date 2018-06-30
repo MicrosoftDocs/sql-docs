@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 18
-author: stevestein
-ms.author: sstein
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Install Distributed Replay from the Command Prompt

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "external tools [SQL Server Management Studio]"
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 caps.latest.revision: 22
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Arguments for External Tools

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SetUnattendedExecutionAccount method"
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 caps.latest.revision: 18
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # SetUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)

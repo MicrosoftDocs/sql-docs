@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Customize the Behavior of Word Breakers with a Custom Dictionary

@@ -14,7 +14,7 @@ f1_keywords:
   - "sql12.dqs.dm.cdrules.f1"
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: 12
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

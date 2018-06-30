@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 caps.latest.revision: 8
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Encrypted Databases with AlwaysOn Availability Groups (SQL Server)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "CHECK constraints, attaching"
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Check Constraints

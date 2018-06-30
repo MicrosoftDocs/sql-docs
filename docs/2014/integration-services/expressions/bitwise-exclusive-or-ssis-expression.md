@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "bitwise exclusive OR (^)"
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 caps.latest.revision: 37
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

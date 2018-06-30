@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newsubwizard.subscriptiontype.f1"
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Subscription Type

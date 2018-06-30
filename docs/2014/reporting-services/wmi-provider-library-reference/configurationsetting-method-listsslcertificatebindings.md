@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ListSSLCertificateBindings method"
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 caps.latest.revision: 12
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # ListSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)

@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "SSIS Script task, connections"
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 caps.latest.revision: 58
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

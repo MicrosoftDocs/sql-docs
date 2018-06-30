@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "synonyms [SQL Server], about synonyms"
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Synonyms (Database Engine)

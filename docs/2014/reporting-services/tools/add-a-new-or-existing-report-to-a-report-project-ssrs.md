@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], creating"
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 caps.latest.revision: 15
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Add a New or Existing Report to a Report Project (SSRS)

@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "custom tasks [Integration Services], scripts"
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 caps.latest.revision: 40
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

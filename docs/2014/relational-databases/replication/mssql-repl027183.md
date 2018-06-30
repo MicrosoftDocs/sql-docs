@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "MSSQL_REPL027183 error"
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQL_REPL027183

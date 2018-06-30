@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Script component [Integration Services], transformation components"
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 caps.latest.revision: 61
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

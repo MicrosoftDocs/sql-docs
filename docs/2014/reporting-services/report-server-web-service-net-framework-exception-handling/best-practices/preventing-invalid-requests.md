@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "valid requests [Reporting Services]"
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 caps.latest.revision: 31
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Preventing Invalid Requests

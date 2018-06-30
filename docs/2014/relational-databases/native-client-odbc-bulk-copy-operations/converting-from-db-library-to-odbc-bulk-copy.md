@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DB-Library bulk copy"
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Converting from DB-Library to ODBC Bulk Copy

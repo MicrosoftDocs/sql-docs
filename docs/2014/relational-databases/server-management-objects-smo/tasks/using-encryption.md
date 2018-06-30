@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "service master key [SMO]"
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 caps.latest.revision: 25
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Using Encryption

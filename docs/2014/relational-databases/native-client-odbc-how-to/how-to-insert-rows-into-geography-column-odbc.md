@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 caps.latest.revision: 5
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # How to: Insert Rows into Geography Column (ODBC)

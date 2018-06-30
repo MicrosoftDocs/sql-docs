@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Add Transact-SQL Snippets

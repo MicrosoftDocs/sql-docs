@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "Enroll instance"
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: 11
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

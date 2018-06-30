@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Jobs object"
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 caps.latest.revision: 20
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

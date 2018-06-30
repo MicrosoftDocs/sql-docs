@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.impexpwizard.saveschedule.f1"
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 caps.latest.revision: 39
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

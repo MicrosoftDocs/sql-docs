@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Setting class"
 ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
 caps.latest.revision: 31
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Using the Setting Class for a Delivery Extension

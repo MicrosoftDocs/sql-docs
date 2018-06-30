@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.subreportproperties.general.f1"
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 8
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Add a Subreport and Parameters (Report Builder and SSRS)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SMO [SQL Server], tasks"
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Programming Specific Tasks

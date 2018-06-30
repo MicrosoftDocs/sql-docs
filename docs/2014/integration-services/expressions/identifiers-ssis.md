@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "qualified identifiers [Integration Services]"
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

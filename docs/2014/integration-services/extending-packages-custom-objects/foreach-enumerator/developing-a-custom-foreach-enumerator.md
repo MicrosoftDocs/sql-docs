@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "foreach enumerators [Integration Services]"
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 caps.latest.revision: 18
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

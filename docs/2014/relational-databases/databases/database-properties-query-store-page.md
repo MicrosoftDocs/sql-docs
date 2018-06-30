@@ -13,8 +13,8 @@ f1_keywords:
   - "sql13.swb.databaseproperties.querystore.f1"
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Properties (Query Store Page)

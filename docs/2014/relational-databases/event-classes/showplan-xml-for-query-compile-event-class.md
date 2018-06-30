@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Showplan XML For Query Compile event class"
 ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 caps.latest.revision: 38
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Showplan XML for Query Compile Event Class

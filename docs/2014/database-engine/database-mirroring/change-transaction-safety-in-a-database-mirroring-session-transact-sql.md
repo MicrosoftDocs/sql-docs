@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "transaction safety [SQL Server database mirroring]"
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 caps.latest.revision: 35
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Change Transaction Safety in a Database Mirroring Session (Transact-SQL)

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "restoring interrupted operation [SQL Server]"
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 caps.latest.revision: 21
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Merge Agent Security dialog box"
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Merge Agent Security

@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.restore.connectstorage.f1"
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 caps.latest.revision: 5
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -13,8 +13,8 @@ f1_keywords:
   - "vs.gotoline"
 ms.assetid: 779fdb9a-4ede-4784-b9eb-997a6683c26e
 caps.latest.revision: 6
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Go To Line Dialog Box

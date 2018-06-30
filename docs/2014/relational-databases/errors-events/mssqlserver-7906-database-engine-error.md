@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "7906 (Database Engine error)"
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_7906

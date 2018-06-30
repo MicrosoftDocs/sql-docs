@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], HTML rendering"
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: 47
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # HTML Device Information Settings

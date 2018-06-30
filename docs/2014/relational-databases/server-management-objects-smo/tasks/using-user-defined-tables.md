@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "user-defined tables [SQL Server]"
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Using User-Defined Tables

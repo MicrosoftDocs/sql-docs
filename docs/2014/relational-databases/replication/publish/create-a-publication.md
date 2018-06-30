@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "articles [SQL Server replication], adding"
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create a Publication

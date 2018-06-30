@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "blocked process threshold option"
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # blocked process threshold Server Configuration Option

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "parameter queries [SQL Server]"
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 caps.latest.revision: 12
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Parameter Queries (Visual Database Tools)

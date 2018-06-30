@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "PropertyName property"
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # PropertyName Property (SqlServiceAdvancedProperty Class)

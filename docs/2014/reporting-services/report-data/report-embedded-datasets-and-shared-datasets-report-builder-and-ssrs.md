@@ -13,8 +13,8 @@ f1_keywords:
   - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)

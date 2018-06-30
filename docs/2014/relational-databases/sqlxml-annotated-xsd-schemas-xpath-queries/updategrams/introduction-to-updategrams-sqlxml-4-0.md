@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "implicit schema mapping"
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 caps.latest.revision: 12
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Introduction to Updategrams (SQLXML 4.0)

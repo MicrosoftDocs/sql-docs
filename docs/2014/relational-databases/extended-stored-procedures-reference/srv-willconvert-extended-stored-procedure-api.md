@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_willconvert"
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_willconvert (Extended Stored Procedure API)

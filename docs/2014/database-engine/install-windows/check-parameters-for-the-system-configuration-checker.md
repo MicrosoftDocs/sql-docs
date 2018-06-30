@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "Setup [SQL Server], system configuration checker"
 ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 caps.latest.revision: 44
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

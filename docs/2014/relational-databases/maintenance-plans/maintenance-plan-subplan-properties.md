@@ -14,7 +14,7 @@ f1_keywords:
   - "sql12.swb.maint.subplanproperties.f1"
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 caps.latest.revision: 6
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

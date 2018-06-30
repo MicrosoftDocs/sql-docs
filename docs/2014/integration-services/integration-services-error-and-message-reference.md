@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "errors [Integration Services], listed"
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 42
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "validating replicated data"
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Validate Replicated Data

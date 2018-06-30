@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "space [SQL Server], SQL Server Profiler"
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 caps.latest.revision: 13
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Improve Access to Trace Data

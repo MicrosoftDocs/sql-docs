@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Server Core Installation [SQL Server]"
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: 10
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

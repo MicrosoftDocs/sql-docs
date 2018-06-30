@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 caps.latest.revision: 6
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Mirroring Connection Event Class

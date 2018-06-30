@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "counting rows"
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Count Rows in a Table (Visual Database Tools)

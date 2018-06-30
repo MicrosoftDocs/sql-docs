@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Business Intelligence Development Studio, Reporting Services in"
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 71
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Reporting Services in SQL Server Data Tools (SSDT)

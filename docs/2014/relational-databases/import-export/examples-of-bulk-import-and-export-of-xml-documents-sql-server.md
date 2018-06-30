@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XML bulk load [SQL Server]"
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Examples of Bulk Import and Export of XML Documents (SQL Server)

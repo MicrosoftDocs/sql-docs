@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "divide operator (/)"
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 caps.latest.revision: 36
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

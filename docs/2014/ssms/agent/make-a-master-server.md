@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "Master Server Wizard"
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 caps.latest.revision: 33
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Make a Master Server

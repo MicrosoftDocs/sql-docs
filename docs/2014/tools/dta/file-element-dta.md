@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "File element"
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # File Element (DTA)

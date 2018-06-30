@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "operators [SQLXML]"
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 caps.latest.revision: 25
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Specifying Arithmetic Operators in XPath Queries (SQLXML 4.0)

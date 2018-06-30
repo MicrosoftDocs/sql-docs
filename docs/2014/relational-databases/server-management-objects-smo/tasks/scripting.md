@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "scripts [SMO]"
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 caps.latest.revision: 42
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Scripting

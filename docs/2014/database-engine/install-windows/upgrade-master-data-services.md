@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 caps.latest.revision: 23
-author: douglaslms
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Master Data Services

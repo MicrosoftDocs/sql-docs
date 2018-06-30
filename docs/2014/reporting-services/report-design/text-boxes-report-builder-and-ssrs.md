@@ -16,8 +16,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.textboxproperties.general.f1"
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Text Boxes (Report Builder and SSRS)

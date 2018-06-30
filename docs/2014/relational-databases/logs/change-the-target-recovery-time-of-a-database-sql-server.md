@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 caps.latest.revision: 11
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Change the Target Recovery Time of a Database (SQL Server)

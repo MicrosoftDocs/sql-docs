@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, building applications"
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 caps.latest.revision: 20
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Building Applications with SQL Server Native Client

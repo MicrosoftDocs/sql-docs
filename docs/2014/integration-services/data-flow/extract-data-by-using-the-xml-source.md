@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "XML source [Integration Services]"
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 caps.latest.revision: 20
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

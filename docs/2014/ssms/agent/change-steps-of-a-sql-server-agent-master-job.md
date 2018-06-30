@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 caps.latest.revision: 6
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Change Steps of a SQL Server Agent Master Job

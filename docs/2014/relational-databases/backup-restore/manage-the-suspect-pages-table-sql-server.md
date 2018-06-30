@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "restoring [SQL Server], pages"
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

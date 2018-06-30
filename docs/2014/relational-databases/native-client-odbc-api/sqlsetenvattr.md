@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLSetEnvAttr function"
 ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLSetEnvAttr

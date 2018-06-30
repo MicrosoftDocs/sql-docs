@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "delete jobs"
 ms.assetid: bffb915e-bc84-4417-aa35-183243ca3312
 caps.latest.revision: 4
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete Jobs

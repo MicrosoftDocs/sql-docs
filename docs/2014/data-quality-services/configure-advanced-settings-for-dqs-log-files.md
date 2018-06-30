@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "dqs log files,advanced settings"
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 caps.latest.revision: 10
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

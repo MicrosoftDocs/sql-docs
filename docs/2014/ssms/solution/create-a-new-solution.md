@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], creating"
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 caps.latest.revision: 25
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a New Solution

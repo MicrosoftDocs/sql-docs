@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SetCurrentCertificate method"
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 caps.latest.revision: 34
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SetCurrentCertificate Method (SecurityCertificate Class)

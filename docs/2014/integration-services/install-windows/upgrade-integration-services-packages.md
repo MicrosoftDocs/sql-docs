@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "migrating packages [Integration Services]"
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 caps.latest.revision: 50
-author: douglaslms
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Upgrade Integration Services Packages

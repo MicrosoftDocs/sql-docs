@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "search criteria [SQL Server], specifying conditions"
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Specify Search Conditions (Visual Database Tools)

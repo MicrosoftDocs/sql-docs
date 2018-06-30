@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "color coding [Query Editor]"
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Color Coding in Query Editors

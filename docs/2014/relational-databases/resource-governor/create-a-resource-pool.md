@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Resource Governor, resource pool create"
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 caps.latest.revision: 18
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

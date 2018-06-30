@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SQL Server Agent alerts, management servers"
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 caps.latest.revision: 24
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Manage Events

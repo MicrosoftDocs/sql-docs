@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Alwayson.Dashboard"
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 6
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Options (SQL Server AlwaysOn, Dashboard Page)

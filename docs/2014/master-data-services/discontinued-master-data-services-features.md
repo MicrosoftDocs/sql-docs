@@ -12,7 +12,7 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 caps.latest.revision: 12
 author: leolimsft
-ms.author: douglasl
+ms.author: lle
 manager: craigg
 ---
 # Discontinued Master Data Services Features in SQL Server 2014

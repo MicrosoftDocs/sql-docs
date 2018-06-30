@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Select a Package dialog box"
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 caps.latest.revision: 15
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

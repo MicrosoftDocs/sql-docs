@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.Distributor.SubscriptionSummary.merge.f1"
 ms.assetid: 0308bbd2-03ce-4f03-974d-e54ebd6c7f58
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Distributor Information, Subscription Watch List (Merge Publication, SQL Server 2005 and Later)

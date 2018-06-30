@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "data collector [SQL Server], SQL Server Management Studio"
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 25
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Manage Data Collection

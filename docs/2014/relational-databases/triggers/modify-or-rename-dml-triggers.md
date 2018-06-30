@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "DML triggers, modifying"
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Modify or Rename DML Triggers

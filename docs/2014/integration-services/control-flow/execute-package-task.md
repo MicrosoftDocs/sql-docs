@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "parent packages [Integration Services]"
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 61
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

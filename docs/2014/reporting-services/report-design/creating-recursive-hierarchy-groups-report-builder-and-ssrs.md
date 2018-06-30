@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Creating Recursive Hierarchy Groups (Report Builder and SSRS)

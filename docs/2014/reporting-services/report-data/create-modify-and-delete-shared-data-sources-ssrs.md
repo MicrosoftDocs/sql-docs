@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "deleting shared data sources"
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 50
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Create, Modify, and Delete Shared Data Sources (SSRS)

@@ -15,8 +15,8 @@ f1_keywords:
   - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 caps.latest.revision: 10
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Add, Change, or Delete Default Values for a Report Parameter (Report Builder and SSRS)

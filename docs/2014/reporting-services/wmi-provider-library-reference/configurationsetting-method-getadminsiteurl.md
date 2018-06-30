@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "GetAdminSiteUrl method"
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 caps.latest.revision: 14
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # GetAdminSiteUrl Method (WMI)

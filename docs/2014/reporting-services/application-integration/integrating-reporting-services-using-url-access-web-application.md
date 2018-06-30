@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "hyperlinks [Reporting Services]"
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 caps.latest.revision: 32
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Using URL Access in a Web Application

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "3156 (Database Engine error)"
 ms.assetid: 345d8ed4-177e-4ec3-bab3-25d30000e323
 caps.latest.revision: 12
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_3156

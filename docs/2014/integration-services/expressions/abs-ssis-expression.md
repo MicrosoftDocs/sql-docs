@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "absolute positive value"
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 caps.latest.revision: 28
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

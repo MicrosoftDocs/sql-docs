@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "MHTML [Reporting Services]"
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 caps.latest.revision: 39
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # MHTML Device Information Settings

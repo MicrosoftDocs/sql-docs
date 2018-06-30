@@ -13,7 +13,7 @@ f1_keywords:
   - "finish"
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 caps.latest.revision: 4
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

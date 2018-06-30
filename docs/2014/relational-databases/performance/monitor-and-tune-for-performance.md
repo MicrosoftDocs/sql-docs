@@ -29,7 +29,7 @@ helpviewer_keywords:
   - "monitoring server performance [SQL Server], about monitoring server performance"
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: 31
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

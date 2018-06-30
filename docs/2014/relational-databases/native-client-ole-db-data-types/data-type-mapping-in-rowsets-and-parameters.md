@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "OLE DB, data types"
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 caps.latest.revision: 40
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Data Type Mapping in Rowsets and Parameters

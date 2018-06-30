@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "MSSQL_ENG021076 error"
 ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQL_ENG021076

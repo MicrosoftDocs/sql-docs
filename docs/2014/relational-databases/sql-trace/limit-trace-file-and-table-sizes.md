@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "size [SQL Server], files"
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 caps.latest.revision: 22
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Limit Trace File and Table Sizes

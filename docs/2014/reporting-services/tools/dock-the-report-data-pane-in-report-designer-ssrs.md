@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Report Data pane, docking"
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Dock the Report Data Pane in Report Designer (SSRS)

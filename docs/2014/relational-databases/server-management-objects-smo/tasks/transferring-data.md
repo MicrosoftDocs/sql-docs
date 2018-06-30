@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "transferring data"
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 caps.latest.revision: 49
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Transferring Data

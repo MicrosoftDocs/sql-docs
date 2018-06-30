@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "data flow engine [Integration Services]"
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 62
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

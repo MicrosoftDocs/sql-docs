@@ -14,8 +14,8 @@ f1_keywords:
   - "vdt.ppg.indexeskeys"
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 caps.latest.revision: 16
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Indexes and Keys Dialog Box (Visual Database Tools)

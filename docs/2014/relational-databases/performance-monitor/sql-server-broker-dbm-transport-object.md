@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQLServer:Broker/DBM Transport"
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 31
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

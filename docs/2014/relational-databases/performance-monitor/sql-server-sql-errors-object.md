@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLServer:SQL Errors"
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, SQL Errors Object

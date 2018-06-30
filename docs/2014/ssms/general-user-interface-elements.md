@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "user interface [SQL Server Management Studio]"
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 caps.latest.revision: 23
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # General User Interface Elements

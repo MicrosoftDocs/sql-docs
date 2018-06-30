@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "WMI connection manager [Integration Services]"
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 caps.latest.revision: 39
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

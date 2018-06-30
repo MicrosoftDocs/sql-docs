@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "backups [SQL Server], log backups"
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 36
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

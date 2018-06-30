@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "printing reports"
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 caps.latest.revision: 10
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Print a Report (Reporting Services in SharePoint Mode)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ascending sorts"
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Sort in Ascending or Descending Order (Visual Database Tools)

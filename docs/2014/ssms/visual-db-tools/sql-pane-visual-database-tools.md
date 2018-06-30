@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL pane [Visual Database Tools]"
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Pane (Visual Database Tools)

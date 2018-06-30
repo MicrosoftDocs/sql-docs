@@ -14,8 +14,8 @@ f1_keywords:
   - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Formatting Data Points on a Chart (Report Builder and SSRS)

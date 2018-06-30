@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), metadata"
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 caps.latest.revision: 15
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Additional Table-Valued Parameter Metadata

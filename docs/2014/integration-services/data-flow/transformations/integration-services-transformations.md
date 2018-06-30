@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "rowset transformations [Integration Services]"
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 caps.latest.revision: 55
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

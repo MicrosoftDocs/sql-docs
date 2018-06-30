@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "scalar-valued functions"
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 caps.latest.revision: 81
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # CLR Scalar-Valued Functions

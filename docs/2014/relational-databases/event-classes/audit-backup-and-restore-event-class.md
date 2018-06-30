@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Audit Backup/Restore event class"
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Audit Backup and Restore Event Class

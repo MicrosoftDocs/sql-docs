@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Broker:Conversation event class"
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Broker:Conversation Event Class

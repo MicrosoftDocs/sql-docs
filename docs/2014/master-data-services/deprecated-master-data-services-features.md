@@ -12,7 +12,7 @@ ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 11
 author: leolimsft
-ms.author: douglasl
+ms.author: lle
 manager: craigg
 ---
 # Deprecated Master Data Services Features in SQL Server 2014

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Rebuild Index task"
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 caps.latest.revision: 49
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

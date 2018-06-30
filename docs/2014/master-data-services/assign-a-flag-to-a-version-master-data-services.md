@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "versions [Master Data Services], assigning flags"
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 caps.latest.revision: 5
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Assign a Flag to a Version (Master Data Services)

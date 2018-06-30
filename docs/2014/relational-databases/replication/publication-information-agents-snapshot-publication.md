@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.publicationinfo.downlevelagents.snapshot.f1"
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication Information, Agents (Snapshot Publication)

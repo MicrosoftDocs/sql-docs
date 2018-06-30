@@ -10,8 +10,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 caps.latest.revision: 6
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # FILESTREAM DDL, Functions, Stored Procedures, and Views

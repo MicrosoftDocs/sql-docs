@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "reducing database size"
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Shrink a Database

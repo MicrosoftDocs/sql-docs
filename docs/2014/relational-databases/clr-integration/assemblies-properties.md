@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.assemblies.general.f1"
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Assembly Properties (General Page)

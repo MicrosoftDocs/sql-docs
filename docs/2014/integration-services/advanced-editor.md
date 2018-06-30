@@ -17,7 +17,7 @@ f1_keywords:
   - "sql12.dts.designer.advancededitor.connections.f1"
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 caps.latest.revision: 6
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

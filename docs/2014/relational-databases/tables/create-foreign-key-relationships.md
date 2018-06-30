@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "relationships [SQL Server], creating"
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Foreign Key Relationships

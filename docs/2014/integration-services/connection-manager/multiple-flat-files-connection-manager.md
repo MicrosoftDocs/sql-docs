@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "multiple flat file connections"
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

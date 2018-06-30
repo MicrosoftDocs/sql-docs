@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "variables [Integration Services], customizing"
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 caps.latest.revision: 52
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OE Help"
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 caps.latest.revision: 5
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Manage Objects by Using Object Explorer

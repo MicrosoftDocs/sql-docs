@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "regenerating package GUID"
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 caps.latest.revision: 22
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Derived Column transformation"
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 caps.latest.revision: 46
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

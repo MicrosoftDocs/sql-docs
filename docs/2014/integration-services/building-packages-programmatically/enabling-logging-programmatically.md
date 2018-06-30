@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "packages [Integration Services], logs"
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 caps.latest.revision: 48
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

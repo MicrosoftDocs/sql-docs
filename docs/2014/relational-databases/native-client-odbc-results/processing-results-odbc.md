@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "COMPUTE BY clause"
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Processing Results (ODBC)

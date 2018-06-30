@@ -15,7 +15,7 @@ f1_keywords:
   - "sql12.dts.designer.configure.f1"
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 caps.latest.revision: 10
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -13,7 +13,7 @@ f1_keywords:
   - "makChanToTab"
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 caps.latest.revision: 5
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

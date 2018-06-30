@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, saving"
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 caps.latest.revision: 47
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

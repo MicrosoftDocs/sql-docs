@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "authentication [SQL Server replication]"
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Security Overview (Replication)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], forcing service"
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 caps.latest.revision: 39
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Force Service in a Database Mirroring Session (Transact-SQL)

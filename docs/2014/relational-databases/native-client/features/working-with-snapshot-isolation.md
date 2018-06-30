@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function"
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
 caps.latest.revision: 27
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Working with Snapshot Isolation

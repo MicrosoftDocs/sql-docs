@@ -14,8 +14,8 @@ f1_keywords:
   - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 9
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Sparklines and Data Bars (Report Builder and SSRS)

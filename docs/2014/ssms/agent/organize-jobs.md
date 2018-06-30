@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "organize jobs"
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 caps.latest.revision: 4
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Organize Jobs

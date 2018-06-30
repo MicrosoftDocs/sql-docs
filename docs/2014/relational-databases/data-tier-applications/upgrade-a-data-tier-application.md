@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "How to [DAC], upgrade"
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 33
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Upgrade a Data-tier Application

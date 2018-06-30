@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "performance [CLR integration]"
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 caps.latest.revision: 43
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Performance of CLR Integration

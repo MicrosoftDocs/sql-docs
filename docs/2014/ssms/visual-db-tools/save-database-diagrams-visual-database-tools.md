@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "diagrams [SQL Server], saving"
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 caps.latest.revision: 12
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Save Database Diagrams (Visual Database Tools)

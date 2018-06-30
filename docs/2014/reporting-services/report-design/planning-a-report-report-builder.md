@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "report design"
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: 17
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Planning a Report (Report Builder)

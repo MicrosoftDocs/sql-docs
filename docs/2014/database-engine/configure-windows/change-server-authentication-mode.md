@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "modifying server authentication mode"
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Change Server Authentication Mode

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Recordset destination"
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

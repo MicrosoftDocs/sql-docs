@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 caps.latest.revision: 5
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Send and Receive Data Incrementally with FILESTREAM (ODBC)

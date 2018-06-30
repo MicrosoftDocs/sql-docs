@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], RPC syntax"
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 caps.latest.revision: 21
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Execute a Stored Procedure (Using RPC Syntax) and Process Return Codes and Output Parameters (OLE DB)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Report Server Web service, endpoints"
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 caps.latest.revision: 25
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Server Web Service Endpoints

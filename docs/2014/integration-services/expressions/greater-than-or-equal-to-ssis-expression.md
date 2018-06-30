@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "greater than or equal to (>=)"
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 caps.latest.revision: 50
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

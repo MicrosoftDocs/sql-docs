@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "logs [SQL Server], viewing"
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 caps.latest.revision: 12
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

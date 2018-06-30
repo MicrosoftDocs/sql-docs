@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Client Protocols (SQL Server Configuration Manager)

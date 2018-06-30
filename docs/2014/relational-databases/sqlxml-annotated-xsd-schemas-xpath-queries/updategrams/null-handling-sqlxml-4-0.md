@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "null values [SQLXML]"
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
 caps.latest.revision: 23
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # NULL Handling (SQLXML 4.0)

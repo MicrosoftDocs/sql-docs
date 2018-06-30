@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "10521 (Database Engine error)"
 ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_10521

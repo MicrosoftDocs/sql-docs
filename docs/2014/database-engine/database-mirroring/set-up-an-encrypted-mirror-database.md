@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 caps.latest.revision: 22
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Set Up an Encrypted Mirror Database

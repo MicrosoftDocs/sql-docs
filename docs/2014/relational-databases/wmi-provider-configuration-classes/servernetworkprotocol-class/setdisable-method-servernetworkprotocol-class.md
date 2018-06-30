@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SetDisable method"
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SetDisable Method (ServerNetworkProtocol Class)

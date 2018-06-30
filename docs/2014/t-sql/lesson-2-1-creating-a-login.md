@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "creating a login"
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Creating a Login

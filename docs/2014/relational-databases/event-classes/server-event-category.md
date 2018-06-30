@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Server event category [SQL Server]"
 ms.assetid: 335ea792-8f3a-45e6-bc63-eb2d7855878e
 caps.latest.revision: 22
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Server Event Category

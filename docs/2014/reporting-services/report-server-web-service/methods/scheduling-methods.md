@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "methods [Reporting Services], scheduling"
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 caps.latest.revision: 34
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Scheduling Methods

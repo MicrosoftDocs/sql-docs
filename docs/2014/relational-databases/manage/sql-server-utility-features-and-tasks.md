@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Multi-server management [SQL Server]"
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 caps.latest.revision: 9
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

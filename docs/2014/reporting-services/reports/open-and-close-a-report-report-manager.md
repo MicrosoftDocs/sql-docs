@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], opening"
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 caps.latest.revision: 50
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Open and Close a Report (Report Manager)

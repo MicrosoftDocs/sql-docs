@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "statistics [SQL Server], updating"
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Update Statistics

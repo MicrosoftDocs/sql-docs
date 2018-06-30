@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Pick Schedule for Job dialog box"
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 caps.latest.revision: 19
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Pick Schedule for Job

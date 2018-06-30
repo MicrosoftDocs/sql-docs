@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "training mining models"
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 caps.latest.revision: 46
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

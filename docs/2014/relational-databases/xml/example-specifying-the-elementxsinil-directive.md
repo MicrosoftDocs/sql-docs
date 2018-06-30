@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ELEMENTXSINIL directive"
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Example: Specifying the ELEMENTXSINIL Directive

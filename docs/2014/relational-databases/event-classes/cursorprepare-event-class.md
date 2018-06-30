@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "CursorPrepare event class"
 ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # CursorPrepare Event Class

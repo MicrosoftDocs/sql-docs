@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "dependencies [SQL Server], clustering"
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 caps.latest.revision: 32
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add Dependencies to a SQL Server Resource

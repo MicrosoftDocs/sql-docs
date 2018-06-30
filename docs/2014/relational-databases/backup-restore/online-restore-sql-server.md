@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "online restores [SQL Server], about online restores"
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 43
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

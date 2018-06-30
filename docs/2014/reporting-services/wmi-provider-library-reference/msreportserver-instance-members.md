@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "MSReportServer_Instance class"
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 caps.latest.revision: 22
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # MSReportServer_Instance Members

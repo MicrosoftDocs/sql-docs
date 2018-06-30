@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "asynchronous error outputs [Integration Services]"
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 caps.latest.revision: 52
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

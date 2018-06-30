@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Cache connection manager"
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 caps.latest.revision: 23
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

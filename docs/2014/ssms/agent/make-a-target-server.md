@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "target servers [SQL Server], creating"
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 caps.latest.revision: 34
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Make a Target Server

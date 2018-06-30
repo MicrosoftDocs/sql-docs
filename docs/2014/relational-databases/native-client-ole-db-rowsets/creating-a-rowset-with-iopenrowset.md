@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, creating"
 ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Creating a Rowset with IOpenRowset

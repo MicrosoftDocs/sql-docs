@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "2 (Database Engine error)"
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_2

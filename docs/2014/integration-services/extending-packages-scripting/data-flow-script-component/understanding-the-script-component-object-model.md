@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Script component [Integration Services], object model"
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

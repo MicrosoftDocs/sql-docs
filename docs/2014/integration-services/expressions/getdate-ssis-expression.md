@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "dates [Integration Services], GETDATE"
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 caps.latest.revision: 34
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "row collapsing [SQL Server]"
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Collapse Groups of Rows (Visual Database Tools)

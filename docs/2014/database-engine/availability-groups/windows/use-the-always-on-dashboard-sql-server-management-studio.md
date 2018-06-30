@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], dashboard"
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 28
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Use the AlwaysOn Dashboard (SQL Server Management Studio)

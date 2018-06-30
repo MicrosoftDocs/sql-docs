@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "performance [CLR integration]"
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 caps.latest.revision: 17
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Monitoring and Troubleshooting Managed Database Objects

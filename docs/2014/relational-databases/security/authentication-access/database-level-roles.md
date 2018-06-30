@@ -41,8 +41,8 @@ helpviewer_keywords:
   - "groups [SQL Server], roles"
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Database-Level Roles

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.configdbmsecurwiz.witnsrvr.f1"
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: 40
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Witness Server Instance (Configure Database Mirroring Security Wizard)

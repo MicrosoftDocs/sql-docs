@@ -14,8 +14,8 @@ f1_keywords:
   - "vdtsql.chm:65565"
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 caps.latest.revision: 15
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Add Table Dialog Box (Query and View Designers) (Visual Database Tools)

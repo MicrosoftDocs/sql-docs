@@ -35,8 +35,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], SQLXML"
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 caps.latest.revision: 32
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Inserting Data Using XML Updategrams (SQLXML 4.0)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "getting started"
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Report Builder in SQL Server 2014

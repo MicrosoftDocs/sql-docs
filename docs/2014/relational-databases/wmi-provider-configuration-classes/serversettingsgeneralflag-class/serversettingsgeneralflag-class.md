@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ServerSettingsGeneralFlag class"
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 caps.latest.revision: 31
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ServerSettingsGeneralFlag Class

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "Profiler [SQL Server Profiler], how-to topics"
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 caps.latest.revision: 16
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

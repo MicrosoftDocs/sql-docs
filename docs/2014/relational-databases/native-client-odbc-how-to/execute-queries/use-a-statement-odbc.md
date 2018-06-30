@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "statements [ODBC]"
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 caps.latest.revision: 14
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use a Statement (ODBC)

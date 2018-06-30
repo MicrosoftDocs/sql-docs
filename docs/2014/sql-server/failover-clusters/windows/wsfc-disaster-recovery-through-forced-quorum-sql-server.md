@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 caps.latest.revision: 20
-author: mashamsft
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---

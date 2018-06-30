@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "tasks [Integration Services], adding"
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 caps.latest.revision: 44
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication to Memory-Optimized Table Subscribers

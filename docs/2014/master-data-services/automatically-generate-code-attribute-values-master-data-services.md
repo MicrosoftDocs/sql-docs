@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 caps.latest.revision: 3
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Automatically Generate Code Attribute Values (Master Data Services)

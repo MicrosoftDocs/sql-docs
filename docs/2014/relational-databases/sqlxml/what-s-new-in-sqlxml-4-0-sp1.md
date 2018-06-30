@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "side-by-side installations [SQLXML]"
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 caps.latest.revision: 67
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # What&#39;s New in SQLXML 4.0 SP1

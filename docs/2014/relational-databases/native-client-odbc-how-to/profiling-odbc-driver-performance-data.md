@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "driver performance data [ODBC]"
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 caps.latest.revision: 17
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Profile Driver Performance Data (ODBC)

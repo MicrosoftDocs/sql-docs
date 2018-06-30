@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "exceptions [Reporting Services], best practices"
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 caps.latest.revision: 33
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Best Practices for Reporting Services Exception Handling

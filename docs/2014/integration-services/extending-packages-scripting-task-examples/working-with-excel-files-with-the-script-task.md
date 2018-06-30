@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 32
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

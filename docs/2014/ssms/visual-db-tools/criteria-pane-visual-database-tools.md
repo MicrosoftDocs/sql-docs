@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "adding query options into grid"
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 caps.latest.revision: 16
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Criteria Pane (Visual Database Tools)

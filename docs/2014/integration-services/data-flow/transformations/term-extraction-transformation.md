@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "stemming words [Integration Services]"
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

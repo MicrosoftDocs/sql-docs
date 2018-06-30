@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "parameterized queries [SQL Server]"
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 caps.latest.revision: 34
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

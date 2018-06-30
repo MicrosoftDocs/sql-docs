@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "attaching databases [SQL Server]"
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 44
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Attach a Database

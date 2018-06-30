@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "attaching databases [SQL Server]"
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 caps.latest.revision: 72
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Upgrade a Database Using Detach and Attach (Transact-SQL)

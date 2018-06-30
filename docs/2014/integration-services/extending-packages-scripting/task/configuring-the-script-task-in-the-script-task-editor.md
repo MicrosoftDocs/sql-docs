@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "SSIS Script task, configuring"
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 caps.latest.revision: 33
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

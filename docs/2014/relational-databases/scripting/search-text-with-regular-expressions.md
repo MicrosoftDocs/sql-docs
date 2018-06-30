@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "searches [SQL Server Management Studio], regular expressions"
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Search Text with Regular Expressions

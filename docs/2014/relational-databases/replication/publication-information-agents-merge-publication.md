@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.publicationinfo.downlevelagents.merge.f1"
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication Information, Agents (Merge Publication)

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "editors [Integration Services]"
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 caps.latest.revision: 59
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

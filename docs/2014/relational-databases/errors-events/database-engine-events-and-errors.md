@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Database Engine Events and Errors

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "bcp_setcolfmt function"
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: 34
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # bcp_setcolfmt

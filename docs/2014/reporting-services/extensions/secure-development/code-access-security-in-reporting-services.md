@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "named permission sets [Reporting Services]"
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 caps.latest.revision: 28
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Code Access Security in Reporting Services

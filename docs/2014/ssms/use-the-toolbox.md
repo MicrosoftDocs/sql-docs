@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "designer controls [SQL Server Management Studio]"
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 caps.latest.revision: 20
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Use the Toolbox

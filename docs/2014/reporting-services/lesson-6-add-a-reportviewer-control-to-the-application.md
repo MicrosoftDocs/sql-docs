@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Lesson 6: Add a ReportViewer Control to the Application

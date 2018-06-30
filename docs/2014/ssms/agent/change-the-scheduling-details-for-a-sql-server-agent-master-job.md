@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 caps.latest.revision: 6
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Change the Scheduling Details for a SQL Server Agent Master Job

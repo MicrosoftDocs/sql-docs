@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SQLAgent:JobSteps"
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: 22
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

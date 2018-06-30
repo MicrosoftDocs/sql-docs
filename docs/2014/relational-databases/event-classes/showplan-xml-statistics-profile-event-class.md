@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Showplan XML Statistics Profile event class"
 ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 caps.latest.revision: 33
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Showplan XML Statistics Profile Event Class

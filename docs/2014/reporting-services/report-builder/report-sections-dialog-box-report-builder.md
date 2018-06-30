@@ -13,8 +13,8 @@ f1_keywords:
   - "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 caps.latest.revision: 8
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Sections Dialog Box (Report Builder)

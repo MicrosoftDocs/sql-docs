@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "checksums [SQL Server]"
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: 36
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

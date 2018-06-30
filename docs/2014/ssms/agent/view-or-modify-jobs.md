@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "displaying jobs"
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 caps.latest.revision: 23
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View or Modify Jobs

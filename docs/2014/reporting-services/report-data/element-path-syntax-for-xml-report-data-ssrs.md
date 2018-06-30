@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "XML [Reporting Services], data retrieval"
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: 42
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Element Path Syntax for XML Report Data (SSRS)

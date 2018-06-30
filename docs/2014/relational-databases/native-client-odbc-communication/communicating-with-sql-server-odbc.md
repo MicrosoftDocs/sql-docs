@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ODBC, communicating with SQL Server"
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 caps.latest.revision: 33
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Communicating with SQL Server (ODBC)

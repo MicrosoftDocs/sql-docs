@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "table values [SQL Server]"
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Insert Values Queries (Visual Database Tools)

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "destinations [Integration Services], DataReader"
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 caps.latest.revision: 30
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "Setup [Integration Services]"
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 caps.latest.revision: 100
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

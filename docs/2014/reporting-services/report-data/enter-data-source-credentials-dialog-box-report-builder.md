@@ -13,8 +13,8 @@ f1_keywords:
   - "10128"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 caps.latest.revision: 12
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)

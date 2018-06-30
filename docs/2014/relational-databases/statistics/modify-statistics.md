@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "modifying statistics"
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Modify Statistics

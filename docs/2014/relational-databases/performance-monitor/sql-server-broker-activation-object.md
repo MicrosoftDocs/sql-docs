@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Broker Activation object"
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 caps.latest.revision: 19
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

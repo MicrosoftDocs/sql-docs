@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], file system"
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure File System Permissions for Database Engine Access

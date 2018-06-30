@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], about SQL Server Native Client"
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
 caps.latest.revision: 36
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # When to Use SQL Server Native Client

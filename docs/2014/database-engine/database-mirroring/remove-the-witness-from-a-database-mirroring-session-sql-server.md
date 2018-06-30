@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], witness"
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 caps.latest.revision: 38
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Remove the Witness from a Database Mirroring Session (SQL Server)

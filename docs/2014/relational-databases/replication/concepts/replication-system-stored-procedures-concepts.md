@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "replication [SQL Server], how-to topics"
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication System Stored Procedures Concepts

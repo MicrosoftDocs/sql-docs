@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], creating"
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Create XML Indexes

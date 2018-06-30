@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "members [Master Data Services]"
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 10
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Members (Master Data Services)

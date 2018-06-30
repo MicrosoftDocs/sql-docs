@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ConnectionString property"
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ConnectionString Property (SqlServerAlias Class)

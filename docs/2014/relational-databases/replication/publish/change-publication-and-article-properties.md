@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "articles [SQL Server replication], properties"
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Change Publication and Article Properties

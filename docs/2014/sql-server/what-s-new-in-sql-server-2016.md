@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sql server 2014 sp2"
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 caps.latest.revision: 70
-author: mashamsft
-ms.author: mathoma
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # What&#39;s New in SQL Server 2014

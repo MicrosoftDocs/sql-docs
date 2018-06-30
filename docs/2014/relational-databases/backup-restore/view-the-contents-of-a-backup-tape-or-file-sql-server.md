@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "backing up databases [SQL Server], viewing content"
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 caps.latest.revision: 29
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

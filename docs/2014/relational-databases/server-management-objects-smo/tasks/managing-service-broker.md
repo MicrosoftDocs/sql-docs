@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Service Broker [SMO]"
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 caps.latest.revision: 33
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Managing Service Broker

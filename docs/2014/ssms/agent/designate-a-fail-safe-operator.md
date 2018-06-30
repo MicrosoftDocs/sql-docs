@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "notifications [SQL Server], job status"
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 caps.latest.revision: 25
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Designate a Fail-Safe Operator

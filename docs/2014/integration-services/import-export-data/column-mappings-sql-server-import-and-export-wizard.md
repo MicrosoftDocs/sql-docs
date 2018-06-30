@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.impexpwizard.columnmapandtransform.f1"
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 caps.latest.revision: 36
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

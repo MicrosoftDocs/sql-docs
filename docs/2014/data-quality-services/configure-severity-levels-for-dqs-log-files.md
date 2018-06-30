@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "configure severity levels"
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 caps.latest.revision: 10
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

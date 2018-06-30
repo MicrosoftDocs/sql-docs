@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Configuring Database Mirroring Security Wizard"
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: 28
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Start the Configuring Database Mirroring Security Wizard (SQL Server Management Studio)

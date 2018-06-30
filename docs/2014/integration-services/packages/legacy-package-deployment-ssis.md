@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "SSIS packages, deploying"
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 caps.latest.revision: 45
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

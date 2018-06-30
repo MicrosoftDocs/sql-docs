@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.errorlog.recyclesqlagenterrorlogs.f1"
 ms.assetid: 10bc2dd1-0505-4527-8ec7-d3b4e5d6352b
 caps.latest.revision: 15
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Recycle SQL Server Agent Error Logs

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "linked reports [Reporting Services], creating"
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 43
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Create a Linked Report

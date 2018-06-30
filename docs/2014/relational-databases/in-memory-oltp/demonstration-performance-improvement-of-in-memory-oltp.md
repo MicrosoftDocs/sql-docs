@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Demonstration: Performance Improvement of In-Memory OLTP

@@ -15,8 +15,8 @@ f1_keywords:
   - "vdt.dlgbox.querydefinitionsdiffer"
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Query Definitions Differ Dialog Box (Visual Database Tools)

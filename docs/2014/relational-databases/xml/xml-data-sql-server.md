@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "XML [SQL Server], about XML"
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # XML Data (SQL Server)

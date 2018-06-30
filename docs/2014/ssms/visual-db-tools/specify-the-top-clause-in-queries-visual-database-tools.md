@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "search criteria [SQL Server], TOP clause"
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Specify the TOP Clause in Queries (Visual Database Tools)

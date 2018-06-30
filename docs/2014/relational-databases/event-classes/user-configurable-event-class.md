@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "User-Configurable event class"
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 caps.latest.revision: 33
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # User-Configurable Event Class

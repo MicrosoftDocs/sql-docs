@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Data Profiling task [Integration Services], configuring"
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 caps.latest.revision: 34
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

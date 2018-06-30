@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "ODBC cursors, cursor behaviors"
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 caps.latest.revision: 30
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Cursor Behaviors

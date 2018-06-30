@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "statistics [SQL Server]"
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 caps.latest.revision: 67
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Statistics

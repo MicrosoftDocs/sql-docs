@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.bnrdevicecontents.f1"
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: 29
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "InitializeReportServer method"
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 caps.latest.revision: 20
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # InitializeReportServer Method (WMI MSReportServer_ConfigurationSetting)

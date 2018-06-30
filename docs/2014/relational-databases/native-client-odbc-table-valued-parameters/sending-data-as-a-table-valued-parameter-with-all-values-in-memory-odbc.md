@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), sending data to a stored procedure with all values in memory"
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 caps.latest.revision: 16
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC)

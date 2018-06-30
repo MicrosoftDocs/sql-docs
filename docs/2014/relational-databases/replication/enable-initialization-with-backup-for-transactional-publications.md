@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Enable Initialization with a Backup for Transactional Publications (SQL Server Management Studio)

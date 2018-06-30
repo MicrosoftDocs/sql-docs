@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "schemas [Reporting Services]"
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 caps.latest.revision: 14
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Find the Report Definition Schema Version (SSRS)

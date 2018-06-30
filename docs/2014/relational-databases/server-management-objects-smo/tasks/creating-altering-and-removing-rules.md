@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "rules [SMO]"
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
 caps.latest.revision: 44
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Creating, Altering, and Removing Rules

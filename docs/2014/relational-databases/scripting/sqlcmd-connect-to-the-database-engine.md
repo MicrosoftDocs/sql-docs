@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "client protocols [SQL Server]"
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 caps.latest.revision: 18
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Connect to the Database Engine With sqlcmd

@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.impexpwizard.selectsourcetablesandviews.f1"
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 caps.latest.revision: 47
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

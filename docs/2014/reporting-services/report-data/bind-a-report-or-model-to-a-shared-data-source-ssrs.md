@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data sources [Reporting Services], shared"
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 caps.latest.revision: 10
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Bind a Report or Model to a Shared Data Source (SSRS)

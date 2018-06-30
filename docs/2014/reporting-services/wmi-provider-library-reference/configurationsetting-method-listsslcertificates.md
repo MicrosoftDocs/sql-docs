@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ListSSLCertificates method"
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 caps.latest.revision: 12
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # ListSSLCertificates Method (WMI MSReportServer_ConfigurationSetting)

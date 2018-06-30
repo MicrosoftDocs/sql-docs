@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "HEX function"
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 caps.latest.revision: 36
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

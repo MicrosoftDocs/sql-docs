@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data collector [SQL Server], enabling"
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 caps.latest.revision: 17
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Enable or Disable Data Collection

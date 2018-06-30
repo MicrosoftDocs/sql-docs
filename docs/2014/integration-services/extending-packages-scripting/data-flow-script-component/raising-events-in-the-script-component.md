@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "Script component [Integration Services], raising events"
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 caps.latest.revision: 15
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

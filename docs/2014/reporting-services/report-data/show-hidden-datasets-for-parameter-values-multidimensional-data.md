@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 caps.latest.revision: 6
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Show Hidden Datasets for Parameter Values for Multidimensional Data (Report Builder and SSRS)

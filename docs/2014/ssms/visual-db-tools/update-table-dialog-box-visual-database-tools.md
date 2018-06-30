@@ -14,8 +14,8 @@ f1_keywords:
   - "vdtsql.chm:69643"
 ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
 caps.latest.revision: 12
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Update Table Dialog Box (Visual Database Tools)

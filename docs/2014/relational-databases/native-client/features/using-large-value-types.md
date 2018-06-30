@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, large value data types"
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 caps.latest.revision: 52
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using Large Value Types

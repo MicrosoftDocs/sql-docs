@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "record deletions [SQLXML]"
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 caps.latest.revision: 23
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)

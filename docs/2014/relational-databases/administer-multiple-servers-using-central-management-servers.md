@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "server configuration [SQL Server]"
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 caps.latest.revision: 25
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Administer Multiple Servers Using Central Management Servers

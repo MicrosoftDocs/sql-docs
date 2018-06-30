@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "database objects [CLR integration], security"
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 caps.latest.revision: 54
-author: mikeraymsft
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # CLR Integration Security

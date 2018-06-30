@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "queries [SQL Server], tables"
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Add Tables to Queries (Visual Database Tools)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), metadata for prepared statements"
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 caps.latest.revision: 13
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Table-Valued Parameter Metadata for Prepared Statements

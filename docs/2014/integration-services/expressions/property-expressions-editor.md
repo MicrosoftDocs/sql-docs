@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Property Expressions Editor dialog box"
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 caps.latest.revision: 20
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

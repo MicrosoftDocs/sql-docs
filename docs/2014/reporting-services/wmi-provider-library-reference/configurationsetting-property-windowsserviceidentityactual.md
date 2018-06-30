@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "WindowsServiceIdentityActual property"
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 caps.latest.revision: 16
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # WindowsServiceIdentityActual Property (WMI MSReportServer_ConfigurationSetting)

@@ -14,8 +14,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard"
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 caps.latest.revision: 24
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Options (Environment-Keyboard Page)

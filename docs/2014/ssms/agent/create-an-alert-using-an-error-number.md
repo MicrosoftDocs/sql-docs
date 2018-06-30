@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "alerts [SQL Server], error numbers"
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 caps.latest.revision: 29
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create an Alert Using an Error Number

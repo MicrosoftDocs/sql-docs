@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "GetColumns method"
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using IRow::GetColumns

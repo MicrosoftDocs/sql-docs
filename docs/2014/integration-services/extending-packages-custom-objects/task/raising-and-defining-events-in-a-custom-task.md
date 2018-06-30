@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "IDTSEvents interface"
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 caps.latest.revision: 52
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "transactional replication, scripting"
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Scripting Replication

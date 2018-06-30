@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "master database [SQL Server], restoring"
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 caps.latest.revision: 40
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "syntax [Integration Services]"
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 caps.latest.revision: 46
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

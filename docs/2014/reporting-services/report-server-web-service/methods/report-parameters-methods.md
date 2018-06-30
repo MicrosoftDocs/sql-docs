@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "parameters [Reporting Services], methods"
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 caps.latest.revision: 37
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Parameters Methods

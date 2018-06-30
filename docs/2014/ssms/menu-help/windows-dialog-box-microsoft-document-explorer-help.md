@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Windows dialog box"
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 caps.latest.revision: 18
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Windows Dialog Box (Microsoft Document Explorer Help)

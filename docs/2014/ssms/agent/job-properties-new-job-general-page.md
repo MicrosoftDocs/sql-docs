@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.job.general.f1"
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 caps.latest.revision: 23
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Job Properties and New Job (General Page)

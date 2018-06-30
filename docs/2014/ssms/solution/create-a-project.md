@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], creating"
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 caps.latest.revision: 22
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Project

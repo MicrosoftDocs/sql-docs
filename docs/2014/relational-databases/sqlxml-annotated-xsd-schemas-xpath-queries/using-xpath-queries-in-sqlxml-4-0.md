@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "XML views [SQLXML]"
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 caps.latest.revision: 29
-author: mikeraymsft
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Using XPath Queries in SQLXML 4.0

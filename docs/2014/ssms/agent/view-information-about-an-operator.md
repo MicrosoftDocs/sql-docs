@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "displaying operators"
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 caps.latest.revision: 24
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View Information About an Operator

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "changing startup accounts for services"
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Change the Service Startup Account for SQL Server (SQL Server Configuration Manager)

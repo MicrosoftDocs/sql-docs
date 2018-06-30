@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Version property"
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 caps.latest.revision: 9
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Version Property  (WMI MSReportServer_ConfigurationSetting)

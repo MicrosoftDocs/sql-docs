@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Replication Monitor, starting"
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Start the Replication Monitor

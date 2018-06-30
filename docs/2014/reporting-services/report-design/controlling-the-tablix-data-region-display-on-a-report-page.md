@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
-author: maggiesmsft
-ms.author: douglasl
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
 ---
 # Controlling the Tablix Data Region Display on a Report Page (Report Builder and SSRS)

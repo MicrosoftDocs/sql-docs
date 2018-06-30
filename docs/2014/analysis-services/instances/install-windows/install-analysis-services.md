@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Install Analysis Services in Tabular Mode

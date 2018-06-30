@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "xsd:redefine element"
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # The &lt;xsd:redefine&gt; Element

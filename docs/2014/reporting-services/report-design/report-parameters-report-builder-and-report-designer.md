@@ -20,7 +20,7 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.reportparameters.advanced.f1"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: 36
-author: maggiesmsft
+author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ---

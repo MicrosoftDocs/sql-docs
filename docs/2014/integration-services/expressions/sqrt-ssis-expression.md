@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "square root of given expression"
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 caps.latest.revision: 33
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

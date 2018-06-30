@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OR operator"
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 caps.latest.revision: 11
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Combine Conditions When OR Has Precedence (Visual Database Tools)

@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.dts.loaddimwizard.histattriboption.f1"
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 caps.latest.revision: 21
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "XML [SMO]"
 ms.assetid: 9d04de01-efeb-4b2d-8c28-3234bc7ff2f3
 caps.latest.revision: 38
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Using XML Schemas

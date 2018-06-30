@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "9002 (Database Engine error)"
 ms.assetid: 2e50841f-2b99-45f4-aec5-aa4add70cbeb
 caps.latest.revision: 18
-author: mikeraymsft
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_9002

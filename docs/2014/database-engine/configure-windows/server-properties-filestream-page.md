@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], properties page"
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 caps.latest.revision: 9
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Properties (FILESTREAM Page)

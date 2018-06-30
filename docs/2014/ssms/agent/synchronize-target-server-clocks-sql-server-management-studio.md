@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "target servers [SQL Server], clock synchronization"
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
 caps.latest.revision: 23
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Synchronize Target Server Clocks (SQL Server Management Studio)

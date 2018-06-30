@@ -13,7 +13,7 @@ f1_keywords:
   - "sql12.swb.ue.navigation.f1"
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 caps.latest.revision: 5
-author: mikeraymsft
+author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---

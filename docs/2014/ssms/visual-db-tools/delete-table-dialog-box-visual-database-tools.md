@@ -14,8 +14,8 @@ f1_keywords:
   - "vdtsql.chm:69644"
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 caps.latest.revision: 10
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete Table Dialog Box (Visual Database Tools)

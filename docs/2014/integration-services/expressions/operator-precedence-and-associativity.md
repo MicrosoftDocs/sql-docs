@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "precedence [Integration Services]"
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 caps.latest.revision: 31
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

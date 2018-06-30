@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 caps.latest.revision: 8
-author: mikeraymsft
-ms.author: mikeray
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Alter an Extended Events Session

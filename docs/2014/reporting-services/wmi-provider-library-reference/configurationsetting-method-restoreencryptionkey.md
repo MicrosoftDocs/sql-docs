@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "RestoreEncryptionKey method"
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 caps.latest.revision: 18
-author: maggiesmsft
-ms.author: douglasl
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # RestoreEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)

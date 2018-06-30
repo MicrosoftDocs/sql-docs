@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "conflict resolution [SQL Server replication], merge replication"
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Interactive Conflict Resolution

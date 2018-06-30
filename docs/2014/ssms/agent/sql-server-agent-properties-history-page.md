@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.agent.history.f1"
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 caps.latest.revision: 19
-author: shamikg
-ms.author: shamikg
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Agent Properties (History Page)

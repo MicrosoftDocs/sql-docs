@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "Active Directory [Integration Services]"
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 caps.latest.revision: 49
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

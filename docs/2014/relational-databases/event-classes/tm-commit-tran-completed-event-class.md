@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "TM: Commit Tran Completed event class"
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 caps.latest.revision: 24
-author: mikeraymsft
-ms.author: mikeray
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # TM: Commit Tran Completed Event Class

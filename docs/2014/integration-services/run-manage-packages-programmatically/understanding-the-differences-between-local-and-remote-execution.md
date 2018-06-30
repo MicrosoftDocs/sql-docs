@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "packages [Integration Services], troubleshooting"
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 caps.latest.revision: 20
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

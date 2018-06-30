@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "flat file connections [Integration Services]"
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 48
-author: douglaslms
+author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ---

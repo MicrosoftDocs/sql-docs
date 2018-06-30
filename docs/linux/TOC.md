@@ -27,7 +27,9 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_Deploy a Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_Create and configure availability groups](sql-server-linux-create-availability-group.md)
-## [10_Availability group on containers with Kubernetes](tutorial-sql-server-ag-kubernetes.md)
+## [10_High availability on containers]
+### [Deploy on Kubernetes](tutorial-sql-server-containers-kubernetes.md)
+### [Deploy on Kubernetes with availability groups](tutorial-sql-server-ag-kubernetes.md)
 
 # Concepts
 ## Install
@@ -94,7 +96,6 @@
 ##### [Fail over primary replica](sql-server-linux-kubernetes-failover-job.md)
 ##### [Rotate credentials](sql-server-linux-kubernetes-rotate-credentials.md)
 ##### [Create listener services for secondary replicas](sql-server-linux-kubernetes-secondary-replica-listeners.md)
-#### [Configure with shared disk](tutorial-sql-server-containers-kubernetes.md)
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)

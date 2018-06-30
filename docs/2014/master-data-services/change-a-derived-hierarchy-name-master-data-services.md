@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "derived hierarchies, changing name"
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 caps.latest.revision: 4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Change a Derived Hierarchy Name (Master Data Services)

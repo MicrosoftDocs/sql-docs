@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Audit Login Failed event class"
 ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
 caps.latest.revision: 29
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Audit Login Failed Event Class

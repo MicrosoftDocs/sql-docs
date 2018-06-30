@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.proxy.general.f1"
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Proxy Account Properties and New Proxy Account (General Page)

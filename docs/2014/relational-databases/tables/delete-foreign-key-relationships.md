@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "deleting foreign keys"
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Delete Foreign Key Relationships

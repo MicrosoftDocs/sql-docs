@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], failover"
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Role Switching During a Database Mirroring Session (SQL Server)

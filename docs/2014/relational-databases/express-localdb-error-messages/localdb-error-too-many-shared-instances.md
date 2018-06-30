@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: c1595263-6264-4a43-9535-5eb76ece3a57
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES

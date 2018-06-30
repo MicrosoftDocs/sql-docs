@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "diagrams [SQL Server], designing"
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create Relationships Between Tables on a Diagram (Visual Database Tools)

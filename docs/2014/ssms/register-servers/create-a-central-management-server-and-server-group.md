@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "configuration server"
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create a Central Management Server and Server Group (SQL Server Management Studio)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "automatic administrative SMO tasks"
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Scheduling Automatic Administrative Tasks in SQL Server Agent

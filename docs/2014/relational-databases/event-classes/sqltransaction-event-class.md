@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQLTransaction event class"
 ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLTransaction Event Class

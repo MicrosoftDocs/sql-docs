@@ -13,8 +13,8 @@ f1_keywords:
   - "vdt.dlgbox.indexcolumns"
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Index Columns Dialog Box (Visual Database Tools)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "targets [SQL Server extended events], bucketing"
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Histogram Target

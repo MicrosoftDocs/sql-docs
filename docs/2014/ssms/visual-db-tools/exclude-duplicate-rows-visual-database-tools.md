@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "excluding rows"
 ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Exclude Duplicate Rows (Visual Database Tools)

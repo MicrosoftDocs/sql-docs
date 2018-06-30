@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "IpAddresses property"
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # IpAddresses Property (ServerNetworkProtocol Class)

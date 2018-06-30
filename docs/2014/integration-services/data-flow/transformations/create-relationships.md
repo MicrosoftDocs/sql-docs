@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.createrelationships.f1"
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Create Relationships

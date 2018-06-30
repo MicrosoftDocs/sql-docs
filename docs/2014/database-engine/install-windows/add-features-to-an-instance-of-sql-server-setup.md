@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "adding features to SQL Server"
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Add Features to an Instance of SQL Server 2014 (Setup)

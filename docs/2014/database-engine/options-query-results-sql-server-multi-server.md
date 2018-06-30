@@ -14,8 +14,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.QueryResults.SqlServer.SQLMultiServerResults"
 ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 caps.latest.revision: 9
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Query Results-SQL Server-Multi-Server)

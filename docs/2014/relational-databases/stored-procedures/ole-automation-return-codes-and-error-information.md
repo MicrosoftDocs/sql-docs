@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server], errors"
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # OLE Automation Return Codes and Error Information

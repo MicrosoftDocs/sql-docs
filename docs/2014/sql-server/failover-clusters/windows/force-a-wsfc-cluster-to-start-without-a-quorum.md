@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Force a WSFC Cluster to Start Without a Quorum

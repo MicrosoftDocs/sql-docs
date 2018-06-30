@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], breaking changes"
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 caps.latest.revision: 39
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Behavior Changes to Full-Text Search

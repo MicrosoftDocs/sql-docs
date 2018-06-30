@@ -18,9 +18,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 10
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Indicators (Report Builder and SSRS)
   Indicators are minimal gauges that convey the state of a single data value at a glance. The icons that represent indicators and their states are simple and visually effective even when used in small sizes.  

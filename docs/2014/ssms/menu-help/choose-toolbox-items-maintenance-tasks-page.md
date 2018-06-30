@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Customize Toolbox dialog box"
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Choose Toolbox Items (Maintenance Tasks Page)

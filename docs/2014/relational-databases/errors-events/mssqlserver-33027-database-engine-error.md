@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "33027 (Database Engine error)"
 ms.assetid: bfdc626e-7958-4511-987d-3b687824e8af
 caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_33027

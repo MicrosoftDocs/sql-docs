@@ -14,8 +14,8 @@ f1_keywords:
   - "vdt.dlgbox.maketable"
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Make Table Dialog Box (Visual Database Tools)

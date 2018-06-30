@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], annotations"
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Add Text Annotations to Diagrams (Visual Database Tools)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "retention periods [SQL Server replication]"
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Set the History Retention Period (SQL Server Management Studio)

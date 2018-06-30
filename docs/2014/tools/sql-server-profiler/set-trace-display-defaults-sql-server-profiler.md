@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "traces [SQL Server], defaults"
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Set Trace Display Defaults (SQL Server Profiler)

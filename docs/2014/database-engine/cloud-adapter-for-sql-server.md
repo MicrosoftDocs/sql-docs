@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Deploy to Windows Azure"
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Cloud Adapter for SQL Server

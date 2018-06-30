@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "rsSharePoint"
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Where to find the Reporting Services add-in for SharePoint Products

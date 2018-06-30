@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "multiple predicates"
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Specifying Boolean-Valued Predicates in XPath Queries (SQLXML 4.0)

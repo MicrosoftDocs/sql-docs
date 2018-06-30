@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "replication [SQL Server], administering"
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Best Practices for Replication Administration

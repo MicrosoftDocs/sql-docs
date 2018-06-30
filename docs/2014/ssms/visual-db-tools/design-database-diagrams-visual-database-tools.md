@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "diagrams [SQL Server], designing"
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Design Database Diagrams (Visual Database Tools)

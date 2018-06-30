@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "foreign keys [SQL Server], about foreign key constraints"
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Primary and Foreign Key Constraints

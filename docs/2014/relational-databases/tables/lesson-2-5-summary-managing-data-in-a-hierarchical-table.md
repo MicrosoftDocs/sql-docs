@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "managing data in a table"
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Summary: Managing Data in a Hierarchical Table

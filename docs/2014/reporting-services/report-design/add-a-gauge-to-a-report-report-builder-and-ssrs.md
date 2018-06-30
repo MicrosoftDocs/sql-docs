@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 caps.latest.revision: 5
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Add a Gauge to a Report (Report Builder and SSRS)
   When you want to summarize data in a visual format, you can use a Gauge data region. After you add a Gauge data region to the design surface, you can drag report dataset fields to a data pane on the gauge.  

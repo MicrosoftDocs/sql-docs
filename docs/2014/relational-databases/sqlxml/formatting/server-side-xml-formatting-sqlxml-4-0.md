@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "server-side XML formatting"
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Server-side XML Formatting (SQLXML 4.0)

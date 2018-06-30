@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], unique"
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Modify Unique Constraints

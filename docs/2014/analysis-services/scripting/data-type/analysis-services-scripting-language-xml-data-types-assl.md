@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "data types [Analysis Services Scripting Language]"
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Analysis Services Scripting Language XML Data Types (ASSL)
   This reference section contains syntax and usage information for each element that acts as a type in the Analysis Services Scripting Language (ASSL) schema.  

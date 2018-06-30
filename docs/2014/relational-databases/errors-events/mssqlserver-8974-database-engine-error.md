@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "8974 (Database Engine error)"
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_8974

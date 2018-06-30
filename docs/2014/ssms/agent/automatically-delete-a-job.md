@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "removing jobs"
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Automatically Delete a Job

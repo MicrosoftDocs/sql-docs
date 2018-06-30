@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "IncrementalProcessingNotification data type"
 ms.assetid: 66e27f92-65c1-4a34-b9c2-bfbb5aeb7d7c
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # IncrementalProcessingNotification Data Type (ASSL)
   Defines a derived data type that represents information for the [ProactiveCaching](../objects/proactivecaching-element-assl.md) element about the query to execute to determine the progress of incremental processing.  

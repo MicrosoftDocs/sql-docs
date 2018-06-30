@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "DATEADD function"
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # DATEADD (SSIS Expression)

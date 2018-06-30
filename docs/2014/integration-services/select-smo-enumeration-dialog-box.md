@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Select SMO Enumeration dialog box"
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Select SMO Enumeration Dialog Box

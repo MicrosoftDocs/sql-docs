@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "root element"
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
 caps.latest.revision: 16
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # root Element (XMLA)
   Contains a result returned by the [Discover](../xml-elements-methods-discover.md) method or an XML for Analysis (XMLA) command executed using the [Execute](../xml-elements-methods-execute.md) method.  

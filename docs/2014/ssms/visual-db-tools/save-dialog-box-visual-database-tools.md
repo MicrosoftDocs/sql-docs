@@ -14,8 +14,8 @@ f1_keywords:
   - "vdt.dlgbox.save"
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Save Dialog Box (Visual Database Tools)

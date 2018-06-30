@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "CommandText property"
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Executing Template Files by Using the CommandText Property

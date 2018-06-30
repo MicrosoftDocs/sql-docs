@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "names [SQL Server], columns with"
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 caps.latest.revision: 9
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Column Names with the Path Specified as data()

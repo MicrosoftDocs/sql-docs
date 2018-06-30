@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Example: Setting Up Database Mirroring Using Windows Authentication (Transact-SQL)

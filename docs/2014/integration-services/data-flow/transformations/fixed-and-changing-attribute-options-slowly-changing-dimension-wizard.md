@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.loaddimwizard.attriboption.f1"
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard

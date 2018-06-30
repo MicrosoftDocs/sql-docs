@@ -13,8 +13,8 @@ f1_keywords:
   - "vs.getdirectoryname"
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Location Dialog Box (Visual Database Tools)

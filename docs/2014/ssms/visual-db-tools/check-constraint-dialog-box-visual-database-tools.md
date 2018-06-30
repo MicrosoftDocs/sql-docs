@@ -13,8 +13,8 @@ f1_keywords:
   - "vdt.dlgbox.checkconstraint"
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Check Constraint Dialog Box (Visual Database Tools)

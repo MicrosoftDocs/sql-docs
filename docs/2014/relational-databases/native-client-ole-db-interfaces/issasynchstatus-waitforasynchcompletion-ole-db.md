@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "WaitForAsynchCompletion method"
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], mapping data types"
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Mapping XSD Data Types to XPath Data Types (SQLXML 4.0)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "notifications [SQL Server], job status"
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create an Operator

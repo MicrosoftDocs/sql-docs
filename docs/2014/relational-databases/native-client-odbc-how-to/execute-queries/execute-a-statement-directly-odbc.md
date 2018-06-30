@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "statement execution"
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Execute a Statement Directly (ODBC)

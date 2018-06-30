@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Maintaining an AlwaysOn Publication Database (SQL Server)

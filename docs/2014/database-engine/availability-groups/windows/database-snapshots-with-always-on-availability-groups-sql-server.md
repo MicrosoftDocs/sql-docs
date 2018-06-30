@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 caps.latest.revision: 5
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Database Snapshots with AlwaysOn Availability Groups (SQL Server)

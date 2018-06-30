@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "programming [SMO]"
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Management Objects (SMO) Programming Guide

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SoapException class"
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 caps.latest.revision: 31
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # SoapException Errors Table

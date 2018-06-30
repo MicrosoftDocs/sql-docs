@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "executing queries [SQL Server]"
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Run Queries (Visual Database Tools)

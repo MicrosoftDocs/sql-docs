@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SharePoint Mode"
 ms.assetid: 2c19794a-dd55-4fe5-b901-6dd93e9f6beb
 caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Reporting Services SharePoint Mode Authentication

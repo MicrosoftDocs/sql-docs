@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "web configuration file [Master Data Services]"
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Web Configuration Reference (Master Data Services)

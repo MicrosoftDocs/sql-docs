@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "row compression [Database Engine]"
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Row Compression Implementation

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "OLE DB Command transformation"
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Configure the OLE DB Command Transformation

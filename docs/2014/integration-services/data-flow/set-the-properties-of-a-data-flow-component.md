@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "components [Integration Services], properties"
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Set the Properties of a Data Flow Component

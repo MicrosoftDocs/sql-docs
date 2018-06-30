@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Agent, stopping"
 ms.assetid: c95a9759-dd30-4ab6-9ab0-087bb3bfb97c
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Start, Stop, or Pause the SQL Server Agent Service

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "explicit hierarchies, creating"
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Create an Explicit Hierarchy (Master Data Services)

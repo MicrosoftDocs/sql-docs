@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "VirtualDirectoryReportManager property"
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
 caps.latest.revision: 9
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # VirtualDirectoryReportManager Property (WMI MSReportServer_ConfigurationSetting)
   Returns the virtual directory for the report manager application. Read-only.  

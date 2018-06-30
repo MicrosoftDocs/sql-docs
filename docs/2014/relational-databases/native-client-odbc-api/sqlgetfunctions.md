@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLGetFunctions function"
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLGetFunctions

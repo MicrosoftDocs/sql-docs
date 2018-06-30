@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "41302 (Database Engine error)"
 ms.assetid: 01e75618-afec-4232-ba68-93ab7bc31003
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # MSSQLSERVER_41302

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.proxy.editor.f1"
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Proxy Editor and  Add Principal

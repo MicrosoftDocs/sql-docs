@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "bytes [CLR integration]"
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Retrieving UDT Data

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "errors [Upgrade Advisor]"
 ms.assetid: a493a459-e7ea-4629-a14c-684d8c57e310
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Advisor Errors

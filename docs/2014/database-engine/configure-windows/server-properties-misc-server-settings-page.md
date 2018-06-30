@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.serverproperties.miscserversettings.f1"
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Server Properties (Misc Server Settings Page)

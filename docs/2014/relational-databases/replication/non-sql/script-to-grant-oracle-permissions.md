@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], script to grant permissions"
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Script to Grant Oracle Permissions

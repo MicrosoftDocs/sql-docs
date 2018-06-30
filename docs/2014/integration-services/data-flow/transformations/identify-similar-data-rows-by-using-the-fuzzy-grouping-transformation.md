@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "fuzzy matches"
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Identify Similar Data Rows by Using the Fuzzy Grouping Transformation

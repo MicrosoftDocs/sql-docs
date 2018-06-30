@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], modifying"
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Modify Check Constraints

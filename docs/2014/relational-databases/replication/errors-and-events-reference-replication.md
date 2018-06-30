@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "errors and events reference [SQL Server replication]"
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: 24
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Errors and Events Reference (Replication)

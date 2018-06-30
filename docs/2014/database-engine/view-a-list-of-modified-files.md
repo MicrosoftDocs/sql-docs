@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "checking in files"
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # View a List of Modified Files

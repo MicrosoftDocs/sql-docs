@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Tutorial: Replicating Data with Mobile Clients

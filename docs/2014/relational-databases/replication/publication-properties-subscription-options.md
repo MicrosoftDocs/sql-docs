@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1"
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Publication Properties, Subscription Options

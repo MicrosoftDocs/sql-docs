@@ -33,8 +33,8 @@ helpviewer_keywords:
   - "accounts [Database Mail]"
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Database Mail Configuration Objects

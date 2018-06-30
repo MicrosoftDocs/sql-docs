@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ID directive"
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Example: Specifying the ID and IDREFS Directives

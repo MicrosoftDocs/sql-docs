@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "numeric value searches [SQL Server]"
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Rules for Entering Search Values (Visual Database Tools)

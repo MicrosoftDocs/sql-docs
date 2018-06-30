@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "logins [SQL Server], database mirroring"
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups (SQL Server)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "exporting trace templates"
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Export a Trace Template (SQL Server Profiler)

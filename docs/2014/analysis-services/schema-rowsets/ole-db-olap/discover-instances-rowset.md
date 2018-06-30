@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DISCOVER_INSTANCES rowset"
 ms.assetid: e0842e63-089d-468d-869f-634da343d9fb
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_INSTANCES Rowset
   Describes the instances on the server.  

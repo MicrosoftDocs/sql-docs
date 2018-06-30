@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Web applications [Reporting Services]"
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Using the SOAP API in a Web Application

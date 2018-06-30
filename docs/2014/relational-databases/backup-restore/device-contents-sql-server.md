@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.bnrdevicecontents.f1"
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Device Contents (SQL Server)

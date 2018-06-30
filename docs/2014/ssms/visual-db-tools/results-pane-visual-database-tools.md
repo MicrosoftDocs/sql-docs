@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "Results pane"
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Results Pane (Visual Database Tools)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.replconflictviewer.cvmerge.f1"
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Microsoft Replication Conflict Viewer (Merge Replication)

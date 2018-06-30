@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.errorlog.configure.f1"
 ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Configure SQL Server Agent Error Logs (General Page)

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Design Queries and Views How-to Topics (Visual Database Tools)

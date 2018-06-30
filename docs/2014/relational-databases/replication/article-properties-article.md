@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Article Properties dialog box"
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: 36
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Article Properties - &lt;Article&gt;

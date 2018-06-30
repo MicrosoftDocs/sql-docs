@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Data Profiling task [Integration Services], viewer"
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Profile Viewer F1 Help

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], executing"
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Execute User-defined Functions

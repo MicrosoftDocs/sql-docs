@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Data Mining Query Transformation Editor"
 ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Mining Query Transformation Editor (Query Tab)

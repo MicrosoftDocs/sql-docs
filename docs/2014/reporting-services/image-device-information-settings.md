@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], IMAGE rendering"
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 caps.latest.revision: 40
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Image Device Information Settings
   The following table lists the device information settings for rendering in IMAGE format.  

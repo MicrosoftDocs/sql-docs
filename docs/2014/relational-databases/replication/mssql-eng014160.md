@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "MSSQL_ENG014160 error"
 ms.assetid: d0f3855e-d095-4a81-a5bd-9d7ad51f2c77
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQL_ENG014160

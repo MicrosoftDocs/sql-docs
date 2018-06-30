@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ISSCommandWithParameters interface"
 ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # ISSCommandWithParameters (OLE DB)

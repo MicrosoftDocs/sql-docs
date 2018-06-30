@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "dates [Integration Services], DAY"
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # DAY (SSIS Expression)

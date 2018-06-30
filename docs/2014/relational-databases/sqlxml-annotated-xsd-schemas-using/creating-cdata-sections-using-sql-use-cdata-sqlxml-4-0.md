@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sql:use-cdata"
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0)

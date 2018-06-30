@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "displaying jobs"
 ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # View a Job

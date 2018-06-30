@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "offload tuning overhead [SQL Server]"
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Reduce the Production Server Tuning Load

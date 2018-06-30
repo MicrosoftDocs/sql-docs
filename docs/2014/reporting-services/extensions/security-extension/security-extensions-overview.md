@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "security [Reporting Services], extensions"
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 caps.latest.revision: 20
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Security Extensions Overview

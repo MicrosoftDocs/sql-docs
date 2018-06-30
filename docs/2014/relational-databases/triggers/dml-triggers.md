@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "triggers [SQL Server]"
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # DML Triggers

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "New Agent Profile dialog box"
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # New Agent Profile

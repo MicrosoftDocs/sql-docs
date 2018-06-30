@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], states"
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Mirroring States (SQL Server)

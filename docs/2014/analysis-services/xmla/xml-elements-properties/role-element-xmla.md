@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 2b851ad5-cc46-4a2e-8873-d8556faca809
 caps.latest.revision: 5
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Role Element  (XMLA)
   Identifies one end of a one-to-many relationship to be used by the parent [RelationshipEnd](../../scripting/data-type/relationshipend-data-type-assl.md).  

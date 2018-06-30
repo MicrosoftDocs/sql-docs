@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Monitoring Database Mirroring (SQL Server)

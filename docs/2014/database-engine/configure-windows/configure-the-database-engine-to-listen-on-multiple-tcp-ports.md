@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "multiple ports"
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Configure the Database Engine to Listen on Multiple TCP Ports

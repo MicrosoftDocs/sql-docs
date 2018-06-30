@@ -14,8 +14,8 @@ f1_keywords:
   - "sql11.dts.designer.afpblobdltask.f1"
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Azure Blob Download Task

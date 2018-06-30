@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 13
-author: "HeidiSteen"
-ms.author: "heidist"
+author: heidisteen
+ms.author: heidist
 manager: craigg
 ---
 # Analysis Services with Always On Availability Groups

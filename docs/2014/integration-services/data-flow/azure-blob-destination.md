@@ -14,8 +14,8 @@ f1_keywords:
   - "sql11.dts.designer.afpblobdest.f1"
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Azure Blob Destination

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AlgorithmParameter element"
 ms.assetid: 73211495-065c-43c6-a486-be6044617263
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AlgorithmParameter Element (ASSL)
   Defines a parameter for the algorithm used by a [MiningModel](miningmodel-element-assl.md) element.  

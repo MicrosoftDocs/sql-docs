@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Broker:Conversation Group event class"
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Broker:Conversation Group Event Class

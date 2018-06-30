@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.dmf.condition.description.f1"
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Create New Condition or Open Condition Dialog Box, Description Page

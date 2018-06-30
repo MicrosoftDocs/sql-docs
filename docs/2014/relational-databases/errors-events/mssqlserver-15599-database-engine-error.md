@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "15599 (Database Engine error)"
 ms.assetid: 97e427a9-8587-46ea-954b-974b5df9c223
 caps.latest.revision: 8
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_15599

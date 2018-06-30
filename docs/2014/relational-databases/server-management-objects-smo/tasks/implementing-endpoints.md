@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "endpoints [SMO]"
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Implementing Endpoints

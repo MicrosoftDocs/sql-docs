@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], Table Designer"
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Work with Tables in Database Diagram (Visual Database Tools)

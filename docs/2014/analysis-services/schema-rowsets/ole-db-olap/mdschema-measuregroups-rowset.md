@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_MEASUREGROUPS rowset"
 ms.assetid: bab1bbd0-421b-4fad-9aee-e6511e0e1f1b
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_MEASUREGROUPS Rowset
   Describes the measure groups within a database.  

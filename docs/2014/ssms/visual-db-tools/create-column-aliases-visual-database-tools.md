@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "aliases [SQL Server], columns"
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create Column Aliases (Visual Database Tools)

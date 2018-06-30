@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.fulltextsearch.fulltextindexproperties.columns.f1"
 ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full-Text Index Properties (Columns Page)

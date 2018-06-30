@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SP:StmtStarting event class"
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SP:StmtStarting Event Class

@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "getting started"
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Connect to a Data Mining Server
   ![Connections button](media/misc-connection.gif "Connections button")  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "12307 (Database Engine error)"
 ms.assetid: 768cf6a8-e0f6-4668-9ab6-7c171a88fd86
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # MSSQLSERVER_12307

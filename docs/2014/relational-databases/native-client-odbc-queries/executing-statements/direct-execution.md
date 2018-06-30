@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "statements [ODBC], direct execution"
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Direct Execution

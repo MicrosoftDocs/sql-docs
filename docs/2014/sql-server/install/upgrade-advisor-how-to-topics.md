@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Upgrade Advisor [SQL Server], how-to topics"
 ms.assetid: d73bf759-58f7-4789-af49-ac8ca94f913d
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Advisor How-to Topics

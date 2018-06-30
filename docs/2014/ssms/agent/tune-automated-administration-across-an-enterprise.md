@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "monitoring performance [SQL Server], automated administration"
 ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Tune Automated Administration Across an Enterprise

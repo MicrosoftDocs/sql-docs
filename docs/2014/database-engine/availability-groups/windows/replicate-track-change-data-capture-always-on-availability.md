@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups (SQL Server)

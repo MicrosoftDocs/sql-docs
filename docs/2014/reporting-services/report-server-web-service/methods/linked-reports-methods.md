@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "methods [Reporting Services], linked reports"
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Linked Reports Methods

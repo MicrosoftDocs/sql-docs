@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "attribute groups [Master Data Services], about attribute groups"
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Attribute Groups (Master Data Services)

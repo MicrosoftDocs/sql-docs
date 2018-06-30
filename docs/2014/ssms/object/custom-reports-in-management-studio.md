@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], custom reports"
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Custom Reports in Management Studio

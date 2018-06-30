@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "multiple-rowset results"
 ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Using IMultipleResults to Process Multiple Result Sets

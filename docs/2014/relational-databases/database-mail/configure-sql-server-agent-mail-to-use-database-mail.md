@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Agent Mail"
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Configure SQL Server Agent Mail to Use Database Mail

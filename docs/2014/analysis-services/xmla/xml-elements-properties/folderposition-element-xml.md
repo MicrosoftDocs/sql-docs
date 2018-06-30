@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 8cccef2b-bdd0-415a-bb53-bda14165d1e4
 caps.latest.revision: 6
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # FolderPosition Element (XML)
   Contains information about the position of the element in a collection of elements.  

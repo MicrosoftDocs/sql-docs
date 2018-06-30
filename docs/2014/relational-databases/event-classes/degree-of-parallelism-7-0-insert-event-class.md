@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Degree of Parallelism event class"
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Degree of Parallelism (7.0 Insert) Event Class

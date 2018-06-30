@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.publisherinfo.commonjobs.f1"
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Publisher Information, Agents

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], pull"
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Delete a Pull Subscription

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.selectoraclepublisher.f1"
 ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Oracle Publisher

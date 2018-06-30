@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "items [SQL Server]"
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Solution Explorer

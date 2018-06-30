@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "XSINIL parameter"
 ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Generate Elements for NULL Values with the XSINIL Parameter

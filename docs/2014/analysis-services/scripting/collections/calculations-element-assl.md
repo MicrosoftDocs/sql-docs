@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Calculations element"
 ms.assetid: 03e5e91c-1f66-4dc7-8aad-4d9876928df0
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Calculations Element (ASSL)
   Contains the collection of [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) elements associated with a [Perspective](../objects/perspective-element-assl.md) element.  

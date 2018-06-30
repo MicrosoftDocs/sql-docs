@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], components"
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Connecting Data Flow Components Programmatically

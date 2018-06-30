@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SecurityCertificate class"
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SecurityCertificate Class

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DatabasePermission element"
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DatabasePermission Element (ASSL)
   Defines the default permissions in a [Database](database-element-assl.md) element for a specific [Role](role-element-assl.md) element.  

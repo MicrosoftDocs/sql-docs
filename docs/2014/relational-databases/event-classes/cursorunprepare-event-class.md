@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "CursorUnprepare event class"
 ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # CursorUnprepare Event Class

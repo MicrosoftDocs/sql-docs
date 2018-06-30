@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.dqs.kb.newkb.f1"
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Create a Knowledge Base

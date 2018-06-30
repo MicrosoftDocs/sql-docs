@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "queries [CLR integration]"
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Working with User-Defined Types in SQL Server

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server event classes, Full Text event category"
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full Text Event Category

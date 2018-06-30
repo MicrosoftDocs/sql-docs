@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "parallel index operations [SQL Server]"
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 caps.latest.revision: 42
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Configure Parallel Index Operations

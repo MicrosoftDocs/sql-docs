@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "related tables [SQL Server]"
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Add Related Tables to Diagrams (Visual Database Tools)

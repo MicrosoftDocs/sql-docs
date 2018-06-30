@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # LOCALDB_ERROR_UNKNOWN_VERSION

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Performance Statistics event class"
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Performance Statistics Event Class

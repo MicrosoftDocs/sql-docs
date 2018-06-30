@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 66d92652-b46f-46d8-8093-fa9c6fc4e0d1
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Complete Word option [IntelliSense]"
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 caps.latest.revision: 24
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Complete Word (IntelliSense)

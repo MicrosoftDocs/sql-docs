@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "idle time [SQL Server]"
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create and Attach Schedules to Jobs

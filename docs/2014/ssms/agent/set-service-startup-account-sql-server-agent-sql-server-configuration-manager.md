@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "service startup accounts [SQL Server Agent]"
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)

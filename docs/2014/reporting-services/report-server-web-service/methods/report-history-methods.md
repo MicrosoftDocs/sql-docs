@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "methods [Reporting Services], report history"
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Report History Methods

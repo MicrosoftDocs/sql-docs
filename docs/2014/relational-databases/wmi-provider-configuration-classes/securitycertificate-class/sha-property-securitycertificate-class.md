@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SHA property"
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SHA Property (SecurityCertificate Class)

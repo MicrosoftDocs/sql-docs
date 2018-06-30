@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "administrators [Master Data Services], changing"
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Change the System Administrator Account (Master Data Services)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sp_addtabletocontents"
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 caps.latest.revision: 32
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Bulk-Load Data into Tables in a Merge Publication (Replication Transact-SQL Programming)

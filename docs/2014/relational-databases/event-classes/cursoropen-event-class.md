@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "CursorOpen event class"
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # CursorOpen Event Class

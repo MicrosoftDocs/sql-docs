@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "5231 (Database Engine error)"
 ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_5231

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "page splits [SQL Server]"
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 caps.latest.revision: 45
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Specify Fill Factor for an Index

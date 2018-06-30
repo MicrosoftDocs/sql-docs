@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "queries [full-text search], functions"
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Query with Full-Text Search

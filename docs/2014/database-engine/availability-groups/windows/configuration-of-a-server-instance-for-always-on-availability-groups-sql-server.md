@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 caps.latest.revision: 16
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Configuration of a Server Instance for Always On Availability Groups (SQL Server)

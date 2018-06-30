@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "hierarchyid [Database Engine], tutorial"
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Tutorial: Using the hierarchyid Data Type

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "storage [SMO]"
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Using Filegroups and Files to Store Data

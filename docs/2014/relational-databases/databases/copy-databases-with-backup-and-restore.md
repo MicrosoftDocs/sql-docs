@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "database backups [SQL Server], copying databases"
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Copy Databases with Backup and Restore

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Database Mirroring State Change event class"
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Database Mirroring State Change Event Class

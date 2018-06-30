@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLDrivers function"
 ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLDrivers

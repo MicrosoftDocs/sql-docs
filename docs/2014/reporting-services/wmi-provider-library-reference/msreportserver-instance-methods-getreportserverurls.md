@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "GetReportServerUrls method"
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 caps.latest.revision: 11
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # GetReportServerUrls Method (WMI MSReportServer_Instance)
   Returns a list of URLs users can use to access the report server and report manager.  

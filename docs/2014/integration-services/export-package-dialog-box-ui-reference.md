@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Export Package dialog box"
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Export Package Dialog Box UI Reference

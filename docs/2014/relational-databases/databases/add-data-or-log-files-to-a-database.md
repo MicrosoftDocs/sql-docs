@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "data additions [SQL Server]"
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Add Data or Log Files to a Database

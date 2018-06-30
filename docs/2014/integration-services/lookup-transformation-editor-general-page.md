@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.lookuptransformation.general.f1"
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Lookup Transformation Editor (General Page)

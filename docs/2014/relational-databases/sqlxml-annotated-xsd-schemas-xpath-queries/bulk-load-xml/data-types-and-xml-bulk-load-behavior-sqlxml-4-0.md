@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "XML Bulk Load [SQLXML], data types"
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Data Types and XML Bulk Load Behavior (SQLXML 4.0)

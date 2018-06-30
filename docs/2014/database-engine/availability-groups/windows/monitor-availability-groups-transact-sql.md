@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "catalog views [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: 48
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Monitor Availability Groups (Transact-SQL)

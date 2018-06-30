@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Measure element"
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Measure Element (ASSL)
   Defines a measure.  

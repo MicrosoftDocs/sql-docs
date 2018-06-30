@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 caps.latest.revision: 58
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Transport Security for Database Mirroring and AlwaysOn Availability Groups (SQL Server)

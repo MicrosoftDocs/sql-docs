@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "diagrams [SQL Server], opening"
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Open Database Diagrams (Visual Database Tools)

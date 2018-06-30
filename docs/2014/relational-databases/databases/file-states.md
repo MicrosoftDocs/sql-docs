@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "defunct file state"
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # File States

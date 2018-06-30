@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "client-side XPath"
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Client-side vs. Server-side XML Formatting (SQLXML 4.0)

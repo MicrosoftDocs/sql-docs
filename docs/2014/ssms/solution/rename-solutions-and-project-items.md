@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "renaming solutions"
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Rename Solutions and Project Items

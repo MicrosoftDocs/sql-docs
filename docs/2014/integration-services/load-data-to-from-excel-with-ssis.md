@@ -10,8 +10,8 @@ ms.custom: ""
 ms.technology: "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)

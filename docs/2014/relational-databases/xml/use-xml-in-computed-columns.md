@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "XML [SQL Server], computed columns"
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Use XML in Computed Columns

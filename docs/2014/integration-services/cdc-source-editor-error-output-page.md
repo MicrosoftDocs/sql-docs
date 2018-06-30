@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.designer.cdcsource.errorhandling.f1"
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # CDC Source Editor (Error Output Page)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "ConnectionString element"
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ConnectionString Element (XMLA)
   Contains a connection string used by the parent [Location](location-element-xmla.md) or [Source](source-element-xmla.md) element.  

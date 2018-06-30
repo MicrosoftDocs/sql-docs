@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "diagrams [SQL Server], upgrading"
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)

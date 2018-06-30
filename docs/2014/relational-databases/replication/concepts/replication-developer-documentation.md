@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "replication [SQL Server], development"
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 caps.latest.revision: 39
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Developer&#39;s Guide (Replication)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "VSS [Visual SourceSafe]"
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Solution Explorer Source Control

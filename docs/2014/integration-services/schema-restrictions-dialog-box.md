@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Schema Restrictions dialog box"
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Schema Restrictions Dialog Box

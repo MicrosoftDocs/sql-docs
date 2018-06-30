@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.publicationinfo.allsubscriptions.merge.f1"
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Publication Information, All Subscriptions (Merge Publication)

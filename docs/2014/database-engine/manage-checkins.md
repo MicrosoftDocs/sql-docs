@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "source controls [SQL Server Management Studio], checkins"
 ms.assetid: 293e60f3-15e3-4258-b73a-8baabe15c760
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Manage Checkins

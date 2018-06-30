@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SetStrValue method"
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SetStrValue Method (SqlServiceAdvancedProperty Class)

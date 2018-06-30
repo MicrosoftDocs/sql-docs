@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.agent.alert.f1"
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # SQL Server Agent Properties (Alert System Page)

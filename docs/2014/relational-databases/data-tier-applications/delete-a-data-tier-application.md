@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "delete DAC"
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Delete a Data-tier Application

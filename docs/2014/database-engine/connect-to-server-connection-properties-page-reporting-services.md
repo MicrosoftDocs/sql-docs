@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.connecttors.connectionproperties.f1"
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Connect to Server (Connection Properties Page) Reporting Services

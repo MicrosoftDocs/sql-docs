@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "aggregate functions [SQL Server], summarizing query results"
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools)

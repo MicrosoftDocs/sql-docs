@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "database master key [SQL Server], exporting"
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Back Up a Database Master Key

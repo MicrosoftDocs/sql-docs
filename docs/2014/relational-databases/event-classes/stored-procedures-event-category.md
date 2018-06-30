@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "event classes [SQL Server], Stored Procedures event category"
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Stored Procedures Event Category

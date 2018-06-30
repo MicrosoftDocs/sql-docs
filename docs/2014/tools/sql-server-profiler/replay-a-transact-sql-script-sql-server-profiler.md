@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "replaying traces"
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Replay a Transact-SQL Script (SQL Server Profiler)

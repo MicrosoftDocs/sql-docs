@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SP:Completed event class"
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SP:Completed Event Class

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "files [SQL Server Management Studio], projects"
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Files That Manage Solutions and Projects

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], operating modes"
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Database Mirroring Operating Modes

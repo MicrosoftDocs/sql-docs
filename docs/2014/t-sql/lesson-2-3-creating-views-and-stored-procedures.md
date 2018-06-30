@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "creating views and stored procedures"
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Creating Views and Stored Procedures

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1"
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full-Text Index Properties (Schedules Page)

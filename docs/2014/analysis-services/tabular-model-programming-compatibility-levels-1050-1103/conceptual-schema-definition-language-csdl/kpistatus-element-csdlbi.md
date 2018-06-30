@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 6fee5b82-caa8-46a1-ad68-bbce3e11e01e
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # KpiStatus Element (CSDLBI)
   The KpiStatus element defines a reference to the column that contains the value used as the status indicator in a Key Performance Indicator (KPI).  

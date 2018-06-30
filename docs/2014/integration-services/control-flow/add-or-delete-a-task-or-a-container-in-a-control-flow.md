@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], adding"
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add or Delete a Task or a Container in a Control Flow

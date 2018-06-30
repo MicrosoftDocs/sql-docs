@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "objects [SQL Server], locks"
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Find the Objects That Have the Most Locks Taken on Them

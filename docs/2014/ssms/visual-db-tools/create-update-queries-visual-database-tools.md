@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "updating tables"
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create Update Queries (Visual Database Tools)

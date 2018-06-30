@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "joining datasets [Integration Services]"
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Extend a Dataset by Using the Merge Join Transformation

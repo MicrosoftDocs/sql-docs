@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "replication [SQL Server], synchronization"
 ms.assetid: cbe13120-8dd9-4309-88dd-07a801c68f5f
 caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Synchronize Subscriptions (Replication)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "18456 (Database Engine error)"
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_18456

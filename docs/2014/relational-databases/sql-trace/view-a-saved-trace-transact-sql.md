@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "viewing traces"
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # View a Saved Trace (Transact-SQL)

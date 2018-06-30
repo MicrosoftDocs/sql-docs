@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "large data, OLE objects"
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Getting Large Data

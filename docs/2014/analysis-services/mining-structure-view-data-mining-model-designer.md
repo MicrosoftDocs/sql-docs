@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.dm.miningmodeleditor.structure.f1"
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Mining Structure View (Data Mining Model Designer)
   Use the **Mining Structure** views to modify mining structures and to process a mining structure and all its associated mining models.  

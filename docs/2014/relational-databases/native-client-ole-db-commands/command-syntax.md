@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], command syntax"
 ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Command Syntax

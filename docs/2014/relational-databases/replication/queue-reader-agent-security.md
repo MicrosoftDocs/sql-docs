@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Queue Reader Agent Security dialog box"
 ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Queue Reader Agent Security

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], creating"
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Walkthrough: Adding and Changing a Database Diagram

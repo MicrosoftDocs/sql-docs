@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "polling interval [SQL Server]"
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Set the Polling Interval for Target Servers

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], Database Engine Query Editor"
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 caps.latest.revision: 46
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Database Engine Query Editor (SQL Server Management Studio)

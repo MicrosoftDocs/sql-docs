@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DiffGrams [SQLXML], ADO"
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Executing a DiffGram by Using ADO (SQLXML 4.0)

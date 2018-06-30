@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Policy-Based Management, delete policies"
 ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Delete a Policy-Based Management Policy

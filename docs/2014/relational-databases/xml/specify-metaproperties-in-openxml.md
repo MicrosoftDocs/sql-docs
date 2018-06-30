@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OPENXML statement, metaproperties"
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Specify Metaproperties in OPENXML

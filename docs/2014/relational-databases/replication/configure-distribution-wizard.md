@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Configure Distribution Wizard"
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Configure Distribution Wizard

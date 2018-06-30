@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server services, setting startup options"
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Configure Server Startup Options (SQL Server Configuration Manager)

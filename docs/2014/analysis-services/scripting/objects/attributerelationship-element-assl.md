@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributeRelationship element"
 ms.assetid: 2e786109-b8bf-4295-b0fe-9c1997349993
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeRelationship Element (ASSL)
   Provides details about the relationship between two attributes.  

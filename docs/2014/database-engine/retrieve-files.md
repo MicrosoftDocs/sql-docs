@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "retrieving files"
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Retrieve Files

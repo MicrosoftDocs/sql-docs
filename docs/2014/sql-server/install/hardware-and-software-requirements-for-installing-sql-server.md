@@ -46,8 +46,8 @@ helpviewer_keywords:
   - "localized SQL Server versions"
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 caps.latest.revision: 302
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Hardware and Software Requirements for Installing SQL Server 2014

@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "named relationships [SQLXML]"
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Specifying Relationships Using sql:relationship (SQLXML 4.0)

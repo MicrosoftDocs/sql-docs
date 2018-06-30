@@ -20,8 +20,8 @@ helpviewer_keywords:
   - ".rdl files"
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: maggiesmsft
+ms.author: maggies
 manager: craigg
 ---
 # Upgrade Reports

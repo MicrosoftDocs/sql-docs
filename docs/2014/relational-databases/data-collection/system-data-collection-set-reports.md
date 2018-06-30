@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "disk usage reports [SQL Server]"
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # System Data Collection Set Reports

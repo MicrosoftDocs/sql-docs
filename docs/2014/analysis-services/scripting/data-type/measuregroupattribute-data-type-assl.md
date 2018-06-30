@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MeasureGroupAttribute data type"
 ms.assetid: dc7f71e6-3755-4d99-9fcd-5830e10eb653
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MeasureGroupAttribute Data Type (ASSL)
   Defines a primitive data type that represents the relationship between an attribute and a measure group.  

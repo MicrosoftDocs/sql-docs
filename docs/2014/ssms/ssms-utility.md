@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "opening SQL Server Management Studio"
 ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Ssms Utility

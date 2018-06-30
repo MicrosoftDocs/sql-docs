@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SMO [SQL Server], transactions"
 ms.assetid: 399aded8-bee3-4cfb-a671-1877c7d0de9f
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Using Transactions

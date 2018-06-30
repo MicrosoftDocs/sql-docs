@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Results pane"
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Edit Rows in the Results Pane (Visual Database Tools)

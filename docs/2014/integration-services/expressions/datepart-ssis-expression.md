@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "DATEPART function"
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # DATEPART (SSIS Expression)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.query.text.f1"
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Query Options Results (Text Page)

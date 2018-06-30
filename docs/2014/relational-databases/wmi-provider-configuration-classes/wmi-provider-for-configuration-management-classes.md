@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "classes [WMI]"
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # WMI Provider for Configuration Management Classes

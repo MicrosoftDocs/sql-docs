@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "disabling constraints"
 ms.assetid: 4211f2fd-d16a-4081-995c-43f1f0827f0b
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Disable Foreign Key Constraints for Replication

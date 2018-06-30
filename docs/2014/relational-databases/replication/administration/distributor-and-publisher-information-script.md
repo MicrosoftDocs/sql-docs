@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Distributors [SQL Server replication], information scripts"
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Distributor and Publisher Information Script

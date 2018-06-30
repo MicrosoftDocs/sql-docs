@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "CPU affinity mask option"
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 caps.latest.revision: 29
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # affinity Input-Output mask Server Configuration Option

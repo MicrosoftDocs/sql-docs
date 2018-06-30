@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "backups [SQL Server], table-level backups unsupported"
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 81
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Backup Overview (SQL Server)

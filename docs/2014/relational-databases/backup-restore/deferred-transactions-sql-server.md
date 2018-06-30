@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "modifying transaction deferred state"
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Deferred Transactions (SQL Server)

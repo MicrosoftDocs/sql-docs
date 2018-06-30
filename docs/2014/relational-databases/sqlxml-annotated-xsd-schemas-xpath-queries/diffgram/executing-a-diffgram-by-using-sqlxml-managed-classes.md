@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQLXML, Managed Classes"
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Executing a DiffGram by Using SQLXML Managed Classes

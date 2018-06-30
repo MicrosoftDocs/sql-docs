@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "distributing reports"
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # How to: Export Reports

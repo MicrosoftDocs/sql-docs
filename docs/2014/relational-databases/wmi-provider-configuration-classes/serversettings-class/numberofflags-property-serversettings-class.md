@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "NumerOfFlags property"
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # NumberOfFlags Property (ServerSettings Class)

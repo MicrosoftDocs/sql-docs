@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "events [WMI]"
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # WMI Provider for Server Events Concepts

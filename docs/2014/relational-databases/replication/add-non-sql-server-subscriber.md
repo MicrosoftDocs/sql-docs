@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newsubwizard.addnonsqlsubscriber.f1"
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Add Non-SQL Server Subscriber

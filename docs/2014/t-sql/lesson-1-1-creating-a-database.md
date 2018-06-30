@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "tutorial creating a database"
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
 caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Creating a Database (Tutorial)

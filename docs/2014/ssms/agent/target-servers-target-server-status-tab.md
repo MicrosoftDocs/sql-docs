@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.target.status.f1"
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Target Servers (Target Server Status Tab)

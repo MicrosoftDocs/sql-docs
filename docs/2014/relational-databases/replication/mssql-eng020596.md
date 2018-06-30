@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "MSSQL_ENG020596 error"
 ms.assetid: fa33627c-2e99-4be3-9424-52ab83446e07
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQL_ENG020596

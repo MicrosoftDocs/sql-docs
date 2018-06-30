@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "trace flags [SQL Server], behavior changes"
 ms.assetid: d739df96-2659-4383-8e10-194657632526
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Changes to behavior of trace flags

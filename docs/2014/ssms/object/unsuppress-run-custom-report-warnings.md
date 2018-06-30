@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], custom reports"
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Unsuppress Run Custom Report Warnings

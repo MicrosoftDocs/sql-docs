@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "creating number attributes [Master Data Services]"
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Create a Numeric Attribute (Master Data Services)

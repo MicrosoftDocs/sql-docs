@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "My Subscriptions page [Reporting Services]"
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 caps.latest.revision: 36
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Use My Subscriptions
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Report Manager includes a **My Subscriptions** page that organizes all of your subscriptions into one place. You can use My Subscriptions to view, modify, and delete existing subscriptions. However, you cannot use it to create subscriptions.  

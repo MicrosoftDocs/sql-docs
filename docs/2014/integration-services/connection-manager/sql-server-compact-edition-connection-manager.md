@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "connection managers [Integration Services], SQL Server Compact"
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # SQL Server Compact Edition Connection Manager

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Prepare SQL event class"
 ms.assetid: 4ff3aa04-0f1a-49e2-a43d-7251bab4a458
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Prepare SQL Event Class

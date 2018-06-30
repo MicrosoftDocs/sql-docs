@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "inserting data"
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Performing Bulk Load of XML Data (SQLXML 4.0)

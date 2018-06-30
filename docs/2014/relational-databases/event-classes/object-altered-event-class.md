@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Object:Altered event class"
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Object:Altered Event Class

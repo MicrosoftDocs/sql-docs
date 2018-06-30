@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "File System Task Editor"
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # File System Task Editor (General Page)

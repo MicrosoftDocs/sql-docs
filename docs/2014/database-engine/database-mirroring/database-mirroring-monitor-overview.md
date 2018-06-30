@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Database Mirroring Monitor [SQL Server], interface"
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Database Mirroring Monitor Overview

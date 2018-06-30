@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sql:overflow-field"
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)

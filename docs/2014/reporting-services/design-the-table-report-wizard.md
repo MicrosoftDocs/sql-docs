@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.rtp.rptwizard.designtable.f1"
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
 caps.latest.revision: 26
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Design the Table (Report Wizard)
   Use this page of the Report Wizard to select fields to place on the report.  

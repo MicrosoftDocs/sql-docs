@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "binding [WMI]"
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Working with the WMI Provider for Configuration Management

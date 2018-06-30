@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "AUTO FOR XML mode, heuristics in shaping returned XML"
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 caps.latest.revision: 7
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # AUTO Mode Heuristics in Shaping Returned XML

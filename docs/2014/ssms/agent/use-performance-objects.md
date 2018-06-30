@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "counters [SQL Server], SQL Server Agent"
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Use Performance Objects

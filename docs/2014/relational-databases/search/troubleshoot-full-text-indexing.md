@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "troubleshooting [full-text search]"
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 caps.latest.revision: 43
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Troubleshoot Full-Text Indexing

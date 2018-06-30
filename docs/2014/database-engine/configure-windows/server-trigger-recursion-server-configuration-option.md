@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "server trigger recursion option"
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # server trigger recursion Server Configuration Option

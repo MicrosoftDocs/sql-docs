@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "partition schemes [SQL Server]"
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Create Partitioned Tables and Indexes

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "agents [SQL Server replication], starting"
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 caps.latest.revision: 40
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Start and Stop a Replication Agent (SQL Server Management Studio)

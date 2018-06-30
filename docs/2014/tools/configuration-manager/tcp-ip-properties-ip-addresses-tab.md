@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "listening [SQL Server], on ports"
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 43
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # TCP-IP Properties (IP Addresses Tab)

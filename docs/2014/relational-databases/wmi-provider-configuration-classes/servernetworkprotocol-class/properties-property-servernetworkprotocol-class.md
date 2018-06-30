@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Properties property"
 ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Properties Property (ServerNetworkProtocol Class)

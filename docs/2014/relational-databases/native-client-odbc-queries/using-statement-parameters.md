@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ODBC applications, statements"
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Using Statement Parameters

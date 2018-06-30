@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "defecting target servers"
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Defect a Target Server from a Master Server

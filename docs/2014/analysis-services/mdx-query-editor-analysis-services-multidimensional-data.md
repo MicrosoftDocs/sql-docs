@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MDX Query Editor"
 ms.assetid: 777f2c23-1c1c-4b72-9d19-48a4866551f8
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDX Query Editor (Analysis Services - Multidimensional Data)
   Use the MDX Query Editor to design and execute statements and scripts written in the Multidimensional Expressions (MDX) language.  

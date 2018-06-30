@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "identity columns [SQL Server], replication"
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Manage Identity Columns

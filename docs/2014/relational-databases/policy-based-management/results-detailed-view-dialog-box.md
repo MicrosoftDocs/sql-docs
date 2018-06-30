@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.dmf.policy.resultdetails.f1"
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Results Detailed View Dialog Box

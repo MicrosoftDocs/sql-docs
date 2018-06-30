@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "tempdb database [SQL Server]"
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # tempdb Database

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.designer.cdcsource.f1"
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # CDC Source

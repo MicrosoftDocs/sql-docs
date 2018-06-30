@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ProcessId property"
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # ProcessId Class (SqlService Class)

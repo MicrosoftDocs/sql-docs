@@ -15,8 +15,8 @@ dev_langs:
   - "TSQL"
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor - Transact-SQL - Tabs Page)

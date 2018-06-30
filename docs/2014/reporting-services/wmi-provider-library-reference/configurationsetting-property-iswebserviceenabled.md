@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "IsWebServiceEnabled property"
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 caps.latest.revision: 18
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # IsWebServiceEnabled Property (WMI MSReportServer_ConfigurationSetting)
   Indicates whether the Report Server Web service is enabled. Read-only.  

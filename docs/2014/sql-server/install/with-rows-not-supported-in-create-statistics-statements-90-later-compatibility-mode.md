@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "WITH ROWS in CREATE STATISTICS statement"
 ms.assetid: 197b2ecf-a1a3-4a3a-a523-a0ee919c1dde
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # WITH ROWS is not supported in CREATE STATISTICS statements in the compatibility mode of 90 or later

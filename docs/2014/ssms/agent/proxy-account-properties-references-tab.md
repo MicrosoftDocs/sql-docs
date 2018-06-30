@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.proxy.references.f1"
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Proxy Account Properties (References Tab)

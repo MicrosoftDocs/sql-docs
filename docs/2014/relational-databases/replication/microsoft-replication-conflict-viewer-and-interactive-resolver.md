@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "interactive resolver [SQL Server replication]"
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Microsoft Replication Conflict Viewer and Interactive Resolver

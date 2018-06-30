@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], exception handling"
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 caps.latest.revision: 28
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Introducing Exception Handling in Reporting Services

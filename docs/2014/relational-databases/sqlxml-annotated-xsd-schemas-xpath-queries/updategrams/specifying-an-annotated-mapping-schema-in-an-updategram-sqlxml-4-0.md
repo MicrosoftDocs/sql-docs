@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sql:inverse"
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Specifying an Annotated Mapping Schema in an Updategram (SQLXML 4.0)

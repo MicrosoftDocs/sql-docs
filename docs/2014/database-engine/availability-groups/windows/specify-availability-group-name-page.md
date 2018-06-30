@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.newagwizard.specifyagname.f1"
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 caps.latest.revision: 12
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Specify Availability Group Name Page (New Availability Group Wizard/Add Database Wizard)

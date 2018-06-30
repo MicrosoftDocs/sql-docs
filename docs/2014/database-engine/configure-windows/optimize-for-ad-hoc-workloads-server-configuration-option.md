@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "optimize for ad hoc workloads option"
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # optimize for ad hoc workloads Server Configuration Option

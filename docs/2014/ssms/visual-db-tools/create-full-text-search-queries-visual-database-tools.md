@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "full-text queries [SQL Server], creating"
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create Full-Text Search Queries (Visual Database Tools)

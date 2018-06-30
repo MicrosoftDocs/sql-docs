@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ClientNetworkProtocol class"
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # ClientNetworkProtocol Class

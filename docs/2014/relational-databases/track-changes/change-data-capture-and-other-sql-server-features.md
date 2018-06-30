@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Change Data Capture and Other SQL Server Features

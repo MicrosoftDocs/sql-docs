@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "multiple AND clauses"
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)

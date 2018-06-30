@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "errors [SQL Server Agent]"
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # View SQL Server Agent Error Log (SQL Server Management Studio)

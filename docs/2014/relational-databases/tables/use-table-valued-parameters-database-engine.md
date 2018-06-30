@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "TVP See table-valued parameters"
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 30
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Use Table-Valued Parameters (Database Engine)

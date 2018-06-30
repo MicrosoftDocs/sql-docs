@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "bcp_gettypename function"
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # bcp_gettypename

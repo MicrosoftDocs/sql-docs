@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Set Breakpoints dialog box"
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Set Breakpoints

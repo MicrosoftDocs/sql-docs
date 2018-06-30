@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "scripts [Integration Services], debugging"
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Debugging Script

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Database Mirroring object"
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, Database Mirroring Object

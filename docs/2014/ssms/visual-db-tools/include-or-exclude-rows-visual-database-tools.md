@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "excluding rows"
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Include or Exclude Rows (Visual Database Tools)

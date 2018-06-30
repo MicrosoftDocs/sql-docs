@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "bcp_control function"
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # bcp_control

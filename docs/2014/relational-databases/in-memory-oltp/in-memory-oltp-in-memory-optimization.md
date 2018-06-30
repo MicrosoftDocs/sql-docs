@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "memory-optimized tables"
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # In-Memory OLTP (In-Memory Optimization)

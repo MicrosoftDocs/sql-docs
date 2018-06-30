@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "backing up databases [SQL Server], backup devices"
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Delete a Backup Device (SQL Server)

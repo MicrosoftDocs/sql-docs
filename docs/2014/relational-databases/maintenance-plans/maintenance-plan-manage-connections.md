@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.maint.connections.f1"
 ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Maintenance Plan (Manage Connections)

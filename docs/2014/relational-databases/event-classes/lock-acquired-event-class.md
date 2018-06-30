@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Acquired event class"
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Lock:Acquired Event Class

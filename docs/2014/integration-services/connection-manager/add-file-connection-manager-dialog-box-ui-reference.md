@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Add File Connection Manager"
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add File Connection Manager Dialog Box UI Reference

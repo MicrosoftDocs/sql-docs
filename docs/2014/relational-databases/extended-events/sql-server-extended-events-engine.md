@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], engine"
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Extended Events Engine

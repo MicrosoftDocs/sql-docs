@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "articles [SQL Server replication], schema options"
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Specify Schema Options

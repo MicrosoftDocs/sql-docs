@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Validate Subscription dialog box"
 ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Validate Subscription

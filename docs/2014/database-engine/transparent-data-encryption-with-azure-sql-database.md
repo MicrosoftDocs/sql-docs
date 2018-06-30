@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "encryption (SQL Database) TDE"
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Transparent Data Encryption with Azure SQL Database

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Policy-Based Management, configure properties"
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Configure the General Properties of Policy-Based Management

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB, interfaces"
 ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Interfaces (OLE DB)

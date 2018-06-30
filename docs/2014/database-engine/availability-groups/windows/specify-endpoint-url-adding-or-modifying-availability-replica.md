@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Endpoint URLs (HADR)"
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 caps.latest.revision: 19
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Specify the Endpoint URL When Adding or Modifying an Availability Replica (SQL Server)

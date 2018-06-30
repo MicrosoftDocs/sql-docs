@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "messages [ODBC]"
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Handling Errors and Messages

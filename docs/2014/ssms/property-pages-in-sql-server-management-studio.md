@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "property pages [SQL Server Management Studio]"
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Property Pages in SQL Server Management Studio

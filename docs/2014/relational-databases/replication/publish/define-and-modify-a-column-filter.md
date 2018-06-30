@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "column filters [SQL Server replication]"
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Define and Modify a Column Filter

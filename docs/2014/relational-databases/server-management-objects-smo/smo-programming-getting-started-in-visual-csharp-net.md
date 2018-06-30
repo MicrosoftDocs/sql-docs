@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Visual C# [SMO]"
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Getting Started in Visual C# .NET

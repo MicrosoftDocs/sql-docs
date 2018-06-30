@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # CLR User-Defined Functions

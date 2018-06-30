@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server]"
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Maintenance Plans

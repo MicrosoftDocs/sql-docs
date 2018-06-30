@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Audit Broker Login event class"
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Audit Broker Login Event Class

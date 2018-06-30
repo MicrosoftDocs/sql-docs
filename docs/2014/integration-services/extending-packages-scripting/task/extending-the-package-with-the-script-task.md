@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SSIS Script task, about Script task"
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Extending the Package with the Script Task

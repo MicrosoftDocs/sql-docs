@@ -14,8 +14,8 @@ f1_keywords:
   - "vdtsql.chm:65548"
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Column Selection Dialog Box (Visual Database Tools)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), how-to topics"
 ms.assetid: 3f52b7a7-f2bd-4455-b79e-d015fb397726
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # ODBC Table-Valued Parameter Programming Examples

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Policy-Based Management, creating policy conditions"
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Create a New Policy-Based Management Condition

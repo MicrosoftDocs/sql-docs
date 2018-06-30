@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION

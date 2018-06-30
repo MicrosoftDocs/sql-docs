@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "local transactions [OLE DB]"
 ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Supporting Local Transactions

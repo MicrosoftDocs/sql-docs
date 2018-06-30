@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Adding Attributes to Dimensions

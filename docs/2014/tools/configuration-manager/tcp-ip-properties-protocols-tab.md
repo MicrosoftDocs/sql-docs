@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "TCP/IP [SQL Server], configuration options"
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 36
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # TCP - IP Properties (Protocols Tab)

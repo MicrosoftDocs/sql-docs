@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "default project locations"
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Change the Default Location for Projects

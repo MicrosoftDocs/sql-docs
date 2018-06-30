@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "views [SMO]"
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Creating, Altering, and Removing Views

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_parammaxlen"
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # srv_parammaxlen (Extended Stored Procedure API)

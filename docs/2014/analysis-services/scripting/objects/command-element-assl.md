@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Command element"
 ms.assetid: 277598b5-9939-4d7f-8c75-06470c3fabdd
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Command Element (ASSL)
   Defines a command that is available for use within the context of the parent element of the [Commands](../collections/commands-element-assl.md) collection.  

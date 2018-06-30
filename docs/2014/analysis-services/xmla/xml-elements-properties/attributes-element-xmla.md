@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Attributes element"
 ms.assetid: c0393de8-44e8-46de-af78-1fd66c218521
 caps.latest.revision: 14
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Attributes Element (XMLA)
   Contains a collection of [Attribute](attribute-element-xmla.md) elements used by the parent [Insert](../xml-elements-commands/insert-element-xmla.md) or [Update](../xml-elements-commands/update-element-xmla.md) command, or by the parent [Where](where-element-xmla.md) element.  

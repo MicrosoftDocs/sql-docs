@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "target servers [SQL Server], modifying"
 ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Modify the Target Servers for a Job

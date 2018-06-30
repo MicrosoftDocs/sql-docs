@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "system health session [SQL Server extended events]"
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Use the system_health Session

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "backward compatibility [Integration Services]"
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 caps.latest.revision: 81
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services Backward Compatibility

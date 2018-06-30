@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "pausing database mirroring"
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Pausing and Resuming Database Mirroring (SQL Server)

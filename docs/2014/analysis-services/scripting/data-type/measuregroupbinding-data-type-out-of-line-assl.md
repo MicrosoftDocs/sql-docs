@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MeasureGroupBinding data type"
 ms.assetid: e6c65597-89ac-457e-a0e5-01d85449a1b7
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MeasureGroupBinding Data Type (out-of-line) (ASSL)
   Defines a primitive data type that represents a binding to a measure group.  

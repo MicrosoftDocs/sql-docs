@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Audit Database Principal Management event class"
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Audit Database Principal Management Event Class

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "StorageMode element"
 ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # StorageMode Element (ASSL)
   Determines the storage mode for the parent element.  

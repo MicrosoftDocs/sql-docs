@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "security [SQL Server], SQL Server Agent"
 ms.assetid: 2e361a62-9e92-4fcd-80d7-d6960f127900
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Configure SQL Server Agent

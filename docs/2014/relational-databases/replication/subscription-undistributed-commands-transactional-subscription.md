@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.subscription.performance.f1"
 ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Subscription, Undistributed Commands (Transactional Subscription, SQL Server 2005 and Later)

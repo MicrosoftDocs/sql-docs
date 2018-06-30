@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "State property"
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # State Property (SqlService Class)

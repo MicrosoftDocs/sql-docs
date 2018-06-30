@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ClientSideXML property"
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Using the SQLXMLOLEDB Provider (SQLXML 4.0)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.job.schedules.f1"
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Job Properties: New Job (Schedules Page)

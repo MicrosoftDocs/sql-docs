@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Cubes element"
 ms.assetid: 0eaaaf3f-0c78-4eb4-bc3a-d266579eca56
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cubes Element (ASSL)
   Contains the collection of [Cube](../objects/cube-element-assl.md) elements associated with a [Database](../objects/database-element-assl.md) element.  

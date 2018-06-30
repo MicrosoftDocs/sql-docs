@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, starting"
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 7
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Run the Transact-SQL Debugger

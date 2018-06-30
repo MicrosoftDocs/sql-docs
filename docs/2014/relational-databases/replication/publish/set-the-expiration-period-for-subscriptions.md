@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "deactivating subscriptions"
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Set the Expiration Period for Subscriptions

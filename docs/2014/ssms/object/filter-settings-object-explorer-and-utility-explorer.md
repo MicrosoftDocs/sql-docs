@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.common.filtersettings.f1"
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Filter Settings (Object Explorer and Utility Explorer)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "triggers [SMO]"
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Creating, Altering, and Removing Triggers

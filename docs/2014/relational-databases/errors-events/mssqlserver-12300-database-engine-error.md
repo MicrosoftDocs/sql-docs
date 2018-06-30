@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "12300 (Database Engine error)"
 ms.assetid: ac71e2e1-5857-4115-a720-7dae08769926
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # MSSQLSERVER_12300

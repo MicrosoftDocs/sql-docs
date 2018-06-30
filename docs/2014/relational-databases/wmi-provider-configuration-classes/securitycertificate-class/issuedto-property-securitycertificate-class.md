@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "IssuedTo property"
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # IssuedTo Property (SecurityCertificate Class)

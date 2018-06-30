@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AllowedRowsExpression Element (ASSL)
   Contains a Data Analysis expression (DAX), of Boolean type, which defines the contents of the parent element.  

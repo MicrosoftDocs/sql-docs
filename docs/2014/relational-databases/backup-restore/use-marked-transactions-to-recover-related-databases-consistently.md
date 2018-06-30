@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "two-phase commit"
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Use Marked Transactions to Recover Related Databases Consistently (Full Recovery Model)

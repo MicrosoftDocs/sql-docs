@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "security [SQL Server], encryption"
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)

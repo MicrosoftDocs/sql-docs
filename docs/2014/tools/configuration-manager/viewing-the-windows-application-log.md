@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "logs [SQL Server], Windows application logs"
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Viewing the Windows Application Log

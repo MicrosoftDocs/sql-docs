@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, BLOBs"
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Streaming Support for BLOB Output Parameters

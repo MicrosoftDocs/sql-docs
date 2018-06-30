@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "bcp_writefmt function"
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # bcp_writefmt

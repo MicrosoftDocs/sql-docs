@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "reports [Reporting Services], opening"
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 caps.latest.revision: 50
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Open and Close a Report (Report Manager)
   You can use Report Manager to view reports that have been published to a report server. By default, all reports open in HTML. After a report is open, you can export it to view it in other application formats. If the report contains interactive features or if it is a Report Builder report that contains interactive data, you can click the links to view additional reports or data.  

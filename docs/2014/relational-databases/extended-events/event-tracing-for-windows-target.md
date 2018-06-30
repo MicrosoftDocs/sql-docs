@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "targets [SQL Server extended events], event tracing for windows target"
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Event Tracing for Windows Target

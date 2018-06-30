@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Log Reader Agent, profiles"
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 caps.latest.revision: 43
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Replication Agent Profiles

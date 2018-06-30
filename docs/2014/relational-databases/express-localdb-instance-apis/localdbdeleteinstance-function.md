@@ -18,8 +18,8 @@ topic_type:
   - "apiref"
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # LocalDBDeleteInstance Function

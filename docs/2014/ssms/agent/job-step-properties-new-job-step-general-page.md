@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.job.stepgeneral.f1"
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Job Step Properties: New Job Step (General Page)

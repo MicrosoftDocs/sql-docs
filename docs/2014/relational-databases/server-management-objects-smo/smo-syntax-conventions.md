@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Management Objects, syntax conventions"
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SMO Syntax Conventions

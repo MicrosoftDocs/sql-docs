@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Visibility element"
 ms.assetid: 59372ebf-af52-4d60-bf9b-bb1644ae9865
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Visibility Element (ASSL)
   Defines the visibility of an [Annotation](../objects/annotation-element-assl.md) element.  

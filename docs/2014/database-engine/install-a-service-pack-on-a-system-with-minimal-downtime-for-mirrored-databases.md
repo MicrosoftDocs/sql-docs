@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "upgrading SQL Server, mirrored databases"
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Install a Service Pack on a System with Minimal Downtime for Mirrored Databases

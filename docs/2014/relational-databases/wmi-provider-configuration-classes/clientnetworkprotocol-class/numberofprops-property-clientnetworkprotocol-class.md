@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "NumberOfProps property"
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # NumberOfProps Property (ClientNetworkProtocol Class)

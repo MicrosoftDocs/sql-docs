@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "deleting traces"
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Delete a Trace (Transact-SQL)

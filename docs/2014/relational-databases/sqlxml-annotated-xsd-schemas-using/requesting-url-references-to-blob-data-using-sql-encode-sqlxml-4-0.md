@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Base 64-encoded format"
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Requesting URL References to BLOB Data Using sql:encode (SQLXML 4.0)

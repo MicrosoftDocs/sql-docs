@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Internet [SQL Server replication], publishing"
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 caps.latest.revision: 30
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Replication over the Internet

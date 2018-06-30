@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "CDATA directive"
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 caps.latest.revision: 9
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Example: Specifying the CDATA Directive

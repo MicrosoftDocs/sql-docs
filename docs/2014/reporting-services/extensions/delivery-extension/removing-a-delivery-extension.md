@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services], removing"
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 caps.latest.revision: 30
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Removing a Delivery Extension

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "report execution time-outs [Reporting Services]"
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 caps.latest.revision: 38
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Setting Time-out Values for Report and Shared Dataset Processing (SSRS)
   You can specify time-out values to set limits on how system resources are used. Report server supports two time-out values:  

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Events element"
 ms.assetid: de887998-dc4b-44dc-8fec-08d67b92f96d
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Events Element (ASSL)
   Defines the collection of [Event](../objects/event-element-assl.md) elements to be captured by a [Trace](../objects/trace-element-assl.md).  

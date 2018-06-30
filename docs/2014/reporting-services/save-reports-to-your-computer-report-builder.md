@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 caps.latest.revision: 5
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Save Reports to Your Computer (Report Builder)
   In Report Builder, you can save a report definitions to your computer. However, when they are saved to your compute,r other users cannot view the reports and reports that reference shared data sources or store report items such as images and subreports externally might not run. It is recommended that you save reports to a report server or SharePoint site.  

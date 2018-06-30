@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "roles [Reporting Services], methods"
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 caps.latest.revision: 42
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Authorization Methods

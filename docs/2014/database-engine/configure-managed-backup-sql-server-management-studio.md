@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.managedbackup.configure.f1"
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Configure Managed Backup (SQL Server Management Studio)

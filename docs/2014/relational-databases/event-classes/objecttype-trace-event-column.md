@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Object Type column values [SQL Server]"
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # ObjectType Trace Event Column

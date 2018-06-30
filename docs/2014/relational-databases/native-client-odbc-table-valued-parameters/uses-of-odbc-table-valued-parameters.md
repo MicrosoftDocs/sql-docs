@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "ODBC, table-valued parameters"
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Uses of ODBC Table-Valued Parameters

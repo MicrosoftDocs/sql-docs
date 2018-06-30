@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "snapshots [SQL Server replication], properties"
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 caps.latest.revision: 36
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Configure Snapshot Properties (Replication Transact-SQL Programming)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "master SQL Server Agent job [SQL Server]"
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create a SQL Server Agent Master Job

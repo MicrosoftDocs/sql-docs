@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.loaddimwizard.scdsupport.f1"
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)

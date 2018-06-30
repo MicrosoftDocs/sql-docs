@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Profiler [SQL Server Profiler], replaying traces"
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Replay Traces

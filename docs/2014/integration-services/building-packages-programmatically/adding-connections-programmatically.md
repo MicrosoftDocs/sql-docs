@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "adding package connections"
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Adding Connections Programmatically

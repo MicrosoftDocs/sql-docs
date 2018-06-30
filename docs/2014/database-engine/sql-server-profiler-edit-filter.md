@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.pro.editfilter.f1"
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Profiler - Edit Filter

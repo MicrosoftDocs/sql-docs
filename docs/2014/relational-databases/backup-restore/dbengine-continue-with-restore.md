@@ -9,8 +9,8 @@ ms.technology:
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Continue with Restore

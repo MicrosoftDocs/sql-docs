@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "operators [SQLXML]"
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # XPath Data Types (SQLXML 4.0)

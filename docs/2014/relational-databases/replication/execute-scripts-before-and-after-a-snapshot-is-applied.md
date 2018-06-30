@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], scripts"
 ms.assetid: b7bb1e4c-5b48-4bb1-9dc8-47c911f2cc82
 caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Execute Scripts Before and After a Snapshot Is Applied (SQL Server Management Studio)

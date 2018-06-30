@@ -9,8 +9,8 @@ ms.technology:
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Backup Files Must Be on Separate Devices from the Database Files

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sql:inverse"
 ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Specifying the sql:inverse Attribute on sql:relationship (SQLXML 4.0)

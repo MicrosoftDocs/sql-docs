@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLParamData function"
 ms.assetid: 92349482-ea22-4a6a-8484-e9c6566794fa
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLParamData

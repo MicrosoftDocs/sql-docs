@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.publicationdatabase.f1"
 ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Publication Database

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Deprecation Announcement event class"
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Deprecation Announcement Event Class

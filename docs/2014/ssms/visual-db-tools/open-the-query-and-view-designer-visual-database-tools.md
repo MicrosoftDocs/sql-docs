@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "opening Query Designer"
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Open the Query and View Designer (Visual Database Tools)

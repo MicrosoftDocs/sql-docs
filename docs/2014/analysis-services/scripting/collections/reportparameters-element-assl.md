@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ReportParameters element"
 ms.assetid: 0e138e8f-8313-47f2-96e1-cd189eec26bb
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ReportParameters Element (ASSL)
   Contains the collection of [ReportParameter](../objects/reportparameter-element-assl.md) elements for a [ReportAction](../data-type/action-data-type-assl.md) element.  

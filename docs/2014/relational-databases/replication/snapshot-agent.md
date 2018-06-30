@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Snapshot Agent dialog box"
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Snapshot Agent

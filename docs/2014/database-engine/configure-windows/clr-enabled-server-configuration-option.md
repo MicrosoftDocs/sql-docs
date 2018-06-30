@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "clr enabled option"
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # clr enabled Server Configuration Option

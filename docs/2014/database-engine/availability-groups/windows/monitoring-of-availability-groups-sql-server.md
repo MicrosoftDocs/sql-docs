@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], troubleshooting"
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 caps.latest.revision: 23
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Monitoring of Availability Groups (SQL Server)

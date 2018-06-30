@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "statistics [SQL Server], viewing properties"
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # View Statistics Properties

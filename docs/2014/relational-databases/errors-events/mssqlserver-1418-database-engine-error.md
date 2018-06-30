@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "1418 (Database Engine error)"
 ms.assetid: 6e9c7241-0201-44e0-9f8b-b3c4e293f0f6
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # MSSQLSERVER_1418

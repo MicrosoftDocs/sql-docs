@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "servers [SQL Server], administering"
 ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Administer Servers with SQL Server Management Studio

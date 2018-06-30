@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newsubwizard.hostnamevalue.f1"
 ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # HOST_NAME Values

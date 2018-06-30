@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.databaseproperties.logshipping.settings.tlogback.f1"
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Log Shipping Transaction Log Backup Settings

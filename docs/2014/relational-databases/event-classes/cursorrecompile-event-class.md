@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "CursorRecompile event class"
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # CursorRecompile Event Class

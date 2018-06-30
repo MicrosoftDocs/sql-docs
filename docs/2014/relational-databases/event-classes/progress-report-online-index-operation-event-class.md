@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Progress Report: Online Index Operation event class [SQL Server]"
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Progress Report: Online Index Operation Event Class

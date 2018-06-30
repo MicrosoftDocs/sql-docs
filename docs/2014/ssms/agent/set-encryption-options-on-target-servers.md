@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "multiserver environments [SQL Server], setting encryption options on target servers"
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Set Encryption Options on Target Servers

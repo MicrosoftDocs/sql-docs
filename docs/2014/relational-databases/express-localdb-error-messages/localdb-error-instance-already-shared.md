@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_ALREADY_SHARED

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "axes [SQLXML]"
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Specifying Axes in XPath Queries (SQLXML 4.0)

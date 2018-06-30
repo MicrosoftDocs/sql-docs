@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "Replication Monitor, publication and subscription status"
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # View Publication and Subscription Status in Replication Monitor

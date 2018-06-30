@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "escape macros [SQL Server Agent]"
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Use Tokens in Job Steps

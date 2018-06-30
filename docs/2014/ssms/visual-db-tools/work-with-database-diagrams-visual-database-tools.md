@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "diagrams [SQL Server]"
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Work with Database Diagrams (Visual Database Tools)

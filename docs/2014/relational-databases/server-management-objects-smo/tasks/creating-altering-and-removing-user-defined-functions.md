@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "user-defined functions [SMO]"
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Creating, Altering, and Removing User-Defined Functions

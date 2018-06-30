@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "modulo operator (%)"
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # (Modulo) (SSIS Expression)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.publisherinfo.subscriptionssummary.tran.f1"
 ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Publisher Information, Subscription Watch List (Transactional Publication, SQL Server 2005 and Later)

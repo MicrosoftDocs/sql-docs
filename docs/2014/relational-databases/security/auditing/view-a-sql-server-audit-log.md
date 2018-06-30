@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "logs [SQL Server], audit"
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # View a SQL Server Audit Log

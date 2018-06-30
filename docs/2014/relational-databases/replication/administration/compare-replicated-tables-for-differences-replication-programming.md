@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "comparing replicated tables"
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Compare Replicated Tables for Differences (Replication Programming)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "security [SQL Server replication], Subscribers"
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Secure the Subscriber

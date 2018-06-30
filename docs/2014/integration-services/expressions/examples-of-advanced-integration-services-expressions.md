@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "examples [Integration Services]"
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Examples of Advanced Integration Services Expressions

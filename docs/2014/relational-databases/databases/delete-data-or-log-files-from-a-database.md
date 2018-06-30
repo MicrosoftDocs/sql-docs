@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "deleting data"
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Delete Data or Log Files from a Database

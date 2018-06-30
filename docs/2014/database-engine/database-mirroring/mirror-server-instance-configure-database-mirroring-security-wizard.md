@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.configdbmsecurwiz.mirrorsrvr.f1"
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Mirror Server Instance (Configure Database Mirroring Security Wizard)

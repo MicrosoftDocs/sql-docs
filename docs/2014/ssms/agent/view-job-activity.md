@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "displaying job activity"
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # View Job Activity

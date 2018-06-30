@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "consumer notification for rowset changes [SQL Server Native Client]"
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Working with Query Notifications

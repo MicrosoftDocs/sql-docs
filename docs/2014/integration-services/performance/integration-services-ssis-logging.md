@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "SQL Server log provider"
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services (SSIS) Logging

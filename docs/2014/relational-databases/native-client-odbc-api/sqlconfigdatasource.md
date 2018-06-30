@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLConfigDataSource function"
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLConfigDataSource

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "full transaction logs [SQL Server]"
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)

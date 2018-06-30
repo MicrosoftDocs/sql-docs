@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "polling interval [SQL Server]"
 ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Poll Servers

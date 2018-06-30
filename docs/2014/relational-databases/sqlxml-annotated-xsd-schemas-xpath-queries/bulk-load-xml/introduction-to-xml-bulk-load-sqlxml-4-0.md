@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "streaming XML data"
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Introduction to XML Bulk Load (SQLXML 4.0)

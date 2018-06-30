@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "modifying database configuration settings"
 ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
 caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Change the Configuration Settings for a Database

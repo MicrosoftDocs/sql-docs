@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "defaults [SMO]"
 ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Creating, Altering, and Removing Defaults

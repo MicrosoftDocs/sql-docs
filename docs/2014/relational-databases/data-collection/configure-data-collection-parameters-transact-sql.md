@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data collection [SQL Server]"
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Configure Data Collection Parameters (Transact-SQL)

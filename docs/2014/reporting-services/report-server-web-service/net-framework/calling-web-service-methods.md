@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SOAP [Reporting Services], calls"
 ms.assetid: f6f0c6e3-8bb5-4c44-9d19-1872edc72746
 caps.latest.revision: 37
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Calling Web Service Methods

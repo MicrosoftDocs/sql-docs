@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data files [SQL Server], changing default location"
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # View or Change the Default Locations for Data and Log Files (SQL Server Management Studio)

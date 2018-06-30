@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "connection managers [Integration Services], copying"
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Copy Package Objects

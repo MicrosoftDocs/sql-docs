@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "OLE DB, how-to topics"
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # OLE DB How-to Topics

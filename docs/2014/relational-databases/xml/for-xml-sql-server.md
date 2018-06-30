@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "XML [SQL Server], construction"
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # FOR XML (SQL Server)

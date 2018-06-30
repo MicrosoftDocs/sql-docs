@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "transactions [CLR integration]"
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # CLR Integration and Transactions

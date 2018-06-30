@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "logins [SQL Server], names"
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Rename logins matching fixed server role names

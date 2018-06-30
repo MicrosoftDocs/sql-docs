@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "data adapters [CLR integration]"
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Updating UDT Columns with DataAdapters

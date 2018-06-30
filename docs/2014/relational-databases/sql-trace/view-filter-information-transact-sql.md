@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "viewing filter information"
 ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # View Filter Information (Transact-SQL)

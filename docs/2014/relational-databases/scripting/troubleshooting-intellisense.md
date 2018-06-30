@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "troubleshooting [IntelliSense]"
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 caps.latest.revision: 40
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Troubleshooting IntelliSense (SQL Server Management Studio)

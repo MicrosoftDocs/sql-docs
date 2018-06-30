@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "agents [SQL Server replication], performance"
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Enhance Merge Replication Performance

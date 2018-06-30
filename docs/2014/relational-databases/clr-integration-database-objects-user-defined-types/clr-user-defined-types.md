@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "indexes [CLR integration]"
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 caps.latest.revision: 66
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # CLR User-Defined Types

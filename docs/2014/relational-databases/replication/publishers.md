@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.configuredistributionwizard.enablepublishers.f1"
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Publishers

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "dropping columns"
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Remove Columns from Queries (Visual Database Tools)

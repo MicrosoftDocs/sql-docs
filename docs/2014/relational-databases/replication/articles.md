@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.articles.f1"
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Articles

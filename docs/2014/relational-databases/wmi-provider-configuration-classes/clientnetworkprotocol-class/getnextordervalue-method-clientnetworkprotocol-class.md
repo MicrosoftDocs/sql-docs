@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "GetNextOrderValue method"
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # GetNextOrderValue Method (ClientNetworkProtocol Class)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], check"
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Disable Check Constraints for Replication

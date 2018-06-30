@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Cache transform"
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Cache Transform

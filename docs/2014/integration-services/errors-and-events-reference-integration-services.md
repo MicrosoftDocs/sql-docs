@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Integration Services, errors"
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Errors and Events Reference (Integration Services)

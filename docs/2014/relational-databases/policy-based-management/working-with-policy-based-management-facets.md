@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "copying Policy-Based Management facets"
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Working with Policy-Based Management Facets

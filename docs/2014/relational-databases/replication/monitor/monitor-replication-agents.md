@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Distribution Agent, monitoring"
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Monitor Replication Agents

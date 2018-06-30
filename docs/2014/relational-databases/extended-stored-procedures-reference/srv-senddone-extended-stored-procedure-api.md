@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_senddone"
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # srv_senddone (Extended Stored Procedure API)

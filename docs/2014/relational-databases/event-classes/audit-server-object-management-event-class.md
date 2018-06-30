@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Audit Server Object Management event class"
 ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Audit Server Object Management Event Class

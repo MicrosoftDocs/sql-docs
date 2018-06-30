@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services], data streams"
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
 caps.latest.revision: 33
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Using the RenderedOutputFile Class for a Delivery Extension

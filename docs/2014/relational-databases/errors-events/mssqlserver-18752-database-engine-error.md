@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "18752 (Database Engine error)"
 ms.assetid: 234c58d8-7a1e-4b07-a64b-32a311527980
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_18752

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Keys element"
 ms.assetid: 67291791-0032-412a-9a4f-74f68533e83d
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Keys Element (XMLA)
   Contains a collection of [Key](key-element-xmla.md) elements used to identify the member keys of the attribute member represented by the parent [Attribute](attribute-element-xmla.md) element.  

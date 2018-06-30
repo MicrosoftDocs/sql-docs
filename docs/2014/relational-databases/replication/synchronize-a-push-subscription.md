@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "push subscriptions [SQL Server replication], synchronizing"
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 caps.latest.revision: 42
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Synchronize a Push Subscription

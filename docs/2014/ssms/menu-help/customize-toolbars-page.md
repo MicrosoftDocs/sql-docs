@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.vs.customizetool.f1"
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Customize (Toolbars Page)

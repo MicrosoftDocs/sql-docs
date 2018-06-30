@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "TuningOptions element"
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # TuningOptions Element (DTA)

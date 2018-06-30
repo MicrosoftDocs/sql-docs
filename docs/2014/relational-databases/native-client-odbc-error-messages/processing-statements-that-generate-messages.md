@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "SQLExecDirect function"
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Processing Statements That Generate Messages

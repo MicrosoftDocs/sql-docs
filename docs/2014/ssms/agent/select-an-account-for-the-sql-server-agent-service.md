@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "security [SQL Server], SQL Server Agent"
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Select an Account for the SQL Server Agent Service

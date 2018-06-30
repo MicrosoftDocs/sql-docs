@@ -13,8 +13,8 @@ f1_keywords:
   - "vdt.designers.properties.QueryViewColumn"
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Table-Valued Object (Column) Properties (Visual Database Tools)

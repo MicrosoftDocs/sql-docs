@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], host protection attributes"
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Disallowed Types and Members in mscorlib.dll

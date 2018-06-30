@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.QueryResults.AnalysisServer.AnalysisServicesResulstsGeneral"
 ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 caps.latest.revision: 22
-author: "HeidiSteen"
-ms.author: "heidist"
+author: heidisteen
+ms.author: heidist
 manager: craigg
 ---
 # Options (Query Results-Analysis Server-General Page)

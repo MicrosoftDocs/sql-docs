@@ -16,8 +16,8 @@ f1_keywords:
   - "sql12.swb.newagwizard.results.f1"
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Results Page (AlwaysOn Availability Group Wizards)

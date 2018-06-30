@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "security [SQL Server replication], passwords"
 ms.assetid: 277759f9-b0da-4524-8abe-0460cdab69ec
 caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Manage Logins and Passwords in Replication

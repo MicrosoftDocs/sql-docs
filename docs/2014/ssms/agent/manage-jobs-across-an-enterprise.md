@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "target servers [SQL Server], job changes"
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Manage Jobs Across an Enterprise

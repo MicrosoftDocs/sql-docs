@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services containers"
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services Containers

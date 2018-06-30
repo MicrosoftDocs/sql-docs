@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "AND, Criteria pane"
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)

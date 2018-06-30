@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Monitor [SQL Server]"
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # SQL Server Monitor Overview

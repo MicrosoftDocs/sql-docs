@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Fuzzy Grouping Transformation Editor"
 ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Fuzzy Grouping Transformation Editor (Connection Manager Tab)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.table.tablerecreatenosave.f1"
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Save (Not Permitted) Dialog Box

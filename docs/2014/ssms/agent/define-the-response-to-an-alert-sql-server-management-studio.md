@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "responding to alerts"
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Define the Response to an Alert (SQL Server Management Studio)

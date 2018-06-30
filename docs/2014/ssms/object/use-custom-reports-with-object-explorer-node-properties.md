@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], custom reports"
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Use Custom Reports with Object Explorer Node Properties

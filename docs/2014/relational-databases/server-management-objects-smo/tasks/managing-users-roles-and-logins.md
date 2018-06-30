@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "users [SMO]"
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Managing Users, Roles, and Logins

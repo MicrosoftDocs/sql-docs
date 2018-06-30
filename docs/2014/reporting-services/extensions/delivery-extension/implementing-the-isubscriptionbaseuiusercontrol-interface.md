@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services], user controls"
 ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Implementing the ISubscriptionBaseUIUserControl Interface for a Delivery Extension

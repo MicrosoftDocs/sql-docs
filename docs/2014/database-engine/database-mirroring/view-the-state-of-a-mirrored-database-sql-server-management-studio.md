@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], states"
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # View the State of a Mirrored Database (SQL Server Management Studio)

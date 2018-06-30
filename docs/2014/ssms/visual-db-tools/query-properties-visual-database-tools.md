@@ -14,8 +14,8 @@ f1_keywords:
   - "vdt.ppg.querydesigner.query"
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Query Properties (Visual Database Tools)

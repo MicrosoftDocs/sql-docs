@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Data Profiling Task Editor"
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Value Inclusion Profile Request Options (Data Profiling Task)

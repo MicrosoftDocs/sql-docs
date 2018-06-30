@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "3437 (Database Engine error)"
 ms.assetid: b38216e2-b650-43bd-97af-061d54f60031
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_3437

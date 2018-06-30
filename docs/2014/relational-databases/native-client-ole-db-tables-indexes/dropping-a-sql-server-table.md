@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "dropping tables"
 ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Dropping a SQL Server Table

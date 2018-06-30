@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "non-uniform memory access"
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Configure SQL Server to Use Soft-NUMA (SQL Server)

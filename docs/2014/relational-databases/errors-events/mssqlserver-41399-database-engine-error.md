@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "41399 (Database Engine error)"
 ms.assetid: 5e5acb07-16ca-4329-8210-cd2bab0c904f
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # MSSQLSERVER_41399

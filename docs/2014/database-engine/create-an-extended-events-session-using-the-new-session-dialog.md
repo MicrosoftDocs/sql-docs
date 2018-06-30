@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Extended Events Dialog Box"
 ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Create an Extended Events Session Using the New Session Dialog

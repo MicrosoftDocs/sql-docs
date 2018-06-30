@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "backing up [SQL Server], viewing backup sets"
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # View the Data and Log Files in a Backup Set (SQL Server)

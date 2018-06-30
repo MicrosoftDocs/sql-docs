@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DependsOnDimensionID element"
 ms.assetid: 66ec20dd-b475-4895-a92c-7ac0e7e1c675
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DependsOnDimensionID Element (ASSL)
   Contains the identifier (ID) of another dimension on which the parent dimension depends.  

@@ -13,9 +13,9 @@ f1_keywords:
   - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 caps.latest.revision: 8
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Add Custom Locations to a Map (Report Builder and SSRS)
   After you add a map to a report, you can add your own point locations.  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Reordering Data in a Hierarchical Table Using Hierarchical Methods

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "constraints [Integration Services]"
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Connecting Tasks Programmatically

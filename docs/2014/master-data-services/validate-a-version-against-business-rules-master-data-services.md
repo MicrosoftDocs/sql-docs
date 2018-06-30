@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "business rules [Master Data Services], applying to all members"
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Validate a Version against Business Rules (Master Data Services)

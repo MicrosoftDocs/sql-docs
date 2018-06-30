@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "queries [SQL Server], creating"
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create Queries (Visual Database Tools)

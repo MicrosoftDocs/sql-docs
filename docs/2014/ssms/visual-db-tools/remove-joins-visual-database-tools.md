@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "deleting joins"
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Remove Joins (Visual Database Tools)

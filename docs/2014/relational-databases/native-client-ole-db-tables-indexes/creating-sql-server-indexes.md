@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "adding indexes"
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Creating SQL Server Indexes

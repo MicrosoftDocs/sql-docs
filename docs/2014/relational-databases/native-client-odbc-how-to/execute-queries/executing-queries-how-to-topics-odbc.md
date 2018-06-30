@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "queries [ODBC]"
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Executing Queries How-to Topics (ODBC)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Original element"
 ms.assetid: c98a3700-ac19-4341-85d9-5afedf662601
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Original Element (XMLA)
   Contains the original file system storage location used by a [Folder](folder-element-xmla.md) element.  

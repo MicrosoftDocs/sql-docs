@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "installing SQL Server, how-to topics"
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Installation How-to Topics

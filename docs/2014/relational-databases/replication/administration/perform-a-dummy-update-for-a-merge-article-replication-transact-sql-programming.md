@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "dummy updates [SQL Server replication]"
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 caps.latest.revision: 30
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Perform a Dummy Update for a Merge Article (Replication Transact-SQL Programming)

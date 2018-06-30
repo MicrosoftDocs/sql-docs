@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQLXML, formats"
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Client-side and Server-side Formatting (SQLXML 4.0)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "alerts [SQL Server], forwarded events"
 ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Designate an Events Forwarding Server (SQL Server Management Studio)

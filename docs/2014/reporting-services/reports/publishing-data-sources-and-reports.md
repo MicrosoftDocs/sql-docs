@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "data sources [Reporting Services], managing"
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 caps.latest.revision: 11
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Publishing Data Sources and Reports
   Before publishing your report, you should preview the report to see how it will look when it is run. You can continue to refine the design until you are satisfied with the results.  

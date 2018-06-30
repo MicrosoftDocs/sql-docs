@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], witness"
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Add a Database Mirroring Witness Using Windows Authentication (Transact-SQL)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], disabling"
 ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Disable or Enable a Job

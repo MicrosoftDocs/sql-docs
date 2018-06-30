@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.treeview.f1"
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # SSIS Package Explorer Tab

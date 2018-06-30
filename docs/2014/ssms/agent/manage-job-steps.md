@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "job steps [Analysis Services]"
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Manage Job Steps

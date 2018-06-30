@@ -15,8 +15,8 @@ f1_keywords:
   - "sql12.dqs.kb.kbmatchingpolicy.f1"
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Create a Matching Policy

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server]"
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 caps.latest.revision: 11
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # View Availability Group Properties (SQL Server)

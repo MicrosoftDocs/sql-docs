@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "disabling plan guides"
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Enable or Disable a Plan Guide

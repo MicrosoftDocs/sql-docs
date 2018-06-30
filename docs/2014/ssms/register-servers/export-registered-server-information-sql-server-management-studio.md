@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "transferring registered server information"
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Export Registered Server Information (SQL Server Management Studio)

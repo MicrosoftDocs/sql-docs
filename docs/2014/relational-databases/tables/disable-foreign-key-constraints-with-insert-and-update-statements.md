@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], foreign key constraints"
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Disable Foreign Key Constraints with INSERT and UPDATE Statements

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "grouping tasks"
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Group or Ungroup Components

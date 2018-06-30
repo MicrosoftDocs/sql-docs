@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLServer: Resource Pool Stats object"
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # SQL Server, Resource Pool Stats Object

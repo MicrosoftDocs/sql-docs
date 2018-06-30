@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "location path for XPath query"
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Specifying Selection Predicates in the Location Path (SQLXML 4.0)

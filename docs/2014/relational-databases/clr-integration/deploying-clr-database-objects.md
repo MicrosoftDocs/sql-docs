@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "deploying [CLR integration]"
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Deploying CLR Database Objects

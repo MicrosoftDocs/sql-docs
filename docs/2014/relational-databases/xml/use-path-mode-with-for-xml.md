@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XPath queries [SQL Server]"
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Use PATH Mode with FOR XML

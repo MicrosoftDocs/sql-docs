@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQLXML"
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLXML 4.0 Programming Concepts

@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.dc.datacollectionprop.general.f1"
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Configure Properties of a Data Collector

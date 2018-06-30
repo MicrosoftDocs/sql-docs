@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Database Engine"
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # SQL Server Database Engine

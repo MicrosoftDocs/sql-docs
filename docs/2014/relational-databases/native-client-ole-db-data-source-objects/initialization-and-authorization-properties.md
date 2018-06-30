@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "initialization properties [OLE DB]"
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Initialization and Authorization Properties

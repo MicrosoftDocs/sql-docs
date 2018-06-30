@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLNumResultCols function"
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLNumResultCols

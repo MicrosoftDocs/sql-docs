@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "connections [SQL Server], database mirroring"
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Connect Clients to a Database Mirroring Session (SQL Server)

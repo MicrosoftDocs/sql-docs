@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Exchange Spill event class"
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Exchange Spill Event Class

@@ -14,8 +14,8 @@ f1_keywords:
   - "vdt.dlgbox.description"
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Description Property Dialog Box (Visual Database Tools)

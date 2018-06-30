@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "2574 (Database Engine error)"
 ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_2574

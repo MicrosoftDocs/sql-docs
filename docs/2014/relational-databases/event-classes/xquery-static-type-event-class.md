@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "XQuery Static Type event class"
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # XQuery Static Type Event Class

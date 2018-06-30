@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CustomRollupColumn element"
 ms.assetid: 8c825f16-0d17-4ff8-bc18-b52cf11edba7
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CustomRollupColumn Element (ASSL)
   Defines the details of the column that provide a custom rollup formula.  

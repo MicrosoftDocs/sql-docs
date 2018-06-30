@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLXML, about SQLXML"
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Guidelines and Limitations of SQLXML 4.0

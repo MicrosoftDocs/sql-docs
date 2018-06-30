@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "UnknownMemberName element"
 ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # UnknownMemberName Element (ASSL)
   Contains the caption, in the default language of the dimension, for the unknown member of the dimension.  

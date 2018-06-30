@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Exception event class"
 ms.assetid: 5a45dfa7-51fc-420c-96f6-ce2a1f61b684
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Exception Event Class

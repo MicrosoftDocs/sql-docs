@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "databases [SQL Server], moving"
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 caps.latest.revision: 36
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Move User Databases

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.operator.delete.f1"
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Delete Operator

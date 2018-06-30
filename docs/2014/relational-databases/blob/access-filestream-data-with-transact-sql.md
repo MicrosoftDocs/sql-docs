@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], Transact-SQL"
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Access FILESTREAM Data with Transact-SQL

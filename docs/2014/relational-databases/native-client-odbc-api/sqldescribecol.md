@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLDescribeCol function"
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLDescribeCol

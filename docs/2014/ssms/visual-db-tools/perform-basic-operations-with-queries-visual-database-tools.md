@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Perform Basic Operations with Queries (Visual Database Tools)

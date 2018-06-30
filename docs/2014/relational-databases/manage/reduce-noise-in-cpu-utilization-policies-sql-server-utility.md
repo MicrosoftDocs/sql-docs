@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.SWB.UE.ReduceNoise.F1"
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Reduce Noise in CPU Utilization Policies (SQL Server Utility)

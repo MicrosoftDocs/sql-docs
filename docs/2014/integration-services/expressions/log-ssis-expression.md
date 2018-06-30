@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "LOG function"
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # LOG (SSIS Expression)

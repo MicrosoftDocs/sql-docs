@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "modifying SQL Server Agent proxy"
 ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Modify a SQL Server Agent Proxy

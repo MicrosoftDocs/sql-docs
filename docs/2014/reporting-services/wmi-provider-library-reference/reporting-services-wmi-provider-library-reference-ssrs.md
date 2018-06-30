@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "WMI provider [Reporting Services], library"
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
 caps.latest.revision: 42
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Reporting Services WMI Provider Library Reference (SSRS)
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider supports WMI operations that enable you to write scripts and code to modify settings of the report server and Report Manager.  

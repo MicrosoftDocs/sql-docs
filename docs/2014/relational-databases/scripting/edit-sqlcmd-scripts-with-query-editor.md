@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Edit SQLCMD Scripts with Query Editor

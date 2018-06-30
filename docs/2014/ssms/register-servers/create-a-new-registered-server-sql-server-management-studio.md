@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], creating new registered servers"
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Create a New Registered Server (SQL Server Management Studio)

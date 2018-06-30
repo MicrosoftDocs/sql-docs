@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.job.alerts.f1"
 ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Job Properties: New Job (Alerts Page)

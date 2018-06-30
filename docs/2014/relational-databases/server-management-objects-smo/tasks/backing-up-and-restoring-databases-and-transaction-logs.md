@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "database restores [SMO]"
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Backing Up and Restoring Databases and Transaction Logs

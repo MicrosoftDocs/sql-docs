@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Policy-Based Management, delete policy conditions"
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Delete a Policy-Based Management Condition

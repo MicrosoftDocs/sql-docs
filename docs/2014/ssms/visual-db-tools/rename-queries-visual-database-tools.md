@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "queries [SQL Server], names"
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Rename Queries (Visual Database Tools)

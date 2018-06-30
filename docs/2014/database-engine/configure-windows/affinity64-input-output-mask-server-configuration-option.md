@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "affinity64 I/O mask option"
 ms.assetid: d304eae7-5116-40ee-a0fa-0a3c0bc20c01
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # affinity64 Input-Output mask Server Configuration Option

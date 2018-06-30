@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], what's new"
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 caps.latest.revision: 206
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # What&#39;s New (Database Engine)

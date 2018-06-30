@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "versions [Master Data Services], committing"
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Commit a Version (Master Data Services)

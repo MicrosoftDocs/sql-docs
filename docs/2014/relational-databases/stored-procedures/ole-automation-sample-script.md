@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server], examples"
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # OLE Automation Sample Script

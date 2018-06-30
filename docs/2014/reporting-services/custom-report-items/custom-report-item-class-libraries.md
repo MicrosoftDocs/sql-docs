@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "RDL [Reporting Services], custom report items"
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 caps.latest.revision: 27
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Custom Report Item Class Libraries

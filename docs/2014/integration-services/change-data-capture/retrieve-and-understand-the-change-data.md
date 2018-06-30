@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "incremental load [Integration Services],retrieving data"
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Retrieve and Understand the Change Data

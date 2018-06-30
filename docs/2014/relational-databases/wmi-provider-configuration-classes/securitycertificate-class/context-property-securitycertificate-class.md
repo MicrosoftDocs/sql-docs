@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Context property"
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Context Property (SecurityCertificate Class)

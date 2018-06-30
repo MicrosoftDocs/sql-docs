@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.adonetsource.erroroutput.f1"
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # ADO NET Source Editor (Error Output Page)

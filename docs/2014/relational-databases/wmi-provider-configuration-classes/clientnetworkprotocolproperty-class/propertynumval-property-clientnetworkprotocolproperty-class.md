@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "PropertyNumVal property"
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # PropertyNumVal Property (ClientNetworkProtocolProperty Class)

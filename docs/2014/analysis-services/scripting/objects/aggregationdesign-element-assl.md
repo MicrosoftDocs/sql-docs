@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AggregationDesign element"
 ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AggregationDesign Element (ASSL)
   Defines a set of aggregation definitions that can be shared across multiple partitions in a database.  

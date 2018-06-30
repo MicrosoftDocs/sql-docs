@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "operators (users) [Database Engine], deleting with Management Studio"
 ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Delete an Operator

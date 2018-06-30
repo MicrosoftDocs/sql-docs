@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data types [Integration Services], converting"
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Cast (SSIS Expression)

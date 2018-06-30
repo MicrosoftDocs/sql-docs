@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "F1 Help [SQL Server replication]"
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Properties Reference (Replication)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.replconflictviewer.cvqueued.f1"
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Microsoft Replication Conflict Viewer (Transactional Replication)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "TM: Promote Tran Completed event class"
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # TM: Promote Tran Completed Event Class

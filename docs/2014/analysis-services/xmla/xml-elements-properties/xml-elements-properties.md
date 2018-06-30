@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "XMLA, properties"
 ms.assetid: 7aa5815f-d614-497b-a9eb-f6284772bda8
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Properties (XMLA)
   The XML for Analysis (XMLA) protocol uses XML elements to represent property information and values for XMLA headers, methods, objects, commands, and data types.  

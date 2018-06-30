@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "DiffGrams [SQLXML], about DiffGrams"
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Guidelines and Limitations of DiffGrams in SQLXML

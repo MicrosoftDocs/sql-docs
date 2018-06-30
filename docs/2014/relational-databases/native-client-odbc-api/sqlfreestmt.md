@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLFreeStmt function"
 ms.assetid: d9666d0b-3446-480e-bf1a-10b01213e411
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLFreeStmt

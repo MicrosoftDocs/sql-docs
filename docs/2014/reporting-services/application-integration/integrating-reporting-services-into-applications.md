@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], integrating"
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
 caps.latest.revision: 56
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Integrating Reporting Services into Applications

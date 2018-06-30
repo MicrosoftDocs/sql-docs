@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Filter a Trace

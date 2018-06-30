@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "importing trace templates"
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Import a Trace Template (SQL Server Profiler)

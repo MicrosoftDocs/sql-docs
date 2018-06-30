@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "technical reference [SQL Server replication]"
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Technical Reference (Replication)

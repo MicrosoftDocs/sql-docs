@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "mining models [Analysis Services], modifying"
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Moving Data Mining Objects
   The most common scenarios for moving data mining objects are to deploy a model from a testing or analysis environment to a production environment, or to share models with other users.  

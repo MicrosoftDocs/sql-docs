@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "CLSID"
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Data Source Objects (OLE DB)

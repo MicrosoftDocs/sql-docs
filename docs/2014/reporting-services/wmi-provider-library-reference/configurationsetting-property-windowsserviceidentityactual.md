@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "WindowsServiceIdentityActual property"
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 caps.latest.revision: 16
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # WindowsServiceIdentityActual Property (WMI MSReportServer_ConfigurationSetting)
   The identity that the Report Server Windows service is running under. Read-only.  

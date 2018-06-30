@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "event classes [SQL Server], Broker event category"
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Broker Event Category

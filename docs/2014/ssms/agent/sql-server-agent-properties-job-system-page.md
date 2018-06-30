@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.agent.job.f1"
 ms.assetid: e171d13e-1302-4f0e-88be-67d656aec8d3
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # SQL Server Agent Properties (Job System Page)

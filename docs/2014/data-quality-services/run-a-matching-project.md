@@ -15,8 +15,8 @@ f1_keywords:
   - "sql12.dqs.matchingproject.map.f1"
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Run a Matching Project

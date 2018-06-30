@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data parsing [Integration Services]"
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Parsing Data

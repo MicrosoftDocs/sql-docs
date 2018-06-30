@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "attributes [Master Data Services], domain-based attributes"
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Domain-Based Attributes (Master Data Services)

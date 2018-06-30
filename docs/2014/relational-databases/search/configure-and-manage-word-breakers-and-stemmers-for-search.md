@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "word breakers [full-text search]"
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 caps.latest.revision: 88
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Configure and Manage Word Breakers and Stemmers for Search

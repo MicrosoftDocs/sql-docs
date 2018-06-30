@@ -13,9 +13,9 @@ f1_keywords:
   - "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 caps.latest.revision: 8
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Report Sections Dialog Box (Report Builder)
   When you open a report, Report Builder verifies that the report contains only one Report Definition Language (RDL) **\<Section>** element. Opening a report with multiple **\<Section>** elements is not supported.  

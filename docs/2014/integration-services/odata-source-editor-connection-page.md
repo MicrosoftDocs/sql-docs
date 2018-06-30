@@ -13,8 +13,8 @@ f1_keywords:
   - "Sql12.dts.designer.odatasource.connection.f1"
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # OData Source Editor (Connection Page)

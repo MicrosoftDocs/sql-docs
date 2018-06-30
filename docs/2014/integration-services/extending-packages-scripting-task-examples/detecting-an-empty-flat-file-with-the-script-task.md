@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Detecting an Empty Flat File with the Script Task

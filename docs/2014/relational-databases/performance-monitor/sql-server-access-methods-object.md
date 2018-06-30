@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLServer:Access Methods"
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # SQL Server, Access Methods Object

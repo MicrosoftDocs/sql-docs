@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "merge replication conflict resolution [SQL Server replication], merge article resolvers"
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Specify a Merge Article Resolver

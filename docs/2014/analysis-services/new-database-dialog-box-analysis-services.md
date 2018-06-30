@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.sqlserverstudio.newdatabase.f1"
 ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # New Database Dialog Box (Analysis Services)
   Use the **New Database** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to create a new, empty [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **New Database** dialog box by right-clicking the **Databases** folder of an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance in **Object Explorer** and selecting **New Database**.  

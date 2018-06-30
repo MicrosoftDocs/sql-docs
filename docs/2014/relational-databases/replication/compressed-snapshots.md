@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "compressed snapshots [SQL Server replication]"
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Compressed Snapshots

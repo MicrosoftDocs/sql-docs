@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server, installing"
 ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # What&#39;s New in SQL Server Installation

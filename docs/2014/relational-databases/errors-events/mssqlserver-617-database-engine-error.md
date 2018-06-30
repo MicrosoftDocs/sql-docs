@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "617 (Database Engine error)"
 ms.assetid: 213545d9-08a7-4427-bfd1-8b7e16644281
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_617

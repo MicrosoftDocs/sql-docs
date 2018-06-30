@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Working with Excel Files with the Script Task

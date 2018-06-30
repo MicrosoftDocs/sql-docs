@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "queries [SQL Server], copying"
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Copy Queries (Visual Database Tools)

@@ -9,8 +9,8 @@ ms.technology:
   - "dbe-security"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Transparent Data Encryption with Azure SQL Database

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Showplan XML event class"
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Showplan XML Event Class

@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "Version property"
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 caps.latest.revision: 9
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Version Property (WMI MSReportServer_Instance)
   Returns the version of the report server in the format Major.Minor.Build.Revision. Read-only.  

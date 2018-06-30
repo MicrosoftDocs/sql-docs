@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "GetProperties method"
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 caps.latest.revision: 37
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Setting the Item Namespace for the GetProperties Method

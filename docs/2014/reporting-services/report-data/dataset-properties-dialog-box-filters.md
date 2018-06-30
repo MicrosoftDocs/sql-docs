@@ -14,9 +14,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.datasetproperties.filters.f1"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: 37
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Dataset Properties Dialog Box, Filters
   Select **Filters** on the **Dataset Properties** dialog box to create filters for the dataset.  

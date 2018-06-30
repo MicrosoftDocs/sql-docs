@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "row additions [SQL Server], Results pane"
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Add New Rows in the Results Pane (Visual Database Tools)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "21871 (Database Engine error)"
 ms.assetid: d3215378-9282-444f-a18b-00b96fd0133d
 caps.latest.revision: 7
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # MSSQLSERVER_21871

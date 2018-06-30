@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "accelerator keys"
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Customize Menus and Shortcut Keys

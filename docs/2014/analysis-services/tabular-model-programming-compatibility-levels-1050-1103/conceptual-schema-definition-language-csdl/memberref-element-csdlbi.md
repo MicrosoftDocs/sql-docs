@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
 caps.latest.revision: 4
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MemberRef Element (CSDLBI)
   The MemberRef element identifies the name of a property that is the target of a reference.  

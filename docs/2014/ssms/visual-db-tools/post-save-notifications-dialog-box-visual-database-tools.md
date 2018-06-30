@@ -15,8 +15,8 @@ f1_keywords:
   - "vdtsql.chm:98831"
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Post-Save Notifications Dialog Box (Visual Database Tools)

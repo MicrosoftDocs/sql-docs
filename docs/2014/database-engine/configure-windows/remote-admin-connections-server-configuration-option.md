@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "dedicated administrator connections [SQL Server]"
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # remote admin connections Server Configuration Option

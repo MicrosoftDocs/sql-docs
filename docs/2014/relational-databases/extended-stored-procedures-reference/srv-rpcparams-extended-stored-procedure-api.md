@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_rpcparams"
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # srv_rpcparams (Extended Stored Procedure API)

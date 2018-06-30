@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "adding tables"
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Add Tables to Diagrams (Visual Database Tools)

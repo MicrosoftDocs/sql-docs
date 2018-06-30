@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "writeable filegroups [SQL Server]"
 ms.assetid: 2985efc1-4b14-46c3-abbd-a656b159f23c
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Verify all filegroups are writeable during the upgrade process

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "read-only routing"
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 caps.latest.revision: 6
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)

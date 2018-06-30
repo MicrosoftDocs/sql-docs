@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "token syntax [SQL Server Agent]"
 ms.assetid: c801e6da-0159-4bb0-9144-eb28b5127ff7
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Update token syntax in SQL Server Agent job steps

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, viewing information"
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Transact-SQL Debugger Information

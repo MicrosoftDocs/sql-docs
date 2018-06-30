@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], creating"
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Create a Maintenance Plan

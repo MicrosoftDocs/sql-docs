@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], implementing"
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: 35
-author: "douglaslM"
-ms.author: "douglasl"
+author: maggiesmsft
+ms.author: douglasl
 manager: craigg
 ---
 # Preparing to Implement a Data Processing Extension

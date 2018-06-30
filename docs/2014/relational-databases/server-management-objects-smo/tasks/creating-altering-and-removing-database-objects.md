@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "objects [SMO]"
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Working with Database Objects

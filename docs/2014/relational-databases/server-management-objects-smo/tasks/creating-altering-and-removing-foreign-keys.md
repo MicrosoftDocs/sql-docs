@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "foreign keys [SMO]"
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Creating, Altering, and Removing Foreign Keys

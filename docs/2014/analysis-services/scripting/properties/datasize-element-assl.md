@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DataSize element"
 ms.assetid: 4be79dbb-304e-4a65-9198-89fad407f775
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSize Element (ASSL)
   Contains the size in bytes of a [DataItem](../data-type/dataitem-data-type-assl.md) element.  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "databases [SQL Server replication]"
 ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Enable a Database for Replication (SQL Server Management Studio)

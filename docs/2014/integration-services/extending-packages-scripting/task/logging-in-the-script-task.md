@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "packages [Integration Services], logs"
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Logging in the Script Task

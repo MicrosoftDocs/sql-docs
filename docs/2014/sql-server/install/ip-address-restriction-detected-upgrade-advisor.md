@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], upgrade issues"
 ms.assetid: 9a154455-c68f-4403-a3a7-b90f4d35eecb
 caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # IP address restriction detected (Upgrade Advisor)

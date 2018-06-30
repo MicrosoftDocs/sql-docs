@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Password element"
 ms.assetid: 8a0603bd-f6a1-4b86-84f1-c83d0b03951b
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Password Element (XMLA)
   Determines the password to be used by the parent [Backup](../xml-elements-commands/backup-element-xmla.md) or [Restore](../xml-elements-commands/restore-element-xmla.md) command for encrypting or decrypting a backup file.  

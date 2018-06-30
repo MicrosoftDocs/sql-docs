@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SetDefaults method"
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SetDefaults Method (ClientSettings Class)

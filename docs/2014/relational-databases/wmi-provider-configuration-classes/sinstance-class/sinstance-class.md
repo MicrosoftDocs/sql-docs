@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SInstance class"
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SInstance Class

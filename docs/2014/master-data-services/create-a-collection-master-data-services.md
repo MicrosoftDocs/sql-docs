@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "collections [Master Data Services], creating"
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Create a Collection (Master Data Services)

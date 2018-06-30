@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.maint.servers.f1"
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Maintenance Plan (Servers)

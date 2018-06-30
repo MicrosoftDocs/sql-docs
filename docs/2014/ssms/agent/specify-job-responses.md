@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "responding to jobs"
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Specify Job Responses

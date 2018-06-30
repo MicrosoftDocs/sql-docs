@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Policy-Based Management, modify policy conditions"
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # View or Modify the Properties of a Policy-Based Management Condition

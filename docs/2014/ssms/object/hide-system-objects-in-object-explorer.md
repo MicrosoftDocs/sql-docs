@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Object Explorer, hiding objects"
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: shamikg
+ms.author: shamikg
 manager: craigg
 ---
 # Hide System Objects in Object Explorer

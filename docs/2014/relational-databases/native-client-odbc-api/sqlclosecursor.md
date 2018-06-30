@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLCloseCursor function"
 ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # SQLCloseCursor

@@ -17,7 +17,7 @@ ms.technology: linux
 
 Create and manage your SQL Server instances natively in Kubernetes.
 
-You can [deploy SQL Server to docker containers](tutorial-sql-server-ag-kubernetes.md) managed by [Kubernetes](https://kubernetes.io/). In Kubernetes, a container with a SQL Server instance to automatically recover in case a cluster node fails. For faster recovery, you can configure SQL Server Always On availability group with SQL Server instances in containers on a Kubernetes cluster. This article compares the two solutions.
+[Deploy SQL Server to docker containers](tutorial-sql-server-ag-kubernetes.md) managed by [Kubernetes](https://kubernetes.io/). In Kubernetes, a container with a SQL Server instance can automatically recover in case a cluster node fails. For more robust availability, configure SQL Server Always On availability group with SQL Server instances in containers on a Kubernetes cluster. This article compares the two solutions.
 
 ## Container with SQL Server instance on Kubernetes
 
@@ -29,7 +29,9 @@ In this configuration, Kubernetes plays the role of the container orchestrator.
 
 In the preceding diagram, `mssql-server` is a SQL Server instance (container) in a [*pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod/). A [replica set](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) ensures that the pod is automatically recovered after a node failure. Applications connect to the service. In this case, the service represents a load balancer that hosts an IP address that stays the same after failure of the `mssql-server`.
 
-Kubernetes orchestrates the resources in the cluster. When a pod or node hosting a SQL Server instance in a container fails, the orchestrator bootstraps another container with a SQL Server instance and attaches it to the same persistent storage.
+Kubernetes orchestrates the resources in the cluster. When a pod or node hosting a SQL Server instance in a container fails, the orchestrator bootstraps a container in an identical pod with a SQL Server instance and attaches it to the same persistent storage.
+
+SQL Server 2017 and later support containers on Kubernetes.
 
 ## A SQL Server Always On availability group on SQL Server containers in Kubernetes
 
@@ -55,9 +57,9 @@ In addition, the cluster stores [*secrets*](http://kubernetes.io/docs/concepts/c
 
 ## Compare SQL Server high availabiltiy on containers with and without the availability group
 
-The following table compairs the high SQL Server availability capability containers on Kubernetes with, and without an availabilty group:
+The following table compairs the SQL Server high availability capability in containers on Kubernetes with, and without an availabilty group:
 
-| |With an availability group | Standalone container instance
+| |With an availability group | Standalone container instance<br/> No availability group
 |:------|:------|:------
 |Automatically recover from node failure | Yes | Yes
 |Automatically recover from pod failure | Yes | Yes
@@ -66,6 +68,13 @@ The following table compairs the high SQL Server availability capability contain
 |Automatically recover from database health check failure | Yes | 
 |Provide read-only replicas | Yes |
 |Secondary replica backup | Yes | 
+|Runs as a StatefulSet | Yes | 
+
+One key difference is that the recovery (or failover) time is faster with an availability group than with a single instance of SQL Server in a container. This is because the SQL Server availability group keeps secondary replicas of the availability group databases on other nodes in the cluster. On failover, a secondary replica is selected and promoted to primary. Applications connected to the service are redirected to the new primary replica. 
+
+Without the availability group, when Kubernetes detects a failover, it needs to create the container, connect it to the storage, and then applications connected to the service are reconnected. The exact failover time depends on where the failover was, and how it was detected. 
+
+Generally, the failover time for an availability group is measured in seconds, while the failover time for single instance to recover a container may be up to 10 minutes.
 
 ## Next steps
 

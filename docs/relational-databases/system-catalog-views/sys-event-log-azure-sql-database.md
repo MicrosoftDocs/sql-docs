@@ -131,7 +131,7 @@ start_time                    end_time
   
 ```  
 SELECT * FROM sys.event_log   
-WHERE start_time >= '2011-09-25:12:00:00'   
+WHERE start_time >= '2011-09-25 12:00:00'   
     AND end_time <= '2011-09-28 12:00:00';  
 ```  
   

@@ -14,7 +14,7 @@ ms.technology: linux
 ---
 # Configure a SQL Server Always On availability group on Docker containers in Kubernetes with Azure Kubernetes Service (AKS)
 
-This tutorial demonstrates how to configure a highly available SQL Server instance in a container on AKS. You can also [deploy a SQL Server container in Kubernetes](tutorial-sql-server-containers-kubernetes.md). To compare the two different Kubernetes solutions, see [High availability for SQL Server containers](sql-server-linux-containter-ha-overview.md).
+This tutorial demonstrates how to configure a highly available SQL Server instance in a container on AKS. You can also [deploy a SQL Server container in Kubernetes](tutorial-sql-server-containers-kubernetes.md). To compare the two different Kubernetes solutions, see [High availability for SQL Server containers](sql-server-linux-container-ha-overview.md).
 
 In this tutorial, you learn how to:  
 

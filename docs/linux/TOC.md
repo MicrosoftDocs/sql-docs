@@ -89,7 +89,7 @@
 #### [Create for read-scale only]()
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
 #### [Configure cross-platform (Windows and Linux)](sql-server-linux-availability-group-cross-platform.md)
-### [High availability for containers](sql-server-linux-containter-ha-overview.md)
+### [High availability for containers](sql-server-linux-container-ha-overview.md)
 #### [Always On Availability groups for SQL Server containers](sql-server-ag-kubernetes.md)
 ##### [SQL Server operator](sql-server-linux-kubernetes-operator.md)
 ##### [SQL Server stateful set](sql-server-linux-kubernetes-spec.md)

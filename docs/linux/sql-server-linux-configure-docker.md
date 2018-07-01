@@ -482,3 +482,5 @@ cat errorlog
 Get started with SQL Server 2017 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md).
 
 Also, see the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues.
+
+[Explore high availability for SQL Server containers](sql-server-linux-container-ha-overview.md)

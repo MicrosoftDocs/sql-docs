@@ -28,45 +28,42 @@ manager: craigg
 # FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the specified filegroup property value when supplied with a filegroup and property name.  
+This function returns the specified filegroup property value for a specified filegroup value and a specified property name value.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
-FILEGROUPPROPERTY ( filegroup_name , property )  
+FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
 ## Arguments  
  *filegroup_name*  
- Is an expression of type **sysname** that represents the name of the filegroup for which to return the named property information.  
+An expression of type **sysname** representing the filegroup name for which `FILEGROUPPROPERTY` will return the named property information.  
   
  *property*  
- Is an expression of type **varchar(128)** contains the name of the filegroup property to return. *property* can be one of these values.  
+An expression of type **varchar(128)** holding the name of the filegroup property to return. *property* can have one of these values:  
   
 |Value|Description|Value returned|  
 |-----------|-----------------|--------------------|  
-|**IsReadOnly**|Filegroup is read-only.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input is not valid.|  
-|**IsUserDefinedFG**|Filegroup is a user-defined filegroup.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input is not valid.|  
-|**IsDefault**|Filegroup is the default filegroup.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input is not valid.|  
+|**IsReadOnly**|Filegroup is read-only.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = invalid input.|  
+|**IsUserDefinedFG**|Filegroup is a user-defined filegroup.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = invalid input.|  
+|**IsDefault**|Filegroup is the default filegroup.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = invalid input.|  
   
 ## Return Types  
- **int**  
+**int**  
   
 ## Remarks  
- *filegroup_name* corresponds to the **name** column in the **sys.filegroups** catalog view.  
+*filegroup_name* corresponds to the **name** column of the **sys.filegroups** catalog view.  
   
 ## Examples  
- This example returns the setting for the `IsDefault` property for the primary filegroup in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+This example returns the `IsDefault` property setting for the primary filegroup in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
-  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  
 GO  
 ```  
-  
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  

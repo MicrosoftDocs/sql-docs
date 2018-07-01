@@ -119,7 +119,7 @@ To run SSIS packages deployed in Azure, you can use a variety of methods. For mo
 
 ### Run packages in an Azure Data Factory pipeline
 
-To run an SSIS package in an Azure Data Factory pipeline, use the Execute SSIS Package Activity. For more info , see [Run an SSIS package using the Execute SSIS Package Activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+To run an SSIS package in an Azure Data Factory pipeline, use the Execute SSIS Package Activity. For more info, see [Run an SSIS package using the Execute SSIS Package Activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
 When you run a package in a Data Factory pipeline with the Execute SSIS Package Activity, you can pass values to the package at runtime. To pass one or more runtime values, create SSIS execution environments in SSISDB with SQL Server Management Studio (SSMS). In each environment, create variables and assign values that correspond to the parameters for your projects or packages. Configure your SSIS packages in SSMS to associate those environment variables with your project or package parameters. When you run the packages in the pipeline, switch between environments by specifying different environment paths on the Settings tab of the Execute SSIS Package activity UI. For more info about SSIS environments, see [Create and Map a Server Environment](../packages/deploy-integration-services-ssis-projects-and-packages.md#create-and-map-a-server-environment).
 

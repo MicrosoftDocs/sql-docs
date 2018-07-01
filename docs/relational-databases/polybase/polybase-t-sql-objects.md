@@ -2,14 +2,12 @@
 title: "PolyBase T-SQL objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine-polybase"
+ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "PolyBase, SQL statements"
   - "PolyBase, SQL objects"
 caps.latest.revision: 20
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # PolyBase T-SQL objects
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

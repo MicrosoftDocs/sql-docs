@@ -5,14 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 caps.latest.revision: 7
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Troubleshoot: Availability group exceeded RTO

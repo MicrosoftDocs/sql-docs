@@ -1,15 +1,12 @@
-﻿---
+---
 title: "Transact-SQL Syntax Conventions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -33,7 +30,7 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
@@ -47,7 +44,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] keywords.|  
 |*italic*|User-supplied parameters of [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax.|  
 |**bold**|Database names, table names, column names, index names, stored procedures, utilities, data type names, and text that must be typed exactly as shown.|  
-|**underline**|Indicates the default value applied when the clause that contains the underlined value is omitted from the statement.|  
+|_underline_|Indicates the default value applied when the clause that contains the underlined value is omitted from the statement.|  
 |&#124; (vertical bar)|Separates syntax items enclosed in brackets or braces. You can use only one of the items.|  
 |`[ ]` (brackets)|Optional syntax items. Do not type the brackets.|  
 |{ } (braces)|Required syntax items. Do not type the braces.|  

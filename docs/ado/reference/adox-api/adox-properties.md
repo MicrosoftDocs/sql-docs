@@ -1,11 +1,8 @@
 ---
 title: "ADOX Properties | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +14,9 @@ helpviewer_keywords:
   - "ADOX, properties"
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADOX Properties
 |||  

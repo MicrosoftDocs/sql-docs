@@ -2,19 +2,17 @@
 title: "PolyBase configuration | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "polybase"
+ms.component: database
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # PolyBase configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

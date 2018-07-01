@@ -1,14 +1,12 @@
 ---
 title: "RDS Properties | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: sql  
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "properties [ADO], RDS"
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RDS Properties
 > [!IMPORTANT]

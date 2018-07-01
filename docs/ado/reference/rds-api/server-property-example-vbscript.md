@@ -1,14 +1,12 @@
 ---
 title: "Server Property Example (VBScript) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: sql  
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
@@ -17,9 +15,9 @@ helpviewer_keywords:
   - "Server property [RDS], VBScript example"
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Server Property Example (VBScript)
 > [!IMPORTANT]

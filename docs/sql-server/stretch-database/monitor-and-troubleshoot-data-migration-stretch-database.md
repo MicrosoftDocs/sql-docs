@@ -3,23 +3,17 @@ title: "Monitor and troubleshoot data migration (Stretch Database) | Microsoft D
 ms.custom: ""
 ms.date: "06/14/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "stretch-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, monitoring"
   - "monitoring Stretch Database"
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Monitor and troubleshoot data migration (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

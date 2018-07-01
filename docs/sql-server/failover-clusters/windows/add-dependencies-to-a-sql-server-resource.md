@@ -3,13 +3,9 @@ title: "Add Dependencies to a SQL Server Resource | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,9 +14,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], dependencies"
   - "dependencies [SQL Server], clustering"
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add Dependencies to a SQL Server Resource

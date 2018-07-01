@@ -3,24 +3,23 @@ title: "Transparent data encryption for Azure SQL Database and Data Warehouse | 
 description: "An overview of transparent data encryption for SQL Database and Data Warehouse. The document covers its benefits and the options for configuration, which includes service-managed transparent data encryption and Bring Your Own Key."
 keywords:
 author: "becczhang"
-manager: "craigg"
+manager: craigg
 editor: ""
 ms.prod: 
 ms.reviewer: ""
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
-ms.component: "security"
 ms.tgt_pltfrm:
 ms.topic: conceptual
-ms.date: "04/10/2018"
+ms.date: "06/26/2018"
 ms.author: "rebeccaz"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Transparent data encryption for SQL Database and Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Transparent data encryption helps protect Azure SQL Database and Azure Data Warehouse against the threat of malicious activity. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.
+Transparent data encryption (TDE) helps protect Azure SQL Database and Azure Data Warehouse against the threat of malicious activity. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application. By default, TDE is enabled for all newly deployed Azure SQL Databases. It will need to be manually enabled for older databases or Azure SQL Data Warehouse.  
 
 Transparent data encryption encrypts the storage of an entire database by using a symmetric key called the database encryption key. This database encryption key is protected by the transparent data encryption protector. The protector is either a service-managed certificate (service-managed transparent data encryption) or an asymmetric key stored in Azure Key Vault (Bring Your Own Key). You set the transparent data encryption protector at the server level. 
 
@@ -61,7 +60,7 @@ When you export a transparent data encryption-protected database, the exported c
 
 For example, if the BACPAC file is exported from an on-premises SQL Server instance, the imported content of the new database isn't automatically encrypted. Likewise, if the BACPAC file is exported to an on-premises SQL Server instance, the new database also isn't automatically encrypted.
 
-The one exception is when you export to and from a SQL database. Transparent data encryption is enabled in the new database, but the PACPAC file itself still isn't encrypted.
+The one exception is when you export to and from a SQL database. Transparent data encryption is enabled in the new database, but the BACPAC file itself still isn't encrypted.
 
 ## Manage transparent data encryption in the Azure portal
 

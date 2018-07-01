@@ -3,13 +3,8 @@ title: "Limitations for Stretch Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "stretch-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,10 +13,9 @@ helpviewer_keywords:
   - "limitations (Stretch Database)"
   - "blocking issues (Stretch Database)"
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Limitations for Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

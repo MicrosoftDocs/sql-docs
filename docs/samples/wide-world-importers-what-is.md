@@ -2,21 +2,16 @@
 title: "Wide World Importers - Sample database for SQL | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ""
-ms.component: "samples"
-ms.technology:
-  - "samples"
+ms.technology: samples
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-caps.latest.revision: 3
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
-robots: noindex,nofollow
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Wide World Importers sample databases for Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

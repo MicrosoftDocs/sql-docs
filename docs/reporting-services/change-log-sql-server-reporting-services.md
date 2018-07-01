@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/25/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: ""

@@ -3,9 +3,6 @@ title: "Managing Passwords (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
@@ -22,7 +19,7 @@ ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
+manager: craigg
 ---
 # Managing Passwords (SybaseToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

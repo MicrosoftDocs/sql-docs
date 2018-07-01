@@ -3,13 +3,8 @@ title: "Identify databases and tables for Stretch Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/30/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "stretch-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,10 +13,9 @@ helpviewer_keywords:
   - "identifying databases for Stretch Database"
   - "identifying tables for Stretch Database"
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Identify databases and tables for Stretch Database with Data Migration Assistant
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

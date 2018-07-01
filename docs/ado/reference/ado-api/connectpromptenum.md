@@ -1,11 +1,8 @@
 ---
 title: "ConnectPromptEnum | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,9 +16,9 @@ helpviewer_keywords:
   - "ConnectPromptEnum enumeration [ADO]"
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ConnectPromptEnum
 Specifies whether a dialog box should be displayed to prompt for missing parameters when opening a connection to a data source.  

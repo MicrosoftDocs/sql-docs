@@ -7,12 +7,11 @@ ms.author: jroth
 manager: craigg
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
+
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"
 ---

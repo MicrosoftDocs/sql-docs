@@ -3,18 +3,15 @@ title: "Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012
 ms.date: "1/25/2018"
 ms.suite: sql
 ms.prod: sql  
-ms.prod_service: database engine
-ms.component: "failover-clustuers"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading failover clusters"
   - "clusters [SQL Server], upgrading"
   - "failover clustering [SQL Server], upgrading"
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 

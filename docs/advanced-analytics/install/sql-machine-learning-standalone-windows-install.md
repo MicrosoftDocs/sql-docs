@@ -14,7 +14,7 @@ manager: cgronlun
 
 SQL Server setup includes the option to install a machine learning server that runs outside of SQL Server. This option might be useful if you need to develop high-performance machine learning solutions that can use remote compute contexts, switching interchangeably between the local server and a remote Machine Learning Server on a Spark cluster or on another SQL Server instance.
   
-This article describes how to use SQL Server setup to install the standalone version of **SQL Server 2017 Machine Learning Server**. If you have an Enterprise Edition or Software Assurance, installing the standalone machine learning server is free.
+This article describes how to use SQL Server setup to install the standalone version of **SQL Server 2017 Machine Learning Server**. 
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
@@ -85,7 +85,7 @@ The following table lists the paths for each installation.
 
 A development IDE is not installed as part of setup. Additional tools are not required, as all the standard tools are included that would be provided with a distribution of R or Python.
 
-We recommend that you try the new release of [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] or [Python for Visual Studio](https://docs.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio). Visual Studio supports both R and Python, as well as database development tools, connectivity with SQL Server, and BI tools. However, you can use any preferred development environment, including RStudio.
+We recommend that you try the new release of [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] or [Python for Visual Studio](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio). Visual Studio supports both R and Python, as well as database development tools, connectivity with SQL Server, and BI tools. However, you can use any preferred development environment, including RStudio.
 
 ## Get help
 

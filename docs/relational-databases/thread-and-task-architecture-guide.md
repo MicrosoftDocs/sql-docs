@@ -2,9 +2,8 @@
 title: "Thread and Task Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/26/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "relational-databases-misc"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -19,7 +18,7 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 caps.latest.revision: 3
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Thread and Task Architecture Guide

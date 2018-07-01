@@ -1,15 +1,14 @@
 ---
 title: Disaster recovery for SQL Server | Microsoft Docs
 description: 
-author: "allanhirt"
+author: "MashaMSFT"
 ms.author: mihaelab 
 ms.reviewer: "mikeray"
 manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: "database-engine"
 ms.suite: "sql"
 ms.custom: ""

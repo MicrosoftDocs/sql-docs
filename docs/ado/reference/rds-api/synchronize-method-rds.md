@@ -1,14 +1,12 @@
 ---
 title: "Synchronize Method (RDS) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: sql  
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "Synchronize method [ADO]"
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Synchronize Method (RDS)
 Synchronize the given Recordset with the database specified by the connection string for use in ADO 2.5 and later.  

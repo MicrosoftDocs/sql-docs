@@ -7,12 +7,10 @@ ms.author: meetb
 manager: craigg
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"
 ---
@@ -72,7 +70,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
       ```/etc/network/interfaces
       <...>
       # The primary network interface
-      auth eth0
+      auto eth0
       iface eth0 inet dhcp
       dns-nameservers **<AD domain controller IP address>**
       dns-search **<AD domain name>**

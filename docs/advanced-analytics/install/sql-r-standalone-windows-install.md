@@ -12,7 +12,7 @@ manager: cgronlun
 # Install SQL Server 2016 R Server (Standalone)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to use SQL Server 2016 setup to install the standalone version of **SQL Server 2016 R Server**. If you have an Enterprise Edition or Software Assurance, installing the standalone R Server on a production server is free.
+This article describes how to use SQL Server 2016 setup to install the standalone version of **SQL Server 2016 R Server**.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 

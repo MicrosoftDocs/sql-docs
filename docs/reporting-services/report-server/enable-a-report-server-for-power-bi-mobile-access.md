@@ -3,7 +3,6 @@ title: "Enable a report server for Power BI Mobile access | Microsoft Docs"
 ms.date: "12/17/2015"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server"
 ms.reviewer: ""
 ms.suite: "pro-bi"

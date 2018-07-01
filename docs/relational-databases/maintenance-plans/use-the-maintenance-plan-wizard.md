@@ -1,9 +1,8 @@
 ---
 title: "Use the Maintenance Plan Wizard | Microsoft Docs"
 ms.date: "06/20/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "maintenance-plans"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -38,9 +37,9 @@ helpviewer_keywords:
   - "Database Maintenance Plan Wizard, starting"
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 43
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Use the Maintenance Plan Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

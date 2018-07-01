@@ -3,9 +3,6 @@ title: "SQL Server Migration Assistant for Sybase (SybaseToSQL) | Microsoft Docs
 ms.custom: ""
 ms.date: "08/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma

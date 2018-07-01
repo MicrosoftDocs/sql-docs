@@ -1,9 +1,10 @@
 ---
 title: Install new Python packages on SQL Server Machine Learning | Microsoft Docs
+description: Add new Python packages to SQL Server 2017 Machine Learning Services (In-Database), and Machine Learning Server (Standalone)
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/10/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,19 +13,17 @@ manager: cgronlun
 # Install new Python packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to install new Python packages on an instance of SQL Server 2017 Machine Learning Services.
+This article describes how to install new Python packages on an instance of SQL Server 2017 Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
-In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
-
-For help figuring out where packages are installed, or which packages are installed, see [Viewing installed R or Python packages](../r/determine-which-packages-are-installed-on-sql-server.md).
+For help figuring out where packages are installed, or which packages are installed, see [Get R or Python package information](../r/determine-which-packages-are-installed-on-sql-server.md).
 
 ## Prerequisites
 
-+ You must have installed Machine Learning Services (In-Database) with the Python language option. For instructions, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
++ You must have installed SQL Server 2017 Machine Learning Services (In-Database) with the Python language option. For instructions, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 
 + For each server instance, you must install a separate copy of the package. Packages cannot be shared across instances.
 
-+ Determine whether the package you intend to use will work with Python 3.5 and in the Windows environment. 
++ Packages must be Python 3.5 compliant and run on Windows. 
 
 + Assess whether the package is a good fit for use in the SQL Server environment. Typically a database server supports multiple services and applications, and resources on the file system might be limited, as well as connections to the server. In many cases Internet access is blocked entirely.
 
@@ -77,11 +76,11 @@ Open the Python command prompt associated with the instance.
 
 + If you are accustomed to using the Python command line, use PIP.exe to install new packages. You can find the **pip** installer in the `Scripts` subfolder. 
 
-    If you get an error that `pip` is not recognized as an internal or external command, you can add the path of the Python executable and the Python scripts folder to the PATH variable in Windows.
+  SQL Server Setup does not add Scripts to the system path. If you get an error that `pip` is not recognized as an internal or external command, you can add the Scripts folder to the PATH variable in Windows.
 
-    The full path of the **Scripts** folder in a default installation is as follows:
+  The full path of the **Scripts** folder in a default installation is as follows:
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + If you are using Visual Studio 2017, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`; it is filled in for you automatically. 
 
@@ -121,13 +120,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  How to view installed packages using conda
+## List installed packages using conda
 
 There are different ways that you can get a list of installed packages. For example, you can view the installed packages in the **Python Environments** windows of Visual Studio.
 
-If you are using the Python command line, you can use the **conda** package manager, which is included with the Anaconda Python environment added by SQL Server setup.
+If you are using the Python command line, you can use either **Pip** or the **conda** package manager, included with the Anaconda Python environment added by SQL Server setup.
 
-To view Python packages that have been installed in the current environment, run this command from the command prompt:
+Assuming you added the Scripts folder to the PATH environment variable, run this command from an administrator's command prompt to list the packages in your Python environment. Otherwise, see [Get R and Python package information](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda) for pointers on how to run the Python tools in SQL Server.
 
 ```python
 conda list

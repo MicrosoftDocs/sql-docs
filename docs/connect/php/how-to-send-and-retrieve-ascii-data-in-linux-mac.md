@@ -2,13 +2,10 @@
 title: "How to: Send and Retrieve ASCII Data in Linux and macOS (SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/16/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

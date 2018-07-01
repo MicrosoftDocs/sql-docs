@@ -5,21 +5,19 @@ author: leolimsft
 ms.author: lle 
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/06/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ---
 # Limitations and known issues for SSIS on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes current limitations and known issues for SQL Server Integration Services (SSIS) on Linux.
+This article describes limitations and known issues for SQL Server Integration Services (SSIS) on Linux.
 
 ## General limitations and known issues
 
@@ -38,11 +36,9 @@ For other limitations and known issues with SSIS on Linux, see the [Release Note
 
 ## <a name="components"></a> Supported and unsupported components
 
-The following built-in Integration Services components are supported on Linux. Some of them have limitations on the Linux platform, as described in the following tables.
+The following built-in Integration Services components are supported on Linux. Some of them have limitations on the Linux platform. Built-in components that are not listed here are not supported on Linux.
 
-Built-in components that are not listed here are not supported on Linux.
-
-### Supported control flow tasks
+## Supported control flow tasks
 - Bulk Insert Task
 - Data Flow Task
 - Data Profiling Task
@@ -53,7 +49,7 @@ Built-in components that are not listed here are not supported on Linux.
 - Web Service Task
 - XML Task
 
-### Control flow tasks supported with limitations
+## Control flow tasks supported with limitations
 
 | Task | Limitations |
 |------------|---|
@@ -64,16 +60,34 @@ Built-in components that are not listed here are not supported on Linux.
 | Transfer Database task | UNC paths are not supported. |
 | | |
 
-### Supported control flow containers
+## Supported and unsupported maintenance plan tasks
+
+In a SQL Server maintenance plan, you can typically use a variety of SSIS tasks.
+
+The following maintenance plan tasks are not supported on Linux:
+- Notify Operator
+- Execute SQL Server Agent Job
+
+The following maintenance plan tasks are supported on Linux:
+- Check Database Integrity
+- Shrink Database
+- Reorganize Index
+- Rebuild Index
+- Update Statistics
+- Clean Up History
+- Back Up Database
+- T-SQL Statement
+
+## Supported control flow containers
 - Sequence Container
 - For Loop Container
 - Foreach Loop Container
 
-### Supported data flow sources and destinations
+## Supported data flow sources and destinations
 - Raw File source and destination
 - XML Source
 
-### Data flow sources and destinations supported with limitations
+## Data flow sources and destinations supported with limitations
 
 | Component | Limitations |
 |------------|---|
@@ -84,7 +98,7 @@ Built-in components that are not listed here are not supported on Linux.
 | OLE DB source and destination | Only support SQL Server Native Client 11.0 and Microsoft OLE DB Provider for SQL Server. |
 | | |
 
-### Supported data flow transformations
+## Supported data flow transformations
 - Aggregate
 - Audit
 - Balanced Data Distributor
@@ -109,7 +123,7 @@ Built-in components that are not listed here are not supported on Linux.
 - Union All
 - Unpivot
 
-### Data flow transformations supported with limitations
+## Data flow transformations supported with limitations
 
 | Component | Limitations |
 |------------|---|
@@ -117,7 +131,7 @@ Built-in components that are not listed here are not supported on Linux.
 | Script component | Only supports standard .NET Framework APIs. |
 | | |
 
-### Supported and unsupported log providers
+## Supported and unsupported log providers
 All the built-in SSIS log providers are supported on Linux except the Windows Event Log provider.
 
 The SQL Server log provider supports only SQL Authentication; it does not support Windows Authentication.

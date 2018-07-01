@@ -2,9 +2,8 @@
 title: "Examples: Using PATH Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "xml"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Examples: Using PATH Mode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -296,17 +295,17 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT ProductModelID     AS "@ProductModelID",  
-       Name               S "@ProductModelName",  
+       Name               AS "@ProductModelName",  
       (SELECT ProductID AS "data()"  
        FROM   Production.Product  
        WHERE  Production.Product.ProductModelID =   
               Production.ProductModel.ProductModelID  
-       FOR XML PATH ('')) S "@ProductIDs",  
+       FOR XML PATH ('')) AS "@ProductIDs",  
        (SELECT Name AS "ProductName"  
        FROM   Production.Product  
        WHERE  Production.Product.ProductModelID =   
               Production.ProductModel.ProductModelID  
-        FOR XML PATH ('')) as "ProductNames"  
+        FOR XML PATH ('')) AS "ProductNames"  
 FROM   Production.ProductModel  
 WHERE  ProductModelID= 7 or ProductModelID=9  
 FOR XML PATH('ProductModelData');  

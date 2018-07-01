@@ -2,14 +2,11 @@
 title: "Block and Scrollable Cursors Compatibility for ODBC 3.x | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "SQLFetchScroll function [ODBC], block cursors"
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Block Cursors, Scrollable Cursors, and Backward Compatibility for ODBC 3.x Applications

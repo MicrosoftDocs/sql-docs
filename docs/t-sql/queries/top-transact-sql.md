@@ -2,14 +2,11 @@
 title: "TOP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,7 +23,7 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # TOP (Transact-SQL)
@@ -215,7 +212,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT TOP(10)WITH TIES  
+SELECT TOP(10) PERCENT WITH TIES  
 pp.FirstName, pp.LastName, e.JobTitle, e.Gender, r.Rate  
 FROM Person.Person AS pp   
     INNER JOIN HumanResources.Employee AS e  

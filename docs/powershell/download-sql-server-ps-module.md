@@ -3,22 +3,18 @@ title: "Download SQL Server PowerShell Module | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/05/2018"
 ms.prod: sql
-ms.prod_service: "powershell"
-ms.service: ""
-ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: scripting
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "install sql server powershell, download sql server powershell"
 ms.assetid: 
 caps.latest.revision: 113
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Install SQL Server PowerShell module
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

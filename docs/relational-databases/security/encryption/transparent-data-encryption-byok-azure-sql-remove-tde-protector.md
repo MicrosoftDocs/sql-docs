@@ -5,14 +5,13 @@ keywords:
 services: "sql-database"
 documentationcenter:
 author: "becczhang"
-manager: "craigg"
+manager: craigg
 ms.prod: 
 ms.reviewer: ""
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.custom: 
-ms.component: "security"
 ms.tgt_pltfrm:
 
 ms.topic: conceptual

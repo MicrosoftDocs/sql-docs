@@ -3,13 +3,9 @@ title: "Failover Cluster Instance Administration and Maintenance | Microsoft Doc
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -26,9 +22,8 @@ helpviewer_keywords:
   - "removing nodes"
   - "virtual servers [SQL Server], adding nodes"
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Failover Cluster Instance Administration and Maintenance

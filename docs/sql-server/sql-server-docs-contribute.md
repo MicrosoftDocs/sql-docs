@@ -2,18 +2,14 @@
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
 ms.date: "04/12/2018"
 ms.prod: sql
-ms.prod_service: sql
-ms.service: ""
-ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: ""
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
@@ -72,7 +68,7 @@ To contribute with this method, see the following articles:
 - [Create a GitHub account](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Install content authoring tools](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Set up a Git repository locally](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Use tools to contribute](https://docs.microsoft.com/contribute/full-workflow)
+- [Use tools to contribute](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 If you submit a pull request with significant changes to documentation, you will get a comment in GitHub asking you to submit an online **Contribution License Agreement (CLA)**. You must complete the online form before your pull request can be accepted.
 
@@ -135,5 +131,3 @@ Explore the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs) on 
 Find an article, submit a change, and help the SQL Server community. 
 
 Thank you!
-
-

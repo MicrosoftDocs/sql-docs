@@ -4,14 +4,14 @@ description: Learn how to backup and restore a database using SQL Operations Stu
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
 ms.prod: sql
-ms.reviewer: "alayu; erickang; sstein"
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
-author: "erickangMSFT"
-ms.author: "erickang"
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 
@@ -72,7 +72,7 @@ After clicking **Backup**, the **Backup database** dialog disappears and the bac
 
 4. Click **Restore**
 
-5. To view the status of the restore operation, click **CTRL+T** to open the **Task History** sidebar.
+5. To view the status of the restore operation, press **CTRL+T** to open the **Task History** sidebar.
 
    ![restore](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 

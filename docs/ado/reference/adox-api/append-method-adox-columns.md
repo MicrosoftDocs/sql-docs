@@ -1,11 +1,8 @@
 ---
 title: "Append Method (ADOX Columns) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,9 +17,9 @@ helpviewer_keywords:
   - "Append method [ADOX]"
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Append Method (ADOX Columns)
 Adds a new [Column](../../../ado/reference/adox-api/column-object-adox.md) object to the [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) collection.  

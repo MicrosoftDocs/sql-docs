@@ -4,8 +4,6 @@ ms.custom: ""
 ms.date: "06/03/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "verifying report server installations"
   - "Report Designer [Reporting Services], verifying installations"
   - "installing Reporting Services, verifying installations"
-  - "Report Manager [Reporting Services], verifying installations"
   - "report servers [Reporting Services], verifying installations"
   - "Setup [Reporting Services], verifying installations"
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0

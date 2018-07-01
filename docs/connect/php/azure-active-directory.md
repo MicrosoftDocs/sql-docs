@@ -1,14 +1,11 @@
 ---
 title: "Azure Active Directory | Microsoft Docs"
 ms.date: "07/13/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.suite: "sql"
 ms.custom: ""
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.topic: conceptual
 author: "david-puglielli"
 ms.author: "v-dapugl"

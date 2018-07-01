@@ -3,7 +3,7 @@ title: Step 2 Import data to SQL Server using PowerShell | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 06/07/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -14,7 +14,7 @@ manager: cgronlun
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 
-In this step, you run one of the downloaded scripts, to create the database objects required for the walkthrough. The script also creates several stored procedures, and uploads the sample data to a table in the database you specified.
+In this step, you run one of the downloaded scripts to create the database objects required for the walkthrough. The script also creates several stored procedures, and uploads the sample data to a table in the database you specified.
 
 ## Create database objects and load data
 
@@ -30,6 +30,16 @@ The script performs these actions:
 
 If you run into problems, you can use the script as a reference to perform the steps manually.
 
+### Modify the script to use a trusted Windows identity
+
+By default, the script assumes a SQL Server database user login and password. If you are db_owner under your Windows user account, you can use your Windows identity to create the objects. To do so, open `RunSQL_SQL_Walkthrough.ps1` in a code editor to append **`-T`** to the bcp bulk insert command:
+
+```text
+bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
+```
+
+### Run the script
+
 1. Open a PowerShell command prompt as administrator. If you are not already in the folder created in the previous step, navigate to the folder, and then run the following command:
   
     ```ps
@@ -40,7 +50,7 @@ If you run into problems, you can use the script as a reference to perform the s
 
     - The name or address of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance where Machine Learning Services with Python has been installed.
     - The user name and password for an account on the instance. The account you use must have the ability to create databases, create tables and stored procedures, and bulk load data to tables. 
-    - If you do not provide the user name and password, your Windows identity is used to sign in to SQL Server, and you are promoted to enter a password.
+    - If you do not provide the user name and password, your Windows identity is used to sign in to SQL Server.
     - The path and file name of the sample data file that you just downloaded. For example, `C:\temp\pysql\nyctaxi1pct.csv`
 
 	> [!NOTE]

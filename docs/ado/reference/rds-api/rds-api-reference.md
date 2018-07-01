@@ -1,11 +1,8 @@
 ---
 title: "RDS API Reference | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +13,9 @@ helpviewer_keywords:
   - "RDS API reference [ADO]"
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RDS API Reference
 > [!IMPORTANT]

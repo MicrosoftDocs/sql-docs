@@ -7,8 +7,7 @@ ms.reviewer: ""
 ms.suite: sql
 ms.prod_service: sql-database
 ms.service: "sql-database"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,7 +23,7 @@ ms.assetid: 34423903-1aaa-4a55-88a6-8228315d84e7
 caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # dbo.server_quotas (Azure SQL Database)

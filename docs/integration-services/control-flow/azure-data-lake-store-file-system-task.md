@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -18,7 +15,7 @@ f1_keywords:
 author: "Lingxi-Li"
 ms.author: "lingxl"
 ms.reviewer: "douglasl"
-manager: "craigg"
+manager: craigg
 ---
 # Azure Data Lake Store File System Task
 

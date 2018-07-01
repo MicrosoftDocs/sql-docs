@@ -3,13 +3,8 @@ title: "Get started by running the Enable Database for Stretch Wizard | Microsof
 ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "stretch-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 f1_keywords: 
@@ -26,10 +21,9 @@ helpviewer_keywords:
   - "Stretch Database, wizard"
   - "Enable Database for Stretch Wizard"
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Get started by running the Enable Database for Stretch Wizard
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

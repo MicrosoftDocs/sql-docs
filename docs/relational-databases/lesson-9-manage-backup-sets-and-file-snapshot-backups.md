@@ -2,9 +2,8 @@
 title: "Lesson 9: Manage backup sets and file-snapshot backups | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,9 +15,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 766a0846-db15-4346-b814-4049039bcbfc
 caps.latest.revision: 10
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Lesson 9: Manage backup sets and file-snapshot backups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

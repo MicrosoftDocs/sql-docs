@@ -608,7 +608,7 @@ Specifies the default language value for full-text indexed columns.
 DEFAULT_LANGUAGE  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Specifies the default language for all newly created logins. Language can be specified by providing the local id (lcid), the language name, or the language alias. For a list of acceptable language names and aliases, see [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
+Specifies the default language for all newly created logins. Language can be specified by providing the local ID (lcid), the language name, or the language alias. For a list of acceptable language names and aliases, see [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
   
 NESTED_TRIGGERS  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -833,7 +833,7 @@ Disables Stretch Database for the database. For more info, see [Disable Stretch 
   
 You can only disable Stretch Database for a database after the database no longer contains any tables that are enabled for Stretch Database. After you disable Stretch Database, data migration stops and query results no longer include results from remote tables.  
   
-Disabling Stretch does not remove the remote database. If you want to delete the remote database, you have to drop it by using the Azure management portal.  
+Disabling Stretch does not remove the remote database. If you want to delete the remote database, you have to drop it by using the Azure portal.  
   
 **\<service_broker_option> ::=**  
   

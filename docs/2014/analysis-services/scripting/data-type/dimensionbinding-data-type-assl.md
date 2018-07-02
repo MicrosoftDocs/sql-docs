@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DimensionBinding data type"
 ms.assetid: 6163d86b-0f6c-4237-b07b-47bc7e2962c4
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DimensionBinding Data Type (ASSL)
   Defines a derived data type that represents the binding between a data source and a [Dimension](../objects/dimension-element-assl.md) element.  

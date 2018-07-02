@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "TableBinding data type"
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # TableBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to a table.  

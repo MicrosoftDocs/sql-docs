@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "unindenting code"
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Manage Code Formatting

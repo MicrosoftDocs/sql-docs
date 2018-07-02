@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubePermission element"
 ms.assetid: b144b623-ff20-4ead-91ad-4c718f3b140b
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubePermission Element (ASSL)
   Defines the permissions of the members of a particular [Role](role-element-assl.md) element in a specific [Cube](cube-element-assl.md) element.  

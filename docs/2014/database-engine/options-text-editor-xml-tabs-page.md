@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Text_Editor.XML.Tabs"
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor:XML:Tabs Page)

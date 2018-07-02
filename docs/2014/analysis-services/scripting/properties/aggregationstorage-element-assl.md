@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AggregationStorage element"
 ms.assetid: dd082388-534d-4847-9232-8f80fc9fe96e
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AggregationStorage Element (ASSL)
   Identifies the storage method for aggregations.  

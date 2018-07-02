@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset"
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DMSCHEMA_MINING_STRUCTURE_COLUMNS Rowset
   Describes the individual columns of all mining structures deployed on a server that is running [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

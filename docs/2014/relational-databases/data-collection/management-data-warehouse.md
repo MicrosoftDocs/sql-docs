@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "management data warehouse"
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Management Data Warehouse

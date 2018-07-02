@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "exact matches [Integration Services]"
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 caps.latest.revision: 66
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Implement a Lookup in No Cache or Partial Cache Mode

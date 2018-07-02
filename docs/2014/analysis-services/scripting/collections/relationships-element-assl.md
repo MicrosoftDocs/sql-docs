@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: e78882c9-b14e-4044-848e-ea7fddd3b75d
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Relationships Element (ASSL)
   Contains the collection of relationships for the associated dimension.  

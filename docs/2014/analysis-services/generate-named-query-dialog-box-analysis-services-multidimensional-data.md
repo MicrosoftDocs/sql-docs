@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Generate Named Query dialog box"
 ms.assetid: 0f385577-a2e5-4527-ab88-b27e73112591
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Generate Named Query Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Generate Named Query** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a named query based on a chart series, chart series value, or chart filter selected from the chart displayed on the **Pivot Chart** tab in the **Explore Data** dialog box. You can display the **Generate Named Query** dialog box by clicking **Generate named query** in the **Explore Data** dialog box.  

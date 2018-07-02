@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "RPC [SQL Server]"
 ms.assetid: 5c5ae453-cc5b-4898-95c7-ad34157b1f60
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Modify connections that use Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk, or NWLink IPX SPX network protocols

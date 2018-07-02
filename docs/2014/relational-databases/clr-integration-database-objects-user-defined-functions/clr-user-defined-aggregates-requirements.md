@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "UDTs [CLR integration], user-defined aggregates"
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Requirements for CLR User-Defined Aggregates

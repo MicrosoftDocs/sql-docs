@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "db_ssisltduser role"
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services Roles (SSIS Service)

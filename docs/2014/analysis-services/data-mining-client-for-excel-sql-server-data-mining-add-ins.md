@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "getting started"
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Client for Excel (SQL Server Data Mining Add-ins)
   The Data Mining Client for Excel is a set of tools that let you perform common data mining tasks, from data cleansing to model building and prediction queries. You can use data in Excel tables or ranges, or access external data sources.  

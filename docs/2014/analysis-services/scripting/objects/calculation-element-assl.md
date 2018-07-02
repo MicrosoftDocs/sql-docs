@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Calculation element"
 ms.assetid: c96e37cf-b7ff-4296-a043-f9a5a5c444ce
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Calculation Element (ASSL)
   Asssociates a calculation with a [Perspective](perspective-element-assl.md) element.  

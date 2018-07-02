@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "historical information [SQL Server], files"
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # View File History

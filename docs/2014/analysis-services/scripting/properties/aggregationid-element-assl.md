@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "AggregationID element"
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AggregationID Element (ASSL)
   Identifies the aggregation definition from the [AggregationDesign](../objects/aggregationdesign-element-assl.md) element used to create the aggregation instance.  

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "tools [Integration Services], SQL Server Management Studio"
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services (SSIS) and Studio Environments

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "connections [SQL Server], other computers"
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Connect to Another Computer (SQL Server Configuration Manager)

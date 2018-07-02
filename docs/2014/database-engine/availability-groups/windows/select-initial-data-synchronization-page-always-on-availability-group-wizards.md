@@ -5,8 +5,7 @@ ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -15,8 +14,8 @@ f1_keywords:
   - "sql12.swb.newagwizard.selectinitialdatasync.f1"
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Select Initial Data Synchronization Page (AlwaysOn Availability Group Wizards)

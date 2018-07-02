@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "MSSQL_ENG014114 error"
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQL_ENG014114

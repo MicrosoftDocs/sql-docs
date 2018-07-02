@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Axes element"
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
 caps.latest.revision: 21
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Axes Element (XMLA)
   Contains a collection of [Axis](axis-element-xmla.md) elements representing axis data contained by a [root](root-element-xmla.md) element that uses the [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) data type.  

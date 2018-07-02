@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "source controls [SQL Server Management Studio], connections"
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Change Source Control Connections

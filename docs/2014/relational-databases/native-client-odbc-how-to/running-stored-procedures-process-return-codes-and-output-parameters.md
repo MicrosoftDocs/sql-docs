@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "output parameters [ODBC]"
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Process Return Codes and Output Parameters (ODBC)

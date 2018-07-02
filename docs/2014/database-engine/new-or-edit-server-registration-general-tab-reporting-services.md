@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.registerserver.general.reportserver.f1"
 ms.assetid: 5f899a8e-52ef-46b5-b7a9-f200ccd9f724
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # New or Edit Server Registration (General Tab) (Reporting Services)

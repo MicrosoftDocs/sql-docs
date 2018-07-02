@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Locations element"
 ms.assetid: 630929cb-f0dc-472a-86bc-28b67e907c3d
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Locations Element (XMLA)
   Contains a collection of [Location](query-element-xmla.md) elements used by the parent [Backup](../xml-elements-commands/backup-element-xmla.md), [Restore](../xml-elements-commands/restore-element-xmla.md) , or [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) command.  

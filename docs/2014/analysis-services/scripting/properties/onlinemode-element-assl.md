@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "OnlineMode element"
 ms.assetid: 0bbac4e2-002f-4be4-8dd6-ccd7034f5f93
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # OnlineMode Element (ASSL)
   Specifies whether the database is brought back online immediately when the rebuilding of the cache is initiated, or only when the rebuilding of the cache is complete.  

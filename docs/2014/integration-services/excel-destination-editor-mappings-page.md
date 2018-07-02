@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Excel Destination Editor"
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Excel Destination Editor (Mappings Page)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], adding"
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Use an Expression in a Precedence Constraint

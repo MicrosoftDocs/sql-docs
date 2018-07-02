@@ -5,14 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full-Text Search F1 Help

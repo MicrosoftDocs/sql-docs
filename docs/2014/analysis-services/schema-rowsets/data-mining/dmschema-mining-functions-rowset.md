@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DMSCHEMA_MINING_FUNCTIONS rowset"
 ms.assetid: 9ace7493-a7b1-45ca-93de-3cb2f3597017
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DMSCHEMA_MINING_FUNCTIONS Rowset
   Describes the data mining functions that are supported by the data mining algorithms available on a server that is running [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

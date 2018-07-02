@@ -3,9 +3,9 @@ title: "PolyBase troubleshooting | Microsoft Docs"
 ms.custom: ""
 ms.date: "8/29/2017"
 ms.prod: sql
+ms.technology: polybase
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -14,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "PolyBase, troubleshooting"
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg

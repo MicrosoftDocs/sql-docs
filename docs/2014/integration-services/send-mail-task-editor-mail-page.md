@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Send Mail Task Editor"
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Send Mail Task Editor (Mail Page)

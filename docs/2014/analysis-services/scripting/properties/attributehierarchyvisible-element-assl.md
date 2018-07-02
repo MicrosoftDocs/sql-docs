@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributeHierarchyVisible element"
 ms.assetid: a3289a9a-dbd6-43e8-a7ca-ee8a1da92a32
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeHierarchyVisible Element (ASSL)
   Determines whether the attribute hierarchy is visible to client applications.  

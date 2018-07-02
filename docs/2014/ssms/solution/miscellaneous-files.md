@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "miscellaneous files folder [SQL Server]"
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Miscellaneous Files

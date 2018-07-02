@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "cursors [ODBC], how to topics"
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use Cursors (ODBC)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "statistics [SQL Server], creating"
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 caps.latest.revision: 9
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create Statistics

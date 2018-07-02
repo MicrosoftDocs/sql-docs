@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "protocols [SQL Server], client configuration"
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure Client Protocols

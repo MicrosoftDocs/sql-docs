@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "HoldoutMaxPercent element"
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # HoldoutMaxPercent Element
   Specifies the maximum percentage of cases in the data source that will be used for the holdout partition that contains the test set of a [MiningStructure](../objects/miningstructure-element-assl.md) element. The remaining cases are used for training. A value of 0 indicates that there is no limit to the number of cases that can be held out as the test set.  

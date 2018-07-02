@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "databases [SQL Server], about databases"
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Databases

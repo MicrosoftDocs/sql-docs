@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Behavior Changes to Analysis Services Features in SQL Server 2014
   This topic describes behavior changes in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] for multidimensional, tabular, data mining, and [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] deployments. Behavior changes affect how features work or interact in the current version as compared to earlier versions of SQL Server.  

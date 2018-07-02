@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Creating an Analysis Services Project

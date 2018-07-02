@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "XML Source Editor"
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # XML Source Editor (Columns Page)

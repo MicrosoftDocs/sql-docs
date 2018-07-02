@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "UnknownMemberTranslations element"
 ms.assetid: 72920843-2d43-4ff4-b38e-19c9a7451cb2
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # UnknownMemberTranslations Element (ASSL)
   Contains the collection of translations for the caption of the [UnknownMember](../objects/member-element-assl.md) element of a dimension.  

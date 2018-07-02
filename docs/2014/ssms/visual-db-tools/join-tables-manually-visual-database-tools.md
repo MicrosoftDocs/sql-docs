@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "joins [SQL Server], creating"
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Join Tables Manually (Visual Database Tools)

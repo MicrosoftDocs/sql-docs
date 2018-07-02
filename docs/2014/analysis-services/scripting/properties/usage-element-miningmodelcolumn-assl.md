@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Usage element"
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Usage Element (MiningModelColumn) (ASSL)
   Describes how the associated column in the parent [MiningStructure](../objects/miningstructure-element-assl.md) is used.  

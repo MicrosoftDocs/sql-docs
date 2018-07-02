@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "LogFileName element"
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # LogFileName Element (ASSL)
   Contains the file name of the log file for the [Trace](../objects/trace-element-assl.md) element.  

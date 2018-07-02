@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "user-defined types [CLR integration], ADO.NET"
 ms.assetid: 4b0d876c-8066-490e-8e18-327c0e942b19
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Accessing User-Defined Types in ADO.NET

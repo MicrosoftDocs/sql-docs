@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "targets [SQL Server extended events], pairing target"
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Event Pairing Target

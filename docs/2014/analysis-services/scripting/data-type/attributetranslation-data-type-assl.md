@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributeTranslation data type"
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeTranslation Data Type (ASSL)
   Defines a derived data type that represents a translation associated with an [Attribute](../objects/attribute-element-assl.md) element  

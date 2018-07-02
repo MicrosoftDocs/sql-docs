@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "checking queries"
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Verify Queries (Visual Database Tools)

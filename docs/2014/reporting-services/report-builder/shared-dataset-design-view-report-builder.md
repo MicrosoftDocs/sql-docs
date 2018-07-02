@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 8
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Shared Dataset Design View (Report Builder)
   The Shared Dataset Design window helps you create a dataset query that you can share with others. The window lets you select a shared data source, specify properties for the shared dataset, and create a query in the query designer.  

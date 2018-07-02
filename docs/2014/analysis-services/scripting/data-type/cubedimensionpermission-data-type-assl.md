@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubeDimensionPermission data type"
 ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubeDimensionPermission Data Type (ASSL)
   Defines a primitive data type that represents the permissions for a single role on a specific dimension in a cube.  

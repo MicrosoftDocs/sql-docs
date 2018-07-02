@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "URL access [Reporting Services], syntax"
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 9
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Configure a URL  (SSRS Configuration Manager)

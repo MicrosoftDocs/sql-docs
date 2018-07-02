@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "logins [SQL Server]"
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Logging In to SQL Server

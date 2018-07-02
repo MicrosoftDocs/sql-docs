@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Bulk Copying Text and Image Data

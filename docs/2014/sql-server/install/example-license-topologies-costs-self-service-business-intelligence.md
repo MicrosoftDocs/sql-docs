@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Example License Topologies and Costs  for SQL Server 2014 Self-Service Business Intelligence

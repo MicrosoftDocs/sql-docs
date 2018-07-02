@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "source controls [SQL Server Management Studio], options"
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Set Source Control Options

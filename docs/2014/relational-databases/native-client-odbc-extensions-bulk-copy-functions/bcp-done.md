@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "bcp_done function"
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # bcp_done

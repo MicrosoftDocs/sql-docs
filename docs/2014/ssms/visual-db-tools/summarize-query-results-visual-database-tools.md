@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "aggregate queries [SQL Server]"
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Summarize Query Results (Visual Database Tools)

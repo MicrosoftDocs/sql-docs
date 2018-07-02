@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "DataSourceID element"
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSourceID Element (XMLA)
   Identifies a data source used by a [Location](location-element-xmla.md) element during a [Backup](../xml-elements-commands/backup-element-xmla.md), [Restore](../xml-elements-commands/restore-element-xmla.md), or [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) command.  

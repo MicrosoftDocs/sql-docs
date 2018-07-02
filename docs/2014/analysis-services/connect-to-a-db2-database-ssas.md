@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.bidtoolset.conndb2db.f1"
 ms.assetid: eeef3697-a4fd-4263-ba7e-f86afa1f46cc
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Connect to a DB2 Database (SSAS)
   This page of the **Table Import Wizard** enables you to specify settings to connect to a DB2 database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

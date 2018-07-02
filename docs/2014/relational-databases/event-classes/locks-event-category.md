@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "lock escalation [SQL Server], locks event category"
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Locks Event Category

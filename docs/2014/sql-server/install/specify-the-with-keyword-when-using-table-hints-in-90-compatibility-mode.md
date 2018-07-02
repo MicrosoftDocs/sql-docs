@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "table hints [SQL Server]"
 ms.assetid: 7636cc85-5155-44db-baf6-df807761adb8
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Specify the WITH keyword when using table hints in 90 compatibility mode

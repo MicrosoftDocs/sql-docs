@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "21879 (Database Engine error)"
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 caps.latest.revision: 8
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_21879

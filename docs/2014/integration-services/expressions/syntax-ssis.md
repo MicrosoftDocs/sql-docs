@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "syntax [Integration Services]"
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Syntax (SSIS)

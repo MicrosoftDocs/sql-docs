@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Database Representation(Tabular)
   In Tabular Mode, the database is the container for all objects in the tabular model.  

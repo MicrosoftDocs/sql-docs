@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "TM: Begin Tran Completed event class"
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # TM: Begin Tran Completed Event Class

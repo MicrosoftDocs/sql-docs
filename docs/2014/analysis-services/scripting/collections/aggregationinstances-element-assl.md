@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "AggregationInstances element"
 ms.assetid: e8321aa8-361b-4d8a-bd89-a596eeb814b1
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AggregationInstances Element (ASSL)
   Contains the collection of aggregation instances that are defined in a [Partition](../objects/partition-element-assl.md) element.  

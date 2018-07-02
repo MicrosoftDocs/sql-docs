@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "optimizing tables"
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Optimizing the NewOrg Table

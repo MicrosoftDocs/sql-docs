@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Destination Editor"
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # SQL Destination Editor (Advanced Page)

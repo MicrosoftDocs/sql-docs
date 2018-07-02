@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "SQL Server services"
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Manage the Database Engine Services

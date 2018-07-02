@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "DISCOVER_LOCKS rowset"
 ms.assetid: dea48167-212c-40b7-a416-434042a1b697
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_LOCKS Rowset
   Provides information about the current standing locks on the server.  

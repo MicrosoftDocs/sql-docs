@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Tutorials (Report Builder)
   Use the following Report Builder tutorials to learn how to create basic reports.  

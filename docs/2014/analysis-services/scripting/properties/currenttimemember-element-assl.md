@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CurrentTimeMember element"
 ms.assetid: 2e73009c-9f2b-441c-bdf0-ca19b160da4f
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CurrentTimeMember Element (ASSL)
   Defines the current member of a time dimension associated with a [Kpi](../objects/kpi-element-assl.md) element.  

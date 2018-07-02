@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ReportViewer controls"
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 caps.latest.revision: 25
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Using the WinForms ReportViewer Control

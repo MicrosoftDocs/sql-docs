@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "queries [SQL Server], opening"
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Open Queries (Visual Database Tools)

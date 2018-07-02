@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], create session"
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Create an Extended Events Session Using Query Editor

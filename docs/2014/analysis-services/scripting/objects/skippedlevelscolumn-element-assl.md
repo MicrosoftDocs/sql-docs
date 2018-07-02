@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "SkippedLevelsColumn element"
 ms.assetid: 6b00a288-99c1-4735-9e6b-cd13ed4fa346
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SkippedLevelsColumn Element (ASSL)
     

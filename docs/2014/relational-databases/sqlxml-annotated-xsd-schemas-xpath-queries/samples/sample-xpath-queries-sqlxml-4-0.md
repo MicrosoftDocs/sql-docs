@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], samples"
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Sample XPath Queries (SQLXML 4.0)

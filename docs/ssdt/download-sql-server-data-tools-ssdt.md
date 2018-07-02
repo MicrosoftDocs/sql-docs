@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/04/2018"
+ms.date: "07/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -43,18 +43,19 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 
 ## SSDT for VS 2017 (standalone installer)
 
-[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.7.0) ](https://go.microsoft.com/fwlink/?linkid=874716) 
+[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.7.1) ](https://go.microsoft.com/fwlink/?linkid=875613) 
 
 > [!IMPORTANT]
-> Before installing SSDT for Visual Studio 2017 (15.7.0), uninstall "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed, and close all VS instances. 
+> - Before installing SSDT for Visual Studio 2017 (15.7.1), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
+> - When installing SSDT on Windows 10 and choosing **Install new SQL Server Data Tools for Visual Studio 2017 instance**, please clear any checkbox and install the new instance first. After the new instance is installed, please reboot the computer and open the SSDT installer again to continue the installation.  
 
 
 
 **Version Information**  
   
-Release number: 15.7.0  
-Build number: 14.0.16165.0  
-Release date: June 1, 2018  
+Release number: 15.7.1  
+Build number: 14.0.16167.0  
+Release date: July 02, 2018  
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -64,17 +65,17 @@ SSDT for Visual Studio 2017 has the same [system requirements](https://docs.micr
 
 This release of **SSDT for VS 2017** can be installed in the following languages:  
 
-[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x804) | 
-[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x404) | 
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x409) | 
-[French]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x407) | 
-[Italian]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x410) | 
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x411) | 
-[Korean]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x412) | 
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x416) | 
-[Russian]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x419) | 
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x40a)  
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
+[French]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
+[Italian]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x410) | 
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x411) | 
+[Korean]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x412) | 
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x416) | 
+[Russian]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x419) | 
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40a)  
 
 
 
@@ -142,7 +143,7 @@ SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4
 ## Next steps  
 After installing SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT:  
 
-- [Project-Oriented Offline Database Development](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
+- [Project-Oriented Offline Database Development](project-oriented-offline-database-development.md)  
 - [SSIS Tutorial: Create a Simple ETL Package](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Analysis Services tutorials](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

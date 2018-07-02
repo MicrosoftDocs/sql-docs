@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "DISCOVER_COMMAND_OBJECTS rowset"
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_COMMAND_OBJECTS Rowset
   Provides resource usage and activity information about the objects in use by the referenced command.  

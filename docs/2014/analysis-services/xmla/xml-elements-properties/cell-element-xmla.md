@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Cell element"
 ms.assetid: 88daba54-89e9-423f-8d12-8de80cf52d6b
 caps.latest.revision: 14
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cell Element (XMLA)
   Contains information about a cell to be updated by an [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) command.  

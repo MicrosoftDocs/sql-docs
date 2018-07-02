@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "owners [SQL Server], database diagrams"
 ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Understand Database Diagram Ownership (Visual Database Tools)

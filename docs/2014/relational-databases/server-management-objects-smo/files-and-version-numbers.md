@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "versions [SMO]"
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Files and Version Numbers

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ForceRebuildInterval element"
 ms.assetid: d068f92e-4213-471c-a3a4-aec5af4b8ebf
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ForceRebuildInterval Element (ASSL)
   Determines the amount of time, starting when a fresh multidimensional OLAP (MOLAP) image becomes available, after which MOLAP imaging unconditionally starts.  

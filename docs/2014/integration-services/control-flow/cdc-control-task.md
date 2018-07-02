@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.designer.cdccontroltask.f1"
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # CDC Control Task

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, transactions"
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Isolation Levels (OLE DB)

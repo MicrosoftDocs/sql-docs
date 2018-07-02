@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "SkippedLevels element"
 ms.assetid: 4887b557-0ffc-4f42-b6b9-c98ad1208ca5
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SkippedLevels Element (XMLA)
   Contains the number of levels skipped by an attribute member represented by the parent [Attribute](attribute-element-xmla.md) element.  

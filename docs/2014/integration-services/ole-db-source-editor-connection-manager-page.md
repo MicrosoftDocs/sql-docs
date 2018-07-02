@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLE DB Source Editor"
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # OLE DB Source Editor (Connection Manager Page)

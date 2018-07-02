@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: e6b03364-263a-4ec4-9794-de9869d396ce
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Set the AUTO_CLOSE Database Option to OFF

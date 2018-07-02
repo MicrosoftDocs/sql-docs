@@ -5,8 +5,7 @@ ms.date: "07/14/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-security"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "join a role"
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Join a Role

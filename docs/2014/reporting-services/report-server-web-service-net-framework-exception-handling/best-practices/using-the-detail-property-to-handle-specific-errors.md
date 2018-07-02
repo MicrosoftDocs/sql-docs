@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "InnerText property"
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
 caps.latest.revision: 29
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Using the Detail Property to Handle Specific Errors

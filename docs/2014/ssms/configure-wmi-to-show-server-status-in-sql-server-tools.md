@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "WMI permissions [SQL Server]"
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Configure WMI to Show Server Status in SQL Server Tools

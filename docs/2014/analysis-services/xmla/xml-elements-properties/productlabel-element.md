@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 95e0cf59-6581-4a0a-8e77-17664debf7af
 caps.latest.revision: 4
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ProductLabel Element
   Determines the product level.  

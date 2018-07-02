@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "sp_helptrigger"
 ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # New column in output of sp_helptrigger may impact applications

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CalendarEndDate element"
 ms.assetid: abedd074-9a28-4169-85b5-49ea57f10fb6
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CalendarEndDate Element (ASSL)
   Defines the end date of the calendar period for a [TimeBinding](../data-type/binding-data-type-assl.md) element.  

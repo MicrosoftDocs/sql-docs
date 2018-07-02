@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "RollbackTransaction command"
 ms.assetid: 40e7dc00-656f-412f-97f0-d05bf7caa196
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # RollbackTransaction Element (XMLA)
   Rolls back a transaction on the current session with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

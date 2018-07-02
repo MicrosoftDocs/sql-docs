@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "StatusGraphic element"
 ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # StatusGraphic Element (ASSL)
   Contains the recommended graphical representation of the status of the [Kpi](../objects/kpi-element-assl.md) element.  

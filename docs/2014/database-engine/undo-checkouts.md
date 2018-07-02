@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "undoing checkouts"
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Undo Checkouts

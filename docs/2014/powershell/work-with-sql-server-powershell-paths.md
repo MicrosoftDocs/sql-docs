@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Work With SQL Server PowerShell Paths

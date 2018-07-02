@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
+ms.technology: data-movement
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "quoted fields in CSV files [SQL Server]"
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Prepare Data for Bulk Export or Import (SQL Server)

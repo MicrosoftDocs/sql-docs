@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Connect to Server dialog box, Reporting Services"
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Connect to Server (Login Page) Reporting Services

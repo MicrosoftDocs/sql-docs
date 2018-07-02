@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "FOR XML EXPLICIT mode"
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Use EXPLICIT Mode with FOR XML

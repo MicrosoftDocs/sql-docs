@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "executing updategrams [SQLXML]"
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Executing an Updategram by Using ADO (SQLXML 4.0)

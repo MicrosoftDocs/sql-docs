@@ -17,8 +17,8 @@ f1_keywords:
   - "sql12.swb.tableproperties.changetracking.f1"
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Table Properties

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "classifier function [SQL Server], overview"
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Resource Governor Classifier Function

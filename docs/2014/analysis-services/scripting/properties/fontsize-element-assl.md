@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "FontSize element"
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # FontSize Element (ASSL)
   Describes font-related display characteristics of the [CalculationProperty](../objects/calculationproperty-element-assl.md) or [Measure](../objects/measure-element-assl.md) parent element.  

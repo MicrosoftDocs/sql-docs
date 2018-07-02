@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "PerspectiveCalculation data type"
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PerspectiveCalculation Data Type (ASSL)
   Defines a primitive data type that represents the relationship between a calculation and a [Perspective](../objects/perspective-element-assl.md) element.  

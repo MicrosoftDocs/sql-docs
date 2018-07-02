@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "deleting database objects"
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Deleting Database Objects

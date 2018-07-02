@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_ACTIONS rowset"
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_ACTIONS Rowset
   Describes the actions that may be available to the client application.  

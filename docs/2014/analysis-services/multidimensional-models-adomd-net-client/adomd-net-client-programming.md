@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "ADOMD.NET, programming"
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ADOMD.NET Client Programming
   The ADOMD.NET client components reside within the `Microsoft.AnalysisServices.AdomdClient` namespace (in microsoft.analysisservices.adomdclient.dll). These client components provide the functionality for client and middle-tier applications to easily query data and metadata from an analytical data store, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

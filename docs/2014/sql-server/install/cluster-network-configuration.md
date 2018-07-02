@@ -14,8 +14,8 @@ f1_keywords:
   - "cluster network selection"
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Cluster Network Configuration

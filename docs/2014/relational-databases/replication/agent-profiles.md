@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Agent Profiles dialog box"
 ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Agent Profiles

@@ -18,8 +18,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 caps.latest.revision: 8
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Getting Started (SQL Server 2014)

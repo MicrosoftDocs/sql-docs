@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Properties window [Visual Database Tools]"
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Visual Database Tool Designers

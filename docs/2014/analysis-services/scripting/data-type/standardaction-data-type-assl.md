@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "StandardAction data type"
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # StandardAction Data Type (ASSL)
   Defines a derived data type that represents any [Action](../objects/action-element-assl.md) element other than a [DrillThroughAction](action-data-type-assl.md) element or a [ReportAction](reportaction-data-type-assl.md) element.  

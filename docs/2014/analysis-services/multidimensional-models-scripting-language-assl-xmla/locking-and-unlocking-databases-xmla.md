@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "unlocking objects"
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Locking and Unlocking Databases (XMLA)
   You can lock and unlock databases using, respectively, the [Lock](../xmla/xml-elements-commands/lock-element-xmla.md) and [Unlock](../xmla/xml-elements-commands/unlock-element-xmla.md) commands in XML for Analysis (XMLA). Typically, other XMLA commands automatically lock and unlock objects as needed to complete the command during execution. You can explicitly lock or unlock a database to perform multiple commands within a single transaction, such as a [Batch](../xmla/xml-elements-commands/batch-element-xmla.md) command, while preventing other applications from committing a write transaction to the database.  

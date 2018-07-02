@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "FOR BROWSE clause"
 ms.assetid: 8f49b1c1-d877-4c46-b988-f8cdd8ac0925
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # FOR BROWSE is not allowed in views in 90 or later compatibility modes

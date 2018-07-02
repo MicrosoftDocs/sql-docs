@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "deleting constraints"
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete Check Constraints

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "tool windows [SQL Server Management Studio]"
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Understand SQL Server Management Studio Windows Management

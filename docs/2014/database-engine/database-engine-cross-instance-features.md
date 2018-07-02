@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
 caps.latest.revision: 4
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Database Engine Cross-Instance Features

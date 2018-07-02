@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Choose Variable Columns dialog box"
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Variable Grid Options

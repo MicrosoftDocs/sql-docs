@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], viewing events"
 ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # View the Events for Registered Packages

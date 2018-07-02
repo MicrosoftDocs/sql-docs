@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLE DB Destination Editor"
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # OLE DB Destination Editor (Error Output Page)

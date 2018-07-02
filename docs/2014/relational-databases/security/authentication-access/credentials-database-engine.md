@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-security"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "credentials [SQL Server]"
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Credentials (Database Engine)

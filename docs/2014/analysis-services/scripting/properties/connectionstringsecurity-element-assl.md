@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ConnectionStringSecurity element"
 ms.assetid: f25c4448-bb0d-4945-bc84-9c015eefa0eb
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ConnectionStringSecurity Element (ASSL)
   Specifies whether the user's password is stripped from the data source connection string for security purposes.  

@@ -13,9 +13,9 @@ f1_keywords:
   - "sql.asvs.dimensiondesigner.dbv.attributespane.f1"
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Attributes (Dimension Structure Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
   Use this pane to manage the attributes associated with the selected dimension. Attributes can be dragged from this pane to the **Hierarchies** pane to create hierarchies and levels. For more information, see [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  

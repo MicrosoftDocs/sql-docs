@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "dialog boxes"
   - "Help, dialog boxes"
   - "user interface, dialog boxes"
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Report Builder F1 Help
   This section contains Help for Report Builder wizards, views, panes, and dialog boxes. You can also open Help by pressing F1 or by clicking the Help button in a dialog box.  

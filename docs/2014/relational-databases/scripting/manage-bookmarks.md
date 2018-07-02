@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "bookmarks [SQL Server Management Studio]"
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Manage Bookmarks

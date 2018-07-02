@@ -3,10 +3,9 @@ title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/17/2018"
 ms.prod: sql
+ms.technology: install
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "server-general"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -84,7 +83,6 @@ helpviewer_keywords:
   - "nodes [Faillover Clustering], command prompt"
   - "INSTALLSQLSHAREDDIR parameter"
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-caps.latest.revision: 255
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

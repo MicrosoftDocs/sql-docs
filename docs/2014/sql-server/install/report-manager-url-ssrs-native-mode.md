@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rsconfigtool.reportmanagervirtualdirectory.f1"
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Manager URL (SSRS Native Mode)

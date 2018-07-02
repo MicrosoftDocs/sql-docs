@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 caps.latest.revision: 23
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Error Page (Report Manager)
   Use the Error page to view details about an error condition. Server–based or session-based errors appear on this page. Validation errors that relate to specific page controls display inline next to the control.  

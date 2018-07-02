@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "command prompt [SQL Server replication]"
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 caps.latest.revision: 62
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Distribution Agent

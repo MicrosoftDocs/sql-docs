@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Type element"
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Type Element (DimensionAttribute) (ASSL)
   Contains the type of the attribute.  

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "custom log providers [Integration Services], developing custom user interface"
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Developing a User Interface for a Custom Log Provider

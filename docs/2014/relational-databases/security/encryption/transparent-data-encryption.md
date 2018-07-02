@@ -5,8 +5,7 @@ ms.date: "11/23/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-security"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], transparent data encryption"
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 70
-author: "craigg-msft"
-ms.author: "craigg"
+author: aliceku
+ms.author: aliceku
 manager: craigg
 ---
 # Transparent Data Encryption (TDE)

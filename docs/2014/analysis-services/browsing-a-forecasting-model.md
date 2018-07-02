@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "time series [data mining]"
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Browsing a Forecasting Model
   When you open a forecasting model using **Browse**, the model is displayed in an interactive viewer, similar to the time series model viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The viewer helps you explore trends, compare series, create predictions, and get information about the model and the underlying data.  

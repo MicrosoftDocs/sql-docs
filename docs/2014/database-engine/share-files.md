@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "version control services [SQL Server], file sharing"
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Share Files

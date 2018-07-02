@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Installation Wizard, Installation Progress page"
 ms.assetid: 326f675a-bead-48d3-9088-539e9f9c3fc9
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Installation Progress

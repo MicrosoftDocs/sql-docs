@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, security"
 ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Access to the Integration Services Service

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "custom report items, creating"
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 caps.latest.revision: 33
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Creating a Custom Report Item Run-Time Component

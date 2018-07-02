@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], property expressions"
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Add or Change a Property Expression

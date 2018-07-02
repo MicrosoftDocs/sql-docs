@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Agent, aliases"
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)

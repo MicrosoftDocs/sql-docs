@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ActionID element"
 ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ActionID Element (ASSL)
   Contains the name of an [Action](../objects/action-element-assl.md) element defined on a [Cube](../objects/cube-element-assl.md) element that is made available in a [Perspective](../objects/perspective-element-assl.md) element as a [PerspectiveAction](../data-type/action-data-type-assl.md) element.  

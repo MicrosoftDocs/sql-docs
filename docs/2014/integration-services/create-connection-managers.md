@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, connections"
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Create Connection Managers

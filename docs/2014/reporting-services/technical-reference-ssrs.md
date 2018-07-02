@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "user interface reference [Reporting Services]"
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 caps.latest.revision: 22
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Technical Reference (SSRS)
   Find the tools and PowerShell reference documentation for using or administering [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

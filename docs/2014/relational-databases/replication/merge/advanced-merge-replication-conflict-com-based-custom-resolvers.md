@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "custom resolvers [SQL Server replication]"
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # COM-Based Custom Resolvers

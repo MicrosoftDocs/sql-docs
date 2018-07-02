@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Binding data type"
 ms.assetid: 0a777219-b885-4961-ac66-b76faeb520db
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Binding Data Type (ASSL)
   Defines an abstract primitive data type that represents a dependent relationship between two objects in which the data or metadata of one object is dependent on the data or metadata of a bound object.  

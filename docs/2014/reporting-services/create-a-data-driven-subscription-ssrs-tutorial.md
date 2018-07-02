@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "data-driven subscriptions"
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Create a Data-Driven Subscription (SSRS Tutorial)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides data-driven subscriptions so that you can customize the distribution of a report based on dynamic subscriber data. Data-driven subscriptions are intended for the following kinds of scenarios:  

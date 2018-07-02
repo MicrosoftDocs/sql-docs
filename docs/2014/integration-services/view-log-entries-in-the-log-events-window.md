@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "packages [Integration Services], logs"
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # View Log Entries in the Log Events Window

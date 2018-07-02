@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "UseCachedPageAllocators property"
 ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Feature Properties
   Feature properties pertain to product features, most of them advanced, including properties that control links between server instances.  

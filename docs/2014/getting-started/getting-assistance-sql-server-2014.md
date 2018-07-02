@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "finding Help topics [SQL Server]"
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Getting Assistance (SQL Server 2014)

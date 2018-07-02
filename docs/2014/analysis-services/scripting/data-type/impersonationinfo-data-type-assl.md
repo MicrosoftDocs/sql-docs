@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ImpersonationInfo data type"
 ms.assetid: 8a6b55fe-1f02-4519-bdc2-4553b576b2f3
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ImpersonationInfo Data Type (ASSL)
   Defines a primitive data type that represents the information used to impersonate a user.  

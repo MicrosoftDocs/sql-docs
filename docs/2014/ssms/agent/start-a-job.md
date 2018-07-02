@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "starting jobs"
 ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Start a Job

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ManufacturingExtraMonthQuarter element"
 ms.assetid: 6e97d92c-dd1e-48f6-a379-c1036c975f9f
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ManufacturingExtraMonthQuarter Element (ASSL)
   Defines the month of the manufacturing period to which an extra month is assigned for a [TimeBinding](../data-type/binding-data-type-assl.md) element.  

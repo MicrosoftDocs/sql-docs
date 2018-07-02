@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DeniedSet element"
 ms.assetid: 898deefb-822d-458b-96d8-880da287b687
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DeniedSet Element (ASSL)
   Contains a set expression that defines the list of permissions that are denied on the associated attribute.  

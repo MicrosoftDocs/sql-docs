@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Broker:Connection event class"
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Broker:Connection Event Class

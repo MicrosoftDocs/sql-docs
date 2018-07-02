@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "programming [SQL Server replication]"
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Programming Concepts

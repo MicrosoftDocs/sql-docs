@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "360 (Database Engine error)"
 ms.assetid: e2b7c1b2-3679-4206-9b25-6bd55ef96a2c
 caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_360

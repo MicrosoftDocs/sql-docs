@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: 5
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Previewing Reports in Report Builder
   While you create a report, it is helpful to preview the report often to verify that the report displays what you want. To preview your report, click **Run**. The report renders in preview mode.  

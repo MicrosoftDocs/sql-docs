@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Binding element"
 ms.assetid: d5acd8d4-8551-449a-ae30-d0ba828cc02d
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Binding Element (XMLA)
   Defines an out-of-line binding for an [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] object, such as an attribute in a dimension, for the [Bindings](bindings-element-xmla.md) collection of a [Batch](../xml-elements-commands/batch-element-xmla.md) or [Process](../xml-elements-commands/process-element-xmla.md) command.  

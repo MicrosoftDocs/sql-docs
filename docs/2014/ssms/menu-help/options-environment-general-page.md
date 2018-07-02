@@ -14,8 +14,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions"
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Options (Environment-General Page)

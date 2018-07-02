@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "DISCOVER_DB_CONNECTIONS rowset"
 ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_DB_CONNECTIONS Rowset
   Provides resource usage and activity information about the currently opened connections from the server to a database.  

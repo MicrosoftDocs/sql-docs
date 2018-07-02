@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 22
-author: "stevestein"
-ms.author: "sstein"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Native Compilation of Tables and Stored Procedures

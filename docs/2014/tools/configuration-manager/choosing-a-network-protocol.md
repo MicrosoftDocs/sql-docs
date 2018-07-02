@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "protocols [SQL Server], client configuration"
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Choosing a Network Protocol

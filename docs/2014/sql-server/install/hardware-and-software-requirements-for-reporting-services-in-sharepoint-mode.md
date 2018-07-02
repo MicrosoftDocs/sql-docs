@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Hardware and Software Requirements for Reporting Services in SharePoint Mode

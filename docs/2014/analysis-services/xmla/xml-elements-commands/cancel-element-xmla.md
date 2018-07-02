@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Cancel command"
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
 caps.latest.revision: 15
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cancel Element (XMLA)
   Cancels a currently running command an [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  

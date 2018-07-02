@@ -653,7 +653,7 @@ GO
 [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
 [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)    
   
-# [SQL Database Managed Instance](#tab/sqldb-mi)  
+# [SQL DB Managed Instance](#tab/sqldb-mi)  
 
 Use this statement with a database in Azure SQL Database Managed Instance.
 

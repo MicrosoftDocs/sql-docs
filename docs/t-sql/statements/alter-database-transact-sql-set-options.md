@@ -1263,7 +1263,7 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# [SQL Database logical server](#tab/sqldb-ls)
+# [SQL DB logical server](#tab/sqldb-ls)
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -2004,7 +2004,7 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# [SQL Database Managed Instance](#tab/sqldb-mi)
+# [SQL DB Managed Instance](#tab/sqldb-mi)
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   

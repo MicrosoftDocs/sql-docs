@@ -256,7 +256,7 @@ GO
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [System Databases](../../relational-databases/databases/system-databases.md)  
   
-# [SQL Database logical server](#tab/sqldb-ls)
+# [SQL DB logical server](#tab/sqldb-ls)
 
 ## Overview
 
@@ -597,7 +597,7 @@ ALTER DATABASE db1 FAILOVER
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [System Databases](../../relational-databases/databases/system-databases.md)  
 
-# [SQL Database Managed Instance](#tab/sqldb-mi)
+# [SQL DB Managed Instance](#tab/sqldb-mi)
 
 ## Overview
 

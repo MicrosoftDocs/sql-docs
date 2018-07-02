@@ -855,7 +855,7 @@ GO
  [Databases](../../relational-databases/databases/databases.md)   
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
 
-# [SQL Database logical server](#tab/sqldb-ls)
+# [SQL DB logical server](#tab/sqldb-ls)
 
 ## Overview
 
@@ -1166,7 +1166,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 - [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-transact-sql.md?&tabs=sqldb-ls) 
 
-# [SQL Database Managed Instance](#tab/sqldb-mi)
+# [SQL DB Managed Instance](#tab/sqldb-mi)
 
 ## Overview
 

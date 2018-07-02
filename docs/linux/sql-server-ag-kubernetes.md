@@ -109,4 +109,4 @@ The version for the operator image is identical to the version for the SQL Serve
 
 ## Next steps
 
-> [SQL Server shared storage solution](tutorial-sql-server-containers-kubernetes.md)
+> [SQL Server container in Kubernetes](tutorial-sql-server-containers-kubernetes.md)

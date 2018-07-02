@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -28,8 +27,8 @@ helpviewer_keywords:
   - "file importing [SQL Server]"
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # BULK INSERT (Transact-SQL)
@@ -419,6 +418,18 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
+```
+
+### G. Importing data from a file in Azure blob storage and specifying an error file   
+The following example shows how to load data from a csv file in an Azure blob storage location, which has been configured as an external data source and also specifying an error file. This requires a database scoped credential using a shared access signature. Note that if running on Azure SQL Database, ERRORFILE option should be accompanied by ERRORFILE_DATA_SOURCE otherwise the import might fail with permissions error. The file specified in ERRORFILE should not exist in the container.
+
+```sql
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-01-19.csv'
+WITH (DATA_SOURCE = 'MyAzureInvoices',
+     FORMAT = 'CSV',
+     ERRORFILE = 'MyErrorFile',
+     ERRORFILE_DATA_SOURCE = 'MyAzureInvoices'); 
 ```
 
 For complete `BULK INSERT` examples including configuring the credential and external data source, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -37,8 +36,8 @@ helpviewer_keywords:
   - "attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH"
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 caps.latest.revision: 212
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE DATABASE (SQL Server Transact-SQL)

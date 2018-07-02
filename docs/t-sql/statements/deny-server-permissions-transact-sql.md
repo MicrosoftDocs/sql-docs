@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "DENY statement, servers"
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DENY Server Permissions (Transact-SQL)

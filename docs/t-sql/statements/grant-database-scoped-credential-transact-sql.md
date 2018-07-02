@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/19/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "GRANT statement, database scoped credentials"
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 caps.latest.revision: 3
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-catalog-views"
+ms.service: sql-data-warehouse
+ms.component: system-objects
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg

@@ -15,7 +15,7 @@ manager: craigg
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WideWorldImportersDW Installation and configuration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 Installation and configuration instructions for the WideWorldImportersDW database.
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (or higher) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). To use the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.

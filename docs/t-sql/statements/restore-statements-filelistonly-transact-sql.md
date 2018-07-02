@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "listing backed up files"
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 caps.latest.revision: 83
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

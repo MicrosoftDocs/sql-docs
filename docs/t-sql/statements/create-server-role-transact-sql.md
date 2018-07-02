@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -26,8 +25,8 @@ helpviewer_keywords:
   - "roles, server"
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE SERVER ROLE (Transact-SQL)

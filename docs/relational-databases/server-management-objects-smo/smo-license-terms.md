@@ -5,11 +5,10 @@ ms.date: "08/06/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

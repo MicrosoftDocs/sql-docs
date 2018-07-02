@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "revoking permissions [SQL Server], database scoped credentials"
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 caps.latest.revision: 2
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---

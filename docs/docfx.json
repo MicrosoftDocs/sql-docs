@@ -101,15 +101,15 @@
         "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
 
         "advanced-analytics/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "analysis-services/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
+        "analysis-services/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016 || = sqlallproducts-allversions",
         "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "database-engine/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "dmx/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
+        "dmx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "integration-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "linux/**/*.md": ">= sql-server-linux-2017 || = sqlallproducts-allversions",
         "master-data-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "mdx/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
+        "mdx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "relational-databases/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "reporting-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
@@ -135,15 +135,11 @@
       },
 
       "gr-sql-2016-a": {
-        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "dest": "temp2016a"
       }
     },
 
-    "xref":[
-      "mref/sql130.zip",
-      "mref/System.Reflection.Assembly.Load.yml",
-      "mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml"
-    ]
+    "xref":["mref/sql130.zip","mref/System.Reflection.Assembly.Load.yml","mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml","2014/mref/Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.yml","2014/mref/Microsoft.AnalysisServices.ClrAssembly.yml","2014/mref/Microsoft.AnalysisServices.Cube.yml","2014/mref/Microsoft.AnalysisServices.Dimension.CurrentStorageMode.yml","2014/mref/Microsoft.AnalysisServices.Dimension.ProcessingMode.yml","2014/mref/Microsoft.AnalysisServices.ProcessableMajorObject.yml","2014/mref/Microsoft.AnalysisServices.Server.yml","2014/mref/Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.yml","2014/mref/Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput.yml","2014/mref/Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask.yml","2014/mref/Microsoft.SqlServer.Management.Common.ServerConnection.yml","2014/mref/Microsoft.SqlServer.Management.Smo.Database.yml","2014/mref/Microsoft.SqlServer.Management.Smo.DataType.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBox.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.yml","2014/mref/Microsoft.SqlServer.MessageBox.yml","2014/mref/Microsoft.SqlServer.Replication.DistributionPublisher.yml","2014/mref/Microsoft.SqlServer.Replication.IProcessSecurityContext.yml","2014/mref/Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId.yml","2014/mref/Microsoft.SqlServer.Replication.MergeArticle.yml","2014/mref/Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription.yml","2014/mref/Microsoft.SqlServer.Replication.TracerToken.TracerTokenId.yml","2014/mref/System.Windows.Forms.MessageBox.yml","2014/mref/System.Data.OracleClient.yml","2014/mref/System.Data.SqlClient.SqlConnection.yml","2014/mref/System.Web.Services.yml","2014/mref/System.Exception.yml","2014/mref/ReportService2006.ReportingService2006.yml","2014/mref/ReportService2010.ReportingService2010.CreateReportEditSession.yml","2014/mref/Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties.yml","2014/mref/ReportService2005.ReportingService2005.yml","2014/mref/System.Xml.Serialization.yml","2014/mref/System.Windows.Forms.DialogResult.yml"]
   }
 }

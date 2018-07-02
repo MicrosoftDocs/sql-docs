@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], types"
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DENY Type Permissions (Transact-SQL)

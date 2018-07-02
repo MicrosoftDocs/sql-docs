@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -213,7 +212,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT TOP(10)WITH TIES  
+SELECT TOP(10) PERCENT WITH TIES  
 pp.FirstName, pp.LastName, e.JobTitle, e.Gender, r.Rate  
 FROM Person.Person AS pp   
     INNER JOIN HumanResources.Employee AS e  

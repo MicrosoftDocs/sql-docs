@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -28,8 +27,8 @@ helpviewer_keywords:
   - "application roles [SQL Server], permissions"
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DENY Database Principal Permissions (Transact-SQL)

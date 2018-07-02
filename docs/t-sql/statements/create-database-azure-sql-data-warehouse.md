@@ -2,19 +2,17 @@
 title: "CREATE DATABASE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/14/20178"
-ms.prod: ""
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "t-sql|statements"
+ms.service: sql-data-warehouse
 ms.suite: "sql"
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---

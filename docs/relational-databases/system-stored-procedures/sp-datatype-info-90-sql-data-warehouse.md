@@ -4,17 +4,16 @@ ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-stored-procedures"
+ms.service: sql-data-warehouse
+ms.component: system-objects
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg

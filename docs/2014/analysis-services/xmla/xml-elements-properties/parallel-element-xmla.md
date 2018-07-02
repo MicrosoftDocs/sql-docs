@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Parallel element"
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Parallel Element (XMLA)
   Identifies commands to be run in parallel by the parent [Batch](../xml-elements-commands/batch-element-xmla.md) command.  

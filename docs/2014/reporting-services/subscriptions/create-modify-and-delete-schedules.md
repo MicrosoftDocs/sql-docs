@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "report-specific schedules [Reporting Services]"
   - "shared schedules [Reporting Services]"
@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "shared schedules [Reporting Services], deleting"
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: 45
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Create, Modify, and Delete Schedules
   Use this topic to learn about how to create, modify, and delete schedules.  

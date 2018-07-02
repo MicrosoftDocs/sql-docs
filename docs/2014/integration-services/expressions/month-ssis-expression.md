@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dates [Integration Services], MONTH"
   - "MONTH function"
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # MONTH (SSIS Expression)
   Returns an integer that represents the month datepart of a date.  

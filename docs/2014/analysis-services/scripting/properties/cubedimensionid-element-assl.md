@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubeDimensionID element"
 ms.assetid: d1341fb2-9afe-40f1-a704-ce548bce48fc
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubeDimensionID Element (ASSL)
   Identifies the [CubeDimension](../data-type/dimension-data-type-assl.md) element associated with the parent element.  

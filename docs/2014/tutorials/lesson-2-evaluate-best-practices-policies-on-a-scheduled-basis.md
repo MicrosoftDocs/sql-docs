@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 37ffad63-d6db-4609-8deb-786200659554
 caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: craigg-msft
+ms.author: craigg
+manager: craigg
 ---
 # Lesson 2: Evaluate Best Practices Policies on a Scheduled Basis
   You can configure scheduled evaluations of best practices policies on one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. To configure best practices policies to run on a scheduled basis, you must import the policies into the target instance.  

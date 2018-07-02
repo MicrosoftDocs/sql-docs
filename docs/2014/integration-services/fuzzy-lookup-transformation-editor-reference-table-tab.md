@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fuzzylookuptransformation.referencetable.f1"
 helpviewer_keywords: 
   - "Fuzzy Lookup Transformation Editor"
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Fuzzy Lookup Transformation Editor (Reference Table Tab)
   Use the **Reference Table** tab of the **Fuzzy Lookup Transformation Editor** dialog box to specify the source table and the index to use for the lookup. The reference data source must be a table in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  

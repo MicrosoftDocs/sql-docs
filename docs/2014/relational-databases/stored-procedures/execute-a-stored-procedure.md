@@ -3,12 +3,11 @@ title: "Execute a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-stored-procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.executeprocedure.f1"
   - "sql12.swb.executeprocedure.general.f1"
@@ -19,10 +18,9 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], executing"
   - "user-defined stored procedures [SQL Server]"
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
-caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Execute a Stored Procedure
   This topic describes how to execute a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

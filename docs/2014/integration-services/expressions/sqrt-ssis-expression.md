@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQRT function"
   - "square root of given expression"
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # SQRT (SSIS Expression)
   Returns the square root of a numeric expression.  

@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.maint.editrecurringjobsched.f1"
   - "sql12.ag.job.scheduleproperties.f1"
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # New Job Schedule: Job Schedule Properties
   Use this page to view and change the properties of the schedule.  

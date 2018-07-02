@@ -13,7 +13,7 @@ ms.technology:
   - "replication"
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "new features [SQL Server]"
   - "SQL Server, what's new"
@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sql server 2014 sp2"
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 caps.latest.revision: 70
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: craigg-msft
+ms.author: craigg
+manager: craigg
 ---
 # What&#39;s New in SQL Server 2014
   This topic summarizes detailed links to new features in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and summarizes services packs for [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  

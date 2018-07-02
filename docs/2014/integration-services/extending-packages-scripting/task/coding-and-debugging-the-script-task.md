@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "SSIS Script task, coding"
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Coding and Debugging the Script Task
   After configuring the Script task in the **Script Task Editor**, you write your custom code in the Script task development environment.  

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "FiscalYearName element"
 ms.assetid: ce613a21-6890-4796-aac5-b029eca46255
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # FiscalYearName Element (ASSL)
   Defines the naming convention for the name of the fiscal year for a [TimeBinding](../data-type/binding-data-type-assl.md) element.  

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "CancelAssociated element"
 ms.assetid: fd890440-d1a7-4c05-9e81-c81e6b8c274c
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CancelAssociated Element (XMLA)
   Indicates whether the parent [Cancel](../xml-elements-commands/cancel-element-xmla.md) element should cancel all associated commands.  

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "bcp_writefmt function"
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # bcp_writefmt
   Creates a format file containing a description of the format of the current bulk copy data file.  

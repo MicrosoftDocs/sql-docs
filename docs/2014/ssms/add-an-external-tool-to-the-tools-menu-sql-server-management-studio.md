@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tools [SQL Server], external"
   - "external tools [SQL Server]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Tools menu"
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Add an External Tool to the Tools Menu (SQL Server Management Studio)
   You can launch any [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows or [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] application from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. External applications can be added to, and run from, the **Tools** menu.  

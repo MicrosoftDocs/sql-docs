@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data types [Integration Services]"
   - "Data Conversion transformation"
   - "data types [Integration Services], converting"
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Convert Data to a Different Data Type by Using the Data Conversion Transformation
   To add and configure a Data Conversion transformation, the package must already include at least one Data Flow task and one source.  

@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: craigg-msft
+ms.author: douglasl
+manager: craigg
 ---
 # Lesson 4: Update the Report Definition Programmatically
   Now that the report definition has been loaded from the report server and you have a reference to it using the report field, you need to update the report definition. For this example, you will update the `Description` property for the report.  

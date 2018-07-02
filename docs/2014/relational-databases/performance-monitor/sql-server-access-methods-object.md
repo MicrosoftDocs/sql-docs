@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Access Methods object"
   - "SQLServer:Access Methods"
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # SQL Server, Access Methods Object
   The **Access Methods** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor how the logical data within the database is accessed. Physical access to the database pages on disk is monitored using the **Buffer Manager** counters. Monitoring the methods used to access data stored in the database can help you to determine whether query performance can be improved by adding or modifying indexes, adding or moving partitions, adding files or file groups, defragmenting indexes, or by rewriting queries. The **Access Methods** counters can also be used to monitor the amount of data, indexes, and free space within the database, thereby indicating data volume and fragmentation for each server instance. Excessive index fragmentation can impair performance.  

@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transfersqlserverobjects.general.f1"
 helpviewer_keywords: 
   - "Transfer SQL Server Objects Task Editor"
 ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Transfer SQL Server Objects Task Editor (General Page)
   Use the **General** page of the **Transfer SQL Server Objects Task Editor** dialog box to name and describe the Transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objects task. For more information about this task, see [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  

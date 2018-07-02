@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing query properties"
   - "displaying query properties"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "queries [SQL Server], properties"
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Show Query Properties (Visual Database Tools)
   You can display properties for a query in the Properties window from Query and View Designer.  

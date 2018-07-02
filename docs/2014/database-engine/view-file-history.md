@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "version control services [SQL Server], file history"
   - "historical information [SQL Server], files"
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # View File History
   You can use the **History** command to view a version history for source-controlled files. This history includes the date and time when the file was added or checked in to source control.  

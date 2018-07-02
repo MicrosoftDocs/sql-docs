@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "NumberOfFlags property"
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # NumberOfFlags Property (ClientNetworkProtocol Class)
   Gets the number of flag options required by the client network protocol specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](clientnetworkprotocol-class.md).  

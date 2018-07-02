@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reverting queries"
   - "queries [SQL Server], discarding changes"
   - "discarding query changes"
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Discard Changes Made to Queries (Visual Database Tools)
   You can discard changes made to a query definition prior to saving them. Once they have been saved, they cannot be returned to a previous state.  

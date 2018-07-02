@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "CursorClose event class"
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # CursorClose Event Class
   Cursor close events occur when the [!INCLUDE[ssDE](../../includes/ssde-md.md)] closes and deallocates a cursor. The **CursorClose** event class describes cursor close events that occur in application programming interface (API) cursors. This event class occurs when a [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor statement by ODBC, OLE DB, or DB-Library is closed.  

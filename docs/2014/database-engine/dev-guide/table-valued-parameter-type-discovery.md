@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "table-valued parameters, type discovery"
 ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Table-Valued Parameter Type Discovery
   The consumer—that is, the client application using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider—can discover the type of each command parameter if the command text has been given to the OLE DB Provider. After the type of a table-valued parameter is known, the consumer can discover the metadata information for each individual column of the table-valued parameter.  

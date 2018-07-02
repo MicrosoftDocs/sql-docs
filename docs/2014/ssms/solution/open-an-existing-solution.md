@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "opening solutions"
   - "solutions [SQL Server Management Studio], opening"
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Open an Existing Solution
   You can have only one solution at a time open in Solution Explorer.  

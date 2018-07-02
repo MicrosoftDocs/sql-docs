@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Partition Wizard"
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Partition Wizard F1 Help (Analysis Services - Multidimensional Data)
   You can use the Partition Wizard to define partitions for a measure group in a cube. By default, a single partition is defined for each measure group in a cube. Access and processing performance, however, can degrade for large partitions. By creating multiple partitions, each containing a portion of the data for a measure group, you can improve the access and processing performance for that measure group.  

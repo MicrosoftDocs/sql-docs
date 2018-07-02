@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [SQL Server], saving"
   - "Table Designer, saving work"
   - "saving tables"
 ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Save Your Work in Table Designer (Visual Database Tools)
   You can save changes to tables that are open in Table Designer.  

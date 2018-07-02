@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
 caps.latest.revision: 25
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specifying the Data Type and Content Type (Basic Data Mining Tutorial)
   Now that you have selected which columns to use for building your structure and training your models, make any necessary changes to the default data and content types that are set by the wizard.  

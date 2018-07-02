@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MiningStructurePermission element"
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MiningStructurePermission Element (ASSL)
   Defines the permissions that members of a [Role](role-element-assl.md) element have on an individual [MiningStructure](miningstructure-element-assl.md) element.  

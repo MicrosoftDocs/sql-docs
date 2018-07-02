@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 caps.latest.revision: 14
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "jhubbard"
+author: heidisteen
+ms.author: heidist
+manager: craigg
 ---
 # Setup Role
   Use this page to specify whether to use the Feature Selection page to select individual features, or to install using a setup role.  

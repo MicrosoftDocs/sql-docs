@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "137 (Database Engine error)"
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_137
     

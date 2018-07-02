@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "10509 (Database Engine error)"
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_10509
     

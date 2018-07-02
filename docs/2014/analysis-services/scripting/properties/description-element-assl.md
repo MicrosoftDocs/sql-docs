@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Description element"
 ms.assetid: 34d67e7c-e79a-429b-8cc3-6ca13b9cf9c3
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Description Element (ASSL)
   Contains the description of the parent element.  

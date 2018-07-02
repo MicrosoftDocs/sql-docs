@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "contained_database_authentication_TSQL"
   - "contained database authentication"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "contained database authentication option"
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 caps.latest.revision: 8
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # contained database authentication Server Configuration Option
   Use the **contained database authentication** option to enable contained databases on the instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

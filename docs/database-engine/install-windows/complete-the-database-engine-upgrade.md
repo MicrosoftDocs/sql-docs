@@ -3,14 +3,12 @@ title: "Complete the Database Engine Upgrade | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
 ms.prod: sql
+ms.technology: install
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "server-general"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

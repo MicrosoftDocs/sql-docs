@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "stored procedures [ODBC], running"
 ms.assetid: c2220182-a23d-4475-b353-77a77ab613d6
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Running Stored Procedures How-to Topics (ODBC)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver supports executing stored procedures as remote stored procedures. Executing a stored procedure as a remote stored procedure allows the driver and the server to optimize the performance of executing the procedure.  

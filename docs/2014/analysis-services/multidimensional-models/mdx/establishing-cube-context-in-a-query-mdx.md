@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cubes [Analysis Services], MDX"
   - "MDX [Analysis Services], cube context"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "queries [MDX], cube context"
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Establishing Cube Context in a Query (MDX)
   Every MDX query runs within a specified cube context. This context defines the members that are evaluated by the expressions within the query.  

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Source element"
 ms.assetid: 1032558c-7546-4ca7-888d-8139df23cb62
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Source Element (Binding) (ASSL)
   Identifies the source of data to which the parent element is bound.  

@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "53"
 helpviewer_keywords: 
   - "53 (Database Engine error)"
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # MSSQLSERVER_53
     

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined types [SQL Server replication]"
   - "articles [SQL Server replication], dropping"
@@ -42,9 +42,9 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server replication]"
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Publish Data and Database Objects
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  

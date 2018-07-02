@@ -5,17 +5,16 @@ ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.spl.searchpropertylisteditor.f1"
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: craigg-msft
+ms.author: craigg
+manager: craigg
 ---
 # Search Property List Editor
   Use this dialog box to add or delete search properties in a search property list.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xp_sqlagent_proxy_account"
 ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Replace usage of the xp_sqlagent_proxy_account extended stored procedure with new stored procedures
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supports multiple proxies. You define these proxies by using a new set of stored procedures. For more information about the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent stored procedures, see the following topics in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online:  

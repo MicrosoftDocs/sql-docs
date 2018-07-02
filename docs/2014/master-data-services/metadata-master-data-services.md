@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined metadata [Master Data Services], about user-defined metadata"
   - "metadata [Master Data Services], about metadata"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "user-defined metadata [Master Data Services]"
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Metadata (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], user-defined metadata is information that you use to describe model objects. For example, you may want to track the owners of a particular model or entity, or track the source systems that supply data to an entity.  

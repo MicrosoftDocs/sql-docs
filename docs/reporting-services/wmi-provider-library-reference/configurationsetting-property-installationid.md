@@ -7,10 +7,7 @@ ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "wmi-provider-library-reference"
 ms.reviewer: ""
 ms.suite: "pro-bi"
-ms.technology: 
-
-
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
@@ -21,7 +18,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "InstanceID property"
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
-caps.latest.revision: 38
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"

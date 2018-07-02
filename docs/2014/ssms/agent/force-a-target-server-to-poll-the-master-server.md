@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "forcing master server polling"
   - "polling master servers [SQL Server]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "target servers [SQL Server], polling the master server"
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Force a Target Server to Poll the Master Server
   This topic describes how to force a target server to poll the master server. The target server must be a registered server on the master server.  

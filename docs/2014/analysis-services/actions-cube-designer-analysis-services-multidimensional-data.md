@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.actionsview.f1"
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Actions (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Actions** tab in Cube Designer to view and edit actions, including drillthrough actions and report actions, for the selected cube.  

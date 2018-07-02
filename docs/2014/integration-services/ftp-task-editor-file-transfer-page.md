@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.ftptask.filetransfer.f1"
 helpviewer_keywords: 
   - "File Transfer Protocol Task Editor"
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # FTP Task Editor (File Transfer Page)
   Use the **File Transfer** page of the **FTP Task Editor** dialog box to configure the FTP operation that the task performs.  

@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Feature Review
   The Feature Review page is a read-only list of features that have been prepared and will be configured and completed at the end of the complete image step. The feature list is selected during the prepare image step and cannot be modified during complete image step. In addition to the features displayed, a prepared instance also includes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

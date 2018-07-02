@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.patheditor.visualizers.f1"
 helpviewer_keywords: 
   - "Data Flow Path Editor dialog box"
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Data Flow Path Editor (Data Viewers Page)
   Use the **Data Viewers** page of the **Data Flow Path Editor** dialog box to manage the data viewers that are attached to the path.  

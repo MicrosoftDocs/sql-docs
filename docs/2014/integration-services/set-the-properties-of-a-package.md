@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, properties"
   - "properties [Integration Services]"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, properties"
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Set the Properties of a Package
   This procedure describes how to configure package properties by using the **Properties** window.  

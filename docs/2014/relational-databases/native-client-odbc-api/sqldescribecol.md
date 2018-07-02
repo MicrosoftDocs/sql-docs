@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQLDescribeCol function"
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLDescribeCol
   For executed statements, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not need to query the server to describe columns in a result set. In this case, `SQLDescribeCol` does not cause a server roundtrip. Like [SQLColAttribute](sqlnumresultcols.md), calling `SQLDescribeCol` on prepared but not executed statements generates a server roundtrip.  

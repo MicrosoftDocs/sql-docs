@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined variables [Integration Services]"
   - "variables [Integration Services], use scenarios"
   - "system variables [Integration Services]"
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Use Variables in Packages
   Variables are a useful and flexible addition to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages; they can provide communication among objects in the package, and between parent and child packages. Variables can also be used in expressions and scripts.  

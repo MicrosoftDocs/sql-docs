@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tracer"
   - "connections"
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Trace (Data Mining Client for Excel)
   ![Trace button](media/misc-trace.gif "Trace button")  

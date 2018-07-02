@@ -62,7 +62,10 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
      To continue, click **Next**.  
 
-4.  On the License Terms page, review the license agreement and, if you agree, select the **I accept the license terms** check box, and then click **Next**. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  On the License Terms page, review the license agreement and, if you agree, select the **I accept the license terms** check box, and then click **Next**.  
+
+  >[!NOTE]
+  > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [Privacy statement](https://privacy.microsoft.com/en-us/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  In the Global Rules window, the setup procedure will automatically advance to the Product Updates window if there are no rule errors.  
   
@@ -74,9 +77,9 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
 9. On **Install Rules** SQL Server Setup checks to identify potential problems that might occur while running Setup. If failures occur, click in the **Status** column for more information. Otherwise click **Next**. 
 
-10. On **Installation Type** choose either perform a new installation, or add features to an existing installation. Click **Next**. 
+10. If this is the first installation of SQL Server on the machine, the **Installation Type** page is skipped, and the installation goes directly to the **Feature Selection** page. However, if SQL Server is already installed on the system, on the  **Installation Type** choose either to perform a new installation, or add features to an existing installation. Click **Next**. 
   
-11. On the Feature Selection page, select the components for your installation. For example, to install a new instance of SQL Server database engine, check **Database Engine Services**.
+11. On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of SQL Server database engine, check **Database Engine Services**.
 
     A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   

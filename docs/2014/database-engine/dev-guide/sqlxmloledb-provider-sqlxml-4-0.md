@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "data providers [SQLXML], SQLXMLOLEDB Provider"
 ms.assetid: fc489682-690a-4bb0-b5ac-237d376dc110
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # SQLXMLOLEDB Provider (SQLXML 4.0)
   The SQLXMLOLEDB Provider is an OLE DB provider that exposes [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML functionality through ADO.  

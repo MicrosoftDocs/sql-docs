@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "InstanceName property"
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # InstanceName Property (ClientSettingsGeneralFlag Class)
   Gets the name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  

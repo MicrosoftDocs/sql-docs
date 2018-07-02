@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], development"
   - "development [SQL Server Database Engine]"
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: craigg-msft
+ms.author: craigg
+manager: craigg
 ---
 # Database Engine Features and Tasks
   Find information that anyone—designer, developer, analyst, or administrator—requires to build [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases.  

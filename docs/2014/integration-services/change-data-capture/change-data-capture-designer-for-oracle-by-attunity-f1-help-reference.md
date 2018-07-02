@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "f1Help"
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Change Data Capture Designer for Oracle by Attunity F1 Help Reference
   The Change Data Capture Designer for Oracle by Attunity is used to create and manage Oracle CDC Instance. The topics in this section explain how to carry out the available tasks in the CDC Designer Console.  

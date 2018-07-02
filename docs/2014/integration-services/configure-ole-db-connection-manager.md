@@ -8,24 +8,19 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbconnection.f1"
 helpviewer_keywords: 
   - "Configure OLE DB Connection Manager dialog box"
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Configure OLE DB Connection Manager
   Use the **Configure OLE DB Connection Manager** dialog box to add a connection to a data source, which can be either a new connection or a copy of an existing connection.  
-  
-> [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](connection-manager/connect-to-an-excel-workbook.md).  
->   
->  If the data source is [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Access 2007, the data source requires a different OLE DB provider than earlier versions of Access. For more information, see [Connect to an Access Database](connection-manager/connect-to-an-access-database.md).  
   
  To learn more about the OLE DB connection manager, see [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   

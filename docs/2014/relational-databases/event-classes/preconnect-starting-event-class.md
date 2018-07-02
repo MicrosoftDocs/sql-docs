@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "PreConnect:Starting Event Class"
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # PreConnect:Starting Event Class
   The PreConnect:Starting event class indicates when a LOGON trigger or the Resource Governor classifier function starts execution.  

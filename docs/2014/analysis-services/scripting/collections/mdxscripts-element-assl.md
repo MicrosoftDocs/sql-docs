@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MdxScripts element"
 ms.assetid: 0aaa849f-e723-4245-8c16-7ed049590fd2
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MdxScripts Element (ASSL)
   Contains the collection of [MdxScript](../objects/mdxscript-element-assl.md) elements associated with a [Cube](../objects/cube-element-assl.md) element.  

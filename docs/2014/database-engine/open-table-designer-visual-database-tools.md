@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "opening tables"
   - "opening Table Designer"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Table Designer, opening"
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Open Table Designer (Visual Database Tools)
   The Table Designer is a visual tool that allows you to design and visualize database tables to which you are connected. You can use Table Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints.  

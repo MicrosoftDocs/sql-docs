@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "OLE DB, bindings and conversions"
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Bindings and Conversions (OLE DB)
   This section discusses how to convert between `datetime` and `datetimeoffset` values. The conversions described in this section are either already provided by OLE DB or are a consistent extension of OLE DB.  

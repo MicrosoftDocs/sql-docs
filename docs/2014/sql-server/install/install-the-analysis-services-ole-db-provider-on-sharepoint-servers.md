@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 caps.latest.revision: 34
-author: "markingmyname"
-ms.author: "maghan"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Install the Analysis Services OLE DB Provider on SharePoint Servers
   The Microsoft OLE DB Provider for Analysis Services (MSOLAP) is an interface that client applications use to interact with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data. In a SharePoint environment that includes [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], the provider handles connection requests for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.  

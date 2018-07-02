@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "time data types [Integration Services]"
   - "fast parse [Integration Services]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "date and time formats for fast parse"
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Date and Time Formats
   Fast parse provides a fast, simple set of routines for parsing data. Fast parse supports the following formats for date and time data types.  

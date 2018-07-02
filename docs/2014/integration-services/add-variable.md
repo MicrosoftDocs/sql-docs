@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.addvariable.f1"
 helpviewer_keywords: 
   - "Add Variable dialog box"
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Add Variable
   Use the **Add Variable** dialog box to specify the properties of a new variable.  

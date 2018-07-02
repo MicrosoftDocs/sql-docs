@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "rendering extensions [Reporting Services], custom extensions"
   - "security extensions [Reporting Services]"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services]"
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 caps.latest.revision: 32
-author: "markingmyname"
-ms.author: "maghan"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Custom extensions were detected on the report server (Upgrade Advisor)
   Upgrade Advisor detected custom extension settings in the configuration files, indicating that your installation includes one or more custom extensions for data processing, delivery, rendering, security, or authentication. Upgrade will move the extension configuration settings with the upgraded report server. However, if the custom extensions are installed in the existing report server installation folder, the assembly files for those custom extensions will not be moved to the new installation folder during the upgrade process. After upgrade completes, you must move the assembly files to the new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation folder.  

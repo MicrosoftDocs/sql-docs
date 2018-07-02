@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 61b91ccf-7b4c-4f3d-8992-2c8eb105ccf4
 caps.latest.revision: 3
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Report Data F1 Help
   Topics in this section provide information about the options that you can set on data sources, shared data sources, and datasets as well as information on the query designers that are available in Report Designer.  

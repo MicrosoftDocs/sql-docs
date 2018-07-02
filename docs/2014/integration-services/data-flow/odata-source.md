@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.DTS.DESIGNER.ODATASOURCE.F1"
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # OData Source
   You use the OData Source component in an SSIS package to consume data from Open Data Protocol (OData) services. The component supports the OData v2 and v3 protocols, as well as the ATOM and JSON data formats.  

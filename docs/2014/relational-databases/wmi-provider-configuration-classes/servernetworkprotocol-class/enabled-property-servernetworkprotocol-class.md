@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Enabled property"
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # Enabled Property (ServerNetworkProtocol Class)
   Gets the Boolean property that specifies whether the server network protocol is enabled.  

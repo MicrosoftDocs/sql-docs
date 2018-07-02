@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "hosting Web browsers"
   - "Web browsers [SQL Server Management Studio]"
   - "integrated Web browsers [SQL Server Management Studio]"
 ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # SQL Server Management Studio Web Browser
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] hosts a version of [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. This Web browser allows you to browse URLs, and view MSDN Library help topics without leaving [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. You can access the Web browser by pointing to **Web Browser** on the **View** menu, and then clicking **Show Browser**.  

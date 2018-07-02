@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "PropertyIdx property"
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # PropertyIdx Property (ClientNetworkProtocolProperty Class)
   Gets or sets the index value of the property in the property array referenced by the [Properties Property (ClientNetworkProtocol Class)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) of the [ClientNetworkProtocol Class](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) object.  

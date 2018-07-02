@@ -3,8 +3,6 @@ title: "Get started with PolyBase | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: database
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: polybase
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "Azure blob storage export"
   - "Hadoop import, PolyBase getting started"
   - "Hadoop export, Polybase getting started"
-caps.latest.revision: 78
 author: rothja
 ms.author: jroth
 manager: craigg 

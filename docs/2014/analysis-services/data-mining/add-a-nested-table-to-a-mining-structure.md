@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [Analysis Services], nested"
   - "nested tables"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "adding nested tables"
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Add a Nested Table to a Mining Structure
   Use Data Mining Designer to add a nested table to a mining structure after it has been created by the Data Mining Wizard.  

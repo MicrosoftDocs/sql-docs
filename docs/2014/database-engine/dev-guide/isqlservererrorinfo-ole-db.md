@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "ISQLServerErrorInfo interface"
 ms.assetid: a8323b5c-686a-4235-a8d2-bda43617b3a1
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # ISQLServerErrorInfo (OLE DB)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider defines the **ISQLServerErrorInfo** error interface. This interface returns details from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error, including its severity and state.  

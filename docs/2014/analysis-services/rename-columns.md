@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Lesson 3: Rename Columns
   In this lesson, you will rename many of the columns in each table you imported. Renaming makes columns more identifiable and easier to navigate in both the model designer as well by users selecting fields in a client application. To learn more, see [Rename a Table or Column &#40;SSAS Tabular&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  

@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Calendar-Aware Date and Time UDT Sample
   Storing dates as strings can be confusing because dates are meaningless without understanding what calendar system is being used.The `CADatetime` sample defines two user-defined data types, `CADatetime` and `CADate`, which provide calendar-aware handling of dates and times.  

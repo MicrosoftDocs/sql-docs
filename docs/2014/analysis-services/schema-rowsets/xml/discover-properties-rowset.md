@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DISCOVER_PROPERTIES rowset"
 ms.assetid: 3e2b50e2-3855-4091-8b02-4968e8e57d4c
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_PROPERTIES Rowset
   Returns a list of information and values about the standard and provider-specific properties that are supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider for the specified data source. Unsupported properties are not listed in the returned result set.  

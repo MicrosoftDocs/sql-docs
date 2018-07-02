@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "client-side XPath"
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Client-side vs. Server-side XML Formatting (SQLXML 4.0)
   This topic describes the general differences between client-side and server-side XML formatting in SQLXML.  

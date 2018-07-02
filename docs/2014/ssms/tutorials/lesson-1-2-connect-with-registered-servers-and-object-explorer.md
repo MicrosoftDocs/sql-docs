@@ -5,15 +5,14 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 caps.latest.revision: 49
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Connect with Registered Servers and Object Explorer
   This tutorial demonstrates the use of Registered Servers and Object Explorer.  

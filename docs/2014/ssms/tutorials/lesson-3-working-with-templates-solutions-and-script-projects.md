@@ -5,15 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: edac948a-18bb-4301-9504-945056727f63
-caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Lesson 3: Working with Templates, Solutions, and Script Projects
   Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can create custom templates, and create solutions and script projects.  

@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "cluster network selection, Setup"
   - "cluster network selection"
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Cluster Network Configuration
   Use the **Cluster Network Selection** page to specify the network resources for your failover cluster instance.  

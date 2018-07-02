@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting values"
   - "queries [SQL Server], types"
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "table values [SQL Server]"
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Create Insert Values Queries (Visual Database Tools)
   You can create a new row in the current table using an Insert Values query. When you create an Insert Values query, you specify:  

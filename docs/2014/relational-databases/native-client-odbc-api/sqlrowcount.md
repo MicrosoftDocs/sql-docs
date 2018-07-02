@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQLRowCount function"
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLRowCount
   When arrays of parameter values are bound for statement execution, `SQLRowCount` returns SQL_ERROR if any row of parameter values generates an error condition in statement execution. No value is returned through the *RowCountPtr* argument of the function.  

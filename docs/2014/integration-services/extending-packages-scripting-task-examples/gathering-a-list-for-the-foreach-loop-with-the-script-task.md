@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SSIS Script task, Foreach loops"
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Gathering a List for the ForEach Loop with the Script Task
   The Foreach from Variable Enumerator enumerates over the items in a list that is passed to it in a variable and performs the same tasks on each item. You can use custom code in a Script task to populate a list for this purpose. For more information about the enumerator, see [Foreach Loop Container](../control-flow/foreach-loop-container.md).  

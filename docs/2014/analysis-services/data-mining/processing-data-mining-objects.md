@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "processing objects [Analysis Services]"
   - "mining structures [Analysis Services]"
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "mining structures [Analysis Services], processing"
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Processing Data Mining Objects
   A data mining object is only an empty container until it has been processed. *Processing* a data mining model is also called *training*.  

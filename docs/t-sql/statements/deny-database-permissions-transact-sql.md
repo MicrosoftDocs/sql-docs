@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], databases"
 ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2014"
 f1_keywords: 
@@ -20,9 +20,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.reportparameters.advanced.f1"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: 36
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Report Parameters (Report Builder and Report Designer)
   This topic describes the common uses for SSRS report parameters, the properties you can set, and much more about parameters. Report parameters enable you to control report data, connect related reports together, and vary report presentation.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "DeleteEncryptionKey method"
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 caps.latest.revision: 20
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # DeleteEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)
   Deletes the encryption keys from the report server database.  

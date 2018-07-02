@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "UnattendedExecutionAccount"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "UnattendedExecutionAccount property"
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 caps.latest.revision: 17
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # UnattendedExecutionAccount Property (WMI MSReportServer_ConfigurationSetting)
   Returns the user account that the report server impersonates when running reports unattended. Read-only.  

@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading Database Engine"
   - "Database Engine [SQL Server], upgrading"
 ms.assetid: 2055865c-f25e-4113-b7e4-2b8ba426335b
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Upgrade How-to Topics
   The topics in this section describe how to upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone instance.  

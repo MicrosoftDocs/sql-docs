@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "View Designer, navigating"
   - "shortcuts [SQL Server]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "keyboard shortcuts [Visual Database Tools]"
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Navigate in the Query and View Designer (Visual Database Tools)
   You can work in the Query and View Designer using the keyboard or the mouse. Refer to the following tables for specific methods.  

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Member element"
 ms.assetid: 03b4cfcb-ce87-452f-9e25-8745c0423f56
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Member Element (ASSL)
   Contains the name of a member of a [Group](group-element-assl.md) element or of a [Role](role-element-assl.md) element.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.usagebasedoptimizationwizard.specifyquerycriteria.f1"
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specify Query Criteria (Usage-Based Optimization Wizard)
   Use the **Specify Query Criteria** page to choose one or more filter options in order to identify queries to optimize.  

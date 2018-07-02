@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Default element"
 ms.assetid: 02c1844c-51fb-44fe-aafb-001e53ad293c
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Default Element (ASSL)
   Determines whether the [DrillThroughAction](../data-type/action-data-type-assl.md) is the default drillthrough action.  

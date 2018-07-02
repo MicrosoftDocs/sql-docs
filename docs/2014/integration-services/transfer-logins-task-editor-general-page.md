@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transferloginstask.general.f1"
 helpviewer_keywords: 
   - "Transfer Logins Task Edito"
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Transfer Logins Task Editor (General Page)
   Use the **General** page of the **Transfer Logins Task Editor** dialog box to name and describe the Transfer Logins task. For more information about this task, see [Transfer Logins Task](control-flow/transfer-logins-task.md).  

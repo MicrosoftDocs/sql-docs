@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event file target"
   - "file target [SQL Server extended events]"
   - "targets [SQL Server extended events], file target"
 ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Event File Target
   The event file target is a target that writes complete buffers to disk.  

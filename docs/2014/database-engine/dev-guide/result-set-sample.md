@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Result Set Sample
   Sometimes it is useful to be able to execute commands while reading through results of a query without opening a new connection and without reading all the results into memory. The Multiple Active Result Set (MARS) feature in ADO.NET 2.0 is a technology that can help you achieve that. Currently, MARS is not implemented for the in-process provider used for server-side programming. To work around this limitation, you can use server-side cursors. This sample demonstrates how to use server-side cursors to work around the lack of MARS support for server-side programming.  

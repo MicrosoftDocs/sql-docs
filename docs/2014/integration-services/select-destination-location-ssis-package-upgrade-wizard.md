@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.selectdestinationlocation.f1"
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Select Destination Location (SSIS Package Upgrade Wizard)
   Use the **Select Destination Location** page to specify the destination to which to save the upgraded packages.  

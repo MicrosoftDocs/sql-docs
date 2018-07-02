@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Install ADO.NET Data Services to support data feed exports of SharePoint lists
   ADO.NET Data Services is required for a data feed export of SharePoint lists. SharePoint 2010 does not include this component in the SharePoint Prerequisite Installer program, so you must install it manually.  

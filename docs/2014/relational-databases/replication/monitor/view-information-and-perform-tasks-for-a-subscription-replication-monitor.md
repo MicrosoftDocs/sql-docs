@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], viewing information"
   - "subscriptions [SQL Server replication], Replication Monitor tasks"
   - "viewing subscription information"
 ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
 caps.latest.revision: 32
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # View Information and Perform Tasks for a Subscription (Replication Monitor)
   Replication Monitor provides the following tabs that include information about subscriptions:  

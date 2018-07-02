@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dmquerytransformation.query.f1"
 helpviewer_keywords: 
   - "Data Mining Query Transformation Editor"
 ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Data Mining Query Transformation Editor (Query Tab)
   Use the **Query** tab of the **Data Mining Query Transformation Editor** dialog box to create a prediction query.  

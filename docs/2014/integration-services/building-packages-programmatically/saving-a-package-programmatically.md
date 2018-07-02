@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "saving a package programmatically"
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Saving a Package Programmatically
   After building a new package programmatically, or modifying an existing one, you usually want to save your changes.  

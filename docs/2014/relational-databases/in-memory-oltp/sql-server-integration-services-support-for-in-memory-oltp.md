@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 caps.latest.revision: 10
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # SQL Server Integration Services Support for In-Memory OLTP
   You can use a memory-optimized table, a view referencing memory-optimized tables, or a natively compiled stored procedure as the source or destination for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) package. You can use [ADO NET Source](../../integration-services/data-flow/ado-net-source.md), [OLE DB Source](../../integration-services/data-flow/ole-db-source.md), or [ODBC Source](../../integration-services/data-flow/odbc-source.md) in the data flow of an SSIS package and configure the source component to retrieve data from a memory-optimized table or a view, or specify a SQL statement to execute a natively compiled stored procedure. Similarly, you can use [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md), [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md), or [ODBC Destination](../../integration-services/data-flow/odbc-destination.md) to load data into a memory-optimized table or a view, or specify a SQL statement to execute a natively compiled stored procedure.  

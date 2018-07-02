@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Data File Auto Grow event class"
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Data File Auto Grow Event Class
   The **Data File Auto Grow** event class indicates that the data file grew automatically. This event is not triggered if the data file is grown explicitly by using the ALTER DATABASE statement.  

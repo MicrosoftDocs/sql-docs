@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "CInstance class"
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CInstance Class
   The [CInstance Class](cinstance-class.md) represents an instance of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client.  

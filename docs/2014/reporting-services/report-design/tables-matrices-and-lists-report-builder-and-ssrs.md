@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.tablix.visibility.f1"
   - "sql12.rtp.rptdesigner.groupproperties.advanced.f1"
@@ -36,9 +36,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.tablix.filter.f1"
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 9
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Tables, Matrices, and Lists (Report Builder and SSRS)
   Tables, matrices, and lists are data regions that display report data in cells that are organized into rows and columns. The cells typically contain text data such as text, dates, and numbers but they can also contain gauges, charts, or report items such as images. Collectively, tables, matrices, and lists are frequently referred to as tablix data regions.  

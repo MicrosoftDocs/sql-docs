@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "QueryNotifications element"
 ms.assetid: 0e7e951f-c8b9-4492-bb01-e4b5d16edde6
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # QueryNotifications Element (ASSL)
   Contains the collection of [QueryNotification](../objects/querynotification-element-assl.md) elements that provide information to the [ProactiveCaching](../objects/proactivecaching-element-assl.md) element about queries to execute to determine whether a data source has been modified.  

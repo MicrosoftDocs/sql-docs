@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], deleting"
   - "removing traces"
   - "deleting traces"
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Delete a Trace (Transact-SQL)
   This topic describes how to use stored procedures to delete a trace.  

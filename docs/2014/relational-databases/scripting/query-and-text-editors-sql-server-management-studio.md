@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.TextEditor"
 helpviewer_keywords: 
@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "queries [SQL Server], SQL Server Management Studio"
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 caps.latest.revision: 52
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Query and Text Editors (SQL Server Management Studio)
   You can use one of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors to interactively edit and test a [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, or XML/A script, or to edit an XML or plain text file. Each editor is supported by a language-specific service that colors keywords, and checks for syntax and usage errors. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor includes a [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger that you can use to help fix problems in [!INCLUDE[tsql](../../includes/tsql-md.md)] code.  

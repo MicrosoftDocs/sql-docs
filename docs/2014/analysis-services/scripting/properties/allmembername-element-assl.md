@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AllMemberName element"
 ms.assetid: 5fda5563-cb7a-4402-82ad-3d6c432b6a7e
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AllMemberName Element (ASSL)
   Contains the caption in the default language for the All member of a [Hierarchy](../objects/hierarchy-element-assl.md) element.  

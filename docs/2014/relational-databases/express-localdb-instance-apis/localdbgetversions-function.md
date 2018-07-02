@@ -18,9 +18,9 @@ topic_type:
   - "apiref"
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # LocalDBGetVersions Function
   Returns all SQL Server Express LocalDB versions available on the computer.  

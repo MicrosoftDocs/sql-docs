@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "FlagIndex property"
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # FlagIndex Property (ClientSettingsGeneralFlag Class)
   Gets the index value of the flag.  

@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "system functions [SQL Server]"
   - "user-defined functions [SQL Server], system"
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # User-defined functions are not allowed in system_function_schema
   The Upgrade Advisor detected user-defined functions that are owned by the undocumented user **system_function_schema**. You cannot create a user-defined system function by specifying this user. The **system_function_schema** user name does not exist, and the user ID that is associated with this name (UID = 4) is reserved for the **sys** schema and is restricted to internal use only.  

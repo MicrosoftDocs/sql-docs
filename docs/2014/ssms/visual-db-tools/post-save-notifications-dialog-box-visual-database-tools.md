@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65546"
   - "vdt.dlgbox.saveincomplete"
   - "vdtsql.chm:98831"
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Post-Save Notifications Dialog Box (Visual Database Tools)
   This dialog box appears when errors are encountered while trying to save changes to a table. This dialog box lists the objects that were successfully saved in the database, the objects that were not saved, and the errors that were encountered.  

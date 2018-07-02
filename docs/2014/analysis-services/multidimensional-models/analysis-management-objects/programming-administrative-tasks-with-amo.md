@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "Analysis Management Objects, programming"
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Programming Administrative Tasks with AMO
   Analysis Management Objects (AMO) is a programming library used from client applications to manage [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. In this section, you will learn to how to program using the AMO objects.  

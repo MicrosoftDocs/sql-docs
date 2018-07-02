@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # UDT Utilities
   The UDT Utilities sample contains a number of utility functions. These include functions to expose assembly metadata to Transact-SQL, sample streaming table-valued functions to return the types in an assembly as a table, and functions to return the fields, methods, and properties in a user-defined data type. Technologies that are demonstrated include streaming table-valued functions, .NET Framework reflection APIs, and invocation of table-valued functions from Transact-SQL.  

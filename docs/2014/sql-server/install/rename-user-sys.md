@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sys user names [SQL Server]"
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Rename user sys
   Upgrade Advisor detected the user name **sys** in a database. This name is reserved. Rename the user before you upgrade. If the user is not renamed, the database will be in a suspect state after the upgrade process and will be unavailable until the database is brought online.  

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SQLXMLOLEDB Provider, XML formatting architecture"
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)
   The following illustration shows the architecture of XML formatting on the server side.  

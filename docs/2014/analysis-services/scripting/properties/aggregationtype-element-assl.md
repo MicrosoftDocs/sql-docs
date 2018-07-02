@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "AggregationType element"
 ms.assetid: c1393bc6-d715-4397-8bc5-82abdb275330
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AggregationType Element (ASSL)
   Defines the type of aggregation stored by the [Partition](../objects/partition-element-assl.md) element.  

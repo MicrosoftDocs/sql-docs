@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ClientNetworkProtocolProperty class"
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ClientNetworkProtocolProperty Class
   The [ClientNetworkProtocolProperty Class](clientnetworkprotocolproperty-class.md) represents properties of a client network protocol.  

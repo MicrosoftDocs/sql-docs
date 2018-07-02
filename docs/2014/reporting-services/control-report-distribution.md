@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], report distribution"
   - "subscriptions [Reporting Services], e-mail"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "mail [Reporting Services]"
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 caps.latest.revision: 32
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Control Report Distribution
   You can configure a report server to reduce the security risks associated with e-mail and file share distribution.  

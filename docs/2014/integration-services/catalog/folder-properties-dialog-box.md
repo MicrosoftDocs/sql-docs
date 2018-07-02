@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.ssms.iscreatefolder.f1"
   - "sql12.ssis.ssms.isfolderprop.general.f1"
   - "sql12.ssis.ssms.isfolderprop.permissions.f1"
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Folder Properties Dialog Box
   A folder contains projects and environments in the `SSISDB` catalog. Each folder defines permissions that apply to the contents of the folder. For more information about [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permissions, see [catalog.grant_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  

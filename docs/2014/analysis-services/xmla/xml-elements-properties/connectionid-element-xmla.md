@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "ConnectionID element"
 ms.assetid: de044fb2-f713-46b2-8899-14e8d515e823
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ConnectionID Element (XMLA)
   Identifies an active connection on which to execute the parent [Cancel](../xml-elements-commands/cancel-element-xmla.md) element.  

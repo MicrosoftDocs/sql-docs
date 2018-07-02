@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "CursorOpen event class"
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # CursorOpen Event Class
   The **CursorOpen** event class describes cursor open events that occur in application programming interface (API) cursors. Cursor open events occur when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] defines the SQL statement to be associated with the cursor and the cursor options, and then populates the cursor.  

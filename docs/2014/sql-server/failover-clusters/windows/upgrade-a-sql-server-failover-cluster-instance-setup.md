@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading clusters"
   - "clusters [SQL Server], upgrading"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], upgrading"
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Upgrade a SQL Server Failover Cluster Instance (Setup)
   You can upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] failover cluster by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Wizard or a command prompt.  

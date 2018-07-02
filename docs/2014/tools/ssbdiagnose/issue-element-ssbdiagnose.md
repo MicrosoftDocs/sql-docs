@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "issue element"
   - "XML output file format [ssbdiagnose], issue element"
   - "ssbdiagnose"
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Issue Element (ssbdiagnose)
   Reports an issue that was found by the **ssbdiagnose** utility. The **ssbdiagnose** XML output file has one Issue element per issue reported.  

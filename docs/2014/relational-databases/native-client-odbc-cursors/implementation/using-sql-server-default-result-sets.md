@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "ODBC applications, cursors"
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using SQL Server Default Result Sets
   The default ODBC cursor attributes are:  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-dml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple row DML triggers"
   - "UPDATE statement [SQL Server], DML triggers"
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DML triggers, multirow"
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # Create DML Triggers to Handle Multiple Rows of Data
   When you write the code for a DML trigger, consider that the statement that causes the trigger to fire can be a single statement that affects multiple rows of data, instead of a single row. This behavior is common for UPDATE and DELETE triggers because these statements frequently affect multiple rows. The behavior is less common for INSERT triggers because the basic INSERT statement adds only a single row. However, because an INSERT trigger can be fired by an INSERT INTO (*table_name*) SELECT statement, the insertion of many rows may cause a single trigger invocation.  

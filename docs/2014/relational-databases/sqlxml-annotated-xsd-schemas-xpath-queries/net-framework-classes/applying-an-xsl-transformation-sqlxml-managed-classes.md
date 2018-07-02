@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "XSL Transformations [SQLXML]"
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Applying an XSL Transformation (SQLXML Managed Classes)
   In this example, an SQL query is executed against the AdventureWorks database. The XSL transformation is applied to the query result to generate a two-column table of the employees' first and last names.  

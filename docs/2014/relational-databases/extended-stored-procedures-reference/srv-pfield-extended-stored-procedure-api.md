@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "srv_pfield"
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # srv_pfield (Extended Stored Procedure API)
     

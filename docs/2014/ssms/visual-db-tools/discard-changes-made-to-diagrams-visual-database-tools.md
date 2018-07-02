@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "discarding database diagram changes"
   - "database diagrams [SQL Server], discarding changes"
   - "diagrams [SQL Server], discarding changes"
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Discard Changes Made to Diagrams (Visual Database Tools)
   You can discard changes in your database diagram that you do not want to save in the database.  

@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "Database element"
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Database Element for Workload (DTA)
   Specifies the database where the workload trace table is located.  

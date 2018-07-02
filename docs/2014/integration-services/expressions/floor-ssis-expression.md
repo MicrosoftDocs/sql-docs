@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "largest integer less than or equal to expression"
   - "FLOOR function [SSIS]"
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # FLOOR (SSIS Expression)
   Returns the largest integer that is less than or equal to a numeric expression.  

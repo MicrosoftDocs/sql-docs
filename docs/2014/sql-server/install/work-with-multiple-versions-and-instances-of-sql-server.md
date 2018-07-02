@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "concurrent installations [SQL Server]"
   - "versions [SQL Server], multiple"
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "editions [SQL Server], side-by-side installations"
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Work with Multiple Versions and Instances of SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer. You can also upgrade earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer where earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions are already installed. For supported upgrade scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  

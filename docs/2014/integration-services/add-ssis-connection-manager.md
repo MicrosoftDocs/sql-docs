@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adddtsconnection.f1"
 helpviewer_keywords: 
   - "Add SSIS Connection Manager"
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Add SSIS Connection Manager
   Use the **Add SSIS Connection Manager** dialog box to select the type of connection to add to a package.  

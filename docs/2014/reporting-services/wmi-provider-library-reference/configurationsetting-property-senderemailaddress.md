@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "SenderEmailAddress"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SenderEmailAddress property"
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
 caps.latest.revision: 17
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # SenderEmailAddress Property (WMI MSReportServer_ConfigurationSetting)
   Gets the address used to send e-mail from the report server. Read-only.  

@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: c2f8cb39-dad7-433b-b7b7-fb1625f76a84
 caps.latest.revision: 6
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ServerMode Element
   The `ServerMode` server element specifies the mode the server is operating in.  

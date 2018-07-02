@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], Help"
   - "bookmarks [SQL Server Management Studio]"
   - "SQL Server Management Studio Help [SQL Server], bookmarks"
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Bookmarks F1 Help
   This section contains the F1 Help for the **Bookmarks** pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

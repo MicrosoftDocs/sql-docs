@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Keep the Affinity Mask Default Value
   This rule checks whether the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setting for the affinity mask is set to 0, which is the default value. The affinity mask option dynamically controls CPU affinity.  

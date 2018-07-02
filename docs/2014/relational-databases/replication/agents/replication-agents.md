@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "agents [SQL Server replication]"
   - "replication [SQL Server], agents and profiles"
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
 caps.latest.revision: 9
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Replication Agents
   Replication uses many stand-alone programs, which are named "agents," to perform the tasks associated with tracking changes and distributing data. This section of the documentation contains parameter references for the following replication agents.  

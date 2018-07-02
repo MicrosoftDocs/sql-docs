@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], database diagrams"
   - "diagrams [SQL Server], renaming"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], renaming"
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Rename a Database Diagram (Visual Database Tools)
   You can rename a database diagram in Object Explorer. Requires ALTER permission on the database.  

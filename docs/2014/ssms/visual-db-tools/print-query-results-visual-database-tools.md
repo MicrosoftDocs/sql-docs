@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "result sets [SQL Server], queries"
   - "results [SQL Server], query"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "printing query results"
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Print Query Results (Visual Database Tools)
   To print the results of your query, you can copy the contents of the [Results pane](visual-database-tools.md) to another Windows program, such as a word processing program, then format and print it there.  

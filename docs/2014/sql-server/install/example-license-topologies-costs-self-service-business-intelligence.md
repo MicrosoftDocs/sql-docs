@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Example License Topologies and Costs  for SQL Server 2014 Self-Service Business Intelligence
   This topic illustrates high-level considerations for selecting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence edition or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. The topic includes several sample on-premises Microsoft self-service Business Intelligence (BI) topologies. The examples include the editions and licenses you can utilize to optimize the balance between cost and performance. The topologies, number of servers and, licensing cost are provided **only as examples**. Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and Microsoft SharePoint 2013 introduced several changes in licensing that provide more options in how you can license your servers, users, and devices. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Licensing supports the same Business Intelligence related scenarios.  

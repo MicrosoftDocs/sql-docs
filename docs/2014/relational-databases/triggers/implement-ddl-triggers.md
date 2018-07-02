@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "dbe-ddl"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DDL triggers, implementing"
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # Implement DDL Triggers
   This topic provides information to help you create DDL triggers, modify DDL triggers, and disable or drop DDL triggers.  

@@ -5,10 +5,9 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], breaking changes"
   - "full-text catalogs [SQL Server], breaking changes"
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], breaking changes"
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 caps.latest.revision: 61
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: craigg-msft
+ms.author: craigg
+manager: craigg
 ---
 # Breaking Changes to Full-Text Search
   This topic describes breaking changes in full-text search. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

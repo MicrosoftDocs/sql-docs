@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dm.savedataminingqueryresult.f1"
 helpviewer_keywords: 
   - "Save Data Mining Query Result dialog box"
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Save Data Mining Query Result Dialog Box (Mining Model Prediction View)
   Use the **Save Data Mining Query Result** dialog box to save the results of a data mining query to a new table.  

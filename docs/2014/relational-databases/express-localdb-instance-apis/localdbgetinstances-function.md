@@ -18,9 +18,9 @@ topic_type:
   - "apiref"
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # LocalDBGetInstances Function
   Returns all SQL Server Express LocalDB instances with the given version.  

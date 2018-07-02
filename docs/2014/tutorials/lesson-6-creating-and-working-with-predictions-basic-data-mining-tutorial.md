@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: b213cb58-2c40-4c89-b08b-d3c36a4afad3
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Lesson 6: Creating and Working with Predictions (Basic Data Mining Tutorial)
   You have trained, tested, and explored the data mining models you created. Now you are ready to use the models to identify the people most likely to respond to the new targeted mailing campaign.  

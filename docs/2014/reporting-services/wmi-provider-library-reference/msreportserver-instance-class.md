@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "MSReportServer_Instance Class"
 api_location: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSReportServer_Instance class"
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 caps.latest.revision: 14
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # MSReportServer_Instance Class
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  

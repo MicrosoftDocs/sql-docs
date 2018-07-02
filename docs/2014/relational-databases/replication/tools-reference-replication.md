@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tools"
   - "tools [SQL Server replication]"
 ms.assetid: 41921d45-8a3c-4b69-b397-4b02b3b62160
 caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Tools Reference (Replication)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides several tools for implementing, administering, and troubleshooting replication. These include [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], programming interfaces, and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows components.  

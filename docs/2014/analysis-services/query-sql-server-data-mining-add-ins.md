@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [data mining]"
   - "Data Mining Query Advanced Editor"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "DMX"
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Query (SQL Server Data Mining Add-ins)
   ![Query Model button, Data Mining ribbon](media/dmc-query.gif "Query Model button, Data Mining ribbon")  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML RAW mode"
   - "XMLSCHEMA option"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "XMLDATA option"
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 caps.latest.revision: 43
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Use RAW Mode with FOR XML
   RAW mode transforms each row in the query result set into an XML element that has the generic identifier \<row>, or the optionally provided element name. By default, each column value in the rowset that is not NULL is mapped to an attribute of the \<row> element. If the ELEMENTS directive is added to the FOR XML clause, each column value is mapped to a subelement of the \<row> element. Together with the ELEMENTS directive, you can optionally specify the XSINIL option to map NULL column values in the result set to an element that has the attribute, xsi:nil=`"`true`"`.  

@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "device information settings [Reporting Services], MHTML rendering"
   - "MHTML [Reporting Services]"
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 caps.latest.revision: 39
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # MHTML Device Information Settings
   The following table lists the device information settings for rendering reports in Web archive (MHTML) format.  

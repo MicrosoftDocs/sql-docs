@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "HPAs [CLR integration]"
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # CLR Hosted Environment
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework common language runtime (CLR) is an environment that executes many modern programming languages, including [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic, and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. The CLR features garbage-collected memory, pre-emptive threading, metadata services (type reflection), code verifiability, and code access security. The CLR uses metadata to locate and load classes, lay out instances in memory, resolve method invocations, generate native code, enforce security, and set run-time context boundaries.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VisualStudio.SourcControl.UndoCheckDialog"
 helpviewer_keywords: 
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "undoing checkouts"
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Undo Checkouts
   You can use the **Undo Checkout** command to cancel an existing checkout. This is particularly useful when you have modified and saved a file, and then later need to roll back your changes.  

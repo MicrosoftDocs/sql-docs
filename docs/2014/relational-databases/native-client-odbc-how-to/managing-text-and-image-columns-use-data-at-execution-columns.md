@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "data-at-execution"
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Use Data-at-Execution Columns (ODBC)
     

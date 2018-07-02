@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ExpirationDate property"
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ExpirationDate Property (SecurityCertificate Class)
   Gets the date when the security certificate ceases to be in effect.  

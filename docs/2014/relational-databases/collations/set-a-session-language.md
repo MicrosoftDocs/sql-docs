@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server], international considerations"
   - "globalization [SQL Server], sessions"
@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "server-side session language"
 ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Set a Session Language
   The session language can be used to set how the following elements are displayed on the server, based on language and cultural preference:  

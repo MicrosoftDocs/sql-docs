@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Analysis Wizard"
   - "analyzing system [Upgrade Advisor], options"
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SQL Server Upgrade Advisor, user interface reference"
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Upgrade Advisor User Interface Reference
   This section includes Help topics for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor. These topics are available from the Upgrade Advisor Wizard by pressing the F1 key or by clicking **Help** on wizard pages and in dialog boxes.  

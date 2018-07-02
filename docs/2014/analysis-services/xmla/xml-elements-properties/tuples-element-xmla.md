@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Tuples element"
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Tuples Element (XMLA)
   Contains a set of [Tuple](tuple-element-xmla.md) objects for an [Axis](axis-element-xmla.md) element that uses the [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) data type, returned by the [Execute](../xml-elements-methods-execute.md) method.  

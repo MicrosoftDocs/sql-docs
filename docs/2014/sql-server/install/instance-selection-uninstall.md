@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e61297fc-a418-4553-b85e-40a3062606f1
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Instance Selection (Uninstall)
   On the Instance Selection — Uninstall page, use the drop-down box to specify the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to uninstall.  

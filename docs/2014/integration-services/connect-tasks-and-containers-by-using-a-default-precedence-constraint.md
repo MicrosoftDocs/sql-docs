@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tasks [Integration Services], precedence constraints"
   - "precedence constraints [Integration Services], connecting tasks"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "containers [Integration Services], precedence constraints"
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Connect Tasks and Containers by Using a Default Precedence Constraint
   Precedence constraints connect two executables. An executable can be any task or a For Loop, Foreach Loop, or Sequence container. This procedure describes how to set the default behavior for precedence constraints, and how to connect executables using the default precedence constraints.  

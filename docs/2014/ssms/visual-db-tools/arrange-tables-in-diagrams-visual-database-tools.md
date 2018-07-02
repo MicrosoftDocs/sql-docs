@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "organizing database diagram objects [SQL Server]"
   - "database diagrams [SQL Server], arranging objects"
   - "arranging database diagram objects"
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Arrange Tables in Diagrams (Visual Database Tools)
   You can quickly arrange the tables in a database diagram to see each table and relationship clearly.  

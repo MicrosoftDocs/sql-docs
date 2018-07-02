@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 caps.latest.revision: 5
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Specify a Logarithmic Scale (Report Builder and SSRS)
   If you have data that is logarithmically proportional, you may want to consider using a logarithmic scale on the chart. This helps improve the appearance of the chart by making your data more manageable. Most logarithmic scales use a base of 10.  

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "FlagValue property"
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # FlagValue Property (ClientSettingsGeneralFlag Class)
   Gets the value of the flag.  

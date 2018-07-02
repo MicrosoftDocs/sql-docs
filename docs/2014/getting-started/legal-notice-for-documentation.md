@@ -6,7 +6,7 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Copyright"
   - "documentation [SQL Server], legal notice"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "documentation policy [SQL Server]"
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mightypen
+ms.author: genemi
+manager: craigg
 ---
 # Legal Notice for Documentation
   This document is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.  

@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.mergetransformation.f1"
 helpviewer_keywords: 
   - "Merge Transformation Editor"
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Merge Transformation Editor
   Use the **Merge Transformation Editor** to specify columns from two sorted sets of data to be merged.  

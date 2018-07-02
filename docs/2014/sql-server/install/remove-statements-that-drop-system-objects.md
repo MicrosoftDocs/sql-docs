@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "drop system objects [SQL Server]"
 ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Remove statements that drop system objects
   Upgrade Advisor detected statements that drop system objects. System objects, including extended stored procedures, are deployed in the read-only **resource** database (mssqlsystemresource) and cannot be dropped. Modify your applications to either revoke or deny EXECUTE permission on system objects.  

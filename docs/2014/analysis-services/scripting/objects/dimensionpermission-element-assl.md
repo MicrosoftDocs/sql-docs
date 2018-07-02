@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DimensionPermission element"
 ms.assetid: e06efbda-64fd-4dca-a2b5-c8ffbf21512c
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DimensionPermission Element (ASSL)
   Defines the permissions that belong to a particular [Role](role-element-assl.md) element for a specific database dimension or cube dimension.  

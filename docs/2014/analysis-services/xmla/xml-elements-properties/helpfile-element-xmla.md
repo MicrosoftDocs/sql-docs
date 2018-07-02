@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "HelpFile element"
 ms.assetid: 537ea7a8-5064-4a31-b0cd-ab7e891fef09
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # HelpFile Element (XMLA)
   Contains the path or URL to the Help file or topic that describes the parent [Error](error-element-xmla.md) element.  

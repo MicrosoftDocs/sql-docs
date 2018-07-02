@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "examples [SQLXML], Updategram"
 ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Updategram Sample Applications (SQLXML 4.0)
   This section provides examples of using updategrams.  

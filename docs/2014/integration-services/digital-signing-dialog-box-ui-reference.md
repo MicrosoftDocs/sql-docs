@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.digitalsigning.f1"
 helpviewer_keywords: 
   - "Digital Signing dialog box"
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Digital Signing Dialog Box UI Reference
   Use the **Digital Signing** dialog box to sign a package with a digital signature or to remove the signature. The **Digital Signing** dialog box is available from the **Digital Signing** option on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

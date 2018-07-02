@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MAXIMUM_STATES"
   - "FORCED_REGRESSOR"
@@ -48,9 +48,9 @@ helpviewer_keywords:
   - "COMPLEXITY_PENALTY"
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Algorithm Parameters (SQL Server Data Mining Add-ins)
   When you perform data mining by using the Table Analysis Tools for Excel, you do not need to configure the data mining algorithm or parameters; each tool analyzes your data and automatically selects the optimum parameters. However, if you want to modify the model, or create a mining model from scratch, the Data Mining Client for Excel offers several options for customization.  

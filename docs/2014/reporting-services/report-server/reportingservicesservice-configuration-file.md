@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [Reporting Services]"
   - "Report Server Windows service, ReportingServicesService configuration file"
   - "ReportingServicesService configuration file"
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 caps.latest.revision: 40
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # ReportingServicesService Configuration File
   The ReportingServicesService.exe.config file includes settings that configure tracing.  

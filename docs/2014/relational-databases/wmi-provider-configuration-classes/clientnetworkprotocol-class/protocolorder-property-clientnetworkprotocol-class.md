@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ProtocolOrder property"
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ProtocolOrder Property (ClientNetworkProtocol Class)
   Gets the order number of the currently referenced client network protocol as specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](clientnetworkprotocol-class.md) method.  

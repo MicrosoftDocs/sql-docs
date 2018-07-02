@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "calculations [Analysis Services], creating"
   - "deleting calculations"
@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "solve orders [Analysis Services]"
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Calculations in Multidimensional Models
   Use the **Calculations** tab of Cube Designer to create calculated members, named sets, and other Multidimensional Expressions (MDX) calculations.  

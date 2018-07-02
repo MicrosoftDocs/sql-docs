@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "SendUsingSMTPServer"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SendUsingSMTPServer property"
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 caps.latest.revision: 18
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # SendUsingSMTPServer Property (WMI MSReportServer_ConfigurationSetting)
   Specifies whether the `SendUsing` element in the in the e-mail configuration for the report server is set to `true`.  

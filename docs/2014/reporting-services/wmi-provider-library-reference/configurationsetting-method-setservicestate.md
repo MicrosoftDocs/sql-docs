@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "SetServiceState (WMI MSReportServer_ConfigurationSetting Class)"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SetServiceState method"
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 caps.latest.revision: 17
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # SetServiceState Method (WMI MSReportServer_ConfigurationSetting)
   Turns the Report Server Windows and Web services on and off.  

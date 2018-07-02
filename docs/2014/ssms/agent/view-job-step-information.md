@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying job step information"
   - "jobs [SQL Server Agent], viewing"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "viewing job step information"
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # View Job Step Information
   This topic describes how to view job step details in the Job Step Properties dialog. It also includes information about viewing job step output.  

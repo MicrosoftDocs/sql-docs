@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "bcp_setcolfmt function"
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # bcp_setcolfmt
   The **bcp_setcolfmt** function supersedes the [bcp_colfmt](bcp-colfmt.md). In specifying the column collation, the **bcp_setcolfmt** function must be used. [bcp_setbulkmode](bcp-setbulkmode.md) can be used to specify more than one column format.  

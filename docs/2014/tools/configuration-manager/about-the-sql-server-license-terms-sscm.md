@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "configmgr-client"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 caps.latest.revision: 5
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: craigg-msft
+ms.author: craigg
+manager: craigg
 ---
 # About the SQL Server License Terms (SSCM)
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)]Software License Terms are copied to the local computer when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed. When multiple instances of the same edition and language of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are installed on the same computer, a single copy of the license terms will apply to all instances of that edition and language. The files are written to: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ or %ProgramFiles(x86)%\Microsoft SQL Server\110\License Terms\\.  

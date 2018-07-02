@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.aggregations.advanced.f1"
 ms.assetid: 23c095dd-f47a-4d6b-8d22-b49bbb954bcb
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Advanced View (Aggregations Tab, Cube Designer)
   Use the **Advanced View** of the aggregation designer to manually create and modify aggregation designs and individual aggregations. This view should be used by advanced users only.  

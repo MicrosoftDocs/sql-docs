@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.grid.f1"
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Configure Data Viewer (Grid Tab)
   Use the **Grid** tab of the **Configure Data Viewer** dialog box to specify columns to display. A grid chart displays data records as rows in a grid. The chart reflects the contents of one buffer only.  

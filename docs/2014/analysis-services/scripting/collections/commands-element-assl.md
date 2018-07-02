@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Commands element"
 ms.assetid: c9f69fe8-2221-469b-b5b0-08563aaa01dc
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Commands Element (ASSL)
   Contains the collection of [Command](../objects/command-element-assl.md) elements associated with an [MdxScript](../objects/mdxscript-element-assl.md) element.  

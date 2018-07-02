@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "process [Analysis Services]"
   - "processing [Analysis Services]"
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Tools and Approaches for Processing (Analysis Services)
   Processing is an operation in which Analysis Services queries a relational data source and populates Analysis Services objects using that data.  

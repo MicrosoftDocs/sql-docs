@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ColumnID element"
 ms.assetid: c4f4fbad-9d70-4de2-8cf7-caee80a4a1e4
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ColumnID Element (EventColumn) (ASSL)
   Contains the identifier (ID) of the column of information to be captured for an event as part of a [Trace](../objects/trace-element-assl.md) element.  

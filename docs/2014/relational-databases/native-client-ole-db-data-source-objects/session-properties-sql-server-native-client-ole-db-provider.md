@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, sessions"
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Session Properties
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider interprets OLE DB session properties as follows.  

@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.excelsourceadapter.columns.f1"
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Excel Source Editor (Columns Page)
   Use the **Columns** page of the **Excel Source Editor** dialog box to map an output column to each external (source) column.  

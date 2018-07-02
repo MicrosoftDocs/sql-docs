@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "actions [Analysis Services]"
   - "actions [Analysis Services], about actions"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "OLAP objects [Analysis Services], actions"
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Actions (Analysis Services - Multidimensional Data)
   Actions can be of different types and they have to be created accordingly. Actions can be:  

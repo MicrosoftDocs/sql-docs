@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, administering"
   - "administering replication"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], administering"
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Administration (Replication)
   This section contains information on administering replication topologies. We recommend that you read the best practices topic first, and then follow the links from that topic to more detailed information in this section and other sections.  

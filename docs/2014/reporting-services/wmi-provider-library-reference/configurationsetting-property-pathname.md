@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "PathName Property"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "PathName property"
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # PathName Property (WMI MSReportServer_ConfigurationSetting)
   Specifies the installation path of a report server instance. Read-only.  

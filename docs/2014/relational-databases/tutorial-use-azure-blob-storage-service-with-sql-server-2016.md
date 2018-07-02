@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Tutorial: SQL Server Data Files in Windows Azure Storage service
   Welcome to the  SQL Server Data Files in Windows Azure Storage Service tutorial. This tutorial helps you understand how to store SQL Server data files in the Windows Azure Blob storage service directly.  

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DMSCHEMA_MINING_SERVICES rowset"
 ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DMSCHEMA_MINING_SERVICES Rowset
   Provides a description of each data mining algorithm that the provider supports.  

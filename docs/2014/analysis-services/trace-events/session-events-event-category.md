@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event classes [Analysis Services], session events"
   - "Session Events event category"
   - "session events [Analysis Services]"
 ms.assetid: 9d42e4e4-26ed-4719-9c80-8cf9189451d1
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Session Events Event Category
   The Session Events event category has the event classes described in the following table.  

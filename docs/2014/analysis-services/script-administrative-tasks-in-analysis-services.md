@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic Analysis Services administration"
   - "administering Analysis Services"
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Script Administrative Tasks in Analysis Services
   You can automate [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrative tasks by writing or generating scripts that can be executed manually or scheduled through SQL Server Agent. The following table summarizes the scripting options available to you and provides links to more information.  

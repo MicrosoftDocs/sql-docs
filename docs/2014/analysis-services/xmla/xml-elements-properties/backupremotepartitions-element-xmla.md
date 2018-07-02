@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "BackupRemotePartitions element"
 ms.assetid: bd68bcf9-b324-4fa8-b6e5-1f5531f9992c
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # BackupRemotePartitions Element (XMLA)
   Determines whether the parent [Backup](../xml-elements-commands/backup-element-xmla.md) command backs up remote partitions associated with the object.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS"
   - "DTS [Integration Services]"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Data Transformation Services"
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # SQL Server Integration Services
   

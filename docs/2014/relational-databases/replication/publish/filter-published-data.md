@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server replication]"
   - "filters [SQL Server replication], about filtering"
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "column filters [SQL Server replication]"
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 49
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Filter Published Data
   Filtering table articles enables you to create partitions of data to be published. By filtering published data, you can:  

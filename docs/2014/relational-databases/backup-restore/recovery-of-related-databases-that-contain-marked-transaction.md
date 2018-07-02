@@ -5,10 +5,9 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], marks"
   - "STOPBEFOREMARK option [RESTORE statement]"
@@ -23,9 +22,9 @@ helpviewer_keywords:
   - "database restores [SQL Server], point in time"
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
   This topic is relevant only for databases that contain marked transactions and that use the full or bulk-logged recovery models.  

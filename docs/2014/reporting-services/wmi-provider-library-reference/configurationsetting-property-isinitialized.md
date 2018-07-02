@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "IsInitialized"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "IsInitialized property"
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 caps.latest.revision: 17
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # IsInitialized Property (WMI MSReportServer_ConfigurationSetting)
   Indicates whether the report server instance is initialized. Read-only.  

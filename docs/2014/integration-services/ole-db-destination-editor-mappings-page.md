@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbdestadapter.mappings.f1"
 helpviewer_keywords: 
   - "OLE DB Destination Editor"
 ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # OLE DB Destination Editor (Mappings Page)
   Use the **Mappings** page of the **OLE DB Destination Editor** dialog box to map input columns to destination columns.  

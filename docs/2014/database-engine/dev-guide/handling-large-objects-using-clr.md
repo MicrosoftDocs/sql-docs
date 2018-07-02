@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Handling Large Objects Using CLR
   The `HandlingLOBUsingCLR` sample for SQL Server demonstrates transferring large objects (LOBs) between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a file system that is available to the server by using common language runtime (CLR) stored procedures. This sample demonstrates how to access files in server-side code, and then invoke both dynamic queries and stored procedures from CLR-based stored procedures. It also demonstrates how to unregister and register CLR methods and assemblies by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  

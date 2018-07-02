@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "DISCOVER_JOBS rowset"
 ms.assetid: b4d83bb6-aed3-4513-b516-cefadf95dad2
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_JOBS Rowset
   Provides information about the active jobs executing on the server. A job is a part of a command that executes a specific task on behalf of the command.  

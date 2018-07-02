@@ -8,10 +8,10 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+ms.topic: conceptual
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # UI Designers and Dialogs for Multidimensional Analysis
 

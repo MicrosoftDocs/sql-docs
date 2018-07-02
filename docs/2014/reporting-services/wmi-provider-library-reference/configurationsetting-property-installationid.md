@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "InstallationID Property"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "InstanceID property"
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 caps.latest.revision: 37
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # InstallationID Property (WMI MSReportServer_ConfigurationSetting)
   This property returns a unique identifier for a specific report server instance.  

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Time element"
 ms.assetid: b74ba333-19e5-407d-92ab-3c429d4b3f45
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Time Element (XMLA)
   Specifies the time limit used by the [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) command to design aggregations.  

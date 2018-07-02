@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagedesignwizard.finish.f1"
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Completing the Wizard (Usage-Based Optimization Wizard)
   Use the **Completing the Wizard** page to save the aggregation design and assign it to the selected partitions. You can also optionally process the selected partitions after the Usage-Based Optimization Wizard finishes designing and saving the aggregations.  

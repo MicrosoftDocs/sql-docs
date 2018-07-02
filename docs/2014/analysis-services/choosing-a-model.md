@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining algorithms"
   - "mining models"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "data mining structures"
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Choosing a Model
   **Mining algorithm:** The data mining *algorithm* is the mechanism that creates patterns from data. The algorithm defines how data is counted, how relationships are derived, and how patterns are stored. The selection of an algorithm is partly dependent on the type of data you want to analyze. For example, some algorithms can only work with continuous numbers, whereas others can work best with a limited number of distinct values.  

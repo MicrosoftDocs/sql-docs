@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "versions [SQL Server], file comparisons"
   - "comparing files"
   - "file comparisons [SQL Server]"
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Compare Files
   You can compare files to determine how a file has progressed to its present state. For example, if you detect a defect in a build of your code project after a particular source file version is checked in, you can compare the current file version to a previous one. This helps you to pinpoint the code that introduced the defect.  

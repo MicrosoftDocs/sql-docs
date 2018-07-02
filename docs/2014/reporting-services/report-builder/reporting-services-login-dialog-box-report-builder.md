@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 caps.latest.revision: 10
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Reporting Services Login Dialog Box (Report Builder)
   Use the **Reporting Services Login** dialog box to provide credentials to publish reports to the report server. For help with these credentials, contact your report server administrator.  

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Date property"
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # Date Property (ClientNetLibInfo Class)
   Gets the date of the client network library file.  

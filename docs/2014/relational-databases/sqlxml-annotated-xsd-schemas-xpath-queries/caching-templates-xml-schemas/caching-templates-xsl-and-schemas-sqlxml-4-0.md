@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "memory [SQLXML]"
 ms.assetid: 80b4fa79-243f-442c-9f22-74ad66186501
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Caching Templates, XSL, and Schemas (SQLXML 4.0)
   To improve performance, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 supports caching templates, XSL, and schemas.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, Invoke-PolicyEvaluation"
   - "Policy-Based Management, PowerShell"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "PowerShell [SQL Server], Invoke-PolicyEvaluation"
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 caps.latest.revision: 18
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Invoke-PolicyEvaluation cmdlet
   **Invoke-PolicyEvaluation** is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet that reports whether a target set of SQL Server objects complies with the conditions specified in one or more Policy-Based Management policies.  

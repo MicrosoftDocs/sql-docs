@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "PropertyValType property"
 ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # PropertyValType Property (ServerNetworkProtocolProperty Class)
   Gets the data type of the value stored in the referenced property.  

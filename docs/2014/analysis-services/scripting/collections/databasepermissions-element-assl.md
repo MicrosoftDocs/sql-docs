@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DatabasePermissions element"
 ms.assetid: c4ce0da3-f7ba-4f11-8cd8-236c32992aaf
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DatabasePermissions Element (ASSL)
   Contains the collection of [DatabasePermission](../objects/databasepermission-element-assl.md) elements associated with a [Database](../objects/database-element-assl.md) element.  

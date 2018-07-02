@@ -5,10 +5,9 @@ ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.failoverwizard.summary.f1"
   - "sql12.swb.addreplicawizard.summary.f1"
@@ -16,9 +15,9 @@ f1_keywords:
   - "sql12.swb.newagwizard.summary.f1"
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 caps.latest.revision: 11
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Summary Page (AlwaysOn Availability Group Wizards)
   This help topic describes the options of the **Summary** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] and [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use the grid on this page to review your choices for the new availability group. To make one or more changes, click **Previous** to return to the relevant page or pages. When you are ready, click **Next** to return to the **Summary** page. Once you are satisfied with your choices, click **Finish**.  

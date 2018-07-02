@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "DataSource element"
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSource Element (XMLA)
   Contains an out-of-line data source binding for the parent [Batch](../xml-elements-commands/batch-element-xmla.md) or [Process](../xml-elements-commands/process-element-xmla.md) element.  

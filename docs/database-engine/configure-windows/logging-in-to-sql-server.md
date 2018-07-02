@@ -59,7 +59,7 @@ manager: craigg
 |Connection to a default instance that is not listening on the default TCP port, by specifying the port that is being used, in this case 2828. (This is not necessary if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is listening on the default port (1433).)|APPHOST,2828|  
 |Connection to a named instance on a designated TCP port, in this case 2828. (This is often necessary if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is not running on the host computer.)|APPHOST,2828|  
 |Connection to a default instance that is not listening on the default TCP port, by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28,2828|  
-|Connection to a named instance by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28,2828|  
+|Connection to a named instance by specifying both the IP address and the TCP port that is being used, in this case 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Connecting to default instance by name, forcing a TCP connection.|tcp:APPHOST|  
 |Connecting to named instance by name, forcing a TCP connection.|tcp:APPHOST\SQLEXPRESS|  
 |Connecting to a default instance by specifying a named pipe name.|\\\APPHOST\pipe\unit\app|  

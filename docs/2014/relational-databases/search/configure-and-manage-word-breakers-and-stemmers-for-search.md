@@ -5,10 +5,9 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "languages [full-text search]"
   - "full-text search [SQL Server], stemmers"
@@ -21,9 +20,9 @@ helpviewer_keywords:
   - "word breakers [full-text search]"
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 caps.latest.revision: 88
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Configure and Manage Word Breakers and Stemmers for Search
   Word breakers and stemmers perform linguistic analysis on all full-text indexed data. Linguistic analysis involves finding word boundaries (word-breaking) and conjugating verbs (stemming). Word breakers and stemmers are language specific, and the rules for linguistic analysis differ for different languages. For a given language, a *word breaker* identifies individual words by determining where word boundaries exist based on the lexical rules of the language. Each word (also known as a *token*) is inserted into the full-text index using a compressed representation to reduce its size. The *stemmer* generates inflectional forms of a particular word based on the rules of that language (for example, "running", "ran", and "runner" are various forms of the word "run").  

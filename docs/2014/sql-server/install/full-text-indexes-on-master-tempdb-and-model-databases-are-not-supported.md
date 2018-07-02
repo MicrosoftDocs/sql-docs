@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes"
 ms.assetid: f7992965-42c1-4eb8-a7fb-afb38b67c740
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Full-text indexes on master, tempdb and model databases are not supported
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow full-text indexes on any system database.  

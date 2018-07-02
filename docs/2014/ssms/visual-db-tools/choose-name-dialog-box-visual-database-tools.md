@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.choosename"
   - "vdt.dlgbox.newdatabaseview"
   - "vdt.dlgbox.newtablename"
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Choose Name Dialog Box (Visual Database Tools)
   This dialog box appears when you choose **Save \<TableName**> , **Save \<DiagramName>**, or **Save \<ViewName>** from the **File** menu.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining models, creating"
   - "forecasting [data mining]"
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "classification [data mining]"
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Creating a Data Mining Model
   Data modeling is the step of data mining where you build patterns and trends by applying *algorithms* to data. Later you can use those patterns for analysis, or to make predictions.  

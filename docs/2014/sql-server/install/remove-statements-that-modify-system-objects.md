@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "direct system catalog updates [SQL Server]"
   - "system catalogs [SQL Server]"
 ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Remove statements that modify system objects
   Upgrade Advisor detected statements that update the system catalog. Direct system catalog updates are not allowed. Modify your SQL scripts to use official and documented APIs.  

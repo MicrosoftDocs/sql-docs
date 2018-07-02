@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], Access reports"
   - "functions [Reporting Services]"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "modules [Reporting Services]"
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Supported Access Report Features (SSRS)
   When you import a report into Report Designer, the import process converts the [!INCLUDE[msCoName](../includes/msconame-md.md)] Access report into a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Definition Language (RDL) file. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports several features of Access; however, because of differences between Access and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], some items are modified slightly or are not supported. This topic describes how Access report features are converted to RDL.  

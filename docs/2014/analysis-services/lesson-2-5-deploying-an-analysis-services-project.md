@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Deploying an Analysis Services Project
   To view the cube and dimension data for the objects in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project, you must deploy the project to a specified instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and then process the cube and its dimensions. *Deploying* an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project creates the defined objects in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. *Processing* the objects in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copies the data from the underlying data sources into the cube objects. For more information, see [Deploy Analysis Services Projects &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) and [Configure Analysis Services Project Properties &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  

@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Trace File Close event class"
 ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Trace File Close Event Class
   The **Trace File Close** event class indicates that a trace file has been closed during a trace file rollover.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1"
   - "sql12.rtp.rptwizard.querybuilder.f1"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Query Builder [Reporting Services]"
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 caps.latest.revision: 21
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Query Builder (Report Wizard)
   Use the Query Builder to specify a query that retrieves a result set to use in a report. You can choose between two query builders:  

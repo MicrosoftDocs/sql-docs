@@ -3,19 +3,15 @@ title: "Return Data from a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "stored-procedures"
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stored-Procs"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], returning data"
   - "returning data from stored procedure"
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

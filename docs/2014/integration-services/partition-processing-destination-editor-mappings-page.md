@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.partprocessingtransformation.mapping.f1"
 helpviewer_keywords: 
   - "Partition Processing Destination Editor"
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Partition Processing Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Partition Processing Destination Editor** dialog box to map input columns to partition columns.  

@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 caps.latest.revision: 29
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Move Items Page (Report Manager)
   Use the Move Items page to move a report, folder, or other item to a new location on the report server. You can type the path of the new location or use a tree view to browse to a new location in the report server namespace. You can only move items that you have permission to move and that are stored on the current report server.  

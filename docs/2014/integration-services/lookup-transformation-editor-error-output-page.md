@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.lookuptransformation.erroroutput.f1"
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Lookup Transformation Editor (Error Output Page)
   Use the **Error Output** page of the **Lookup Transformation Editor** dialog box to specify error handling options.  

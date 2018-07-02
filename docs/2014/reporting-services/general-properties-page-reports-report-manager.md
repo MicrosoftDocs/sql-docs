@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 caps.latest.revision: 29
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # General Properties Page, Reports (Report Manager)
   Use the General properties page for reports to rename, delete, move, or replace the report definition. You can also use this page to create a linked report. Details about who created or modified the report and when the changes took place are indicated at the top of the page.  

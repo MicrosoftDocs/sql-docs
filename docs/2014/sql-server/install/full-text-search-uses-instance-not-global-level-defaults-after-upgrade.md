@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [Full-Text Search]"
   - "word breakers [Full-Text Search]"
 ms.assetid: 93ee8fcb-d11c-49fa-8fac-51ed31a8f008
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Upgrading will cause Full-Text Search to use instance-level, not global, word breakers and filters by default
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a way to allow instance-level registration of new word breakers and filters.  

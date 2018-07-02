@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "SourceMeasureGroup element"
 ms.assetid: aaa7cc0b-162a-4c31-ab03-a90f81eeca00
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SourceMeasureGroup Element (ASSL)
   Identifies the measure group that serves as the data source for a mining structure column.  

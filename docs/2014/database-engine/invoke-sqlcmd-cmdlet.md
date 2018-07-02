@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "PowerShell [SQL Server], Invoke-Sqlcmd"
   - "Cmdlets [SQL Server], Invoke-Sqlcmd"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "sqlcmd utility, PowerShell"
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 caps.latest.revision: 17
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd** is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet that runs scripts that contain statements from the languages ([!INCLUDE[tsql](../includes/tsql-md.md)] and XQuery) and commands that are supported by the **sqlcmd** utility.  

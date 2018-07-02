@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.webservicestask.output.f1"
 helpviewer_keywords: 
   - "Web Service Task Editor"
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Web Service Task Editor (Output Page)
   Use the **Output** page of the **Web Service Task Editor** dialog box to specify where to store the result returned by the Web method.  

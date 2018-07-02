@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "In-Memory OLTP"
   - "memory-optimized tables"
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # In-Memory OLTP (In-Memory Optimization)
   New in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] can significantly improve OLTP database application performance. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] is a memory-optimized database engine integrated into the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine, optimized for OLTP.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes"
 ms.assetid: cba737f7-b187-47d0-8458-23dc18d18aca
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Full-text indexes on nonpersisted, computed columns are not allowed
   You cannot create full-text indexes on nondeterministic and imprecise computed columns. Such columns cannot be used as type columns or as full-text key columns.  

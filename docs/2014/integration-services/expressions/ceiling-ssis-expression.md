@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "smallest integer great than or equal to expression"
   - "CEILING function [SSIS]"
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # CEILING (SSIS Expression)
   Returns the smallest integer that is greater than or equal to a numeric expression.  

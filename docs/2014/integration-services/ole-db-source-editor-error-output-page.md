@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbsourceadapter.errorhandling.f1"
 helpviewer_keywords: 
   - "OLE DB Source Editor"
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # OLE DB Source Editor (Error Output Page)
   Use the **Error Output** page of the **OLE DB Source Editor** dialog box to select error handling options and to set properties on error output columns.  

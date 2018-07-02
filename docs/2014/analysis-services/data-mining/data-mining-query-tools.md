@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "predictions [Analysis Services], DMX prediction queries"
   - "predictions [DMX]"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "mining models [Analysis Services], DMX"
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Query Interfaces
   Data mining queries are based on the Data Mining Extensions (DMX) language. You use DMX for all prediction and modeling tasks, including classification, risk analysis, generation of recommendations, and linear regression. You can also retrieve the patterns and statistics that were generated when you processed the model.  

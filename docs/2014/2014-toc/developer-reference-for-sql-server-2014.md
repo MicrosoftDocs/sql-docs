@@ -6,16 +6,15 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
 ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords: 
   - "sql12.portal.DevRef.f1"
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mightypen
+ms.author: genemi
+manager: craigg
 ---
 # Developer Reference for SQL Server 2014
   The following features and technologies allow you to develop applications that access data in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  

@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.treeview.f1"
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # SSIS Package Explorer Tab
   Use the **Package Explorer** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to see a hierarchical view of all of the elements in a package: configurations, connections, event handlers, executable objects such as tasks and containers, log providers, precedence constraints, and variables. If a package contains a Data Flow task, the **Package Explorer** tab includes a node that contains a hierarchical view of the data flow components.  

@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [MDX], exceptions"
   - "exceptions [MDX]"
 ms.assetid: bc6ff0af-9fe6-44d6-bc3c-801d71ea41a9
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Error Handling (MDX)
   Each cube can control how errors within a Multidimensional Expressions (MDX) script are handled. Error handling is done through the `ScriptErrorHandlingMode` enumerator. The possible values for this enumerator are:  

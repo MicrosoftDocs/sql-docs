@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, manually running"
   - "multiserver job processing [SQL Server]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "manual job processing [SQL Server]"
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Run Jobs
   To manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects.  

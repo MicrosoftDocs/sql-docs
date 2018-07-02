@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.showplan.nestedloops.f1"
   - "sql12.swb.showplan.dynamic.f1"
@@ -136,9 +136,9 @@ helpviewer_keywords:
   - "execution plans [SQL Server], reading output"
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 caps.latest.revision: 51
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # Showplan Logical and Physical Operators Reference
   Operators describe how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes a query or a Data Manipulation Language (DML) statement. The query optimizer uses operators to build a query plan to create the result specified in the query, or to perform the operation specified in the DML statement. The query plan is a tree consisting of physical operators. You can view the query plan by using the SET SHOWPLAN statements, the graphical execution plan options in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], or the SQL Server Profiler Showplan event classes.  

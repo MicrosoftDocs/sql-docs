@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, backward compatibility"
   - "backward compatibility [SQL Server replication]"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "compatibility [SQL Server replication]"
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 caps.latest.revision: 52
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Replication Backward Compatibility
   Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. It is important to understand backward compatibility if you are upgrading or if you have more than one version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a replication topology.  

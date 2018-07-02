@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Hierarchy data type"
 ms.assetid: 2e05917e-7e5d-4dd1-817b-4ff5647747ff
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Hierarchy Data Type (ASSL)
   Defines a primitive data type that represents a hierarchy in a dimension.  

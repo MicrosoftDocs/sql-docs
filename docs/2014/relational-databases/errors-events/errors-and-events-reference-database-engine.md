@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server Database Engine]"
   - "Database Engine [SQL Server], errors"
   - "events [SQL Server Database Engine]"
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Errors and Events Reference (Database Engine)
   The [Events and Errors Message Center](http://go.microsoft.com/fwlink/?LinkId=47660) on TechNet is the primary source of information on error messages for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It improves the customer experience when searching for information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error messages, as well as other Microsoft products by enabling customers to perform full-text searches and filter results based on product, version, source, and numeric or symbolic identifier. Additionally, the new interface provides support across multiple languages. The Center will be continually updated with new troubleshooting information on frequently encountered errors.  

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, object model"
 ms.assetid: 1726cba5-a294-4a8b-a5c6-e9d325066000
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # SQLXML Managed Classes Object Model
   This section documents the [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML Managed Classes object model.  

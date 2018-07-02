@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "RPC Output Parameter event class"
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # RPC Output Parameter Event Class
   The RPC Output Parameter event class traces the output parameter values of remote procedure calls (RPCs) after execution.  

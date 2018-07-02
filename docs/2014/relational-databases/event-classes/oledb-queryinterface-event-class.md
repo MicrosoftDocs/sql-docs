@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "OLEDB QueryInterface event class"
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # OLEDB QueryInterface Event Class
   The **OLEDB QueryInterface** event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues an OLE DB **QueryInterface** call for distributed queries and remote stored procedures. Include this event class in traces that are monitoring problems associated with distributed queries and remote stored procedures.  

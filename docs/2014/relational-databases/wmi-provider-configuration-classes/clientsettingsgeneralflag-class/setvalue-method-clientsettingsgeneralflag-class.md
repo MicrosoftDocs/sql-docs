@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SetValue method"
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # SetValue Method (ClientSettingsGeneralFlag Class)
   Sets all the values of the referenced flag.  

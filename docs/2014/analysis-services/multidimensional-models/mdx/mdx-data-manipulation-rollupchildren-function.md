@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [MDX], RollupChildren function"
   - "RollupChildren function"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "IIf function"
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Working with the RollupChildren Function (MDX)
   The Multidimensional Expressions (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx)

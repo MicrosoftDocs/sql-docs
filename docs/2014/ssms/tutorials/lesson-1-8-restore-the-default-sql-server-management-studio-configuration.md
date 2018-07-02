@@ -5,15 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 4efb0f74-edd5-4b14-bca6-bee94fb48bcc
-caps.latest.revision: 29
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Restore the Default SQL Server Management Studio Configuration
   Users new to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] might have inadvertently closed or hidden windows and might have trouble restoring [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to the original layout. The following steps restore [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to the default environment layout.  

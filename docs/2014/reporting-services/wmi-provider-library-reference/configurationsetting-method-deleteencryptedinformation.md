@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "DeleteEncryptedInformation method"
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 caps.latest.revision: 19
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # DeleteEncryptedInformation Method (WMI MSReportServer_ConfigurationSetting)
   Deletes the encrypted information from the report server database.  

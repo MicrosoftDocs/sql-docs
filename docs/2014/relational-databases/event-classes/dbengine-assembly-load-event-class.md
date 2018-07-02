@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
 ---
 # Assembly Load Event Class
   See [assembly-load-event-class](../../database-engine/assembly-load-event-class.md).  

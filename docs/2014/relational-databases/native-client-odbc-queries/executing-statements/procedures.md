@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "ODBC applications, stored procedures"
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Procedures
   A stored procedure is a precompiled executable object that contains one or more [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements. Stored procedures can have input and output parameters and can also put out an integer return code. An application can enumerate available stored procedures by using catalog functions.  

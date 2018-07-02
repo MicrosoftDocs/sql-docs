@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logistic regression [Analysis Services]"
   - "data mining [Analysis Services], tutorials"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "neural network model [Analysis Services]"
 ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 caps.latest.revision: 22
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Lesson 5: Building Neural Network and Logistic Regression Models (Intermediate Data Mining Tutorial)
   

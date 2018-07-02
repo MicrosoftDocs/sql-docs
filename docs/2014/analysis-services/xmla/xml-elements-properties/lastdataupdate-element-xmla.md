@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "LastDataUpdate element"
 ms.assetid: 66e43b17-844f-4ec2-bd1d-35608e7b6524
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # LastDataUpdate Element (XMLA)
   Contains the date and time that the data of the cube represented by the parent [Cube](cube-element-olapinfo-xmla.md) element was last updated.  

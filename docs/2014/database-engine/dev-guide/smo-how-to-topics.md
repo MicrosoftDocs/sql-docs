@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 201c83af-47b3-413a-8909-3c7cc5142be5
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # SMO How-to Topics
   The SMO How-to topics provide information about how to set up the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET programming environment to create programs in either [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] or C#.  

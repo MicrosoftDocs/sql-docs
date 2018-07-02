@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail XPs option"
   - "Database Mail [SQL Server], enabling"
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Mail XPs Server Configuration Option
   Use the **DatabaseMail XPs** option to enable Database Mail on this server. The possible values are:  

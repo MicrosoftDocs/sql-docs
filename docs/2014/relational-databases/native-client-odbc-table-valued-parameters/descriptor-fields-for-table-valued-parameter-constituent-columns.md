@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), descriptor fields for constituent columns"
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Descriptor Fields for Table-Valued Parameter Constituent Columns
   The table-valued parameter descriptor fields described in this section are manipulated by using [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) and [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) with the handle for the implementation parameter descriptor (IPD).  

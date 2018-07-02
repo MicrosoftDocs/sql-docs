@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "service [Integration Services], remote instance"
   - "Integration Services service, connecting"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "service [Integration Services], connecting"
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Connect to a Remote Integration Services Server (SSIS Service)
     

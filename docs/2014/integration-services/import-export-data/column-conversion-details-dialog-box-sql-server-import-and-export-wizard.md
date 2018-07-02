@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.issuedetails.f1"
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
   Use the **Column Conversion Details** dialog box to review detailed conversion information about an individual column. This conversion information contains the column's data type at the source and the destination, and the conversion that the wizard will perform. This page also lists the data type mapping files that the wizard uses to determine the data type conversions that are required. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installs these data type mapping files during setup.  

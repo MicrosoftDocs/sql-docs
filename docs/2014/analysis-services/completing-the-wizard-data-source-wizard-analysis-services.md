@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasourcewizard.completion.f1"
 ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Completing the Wizard (Data Source Wizard) (Analysis Services)
   Use the **Completing the Wizard** page of the wizard to review the connection string and specify a name for the new data source.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "outer joins"
   - "=* join"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "joins [SQL Server]"
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Outer join operators *= and =* are not supported in 90 or later compatibility modes
   Upgrade Advisor detected the use of outer join operators *= and =\*. These operators are not supported in 90 or later compatibility modes. When you upgrade, user databases maintain their compatibility mode. Statements that use these operators will fail.  

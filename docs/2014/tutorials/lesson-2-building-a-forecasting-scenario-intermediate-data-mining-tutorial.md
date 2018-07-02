@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "time series [Analysis Services]"
   - "data mining [Analysis Services], tutorials"
   - "tutorials [Data Mining]"
 ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
 caps.latest.revision: 31
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Lesson 2: Building a Forecasting Scenario (Intermediate Data Mining Tutorial)
   As the sales analyst for [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], you have been asked to forecast the sales of products for the next year. In particular, you have been asked to compare forecasts for the different regions and product lines. Additionally, you have been asked to determine whether sales of different products vary depending on the time of the year.  

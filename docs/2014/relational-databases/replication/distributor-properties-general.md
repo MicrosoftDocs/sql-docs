@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.configdistwizard.distproperties.general.f1"
 helpviewer_keywords: 
   - "Distributor Properties dialog box"
 ms.assetid: ab4120ec-e524-4c0c-8b48-f2f40adb1a3b
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Distributor Properties, General
   The **General** page of the **Distributor Properties** dialog box allows you to add and delete distribution databases and set distribution database properties.  

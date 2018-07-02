@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Discover Events event category"
   - "discover events [Analysis Services]"
   - "event classes [Analysis Services], discover events"
 ms.assetid: fb964bac-dc68-4ad0-80f5-aeb677277169
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Discover Events Event Category
   The Discover Events event category has the event classes described in the following table.  

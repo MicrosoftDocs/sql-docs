@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installing Upgrade Advisor"
   - "requirements [Upgrade Advisor]"
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Upgrade Advisor [SQL Server], prerequisites"
 ms.assetid: d21a39e5-5f81-4096-a7dd-f244e4779992
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Upgrade Advisor Prerequisites
   This topic describes the software requirements for Upgrade Advisor.  

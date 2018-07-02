@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "behavior changes [Integration Services]"
   - "Integration Services, backward compatibility"
 ms.assetid: 611d22fa-5ac7-485e-9a40-7131e852f794
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Behavior Changes to Integration Services Features in SQL Server 2014
   This topic describes behavior changes in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Behavior changes affect how features work or interact in the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] as compared to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

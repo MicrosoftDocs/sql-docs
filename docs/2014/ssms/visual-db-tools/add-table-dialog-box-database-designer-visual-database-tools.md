@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65555"
   - "vdt.dlgbox.schema.addtable"
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Add Table Dialog Box (Database Designer) (Visual Database Tools)
   Lets you add tables in Database Designer.  

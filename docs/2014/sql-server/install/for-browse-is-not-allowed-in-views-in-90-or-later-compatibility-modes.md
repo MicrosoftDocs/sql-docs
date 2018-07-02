@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], FOR BROWSE clause"
   - "FOR BROWSE clause"
 ms.assetid: 8f49b1c1-d877-4c46-b988-f8cdd8ac0925
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # FOR BROWSE is not allowed in views in 90 or later compatibility modes
   Upgrade Advisor detected the use of the FOR BROWSE clause in a view. The FOR BROWSE clause is allowed (and ignored) in views when the database compatibility mode is set to 80. The FOR BROWSE clause is not allowed in views when the database compatibility mode is set to 90 or later.  

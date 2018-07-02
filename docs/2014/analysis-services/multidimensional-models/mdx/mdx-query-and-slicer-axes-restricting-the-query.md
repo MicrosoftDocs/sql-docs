@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Multidimensional Expressions [Analysis Services], axes"
   - "queries [MDX], axes"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MDX [Analysis Services], axes"
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Restricting the Query with Query and Slicer Axes (MDX)
   When formulating a Multidimensional Expressions (MDX) SELECT statement, an application typically examines a cube and divides the set of hierarchies into two subsets:  

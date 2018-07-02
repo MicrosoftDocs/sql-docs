@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.roledesignerdialog.membership.f1"
   - "sql12.asvs.roledesignerdialog.general.f1"
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "granting permissions [Analysis Services], users"
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Authorizing access to objects and operations (Analysis Services)
   Non-administrative user access to cubes, dimensions, and mining models within an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database is granted through membership in one or more database roles. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrators create these database roles, granting Read or Read/Write permissions on [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, and then assigning [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows users and groups to each role.  

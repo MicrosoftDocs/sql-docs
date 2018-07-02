@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "IsWebServiceEnabled"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "IsWebServiceEnabled property"
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 caps.latest.revision: 18
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # IsWebServiceEnabled Property (WMI MSReportServer_ConfigurationSetting)
   Indicates whether the Report Server Web service is enabled. Read-only.  

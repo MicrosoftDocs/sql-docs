@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Registered Servers [SQL Server], connections"
   - "connections [SQL Server], registered servers"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "disconnecting registered servers [SQL Server]"
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Disconnect from a Registered Server (SQL Server Management Studio)
   This topic describes how to  disconnect Object Explorer from a server at any time in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Disconnecting Object Explorer does not disconnect other [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] components such as SQL Editor.  

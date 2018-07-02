@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.models.f1"
 ms.assetid: f7bfc77c-e0a4-4bd0-9358-ee1d5562a7f3
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Mining Models View (Data Mining Model Designer)
   Use the **Mining Models** view to create or modify mining models that a mining structure contains.  

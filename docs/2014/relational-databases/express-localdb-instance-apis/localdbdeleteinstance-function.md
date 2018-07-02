@@ -18,9 +18,9 @@ topic_type:
   - "apiref"
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # LocalDBDeleteInstance Function
   Removes the specified SQL Server Express LocalDB instance.  

@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "sql_variant data type"
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # sql_variant Support for Date and Time Types
   This topic describes how the `sql_variant` data type supports enhanced date and time functionality.  

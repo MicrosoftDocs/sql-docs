@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.kb.kbmatchingresults.f1"
   - "sql12.dqs.kb.kbmatchingmap.f1"
   - "sql12.dqs.kb.kbmatchingpolicy.f1"
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Create a Matching Policy
   This topic describes how to build a matching policy in a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). You prepare for the matching process in DQS by running the Matching Policy activity on sample data. In this activity you create and test one or more matching rules in the policy, and then publish the knowledge base to make the matching rules publically available for use. There can be only one matching policy in a knowledge base, but that policy can contain multiple matching rules.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
   - "clustering [data mining]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "category detection"
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Detect Categories (Table Analysis Tools for Excel)
   ![Detect Categories button in ribbon](media/tat-detectcat.gif "Detect Categories button in ribbon")  

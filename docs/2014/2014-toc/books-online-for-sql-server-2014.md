@@ -2,6 +2,7 @@
 title: "Books Online for SQL Server 2014 | Microsoft Docs"
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
+ms.technology: release-landing
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,10 +18,9 @@ helpviewer_keywords:
   - "Books Online [SQL Server], home page"
   - "portal page [SQL Server]"
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 61
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: craigg-msft
+ms.author: craigg
+manager: craigg
 ---
 # Books Online for SQL Server 2014
   Welcome to [!INCLUDE[msCoName](../includes/msconame-md.md)]® Books Online for [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Books Online contains the task descriptions and reference documentation that describes how to perform data management and business intelligence work by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

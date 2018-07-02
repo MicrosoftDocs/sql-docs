@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Value element"
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Value Element (XMLA)
   Contains the desired value of an [Attribute](attribute-element-xmla.md) element to be added by an [Insert](../xml-elements-commands/insert-element-xmla.md) command, or a [Cell](cell-element-xmla.md) element to be updated by an [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) command.  

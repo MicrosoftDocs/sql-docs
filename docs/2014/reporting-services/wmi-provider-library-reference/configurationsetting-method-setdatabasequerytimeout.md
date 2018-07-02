@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting Class)"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SetDatabaseQueryTimeout method"
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 caps.latest.revision: 19
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # SetDatabaseQueryTimeout Method (WMI MSReportServer_ConfigurationSetting)
   Specifies the default time-out value for report server database queries.  

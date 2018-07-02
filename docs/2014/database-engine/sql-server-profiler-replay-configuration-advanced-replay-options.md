@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.replay.generaloptions.advanced.f1"
 helpviewer_keywords: 
   - "Replay Configuration dialog box"
 ms.assetid: b4eb34f7-3af6-4a44-ba7e-2b8430ec3cd7
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # SQL Server Profiler - Replay Configuration (Advanced Replay Options)
   In the **Replay Configuration** dialog box, use the **Advanced Replay Options** tab to specify how to replay a trace file.  

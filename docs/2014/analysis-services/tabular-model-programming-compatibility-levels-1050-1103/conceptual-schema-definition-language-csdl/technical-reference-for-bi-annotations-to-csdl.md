@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
 caps.latest.revision: 15
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Technical Reference for BI Annotations to CSDL
   This section lists the elements, attribute, and properties in CSDL that are used to represent [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tabular models. Some elements are new; others have been annotated or extended to support business intelligence modeling.  

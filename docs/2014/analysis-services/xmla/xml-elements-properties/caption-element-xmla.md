@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Caption element"
 ms.assetid: 3d10ee68-98ab-4da0-a409-800dea2f1c32
 caps.latest.revision: 15
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Caption Element (XMLA)
   Contains information about the caption of the parent [HierarchyInfo](hierarchyinfo-element-xmla.md) or [Member](member-element-xmla.md) element.  

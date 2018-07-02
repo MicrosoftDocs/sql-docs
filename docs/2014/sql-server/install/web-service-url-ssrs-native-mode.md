@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.reportservervirtualdirectory.F1"
 helpviewer_keywords: 
   - "Reporting Services, Web service"
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 caps.latest.revision: 9
-author: "markingmyname"
-ms.author: "maghan"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Web Service URL (SSRS Native Mode)
   Use the Web Service URL page to configure or modify the URL used to access the report server. A *URL reservation* will be created based on the URL you specify. The URL reservation defines the syntax and rules for all URLs that can be subsequently used to access the Report Server Web service. It specifies the prefix, host, port, and virtual directory for the Report Server Web service. Depending on how you specify the host, multiple URLs might be possible for a single reservation. The default value for the host specifies a strong wildcard. A strong wildcard allows you to specify in a URL any host name that can be resolved to the computer that hosts the report server. For more information about URL configuration and reservations, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) and [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

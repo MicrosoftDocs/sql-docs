@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Audit Database Object Take Ownership event class"
 ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Audit Database Object Take Ownership Event Class
   The **Audit Database Object Take Ownership** event class occurs when a change of owner for objects within database scope occurs.  

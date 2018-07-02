@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "StopService method"
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # StopService Method (SqlService Class)
   Attempts to place the service in the stopped state.  

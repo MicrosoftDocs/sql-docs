@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.gotodb.f1"
 ms.assetid: 28cc2539-a983-4e29-9017-62e3ebea450f
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Go To Dialog Box (SSAS)
   The **Go To** dialog box enables you to jump to a specific column in a table.  

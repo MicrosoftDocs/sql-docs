@@ -5,10 +5,9 @@ ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes creation, columnstore"
   - "indexes [SQL Server], columnstore"
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "xVelocity, columnstore indexes"
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 50
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
 ---
 # Columnstore Indexes Described
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*in-memory columnstore index* stores and manages data by using column-based data storage and column-based query processing. Columnstore indexes work well for data warehousing workloads that primarily perform bulk loads and read-only queries. Use the columnstore index to achieve up to **10x query performance** gains over traditional row-oriented storage, and up to **7x data compression** over the uncompressed data size.  

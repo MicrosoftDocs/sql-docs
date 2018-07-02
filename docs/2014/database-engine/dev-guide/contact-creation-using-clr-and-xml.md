@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Contact Creation using CLR and XML
   The Contact sample for SQL Server provides some useful utilities that form an extra layer of functionality on top of the base AdventureWorks2012 sample database. The first utility creates contact records for various types of people involved in the AdventureWorks2012 database. The contact information is specified by using XML and is passed to a C#-based or VB stored procedure to create the XML and place it in the proper tables with the database.  

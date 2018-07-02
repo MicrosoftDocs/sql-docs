@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "context [CLR integration]"
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # SqlContext Object
   You invoke managed code in the server when you call a procedure or function, when you call a method on a common language runtime (CLR) user-defined type, or when your action fires a trigger defined in any of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework languages. Because execution of this code is requested as part of a user connection, access to the context of the caller from the code running in the server is required. In addition, certain data access operations may only be valid if run under the context of the caller. For example, access to inserted and deleted pseudo-tables used in trigger operations is only valid under the context of the caller.  

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Mapping Schema property"
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)
   This example illustrates the use of the following SQLXMLOLEDB Provider-specific properties:  

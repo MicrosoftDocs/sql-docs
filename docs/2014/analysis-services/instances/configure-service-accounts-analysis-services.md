@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Analysis Services], logon accounts"
   - "logon accounts [Analysis Services]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "logon accounts [Analysis Services], about logon accounts"
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 caps.latest.revision: 52
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure Service Accounts (Analysis Services)
   Product-wide account provisioning is documented in [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), a topic that provides comprehensive service account information for all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, including [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Refer to it to learn about valid account types, Windows privileges assigned by setup, file system permissions, registry permissions, and more.  

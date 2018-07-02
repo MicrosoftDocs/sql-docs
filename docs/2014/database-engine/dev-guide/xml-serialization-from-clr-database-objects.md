@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "XmlSerializer class"
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # XML Serialization from CLR Database Objects
   XML serialization is required for two scenarios:  

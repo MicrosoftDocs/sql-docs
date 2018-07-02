@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubePermissions element"
 ms.assetid: 75a3a0c2-e1d4-4896-b0f5-2ea9c769b927
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubePermissions Element (ASSL)
   Contains the collection of permissions applicable to a [Cube](../objects/cube-element-assl.md) element.  

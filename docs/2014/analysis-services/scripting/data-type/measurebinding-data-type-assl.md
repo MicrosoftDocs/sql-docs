@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MeasureBinding data type"
 ms.assetid: f4dac8a6-7ad6-4edb-8e5b-744bb94ee34c
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MeasureBinding Data Type (ASSL)
   Defines a derived data type that represents the binding of a measure to the parent element.  

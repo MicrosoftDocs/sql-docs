@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.serviceaccount.F1"
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Service Account (SSRS Native Mode)
   Use the Service Account page to specify the account under which the Report Server service runs. This account is initially configured during Setup. You can modify it if you want to change the account or password. The Report Server Web service, Report Manager, and the background processing application all run under the service identity you specify on this page.  

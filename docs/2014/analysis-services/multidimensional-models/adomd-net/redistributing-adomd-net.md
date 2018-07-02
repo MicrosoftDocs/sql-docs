@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "redistributing ADOMD.NET"
 ms.assetid: f8db3c99-0243-4b92-b486-0d8786c264f4
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Redistributing ADOMD.NET
   When you write applications that use ADOMD.NET, you must redistribute the appropriate version of ADOMD.NET along with your application. To redistribute ADOMD.NET, include the ADOMD.NET setup program in your application's setup program.  

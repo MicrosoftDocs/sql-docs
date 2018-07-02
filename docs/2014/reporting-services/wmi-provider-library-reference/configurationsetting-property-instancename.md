@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "InstanceName Property"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "InstanceName property"
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # InstanceName Property (WMI MSReportServer_ConfigurationSetting)
   Specifies the name of a report server instance on a specific computer. Read-only.  

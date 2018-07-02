@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.security.SSA.f1"
 helpviewer_keywords: 
   - "Snapshot Agent Security dialog box"
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Snapshot Agent Security
   The **Snapshot Agent Security** dialog box allows you to specify:  

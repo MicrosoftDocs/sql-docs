@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # UTF8 String User-Defined Data Type (UDT)
   The UTF8String sample for SQL Server demonstrates the implementation of a user-defined data type. This sample shows the implementation of a UTF8 user-defined data type that extends the type system of the database to provide storage for UTF8-encoded values. This type also implements code to convert Unicode strings to and from UTF8.  

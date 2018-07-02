@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "InstanceName property"
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # InstanceName Property (ServerNetworkProtocolProperty Class)
   Gets the name of an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on which the server network protocol is installed.  

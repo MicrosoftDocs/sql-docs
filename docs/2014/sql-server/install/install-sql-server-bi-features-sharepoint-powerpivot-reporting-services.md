@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
 caps.latest.revision: 20
-author: "markingmyname"
-ms.author: "maghan"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be integrated with a Microsoft SharePoint farm to enable Business Intelligence (BI) features in SharePoint. The features include [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is used for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access in a SharePoint farm. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is the data engine for workbooks created in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel and accessed from a SharePoint library. Once you save a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook to SharePoint, you can use it as a data source for [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports.  

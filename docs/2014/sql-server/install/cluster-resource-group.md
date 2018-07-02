@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "Cluster Resource Group"
 ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Cluster Resource Group
   Use the Cluster Resource Group page to specify the disk where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] virtual server resources will be located.  

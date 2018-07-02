@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), cross-version compatibility"
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Cross-Version Compatibility
   Cross-version conflicts can occur when client or server instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] are expected to process table-valued parameters.  

@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: bd22e41a-0931-4d32-888a-633a3046fc5e
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # The data connection path in the workbook points to a file on the local drive or is an invalid URI. The following connections failed to refresh: PowerPivot Data
   For Excel workbooks that contain PowerPivot data, Excel Services returns this error if it cannot connect to embedded data sources.  

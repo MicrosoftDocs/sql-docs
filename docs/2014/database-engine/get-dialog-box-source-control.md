@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VisualStudio.SourceControl.GetVersionDialog"
 helpviewer_keywords: 
   - "Get dialog box"
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Get Dialog Box (Source Control)
   Retrieves a read-only copy of the selected item from the source control database to your working folder, or another folder that you specify.  

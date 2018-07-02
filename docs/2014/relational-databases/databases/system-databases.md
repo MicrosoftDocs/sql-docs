@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "system databases [SQL Server]"
   - "displaying system database data"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "viewing system database data"
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 caps.latest.revision: 24
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # System Databases
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following system databases.  

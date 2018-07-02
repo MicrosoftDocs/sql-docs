@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQLGetInfo function"
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetInfo
   The table shows the values returned by **SQLGetInfo**. These values might vary based on the version number of the connected server.  

@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Publishers [SQL Server replication], Replication Monitor tasks"
   - "viewing Publisher information"
   - "Publishers [SQL Server replication], viewing information"
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
 caps.latest.revision: 36
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # View Information and Perform Tasks for a Publisher (Replication Monitor)
   Replication Monitor provides the following tabs that display information about the selected Publisher:  

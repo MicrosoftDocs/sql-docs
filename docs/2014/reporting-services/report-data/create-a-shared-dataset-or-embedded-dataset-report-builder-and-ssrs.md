@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)
   You can create an embedded dataset for use in a single report or a shared dataset to save to a report server, for use by multiple reports. To create a dataset, you must have an embedded or shared data source.  

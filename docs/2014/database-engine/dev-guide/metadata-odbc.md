@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "metadata [ODBC]"
 ms.assetid: 99133efc-b1f2-46e9-8203-d90c324a8e4c
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Metadata (ODBC)
   This section discusses parameter, column result, and catalog metadata.  

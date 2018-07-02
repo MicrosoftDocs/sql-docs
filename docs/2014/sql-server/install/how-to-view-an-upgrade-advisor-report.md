@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying reports"
   - "viewing reports"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "reports [Upgrade Advisor], viewing"
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # How to: View an Upgrade Advisor Report
   Upgrade Advisor creates reports for each component that you select to analyze. This topic describes how to view an Upgrade Advisor report from the Upgrade Advisor start page.  

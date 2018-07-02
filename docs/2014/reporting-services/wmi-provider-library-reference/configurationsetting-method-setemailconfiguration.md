@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SetEmailConfiguration method"
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 caps.latest.revision: 19
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # SetEmailConfiguration Method (WMI MSReportServer_ConfigurationSetting)
   Configures the e-mail delivery extension used by the report server to send e-mail.  

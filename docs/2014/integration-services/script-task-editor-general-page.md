@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.scripttask.general.f1"
 helpviewer_keywords: 
   - "Script Task Editor"
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Script Task Editor (General Page)
   Use the **General** page of the **Script Task Editor** dialog box to name and describe the Script task.  

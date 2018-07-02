@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mightypen
+ms.author: genemi
+manager: craigg
 ---
 # Discontinued SQL Server Features in SQL Server 2014
   This topic describes features that are no longer available after you upgrade to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

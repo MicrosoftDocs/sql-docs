@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ManagedProvider element"
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ManagedProvider Element (ASSL)
   Contains the name of the managed provider used by an element that is derived from the [DataSource](../data-type/datasource-data-type-assl.md) data type.  

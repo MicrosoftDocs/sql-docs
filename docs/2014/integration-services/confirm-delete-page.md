@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.Comfirm_Delete"
 ms.assetid: 091def94-6c9c-4afc-92dc-4c2f4c2cafa0
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Confirm Delete Page
   Use the **Confirm Delete** page to indicate whether [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] displays a confirmation message when you delete certain components.  

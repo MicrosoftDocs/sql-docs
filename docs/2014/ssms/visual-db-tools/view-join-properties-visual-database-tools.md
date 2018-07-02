@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "joins [SQL Server], properties"
   - "viewing join properties"
   - "displaying join properties"
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # View Join Properties (Visual Database Tools)
   You can see a collection of properties for a view in the Properties window.  

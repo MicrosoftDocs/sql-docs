@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "EstimatedPerformanceGain element"
 ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # EstimatedPerformanceGain Element (ASSL)
   Contains the read-only percentage of estimated performance gain for the partition.  

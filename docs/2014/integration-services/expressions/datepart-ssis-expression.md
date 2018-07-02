@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dates [Integration Services], DATEPART"
   - "DATEPART function"
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # DATEPART (SSIS Expression)
   Returns an integer representing a datepart of a date.  

@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, saving"
   - "packages [Integration Services], saving"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, saving"
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # Save a Package to the File System
   This procedure describes how to save an existing package to the file system as a .dtsx file.  

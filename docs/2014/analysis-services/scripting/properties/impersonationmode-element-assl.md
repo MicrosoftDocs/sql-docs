@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ImpersonateMode element"
 ms.assetid: 160fdcb2-ac9f-4c5a-a0eb-a5f7669166b9
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ImpersonationMode Element (ASSL)
   Contains a value that indicates the method of impersonation for elements that are derived from the [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) data type.  

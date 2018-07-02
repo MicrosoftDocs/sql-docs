@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.reinit.all.f1"
 helpviewer_keywords: 
   - "Reinitialize Subscription(s) dialog box"
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Reinitialize Subscription(s) - All Subscriptions
   The **Reinitialize Subscription(s)** dialog box allows you to mark all subscriptions to a publication for reinitialization. Reinitialization involves applying a snapshot to each Subscriber; it is performed by the Distribution Agent for subscriptions to transactional publications and by the Merge Agent for subscriptions to merge publications.  

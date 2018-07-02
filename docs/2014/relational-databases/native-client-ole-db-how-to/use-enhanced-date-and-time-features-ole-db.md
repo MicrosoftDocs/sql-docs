@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Use Enhanced Date and Time Features (OLE DB)
   This sample shows how to use the date/time features that were introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. The sample uses the four new date and time types (`date`, **time**, `datetime2`, and `datetimeoffset`) to execute commands with parameters and retrieve rowset results.  

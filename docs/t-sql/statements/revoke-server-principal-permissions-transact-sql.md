@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "REVOKE statement, logins"
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # REVOKE Server Principal Permissions (Transact-SQL)

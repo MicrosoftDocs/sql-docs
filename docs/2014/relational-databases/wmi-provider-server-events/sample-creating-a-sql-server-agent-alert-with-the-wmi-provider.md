@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "sample applications [WMI]"
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # Sample: Creating a SQL Server Agent Alert by Using the WMI Provider for Server Events
   One common way to use the WMI Event Provider is to create SQL Server Agent alerts that respond to specific events. The following sample presents a simple alert that saves XML deadlock graph events in a table for later analysis. SQL Server Agent submits a WQL request, receives WMI events, and runs a job in response to the event. Notice that, although several Service Broker objects are involved in processing the notification message, the WMI Event Provider handles the details of creating and managing these objects.  

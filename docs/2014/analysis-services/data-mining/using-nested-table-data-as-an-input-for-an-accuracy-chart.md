@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Mining Accuracy Chart [Analysis Services], nested tables"
   - "Mining Accuracy Chart [Analysis Services], input tables"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "adding nested tables"
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Using Nested Table Data as an Input for an Accuracy Chart
   When you test the accuracy of a mining model by using external data, if the mining model contains nested tables, the external data must also contain a case table and an associated nested table.  

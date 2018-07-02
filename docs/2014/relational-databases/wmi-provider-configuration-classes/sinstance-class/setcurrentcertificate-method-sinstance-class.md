@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SetCurrentCertificate method"
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # SetCurrentCertificate Method (SInstance Class)
   Sets the current security certificate.  

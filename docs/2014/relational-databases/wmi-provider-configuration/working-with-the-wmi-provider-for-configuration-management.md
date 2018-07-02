@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "binding [WMI]"
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # Working with the WMI Provider for Configuration Management
   Consider the following before programming with the WMI Provider for Computer Management:  

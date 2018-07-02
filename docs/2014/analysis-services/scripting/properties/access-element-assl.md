@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Access element"
 ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Access Element (ASSL)
   Indicates the level of access given to a [CellPermission](../objects/cellpermission-element-assl.md) element.  

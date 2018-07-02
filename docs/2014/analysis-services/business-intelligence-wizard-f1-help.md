@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Business Intelligence Wizard"
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Business Intelligence Wizard F1 Help
   Use the Business Intelligence Wizard to define business intelligence features and set advanced options on cubes and dimensions. The wizard sets properties on existing objects, creates new objects, and generates Multidimensional Expressions (MDX) scripts to provide features such as dimension intelligence and currency conversion.  

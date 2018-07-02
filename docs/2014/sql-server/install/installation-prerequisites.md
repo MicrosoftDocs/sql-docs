@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "installation prerequisites, Setup"
 helpviewer_keywords: 
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQL Server Installation Wizard, SQL Server Component Update page"
 ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Installation Prerequisites
   For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to install successfully, the following software components are required on the installation computer. They will be installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup:  

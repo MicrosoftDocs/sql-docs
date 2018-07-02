@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "targets [SQL Server extended events], ring buffer target"
   - "ring buffer target [SQL Server extended events]"
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Ring Buffer Target
   The ring buffer target briefly holds event data in memory. This target can manage events in one of two modes.  

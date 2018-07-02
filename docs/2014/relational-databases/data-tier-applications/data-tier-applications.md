@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "designing DACs"
   - "How to [DAC]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "wizard [DAC]"
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Data-tier Applications
   A data-tier application (DAC) is a logical database management entity that defines all of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects - like tables, views, and instance objects, including logins – associated with a user’s database. A DAC is a self-contained unit of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database deployment that enables data-tier developers and database administrators to package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects into a portable artifact called a DAC package, also known as a DACPAC.  

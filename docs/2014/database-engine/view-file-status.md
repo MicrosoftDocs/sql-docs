@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "file status information [SQL Server]"
   - "file history [SQL Server]"
   - "version control services [SQL Server], file status"
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # View File Status
   Source control maintains detailed status information on every source-controlled item. You can use this information to identify the current state of the file, and to create a status report on the item.  

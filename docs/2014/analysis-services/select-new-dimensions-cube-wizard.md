@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubewizard.newdimselection.f1"
 ms.assetid: 7241a3b3-bba9-4b4c-99d9-61ec92ab969a
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select New Dimensions (Cube Wizard)
   Use the **Select New Dimensions** page to select the new dimensions to create.  

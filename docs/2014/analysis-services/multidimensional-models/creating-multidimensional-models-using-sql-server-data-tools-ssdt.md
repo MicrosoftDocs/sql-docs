@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SSAS, environments"
   - "Analysis Services, development"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "solutions [Analysis Services]"
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
 caps.latest.revision: 62
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Creating Multidimensional Models Using SQL Server Data Tools (SSDT)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides two different environments for building, deploying, and managing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solutions: [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Both of these environments implement a project system. For more information about Visual Studio projects, see [Projects as Containers](http://go.microsoft.com/fwlink/?LinkId=63960) in the MSDN Library.  

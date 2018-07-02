@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "cache [Analysis Services]"
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Managing Caches (XMLA)
   You can use the [ClearCache](../xmla/xml-elements-commands/clearcache-element-xmla.md) command in XML for Analysis (XMLA) to clear the cache of a specified dimension or partition. Clearing the cache forces [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to rebuild the cache for that object.  

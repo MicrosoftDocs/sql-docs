@@ -5,10 +5,9 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.locatebackupfileazure.f1"
   - "sql12.swb.specifybackup.f1"
@@ -20,9 +19,9 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], full backups"
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: 73
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Restore a Database Backup (SQL Server Management Studio)
   This topic explains how to restore a full database backup.  

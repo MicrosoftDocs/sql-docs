@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 api_name: 
   - "DatabaseServerName Property"
 api_location: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "DatabaseServerName property"
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # DatabaseServerName Property (WMI MSReportServer_ConfigurationSetting)
   Specifies the name of the server on which the report server database is installed. Read/write.  

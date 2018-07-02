@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubewizard.cubedefinition.f1"
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Creation Method (Cube Wizard)
   Use the **Select Creation Method** page to specify how to create the cube.  

@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "files [SQL Server Management Studio]"
   - "encoding [SQL Server Management Studio]"
   - "files [SQL Server Management Studio], encoding"
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Manage Files with Encoding
   To facilitate the display of your code in a particular language and on a particular platform, you can associate a particular character encoding with a file.  

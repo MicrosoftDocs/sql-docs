@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ProtocolName property"
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ProtocolName Property (SqlServerAlias Class)
   Gets the name of the protocol used by the server connection alias.  

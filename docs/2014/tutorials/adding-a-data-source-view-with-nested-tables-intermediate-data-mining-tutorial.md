@@ -8,12 +8,12 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
 caps.latest.revision: 44
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Adding a Data Source View with Nested Tables (Intermediate Data Mining Tutorial)
   To create a market basket model, you must use a data source view that supports associative data. This data source view will also be used for the sequence clustering scenario.  

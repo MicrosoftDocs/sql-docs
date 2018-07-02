@@ -8,15 +8,15 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server], about Upgrade Advisor"
   - "SQL Server Upgrade Advisor, about Upgrade Advisor"
 ms.assetid: d52773fd-0e13-44a2-a5f2-69d6974bb08f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Overview of Upgrade Advisor
   This section provides an overview to the upgrade process, and information to help you understand and use the Upgrade Advisor Analysis Wizard and Upgrade Advisor Report Viewer.  

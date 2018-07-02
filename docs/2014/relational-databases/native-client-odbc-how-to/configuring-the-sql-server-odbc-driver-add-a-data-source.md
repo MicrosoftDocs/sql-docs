@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "data sources [ODBC]"
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Add a Data Source (ODBC)
   You can add a data source by using ODBC Administrator, programmatically (by using [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), or by creating a file.  

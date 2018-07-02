@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "data mining [Analysis Services], schema rowsets"
 ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Schema Rowsets
   A server that is running [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the following data mining schema rowsets. To check whether a particular XML/A provider supports a specific rowset, use the [DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md) rowset with the [Discover](../../xmla/xml-elements-methods-discover.md) method.  

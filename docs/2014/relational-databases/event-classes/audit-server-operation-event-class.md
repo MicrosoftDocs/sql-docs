@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Audit Server Operation event class"
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Audit Server Operation Event Class
   The **Audit Server Operation** event class occurs when Security Audit operations such as altering settings, resources, external access, or authorization are used.  

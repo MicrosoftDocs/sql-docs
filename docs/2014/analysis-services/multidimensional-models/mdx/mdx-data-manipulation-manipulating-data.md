@@ -8,16 +8,16 @@ ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MDX [Analysis Services], data manipulation"
   - "data manipulation [MDX]"
   - "Multidimensional Expressions [Analysis Services], data manipulation"
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Manipulating Data (MDX)
   Multidimensional Expressions (MDX) can be used to manipulate the data in a variety of ways. The following topics cover some of the more advanced concepts of data manipulation in the MDX language  

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ProtocolName property"
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ProtocolName Property (ServerNetworkProtocolIPAddress Class)
   Gets the name of the server network protocol that references the IP address.  

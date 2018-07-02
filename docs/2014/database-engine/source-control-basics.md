@@ -8,7 +8,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-cross-instance"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "source controls [SQL Server Management Studio], providers"
   - "source controls [SQL Server Management Studio]"
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "source controls [SQL Server Management Studio], clients"
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Source Control Basics
   Source control refers to a system in which a central piece of server software stores and tracks file versions, and also controls access to files. A typical source control system includes a source control provider and two or more source control clients.  

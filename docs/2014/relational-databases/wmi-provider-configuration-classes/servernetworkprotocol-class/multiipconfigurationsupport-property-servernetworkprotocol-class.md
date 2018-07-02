@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MultiIpConfigurationSupport property"
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)
   Gets the Boolean property that specifies whether multiple IP addresses are supported by a server network protocol.  

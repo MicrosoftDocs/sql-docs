@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "annotated XSD schemas, queries"
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Sample Annotated XSD Schema for XPath Examples (SQLXML 4.0)
   The sample XPath queries in this section refer to a mapping schema. The mapping schema is an annotated XML Schema (XSD) file. For more information about mapping schemas, see [Introduction to Annotated XSD Schemas &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  

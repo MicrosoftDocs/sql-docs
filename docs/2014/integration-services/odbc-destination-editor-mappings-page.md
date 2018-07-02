@@ -8,14 +8,14 @@ ms.suite: ""
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcdest.columns.f1"
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: douglaslms
+ms.author: douglasl
+manager: craigg
 ---
 # ODBC Destination Editor (Mappings Page)
   Use the **Mappings** page of the **ODBC Destination Editor** dialog box to map input columns to destination columns.  

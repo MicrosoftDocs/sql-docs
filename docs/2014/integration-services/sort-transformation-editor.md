@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Sort Transformation Editor"
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Sort Transformation Editor

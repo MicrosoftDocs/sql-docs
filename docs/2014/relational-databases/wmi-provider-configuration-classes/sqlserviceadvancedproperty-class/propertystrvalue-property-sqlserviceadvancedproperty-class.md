@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "PropertyStrValue property"
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # PropertyStrValue Property (SqlServiceAdvancedProperty Class)

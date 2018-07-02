@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DMSCHEMA_MINING_SERVICE_PARAMETERS rowset"
 ms.assetid: 5994e66b-84d0-4279-9f50-d92fd829dd83
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DMSCHEMA_MINING_SERVICE_PARAMETERS Rowset
   Describes the parameters for the algorithms on the server.  

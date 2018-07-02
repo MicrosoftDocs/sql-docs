@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Storage element"
 ms.assetid: c3590af8-a24b-4fd3-b846-17edbd399b6d
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Storage Element (XMLA)
   Specifies the maximum amount of storage, in bytes, used by the [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) command to design aggregations.  

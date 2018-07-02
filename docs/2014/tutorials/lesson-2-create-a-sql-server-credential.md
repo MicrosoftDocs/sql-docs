@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Lesson 2: Create a SQL Server Credential

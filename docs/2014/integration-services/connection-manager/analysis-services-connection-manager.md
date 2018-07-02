@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Analysis Services connection manager"
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Analysis Services Connection Manager

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Source element"
 ms.assetid: eed47b9f-0501-4baf-8cac-3ea839a859c3
 caps.latest.revision: 9
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Source Element (Error) (XMLA)
   Contains the name of the component that generated the parent [Error](error-element-xmla.md) element.  

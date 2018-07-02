@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.windowsazurestorage.connect.f1"
 ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Connect to Windows Azure Storage

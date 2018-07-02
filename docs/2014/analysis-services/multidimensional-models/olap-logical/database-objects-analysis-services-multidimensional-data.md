@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "objects [Analysis Services]"
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Database Objects (Analysis Services - Multidimensional Data)
   A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance contains database objects and assemblies for use with online analytical processing (OLAP) and data mining.  

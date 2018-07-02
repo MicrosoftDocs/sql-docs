@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], upgrading"
 ms.assetid: d104a0c3-0492-4de6-8ce5-eacee47c978f
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Full-Text Search Upgrade Issues

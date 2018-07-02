@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.cachetransmap.f1"
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Cache Transformation Editor (Mappings Page)

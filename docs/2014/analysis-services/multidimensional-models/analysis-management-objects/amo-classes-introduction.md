@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "classes [AMO]"
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Introducing AMO Classes
   Analysis Management Objects (AMO) is a library of classes designed to manage an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] from a client application. AMO classes are classes that you will use to administer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects such as databases, dimensions, cubes, mining structures and models, roles and permissions, exceptions, and others  

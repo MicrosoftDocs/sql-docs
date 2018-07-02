@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sqlcmd utility, PowerShell"
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 caps.latest.revision: 17
-author: "mgblythe"
-ms.author: "mblythe"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Invoke-Sqlcmd cmdlet

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "errors [SQL Server Agent]"
 ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Send SQL Server Agent Error Messages

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "projects [Integration Services], adding"
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add or Remove an Integration Services Project in a Solution

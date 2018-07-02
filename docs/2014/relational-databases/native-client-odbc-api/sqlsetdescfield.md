@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLSetDescField function"
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLSetDescField

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "CubeName element"
 ms.assetid: c5c0546e-b9b2-4813-82a9-b028628b88dc
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubeName Element (XMLA)
   Contains the name of the cube represented by the parent [Cube](cube-element-olapinfo-xmla.md) element.  

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "aggregations [Integration Services]"
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 65
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Data Flow Performance Features

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.rawfiledestinationcolumns.f1"
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Raw File Destination Editor (Columns Page)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Subscription Validation Options dialog box"
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Subscription Validation Options (Merge Subscriptions)

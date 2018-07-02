@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "URL access [Reporting Services], Windows applications"
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 caps.latest.revision: 47
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Using URL Access in a Windows Application

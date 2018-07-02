@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "opening projects"
 ms.assetid: 942f93a3-e264-4ec4-ba72-a28e0509a527
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Open Projects from Source Control

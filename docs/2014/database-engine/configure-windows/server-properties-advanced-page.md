@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.serverproperties.advanced.f1"
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: 65
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Server Properties (Advanced Page)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "results element"
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # results Element (XMLA)
   Contains a collection of [root](root-element-xmla.md) elements returned by the [Execute](../xml-elements-methods-execute.md) method using the [Batch](../xml-elements-commands/batch-element-xmla.md) command.  

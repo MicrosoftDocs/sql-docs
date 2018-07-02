@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sample applications [WMI]"
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Sample: Creating a SQL Server Agent Alert by Using the WMI Provider for Server Events

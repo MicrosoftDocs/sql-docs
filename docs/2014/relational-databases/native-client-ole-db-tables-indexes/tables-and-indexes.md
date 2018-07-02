@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "indexes [OLE DB]"
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Tables and Indexes

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Named Pipes [SQL Server], connection strings"
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 caps.latest.revision: 30
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Creating a Valid Connection String Using Named Pipes

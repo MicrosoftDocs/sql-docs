@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.dmf.viewfacet.f1"
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # View Facets Dialog Box

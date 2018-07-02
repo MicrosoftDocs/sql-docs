@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "subset control flow [Integration Services]"
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Sequence Container

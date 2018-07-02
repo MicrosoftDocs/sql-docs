@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "time series [data mining]"
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Forecast (Table Analysis Tools for Excel)
   ![Forecast button in Table Analysis tools ribbon](media/tat-forecast.gif "Forecast button in Table Analysis tools ribbon")  

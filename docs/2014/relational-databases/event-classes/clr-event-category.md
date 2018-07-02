@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "CLR event category [SQL Server]"
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # CLR Event Category

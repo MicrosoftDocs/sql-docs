@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Data Mining Model Training Editor"
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Mining Model Training Editor (Connection Tab)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Delete Group dialog box"
 ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
 caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Delete Group Dialog Box
   Use the **Delete Group** dialog box to delete a group from a table, matrix, or list data region. If there are rows or columns associated with this group, you can also delete these structures.  

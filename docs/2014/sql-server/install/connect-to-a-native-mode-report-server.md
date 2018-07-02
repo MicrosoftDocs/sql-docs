@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], configuring"
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Connect to a Native Mode Report Server

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Percentage Sampling Transformation Editor"
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Percentage Sampling Transformation Editor

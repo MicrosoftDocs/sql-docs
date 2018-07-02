@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "referencing Web services"
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Referencing Other Assemblies in Scripting Solutions

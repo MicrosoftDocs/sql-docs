@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "SourceColumnID element"
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SourceColumnID Element (ASSL)
   Contains the identifier (ID) of the source mining structure column in the ancestor [MiningStructure](../objects/miningstructure-element-assl.md) element.  

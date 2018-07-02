@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Internet [SQL Server replication], security"
 ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Securing Replication Over the Internet

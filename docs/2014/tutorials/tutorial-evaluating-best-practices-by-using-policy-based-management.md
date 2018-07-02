@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Policy-Based Management, tutorials"
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Tutorial: Evaluating Best Practices by Using Policy-Based Management

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "IRowsetFind comparability [ODBC]"
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Comparability for IRowsetFind

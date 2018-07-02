@@ -14,9 +14,9 @@ f1_keywords:
   - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 caps.latest.revision: 6
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Map Viewport Properties Dialog Box, Optimization
   Select **Optimization** for the **Map Viewport Properties** dialog box to help control the resolution for viewing a map in a report.  

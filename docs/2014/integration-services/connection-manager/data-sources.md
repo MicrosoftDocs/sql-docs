@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data sources [Integration Services], about data sources"
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Data Sources

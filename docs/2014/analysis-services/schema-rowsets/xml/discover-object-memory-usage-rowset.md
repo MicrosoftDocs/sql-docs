@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "DISCOVER_OBJECT_MEMORY_USAGE rowset"
 ms.assetid: 211cfa04-7bd6-43fe-8bd5-bfbff78bdafb
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_OBJECT_MEMORY_USAGE Rowset
   Provides information about memory resources used by objects.  

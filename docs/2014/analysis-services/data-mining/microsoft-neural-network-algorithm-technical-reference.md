@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "HOLDOUT_SEED parameter"
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Microsoft Neural Network Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network uses a *Multilayer Perceptron* network, also called a *Back-Propagated Delta Rule network*, composed of up to three layers of neurons, or *perceptrons*. These layers are an input layer, an optional hidden layer, and an output layer.  

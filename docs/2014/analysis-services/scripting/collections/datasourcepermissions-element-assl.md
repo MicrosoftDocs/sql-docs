@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "DataSourcePermissions element"
 ms.assetid: 6e1cfbec-65b9-4942-a628-f7f7c891e35f
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSourcePermissions Element (ASSL)
   Contains the collection of [DataSourcePermission](../objects/datasourcepermission-element-assl.md) elements associated with a [DataSource](../data-type/datasource-data-type-assl.md) data type.  

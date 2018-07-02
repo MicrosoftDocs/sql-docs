@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Bulk Insert Task Editor"
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Bulk Insert Task Editor (Connection Page)

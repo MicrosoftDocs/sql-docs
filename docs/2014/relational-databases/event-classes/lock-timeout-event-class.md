@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Timeout event class"
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Lock:Timeout Event Class

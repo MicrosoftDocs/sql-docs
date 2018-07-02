@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ReportingFirstMonth element"
 ms.assetid: cdce83ab-ac22-4f4a-b8f2-1739883be8dd
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ReportingFirstMonth Element (ASSL)
   Defines the first reporting month for the [TimeBinding](../data-type/binding-data-type-assl.md) element.  

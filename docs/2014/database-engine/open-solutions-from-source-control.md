@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], opening"
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Open Solutions from Source Control

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ErrorConfiguration element"
 ms.assetid: e8363ec2-fbbf-48f6-a55d-01793afa759c
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ErrorConfiguration Element (ASSL)
   Specifies settings for handling errors that can occur when the parent element is processed.  

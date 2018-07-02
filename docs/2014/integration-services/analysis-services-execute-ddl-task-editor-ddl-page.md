@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Analysis Services Execute DDL Task Editor"
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Analysis Services Execute DDL Task Editor (DDL Page)

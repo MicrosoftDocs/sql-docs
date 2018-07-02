@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.importprojectwizard.f1"
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Import Project Wizard

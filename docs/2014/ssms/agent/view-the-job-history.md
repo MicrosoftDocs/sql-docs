@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "displaying job history"
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View the Job History

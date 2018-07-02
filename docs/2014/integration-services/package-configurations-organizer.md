@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Package Configurations Organizer dialog box"
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Package Configurations Organizer

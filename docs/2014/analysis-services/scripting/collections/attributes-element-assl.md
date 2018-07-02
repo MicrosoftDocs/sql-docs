@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Attributes element"
 ms.assetid: d6b545e6-1521-496f-a731-f2c2c44118e4
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Attributes Element (ASSL)
   Contains the collection of attributes for the associated dimension.  

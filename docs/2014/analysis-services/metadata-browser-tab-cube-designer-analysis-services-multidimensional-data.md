@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.cubeeditor.browsecube.metadatapane.f1"
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Metadata (Browser Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Metadata** pane on the **Browser** tab in Cube Designer to browse the structure of the cube, to see related measures, and to view and create dimensions. You can drill down into hierarchies, view a list of available measures and KPIs, and copy the fully qualified names of objects.  

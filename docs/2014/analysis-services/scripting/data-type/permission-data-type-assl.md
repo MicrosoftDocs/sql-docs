@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Permission data type"
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Permission Data Type (ASSL)
   Defines an abstract primitive data type that represents information about an individual permission.  

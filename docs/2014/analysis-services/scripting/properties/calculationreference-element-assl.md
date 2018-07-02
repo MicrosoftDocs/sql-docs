@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CalculationReference element"
 ms.assetid: 4dd18b1f-55c3-4673-afbe-736d1bce8331
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CalculationReference Element (ASSL)
   Contains the name of the named set or calculated cell referenced by the [CalculationProperty](../objects/calculationproperty-element-assl.md).  

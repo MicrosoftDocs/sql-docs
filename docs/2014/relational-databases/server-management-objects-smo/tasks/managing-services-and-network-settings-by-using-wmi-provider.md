@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "monitoring [SMO]"
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Managing Services and Network Settings by Using WMI Provider

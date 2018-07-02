@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Format element"
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Format Element (ASSL)
   Contains the required format of the [DataItem](../data-type/dataitem-data-type-assl.md) element.  

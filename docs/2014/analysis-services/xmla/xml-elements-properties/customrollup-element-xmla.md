@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "CustomRollup element"
 ms.assetid: b266ac8b-1ae7-461c-9127-3c5642f829f5
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CustomRollup Element (XMLA)
   Contains the custom rollup formula for an attribute member represented by the parent [Attribute](attribute-element-xmla.md) element.  

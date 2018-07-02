@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "mapping literals [Integration Services]"
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Literals (SSIS)

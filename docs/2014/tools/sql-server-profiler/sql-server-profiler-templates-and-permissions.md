@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Profiler, about SQL Server Profiler"
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Profiler Templates and Permissions

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Recommendation element"
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Recommendation Element (DTA)

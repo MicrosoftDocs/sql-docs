@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "WMI Data Reader Task Editor"
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # WMI Data Reader Task Editor (General Page)

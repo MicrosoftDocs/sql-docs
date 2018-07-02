@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.dqs.connecttoserver.f1"
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Run the Data Quality Client Application

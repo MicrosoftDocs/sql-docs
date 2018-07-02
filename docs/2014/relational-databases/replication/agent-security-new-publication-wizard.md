@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.agentsecurity.articles.f1"
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Agent Security (New Publication Wizard)

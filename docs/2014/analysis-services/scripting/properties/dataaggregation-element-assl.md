@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "DataAggregation element"
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataAggregation Element (ASSL)
   Determines whether the instance can aggregate persisted data or cached data for the [MeasureGroup](../objects/group-element-assl.md).  

@@ -14,8 +14,8 @@ f1_keywords:
   - "SQL11.DTS.DESIGNER.AFPDWUPTASK.F1"
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 caps.latest.revision: 5
-author: "yualan"
-ms.author: "yual"
+author: yualan
+ms.author: douglasl
 manager: craigg
 ---
 # Azure SQL DW Upload Task

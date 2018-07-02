@@ -13,8 +13,8 @@ f1_keywords:
   - "vdt.dlgbox.fulltextindex"
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Full-Text Index Dialog Box (Visual Database Tools)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "alternate pipes [SQL Server]"
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure a Server to Listen on an Alternate Pipe (SQL Server Configuration Manager)

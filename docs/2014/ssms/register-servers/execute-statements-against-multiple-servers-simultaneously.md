@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "queries [SQL Server], multiserver"
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)

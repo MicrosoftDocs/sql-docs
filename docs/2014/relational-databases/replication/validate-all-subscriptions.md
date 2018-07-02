@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Validate All Subscriptions dialog box"
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Validate All Subscriptions

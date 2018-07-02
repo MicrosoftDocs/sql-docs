@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.dm.miningmodeleditor.naivebayse.discrimination.f1"
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Attribute Discrimination Tab (Mining Model Viewer)
   Use the **Attribute Discrimination** tab to compare the states of the input attributes and see how they are related to the outcome attribute. The attribute values that make the most difference between the two selected predictable attribute states are listed first.  

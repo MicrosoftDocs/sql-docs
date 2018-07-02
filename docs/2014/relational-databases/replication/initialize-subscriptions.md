@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newsubwizard.initializesubscriptions.f1"
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Initialize Subscriptions

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "operators (users) [Database Engine], modifying with Management Studio"
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Edit an Operator

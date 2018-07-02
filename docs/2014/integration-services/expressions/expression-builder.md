@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Expression Builder dialog box"
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Expression Builder

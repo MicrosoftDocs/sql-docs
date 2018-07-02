@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Parameters element"
 ms.assetid: d46454a1-a1d1-4aa8-95ea-54be22a53e83
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Parameters Element (XMLA)
   Contains a collection of [Parameter](parameter-element-xmla.md) elements used by the [Execute](../xml-elements-methods-execute.md) method.  

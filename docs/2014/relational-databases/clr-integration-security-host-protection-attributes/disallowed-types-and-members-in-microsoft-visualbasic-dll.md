@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], host protection attributes"
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Disallowed Types and Members in Microsoft.VisualBasic.dll

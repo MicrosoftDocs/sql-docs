@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ScalarMiningStructureColumn data type"
 ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ScalarMiningStructureColumn Data Type (ASSL)
   Defines a derived data type that represents a [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) element that contains scalar values, as opposed to the nested tables associated with the [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) element that contains nested tables.  

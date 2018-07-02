@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributeAllMemberName element"
 ms.assetid: 5ede46a7-d8b0-40be-98d7-b01047b27d2e
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeAllMemberName Element (ASSL)
   Contains the caption, in the default language, for the All member of the dimension.  

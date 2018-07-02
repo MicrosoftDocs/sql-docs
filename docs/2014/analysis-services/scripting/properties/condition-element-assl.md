@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Condition element"
 ms.assetid: 9c3cb31c-4aa1-49e4-aeb2-6cab54db0be3
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Condition Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that determines whether the [Action](../objects/action-element-assl.md) parent element applies to the target.  

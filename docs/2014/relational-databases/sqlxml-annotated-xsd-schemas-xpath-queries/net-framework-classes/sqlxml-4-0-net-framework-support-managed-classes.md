@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "SQLXML, Managed Classes"
 ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # SQLXML Managed Classes

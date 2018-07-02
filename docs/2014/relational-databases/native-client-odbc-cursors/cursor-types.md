@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ODBC cursors, types"
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Cursor Types

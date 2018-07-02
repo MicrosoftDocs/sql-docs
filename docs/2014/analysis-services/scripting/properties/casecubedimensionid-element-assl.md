@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CaseCubeDimensionID element"
 ms.assetid: 96720e13-7f9b-4768-ad4b-4def40758707
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CaseCubeDimensionID Element (ASSL)
   Contains the identifier (ID) of the cube dimension that relates the data mining dimension to the measure group.  

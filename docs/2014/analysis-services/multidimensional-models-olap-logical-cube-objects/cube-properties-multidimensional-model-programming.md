@@ -33,9 +33,9 @@ helpviewer_keywords:
   - "ProactiveCaching property"
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cube Properties
   Cubes have a number of properties that you can set to affect cube-wide behavior. These properties are summarized in the following table.  

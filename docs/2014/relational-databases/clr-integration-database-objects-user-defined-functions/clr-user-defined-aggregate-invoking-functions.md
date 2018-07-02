@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Invoking CLR User-Defined Aggregate Functions

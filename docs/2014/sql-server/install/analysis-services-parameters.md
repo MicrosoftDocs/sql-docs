@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "parameters [Analysis Services]"
 ms.assetid: 52083ddb-d677-49fc-ad59-285743f4921d
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Analysis Services Parameters

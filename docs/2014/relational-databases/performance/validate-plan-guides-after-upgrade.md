@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "plan guides [SQL Server], validating after upgrade"
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Validate Plan Guides After Upgrade

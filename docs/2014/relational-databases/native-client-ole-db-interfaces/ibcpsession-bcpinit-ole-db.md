@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "BCPInit method"
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # IBCPSession::BCPInit (OLE DB)

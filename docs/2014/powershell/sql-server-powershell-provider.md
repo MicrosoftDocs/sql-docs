@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQL Server Management Objects, PowerShell"
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 caps.latest.revision: 60
-author: "mgblythe"
-ms.author: "mblythe"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server PowerShell Provider

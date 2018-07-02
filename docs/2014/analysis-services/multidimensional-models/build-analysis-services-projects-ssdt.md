@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "Business Intelligence Development Studio, project building [Analysis Services]"
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Build Analysis Services Projects (SSDT)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you build an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project much like you build any programming project in Visual Studio. When you build the project, a set of XML files are created in the output directory. These XML files use Analysis Services Scripting Language (ASSL), which is the XML dialect the client applications including [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] use to communicate with an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance to create or modify [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. These XML files are used to deploy [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object definitions in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project to a specified [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  

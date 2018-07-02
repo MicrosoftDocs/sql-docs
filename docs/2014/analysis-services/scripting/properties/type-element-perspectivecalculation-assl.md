@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Type element"
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Type Element (PerspectiveCalculation) (ASSL)
   Indicates the type of the [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) element.  

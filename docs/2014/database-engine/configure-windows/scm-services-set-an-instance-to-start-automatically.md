@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "starting SQL Server, automatically"
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Set an Instance of SQL Server to Start Automatically (SQL Server Configuration Manager)

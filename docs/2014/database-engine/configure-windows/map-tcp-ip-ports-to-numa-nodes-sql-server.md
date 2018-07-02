@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "non-uniform memory access"
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Map TCP IP Ports to NUMA Nodes (SQL Server)

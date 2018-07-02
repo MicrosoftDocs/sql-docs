@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "New element"
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # New Element (XMLA)
   Contains the new file system storage location used by a [Folder](folder-element-xmla.md) element.  

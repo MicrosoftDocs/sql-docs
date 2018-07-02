@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SMO [SQL Server], connections"
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Connecting to an Instance of SQL Server

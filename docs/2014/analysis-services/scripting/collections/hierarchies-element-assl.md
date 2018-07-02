@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Hierarchies element"
 ms.assetid: dc844eea-869c-4217-b9be-e543a76f5e92
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Hierarchies Element (ASSL)
   Contains the collection of [Hierarchy](../objects/hierarchy-element-assl.md) elements associated with the parent element.  

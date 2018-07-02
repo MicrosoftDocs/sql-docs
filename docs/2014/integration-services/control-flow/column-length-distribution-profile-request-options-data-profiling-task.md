@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Data Profiling Task Editor"
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Column Length Distribution Profile Request Options (Data Profiling Task)

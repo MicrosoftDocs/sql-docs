@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # LOCALDB_ERROR_CALLER_IS_NOT_OWNER

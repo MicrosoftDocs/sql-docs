@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "developer's guide [Analysis Services - multidimensional data]"
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Developer&#39;s Guide (Analysis Services)
     

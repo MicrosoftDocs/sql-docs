@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 1ba225f5-3867-4aae-a519-e3c277688d1e
 caps.latest.revision: 5
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Member Element (CSDLBI)
   The Member element is a complex type that serves as the base for other elements.  

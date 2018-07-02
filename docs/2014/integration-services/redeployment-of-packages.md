@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "deploying packages [Integration Services], redeploying"
 ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Redeployment of Packages

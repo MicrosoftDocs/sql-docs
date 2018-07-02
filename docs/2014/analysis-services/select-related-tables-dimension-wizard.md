@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.dimensionwizard.selectrelatedtables.f1"
 ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Related Tables (Dimension Wizard)
   Use the **Select Related Tables** page to include related tables (tables to which the main dimension tables are related in the data source view) in the dimension.  

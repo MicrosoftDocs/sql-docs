@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "EmptyResult data type"
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # EmptyResult Data Type (XMLA)
   Defines a derived data type that represents a [root](../xml-elements-properties/root-element-xmla.md) element that does not return data from a [Discover](../xml-elements-methods-discover.md) or [Execute](../xml-elements-methods-execute.md) method call.  

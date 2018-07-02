@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "Analysis Services, architecture"
 ms.assetid: 7109fad3-65d3-4971-87db-31194bc85e05
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Physical Architecture (Analysis Services - Multidimensional Data)
     

@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DefaultDetails Element (CSDLBI)
   The DefaultDetails element represents a list of property references that together define the “default field set” of columns in the table. Each property can only refer to a measure or a column.  

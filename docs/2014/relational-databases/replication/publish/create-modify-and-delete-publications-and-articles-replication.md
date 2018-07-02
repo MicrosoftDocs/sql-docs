@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "articles [SQL Server replication], defining"
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create, Modify, and Delete Publications and Articles (Replication)

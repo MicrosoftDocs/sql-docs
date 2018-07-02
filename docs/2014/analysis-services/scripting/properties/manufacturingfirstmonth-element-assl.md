@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ManufacturingFirstMonth element"
 ms.assetid: 3b2fb440-662b-4d88-a133-1e098b9c8169
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ManufacturingFirstMonth Element (ASSL)
   Defines the first manufacturing month for a [TimeBinding](../data-type/binding-data-type-assl.md) element.  

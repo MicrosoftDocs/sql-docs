@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Select Variables dialog box"
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Select Variables

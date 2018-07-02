@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transfer Error Messages Task Editor"
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Transfer Error Messages Task Editor (Messages Page)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Cube element"
 ms.assetid: c2b6fe41-6ad4-4181-98a9-3a2517f0b7cc
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cube Element (OlapInfo) (XMLA)
   Contains information about a cube for the parent [CubeInfo](cubeinfo-element-xmla.md) element.  

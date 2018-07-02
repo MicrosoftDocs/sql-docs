@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "architecture [Analysis Services]"
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Physical Architecture (Analysis Services - Data Mining)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses both server and client components to supply data mining functionality for business intelligence applications:  

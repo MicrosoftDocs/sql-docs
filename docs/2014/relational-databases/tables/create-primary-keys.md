@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "primary keys [SQL Server], creating"
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Primary Keys

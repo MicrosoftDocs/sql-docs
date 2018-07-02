@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.agent.general.f1"
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Agent Properties (General Page)

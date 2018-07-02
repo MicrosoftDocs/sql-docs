@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "RegularMeasureGroupDimension data type"
 ms.assetid: 5c4ce400-6d7c-40fc-9bcb-392718b77182
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # RegularMeasureGroupDimension Data Type (ASSL)
   Defines a derived data type that represents a regular relationship between a dimension and a measure group.  

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.deploymentwizard.f1"
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services Deployment Wizard

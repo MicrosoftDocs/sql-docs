@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "closing trace window"
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Close a Trace Window (SQL Server Profiler)

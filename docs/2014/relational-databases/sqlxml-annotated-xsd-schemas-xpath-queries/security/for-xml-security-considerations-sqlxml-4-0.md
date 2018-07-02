@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "security [SQLXML], FOR XML"
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # FOR XML Security Considerations (SQLXML 4.0)

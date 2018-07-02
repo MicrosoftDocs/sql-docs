@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "security events [Analysis Services]"
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Security Audit Event Category
   The Security Audit event category has the event classes described in the following table.  

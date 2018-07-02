@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Upgrade Advisor, reviewing settings"
 ms.assetid: 07a4d94b-df0e-4662-9604-221664762ee8
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Confirm Upgrade Advisor Settings

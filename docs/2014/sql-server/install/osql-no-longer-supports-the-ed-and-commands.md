@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "!! command"
 ms.assetid: 7cc2852f-94e8-4292-9326-c3f1a1acd281
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # osql no longer supports the ED and !! commands

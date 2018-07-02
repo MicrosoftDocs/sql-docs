@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLEDB DataRead event class"
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # OLEDB DataRead Event Class

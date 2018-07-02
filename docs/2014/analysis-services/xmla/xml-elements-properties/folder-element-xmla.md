@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Folder element"
 ms.assetid: 87b305b0-57e3-4ec3-9d80-f1bcf3ce7540
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Folder Element (XMLA)
   Contains a file system storage location to be updated for a [Location](location-element-xmla.md) element during a [Restore](../xml-elements-commands/restore-element-xmla.md) or [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) command.  

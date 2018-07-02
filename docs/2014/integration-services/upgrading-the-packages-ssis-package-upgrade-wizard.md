@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.is.upgradewizard.upgradingpackage.f1"
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Upgrading the Packages (SSIS Package Upgrade Wizard)

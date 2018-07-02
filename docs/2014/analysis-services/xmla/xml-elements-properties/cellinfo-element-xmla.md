@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "CellInfo element"
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CellInfo Element (XMLA)
   Represents the cell metadata contained by the parent [OlapInfo](olapinfo-element-xmla.md) element.  

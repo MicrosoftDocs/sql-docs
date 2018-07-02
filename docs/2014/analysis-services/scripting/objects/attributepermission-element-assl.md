@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributePermission element"
 ms.assetid: efc8aa63-3959-4b2e-98f8-2a9c424298c2
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributePermission Element (ASSL)
   Defines the permissions that members of a [Role](role-element-assl.md) element have on the attributes of an individual dimension in a [Cube](cube-element-assl.md) element.  

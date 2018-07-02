@@ -14,8 +14,8 @@ f1_keywords:
   - "SQL11.DTS.DESIGNER.AFPHDICM.F1"
 ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
 caps.latest.revision: 2
-author: "Lingxi-Li"
-ms.author: "lingxl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Azure HDInsight Connection Manager

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "!= (not equal to)"
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # != (Unequal) (SSIS Expression)

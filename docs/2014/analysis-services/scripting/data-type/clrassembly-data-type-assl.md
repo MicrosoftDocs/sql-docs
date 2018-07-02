@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ClrAssembly data type"
 ms.assetid: 3f5dc5a1-ebd6-41b8-ac04-91d4de137eb4
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ClrAssembly Data Type (ASSL)
   Defines a derived data type that represents a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly associated with a [Database](../objects/database-element-assl.md) or [Server](../objects/server-element-assl.md) element  

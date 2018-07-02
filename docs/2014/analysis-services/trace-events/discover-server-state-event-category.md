@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "event classes [Analysis Services], discover server state"
 ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Discover Server State Event Category
   The Discover Server State event category has the event classes described in the following table.  

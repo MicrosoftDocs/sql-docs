@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "table-valued parameters, rowset creation"
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Table-Valued Parameter Rowset Creation

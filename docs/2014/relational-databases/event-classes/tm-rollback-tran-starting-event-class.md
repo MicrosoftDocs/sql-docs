@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "TM: Rollback Tran Starting event class"
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # TM: Rollback Tran Starting Event Class

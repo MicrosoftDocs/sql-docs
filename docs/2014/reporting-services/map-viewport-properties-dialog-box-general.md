@@ -14,9 +14,9 @@ f1_keywords:
   - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 caps.latest.revision: 6
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Map Viewport Properties Dialog Box, General
   Select **General** on the **Map Viewport Properties** dialog box to change the coordinate system, the projection, and the boundary options.  

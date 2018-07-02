@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "EstimatedSize element"
 ms.assetid: a9c63a22-d424-4f27-a186-5372f7b0224d
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # EstimatedSize Element (ASSL)
   Contains the read-only estimated size, in bytes, of the parent element.  

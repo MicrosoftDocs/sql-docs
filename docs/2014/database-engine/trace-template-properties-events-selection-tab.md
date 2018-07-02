@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Trace Template Properties dialog box"
 ms.assetid: 5b202457-ab42-4902-8012-7f3f40aa09f5
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Trace Template Properties (Events Selection Tab)

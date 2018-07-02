@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Audit element"
 ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Audit Element (ASSL)
   Specifies that a [Trace](../objects/trace-element-assl.md) element cannot drop any events, even if this results in degraded performance on the server.  

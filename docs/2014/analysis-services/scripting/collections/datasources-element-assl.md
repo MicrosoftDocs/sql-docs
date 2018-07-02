@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DataSources element"
 ms.assetid: c79760f2-9002-4a73-805d-d40bc042ea2b
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSources Element (ASSL)
   Contains the collection of [DataSource](../objects/datasource-element-assl.md) elements associated with a [Database](../objects/database-element-assl.md) element.  

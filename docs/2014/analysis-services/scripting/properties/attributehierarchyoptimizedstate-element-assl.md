@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributeHierarchyOptimizedState element"
 ms.assetid: d87148c8-2011-45ae-94c3-851f48babc5f
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeHierarchyOptimizedState Element (ASSL)
   Determines the level of optimization applied to the attribute hierarchy.  

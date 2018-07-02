@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "FormatString element"
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # FormatString Element (ASSL)
   Describes the display format for a [CalculationProperty](../objects/calculationproperty-element-assl.md) element or a [Measure](../objects/measure-element-assl.md) element.  

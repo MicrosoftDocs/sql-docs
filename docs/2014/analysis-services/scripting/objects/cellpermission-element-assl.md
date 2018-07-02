@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CellPermission element"
 ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CellPermission Element (ASSL)
   Describes the permissions that members of a [Role](role-element-assl.md) element have on individual cells within a [Cube](cube-element-assl.md) element.  

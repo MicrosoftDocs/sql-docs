@@ -14,8 +14,8 @@ f1_keywords:
   - "SQL11.DTS.DESIGNER.AFPADLSDEST.F1"
 ms.assetid: d0e86032-2a6b-48b2-898f-e94328474fde
 caps.latest.revision: 5
-author: "yualan"
-ms.author: "yual"
+author: yualan
+ms.author: douglasl
 manager: craigg
 ---
 # Azure Data Lake Store Destination

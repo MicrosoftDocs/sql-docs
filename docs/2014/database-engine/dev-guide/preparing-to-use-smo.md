@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SMO [SQL Server], about SQL Server Management Objects"
 ms.assetid: 05018a4d-2339-4ecf-8769-414ec781c535
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Preparing to Use SMO

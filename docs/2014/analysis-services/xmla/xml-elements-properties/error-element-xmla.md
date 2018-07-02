@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Error element"
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Error Element (XMLA)
   Contains information about an error returned by an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Parameter element"
 ms.assetid: fe31ac3d-a3e8-4f60-a81a-c43271ddbed4
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Parameter Element (XMLA)
   Contains the name and value of a parameter used by the [Execute](../xml-elements-methods-execute.md) method.  

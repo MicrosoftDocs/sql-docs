@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], assigning model object permissions"
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Assign Model Object Permissions (Master Data Services)

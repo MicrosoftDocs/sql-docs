@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 caps.latest.revision: 29
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # General Properties Page, Shared Data Sources (Report Manager)
   Use the General properties page to view or modify properties of a shared data source item. Any changes that you make to the properties take effect for all reports that reference the item when you click **Apply**.  

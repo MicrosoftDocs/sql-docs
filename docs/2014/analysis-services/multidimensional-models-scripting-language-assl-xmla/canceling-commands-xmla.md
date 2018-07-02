@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sessions [XML for Analysis]"
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Canceling Commands (XMLA)
   Depending on the administrative permissions of the user issuing the command, the [Cancel](../xmla/xml-elements-commands/cancel-element-xmla.md) command in XML for Analysis (XMLA) can cancel a command on a session, a session, a connection, a server process, or an associated session or connection.  

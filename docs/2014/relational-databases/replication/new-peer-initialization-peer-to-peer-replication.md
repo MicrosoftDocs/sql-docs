@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.p2pwizard.init.f1"
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # New Peer Initialization (Peer-to-Peer Replication)

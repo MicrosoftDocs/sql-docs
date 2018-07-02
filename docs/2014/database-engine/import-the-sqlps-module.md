@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 9
-author: "mgblythe"
-ms.author: "mblythe"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Import the SQLPS Module

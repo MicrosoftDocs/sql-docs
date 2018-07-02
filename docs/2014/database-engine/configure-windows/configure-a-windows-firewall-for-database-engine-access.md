@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "security [SQL Server], firewalls"
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 caps.latest.revision: 55
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure a Windows Firewall for Database Engine Access

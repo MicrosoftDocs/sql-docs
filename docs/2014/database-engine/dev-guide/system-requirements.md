@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "requirements [SMO]"
 ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # System Requirements

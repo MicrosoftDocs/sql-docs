@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "AxisInfo element"
 ms.assetid: 060741db-b2ec-4174-9277-58d996440a88
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AxisInfo Element (XMLA)
   Represents the metadata of a single axis contained by the parent [AxesInfo](axesinfo-element-xmla.md) element.  

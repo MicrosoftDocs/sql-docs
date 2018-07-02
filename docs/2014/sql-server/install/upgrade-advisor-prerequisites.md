@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Upgrade Advisor [SQL Server], prerequisites"
 ms.assetid: d21a39e5-5f81-4096-a7dd-f244e4779992
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Advisor Prerequisites

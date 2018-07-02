@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "regular connections [CLR integration]"
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Restrictions on Regular and Context Connections

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "ASSL, properties"
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Properties (ASSL)
   This reference section contains syntax and usage information for each element that acts as an object property in the Analysis Services Scripting Language (ASSL) schema.  

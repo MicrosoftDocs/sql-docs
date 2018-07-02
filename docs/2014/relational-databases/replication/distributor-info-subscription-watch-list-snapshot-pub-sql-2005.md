@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.Distributor.SubscriptionSummary.snapshot.f1"
 ms.assetid: 016ac5f8-ce40-4627-aceb-11747d54fed1
 caps.latest.revision: 8
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Distributor Information, Subscription Watch List (Snapshot Publication, SQL Server 2005 and Later)

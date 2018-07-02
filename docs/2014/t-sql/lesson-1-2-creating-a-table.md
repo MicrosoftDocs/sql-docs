@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "creating tables"
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Creating a Table (Tutorial)

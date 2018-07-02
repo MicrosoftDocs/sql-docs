@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "statements [ODBC], prepared execution"
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Prepared Execution

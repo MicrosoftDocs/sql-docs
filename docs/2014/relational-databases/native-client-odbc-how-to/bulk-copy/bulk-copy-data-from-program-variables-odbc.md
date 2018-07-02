@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "bulk copy [ODBC]"
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Bulk Copy Data from Program Variables (ODBC)

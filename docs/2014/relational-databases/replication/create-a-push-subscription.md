@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "transactional replication, subscribing"
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 caps.latest.revision: 39
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create a Push Subscription

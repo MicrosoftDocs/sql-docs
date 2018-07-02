@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "event handlers [Integration Services], creating"
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add an Event Handler to a Package

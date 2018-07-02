@@ -13,8 +13,8 @@ f1_keywords:
   - "vdt.dlgbox.xmlindexes"
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # XML Indexes Dialog Box (Visual Database Tools)

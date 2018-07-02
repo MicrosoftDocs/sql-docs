@@ -14,9 +14,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.datasetproperties.parameters.f1"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 caps.latest.revision: 39
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Dataset Properties Dialog Box, Parameters
   Select **Parameters** on the **Dataset Properties** dialog box to add, change, and delete query parameters, including query parameters that link to report parameters.  

@@ -85,8 +85,8 @@ helpviewer_keywords:
   - "INSTALLSQLSHAREDDIR parameter"
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 caps.latest.revision: 223
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Install SQL Server 2014 from the Command Prompt

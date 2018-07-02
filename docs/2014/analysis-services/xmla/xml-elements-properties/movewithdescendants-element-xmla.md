@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "MoveWithDescendants element"
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MoveWithDescendants Element (XMLA)
   Indicates whether the descendants of attribute members are also updated by the parent [Update](../xml-elements-commands/update-element-xmla.md) command.  

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ForeignKeyColumns element"
 ms.assetid: 0a673c1a-73dd-4217-aa41-56b340b5e1ab
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ForeignKeyColumns Element (ASSL)
   Contains the collection of columns that identify the join to the parent table for a relational data source.  

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Member element"
 ms.assetid: 5cc33a1f-192e-4821-a4ef-9a5f2bb7a9f0
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Member Element (XMLA)
   Represents a single member in a parent [Members](members-element-xmla.md) or [Tuple](tuple-element-xmla.md) element.  

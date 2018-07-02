@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AllowBrowsing element"
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AllowBrowsing Element (ASSL)
   Defines whether the members of a [Role](../objects/role-element-assl.md) element have browse permission on a [MiningModel](../objects/miningmodel-element-assl.md) element.  

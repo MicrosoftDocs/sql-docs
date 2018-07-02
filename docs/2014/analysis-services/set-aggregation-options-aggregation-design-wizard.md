@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.storagedesignwizard.setaggregateoptions.f1"
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Set Aggregation Options (Aggregation Design Wizard)
   Use the **Set Aggregation Options** page to start the aggregation design process, and specify storage or performance limits for the generated aggregations.  

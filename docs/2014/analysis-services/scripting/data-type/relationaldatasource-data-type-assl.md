@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "RelationalDataSource data type"
 ms.assetid: 2b99d7d0-731d-4506-8c37-678a5dc29c8a
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # RelationalDataSource Data Type (ASSL)
   Defines a derived data type that represents a [DataSource](../objects/datasource-element-assl.md) element based on a relational data source.  

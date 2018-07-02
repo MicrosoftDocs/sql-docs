@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SupportAlias property"
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SupportAlias Property (ClientNetworkProtocol Class)

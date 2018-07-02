@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Publishers [SQL Server replication], Oracle"
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 caps.latest.revision: 30
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Non-SQL Server Publishers

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "traces [SQL Server], creating"
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create a Trace (Transact-SQL)

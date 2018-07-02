@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Upgrade Advisor [SQL Server], installing"
 ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # How to: Install Upgrade Advisor

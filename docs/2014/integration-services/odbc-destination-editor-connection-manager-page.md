@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.designer.odbcdest.connection.f1"
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # ODBC Destination Editor (Connection Manager Page)

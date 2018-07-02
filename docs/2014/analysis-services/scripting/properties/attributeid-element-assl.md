@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributeID element"
 ms.assetid: 13d2e92b-e4bf-4f2d-b34c-a6f483da3a9e
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeID Element (ASSL)
   Contains the ID of the attribute associated with the parent element.  

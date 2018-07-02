@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "data visualization"
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Explore Data (SQL Server Data Mining Add-ins)
   ![Explore Data wizard](media/dmc-explore.gif "Explore Data wizard")  

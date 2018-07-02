@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "components [Reporting Services], Reporting Services Configuration tool"
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Reporting Services Configuration Manager (Native Mode)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SMO Connection Manager Editor"
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # SMO Connection Manager Editor

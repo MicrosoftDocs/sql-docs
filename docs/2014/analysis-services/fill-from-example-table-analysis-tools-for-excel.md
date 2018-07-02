@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "fill from example"
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Fill From Example (Table Analysis Tools for Excel)
   ![Fill From Example button in Table Analysis Tools](media/tat-fillex.gif "Fill From Example button in Table Analysis Tools")  

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "collations [Analysis Services]"
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Languages and Collations (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the languages and collations provided by [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating systems. `Language` and `Collation` properties are initially set at the instance level during installation, but can be changed afterwards at different levels of the object hierarchy.  

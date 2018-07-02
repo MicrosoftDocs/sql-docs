@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sql:overflow-field"
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # sql:overflow-field (SQLXML 4.0)

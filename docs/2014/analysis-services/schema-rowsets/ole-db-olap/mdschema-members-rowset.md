@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_MEMBERS rowset"
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_MEMBERS Rowset
   Describes the members within a database.  

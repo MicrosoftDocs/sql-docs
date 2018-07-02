@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "time [SQL Server], query run time"
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure the query governor cost limit Server Configuration Option

@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SqlToolsVSNativeHelpers

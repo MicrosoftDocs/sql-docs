@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "account provisioning"
 ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 caps.latest.revision: 28
-author: "HeidiSteen"
-ms.author: "heidist"
+author: heidisteen
+ms.author: heidist
 manager: craigg
 ---
 # Analysis Services Configuration - Account Provisioning

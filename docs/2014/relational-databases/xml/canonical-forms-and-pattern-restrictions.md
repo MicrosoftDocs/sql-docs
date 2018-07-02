@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "canonical forms"
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Canonical Forms and Pattern Restrictions

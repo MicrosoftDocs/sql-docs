@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Object:Deleted event class"
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Object:Deleted Event Class

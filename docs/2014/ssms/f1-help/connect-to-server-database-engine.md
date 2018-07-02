@@ -18,8 +18,8 @@ f1_keywords:
   - "sql12.swb.connecttoce.connectionproperties.f1"
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Connect to Server (Database Engine)

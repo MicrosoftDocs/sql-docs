@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "administering replication, publications"
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Maintain Publications

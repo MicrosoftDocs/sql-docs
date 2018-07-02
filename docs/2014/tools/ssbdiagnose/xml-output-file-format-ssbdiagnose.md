@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ssbdiagnose"
 ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # XML Output File Format (ssbdiagnose)

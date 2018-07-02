@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "content queries [DMX]"
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create a Data Mining Query by Using XMLA
   You can create a variety of queries against data mining objects by using AMO, DMX, or XML/A.  

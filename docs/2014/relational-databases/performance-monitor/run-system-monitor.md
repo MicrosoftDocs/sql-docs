@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "RPC"
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Run System Monitor

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "child KPIs"
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Key Performance Indicators (KPIs) in Multidimensional Models
   In business terminology, a Key Performance Indicator (KPI) is a quantifiable measurement for gauging business success.  

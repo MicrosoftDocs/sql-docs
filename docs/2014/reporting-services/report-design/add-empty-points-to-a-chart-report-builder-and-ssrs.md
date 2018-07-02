@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Add Empty Points to the Chart (Report Builder and SSRS)
   Null values are shown on the chart as empty spaces or gaps between data points in a series. Empty points are data points that can be inserted in the empty space created by null values.  

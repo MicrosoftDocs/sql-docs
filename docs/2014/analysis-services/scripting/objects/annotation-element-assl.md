@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Annotation element"
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Annotation Element (ASSL)
   Contains elements that are used to extend the Analysis Services Scripting Language (ASSL) schema.  

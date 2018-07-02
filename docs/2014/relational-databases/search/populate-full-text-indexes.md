@@ -5,8 +5,7 @@ ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], populations"
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 74
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Populate Full-Text Indexes

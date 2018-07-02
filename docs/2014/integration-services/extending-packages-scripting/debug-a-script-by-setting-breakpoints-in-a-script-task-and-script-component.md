@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "scripts [Integration Services], breakpoints"
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component

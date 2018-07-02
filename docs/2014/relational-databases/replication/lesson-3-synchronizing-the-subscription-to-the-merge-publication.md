@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 ms.assetid: 49008384-2c55-4080-a890-9bceb40e4d6d
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Lesson 3: Synchronizing the Subscription to the Merge Publication

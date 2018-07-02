@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Lesson 3: Write a Full Database Backup to the Windows Azure Blob Storage Service

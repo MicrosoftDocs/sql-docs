@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "password hashes [SQL Server]"
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Dormant SQL Server 6.5 logins cannot be upgraded

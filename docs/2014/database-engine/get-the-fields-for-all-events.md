@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "xe"
 ms.assetid: 4e4ee03f-5bca-42ed-a37c-db1c82e3aad2
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Get the Fields for All Events

@@ -40,8 +40,8 @@ f1_keywords:
   - "Sql12.swb.dbmail.manageprofilesecurity.principalview.f1"
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Configure Database Mail

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AllowDrillThrough element"
 ms.assetid: 53c9e4a3-a376-447d-a13f-80d845cc9789
 caps.latest.revision: 51
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AllowDrillThrough Element (ASSL)
   Determines whether drillthrough is permitted on the parent element.  

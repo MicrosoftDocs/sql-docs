@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.sqlserverstudio.copyaggregationdesign.f1"
 ms.assetid: 50c26cb1-c294-4f17-8b9e-435fdbd4806d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Assign Aggregation Design Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Assign Aggregation Design** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to assign aggregation designs to one or more destination partitions. You can display the **Assign Aggregation Design** dialog box by right-clicking a partition or aggregation design in **Object Explorer** and selecting **Assign Aggregation Design**.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "upgrading replication"
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Upgrade Issues

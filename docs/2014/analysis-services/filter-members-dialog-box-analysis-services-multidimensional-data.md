@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Filter Members dialog box"
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Filter Members Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Filter Members** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to filter dimension members by member caption, member name, member unique name, key column value, or value column value for the current level while browsing a dimension in the **Browser** tab of **Dimension Designer**.  

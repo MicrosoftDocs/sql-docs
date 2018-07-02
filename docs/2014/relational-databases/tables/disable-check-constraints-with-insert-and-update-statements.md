@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], check"
 ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Disable Check Constraints with INSERT and UPDATE Statements

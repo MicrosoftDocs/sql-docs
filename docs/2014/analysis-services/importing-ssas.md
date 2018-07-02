@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.bidtoolset.importing.f1"
 ms.assetid: f1681be4-c543-4e77-875d-b13eeb75cf77
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Importing (SSAS)
   This page of the **Table Import Wizard** enables you to view the progress of the import operation. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

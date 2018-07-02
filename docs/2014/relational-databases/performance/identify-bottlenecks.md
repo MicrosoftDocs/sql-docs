@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "identifying bottlenecks [SQL Server]"
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Identify Bottlenecks

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "logs [Integration Services], remote packages"
 ms.assetid: fd571567-b625-4f9a-8b7e-42c5c588b11b
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Logging for Load Balanced Packages on Remote Servers

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "preventing automatic startups [SQL Server]"
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Prevent Automatic Startup of an Instance of SQL Server (SQL Server Configuration Manager)

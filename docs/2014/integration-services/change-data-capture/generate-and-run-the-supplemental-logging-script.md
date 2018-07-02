@@ -13,8 +13,8 @@ f1_keywords:
   - "supLog"
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Generate and Run the Supplemental Logging Script

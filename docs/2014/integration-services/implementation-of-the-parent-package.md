@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "parent packages [Integration Services]"
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Implementation of the Parent Package

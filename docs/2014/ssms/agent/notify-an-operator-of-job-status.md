@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "notifications [SQL Server], job status"
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Notify an Operator of Job Status

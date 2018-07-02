@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Password Expired dialog box"
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Password Expired

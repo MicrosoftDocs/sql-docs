@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Statement command"
 ms.assetid: bfedc03c-d476-4d55-b5fd-36169f01351a
 caps.latest.revision: 14
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Statement Element (XMLA)
   Contains a query or statement to be sent using the `Execute` method to an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

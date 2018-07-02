@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Keep the Locks Configuration Option Default Value

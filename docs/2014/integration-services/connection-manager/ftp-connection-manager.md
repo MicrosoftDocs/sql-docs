@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "connection managers [Integration Services], FTP"
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # FTP Connection Manager

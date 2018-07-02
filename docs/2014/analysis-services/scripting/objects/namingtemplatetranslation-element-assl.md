@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "NamingTemplateTranslation element"
 ms.assetid: 4a97a31d-23bc-4afd-a4dc-bc0ad7121f08
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # NamingTemplateTranslation Element (ASSL)
   Provides a localized translation of the [NamingTemplate](../properties/namingtemplate-element-assl.md) element for a parent [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) data type.  

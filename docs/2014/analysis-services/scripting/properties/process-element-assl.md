@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Process element"
 ms.assetid: 4aa08718-be44-4781-92cf-7b32b20f862c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Process Element (ASSL)
   Determines whether a user can process the owner of the parent element.  

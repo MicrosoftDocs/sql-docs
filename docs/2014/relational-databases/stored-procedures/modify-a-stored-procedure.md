@@ -3,10 +3,9 @@ title: "Modify a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-stored-procs"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,9 +13,8 @@ helpviewer_keywords:
   - "editing stored procedures"
   - "stored procedures [SQL Server], modifying"
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
-caps.latest.revision: 29
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Modify a Stored Procedure

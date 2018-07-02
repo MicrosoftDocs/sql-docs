@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_CUBES rowset"
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_CUBES Rowset
   Describes the structure of cubes within a database.  

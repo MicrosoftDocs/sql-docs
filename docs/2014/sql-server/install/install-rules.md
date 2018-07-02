@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SCC [SQL Server]"
 ms.assetid: 168c0445-5651-42fc-91f4-d9f27d9e2281
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Install Rules

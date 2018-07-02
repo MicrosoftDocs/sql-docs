@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "transactional replication, subscribing"
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 caps.latest.revision: 42
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create a Pull Subscription

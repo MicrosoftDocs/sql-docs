@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SPNs [SQL Server]"
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Service Principal Name (SPN) Support in Client Connections

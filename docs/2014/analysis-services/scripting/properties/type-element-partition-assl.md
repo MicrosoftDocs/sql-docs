@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Type element"
 ms.assetid: 61c022fe-8c41-4f62-9808-c386e05eb547
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Type Element (Partition) (ASSL)
   Contains the type of the [Partition](../objects/partition-element-assl.md) element.  

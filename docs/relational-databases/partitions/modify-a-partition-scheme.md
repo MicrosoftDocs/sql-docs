@@ -3,16 +3,12 @@ title: "Modify a Partition Scheme | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "partitions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-partition"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

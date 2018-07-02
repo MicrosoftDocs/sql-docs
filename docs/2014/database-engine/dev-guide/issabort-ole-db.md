@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ISSAbort interface"
 ms.assetid: 7c4df482-4a83-4da0-802b-3637b507693a
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # ISSAbort (OLE DB)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "system tables [SQL Server]"
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Remove references to undocumented system tables

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DataMiningMeasureGroupDimension data type"
 ms.assetid: 56d5c2ec-7e03-4dc7-a668-c8d598d59e55
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataMiningMeasureGroupDimension Data Type (ASSL)
   Defines a derived data type that represents the relationship between a measure group and a data mining dimension.  

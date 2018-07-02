@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.rtp.rptwizard.designmatrix.f1"
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
 caps.latest.revision: 22
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Design the Matrix
   Use this page of the Report Wizard to select fields for the report.  

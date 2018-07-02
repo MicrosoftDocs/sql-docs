@@ -9,8 +9,8 @@ ms.technology:
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # sqlcmd How-to Topics

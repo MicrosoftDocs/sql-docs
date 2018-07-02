@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "State element"
 ms.assetid: b6ee1144-89f7-4ced-bc87-c2e33ca25f73
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # State Element (ASSL)
   Contains a read-only value that describes the current processing state of the parent element.  

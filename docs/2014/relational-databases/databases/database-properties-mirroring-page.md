@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.databaseproperties.mirroring.f1"
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: 85
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Properties (Mirroring Page)

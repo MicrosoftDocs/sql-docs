@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.pubproperties.articles.f1"
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication Properties, Articles

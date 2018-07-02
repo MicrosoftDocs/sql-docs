@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Path element"
 ms.assetid: 0edc59ac-1671-4fe1-9b7c-6c1548df5c63
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Path Element (ASSL)
   Contains the path, as provided by an instance of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], of a report used by the [ReportAction](../data-type/action-data-type-assl.md) element.  

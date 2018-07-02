@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.storagedesignwizard.selectpartitions.f1"
 ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Partitions to Modify (Usage-Based Optimization Wizard)
   Use the **Select Partitions to Modify** page to select the partitions for which you want to design aggregations.  

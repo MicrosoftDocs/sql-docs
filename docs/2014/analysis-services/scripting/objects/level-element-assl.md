@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Level element"
 ms.assetid: 66ee2c16-d6b8-4dd3-879f-1f2b6923bc43
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Level Element (ASSL)
   Defines a level in a [Hierarchy](hierarchy-element-assl.md) element.  

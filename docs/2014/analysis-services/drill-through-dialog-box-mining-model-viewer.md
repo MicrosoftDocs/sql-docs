@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.dm.miningmodeleditor.drillthrough.f1"
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Drill Through Dialog Box (Mining Model Viewer)
   When you view a mining model by using the **Mining Model Viewer** tab of Data Mining Designer, you can drill through into details about the case data, provided the model has drillthrough enabled. Moreover, if the underlying mining structure has drillthrough enabled, you can also see columns in the mining structure, even if those columns were not included in the mining model. In the column list, the structure columns are prefixed by the "Structure." label.  

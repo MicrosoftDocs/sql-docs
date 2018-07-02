@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DataSourceID element"
 ms.assetid: 2d71ba53-1684-4da0-8da4-fb75033c971b
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSourceID Element (ASSL)
   Identifies the [DataSource](../objects/datasource-element-assl.md) element associated with the parent element.  

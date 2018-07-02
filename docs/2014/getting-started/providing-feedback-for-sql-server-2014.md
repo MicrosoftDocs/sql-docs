@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "automatic error or usage reporting"
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Providing Feedback for SQL Server 2014

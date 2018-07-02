@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "SPID element"
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
 caps.latest.revision: 15
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SPID Element (XMLA)
   Identifies an active server process identifier (SPID) on which to execute the parent [Cancel](../xml-elements-commands/cancel-element-xmla.md) element.  

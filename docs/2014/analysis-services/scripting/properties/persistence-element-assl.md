@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Persistence element"
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Persistence Element (ASSL)
   Determines which parts of the bound source data are dynamic and are checked for updates using the frequency specified by the [RefreshPolicy](refreshpolicy-element-assl.md) element.  

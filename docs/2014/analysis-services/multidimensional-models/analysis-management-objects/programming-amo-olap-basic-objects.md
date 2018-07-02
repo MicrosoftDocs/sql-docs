@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "AMO, OLAP"
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Programming AMO OLAP Basic Objects
   Creating complex [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects is simple and straightforward but requires attention to detail. This topic explains the programming details of OLAP basic objects. This topic contains the following sections:  

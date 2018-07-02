@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "manual dimension structure modifications"
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Enable Dimension Writeback
   Add the dimension writeback enhancement to a cube or dimension to allow users to manually modify the dimension structure and members. Updates to a write-enabled dimension are recorded directly in the dimension table. This enhancement changes the `WriteEnabled` property setting for a dimension.  

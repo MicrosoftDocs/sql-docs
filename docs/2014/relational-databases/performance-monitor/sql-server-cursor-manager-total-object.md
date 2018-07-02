@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Cursor Manager Total object"
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, Cursor Manager Total Object

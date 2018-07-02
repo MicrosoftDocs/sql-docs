@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLDescribeParam function"
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 caps.latest.revision: 61
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLDescribeParam

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "bcp_batch function"
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # bcp_batch

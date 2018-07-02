@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "element-centric mapping [SQL Server]"
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # OPENXML (SQL Server)

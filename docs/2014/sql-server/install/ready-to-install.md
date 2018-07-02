@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Ready to Install page [SQL Server Installation Wizard]"
 ms.assetid: 4dd5d5b7-01b7-4b51-9589-764f69bdb7ae
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Ready to Install

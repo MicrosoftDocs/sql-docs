@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Actions element"
 ms.assetid: 100a4209-2c22-4902-a8ca-f2bd99bf8fbb
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Actions Element (ASSL)
   Contains the collection of actions for a [Cube](../objects/cube-element-assl.md) or [Perspective](../objects/perspective-element-assl.md) element.  

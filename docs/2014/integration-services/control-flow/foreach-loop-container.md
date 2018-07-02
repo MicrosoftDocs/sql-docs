@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "containers [Integration Services], Foreach Loop"
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Foreach Loop Container

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "local cubes [Analysis Services]"
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Client Architecture Requirements for Analysis Services Development
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports a thin-client architecture. The [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] calculation engine is entirely server-based, so all queries are resolved on the server. As a result, only a single round trip between the client and the server is required for each query, resulting in scalable performance as queries increase in complexity.  

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], upgrade issues"
 ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Reporting Services Upgrade Issues (Upgrade Advisor)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "command prompt [SQL Server], utilities"
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 caps.latest.revision: 87
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Command Prompt Utility Reference (Database Engine)

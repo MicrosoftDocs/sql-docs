@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "metadata [SQL Server], assemblies"
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Getting Information About Assemblies

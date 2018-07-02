@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Rowset data type"
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Rowset Data Type (XMLA)
   Defines a derived data type that represents a [root](../xml-elements-properties/root-element-xmla.md) element that returns tabular data from a [Discover](../xml-elements-methods-discover.md) or [Execute](../xml-elements-methods-execute.md) method call.  

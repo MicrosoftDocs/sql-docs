@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "members [Master Data Services], assigning permissions"
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Assign Hierarchy Member Permissions (Master Data Services)

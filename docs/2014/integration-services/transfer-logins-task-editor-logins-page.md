@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transfer Logins Task Editor"
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Transfer Logins Task Editor (Logins Page)

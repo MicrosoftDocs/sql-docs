@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "FOR XML clause, generating XML from rowsets"
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Generate XML from Rowsets with FOR XML

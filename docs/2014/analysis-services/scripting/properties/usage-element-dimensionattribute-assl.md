@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Usage element"
 ms.assetid: c5e38d2e-5a8e-4157-84e9-285e78c84e74
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Usage Element (DimensionAttribute) (ASSL)
   Describes how an attribute is used.  

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "RequiresRestart element"
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # RequiresRestart Element (ASSL)
   Contains a read-only value associated with a [ServerProperty](../objects/serverproperty-element-assl.md) element that determines whether changing the value of the server property requires that the instance be restarted for the change to take effect.  

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "XMLA, methods"
 ms.assetid: c6768dd4-ca06-4a85-93b7-5fd5700886ad
 caps.latest.revision: 30
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Methods (XMLA)
   The XML for Analysis (XMLA) protocol uses two methods, `Discover` and `Execute`, to offer a standard way for applications to access information on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Because these methods are invoked by using Simple Object Access Protocol (SOAP), they accept input and deliver output in XML. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implements both methods, in compliance with the XML for Analysis 1.1 specification.  

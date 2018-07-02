@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "< (less than operator)"
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # &lt; (Less Than) (SSIS Expression)

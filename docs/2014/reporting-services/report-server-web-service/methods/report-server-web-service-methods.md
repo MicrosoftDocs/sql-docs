@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], methods"
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 48
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report Server Web Service Methods

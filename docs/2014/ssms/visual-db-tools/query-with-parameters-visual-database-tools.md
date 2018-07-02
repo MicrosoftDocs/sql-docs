@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "parameters [SQL Server], queries"
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Query with Parameters (Visual Database Tools)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.dataflowwindow.f1"
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Flow Tab

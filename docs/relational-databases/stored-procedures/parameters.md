@@ -3,19 +3,15 @@ title: "Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "stored-procedures"
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "server-general"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], parameters"
   - "user-defined functions [SQL Server], parameters"
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
-caps.latest.revision: 2
 author: "pmasl"
 ms.author: "pelopes"
 manager: craigg

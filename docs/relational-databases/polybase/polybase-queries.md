@@ -3,8 +3,6 @@ title: "PolyBase Queries | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/08/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: polybase
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "Azure blob storage, import with PolyBase"
   - "Azure blob storage, export with PolyBase"
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg

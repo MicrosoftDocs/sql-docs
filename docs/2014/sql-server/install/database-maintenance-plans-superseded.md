@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server Agent]"
 ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Database maintenance plans superseded

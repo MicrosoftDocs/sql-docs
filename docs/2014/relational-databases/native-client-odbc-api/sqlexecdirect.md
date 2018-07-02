@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLExecDirect function"
 ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLExecDirect

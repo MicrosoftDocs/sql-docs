@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ColumnBinding data type"
 ms.assetid: 3ab1bac1-6716-4b17-a107-d5f9c744c5e6
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ColumnBinding Data Type (ASSL)
   Defines a derived data type that represents the binding of a column in a data source view to a [DataItem](dataitem-data-type-assl.md) element.  

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Report Viewer Web Part [Reporting Services]"
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Add the Report Viewer Web Part to a Web Page (Reporting Services in SharePoint Integrated Mode)
   You can use the Report Viewer Web Part to view reports that run on report server that is configured to run in SharePoint integrated mode. You can use the Web Part to display report definition (.rdl) files that you created in Report Builder or Report Designer and uploaded to a library.  

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Restrictions element"
 ms.assetid: e745ce13-b468-4372-a6f0-0da3d772dda3
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Restrictions Element (XMLA)
   Contains restriction columns and data used by the [Discover](../xml-elements-methods-discover.md) method.  

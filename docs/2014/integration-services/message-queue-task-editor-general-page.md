@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Message Queue Task Editor"
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Message Queue Task Editor (General Page)

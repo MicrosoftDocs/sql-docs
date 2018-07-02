@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Role element"
 ms.assetid: 56f52462-a7fd-4b51-a7fb-4311134439e9
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Role Element (ASSL)
   Contains information about a security role.  

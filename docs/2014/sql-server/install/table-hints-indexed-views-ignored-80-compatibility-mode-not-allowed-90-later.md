@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "indexed views [SQL Server], query hints"
 ms.assetid: 405dfcff-a3a6-4e6d-a53a-ed77bbacdd13
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Table hints in indexed view definitions are ignored in 80 compatibility mode and are not allowed in 90 mode or later

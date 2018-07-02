@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "Analysis Services OLE DB Provider"
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Analysis Services OLE DB Provider (Analysis Services - Multidimensional Data)
   The Analysis Services OLE DB Provider is an interface for applications interacting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. It is used to build client applications that interact with multidimensional data. This provider also provides methods for online and offline data mining analysis of multidimensional data and relational data, and is included as part of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. It can be redistributed by third-party client applications.  

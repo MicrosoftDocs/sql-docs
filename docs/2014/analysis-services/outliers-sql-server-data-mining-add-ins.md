@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "data cleaning"
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Outliers (SQL Server Data Mining Add-ins)
   ![Outliers wizard in Data Mining ribbon](media/dmc-outliers.gif "Outliers wizard in Data Mining ribbon")  

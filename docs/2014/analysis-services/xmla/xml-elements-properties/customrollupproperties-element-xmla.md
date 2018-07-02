@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "CustomRollupProperties element"
 ms.assetid: 4abf0129-e529-4355-b8d5-6f4e6a88e796
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CustomRollupProperties Element (XMLA)
   Contains the custom rollup properties for an attribute member represented by the parent [Attribute](attribute-element-xmla.md) element.  

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dqs.kb.linkeddomain.f1"
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Create a Linked Domain

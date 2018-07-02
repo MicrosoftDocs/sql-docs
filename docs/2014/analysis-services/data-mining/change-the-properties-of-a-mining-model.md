@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "properties [data mining]"
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Change the Properties of a Mining Model
   Some mining model properties apply to the model as a whole, and other model properties apply to individual columns. Examples of properties that apply to the entire model would be the `Drillthrough` property, which specifies whether the case data should be available for querying, and the `Description` property. Properties that apply to the column include `Usage` and `ModelingFlags`, which control how data in the column is used within the model.  

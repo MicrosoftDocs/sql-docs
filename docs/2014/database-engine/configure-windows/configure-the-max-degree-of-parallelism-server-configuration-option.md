@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "max degree of parallelism option"
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 caps.latest.revision: 30
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure the max degree of parallelism Server Configuration Option

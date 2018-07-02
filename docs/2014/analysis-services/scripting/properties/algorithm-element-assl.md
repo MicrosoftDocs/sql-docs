@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Algorithm element"
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Algorithm Element (ASSL)
   Defines the algorithm used by a [MiningModel](../objects/miningmodel-element-assl.md) element.  

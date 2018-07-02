@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ProactiveCaching element"
 ms.assetid: 85f9ed44-2ede-406f-b0ca-237ab2f49722
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ProactiveCaching Element (ASSL)
   Defines proactive caching settings for the parent element.  

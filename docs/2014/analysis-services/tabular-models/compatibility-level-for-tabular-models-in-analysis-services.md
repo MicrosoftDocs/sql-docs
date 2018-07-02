@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.bidtoolset.versioncompat.f1"
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Compatibility Level (SSAS Tabular SP1)
   You can specify *Compatibility Level* when creating new Tabular model projects, when upgrading existing Tabular model projects, when upgrading existing deployed Tabular model databases, or when importing PowerPivot workbooks.  

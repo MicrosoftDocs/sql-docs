@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, sessions"
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Sessions

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "srv_sendmsg"
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_sendmsg (Extended Stored Procedure API)

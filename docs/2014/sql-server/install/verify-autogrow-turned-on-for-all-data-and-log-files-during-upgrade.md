@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "autogrow [SQL Server]"
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Verify autogrow is turned on for all data and log files during the upgrade process

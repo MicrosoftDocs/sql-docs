@@ -14,9 +14,9 @@ f1_keywords:
   - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 caps.latest.revision: 9
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Text Box Properties Dialog Box, Alignment (Report Builder and SSRS)
   Select **Alignment** on the **Text Box Properties** dialog box to position the values within a selected cell or data region.  

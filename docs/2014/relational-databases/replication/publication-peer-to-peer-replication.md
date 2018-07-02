@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.p2pwizard.publication.f1"
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication (Peer-to-Peer Replication)

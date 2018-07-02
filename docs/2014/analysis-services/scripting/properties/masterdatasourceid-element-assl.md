@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MasterDatasourceID element"
 ms.assetid: a9cbd3a9-581f-4a08-93d8-e1eea8757ce9
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MasterDatasourceID Element (ASSL)
   Contains the master data source identifier (ID) for a [Database](../objects/database-element-assl.md) element.  

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "IncrementalProcessingNotifications element"
 ms.assetid: 46f3c9d0-46cc-4833-8f15-7831207f57ce
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # IncrementalProcessingNotifications Element (ASSL)
   Contains the collection of [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md) elements that provide information to the [ProactiveCaching](../objects/proactivecaching-element-assl.md) element about queries to execute to determine the progress of incremental processing.  

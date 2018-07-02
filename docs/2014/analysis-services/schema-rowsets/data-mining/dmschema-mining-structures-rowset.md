@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DMSCHEMA_MINING_STRUCTURES rowset"
 ms.assetid: 6224556b-08a0-496e-bd7c-632c3e833e26
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DMSCHEMA_MINING_STRUCTURES Rowset
   Enumerates information about the mining structures in the current catalog.  

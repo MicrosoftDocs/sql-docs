@@ -6,7 +6,6 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "dbe-data-compression"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "compression [SQL Server], enable"
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 caps.latest.revision: 9
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Enable Compression on a Table or Index

@@ -17,8 +17,8 @@ f1_keywords:
   - "DevLang-TSQL"
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Query Results-SQL Server-General Page)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Execute Process Task Editor"
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Execute Process Task Editor (Process Page)

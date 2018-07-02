@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "ErrorConfiguration element"
 ms.assetid: 5e350f5f-3a14-49b4-80c0-208c61f336d5
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ErrorConfiguration Element (XMLA)
   Specifies settings for handling errors that can occur during a [Batch](../xml-elements-commands/batch-element-xmla.md) or [Process](../xml-elements-commands/process-element-xmla.md) operation.  

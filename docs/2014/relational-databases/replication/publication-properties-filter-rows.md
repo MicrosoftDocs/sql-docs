@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.pubproperties.filterrows.f1"
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publication Properties, Filter Rows

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Invocation element"
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Invocation Element (ASSL)
   Specifies how an [Action](../objects/action-element-assl.md) should be invoked.  

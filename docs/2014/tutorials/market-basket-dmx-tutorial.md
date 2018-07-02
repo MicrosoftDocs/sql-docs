@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "tutorials [DMX]"
 ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 caps.latest.revision: 28
-author: "minewiskan"
-ms.author: "owend"
-manager: "kfile"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Market Basket DMX Tutorial
   In this tutorial, you will learn how to create, train, and explore mining models by using the Data Mining Extensions (DMX) query language. You will then use these mining models to create predictions that describe which products tend to be purchased at the same time.  

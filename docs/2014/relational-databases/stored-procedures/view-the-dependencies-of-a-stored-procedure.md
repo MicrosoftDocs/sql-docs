@@ -3,10 +3,9 @@ title: "View the Dependencies of a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-stored-procs"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "displaying stored procedure dependencies"
   - "viewing stored procedure dependencies"
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

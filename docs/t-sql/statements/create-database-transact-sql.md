@@ -1179,7 +1179,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```
 > [!IMPORTANT]
-> To add files or set containment for a database in a Managed Instance, use the [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldb) statement.
+> To add files or set containment for a database in a Managed Instance, use the [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldb-mi) statement.
   
 ## Arguments  
   
@@ -1205,7 +1205,7 @@ The following are `CREATE DATABASE` limitations:
 - `WITH`options are not supported.  
 
    > [!TIP]
-   > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldb-mi). after `CREATE DATABASE` to set database options to add files.  
+   > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldb-mi). after `CREATE DATABASE` to set database options and to add files.  
 
 ## Permissions  
 To create a database, a login must be one of the following: 
@@ -1214,7 +1214,6 @@ To create a database, a login must be one of the following:
   
 - The Azure AD administrator for the local Azure SQL Server  
 - A login that is a member of the `dbmanager` database role    
-**Additional requirements for using `CREATE DATABASE ... AS COPY OF` syntax:** The login executing the statement on the local server must also be at least the `db_owner` on the source server. If the login  is based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, the login executing the statement on the local server must have a matching login on the source [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server, with an identical name and password.  
   
 ## Examples
   
@@ -1228,7 +1227,6 @@ CREATE DATABASE TestDB1;
 ## See also  
 
 See [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-transact-sql.md?&tabs=sqldb-mi) 
-
 
 # [SQL Data Warehouse](#tab/sqldw)
 

@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 caps.latest.revision: 282
-author: CarlRabeler
-ms.author: carlrab
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -75,18 +75,19 @@ ALTER DATABASE { database_name  | CURRENT }
     MODIFY NAME = new_database_name   
   | COLLATE collation_name  
   | <file_and_filegroup_options>  
-  | <set_database_options>  
+  | SET <option_spec> [ ,...n ] [ WITH <termination> ] 
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }   
+  
 }  
 [;]  
   
-<file_and_filegroup_options >::=  
+<file_and_filegroup_options>::=  
   <add_or_modify_files>::=  
   <filespec>::=   
   <add_or_modify_filegroups>::=  
   <filegroup_updatability_option>::=  
   
-<set_database_options>::=  
-  <optionspec>::=   
+<option_spec>::=  
   <auto_option> ::=   
   <change_tracking_option> ::=  
   <cursor_option> ::=   
@@ -105,7 +106,9 @@ ALTER DATABASE { database_name  | CURRENT }
   <snapshot_option> ::=  
   <sql_option> ::=   
   <termination> ::=  
-  
+ 
+<compatibility_level>
+   { 140 | 130 | 120 | 110 | 100 | 90 }   
 ```  
   
 ## Arguments  
@@ -253,37 +256,33 @@ GO
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [System Databases](../../relational-databases/databases/system-databases.md)  
   
-# [SQL Database](#tab/sqldb)
+# [SQL Database logical server](#tab/sqldb-ls)
 
 ## Overview
 
-In Azure SQL Database, use this statement to modify a database on a logical server or in a Managed Instance. 
-- With a database on a logical server, use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, and add or remove the database as a secondary in a geo-replication relationship.
-- With a database in a Managed Instance, use this statement to ...
+In Azure SQL Database, use this statement to modify a database on a logical server. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
 
 ALTER DATABASE  
 The current topic provides the syntax for changing the name and the collation of a database.  
   
-[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-Provides the syntax for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
-  
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md&tabs=sqldb-ls)  
 Provides the syntax for changing the attributes of a database by using the SET options of ALTER DATABASE.  
   
-[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md&tabs=sqldb-ls)  
 Provides the syntax for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
-# [SQL Database logical server](#tab/sqldb1)
+## Syntax 
 
 ```  
 -- Azure SQL Database Syntax  
-ALTER DATABASE { database_name }  
+ALTER DATABASE { database_name | CURRENT }  
 {  
     MODIFY NAME = new_database_name  
   | MODIFY ( <edition_options> [, ... n] ) 
-  | SET { <option_spec> [ ,... n ] } 
+  | SET { <option_spec> [ ,... n ] WITH <termination>} 
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }   
   | ADD SECONDARY ON SERVER <partner_server_name>  
     [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
@@ -320,13 +319,6 @@ ALTER DATABASE { database_name }
       | 'BC_GEN5_2'	| 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
       }
 
-```  
-  
-```
--- SET OPTIONS AVAILABLE FOR SQL Database  
--- Full descriptions of the set options are available in the topic 
--- ALTER DATABASE SET Options. The supported syntax is listed here.  
-
 <option_spec> ::= 
 {  
     <auto_option> 
@@ -346,10 +338,6 @@ ALTER DATABASE { database_name }
 }  
 ```
   
-# [SQL Database Managed Instance](#tab/sqldb2)
-
----
-
 ## Arguments  
 
 *database_name*  
@@ -594,7 +582,7 @@ ALTER DATABASE db1 FAILOVER
   
 ## See also
   
-[CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldb)   
+[CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldb-ls)   
  [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
@@ -608,6 +596,127 @@ ALTER DATABASE db1 FAILOVER
  [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [System Databases](../../relational-databases/databases/system-databases.md)  
+
+# [SQL Database Managed Instance](#tab/sqldb-mi)
+
+## Overview
+
+In Azure SQL Database Managed Instance, use this statement to set database options.
+
+Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+
+ALTER DATABASE  
+The current topic provides the syntax for setting file and filegroup options, for setting database options, and for setting the database compatability level.  
+  
+[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md&tabs=sqldb-mi)  
+Provides the syntax for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
+  
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md&tabs=sqldb-mi)  
+Provides the syntax for changing the attributes of a database by using the SET options of ALTER DATABASE.  
+  
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md&tabs=sqldb-mi)  
+Provides the syntax for the SET options of ALTER DATABASE that are related to database compatibility levels.  
+
+## Syntax 
+
+```  
+-- Azure SQL Database Syntax  
+ALTER DATABASE { database_name | CURRENT }  
+{  
+    <file_and_filegroup_options>  
+  | SET <option_spec> [ ,...n ] [ WITH <termination> ] 
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }   
+}  
+[;] 
+
+<file_and_filegroup_options>::=  
+  <add_or_modify_files>::=  
+  <filespec>::=   
+  <add_or_modify_filegroups>::=  
+  <filegroup_updatability_option>::=  
+
+<option_spec> ::= 
+{  
+    <auto_option> 
+  | <change_tracking_option> 
+  | <cursor_option> 
+  | <db_encryption_option>  
+  | <db_update_option> 
+  | <db_user_access_option> 
+  | <delayed_durability_option>  
+  | <parameterization_option>  
+  | <query_store_options>  
+  | <snapshot_option>  
+  | <sql_option> 
+  | <target_recovery_time_option> 
+  | <termination>  
+  | <temporal_history_retention>  
+}  
+```
+  
+## Arguments  
+
+*database_name*  
+
+Is the name of the database to be modified.  
+  
+CURRENT  
+
+Designates that the current database in use should be altered.  
+  
+MODIFY NAME **=***new_database_name*  
+
+Renames the database with the name specified as *new_database_name*. The following example changes the name of a database `db1` to `db2`:   
+
+```sql  
+ALTER DATABASE db1  
+    MODIFY Name = db2 ;  
+```    
+  
+## Remarks  
+
+To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
+To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+  
+The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.  
+  
+Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
+  
+The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.    
+  
+## Viewing Database Information  
+
+You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.  
+  
+## Permissions  
+
+Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can alter a database.  
+  
+> [!IMPORTANT]  
+>  The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.  
+  
+## Examples  
+  
+### A. what examples here??
+
+```sql
+```
+  
+## See also
+  
+[CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldb-mi)   
+[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
+[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
+[SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)   
+[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+[sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+[sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+[System Databases](../../relational-databases/databases/system-databases.md)  
 
 # [SQL Data Warehouse](#tab/sqldw)
 

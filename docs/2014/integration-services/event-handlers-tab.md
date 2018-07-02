@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.eventhandlerwindow.f1"
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Event Handlers Tab

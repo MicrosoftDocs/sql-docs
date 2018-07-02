@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "HoldoutSeed element"
 ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # HoldoutSeed Element
   Specifies the seed for a repeatable holdout partition that contains the test set of a [MiningStructure](../objects/miningstructure-element-assl.md) element. This seed ensures that the model content remains the same during reprocessing. If unspecified or set to 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] creates a seed by using a hashing algorithm on the name of the mining structure.  

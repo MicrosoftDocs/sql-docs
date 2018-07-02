@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.asquery.execgeneral.f1"
 ms.assetid: c534a0e2-5c35-46c2-a7e8-b1964850bd0e
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Analysis Services Query Execution Options (General Page)

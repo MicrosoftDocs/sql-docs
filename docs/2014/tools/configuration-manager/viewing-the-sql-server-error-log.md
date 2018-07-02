@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "logs [SQL Server], SQL Server error logs"
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
 caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Viewing the SQL Server Error Log

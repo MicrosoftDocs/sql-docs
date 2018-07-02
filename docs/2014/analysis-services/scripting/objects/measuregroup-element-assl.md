@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MeasureGroup element"
 ms.assetid: 7aa099db-5dc7-4cac-b437-f73fc0921b24
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MeasureGroup Element (ASSL)
   Defines a set of measures at the same level of granularity.  

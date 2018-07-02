@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "templates [Integration Services]"
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Save a Package as a Package Template

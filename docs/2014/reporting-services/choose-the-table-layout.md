@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.rtp.rptwizard.choosetablelayout.f1"
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
 caps.latest.revision: 24
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Choose the Table Layout
   Use this page of the Report Wizard to select the layout of the table in the report.  

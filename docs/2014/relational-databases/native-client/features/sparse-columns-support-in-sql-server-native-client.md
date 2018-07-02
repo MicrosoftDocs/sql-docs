@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sparse columns, OLE DB"
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Sparse Columns Support in SQL Server Native Client

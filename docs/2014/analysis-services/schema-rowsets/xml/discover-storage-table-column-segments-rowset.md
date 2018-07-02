@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS Rowset
   Provides information at the column and segment level about storage tables used by an Analysis Services database running in tabular or PowerPivot mode. This rowset is primarily used for troubleshooting and analysis.  

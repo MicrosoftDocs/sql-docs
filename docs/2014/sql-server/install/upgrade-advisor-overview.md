@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "analyzing system [Upgrade Advisor], about analysis"
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Advisor Overview

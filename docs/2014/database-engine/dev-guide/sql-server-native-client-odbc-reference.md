@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ODBC drivers"
 ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Native Client (ODBC) Reference

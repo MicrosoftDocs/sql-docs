@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "historical information [SQL Server], source control files"
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Set and Retrieve Version Information

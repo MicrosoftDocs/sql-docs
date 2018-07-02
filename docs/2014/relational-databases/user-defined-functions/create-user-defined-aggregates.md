@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Create User-defined Aggregates

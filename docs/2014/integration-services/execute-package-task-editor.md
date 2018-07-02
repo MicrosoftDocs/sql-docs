@@ -15,8 +15,8 @@ f1_keywords:
   - "sql12.dts.designer.executepackagetask.general.f1"
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Execute Package Task Editor

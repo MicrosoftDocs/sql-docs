@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Data Profiling Task Editor"
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Column Pattern Profile Request Options (Data Profiling Task)

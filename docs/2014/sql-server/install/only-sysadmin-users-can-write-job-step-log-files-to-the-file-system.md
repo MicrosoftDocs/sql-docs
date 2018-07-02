@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "writing job step log files"
 ms.assetid: d26a7cef-1a60-4c95-b9df-f8b4fec59f9b
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Only sysadmin users can write job step log files to the file system

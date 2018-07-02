@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "Mining Model Prediction [Analysis Services], singleton queries"
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create a Singleton Query in the Data Mining Designer
   A singleton query is useful if you want to create a prediction for a single case. For more information about singleton queries, see [Data Mining Queries](data-mining-queries.md).  

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.databaseproperties.logshipping.settings.dest.f1"
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Secondary Database Settings

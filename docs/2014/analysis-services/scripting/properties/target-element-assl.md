@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Target element"
 ms.assetid: 08ce0441-94b6-4f1d-acba-f31c8212cb79
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Target Element (ASSL)
   Identifies the target of the [Action](../objects/action-element-assl.md) element.  

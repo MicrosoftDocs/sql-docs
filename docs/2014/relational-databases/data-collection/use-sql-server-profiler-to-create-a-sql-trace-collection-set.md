@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Trace collector set"
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Use SQL Server Profiler to Create a SQL Trace Collection Set (SQL Server Management Studio)

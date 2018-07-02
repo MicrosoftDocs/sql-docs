@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Source Table dialog box"
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Profiler - Source Table-Database Engine Tuning Advisor - Select Workload Table

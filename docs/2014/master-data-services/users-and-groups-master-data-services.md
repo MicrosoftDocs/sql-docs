@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "groups [Master Data Services], about groups"
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Users and Groups (Master Data Services)

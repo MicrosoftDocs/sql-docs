@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: a36b4d3b-6a6c-489b-8a46-2e6b925b568f
 caps.latest.revision: 9
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # NavigationProperty Element (CSDLBI)
   The NavigationProperty element is a complex type that extends the CSDL Member type, to support navigation in business intelligence data models.  

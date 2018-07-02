@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "NotificationTechnique element"
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # NotificationTechnique Element (ASSL)
   Specifies whether [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or an external client application processes the notifications.  

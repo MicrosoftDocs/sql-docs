@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "DimensionPermission data type"
 ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DimensionPermission Data Type (ASSL)
   Defines a derived data type that represents the permissions assigned to a database dimension.  

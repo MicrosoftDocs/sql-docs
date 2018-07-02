@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Name element"
 ms.assetid: cc1a93df-0b1b-4c38-9183-4f11c26fea6a
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Name Element (XMLA)
   Contains the name of an attribute member for the parent [Attribute](attribute-element-xmla.md) or [Translation](translation-element-xmla.md) element.  

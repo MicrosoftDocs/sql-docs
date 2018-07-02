@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "multiple target server defections"
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Defect Multiple Target Servers from a Master Server

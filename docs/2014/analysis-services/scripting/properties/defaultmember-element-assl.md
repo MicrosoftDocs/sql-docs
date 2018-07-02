@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DefaultMember element"
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DefaultMember Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that identifies the default member of the parent element.  

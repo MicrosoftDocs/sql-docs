@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "transactional replication, security"
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Security and Protection (Replication)

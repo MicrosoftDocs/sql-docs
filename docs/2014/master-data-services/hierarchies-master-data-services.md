@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "hierarchies [Master Data Services], about hierarchies"
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Hierarchies (Master Data Services)

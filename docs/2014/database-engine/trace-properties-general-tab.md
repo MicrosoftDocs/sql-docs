@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Trace Properties dialog box"
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Trace Properties (General Tab)

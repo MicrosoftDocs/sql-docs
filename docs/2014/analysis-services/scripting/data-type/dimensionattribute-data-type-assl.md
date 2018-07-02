@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DimensionAttribute data type"
 ms.assetid: 94349a87-b284-49d1-ac72-888f0375ceb8
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DimensionAttribute Data Type (ASSL)
   Defines a primitive data type that represents an attribute in a dimension.  

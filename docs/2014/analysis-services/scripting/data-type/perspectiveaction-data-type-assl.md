@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "PerspectiveAction data type"
 ms.assetid: a0e4a545-688c-4d4e-b05f-0008d3503349
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PerspectiveAction Data Type (ASSL)
   Defines a primitive data type that represents information about an action in a [Perspective](../objects/perspective-element-assl.md) element.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "cursors [ODBC], options"
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Set Cursor Options (ODBC)

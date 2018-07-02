@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Data Mining Query Task Editor"
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Mining Query Task Editor (Query Tab)

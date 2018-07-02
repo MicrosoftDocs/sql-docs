@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ActiveX controls [SQL Server replication]"
 ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Other Replication Upgrade Issues

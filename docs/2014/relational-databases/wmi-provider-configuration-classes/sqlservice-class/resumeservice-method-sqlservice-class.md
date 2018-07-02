@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ResumeService method"
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ResumeService Method (SqlService Class)

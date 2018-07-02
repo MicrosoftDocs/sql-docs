@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Members element"
 ms.assetid: 4bf585a3-b681-486d-852b-1244c5658a04
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Members Element (ASSL)
   Contains the collection of [Member](../objects/member-element-assl.md) elements of the parent element.  

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Enabled element"
 ms.assetid: dbe57903-75c0-4060-a2b3-eab241d7469f
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Enabled Element (ASSL)
   Indicates whether the parent element is enabled.  

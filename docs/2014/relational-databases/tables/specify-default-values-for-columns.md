@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "default values"
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Specify Default Values for Columns

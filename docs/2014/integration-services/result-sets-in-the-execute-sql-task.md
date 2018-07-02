@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Execute SQL task [Integration Services]"
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Result Sets in the Execute SQL Task

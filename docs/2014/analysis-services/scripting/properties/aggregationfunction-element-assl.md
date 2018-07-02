@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AggregationFunction element"
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AggregationFunction Element (ASSL)
   Contains the aggregation function to use for the account type.  

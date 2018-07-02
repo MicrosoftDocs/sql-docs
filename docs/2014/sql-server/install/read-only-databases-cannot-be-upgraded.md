@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "database cannot be upgraded"
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Read-only databases cannot be upgraded

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "tabular results"
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # CLR Stored Procedures

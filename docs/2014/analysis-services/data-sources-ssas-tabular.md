@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Sources (SSAS Tabular)
   Data sources provide the data to be included in a tabular model solution. You can import data into your model from a wide variety of sources such as relational databases, data feeds, multidimensional data sources such as an Analysis Services cube, and from text files such as a Microsoft Excel workbook. Topics in this section provide information about the types of data sources you can import from, the various data types you can import, and tasks describing how to import data from those sources.  

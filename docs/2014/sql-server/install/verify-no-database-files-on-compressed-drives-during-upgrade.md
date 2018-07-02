@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "compressed drives [SQL Server]"
 ms.assetid: 63be6853-c54a-42b2-ae1a-db2175f1d28e
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Verify that no database files are on compressed drives during the upgrade process

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DiscretizationMethod element"
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DiscretizationMethod Element (ASSL)
   Defines the method to be used for discretization.  

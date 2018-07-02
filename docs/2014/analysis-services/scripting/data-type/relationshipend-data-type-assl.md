@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 3a974dd4-e1d6-45b2-b8c8-1a914bc13a02
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # RelationshipEnd Data Type (ASSL)
   Defines a primitive data type that represents a relationship end in a relationship.  

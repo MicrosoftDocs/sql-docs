@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.job.categoriesproperties"
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Job Categories Properties and New Job Category

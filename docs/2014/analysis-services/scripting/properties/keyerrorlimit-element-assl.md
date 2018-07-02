@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "KeyErrorLimit element"
 ms.assetid: c91d3bd8-2ad7-416f-a860-2599e4a4dbee
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # KeyErrorLimit Element (ASSL)
   Contains the number of acceptable errors during processing.  

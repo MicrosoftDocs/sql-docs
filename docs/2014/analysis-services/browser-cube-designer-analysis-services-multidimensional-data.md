@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.cubeeditor.browsecube.view.f1"
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Browser (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Browser** tab in Cube Designer to explore dimensions, measures, and KPIS in a cube. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube browser has been integrated with the MDX Query Designer, and provides a graphical user interfaces to help you create MDX queries, filter and slice cubes, and drill down into hierarchies.  

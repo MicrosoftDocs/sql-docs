@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Profiler, templates"
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Modify Trace Templates

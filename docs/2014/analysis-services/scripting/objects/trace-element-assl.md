@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Trace element"
 ms.assetid: dda9136a-a9c1-44a1-b8d3-b0ec4dc65c87
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Trace Element (ASSL)
   Defines a trace that can be queried.  

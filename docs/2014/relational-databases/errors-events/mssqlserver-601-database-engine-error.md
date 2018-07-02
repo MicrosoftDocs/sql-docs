@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "601 (Database Engine error)"
 ms.assetid: 2039cc0a-9a43-4369-a04a-935e384388b6
 caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_601

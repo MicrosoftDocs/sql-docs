@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "date data type [SQL Server], UDTs"
 ms.assetid: 48f109af-b1d1-4f03-a7e3-8a0b05ed94e8
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Remove UDT&#39;s named after the reserved DATE and TIME data types

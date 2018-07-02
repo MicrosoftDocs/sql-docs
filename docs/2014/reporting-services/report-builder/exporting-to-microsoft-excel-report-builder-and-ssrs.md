@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 24
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Exporting to Microsoft Excel (Report Builder and SSRS)
   The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel rendering extension renders a report to the native format of [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. With the Excel rendering extension, the width of columns in Excel more accurately reflects the width of columns in reports.  

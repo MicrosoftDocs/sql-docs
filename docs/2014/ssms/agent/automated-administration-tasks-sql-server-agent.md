@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "administering SQL Server, automatically"
 ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Automated Administration Tasks (SQL Server Agent)

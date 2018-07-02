@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Audit Server Object GDR event class"
 ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Audit Server Object GDR Event Class

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "source controls [SQL Server Management Studio], file exclusions"
 ms.assetid: 7dcb6514-db5c-49eb-8b5a-2c766ce39aa7
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Exclude Files from Source Control

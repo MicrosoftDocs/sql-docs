@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a701c5d5-f190-4b57-a3f8-954c2572e682
 caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server &lt;server&gt; (SQL Server Configuration Manager)

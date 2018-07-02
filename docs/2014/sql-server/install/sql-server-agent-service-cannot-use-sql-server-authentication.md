@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Authentication [SQL Server Agent]"
 ms.assetid: c39f3ec3-fc2c-4c12-940f-60d8d3d17660
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Agent Service cannot use SQL Server Authentication

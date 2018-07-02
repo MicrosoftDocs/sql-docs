@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "SynchronizeSecurity element"
 ms.assetid: d37dbb95-f4a4-44ac-8eb9-f661d5bb5018
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SynchronizeSecurity Element (XMLA)
   Specifies how to synchronize security definitions, such as roles and permissions, during a [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) command.  

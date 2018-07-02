@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AllowedSet element"
 ms.assetid: 4aff2e03-6e1f-4f1a-b99d-d86bba25ab9b
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AllowedSet Element (ASSL)
   Contains a set expression that defines the set of allowed permissions for a [Role](../objects/role-element-assl.md) element on an attribute.  

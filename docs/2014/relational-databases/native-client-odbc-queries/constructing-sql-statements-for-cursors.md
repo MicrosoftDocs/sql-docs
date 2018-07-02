@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "statements [ODBC], cursors"
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Constructing SQL Statements for Cursors

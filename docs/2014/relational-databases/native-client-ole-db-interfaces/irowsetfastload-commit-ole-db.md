@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Commit method"
 ms.assetid: 19de9128-b91a-4626-847f-af721edaa24e
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # IRowsetFastLoad::Commit (OLE DB)

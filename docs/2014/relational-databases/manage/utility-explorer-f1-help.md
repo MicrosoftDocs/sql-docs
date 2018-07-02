@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.ue.navigation.f1"
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Utility Explorer F1 Help

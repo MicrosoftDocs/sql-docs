@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "Package Installer Wizard"
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Package Installation Wizard UI Reference

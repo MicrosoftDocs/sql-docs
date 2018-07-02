@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Integration Services service, events"
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # View Events for the Integration Services Service

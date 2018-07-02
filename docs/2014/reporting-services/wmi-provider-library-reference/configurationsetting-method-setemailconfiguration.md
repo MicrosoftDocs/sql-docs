@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SetEmailConfiguration method"
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 caps.latest.revision: 19
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # SetEmailConfiguration Method (WMI MSReportServer_ConfigurationSetting)
   Configures the e-mail delivery extension used by the report server to send e-mail.  

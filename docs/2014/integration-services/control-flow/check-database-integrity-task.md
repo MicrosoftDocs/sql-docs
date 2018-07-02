@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "integrity checking [Integration Services]"
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Check Database Integrity Task

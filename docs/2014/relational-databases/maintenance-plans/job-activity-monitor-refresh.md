@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.jobactivitymon.refresh.f1"
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Job Activity Monitor Refresh

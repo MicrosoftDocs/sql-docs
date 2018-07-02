@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "backups [AMO]"
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AMO Other Classes and Methods
   This section contains common classes that are not specific to OLAP or data mining, and that are helpful when administering or managing objects in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. These classes cover features such as stored procedures, tracing, exceptions, and backup and restore.  

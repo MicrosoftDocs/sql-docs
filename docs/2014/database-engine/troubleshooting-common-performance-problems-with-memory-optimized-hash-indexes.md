@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes

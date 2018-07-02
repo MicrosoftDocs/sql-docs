@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Column element"
 ms.assetid: 10dc6d5e-c690-4415-adbb-eaeebaa29cb4
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Column Element (ASSL)
   Describes a column in the collection of columns associated with the parent element.  

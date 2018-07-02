@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "View Designer, query types"
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Supported Query Types (Visual Database Tools)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "constrained executables [Integration Services]"
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Multiple Precedence Constraints

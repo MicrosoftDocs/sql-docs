@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "DbTableName element"
 ms.assetid: 0ffda645-2a88-4f42-8929-9d7385c19a74
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DbTableName Element (XMLA)
   Contains the name of the table used by the parent [TableNotification](tablenotification-element-xmla.md) element.  

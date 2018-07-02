@@ -13,8 +13,8 @@ f1_keywords:
   - "desCons"
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Change Data Capture Designer for Oracle by Attunity

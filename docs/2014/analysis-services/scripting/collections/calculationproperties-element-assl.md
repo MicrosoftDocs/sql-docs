@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CalculationProperties element"
 ms.assetid: dccfe036-0b1b-4877-8bdd-4b128ccb55c9
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CalculationProperties Element (ASSL)
   Contains the collection of [CalculationProperty](../objects/calculationproperty-element-assl.md) elements associated with an [MdxScript](../objects/mdxscript-element-assl.md) element.  

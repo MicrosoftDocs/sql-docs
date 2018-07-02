@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Save Copy of Package dialog box"
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Save Copy of Package

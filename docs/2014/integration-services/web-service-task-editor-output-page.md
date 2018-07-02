@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Web Service Task Editor"
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Web Service Task Editor (Output Page)

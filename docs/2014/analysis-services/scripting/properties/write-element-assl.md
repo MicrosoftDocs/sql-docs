@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Write element"
 ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Write Element (ASSL)
   Determines whether data or metadata can be written for a given [CubeDimensionPermission](../data-type/permission-data-type-assl.md) or [Permission](../data-type/permission-data-type-assl.md) element.  

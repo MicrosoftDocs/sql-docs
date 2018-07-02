@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Folders element"
 ms.assetid: fefb0469-22ea-4804-8dc3-9c49825b32f1
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Folders Element (XMLA)
   Contains a collection of [Folder](folder-element-xmla.md) elements used by the parent [Location](location-element-xmla.md) element during a [Restore](../xml-elements-commands/restore-element-xmla.md) or [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) command.  

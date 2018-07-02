@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Installation Wizard, Registration Information page"
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Accept License Terms

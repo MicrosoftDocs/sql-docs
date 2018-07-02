@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "modifying passwords"
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Change the Password of the Accounts Used by SQL Server (SQL Server Configuration Manager)

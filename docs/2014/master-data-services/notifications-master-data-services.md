@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "e-mail [Master Data Services], about e-mail notifications"
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Notifications (Master Data Services)

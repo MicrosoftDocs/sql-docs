@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "row element"
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # row Element (XMLA)
   Contains a single row of data for a [root](root-element-xmla.md) element that contains tabular data returned by a [Discover](../xml-elements-methods-discover.md) or [Execute](../xml-elements-methods-execute.md) method call.  

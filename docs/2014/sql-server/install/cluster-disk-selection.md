@@ -13,8 +13,8 @@ f1_keywords:
   - "cluster disk selection"
 ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Cluster Disk Selection

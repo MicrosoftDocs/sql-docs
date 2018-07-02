@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "gated links [CLR integration]"
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Links in CLR Integration Security

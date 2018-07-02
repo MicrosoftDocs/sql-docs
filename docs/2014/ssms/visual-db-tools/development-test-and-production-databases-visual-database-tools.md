@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database testing [SQL Server]"
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Development, Test, and Production Databases (Visual Database Tools)

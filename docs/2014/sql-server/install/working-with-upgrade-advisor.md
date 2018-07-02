@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "when to use Upgrade Advisor"
 ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Working with Upgrade Advisor

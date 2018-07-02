@@ -14,9 +14,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.datasetproperties.query.f1"
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 caps.latest.revision: 37
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Dataset Properties Dialog Box, Query
   Select **Query** on the **Dataset Properties** dialog box to choose a data source and create a query.  

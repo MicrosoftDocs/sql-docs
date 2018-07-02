@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributeHierarchyEnabled element"
 ms.assetid: 1e95307f-530e-4e98-a0e1-2b0462d330a3
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeHierarchyEnabled Element (ASSL)
   Determines whether an attribute hierarchy is enabled for the attribute.  

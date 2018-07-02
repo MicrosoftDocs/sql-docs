@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "viewing dependencies"
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View the Dependencies of a Table

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "DiscoverResponse element"
 ms.assetid: 20e10a82-dbd1-4ead-b92d-f84b4b2f10c6
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DiscoverResponse Element (XMLA)
   Contains the information returned by an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in response to a [Discover](xml-elements-methods-discover.md) method call.  

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transact-SQL vs. managed code"
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Transaction Lifetimes

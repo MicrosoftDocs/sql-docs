@@ -14,8 +14,8 @@ f1_keywords:
   - "SQL11.DTS.DESIGNER.AFPADLSTASK.F1"
 ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
 caps.latest.revision: 3
-author: "Lingxi-Li"
-ms.author: "lingxl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Azure Data Lake Store File System Task

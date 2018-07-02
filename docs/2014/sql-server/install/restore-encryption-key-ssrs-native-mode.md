@@ -13,8 +13,8 @@ f1_keywords:
   - "SQL12.rsconfigtool.restoreencryptionkey.F1"
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Restore Encryption Key (SSRS Native Mode)

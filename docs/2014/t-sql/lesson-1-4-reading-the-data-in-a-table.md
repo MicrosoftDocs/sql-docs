@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "reading data in a table"
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: edmacauley
+ms.author: edmaca
 manager: craigg
 ---
 # Reading the Data in a Table (Tutorial)

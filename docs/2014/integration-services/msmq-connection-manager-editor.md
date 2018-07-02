@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "MSMQ Connection Manager Editor"
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # MSMQ Connection Manager Editor

@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "retrieving metadata"
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Retrieving Metadata from an Analytical Data Source
   Metadata is important to applications that retrieve and work with analytical data. When retrieving data from a relational data source, the dimensionality of such data is predictable, even with nested datasets. Result sets from a relational database are typically two-dimensional or scalar in structure. However, data retrieved from analytical data sources can be of variable dimensionality, organized along potentially deep hierarchies.  

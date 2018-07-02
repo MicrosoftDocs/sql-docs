@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "HierarchyInfo element"
 ms.assetid: b4472251-1f1d-4233-a8e6-407397862ab4
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # HierarchyInfo Element (XMLA)
   Represents a single hierarchy contained by a parent [AxisInfo](axisinfo-element-xmla.md) element.  

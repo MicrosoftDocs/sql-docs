@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "historical information [SQL Server], jobs"
 ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Clear the Job History Log

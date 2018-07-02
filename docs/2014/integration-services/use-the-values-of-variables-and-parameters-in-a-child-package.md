@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "variables [Integration Services], adding"
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Use the Values of Variables and Parameters in a Child Package

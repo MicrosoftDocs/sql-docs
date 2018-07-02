@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "LogFileAppend element"
 ms.assetid: f85e94a9-e5c5-478a-a5a0-fc99ed19b582
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # LogFileAppend Element (ASSL)
   Determines whether the [Trace](../objects/trace-element-assl.md) element appends its logging output to the existing log file, or overwrites it.  

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ProtocolName property"
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ProtocolName Property (ClientNetworkProtocol Class)

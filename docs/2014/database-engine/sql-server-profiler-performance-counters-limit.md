@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Performance Counters List dialog box"
 ms.assetid: d10140ef-36c4-449c-b365-1cff1b2524e4
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Profiler - Performance Counters Limit

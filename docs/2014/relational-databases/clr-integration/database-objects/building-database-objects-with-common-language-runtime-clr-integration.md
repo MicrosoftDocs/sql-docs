@@ -19,8 +19,8 @@ helpviewer_keywords:
   - ".NET Framework routines [SQL Server]"
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Building Database Objects with Common Language Runtime (CLR) Integration

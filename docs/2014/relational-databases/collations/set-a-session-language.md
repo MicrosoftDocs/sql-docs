@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "server-side session language"
 ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Set a Session Language

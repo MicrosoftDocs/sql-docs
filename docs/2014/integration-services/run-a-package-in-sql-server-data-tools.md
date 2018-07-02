@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, running"
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Run a Package in SQL Server Data Tools

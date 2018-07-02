@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Configure Data Viewer dialog box"
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Configure Data Viewer (Scatter Plot Tab)

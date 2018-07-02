@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Browse Data Source View dialog box"
 ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Browse Data Source View Dialog Box (Analysis Services - Multidimensional Data)
   The Browse Data Source View dialog box displays a simple graphical diagram of the selected data source view. Also, the name of the data source view appears as the title of the dialog box.  

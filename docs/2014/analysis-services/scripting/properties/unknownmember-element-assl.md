@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "UnknownMember element"
 ms.assetid: 5558961e-e3c6-4f4e-817d-5b12b0734c03
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # UnknownMember Element (ASSL)
   Indicates whether the unknown member is visible.  

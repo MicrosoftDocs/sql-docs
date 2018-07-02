@@ -3,19 +3,15 @@ title: "Stored Procedure Properties (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "stored-procedures"
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stored-Procs"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.spassistededitor.storedprocedure.f1"
   - "sql13.swb.spproperties.general.f1"
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
-caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

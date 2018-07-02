@@ -14,8 +14,8 @@ f1_keywords:
   - "database engine configuration, user instance"
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Database Engine Configuration - User Instance

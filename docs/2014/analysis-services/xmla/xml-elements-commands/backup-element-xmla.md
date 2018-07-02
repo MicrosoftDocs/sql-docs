@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Backup command"
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
 caps.latest.revision: 19
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Backup Element (XMLA)
   Backs up a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database to a backup file.  

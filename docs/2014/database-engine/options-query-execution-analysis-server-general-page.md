@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.QueryExecution.AnalysisServer.AnalysisServicesExecutionGeneral"
 ms.assetid: 456867d0-724c-449c-abf9-013a694d7924
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Query Execution-Analysis Server-General Page)

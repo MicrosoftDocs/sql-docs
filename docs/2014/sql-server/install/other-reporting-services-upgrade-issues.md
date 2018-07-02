@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "authentication [Reporting Services]"
 ms.assetid: 42dd2f06-1de9-449e-ab9d-f4ef25f8b728
 caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Other Reporting Services Upgrade Issues

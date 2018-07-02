@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "7937 (Database Engine error)"
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_7937

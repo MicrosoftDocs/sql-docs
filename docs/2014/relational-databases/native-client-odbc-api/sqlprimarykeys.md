@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLPrimaryKeys function"
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLPrimaryKeys

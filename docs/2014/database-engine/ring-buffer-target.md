@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ring buffer target [SQL Server extended events]"
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Ring Buffer Target

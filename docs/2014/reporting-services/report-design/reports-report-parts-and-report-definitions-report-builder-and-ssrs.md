@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "reports"
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 caps.latest.revision: 23
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Reports, Report Parts, and Report Definitions (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a variety of terms to describe a report in different states, including the initial definition, the published report, and the viewed report as it appears to the user.  

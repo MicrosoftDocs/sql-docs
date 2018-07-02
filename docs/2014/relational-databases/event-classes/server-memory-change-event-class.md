@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Server Memory Change event class"
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Server Memory Change Event Class

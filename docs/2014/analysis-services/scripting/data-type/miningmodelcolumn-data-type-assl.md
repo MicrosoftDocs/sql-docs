@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MiningModelColumn data type"
 ms.assetid: de8bf815-43b4-4983-bdb9-b67e8563be0e
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MiningModelColumn Data Type (ASSL)
   Defines a primitive data type that represents information about a column in a [MiningModel](../objects/miningmodel-element-assl.md) element.  

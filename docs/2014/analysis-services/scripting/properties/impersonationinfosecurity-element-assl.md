@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ImpersonationInfoSecurity element"
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ImpersonationInfoSecurity Element (ASSL)
   Contains a read-only value that indicates if any changes were made to the security credentials that are supplied in the [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) data type.  

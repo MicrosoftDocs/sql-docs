@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Agent, upgrades"
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Agent Upgrade Issues

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Trimming element"
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Trimming Element (ASSL)
   Specifies how data from the data source is trimmed.  

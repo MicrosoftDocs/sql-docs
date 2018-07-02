@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ForeColor element"
 ms.assetid: 5125520c-3bce-40e6-a722-8d4d47306fed
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ForeColor Element (ASSL)
   Describes color-related display characteristics of the [CalculationProperty](../objects/calculationproperty-element-assl.md) or [Measure](../objects/measure-element-assl.md) parent element.  

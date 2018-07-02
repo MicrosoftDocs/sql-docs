@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubeID element"
 ms.assetid: cea9cd1b-30e6-48b1-afb9-c2c1243cead8
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubeID Element (ASSL)
   Identifies the [Cube](../objects/cube-element-assl.md) element associated with a [Binding](../data-type/binding-data-type-assl.md) element.  

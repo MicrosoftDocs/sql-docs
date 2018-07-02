@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "contained database, threats"
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Security Best Practices with Contained Databases

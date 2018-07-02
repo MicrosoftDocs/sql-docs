@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, scripts"
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Using WQL and Scripting Languages with the WMI Provider for Configuration Management

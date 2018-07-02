@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "adding connection managers"
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add, Delete, or Share a Connection Manager in a Package

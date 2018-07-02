@@ -15,8 +15,8 @@ dev_langs:
   - "TSQL"
 ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor-Transact-SQL-IntelliSense)

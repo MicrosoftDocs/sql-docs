@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.Distributor.Publications.f1"
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 caps.latest.revision: 9
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Distributor Information, Publications

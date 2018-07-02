@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.designer.odbcsource.connection.f1"
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # ODBC Source Editor (Connection Manager Page)

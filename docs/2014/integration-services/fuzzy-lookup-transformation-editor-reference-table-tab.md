@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Fuzzy Lookup Transformation Editor"
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Fuzzy Lookup Transformation Editor (Reference Table Tab)

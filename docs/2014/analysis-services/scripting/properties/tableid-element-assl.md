@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "TableID element"
 ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # TableID Element (ASSL)
   Contains the identifier (ID) of the table (from the [DataSourceView](../objects/datasourceview-element-assl.md) element) associated with the parent element.  

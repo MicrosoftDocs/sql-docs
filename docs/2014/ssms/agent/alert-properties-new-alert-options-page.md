@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.alert.options.f1"
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Alert Properties: New Alert (Options Page)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "articles [SQL Server replication], adding"
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add Articles to and Drop Articles from Existing Publications

@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 68b040a7-ab16-46f5-8610-21db07df9181
 caps.latest.revision: 6
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SortPropertiesPosition Element (XML)
   Contains information about the position of the element in a collection of elements.  

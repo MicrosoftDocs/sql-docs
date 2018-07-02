@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], managing"
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Managing CLR Integration Assemblies

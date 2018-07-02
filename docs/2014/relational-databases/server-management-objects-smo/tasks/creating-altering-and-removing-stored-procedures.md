@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "stored procedures [SMO]"
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Creating, Altering, and Removing Stored Procedures

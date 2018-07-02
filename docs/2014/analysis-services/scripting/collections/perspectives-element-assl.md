@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Perspectives element"
 ms.assetid: d071acc3-469b-44f3-b724-423a48da2d41
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Perspectives Element (ASSL)
   Contains the collection of [Perspective](../objects/perspective-element-assl.md) elements associated with a [Cube](../objects/cube-element-assl.md) element.  

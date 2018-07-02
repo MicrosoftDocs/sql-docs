@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "drop system objects [SQL Server]"
 ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Remove statements that drop system objects

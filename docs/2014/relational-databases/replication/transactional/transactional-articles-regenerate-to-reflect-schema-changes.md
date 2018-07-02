@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "schemas [SQL Server replication], replicating changes"
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Regenerate Custom Transactional Procedures to Reflect Schema Changes

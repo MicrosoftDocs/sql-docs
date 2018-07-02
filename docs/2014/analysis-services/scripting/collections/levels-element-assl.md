@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Levels element"
 ms.assetid: a9dd4890-a5da-48e7-9bbf-f857107cde8d
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Levels Element (ASSL)
   Contains the collection of [Level](../objects/level-element-assl.md) elements in a [Hierarchy](../objects/hierarchy-element-assl.md) element.  

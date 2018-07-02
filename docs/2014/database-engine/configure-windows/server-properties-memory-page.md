@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.serverproperties.memory.f1"
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 caps.latest.revision: 43
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Server Properties (Memory Page)

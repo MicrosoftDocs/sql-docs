@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "PermissionSet property"
 ms.assetid: 6364b125-7d72-4312-9677-56c62e22461e
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Setting Security for Stored Procedures
   Security for stored procedures is set with the `PermissionSet` property on a stored procedure for an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (server level), an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  

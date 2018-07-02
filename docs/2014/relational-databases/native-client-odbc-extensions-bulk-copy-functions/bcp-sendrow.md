@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "bcp_sendrow function"
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # bcp_sendrow

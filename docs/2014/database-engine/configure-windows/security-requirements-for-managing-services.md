@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "services [SQL Server], WMI"
 ms.assetid: 1874a317-ddb2-425d-98d9-b53e1be6fc6a
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Security Requirements for Managing Services

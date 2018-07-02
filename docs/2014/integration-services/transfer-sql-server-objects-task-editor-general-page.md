@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transfer SQL Server Objects Task Editor"
 ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Transfer SQL Server Objects Task Editor (General Page)

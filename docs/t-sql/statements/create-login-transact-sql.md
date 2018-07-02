@@ -42,7 +42,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
   
 ## Syntax 
   
-```sql  
+```  
 -- Syntax for SQL Server  
 CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }  
   
@@ -247,7 +247,7 @@ GO
   
 ## Syntax 
   
-```sql  
+```
 -- Syntax for Azure SQL Database  
 CREATE LOGIN login_name  
  { WITH <option_list> }  
@@ -356,7 +356,7 @@ GO
   
 ## Syntax 
   
-```sql
+```
 -- Syntax for Azure SQL Data Warehouse  
 CREATE LOGIN login_name  
  { WITH <option_list> }  
@@ -458,7 +458,7 @@ GO
   
 ## Syntax 
   
-```sql
+```
 -- Syntax for Parallel Data Warehouse  
 CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }  
   

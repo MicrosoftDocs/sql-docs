@@ -3,8 +3,6 @@ title: "PolyBase installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: polybase

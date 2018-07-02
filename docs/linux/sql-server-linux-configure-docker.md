@@ -4,7 +4,7 @@ description: Explore different ways of using and interacting with SQL Server 201
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 06/25/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ""
@@ -152,6 +152,15 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P '<YourPassword>'
 sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
+## <a id="customcontainer"></a> Create a customized container
+
+It is possible to create your own [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) to create a customized SQL Server container. For more information, see [a demo that combines SQL Server and a Node application](https://github.com/twright-msft/mssql-node-docker-demo-app). If you do create your own Dockerfile, be aware of the foreground process, because this process controls the life of the container. If it exits, the container will shutdown. For example, if you want to run a script and start SQL Server, make sure that the SQL Server process is the right-most command. All other commands are run in the background. This is illustrated in the following command inside a Dockerfile:
+
+```bash
+/usr/src/app/do-my-sql-commands.sh & /opt/mssql/bin/sqlservr
+```
+
+If you reversed the commands in the previous example, the container would shutdown when the do-my-sql-commands.sh script completes.
 
 ## <a id="persist"></a> Persist your data
 

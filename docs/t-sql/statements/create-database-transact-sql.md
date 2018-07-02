@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Parallel Data Warehouse
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

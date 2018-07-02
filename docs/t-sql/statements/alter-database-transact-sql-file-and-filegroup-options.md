@@ -1,7 +1,7 @@
 ﻿---
 title: "ALTER DATABASE File and Filegroup Options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

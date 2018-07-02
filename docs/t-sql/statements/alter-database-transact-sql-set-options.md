@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "6/01/2018"
+ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -44,12 +44,10 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 # [SQL Server](#tab/sqlserver)
   
-Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate articles because of their length. For more information, see [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 > Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -1476,7 +1474,7 @@ For more information that describes when to use synchronous or asynchronous stat
   
 **\<change_tracking_option> ::=**  
   
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this topic.  
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.  
   
 ON  
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.  
@@ -1853,7 +1851,7 @@ For more information about indirect checkpoints, see [Database Checkpoints](../.
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there is any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.  
   
 > [!NOTE]  
->  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this topic.  
+>  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this article.  
   
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
 Specifies whether to roll back after the specified number of seconds or immediately.  
@@ -2217,7 +2215,7 @@ For more information that describes when to use synchronous or asynchronous stat
   
 **\<change_tracking_option> ::=**  
   
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this topic.  
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.  
   
 ON  
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.  
@@ -2594,7 +2592,7 @@ For more information about indirect checkpoints, see [Database Checkpoints](../.
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there is any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.  
   
 > [!NOTE]  
->  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this topic.  
+>  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this article.  
   
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
 Specifies whether to roll back after the specified number of seconds or immediately.  

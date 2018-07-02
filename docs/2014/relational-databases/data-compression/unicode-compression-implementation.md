@@ -6,7 +6,6 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "dbe-data-compression"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

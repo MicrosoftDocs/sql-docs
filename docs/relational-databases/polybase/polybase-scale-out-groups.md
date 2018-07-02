@@ -3,8 +3,6 @@ title: "PolyBase scale-out groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: polybase
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "PolyBase, scale-out groups"
   - "scale-out PolyBase"
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg

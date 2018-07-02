@@ -275,7 +275,7 @@ Provides the syntax for changing the attributes of a database by using the SET o
 [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
 Provides the syntax for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
-## Syntax for databases with a logical server 
+# [SQL Database logical server](#tab/sqldb1)
 
 ```  
 -- Azure SQL Database Syntax  
@@ -346,7 +346,9 @@ ALTER DATABASE { database_name }
 }  
 ```
   
-## Syntax for database in a Managed Instance  
+# [SQL Database Managed Instance](#tab/sqldb2)
+
+---
 
 ## Arguments  
 

@@ -49,22 +49,22 @@ In SQL Server, this statement modifies a database, or the files and filegroups a
 Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
 
 ALTER DATABASE  
-The current topic provides the syntax for changing the name and the collation of a database.  
+The current topic provides the syntax and related information for changing the name and the collation of a database.  
   
 [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-Provides the syntax for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
+Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
   
 [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
-Provides the syntax for changing the attributes of a database by using the SET options of ALTER DATABASE.  
+Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
   
 [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)  
-Provides the syntax for the SET options of ALTER DATABASE that are related to database mirroring.  
+Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database mirroring.  
   
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)  
-Provides the syntax for the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] options of ALTER DATABASE for configuring a secondary database on a secondary replica of an Always On availability group.  
+Provides the syntax and related information for the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] options of ALTER DATABASE for configuring a secondary database on a secondary replica of an Always On availability group.  
   
 [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
-Provides the syntax for the SET options of ALTER DATABASE that are related to database compatibility levels.  
+Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  
   
 ## Syntax  
   
@@ -265,13 +265,13 @@ In Azure SQL Database, use this statement to modify a database on a logical serv
 Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
 
 ALTER DATABASE  
-The current topic provides the syntax for changing the name and the collation of a database.  
+The current topic provides the syntax and related information for changing the name and the collation of a database.  
   
 [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md&tabs=sqldb-ls)  
-Provides the syntax for changing the attributes of a database by using the SET options of ALTER DATABASE.  
+Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
   
 [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md&tabs=sqldb-ls)  
-Provides the syntax for the SET options of ALTER DATABASE that are related to database compatibility levels.  
+Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
 ## Syntax 
 
@@ -606,16 +606,16 @@ In Azure SQL Database Managed Instance, use this statement to set database optio
 Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
 
 ALTER DATABASE  
-The current topic provides the syntax for setting file and filegroup options, for setting database options, and for setting the database compatability level.  
+The current topic provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatability level.  
   
 [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md&tabs=sqldb-mi)  
-Provides the syntax for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
+Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
   
 [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md&tabs=sqldb-mi)  
-Provides the syntax for changing the attributes of a database by using the SET options of ALTER DATABASE.  
+Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
   
 [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md&tabs=sqldb-mi)  
-Provides the syntax for the SET options of ALTER DATABASE that are related to database compatibility levels.  
+Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
 ## Syntax 
 

@@ -256,7 +256,7 @@ GO
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [System Databases](../../relational-databases/databases/system-databases.md)  
   
-# [SQL DB logical server](#tab/sqldb-ls)
+# [SQL DB logical server](#tab/sqldbls)
 
 ## Overview
 
@@ -267,10 +267,10 @@ Because of its length, the ALTER DATABASE syntax is separated into the multiple 
 ALTER DATABASE  
 The current topic provides the syntax and related information for changing the name and the collation of a database.  
   
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md&tabs=sqldb-ls)  
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbls)  
 Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
   
-[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md&tabs=sqldb-ls)  
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbls)  
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
 ## Syntax 
@@ -582,7 +582,7 @@ ALTER DATABASE db1 FAILOVER
   
 ## See also
   
-[CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldb-ls)   
+[CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbls)   
  [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
@@ -597,7 +597,7 @@ ALTER DATABASE db1 FAILOVER
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [System Databases](../../relational-databases/databases/system-databases.md)  
 
-# [SQL DB Managed Instance](#tab/sqldb-mi)
+# [SQL DB Managed Instance](#tab/sqldbmi)
 
 ## Overview
 
@@ -608,13 +608,13 @@ Because of its length, the ALTER DATABASE syntax is separated into the multiple 
 ALTER DATABASE  
 The current topic provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatability level.  
   
-[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md&tabs=sqldb-mi)  
+[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md&tabs=sqldbmi)  
 Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
   
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md&tabs=sqldb-mi)  
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md&tabs=sqldbmi)  
 Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
   
-[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md&tabs=sqldb-mi)  
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md&tabs=sqldbmi)  
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
 ## Syntax 
@@ -704,7 +704,7 @@ Only the server-level principal login (created by the provisioning process) or m
   
 ## See also
   
-[CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldb-mi)   
+[CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
 [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

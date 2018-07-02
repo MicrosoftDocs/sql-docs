@@ -855,7 +855,7 @@ GO
  [Databases](../../relational-databases/databases/databases.md)   
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
 
-# [SQL DB logical server](#tab/sqldb-ls)
+# [SQL DB logical server](#tab/sqldbls)
 
 ## Overview
 
@@ -1049,7 +1049,7 @@ MAXSIZE provides the ability to limit the size of the database. If the size of t
 > [!IMPORTANT]  
 >  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. 
   
-To change the size, edition, or service objective values later, use [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldb-ls).  
+To change the size, edition, or service objective values later, use [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbls).  
 
 The CATALOG_COLLATION argument is only available during database creation. 
   
@@ -1164,9 +1164,9 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 -  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
-- [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-transact-sql.md?&tabs=sqldb-ls) 
+- [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-transact-sql.md?&tabs=sqldbls) 
 
-# [SQL DB Managed Instance](#tab/sqldb-mi)
+# [SQL DB Managed Instance](#tab/sqldbmi)
 
 ## Overview
 
@@ -1179,7 +1179,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```
 > [!IMPORTANT]
-> To add files or set containment for a database in a Managed Instance, use the [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldb-mi) statement.
+> To add files or set containment for a database in a Managed Instance, use the [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi) statement.
   
 ## Arguments  
   
@@ -1205,7 +1205,7 @@ The following are `CREATE DATABASE` limitations:
 - `WITH`options are not supported.  
 
    > [!TIP]
-   > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldb-mi). after `CREATE DATABASE` to set database options and to add files.  
+   > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi). after `CREATE DATABASE` to set database options and to add files.  
 
 ## Permissions  
 To create a database, a login must be one of the following: 
@@ -1226,7 +1226,7 @@ CREATE DATABASE TestDB1;
   
 ## See also  
 
-See [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-transact-sql.md?&tabs=sqldb-mi) 
+See [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-transact-sql.md?&tabs=sqldbmi) 
 
 # [SQL Data Warehouse](#tab/sqldw)
 

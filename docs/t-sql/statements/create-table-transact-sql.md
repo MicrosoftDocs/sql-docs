@@ -253,6 +253,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | FILLFACTOR = fillfactor   
   | IGNORE_DUP_KEY = { ON | OFF }   
   | STATISTICS_NORECOMPUTE = { ON | OFF }   
+  | STATISTICS_INCREMENTAL = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF}   
   | ALLOW_PAGE_LOCKS ={ ON | OFF}   
   | COMPRESSION_DELAY= {0 | delay [Minutes]}  

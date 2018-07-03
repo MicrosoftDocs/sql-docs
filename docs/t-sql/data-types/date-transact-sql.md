@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "data types [SQL Server], date and time"
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

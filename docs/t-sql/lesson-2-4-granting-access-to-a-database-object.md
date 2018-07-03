@@ -3,11 +3,9 @@ title: "Granting Access to a Database Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql"
+ms.technology: t-sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -15,9 +13,8 @@ applies_to:
 helpviewer_keywords: 
   - "granting access to database objects"
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

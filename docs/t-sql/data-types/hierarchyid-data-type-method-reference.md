@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "hierarchyid data type"
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # hierarchyid data type method reference

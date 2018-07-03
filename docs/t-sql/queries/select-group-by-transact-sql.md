@@ -31,9 +31,8 @@ helpviewer_keywords:
   - "groups [SQL Server], tables divided into groups"
   - "summary values [SQL Server]"
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 80
-author: edmacauley
-ms.author: edmaca
+author: shkale-msft
+ms.author: shkale
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

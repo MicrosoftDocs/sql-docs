@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "names [SQL Server], filegroups"
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # FILEGROUP_ID (Transact-SQL)

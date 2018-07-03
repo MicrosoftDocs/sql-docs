@@ -3,11 +3,9 @@ title: "Creating a Login | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql"
+ms.technology: t-sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -15,9 +13,8 @@ applies_to:
 helpviewer_keywords: 
   - "creating a login"
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

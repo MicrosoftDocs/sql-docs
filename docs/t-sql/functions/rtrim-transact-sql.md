@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "trailing blanks"
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

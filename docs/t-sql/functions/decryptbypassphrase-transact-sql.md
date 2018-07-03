@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "DECRYPTBYPASSPHRASE function"
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # DECRYPTBYPASSPHRASE (Transact-SQL)

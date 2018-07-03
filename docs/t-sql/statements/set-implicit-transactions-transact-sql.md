@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "IMPLICIT_TRANSACTIONS option"
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

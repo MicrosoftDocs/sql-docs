@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "dateparts [SQL Server], day"
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

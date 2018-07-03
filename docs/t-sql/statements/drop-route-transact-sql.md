@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "removing routes"
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP ROUTE (Transact-SQL)

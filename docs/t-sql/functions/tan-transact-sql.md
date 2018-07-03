@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "tangent"
 ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

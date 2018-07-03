@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

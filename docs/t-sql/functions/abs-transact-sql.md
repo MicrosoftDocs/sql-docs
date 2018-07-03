@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "absolute positive value"
 ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

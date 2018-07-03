@@ -3,12 +3,9 @@ title: "Stretch Database Extended Stored Procedures (Transact-SQL) | Microsoft D
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -16,7 +13,6 @@ dev_langs:
 helpviewer_keywords: 
   - "Stretch Database, stored procedures"
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

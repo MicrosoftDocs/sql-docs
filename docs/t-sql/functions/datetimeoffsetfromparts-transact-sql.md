@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DATETIMEOFFSETFROMPARTS function"
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

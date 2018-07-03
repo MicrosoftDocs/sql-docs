@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "testing application locks"
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # APPLOCK_TEST (Transact-SQL)

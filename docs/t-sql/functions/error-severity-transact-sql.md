@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "ERROR_SEVERITY function"
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "TERTIARY_WEIGHTS function"
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

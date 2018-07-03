@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "PATINDEX function"
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 caps.latest.revision: 53
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

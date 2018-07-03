@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "CHOOSE function"
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Logical Functions - CHOOSE (Transact-SQL)

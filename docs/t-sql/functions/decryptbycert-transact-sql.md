@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "DECRYPTBYCERT function"
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # DECRYPTBYCERT (Transact-SQL)

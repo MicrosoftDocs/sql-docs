@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], databases"
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # USER_ID (Transact-SQL)

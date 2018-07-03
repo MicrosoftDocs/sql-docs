@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "leftmost character of expression"
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

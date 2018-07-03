@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "data types [SQL Server], IDs"
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

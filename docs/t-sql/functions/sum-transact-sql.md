@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "summary values [SQL Server]"
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

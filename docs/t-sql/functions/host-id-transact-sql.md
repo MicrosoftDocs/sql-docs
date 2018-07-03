@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], workstations"
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # HOST_ID (Transact-SQL)

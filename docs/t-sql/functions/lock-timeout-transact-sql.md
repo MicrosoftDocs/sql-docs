@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "locking [SQL Server], time-outs"
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)

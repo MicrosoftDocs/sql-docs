@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "CREATE PARTITION FUNCTION statement"
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 caps.latest.revision: 57
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE PARTITION FUNCTION (Transact-SQL)

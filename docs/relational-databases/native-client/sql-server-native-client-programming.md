@@ -3,12 +3,10 @@ title: "SQL Server Native Client Programming | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "native-client"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "SQLNCLI"
   - "native data access [SQL Server Native Client]"
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-caps.latest.revision: 66
 author: MightyPen
 ms.author: genemi
 manager: craigg

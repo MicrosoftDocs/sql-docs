@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "characters [SQL Server], returning part of"
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 caps.latest.revision: 65
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

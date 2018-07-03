@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "analytic functions, FIRST_VALUE"
 ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -3,19 +3,15 @@ title: "Modify Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "statistics"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-statistics"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statistics [SQL Server], modifying"
   - "modifying statistics"
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

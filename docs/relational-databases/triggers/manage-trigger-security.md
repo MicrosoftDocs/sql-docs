@@ -3,18 +3,14 @@ title: "Manage Trigger Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-dml"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "triggers [SQL Server], security"
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
-caps.latest.revision: 19
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

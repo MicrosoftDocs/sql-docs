@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "disabling triggers"
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DISABLE TRIGGER (Transact-SQL)

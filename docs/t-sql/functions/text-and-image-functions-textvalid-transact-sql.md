@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "verifying text pointers"
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)

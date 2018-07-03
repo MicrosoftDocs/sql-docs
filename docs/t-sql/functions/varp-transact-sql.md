@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "VARP function [Transact-SQL]"
 ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Collation Designator"
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

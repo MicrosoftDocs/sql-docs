@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "SET XACT_ABORT statement"
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

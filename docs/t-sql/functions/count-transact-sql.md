@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "COUNT function [Transact-SQL]"
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

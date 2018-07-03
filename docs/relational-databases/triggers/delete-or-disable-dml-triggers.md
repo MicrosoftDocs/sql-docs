@@ -3,8 +3,6 @@ title: "Delete or Disable DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "deleting DML triggers"
   - "DML triggers, removing"
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
-caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

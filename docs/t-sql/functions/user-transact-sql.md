@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "database usernames [SQL Server]"
 ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

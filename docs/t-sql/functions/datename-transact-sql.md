@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "dates [SQL Server], dateparts"
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 caps.latest.revision: 59
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

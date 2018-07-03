@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "index_option"
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 caps.latest.revision: 68
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER TABLE index_option (Transact-SQL)

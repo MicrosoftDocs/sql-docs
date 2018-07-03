@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "TRIM function"
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 caps.latest.revision: 4
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---

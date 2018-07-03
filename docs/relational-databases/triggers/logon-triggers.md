@@ -3,12 +3,9 @@ title: "Logon Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/19/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -17,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "triggers [SQL Server], logon"
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031

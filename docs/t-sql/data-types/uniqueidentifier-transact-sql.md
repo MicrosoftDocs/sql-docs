@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "GUIDs [SQL Server]"
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

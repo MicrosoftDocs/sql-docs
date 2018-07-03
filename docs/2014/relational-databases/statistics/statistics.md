@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -23,7 +22,6 @@ helpviewer_keywords:
   - "query optimizer [SQL Server], statistics"
   - "statistics [SQL Server]"
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

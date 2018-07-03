@@ -6,14 +6,12 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "dbe-udf"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CLR functions [SQL Server]"
   - "user-defined functions [SQL Server], CLR"
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
-caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg

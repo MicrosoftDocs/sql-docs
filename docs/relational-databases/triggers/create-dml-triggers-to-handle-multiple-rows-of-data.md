@@ -3,12 +3,9 @@ title: "Create DML Triggers to Handle Multiple Rows of Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-dml"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], DML triggers"
   - "DML triggers, multirow"
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
-caps.latest.revision: 25
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

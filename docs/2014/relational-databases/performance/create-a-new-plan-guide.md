@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 

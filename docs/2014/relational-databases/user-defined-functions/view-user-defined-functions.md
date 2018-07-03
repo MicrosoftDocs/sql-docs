@@ -6,7 +6,6 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "dbe-udf"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], viewing"
   - "status information [SQL Server], user-defined functions"
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg

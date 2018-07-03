@@ -1,5 +1,6 @@
 ---
-title: "Run from command line (SQL Server Data Migration Assistant) | Microsoft Docs"
+title: "Run from command line (Data Migration Assistant) | Microsoft Docs"
+description: Learn how to run Data Migration Assistant from the command line to assess SQL Server databases for migration
 ms.custom: ""
 ms.date: "09/01/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Always Encrypted with secure enclaves (Database Engine) | Microsoft Docs"
+title: "Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
 ms.prod: sql
@@ -9,13 +9,13 @@ ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
 monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 
-# Introducing Always Encrypted with Secure enclaves
+# Always Encrypted with Secure Enclaves
 
 Always Encrypted with secure enclaves extends the existing Always
 Encrypted feature to enable richer functionality on sensitive data,
@@ -46,7 +46,7 @@ appears as a black box to the rest of the SQL Server process and other
 processes on the hosting machine. There is no way to view the data or
 the code inside the enclave from the outside, even with a debugger.
 
-The way Always Encrypted in SQL Server v.Next uses secure enclaves is
+The way Always Encrypted in SQL Server vNext uses secure enclaves is
 illustrated on the following diagram:
 
 When parsing an application’s query, the SQL Server Engine determines if
@@ -64,7 +64,7 @@ During query processing, the data or the column
 encryption keys are not exposed in plaintext in the SQL Server Engine
 outside of the secure enclaves.
 
-![text](./media/always-encrypted-enclaves/ae-data-flow.png)
+![data flow](./media/always-encrypted-enclaves/ae-data-flow.png)
 
 With secure enclaves, Always Encrypted can protect the confidentiality
 of sensitive data while providing the following benefits:
@@ -84,7 +84,7 @@ of sensitive data while providing the following benefits:
     computations to be performed inside the database system.
 
 In the current stage of the Community Technology Preview (CTP) of SQL
-Server v.Next, Always Encrypted with secure enclaves uses
+Server vNext, Always Encrypted with secure enclaves uses
 Virtualization-Based security (VBS) secure memory enclaves (also known
 as Virtual Secure Mode, or VSM, enclaves) in Windows.
 
@@ -106,7 +106,7 @@ attestation service. The specifics of the attestation process depend on
 the enclave technology and the attestation service.
 
 The attestation process, SQL Server supports for VBS secure enclaves in
-SQL Server v.Next CTP is Windows Defender System Guard runtime
+SQL Server vNext CTP is Windows Defender System Guard runtime
 attestation, which uses Host Guardian Service (HGS) as an attestation
 service. You need to configure HGS in your environment and register the
 machine hosting your SQL Server instance in HGS. You also must configure
@@ -170,8 +170,8 @@ encryption type the column is using.
     operators](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/comparison-operators-transact-sql),
     including equality comparison, .
 
-For more information about encryption types, see
-<https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-cryptography>.
+For more information about encryption types, see [Always Encrypted Cryptography]
+(always-encrypted-cryptography.md).
 
 The following table summarizes the functionality available for encrypted
 columns, depending on whether the columns use enclave-enabled column
@@ -227,11 +227,6 @@ General limitations:
     are removed by adding support for in-place encryption and rich
     computations.
 
-<!-- end list -->
-
-  - 
-<!-- end list -->
-
   - Equality comparison remains the only Transact-SQL operator supported
     with deterministic encryption and equality comparisons are performed
     by comparing ciphertext values outside of the enclave, regardless if
@@ -243,8 +238,6 @@ General limitations:
     enclave-enabled), to enable rich computations (pattern matching,
     comparison operations), you need to re-encrypt the column using
     randomized encryption.
-
-<!-- end list -->
 
   - The existing restriction on using collations apply to columns
     encrypted with enclave-enabled column encryption keys: character
@@ -300,15 +293,16 @@ Limitations that apply to the preview and may be lifted later:
 
 ## System Requirements
 
-  - SQL Server machine
+  - SQL Server computer
     
       - Windows Server 2019 Preview. The machine must be configured as a
         guarded host, attested by HGS. See Configuring HGS
         Attestation.pdf for details.
     
-      - SQL Server v.Next CTP 1.6 or later
+      - SQL Server vNext CTP 2.0 or later
 
-> Note: During the preview (for testing/prototyping), it is fine to use
+> [!NOTE]
+> During the preview (for testing/prototyping), it is fine to use
 > Always Encrypted with secure enclaves in a SQL Server instance inside
 > a virtual machine. However, for production, the recommended TPM
 > attestation mode requires SQL Server runs on a physical machine.
@@ -317,7 +311,8 @@ Limitations that apply to the preview and may be lifted later:
     
       - See Configuring HGS Attestation.pdf for details.
 
-> Note: A single HGS machine is sufficient during the preview
+> [!NOTE]
+> A single HGS machine is sufficient during the preview
 > (testing/prototyping). For production, a Windows failover cluster with
 > 3 machines is strongly recommended.
 
@@ -325,7 +320,7 @@ Limitations that apply to the preview and may be lifted later:
     
       - .NET Framework 4.7.2
     
-      - SSMS 18.0 Preview 2 or later
+      - SQL Server Management Studio (SSMS) 18.0 or later
     
       - Visual Studio (2017 recommended)
 
@@ -362,10 +357,9 @@ On the client/development machine:
 
 1.  Install .NET Framework 4.7.2.
 
-2.  Install SSMS 18.0 Preview 2 or later. You can download it from:
-    https://go.microsoft.com/fwlink/?linkid=875509
+2.  Install SSMS 18.0 or later. For details, see [Download SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
 
-3.  Download and install the SqlServer PowerShell module.
+3.  Download and [Install the SQL Server PowerShell module](../../powershell/download-sql-server-ps-module)
     
     1.  Download SqlServer PowerShell Pre-release EULA.rtf from MS
         Collaborate. If you accept the EULA, proceed to the next step.
@@ -571,47 +565,47 @@ it.
 
 
 ```powershell
-\# Create a column master key in Windows Certificate Store.
+# Create a column master key in Windows Certificate Store.
 
 $cert = New-SelfSignedCertificate -Subject "\<Subject Name\>"
 -CertStoreLocation Cert:CurrentUser\\My -KeyExportPolicy Exportable
 -Type DocumentEncryptionCert -KeyUsage DataEncipherment -KeySpec
 KeyExchange
 
-\# Import the SqlServer module.
+# Import the SqlServer module.
 
 Import-Module "SqlServer"
 
-\# Connect to your database. Provide the server/db name. You can also
+# Connect to your database. Provide the server/db name. You can also
 modify the connection string, if needed.
 
-$serverName = "\<server name\>"
+$serverName = "<server name>"
 
-$databaseName = "\<database name\>"
+$databaseName = "<database name>"
 
 $connStr = "Data Source = " + $serverName + "; Initial Catalog = " +
 $databaseName + "; Integrated Security = true"
 
 $database = Get-SqlDatabase -ConnectionString $connStr
 
-\# Create a SqlColumnMasterKeySettings object for your column master
+# Create a SqlColumnMasterKeySettings object for your column master
 key.
 
 $cmkSettings = New-SqlCertificateStoreColumnMasterKeySettings
 -CertificateStoreLocation "CurrentUser" -Thumbprint $cert.Thumbprint
 -AllowEnclaveComputations
 
-\# Create column master key metadata in the database.
+# Create column master key metadata in the database.
 
-$cmkName = "\<column master key name in the database\>"
+$cmkName = "<column master key name in the database>"
 
 New-SqlColumnMasterKey -Name $cmkName -InputObject $database
 -ColumnMasterKeySettings $cmkSettings
 
-\# Generate a column encryption key, encrypt it with the column master
+# Generate a column encryption key, encrypt it with the column master
 key and create column encryption key metadata in the database.
 
-$cekName = "\<column encryption key name in the database\>"
+$cekName = "<column encryption key name in the database>"
 
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database
 -ColumnMasterKey $cmkName
@@ -624,7 +618,7 @@ One the client/development machine, open Windows PowerShell ISE, copy
 the following script into Windows PowerShell ISE, customize the script and
 run it.
 
-\# Step 1: Provision a column master key in Azure Key Vault. Note this can be also done using Azure portal:
+### Step 1: Provision a column master key in Azure Key Vault. Note this can be also done using Azure portal:
 https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/
 
 
@@ -633,69 +627,69 @@ Import-Module AzureRM
 
 Login-AzureRmAccount
 
-\# Provide the below values
+# Provide the below values
 
-$SubscriptionId = "\<Azure SubscriptionId\>"
+$SubscriptionId = "<Azure SubscriptionId>"
 
-$resourceGroup = "\<resource group name\>"
+$resourceGroup = "<resource group name>"
 
-$azureLocation = "\<datacenter location\>"
+$azureLocation = "<datacenter location>"
 
-$akvName = "\<key vault name\>"
+$akvName = "<key vault name>"
 
-$akvKeyName = "\<key name\>"
+$akvKeyName = "<key name>"
 
-\# Set the context to the specified subscription.
+# Set the context to the specified subscription.
 
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
 
-\# Create a new resource group - skip, if your desired group already
+# Create a new resource group - skip, if your desired group already
 exists.
 
 New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
 
-\# Create a new key vault - skip if your vault already exists.
+# Create a new key vault - skip if your vault already exists.
 
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName
 $resourceGroup -Location $azureLocation
 
-\# Grant yourself permissions needed to create and use the column master
+# Grant yourself permissions needed to create and use the column master
 key.
 
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName
 $resourceGroup -PermissionsToKeys get, create, list, update,
 wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 
-\# Create a column master key in Azure Key Vault.
+# Create a column master key in Azure Key Vault.
 
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName
 -Destination "Software"
 
-\# Step 2: Create column master key metadata in the database, create a
+# Step 2: Create column master key metadata in the database, create a
 column encryption key and create column encryption key metadata in the
 database.
 
-\# Connect to your database (Azure SQL database).
+# Connect to your database (Azure SQL database).
 
-\# Import the SqlServer module.
+# Import the SqlServer module.
 
 Import-Module "SqlServer" -Version
 
-\# Connect to your database. Provide the server/db name. You can also
+# Connect to your database. Provide the server/db name. You can also
 modify the connection string, if needed.
 
-$serverName = "\<server name\>"
+$serverName = "<server name>"
 
-$databaseName = "\<database name\>"
+$databaseName = "<database name>"
 
 $connStr = "Data Source = " + $serverName + "; Initial Catalog = " +
 $databaseName + "; Integrated Security = true"
 
 $database = Get-SqlDatabase -ConnectionString $connStr
 
-\# Authenticate to Azure
+# Authenticate to Azure
 
-\# Note: authentication needs to be done before
+# Note: authentication needs to be done before
 New-SqlAzureKeyVaultColumnMasterKeySettings, as
 -AllowEnclaveComputations will cause
 New-SqlAzureKeyVaultColumnMasterKeySettings to call Azure Key Vault to
@@ -703,23 +697,23 @@ generate the signature of the column master key.
 
 Add-SqlAzureAuthenticationContext -Interactive
 
-\# Create a SqlColumnMasterKeySettings object for your column master
+# Create a SqlColumnMasterKeySettings object for your column master
 key.
 
 $cmkSettings = New-SqlAzureKeyVaultColumnMasterKeySettings -KeyURL
 $akvKey.ID -AllowEnclaveComputations
 
-\# Create column master key metadata in the database.
+# Create column master key metadata in the database.
 
-$cmkName = "\<column master key name in the database\>"
+$cmkName = "<column master key name in the database>"
 
 New-SqlColumnMasterKey -Name $cmkName -InputObject $database
 -ColumnMasterKeySettings $cmkSettings
 
-\# Generate a column encryption key, encrypt it with the column master
+# Generate a column encryption key, encrypt it with the column master
 key and create column encryption key metadata in the database.
 
-$cekName = "\<column encryption key name in the database\>"
+$cekName = "<column encryption key name in the database>"
 
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database
 -ColumnMasterKey $cmkName
@@ -739,39 +733,39 @@ SELECT
 
 name
 
-, allow\_enclave\_computations
+, allow_enclave_computations
 
-FROM sys.column\_master\_keys
+FROM sys.column_master_keys
 ```
 
 
 2.  To determine which column encryption keys are encrypted with
     enclave-enabled column encryption keys (and, thus, are
-    enclave-enabled), you need to join sys.column\_master\_keys,
-    sys.column\_encryption\_key\_values, and
-    sys.column\_encryption\_keys.
+    enclave-enabled), you need to join sys.column_master_keys,
+    sys.column_encryption_key_values, and
+    sys.column_encryption_keys.
 
 
 ```sql
 SELECT
 
-cek.name AS \[cek\_name\]
+cek.name AS [cek_name]
 
-, cmk.name AS \[cmk\_name\]
+, cmk.name AS [cmk_name]
 
-, cmk.allow\_enclave\_computations
+, cmk.allow_enclave_computations
 
 FROM
 
-sys.column\_master\_keys cmk
+sys.column_master_keys cmk
 
-JOIN sys.column\_encryption\_key\_values cekv
+JOIN sys.column_encryption_key_values cekv
 
-ON cmk.column\_master\_key\_id = cekv.column\_master\_key\_id
+ON cmk.column_master_key_id = cekv.column_master_key_id
 
-JOIN sys.column\_encryption\_keys cek
+JOIN sys.column_encryption_keys cek
 
-ON cekv.column\_encryption\_key\_id = cek.column\_encryption\_key\_id
+ON cekv.column_encryption_key_id = cek.column_encryption_key_id
 ```
 
 
@@ -845,15 +839,19 @@ same code page as the database collation**.
 To list all collations along with their code page identifiers, you can
 use the following query:
 
-SELECT \[Name\], \[Description\], \[CodePage\] =
-COLLATIONPROPERTY(\[Name\], 'CodePage')
 
-FROM ::fn\_helpcollations()
+```sql
+SELECT [Name], [Description], [CodePage] =
+COLLATIONPROPERTY([Name], 'CodePage')
 
-For example, Chinese\_Traditional\_Stroke\_Order\_100\_CI\_AI\_WS and
-Chinese\_Traditional\_Stroke\_Order\_100\_BIN2 have the same code page
-(950), but Chinese\_Traditional\_Stroke\_Order\_100\_CI\_AI\_WS and
-Latin1\_General\_100\_BIN2 have different code pages (950 and 1252,
+FROM ::fn_helpcollations()
+```
+
+
+For example, Chinese_Traditional_Stroke_Order_100_CI_AI_WS and
+Chinese_Traditional_Stroke_Order_100_BIN2 have the same code page
+(950), but Chinese_Traditional_Stroke_Order_100_CI_AI_WS and
+Latin1_General_100_BIN2 have different code pages (950 and 1252,
 respectively).
 
 The above restriction does not apply to UNICODE (nchar,
@@ -897,37 +895,37 @@ UNICODE SSN column, which is required assuming the default database
 collation is a non-BIN2 Latin1 collation.
 
 ```sql
-CREATE TABLE \[dbo\].\[Employees\](
+CREATE TABLE [dbo].[Employees](
 
-\[EmployeeID\] \[int\] IDENTITY(1,1) NOT NULL,
+[EmployeeID] [int] IDENTITY(1,1) NOT NULL,
 
-\[SSN\] \[char\](11) COLLATE Latin1\_General\_BIN2 ENCRYPTED WITH (
+[SSN] [char](11) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (
 
-COLUMN\_ENCRYPTION\_KEY = \[CEK1\],
+COLUMN_ENCRYPTION_KEY = [CEK1],
 
-ENCRYPTION\_TYPE = Randomized,
+ENCRYPTION_TYPE = Randomized,
 
-ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NOT NULL,
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
 
-\[FirstName\] \[nvarchar\](50) NOT NULL,
+[FirstName] [nvarchar](50) NOT NULL,
 
-\[LastName\] \[nvarchar\](50) NOT NULL,
+[LastName] [nvarchar](50) NOT NULL,
 
-\[Salary\] \[int\] ENCRYPTED WITH (
+[Salary] [int] ENCRYPTED WITH (
 
-COLUMN\_ENCRYPTION\_KEY = \[CEK1\],
+COLUMN_ENCRYPTION_KEY = [CEK1],
 
-ENCRYPTION\_TYPE = Randomized,
+ENCRYPTION_TYPE = Randomized,
 
-ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NOT NULL,
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
 
-CONSTRAINT \[PK\_dbo.Employees\] PRIMARY KEY CLUSTERED (
+CONSTRAINT [PK_dbo.Employees] PRIMARY KEY CLUSTERED (
 
-\[EmployeeID\] ASC
+[EmployeeID] ASC
 
 )
 
-) ON \[PRIMARY\]
+) ON [PRIMARY]
 
 GO
 ```
@@ -991,7 +989,7 @@ tools and applications with:
 4.  Take note of the AttestationServerURL property. It should look like
     this: http://10.193.16.185/Attestation.
 
-5.  If you are using SQL Server v.Next CTP 1.6/1.7, you must append
+5.  If you are using SQL Server v.Next CTP 2.0, you must append
     “/attestationservice.svc/signingCertificates” to the above URL.
     The result if the attestation URL for your SQL server instance.
 
@@ -1298,46 +1296,46 @@ PowerShell ISE, customize the script and run it.
 
 
 ```powershell
-\# Import the SqlServer module.
+# Import the SqlServer module.
 
 Import-Module "SqlServer"
 
-\# Connect to your database. Modify server/db name or/and the connection
+# Connect to your database. Modify server/db name or/and the connection
 string, if needed.
 
-$serverName = "\<server name\>"
+$serverName = "<server name>"
 
-$databaseName = "\<database name\>"
+$databaseName = "<database name>"
 
 $connStr = "Data Source = " + $serverName + "; Initial Catalog = " +
 $databaseName + "; Integrated Security = true"
 
 $database = Get-SqlDatabase -ConnectionString $connStr
 
-\# Set the names of the old/current column master key and the new/target
+# Set the names of the old/current column master key and the new/target
 enclave-enabled column master key. (Change the names, if needed).
 
-$oldCmkName = "\<old column master key name\>"
+$oldCmkName = "<old column master key name>"
 
-$newCmkName = "\<new column master key name\>"
+$newCmkName = "<new column master key name>"
 
-\# Authenticate to Azure. Needed only of either column master key is
+# Authenticate to Azure. Needed only of either column master key is
 stored in Azure Key Vault.
 
 Add-SqlAzureAuthenticationContext -Interactive
 
-\# Initiate the rotation from the current column master key to the new
+# Initiate the rotation from the current column master key to the new
 column master key.
 
 Invoke-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName $oldCmkName
 -TargetColumnMasterKeyName $newCmkName -InputObject $database
 
-\# Complete the rotation of the old column master key.
+# Complete the rotation of the old column master key.
 
 Complete-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName
 $oldCmkName -InputObject $database
 
-\# Remove the old column master key metadata.
+# Remove the old column master key metadata.
 
 Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 ```
@@ -1397,7 +1395,7 @@ move the data out of the database):
         Vault, you might be prompted to sign in to Azure.
 
 3.  (Optionally) clear the plan cache using [DBCC
-    FREEPROCCACHE](https://technet.microsoft.com/en-us/library/ms174283\(v=sql.105\).aspx)
+    FREEPROCCACHE](https://technet.microsoft.com/library/ms174283\(v=sql.105\).aspx)
     to ensure the plans for any query against the columns you have
     re-encrypted gets re-created on the first query execution.
     
@@ -1409,11 +1407,11 @@ move the data out of the database):
     it may result in temporary query performance degradation. To
     minimize the negative impact of clearing the cache, you can
     selectively remove the plans for the impacted queries only. See the [DBCC
-    FREEPROCCACHE](https://technet.microsoft.com/en-us/library/ms174283\(v=sql.105\).aspx)
+    FREEPROCCACHE](https://technet.microsoft.com/library/ms174283\(v=sql.105\).aspx)
     for details.
 
 4.  (Optionally) call
-    [sp\_refresh\_parameter\_encryption](https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql)
+    [sp_refresh_parameter_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql)
     to update the metadata for the parameters of each module (stored
     procedure, function, view, trigger) that may have been invalidated
     by re-encrypting the columns.
@@ -1428,11 +1426,11 @@ same key.
 
 
 ```sql
-ALTER TABLE \[dbo\].\[Employees\]
+ALTER TABLE [dbo].[Employees]
 
-ALTER COLUMN \[SSN\] \[char\](11) COLLATE Latin1\_General\_BIN2
-ENCRYPTED WITH (COLUMN\_ENCRYPTION\_KEY = \[CEK1\], ENCRYPTION\_TYPE =
-Randomized, ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NOT NULL
+ALTER COLUMN [SSN] [char](11) COLLATE Latin1_General_BIN2
+ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE =
+Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
 
 GO
 
@@ -1450,11 +1448,11 @@ new enclave-enabled key, named CEK2 (without changing the encryption
 type).
 
 ```sql
-ALTER TABLE \[dbo\].\[Employees\]
+ALTER TABLE [dbo].[Employees]
 
-ALTER COLUMN \[SSN\] \[char\](11) ENCRYPTED WITH
-(COLUMN\_ENCRYPTION\_KEY = \[CEK2\], ENCRYPTION\_TYPE = Deterministic,
-ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NOT NULL
+ALTER COLUMN [SSN] [char](11) ENCRYPTED WITH
+(COLUMN_ENCRYPTION_KEY = [CEK2], ENCRYPTION\_TYPE = Deterministic,
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
 
 GO
 
@@ -1473,11 +1471,11 @@ operation is performed in the online mode.
 
 
 ```sql
-ALTER TABLE \[dbo\].\[Employees\]
+ALTER TABLE [dbo].[Employees]
 
-ALTER COLUMN \[SSN\] \[char\](11) ENCRYPTED WITH
-(COLUMN\_ENCRYPTION\_KEY = \[CEK1\], ENCRYPTION\_TYPE = Randomized,
-ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NOT NULL
+ALTER COLUMN [SSN] [char](11) ENCRYPTED WITH
+(COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized,
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
 
 > WITH (ONLINE = ON)
 
@@ -1571,9 +1569,9 @@ statement).
 
 
 ```sql
-ALTER TABLE \[dbo\].\[Employees\]
+ALTER TABLE [dbo].[Employees]
 
-ALTER COLUMN \[SSN\] \[char\](11) COLLATE Latin1\_General\_BIN2
+ALTER COLUMN [SSN] [char](11) COLLATE Latin1_General_BIN2
 
 WITH (ONLINE = ON)
 
@@ -1634,37 +1632,37 @@ This example assumes your database contains a table that has been
 created using the below statement.
 
 ```sql
-CREATE TABLE \[dbo\].\[Employees\](
+CREATE TABLE [dbo].[Employees](
 
-\[EmployeeID\] \[int\] IDENTITY(1,1) NOT NULL,
+[EmployeeID] [int] IDENTITY(1,1) NOT NULL,
 
-\[SSN\] \[char\](11) COLLATE Latin1\_General\_BIN2 ENCRYPTED WITH (
+[SSN] [char](11) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (
 
-COLUMN\_ENCRYPTION\_KEY = \[CEK1\],
+COLUMN_ENCRYPTION_KEY = [CEK1],
 
-ENCRYPTION\_TYPE = Randomized,
+ENCRYPTION_TYPE = Randomized,
 
-ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NOT NULL,
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
 
-\[FirstName\] \[nvarchar\](50) NOT NULL,
+[FirstName] [nvarchar](50) NOT NULL,
 
-\[LastName\] \[nvarchar\](50) NOT NULL,
+[LastName] [nvarchar](50) NOT NULL,
 
-\[Salary\] \[int\] ENCRYPTED WITH (
+[Salary] [int] ENCRYPTED WITH (
 
-COLUMN\_ENCRYPTION\_KEY = \[CEK1\],
+COLUMN_ENCRYPTION_KEY = [CEK1],
 
-ENCRYPTION\_TYPE = Randomized,
+ENCRYPTION_TYPE = Randomized,
 
-ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NOT NULL,
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
 
-CONSTRAINT \[PK\_dbo.Employees\] PRIMARY KEY CLUSTERED (
+CONSTRAINT [PK_dbo.Employees] PRIMARY KEY CLUSTERED (
 
-\[EmployeeID\] ASC
+[EmployeeID] ASC
 
 )
 
-) ON \[PRIMARY\]
+) ON [PRIMARY]
 
 GO
 ```
@@ -1681,11 +1679,11 @@ DECLARE @SSNPattern CHAR(11) = '%1111%'
 
 DECLARE @MinSalary INT = 1000
 
-SELECT \* FROM \[dbo\].\[Employees\]
+SELECT * FROM [dbo].[Employees]
 
 WHERE SSN LIKE @SSNPattern
 
-AND \[Salary\] \>= @MinSalary;
+AND [Salary] >= @MinSalary;
 
 GO;
 ```
@@ -1757,24 +1755,21 @@ NuGet.
     section, locate the \<configSections\> section. Add the following
     section within the \<configSection\>:
 
-    > \<section name="SqlColumnEncryptionEnclaveProviders"
-    > type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,
-    > System.Data, Version=4.0.0.0, Culture=neutral,
-    > PublicKeyToken=b77a5c561934e089" /\>
+    \<section name="SqlColumnEncryptionEnclaveProviders"
+    type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,
+    System.Data, Version=4.0.0.0, Culture=neutral,
+    PublicKeyToken=b77a5c561934e089" /\>
 
 14. Inside the configuration section, below the \<configSections\>, add
     the following section, which specific an enclave provider to be used
     to attest and interact with Intel SGX enclaves:
 
-    > \<SqlColumnEncryptionEnclaveProviders\>
-    > 
-    > \<providers\>
-    > 
-    > \<add name="VSM" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.VirtualSecureModeEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/\>
-    > 
-    > \</providers\>
-    > 
-    > \</SqlColumnEncryptionEnclaveProviders\> 
+    \<SqlColumnEncryptionEnclaveProviders\>
+    
+    \<providers\>
+    
+    \<add name="VSM" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.VirtualSecureModeEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/\>
+    \</SqlColumnEncryptionEnclaveProviders\> 
 
 ### Develop and Test Your App 
 
@@ -1805,37 +1800,37 @@ The below code is a simple example of a C\# console app issuing a LIKE
 query against the table with the following schema:
 
 ```sql
-CREATE TABLE \[dbo\].\[Employees\](
+CREATE TABLE [dbo].[Employees](
 
-\[EmployeeID\] \[int\] IDENTITY(1,1) NOT NULL,
+[EmployeeID] [int] IDENTITY(1,1) NOT NULL,
 
-\[SSN\] \[char\](11) ENCRYPTED WITH (
+[SSN] [char](11) ENCRYPTED WITH (
 
-COLUMN\_ENCRYPTION\_KEY = \[CEK1\],
+COLUMN_ENCRYPTION_KEY = [CEK1],
 
-ENCRYPTION\_TYPE = Randomized,
+ENCRYPTION_TYPE = Randomized,
 
-ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NOT NULL,
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
 
-\[FirstName\] \[nvarchar\](50) NOT NULL,
+[FirstName] [nvarchar](50) NOT NULL,
 
-\[LastName\] \[nvarchar\](50) NOT NULL,
+[LastName] [nvarchar](50) NOT NULL,
 
-\[Salary\] \[int\] ENCRYPTED WITH (
+[Salary] [int] ENCRYPTED WITH (
 
-COLUMN\_ENCRYPTION\_KEY = \[CEK1\],
+COLUMN_ENCRYPTION_KEY = [CEK1],
 
-ENCRYPTION\_TYPE = Randomized,
+ENCRYPTION_TYPE = Randomized,
 
-ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NOT NULL,
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
 
-CONSTRAINT \[PK\_dbo.Employees\] PRIMARY KEY CLUSTERED (
+CONSTRAINT [PK_dbo.Employees] PRIMARY KEY CLUSTERED (
 
-\[EmployeeID\] ASC
+[EmployeeID] ASC
 
 )
 
-) ON \[PRIMARY\]
+) ON [PRIMARY]
 
 GO
 ```
@@ -1845,32 +1840,20 @@ CEK1 is assumed to be an enclave-enabled column encryption key.
 
 ```csharp
 using System;
-
 using System.Collections.Generic;
-
 using System.Linq;
-
 using System.Text;
-
 using System.Threading.Tasks;
-
 using System.Data.SqlClient;
-
 using System.Data;
-
 namespace ConsoleApp1
-
 {
+   class Program
+   {
+      static void Main(string\[\] args)
+   {
 
-class Program
-
-{
-
-static void Main(string\[\] args)
-
-{
-
-string connectionString = "Data Source = myserver; Initial Catalog =
+   string connectionString = "Data Source = myserver; Initial Catalog =
 ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url =
 http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates;
 Integrated Security = true";
@@ -1885,9 +1868,9 @@ connection.Open();
 
 SqlCommand cmd = connection.CreateCommand();
 
-cmd.CommandText = @"SELECT \[SSN\], \[FirstName\], \[LastName\],
-\[Salary\] FROM \[dbo\].\[Employees\] WHERE \[SSN\] LIKE @SSNPattern AND
-\[Salary\] \> @MinSalary;";
+cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName],
+[Salary] FROM [dbo].[Employees] WHERE [SSN] LIKE @SSNPattern AND
+[Salary] > @MinSalary;";
 
 SqlParameter paramSSNPattern = cmd.CreateParameter();
 

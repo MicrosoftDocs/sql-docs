@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "database master key [SQL Server], opening"
 ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

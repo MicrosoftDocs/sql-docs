@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], modifying"
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER ASYMMETRIC KEY (Transact-SQL)

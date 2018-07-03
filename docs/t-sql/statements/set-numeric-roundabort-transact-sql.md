@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "SET NUMERIC_ROUNDABORT statement"
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

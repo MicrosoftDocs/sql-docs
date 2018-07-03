@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "CREATE WORKLOAD GROUP statement"
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)

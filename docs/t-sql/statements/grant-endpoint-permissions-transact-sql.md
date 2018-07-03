@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], endpoints"
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # GRANT Endpoint Permissions (Transact-SQL)

@@ -3,8 +3,6 @@ title: "Reading the Data in a Table (Tutorial) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -15,9 +13,8 @@ applies_to:
 helpviewer_keywords: 
   - "reading data in a table"
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

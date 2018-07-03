@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "PARSE function"
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # PARSE (Transact-SQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SOUNDEX values"
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

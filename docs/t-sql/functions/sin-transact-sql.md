@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sine"
 ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -35,8 +35,8 @@ helpviewer_keywords:
   - "roundtrip conversions"
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 caps.latest.revision: 136
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

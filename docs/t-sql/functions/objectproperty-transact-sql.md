@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "objects [SQL Server], schema-scoped"
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 caps.latest.revision: 81
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

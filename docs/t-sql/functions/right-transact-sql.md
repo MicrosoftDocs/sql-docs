@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "character strings [SQL Server], RIGHT"
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

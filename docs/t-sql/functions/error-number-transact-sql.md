@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "CATCH block"
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

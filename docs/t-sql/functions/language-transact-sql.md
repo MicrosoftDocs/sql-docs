@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "names [SQL Server], language in use"
 ms.assetid: 3e13b477-7dfa-4da6-9948-da2050d42527
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

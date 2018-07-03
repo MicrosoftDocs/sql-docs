@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "NTILE function"
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 caps.latest.revision: 63
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

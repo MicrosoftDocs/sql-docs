@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "CURRENT_REQUEST_ID"
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # CURRENT_REQUEST_ID (Transact-SQL)

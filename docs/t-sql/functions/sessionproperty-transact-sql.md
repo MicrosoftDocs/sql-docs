@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sessions [SQL Server], SET options settings"
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # SESSIONPROPERTY (Transact-SQL)

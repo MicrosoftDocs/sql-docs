@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "TYPEPROPERTY function"
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

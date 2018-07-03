@@ -5,9 +5,9 @@ ms.prod: sql
 ms.technology: configuration
 ms.reviewer: ""
 ms.suite: "sql"
-ms.custom: ""
-ms.topic: "language-reference"
-f1_keywords:   - "external scripts enabled"
+ms.topic: language-reference
+f1_keywords: 
+  - "external scripts enabled"
   - "external_scripts_enabled_TSQL"
 helpviewer_keywords: 
   - "external scripts enabled option"

@@ -239,6 +239,7 @@ MAXDOP = *max_degree_of_parallelism*
 * Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
 * You can list up to 64 columns per statistics object.
 * The MAXDOP option is not compatible with STATS_STREAM, ROWCOUNT and PAGECOUNT options.
+* The MAXDOP option is limited by the Resource Governor workload group MAX_DOP setting, if used.
   
 ## Examples  
 

@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Columnstore indexes - Overview | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/03/2018"
+ms.date: "06/08/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -13,6 +13,7 @@ helpviewer_keywords:
   - "indexes creation, columnstore"
   - "indexes [SQL Server], columnstore"
   - "columnstore index"
+  - "batch mode execution"
   - "columnstore index, described"
   - "xVelocity, columnstore indexes"
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
@@ -27,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 *Columnstore indexes* are the standard for storing and querying large data warehousing fact tables. It uses column-based data storage and query processing to achieve up to **10x query performance** gains in your data warehouse over traditional row-oriented storage, and up to **10x data compression** over the uncompressed data size. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], columnstore indexes enable operational analytics, the ability to run performant real-time analytics on a transactional workload.  
   
- Jump to scenarios:  
+Jump to scenarios:  
   
 -   [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 -   [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
@@ -36,62 +37,61 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore.  
   
 ### Key terms and concepts  
- These are key terms and concepts are associated with columnstore indexes.  
+These are key terms and concepts are associated with columnstore indexes.  
   
- columnstore  
- A *columnstore* is data that is logically organized as a table with rows and columns, and physically stored in a column-wise data format.  
+**columnstore**  
+A *columnstore* is data that is logically organized as a table with rows and columns, and physically stored in a column-wise data format.  
   
- rowstore  
- A *rowstore* is data that is logically organized as a table with rows and columns, and then physically stored in a row-wise data format. This has been the traditional way to store relational table data. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rowstore refers to table where the underlying data storage format is a heap, a clustered index, or a memory-optimized table.  
+**rowstore**  
+A *rowstore* is data that is logically organized as a table with rows and columns, and then physically stored in a row-wise data format. This has been the traditional way to store relational table data. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rowstore refers to table where the underlying data storage format is a heap, a clustered index, or a memory-optimized table.  
   
 > [!NOTE]  
 > In discussions about columnstore indexes, we use the terms *rowstore* and *columnstore* to emphasize the format for the data storage.  
   
- rowgroup  
- A *row group* is a group of rows that are compressed into columnstore format at the same time. A rowgroup usually contains the maximum number of rows per rowgroup which is 1,048,576 rows.  
+**rowgroup**  
+A *row group* is a group of rows that are compressed into columnstore format at the same time. A rowgroup usually contains the maximum number of rows per rowgroup which is 1,048,576 rows.  
   
- For high performance and high compression rates, the columnstore index slices the table into groups of rows, called rowgroups, and then compresses each rowgroup in a column-wise manner. The number of rows in the rowgroup must be large enough to improve compression rates, and small enough to benefit from in-memory operations.  
- column segment  
- A *column segment* is a column of data from within the rowgroup.  
+For high performance and high compression rates, the columnstore index slices the table into groups of rows, called rowgroups, and then compresses each rowgroup in a column-wise manner. The number of rows in the rowgroup must be large enough to improve compression rates, and small enough to benefit from in-memory operations.    
+
+**column segment**  
+A *column segment* is a column of data from within the rowgroup.  
   
 -   Each rowgroup contains one column segment for every column in the table.  
 -   Each column segment is compressed together and stored on physical media.  
   
- ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
- clustered columnstore index  
- A *clustered columnstore index* is the physical storage for the entire table.  
+**clustered columnstore index**  
+A *clustered columnstore index* is the physical storage for the entire table.    
   
- ![Clustered Columnstore Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+![Clustered Columnstore Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
- To reduce fragmentation of the column segments and improve performance, the columnstore index might store some data temporarily into a clustered index, which is called a deltastore, and a btree list of IDs for deleted rows. The deltastore operations are handled behind the scenes. To return the correct query results, the clustered columnstore index combines query results from both the columnstore and the deltastore.  
+To reduce fragmentation of the column segments and improve performance, the columnstore index might store some data temporarily into a clustered index, which is called a deltastore, and a btree list of IDs for deleted rows. The deltastore operations are handled behind the scenes. To return the correct query results, the clustered columnstore index combines query results from both the columnstore and the deltastore.  
   
- delta rowgroup  
- Used with column store indexes only, a *delta rowgroup* is a clustered index that improves columnstore compression and performance by storing rows until the number of rows reaches a threshold and are then moved into the columnstore.  
+**delta rowgroup**  
+Used with column store indexes only, a *delta rowgroup* is a clustered index that improves columnstore compression and performance by storing rows until the number of rows reaches a threshold and are then moved into the columnstore.  
 
- When a delta rowgroup reaches the maximum number of rows, it becomes closed. A tuple-mover process checks for closed row groups. When it finds the closed rowgroup, it compresses it and stores it into the columnstore.  
+When a delta rowgroup reaches the maximum number of rows, it becomes closed. A tuple-mover process checks for closed row groups. When it finds the closed rowgroup, it compresses it and stores it into the columnstore.  
   
-deltastore
+**deltastore**
 A columnstore index can have more than one delta rowgroup.  All of the delta rowgroups are collectively called the *deltastore*.   
 
 During a large bulk load, most of the rows go directly to the columnstore without passing through the deltastore. Some rows at the end of the bulk load might be too few in number to meet the minimum size of a rowgroup which is 102,400 rows. When this happens, the final rows go to the deltastore instead of the columnstore. For small bulk loads with less than 102,400 rows, all of the rows go directly to the deltastore.  
   
-
+**nonclustered columnstore index**  
+A *nonclustered columnstore index* and a clustered columnstore index function the same. The difference is a nonclustered index is a secondary index created on a rowstore table, whereas a clustered columnstore index is the primary storage for the entire table.  
   
- nonclustered columnstore index  
- A *nonclustered columnstore index* and a clustered columnstore index function the same. The difference is a nonclustered index is a secondary index created on a rowstore table, whereas a clustered columnstore index is the primary storage for the entire table.  
+The nonclustered index contains a copy of part or all of the rows and columns in the underlying table. The index is defined as one or more columns of the table, and has an optional condition that filters the rows.  
   
- The nonclustered index contains a copy of part or all of the rows and columns in the underlying table. The index is defined as one or more columns of the table, and has an optional condition that filters the rows.  
+A nonclustered columnstore index enables real-time operational analytics in which the OLTP workload uses the underlying clustered index, while analytics run concurrently on the columnstore index. For more information, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
- A nonclustered columnstore index enables real-time operational analytics in which the OLTP workload uses the underlying clustered index, while analytics run concurrently on the columnstore index. For more information, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
-  
- batch execution  
- *Batch execution* is a query processing method in which queries process multiple rows together. Queries on columnstore indexes use batch mode execution which improves query performance typically 2-4x. Batch execution is closely integrated with, and optimized around, the columnstore storage format. Batch-mode execution is sometimes known as vector-based or vectorized execution.  
+**batch mode execution**  
+*Batch mode execution* is a query processing method used to process multiple rows together. Batch mode execution is closely integrated with, and optimized around, the columnstore storage format. Batch mode execution is sometimes known as vector-based or vectorized execution. Queries on columnstore indexes use batch mode execution which improves query performance typically 2-4x. For more information on execution modes, refer to the [Query Processing Architecture Guide](../query-processing-architecture-guide.md#execution-modes). 
   
 ##  <a name="benefits"></a> Why should I use a columnstore index?  
- A columnstore index can provide a very high level of data compression, typically 10x, to reduce your data warehouse storage cost significantly. Plus, for analytics they offer an order of magnitude better performance than a btree index. They are the preferred data storage format for data warehousing and analytics workloads. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can use columnstore indexes for real-time analytics on your operational workload.  
+A columnstore index can provide a very high level of data compression, typically 10x, to reduce your data warehouse storage cost significantly. Plus, for analytics they offer an order of magnitude better performance than a btree index. They are the preferred data storage format for data warehousing and analytics workloads. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can use columnstore indexes for real-time analytics on your operational workload.  
   
- Reasons why columnstore indexes are so fast:  
+Reasons why columnstore indexes are so fast:  
   
 -   Columns store values from the same domain and commonly have similar values, which results in high compression rates. This minimizes or eliminates IO bottleneck in your system while reducing the memory footprint significantly.  
   
@@ -102,24 +102,24 @@ During a large bulk load, most of the rows go directly to the columnstore withou
 -   Queries often select only a few columns from a table, which reduces total I/O from the physical media.  
   
 ## When should I use a columnstore index?  
- Recommended use cases:  
+Recommended use cases:  
   
 -   Use a clustered columnstore index to store fact tables and large dimension tables for data warehousing workloads. This improves query performance and data compression by up to 10x. See [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md).  
   
 -   Use a nonclustered columnstore index to perform analysis in real-time on an OLTP workload. See [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 ### How do I choose between a rowstore index and a columnstore index?  
- Rowstore indexes perform best on queries that seek into the data, searching for a particular value, or for queries on a small range of values. Use rowstore indexes with transactional workloads since they tend to require mostly table seeks instead of table scans.  
+Rowstore indexes perform best on queries that seek into the data, searching for a particular value, or for queries on a small range of values. Use rowstore indexes with transactional workloads since they tend to require mostly table seeks instead of table scans.  
   
- Columnstore indexes give high performance gains for analytic queries that scan large amounts of data, especially on large tables.  Use columnstore indexes on data warehousing and analytics workloads, especially on fact tables, since they tend to require full table scans rather than table seeks.  
+Columnstore indexes give high performance gains for analytic queries that scan large amounts of data, especially on large tables.  Use columnstore indexes on data warehousing and analytics workloads, especially on fact tables, since they tend to require full table scans rather than table seeks.  
   
 ### Can I combine rowstore and columnstore on the same table?  
- Yes. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can  create an updatable  nonclustered columnstore index on a rowstore table. The columnstore index stores a copy of the chosen columns so you do need extra space for this but it will be compressed on average by 10x. By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.  
+Yes. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can  create an updatable  nonclustered columnstore index on a rowstore table. The columnstore index stores a copy of the chosen columns so you do need extra space for this but it will be compressed on average by 10x. By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.  
   
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore.  
+Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore.  
   
 ## Metadata  
- All of the columns in a columnstore index are stored in the metadata as included columns. The columnstore index does not have key columns.  
+All of the columns in a columnstore index are stored in the metadata as included columns. The columnstore index does not have key columns.  
 
 |||
 |-|-|  
@@ -132,9 +132,9 @@ During a large bulk load, most of the rows go directly to the columnstore withou
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## Related Tasks  
- All relational tables, unless you specify them as a clustered columnstore index, use rowstore as the underlying data format. `CREATE TABLE` creates a rowstore table unless you specify the `WITH CLUSTERED COLUMNSTORE INDEX` option.  
+All relational tables, unless you specify them as a clustered columnstore index, use rowstore as the underlying data format. `CREATE TABLE` creates a rowstore table unless you specify the `WITH CLUSTERED COLUMNSTORE INDEX` option.  
   
- When you create a table with the `CREATE TABLE` statement you can create the table as a columnstore by specifying the `WITH CLUSTERED COLUMNSTORE INDEX` option. If you already have a rowstore table and want to convert it to a columnstore, you can use the `CREATE COLUMNSTORE INDEX` statement.  
+When you create a table with the `CREATE TABLE` statement you can create the table as a columnstore by specifying the `WITH CLUSTERED COLUMNSTORE INDEX` option. If you already have a rowstore table and want to convert it to a columnstore, you can use the `CREATE COLUMNSTORE INDEX` statement.  
   
 |Task|Reference Topics|Notes|  
 |----------|----------------------|-----------|  
@@ -165,8 +165,3 @@ During a large bulk load, most of the rows go directly to the columnstore withou
  [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
   
   
-
-
-
-
-

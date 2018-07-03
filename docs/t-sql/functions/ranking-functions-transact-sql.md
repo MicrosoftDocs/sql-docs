@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ranking rows"
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Ranking Functions (Transact-SQL)

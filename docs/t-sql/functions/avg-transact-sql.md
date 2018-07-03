@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "average values"
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 caps.latest.revision: 52
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

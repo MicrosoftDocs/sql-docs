@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP ASYMMETRIC KEY (Transact-SQL)

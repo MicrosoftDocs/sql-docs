@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "SET NOCOUNT statement"
 ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

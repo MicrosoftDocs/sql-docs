@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "removing procedure groups"
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 caps.latest.revision: 51
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

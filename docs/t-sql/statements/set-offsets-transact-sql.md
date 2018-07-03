@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "SET OFFSETS statement"
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET OFFSETS (Transact-SQL)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "PI function"
 ms.assetid: d7c4575b-ba1c-4ef7-a633-9a379d7f01fd
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

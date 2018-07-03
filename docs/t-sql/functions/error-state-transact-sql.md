@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "states [SQL Server], error numbers"
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

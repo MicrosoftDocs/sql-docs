@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "column definitions [SQL Server]"
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 caps.latest.revision: 78
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

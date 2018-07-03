@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "processors [SQL Server], types"
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

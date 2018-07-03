@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "active transactions"
 ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

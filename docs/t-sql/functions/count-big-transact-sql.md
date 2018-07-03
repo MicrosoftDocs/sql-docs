@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "COUNT_BIG function"
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

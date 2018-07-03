@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -68,7 +68,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- The following example updates the statistics for the AK_SalesOrderDetail_rowguid index of the SalesOrderDetail table.   
@@ -84,7 +84,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- The following example updates the statistics for all indexes on the SalesOrderDetail table.   
@@ -102,7 +102,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- The following example updates the statistics for all tables in the database.   

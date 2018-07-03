@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "viewing filegroup names"
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # FILEGROUP_NAME (Transact-SQL)

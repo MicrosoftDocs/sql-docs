@@ -46,8 +46,8 @@ helpviewer_keywords:
   - "creating stored procedures"
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 caps.latest.revision: 180
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

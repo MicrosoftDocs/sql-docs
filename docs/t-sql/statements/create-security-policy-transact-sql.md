@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "Row-Level Security"
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE SECURITY POLICY (Transact-SQL)

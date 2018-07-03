@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "logical file names [SQL Server]"
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # FILE_NAME (Transact-SQL)

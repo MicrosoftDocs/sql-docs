@@ -1170,7 +1170,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 ## Overview
 
-In Azure SQL Database Managed Instance, this statement is used to create a database. When creating a database on a Managed Instance, you specify the database name, collation, maximum size, edition, and service objective. 
+In Azure SQL Database Managed Instance, this statement is used to create a database. When creating a database on a Managed Instance, you specify the database name and collation. 
 
 ## Syntax
 
@@ -1226,7 +1226,7 @@ CREATE DATABASE TestDB1;
   
 ## See also  
 
-See [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-transact-sql.md?&tabs=sqldbmi) 
+See [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi) 
 
 # [SQL Data Warehouse](#tab/sqldw)
 

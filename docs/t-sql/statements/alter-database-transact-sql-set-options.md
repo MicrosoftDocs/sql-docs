@@ -1887,30 +1887,14 @@ Not all database options use the WITH \<termination> clause or can be specified 
   
 ## Examples  
   
-### A. Setting options on a database  
-The following example sets the recovery model and data page verification options for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+### A. Setting the database to READ_ONLY  
+Changing the state of a database or filegroup to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to limit access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.  
   
 ```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
-SET RECOVERY FULL PAGE_VERIFY CHECKSUM;  
-GO  
-  
-```  
-  
-### B. Setting the database to READ_ONLY  
-Changing the state of a database or filegroup to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `SINGLE_USER` mode to obtain exclusive access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.  
-  
-> [!NOTE]  
->  This example uses the termination option `WITH ROLLBACK IMMEDIATE` in the first `ALTER DATABASE` statement. All incomplete transactions will be rolled back and any other connections to the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database will be immediately disconnected.  
-  
-```sql  
-USE master;  
-GO  
-ALTER DATABASE AdventureWorks2012  
-SET SINGLE_USER  
-WITH ROLLBACK IMMEDIATE;  
+SET RESTRICTED_USER;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 SET READ_ONLY  
@@ -1921,7 +1905,7 @@ GO
   
 ```  
   
-### C. Enabling snapshot isolation on a database  
+### B. Enabling snapshot isolation on a database  
 The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
@@ -1947,7 +1931,7 @@ The result set shows that the snapshot isolation framework is enabled.
 |-------------------- |------------------------  |----------|  
 |AdventureWorks2012   |1                        | ON |  
   
-### D. Enabling, modifying, and disabling change tracking  
+### C. Enabling, modifying, and disabling change tracking  
 The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.  
   
 ```sql  
@@ -1970,7 +1954,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING = OFF;  
 ```  
   
-### E. Enabling the query store  
+### D. Enabling the query store  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 The following example enables the query store and configures query store parameters.  
@@ -1990,9 +1974,8 @@ SET QUERY_STORE = ON
 ## See Also  
 [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
 [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
-[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
 [Statistics](../../relational-databases/statistics/statistics.md)   
-[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbls)   
 [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   
 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -2276,10 +2259,7 @@ Users can read data from the database but not modify it.
 READ_WRITE  
 The database is available for read and write operations.  
   
-To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.  
-  
-> [!NOTE]  
-> On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.  
+To change this state, you must have exclusive access to the database.   
   
 **\<db_user_access_option> ::=**  
   
@@ -2587,13 +2567,6 @@ Indicates that *target_recovery_time* is expressed as the number of minutes.
   
 For more information about indirect checkpoints, see [Database Checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-**WITH \<termination> ::=**  
-  
-Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there is any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.  
-  
-> [!NOTE]  
->  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this article.  
-  
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
 Specifies whether to roll back after the specified number of seconds or immediately.  
   
@@ -2607,51 +2580,16 @@ After you set a database option, the modification takes effect immediately.
   
 To change the default values for any one of the database options for all newly created databases, change the appropriate database option in the model database.  
   
-Not all database options use the WITH \<termination> clause or can be specified in combination with other options. The following table lists these options and their option and termination status.  
-  
-|Options category|Can be specified with other options|Can use the WITH \<termination> clause|  
-|----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|Yes|No|  
-|\<change_tracking_option>|Yes|Yes|  
-|\<cursor_option>|Yes|No|  
-|\<db_encryption_option>|Yes|No|  
-|\<db_update_option>|Yes|Yes|  
-|\<db_user_access_option>|Yes|Yes|  
-|\<delayed_durability_option>|Yes|Yes|  
-|\<parameterization_option>|Yes|Yes|  
-|ALLOW_SNAPSHOT_ISOLATION|No|No|  
-|READ_COMMITTED_SNAPSHOT|No|Yes|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Yes|Yes|  
-|DATE_CORRELATION_OPTIMIZATION|Yes|Yes|  
-|\<sql_option>|Yes|No|  
-|\<target_recovery_time_option>|No|Yes|  
-  
 ## Examples  
   
-### A. Setting options on a database  
-The following example sets the recovery model and data page verification options for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+### A. Setting the database to READ_ONLY  
+Changing the state of a database or filegroup to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to restricted access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.  
   
 ```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
-SET RECOVERY FULL PAGE_VERIFY CHECKSUM;  
-GO  
-  
-```  
-  
-### B. Setting the database to READ_ONLY  
-Changing the state of a database or filegroup to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `SINGLE_USER` mode to obtain exclusive access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.  
-  
-> [!NOTE]  
->  This example uses the termination option `WITH ROLLBACK IMMEDIATE` in the first `ALTER DATABASE` statement. All incomplete transactions will be rolled back and any other connections to the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database will be immediately disconnected.  
-  
-```sql  
-USE master;  
-GO  
-ALTER DATABASE AdventureWorks2012  
-SET SINGLE_USER  
-WITH ROLLBACK IMMEDIATE;  
+SET RESTRICTED_USER;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 SET READ_ONLY  
@@ -2662,7 +2600,7 @@ GO
   
 ```  
   
-### C. Enabling snapshot isolation on a database  
+### B. Enabling snapshot isolation on a database  
 The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
@@ -2688,7 +2626,7 @@ The result set shows that the snapshot isolation framework is enabled.
 |-------------------- |------------------------  |----------|  
 |AdventureWorks2012   |1                        | ON |  
   
-### D. Enabling, modifying, and disabling change tracking  
+### C. Enabling, modifying, and disabling change tracking  
 The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.  
   
 ```sql  
@@ -2711,7 +2649,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING = OFF;  
 ```  
   
-### E. Enabling the query store  
+### D. Enabling the query store  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 The following example enables the query store and configures query store parameters.  
@@ -2731,9 +2669,8 @@ SET QUERY_STORE = ON
 ## See Also  
 [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
 [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
-[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
 [Statistics](../../relational-databases/statistics/statistics.md)   
-[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
 [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   
 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   

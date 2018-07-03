@@ -671,7 +671,6 @@ ALTER DATABASE database_name
 {  
     ADD FILE <filespec> [ ,...n ]   
         [ TO FILEGROUP { filegroup_name } ]  
-  | ADD LOG FILE <filespec> [ ,...n ]   
   | REMOVE FILE logical_file_name   
   | MODIFY FILE <filespec>  
 }  
@@ -679,7 +678,6 @@ ALTER DATABASE database_name
 <filespec>::=   
 (  
     NAME = logical_file_name    
-    [ , NEWNAME = new_logical_name ]   
     [ , SIZE = size [ KB | MB | GB | TB ] ]   
     [ , MAXSIZE = { max_size [ KB | MB | GB | TB ] | UNLIMITED } ]   
     [ , FILEGROWTH = growth_increment [ KB | MB | GB | TB| % ] ]   
@@ -718,9 +716,6 @@ Adds a file to the database.
 TO FILEGROUP { *filegroup_name* }  
 Specifies the filegroup to which to add the specified file. To display the current filegroups and which filegroup is the current default, use the [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) catalog view.  
   
-ADD LOG FILE  
-Adds a log file be added to the specified database.  
-  
 REMOVE FILE *logical_file_name*  
 Removes the logical file description from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and deletes the physical file. The file cannot be removed unless it is empty.  
   
@@ -729,12 +724,6 @@ Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
   
 MODIFY FILE  
 Specifies the file that should be modified. Only one \<filespec> property can be changed at a time. NAME must always be specified in the \<filespec> to identify the file to be modified. If SIZE is specified, the new size must be larger than the current file size.  
-  
-To modify the logical name of a data file or log file, specify the logical file name to be renamed in the `NAME` clause, and specify the new logical name for the file in the `NEWNAME` clause. For example:  
-  
-```sql  
-MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )   
-```  
   
 **\<filespec>::=**  
   
@@ -753,7 +742,7 @@ Specifies a new logical name for the file.
 Is the name to replace the existing logical file name. The name must be unique within the database and comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). The name can be a character or Unicode constant, a regular identifier, or a delimited identifier.  
   
 SIZE *size*  
-Specifies the file size. SIZE does not apply to FILESTREAM filegroups.  
+Specifies the file size.   
   
 *size*  
 Is the size of the file.  
@@ -771,10 +760,10 @@ Specifies the maximum file size to which the file can grow.
 Is the maximum file size. The KB, MB, GB, and TB suffixes can be used to specify kilobytes, megabytes, gigabytes, or terabytes. The default is MB. Specify a whole number and do not include a decimal. If *max_size* is not specified, the file size will increase until the disk is full.  
   
 UNLIMITED  
-Specifies that the file grows until the disk is full. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a log file specified with unlimited growth has a maximum size of 2 TB, and a data file has a maximum size of 16 TB. There is no maximum size when this option is specified for a FILESTREAM container. It continues to grow until the disk is full.  
+Specifies that the file grows until the disk is full. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a log file specified with unlimited growth has a maximum size of 2 TB, and a data file has a maximum size of 16 TB. 
   
 FILEGROWTH *growth_increment*  
-Specifies the automatic growth increment of the file. The FILEGROWTH setting for a file cannot exceed the MAXSIZE setting. FILEGROWTH does not apply to FILESTREAM filegroups.  
+Specifies the automatic growth increment of the file. The FILEGROWTH setting for a file cannot exceed the MAXSIZE setting. 
   
 *growth_increment*  
 Is the amount of space added to the file every time new space is required.  
@@ -856,20 +845,6 @@ To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/databa
 You cannot add or remove a file while a `BACKUP` statement is running.  
   
 A maximum of 32,767 files and 32,767 filegroups can be specified for each database.  
-  
-The state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). 
-- The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. 
-- If a filegroup is offline, any try to access the filegroup by an SQL statement will fail with an error. When you build query plans for `SELECT` statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the `SELECT` statements fail. Additionally, any `INSERT`, `UPDATE`, or `DELETE` statement that modifies a table with any index in an offline filegroup will fail.  
-  
-## Initializing Files  
-By default, data and log files are initialized by filling the files with zeros when you perform one of the following operations:  
-  
-- Create a database.   
-- Add files to an existing database.   
-- Increase the size of an existing file.   
-- Restore a database or filegroup.   
-  
-Data files can be initialized instantaneously. This enables for fast execution of these file operations. For more information, see [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md). 
   
 ## Examples  
   
@@ -1003,7 +978,7 @@ GO
 ```  
   
 ### G. Adding a Filegroup Using ALTER DATABASE  
-The following example adds a `FILEGROUP` that contains the `FILESTREAM` clause to the `FileStreamPhotoDB` database.  
+The following example adds a `FILEGROUP` to the `MyDB` database.  
   
 ```sql  
 --Create and add a FILEGROUP.  
@@ -1072,7 +1047,7 @@ GO
 ```      
   
 ## See Also  
-[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
@@ -1082,4 +1057,3 @@ GO
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
-[Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)    

@@ -624,7 +624,7 @@ Provides the syntax and related information for the SET options of ALTER DATABAS
 ALTER DATABASE { database_name | CURRENT }  
 {  
     <file_and_filegroup_options>  
-  | SET <option_spec> [ ,...n ] [ WITH <termination> ] 
+  | SET <option_spec> [ ,...n ]  
   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }   
 }  
 [;] 
@@ -649,7 +649,6 @@ ALTER DATABASE { database_name | CURRENT }
   | <snapshot_option>  
   | <sql_option> 
   | <target_recovery_time_option> 
-  | <termination>  
   | <temporal_history_retention>  
 }  
 ```
@@ -663,15 +662,6 @@ Is the name of the database to be modified.
 CURRENT  
 
 Designates that the current database in use should be altered.  
-  
-MODIFY NAME **=***new_database_name*  
-
-Renames the database with the name specified as *new_database_name*. The following example changes the name of a database `db1` to `db2`:   
-
-```sql  
-ALTER DATABASE db1  
-    MODIFY Name = db2 ;  
-```    
   
 ## Remarks  
 

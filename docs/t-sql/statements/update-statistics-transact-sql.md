@@ -188,6 +188,7 @@ MAXDOP = *max_degree_of_parallelism*
 ## Limitations and Restrictions  
 * Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
 * The MAXDOP option is not compatible with STATS_STREAM, ROWCOUNT and PAGECOUNT options.
+* The MAXDOP option is limited by the Resource Governor workload group MAX_DOP setting, if used.
 
 ## Updating All Statistics with sp_updatestats  
  For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). For example, the following command calls sp_updatestats to update all statistics for the database.  

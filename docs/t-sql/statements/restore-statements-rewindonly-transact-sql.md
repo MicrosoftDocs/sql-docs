@@ -86,8 +86,6 @@ FROM <backup_device> [ ,...n ]
  NOUNLOAD  
  Specifies that the tape is not unloaded automatically from the tape drive after a RESTORE. NOUNLOAD remains set until UNLOAD is specified.  
   
- Specifies that the tape is not unloaded automatically from the tape drive after a RESTORE. NOUNLOAD remains set until UNLOAD is specified.  
-  
 ## General Remarks  
  RESTORE REWINDONLY is an alternative to RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. You can get a list of opened tape drives from the [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) dynamic management view.  
   

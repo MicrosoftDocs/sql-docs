@@ -419,12 +419,11 @@ On the client/development machine:
     SELECT \* FROM sys.configurations
         
         WHERE \[name\] = 'column encryption enclave type'
-    ```
+    ```   
 
-    
-    The query should return a row that looks like the following:
+    The query should return a row that looks like the following:  
 
-    | name                           | value | value\_in\_use |
+    | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 0     | 0              |
 
@@ -447,12 +446,12 @@ On the client/development machine:
     SELECT \* FROM sys.configurations
         
         WHERE \[name\] = 'column encryption enclave type'
-    ```
+    ```   
 
     
-    The query should return a row that looks like the following:
+    The query should return a row that looks like the following:  
 
-    | name                           | value | value\_in\_use |
+    | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 

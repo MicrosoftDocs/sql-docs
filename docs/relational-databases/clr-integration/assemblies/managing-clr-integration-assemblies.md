@@ -3,10 +3,9 @@ title: "Managing CLR Integration Assemblies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

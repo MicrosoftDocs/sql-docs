@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "SESSION_USER function"
 ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -18,9 +18,6 @@
 ## [CRYPTOGRAPHIC PROVIDER](alter-cryptographic-provider-transact-sql.md)  
 
 ## [DATABASE](alter-database-transact-sql.md)
-## [DATABASE (Azure SQL Database)](alter-database-azure-sql-database.md)  
-## [DATABASE (Azure SQL Data Warehouse)](alter-database-azure-sql-data-warehouse.md)  
-## [DATABASE (Parallel Data Warehouse)](alter-database-parallel-data-warehouse.md)  
 ## [DATABASE AUDIT SPECIFICATION](alter-database-audit-specification-transact-sql.md)
 ## [DATABASE compatibility level](alter-database-transact-sql-compatibility-level.md)  
 ## [DATABASE database mirroring](alter-database-transact-sql-database-mirroring.md)  
@@ -117,10 +114,7 @@
 ## [CREDENTIAL](create-credential-transact-sql.md)  
 ## [CRYPTOGRAPHIC PROVIDER](create-cryptographic-provider-transact-sql.md)  
 
-## [DATABASE](create-database-sql-server-transact-sql.md)  
-## [DATABASE (Azure SQL Database)](create-database-azure-sql-database.md)  
-## [DATABASE (Azure SQL Data Warehouse)](create-database-azure-sql-data-warehouse.md)  
-## [DATABASE (Parallel Data Warehouse)](create-database-parallel-data-warehouse.md)  
+## [DATABASE](create-database-transact-sql.md)  
 ## [DATABASE AUDIT SPECIFICATION](create-database-audit-specification-transact-sql.md)  
 ## [DATABASE ENCRYPTION KEY](create-database-encryption-key-transact-sql.md)  
 ## [DATABASE SCOPED CREDENTIAL](create-database-scoped-credential-transact-sql.md)  

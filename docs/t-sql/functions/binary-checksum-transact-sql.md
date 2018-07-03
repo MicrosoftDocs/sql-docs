@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "binary [SQL Server], checksum values"
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

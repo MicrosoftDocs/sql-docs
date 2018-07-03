@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "IDENT_SEED function"
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # IDENT_SEED (Transact-SQL)

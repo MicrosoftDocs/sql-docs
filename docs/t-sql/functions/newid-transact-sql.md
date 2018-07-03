@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "NEWID function"
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

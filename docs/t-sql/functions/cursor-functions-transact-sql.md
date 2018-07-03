@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "cursor functions"
 ms.assetid: 7d9daa10-4c50-4212-9400-42120222b2b8
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Cursor Functions (Transact-SQL)

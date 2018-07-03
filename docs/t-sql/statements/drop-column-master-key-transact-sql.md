@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.column_master_keys catalog view"
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP COLUMN MASTER KEY (Transact-SQL)

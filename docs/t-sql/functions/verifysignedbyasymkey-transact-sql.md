@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "digital signatures [SQL Server]"
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # VERIFYSIGNEDBYASYMKEY (Transact-SQL)

@@ -1,5 +1,5 @@
 ---
-title: "Import and consolidate assessment reports (Data Migration Assistant) | Microsoft Docs"
+title: "Import and consolidate Data Migration Assistant assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to import assessment reports from Data Migration Assistant into a SQL Server database, and to consolidate multiple reports
 ms.custom: ""
 ms.date: "04/16/2018"
@@ -20,7 +20,7 @@ ms.author: jtoland
 manager: craigg
 ---
 
-# Import and consolidate assessment reports (Data Migration Assistant)
+# Import and consolidate Data Migration Assistant assessment reports
 
 You can use the command line to perform migration assessments in unattended mode, starting with Data Migration Assistant v2.1. This feature helps you to run the assessments at scale. The assessment results in the form of a JSON or CSV file.
 

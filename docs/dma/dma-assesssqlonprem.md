@@ -20,7 +20,8 @@ ms.author: jtoland
 manager: craigg
 ---
 
-# Perform a SQL Server migration assessment
+# Perform a SQL Server migration assessment with Data Migration Assistant
+
 The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database, by using Data Migration Assistant.
 
 ## Create an assessment

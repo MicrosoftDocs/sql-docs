@@ -1,5 +1,5 @@
 ---
-title: "Configure settings (Data Migration Assistant) | Microsoft Docs"
+title: "Configure settings for Data Migration Assistant (SQL Server) | Microsoft Docs"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
 ms.custom: ""
 ms.date: "08/31/2017"

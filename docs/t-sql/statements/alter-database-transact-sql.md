@@ -608,13 +608,13 @@ Because of its length, the ALTER DATABASE syntax is separated into the multiple 
 ALTER DATABASE  
 The current topic provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatability level.  
   
-[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md&tabs=sqldbmi)  
+[ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) 
 Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
   
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md&tabs=sqldbmi)  
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)
 Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
   
-[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md&tabs=sqldbmi)  
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.  
 
 ## Syntax 

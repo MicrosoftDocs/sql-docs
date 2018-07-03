@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], reorganizing"
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER FULLTEXT CATALOG (Transact-SQL)

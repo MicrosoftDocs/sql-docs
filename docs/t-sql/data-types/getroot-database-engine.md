@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "GetRoot [Database Engine]"
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # GetRoot (Database Engine)

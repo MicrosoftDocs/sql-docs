@@ -3,18 +3,14 @@ title: "Add a Root Node to JSON Output with the ROOT Option (SQL Server) | Micro
 ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ROOT (FOR JSON)"
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
-caps.latest.revision: 16
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl

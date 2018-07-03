@@ -6,7 +6,6 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "dbe-udf"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "CREATE FUNCTION statement"
   - "valid statements [SQL Server]"
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg

@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "size [SQL Server], timestamp"
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 caps.latest.revision: 57
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # rowversion (Transact-SQL)

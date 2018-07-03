@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "PWDCOMPARE function [Transact-SQL]"
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # PWDCOMPARE (Transact-SQL)

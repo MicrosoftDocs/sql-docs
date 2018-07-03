@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "names [SQL Server], collations"
 ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "varchar data type"
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

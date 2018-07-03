@@ -3,18 +3,15 @@ title: "Table-Valued Parameters (SQL Server Native Client) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, table-valued parameters"
   - "table-valued parameters (SQL Server Native Client)"
 ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

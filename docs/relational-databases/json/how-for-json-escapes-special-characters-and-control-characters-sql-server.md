@@ -3,18 +3,14 @@ title: "How FOR JSON escapes special characters and control characters (SQL Serv
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON, special characters"
 ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
-caps.latest.revision: 16
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl

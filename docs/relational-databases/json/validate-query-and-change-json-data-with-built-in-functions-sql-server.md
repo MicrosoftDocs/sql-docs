@@ -3,19 +3,15 @@ title: "Validate, Query, and Change JSON Data with Built-in Functions (SQL Serve
 ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, built-in functions"
   - "functions (JSON)"
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
-caps.latest.revision: 21
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl

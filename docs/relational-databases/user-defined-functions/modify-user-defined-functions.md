@@ -8,7 +8,6 @@ ms.component: "udf"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-udf"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "removing event notifications"
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP EVENT NOTIFICATION (Transact-SQL)

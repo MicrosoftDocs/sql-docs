@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "inserting data"
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 caps.latest.revision: 76
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # MERGE (Transact-SQL)

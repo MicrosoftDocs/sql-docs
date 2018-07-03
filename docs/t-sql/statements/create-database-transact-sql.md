@@ -1211,7 +1211,6 @@ The following are `CREATE DATABASE` limitations:
 To create a database, a login must be one of the following: 
   
 - The server-level principal login  
-  
 - The Azure AD administrator for the local Azure SQL Server  
 - A login that is a member of the `dbmanager` database role    
   

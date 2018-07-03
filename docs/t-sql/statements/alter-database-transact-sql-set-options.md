@@ -238,7 +238,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
+  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }   
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -1002,7 +1002,7 @@ SET ARITHABORT must be set to ON when you create or make changes to indexes on c
   
 The status of this option can be determined by examining the is_arithabort_on column in the sys.databases catalog view or the IsArithmeticAbortEnabled property of the DATABASEPROPERTYEX function.  
   
-COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
+COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }   
 For more information, see [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1375,7 +1375,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 100 | 110 | 120 | 130 | 140 }  
+  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -1769,7 +1769,7 @@ SET ARITHABORT must be set to ON when you create or make changes to indexes on c
   
 The status of this option can be determined by examining the is_arithabort_on column in the sys.databases catalog view or the IsArithmeticAbortEnabled property of the DATABASEPROPERTYEX function.  
   
-COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
+COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
 For more information, see [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1829,8 +1829,6 @@ Only direct recursive firing of AFTER triggers is not allowed. To also disable i
 The status of this option can be determined by examining the is_recursive_triggers_on column in the sys.databases catalog view or the IsRecursiveTriggersEnabled property of the DATABASEPROPERTYEX function.  
 
 **\<target_recovery_time_option> ::=**  
-  
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.  
   
@@ -1955,7 +1953,6 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### D. Enabling the query store  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 The following example enables the query store and configures query store parameters.  
   
@@ -2099,7 +2096,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 100 | 110 | 120 | 130 | 140 }  
+  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -2490,7 +2487,7 @@ SET ARITHABORT must be set to ON when you create or make changes to indexes on c
   
 The status of this option can be determined by examining the is_arithabort_on column in the sys.databases catalog view or the IsArithmeticAbortEnabled property of the DATABASEPROPERTYEX function.  
   
-COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
+COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
 For more information, see [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -2550,8 +2547,6 @@ Only direct recursive firing of AFTER triggers is not allowed. To also disable i
 The status of this option can be determined by examining the is_recursive_triggers_on column in the sys.databases catalog view or the IsRecursiveTriggersEnabled property of the DATABASEPROPERTYEX function.  
 
 **\<target_recovery_time_option> ::=**  
-  
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 Specifies the frequency of indirect checkpoints on a per-database basis. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the default value for new databases is 1 minute, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.  
   
@@ -2650,7 +2645,6 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### D. Enabling the query store  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 The following example enables the query store and configures query store parameters.  
   

@@ -282,7 +282,7 @@ ALTER DATABASE { database_name | CURRENT }
     MODIFY NAME = new_database_name  
   | MODIFY ( <edition_options> [, ... n] ) 
   | SET { <option_spec> [ ,... n ] WITH <termination>} 
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }   
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
   | ADD SECONDARY ON SERVER <partner_server_name>  
     [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
@@ -625,7 +625,7 @@ ALTER DATABASE { database_name | CURRENT }
 {  
     <file_and_filegroup_options>  
   | SET <option_spec> [ ,...n ]  
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }   
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
 }  
 [;] 
 

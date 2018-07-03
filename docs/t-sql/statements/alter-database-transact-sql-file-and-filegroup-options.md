@@ -894,31 +894,7 @@ GO
   
 ```  
   
-### C. Adding two log files to a database  
-The following example adds two 5-MB log files to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
-  
-```sql  
-USE master;  
-GO  
-ALTER DATABASE AdventureWorks2012   
-ADD LOG FILE   
-(  
-    NAME = test1log2,  
-    SIZE = 5MB,  
-    MAXSIZE = 100MB,  
-    FILEGROWTH = 5MB  
-),  
-(  
-    NAME = test1log3,  
-    SIZE = 5MB,  
-    MAXSIZE = 100MB,  
-    FILEGROWTH = 5MB  
-);  
-GO  
-  
-```  
-  
-### D. Removing a file from a database  
+### C. Removing a file from a database  
 The following example removes one of the files added in example B.  
   
 ```sql  
@@ -929,7 +905,7 @@ REMOVE FILE test1dat4;
 GO  
 ```  
   
-### E. Modifying a file  
+### D. Modifying a file  
 The following example increases the size of one of the files added in example B.  
 The ALTER DATABASE with MODIFY FILE command can only make a file size bigger, so if you need to make the file size smaller you need to use DBCC SHRINKFILE.  
   
@@ -963,7 +939,7 @@ SIZE = 200MB);
 GO
 ```
 
-### F. Making a filegroup the default  
+### E. Making a filegroup the default  
 The following example makes the `Test1FG1` filegroup created in example B the default filegroup. Then, the default filegroup is reset to the `PRIMARY` filegroup. Note that `PRIMARY` must be delimited by brackets or quotation marks.  
   
 ```sql  
@@ -977,7 +953,7 @@ MODIFY FILEGROUP [PRIMARY] DEFAULT;
 GO  
 ```  
   
-### G. Adding a Filegroup Using ALTER DATABASE  
+### F. Adding a Filegroup Using ALTER DATABASE  
 The following example adds a `FILEGROUP` to the `MyDB` database.  
   
 ```sql  
@@ -996,7 +972,7 @@ TO FILEGROUP NewFG;
 GO  
 ```      
         
-### H. Change filegroup so that when a file in the filegroup meets the autogrow threshold, all files in the filegroup grow
+### G. Change filegroup so that when a file in the filegroup meets the autogrow threshold, all files in the filegroup grow
  The following example generates the required `ALTER DATABASE` statements to modify read-write filegroups with the `AUTOGROW_ALL_FILES` setting.  
   
 ```sql  

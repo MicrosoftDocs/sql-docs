@@ -243,7 +243,17 @@ USE AdventureWorks2012;
 GRANT CREATE VIEW TO CarmineEs WITH GRANT OPTION;  
 GO  
 ```  
-  
+
+### D. Granting CONTROL permission to a database user.
+ The following example grants `CONTROL` permission on the `AdventureWorks2012` database to the database user `Sarah`. The user must exist in the database and the context must be set to the database.
+ 
+```  
+USE AdventureWorks2012;  
+GRANT CONTROL ON DATABASE:AdventureWorks2012 TO Sarah;  
+GO  
+```  
+
+
 ## See Also  
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   

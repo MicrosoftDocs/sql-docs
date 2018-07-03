@@ -301,20 +301,20 @@ Limitations that apply to the preview and may be lifted later:
     
       - SQL Server vNext CTP 2.0 or later
 
-> [!NOTE]
-> During the preview (for testing/prototyping), it is fine to use
-> Always Encrypted with secure enclaves in a SQL Server instance inside
-> a virtual machine. However, for production, the recommended TPM
-> attestation mode requires SQL Server runs on a physical machine.
+   > [!NOTE]
+   > During the preview (for testing/prototyping), it is fine to use
+   > Always Encrypted with secure enclaves in a SQL Server instance inside
+   > a virtual machine. However, for production, the recommended TPM
+   > attestation mode requires SQL Server runs on a physical machine.
 
   - HGS machine(s).
     
       - See Configuring HGS Attestation.pdf for details.
 
-> [!NOTE]
-> A single HGS machine is sufficient during the preview
-> (testing/prototyping). For production, a Windows failover cluster with
-> 3 machines is strongly recommended.
+   > [!NOTE]
+   > A single HGS machine is sufficient during the preview
+   > (testing/prototyping). For production, a Windows failover cluster with
+   > 3 machines is strongly recommended.
 
   - Client/development machine.
     
@@ -342,9 +342,10 @@ Limitations that apply to the preview and may be lifted later:
 7.  Test your rich queries in SSMS.
 
 8.  Develop your .NET application using Always Encrypted with secure
-    enclaves.
+    enclaves.  
 
-  - 
+
+
 ## How-to Guides
 
 ## Configure HGS attestation
@@ -416,12 +417,12 @@ On the client/development machine:
     
     
     ```sql
-    SELECT \* FROM sys.configurations
+    SELECT * FROM sys.configurations
         
-        WHERE \[name\] = 'column encryption enclave type'
+        WHERE [name] = 'column encryption enclave type'
     ```   
 
-    The query should return a row that looks like the following:  
+The query should return a row that looks like the following:  
 
     | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -443,13 +444,13 @@ On the client/development machine:
     
 
     ```sql
-    SELECT \* FROM sys.configurations
+    SELECT * FROM sys.configurations
         
-        WHERE \[name\] = 'column encryption enclave type'
+        WHERE [name] = 'column encryption enclave type'
     ```   
 
     
-    The query should return a row that looks like the following:  
+The query should return a row that looks like the following:  
 
     | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -962,15 +963,15 @@ encryption).
 
 
 ```sql
-ALTER TABLE \[dbo\].\[Employees\]
+ALTER TABLE [dbo].[Employees]
 
-ADD \[BirthDate\] \[Date\] ENCRYPTED WITH (
+ADD [BirthDate] [Date] ENCRYPTED WITH (
 
-COLUMN\_ENCRYPTION\_KEY = \[CEK1\],
+COLUMN_ENCRYPTION_KEY = [CEK1],
 
-ENCRYPTION\_TYPE = Randomized,
+ENCRYPTION_TYPE = Randomized,
 
-ALGORITHM = 'AEAD\_AES\_256\_CBC\_HMAC\_SHA\_256') NULL
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
 ```
 
 

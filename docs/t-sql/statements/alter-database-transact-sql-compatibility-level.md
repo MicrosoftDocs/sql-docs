@@ -26,7 +26,8 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
+manager: craigg'
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Transact-SQL) Compatibility Level
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

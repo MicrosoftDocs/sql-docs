@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "smallint data type"
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

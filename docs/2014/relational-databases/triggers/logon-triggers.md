@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -15,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "triggers [SQL Server], logon"
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg

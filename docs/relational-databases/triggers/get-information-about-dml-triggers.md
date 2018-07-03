@@ -3,12 +3,9 @@ title: "Get Information About DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-dml"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "status information [SQL Server], triggers"
   - "DML triggers, viewing"
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

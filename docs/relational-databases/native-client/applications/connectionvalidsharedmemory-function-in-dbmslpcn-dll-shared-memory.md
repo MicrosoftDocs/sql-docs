@@ -3,12 +3,9 @@ title: "ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory | Mic
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|applications"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 6ae35826-7d75-4542-b686-5f79316b6157

@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "deleting DML triggers"
   - "DML triggers, removing"
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg

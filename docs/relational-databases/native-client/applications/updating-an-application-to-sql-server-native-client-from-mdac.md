@@ -3,12 +3,9 @@ title: "Updating an Application to SQL Server Native Client from MDAC | Microsof
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|applications"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], vs. MDAC"
   - "SQL Server Native Client, updating applications"
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg

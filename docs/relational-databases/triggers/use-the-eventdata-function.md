@@ -3,19 +3,15 @@ title: "Use the EVENTDATA Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-ddl"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "EVENTDATA function"
   - "DDL triggers, EVENTDATA function"
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

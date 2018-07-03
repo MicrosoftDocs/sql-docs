@@ -6,8 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: native-client  - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 

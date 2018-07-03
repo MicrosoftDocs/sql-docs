@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: e33f3809-0175-4d83-b1b7-b29d23238846

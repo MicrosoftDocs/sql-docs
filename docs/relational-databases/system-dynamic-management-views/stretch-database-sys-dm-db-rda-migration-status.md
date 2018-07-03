@@ -5,8 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -19,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_rda_migration_status dynamic management view"
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

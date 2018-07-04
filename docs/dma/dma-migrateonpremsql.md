@@ -1,5 +1,6 @@
 ---
-title: "Migrate on-premises SQL Server (Data Migration Assistant) | Microsoft Docs"
+title: "Migrate an on-premises SQL Server with Data Migration Assistant | Microsoft Docs"
+description: Learn how to use Data Migration Assistant to migrate an on-premises SQL Server to another SQL Server or to Azure SQL Database
 ms.custom: ""
 ms.date: "09/01/2017"
 ms.prod: sql
@@ -19,13 +20,11 @@ ms.author: jtoland
 manager: craigg
 ---
 
-# Migrate on-premises SQL Server using Data Migration Assistant
+# Migrate an on-premises SQL Server with Data Migration Assistant
 
-This article provides step-by-step instructions for migrating SQL Server using Data Migration Assistant.
+This article provides step-by-step instructions for migrating SQL Server using Data Migration Assistant. Data Migration Assistant provides seamless assessments and migrations to modern on-premises SQL Server and SQL Azure VM data platforms, and to Azure SQL Database.  
 
-Data Migration Assistant provides seamless assessments and migrations to modern on-premises SQL Server and SQL Azure VM data platforms.  
-
-Complete the following tasks to perform the migration.
+To perform the migration, complete the following tasks .
 
 - [Create a new migration project](#create-a-new-migration-project)
 - [Specify the source and target](#specify-source-and-target)
@@ -67,12 +66,7 @@ Complete the following tasks to perform the migration.
 1. Use the migration settings on the right side of the page to set the migration options that are applied to the databases, by doing the following.
 
    > [!NOTE]
-   > You can apply the migration settings to all the
-   > databases that you're migrating, by selecting the
-   > server in the left pane. You can also configure an
-   > individual database with specific settings by
-   > selecting the database in the left pane.
-
+   > You can apply the migration settings to all the databases that you're migrating, by selecting the server in the left pane. You can also configure an individual database with specific settings by selecting the database in the left pane.
 
  1. Specify the **Shared location accessible by source and target SQL servers for backup operation**. Make sure that the service account running the source SQL Server instance has write privileges on the shared location and the target service account has read privileges on the shared location.
 
@@ -97,8 +91,7 @@ Data Migration Assistant performs validations on the backup folders, data and lo
 1. Select specific logins for migration.
 
    > [!IMPORTANT]
-   > Make sure to select the logins that are mapped to one or more users
-   > in the databases selected for migration.   
+   > Make sure to select the logins that are mapped to one or more users in the databases selected for migration.   
 
    By default, all the SQL Server and Windows logins that qualify for migration are selected for migration.
 

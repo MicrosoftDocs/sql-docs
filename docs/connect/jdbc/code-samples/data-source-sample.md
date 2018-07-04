@@ -45,44 +45,36 @@ import java.sql.SQLException;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class ConnectDS {  
-  
-   public static void main(String[] args) throws SQLException {  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      CallableStatement cstmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-         // Establish the connection.   
-         SQLServerDataSource ds = new SQLServerDataSource();  
-         ds.setUser("<user>");  
-         ds.setPassword("<password>");  
-         ds.setServerName("<server>");  
-         ds.setPortNumber(1433);   
-         ds.setDatabaseName("AdventureWorks");  
-         con = ds.getConnection();  
-  
-         // Execute a stored procedure that returns some data.  
-         cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");  
-         cstmt.setInt(1, 50);  
-         rs = cstmt.executeQuery();  
-  
-         // Iterate through the data in the result set and display it.  
-         while (rs.next()) {  
-            System.out.println("EMPLOYEE: " + rs.getString("LastName") +   
-               ", " + rs.getString("FirstName"));  
-            System.out.println("MANAGER: " + rs.getString("ManagerLastName") +   
-               ", " + rs.getString("ManagerFirstName"));  
-            System.out.println();  
-         }  
-      }  
-      finally {  
-         if (cstmt != null) cstmt.close(); 
-         if (con != null) con.close();
-      }  
-   }  
+public class ConnectDS {
+
+    public static void main(String[] args) {
+
+        // Create datasource.
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setUser("<user>");
+        ds.setPassword("<password>");
+        ds.setServerName("<server>");
+        ds.setPortNumber(<port>);
+        ds.setDatabaseName("AdventureWorks");
+
+        try (Connection con = ds.getConnection(); 
+                CallableStatement cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");) {
+            // Execute a stored procedure that returns some data.
+            cstmt.setInt(1, 50);
+            ResultSet rs = cstmt.executeQuery();
+
+            // Iterate through the data in the result set and display it.
+            while (rs.next()) {
+                System.out.println("EMPLOYEE: " + rs.getString("LastName") + ", " + rs.getString("FirstName"));
+                System.out.println("MANAGER: " + rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));
+                System.out.println();
+            }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 ```  
   

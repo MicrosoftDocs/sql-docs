@@ -45,10 +45,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ConnectURL {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:1433;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
             String SQL = "SELECT TOP 10 * FROM Person.Contact";
@@ -58,6 +58,10 @@ public class ConnectURL {
             while (rs.next()) {
                 System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));
             }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

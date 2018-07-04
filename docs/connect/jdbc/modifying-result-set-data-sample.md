@@ -48,10 +48,10 @@ import java.sql.Statement;
 
 public class UpdateRS {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:1433;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);) {
@@ -85,6 +85,10 @@ public class UpdateRS {
             rs.first();
             rs.deleteRow();
             System.out.println("ROW DELETED");
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 

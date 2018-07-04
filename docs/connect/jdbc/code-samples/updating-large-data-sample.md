@@ -20,7 +20,7 @@ manager: craigg
 
   This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to update a large column in a database.  
   
- The code file for this sample is named updateLargeData.java, and can be found in the following location:  
+ The code file for this sample is named UpdateLargeData.java, and can be found in the following location:  
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\adaptive  
   

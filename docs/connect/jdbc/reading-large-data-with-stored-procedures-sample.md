@@ -20,7 +20,7 @@ manager: craigg
 
   This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve a large OUT parameter from a stored procedure.  
   
- The code file for this sample is named executeStoredProcedure.java, and can be found in the following location:  
+ The code file for this sample is named ExecuteStoredProcedure.java, and can be found in the following location:  
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\adaptive  
   

@@ -27,7 +27,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  In order to use the SAX parser API, you must import the standard SAX implementation from the javax.xml package.  
   
- The code file for this sample is named sqlxmlExample.java, and it can be found in the following location:  
+ The code file for this sample is named SQLXMLExample.java, and it can be found in the following location:  
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\datatypes  
   

@@ -44,15 +44,19 @@ import java.sql.Statement;
 
 public class RetrieveRS {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:1433;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
             String SQL = "SELECT * FROM Production.Product;";
             ResultSet rs = stmt.executeQuery(SQL);
             displayRow("PRODUCTS", rs);
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 

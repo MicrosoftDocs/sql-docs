@@ -56,10 +56,10 @@ import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 
 public class CacheRS {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:1433;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement(SQLServerResultSet.TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, SQLServerResultSet.CONCUR_READ_ONLY);) {
@@ -90,6 +90,10 @@ public class CacheRS {
             rs = stmt.executeQuery(SQL);
             timerTest(0, rs);
             rs.close();
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 

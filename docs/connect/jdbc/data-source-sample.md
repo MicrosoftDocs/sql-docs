@@ -1,7 +1,7 @@
 ---
 title: "Data Source Sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/03/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -20,15 +20,15 @@ manager: craigg
 
   This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database by using a data source object. It also demonstrates how to retrieve data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database by using a stored procedure.  
   
- The code file for this sample is named connectDS.java, and it can be found in the following location:  
+ The code file for this sample is named ConnectDS.java, and it can be found in the following location:  
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\connections  
   
 ## Requirements  
- To run this sample application, you must set the classpath to include the sqljdbc.jar file or sqljdbc4.jar file. If the classpath is missing an entry for sqljdbc.jar or sqljdbc4.jar, the sample application will throw the common "Class not found" exception. You will also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).  
+ To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You will also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides sqljdbc.jar and sqljdbc4.jar class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## Example  
  In the following example, the sample code sets various connection properties by using setter methods of the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) object, and then calls the [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) method of the SQLServerDataSource object to return a [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
@@ -38,12 +38,16 @@ manager: craigg
  Finally, the sample uses the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object returned from the executeQuery method to iterate through the results returned by the stored procedure.  
   
 ```java
-import java.sql.*;  
-import com.microsoft.sqlserver.jdbc.*;  
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class ConnectDS {  
   
-public class connectDS {  
-  
-   public static void main(String[] args) {  
+   public static void main(String[] args) throws SQLException {  
   
       // Declare the JDBC objects.  
       Connection con = null;  
@@ -53,9 +57,9 @@ public class connectDS {
       try {  
          // Establish the connection.   
          SQLServerDataSource ds = new SQLServerDataSource();  
-         ds.setUser("UserName");  
-         ds.setPassword("*****");  
-         ds.setServerName("localhost");  
+         ds.setUser("<user>");  
+         ds.setPassword("<password>");  
+         ds.setServerName("<server>");  
          ds.setPortNumber(1433);   
          ds.setDatabaseName("AdventureWorks");  
          con = ds.getConnection();  
@@ -74,19 +78,12 @@ public class connectDS {
             System.out.println();  
          }  
       }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
       finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (cstmt != null) try { cstmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-         System.exit(1);  
+         if (cstmt != null) cstmt.close(); 
+         if (con != null) con.close();
       }  
    }  
-}  
+}
 ```  
   
 ## See Also  

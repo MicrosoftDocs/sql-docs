@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/06/2018"

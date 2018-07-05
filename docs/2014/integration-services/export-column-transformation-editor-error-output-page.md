@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Export Column Transformation Editor"
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Export Column Transformation Editor (Error Output Page)

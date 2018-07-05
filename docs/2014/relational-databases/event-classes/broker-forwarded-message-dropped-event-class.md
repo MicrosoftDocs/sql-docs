@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Broker:Forwarded Message Dropped event class"
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Broker:Forwarded Message Dropped Event Class

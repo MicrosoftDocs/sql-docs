@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Publisher Properties dialog box"
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Publisher Properties - Publisher, General

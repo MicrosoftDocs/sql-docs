@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "InheritedBinding data type"
 ms.assetid: a61f58c5-62d6-44e8-a02f-db2b17d1f256
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # InheritedBinding Data Type (ASSL)
   Defines a derived data type that indicates that a [MeasureGroupAttribute](measuregroupattribute-data-type-assl.md) element inherits its bindings from the attribute.  

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "calculating table size"
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 39
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Estimate the Size of a Nonclustered Index

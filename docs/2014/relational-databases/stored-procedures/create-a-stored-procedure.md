@@ -3,10 +3,9 @@ title: "Create a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-stored-procs"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,9 +13,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], creating"
   - "creating stored procedures"
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
-caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Stored Procedure

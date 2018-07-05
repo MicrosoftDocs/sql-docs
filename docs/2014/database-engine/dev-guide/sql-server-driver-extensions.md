@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ODBC, driver extensions"
 ms.assetid: 1043bc93-965d-4939-bd1c-21e9d8d3e9ac
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Driver Extensions

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SecureConnectionLevel property"
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 caps.latest.revision: 19
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting)
   Returns the secure connection level specified in the RSReportServer.config file. Read-only.  

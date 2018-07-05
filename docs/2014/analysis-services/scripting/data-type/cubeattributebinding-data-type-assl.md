@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubeAttributeBinding data type"
 ms.assetid: 04e3d619-1de8-4fc8-a089-9a44ac0f930c
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubeAttributeBinding Data Type (ASSL)
   Defines a derived data type that represents the binding of an attribute in a cube dimension to either an action or a mining structure column.  

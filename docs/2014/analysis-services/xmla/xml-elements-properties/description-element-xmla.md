@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Description element"
 ms.assetid: db24bb51-3d75-49f9-82be-3380b2de1622
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Description Element (XMLA)
   Contains the description of the parent [Error](error-element-xmla.md) element.  

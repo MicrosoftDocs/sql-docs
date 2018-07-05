@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Type element"
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Type Element (Action) (ASSL)
   Contains the type of the [Action](../objects/action-element-assl.md) element.  

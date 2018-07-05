@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "application domains [CLR integration]"
 ms.assetid: 54ee904e-e21a-4ee7-b4ad-a6f6f71bd473
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Application Domains and CLR Integration Security

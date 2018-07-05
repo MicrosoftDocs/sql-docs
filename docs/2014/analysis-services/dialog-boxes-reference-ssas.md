@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c7d1059a-3133-4884-b2f0-518febfc56ad
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Dialog Boxes Reference (SSAS)
   To learn about the dialog boxes in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], see the following topics.  

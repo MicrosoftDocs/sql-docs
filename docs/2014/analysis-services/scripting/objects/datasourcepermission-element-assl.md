@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "DataSourcePermission element"
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSourcePermission Element (ASSL)
   Defines the default permissions in a [DataSource](../data-type/datasource-data-type-assl.md) data type for a specific [Role](role-element-assl.md) element.  

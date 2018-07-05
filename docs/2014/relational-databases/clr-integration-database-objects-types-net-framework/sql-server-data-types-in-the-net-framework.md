@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -21,8 +19,8 @@ helpviewer_keywords:
   - "mapping data types [CLR integration]"
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQL Server Data Types in the .NET Framework

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "truncate options [Integration Services]"
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Data Truncation (SSIS)

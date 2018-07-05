@@ -9,9 +9,9 @@ ms.technology:
   - "analysis-services"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # UI Designers and Dialogs for Tabular Analysis
 

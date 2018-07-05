@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "XML Task Editor"
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # XML Task Editor (General Page)

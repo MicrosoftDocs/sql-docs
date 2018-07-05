@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Files element"
 ms.assetid: 8a1327cb-1f60-42a7-b8ef-213d45a63e55
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Files Element (ASSL)
   Contains the collection of [File](../objects/file-element-assl.md) elements that make up a [ClrAssembly](../data-type/assembly-data-type-assl.md) element.  

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset"
 ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_MEASUREGROUP_DIMENSIONS Rowset
   Enumerates the dimensions of measure groups.  

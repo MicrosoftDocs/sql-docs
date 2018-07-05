@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CreatedTimestamp element"
 ms.assetid: 35f5dd33-ea82-4be3-a117-69136aa9d1a4
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CreatedTimestamp Element (ASSL)
   Contains the read-only creation timestamp of the parent element.  

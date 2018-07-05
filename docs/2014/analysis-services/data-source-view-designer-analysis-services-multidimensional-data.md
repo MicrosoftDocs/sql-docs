@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Data Source View Designer"
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Source View Designer (Analysis Services - Multidimensional Data)
   A data source view (DSV) is a logical view of an external relational data source used to create cubes and dimensions in a multidimensional model.  

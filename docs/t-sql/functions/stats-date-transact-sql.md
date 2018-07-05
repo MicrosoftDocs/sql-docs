@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "stats update date"
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

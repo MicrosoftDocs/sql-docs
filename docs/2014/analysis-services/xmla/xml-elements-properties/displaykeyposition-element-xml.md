@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 345a24e6-186c-4570-baf2-7bfe9b7b4cc1
 caps.latest.revision: 6
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DisplayKeyPosition Element (XML)
   Contains information about the position of the element in a collection of elements.  

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - ".NET Framework [SQLXML], accessing SQLXML functionality"
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Accessing SQLXML Functionality in the .NET Environment

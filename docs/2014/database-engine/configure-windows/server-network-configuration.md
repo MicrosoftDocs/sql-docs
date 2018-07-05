@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "server configuration [SQL Server]"
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: 47
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Server Network Configuration

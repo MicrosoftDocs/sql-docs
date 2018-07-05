@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], upgrade issues"
 ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
 caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # ISAPI filters detected on the report server site (Upgrade Advisor)

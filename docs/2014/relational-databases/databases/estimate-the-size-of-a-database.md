@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "designing databases [SQL Server], estimating size"
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Estimate the Size of a Database

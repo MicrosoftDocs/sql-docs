@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "data flow components [Integration Services], transformation components"
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Developing a Custom Transformation Component with Asynchronous Outputs

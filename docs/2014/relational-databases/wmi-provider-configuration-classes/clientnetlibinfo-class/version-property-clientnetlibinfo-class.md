@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Version property"
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Version Property (ClientNetLibInfo Class)

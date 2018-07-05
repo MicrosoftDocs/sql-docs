@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Partition element"
 ms.assetid: 40020840-1bb7-478f-9017-1a30342ac4c6
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Partition Element (ASSL)
   Defines a partition of a [MeasureGroup](group-element-assl.md) element or a partition binding in an out-of-line [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) element.  

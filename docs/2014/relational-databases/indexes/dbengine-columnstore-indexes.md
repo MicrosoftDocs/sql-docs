@@ -5,12 +5,11 @@ ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "barbkess"
-ms.author: "barbkess"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Columnstore Indexes 

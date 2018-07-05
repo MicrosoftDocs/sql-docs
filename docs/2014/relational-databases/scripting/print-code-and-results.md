@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "printing code and text"
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Print Code and Results

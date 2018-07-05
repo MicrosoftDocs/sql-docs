@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "HierarchyUniqueNameStyle element"
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # HierarchyUniqueNameStyle Element (ASSL)
   Determines how unique names are generated for hierarchies that are contained within the [CubeDimension](../data-type/dimension-data-type-assl.md).  

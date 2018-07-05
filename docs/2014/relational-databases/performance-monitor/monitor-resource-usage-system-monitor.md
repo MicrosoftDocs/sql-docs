@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "server performance [SQL Server], resource usage"
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Monitor Resource Usage (System Monitor)

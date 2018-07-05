@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "managed code [WMI]"
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Sample: Using the WMI Event Provider with the .NET Framework

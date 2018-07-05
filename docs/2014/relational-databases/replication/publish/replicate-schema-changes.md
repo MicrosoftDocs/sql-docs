@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "schemas [SQL Server replication], replicating changes"
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replicate Schema Changes

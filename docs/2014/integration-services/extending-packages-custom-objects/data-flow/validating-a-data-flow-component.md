@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "validation [Integration Services]"
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Validating a Data Flow Component

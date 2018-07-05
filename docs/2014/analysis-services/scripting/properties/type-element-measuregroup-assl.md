@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Type element"
 ms.assetid: 3a584baf-36bb-4e1d-9128-c4758c0b8f06
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Type Element (MeasureGroup) (ASSL)
   Specifies the type of the [MeasureGroup](../objects/group-element-assl.md).  

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SetFlag method"
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SetFlag Method (ServerNetworkProtocolProperty Class)

@@ -3,12 +3,9 @@ title: "Recompile a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "stored-procedures"
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stored-Procs"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "recompiling stored procedures"
   - "stored procedures [SQL Server], recompiling"
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: 37
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

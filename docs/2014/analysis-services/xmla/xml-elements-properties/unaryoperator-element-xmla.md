@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "UnaryOperator element"
 ms.assetid: 4dc9cfbe-6f8b-42bc-8d3a-42f48ca5d299
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # UnaryOperator Element (XMLA)
   Contains the unary operator for an attribute member represented by the parent [Attribute](attribute-element-xmla.md) element.  

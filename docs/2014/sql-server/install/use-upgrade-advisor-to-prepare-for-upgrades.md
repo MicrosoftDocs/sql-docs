@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "analyzing installations for upgrading [SQL Server]"
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Use Upgrade Advisor to Prepare for Upgrades

@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "mining models [Analysis Services], algorithms"
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # View or Change Algorithm Parameters
   You can change the parameters provided with the algorithms that you use to build data mining models to customize the results of the model.  

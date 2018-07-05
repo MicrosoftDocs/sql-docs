@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "refreshing data"
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Refresh Data in Replication Monitor

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "keywords [SQL Server]"
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # After upgrade, new reserved keywords cannot be used as identifiers

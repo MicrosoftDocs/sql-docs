@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "full path DLL name registration [SQL Server]"
 ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Use the full path to register extended stored procedure DLL names

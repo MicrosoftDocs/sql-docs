@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "WITH CHECK OPTION clause"
 ms.assetid: 1b9581d0-bad9-43e0-b8fc-f32d8a8a04ca
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # WITH CHECK OPTION is not supported in views that contain TOP in 90 or later compatibility modes

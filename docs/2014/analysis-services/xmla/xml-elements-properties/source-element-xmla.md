@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Source element"
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
 caps.latest.revision: 17
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Source Element (XMLA)
   Represents a source partition to be merged during a [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) command.  

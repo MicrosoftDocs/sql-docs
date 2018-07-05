@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "nontransactional batches"
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Performing Batch Operations (XMLA)
   You can use the [Batch](../xmla/xml-elements-commands/batch-element-xmla.md) command in XML for Analysis (XMLA) to run multiple XMLA commands using a single XMLA [Execute](../xmla/xml-elements-methods-execute.md) method. You can run multiple commands contained in the `Batch` command either as a single transaction or in individual transactions for each command, in serial or in parallel. You can also specify out-of-line bindings and other properties in the `Batch` command for processing multiple [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects.  

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], errors"
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Error Handling in Data

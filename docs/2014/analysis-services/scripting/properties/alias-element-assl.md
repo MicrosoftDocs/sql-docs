@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Alias element"
 ms.assetid: 674fdb06-e33c-4f35-bd6a-d9bbb13ececa
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Alias Element (ASSL)
   Defines an alias for an [Account](../objects/account-element-assl.md) element.  

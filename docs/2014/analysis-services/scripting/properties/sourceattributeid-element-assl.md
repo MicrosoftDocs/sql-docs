@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "SourceAttributeID element"
 ms.assetid: 8973eb62-6142-4ce2-ad42-c8be2b43c04f
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SourceAttributeID Element (ASSL)
   Contains the identifier (ID) of the source attribute on which the [Level](../objects/level-element-assl.md) element is based.  

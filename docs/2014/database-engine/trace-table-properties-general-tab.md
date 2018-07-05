@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Trace Table Properties dialog box"
 ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Trace Table Properties (General Tab)

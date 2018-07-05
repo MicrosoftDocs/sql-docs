@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ISQLServerErrorInfo interface"
 ms.assetid: a8323b5c-686a-4235-a8d2-bda43617b3a1
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # ISQLServerErrorInfo (OLE DB)

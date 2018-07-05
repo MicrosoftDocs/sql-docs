@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.dacwizards.validation.f1"
 ms.assetid: 422872b7-b0cd-466d-a6bf-2e2c8a2f8da5
 caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Validation Rules for Data-tier Application Wizards

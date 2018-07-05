@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "components [Reporting Services], Report Manager"
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 caps.latest.revision: 69
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Report Manager  (SSRS Native Mode)
   Report Manager is a Web-based report access and management tool that you use to administer a single report server instance from a remote location over an HTTP connection. You can also use Report Manager for its report viewer and navigation features. In this topic:  

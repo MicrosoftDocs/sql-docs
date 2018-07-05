@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: d4703c9e-5594-472e-a85b-0f5bd0d73d6f
 caps.latest.revision: 9
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # EntitySet Element (CSDLBI)
   The EntitySet element defines a collection of entities of a particular type in a CSDLBI data model.  

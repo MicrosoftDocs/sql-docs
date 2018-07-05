@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "file comparisons [SQL Server]"
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Compare Files

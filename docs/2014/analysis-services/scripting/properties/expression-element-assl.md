@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Expression element"
 ms.assetid: a9491b21-5279-4531-b6a5-9e8022060dd8
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Expression Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that defines the contents of the parent element.  

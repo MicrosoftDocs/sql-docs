@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], adding"
 ms.assetid: b9e36569-616d-4e47-9140-0978a9bfe923
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Add Solutions to Source Control

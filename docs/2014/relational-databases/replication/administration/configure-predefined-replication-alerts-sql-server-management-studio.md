@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "predefined replication alerts [SQL Server replication]"
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure Predefined Replication Alerts (SQL Server Management Studio)

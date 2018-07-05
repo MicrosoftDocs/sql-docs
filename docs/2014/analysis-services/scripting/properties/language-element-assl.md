@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Language element"
 ms.assetid: 4d745d23-6b1f-4a85-97cf-d034cc41356f
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Language Element (ASSL)
   Contains the language identifier of the parent element.  

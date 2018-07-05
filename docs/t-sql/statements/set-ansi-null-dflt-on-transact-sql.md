@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "overriding default nullability"
 ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

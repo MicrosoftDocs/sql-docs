@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ManufacturingFirstWeekOfMonth element"
 ms.assetid: adb76a2f-c6c3-459e-a441-e80adad76ff1
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ManufacturingFirstWeekOfMonth Element (ASSL)
   Defines the first week of the manufacturing month for a [TimeBinding](../data-type/binding-data-type-assl.md) element.  

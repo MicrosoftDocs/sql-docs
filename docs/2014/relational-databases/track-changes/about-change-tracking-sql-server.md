@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data [SQL Server], changing"
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # About Change Tracking (SQL Server)

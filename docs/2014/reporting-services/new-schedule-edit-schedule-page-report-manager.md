@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # New Schedule: Edit Schedule Page (Report Manager)
   Use the New Schedule / Edit Schedule page to create a schedule for a report. Schedules are used with subscriptions, to refresh cached reports, and to create snapshots as standalone items or in report history.  

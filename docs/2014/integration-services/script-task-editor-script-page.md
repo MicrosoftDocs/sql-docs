@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Script Task Editor"
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Script Task Editor (Script Page)

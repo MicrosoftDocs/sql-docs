@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.swb.maint.maintplanproperties.completebackup.f1"
 ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Maintenance Plans Node (Object Explorer)

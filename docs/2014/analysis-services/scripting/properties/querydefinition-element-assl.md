@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "QueryDefinition element"
 ms.assetid: 25bf0e93-d5c5-41df-b310-a253a4ace80e
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # QueryDefinition Element (ASSL)
   Contains an opaque expression for a query associated with a [DataSource](../objects/datasource-element-assl.md) element in a [QueryBinding](../data-type/binding-data-type-assl.md) element.  

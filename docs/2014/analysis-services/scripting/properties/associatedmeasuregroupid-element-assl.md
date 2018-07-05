@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AssociatedMeasureGroupID element"
 ms.assetid: a18ff25b-00a2-4ddf-abcc-ef4d52c8a462
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AssociatedMeasureGroupID Element (ASSL)
   Contains the ID of the [MeasureGroup](../objects/group-element-assl.md) element associated with a [CalculationProperty](../objects/calculationproperty-element-assl.md) element or a [Kpi](../objects/kpi-element-assl.md) element.  

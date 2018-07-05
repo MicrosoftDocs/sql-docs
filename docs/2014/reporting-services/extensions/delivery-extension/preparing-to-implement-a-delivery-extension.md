@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services], implementing"
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 caps.latest.revision: 33
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Preparing to Implement a Delivery Extension

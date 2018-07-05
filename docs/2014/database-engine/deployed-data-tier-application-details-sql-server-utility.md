@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Multi-server management [SQL Server]"
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Deployed Data-tier Application Details (SQL Server Utility)

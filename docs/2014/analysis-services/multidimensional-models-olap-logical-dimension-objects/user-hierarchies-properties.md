@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "multilevel hierarchies [Analysis Services]"
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # User Hierarchy Properties
   The following table describes the properties of a user-defined hierarchy.  

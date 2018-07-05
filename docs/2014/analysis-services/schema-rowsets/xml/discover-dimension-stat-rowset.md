@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_DIMENSION_STAT Rowset
   Provides information about a dimension, including the name of the database that contains it, the dimension name, its attributes, and a count of the members for each attribute. In a tabular model, this corresponds to the columns in a table, and the number of values in each column.  

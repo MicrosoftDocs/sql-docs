@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.SCHEMATA view"
 ms.assetid: 4337b643-910d-47d7-bea8-f4052066b9a2
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # INFORMATION_SCHEMA.SCHEMATA returns schema names in a database, not databases in an instance

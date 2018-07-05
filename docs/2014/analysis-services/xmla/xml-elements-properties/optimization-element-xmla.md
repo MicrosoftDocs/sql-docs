@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Optimization element"
 ms.assetid: fb9ff737-59e2-4d8b-9f0e-af392eb25d08
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Optimization Element (XMLA)
   Specifies the optimization threshold percentage used by the [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) command to design aggregations.  

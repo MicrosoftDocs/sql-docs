@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "constraints [SQL Server], unique"
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Unique Constraints

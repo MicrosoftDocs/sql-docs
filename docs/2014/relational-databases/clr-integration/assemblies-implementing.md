@@ -5,17 +5,15 @@ ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "assemblies [CLR integration], implementing"
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Implementing Assemblies

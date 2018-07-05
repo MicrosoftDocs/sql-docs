@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributeHierarchyDisplayFolder element"
 ms.assetid: d4a3aff7-553e-416c-9c42-819a96ae264d
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeHierarchyDisplayFolder Element (ASSL)
   Identifies the folder in which to display the associated attribute hierarchy.  

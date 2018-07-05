@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "security [SQL Server], functions"
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Security Functions (Transact-SQL)

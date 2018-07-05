@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.configuresnapshotagent.f1"
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Snapshot Agent (New Publication Wizard)

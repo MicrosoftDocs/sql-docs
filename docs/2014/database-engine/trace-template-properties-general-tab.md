@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Trace Template Properties dialog box"
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Trace Template Properties (General Tab)

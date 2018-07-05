@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "deployment utility [Integration Services]"
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Create a Deployment Utility

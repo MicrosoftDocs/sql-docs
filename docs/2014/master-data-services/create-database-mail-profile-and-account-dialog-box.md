@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.mds.configmanager.dbmailprofileacct.f1"
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create Database Mail Profile and Account Dialog Box (Master Data Services Configuration Manager)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MdxScript element"
 ms.assetid: 0c59a550-dc95-4d50-948a-bb99348bdd86
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MdxScript Element (ASSL)
   Contains information about a Multidimensional Expressions (MDX) script that is associated with a [Cube](cube-element-assl.md) element.  

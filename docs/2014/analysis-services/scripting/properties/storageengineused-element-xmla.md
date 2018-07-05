@@ -18,9 +18,9 @@ topic_type:
   - "apiref"
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # StorageEngineUsed Element (XMLA)
   Contains a read-only value that describes the current database type.  

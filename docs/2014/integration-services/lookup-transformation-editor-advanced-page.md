@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Lookup Transformation Editor"
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Lookup Transformation Editor (Advanced Page)

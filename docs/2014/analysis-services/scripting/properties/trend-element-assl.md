@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Trend element"
 ms.assetid: d1d92d10-a181-4402-aacb-c0b2adc96bba
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Trend Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that returns a trend indicator for a [Kpi](../objects/kpi-element-assl.md) element.  

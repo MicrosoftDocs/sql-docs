@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DBSCHEMA_COLUMNS rowset"
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DBSCHEMA_COLUMNS Rowset
   Provides column information for all columns meeting the provided restriction criteria.  

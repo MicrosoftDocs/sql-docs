@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], upgrade issues"
 ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
 caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Report server database is not configured (Upgrade Advisor)

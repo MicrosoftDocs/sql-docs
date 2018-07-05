@@ -16,8 +16,8 @@ helpviewer_keywords:
   - ".NET Framework [SQLXML]"
 ms.assetid: c18cf801-f893-4fbc-8e2b-c563f6108acf
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQLXML 4.0 .NET Framework Support

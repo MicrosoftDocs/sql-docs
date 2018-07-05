@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "programming [Reporting Services]"
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 caps.latest.revision: 21
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Developer&#39;s Guide (Reporting Services)

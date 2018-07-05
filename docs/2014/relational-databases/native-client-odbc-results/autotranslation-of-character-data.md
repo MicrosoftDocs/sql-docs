@@ -5,9 +5,7 @@ ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -24,8 +22,8 @@ helpviewer_keywords:
   - "ODBC data types, autotranslating character data"
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Autotranslation of Character Data

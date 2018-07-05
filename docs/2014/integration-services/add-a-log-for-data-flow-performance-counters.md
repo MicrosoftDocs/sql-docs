@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "logs [Integration Services], data flow counters"
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add a Log for Data Flow Performance Counters

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "viewing table properties"
 ms.assetid: 1865fb7c-f480-4100-9007-df5364cd002a
 caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View the Table Definition

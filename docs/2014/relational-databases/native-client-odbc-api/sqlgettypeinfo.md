@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "SQLGetTypeInfo function"
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLGetTypeInfo

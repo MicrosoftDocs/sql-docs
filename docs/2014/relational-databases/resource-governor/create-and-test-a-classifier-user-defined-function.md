@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Resource Governor, classifier function test"
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create and Test a Classifier User-Defined Function

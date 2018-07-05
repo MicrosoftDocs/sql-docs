@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "publications [SQL Server replication], Replication Monitor tasks"
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View Information and Perform Tasks for a Publication (Replication Monitor)

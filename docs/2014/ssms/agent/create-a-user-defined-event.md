@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "international considerations [SQL Server], alerts"
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a User-Defined Event

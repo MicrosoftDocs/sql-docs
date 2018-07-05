@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "objects [Analysis Services], maximum size"
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Maximum Capacity Specifications (Analysis Services)
   The following tables specify the maximum sizes and numbers of various objects defined in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] components under different server deployment modes.  

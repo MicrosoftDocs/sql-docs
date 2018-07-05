@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "messages [SQL Server], exception message box"
 ms.assetid: 0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Exception Message Box Programming

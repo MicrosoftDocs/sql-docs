@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "PerspectiveHierarchy data type"
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PerspectiveHierarchy Data Type (ASSL)
   Defines a primitive data type that represents information about a hierarchy in a [PerspectiveDimension](dimension-data-type-assl.md) element.  

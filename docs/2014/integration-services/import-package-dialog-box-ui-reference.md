@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Import Package dialog box"
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Import Package Dialog Box UI Reference

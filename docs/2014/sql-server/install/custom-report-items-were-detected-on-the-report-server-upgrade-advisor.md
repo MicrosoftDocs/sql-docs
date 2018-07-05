@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "custom report items, upgrading"
 ms.assetid: aee32006-65b2-4dfe-9570-d85a249d17b2
 caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Custom report items were detected on the report server (Upgrade Advisor)

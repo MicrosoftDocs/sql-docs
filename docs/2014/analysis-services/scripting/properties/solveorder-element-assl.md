@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "SolveOrder element"
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # SolveOrder Element (ASSL)
   Indicates the solve order in which the [CalculationProperty](../objects/calculationproperty-element-assl.md) element is applied to a calculated member or calculated cell definition.  

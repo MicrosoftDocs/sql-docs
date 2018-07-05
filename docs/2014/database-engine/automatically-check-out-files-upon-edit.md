@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "automatic file check outs"
 ms.assetid: afa9f637-3d14-4d64-be51-0e8167e21d2b
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Automatically Check Out Files Upon Edit

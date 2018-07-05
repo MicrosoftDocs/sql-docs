@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "viewing filter information"
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View Filter Information (SQL Server Profiler)

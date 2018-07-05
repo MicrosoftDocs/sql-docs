@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.rtp.rptwizard.finish.f1"
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
 caps.latest.revision: 28
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Complete the Report Wizard
   Use this page to name the report and review the options to be applied to the report.  

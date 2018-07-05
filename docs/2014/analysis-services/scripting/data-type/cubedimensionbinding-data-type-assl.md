@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubeDimensionBinding data type"
 ms.assetid: 7288e345-4a3e-4197-82e9-9daa38f6e928
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubeDimensionBinding Data Type (ASSL)
   Defines a derived data type that represents the binding of a [Dimension](../objects/dimension-element-assl.md), [Measure](../objects/measure-element-assl.md), or [MiningModel](../objects/miningmodel-element-assl.md) element to a cube dimension.  

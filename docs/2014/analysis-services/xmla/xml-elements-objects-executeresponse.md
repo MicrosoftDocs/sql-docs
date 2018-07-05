@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "ExecuteResponse element"
 ms.assetid: 6edb1b82-da4c-4cd9-9385-bea04032f0eb
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ExecuteResponse Element (XMLA)
   Contains the information returned by an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in response to an [Execute](xml-elements-methods-execute.md) method call.  

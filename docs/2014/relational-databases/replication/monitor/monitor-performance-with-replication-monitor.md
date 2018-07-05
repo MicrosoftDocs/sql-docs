@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "monitoring performance [SQL Server replication]"
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Monitor Performance with Replication Monitor

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.generatefilters.f1"
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Generate Filters

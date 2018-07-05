@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "AxesInfo element"
 ms.assetid: 15cfa67d-5acd-4737-8a81-2df34b334d3f
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AxesInfo Element (XMLA)
   Contains a collection of [AxisInfo](axisinfo-element-xmla.md) elements, representing the axis metadata contained by the parent [OlapInfo](olapinfo-element-xmla.md) element.  

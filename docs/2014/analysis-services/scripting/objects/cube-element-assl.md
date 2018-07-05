@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Cube element"
 ms.assetid: 2d801066-6cca-4a99-bbd8-56a38d762108
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cube Element (ASSL)
   Defines a regular, virtual, or linked cube in a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [Database](database-element-assl.md) element.  

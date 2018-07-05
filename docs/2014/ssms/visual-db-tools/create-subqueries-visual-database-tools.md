@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "subqueries [SQL Server], SQL pane"
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Subqueries (Visual Database Tools)

@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "transactions [CLR integration]"
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # CLR Triggers

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Query Builder dialog box"
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Query Builder

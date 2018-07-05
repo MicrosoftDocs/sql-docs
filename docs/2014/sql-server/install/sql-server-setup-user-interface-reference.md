@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "user interface reference [SQL Server]"
 ms.assetid: 183b5cdd-962e-41ca-8064-ea44f622c77d
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Setup User Interface Reference

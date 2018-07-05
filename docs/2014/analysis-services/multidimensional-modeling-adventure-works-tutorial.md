@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Analysis Services, tutorials"
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Multidimensional Modeling (Adventure Works Tutorial)

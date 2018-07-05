@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "version control services [SQL Server], file status"
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # View File Status

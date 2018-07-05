@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ValueColumn element"
 ms.assetid: 6c2d6822-8ecc-46df-9fa9-bb92ac716c36
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ValueColumn Element (ASSL)
   Identifies the column that provides the value of the parent element.  

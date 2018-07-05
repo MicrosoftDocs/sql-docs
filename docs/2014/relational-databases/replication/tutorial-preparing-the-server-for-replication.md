@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Tutorial: Preparing the Server for Replication

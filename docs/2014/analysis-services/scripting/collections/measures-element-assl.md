@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Measures element"
 ms.assetid: d2107112-f620-4fd7-a05f-bb2606b4be18
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Measures Element (ASSL)
   Contains the collection of [Measure](../objects/measure-element-assl.md) elements associated with the parent element.  

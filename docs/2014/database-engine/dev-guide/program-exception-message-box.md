@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "displaying exception message box"
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Program Exception Message Box

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CubeBinding data type"
 ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CubeBinding Data Type (out-of-line) (ASSL)
   Defines a primitive data type that represents the relationship between a [Cube](../objects/cube-element-assl.md) element and a [DataSource](../objects/datasource-element-assl.md) element.  

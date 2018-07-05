@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "fast parse [Integration Services]"
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Numeric Data Formats

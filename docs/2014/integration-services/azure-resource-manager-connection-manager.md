@@ -14,8 +14,8 @@ f1_keywords:
   - "SQL11.DTS.DESIGNER.AFPARMCM.F1"
 ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
 caps.latest.revision: 2
-author: "Lingxi-Li"
-ms.author: "lingxl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Azure Resource Manager Connection Manager

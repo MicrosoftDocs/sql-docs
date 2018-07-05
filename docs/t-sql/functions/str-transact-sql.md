@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STR function"
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

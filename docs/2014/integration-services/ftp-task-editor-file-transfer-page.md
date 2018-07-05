@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "File Transfer Protocol Task Editor"
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # FTP Task Editor (File Transfer Page)

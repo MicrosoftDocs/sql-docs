@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "key-fields annotation"
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Identifying Key Columns Using sql:key-fields (SQLXML 4.0)

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "rowsets [Analysis Services], OLE DB"
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # OLE DB Schema Rowsets
   The following OLE DB schema rowsets are supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider. Use the `DISCOVER_ENUMERATORS` rowset with the [Discover](../../xmla/xml-elements-methods-discover.md) method to check whether a particular data source provider supports a rowset.  

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Members element"
 ms.assetid: 55f9ec3a-5a41-4b3a-acd6-c07598868c46
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Members Element (XMLA)
   Contains a collection of [Member](member-element-xmla.md) elements contained by the parent [CrossProduct](crossproduct-element-xmla.md) element.  

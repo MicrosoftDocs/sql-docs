@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Visual SourceSafe, reports"
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Create History and Status Reports

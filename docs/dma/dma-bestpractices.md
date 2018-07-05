@@ -1,5 +1,6 @@
 ---
 title: "Best practices for Data Migration Assistant (SQL Server) | Microsoft Docs"
+description: Learn best practices for migrating SQL Server databases with Data Migration Assistant
 ms.custom: ""
 ms.date: "06/02/2018"
 ms.prod: sql
@@ -21,7 +22,7 @@ manager: craigg
 
 
 # Best practices for running Data Migration Assistant
-This article provides the following best practice information for installation, assessment, and migration.
+This article provides some best practice information for installation, assessment, and migration.
 
 ## Installation
 Do not install and run the Data Migration Assistant directly on the SQL Server host machine.
@@ -32,6 +33,7 @@ Do not install and run the Data Migration Assistant directly on the SQL Server 
 
 ## Migration
 - Migrate a server during non-peak times.
+
 - When migrating a database, provide a single share location accessible by the source server and the target server, and avoid a copy operation if possible. A copy operation may introduce delay based on the size of the backup file. The copy operation also increases the chances that a migration will fail because of an extra step. When a single location is provided, Data Migration Assistant bypasses the copy operation.
  
     In addition, be sure that to provide the correct permissions to the shared folder to avoid migration failures. The correct permissions are specified in the tool. If a SQL Server instance runs under Network Service credentials, give the correct permissions on the shared folder to the machine account for the SQL Server instance.

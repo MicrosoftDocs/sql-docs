@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SetEnable method"
 ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SetEnable Method (ServerNetworkProtocol Class)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DimensionPermissions element"
 ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DimensionPermissions Element (ASSL)
   Contains the collection of permissions applicable to a [Dimension](../objects/dimension-element-assl.md) element or a [CubePermission](../objects/cubepermission-element-assl.md) element.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], constraints"
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Unique Constraints and Check Constraints

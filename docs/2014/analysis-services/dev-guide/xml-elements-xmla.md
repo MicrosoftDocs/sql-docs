@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "elements [XML for Analysis]"
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 caps.latest.revision: 32
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # XML Elements (XMLA)
   The following topics describe the various XML for Analysis (XMLA) element categories supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

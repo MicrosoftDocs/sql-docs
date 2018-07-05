@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Filter Server Process IDs (SPIDs) in a Trace (SQL Server Profiler)

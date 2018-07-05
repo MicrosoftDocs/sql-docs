@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Data Conversion Transformation Editor"
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Conversion Transformation Editor

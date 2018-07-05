@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "WriteEnabled element"
 ms.assetid: 681290b3-ae8f-4659-9b17-a26d401a3fb0
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # WriteEnabled Element (ASSL)
   Indicates whether dimension writebacks are available (subject to security permissions).  

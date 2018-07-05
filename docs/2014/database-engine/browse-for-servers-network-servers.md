@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.browseservers.network.f1"
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Browse for Servers (Network Servers)

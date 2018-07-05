@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "logs [Integration Services], enabling"
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Enable Package Logging in SQL Server Data Tools

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MiningStructure element"
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MiningStructure Element (ASSL)
   Defines the structure for a set of mining models.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "end user license agreement [SQL Server]"
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # About the SQL Server License Terms

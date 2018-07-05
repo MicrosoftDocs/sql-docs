@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "07/02/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "External"
   - "External, data source"
   - "PolyBase, create data source"
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -57,7 +57,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 -- (on SQL Server 2016 and Azure SQL Data Warehouse)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
-        TYPE = HADOOP,  
+        TYPE = BLOB_STORAGE,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
         [, CREDENTIAL = credential_name ]
     )  
@@ -86,7 +86,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
-        TYPE = HADOOP,
+        TYPE = BLOB_STORAGE,
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
     )
 [;]

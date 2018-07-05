@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DiscretizationBucketCount element"
 ms.assetid: 551a73ae-59e1-4079-a2d9-988df96b5e07
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DiscretizationBucketCount Element (ASSL)
   Contains the number of buckets into which to discretize.  

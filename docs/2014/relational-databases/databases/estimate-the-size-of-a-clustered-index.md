@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "calculating table size"
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 48
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Estimate the Size of a Clustered Index

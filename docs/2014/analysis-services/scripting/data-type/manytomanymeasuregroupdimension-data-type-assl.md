@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ManyToManyMeasureGroupDimension data type"
 ms.assetid: f2b914cb-c817-43ff-9cb4-ac8d326136b5
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ManyToManyMeasureGroupDimension Data Type (ASSL)
   Defines a derived data type that represents the relationship between a many-to-many dimension and a measure group.  

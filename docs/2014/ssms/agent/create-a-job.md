@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, creating"
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Job

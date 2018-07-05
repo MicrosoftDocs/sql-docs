@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "events [SMO], tracing"
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Tracing and Replaying Events

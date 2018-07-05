@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "programmatically load and run packages [SSIS]"
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Loading and Running a Local Package Programmatically

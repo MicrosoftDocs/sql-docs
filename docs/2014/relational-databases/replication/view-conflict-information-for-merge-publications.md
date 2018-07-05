@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_helpmergearticleconflicts"
 ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View Conflict Information for Merge Publications (Replication Transact-SQL Programming)

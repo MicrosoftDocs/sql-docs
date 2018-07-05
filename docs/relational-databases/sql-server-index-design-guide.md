@@ -349,7 +349,8 @@ The following illustration shows the structure of a nonclustered index in a sing
   
      Create filtered indexes to cover queries that return a well-defined subset of rows from a large table. 
      
-     > [!TIP] Typically the WHERE clause of the CREATE INDEX statement matches the WHERE clause of a query being covered.  
+     > [!TIP] 
+     > Typically the WHERE clause of the CREATE INDEX statement matches the WHERE clause of a query being covered.  
 
 -   Contain columns frequently involved in search conditions of a query, such as WHERE clause, that return exact matches.  
 

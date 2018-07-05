@@ -39,17 +39,17 @@ Most existing client tools that target SQL Server can seamlessly target SQL Serv
 
 The following table lists the release history for SQL Server 2017.
 
-| Release | Version | Release date |
-|-----|-----|-----|
-| [CU8](#CU8) | 14.0.3029.16 | 6-2018 |
-| [CU7](#CU7) | 14.0.3026.27 | 5-2018 |
-| [CU6](#CU6) | 14.0.3025.34 | 4-2018 |
-| [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
-| [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
-| [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
-| [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
-| [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
-| [GA](#GA) | 14.0.1000.169 | 10-2017 |
+| Release     | Version       | Release date |
+|-------------|---------------|--------------|
+| [CU8](#CU8) | 14.0.3029.16  | 2018-06-21   |
+| [CU7](#CU7) | 14.0.3026.27  | 2018-05-24   |
+| [CU6](#CU6) | 14.0.3025.34  | 2018-04-19   |
+| [CU5](#CU5) | 14.0.3023.8   | 2018-03-20   |
+| [CU4](#CU4) | 14.0.3022.28  | 2018-02-20   |
+| [CU3](#CU3) | 14.0.3015.40  | 2017-01-03   |
+| [CU2](#CU2) | 14.0.3008.27  | 2017-11-28   |
+| [CU1](#CU1) | 14.0.3006.16  | 2017-10-24   |
+| [GA](#GA)   | 14.0.1000.169 | 2017-10-02   |
 
 ## <a id="cuinstall"></a> How to install cumulative updates
 
@@ -62,7 +62,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU8"></a> CU8 (May 2018)
+## <a id="CU8"></a> CU8 (June 2018)
 
 This is the Cumulative Update 8 (CU8) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3029.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4229789](https://support.microsoft.com/en-us/help/4229789).
 

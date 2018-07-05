@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Specify Field and Row Terminators (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"
@@ -35,15 +35,14 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 |Terminating character|Indicated by|  
 |---------------------------|------------------|  
-|Tab|\t<br /><br /> This is the default field terminator.|  
-|Newline character|\n<br /><br /> This is the default row terminator.|  
-|Carriage return/line feed|\r|  
-|Backslash*|\\\|  
-|Null terminator (nonvisible terminator)**|\0|  
+|Tab|`'0x0B'`<br /><br /> This is the default field terminator.|  
+|Newline / Line feed |`'0x0A'`<br /><br /> This is the default row terminator.|  
+|Carriage return|`'0x0D'`|  
+|Backslash|`'\'`|  
+|Null terminator (nonvisible terminator)**|`'0x00'`|  
 |Any printable character (control characters are not printable, except null, tab, newline, and carriage return)|(*, A, t, l, and so on)|  
 |String of up to 10 printable characters, including some or all of the terminators listed earlier|(**\t\*\*, end, !!!!!!!!!!, \t—\n, and so on)|  
-  
- *Only the t, n, r, 0 and '\0' characters work with the backslash escape character to produce a control character.  
+
   
  **Even though the null control character (\0) is not visible when printed, it is a distinct character in the data file. This means that using the null control character as a field or row terminator is different than having no field or row terminator at all.  
   
@@ -182,7 +181,7 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
    WITH (  
       DATAFILETYPE = 'char',  
       FIELDTERMINATOR = ',',  
-      ROWTERMINATOR = '\n'  
+      ROWTERMINATOR = '0x0A'  
 );  
 GO  
 ```  

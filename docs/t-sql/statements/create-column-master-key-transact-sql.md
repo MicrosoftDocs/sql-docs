@@ -1,7 +1,7 @@
 ---
 title: "CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/18/2016"
+ms.date: "07/05/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -45,6 +45,7 @@ CREATE COLUMN MASTER KEY key_name
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
         KEY_PATH = 'key_path'   
+        [,ENCLAVE_COMPUTATIONS (SIGNATURE = signature)]
          )   
 [;]  
 ```  

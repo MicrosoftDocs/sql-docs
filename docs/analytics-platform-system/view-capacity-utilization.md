@@ -15,7 +15,7 @@ ms.reviewer: martinle
 This topic explains how to view capacity utilization in the SQL Server PDW appliance.  
   
 ## To View Capacity Utilization By Using Admin Console  
-To view the space used, open the Admin Console, and click the **Storage** tab. There is a **Storage** tab for both the PDW region and the HDI region.  
+To view the space used, open the Admin Console, and click the **Storage** tab. There is a **Storage** tab for the PDW region.  
   
 ![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   

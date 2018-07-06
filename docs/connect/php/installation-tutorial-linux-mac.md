@@ -282,15 +282,15 @@ To test this sample script, create a file called testsql.php in your system's do
 <?php
 $serverName = "yourServername";
 $connectionOptions = array(
-    "Database" => "yourDatabase",
-    "Uid" => "yourUsername",
-    "PWD" => "yourPassword"
+    "database" => "yourDatabase",
+    "uid" => "yourUsername",
+    "pwd" => "yourPassword"
 );
 
 // Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 if ($conn === false) {
-    die(formatErrors( sqlsrv_errors()));
+    die(formatErrors(sqlsrv_errors()));
 }
 
 // Select Query
@@ -301,7 +301,7 @@ $stmt = sqlsrv_query($conn, $tsql);
 
 // Error handling
 if ($stmt === false) {
-    die(FormatErrors(sqlsrv_errors()));
+    die(formatErrors(sqlsrv_errors()));
 }
 ?>
 

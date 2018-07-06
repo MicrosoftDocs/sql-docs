@@ -85,7 +85,7 @@ Data Movement Service (DMS) runs on each Compute node to do the following:
   
 -   DMS transfers data from each Compute node directly to the backup server.  
   
--   Using PolyBase, DMS transfers data to and from an external Hadoop cluster, or the HDInsight Region on the appliance.  
+-   Using PolyBase, DMS transfers data to and from an external Hadoop cluster or Azure Storage Blob.  
   
 ### Compute node databases 
 Each Compute node runs an instance of SQL Server to process queries and manage user data.  
@@ -125,11 +125,9 @@ Microsoft Hyper-V Server provides a simple and reliable virtualization solution.
 ## <a name="sec2"></a>Non-relational data
 PolyBase technology to integrates SQL Server PDW data with external Hadoop data. The Hadoop data can be stored on any of these Hadoop Data sources:  
   
--   Hortonworks for Linux or Windows Server  
+-   Hortonworks Hadoop Distribution  
   
--   Cloudera on Linux  
-  
--   HDInsight running on APS  
+-   Cloudera Distribution of Hadoop  
   
 -   HDInsight data stored on Azure Storage Blob  
   
@@ -169,7 +167,7 @@ For more information, see [Connect With SQL Server Linked Server &#40;SQL Server
   
 ## Business Intelligence Tools
   
-Analysis Services  
+### Analysis Services  
 SQL Server PDW is a valid data source for Analysis Services databases and Excel PowerPivot models. Using the OLE DB provider, you can configure an Analysis Services cube to use either multidimensional online analytical processing (MOLAP) or relational online analytical processing (ROLAP) storage.  
   
 <!-- MISSING LINKS
@@ -212,7 +210,7 @@ For more information, see [Install dwloader Command-Line Loader &#40;SQL Server 
 -->
   
 ### PolyBase for Hadoop Integration  
-With PolyBase technology, you can load non-relational data from an Hadoop Cluster into a relational table in SQL Server PDW. The Hadoop data can be located in an external Hadoop Cluster, the HDI Region on APS, or in a Azure Storage Blob.  
+With PolyBase technology, you can load non-relational data from an Hadoop Cluster into a relational table in SQL Server PDW. The Hadoop data can be located in an external Hadoop Cluster or in a Azure Storage Blob.  
 
 <!-- MISSING LINKS
 For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md).

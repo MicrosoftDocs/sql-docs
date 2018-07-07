@@ -60,7 +60,7 @@ manager: craigg
   
  Then add a AddKeepAlive.cmd file to your project. Set the "Copy to Output Directory" setting to Copy always. The following is a sample AddKeepAlive.cmd file:  
   
-```  
+```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
 REM Workaround for JDBC keep alive on SQL Azure  

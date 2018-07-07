@@ -52,7 +52,7 @@ manager: craigg
   
  When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] column data type is **XML**, the data value must be a valid **XML**. When calling updateBytes, updateBinaryStream, or updateBlob methods, the data value should be the hexadecimal string representation of the XML characters. For example:  
   
-```  
+```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
 ```  
   
@@ -79,7 +79,7 @@ manager: craigg
   
  When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] column data type is **XML**, the data value must be a valid **XML**. When calling updateBytes, updateBinaryStream, or updateBlob methods, the data value should be the hexadecimal string representation of the XML characters. For example:  
   
-```  
+```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
 ```  
   
@@ -108,7 +108,7 @@ manager: craigg
   
  When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] column data type is **XML**, the data value must be a valid **XML**. When calling setObject(byte[], SQLXML), setObject(inputStream, SQLXML), or setObject(Blob, SQLXML) methods, the data value should be the hexadecimal string representation of the XML characters. For example:  
   
-```  
+```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
 ```  
   

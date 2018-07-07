@@ -36,7 +36,7 @@ manager: craigg
   
  As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:  
   
-```  
+```sql
 CREATE PROCEDURE CheckContactCity  
    (@cityName CHAR(50))  
 AS  

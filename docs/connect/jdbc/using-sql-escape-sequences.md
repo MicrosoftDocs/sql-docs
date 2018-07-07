@@ -63,7 +63,7 @@ LIKE '\\_%' {escape '\\'}");
   
  where `functionName` is a function supported by the JDBC driver. For example:  
   
-```  
+```sql
 SELECT {fn UCASE(Name)} FROM Employee  
 ```  
   
@@ -79,7 +79,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 ## Date and Time Literals  
  The escape syntax for date, time, and timestamp literals is the following:  
   
-```  
+```
 {literal-type 'value'}  
 ```  
   
@@ -93,7 +93,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  For example:  
   
-```  
+```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
 WHERE OrderID=1025  
 ```  
@@ -103,7 +103,7 @@ WHERE OrderID=1025
   
  A procedure is an executable object stored in the database. Generally, it is one or more SQL statements that have been precompiled. The escape sequence syntax for calling a stored procedure is the following:  
   
-```  
+```sql
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
@@ -114,13 +114,13 @@ WHERE OrderID=1025
 ## Outer Joins  
  The JDBC driver supports the SQL92 left, right, and full outer join syntax. The escape sequence for outer joins is the following:  
   
-```  
+```sql
 {oj outer-join}  
 ```  
   
  where outer-join is:  
   
-```  
+```sql
 table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
 {table-reference | outer-join} ON search-condition  
 ```  
@@ -129,7 +129,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  For example:  
   
-```  
+```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
    FROM {oj Customers LEFT OUTER JOIN   
       Orders ON Customers.CustID=Orders.CustID}   
@@ -153,7 +153,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
  The escape syntax for LIMIT is as follows:  
   
-```  
+```sql
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   

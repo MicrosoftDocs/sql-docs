@@ -58,7 +58,7 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 
 For the examples on this page, if you have created an Azure Key Vault based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this example with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -109,7 +109,7 @@ The name of the SQLServerColumnEncryptionCertificateStoreProvider is MSSQL_CERTI
 
 For the examples on this page, if you have created a Windows Certificate Store based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this example with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -174,7 +174,7 @@ After creating the keytool entry, create the column master key metadata in the d
 
 The T-SQL syntax for creating the column master key is:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [<CMK_name>]
 WITH
 (
@@ -185,7 +185,7 @@ WITH
 
 For the 'AlwaysEncryptedKey' created above, the column master key definition would be:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -388,7 +388,7 @@ The following table summarizes the behavior of queries depending on whether Alwa
 ### Inserting and retrieving encrypted data examples 
 The following examples illustrate retrieving and modifying data in encrypted columns. The examples assume the target table with the following schema and encrypted SSN and BirthDate columns. If you have configured a Column Master Key named "MyCMK" and a Column Encryption Key named "MyCEK" (as described in the preceding keystore providers sections), you can create the table using this script:
 
-```
+```sql
 CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
  [SSN] [char](11) COLLATE Latin1_General_BIN2
  ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC,

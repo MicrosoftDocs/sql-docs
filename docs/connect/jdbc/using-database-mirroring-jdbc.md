@@ -40,7 +40,7 @@ manager: craigg
   
  If the failover partner server supplied by the client does not refer to a server acting as a failover partner for the specified database, and if the server/database referred to is in a mirroring arrangement, the connection is refused by the server. Although the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) class provides the [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md) method, this method only returns the name of the failover partner specified in the connection string or the setFailoverPartner method. To retrieve the name of the actual failover partner that is currently being used, use the following [!INCLUDE[tsql](../../includes/tsql_md.md)] statement:  
   
-```  
+```sql
 SELECT m.mirroring_role_DESC, m.mirroring_state_DESC,  
 m.mirroring_partner_instance FROM sys.databases as db,  
 sys.database_mirroring AS m WHERE db.name = 'MirroringDBName'  

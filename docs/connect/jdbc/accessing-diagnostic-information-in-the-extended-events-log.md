@@ -39,7 +39,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  The following is a sample that uses [!INCLUDE[tsql](../../includes/tsql_md.md)] to start an extended events session that will be stored in a ring buffer and will record the activity ID sent from a client on RPC and batch operations:  
   
-```  
+```sql
 create event session MySession on server  
 add event connectivity_ring_buffer_recorded,  
 add event sql_statement_starting (action (client_connection_id)),  

@@ -35,7 +35,7 @@ manager: craigg
   
 ### Code  
   
-```  
+```sql
 use AdventureWorks  
 CREATE TABLE ColdCalling  
 (  

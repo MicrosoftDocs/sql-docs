@@ -46,7 +46,7 @@ manager: craigg
 ###  <a name="BKMK_TableSetup"></a> Table setup  
  To create the tables necessary for the code samples to run correctly, you must run the following Transact-SQL statements in a SQL Server database.  
   
-```  
+```sql
 USE AdventureWorks  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   

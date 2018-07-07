@@ -147,7 +147,7 @@ manager: craigg
 ### Configuring the User-Defined Roles  
  To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role. For example, use the following [!INCLUDE[tsql](../../includes/tsql_md.md)] code to add a user named 'shelby' (SQL standard login user named 'shelby') to the SqlJDBCXAUser role:  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  

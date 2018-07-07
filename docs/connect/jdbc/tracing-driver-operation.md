@@ -104,27 +104,27 @@ manager: craigg
 ## Enabling Tracing Programmatically  
  Tracing can be enabled programmatically by creating a Logger object and indicating the category to be logged. For example, the following code shows how to enable logging for SQL statements:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.FINER);  
 ```  
   
  To turn off logging in your code, use the following:  
   
-```  
+```java
 logger.setLevel(Level.OFF);  
 ```  
   
  To log all available categories, use the following:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc");  
 logger.setLevel(Level.FINE);  
 ```  
   
  To disable a specific category from being logged, use the following:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.OFF);  
 ```  

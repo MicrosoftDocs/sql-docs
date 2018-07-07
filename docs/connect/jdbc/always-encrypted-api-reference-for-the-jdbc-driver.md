@@ -160,7 +160,7 @@ New types in **microsoft.sql.Types** class
   
  **Syntax**  
   
-```  
+```java
 Public enum  SQLServerStatementColumnEncryptionSetting  
 ```  
   

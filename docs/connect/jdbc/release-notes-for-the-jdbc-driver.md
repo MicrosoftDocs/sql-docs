@@ -51,7 +51,7 @@ The JDBC Driver now supports sql_variant datatypes to be used with SQL Server. S
 
 1. For Date values:
 When using TVP to populate a table that contains datetime/smalldatetime/date values stored in sql_variant column, calling getDateTime()/getSmallDateTime()/getDate() methods on resultset does not work and throws the following exception:
-	```
+	```java
 	java.lang.String cannot be cast to java.sql.Timestamp
 	```
 	Workaround: use "getString()" or "getObject()" methods instead.
@@ -108,7 +108,7 @@ The Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specif
 The Microsoft JDBC Driver 6.0 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.0 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 6.0 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.
 
 To ensure you have the right sqljdbc42.jar or sqljdbc41.jar, run the following lines of code. If the output is “Driver version: 6.0.7507.100“, you have the JDBC Driver 6.0 package.
-```
+```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```  
@@ -140,7 +140,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 The Microsoft JDBC Driver 4.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 4.2 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 4.2 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.
 
 To ensure you have the right sqljdbc42.jar or sqljdbc41.jar, run the following lines of code. If the output is "Driver version: 4.2.6420.100", you have the JDBC Driver 4.2 package.
-```
+```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```

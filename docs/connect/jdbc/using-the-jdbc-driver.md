@@ -113,7 +113,7 @@ manager: craigg
   
  When the driver is loaded, you can establish a connection by using a connection URL and the getConnection method of the DriverManager class:  
   
-```  
+```java
 String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
    "databaseName=AdventureWorks;user=MyUserName;password=*****;";  
 Connection con = DriverManager.getConnection(connectionUrl);  

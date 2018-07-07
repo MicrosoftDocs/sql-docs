@@ -79,7 +79,7 @@ shutdown /r /t 1
   
  For example:  
   
-```  
+```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
 ```  
   

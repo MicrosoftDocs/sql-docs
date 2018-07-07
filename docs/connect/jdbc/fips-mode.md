@@ -36,12 +36,12 @@ Vendors may have some additional steps to configure JVM with FIPS.
 ### Ensure your JVM is in FIPS Mode
 In order to ensure your JVM is FIPS enabled, execute the following snippet: 
 
-````
+```java
 public boolean isFIPS() throws Exception {
     Provider jsse = Security.getProvider("SunJSSE");
     return jsse != null && jsse.getInfo().contains("FIPS");
 }
-````
+```
 
 ## Appropriate SSL Certificate
 In order to connect SQL Server in FIPS mode, a valid SSL Certificate is required. Install or import it in the Java Key Store on the client machine (JVM) where FIPS is enabled. If you did not import / install the appropriate certificate, you could not be able to connect to SQL Server as a secure connection cannot be made.
@@ -50,7 +50,7 @@ In order to connect SQL Server in FIPS mode, a valid SSL Certificate is required
 For FIPS, most likely you need to import the certificate (.cert) to either PKCS or in a provider-specific format. 
 Use the following snippet to import the SSL certificate and store it in a working directory with the appropriate KeyStore format. _TRUST_STORE_PASSWORD_ is your password for Java KeyStore. 
 
-````
+```java
 	public void saveGenericKeyStore(String provider, String trustStoreType, String certName, String certPath) throws KeyStoreException, CertificateException, NoSuchAlgorithmException, NoSuchProviderException, IOException {
 		KeyStore ks = KeyStore.getInstance(trustStoreType, provider);
 		FileOutputStream os = new FileOutputStream("./MyTrustStore_" + trustStoreType);
@@ -67,7 +67,7 @@ Use the following snippet to import the SSL certificate and store it in a workin
 		return cf.generateCertificate(fis);
 	}
 
-````
+```
 
 
 The following example is importing an Azure SSL Certificate in PKCS12 format with BouncyCastle Provider. The certificate is imported in the working directory named _MyTrustStore_PKCS12_ by using the following snippet:

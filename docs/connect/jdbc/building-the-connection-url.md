@@ -50,7 +50,7 @@ manager: craigg
   
  The following connection string shows an example of how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database using integrated authentication and Kerberos from an application running on any operating system supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
   
-```  
+```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
 ```  
   

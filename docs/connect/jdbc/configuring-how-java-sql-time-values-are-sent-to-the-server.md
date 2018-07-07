@@ -54,7 +54,7 @@ manager: craigg
   
 Note that sendTimeAsDatetime must be false for encrypted columns as encrypted columns do not support the conversion from time to datetime. Beginning with Microsoft JDBC Driver 6.0 for SQL Server, the SQLServerConnection class has the following two methods to set/get the value of the sendTimeAsDatetime property.
 
-```
+```java
   public boolean getSendTimeAsDatetime()
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```

@@ -100,7 +100,7 @@ manager: craigg
   
  A login configuration file consists of one or more entries, each specifying which underlying authentication technology should be used for a particular application or applications. For example,  
   
-```  
+```java
 SQLJDBCDriver {  
    com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true;  
 };  
@@ -166,7 +166,7 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 ## Constrained Delegation
 Beginning in Microsoft JDBC Driver 6.2, the driver supports Kerberos Constrained Delegation. The delegated credential can be passed in as org.ietf.jgss.GSSCredential object, these credentials are used by driver to establish connection. 
 
-```
+```java
 Properties driverProperties = new Properties();
 GSSCredential impersonatedUserCredential = [userCredential]
 driverProperties.setProperty("integratedSecurity", "true");
@@ -177,7 +177,7 @@ Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 
 ## Kerberos Connection using Principal Names and Password
 Beginning in Microsoft JDBC Driver 6.2, the driver can establish Kerberos connection using the Principal Name and Password passed in connection string. 
-```
+```java
 jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
 ```
 The username property does not require REALM if user belongs to the default_realm set in krb5.conf file. When `userName` and `password` is set along with `integratedSecurity=true;` and `authenticationScheme=JavaKerberos;` property, the connection is established with value of userName as Kerberos Principal along with the password supplied.

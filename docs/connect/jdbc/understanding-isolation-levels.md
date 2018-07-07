@@ -53,19 +53,19 @@ manager: craigg
   
  To set the isolation level for a transaction, you can use the [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) method of the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class. This method accepts an **int** value as its argument, which is based on one of the connection constants as in the following:  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
  To use the new snapshot isolation level of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can use one of the SQLServerConnection constants as in the following:  
   
-```  
+```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
 ```  
   
  or you can use:  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   

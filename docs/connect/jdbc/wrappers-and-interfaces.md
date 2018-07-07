@@ -77,7 +77,7 @@ manager: craigg
   
 ### Code  
   
-```  
+```java
 import javax.sql.*;  
 import java.sql.*;  
 import com.microsoft.sqlserver.jdbc.*;  

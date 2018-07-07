@@ -49,7 +49,7 @@ manager: craigg
 ### Retrieving Large-Value Types from a Database  
  When you retrieve a non-binary large-value data type—such as the **varchar(max)** data type—from a database, one approach is to read that data as a character stream. In the following example, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method of the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class is used to retrieve data from the database and return it as a result set. Then the [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class is used to read the large-value data from the result set.  
   
-```  
+```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
 rs.next();  
 Reader reader = rs.getCharacterStream(2);  
@@ -60,7 +60,7 @@ Reader reader = rs.getCharacterStream(2);
   
  When you retrieve a binary large-value data type—such as the **varbinary(max)** data type—from a database, there are several approaches that you can take. The most efficient approach is to read the data as a binary stream, as in the following:  
   
-```  
+```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
 rs.next();  
 InputStream is = rs.getBinaryStream(2);  
@@ -68,7 +68,7 @@ InputStream is = rs.getBinaryStream(2);
   
  You can also use the [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) method to read the data as a byte array, as in the following:  
   
-```  
+```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
 rs.next();  
 byte [] b = rs.getBytes(2);  
@@ -82,7 +82,7 @@ byte [] b = rs.getBytes(2);
   
  Using a String or bytes is also an option, as in the following:  
   
-```  
+```java
 PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (c1_id, c2_vcmax) VALUES (?, ?)");  
 pstmt.setInt(1, 1);  
 pstmt.setString(2, htmlStr);  
@@ -94,7 +94,7 @@ pstmt.executeUpdate();
   
  If you have an image library on the server and must upload entire binary image files to a **varbinary(max)** column, the most efficient method with the JDBC driver is to use streams directly, as in the following:  
   
-```  
+```java
 PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Col2) VALUES(?,?)");  
 File inputFile = new File("CLOBFile20mb.jpg");  
 FileInputStream inStream = new FileInputStream(inputFile);  
@@ -113,7 +113,7 @@ inStream.close();
   
  If you have to replace the instance of a word in a large text file, such as an archived HTML file, you can use a Clob object, as in the following:  
   
-```  
+```java
 String SQL = "SELECT * FROM test1;";  
 Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);  
 ResultSet rs = stmt.executeQuery(SQL);  

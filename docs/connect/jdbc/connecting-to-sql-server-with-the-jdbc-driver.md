@@ -22,7 +22,7 @@ manager: craigg
   
  If a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is only listening on an IPv6 port, set the java.net.preferIPv6Addresses system property to make sure that IPv6 is used instead of IPv4 to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
   
-```  
+```java
 System.setProperty("java.net.preferIPv6Addresses", "true");  
 ```  
   

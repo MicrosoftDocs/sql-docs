@@ -50,7 +50,7 @@ manager: craigg
   
  The following shows how an application connects by using a data source:  
   
-```  
+```java
 initialize JNDI ..  
 Context ctx = new InitialContext(System.getProperties());  
 ...  

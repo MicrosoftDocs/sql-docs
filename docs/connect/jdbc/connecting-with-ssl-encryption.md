@@ -24,7 +24,7 @@ manager: craigg
   
  The following code example demonstrates how to set the **trustServerCertificate** property in a connection string:  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
@@ -37,7 +37,7 @@ String connectionUrl =
   
  The following code example demonstrates how to set the **trustStore** and **trustStorePassword** properties in a connection string:  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
@@ -49,7 +49,7 @@ String connectionUrl =
   
  The following code example demonstrates how to use the **hostNameInCertificate** property in a connection string:  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  

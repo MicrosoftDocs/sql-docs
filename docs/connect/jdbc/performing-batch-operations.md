@@ -38,7 +38,7 @@ CREATE TABLE TestTable
   
  In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, the addBatch method is used to create the statements to be executed, and the executeBatch method is called to submit the batch to the database.  
   
-```  
+```java
 public static void executeBatchUpdate(Connection con) {  
    try {  
       Statement stmt = con.createStatement();  

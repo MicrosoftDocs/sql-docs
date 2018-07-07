@@ -46,7 +46,7 @@ manager: craigg
 ## LIKE Wildcard Literals  
  The JDBC driver supports the `{escape 'escape character'}` syntax for using LIKE clause wildcards as literals. For example, the following code will return values for col3, where the value of col2 literally begins with an underscore (and not its wildcard usage).  
   
-```  
+```java
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
 LIKE '\\_%' {escape '\\'}");  
 ```  
@@ -57,7 +57,7 @@ LIKE '\\_%' {escape '\\'}");
 ## Function Handling  
  The JDBC driver supports function escape sequences in SQL statements with the following syntax:  
   
-```  
+```java
 {fn functionName}  
 ```  
   

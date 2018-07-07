@@ -47,46 +47,36 @@ BEGIN
    SELECT @managerID = ManagerID   
    FROM HumanResources.Employee   
    WHERE EmployeeID = @employeeID  
-END  
+END
 ```  
   
  This stored procedure returns a single OUT parameter (managerID), which is an integer, based on the specified IN parameter (employeeID), which is also an integer. The value that is returned in the OUT parameter is the ManagerID based on the EmployeeID that is contained in the HumanResources.Employee table.  
   
  In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) method is used to call the GetImmediateManager stored procedure:  
   
-```  
-public static void executeStoredProcedure(Connection con) {  
-   try {  
-      CallableStatement cstmt = con.prepareCall("{call dbo.GetImmediateManager(?, ?)}");  
-      cstmt.setInt(1, 5);  
-      cstmt.registerOutParameter(2, java.sql.Types.INTEGER);  
-      cstmt.execute();  
-      System.out.println("MANAGER ID: " + cstmt.getInt(2));  
-   }  
-   catch (Exception e) {  
-      e.printStackTrace();  
-   }  
-}  
+```java
+public static void executeStoredProcedure(Connection con) throws SQLException {  
+    try(CallableStatement cstmt = con.prepareCall("{call dbo.GetImmediateManager(?, ?)}");) {  
+        cstmt.setInt(1, 5);  
+        cstmt.registerOutParameter(2, java.sql.Types.INTEGER);  
+        cstmt.execute();  
+        System.out.println("MANAGER ID: " + cstmt.getInt(2));  
+    }  
+} 
 ```  
   
  This example uses the ordinal positions to identify the parameters. Alternatively, you can identify a parameter by using its name instead of its ordinal position. The following code example modifies the previous example to demonstrate how to use named parameters in a Java application. Note that parameter names correspond to the parameter names in the stored procedure's definition:  
   
+```java
+public static void executeStoredProcedure(Connection con) throws SQLException {  
+    try(CallableStatement cstmt = con.prepareCall("{call dbo.GetImmediateManager(?, ?)}"); ) {  
+        cstmt.setInt("employeeID", 5);  
+        cstmt.registerOutParameter("managerID", java.sql.Types.INTEGER);  
+        cstmt.execute();  
+        System.out.println("MANAGER ID: " + cstmt.getInt("managerID"));  
+    }  
+}
 ```  
-public static void executeStoredProcedure(Connection con) {  
-   try {  
-      CallableStatement cstmt = con.prepareCall("{call dbo.GetImmediateManager(?, ?)}");  
-      cstmt.setInt("employeeID", 5);  
-      cstmt.registerOutParameter("managerID", java.sql.Types.INTEGER);  
-      cstmt.execute();  
-      System.out.println("MANAGER ID: " + cstmt.getInt("managerID"));  
-      cstmt.close();  
-   }  
-   catch (Exception e) {  
-      e.printStackTrace();  
-   }  
-```  
-  
- }  
   
 > [!NOTE]  
 >  These examples use the execute method of the SQLServerCallableStatement class to run the stored procedure. This is used because the stored procedure did not also return a result set. If it did, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method would be used.  

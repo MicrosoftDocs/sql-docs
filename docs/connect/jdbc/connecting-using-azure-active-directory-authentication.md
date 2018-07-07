@@ -57,38 +57,41 @@ Before building and running the example, on the client machine (on which, you wa
 
 Replace the server/database name with your server/database name in the following lines before executing the example:
 
-```
+```java
 ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 ```
 
 The example to use ActiveDirectoryIntegrated authentication mode:
-```
+```java
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.Statement;
+
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class IntegratedExample {
+public class AADIntegrated {
+    public static void main(String[] args) throws Exception {
 
-	public static void main(String[] args) throws Exception {
-		SQLServerDataSource ds = new SQLServerDataSource();
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database name
+        ds.setAuthentication("ActiveDirectoryIntegrated");
+        ds.setHostNameInCertificate("*.database.windows.net");
 
-		ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
-		ds.setDatabaseName("demo"); // Replace with your database name
-		ds.setAuthentication("ActiveDirectoryIntegrated");
-		ds.setHostNameInCertificate("*.database.windows.net");
-
-		Connection connection = ds.getConnection();
-
-		ResultSet rs = connection.createStatement().executeQuery("SELECT SUSER_SNAME()");
-		if(rs.next()){
-			System.out.println("You have successfully logged on as: " + rs.getString(1));
-		}
-	}
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();) {
+            
+            ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()");
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
 }
 ```
 Running this example on a client machine automatically uses your Kerberos ticket and no password is required. If a connection is established, you should see the following message:
-```
+```java
 You have successfully logged on as: <your domain user name>
 ```
 
@@ -155,45 +158,49 @@ The following example shows how to use 'authentication=ActiveDirectoryPassword' 
 Before building and running the example:
 1.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path
 2.	Locate the following lines of code and replace the server/database name with your server/database name.
-	```
+	```java
 	ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 	ds.setDatabaseName("demo"); // replace with your database name
 	```
 3.	Locate the following lines of code and replace user name, with the name of the Azure AD user you want to connect as.
-	```
+	```java
 	ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
 	ds.setPassword("password"); 	// replace with your password
 	```
 
 The example to use ActiveDirectoryPassword authentication mode:
-```
+```java
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.Statement;
+
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class UserPasswordExample {
-	
-	public static void main(String[] args) throws Exception{
-		SQLServerDataSource ds = new SQLServerDataSource();
-		
-		ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
-		ds.setDatabaseName("demo"); // Replace with your database
-		ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
-		ds.setPassword("password"); // Replace with your password
-		ds.setAuthentication("ActiveDirectoryPassword");
-		ds.setHostNameInCertificate("*.database.windows.net");
-		
-		Connection connection = ds.getConnection();
-		
-		ResultSet rs = connection.createStatement().executeQuery("SELECT SUSER_SNAME()");
-		if(rs.next()){
-			System.out.println("You have successfully logged on as: " + rs.getString(1));
-		}
-	}
+public class AADUserPassword {
+    
+    public static void main(String[] args) throws Exception{
+        
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        ds.setPassword("password"); // Replace with your password
+        ds.setAuthentication("ActiveDirectoryPassword");
+        ds.setHostNameInCertificate("*.database.windows.net");
+        
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();) {
+            
+            ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()");
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
 }
 ```
 If connection is established, you should see the following message as output:
-```
+```java
 You have successfully logged on as: <your user name>
 ```
 
@@ -231,57 +238,59 @@ provision a contained database user for your application principal. See the [Con
 
 In the following example, replace the STS URL, Client ID, Client Secret, server and database name with your values.
 
-```
+```java
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-// The azure-activedirectory-library-for-java is needed to retrieve the access token from the AD. 
+// The azure-activedirectory-library-for-java is needed to retrieve the access token from the AD.
 import com.microsoft.aad.adal4j.AuthenticationContext;
 import com.microsoft.aad.adal4j.AuthenticationResult;
 import com.microsoft.aad.adal4j.ClientCredential;
 
+public class AADTokenBased {
 
-public class TokenBasedExample {
+    public static void main(String[] args) throws Exception {
 
-	public static void main(String[] args) throws Exception{
+        // Retrieve the access token from the AD.
+        String spn = "https://database.windows.net/";
+        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
+        String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
+        String clientSecret = "..."; // Replace with your client secret.
 
-		// Retrieve the access token from the AD.
-		String spn = "https://database.windows.net/";
-		String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-		String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
-		String clientSecret = "..."; // Replace with your client secret.
+        AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));
+        ClientCredential cred = new ClientCredential(clientId, clientSecret);
 
-		AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));
-		ClientCredential cred = new ClientCredential(clientId, clientSecret);
+        Future<AuthenticationResult> future = context.acquireToken(spn, cred, null);
+        String accessToken = future.get().getAccessToken();
 
-		Future<AuthenticationResult> future = context.acquireToken(spn, cred, null);
-		String accessToken = future.get().getAccessToken();
+        System.out.println("Access Token: " + accessToken);
 
-		System.out.println("Access Token: " + accessToken);		
-		
-		// Connect with the access token.
-		SQLServerDataSource ds = new SQLServerDataSource();
+        // Connect with the access token.
+        SQLServerDataSource ds = new SQLServerDataSource();
 
-		ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name.
-		ds.setDatabaseName("demo"); // Replace with your database name.
-		ds.setAccessToken(accessToken);
-		ds.setHostNameInCertificate("*.database.windows.net");
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name.
+        ds.setDatabaseName("demo"); // Replace with your database name.
+        ds.setAccessToken(accessToken);
+        ds.setHostNameInCertificate("*.database.windows.net");
 
-		Connection connection = ds.getConnection();
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();) {
 
-		ResultSet rs = connection.createStatement().executeQuery("SELECT SUSER_SNAME()");
-		if(rs.next()){
-			System.out.println("You have successfully logged on as: " + rs.getString(1));
-		}
-	}
+            ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()");
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
 }
 ``` 
 
 If the connection is successful, you should see the following message as output:
-```
+```java
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>	
 ``` 

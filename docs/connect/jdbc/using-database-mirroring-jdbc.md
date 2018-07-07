@@ -55,68 +55,52 @@ AND db.database_id = m.database_id
 ## Example  
  In the following example, an attempt is first made to connect to the principle server. If that fails and an exception is thrown, an attempt is made to connect to the mirror server, which may have been promoted to the new principle server. Note the use of the failoverPartner property in the connection string.  
   
-```  
-import java.sql.*;  
-  
-public class clientFailover {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://serverA:1433;" +  
-         "databaseName=AdventureWorks;integratedSecurity=true;" +  
-         "failoverPartner=serverB";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-  
-      try {  
-         // Establish the connection to the principal server.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-         System.out.println("Connected to the principal server.");  
-  
-         // Note that if a failover of serverA occurs here, then an  
-         // exception will be thrown and the failover partner will  
-         // be used in the first catch block below.  
-  
-         // Create and execute an SQL statement that inserts some data.  
-         stmt = con.createStatement();  
-  
-         // Note that the following statement assumes that the   
-         // TestTable table has been created in the AdventureWorks  
-         // sample database.  
-         stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (SQLException se) {  
-         try {  
-            // The connection to the principal server failed,  
-            // try the mirror server which may now be the new  
-            // principal server.  
-            System.out.println("Connection to principal server failed, " +  
-            "trying the mirror server.");  
-            con = DriverManager.getConnection(connectionUrl);  
-            System.out.println("Connected to the new principal server.");  
-            stmt = con.createStatement();  
-            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-         }  
-         catch (Exception e) {  
-            e.printStackTrace();  
-         }  
-      }  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      // Close the JDBC objects.  
-      finally {  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-}  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ClientFailover {
+    public static void main(String[] args) {
+
+        String connectionUrl = "jdbc:sqlserver://serverA:1433;" 
+                + "databaseName=AdventureWorks;integratedSecurity=true;" 
+                + "failoverPartner=serverB";
+
+        // Establish the connection to the principal server.
+        try (Connection con = DriverManager.getConnection(connectionUrl); 
+                Statement stmt = con.createStatement();) {
+            System.out.println("Connected to the principal server.");
+
+            // Note that if a failover of serverA occurs here, then an
+            // exception will be thrown and the failover partner will
+            // be used in the first catch block below.
+
+            // Execute a SQL statement that inserts some data.
+
+            // Note that the following statement assumes that the
+            // TestTable table has been created in the AdventureWorks
+            // sample database.
+            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+        }
+        catch (SQLException se) {
+            System.out.println("Connection to principal server failed, " + "trying the mirror server.");
+            // The connection to the principal server failed,
+            // try the mirror server which may now be the new
+            // principal server.
+            try (Connection con = DriverManager.getConnection(connectionUrl); 
+                    Statement stmt = con.createStatement();) {
+                System.out.println("Connected to the new principal server.");
+                stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+            }
+            // Handle any errors that may have occurred.
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 ```  
   
 ## See Also  

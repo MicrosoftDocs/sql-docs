@@ -79,7 +79,7 @@ To use the Azure Key Vault, client applications need to instantiate the SQLServe
 
 Here is an example of initializing SQLServerColumnEncryptionAzureKeyVaultProvider:  
 
-```
+```java
 SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
 ```
 
@@ -87,7 +87,7 @@ SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumn
 
 After the application creates an instance of SQLServerColumnEncryptionAzureKeyVaultProvider, the application must register the instance with the driver using the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method. It is highly recommended that the instance is registered using the default lookup name, AZURE_KEY_VAULT, which can be obtained by calling the SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API. Using the default name will allow you to use tools such as SQL Server Management Studio or PowerShell to provision and manage Always Encrypted keys (the tools use the default name to generate the metadata object to column master key). The following example shows registering the Azure Key Vault provider. For more information on the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
-```
+```java
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
 keyStoreMap.put(akvProvider.getName(), akvProvider);
 SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
@@ -143,8 +143,8 @@ There are three connection string properties that allow a client application to 
 
 Here is an example of providing these credentials in the connection string:
 
-```
-String connectionString = "jdbc:sqlserver://localhost;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
 ```
 
 You can also get or set these settings using the SQLServerDataSource object. For more information, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
@@ -203,7 +203,7 @@ The SQL Server Management Studio or any other tool cannot be used to create colu
 ### Implementing a custom column master key store provider
 If you want to store column master keys in a keystore that is not supported by an existing provider, you can implement a custom provider by extending the SQLServerColumnEncryptionKeyStoreProvider Class and registering the provider using the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method.
 
-```
+```java
 public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{  
     private String name = "MY_CUSTOM_KEYSTORE";
 
@@ -231,7 +231,7 @@ public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{
 
 Register the provider:
 
-```
+```java
 SQLServerColumnEncryptionKeyStoreProvider storeProvider = new MyCustomKeyStore();
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
 keyStoreMap.put(storeProvider.getName(), storeProvider);
@@ -243,9 +243,12 @@ When accessing encrypted columns, the Microsoft JDBC Driver for SQL Server trans
 
 If you use a custom keystore provider, implementing your own key management tools may be required. When using keys stored in Windows Certificate Store or in Azure Key Vault, you can use existing tools, such as SQL Server Management Studio or PowerShell, to manage and provision keys. When using keys stored in the Java Key Store, you need to provision keys programmatically. The following example illustrates using the SQLServerColumnEncryptionJavaKeyStoreProvider class to encrypt the key with a key stored in the Java Key Store.
 
-```
-import java.sql.*;
-import javax.xml.bind.DatatypeConverter;
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionJavaKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -253,8 +256,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 /**
  * This program demonstrates how to create a column encryption key programmatically for the Java Key Store.
  */
-public class AlwaysEncrypted
-{
+public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
     private static String keyAlias = "<proide key alias>";
 
@@ -271,96 +273,64 @@ public class AlwaysEncrypted
     private static char[] keyStoreSecret = "********".toCharArray();
 
     /**
-     * Name of the encryption algorithm used to encrypt the value of
-     * the column encryption key. The algorithm for the system providers must be RSA_OAEP.
+     * Name of the encryption algorithm used to encrypt the value of the column encryption key. The algorithm for the system providers must be
+     * RSA_OAEP.
      */
     private static String algorithm = "RSA_OAEP";
 
-    public static void main(String[] args)
-    {
-        String connectionString = GetConnectionString();
-        try
-        {
-            // Note: if you are not using try-with-resources statements (as here),
-            // you must remember to call close() on any Connection, Statement,
-            // ResultSet objects that you create.
+    public static void main(String[] args) {
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 
-            // Open a connection to the database.
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-            {
-                // Instantiate the Java Key Store provider.
-                SQLServerColumnEncryptionKeyStoreProvider storeProvider =
-                        new SQLServerColumnEncryptionJavaKeyStoreProvider(
-                                keyStoreLocation,
-                                keyStoreSecret);
+        try (Connection connection = DriverManager.getConnection(connectionUrl);
+                Statement statement = connection.createStatement();) {
 
-                byte [] encryptedCEK=getEncryptedCEK(storeProvider);
+            // Instantiate the Java Key Store provider.
+            SQLServerColumnEncryptionKeyStoreProvider storeProvider = new SQLServerColumnEncryptionJavaKeyStoreProvider(keyStoreLocation,
+                    keyStoreSecret);
 
-                /**
-                 * Create column encryption key
-                 * For more details on the syntax, see:
-                 * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql
-                 * Encrypted column encryption key first needs to be converted into varbinary_literal from bytes, 
-                 * for which DatatypeConverter.printHexBinary is used
-                 */
-                String createCEKSQL = "CREATE COLUMN ENCRYPTION KEY "
-                        + columnEncryptionKey
-                        + " WITH VALUES ( "
-                        + " COLUMN_MASTER_KEY = "
-                        + columnMasterKeyName
-                        + " , ALGORITHM =  '"
-                        + algorithm
-                        + "' , ENCRYPTED_VALUE =  0x"
-                        + DatatypeConverter.printHexBinary(encryptedCEK)
-                        + " ) ";
+            byte[] encryptedCEK = getEncryptedCEK(storeProvider);
 
-                try (Statement cekStatement = sourceConnection.createStatement())
-                {
-                    cekStatement.executeUpdate(createCEKSQL);
-                    System.out.println("Column encryption key created with name : " + columnEncryptionKey);
-                }
-            }
+            /**
+             * Create column encryption key For more details on the syntax, see:
+             * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql Encrypted column encryption key first needs
+             * to be converted into varbinary_literal from bytes, for which byteArrayToHex() is used.
+             */
+            String createCEKSQL = "CREATE COLUMN ENCRYPTION KEY "
+                    + columnEncryptionKey
+                    + " WITH VALUES ( "
+                    + " COLUMN_MASTER_KEY = "
+                    + columnMasterKeyName
+                    + " , ALGORITHM =  '"
+                    + algorithm
+                    + "' , ENCRYPTED_VALUE =  0x"
+                    + byteArrayToHex(encryptedCEK)
+                    + " ) ";
+            statement.executeUpdate(createCEKSQL);
+            System.out.println("Column encryption key created with name : " + columnEncryptionKey);
         }
-        catch (Exception e)
-        {
-            // Handle any errors that may have occurred.
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    // To avoid storing the sourceConnection String in your code,
-    // you can retrieve it from a configuration file.
-    private static String GetConnectionString()
-    {
-        // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
-                "databaseName=ae2;user=sa;password=********;";
-
-        return connectionUrl;
-    }
-
-    private static byte[] getEncryptedCEK(SQLServerColumnEncryptionKeyStoreProvider storeProvider) throws SQLServerException
-    {
-        /**
-         * Following arguments needed by SQLServerColumnEncryptionJavaKeyStoreProvider
-         * 1) keyStoreLocation :
-         *      Path where keystore is located, including the keystore file name.
-         * 2) keyStoreSecret :
-         *      Password of the keystore and the key.
-         */
+    private static byte[] getEncryptedCEK(SQLServerColumnEncryptionKeyStoreProvider storeProvider) throws SQLServerException {
         String plainTextKey = "You need to give your plain text";
 
         // plainTextKey has to be 32 bytes with current algorithm supported
         byte[] plainCEK = plainTextKey.getBytes();
 
         // This will give us encrypted column encryption key in bytes
-        byte[] encryptedCEK = storeProvider.encryptColumnEncryptionKey(
-                keyAlias,
-                algorithm,
-                plainCEK);
+        byte[] encryptedCEK = storeProvider.encryptColumnEncryptionKey(keyAlias, algorithm, plainCEK);
 
         return encryptedCEK;
+    }
+
+    public static String byteArrayToHex(byte[] a) {
+        StringBuilder sb = new StringBuilder(a.length * 2);
+        for (byte b : a)
+            sb.append(String.format("%02x", b).toUpperCase());
+        return sb.toString();
     }
 }
 ```
@@ -370,16 +340,17 @@ The easiest way to enable the encryption of parameters and the decryption of que
 
 The following connection string is an example of enabling Always Encrypted in the JDBC driver:
 
-```
-String connectionString = "jdbc:sqlserver://localhost;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
-SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionString);
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
+SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionUrl);
 ```
 
 The following code is an equivalent example using the SQLServerDataSource object:
 
-```
+```java
 SQLServerDataSource ds = new SQLServerDataSource();
-ds.setServerName("localhost");
+ds.setServerName("<server>");
+ds.setPortNumber(<port>);
 ds.setUser("<user>");
 ds.setPassword("<password>");
 ds.setDatabaseName("<database>");
@@ -437,26 +408,26 @@ For each Java code example, you will need to insert keystore-specific code in th
 
 If you are using an Azure Key Vault keystore provider:
 
-```
+```java
     String clientID = "<Azure Application ID>";
     String clientKey = "<Azure Application API Key Password>";
     SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
     Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
     keyStoreMap.put(akvProvider.getName(), akvProvider);
     SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;";
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
 If you are using a Windows Certificate Store keystore provider:
 
-```
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;";
+```java
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
 If you are using a Java Key Store keystore provider:
 
-```
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
+```java
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
 ```
 
 ### Inserting data example
@@ -467,28 +438,19 @@ This example inserts a row into the Patients table. Note the following items:
 - If you are doing a lookup using a WHERE clause, the value used in the WHERE clause needs to be passed as a parameter so that the driver can transparently encrypt it before sending it to the database. In the following example, the SSN is passed as a parameter but the LastName is passed as a literal as LastName is not encrypted.
 - The setter method used for the parameter targeting the SSN column is setString(), which maps to the char/varchar SQL Server data type. If, for this parameter, the setter method used was setNString(), which maps to nchar/nvarchar, the query would fail, as Always Encrypted does not support conversions from encrypted nchar/nvarchar values to encrypted char/varchar values.
 
-```
-try
-{
-    <Insert keystore-specific code here>
-
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String insertRecord="INSERT INTO [dbo].[Patients] VALUES (?, ?, ?, ?)";
-        try (PreparedStatement insertStatement = sourceConnection.prepareStatement(insertRecord))
-        {
-            insertStatement.setString(1, "795-73-9838");
-            insertStatement.setString(2, "Catherine");
-            insertStatement.setString(3, "Abel");
-            insertStatement.setDate(4, Date.valueOf("1996-09-10"));
-            insertStatement.executeUpdate();
-            System.out.println("1 record inserted.\n");
-        }
-    }
+```java
+// <Insert keystore-specific code here>
+try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement insertStatement = sourceConnection.prepareStatement("INSERT INTO [dbo].[Patients] VALUES (?, ?, ?, ?)")) {
+    insertStatement.setString(1, "795-73-9838");
+    insertStatement.setString(2, "Catherine");
+    insertStatement.setString(3, "Abel");
+    insertStatement.setDate(4, Date.valueOf("1996-09-10"));
+    insertStatement.executeUpdate();
+    System.out.println("1 record inserted.\n");
 }
-catch (Exception e)
-{
+// Handle any errors that may have occurred.
+catch (SQLException e) {
     e.printStackTrace();
 }
 ```
@@ -501,33 +463,21 @@ The following example demonstrates filtering data based on encrypted values and 
 > [!NOTE]
 > if columns are encrypted using deterministic encryption, queries can perform equality comparisons on them. For more information, see [Selecting Deterministic or Randomized encryption in Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
-```
-try
-{
-    <Insert keystore-specific code here>
-
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String filterRecord="SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = ?;";
-    
-        try (PreparedStatement selectStatement = sourceConnection.prepareStatement(filterRecord))
-        {
-            selectStatement.setString(1, "795-73-9838");
-            ResultSet rs = selectStatement.executeQuery();
-            while(rs.next())
-            {
-                System.out.println("SSN: " +rs.getString("SSN") +
-                    ", FirstName: " + rs.getString("FirstName") +
-                    ", LastName:"+ rs.getString("LastName")+
-                    ", Date of Birth: " + rs.getString("BirthDate"));
-            }
-        }
+```java
+// <Insert keystore-specific code here>
+try (Connection connection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = connection
+                .prepareStatement("\"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = ?;\"");) {
+    selectStatement.setString(1, "795-73-9838");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("SSN: " + rs.getString("SSN") + ", FirstName: " + rs.getString("FirstName") + ", LastName:"
+                + rs.getString("LastName") + ", Date of Birth: " + rs.getString("BirthDate"));
     }
 }
-catch (Exception e)  
-{  
-    e.printStackTrace();  
+// Handle any errors that may have occurred.
+catch (SQLException e) {
+    e.printStackTrace();
 }
 ```
   
@@ -538,32 +488,20 @@ The following example illustrates retrieving binary encrypted data from encrypte
 - Since Always Encrypted is not enabled in the connection string, the query will return encrypted values of SSN and BirthDate as byte arrays (the program converts the values to strings).
 - A query retrieving data from encrypted columns with Always Encrypted disabled can have parameters, as long as none of the parameters target an encrypted column. The following query filters by LastName, which is not encrypted in the database. If the query filtered by SSN or BirthDate, the query would fail.
 
-```
-try
-{
-    String connectionString  = "jdbc:sqlserver://localhost:1433;" + "databaseName=Clinic;user=sa;password=******";
+```java
+try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = sourceConnection
+                .prepareStatement("SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE LastName = ?;");) {
 
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String filterRecord="SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE LastName = ?;";
-
-        try (PreparedStatement selectStatement = sourceConnection.prepareStatement(filterRecord))
-        {
-            selectStatement.setString(1, "Abel");
-            ResultSet rs = selectStatement.executeQuery();
-            while (rs.next())
-            {
-                System.out.println("SSN: " + rs.getString("SSN") +
-                    ", FirstName: " + rs.getString("FirstName") +
-                    ", LastName:"+ rs.getString("LastName") +
-                    ", Date of Birth: " + rs.getString("BirthDate"));
-            }
-        }
+    selectStatement.setString(1, "Abel");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("SSN: " + rs.getString("SSN") + ", FirstName: " + rs.getString("FirstName") + ", LastName:"
+                + rs.getString("LastName") + ", Date of Birth: " + rs.getString("BirthDate"));
     }
 }
-catch (Exception e)
-{
+// Handle any errors that may have occurred.
+catch (SQLException e) {
     e.printStackTrace();
 }
 ```
@@ -586,7 +524,7 @@ This section describes how to configure connection settings properly to use Alwa
 ### Errors due to passing plaintext instead of encrypted values
 Any value that targets an encrypted column needs to be encrypted inside the application. An attempt to insert/modify or to filter by a plaintext value on an encrypted column will result in an error similar to this one:
 
-```
+```java
 com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is incompatible with varchar(8000) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'MyCEK', column_encryption_key_database_name = 'ae') collation_name = 'SQL_Latin1_General_CP1_CI_AS'
 ```
 
@@ -594,7 +532,7 @@ To prevent such errors, make sure:
 - always Encrypted is enabled for application queries targeting encrypted columns (for the connection string or for a specific query).
 - you use prepared statements and parameters to send data targeting encrypted columns. The following example shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN), instead of passing the literal inside as a parameter. This query will fail:
 
-```
+```java
 ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customers WHERE SSN='795-73-9838'");
 ```
 
@@ -630,33 +568,33 @@ The SQLServerStatementColumnEncryptionSetting settings cannot be used to bypass 
 
 In the following example, Always Encrypted is disabled for the database connection. The query the application issues has a parameter that targets the LastName column that is not encrypted. The query retrieves data from the SSN and BirthDate columns that are both encrypted. In such a case, calling sys.sp_describe_parameter_encryption to retrieve encryption metadata is not required. However, the decryption of the query results needs to be enabled so that the application can receive plaintext values from the two encrypted columns. The SQLServerStatementColumnEncryptionSetting.ResultSet setting is used to ensure that.
 
-```
+```java
 // Assumes the same table definition as in Section "Retrieving and modifying data in encrypted columns"
 // where only SSN and BirthDate columns are encrypted in the database.
-String connectionUrl = "jdbc:sqlserver://localhost;databaseName=ae;user=sa;password=******;"
-		+ "keyStoreAuthentication=JavaKeyStorePassword;"
-		+ "keyStoreLocation=" + keyStoreLocation + ";"
-		+ "keyStoreSecret=******;";
-SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionString);
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>;" 
+        + "keyStoreAuthentication=JavaKeyStorePassword;"
+        + "keyStoreLocation=<keyStoreLocation>" 
+        + "keyStoreSecret=<keyStoreSecret>;";
 
-String filterRecord="SELECT FirstName, LastName, SSN, BirthDate FROM " + tblName + " WHERE LastName = ?";
-PreparedStatement selectStatement = connection.prepareStatement(
-		filterRecord,
-		ResultSet.TYPE_FORWARD_ONLY,
-		ResultSet.CONCUR_READ_ONLY,
-		connection.getHoldability(),
-		SQLServerStatementColumnEncryptionSetting.ResultSetOnly);
-selectStatement.setString(1, "Abel");
-ResultSet rs = selectStatement.executeQuery();
-while(rs.next()) {
-	System.out.println("First name: " + rs.getString("FirstName"));
-	System.out.println("Last name: " + rs.getString("LastName"));
-	System.out.println("SSN: " + rs.getString("SSN"));
-	System.out.println("Date of Birth: " + rs.getDate("BirthDate"));
+String filterRecord = "SELECT FirstName, LastName, SSN, BirthDate FROM " + tableName + " WHERE LastName = ?";
+
+try (SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = connection.prepareStatement(filterRecord, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY,
+                connection.getHoldability(), SQLServerStatementColumnEncryptionSetting.ResultSetOnly);) {
+
+    selectStatement.setString(1, "Abel");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("First name: " + rs.getString("FirstName"));
+        System.out.println("Last name: " + rs.getString("LastName"));
+        System.out.println("SSN: " + rs.getString("SSN"));
+        System.out.println("Date of Birth: " + rs.getDate("BirthDate"));
+    }
 }
-rs.close();
-selectStatement.close();
-connection.close();
+// Handle any errors that may have occurred.
+catch (SQLException e) {
+    e.printStackTrace();
+}
 ```
 
 ### Column encryption key caching
@@ -664,13 +602,13 @@ To reduce the number of calls to a column master key store to decrypt column enc
 
 You can configure a time-to-live value for the column encryption key entries in the cache using the API, setColumnEncryptionKeyCacheTtl(), in the SQLServerConnection class. The default time-to-live value for the column encryption key entries in the cache is two hours. To turn off caching, use a value of 0. To set any time-to-live value, use the following API:
 
-```
+```java
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (int columnEncryptionKeyCacheTTL, TimeUnit unit)
 ```
 
 For example, to set a time-to-live value of 10 minutes, use:
 
-```
+```java
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 ```
 

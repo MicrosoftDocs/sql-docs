@@ -2,7 +2,7 @@
 title: "Perform a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
 ms.custom: ""
-ms.date: "10/04/2017"
+ms.date: "07/09/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -82,7 +82,7 @@ The duration of the assessment depends on the number of databases added and the 
 
 2.  Review the compatibility issues across all compatibility levels supported by the target SQL Server version that you selected on the **Options** page.
 
-You can review compatibility issues by analyzing the affected object and its details for every issue identified under **Breaking changes**, **Behavior changes**, and **Deprecated features**.
+You can review compatibility issues by analyzing the affected object, its details, and potentially a fix for every issue identified under **Breaking changes**, **Behavior changes**, and **Deprecated features**.
 
 ![View assessment results](../dma/media/ReviewResults.png)
 

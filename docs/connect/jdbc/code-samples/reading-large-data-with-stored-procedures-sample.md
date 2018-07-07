@@ -32,7 +32,7 @@ manager: craigg
   
  You must also create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database:  
   
-```  
+```sql
 CREATE PROCEDURE GetLargeDataValue   
   (@Document_ID int,   
    @Document_ID_out int OUTPUT,   

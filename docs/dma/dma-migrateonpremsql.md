@@ -108,8 +108,6 @@ You can monitor the migration progress on the **View results** page.
 
 ## See also
 
-[Data Migration Assistant (DMA)](../dma/dma-overview.md)
-
-[Data Migration Assistant: Configuration settings](../dma/dma-configurationsettings.md)
-
-[Data Migration Assistant: Best Practices](../dma/dma-bestpractices.md)
+- [Data Migration Assistant (DMA)](../dma/dma-overview.md)
+- [Data Migration Assistant: Configuration settings](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant: Best Practices](../dma/dma-bestpractices.md)

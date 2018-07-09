@@ -27,7 +27,7 @@ AdventureWorks download links and installation instructions.
 
 - [All AdventureWorks files for SQL 2014 - 2016](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 - [All AdventureWorks files for SQL 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
-- [All AdventurewWorks files for SQL 2008 and 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
+- [All AdventureWorks files for SQL 2008 and 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
 
 ## OLTP downloads
 

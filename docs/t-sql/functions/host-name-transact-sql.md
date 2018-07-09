@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "workstation names [SQL Server]"
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # HOST_NAME (Transact-SQL)

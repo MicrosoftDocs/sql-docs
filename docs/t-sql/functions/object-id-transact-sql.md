@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "verifying object exists"
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 caps.latest.revision: 63
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "OBJECT_DEFINITION function"
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # OBJECT_DEFINITION (Transact-SQL)

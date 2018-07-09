@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "CREATE FULLTEXT CATALOG statement"
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 caps.latest.revision: 60
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE FULLTEXT CATALOG (Transact-SQL)

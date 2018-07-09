@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

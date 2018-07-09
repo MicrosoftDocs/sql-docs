@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "DEFAULT definition"
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE DEFAULT (Transact-SQL)

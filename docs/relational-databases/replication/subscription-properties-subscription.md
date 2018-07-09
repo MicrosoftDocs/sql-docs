@@ -7,8 +7,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30

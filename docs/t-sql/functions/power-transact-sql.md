@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "POWER function"
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

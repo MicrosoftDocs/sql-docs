@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server]"
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 caps.latest.revision: 72
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "removing services"
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP SERVICE (Transact-SQL)

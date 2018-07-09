@@ -1,20 +1,20 @@
 ---
 title: "Deploy and run an SSIS package in Azure | Microsoft Docs"
+description: Learn how to deploy a SQL Server Integration Services (SSIS) project to the SSIS Catalog on Azure SQL Database, run a package 
 ms.date: "5/22/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
-author: "douglaslMS"
-ms.author: "douglasl"
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
-# Deploy and run an SSIS package in Azure
-This tutorial shows you how to deploy a SQL Server Integration Services project to the SSISDB Catalog database on Azure SQL Database, run a package in the Azure-SSIS Integration Runtime, and monitor the running package.
+# Tutorial: Deploy and run a SQL Server Integration Services (SSIS) package in Azure
+This tutorial shows you how to deploy a SQL Server Integration Services (SSIS) project to the SSIS Catalog in Azure SQL Database, run a package in the Azure-SSIS Integration Runtime, and monitor the running package.
 
 ## Prerequisites
 

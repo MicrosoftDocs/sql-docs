@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "11/03/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "blob"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
+ms.technology: filestream
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -32,12 +30,12 @@ manager: craigg
 ## Why RBS?  
   
 ### Optimized database storage and performance  
- Storing BLOBs in the database can consume large amounts of file space and expensive server resources. RBS transfers the BLOBs to a dedicated storage solution you choose and stores references to thr BLOBs in the database. This frees server storage for structured data, and frees server resources for database operations.  
+ Storing BLOBs in the database can consume large amounts of file space and expensive server resources. RBS transfers the BLOBs to a dedicated storage solution you choose and stores references to the BLOBs in the database. This frees server storage for structured data, and frees server resources for database operations.  
   
 ### Efficient BLOB management  
  Several RBS features support stored BLOBs management:  
   
--   BLOBS are managed with ACID (atomic consistency isolation durable) transactions.  
+-   BLOBS are managed with ACID (atomic, consistent, isolatable, durable) transactions.  
   
 -   BLOBs are organized into collections.  
   

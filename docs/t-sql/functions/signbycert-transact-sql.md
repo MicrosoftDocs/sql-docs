@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # SIGNBYCERT (Transact-SQL)

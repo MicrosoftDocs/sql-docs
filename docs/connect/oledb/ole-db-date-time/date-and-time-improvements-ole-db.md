@@ -2,10 +2,10 @@
 title: "Date and Time Improvements (OLE DB) | Microsoft Docs"
 description: "Date and time improvements (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-date-time"
+ms.component: "oledb|ole-db-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -19,7 +19,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Date and Time Improvements (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introduces new date and time data types. This section describes how these new types are exposed as extensions in OLE DB Driver for SQL Server. For an overview of the OLE DB Driver for SQL Server support for the new date and time data types, see [Date and Time Improvements](../../oledb/features/date-and-time-improvements.md). For a sample, see [Use Enhanced Date and Time Features &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   

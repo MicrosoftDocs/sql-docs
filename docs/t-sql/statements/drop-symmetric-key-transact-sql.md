@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "DROP SYMMETRIC KEY statement"
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP SYMMETRIC KEY (Transact-SQL)

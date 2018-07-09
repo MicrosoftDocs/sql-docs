@@ -2,10 +2,10 @@
 title: "ICommandWithParameters | Microsoft Docs"
 description: "ICommandWithParameters interface"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-interfaces"
+ms.component: "oledb|ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -17,7 +17,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # ICommandWithParameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Improvements in the database engine beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] allow ICommandWithParameters::GetParameterInfo to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by CommandWithParameters::GetParameterInfo in previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../../oledb/features/metadata-discovery.md).  
   

@@ -11,11 +11,10 @@ ms.reviewer: ""
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
-ms.component: "security"
 ms.tgt_pltfrm:
 ms.devlang: "azurecli, powershell"
 ms.topic: conceptual
-ms.date: "04/24/2018"
+ms.date: "06/28/2018"
 ms.author: "aliceku"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -257,4 +256,14 @@ Now the database or data warehouse has TDE enabled with an encryption key in Key
 
       # get whether encryption is on or off
       az sql db tde show-configuration -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+## SQL CLI References
+
+https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest 
+
+https://docs.microsoft.com/en-us/cli/azure/sql/server/key?view=azure-cli-latest 
+
+https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+
+https://docs.microsoft.com/en-us/cli/azure/sql/db/tde?view=azure-cli-latest 
 

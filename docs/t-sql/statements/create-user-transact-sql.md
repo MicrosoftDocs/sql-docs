@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -30,8 +29,8 @@ helpviewer_keywords:
   - "users [SQL Server]"
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 caps.latest.revision: 111
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -105,8 +105,10 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table and defines a primary key on the column `CustomerID` and a clustered index on `TransactionID`.  
   
     ```sql  
+    -- Select appropriate database
     USE AdventureWorks2012;  
     GO  
+    -- Create table to add the clustered index
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
        CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "7/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "image data type, about image data type"
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # ntext, text, and image (Transact-SQL)

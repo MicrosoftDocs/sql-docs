@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "DROP CRYPTOGRAPHIC PROVIDER statement"
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)

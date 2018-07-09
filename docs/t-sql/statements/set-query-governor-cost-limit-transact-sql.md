@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "overriding connection values"
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)

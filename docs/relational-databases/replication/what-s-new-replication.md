@@ -7,8 +7,7 @@ ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

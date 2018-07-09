@@ -1,27 +1,27 @@
 ---
-title: "Connect to the SSIS Catalog database (SSISDB) in Azure | Microsoft Docs"
+title: "Connect to the SSIS Catalog  (SSISDB) in Azure | Microsoft Docs"
+description: Find the connection information you need to connect to the SSIS Catalog (SSISDB) hosted on an Azure SQL Database server.
 ms.date: "09/25/2017"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
-author: "douglaslMS"
-ms.author: "douglasl"
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
-# Connect to the SSIS Catalog database (SSISDB) in Azure
+# Connect to the SSIS Catalog (SSISDB) in Azure
 
-Get the connection information you need to connect to the SSISDB Catalog database hosted on an Azure SQL Database server. You  need the following items to connect:
+Find the connection information you need to connect to the SSIS Catalog (SSISDB) hosted on an Azure SQL Database server. You need the following items to connect:
 - fully qualified server name
 - database name
 - login information 
 
 > [!IMPORTANT]
-> You can't create the SSISDB Catalog database on Azure SQL Database at this time independently of creating the Azure-SSIS Integration Runtime in Azure Data Factory version 2. It's the Azure-SSIS IR that runs SSIS packages on Azure. For more info, see [Deploy SSIS packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> You can't create the SSISDB Catalog database on Azure SQL Database at this time independently of creating the Azure-SSIS Integration Runtime in Azure Data Factory. The Azure-SSIS IR is the runtime environment that runs SSIS packages on Azure. For a walkthrough of the process, see [Deploy and run an SSIS package in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## Prerequisites
 Before you start, make sure you have version 17.2 or later of SQL Server Management Studio (SSMS). If the SSISDB Catalog database is hosted on SQL Database Managed Instance (Preview), make sure you have version 17.6 or later of SSMS. To download the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -66,4 +66,4 @@ Before you start, make sure you have version 17.2 or later of SQL Server Managem
 ## Next steps
 - Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
 - Run a package. For more info, see [Run an SSIS package with SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Schedule a package. For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedule-packages.md)
+- Schedule a package. For more info, see [Schedule SSIS packages in Azure](ssis-azure-schedule-packages.md)

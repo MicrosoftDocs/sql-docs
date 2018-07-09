@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "counting rows"
 ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ROWCOUNT_BIG (Transact-SQL)

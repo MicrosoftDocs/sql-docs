@@ -1,10 +1,9 @@
-﻿---
+---
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -29,8 +28,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -78,7 +77,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  Is the password that is used to encrypt the private key before writing the key to the backup file. The password is subject to complexity checks.  
   
  *decryption_password*  
- Is the password that is used to decrypt the private key before backing up the key.  
+ Is the password that is used to decrypt the private key before backing up the key. This is not necessary if the certificate is encrypted by the master key. 
   
 ## Remarks  
  If the private key is encrypted with a password in the database, the decryption password must be specified.  

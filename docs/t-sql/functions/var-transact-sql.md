@@ -1,10 +1,9 @@
-﻿---
+---
 title: "VAR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -21,8 +20,8 @@ helpviewer_keywords:
   - "VAR function [Transact-SQL]"
 ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -38,8 +37,8 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-VAR ( [ ALL | DISTINCT ] expression )   
-   OVER ( [ partition_by_clause ] order_by_clause )    
+VAR ( [ ALL | DISTINCT ] expression )
+   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
   
 ```  

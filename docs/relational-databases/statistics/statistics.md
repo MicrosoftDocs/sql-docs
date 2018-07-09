@@ -3,12 +3,9 @@ title: "Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "statistics"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-statistics"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -25,7 +22,6 @@ helpviewer_keywords:
   - "query optimizer [SQL Server], statistics"
   - "statistics [SQL Server]"
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

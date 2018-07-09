@@ -1,20 +1,21 @@
 ---
 title: "Schedule SSIS packages in Azure | Microsoft Docs"
+description: Provides an overview of the available methods for scheduling the execution of SSIS packages deployed to Azure SQL Database.
 ms.date: "05/29/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
-author: "douglaslMS"
-ms.author: "douglasl"
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
-# Schedule the execution of an SSIS package in Azure
-You can schedule the execution of SSIS packages deployed to the SSISDB Catalog database on an Azure SQL Database server by choosing one of the options described in this article. You can schedule a package directly, or schedule a package indirectly as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
+# Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure
+
+You can schedule the execution of SSIS packages deployed to the SSISDB Catalog on an Azure SQL Database server by choosing one of the methods described in this article. You can schedule a package directly, or schedule a package indirectly as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Schedule a package directly
 
@@ -29,7 +30,7 @@ You can schedule the execution of SSIS packages deployed to the SSISDB Catalog d
 
 ## <a name="ssms"></a> Schedule a package with SSMS
 
-In SQL Server Management Studio (SSMS), you can right-click on a package deployed to the SSIS Catalog database, SSISDB, and select **Schedule** to open the **New schedule** dialog box. For more info, see [Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md).
+In SQL Server Management Studio (SSMS), you can right-click on a package deployed to the SSIS Catalog database, SSISDB, and select **Schedule** to open the **New schedule** dialog box. For more info, see [Schedule SSIS packages in Azure with SSMS](ssis-azure-schedule-packages-ssms.md).
 
 This feature requires SQL Server Management Studio version 17.7 or higher. To get the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -171,4 +172,4 @@ To run an SSIS package as part of a Data Factory pipeline, use one of the follow
 
 ## Next steps
 
-Review the options for running SSIS packages deployed to Azure. For more info, see [Run an SSIS package in Azure](ssis-azure-run-packages.md).
+Review the options for running SSIS packages deployed to Azure. For more info, see [Run SSIS packages in Azure](ssis-azure-run-packages.md).

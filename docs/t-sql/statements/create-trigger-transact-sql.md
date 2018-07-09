@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -30,8 +29,8 @@ helpviewer_keywords:
   - "database-scoped triggers [SQL Server]"
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 caps.latest.revision: 140
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.reviewer: mathoma
 ---

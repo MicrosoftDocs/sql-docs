@@ -3,12 +3,9 @@ title: "sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -19,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_set_query_mode stored procedure"
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

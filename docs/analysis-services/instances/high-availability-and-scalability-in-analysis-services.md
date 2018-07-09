@@ -79,7 +79,7 @@ manager: kfile
 |Multidimensional models using MOLAP storage|Choose a balanced configuration that accommodates disk IO for loading data quickly and sufficient RAM for cached data.|  
 |Multidimensional models using ROLAP storage.|Maximize disk IO and minimize network latency.|  
   
-## Highly availability and redundancy through WSFC  
+## High availability and redundancy through WSFC  
  Analysis Services can be installed into an existing Windows Server Failover Cluster (WSFC) to achieve high availability that restores service within the shortest time possible.  
   
  Failover clusters provide full access (read and writeback) to the database, but only one node at a time. Secondary databases run on additional nodes in the cluster, as replacement servers if the first node goes down.  

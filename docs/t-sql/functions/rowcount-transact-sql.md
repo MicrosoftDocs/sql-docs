@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "counting rows"
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;ROWCOUNT (Transact-SQL)

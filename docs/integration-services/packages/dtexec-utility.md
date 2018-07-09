@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "08/26/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "packages"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612

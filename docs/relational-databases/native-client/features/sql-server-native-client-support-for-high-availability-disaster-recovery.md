@@ -3,16 +3,12 @@ title: "SQL Server Native Client Support for High Availability, Disaster Recover
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|features"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg

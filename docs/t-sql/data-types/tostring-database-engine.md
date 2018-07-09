@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "7/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "ToString [Database Engine]"
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # ToString (Database Engine)

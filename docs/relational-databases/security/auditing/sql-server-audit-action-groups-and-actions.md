@@ -3,12 +3,10 @@ title: "SQL Server Audit Action Groups and Actions | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "security"
+ms.prod_service: security
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -24,8 +22,8 @@ helpviewer_keywords:
   - "audits [SQL Server], actions"
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 ---
 # SQL Server Audit Action Groups and Actions

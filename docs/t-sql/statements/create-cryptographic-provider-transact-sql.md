@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -27,8 +26,8 @@ helpviewer_keywords:
   - "33032 (Database Engine error)"
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)

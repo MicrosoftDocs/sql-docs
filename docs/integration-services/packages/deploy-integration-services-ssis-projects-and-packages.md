@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "packages"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -147,7 +145,7 @@ For more info about the error described in this section and about the permission
   
      -or-  
   
-     From the command prompt, run **isdeploymentwizard.exe** from **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn**. On 64-bit computers, there is also a 32-bit version of the tool in **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**.  
+     From the command prompt, run **isdeploymentwizard.exe** from **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. On 64-bit computers, there is also a 32-bit version of the tool in **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  On the **Select Source** page, click **Project deployment file** to select the deployment file for the project.  
   

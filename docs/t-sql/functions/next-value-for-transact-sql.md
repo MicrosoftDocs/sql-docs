@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "sequence number object, NEXT VALUE FOR function"
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # NEXT VALUE FOR (Transact-SQL)

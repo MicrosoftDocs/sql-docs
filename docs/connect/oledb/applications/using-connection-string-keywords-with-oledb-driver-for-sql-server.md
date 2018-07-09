@@ -2,7 +2,7 @@
 title: "Using Connection String Keywords with OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Using connection string keywords with OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb|applications"
@@ -23,13 +23,14 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # Using Connection String Keywords with OLE DB Driver for SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Some OLE DB Driver for SQL Server APIs use connection strings to specify connection attributes. Connection strings are lists of keyword and associated values; each keyword identifies a particular connection attribute.  
   
-> **NOTE:** OLE DB Driver for SQL Server allows ambiguity in connection strings to maintain backward compatibility (for example, some keywords may be specified more than once, and conflicting keywords may be allowed with resolution based on position or precedence). Future releases of OLE DB Driver for SQL Server might not allow ambiguity in connection strings. It is good practice when modifying applications to use OLE DB Driver for SQL Server to eliminate any dependency on connection string ambiguity.  
+> [!NOTE]
+> OLE DB Driver for SQL Server allows ambiguity in connection strings to maintain backward compatibility (for example, some keywords may be specified more than once, and conflicting keywords may be allowed with resolution based on position or precedence). Future releases of OLE DB Driver for SQL Server might not allow ambiguity in connection strings. It is good practice when modifying applications to use OLE DB Driver for SQL Server to eliminate any dependency on connection string ambiguity.  
   
  The following sections describe the keywords that can be used with the OLE DB Driver for SQL Server, and ActiveX Data Objects (ADO) when using OLE DB Driver for SQL Server as the data provider.  
 
@@ -101,6 +102,7 @@ manager: craigg
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|When "yes", instructs the OLE DB Driver for SQL Server to use Windows Authentication Mode for login validation. Otherwise instructs the OLE DB Driver for SQL Server to use a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] username and password for login validation, and the UID and PWD keywords must be specified.|  
 |**TrustServerCertificate**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepts the strings "yes" and "no" as values. The default value is "no", which means that the server certificate will be validated.|  
 |**UID**|DBPROP_AUTH_USERID|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login name.|  
+|**UseFMTONLY**|SSPROP_INIT_USEFMTONLY|Controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and newer. Possible values are "yes" and "no". The default value is "no".<br /><br />By default, the OLE DB Driver for SQL Server uses [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) and [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) stored procedures to retrieve metadata. These stored procedures have some limitations (e.g. they will fail when operating on temporary tables). Setting **UseFMTONLY** to "yes" instructs the driver to use [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) for metadata retrieval instead.|  
 |**UseProcForPrepare**|SSPROP_INIT_USEPROCFORPREP|This keyword is deprecated, and its setting is ignored by the OLE DB Driver for SQL Server.|  
 |**WSID**|SSPROP_INIT_WSID|The workstation identifier.|  
   
@@ -154,6 +156,7 @@ manager: craigg
 |**Server SPN**|SSPROP_INIT_SERVERSPN|The SPN for the server. The default value is an empty string. An empty string causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|  
 |**Trust Server Certificate**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepts the strings "true" and "false" as values. The default value is "false", which means that the server certificate will be validated.|  
 |**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are "true" and "false". The default value is "false".|  
+|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|Controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and newer. Possible values are "true" and "false". The default value is "false".<br /><br />By default, the OLE DB Driver for SQL Server uses [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) and [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) stored procedures to retrieve metadata. These stored procedures have some limitations (e.g. they will fail when operating on temporary tables). Setting **Use FMTONLY** to "true" instructs the driver to use [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) for metadata retrieval instead.|  
 |**User ID**|DBPROP_AUTH_USERID|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login name.|  
 |**Workstation ID**|SSPROP_INIT_WSID|The workstation identifier.|  
   
@@ -206,6 +209,7 @@ manager: craigg
 |**Server SPN**|SSPROP_INIT_SERVERSPN|The SPN for the server. The default value is an empty string. An empty string causes OLE DB Driver for SQL Server to use the default, provider-generated SPN.|  
 |**Trust Server Certificate**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepts the strings "true" and "false" as values. The default value is "false", which means that the server certificate will be validated.|  
 |**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|Specifies whether data should be encrypted before sending it over the network. Possible values are "true" and "false". The default value is "false".|  
+|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|Controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and newer. Possible values are "true" and "false". The default value is "false".<br /><br />By default, the OLE DB Driver for SQL Server uses [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) and [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) stored procedures to retrieve metadata. These stored procedures have some limitations (e.g. they will fail when operating on temporary tables). Setting **Use FMTONLY** to "true" instructs the driver to use [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) for metadata retrieval instead.|  
 |**User ID**|DBPROP_AUTH_USERID|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login name.|  
 |**Workstation ID**|SSPROP_INIT_WSID|The workstation identifier.|  
   

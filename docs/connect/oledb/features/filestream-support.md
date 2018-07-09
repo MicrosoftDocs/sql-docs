@@ -2,7 +2,7 @@
 title: "FILESTREAM Support | Microsoft Docs"
 description: "FILESTREAM support in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb|features"
@@ -19,7 +19,9 @@ ms.author: "Pedro.Lopes"
 manager: craigg
 ---
 # FILESTREAM Support
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], OLE DB Driver for SQL Server supports the enhanced FILESTREAM feature. For samples, see [Filestream and OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
 

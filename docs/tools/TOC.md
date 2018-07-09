@@ -30,3 +30,8 @@
 ## [sqlps Utility](sqlps-utility.md)  
 ## [sqlservr Application](sqlservr-application.md)  
 ## [tablediff Utility](tablediff-utility.md)
+
+# sqlpackage
+## [Install sqlpackage](sqlpackage-download.md)
+## [Release notes](sqlpackage-release-notes.md)
+## [sqlpackage ref](sqlpackage.md)

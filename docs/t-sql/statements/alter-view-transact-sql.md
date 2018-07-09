@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "ALTER VIEW statement"
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER VIEW (Transact-SQL)

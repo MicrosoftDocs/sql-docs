@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -47,8 +46,8 @@ helpviewer_keywords:
   - "cross-platform backups"
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 caps.latest.revision: 275
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

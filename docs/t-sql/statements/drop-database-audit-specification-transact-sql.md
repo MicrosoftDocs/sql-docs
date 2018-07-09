@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "DROP DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)

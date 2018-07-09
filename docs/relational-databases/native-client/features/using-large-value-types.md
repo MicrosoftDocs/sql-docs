@@ -3,12 +3,9 @@ title: "Using Large Value Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|features"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, large value data types"
   - "SQL Server Native Client OLE DB provider, large value data types"
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg

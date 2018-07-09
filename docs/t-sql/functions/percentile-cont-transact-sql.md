@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "10/20/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "PERCENTILE_CONT function"
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

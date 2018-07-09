@@ -3,12 +3,9 @@ title: "OLE Automation Objects in Transact-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-ole"
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server]"
   - "OLE Automation [SQL Server], about OLE Automation"
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

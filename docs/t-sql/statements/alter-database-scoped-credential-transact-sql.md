@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "02/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -18,13 +17,13 @@ helpviewer_keywords:
   - "credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Changes the properties of a database scoped credential.  
   

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "FIPS_FLAGGER option"
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET FIPS_FLAGGER (Transact-SQL)

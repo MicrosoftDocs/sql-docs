@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "digital signatures [SQL Server]"
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ADD SIGNATURE (Transact-SQL)

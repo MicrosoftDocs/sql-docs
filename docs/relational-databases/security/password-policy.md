@@ -3,12 +3,10 @@ title: "Password Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2015"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "security"
+ms.prod_service: security
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -35,8 +33,8 @@ helpviewer_keywords:
   - "characters [SQL Server], password policies"
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 ---
 # Password Policy

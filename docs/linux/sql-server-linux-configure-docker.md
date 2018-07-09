@@ -4,7 +4,7 @@ description: Explore different ways of using and interacting with SQL Server 201
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/26/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ""
@@ -13,7 +13,7 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: "sql-linux"
 ---
-# Configure SQL Server 2017 container images on Docker
+# Configure SQL Server container images on Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -152,6 +152,15 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P '<YourPassword>'
 sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
+## <a id="customcontainer"></a> Create a customized container
+
+It is possible to create your own [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) to create a customized SQL Server container. For more information, see [a demo that combines SQL Server and a Node application](https://github.com/twright-msft/mssql-node-docker-demo-app). If you do create your own Dockerfile, be aware of the foreground process, because this process controls the life of the container. If it exits, the container will shutdown. For example, if you want to run a script and start SQL Server, make sure that the SQL Server process is the right-most command. All other commands are run in the background. This is illustrated in the following command inside a Dockerfile:
+
+```bash
+/usr/src/app/do-my-sql-commands.sh & /opt/mssql/bin/sqlservr
+```
+
+If you reversed the commands in the previous example, the container would shutdown when the do-my-sql-commands.sh script completes.
 
 ## <a id="persist"></a> Persist your data
 
@@ -293,6 +302,62 @@ These steps can also be used to downgrade an existing container. For example, yo
 > [!IMPORTANT]
 > Upgrade and downgrade are only supported between RC1 and RC2 at this time.
 
+## <a id="version"></a> Check the container version
+
+If you want to know the version of SQL Server in a running docker container, run the following command to display it. Replace `<Container ID or name>` with the target container ID or name. Replace `<YourStrong!Passw0rd>` with the SQL Server password for the SA login.
+
+```bash
+sudo docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd \
+   -S localhost -U SA -P '<YourStrong!Passw0rd>' \
+   -Q 'SELECT @@VERSION'
+```
+
+```PowerShell
+docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd `
+   -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+   -Q 'SELECT @@VERSION'
+```
+
+You can also identify the SQL Server version and build number for a target docker container image. The following command displays the SQL Server version and build information for the **microsoft/mssql-server-linux: 2017-latest** image. It does this by running a new container with an environment variable **PAL_PROGRAM_INFO=1**. The resulting container instantly exits, and the `docker rm` command removes it.
+
+```bash
+sudo docker run -e PAL_PROGRAM_INFO=1 --name sqlver \
+   -ti microsoft/mssql-server-linux:2017-latest && \
+   sudo docker rm sqlver
+```
+
+```PowerShell
+docker run -e PAL_PROGRAM_INFO=1 --name sqlver `
+   -ti microsoft/mssql-server-linux:2017-latest; `
+   docker rm sqlver
+```
+
+The previous commands display version information similar to the following output:
+
+```Text
+sqlservr
+  Version 14.0.3029.16
+  Build ID ee3d3882f1c48a7a7e590a620153012eaedc2f37143d485df945a079b9d4eeea
+  Build Type release
+  Git Version 65d42c4
+  Built at Sat Jun 16 01:20:11 GMT 2018
+
+PAL
+  Build ID 60cfcb134bbae96d311f6a4f56aeb5a685b3809de80bcb61ec587a8f58b555eb
+  Build Type release
+  Git Version 21a4c11
+  Built at Sat Jun 16 01:18:53 GMT 2018
+
+Packages
+  system.sfp                    6.2.9200.1,21a4c1178,
+  system.common.sfp             10.0.15063.540
+  system.certificates.sfp       6.2.9200.1,21a4c1178,
+  system.netfx.sfp              4.6.1590.0
+  secforwarderxplat.sfp         14.0.3029.16
+  sqlservr.sfp                  14.0.3029.16
+  sqlagent.sfp                  14.0.3029.16
+```
+
 ## <a id="upgrade"></a> Upgrade SQL Server in containers
 
 To upgrade the container image with Docker, first identify the tag for the release for your upgrade. Pull this version from the registry with the `docker pull` command:
@@ -307,7 +372,7 @@ This updates the SQL Server image for any new containers you create, but it does
 
 1. Stop the SQL Server container with the `docker stop` command.
 
-1. Create a new SQL Server container with `docker run` and specify either a mapped host directory or a data volume container. Make sure to use the specific tag for the your SQL Server upgrade. The new container now uses a new version of SQL Server with your existing SQL Server data.
+1. Create a new SQL Server container with `docker run` and specify either a mapped host directory or a data volume container. Make sure to use the specific tag for your SQL Server upgrade. The new container now uses a new version of SQL Server with your existing SQL Server data.
 
    > [!IMPORTANT]
    > Upgrade is only supported between RC1, RC2, and GA at this time.
@@ -359,7 +424,7 @@ If the SQL Server container fails to run, try the following tests:
     docker logs e69e056c702d
     ```
 
-- Make sure that you meet the minimum memory and disk requirements specified in the [Requirements](#requirements) section of this topic.
+- Make sure that you meet the minimum memory and disk requirements specified in the [Requirements](#requirements) section of this article.
 
 - If you are using any container management software, make sure it supports container processes running as root. The sqlservr process in the container runs as root.
 

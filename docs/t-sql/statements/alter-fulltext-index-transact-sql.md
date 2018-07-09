@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "ALTER FULLTEXT INDEX statement"
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 caps.latest.revision: 95
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER FULLTEXT INDEX (Transact-SQL)

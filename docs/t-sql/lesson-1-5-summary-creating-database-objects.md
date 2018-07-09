@@ -3,8 +3,6 @@ title: "Summary: Creating Database Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -15,9 +13,8 @@ applies_to:
 helpviewer_keywords: 
   - "creating database objects"
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
-caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

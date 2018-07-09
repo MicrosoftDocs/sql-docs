@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "asynchronous cursors [SQL Server]"
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;CURSOR_ROWS (Transact-SQL)

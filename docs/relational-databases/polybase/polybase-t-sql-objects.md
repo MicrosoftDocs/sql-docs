@@ -3,8 +3,6 @@ title: "PolyBase T-SQL objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: polybase
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "PolyBase, fundamentals"
   - "PolyBase, SQL statements"
   - "PolyBase, SQL objects"
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg

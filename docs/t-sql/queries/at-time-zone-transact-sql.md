@@ -3,7 +3,6 @@ title: "AT TIME ZONE (Transact-SQL) | Microsoft Docs"
 ms.date: "11/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""

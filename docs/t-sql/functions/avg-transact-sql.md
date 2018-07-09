@@ -1,10 +1,9 @@
-﻿---
+---
 title: "AVG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "average values"
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 caps.latest.revision: 52
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -39,7 +38,7 @@ This function returns the average of the values in a group. It ignores null valu
   
 ```sql
 AVG ( [ ALL | DISTINCT ] expression )  
-   OVER ( [ partition_by_clause ] order_by_clause )    
+   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
   
 ## Arguments  

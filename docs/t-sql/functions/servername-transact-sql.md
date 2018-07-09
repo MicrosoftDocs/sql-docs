@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "local servers [SQL Server]"
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;SERVERNAME (Transact-SQL)

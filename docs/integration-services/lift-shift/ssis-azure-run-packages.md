@@ -1,22 +1,21 @@
 ---
 title: "Run SSIS packages in Azure | Microsoft Docs"
-ms.description: "Provides an overview of the available methods for running packages deployed to Azure SQL Database."
+description: "Provides an overview of the available methods for running SSIS packages deployed to Azure SQL Database."
 ms.date: "05/29/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "lift-shift"
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
-author: "douglaslMS"
-ms.author: "douglasl"
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
-# Run an SSIS package in Azure
+# Run SQL Server Integration Services (SSIS) packages deployed in Azure
 
-You can run SSIS packages deployed to the SSISDB Catalog database on an Azure SQL Database server by choosing one of the options described in this article. You can run a package directly, or run a package as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
+You can run SSIS packages deployed to the SSISDB Catalog on an Azure SQL Database server by choosing one of the methods described in this article. You can run a package directly, or run a package as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Deploy and run SSIS packages in Azure](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Run a package directly
 
@@ -75,4 +74,4 @@ For more info, see [Run an SSIS package using stored procedure activity in Azure
 
 ## Next steps
 
-Learn about options for scheduling SSIS packages deployed to Azure. For more info, see [Schedule the execution of an SSIS package in Azure](ssis-azure-schedule-packages.md).
+Learn about options for scheduling SSIS packages deployed to Azure. For more info, see [Schedule SSIS packages in Azure](ssis-azure-schedule-packages.md).

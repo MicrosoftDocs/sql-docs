@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "ALTER COLUMN ENCRYPTION KEY statement"
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER COLUMN ENCRYPTION KEY (Transact-SQL)

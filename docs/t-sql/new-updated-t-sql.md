@@ -11,8 +11,6 @@ ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.prod_service: sql-non-specified
-
-ms.component: t-sql
 ms.date: 04/28/2018
 ---
 # New and Recently Updated: Transact-SQL docs

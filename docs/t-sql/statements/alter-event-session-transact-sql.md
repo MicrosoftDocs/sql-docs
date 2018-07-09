@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -21,8 +20,8 @@ helpviewer_keywords:
   - "ALTER EVENT SESSION statement"
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER EVENT SESSION (Transact-SQL)

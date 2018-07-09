@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "ALTER RESOURCE POOL"
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER RESOURCE POOL (Transact-SQL)

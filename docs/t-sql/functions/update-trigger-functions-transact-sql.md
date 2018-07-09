@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -27,8 +26,8 @@ helpviewer_keywords:
   - "checking column updates"
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # UPDATE - Trigger Functions (Transact-SQL)

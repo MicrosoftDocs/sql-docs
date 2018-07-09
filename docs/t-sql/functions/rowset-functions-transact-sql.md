@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "rowsets [SQL Server]"
 ms.assetid: ac24d700-3144-4ab5-9fa8-8c014001cc71
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Rowset Functions (Transact-SQL)

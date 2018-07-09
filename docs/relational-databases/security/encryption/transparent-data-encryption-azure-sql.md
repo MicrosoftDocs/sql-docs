@@ -10,17 +10,16 @@ ms.reviewer: ""
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
-ms.component: "security"
 ms.tgt_pltfrm:
 ms.topic: conceptual
-ms.date: "05/08/2018"
+ms.date: "06/26/2018"
 ms.author: "rebeccaz"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Transparent data encryption for SQL Database and Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Transparent data encryption (TDE) helps protect Azure SQL Database and Azure Data Warehouse against the threat of malicious activity. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application. By default, TDE is enabled for all newly deployed Azure SQL Databases, but may need to be manually enabled for older databases.  
+Transparent data encryption (TDE) helps protect Azure SQL Database and Azure Data Warehouse against the threat of malicious activity. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application. By default, TDE is enabled for all newly deployed Azure SQL Databases. It will need to be manually enabled for older databases or Azure SQL Data Warehouse.  
 
 Transparent data encryption encrypts the storage of an entire database by using a symmetric key called the database encryption key. This database encryption key is protected by the transparent data encryption protector. The protector is either a service-managed certificate (service-managed transparent data encryption) or an asymmetric key stored in Azure Key Vault (Bring Your Own Key). You set the transparent data encryption protector at the server level. 
 

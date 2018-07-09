@@ -51,7 +51,7 @@ manager: "kfile"
   
  Setup no longer checks for Internet Information Services (IIS) or [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requires MDAC 2.0 and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0; Setup will install these if they are not already installed.  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> Troubleshoot oroblems with SharePoint mode installations  
+##  <a name="bkmk_tshoot_sharepoint"></a> Troubleshoot problems with SharePoint mode installations  
   
 -   [Reporting Services Configuration Manager Does not start](#bkmk_configmanager_notstart)  
   

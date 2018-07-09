@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2018"
@@ -506,7 +506,7 @@ WITH CHECK | WITH NOCHECK
   
  A column cannot be dropped when it is:  
   
--   Used in an index.  
+-   Used in an index, whether as a key column or as an INCLUDE
   
 -   Used in a CHECK, FOREIGN KEY, UNIQUE, or PRIMARY KEY constraint.  
   

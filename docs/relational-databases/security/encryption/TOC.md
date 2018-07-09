@@ -24,6 +24,7 @@
 ## [Create Identical Symmetric Keys on Two Servers](create-identical-symmetric-keys-on-two-servers.md)  
 ## [Encrypt a Column of Data](encrypt-a-column-of-data.md)  
 # [Always Encrypted using Secure Enclaves](always-encrypted-enclaves.md)  
+## [Configure Always Encrypted with Secure Enclaves](configure-always-encrypted-enclaves.md)  
 # [Always Encrypted](always-encrypted-database-engine.md)  
 ## [Always Encrypted Wizard](always-encrypted-wizard.md)  
 ## [Overview of Key Management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)  

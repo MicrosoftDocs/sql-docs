@@ -115,7 +115,7 @@ This article provides step-by-step instructions for migrating SQL Server on-prem
  
 The final screen shows the overall status.
 
-    ![Migration status](../dma/media/migration-status.png) 
+   ![Migration status](../dma/media/migration-status.png) 
 
 ## See also
 

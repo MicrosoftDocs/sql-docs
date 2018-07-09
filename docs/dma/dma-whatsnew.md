@@ -1,7 +1,7 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/01/2018"
+ms.date: "07/09/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -21,6 +21,18 @@ manager: craigg
 
 # What's new in Data Migration Assistant
 This topic lists the additions in each release of Data Migration Assistant (DMA).
+
+## DMA v3.6
+The v3.6 release of DMA introduces “Auto fix” for the schema objects that are impacted by the most common migration blockers.
+
+This release provides auto-fix for the following migration blocker and behavior change issues:
+- The schema objects that use Unqualified Join syntax.
+- The schema objects that use the legacy RAISEERROR statement.
+- SQL statements that use Order By Integer Literal.
+
+DMA performs automatic schema conversion for the objects impacted by the listed issues and prompts the user for confirmation before proceeding with the schema conversion. Users can review the suggested code changes and then either accept or reject all conversions for any given database object.
+
+DMA uses Microsoft Program Synthesis (PROSE) technology to suggest the code fixes. Learn more about [PROSE](https://microsoft.github.io/prose/).
 
 ## DMA v3.5
 The v3.5 release of DMA includes the following additions:

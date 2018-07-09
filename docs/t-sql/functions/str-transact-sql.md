@@ -94,7 +94,7 @@ GO
  Even when numeric data is nested within `STR`, the result is character data with the specified format.  
   
 ```  
-SELECT STR (FLOOR (123.45), 8, 3;)  
+SELECT STR (FLOOR (123.45), 8, 3);
 GO  
 ```  
   

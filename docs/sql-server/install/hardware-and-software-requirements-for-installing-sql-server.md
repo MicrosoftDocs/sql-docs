@@ -97,7 +97,8 @@ The following requirements apply to all installations:
 > [!NOTE]
 > Running [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a virtual machine will be slower than running natively because of the overhead of virtualization.  
   
- There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+> [!IMPORTANT]
+> There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
 ##  <a name="pmosr"></a> Processor, Memory, and Operating System Requirements  
  The following memory and processor requirements apply to all editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  

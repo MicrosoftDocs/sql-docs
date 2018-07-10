@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Disable or Enable a Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -82,5 +82,5 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/en-us/cbdfea38-9e42-47f3-8fc8-5978b82e2623).  
+For more information, see [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623).  
   

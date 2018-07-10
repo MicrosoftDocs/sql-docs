@@ -85,7 +85,7 @@ The following procedure shows how to map data types at the project, database, or
         You cannot remove inherited mappings. However, inherited mappings are overridden by custom mappings on a specific object or object category.  
   
 ## Next Steps  
-The next step in the migration process is to either [create an assessment report](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) or [convert Oracle database objects to SQL Server syntax](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). If you create an assessment report, Oracle objects are automatically converted during the assessment.  
+The next step in the migration process is to either [create an assessment report](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) or [convert Oracle database objects to SQL Server syntax](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). If you create an assessment report, Oracle objects are automatically converted during the assessment.  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

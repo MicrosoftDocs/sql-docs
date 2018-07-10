@@ -20,7 +20,7 @@ manager: craigg
 
 ## Purpose
 
-The Microsoft ODBC Driver for SQL Server with version 13.1 or above allows ODBC applications to connect to an instance of SQL Azure using a federated identity in Azure Active Directory with a username/password, an Azure Active Directory access token, or Windows Integrated Authentication (_Windows driver only_). For the ODBC Driver version 13.1, the Azure Active Directory access token authentication is _Windows only_. The ODBC Diver version 17 and 17.1 support this authentication across all platforms (Windows, Linux and Mac). A new Azure Active Directory interactive authentication with Login ID is introduced in ODBC Driver version 17.1 for Windows. All of these are accomplished through the use of new DSN and connection string keywords, and connection attributes.
+The Microsoft ODBC Driver for SQL Server with version 13.1 or above allows ODBC applications to connect to an instance of SQL Azure using a federated identity in Azure Active Directory with a username/password, an Azure Active Directory access token, or Windows Integrated Authentication (_Windows driver only_). For the ODBC Driver version 13.1, the Azure Active Directory access token authentication is _Windows only_. The ODBC Driver version 17 and above support this authentication across all platforms (Windows, Linux and Mac). A new Azure Active Directory interactive authentication with Login ID is introduced in ODBC Driver version 17.1 for Windows. All of these are accomplished through the use of new DSN and connection string keywords, and connection attributes.
 
 ## New and/or Modified DSN and Connection String Keywords
 
@@ -100,7 +100,7 @@ These options correspond to the same five available in the DSN setup UI above.
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
 > [!NOTE] 
->- When using the new Active Directory options with the Windows ODBC driver, ensure that the [Active Directory Authentication Library for SQL Server](http://go.microsoft.com/fwlink/?LinkID=513072) has been installed. The Linux and macOS drivers do not require any additional dependencies for authenticating with Azure Active Directory.
+>- When using the new Active Directory options with the Windows ODBC driver, ensure that the [Active Directory Authentication Library for SQL Server](http://go.microsoft.com/fwlink/?LinkID=513072) has been installed. When using the Linux and macOS drivers, ensure that `libcurl` has been installed. For driver version 17.2 and later, this is not an explicit dependency since it is not required for the other authentication methods or ODBC operations.
 >- To connect using a SQL Server account username and password, you may now use the new `SqlPassword` option, which is recommended especially for SQL Azure since this option enables more secure connection defaults.
 >- To connect using an Azure Active Directory account username and password, specify `Authentication=ActiveDirectoryPassword` in the connection string and the `UID` and `PWD` keywords with the username and password, respectively.
 >- To connect using Windows Integrated or Active Directory Integrated (Windows driver only) authentication, specify `Authentication=ActiveDirectoryIntegrated` in the connection string. The driver will choose the correct authentication mode automatically. `UID` and `PWD` must not be specified.
@@ -118,7 +118,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-The `ACCESSTOKEN` is a variable-length structure consisting of a 4-byte _length_ followed by _length_ bytes of opaque data that form the access token. Due to how SQL Server handles access tokens, one obtained via an [OAuth 2.0](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios) JSON response must be expanded so that each byte is followed by a 0 padding byte, similar to a UCS-2 string containing only ASCII characters; however, the token is an opaque value and the length specified, in bytes, must NOT include any null terminator. Because of their considerable length and format constraints, this method of authentication is only available programmatically via the `SQL_COPT_SS_ACCESS_TOKEN` coonnection attribute; there is no corresponding DSN or connection string keyword. The connection string must not contain `UID`, `PWD`, `Authentication`, or `Trusted_Connection` keywords.
+The `ACCESSTOKEN` is a variable-length structure consisting of a 4-byte _length_ followed by _length_ bytes of opaque data that form the access token. Due to how SQL Server handles access tokens, one obtained via an [OAuth 2.0](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios) JSON response must be expanded so that each byte is followed by a 0 padding byte, similar to a UCS-2 string containing only ASCII characters; however, the token is an opaque value and the length specified, in bytes, must NOT include any null terminator. Because of their considerable length and format constraints, this method of authentication is only available programmatically via the `SQL_COPT_SS_ACCESS_TOKEN` connection attribute; there is no corresponding DSN or connection string keyword. The connection string must not contain `UID`, `PWD`, `Authentication`, or `Trusted_Connection` keywords.
 
 > [!NOTE]
 > The ODBC Driver version 13.1 only supports this authentication on _Windows_.

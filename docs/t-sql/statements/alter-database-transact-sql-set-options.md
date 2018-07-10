@@ -1995,7 +1995,7 @@ Compatibility levels are `SET` options but are described in [ALTER DATABASE Comp
 ALTER DATABASE { database_name | Current }  
 SET   
 {  
-    <optionspec> [ ,...n ] [ WITH <termination> ]   
+    <optionspec> [ ,...n ] 
 }  
 ;  
 
@@ -2004,9 +2004,7 @@ SET
     <auto_option>   
   | <change_tracking_option>   
   | <cursor_option>   
-  | <db_encryption_option>  
-  | <db_update_option>   
-  | <db_user_access_option>   
+  | <db_encryption_option>    
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
@@ -2048,12 +2046,6 @@ SET
   
 <db_encryption_option> ::=  
   ENCRYPTION { ON | OFF }  
-  
-<db_update_option> ::=  
-  { READ_ONLY | READ_WRITE }  
-  
-<db_user_access_option> ::=  
-  { RESTRICTED_USER | MULTI_USER }  
   
 <delayed_durability_option> ::=  DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
   
@@ -2101,14 +2093,7 @@ SET
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
   | RECURSIVE_TRIGGERS { ON | OFF }   
-}  
-  
-<termination>  ::=   
-{  
-    ROLLBACK AFTER integer [ SECONDS ]   
-  | ROLLBACK IMMEDIATE   
-  | NO_WAIT  
-}  
+}
 
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  

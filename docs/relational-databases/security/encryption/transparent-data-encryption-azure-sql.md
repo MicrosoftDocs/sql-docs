@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Transparent data encryption for Azure SQL Database and Data Warehouse | Microsoft Docs"
 description: "An overview of transparent data encryption for SQL Database and Data Warehouse. The document covers its benefits and the options for configuration, which includes service-managed transparent data encryption and Bring Your Own Key."
 keywords:
@@ -12,14 +12,16 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.tgt_pltfrm:
 ms.topic: conceptual
-ms.date: "06/26/2018"
-ms.author: "rebeccaz"
+ms.date: "07/09/2018"
+ms.author: "aliceku"
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Transparent data encryption for SQL Database and Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Transparent data encryption (TDE) helps protect Azure SQL Database and Azure Data Warehouse against the threat of malicious activity. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application. By default, TDE is enabled for all newly deployed Azure SQL Databases. It will need to be manually enabled for older databases or Azure SQL Data Warehouse.  
+Transparent data encryption (TDE) helps protect Azure SQL Database and Azure Data Warehouse against the threat of malicious activity. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application. By default, TDE is enabled for all newly deployed Azure SQL Databases. TDE cannot be used to encrypt the logical **master** database in SQL Database.  The **master** database contains objects that are needed to perform the TDE operations on the user databases.
+
+TDE will need to be manually enabled for older databases or Azure SQL Data Warehouse.  
 
 Transparent data encryption encrypts the storage of an entire database by using a symmetric key called the database encryption key. This database encryption key is protected by the transparent data encryption protector. The protector is either a service-managed certificate (service-managed transparent data encryption) or an asymmetric key stored in Azure Key Vault (Bring Your Own Key). You set the transparent data encryption protector at the server level. 
 

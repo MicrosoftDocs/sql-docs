@@ -1660,6 +1660,7 @@ There is already an object named 'PK_#tmp' in the database.
 Msg 1750, Level 16, State 1, Line 1
 Could not create constraint or index. See previous errors.
 ```
+The problem arises from the fact that while the temp table name is uniquified, the constraint names are not.
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

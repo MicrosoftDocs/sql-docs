@@ -14,8 +14,8 @@ f1_keywords:
   - "SQL11.DTS.DESIGNER.AFPADLSCM.F1"
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 caps.latest.revision: 5
-author: "yualan"
-ms.author: "yual"
+author: yualan
+ms.author: douglasl
 manager: craigg
 ---
 # Azure Data Lake Store Connection Manager

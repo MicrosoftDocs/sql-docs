@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "source controls [SQL Server Management Studio], projects"
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Open Solutions and Projects from Source Control

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "ApplyCompression element"
 ms.assetid: 93e222e5-9371-4fb5-aae0-f50b964cc264
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ApplyCompression Element (XMLA)
   Determines whether the parent [Backup](../xml-elements-commands/backup-element-xmla.md) command compresses the backup file.  

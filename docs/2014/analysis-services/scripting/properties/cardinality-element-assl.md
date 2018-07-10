@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Cardinality element"
 ms.assetid: 60ac8a26-7c8b-4011-9b9b-a29863779428
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cardinality Element (ASSL)
   Indicates the cardinality of the relationship described by an [AttributeRelationship](../objects/attributerelationship-element-assl.md) or [RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md).  

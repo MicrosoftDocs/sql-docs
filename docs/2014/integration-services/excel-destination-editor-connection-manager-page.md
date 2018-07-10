@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Excel Destination Editor"
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Excel Destination Editor (Connection Manager Page)

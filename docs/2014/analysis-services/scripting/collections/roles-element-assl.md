@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Roles element"
 ms.assetid: 4191b7ce-bae4-4200-8550-3904420efafd
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Roles Element (ASSL)
   Contains the collection of [Role](../objects/role-element-assl.md) elements defined under the parent element.  

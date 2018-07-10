@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Annotations element"
 ms.assetid: b2236075-6a48-470d-8182-b0de112e258a
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Annotations Element (ASSL)
   Contains the collection of [Annotation](../objects/annotation-element-assl.md) elements associated with the parent element.  

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MemberNamesUnique element"
 ms.assetid: bd4e75b2-4605-4ebc-a535-10f743eba08e
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MemberNamesUnique Element (ASSL)
   Determines whether member names under the parent element must be unique.  

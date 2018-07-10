@@ -5,16 +5,15 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1"
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full-Text Index Properties (Schedules Page)

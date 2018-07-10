@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "traces [SQL Server], replaying"
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Replay to a Breakpoint (SQL Server Profiler)

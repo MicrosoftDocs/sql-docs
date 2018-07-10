@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "New Measure Group dialog box"
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # New Measure Group Dialog Box (Cube Designer)
   Use the **New Measure Group** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to add a new measure group to a cube in Cube Designer. You can display the **New Measure Group** dialog box by:  

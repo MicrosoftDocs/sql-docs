@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Shrink Database Task dialog box"
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Shrink Database Task (Maintenance Plan)

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Lesson 10: Defining Administrative Roles

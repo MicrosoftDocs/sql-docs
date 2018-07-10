@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.dmf.condition.advancededit.f1"
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Advanced Edit (Condition) Dialog Box

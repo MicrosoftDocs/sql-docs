@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Integration Services, backward compatibility"
 ms.assetid: 7e0a28b1-324b-4a0b-862b-aabe476f06e5
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Deprecated Integration Services Features in SQL Server 2014

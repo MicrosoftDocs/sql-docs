@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CalendarLanguage element"
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CalendarLanguage Element (ASSL)
   Defines the calendar language used for the [TimeBinding](../data-type/binding-data-type-assl.md) element.  

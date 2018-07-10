@@ -3,11 +3,9 @@ title: "Creating Views and Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql"
+ms.technology: t-sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -15,9 +13,8 @@ applies_to:
 helpviewer_keywords: 
   - "creating views and stored procedures"
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

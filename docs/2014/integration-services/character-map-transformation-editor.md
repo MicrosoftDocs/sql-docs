@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Character Map Transformation Editor"
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Character Map Transformation Editor

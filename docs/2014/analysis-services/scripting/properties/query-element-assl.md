@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Query element"
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Query Element (ASSL)
   Contains the text of the query to execute for the notification.  

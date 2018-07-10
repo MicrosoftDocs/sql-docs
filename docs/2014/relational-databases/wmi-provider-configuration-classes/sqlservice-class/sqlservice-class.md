@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SqlService class"
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SqlService Class

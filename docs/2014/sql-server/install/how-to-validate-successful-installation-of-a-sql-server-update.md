@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 96b0fb42-ebf0-408f-ba31-524cdbc0860e
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # How to: Validate Successful Installation of a SQL Server Update

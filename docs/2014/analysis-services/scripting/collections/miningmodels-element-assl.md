@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MiningModels element"
 ms.assetid: 19824d92-2e23-4e5e-b329-e46baf709c4a
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MiningModels Element (ASSL)
   Contains the collection of [MiningModel](../objects/miningmodel-element-assl.md) elements associated with a [MiningStructure](../objects/miningstructure-element-assl.md).  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "development security [SQL Server replication]"
 ms.assetid: 2322d39c-6689-4fb6-b23b-eae51cbb0222
 caps.latest.revision: 8
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Secure Development (Replication)

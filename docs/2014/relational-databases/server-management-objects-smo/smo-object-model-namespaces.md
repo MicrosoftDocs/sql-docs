@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SQL Server Management Objects, namespaces"
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SMO Namespaces

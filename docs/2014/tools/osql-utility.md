@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "CTRL+C command"
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # osql Utility

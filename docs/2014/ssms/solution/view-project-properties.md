@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "viewing project properties"
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View Project Properties

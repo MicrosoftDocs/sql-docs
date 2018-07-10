@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], push"
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Delete a Push Subscription

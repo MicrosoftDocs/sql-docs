@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "schema rowsets [ADOMD.NET]"
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Working with Schema Rowsets in ADOMD.NET
   When you need more metadata than is available in the ADOMD.NET object model, ADOMD.NET provides the capability to retrieve the full range of XML for Analysis (XMLA), OLE DB, OLE DB for OLAP, and OLE DB for Data Mining schema rowsets:  

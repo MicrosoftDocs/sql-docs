@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "FLOOR function [Transact-SQL]"
 ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

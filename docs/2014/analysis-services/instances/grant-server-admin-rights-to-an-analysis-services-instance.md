@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "server-wide administrative permissions [Analysis Services]"
 ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Grant Server Administrator Permissions (Analysis Services)
   Members of the Server administrator role within an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] have unrestricted access to all [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects and data in that instance. A user must be a member of the Server administrator role to perform any server-wide task, such as creating or processing a database, modifying server properties, or launching a trace (other than for processing events).  

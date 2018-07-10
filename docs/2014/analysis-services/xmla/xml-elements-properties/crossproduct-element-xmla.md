@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "CrossProduct element"
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CrossProduct Element (XMLA)
   Contains a cross-product between ordered sets of members from each hierarchy for an [Axis](axis-element-xmla.md) element that uses the [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) data type, returned by the [Execute](../xml-elements-methods-execute.md) method.  

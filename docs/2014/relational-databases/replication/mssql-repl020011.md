@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "MSSQL_REPL020011 error"
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 caps.latest.revision: 14
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQL_REPL020011

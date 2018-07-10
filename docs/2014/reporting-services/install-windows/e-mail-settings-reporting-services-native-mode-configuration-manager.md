@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL11.rsconfigtool.emailsettings.F1"
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # E-mail Settings - Configuration Manager (SSRS Native Mode)

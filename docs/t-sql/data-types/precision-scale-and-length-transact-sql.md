@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "data types [SQL Server], precision"
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Precision, scale, and Length (Transact-SQL)

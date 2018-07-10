@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "alternate snapshot folders [SQL Server replication]"
 ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Alternate Snapshot Folder Locations

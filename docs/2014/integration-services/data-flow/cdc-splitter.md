@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.designer.cdcsplitter.f1"
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # CDC Splitter

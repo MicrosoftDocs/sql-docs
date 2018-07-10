@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQLAgentOperatorRole database role"
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Agent Fixed Database Roles

@@ -9,8 +9,8 @@ ms.technology:
   - "replication"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Errors and Events (Replication)

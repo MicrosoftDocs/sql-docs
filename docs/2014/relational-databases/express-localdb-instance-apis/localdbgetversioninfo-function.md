@@ -18,8 +18,8 @@ topic_type:
   - "apiref"
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # LocalDBGetVersionInfo Function

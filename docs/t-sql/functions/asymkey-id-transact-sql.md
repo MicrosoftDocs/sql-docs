@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ASYMKEY_ID (Transact-SQL)

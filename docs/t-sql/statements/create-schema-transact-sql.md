@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "CREATE SCHEMA statement"
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 caps.latest.revision: 60
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

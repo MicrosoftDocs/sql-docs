@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "checking valid numeric type"
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

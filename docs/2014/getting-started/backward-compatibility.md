@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "earlier versions [SQL Server], (See also backward compatibility)"
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Backward Compatibility

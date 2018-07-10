@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], failover"
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Role Switching During a Database Mirroring Session (SQL Server)

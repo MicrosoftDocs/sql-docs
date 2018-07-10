@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "annotations [Master Data Services], for transactions"
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Annotate a Transaction (Master Data Services)

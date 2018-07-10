@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MdxMissingMemberMode element"
 ms.assetid: aca6130b-5fb8-4fa1-af8b-8e1ef361926f
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MdxMissingMemberMode Element (ASSL)
   Determines how missing members are handled for Multidimensional Expressions (MDX) statements.  

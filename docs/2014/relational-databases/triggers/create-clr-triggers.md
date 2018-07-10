@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,9 +13,8 @@ helpviewer_keywords:
   - "DML triggers, CLR triggers"
   - "DDL triggers, CLR triggers"
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Create CLR Triggers

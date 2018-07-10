@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.monitor.sortcolumns.f1"
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 caps.latest.revision: 6
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Sort Columns

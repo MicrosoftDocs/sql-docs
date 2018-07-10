@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ad hoc access"
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # ad hoc distributed queries Server Configuration Option

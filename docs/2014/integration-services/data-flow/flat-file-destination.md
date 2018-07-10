@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], Flat File"
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Flat File Destination

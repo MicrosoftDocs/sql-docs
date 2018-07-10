@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "dqs,adminstration"
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # DQS Administration

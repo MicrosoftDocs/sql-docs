@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "licensing"
 ms.assetid: 20f624c2-0036-4f44-a2a8-a041af0a0966
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Licensing Considerations for SQL Server

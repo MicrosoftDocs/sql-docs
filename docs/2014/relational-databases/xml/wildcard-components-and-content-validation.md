@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "content validation [XML]"
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Wildcard Components and Content Validation

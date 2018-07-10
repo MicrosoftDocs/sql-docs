@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "target namespaces [SQLXML]"
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Specifying a Target Namespace Using the targetNamespace Attribute (SQLXML 4.0)

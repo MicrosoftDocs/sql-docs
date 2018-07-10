@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.adonetsource.columns.f1"
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # ADO NET Source Editor (Columns Page)

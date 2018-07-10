@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Translation element"
 ms.assetid: fe715bab-050d-49e6-8ba6-801d0fa379a4
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Translation Element (ASSL)
   Provides a localized translation for the parent of the [Translations](../collections/translations-element-assl.md) collection.  

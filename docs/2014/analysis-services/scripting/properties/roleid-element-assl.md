@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "RoleID element"
 ms.assetid: 811e24c9-c732-41f9-bd5f-5c9e3503706a
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # RoleID Element (ASSL)
   Identifies the role for which permissions are being defined.  

@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.dm.dmwizard.selectdefinition.f1"
 ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select the Definition Method (Data Mining Wizard)
   Use the **Select the Definition Method** page to select the source for creating the new mining model. Your path through the wizard will be different depending on your selection, because a mining structure that is based on a cube requires different steps to construct than a mining structure that is based on a relational data source.  

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Subscribe command"
 ms.assetid: aad50dd7-44d4-4d83-a973-187f9aed35ec
 caps.latest.revision: 14
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Subscribe Element (XMLA)
   Subscribes to a trace and returns a rowset that contains the trace events from a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "XML for Analysis, partitions"
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Merging Partitions (XMLA)
   If partitions have the same aggregation design and structure, you can merge the partition by using the [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) command in XML for Analysis (XMLA). Merging partitions is an important action to perform when you manage partitions, especially those partitions that contain historical data partitioned by date.  

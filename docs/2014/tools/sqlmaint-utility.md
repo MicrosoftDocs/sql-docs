@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "backing up [SQL Server], sqlmaint utility"
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sqlmaint Utility

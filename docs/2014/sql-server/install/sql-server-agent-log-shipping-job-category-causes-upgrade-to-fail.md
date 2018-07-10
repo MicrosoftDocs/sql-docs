@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "job categories [SQL Server Agent]"
 ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Agent log shipping job category causes upgrade to fail

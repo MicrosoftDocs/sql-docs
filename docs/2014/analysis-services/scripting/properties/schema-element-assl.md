@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Schema element"
 ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Schema Element (ASSL)
   Contains the schema of the data source view.  

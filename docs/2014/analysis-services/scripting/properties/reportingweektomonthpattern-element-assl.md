@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ReportingWeekToMonthPattern element"
 ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ReportingWeekToMonthPattern Element (ASSL)
   Defines the reporting week-to-month pattern for the [TimeBinding](../data-type/binding-data-type-assl.md) element.  

@@ -14,8 +14,8 @@ f1_keywords:
   - "sql11.dts.designer.afpblobsrc.f1"
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Azure Blob Source

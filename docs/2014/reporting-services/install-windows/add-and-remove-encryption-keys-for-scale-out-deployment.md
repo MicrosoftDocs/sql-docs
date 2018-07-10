@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "scale-out deployments [Reporting Services]"
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Add and Remove Encryption Keys for Scale-Out Deployment (SSRS Configuration Manager)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "writeback [Analysis Services], partitions"
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Set Partition Writeback
   If you write-enable a measure group, end users can change cube data while they browse it, where changes are saved in a separate table called a writeback table, not in the cube data or source data. End users who browse a write-enabled partition see the net effect of all changes in the writeback table for the partition.  

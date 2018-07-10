@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Web browsers [Reporting Services]"
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 caps.latest.revision: 99
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Planning for Reporting Services and Power View Browser Support (Reporting Services 2014)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you use a web browser to view reports and run Report Manager. Not all browsers support all report functionality. This topic describes the support and requirements for Report Manager management features, viewing reports, the Report Viewer controls in Visual Studio. The topic also summarizes feature availability for the supported browsers, authentication requirements, and script requirements.  

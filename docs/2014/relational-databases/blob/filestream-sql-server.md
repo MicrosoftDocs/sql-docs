@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], overview"
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # FILESTREAM (SQL Server)

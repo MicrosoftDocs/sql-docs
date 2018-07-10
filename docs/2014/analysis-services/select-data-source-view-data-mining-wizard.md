@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.dm.dmwizard.selectdatasource.f1"
 ms.assetid: ee6c283d-60a2-4f51-9406-483cd1df2d7d
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Data Source View (Data Mining Wizard)
   Use the **Select Data Source View** page to identify the data source view for the mining structure.  

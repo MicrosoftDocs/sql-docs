@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Group element"
 ms.assetid: 7df4ba90-b39f-4d8a-8db1-b73639a522a6
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Group Element (ASSL)
   Defines a group of members bound to an attribute.  

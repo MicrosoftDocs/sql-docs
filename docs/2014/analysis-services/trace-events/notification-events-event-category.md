@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "notification events [Analysis Services]"
 ms.assetid: 5f215a7a-dab8-458c-b846-2d261e957849
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Notification Events Event Category
   The Notification Events event category has the event classes described in the following table.  

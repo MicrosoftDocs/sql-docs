@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "datasets [Integration Services], aggregate values"
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Aggregate Values in a Dataset by Using the Aggregate Transformation

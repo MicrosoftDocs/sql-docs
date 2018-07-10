@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "monitoring server performance [SQL Server], CPU usage"
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Monitor CPU Usage

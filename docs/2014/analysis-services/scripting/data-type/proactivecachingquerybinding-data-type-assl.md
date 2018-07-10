@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ProactiveCachingQueryBinding data type"
 ms.assetid: c1b06e50-9e68-40db-bdab-fc2cb3a8ff64
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ProactiveCachingQueryBinding Data Type (ASSL)
   Defines a derived data type that represents information to the [ProactiveCaching](../objects/proactivecaching-element-assl.md) element about data source changes in tables and views, identified through the execution of the specified queries that require rebuilding the cache.  

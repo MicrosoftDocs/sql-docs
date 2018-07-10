@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "DISCOVER_OBJECT_ACTIVITY rowset"
 ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_OBJECT_ACTIVITY Rowset
   Provides resource usage per object since the start of the service.  

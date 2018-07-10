@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSReportServer_ConfigurationSetting class"
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 caps.latest.revision: 46
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # MSReportServer_ConfigurationSetting Members
   The MSReportServer_ConfigurationSetting class contains the following properties and methods.  

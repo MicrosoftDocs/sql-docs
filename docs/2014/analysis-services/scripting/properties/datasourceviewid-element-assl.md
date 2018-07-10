@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DataSourceViewID element"
 ms.assetid: dcf617fe-0bf6-4767-af35-07c0c7fd96e5
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSourceViewID Element (ASSL)
   Identifies the [DataSourceView](../objects/datasourceview-element-assl.md) element associated with the [Binding](../data-type/binding-data-type-assl.md) parent element.  

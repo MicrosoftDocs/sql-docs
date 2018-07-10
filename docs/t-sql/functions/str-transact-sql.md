@@ -1,4 +1,4 @@
-﻿---
+---
 title: "STR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STR function"
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -94,7 +94,7 @@ GO
  Even when numeric data is nested within `STR`, the result is character data with the specified format.  
   
 ```  
-SELECT STR (FLOOR (123.45), 8, 3;)  
+SELECT STR (FLOOR (123.45), 8, 3);
 GO  
 ```  
   

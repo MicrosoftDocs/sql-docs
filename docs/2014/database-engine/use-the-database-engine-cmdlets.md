@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "Cmdlets [SQL Server], Decode-Sqlname"
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 caps.latest.revision: 24
-author: "mgblythe"
-ms.author: "mblythe"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Use the Database Engine cmdlets

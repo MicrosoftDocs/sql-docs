@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], system"
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # User-defined functions are not allowed in system_function_schema

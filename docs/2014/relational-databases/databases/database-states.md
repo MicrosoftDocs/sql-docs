@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "restoring database state [SQL Server]"
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database States

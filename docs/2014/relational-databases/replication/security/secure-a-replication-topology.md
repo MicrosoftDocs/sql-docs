@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "replication [SQL Server], security"
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
 caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Secure a Replication Topology

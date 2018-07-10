@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "documentation policy [SQL Server]"
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Legal Notice for Documentation

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "queries [SQL Server], tables"
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Remove Tables from Queries (Visual Database Tools)

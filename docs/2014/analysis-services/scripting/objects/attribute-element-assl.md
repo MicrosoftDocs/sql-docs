@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Attribute element"
 ms.assetid: 079ec9f8-a314-4e3c-821a-b42c65cc7363
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Attribute Element (ASSL)
   Contains the description of an attribute.  

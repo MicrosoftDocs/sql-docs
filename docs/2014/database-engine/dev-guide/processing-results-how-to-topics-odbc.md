@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ODBC, results processing"
 ms.assetid: 772d9064-c91d-4cac-8b60-fcc16bf76e10
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Processing Results How-to Topics (ODBC)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SSIS, functions"
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Functions (SSIS Expression)

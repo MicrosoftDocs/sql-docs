@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs"
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor - Plain Text - Tabs Page)

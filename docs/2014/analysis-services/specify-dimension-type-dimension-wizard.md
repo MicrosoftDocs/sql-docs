@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.dimensionwizard.bidimensionproperties.f1"
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specify Dimension Type (Dimension Wizard)
   Use the **Specify Dimension Type** page to define the dimension type and add special attribute types associated with the selected dimension type to the dimension.  

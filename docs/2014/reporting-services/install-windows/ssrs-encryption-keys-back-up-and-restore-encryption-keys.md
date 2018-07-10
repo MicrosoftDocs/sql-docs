@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "symmetric keys [Reporting Services]"
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Back Up and Restore Reporting Services Encryption Keys

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Create command (XMLA)"
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
 caps.latest.revision: 17
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create Element (XMLA)
   Contains Analysis Services Scripting Language (ASSL) elements used by the `Execute` method to create objects on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  

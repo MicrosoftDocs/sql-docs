@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "FontName element"
 ms.assetid: 5560a852-9745-4abb-93d8-9cebe8a9897c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # FontName Element (ASSL)
   Describes font-related display characteristics of the [CalculationProperty](../objects/calculationproperty-element-assl.md) or [Measure](../objects/measure-element-assl.md) parent element.  

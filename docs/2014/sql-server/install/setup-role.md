@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 caps.latest.revision: 14
-author: "HeidiSteen"
-ms.author: "heidist"
+author: heidisteen
+ms.author: heidist
 manager: craigg
 ---
 # Setup Role

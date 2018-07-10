@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "DB_NAME function"
 ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

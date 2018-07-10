@@ -5,9 +5,7 @@ ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
@@ -20,8 +18,8 @@ helpviewer_keywords:
   - "bcp_control function"
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # bcp_control

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Reorganize Index Task dialog box"
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Reorganize Index Task (Maintenance Plan)

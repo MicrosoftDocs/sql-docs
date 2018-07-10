@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.is.upgradewizard.selectsourcelocation.f1"
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Select Source Location (SSIS Package Upgrade Wizard)

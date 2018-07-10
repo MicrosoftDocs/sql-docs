@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], SOAP"
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 caps.latest.revision: 38
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Using Reporting Services SOAP Headers

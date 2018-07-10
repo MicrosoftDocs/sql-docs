@@ -3,8 +3,6 @@ title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
 manager: craigg
-ms.assetid: 
-ms.component: "polybase"
 ms.technology: polybase
 ms.suite: "sql"
 ms.custom: ""

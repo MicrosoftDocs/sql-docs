@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data collector [SQL Server], programming"
 ms.assetid: 53b4752b-055d-4716-b2bc-75b4cce84101
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Data Collector Programming

@@ -2,8 +2,6 @@
 title: "PolyBase Guide | Microsoft Docs"
 ms.date: "05/30/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], search multiple files"
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Search Documents Using Results Lists

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "connections [Integration Services], HTTP"
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # HTTP Connection Manager

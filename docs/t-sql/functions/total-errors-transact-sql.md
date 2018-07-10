@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "read/write errors"
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;TOTAL_ERRORS (Transact-SQL)

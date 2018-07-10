@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.impexpwizard.specifytablecopyorquery.f1"
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Specify Table Copy or Query (SQL Server Import and Export Wizard)

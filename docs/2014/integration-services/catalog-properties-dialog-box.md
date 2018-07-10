@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.ssis.ssms.iscreatecatalog.f1"
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Catalog Properties Dialog Box

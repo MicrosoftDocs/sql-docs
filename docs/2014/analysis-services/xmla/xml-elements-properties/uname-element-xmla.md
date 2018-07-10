@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "UName element"
 ms.assetid: b4916d44-cf77-4d4c-b4e5-a0a98192d057
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # UName Element (XMLA)
   Contains the unique name of the parent [HierarchyInfo](hierarchyinfo-element-xmla.md) or [Member](member-element-xmla.md) element.  

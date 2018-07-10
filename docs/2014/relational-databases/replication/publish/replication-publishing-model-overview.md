@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "Distributors [SQL Server replication]"
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Publishing Model Overview

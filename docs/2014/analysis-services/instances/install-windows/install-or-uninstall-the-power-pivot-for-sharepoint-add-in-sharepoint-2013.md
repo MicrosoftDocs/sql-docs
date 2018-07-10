@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 caps.latest.revision: 22
-author: "markingmyname"
-ms.author: "maghan"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Install or Uninstall the PowerPivot for SharePoint Add-in (SharePoint 2013)

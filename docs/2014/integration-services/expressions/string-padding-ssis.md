@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "string padding"
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # String Padding (SSIS)

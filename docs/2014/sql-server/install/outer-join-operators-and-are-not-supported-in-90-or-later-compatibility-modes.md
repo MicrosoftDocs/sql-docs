@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "joins [SQL Server]"
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Outer join operators *= and =* are not supported in 90 or later compatibility modes

@@ -5,15 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # LOCALDB_ERROR_INSTANCE_STOP_FAILED

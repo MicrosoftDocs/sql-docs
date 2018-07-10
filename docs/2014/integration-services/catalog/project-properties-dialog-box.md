@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.ssis.ssms.isprojectprop.permissions.f1"
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Project Properties Dialog Box

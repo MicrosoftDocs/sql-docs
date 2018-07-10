@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], scheduling"
 ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Schedule a Job

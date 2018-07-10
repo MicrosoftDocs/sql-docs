@@ -3,12 +3,9 @@ title: "sys.remote_data_archive_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.remote_data_archive_tables catalog view"
 ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

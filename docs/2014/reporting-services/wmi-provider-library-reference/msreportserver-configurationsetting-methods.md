@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSReportServer_ConfigurationSetting class"
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 caps.latest.revision: 45
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # MSReportServer_ConfigurationSetting Methods
   The MSReportServer_ConfigurationSetting class of the Report Server WMI Provider provides the following public methods.  

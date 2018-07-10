@@ -14,9 +14,9 @@ f1_keywords:
   - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
 caps.latest.revision: 35
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Data Source Properties Dialog Box, General
   Select **General** on the **Data Source Properties** dialog box to display and modify connection information for a data source in the report.  

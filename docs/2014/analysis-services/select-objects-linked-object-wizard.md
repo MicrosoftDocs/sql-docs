@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.linkedobjectwizard.selectobjects.f3"
 ms.assetid: 733afc25-5055-4411-bab5-dd9e0595cd2d
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Objects (Linked Object Wizard)
   Use the **Select Objects** page to select the objects that will be linked to or imported.  

@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
@@ -24,8 +22,8 @@ helpviewer_keywords:
   - "indexes [CLR integration]"
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Defining UDT Tables and Columns

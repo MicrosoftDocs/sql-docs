@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Excel Source Editor"
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Excel Source Editor (Columns Page)

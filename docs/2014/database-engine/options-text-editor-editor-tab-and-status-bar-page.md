@@ -14,8 +14,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar"
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor: Editor Tab and Status Bar Page)

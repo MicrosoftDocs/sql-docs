@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "default configuration files"
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Configuring the Integration Services Service (SSIS Service)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "GUIDs [SQL Server]"
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # NEWSEQUENTIALID (Transact-SQL)

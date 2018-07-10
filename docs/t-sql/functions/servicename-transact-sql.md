@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "registry keys [SQL Server]"
 ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

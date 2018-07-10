@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "AMR"
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 33
-author: "stevestein"
-ms.author: "sstein"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transact-SQL snippets, surround with"
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 caps.latest.revision: 5
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Insert Surround-with Transact-SQL snippets

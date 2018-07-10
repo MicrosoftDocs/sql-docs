@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Assembly element [ASSL]"
 ms.assetid: 1910ccb0-7da0-4ee1-9548-ad6e0068d23d
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Assembly Element (ASSL)
   Represents a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly or a COM dynamic link library (DLL) associated with a [Server](server-element-assl.md) element or a [Database](database-element-assl.md) element.  

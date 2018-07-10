@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
 caps.latest.revision: 8
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AssociationSet Element (CSDLBI)
   The `AssociationSet` element is a complex type that defines an association. In a CSDLBI data model, an association is a relationship between two tables.  

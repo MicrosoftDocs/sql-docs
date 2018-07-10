@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], pull"
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Synchronize a Pull Subscription

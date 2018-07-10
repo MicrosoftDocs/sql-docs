@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "precedence constraints [Integration Services], properties"
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Set the Properties of a Precedence Constraint

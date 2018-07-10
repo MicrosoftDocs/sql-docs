@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "FirstDayOfWeek element"
 ms.assetid: d3c92fa3-b293-43b5-806e-cd1c146a3a7c
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # FirstDayOfWeek Element (ASSL)
   Defines the first day of the week for a [TimeBinding](../data-type/binding-data-type-assl.md) element.  

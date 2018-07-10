@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "number of characters"
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

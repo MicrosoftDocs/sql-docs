@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "categories [SQL Server Agent jobs]"
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Job Category

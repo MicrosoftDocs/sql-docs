@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "History Cleanup Task dialog box"
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # History Cleanup Task (Maintenance Plan)

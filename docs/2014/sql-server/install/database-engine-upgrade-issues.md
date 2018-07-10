@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], upgrading"
 ms.assetid: 81df03de-219b-4ec1-b3c6-fb861150346e
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Database Engine Upgrade Issues

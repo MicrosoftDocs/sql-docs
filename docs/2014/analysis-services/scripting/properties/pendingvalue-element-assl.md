@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "PendingValue element"
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PendingValue Element (ASSL)
   Contains the read-only pending value of the associated [ServerProperty](../objects/serverproperty-element-assl.md) element.  

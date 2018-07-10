@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], IP addresses"
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 caps.latest.revision: 32
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Change the IP Address of a Failover Cluster Instance

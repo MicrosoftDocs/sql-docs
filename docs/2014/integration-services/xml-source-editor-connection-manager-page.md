@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "XML Source Editor"
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # XML Source Editor (Connection Manager Page)

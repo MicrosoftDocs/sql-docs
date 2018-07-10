@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Allow a Text Box to Grow or Shrink (Report Builder and SSRS)
   By default, text boxes are a fixed size. You can set options that let the text box expand or shrink based on its contents. These options correspond to the `CanGrow` or `CanShrink` properties in the Properties pane.  

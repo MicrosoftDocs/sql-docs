@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ConnectionString element"
 ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ConnectionString Element (ASSL)
   Contains the encrypted connection string for a [DataSource](../objects/datasource-element-assl.md) element.  

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "dates [SQL Server], international considerations"
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Write International Transact-SQL Statements

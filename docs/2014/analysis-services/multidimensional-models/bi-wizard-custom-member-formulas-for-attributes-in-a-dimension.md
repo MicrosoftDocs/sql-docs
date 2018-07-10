@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "CustomRollupColumn property"
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Set Custom Member Formulas for Attributes in a Dimension
   Add a custom member formula enhancement to a cube or dimension to replace the default aggregation that is associated with a dimension member with the results of a Multidimensional Expressions (MDX) expression. (This enhancement sets the `CustomRollupColumn` property on a specified attribute in a dimension.)  

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Subscribers [SQL Server replication], republishing data"
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Republish Data

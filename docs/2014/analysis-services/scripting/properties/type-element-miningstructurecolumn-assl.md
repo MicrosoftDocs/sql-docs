@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Type element"
 ms.assetid: ce999716-9487-4348-bc42-270a2026a452
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Type Element (MiningStructureColumn) (ASSL)
   Contains the type of the [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) element.  

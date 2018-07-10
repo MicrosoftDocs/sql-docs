@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Output Window [SQL Server Management Studio]"
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Output Window

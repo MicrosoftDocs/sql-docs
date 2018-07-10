@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sources [Integration Services], Excel"
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Excel Source

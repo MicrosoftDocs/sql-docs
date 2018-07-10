@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "PartitionBinding data type"
 ms.assetid: 859d4b47-31c7-4678-9388-254fec484299
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PartitionBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to a [Partition](../objects/partition-element-assl.md) element.  

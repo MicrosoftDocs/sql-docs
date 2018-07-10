@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "alias data types [SQL Server], creating"
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a User-Defined Data Type Alias

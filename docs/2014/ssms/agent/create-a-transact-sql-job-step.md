@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, Transact-SQL step"
 ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Transact-SQL Job Step

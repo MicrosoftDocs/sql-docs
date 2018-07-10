@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "identifying components to analyze"
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Components

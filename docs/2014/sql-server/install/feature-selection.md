@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Components to Install page [SQL Server Installation Wizard]"
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 caps.latest.revision: 86
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Feature Selection

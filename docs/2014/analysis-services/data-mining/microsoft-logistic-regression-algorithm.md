@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "regression algorithms [Analysis Services]"
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Microsoft Logistic Regression Algorithm
   Logistic regression is a well-known statistical technique that is used for modeling binary outcomes.  

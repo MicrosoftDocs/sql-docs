@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "stopping traces"
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Schedule Traces

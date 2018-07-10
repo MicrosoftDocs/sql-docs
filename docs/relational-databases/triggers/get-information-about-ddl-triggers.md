@@ -3,12 +3,9 @@ title: "Get Information About DDL Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-ddl"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "status information [SQL Server], DDL triggers"
   - "DDL triggers, metadata"
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

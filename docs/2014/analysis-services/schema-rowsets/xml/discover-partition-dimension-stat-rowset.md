@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: bf4626b3-4d6b-4795-bb01-df335fb9c09a
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_PARTITION_DIMENSION_STAT Rowset
   Returns statistics on the dimension that is associated with a partition  

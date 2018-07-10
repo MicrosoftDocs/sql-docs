@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ADO.NET destination"
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # ADO NET Destination

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], targets"
 ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Extended Events Targets

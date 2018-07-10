@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.impexpwizard.chooseadatasource.f1"
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)

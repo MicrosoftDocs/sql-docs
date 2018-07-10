@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Tabular Modeling (Adventure Works Tutorial)

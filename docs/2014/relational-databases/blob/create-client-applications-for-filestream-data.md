@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], Win32"
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Create Client Applications for FILESTREAM Data

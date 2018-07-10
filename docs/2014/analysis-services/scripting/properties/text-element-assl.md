@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Text element"
 ms.assetid: 0edece73-236f-4661-8102-3fcc29326bf4
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Text Element (ASSL)
   Contains the text of a [Command](../objects/command-element-assl.md) element.  

@@ -3,19 +3,15 @@ title: "Use FOR JSON output in SQL Server and in client apps (SQL Server) | Micr
 ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON, using in client apps"
   - "FOR JSON, using in SQL Server"
 ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
-caps.latest.revision: 12
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl

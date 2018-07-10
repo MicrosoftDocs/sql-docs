@@ -147,7 +147,7 @@ For each item that could not be converted, you have to determine what you want t
 -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer and DB2 Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and migrating data from DB2.  
   
 ## Next Step  
-The next step in the migration process is to [Load the converted objects into SQL Server](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
+The next step in the migration process is to [Load the converted objects into SQL Server](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
 ## See Also  
 [Migrating DB2 Data into SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

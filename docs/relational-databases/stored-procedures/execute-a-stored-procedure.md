@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Execute a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -26,7 +26,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 # Execute a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > For content related to previous versions of SQL Server, see [Execute a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Execute a Stored Procedure](https://msdn.microsoft.com/library/ms189915(SQL.120).aspx).
 
   This topic describes how to execute a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

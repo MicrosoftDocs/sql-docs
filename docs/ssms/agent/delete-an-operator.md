@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete an Operator | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -92,5 +92,5 @@ Members of the **sysadmin** fixed server role can delete operators.
     GO  
     ```  
   
-For more information, see [sp_delete_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95).  
+For more information, see [sp_delete_operator (Transact-SQL)](http://msdn.microsoft.com/ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95).  
   

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Overview and Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"

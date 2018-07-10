@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Stop a Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -84,7 +84,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_stop_job (Transact-SQL)](http://msdn.microsoft.com/en-us/64b4cc75-99a0-421e-b418-94e37595bbb0).  
+For more information, see [sp_stop_job (Transact-SQL)](http://msdn.microsoft.com/64b4cc75-99a0-421e-b418-94e37595bbb0).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To stop a job**  

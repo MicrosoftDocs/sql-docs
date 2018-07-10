@@ -46,10 +46,10 @@ Converting database objects takes the object definitions from the Access metadat
 > [!IMPORTANT]  
 > Converting objects does not create the objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. It only converts the object definitions and stores the information in the SSMA project.  
   
-During the conversion, SSMA prints status to the Output pane, and error, warning, and informational messages to the Error List pane. Use this information to determine whether you need to modify your Access databases or your conversion process to obtain the desired conversion results. You can also use the information in the [Preparing Access Databases for Migration](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114) topic to determine what will and will not be converted.  
+During the conversion, SSMA prints status to the Output pane, and error, warning, and informational messages to the Error List pane. Use this information to determine whether you need to modify your Access databases or your conversion process to obtain the desired conversion results. You can also use the information in the [Preparing Access Databases for Migration](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114) topic to determine what will and will not be converted.  
   
 ## Setting Conversion Options  
-Before converting objects, review the project conversion options in the **Project Settings** dialog box. By using this dialog box, you can set how SSMA converts indexed memo columns, primary keys, foreign key constraints, timestamps, and tables without indexes. For more information, see [Project Settings (Conversion)](http://msdn.microsoft.com/en-us/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+Before converting objects, review the project conversion options in the **Project Settings** dialog box. By using this dialog box, you can set how SSMA converts indexed memo columns, primary keys, foreign key constraints, timestamps, and tables without indexes. For more information, see [Project Settings (Conversion)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## Conversion Results  
 The following table shows which Access objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects:  
@@ -116,8 +116,8 @@ After you convert Access metadata to [!INCLUDE[ssNoVersion](../../includes/ssnov
 You can now view the changes in the code on the **SQL** tab.  
   
 ## Next Step  
-The next step in the migration process is [load converted database objects into SQL Server](http://msdn.microsoft.com/en-us/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba)  
+The next step in the migration process is [load converted database objects into SQL Server](http://msdn.microsoft.com/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba)  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

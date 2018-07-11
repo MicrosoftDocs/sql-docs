@@ -18,7 +18,7 @@ manager: craigg
 # Connecting to SQL Server with the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  One of the most fundamental things that you will do with the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] is to make a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. All interaction with the database occurs through the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) object, and because the JDBC driver has such a flat architecture, almost all interesting behavior touches the SQLServerConnection object.  
+  One of the most fundamental things that you'll do with the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] is to make a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. All interaction with the database occurs through the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) object, and because the JDBC driver has such a flat architecture, almost all interesting behavior touches the SQLServerConnection object.  
   
  If a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is only listening on an IPv6 port, set the java.net.preferIPv6Addresses system property to make sure that IPv6 is used instead of IPv4 to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
   

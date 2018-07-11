@@ -28,14 +28,14 @@ manager: craigg
 > [!NOTE]  
 >  An alternative to using the SQL Server specific cursor type is to use the selectMethod connection string property, setting its value to "cursor". For more information about the cursor types supported by the JDBC driver, see [Understanding Cursor Types](../../../connect/jdbc/understanding-cursor-types.md).  
   
- After you have run the query contained in the Statement object and the data is returned to the client as a result set, you can call the setFetchSize method to control how much data is retrieved from the database at one time. For example, if you have a table that contains 100 rows of data, and you set the fetch size to 10, only 10 rows of data will be cached on the client at any point in time. Although this will slow down the speed at which the data is processed, it has the advantage of using less memory on the client, which can be especially useful when you need to process large amounts of data.  
+ After you have run the query in the Statement object and the data is returned to the client as a result set, you can call the setFetchSize method to control how much data is retrieved from the database at one time. For example, if you have a table that 100 rows of data, and you set the fetch size to 10, only 10 rows of data will be cached on the client at any time. Although this will slow down the speed at which the data is processed, it has the advantage of using less memory on the client, which can be especially useful when you need to process large amounts of data.  
   
  The code file for this sample is named CacheRS.java, and it can be found in the following location:  
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\resultsets  
   
 ## Requirements  
- To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You will also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
 >  The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] rovides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  

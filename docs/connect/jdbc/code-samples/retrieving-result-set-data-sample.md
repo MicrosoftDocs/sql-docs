@@ -25,7 +25,7 @@ manager: craigg
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\resultsets  
   
 ## Requirements  
- To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You will also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
 >  The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
@@ -33,7 +33,7 @@ manager: craigg
 ## Example  
  In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into a [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object.  
   
- Next, the sample code calls the custom displayRow method to iterate through the rows of data that are contained in the result set, and uses the [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) method to display some of the data that it contains.  
+ Next, the sample code calls the custom displayRow method to iterate through the rows of data that are in the result set, and uses the [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) method to display some of the data.
   
 ```java
 import java.sql.Connection;

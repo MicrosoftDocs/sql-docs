@@ -33,7 +33,7 @@ Always Encrypted allows clients to encrypt sensitive data and never reveal the d
     - If using the mssql-jdbc-X.X.X.jre9.jar, no policy file needs to be downloaded. The jurisdiction policy in Java 9 defaults to unlimited strength encryption.
 
 ## Working with column master key stores
-To encrypt or decrypt data for encrypted columns, SQL Server maintains column encryption keys. Column encryption keys are stored in encrypted form in the database metadata. Each column encryption key has a corresponding column master key that is used to encrypt the column encryption key. The database metadata does not contain the column master keys. Those keys are only held by the client. However the database metadata does contain information about where the column master keys are stored relative to the client. For example, the database metadata may say that the keystore holding a column master key is the Windows Certificate Store and the specific certificate used to encrypt and decrypt is located at a specific path within the Windows Certificate Store. If the client has access to that certificate in the Windows Certificate Store, it can obtain the certificate. The certificate can then be used to decrypt the column encryption key. Then that encryption key can be used to decrypt or encrypt data for encrypted columns that use that column encryption key.
+To encrypt or decrypt data for encrypted columns, SQL Server maintains column encryption keys. Column encryption keys are stored in encrypted form in the database metadata. Each column encryption key has a corresponding column master key that is used to encrypt the column encryption key. The database metadata doesn't contain the column master keys. Those keys are only held by the client. However the database metadata does contain information about where the column master keys are stored relative to the client. For example, the database metadata may say that the keystore holding a column master key is the Windows Certificate Store and the specific certificate used to encrypt and decrypt is located at a specific path within the Windows Certificate Store. If the client has access to that certificate in the Windows Certificate Store, it can obtain the certificate. The certificate can then be used to decrypt the column encryption key. Then that encryption key can be used to decrypt or encrypt data for encrypted columns that use that column encryption key.
 
 The Microsoft JDBC Driver for SQL Server communicates with a keystore using a column master key store provider, which is an instance of a class derived from **SQLServerColumnEncryptionKeyStoreProvider**.
 
@@ -46,9 +46,9 @@ The Microsoft JDBC Driver for SQL Server comes with the following built-in colum
 |**SQLServerColumnEncryptionCertificateStoreProvider**| A provider for the Windows Certificate Store.|MSSQL_CERTIFICATE_STORE|Yes
 |**SQLServerColumnEncryptionJavaKeyStoreProvider**| A provider for the Java keystore|MSSQL_JAVA_KEYSTORE|Yes|
 
-For the pre-registered keystore providers, you do not need to make any application code changes to use these providers but note the following items:
+For the pre-registered keystore providers, you don't need to make any application code changes to use these providers but note the following items:
 
-- You (or your DBA) need to make sure the provider name configured in the column master key metadata is correct and the column master key path complies with the key path format that is valid for a given provider. It is recommended that you configure the keys using tools, such as SQL Server Management Studio, which automatically generates the valid provider names and key paths when issuing the CREATE COLUMN MASTER KEY (Transact-SQL) statement.
+- You (or your DBA) need to make sure the provider name configured in the column master key metadata is correct and the column master key path complies with the key path format that is valid for a given provider. It's recommended that you configure the keys using tools, such as SQL Server Management Studio, which automatically generates the valid provider names and key paths when issuing the CREATE COLUMN MASTER KEY (Transact-SQL) statement.
 - Ensure your application can access the key in the keystore. This task may involve granting your application access to the key and/or the keystore, depending on the keystore, or performing other keystore-specific configuration steps. For example, for using the SQLServerColumnEncryptionJavaKeyStoreProvider, you need to provide the location and the password of the keystore in the connection properties. 
 
 All of these keystore providers are described in more detail in the sections that follow. You only need to implement one keystore provider to use Always Encrypted.
@@ -56,7 +56,7 @@ All of these keystore providers are described in more detail in the sections tha
 ### Using Azure Key Vault provider
 Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your application is hosted in Azure). The Microsoft JDBC Driver for SQL Server includes a built-in provider, SQLServerColumnEncryptionAzureKeyVaultProvider, for applications that have keys stored in Azure Key Vault. The name of this provider is AZURE_KEY_VAULT. In order to use the Azure Key Vault store provider, an application developer needs to create the vault and the keys in Azure Key Vault and create an App registration in Azure Active Directory. The registered application must be granted Get, Decrypt, Encrypt, Unwrap Key, Wrap Key, and Verify permissions in the Access policies defined for the key vault created for use with Always Encrypted. For more information on how to set up the key vault and create a column master key, see [Azure Key Vault – Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
-For the examples on this page, if you have created an Azure Key Vault based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this example with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
+For the examples on this page, if you've created an Azure Key Vault based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this example with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
 
 ```sql
 CREATE COLUMN MASTER KEY [MyCMK]
@@ -85,7 +85,7 @@ SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumn
 
 **clientID** is the Application ID of an App registration in an Azure Active Directory instance. **clientKey** is a Key Password registered under that Application, which provides API access to the Azure Key Vault.
 
-After the application creates an instance of SQLServerColumnEncryptionAzureKeyVaultProvider, the application must register the instance with the driver using the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method. It is highly recommended that the instance is registered using the default lookup name, AZURE_KEY_VAULT, which can be obtained by calling the SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API. Using the default name will allow you to use tools such as SQL Server Management Studio or PowerShell to provision and manage Always Encrypted keys (the tools use the default name to generate the metadata object to column master key). The following example shows registering the Azure Key Vault provider. For more information on the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
+After the application creates an instance of SQLServerColumnEncryptionAzureKeyVaultProvider, the application must register the instance with the driver using the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method. It's highly recommended that the instance is registered using the default lookup name, AZURE_KEY_VAULT, which can be obtained by calling the SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API. Using the default name will allow you to use tools such as SQL Server Management Studio or PowerShell to provision and manage Always Encrypted keys (the tools use the default name to generate the metadata object to column master key). The following example shows registering the Azure Key Vault provider. For more information on the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
 ```java
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
@@ -105,9 +105,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 ### Using Windows Certificate Store provider
 The SQLServerColumnEncryptionCertificateStoreProvider can be used to store column master keys in the Windows Certificate Store. Use the SQL Server Management Studio (SSMS) Always Encrypted wizard or other supported tools to create the column master key and column encryption key definitions in the database. The same wizard can be used to generate a self signed certificate in the Windows Certificate Store that can be used as a column master key for the always encrypted data. For more information on column master key and column encryption key T-SQL syntax, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) and [CREATE COLUMN ENCRPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) respectively.
 
-The name of the SQLServerColumnEncryptionCertificateStoreProvider is MSSQL_CERTIFICATE_STORE and can be queried by the getName() API of the provider object. It is automatically registered by the driver and can be used seamlessly without any application change.
+The name of the SQLServerColumnEncryptionCertificateStoreProvider is MSSQL_CERTIFICATE_STORE and can be queried by the getName() API of the provider object. It's automatically registered by the driver and can be used seamlessly without any application change.
 
-For the examples on this page, if you have created a Windows Certificate Store based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this example with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
+For the examples on this page, if you've created a Windows Certificate Store based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this example with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
 
 ```sql
 CREATE COLUMN MASTER KEY [MyCMK]
@@ -131,7 +131,7 @@ WITH VALUES
 `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### Using Java Key Store provider
-The JDBC driver comes with a built-in keystore provider implementation for the Java Key Store. If the **keyStoreAuthentication** connection string property is present in the connection string and it is set to "JavaKeyStorePassword", the driver automatically instantiates and registers the provider for Java Key Store. The name of the Java Key Store provider is MSSQL_JAVA_KEYSTORE. This name can also be queried by using the SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API. 
+The JDBC driver comes with a built-in keystore provider implementation for the Java Key Store. If the **keyStoreAuthentication** connection string property is present in the connection string and it's set to "JavaKeyStorePassword", the driver automatically instantiates and registers the provider for Java Key Store. The name of the Java Key Store provider is MSSQL_JAVA_KEYSTORE. This name can also be queried by using the SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API. 
 
 There are three connection string properties that allow a client application to specify the credentials the driver needs to authenticate to the Java Key Store. The driver initializes the provider based on the values of these three properties in the connection string.
 
@@ -166,7 +166,7 @@ Here is an example of the same using a PKCS12 store type:
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.pfx -storepass mypassword -validity 360 -keysize 2048 -storetype pkcs12 -keypass mypassword
 ```
 
-If the keystore is of type PKCS12, the keytool utility does not prompt for a key password and the key password needs to be provided with -keypass option as the SQLServerColumnEncryptionJavaKeyStoreProvider requires that the keystore and the key have the same password.
+If the keystore is of type PKCS12, the keytool utility doesn't prompt for a key password and the key password needs to be provided with -keypass option as the SQLServerColumnEncryptionJavaKeyStoreProvider requires that the keystore and the key have the same password.
 
 You can also export a certificate from the Windows Certificate store in .pfx format and use that with the SQLServerColumnEncryptionJavaKeyStoreProvider. The exported certificate can also be imported to the Java Key Store as a JKS keystore type.
 
@@ -198,7 +198,7 @@ WITH
 > The built-in SQL Server management Studio functionality cannot create column master key definitions for the Java Key Store. T-SQL commands must be used programmatically.
 
 ### Creating a column encryption key for the Java Key Store
-The SQL Server Management Studio or any other tool cannot be used to create column encryption keys using column master keys in the Java Key Store. The client application must create the column encryption key programmatically using the SQLServerColumnEncryptionJavaKeyStoreProvider class. For more information, see [Using column master key store providers for programmatic key provisioning](#using-column-master-key-store-providers-for-programmatic-key-provisioning).
+The SQL Server Management Studio or any other tool can't be used to create column encryption keys using column master keys in the Java Key Store. The client application must create the column encryption key programmatically using the SQLServerColumnEncryptionJavaKeyStoreProvider class. For more information, see [Using column master key store providers for programmatic key provisioning](#using-column-master-key-store-providers-for-programmatic-key-provisioning).
 
 ### Implementing a custom column master key store provider
 If you want to store column master keys in a keystore that is not supported by an existing provider, you can implement a custom provider by extending the SQLServerColumnEncryptionKeyStoreProvider Class and registering the provider using the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method.
@@ -239,7 +239,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 ```
 
 ## Using column master key store providers for programmatic key provisioning
-When accessing encrypted columns, the Microsoft JDBC Driver for SQL Server transparently finds and calls the right column master key store provider to decrypt column encryption keys. Typically, your normal application code does not directly call column master key store providers. You may, however, instantiate and call a provider programmatically to provision and manage Always Encrypted keys. This step may be done to generate an encrypted column encryption key and decrypt a column encryption key as part column master key rotation, for example. For more information, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
+When accessing encrypted columns, the Microsoft JDBC Driver for SQL Server transparently finds and calls the right column master key store provider to decrypt column encryption keys. Typically, your normal application code doesn't directly call column master key store providers. You may, however, instantiate and call a provider programmatically to provision and manage Always Encrypted keys. This step may be done to generate an encrypted column encryption key and decrypt a column encryption key as part column master key rotation, for example. For more information, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
 If you use a custom keystore provider, implementing your own key management tools may be required. When using keys stored in Windows Certificate Store or in Azure Key Vault, you can use existing tools, such as SQL Server Management Studio or PowerShell, to manage and provision keys. When using keys stored in the Java Key Store, you need to provision keys programmatically. The following example illustrates using the SQLServerColumnEncryptionJavaKeyStoreProvider class to encrypt the key with a key stored in the Java Key Store.
 
@@ -358,12 +358,12 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-Always Encrypted can also be enabled for individual queries. For more information, see [Controlling the performance impact of Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). Enabling Always Encrypted is not sufficient for encryption or decryption to succeed. You also need to make sure:
+Always Encrypted can also be enabled for individual queries. For more information, see [Controlling the performance impact of Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). Enabling Always Encrypted isn't sufficient for encryption or decryption to succeed. You also need to make sure:
 - The application has the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions in Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 - The application can access the column master key that protects the column encryption keys, which encrypt the queried database columns. To use the Java Key Store provider, you need to provide additional credentials in the connection string. For more information, see [Using Java Key Store provider](#using-java-key-store-provider).
 
 ### Configuring how java.sql.Time values are sent to the server
-The **sendTimeAsDatetime** connection property is used to configure how the java.sql.Time value is sent to the server. When set to false, the time value is sent as a SQL Server time type. When set to true, the time value is sent as a datetime type. If a time column is encrypted, the **sendTimeAsDatetime** property must be false, as encrypted columns do not support the conversion from time to datetime. Also note that this property is by default true, so when using encrypted time columns you will have to set it to false. Otherwise, the driver will throw an exception. Starting with version 6.0 of the driver, the SQLServerConnection class has two methods to configure the value of this property programmatically:
+The **sendTimeAsDatetime** connection property is used to configure how the java.sql.Time value is sent to the server. When set to false, the time value is sent as a SQL Server time type. When set to true, the time value is sent as a datetime type. If a time column is encrypted, the **sendTimeAsDatetime** property must be false, as encrypted columns don't support the conversion from time to datetime. Also note that this property is by default true, so when using encrypted time columns you'll have to set it to false. Otherwise, the driver will throw an exception. Starting with version 6.0 of the driver, the SQLServerConnection class has two methods to configure the value of this property programmatically:
  
 * public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
@@ -376,17 +376,17 @@ The **sendStringParametersAsUnicode** connection property is used to configure h
 ## Retrieving and modifying data in encrypted columns
 Once you enable Always Encrypted for application queries, you can use standard JDBC APIs to retrieve or modify data in encrypted database columns. If your application has the required database permissions and can access the column master key, the driver will encrypt any query parameters that target encrypted columns and will decrypt data that is retrieved from encrypted columns.
 
-If Always Encrypted is not enabled, queries with parameters that target encrypted columns will fail. Queries can still retrieve data from encrypted columns as long as the query has no parameters targeting encrypted columns. However, the driver will not attempt to decrypt any values retrieved from encrypted columns and the application will receive binary encrypted data (as byte arrays).
+If Always Encrypted isn't enabled, queries with parameters that target encrypted columns will fail. Queries can still retrieve data from encrypted columns as long as the query has no parameters targeting encrypted columns. However, the driver won't attempt to decrypt any values retrieved from encrypted columns and the application will receive binary encrypted data (as byte arrays).
 
 The following table summarizes the behavior of queries depending on whether Always Encrypted is enabled or not:
 
-|Query characteristic | Always Encrypted is enabled and application can access the keys and key metadata|Always Encrypted is enabled and application cannot access the keys or key metadata | Always Encrypted is disabled|
+|Query characteristic | Always Encrypted is enabled and application can access the keys and key metadata|Always Encrypted is enabled and application can't access the keys or key metadata | Always Encrypted is disabled|
 |:---|:---|:---|:---|
 | Queries with parameters targeting encrypted columns. | Parameter values are transparently encrypted. | Error | Error|
-| Queries retrieving data from encrypted columns without parameters targeting encrypted columns.| Results from encrypted columns are transparently decrypted. The application receives plaintext values of the JDBC datatypes corresponding to the SQL Server types configured for the encrypted columns. | Error | Results from encrypted columns are not decrypted. The application receives encrypted values as byte arrays (byte[]).
+| Queries retrieving data from encrypted columns without parameters targeting encrypted columns.| Results from encrypted columns are transparently decrypted. The application receives plaintext values of the JDBC datatypes corresponding to the SQL Server types configured for the encrypted columns. | Error | Results from encrypted columns aren't decrypted. The application receives encrypted values as byte arrays (byte[]).
 
 ### Inserting and retrieving encrypted data examples 
-The following examples illustrate retrieving and modifying data in encrypted columns. The examples assume the target table with the following schema and encrypted SSN and BirthDate columns. If you have configured a Column Master Key named "MyCMK" and a Column Encryption Key named "MyCEK" (as described in the preceding keystore providers sections), you can create the table using this script:
+The following examples illustrate retrieving and modifying data in encrypted columns. The examples assume the target table with the following schema and encrypted SSN and BirthDate columns. If you've configured a Column Master Key named "MyCMK" and a Column Encryption Key named "MyCEK" (as described in the preceding keystore providers sections), you can create the table using this script:
 
 ```sql
 CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
@@ -404,9 +404,9 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
  GO
 ```
 
-For each Java code example, you will need to insert keystore-specific code in the location noted.
+For each Java code example, you'll need to insert keystore-specific code in the location noted.
 
-If you are using an Azure Key Vault keystore provider:
+If you're using an Azure Key Vault keystore provider:
 
 ```java
     String clientID = "<Azure Application ID>";
@@ -418,13 +418,13 @@ If you are using an Azure Key Vault keystore provider:
     String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
-If you are using a Windows Certificate Store keystore provider:
+If you're using a Windows Certificate Store keystore provider:
 
 ```java
     String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
-If you are using a Java Key Store keystore provider:
+If you're using a Java Key Store keystore provider:
 
 ```java
     String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
@@ -432,11 +432,11 @@ If you are using a Java Key Store keystore provider:
 
 ### Inserting data example
 This example inserts a row into the Patients table. Note the following items:
-- There is nothing specific to encryption in the sample code. The Microsoft JDBC Driver for SQL Server automatically detects and encrypts the parameters that target encrypted columns. This behavior makes encryption transparent to the application.
-- The values inserted into database columns, including the encrypted columns, are passed as parameters using SQLServerPreparedStatement. While using parameters is optional when sending values to non-encrypted columns (although, it is highly recommended because it helps prevent SQL injection), it is required for values that target encrypted columns. If the values inserted into the encrypted columns were passed as literals embedded in the query statement, the query would fail because the driver would not be able to determine the values in the target encrypted columns and it would not encrypt the values. As a result, the server would reject them as incompatible with the encrypted columns.
+- There's nothing specific to encryption in the sample code. The Microsoft JDBC Driver for SQL Server automatically detects and encrypts the parameters that target encrypted columns. This behavior makes encryption transparent to the application.
+- The values inserted into database columns, including the encrypted columns, are passed as parameters using SQLServerPreparedStatement. While using parameters is optional when sending values to non-encrypted columns (although, it's highly recommended because it helps prevent SQL injection), it's required for values that target encrypted columns. If the values inserted into the encrypted columns were passed as literals embedded in the query statement, the query would fail because the driver wouldn't be able to determine the values in the target encrypted columns and it wouldn't encrypt the values. As a result, the server would reject them as incompatible with the encrypted columns.
 - All values printed by the program will be in plaintext, as the Microsoft JDBC Driver for SQL Server will transparently decrypt the data retrieved from the encrypted columns.
-- If you are doing a lookup using a WHERE clause, the value used in the WHERE clause needs to be passed as a parameter so that the driver can transparently encrypt it before sending it to the database. In the following example, the SSN is passed as a parameter but the LastName is passed as a literal as LastName is not encrypted.
-- The setter method used for the parameter targeting the SSN column is setString(), which maps to the char/varchar SQL Server data type. If, for this parameter, the setter method used was setNString(), which maps to nchar/nvarchar, the query would fail, as Always Encrypted does not support conversions from encrypted nchar/nvarchar values to encrypted char/varchar values.
+- If you're doing a lookup using a WHERE clause, the value used in the WHERE clause needs to be passed as a parameter so that the driver can transparently encrypt it before sending it to the database. In the following example, the SSN is passed as a parameter but the LastName is passed as a literal as LastName isn't encrypted.
+- The setter method used for the parameter targeting the SSN column is setString(), which maps to the char/varchar SQL Server data type. If, for this parameter, the setter method used was setNString(), which maps to nchar/nvarchar, the query would fail, as Always Encrypted doesn't support conversions from encrypted nchar/nvarchar values to encrypted char/varchar values.
 
 ```java
 // <Insert keystore-specific code here>
@@ -482,11 +482,11 @@ catch (SQLException e) {
 ```
   
 ### Retrieving encrypted data example
-If Always Encrypted is not enabled, a query can still retrieve data from encrypted columns, as long as the query has no parameters targeting encrypted columns.
+If Always Encrypted isn't enabled, a query can still retrieve data from encrypted columns, as long as the query has no parameters targeting encrypted columns.
 
 The following example illustrates retrieving binary encrypted data from encrypted columns. Note the following items:
-- Since Always Encrypted is not enabled in the connection string, the query will return encrypted values of SSN and BirthDate as byte arrays (the program converts the values to strings).
-- A query retrieving data from encrypted columns with Always Encrypted disabled can have parameters, as long as none of the parameters target an encrypted column. The following query filters by LastName, which is not encrypted in the database. If the query filtered by SSN or BirthDate, the query would fail.
+- Since Always Encrypted isn't enabled in the connection string, the query will return encrypted values of SSN and BirthDate as byte arrays (the program converts the values to strings).
+- A query retrieving data from encrypted columns with Always Encrypted disabled can have parameters, as long as none of the parameters target an encrypted column. The following query filters by LastName, which isn't encrypted in the database. If the query filtered by SSN or BirthDate, the query would fail.
 
 ```java
 try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
@@ -512,9 +512,9 @@ This section describes common categories of errors when querying encrypted colum
 ### Unsupported data type conversion errors
 Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) for the detailed list of supported type conversions. Here is what you can do to avoid data type conversion errors. Make sure that:
 
-- you use the proper setter methods when passing values for parameters that target encrypted columns. Ensure that the SQL Server data type of the parameter is exactly the same as the type of the target column or a conversion of the SQL Server data type of the parameter to the target type of the column is supported. API methods have been added to the SQLServerPreparedStatement, SQLServerCallableStatement, and SQLServerResultSet classes to pass parameters corresponding to specific SQL Server data types. For example, if a column is not encrypted you can use the setTimestamp() method to pass a parameter to a datetime2 or to a datetime column. But when a column is encrypted you will have to use the exact method representing the type of the column in the database. For example, use setTimestamp() to pass values to an encrypted datetime2 column and use setDateTime() to pass values to an encrypted datetime column. See [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) for a complete list of new APIs.
+- you use the proper setter methods when passing values for parameters that target encrypted columns. Ensure that the SQL Server data type of the parameter is exactly the same as the type of the target column or a conversion of the SQL Server data type of the parameter to the target type of the column is supported. API methods have been added to the SQLServerPreparedStatement, SQLServerCallableStatement, and SQLServerResultSet classes to pass parameters corresponding to specific SQL Server data types. For example, if a column isn't encrypted you can use the setTimestamp() method to pass a parameter to a datetime2 or to a datetime column. But when a column is encrypted you'll have to use the exact method representing the type of the column in the database. For example, use setTimestamp() to pass values to an encrypted datetime2 column and use setDateTime() to pass values to an encrypted datetime column. See [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) for a complete list of new APIs.
 - the precision and scale of parameters targeting columns of the decimal and numeric SQL Server data types is the same as the precision and scale configured for the target column. API methods have been added to the SQLServerPreparedStatement, SQLServerCallableStatement, and SQLServerResultSet classes to accept precision and scale along with data values for parameters/columns representing decimal and numeric data types. See [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) for a complete list of new/overloaded APIs.  
-- the fractional seconds precision/scale of parameters targeting columns of datetime2, datetimeoffset, or time SQL Server data types is not greater than the fractional seconds precision/scale for the target column in queries that modify values of the target column. API methods have been added to the SQLServerPreparedStatement, SQLServerCallableStatement, and SQLServerResultSet classes to accept fractional seconds precision/scale along with data values for parameters representing these data types. For a complete list of new/overloaded APIs, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).   
+- the fractional seconds precision/scale of parameters targeting columns of datetime2, datetimeoffset, or time SQL Server data types isn't greater than the fractional seconds precision/scale for the target column in queries that modify values of the target column. API methods have been added to the SQLServerPreparedStatement, SQLServerCallableStatement, and SQLServerResultSet classes to accept fractional seconds precision/scale along with data values for parameters representing these data types. For a complete list of new/overloaded APIs, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).   
 
 ### Errors due to incorrect connection properties
 This section describes how to configure connection settings properly to use Always Encrypted data. Since encrypted data types support limited conversions, the **sendTimeAsDatetime** and **sendStringParametersAsUnicode** connection settings need proper configuration when using encrypted columns. Make sure that: 
@@ -537,7 +537,7 @@ ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customer
 ```
 
 ## Force encryption on input parameters
-The Force Encryption feature enforces encryption of a parameter when using Always Encrypted. If force encryption is used and SQL Server informs the driver that the parameter does not need to be encrypted, the query using the parameter will fail. This property provides additional protection against security attacks that involve a compromised SQL Server providing incorrect encryption metadata to the client, which may lead to data disclosure. The set* methods in the SQLServerPreparedStatement and SQLServerCallableStatement classes and the update\* methods in the SQLServerResultSet class are overloaded to accept a boolean argument to specify the force encryption setting. If the value of this argument is false, the driver will not force encryption on parameters. If force encryption is set to true, the query parameter is only sent if the destination column is encrypted and Always Encrypted is enabled on the connection or on the statement. Using this property gives an extra layer of security, ensuring that the driver does not mistakenly send data to SQL Server as plaintext when it is expected to be encrypted.
+The Force Encryption feature enforces encryption of a parameter when using Always Encrypted. If force encryption is used and SQL Server informs the driver that the parameter doesn't need to be encrypted, the query using the parameter will fail. This property provides additional protection against security attacks that involve a compromised SQL Server providing incorrect encryption metadata to the client, which may lead to data disclosure. The set* methods in the SQLServerPreparedStatement and SQLServerCallableStatement classes and the update\* methods in the SQLServerResultSet class are overloaded to accept a boolean argument to specify the force encryption setting. If the value of this argument is false, the driver won't force encryption on parameters. If force encryption is set to true, the query parameter is only sent if the destination column is encrypted and Always Encrypted is enabled on the connection or on the statement. Using this property gives an extra layer of security, ensuring that the driver doesn't mistakenly send data to SQL Server as plaintext when it's expected to be encrypted.
 
 For more information on the SQLServerPreparedStatement and SQLServerCallableStatement methods that are overloaded with the force encryption setting, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 
@@ -549,7 +549,7 @@ Because Always Encrypted is a client-side encryption technology, most of the per
 This section describes the built-in performance optimizations in the Microsoft JDBC Driver for SQL Server and how you can control the impact of the above two factors on performance.
 
 ### Controlling round trips to retrieve metadata for query parameters
-If Always Encrypted is enabled for a connection, by default the driver will call [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) analyzes the query statement to find out if any parameters need to be encrypted, and if so, for each one it returns the encryption-related information that will allow the driver to encrypt parameter values. This behavior ensures a high level of transparency to the client application. As long as the application uses parameters to pass values that target encrypted columns to the driver, the application (and the application developer) does not need to know which queries access encrypted columns.
+If Always Encrypted is enabled for a connection, by default the driver will call [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) analyzes the query statement to find out if any parameters need to be encrypted, and if so, for each one it returns the encryption-related information that will allow the driver to encrypt parameter values. This behavior ensures a high level of transparency to the client application. As long as the application uses parameters to pass values that target encrypted columns to the driver, the application (and the application developer) doesn't need to know which queries access encrypted columns.
 
 ### Setting Always Encrypted at the query level
 To control the performance impact of retrieving encryption metadata for parameterized queries, you can enable Always Encrypted for individual queries instead of setting it up for the connection. This way you can ensure that sys.sp_describe_parameter_encryption is invoked only for queries that you know have parameters targeting encrypted columns. Note, however, that by doing so you reduce the transparency of encryption: if you change encryption properties of your database columns, you may need to change the code of your application to align it with the schema changes.
@@ -557,16 +557,16 @@ To control the performance impact of retrieving encryption metadata for paramete
 To control the Always Encrypted behavior of individual queries, you need to configure individual statement objects by passing an Enum, SQLServerStatementColumnEncryptionSetting, which specifies how data will be sent and received when reading and writing encrypted columns for that specific statement. Here are some useful guidelines:
 - If most queries a client application sends over a database connection access encrypted columns, use these guidelines:
     - Set the **columnEncryptionSetting** connection string keyword to **Enabled**.
-    - Set SQLServerStatementColumnEncryptionSetting.Disabled for individual queries that do not access any encrypted columns. This setting will disable both calling sys.sp_describe_parameter_encryption as well as an attempt to decrypt any values in the result set.
-    - Set SQLServerStatementColumnEncryptionSetting.ResultSet for individual queries that do not have any parameters requiring encryption but retrieve data from encrypted columns. This setting will disable calling sys.sp_describe_parameter_encryption and parameter encryption. The query will be able to decrypt the results from encryption columns.
-- If most queries a client application sends over a database connection do not access encrypted columns, use these guidelines:
+    - Set SQLServerStatementColumnEncryptionSetting.Disabled for individual queries that don't access any encrypted columns. This setting will disable both calling sys.sp_describe_parameter_encryption as well as an attempt to decrypt any values in the result set.
+    - Set SQLServerStatementColumnEncryptionSetting.ResultSet for individual queries that don't have any parameters requiring encryption but retrieve data from encrypted columns. This setting will disable calling sys.sp_describe_parameter_encryption and parameter encryption. The query will be able to decrypt the results from encryption columns.
+- If most queries a client application sends over a database connection don't access encrypted columns, use these guidelines:
     - Set the **columnEncryptionSetting** connection string keyword to **Disabled**.
     - Set SQLServerStatementColumnEncryptionSetting.Enabled for individual queries that have any parameters that need to be encrypted. This setting will enable both calling sys.sp_describe_parameter_encryption as well as the decryption of any query results retrieved from encrypted columns.
-    - Set SQLServerStatementColumnEncryptionSetting.ResultSet for queries that do not have any parameters requiring encryption but retrieve data from encrypted columns. This setting will disable calling sys.sp_describe_parameter_encryption and parameter encryption. The query will be able to decrypt the results from encryption columns.
+    - Set SQLServerStatementColumnEncryptionSetting.ResultSet for queries that don't have any parameters requiring encryption but retrieve data from encrypted columns. This setting will disable calling sys.sp_describe_parameter_encryption and parameter encryption. The query will be able to decrypt the results from encryption columns.
 
-The SQLServerStatementColumnEncryptionSetting settings cannot be used to bypass encryption and gain access to plaintext data. For more information on how to configure column encryption on a statement, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).  
+The SQLServerStatementColumnEncryptionSetting settings can't be used to bypass encryption and gain access to plaintext data. For more information on how to configure column encryption on a statement, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).  
 
-In the following example, Always Encrypted is disabled for the database connection. The query the application issues has a parameter that targets the LastName column that is not encrypted. The query retrieves data from the SSN and BirthDate columns that are both encrypted. In such a case, calling sys.sp_describe_parameter_encryption to retrieve encryption metadata is not required. However, the decryption of the query results needs to be enabled so that the application can receive plaintext values from the two encrypted columns. The SQLServerStatementColumnEncryptionSetting.ResultSet setting is used to ensure that.
+In the following example, Always Encrypted is disabled for the database connection. The query the application issues has a parameter that targets the LastName column that isn't encrypted. The query retrieves data from the SSN and BirthDate columns that are both encrypted. In such a case, calling sys.sp_describe_parameter_encryption to retrieve encryption metadata isn't required. However, the decryption of the query results needs to be enabled so that the application can receive plaintext values from the two encrypted columns. The SQLServerStatementColumnEncryptionSetting.ResultSet setting is used to ensure that.
 
 ```java
 // Assumes the same table definition as in Section "Retrieving and modifying data in encrypted columns"
@@ -617,7 +617,7 @@ Only DAYS, HOURS, MINUTES, or SECONDS are supported as the time unit.
 ## Copying encrypted data using SQLServerBulkCopy
 With SQLServerBulkCopy, you can copy data that is already encrypted and stored in one table to another table without decrypting the data. To do that:
 
-- Make sure the encryption configuration of the target table is identical to the configuration of the source table. In particular, both tables must have the same columns encrypted and the columns must be encrypted using the same encryption types and the same encryption keys. If any target column is encrypted differently than its corresponding source column, you will not be able to decrypt the data in the target table after the copy operation. The data will be corrupted.
+- Make sure the encryption configuration of the target table is identical to the configuration of the source table. In particular, both tables must have the same columns encrypted and the columns must be encrypted using the same encryption types and the same encryption keys. If any target column is encrypted differently than its corresponding source column, you won't be able to decrypt the data in the target table after the copy operation. The data will be corrupted.
 - Configure both database connections to the source table and to the target table without Always Encrypted enabled.
 - Set the allowEncryptedValueModifications option. For more information, see [Using Bulk Copy with the JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
 

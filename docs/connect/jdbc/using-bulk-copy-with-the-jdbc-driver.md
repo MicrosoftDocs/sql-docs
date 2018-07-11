@@ -20,7 +20,7 @@ manager: craigg
 
   Microsoft SQL Server includes a popular command-line utility named **bcp** for quickly bulk copying large files into tables or views in SQL Server databases. The SQLServerBulkCopy class allows you to write code solutions in Java that provide similar functionality. There are other ways to load data into a SQL Server table (INSERT statements, for example) but SQLServerBulkCopy offers a significant performance advantage over them.  
   
- The SQLServerBulkCopy class can be used to write data only to SQL Server tables. But the data source is not limited to SQL Server; any data source can be used, as long as the data can be read with a ResultSet, RowSet, or ISQLServerBulkRecord implementation.  
+ The SQLServerBulkCopy class can be used to write data only to SQL Server tables. But the data source isn't limited to SQL Server; any data source can be used, as long as the data can be read with a ResultSet, RowSet, or ISQLServerBulkRecord implementation.  
   
  Using the SQLServerBulkCopy class, you can perform:  
   
@@ -34,7 +34,7 @@ manager: craigg
 >  When using the Microsoft JDBC Driver 4.1 for SQL Server or earlier (which does not support the SQLServerBulkCopy class), you can execute the SQL Server Transact-SQL BULK INSERT statement instead.  
   
 ## Bulk copy example setup  
- The SQLServerBulkCopy class can be used to write data only to SQL Server tables. The code samples shown in this topic use the SQL Server sample database, AdventureWorks. To avoid altering the existing tables code samples write data to tables that you must create first.  
+ The SQLServerBulkCopy class can be used to write data only to SQL Server tables. The code samples shown in this article use the SQL Server sample database, AdventureWorks. To avoid altering the existing tables code samples write data to tables that you must create first.  
   
  The BulkCopyDemoMatchingColumns and BulkCopyDemoDifferentColumns tables are both based on the AdventureWorks Production.Products table. In code samples that use these tables, data is added from the Production.Products table to one of these sample tables. The BulkCopyDemoDifferentColumns table is used when the sample illustrates how to map columns from the source data to the destination table; BulkCopyDemoMatchingColumns is used for most other samples.  
   
@@ -458,7 +458,7 @@ copyOptions.setUseInternalTransaction(true);
 ```
   
 ### Using existing transactions  
- You can pass a Connection object that has transactions enabled as a parameter in a SQLServerBulkCopy constructor. In this situation, the bulk copy operation is performed in an existing transaction, and no change is made to the transaction state (that is, it is neither committed nor aborted). This allows an application to include the bulk copy operation in a transaction with other database operations. If you need to roll back the entire bulk copy operation because an error occurs, or if the bulk copy should execute as part of a larger process that can be rolled back, you can perform the rollback on the Connection object at any point after the bulk copy operation.  
+ You can pass a Connection object that has transactions enabled as a parameter in a SQLServerBulkCopy constructor. In this situation, the bulk copy operation is performed in an existing transaction, and no change is made to the transaction state (that is, it's neither committed nor aborted). This allows an application to include the bulk copy operation in a transaction with other database operations. If you need to roll back the entire bulk copy operation because an error occurs, or if the bulk copy should execute as part of a larger process that can be rolled back, you can perform the rollback on the Connection object at any point after the bulk copy operation.  
   
  The following application is similar to **BulkCopyNonTransacted**, with one exception: in this example, the bulk copy operation is included in a larger, external transaction. When the primary key violation error occurs, the entire transaction is rolled back and no rows are added to the destination table.
   
@@ -561,13 +561,13 @@ public class BulkCopyExistingTransactions {
   
 1.  Open **SQL Server Management Studio** and connect to the SQL Server with the AdventureWorks database.  
   
-2.  Expand the databases, right click the AdventureWorks database, select **Tasks** and **Export Data**…  
+2.  Expand the databases, right-click the AdventureWorks database, select **Tasks** and **Export Data**…  
   
 3.  For the Data Source, select the **Data source** that allows you to connect to your SQL Server (e.g. SQL Server Native Client 11.0), check the configuration and then **Next**  
   
 4.  For the Destination, Select the **Flat File Destination** and enter a **File Name** with a destination such as C:\Test\TestBulkCSVExample.csv. Check that the **Format** is Delimited, the **Text qualifier** is none, and enable **Column names in the first data row**, and then select **Next**  
   
-5.  Select **Write a query to specify the data to transfer** and **Next**.  Enter your **SQL Statement** SELECT ProductID, Name, ProductNumber FROM Production.Product and **Next**  
+5.  Select **Write a query to specify the data to transfer** and **Next**.  Enter your **SQL Statement** SELECT ProductID, Name, ProductNumber FROM Production.Product, and **Next**  
   
 6.  Check the configuration: You can leave the Row delimiter as {CR}{LF} and Column Delimiter as Comma {,}.  Select **Edit Mappings**… and check that the data **Type** is correct for each column (e.g. integer for ProductID and Unicode string for the others).  
   
@@ -660,7 +660,7 @@ public class BulkCopyCSV {
   
  Microsoft SQL Server includes a popular command-prompt utility named bcp for moving data from one table to another, whether on a single server or between servers. The SQLServerBulkCopy class lets you write code solutions in Java that provide similar functionality. There are other ways to load data into a SQL Server table (INSERT statements, for example), but SQLServerBulkCopy offers a significant performance advantage over them.  
   
- The SQLServerBulkCopy class can be used to write data only to SQL Server tables. However, the data source is not limited to SQL Server; any data source can be used, as long as the data can be read with a ResultSet instance or ISQLServerBulkRecord implementation.  
+ The SQLServerBulkCopy class can be used to write data only to SQL Server tables. However, the data source isn't limited to SQL Server; any data source can be used, as long as the data can be read with a ResultSet instance or ISQLServerBulkRecord implementation.  
   
 |Constructor|Description|  
 |-----------------|-----------------|  
@@ -669,15 +669,15 @@ public class BulkCopyCSV {
   
 |Property|Description|  
 |--------------|-----------------|  
-|String DestinationTableName|Name of the destination table on the server.<br /><br /> If DestinationTableName has not been set when writeToServer is called, a SQLServerException is thrown.<br /><br /> DestinationTableName is a three-part name (\<database>.\<owningschema>.\<name>). You can qualify the table name with its database and owning schema if you choose. However, if the table name uses an underscore ("_") or any other special characters, you must escape the name using surrounding brackets. For more information, see "Identifiers" in SQL Server Books Online.|  
-|ColumnMappings|Column mappings define the relationships between columns in the data source and columns in the destination.<br /><br /> If mappings are not defined the columns are mapped implicitly based on ordinal position. For this to work, source and target schemas must match. If they do not, an Exception will be thrown.<br /><br /> If the mappings is not empty, not every column present in the data source has to be specified. Those not mapped are ignored.<br /><br /> You can refer to source and target columns by either name or ordinal.|  
+|String DestinationTableName|Name of the destination table on the server.<br /><br /> If DestinationTableName hasn't been set when writeToServer is called, a SQLServerException is thrown.<br /><br /> DestinationTableName is a three-part name (\<database>.\<owningschema>.\<name>). You can qualify the table name with its database and owning schema if you choose. However, if the table name uses an underscore ("_") or any other special characters, you must escape the name using surrounding brackets. For more information, see "Identifiers" in SQL Server Books Online.|  
+|ColumnMappings|Column mappings define the relationships between columns in the data source and columns in the destination.<br /><br /> If mappings aren't defined the columns are mapped implicitly based on ordinal position. For this to work, source and target schemas must match. If they don't, an Exception will be thrown.<br /><br /> If the mappings isn't empty, not every column present in the data source has to be specified. Those not mapped are ignored.<br /><br /> You can refer to source and target columns by either name or ordinal.|  
   
 |Method|Description|  
 |------------|-----------------|  
-|Void addColumnMapping((int sourceColumn, int destinationColumn)|Adds a new column mapping, using ordinals to specify both source and destination columns.|  
-|Void addColumnMapping ((int sourceColumn, String destinationColumn)|Adds a new column mapping, using an ordinal for the source column and a column name for the destination column.|  
-|Void addColumnMapping ((String sourceColumn , int destinationColumn)|Adds a new column mapping, using a column name to describe the source column and an ordinal to specify the destination column.|  
-|Void addColumnMapping (String sourceColumn, String destinationColumn)|Adds a new column mapping, using column names to specify both source and destination columns.|  
+|Void addColumnMapping((int sourceColumn, int destinationColumn)|Adds a new column-mapping, using ordinals to specify both source and destination columns.|  
+|Void addColumnMapping ((int sourceColumn, String destinationColumn)|Adds a new column-mapping, using an ordinal for the source column and a column name for the destination column.|  
+|Void addColumnMapping ((String sourceColumn, int destinationColumn)|Adds a new column-mapping, using a column name to describe the source column and an ordinal to specify the destination column.|  
+|Void addColumnMapping (String sourceColumn, String destinationColumn)|Adds a new column-mapping, using column names to specify both source and destination columns.|  
 |Void clearColumnMappings()|Clears the contents of the column mappings.|  
 |Void close()|Closes the SQLServerBulkCopy instance.|  
 |SQLServerBulkCopyOptions getBulkCopyOptions()|Retrieves the current set of SQLServerBulkCopyOptions.|  
@@ -699,7 +699,7 @@ public class BulkCopyCSV {
   
 |Option|Description|Default|  
 |------------|-----------------|-------------|  
-|Boolean CheckConstraints|Check constraints while data is being inserted.|False - constraints are not checked|  
+|Boolean CheckConstraints|Check constraints while data is being inserted.|False - constraints aren't checked|  
 |Boolean FireTriggers|When specified, cause the server to fire the insert triggers for the rows being inserted into the database.|False - no triggers are fired|  
 |Boolean KeepIdentity|Preserve source identity values.|False - identity values are assigned by the destination|  
 |Boolean KeepNulls|Preserve null values in the destination table regardless of the settings for default values.|False - null values are replaced by default values where applicable.|  
@@ -707,7 +707,7 @@ public class BulkCopyCSV {
 |Boolean UseInternalTransaction|When specified, each batch of the bulk-copy operation will occur within a transaction. If SQLServerBulkCopy is using an existing connection (as specified by the constructor), a SQLServerException will occur.  If SQLServerBulkCopy created a dedicated connection, a transaction will be enabled.|False - no transaction|  
 |Int BatchSize|Number of rows in each batch. At the end of each batch, the rows in the batch are sent to the server.<br /><br /> A batch is complete when BatchSize rows have been processed or there are no more rows to send to the destination data source.  If the SQLServerBulkCopy instance has been declared without the UseInternalTransaction option in effect, rows are sent to the server BatchSize rows at a time, but no transaction-related action is taken. If UseInternalTransaction is in effect, each batch of rows is inserted as a separate transaction.|0 - indicates that each writeToServer operation is a single batch|  
 |Int BulkCopyTimeout|Number of seconds for the operation to complete before it times out. A value of 0 indicates no limit; the bulk copy will wait indefinitely.|60 seconds.|  
-|Boolean allowEncryptedValueModifications|This option is available with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.<br /><br /> When specified, **allowEncryptedValueModifications** enables bulk copying of encrypted data between tables or databases, without decrypting the data. Typically, an application would select data from encrypted columns from one table without decrypting the data (the app would connect to the database with the column encryption setting keyword set to disabled) and then would use this option to bulk insert the data, which is still encrypted. For more information, see [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Use caution when specifying **allowEncryptedValueModifications** as this may lead to corrupting the database because the driver does not check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column.||  
+|Boolean allowEncryptedValueModifications|This option is available with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.<br /><br /> When specified, **allowEncryptedValueModifications** enables bulk copying of encrypted data between tables or databases, without decrypting the data. Typically, an application would select data from encrypted columns from one table without decrypting the data (the app would connect to the database with the column encryption setting keyword set to disabled) and then would use this option to bulk insert the data, which is still encrypted. For more information, see [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Use caution when specifying **allowEncryptedValueModifications** as this may lead to corrupting the database because the driver doesn't check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column.||  
   
  Getters and setters:  
   
@@ -730,7 +730,7 @@ public class BulkCopyCSV {
 |Int getBulkCopyTimeout()|Gets the number of seconds for the operation to complete before it times out.|  
 |Void  setBulkCopyTimeout(int timeout)|Sets the number of seconds for the operation to complete before it times out.|  
 |boolean isAllowEncryptedValueModifications()|Indicates whether allowEncryptedValueModifications setting is enabled or disabled.|  
-|void setAllowEncryptedValueModifications(boolean allowEncryptedValueModifications)|Configures the allowEncryptedValueModifications setting which is used for bulk copy with Always Encrypted columns.|  
+|void setAllowEncryptedValueModifications(boolean allowEncryptedValueModifications)|Configures the allowEncryptedValueModifications setting that is used for bulk copy with Always Encrypted columns.|  
   
 ### ISQLServerBulkRecord  
  The ISQLServerBulkRecord interface can be used to create classes that read in data from any source (such as a file) and allow a SQLServerBulkCopy instance to bulk load a SQL Server table with that data.  
@@ -753,19 +753,19 @@ public class BulkCopyCSV {
   
 1.  The maximum amount of data allowed in any given row is limited by the available memory because the data is read one line at a time.  
   
-2.  Streaming of large data types such as varchar(max), varbinary(max), nvarchar(max), sqlxml, ntext is not supported.  
+2.  Streaming of large data types such as varchar(max), varbinary(max), nvarchar(max), sqlxml, ntext isn't supported.  
   
-3.  The delimiter specified for the CSV file should not appear anywhere in the data and should be escaped properly if it is a restricted character in Java regular expressions.  
+3.  The delimiter specified for the CSV file shouldn't appear anywhere in the data and should be escaped properly if it is a restricted character in Java regular expressions.  
   
 4.  In the CSV file implementation, double quotes are treated as part of the data. For example, the line hello,”world”,”hello,world” would be treated as having four columns with the values hello, “world”, “hello and world” if the delimiter is a comma.  
   
-5.  New line characters are used as row terminators and are not allowed anywhere in the data.  
+5.  New line characters are used as row terminators and aren't allowed anywhere in the data.  
   
 |Constructor|Description|  
 |-----------------|-----------------|  
 |SQLServerBulkCSVFileRecord(String fileToParse, String encoding, String delimiter, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, String, boolean)|Initializes a new instance of the SQLServerBulkCSVFileRecord class that will parse each line in the fileToParse with the provided delimiter and encoding. If firstLineIsColumnNames is set to True, the first line in the file will be parsed as column names.  If encoding is NULL, the default encoding will be used.|  
 |SQLServerBulkCSVFileRecord(String fileToParse, String encoding, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, boolean)|Initializes a new instance of the SQLServerBulkCSVFileRecord class that will parse each line in the fileToParse with a comma as the delimiter and provided encoding. If firstLineIsColumnNames is set to True, the first line in the file will be parsed as column names.  If encoding is NULL, the default encoding will be used.|  
-|SQLServerBulkCSVFileRecord(String fileToParse, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, boolean)|Initializes a new instance of the SQLServerBulkCSVFileRecord class that will parse each line in the fileToParse with a comma as the delimiter and default encoding. If firstLineIsColumnNames is set to True, the first line in the file will be will be parsed as column names.|  
+|SQLServerBulkCSVFileRecord(String fileToParse, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, boolean)|Initializes a new instance of the SQLServerBulkCSVFileRecord class that will parse each line in the fileToParse with a comma as the delimiter and default encoding. If firstLineIsColumnNames is set to True, the first line in the file will be parsed as column names.|  
   
 |Method|Description|  
 |------------|-----------------|  

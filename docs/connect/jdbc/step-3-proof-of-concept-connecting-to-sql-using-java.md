@@ -17,7 +17,7 @@ manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using Java
   
-This example should be considered a proof of concept only. The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
+This example should be considered a proof of concept only. The sample code is simplified for clarity, and doesn't necessarily represent best practices recommended by Microsoft.  
   
 ## Step 1:  Connect  
   

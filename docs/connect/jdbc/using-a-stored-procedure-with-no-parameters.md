@@ -38,7 +38,7 @@ BEGIN
 END  
 ```  
   
- This stored procedure returns a single result set that contains one column of data, which is a combination of the title, first name, and last name of the top ten contacts that are in the Person.Contact table.  
+ This stored procedure returns a single result set that contains one column of data, which is a combination of the title, first name, and last name of the top 10 contacts that are in the Person.Contact table.  
   
  In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method is used to call the GetContactFormalNames stored procedure.  
   

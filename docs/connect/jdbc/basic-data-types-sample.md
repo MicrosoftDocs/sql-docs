@@ -25,9 +25,9 @@ manager: craigg
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\datatypes  
   
 ## Requirements  
- To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You will also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).  
+ To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).  
   
- You must also create the following table and sample data in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:  
+ Create the following table and sample data in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:  
   
 ```sql
 use AdventureWorks  
@@ -53,11 +53,11 @@ VALUES ('A', 'Some text.', 0, 15.25, 10.00, '01/01/2006 23:59:59.991', '01/01/20
 >  The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## Example  
- In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database, and then retrieves a single row of data from the DataTypesTable test table. The custom displayRow method is then called to display all the data contained in the result set using various get\<Type> methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class.  
+ In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database, and then retrieves a single row of data from the DataTypesTable test table. The custom displayRow method is then called to display all the data in the result set using various get\<Type> methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class.  
   
- Next, the sample uses various update\<Type> methods of the SQLServerResultSet class to update the data contained in the result set, and then calls the [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) method to persist that data back to the database.  
+ Next, the sample uses various update\<Type> methods of the SQLServerResultSet class to update the data in the result set, and then calls the [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) method to persist that data back to the database.  
   
- Finally, the sample refreshes the data contained in the result set and then calls the custom displayRow method again to display the data contained in the result set.  
+ Finally, the sample refreshes the data in the result set and then calls the custom displayRow method again to display the data in the result set.  
   
 ```java
 import java.sql.Connection;

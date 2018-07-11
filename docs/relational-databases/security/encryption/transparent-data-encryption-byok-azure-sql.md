@@ -87,6 +87,7 @@ When TDE is first configured to use a TDE protector from Key Vault, the server s
     >
     
 - Use a key without an expiration date – and never set an expiration date on a key already in use: **once the key expires, the encrypted databases lose access to their TDE Protector and are dropped within 24 hours**.
+- Make sure the Key Vauld is always accessible for the Azure SQL Server, as once it will not be accessible (in case of AKV Firewall usage - note that Azure SQL is not in the list of trusted services) the encrypted databases are dropped within 24 hours.
 - Ensure the key is enabled and has permissions to perform *get*, *wrap key*, and *unwrap key* operations.
 - Create an Azure Key Vault key backup before using the key in Azure Key Vault for the first time. Learn more about the [Backup-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) command.
 - Create a new backup whenever any changes are made to the key (for example, add ACLs, add tags, add key attributes).

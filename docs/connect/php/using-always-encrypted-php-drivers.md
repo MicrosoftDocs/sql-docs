@@ -30,7 +30,7 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 ## Enabling Always Encrypted in a PHP Application
 
-The easiest way to enable the encryption of parameters targeting the encrypted columns, and the decryption of query results is by setting the value of the `ColumnEncryption` connection string keyword to `Enabled`. The following are examples of enabling Always Encrypted in the SQLSRV and PDO_SQLSRV drivers:
+The easiest way to enable the encryption of parameters targeting the encrypted columns and the decryption of query results is by setting the value of the `ColumnEncryption` connection string keyword to `Enabled`. The following are examples of enabling Always Encrypted in the SQLSRV and PDO_SQLSRV drivers:
 
 SQLSRV:
 ```
@@ -240,7 +240,7 @@ Because Always Encrypted is a client-side encryption technology, most of the per
 
 If Always Encrypted is enabled for a connection, the ODBC Driver will, by default, call [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them.
 
-Since the PHP drivers allow the user to bind a parameter in a prepared statement without providing the SQL type, when binding a parameter in an Always Encrypted enabled connection, the PHP Drivers call [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) on the parameter to get the SQL type, column size, and decimal digits. The metadata is then used to call [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). These extra `SQLDescribeParam` calls do not require extra round-trip to the database as the ODBC Driver has already stored the information on the client side when `sys.sp_describe_parameter_encryption` was called.
+Since the PHP drivers allow the user to bind a parameter in a prepared statement without providing the SQL type, when binding a parameter in an Always Encrypted enabled connection, the PHP Drivers call [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) on the parameter to get the SQL type, column size, and decimal digits. The metadata is then used to call [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). These extra `SQLDescribeParam` calls do not require extra round-trips to the database as the ODBC Driver has already stored the information on the client side when `sys.sp_describe_parameter_encryption` was called.
 
 The preceding behaviors ensure a high level of transparency to the client application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
 
@@ -267,7 +267,7 @@ The ODBC Driver for SQL Server on Windows includes a built-in column master key 
 ### Using Azure Key Vault
 
 Azure Key Vault offers a way to store encryption keys, passwords, and other secrets using Azure and can be used to store keys for Always Encrypted. The ODBC Driver for SQL Server (version 17 and higher) includes a built-in master key store provider for Azure Key Vault. The following connection options handle Azure Key Vault configuration: `KeyStoreAuthentication`, `KeyStorePrincipalId`, and `KeyStoreSecret`. 
- -   `KeyStoreAuthentication` can take one of two possible string values: `KeyVaultPassword` and `KeyVaultClientSecret`. These control what kind of authentication credentials are used with the other two keywords.
+ -   `KeyStoreAuthentication` can take one of two possible string values: `KeyVaultPassword` and `KeyVaultClientSecret`. These values control what kind of authentication credentials are used with the other two keywords.
  -   `KeyStorePrincipalId` takes a string representing an identifier for the account seeking to access the Azure Key Vault. 
      -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, `KeyStorePrincipalId` must be the name of an Azure ActiveDirectory user.
      -   If `KeyStoreAuthentication` is set to `KeyVaultClientSecret`, then `KeyStorePrincipalId` must be an application client ID.

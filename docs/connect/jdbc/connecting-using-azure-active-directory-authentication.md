@@ -1,7 +1,7 @@
 ---
 title: "Connecting using Azure Active Directory Authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2018"
+ms.date: "07/11/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""

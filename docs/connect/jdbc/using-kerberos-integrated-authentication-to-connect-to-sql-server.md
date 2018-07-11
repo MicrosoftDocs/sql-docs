@@ -1,7 +1,7 @@
 ---
 title: "Using Kerberos Integrated Authentication to Connect to SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

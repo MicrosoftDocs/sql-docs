@@ -1,7 +1,7 @@
 ---
 title: "Data Source Sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2017"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

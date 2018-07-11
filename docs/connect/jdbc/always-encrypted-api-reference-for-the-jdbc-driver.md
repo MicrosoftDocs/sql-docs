@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted API Reference for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "1/19/2018"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

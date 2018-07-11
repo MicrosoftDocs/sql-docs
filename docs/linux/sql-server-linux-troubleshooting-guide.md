@@ -106,7 +106,7 @@ If you prefer, you can also convert the files to UTF-8 to read them with ‘more
    ```
 ## Extended events
 
-Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/en-us/library/bb630282.aspx):
+Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/library/bb630282.aspx):
 
 ## Crash dumps 
 

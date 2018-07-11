@@ -395,7 +395,7 @@ No other ODBC application changes are required to use AKV for CMK storage.
 
 ### Using the Windows Certificate Store Provider
 
-The ODBC Driver for SQL Server on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider is not available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no additional configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. See [Create and Store Column Master Keys (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) for more information.
+The ODBC Driver for SQL Server on Windows includes a built-in column master key store provider for the Windows Certificate Store, named `MSSQL_CERTIFICATE_STORE`. (This provider is not available on macOS or Linux.) With this provider, the CMK is stored locally on the client machine and no additional configuration by the application is necessary to use it with the driver. However, the application must have access to the certificate and its private key in the store. See [Create and Store Column Master Keys (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) for more information.
 
 ### Using Custom Keystore Providers
 

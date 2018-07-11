@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Defect a Target Server from a Master Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -76,7 +76,7 @@ To execute this stored procedure, a user must be a member of the **sysadmin** fi
 sp_msx_defect ;  
 ```  
   
-For more information, see [sp_msx_defect (Transact-SQL)](http://msdn.microsoft.com/en-us/0dfd963a-3bc5-4b58-94f7-aec976da2883).  
+For more information, see [sp_msx_defect (Transact-SQL)](http://msdn.microsoft.com/0dfd963a-3bc5-4b58-94f7-aec976da2883).  
   
 ## <a name="PowerShellProcedure"></a>Using SQL Server Management Objects (SMO)  
 Use the **MsxDefect Method**.  

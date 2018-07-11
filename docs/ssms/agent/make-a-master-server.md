@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Make a Master Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -139,7 +139,7 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO;  
 ```  
   
-For more information, see [sp_msx_enlist (Transact-SQL)](http://msdn.microsoft.com/en-us/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f).  
+For more information, see [sp_msx_enlist (Transact-SQL)](http://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f).  
   
 ## See Also  
 [Create a Multiserver Environment](../../ssms/agent/create-a-multiserver-environment.md)  

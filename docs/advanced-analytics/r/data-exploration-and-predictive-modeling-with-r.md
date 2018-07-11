@@ -84,7 +84,7 @@ When using the RevoScaleR package to connect to [!INCLUDE[ssNoVersion](../../inc
 For examples of how to create and work with data sources and execution contexts,  see these tutorials:
 
 + [Data Science Deep Dive](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [Data Analysis using Microsoft R](https://msdn.microsoft.com/en-us/microsoft-r/data-analysis-in-microsoft-r)
++  [Data Analysis using Microsoft R](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
 ## Deploy R Code to Production
 

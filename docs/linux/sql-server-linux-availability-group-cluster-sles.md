@@ -233,6 +233,16 @@ sudo crm configure property stonith-enabled=true
 
 Refer to [SLES Administration Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
 
+## Enable Pacemaker
+
+From one node in the cluster, enable Pacemaker so that it can automatically start.
+
+Run the following command.
+
+```bash
+systemctl enable pacemaker
+```
+
 ### Create availability group resource
 
 The following command creates and configures the availability group resource for three replicas of availability group [ag1]. The monitor operations and timeouts have to be specified explicitly in SLES based on the fact that timeouts are highly workload-dependent and need to be carefully adjusted for each deployment.

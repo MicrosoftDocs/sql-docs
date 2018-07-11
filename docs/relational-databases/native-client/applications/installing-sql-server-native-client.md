@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Installing SQL Server Native Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/15/2016"
@@ -28,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 # Installing SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > For content related to previous versions of SQL Server, see [Installing SQL Server Native Client](https://msdn.microsoft.com/en-US/library/ms131321(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Installing SQL Server Native Client](https://msdn.microsoft.com/library/ms131321(SQL.120).aspx).
 
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 

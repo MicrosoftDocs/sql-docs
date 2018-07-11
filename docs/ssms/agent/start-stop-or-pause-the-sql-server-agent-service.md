@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Start, Stop, or Pause the SQL Server Agent Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -62,7 +62,7 @@ To perform its functions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.m
   
 -   Adjust memory quotas for a process (SeIncreaseQuotaPrivilege)  
   
-For more information about the Windows permissions required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account, see [Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) and [Setting Up Windows Service Accounts](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014).  
+For more information about the Windows permissions required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account, see [Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) and [Setting Up Windows Service Accounts](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014).  
   
 ## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  
   
@@ -78,7 +78,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 For more information, see:  
   
--   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6)  
+-   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)  
   
 -   [Autostart SQL Server Agent &#40;SQL Server Management Studio&#41;](../../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md)  
   

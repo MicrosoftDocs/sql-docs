@@ -47,5 +47,5 @@ When sending data to the server, the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 
 [PHP Types](http://php.net/manual/language.types.php)
 
-[Data Types (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[Data Types (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

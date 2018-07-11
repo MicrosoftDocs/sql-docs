@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create a Schedule | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -93,7 +93,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_add_schedule (Transact-SQL)](http://msdn.microsoft.com/en-us/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7).  
+For more information, see [sp_add_schedule (Transact-SQL)](http://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To create a schedule**  

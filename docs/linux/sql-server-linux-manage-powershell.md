@@ -17,11 +17,11 @@ ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article introduces [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) and walks you through a couple of examples on how to use it with SQL Server 2017 on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
+This article introduces [SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) and walks you through a couple of examples on how to use it with SQL Server 2017 on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 ## Install the newest version of SQL PowerShell on Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download.
+[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download.
 
 ## Before you begin
 
@@ -65,7 +65,7 @@ Let's use PowerShell on Windows to connect to your SQL Server 2017 instance on L
 Copy and paste the following commands at the PowerShell prompt. When you run these commands, PowerShell will:
 - Display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server 2017 instance on Linux
 - Load the SQL Server Management Objects (SMO) assembly
-- Create an instance of the [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) object
+- Create an instance of the [Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx) object
 - Connect to the **Server** and display a few properties
 
 Remember to replace **\<your_server_instance\>** with the IP address or the hostname of your SQL Server 2017 instance on Linux.

@@ -2,7 +2,8 @@
 
 # [What's new in Data Migration Assistant](dma-whatsnew.md)
 # [Assess your SQL Server migration](dma-assesssqlonprem.md)
-# [Migrate a SQL Server](dma-migrateonpremsql.md)
+# [Upgrade SQL Server to a later version](dma-migrateonpremsql.md)
+# [Migrate SQL Server to Azure SQL Database](dma-migrateonpremsqltosqldb.md)
 # [Migrate SQL Server logins](dma-migrateserverlogins.md)
 # [Best practices for Data Migration Assistant](dma-bestpractices.md)
 # [Consolidate assessment reports](dma-consolidatereports.md)

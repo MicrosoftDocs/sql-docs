@@ -19,7 +19,7 @@ manager: "kfile"
 ---
 # Lesson 1: Creating a Report Server Project (Reporting Services)
 
- > For content related to previous versions of SQL Server, see [Lesson 1: Creating a Report Server Project (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Lesson 1: Creating a Report Server Project (Reporting Services)](https://msdn.microsoft.com/library/ms167559(SQL.120).aspx).
 
 In this lesson, you'll create a *report server project* and a *report definition (.rdl)* file in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] within Visual Studio. 
 

@@ -34,7 +34,7 @@ To review what is new in the other SQL Server components, see [What's New in SQL
 
 - To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![download](../analysis-services/media/download.png "download").
 
-- Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
+- Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
 
 > [!NOTE]
 > For the current release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).

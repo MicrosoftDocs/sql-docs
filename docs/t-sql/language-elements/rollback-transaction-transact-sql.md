@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"

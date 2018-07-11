@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 ---
 
-## Verify Analysis Services cumulative update build version
+# Verify Analysis Services cumulative update build version
 
 Beginning with SQL Server 2017, the Analysis Services build version number and SQL Server Database Engine build version number do not match. While both Analysis Services and the Database Engine use the same installer, the build systems each use are separate.
 
- In some cases, it may be necessary to verify if a Cumulative Update (CU) build package has been applied and Analysis Services components have been updated. You do this by comparing the build version numbers of Analysis Services component files installed on your computer with the  build version numbers for a particular CU.
+ In some cases, it may be necessary to verify if a Cumulative Update (CU) build package has been applied and Analysis Services components have been updated. You verify by comparing the build version numbers of Analysis Services component files installed on your computer with the  build version numbers for a particular CU.
 
 ## Verify component file version
 
@@ -26,7 +26,7 @@ To verify component file version,
 3. In the **Cumulative Update (#) for SQL Server 2017** article, in the **Cumulative Update package information** section, expand **Cumulative update package file information**. 
 4. Check the File version for the following component files: **Msmdpump.dll**, **Msmdredir.dll**, **Msmdsrv.exe**, **Msmgdsrv.dll**.
 
-If the CU has been applied, the file version numbers should match the files installed on your computer.
+    If the CU has been applied, the file version numbers should match the component files installed on your computer.
 
 ## See also  
 

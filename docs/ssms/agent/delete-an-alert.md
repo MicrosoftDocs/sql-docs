@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete an Alert | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -91,5 +91,5 @@ By default, only members of the **sysadmin** fixed server role can delete alerts
     GO  
     ```  
   
-For more information, see [sp_delete_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/a831315e-793d-41c4-8333-b324bb2bc614).  
+For more information, see [sp_delete_alert (Transact-SQL)](http://msdn.microsoft.com/a831315e-793d-41c4-8333-b324bb2bc614).  
   

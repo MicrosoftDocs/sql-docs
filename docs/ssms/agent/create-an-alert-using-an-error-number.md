@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create an Alert Using an Error Number | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -107,5 +107,5 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
     GO  
     ```  
   
-For more information, see [sp_add_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09).  
+For more information, see [sp_add_alert (Transact-SQL)](http://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09).  
   

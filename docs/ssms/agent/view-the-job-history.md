@@ -1,4 +1,4 @@
-﻿---
+---
 title: "View the Job History | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -82,7 +82,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_help_jobhistory (Transact-SQL)](http://msdn.microsoft.com/en-us/a944d44e-411b-4735-8ce4-73888d4262d7).  
+For more information, see [sp_help_jobhistory (Transact-SQL)](http://msdn.microsoft.com/a944d44e-411b-4735-8ce4-73888d4262d7).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To view the job history log**  

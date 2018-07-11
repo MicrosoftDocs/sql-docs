@@ -87,7 +87,7 @@ Object Explorer Details supports multiple object selection. For example, if you 
 ## SQL Server Object Search  
 Wildcards  
   
--   Standard wildcard characters are supported. For example, searching for **dm_os%counters** returns both dm_os_memory_cache_counters and dm_os_performance_counters. For more information, see [How to: Search with Wildcards](http://msdn.microsoft.com/en-us/449600f8-cc87-4b3f-878a-59c158a88a40).  
+-   Standard wildcard characters are supported. For example, searching for **dm_os%counters** returns both dm_os_memory_cache_counters and dm_os_performance_counters. For more information, see [How to: Search with Wildcards](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40).  
   
 Search Scope  
   

@@ -43,7 +43,7 @@ manager: "kfile"
   
 -   To use e-mail delivery, the report server must be configured for an SMTP server or gateway connection before you create the subscription.  
   
--   To use file share delivery, you must have target folder already defined. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   To use file share delivery, you must have target folder already defined. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Before you can subscribe to a report, the report data source must be configured to use stored credentials or no credentials. For more information, see [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). If it does not, the **New Subscription** button is not available.  
   
@@ -108,9 +108,9 @@ manager: "kfile"
   
 4.  **Owner**: The owner field defaults to the current user and cannot be edited when you create the subscription. However, after the subscription is saved, you can change the subscription properties including the owner and description.  
   
-5.  **Delivered by**: Select **E-Mail**. If **E-Mail** is not available, your report server has not been configured for e-mail subscriptions. See [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **Delivered by**: Select **E-Mail**. If **E-Mail** is not available, your report server has not been configured for e-mail subscriptions. See [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **To**: The recipient name in the To: field is self-addressed using your domain user account. Verify the format is [user name]@[domain.com]Report server configuration settings determine whether the **To** field is self-addressed with your user account. For more information about changing the configuration settings e-mail addresses, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **To**: The recipient name in the To: field is self-addressed using your domain user account. Verify the format is [user name]@[domain.com]Report server configuration settings determine whether the **To** field is self-addressed with your user account. For more information about changing the configuration settings e-mail addresses, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
     >  Depending on your permissions, you might be able to type the e-mail address you want the report delivered to. To specify multiple e-mail addresses, separate them with a semicolon (;). You can also type additional e-mail addresses in the **Cc**, **Bcc**, and **Reply-To** text boxes. This requires that you have permission to manage all subscriptions.  

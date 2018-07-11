@@ -116,7 +116,7 @@ When you open a project, it is disconnected from DB2 and from [!INCLUDE[ssNoVers
 3.  To reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], on the **File** menu, click **Reconnect to SQL Server**.  
   
 ## Next Step  
-The next step in the migration process is to [Connecting to DB2 Database](http://msdn.microsoft.com/en-us/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
+The next step in the migration process is to [Connecting to DB2 Database](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
   
 ## See Also  
 [Migrating DB2 Databases to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use Performance Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -48,12 +48,12 @@ The following table shows how the [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 |Object name|Description|  
 |---------------|---------------|  
-|[SQLAgent:Jobs](http://msdn.microsoft.com/en-us/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|Performance information about jobs that have been started, success rates, and current status|  
-|[SQLAgent:JobSteps](http://msdn.microsoft.com/en-us/44f9983c-1753-4fe0-8475-973aa2460b3a)|Status information about job steps|  
-|[SQLAgent:Alerts](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Information about number of alerts and notifications|  
-|[SQLAgent:Statistics](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|General performance information|  
+|[SQLAgent:Jobs](http://msdn.microsoft.com/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|Performance information about jobs that have been started, success rates, and current status|  
+|[SQLAgent:JobSteps](http://msdn.microsoft.com/44f9983c-1753-4fe0-8475-973aa2460b3a)|Status information about job steps|  
+|[SQLAgent:Alerts](http://msdn.microsoft.com/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Information about number of alerts and notifications|  
+|[SQLAgent:Statistics](http://msdn.microsoft.com/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|General performance information|  
   
 ## See Also  
-[Monitor and Tune for Performance](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
-[How to: Start System Monitor (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[Monitor and Tune for Performance](http://msdn.microsoft.com/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
+[How to: Start System Monitor (Windows)](http://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

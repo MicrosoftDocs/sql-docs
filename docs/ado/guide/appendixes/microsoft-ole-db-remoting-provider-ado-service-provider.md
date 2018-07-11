@@ -89,4 +89,4 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ```
 
 ## See Also
- [Overview of the OLE DB Remoting Provider](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [Overview of the OLE DB Remoting Provider](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

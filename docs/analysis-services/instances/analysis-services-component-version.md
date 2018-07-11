@@ -1,6 +1,6 @@
 ---
-title: "Install Analysis Services | Microsoft Docs"
-ms.date: 05/02/2018
+title: "Verify Analysis Services cumulative update build version | Microsoft Docs"
+ms.date: 07/11/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -24,13 +24,9 @@ To verify component file version,
 1. Go to [SQL Server 2017 build versions](https://support.microsoft.com/help/4047329). 
 2. In **SQL Server 2017 cumulative update (CU) builds**, click the **Knowledge Base Number** for the build you want to verify. 
 3. In the **Cumulative Update (#) for SQL Server 2017** article, in the **Cumulative Update package information** section, expand **Cumulative update package file information**. 
-4. Check the File version for the following files:
-    - Msmdpump.dll
-    - Msmdredir.dll
-    - Msmdsrv.exe
-    - Msmgdsrv.dll
+4. Check the File version for the following component files: **Msmdpump.dll**, **Msmdredir.dll**, **Msmdsrv.exe**, **Msmgdsrv.dll**.
 
-    If the CU has been applied, the file version numbers should match the files installed on your computer.
+If the CU has been applied, the file version numbers should match the files installed on your computer.
 
 ## See also  
 

@@ -1,7 +1,7 @@
 ---
 title: "Azure Key Vault Sample Version 6.2.2 | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/28/2018"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

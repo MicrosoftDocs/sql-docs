@@ -35,7 +35,7 @@ Similarly, the R tools associated with the default instance would be located in 
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
 
-For more information about how Microsoft R is different from a base distribution of R that you might get from CRAN, see [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/en-us/r-server/what-is-r-server-interoperability)
+For more information about how Microsoft R is different from a base distribution of R that you might get from CRAN, see [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)
 
 ### Additional R packages from Microsoft R
 

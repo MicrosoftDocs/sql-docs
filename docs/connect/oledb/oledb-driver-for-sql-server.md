@@ -46,7 +46,7 @@ manager: craigg
 There are three distinct generations of Microsoft OLE DB providers for SQL Server.
 
 ### 1. Microsoft OLE DB Provider for SQL Server (SQLOLEDB)
-The [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) still ships as part of [Windows Data Access Components](https://msdn.microsoft.com/en-us/library/ms692897.aspx). It is not maintained anymore and it is not recommended to use this driver for new development.
+The [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) still ships as part of [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx). It is not maintained anymore and it is not recommended to use this driver for new development.
 
 ### 2. SQL Server Native Client (SNAC)
 Starting in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) includes an OLE DB provider interface (SQLNCLI) and is the OLE DB provider that shipped with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].

@@ -18,7 +18,7 @@ In SQL Server 2017 CTP 2.0, support was added for the Python language. The **mic
 
 + **MicrosoftML for R**
 
-    Introduction and package reference: [MicrosoftML: machine learning R algorithms](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
+    Introduction and package reference: [MicrosoftML: machine learning R algorithms](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)
 
     Because R is case-sensitive, make sure that you reference the name correctly when loading the package.
 
@@ -110,4 +110,4 @@ For more information about revoscalepy, see:
 
 + [What is revoscalepy](python/what-is-revoscalepy.md)
 
-+ [revoscalepy function library](https://docs.microsoft.com/en-us/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [revoscalepy function library](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 

@@ -122,6 +122,7 @@ The following command creates a three-node cluster. Before you run the script, r
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
    sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
    sudo pcs cluster start --all
+   sudo pcs cluster enable --all
    ```
    
    >[!NOTE]

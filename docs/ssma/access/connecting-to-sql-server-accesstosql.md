@@ -46,7 +46,7 @@ The account that is used to connect to [!INCLUDE[ssNoVersion](../../includes/ssn
 ## Establishing a SQL Server Connection  
 Before you convert Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax, you must establish a connection to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] where you want to migrate the Access databases.  
   
-When you define the connection properties, you also specify the database where objects and data will be migrated. You can customize this mapping at the Access database level after you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Mapping Source and Target Databases](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+When you define the connection properties, you also specify the database where objects and data will be migrated. You can customize this mapping at the Access database level after you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Mapping Source and Target Databases](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 > [!IMPORTANT]  
 > Before you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], make sure that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is running and can accept connections. For more information, see "Connecting to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
@@ -75,7 +75,7 @@ When you define the connection properties, you also specify the database where o
   
     The target database name cannot contain spaces or special characters. For example, you can migrate Access databases to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database named "abc". But you cannot migrate Access databases to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database named "a b-c".  
   
-    You can customize this mapping per database after you connect. For more information, see [Mapping Source and Target Databases](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+    You can customize this mapping per database after you connect. For more information, see [Mapping Source and Target Databases](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 5.  In the **Authentication** drop-down menu, select the authentication type to use for the connection. To use the current Windows account, select **Windows Authentication**. To use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] login, select **SQL Server Authentication**, and then provide a user name and password.  
   
@@ -121,8 +121,8 @@ Your connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sta
 The procedure for reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is the same as the procedure for establishing a connection.  
   
 ## Next Steps  
-If you want to customize the mapping between source and target databases, see [Mapping Source and Target Databases](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) Otherwise, the next step is to convert database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax using [convert database objects](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+If you want to customize the mapping between source and target databases, see [Mapping Source and Target Databases](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4) Otherwise, the next step is to convert database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax using [convert database objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

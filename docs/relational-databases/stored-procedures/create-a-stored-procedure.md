@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -20,7 +20,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 # Create a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > For content related to previous versions of SQL Server, see [Create a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Create a Stored Procedure](https://msdn.microsoft.com/library/ms345415(SQL.120).aspx).
 
   This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE statement.  
   

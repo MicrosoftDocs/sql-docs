@@ -123,7 +123,7 @@ manager: "kfile"
   
 -   [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
--   [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
+-   [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
   
  ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
@@ -179,7 +179,7 @@ manager: "kfile"
   
  This functionality is not supported because a SQL Server Reporting Services service application does not exist or a report server URL has not been configured in Central Administration.  
   
- **Workaround:** Verify you have an [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and it is correctly configured. For more information see, [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).
+ **Workaround:** Verify you have an [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and it is correctly configured. For more information see, [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).
   
  ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   

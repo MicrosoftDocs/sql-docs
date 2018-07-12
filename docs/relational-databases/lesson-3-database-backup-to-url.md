@@ -23,7 +23,7 @@ manager: craigg
 In this lesson, you will back up the AdventureWorks2014 database in your on-premises SQL Server 2016 instance to the Azure container that you created in [Lesson 1: Create a stored access policy and a shared access signature  on an Azure container](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
-> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) to backup to URL using the WITH CREDENTIAL syntax.  
+> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) to backup to URL using the WITH CREDENTIAL syntax.  
   
 To back up a database to Blob storage, follow these steps:  
   

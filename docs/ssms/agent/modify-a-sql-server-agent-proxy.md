@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Modify a SQL Server Agent Proxy | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -95,5 +95,5 @@ Only members of the **sysadmin** fixed server role can create, modify, or delete
     GO  
     ```  
   
-For more information, see [sp_update_proxy (Transact-SQL)](http://msdn.microsoft.com/en-us/864fd0e6-9d61-4f07-92ef-145318d2f881).  
+For more information, see [sp_update_proxy (Transact-SQL)](http://msdn.microsoft.com/864fd0e6-9d61-4f07-92ef-145318d2f881).  
   

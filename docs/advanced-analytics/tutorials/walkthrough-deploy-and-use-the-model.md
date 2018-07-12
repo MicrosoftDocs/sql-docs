@@ -184,7 +184,7 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
     ```
 
     >[!TIP]
-    > R Tools for Visual Studio (RTVS) provides great integration with both SQL Server and R. See this article for more examples of using RODBC with a SQL Server connection: [Working with SQL Server and R](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
+    > R Tools for Visual Studio (RTVS) provides great integration with both SQL Server and R. See this article for more examples of using RODBC with a SQL Server connection: [Working with SQL Server and R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## Summary
 

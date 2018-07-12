@@ -49,9 +49,9 @@ A rowstore is data that's logically organized as a table with rows and columns, 
 > In discussions about columnstore indexes, the terms rowstore and columnstore are used to emphasize the format for the data storage.  
   
 #### Rowgroup
-A row group is a group of rows that are compressed into columnstore format at the same time. A rowgroup usually contains the maximum number of rows per rowgroup, which is 1,048,576 rows.  
+A rowgroup is a group of rows that are compressed into columnstore format at the same time. A rowgroup usually contains the maximum number of rows per rowgroup, which is 1,048,576 rows.  
   
-For high performance and high compression rates, the columnstore index slices the table into groups of rows, called rowgroups, and then compresses each rowgroup in a column-wise manner. The number of rows in the rowgroup must be large enough to improve compression rates, and small enough to benefit from in-memory operations.    
+For high performance and high compression rates, the columnstore index slices the table into rowgroups, and then compresses each rowgroup in a column-wise manner. The number of rows in the rowgroup must be large enough to improve compression rates, and small enough to benefit from in-memory operations.    
 
 #### Column segment
 A column segment is a column of data from within the rowgroup.  
@@ -69,7 +69,7 @@ A clustered columnstore index is the physical storage for the entire table.
 To reduce fragmentation of the column segments and improve performance, the columnstore index might store some data temporarily into a clustered index called a *deltastore* and a btree list of IDs for deleted rows. The deltastore operations are handled behind the scenes. To return the correct query results, the clustered columnstore index combines query results from both the columnstore and the deltastore.  
   
 #### Delta rowgroup
-(Used only with columnstore indexes.) A delta rowgroup is a clustered index that improves columnstore compression and performance by storing rows until the number of rows reaches a threshold and are then moved into the columnstore.  
+A delta rowgroup is a clustered index that's used only with columnstore indexes. It improves columnstore compression and performance by storing rows until the number of rows reaches a threshold and are then moved into the columnstore.  
 
 When a delta rowgroup reaches the maximum number of rows, it becomes closed. A tuple-mover process checks for closed row groups. If the process finds a closed rowgroup, it compresses the rowgroup and stores it into the columnstore.  
   
@@ -109,14 +109,14 @@ Recommended use cases:
 -   Use a nonclustered columnstore index to perform analysis in real time on an OLTP workload. For more information, see [Get started with columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 ### How do I choose between a rowstore index and a columnstore index?  
-Rowstore indexes perform best on queries that seek into the data, when searching for a particular value, or for queries on a small range of values. Use rowstore indexes with transactional workloads since they tend to require mostly table seeks instead of table scans.  
+Rowstore indexes perform best on queries that seek into the data, when searching for a particular value, or for queries on a small range of values. Use rowstore indexes with transactional workloads because they tend to require mostly table seeks instead of table scans.  
   
-Columnstore indexes give high performance gains for analytic queries that scan large amounts of data, especially on large tables. Use columnstore indexes on data warehousing and analytics workloads, especially on fact tables, since they tend to require full table scans rather than table seeks.  
+Columnstore indexes give high performance gains for analytic queries that scan large amounts of data, especially on large tables. Use columnstore indexes on data warehousing and analytics workloads, especially on fact tables, because they tend to require full table scans rather than table seeks.  
   
 ### Can I combine rowstore and columnstore on the same table?  
 Yes. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create an updatable nonclustered columnstore index on a rowstore table. The columnstore index stores a copy of the selected columns, so you need extra space for this data, but the selected data is compressed on average 10 times. You can run analytics on the columnstore index and transactions on the rowstore index at the same time. The columnstore is updated when data changes in the rowstore table, so both indexes work against the same data.  
   
-Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index and perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since a non-unique value fails to insert into the rowstore table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't insert the value into the columnstore.  
+Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index and perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Because a non-unique value fails to insert into the rowstore table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't insert the value into the columnstore.  
   
 ## Metadata  
 All of the columns in a columnstore index are stored in the metadata as included columns. The columnstore index doesn't have key columns.  

@@ -269,13 +269,13 @@ The ODBC Driver for SQL Server on Windows includes a built-in column master key 
 Azure Key Vault offers a way to store encryption keys, passwords, and other secrets using Azure and can be used to store keys for Always Encrypted. The ODBC Driver for SQL Server (version 17 and higher) includes a built-in master key store provider for Azure Key Vault. The following connection options handle Azure Key Vault configuration: `KeyStoreAuthentication`, `KeyStorePrincipalId`, and `KeyStoreSecret`. 
  -   `KeyStoreAuthentication` can take one of two possible string values: `KeyVaultPassword` and `KeyVaultClientSecret`. These values control what kind of authentication credentials are used with the other two keywords.
  -   `KeyStorePrincipalId` takes a string representing an identifier for the account seeking to access the Azure Key Vault. 
-     -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, `KeyStorePrincipalId` must be the name of an Azure ActiveDirectory user.
+     -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStorePrincipalId` must be the name of an Azure ActiveDirectory user.
      -   If `KeyStoreAuthentication` is set to `KeyVaultClientSecret`, then `KeyStorePrincipalId` must be an application client ID.
  -   `KeyStoreSecret` takes a string representing a credential secret. 
-     -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, `KeyStoreSecret` must be the user’s password. 
+     -   If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStoreSecret` must be the user’s password. 
      -   If `KeyStoreAuthentication` is set to `KeyVaultClientSecret`, then `KeyStoreSecret` must be the application secret associated with the application client ID.
 
-All three options must be present in the connection string to use Azure Key Vault. In addition, `ColumnEncryption` must be set to `enabled`. If `ColumnEncryption` is set to `disabled` but the Azure Key Vault options are present, the script will proceed without errors but no encryption will be performed.
+All three options must be present in the connection string to use Azure Key Vault. In addition, `ColumnEncryption` must be set to `Enabled`. If `ColumnEncryption` is set to `Disabled` but the Azure Key Vault options are present, the script will proceed without errors but no encryption will be performed.
 
 The following examples show how to connect to SQL Server using Azure Key Vault.
 

@@ -29,14 +29,14 @@ Versions 3.1 and later of the Microsoft PHP Drivers for SQL Server are officiall
 
 For information about how to download and install the latest stable PHP binaries, see [the PHP web site](http://php.net).  The Microsoft Drivers for PHP for SQL Server require the following versions of PHP:
 
-|PHP for SQL Server driver version &#8594;<br />&#8595; PHP version|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
-|---|---|---|---|---|---|---|
-|7.2|7.2.0+ |7.2.1+ on Windows<br/>7.2.0+ on other platforms | | | | |
-|7.1|7.1.0+ |7.1.0+ |7.1.0+ |       |        |        |
-|7.0|7.0.0+ |7.0.0+ |7.0.0+ |7.0.0+ |        |        |
-|5.6|       |       |       |       |5.6.4+  |        |
-|5.5|       |       |       |       |5.5.16+ |5.5.16+ |
-|5.4|       |       |       |       |5.4.32  |5.4.32  |
+|PHP for SQL Server driver version &#8594;<br />&#8595; PHP version|5.3 and 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
+|---|---|---|---|---|---|
+|7.2|7.2.1+ on Windows<br/>7.2.0+ on other platforms | | | | |
+|7.1|7.1.0+ |7.1.0+ |       |        |        |
+|7.0|7.0.0+ |7.0.0+ |7.0.0+ |        |        |
+|5.6|       |       |       |5.6.4+  |        |
+|5.5|       |       |       |5.5.16+ |5.5.16+ |
+|5.4|       |       |       |5.4.32  |5.4.32  |
 
 -   A version of the driver file must be in your PHP extension directory. See [Driver Versions](#driver-versions) for information about the different driver files.  To download the drivers, see [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md). For information on configuring the driver for the PHP, see [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
 
@@ -49,13 +49,9 @@ For information about how to download and install the latest stable PHP binaries
 
 ## ODBC Driver
 
-The correct version of the Microsoft ODBC Driver for SQL Server is required on the computer on which PHP is running. Download from the following links:
-- [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56567)
-- [Microsoft ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=53339)
-- [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=50420)
-- [Microsoft ODBC Driver 11 for SQL Server](http://www.microsoft.com/download/details.aspx?id=36434)
+The correct version of the Microsoft ODBC Driver for SQL Server is required on the computer on which PHP is running. You can download all supported versions of the driver for supported platform on [this page](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
 
-If you are using a 64-bit operating system, the ODBC 64-bit installer installs both 32-bit and 64-bit ODBC drivers. If you use a 32-bit operating system, use the ODBC x86 installer.
+If you are downloading the Windows version of the driver on 64-bit operating system, the ODBC 64-bit installer installs both 32-bit and 64-bit ODBC drivers. If you use a 32-bit operating system, use the ODBC x86 installer. On other platforms, only 64-bit versions of the driver are available.
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; ODBC Driver version|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|---|

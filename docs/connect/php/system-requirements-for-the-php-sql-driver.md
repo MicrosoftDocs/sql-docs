@@ -47,15 +47,17 @@ For information about how to download and install the latest stable PHP binaries
     > [!NOTE]  
     > Microsoft provides support only for IIS.  
 
+-   Version 5.3 of the Microsoft Drivers for PHP for SQL Server will be the last to support PHP 7.0.
+
 ## ODBC Driver
 
-The correct version of the Microsoft ODBC Driver for SQL Server is required on the computer on which PHP is running. You can download all supported versions of the driver for supported platform on [this page](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
+The correct version of the Microsoft ODBC Driver for SQL Server is required on the computer on which PHP is running. You can download all supported versions of the driver for supported platforms on [this page](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
 
-If you are downloading the Windows version of the driver on 64-bit operating system, the ODBC 64-bit installer installs both 32-bit and 64-bit ODBC drivers. If you use a 32-bit operating system, use the ODBC x86 installer. On other platforms, only 64-bit versions of the driver are available.
+If you are downloading the Windows version of the driver on a 64-bit version of Windows, the ODBC 64-bit installer installs both 32-bit and 64-bit ODBC drivers. If you use a 32-bit version of Windows, use the ODBC x86 installer. On non-Windows platforms, only 64-bit versions of the driver are available.
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; ODBC Driver version|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|---|
-|ODBC Driver 17  |Y|Y| | | | |
+|ODBC Driver 17+ |Y|Y| | | | |
 |ODBC Driver 13.1|Y|Y|Y|Y| | |
 |ODBC Driver 13  | | | |Y| | |
 |ODBC Driver 11  |Y|Y|Y|Y|Y|Y|
@@ -68,14 +70,15 @@ Azure SQL Databases are supported. For information, see [Connecting to Microsoft
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; SQL Server version|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|---|
-|Azure SQL Managed Instance<br/> (Extended Private Preview)|Y|Y|Y| | | |
-|Azure SQL Data Warehouse|Y|Y|Y| | | |
-|SQL Server 2017   |Y|Y|Y| | | |
-|SQL Server 2016   |Y|Y|Y|Y| | |
-|SQL Server 2014   |Y|Y|Y|Y|Y|Y|
-|SQL Server 2012   |Y|Y|Y|Y|Y|Y|
-|SQL Server 2008 R2|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008   | | | |Y|Y|Y|
+|Azure SQL Database        |Y|Y|Y| | | |
+|Azure SQL Managed Instance|Y|Y|Y| | | |
+|Azure SQL Data Warehouse  |Y|Y|Y| | | |
+|SQL Server 2017           |Y|Y|Y| | | |
+|SQL Server 2016           |Y|Y|Y|Y| | |
+|SQL Server 2014           |Y|Y|Y|Y|Y|Y|
+|SQL Server 2012           |Y|Y|Y|Y|Y|Y|
+|SQL Server 2008 R2        |Y|Y|Y|Y|Y|Y|
+|SQL Server 2008           | | | |Y|Y|Y|
 
 ## Operating Systems
 Supported operating systems for the versions of the driver are as follows:

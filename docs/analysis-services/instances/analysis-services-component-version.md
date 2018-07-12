@@ -1,5 +1,5 @@
 ---
-title: "Verify Analysis Services cumulative update build version | Microsoft Docs"
+title: "Verify SQL Server Analysis Services cumulative update build version | Microsoft Docs"
 ms.date: 07/11/2018
 ms.prod: sql
 ms.technology: analysis-services

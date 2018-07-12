@@ -24,8 +24,6 @@ manager: kenvh
 
 **Features Added**:
 
-UTF8 server encoding
-
 Data Classification for Azure SQL Database and SQL Server
 
 [Bug fixes](../bug-fixes.md)

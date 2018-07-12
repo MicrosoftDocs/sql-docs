@@ -38,7 +38,7 @@ manager: craigg
  To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] rovides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## Example  
  In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. Then it uses an SQL statement with the [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object, specifies the server-side cursor type, and then runs the SQL statement and places the data that it returns into a SQLServerResultSet object.  

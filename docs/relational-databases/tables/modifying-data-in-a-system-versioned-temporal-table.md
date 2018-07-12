@@ -64,7 +64,7 @@ CREATE TABLE [dbo].[CompanyLocation]
    , [City] [varchar](50) NOT NULL  
    , [SysStartTime] [datetime2](0) GENERATED ALWAYS AS ROW START HIDDEN NOT NULL   
    , [SysEndTime] [datetime2](0) GENERATED ALWAYS AS ROW END HIDDEN NOT NULL   
-PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime])   
+   , PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime])   
 )    
 WITH ( SYSTEM_VERSIONING = ON );   
 GO   

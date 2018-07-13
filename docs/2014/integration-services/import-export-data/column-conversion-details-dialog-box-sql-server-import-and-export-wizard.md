@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.impexpwizard.issuedetails.f1"
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)

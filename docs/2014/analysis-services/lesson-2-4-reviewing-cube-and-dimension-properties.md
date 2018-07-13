@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Reviewing Cube and Dimension Properties

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Perform an On-Demand Evaluation by Using Object Explorer

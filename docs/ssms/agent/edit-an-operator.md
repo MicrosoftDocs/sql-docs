@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Edit an Operator | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -109,5 +109,5 @@ Only members of the **sysadmin** fixed server role can edit operators.
     GO  
     ```  
   
-For more information, see [sp_update_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/231750a6-4828-4d03-afe6-b91d38c42ed3).  
+For more information, see [sp_update_operator (Transact-SQL)](http://msdn.microsoft.com/231750a6-4828-4d03-afe6-b91d38c42ed3).  
   

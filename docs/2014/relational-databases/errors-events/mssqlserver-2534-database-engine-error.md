@@ -5,16 +5,15 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "2534 (Database Engine error)"
 ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_2534

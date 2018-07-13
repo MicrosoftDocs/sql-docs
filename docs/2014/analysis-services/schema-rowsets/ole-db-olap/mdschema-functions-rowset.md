@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_FUNCTIONS rowset"
 ms.assetid: 5253fa8c-b1ce-4504-aff6-a246b5e675c7
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_FUNCTIONS Rowset
   Describes the functions available to client applications connected to the database.  

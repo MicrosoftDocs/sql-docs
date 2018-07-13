@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "repeating character expressions"
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

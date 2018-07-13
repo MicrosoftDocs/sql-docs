@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "XMLA, objects"
 ms.assetid: 768188ef-85d4-432a-9390-be05c835137f
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Objects (XMLA)
   The XML for Analysis (XMLA) protocol uses two methods, `Discover` and `Execute`, to offer a standard way for applications to access information on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Because these methods are invoked by using the Simple Object Access Protocol (SOAP) protocol, they accept input and deliver output in XML.  

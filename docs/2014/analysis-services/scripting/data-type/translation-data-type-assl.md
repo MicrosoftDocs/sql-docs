@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Translation data type"
 ms.assetid: d40039e1-3ff6-4e20-8d8b-5baf501f726f
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Translation Data Type (ASSL)
   Defines a primitive data type that represents a localized translation.  

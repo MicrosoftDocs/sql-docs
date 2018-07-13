@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "appearance of database diagrams"
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Work with Diagram Layout (Visual Database Tools)

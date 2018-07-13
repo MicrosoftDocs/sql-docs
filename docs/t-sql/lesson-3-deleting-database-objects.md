@@ -3,11 +3,9 @@ title: "Lesson 3: Deleting Database Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql"
+ms.technology: t-sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "deleting database objects"
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

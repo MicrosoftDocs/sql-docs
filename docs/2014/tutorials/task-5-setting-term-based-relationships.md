@@ -13,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Task 5: Setting Term Based Relationships

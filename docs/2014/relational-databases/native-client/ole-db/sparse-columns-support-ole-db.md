@@ -5,15 +5,13 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Sparse Columns Support (OLE DB)

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "table/view mapping [SQLXML], excluding schema elements"
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Excluding Schema Elements from the Resulting XML Document Using sql:mapped (SQLXML 4.0)

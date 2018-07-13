@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Usage-Based Optimization Wizard"
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Usage-Based Optimization Wizard F1 Help
   The Usage-Based Optimization Wizard is similar in output to the Aggregation Design Wizard, and is used to design aggregations for a partition. However, the Usage-Based Optimization Wizard designs aggregations based on the specific usage patterns of queries recorded in the query log of an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. Aggregations provide performance improvements by allowing [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to retrieve pre-calculated totals directly from cube storage instead of having to recalculate data from an underlying data source for each query.  

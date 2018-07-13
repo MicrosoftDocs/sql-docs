@@ -6,7 +6,6 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "dbe-transaction-log"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "logs [SQL Server], transaction logs"
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # The Transaction Log (SQL Server)

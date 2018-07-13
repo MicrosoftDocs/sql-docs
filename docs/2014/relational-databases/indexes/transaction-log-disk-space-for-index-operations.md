@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "space [SQL Server], transaction logs"
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Transaction Log Disk Space for Index Operations

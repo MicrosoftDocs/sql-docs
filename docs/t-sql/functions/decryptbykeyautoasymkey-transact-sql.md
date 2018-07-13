@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DECRYPTBYKEYAUTOASYMSKEY function"
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "accuracy testing [data mining]"
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cross-Validation (Analysis Services - Data Mining)
   *Cross-validation* is a standard tool in analytics and is an important feature for helping you develop and fine-tune data mining models. You use cross-validation after you have created a mining structure and related mining models to ascertain the validity of the model.  Cross-validation has the following applications:  

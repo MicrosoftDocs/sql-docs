@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AllMemberTranslations element"
 ms.assetid: 982ee2bf-c88d-4da5-a679-7a6b08a48a0d
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AllMemberTranslations Element (ASSL)
   Contains the collection of [Translation](../objects/translation-element-assl.md) elements for the caption of the All member of a [Hierarchy](../objects/hierarchy-element-assl.md) element.  

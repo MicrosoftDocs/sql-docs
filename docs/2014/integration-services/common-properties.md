@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "component properties [Integration Services]"
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Common Properties

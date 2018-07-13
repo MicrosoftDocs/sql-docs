@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "AdomdTransaction object"
 ms.assetid: 7978c28b-c255-43c0-ad05-f38604d4d8fe
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Performing Transactions in ADOMD.NET
   In ADOMD.NET, you use the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> object to manage transaction context for a given <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object. This functionality allows you to run several commands within the same context. Each command will read the same data without the read data changing between each command execution.  

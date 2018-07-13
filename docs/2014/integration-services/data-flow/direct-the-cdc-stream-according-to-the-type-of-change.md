@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Direct the CDC Stream According to the Type of Change

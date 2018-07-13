@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Impersonation Information dialog box"
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Set Impersonation Options (SSAS - Multidimensional)
   When creating a `data source` object in an Analysis Services model, one of the settings that you must configure is an impersonation option. This option determines whether Analysis Services assumes the identity of a specific Windows user account when performing local operations related to the connection, such as loading an OLE DB data provider or resolving user profile information in environments that support roaming profiles.  

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SOAP [Reporting Services], Windows applications"
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Using the SOAP API in a Windows Application

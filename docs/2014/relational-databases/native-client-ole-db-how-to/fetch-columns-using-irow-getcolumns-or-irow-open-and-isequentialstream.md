@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "GetColumns method"
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream

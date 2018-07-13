@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "status information [Upgrade Advisor]"
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Advisor Progress

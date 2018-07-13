@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "FOR XML clause, inline XDR schema generation"
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Generate an Inline XDR Schema

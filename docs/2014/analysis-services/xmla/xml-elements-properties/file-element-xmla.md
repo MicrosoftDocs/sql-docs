@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "File element"
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # File Element (XMLA)
   Identifies a file to be used by the parent [Backup](../xml-elements-commands/backup-element-xmla.md) or [Restore](../xml-elements-commands/restore-element-xmla.md) command, or by the parent [Location](location-element-xmla.md) element.  

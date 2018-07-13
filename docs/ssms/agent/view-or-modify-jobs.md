@@ -1,4 +1,4 @@
-﻿---
+---
 title: "View or Modify Jobs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -56,7 +56,7 @@ To make sure that changes to multiserver jobs take effect, you must post the cha
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
-For more information, see [sp_purge_jobhistory (Transact-SQL)](http://msdn.microsoft.com/en-us/237f9bad-636d-4262-9bfb-66c034a43e88).  
+For more information, see [sp_purge_jobhistory (Transact-SQL)](http://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88).  
   
 Members of the **sysadmin** fixed server role can view the definition or history of any job, and can modify any job.  
   
@@ -72,5 +72,5 @@ Members of the **sysadmin** fixed server role can view the definition or history
 |Describes how to change the properties of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs.|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
   
 ## See Also  
-[sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sysjobhistory](http://msdn.microsoft.com/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
   

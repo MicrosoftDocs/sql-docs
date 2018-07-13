@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: native-client  - "database-engine"
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "removing SQL Server Native Client"
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Installing SQL Server Native Client

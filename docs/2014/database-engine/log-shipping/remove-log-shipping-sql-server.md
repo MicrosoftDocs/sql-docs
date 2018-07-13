@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "deleting log shipping"
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Remove Log Shipping (SQL Server)

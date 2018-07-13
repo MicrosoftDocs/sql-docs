@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Parameters Properties Page (Report Manager)
   Use the Parameters properties page to view or modify parameter settings for a parameterized report.  

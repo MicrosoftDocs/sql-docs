@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "disconnecting [SMO]"
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Disconnecting from an Instance of SQL Server

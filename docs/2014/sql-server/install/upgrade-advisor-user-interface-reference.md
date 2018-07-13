@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server Upgrade Advisor, user interface reference"
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Advisor User Interface Reference

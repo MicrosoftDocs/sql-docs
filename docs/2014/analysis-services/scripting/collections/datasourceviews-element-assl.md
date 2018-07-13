@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DataSourceViews element"
 ms.assetid: f708ceac-8eeb-45ee-a2bb-919126898c80
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSourceViews Element (ASSL)
   Contains the collection of [DataSourceView](../objects/datasourceview-element-assl.md) elements associated with a [Database](../objects/database-element-assl.md) element.  

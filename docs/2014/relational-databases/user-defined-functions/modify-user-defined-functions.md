@@ -6,13 +6,11 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "dbe-udf"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Modify User-defined Functions

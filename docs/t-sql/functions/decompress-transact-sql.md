@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "DECOMPRESS function"
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # DECOMPRESS (Transact-SQL)

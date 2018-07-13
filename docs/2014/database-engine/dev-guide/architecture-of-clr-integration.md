@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "architecture [CLR integration]"
 ms.assetid: 05e4b872-3d21-46de-b4d5-739b5f2a0cf9
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Architecture of CLR Integration

@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "stopwords [full-text search]"
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 79
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Configure and Manage Stopwords and Stoplists for Full-Text Search

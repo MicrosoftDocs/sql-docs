@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "TableNotifications element"
 ms.assetid: 4cecdfea-0d4d-4bd6-bbb3-4d0d2284c665
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # TableNotifications Element (ASSL)
   Contains the collection of [TableNotification](../objects/tablenotification-element-assl.md) elements that provide information for the [ProactiveCaching](../objects/proactivecaching-element-assl.md) element about tables or views in a data source that have been modified.  

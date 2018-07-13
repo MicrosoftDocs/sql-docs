@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Reporting Services, Web service"
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 caps.latest.revision: 9
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Web Service URL (SSRS Native Mode)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Flat File Source Editor"
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Flat File Source Editor (Connection Manager Page)

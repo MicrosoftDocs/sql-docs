@@ -43,7 +43,7 @@ The account that is used to connect to SQL Azure requires different permissions 
 ## Establishing a SQL Azure Connection  
 Before you convert Access database objects to SQL Azure syntax, you must establish a connection to the instance of SQL Azure where you want to migrate the Access database or databases.  
   
-When you define the connection properties, you also specify the database where objects and data will be migrated. You can customize this mapping at the Access schema level after you connect to SQL Azure. For more information, see [Mapping Access Databases to SQL Server Schemas](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+When you define the connection properties, you also specify the database where objects and data will be migrated. You can customize this mapping at the Access schema level after you connect to SQL Azure. For more information, see [Mapping Access Databases to SQL Server Schemas](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 > [!IMPORTANT]  
 > Before you try to connect to SQL Azure, make sure that the instance of SQL Azure is running and can accept connections.  
@@ -99,14 +99,14 @@ The procedure for reconnecting to SQL Azure is the same as the procedure for est
 ## Next Step  
 The next step in the migration depends on your project needs:  
   
--   To customize the mapping between Access schemas and SQL Azure databases and schemas, see [Mapping Access Databases to SQL Server Schemas](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4).  
+-   To customize the mapping between Access schemas and SQL Azure databases and schemas, see [Mapping Access Databases to SQL Server Schemas](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4).  
   
--   To customize configuration options for the projects, see [Setting Project Options](http://msdn.microsoft.com/en-us/0a7304df-2f35-4453-96ef-7ac83dea1167).  
+-   To customize configuration options for the projects, see [Setting Project Options](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167).  
   
--   To customize the mapping of source and target data types, see [Mapping Source and Target Data Types](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+-   To customize the mapping of source and target data types, see [Mapping Source and Target Data Types](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
   
--   If you do not have to perform any of these tasks, you can convert the Access database object definitions into SQL Azure object definitions. For more information, see [Converting Access Databases](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   If you do not have to perform any of these tasks, you can convert the Access database object definitions into SQL Azure object definitions. For more information, see [Converting Access Databases](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

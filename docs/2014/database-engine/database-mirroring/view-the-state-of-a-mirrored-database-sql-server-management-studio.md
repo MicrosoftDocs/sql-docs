@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], states"
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # View the State of a Mirrored Database (SQL Server Management Studio)

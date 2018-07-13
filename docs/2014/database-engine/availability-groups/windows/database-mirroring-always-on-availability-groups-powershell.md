@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Create a Database Mirroring Endpoint for AlwaysOn Availability Groups (SQL Server PowerShell)

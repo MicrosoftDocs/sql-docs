@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Management Objects, samples"
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Link to Programming Samples

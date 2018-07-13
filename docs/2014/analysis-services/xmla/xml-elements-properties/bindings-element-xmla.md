@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Bindings element"
 ms.assetid: caa34cab-f61f-4f39-b800-af1601714daa
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Bindings Element (XMLA)
   Contains a collection of [Binding](binding-element-xmla.md) elements for the parent [Batch](../xml-elements-commands/batch-element-xmla.md) or [Process](../xml-elements-commands/process-element-xmla.md) element.  

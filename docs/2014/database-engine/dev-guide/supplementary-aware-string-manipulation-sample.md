@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Supplementary-Aware String Manipulation Sample

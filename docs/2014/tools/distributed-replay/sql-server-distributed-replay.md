@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Distributed Replay"
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Distributed Replay

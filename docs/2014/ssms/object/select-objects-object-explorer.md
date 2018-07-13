@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.common.selectobjects.f1"
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Select Objects (Object Explorer)

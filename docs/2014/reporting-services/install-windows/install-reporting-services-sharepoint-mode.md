@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "installation options [Reporting Services]"
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 caps.latest.revision: 30
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Reporting Services SharePoint Mode Installation (SharePoint 2010 and SharePoint 2013)

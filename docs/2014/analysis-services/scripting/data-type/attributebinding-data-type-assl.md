@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AttributeBinding data type"
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AttributeBinding Data Type (ASSL)
   Defines a derived data type that represents a binding for an [Attribute](../objects/attribute-element-assl.md) element.  

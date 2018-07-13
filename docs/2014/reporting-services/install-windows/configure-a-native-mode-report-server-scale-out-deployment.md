@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "scale-out deployments [Reporting Services]"
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Configure a Native Mode Report Server Scale-Out Deployment (SSRS Configuration Manager)

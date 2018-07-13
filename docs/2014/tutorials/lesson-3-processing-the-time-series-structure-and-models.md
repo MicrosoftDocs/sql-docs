@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 caps.latest.revision: 11
-author: "minewiskan"
-ms.author: "owend"
-manager: "kfile"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Lesson 3: Processing the Time Series Structure and Models
   In this lesson, you will use the [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) statement to process the time series mining structures and mining models that you created.  

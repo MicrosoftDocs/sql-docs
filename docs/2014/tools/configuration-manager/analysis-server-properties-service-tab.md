@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Analysis Server Properties (Service Tab)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "MDDataSet data type"
 ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDDataSet Data Type (XMLA)
   Defines a derived data type that represents multidimensional data returned by the [Execute](../xml-elements-methods-execute.md) method.  

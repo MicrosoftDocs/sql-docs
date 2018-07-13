@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "stored procedures [ODBC], executing"
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Running Stored Procedures

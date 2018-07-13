@@ -1,4 +1,4 @@
-﻿---
+---
 title: "View Information About an Operator | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -102,5 +102,5 @@ For details about the permissions of these roles, see [SQL Server Agent Fixed Da
     GO  
     ```  
   
-For more information, see [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/caedc43d-44b8-415a-897e-92923f6de3b8).  
+For more information, see [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8).  
   

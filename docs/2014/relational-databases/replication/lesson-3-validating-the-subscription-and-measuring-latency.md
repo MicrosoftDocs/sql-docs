@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 ms.assetid: 147f7b93-1804-4e0b-9e17-57a51d035b2a
 caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Lesson 3: Validating the Subscription and Measuring Latency

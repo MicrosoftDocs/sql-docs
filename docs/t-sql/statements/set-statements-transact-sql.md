@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "locking [SQL Server], SET statements"
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET Statements (Transact-SQL)

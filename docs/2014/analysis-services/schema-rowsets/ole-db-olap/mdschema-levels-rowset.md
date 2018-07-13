@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_LEVELS rowset"
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_LEVELS Rowset
   Describes each level within a particular hierarchy.  

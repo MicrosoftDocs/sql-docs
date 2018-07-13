@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Drop a SQL Server 2014 Installation

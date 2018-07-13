@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Term Extraction Transformation Editor"
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Term Extraction Transformation Editor (Exclusion Tab)

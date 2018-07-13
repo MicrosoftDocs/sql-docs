@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Account element"
 ms.assetid: aa3a1281-e42a-4926-875b-e6b81f4599c3
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Account Element (ImpersonationInfo) (ASSL)
   Contains the name of the user account for the [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) data type.  

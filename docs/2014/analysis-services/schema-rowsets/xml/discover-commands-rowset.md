@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "DISCOVER_COMMANDS rowset"
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_COMMANDS Rowset
   Provides resource usage and activity information about the currently executing or last executed commands in the opened connections on the server.  

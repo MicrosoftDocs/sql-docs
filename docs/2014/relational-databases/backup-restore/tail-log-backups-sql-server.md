@@ -5,8 +5,7 @@ ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "backups [SQL Server], tail-log backups"
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Tail-Log Backups (SQL Server)

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.adonetdest.connection.f1"
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # ADO NET Destination Editor (Connection Manager Page)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "object models [SMO]"
 ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SMO Object Model Diagram

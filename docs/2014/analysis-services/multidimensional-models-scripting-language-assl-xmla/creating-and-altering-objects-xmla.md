@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "XMLA, objects"
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Creating and Altering Objects (XMLA)
   Major objects can be independently created, altered, and deleted. Major objects include the following objects:  

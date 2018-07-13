@@ -15,7 +15,7 @@ ms.custom:
 ms.tgt_pltfrm: ""
 
 ms.topic: conceptual
-ms.date: "06/20/2018"
+ms.date: "06/28/2018"
 ms.author: "aliceku"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 --- 
@@ -53,7 +53,7 @@ When TDE is first configured to use a TDE protector from Key Vault, the server s
 
 ### General Guidelines
 - Ensure Azure Key Vault and Azure SQL Database are going to be in the same tenant.  Cross-tenant key vault and server interactions **are not supported**.
-- Decide which subscriptions are going to be used for the required resources – moving the server across subscriptions later requires a new setup of TDE with BYOKs.
+- Decide which subscriptions are going to be used for the required resources – moving the server across subscriptions later requires a new setup of TDE with BYOKs. Learn more about [moving resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources)
 - When configuring TDE with BYOK, it is important to consider the load placed on the key vault by repeated wrap/unwrap operations. For example, since all databases associated with a logical server use the same TDE protector, a failover of that server will trigger as many key operations against the vault as there are databases in the server. Based on our experience and documented [key vault service limits](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits), we recommend associating at most 500 Standard / General Purpose or 200 Premium / Business Critical databases with one Azure Key Vault in a single subscription to ensure consistently high availability when accessing the TDE protector in the vault. 
 - Recommended: Keep a copy of the TDE protector on premises.  This requires an HSM device to create a TDE Protector locally and a key escrow system to store a local copy of the TDE Protector.
 
@@ -68,9 +68,10 @@ When TDE is first configured to use a TDE protector from Key Vault, the server s
 - Grant the logical server access to the key vault using its Azure Active Directory (Azure AD) Identity.  When using the Portal UI, the Azure AD identity gets automatically created and the key vault access permissions are granted to the server.  Using PowerShell to configure TDE with BYOK, the Azure AD identity must be created and completion should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-azure-sql-configure.md) for detailed step-by-step instructions when using PowerShell.
 
   >[!NOTE]
-  >If the Azure AD Identity **is accidentally deleted or the server’s permissions are revoked** using the key vault’s access policy, the  server loses access to the key vault.
+  >If the Azure AD Identity **is accidentally deleted or the server’s permissions are revoked** using the key vault’s access policy, the  server loses access to the key vault, and TDE encrypted databases are dropped within 24 hours.
   >
-  
+
+- Configure Azure Key Vault without a VNET or firewall.  If SQL loses access to the key vault, TDE encrypted databases are dropped within 24 hours.
 - Enable auditing and reporting on all encryption keys: Key Vault provides logs that are easy to inject into other security information and event management (SIEM) tools. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) is one example of a service that is already integrated.
 - To ensure high-availability of encrypted databases, configure each logical server with two Azure Key Vaults that reside in different regions.
 

@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_PERFORMANCE_COUNTERS Rowset
   Returns the value of one or more performance counters. It does not support counters that return information about usage over time (such as disk reads per second and percentage of CPU usage).  

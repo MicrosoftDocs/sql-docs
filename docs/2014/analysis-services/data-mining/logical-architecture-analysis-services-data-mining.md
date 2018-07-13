@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "architecture [Analysis Services]"
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Logical Architecture (Analysis Services - Data Mining)
   Data mining is a process that involves the interaction of multiple components.  

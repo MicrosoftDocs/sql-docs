@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Deployment Checklist: Install Reporting Services into an Existing SharePoint Farm

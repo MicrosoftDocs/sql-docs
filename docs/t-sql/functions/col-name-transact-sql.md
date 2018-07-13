@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "names [SQL Server], columns"
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

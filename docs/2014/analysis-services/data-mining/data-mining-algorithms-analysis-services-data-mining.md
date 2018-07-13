@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "machine learning algorithms [Analysis Services]"
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 caps.latest.revision: 72
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Algorithms (Analysis Services - Data Mining)
   A *data mining algorithm* is a set of heuristics and calculations that creates a data mining model from data. To create a model, the algorithm first analyzes the data you provide, looking for specific types of patterns or trends. The algorithm uses the results of this analysis to define the optimal parameters for creating the mining model. These parameters are then applied across the entire data set to extract actionable patterns and detailed statistics.  

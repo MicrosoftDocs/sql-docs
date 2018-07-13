@@ -5,8 +5,7 @@ ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], creating"
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 caps.latest.revision: 27
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Creation and Configuration of Availability Groups (SQL Server)

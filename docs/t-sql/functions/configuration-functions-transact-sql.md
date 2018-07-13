@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "configuration functions [SQL Server]"
 ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configuration Functions (Transact-SQL)

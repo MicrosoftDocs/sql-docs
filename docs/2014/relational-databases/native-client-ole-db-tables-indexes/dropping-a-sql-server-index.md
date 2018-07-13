@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,8 +17,8 @@ helpviewer_keywords:
   - "indexes [OLE DB]"
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Dropping a SQL Server Index

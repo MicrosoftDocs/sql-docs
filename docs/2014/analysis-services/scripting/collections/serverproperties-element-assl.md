@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ServerProperties element"
 ms.assetid: 8ccbef3f-1388-4fa3-b0a4-c89b89f09056
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ServerProperties Element (ASSL)
   Contains the collection of [ServerProperty](../objects/serverproperty-element-assl.md) elements associated with a [Server](../objects/server-element-assl.md) element.  

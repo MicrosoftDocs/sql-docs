@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "per-row rank values [full-text search]"
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Limit Search Results with RANK

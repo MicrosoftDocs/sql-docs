@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "fill factor option [SQL Server]"
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure the fill factor Server Configuration Option

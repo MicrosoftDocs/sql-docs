@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced"
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Query Execution:SQL Server:Advanced Page)

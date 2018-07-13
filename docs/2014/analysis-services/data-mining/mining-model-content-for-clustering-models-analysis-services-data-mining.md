@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "clustering algorithms [Analysis Services]"
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Mining Model Content for Clustering Models (Analysis Services - Data Mining)
   This topic describes mining model content that is specific to models that use the Microsoft Clustering algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  

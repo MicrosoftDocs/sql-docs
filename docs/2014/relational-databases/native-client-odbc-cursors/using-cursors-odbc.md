@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,8 +16,8 @@ helpviewer_keywords:
   - "ODBC cursors"
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using Cursors (ODBC)

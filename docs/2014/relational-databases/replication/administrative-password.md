@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.replicationutilities.administrativepassword.f1"
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Administrative Password

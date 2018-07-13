@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "ISNULL function"
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

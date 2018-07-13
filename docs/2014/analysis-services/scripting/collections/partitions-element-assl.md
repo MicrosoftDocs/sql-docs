@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Partitions element"
 ms.assetid: e41c97ca-da44-48e9-a454-d25ee74209fd
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Partitions Element (ASSL)
   Contains the collection of [Partition](../objects/partition-element-assl.md) elements used by a [MeasureGroup](../objects/group-element-assl.md) element, or the collection of partition bindings that make up an out-of-line [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) element.  

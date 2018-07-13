@@ -5,8 +5,7 @@ ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server]"
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: 146
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups (SQL Server)

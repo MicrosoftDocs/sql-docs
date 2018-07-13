@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "DISCOVER_SESSIONS rowset"
 ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_SESSIONS Rowset
   Provides resource usage and activity information about the currently opened sessions on the server.  

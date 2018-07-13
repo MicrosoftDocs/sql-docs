@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "DROP INDEX statement"
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 caps.latest.revision: 99
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

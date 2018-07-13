@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "error numbers [SQL Server]"
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

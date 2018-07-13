@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Translation element"
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Translation Element (XMLA)
   Defines a translation for an attribute member.  

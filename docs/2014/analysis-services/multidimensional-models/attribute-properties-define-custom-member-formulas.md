@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "custom member formulas [Analysis Services]"
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Define Custom Member Formulas
   You can define a Multidimensional Expressions (MDX) expression, called a custom member formula, to supply the values for the members of a specified attribute. A column in a table from a data source view provides, for each member in an attribute, the expression used to supply the value for that member.  

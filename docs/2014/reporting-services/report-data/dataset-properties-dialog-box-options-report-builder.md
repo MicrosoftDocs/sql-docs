@@ -13,9 +13,9 @@ f1_keywords:
   - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 caps.latest.revision: 15
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Dataset Properties Dialog Box, Options (Report Builder)
   Select **Options** on the **DatasetProperties** dialog box to change data options, such as collation options and treating subtotals as detail data, for the query. For more information about collations, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  

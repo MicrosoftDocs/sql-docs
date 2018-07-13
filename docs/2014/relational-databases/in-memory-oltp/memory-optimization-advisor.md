@@ -14,8 +14,8 @@ f1_keywords:
   - "swb.memoryoptimizationwizard.f1"
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 caps.latest.revision: 14
-author: "stevestein"
-ms.author: "sstein"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Memory Optimization Advisor

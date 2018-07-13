@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "storage [Reporting Services]"
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 caps.latest.revision: 89
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Reporting Services Report Server
   This topic is an overview of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server, the central component of a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation. It consists of a pair of processing engines plus a collection of special-purpose extensions that handle authentication, data processing, rendering, and delivery operations. A [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server runs in one of two deployment modes; Native mode or SharePoint mode. See the [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport) section for a comparison of features.  

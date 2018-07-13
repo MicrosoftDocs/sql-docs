@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "history tables"
 ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Large backup or restore history tables make upgrade appear to not respond

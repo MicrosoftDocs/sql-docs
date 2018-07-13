@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "duplicate index names"
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Use sp_rename to rename duplicate index name

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "schema rowsets [XML for Analysis]"
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # XML for Analysis Schema Rowsets
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider includes schema rowsets that return metadata about server state, activity, and objects. Retrieving metadata is necessary if you are developing a client application that connects to an Analysis Services model whose structure and characteristics are variable.  

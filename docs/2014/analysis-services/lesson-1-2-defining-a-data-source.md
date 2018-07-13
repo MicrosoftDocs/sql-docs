@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Defining a Data Source

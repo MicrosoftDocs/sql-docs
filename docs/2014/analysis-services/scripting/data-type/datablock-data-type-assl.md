@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DataBlock data type"
 ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataBlock Data Type (ASSL)
   Defines a primitive data type that represents a collection of data blocks used to store the binary contents of a [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) element.  

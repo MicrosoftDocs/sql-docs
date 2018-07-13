@@ -38,6 +38,7 @@ manager: craigg
 - [SuSE 11 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### Ubuntu
+- [Ubuntu 18.04 .deb packages](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 17.10 .deb packages](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 14.04 .deb packages](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 

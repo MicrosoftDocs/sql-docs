@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "operations [Analysis Services - multidimensional data]"
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Switch an Analysis Services database between ReadOnly and ReadWrite modes
   There are often situations when a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants to change the read/write mode of a tabular or multidimensional database. These situations are often driven by business needs, such as sharing the database among a pool of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servers for a better user experience.  

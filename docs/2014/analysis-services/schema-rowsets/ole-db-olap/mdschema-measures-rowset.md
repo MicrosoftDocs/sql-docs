@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_MEASURES rowset"
 ms.assetid: 6ff5bd1a-aad0-49b8-9f8d-7df2637caacf
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_MEASURES Rowset
   Describes each measure within a cube.  

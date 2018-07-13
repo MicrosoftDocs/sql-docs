@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "Analysis Services data access interfaces, about data access interfaces"
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Multidimensional Model Data Access (Analysis Services - Multidimensional Data)
   Use the information in this topic to learn how to access [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] multidimensional data using programmatic methods, script, or client applications that include built-in support for connecting to an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server on your network.  

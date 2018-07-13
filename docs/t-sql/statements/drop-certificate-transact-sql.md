@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "deleting certificates"
 ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

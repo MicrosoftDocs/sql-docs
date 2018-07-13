@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
 caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Accessing Native Code from a CLR UDF

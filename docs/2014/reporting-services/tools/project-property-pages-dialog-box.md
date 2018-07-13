@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Project Property Pages dialog box"
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Project Property Pages Dialog Box
   Use the project property pages to configure deployment properties for a Report Server project. To open this dialog box, from the **Project** menu, click *\<Report Project Name>***Properties**.  

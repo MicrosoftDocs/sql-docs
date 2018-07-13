@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 caps.latest.revision: 14
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # WSFC cluster service is offline

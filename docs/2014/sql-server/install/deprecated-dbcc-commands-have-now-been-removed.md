@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "DBCC commands [SQL Server]"
 ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Deprecated DBCC commands have now been removed

@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,8 +18,8 @@ helpviewer_keywords:
   - "OLE DB, data types"
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Data Type Mapping in ITableDefinition

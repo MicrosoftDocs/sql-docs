@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Install SQL Server 2014 Using SysPrep

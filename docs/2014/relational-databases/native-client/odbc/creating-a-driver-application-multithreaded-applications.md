@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: native-client  - "database-engine"
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "multithreaded applications [SQL Server Native Client]"
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Multithreaded Applications

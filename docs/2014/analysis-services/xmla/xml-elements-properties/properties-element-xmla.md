@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Properties element"
 ms.assetid: 0b5468e5-bf23-4d22-862f-72e27a9fff2f
 caps.latest.revision: 30
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Properties Element (XMLA)
   Contains XML for Analysis (XMAL) properties used by the [Discover](../xml-elements-methods-discover.md) and [Execute](../xml-elements-methods-execute.md) methods.  

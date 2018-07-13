@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Mining Model Wizard"
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Wizard F1 Help (Analysis Services - Data Mining)
   Use the **Data Mining Wizard** to create a new mining structure and an optional associated mining model.  

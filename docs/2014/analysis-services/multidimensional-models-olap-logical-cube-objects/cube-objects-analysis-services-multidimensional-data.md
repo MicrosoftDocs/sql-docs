@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "cubes [Analysis Services], objects"
 ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cube Objects (Analysis Services - Multidimensional Data)
     

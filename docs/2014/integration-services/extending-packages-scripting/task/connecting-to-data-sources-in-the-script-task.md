@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "SSIS Script task, connections"
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Connecting to Data Sources in the Script Task

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Goal element"
 ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Goal Element (ASSL)
   Identifies the desired goal in a [Kpi](../objects/kpi-element-assl.md) element.  

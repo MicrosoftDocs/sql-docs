@@ -5,16 +5,15 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "102 (Database Engine error)"
 ms.assetid: 264dc1a2-c8a0-4c89-b5f6-951baf950299
 caps.latest.revision: 7
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_102

@@ -13,8 +13,8 @@ f1_keywords:
   - "SQL12.DTS.DESIGNER.EXPRESSIONTASK.F1"
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Expression Task

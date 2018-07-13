@@ -5,15 +5,13 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Express LocalDB Error Message Reference

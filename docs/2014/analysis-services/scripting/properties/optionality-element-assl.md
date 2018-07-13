@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Optionality element"
 ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Optionality Element (ASSL)
   Indicates the optionality of the members for an [AttributeRelationship](../objects/attributerelationship-element-assl.md) element.  

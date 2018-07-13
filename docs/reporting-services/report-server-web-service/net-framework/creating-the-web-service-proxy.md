@@ -116,8 +116,8 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```csharp  
 myNamespace.myReferenceName.ReportExecutionService rs = new myNamespace.myReferenceName.ReportExecutionService();  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
-rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
+rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
+rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
 ```  
   

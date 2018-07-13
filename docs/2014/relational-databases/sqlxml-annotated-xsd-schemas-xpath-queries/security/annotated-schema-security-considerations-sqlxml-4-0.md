@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], security"
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Annotated Schema Security Considerations (SQLXML 4.0)

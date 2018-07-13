@@ -14,9 +14,9 @@ f1_keywords:
   - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
 caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Map Embedded Point Properties Dialog Box, Marker
   Select **Marker** on the **Embedded Point Properties** dialog box to change marker type and marker size options for the following map elements:  

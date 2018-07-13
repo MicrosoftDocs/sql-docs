@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "SQLGetDiagField function"
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLGetDiagField

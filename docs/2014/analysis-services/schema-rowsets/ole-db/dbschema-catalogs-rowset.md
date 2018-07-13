@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DBSCHEMA_CATALOGS rowset"
 ms.assetid: f02dc75d-5442-4eea-b33a-567dc816be7a
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DBSCHEMA_CATALOGS Rowset
   Identifies the physical attributes associated with catalogs accessible from the database management system (DBMS).  

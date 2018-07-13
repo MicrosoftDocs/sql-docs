@@ -3,8 +3,6 @@ title: "PolyBase T-SQL objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "polybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: polybase
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "PolyBase, fundamentals"
   - "PolyBase, SQL statements"
   - "PolyBase, SQL objects"
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -199,7 +196,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## Create external tables for Azure Data Lake Store
 Applies to: Azure SQL Data Warehouse
 
-For more information, see [Load with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+For more information, see [Load with Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
  
  **1. Create Database Scoped Credential**   
 
@@ -213,7 +210,7 @@ CREATE MASTER KEY;
 -- Create a database scoped credential
 -- IDENTITY: Pass the client id and OAuth 2.0 Token Endpoint taken from your Azure Active Directory Application
 -- SECRET: Provide your AAD Application Service Principal key.
--- For more information on Create Database Scoped Credential: https://msdn.microsoft.com/en-us/library/mt270260.aspx
+-- For more information on Create Database Scoped Credential: https://msdn.microsoft.com/library/mt270260.aspx
 
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH

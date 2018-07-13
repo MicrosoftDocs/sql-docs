@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Slowly Changing Dimension Wizard"
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Slowly Changing Dimension Wizard F1 Help

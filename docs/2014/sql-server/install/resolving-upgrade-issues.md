@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "fixing upgrade issues [Upgrade Advisor]"
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Resolving Upgrade Issues

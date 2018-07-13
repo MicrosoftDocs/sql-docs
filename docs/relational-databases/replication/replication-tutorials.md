@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -51,8 +50,8 @@ Learn how to configure merge replication to exchange data between a server and o
 ## See also  
 [Security and protection for replication](../../relational-databases/replication/security/security-and-protection-replication.md) 
 
-[Transactional replication overview](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication) 
+[Transactional replication overview](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 
-[Merge replication overview](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication)
+[Merge replication overview](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
 
   

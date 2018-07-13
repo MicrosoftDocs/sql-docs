@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "divide-by-zero errors"
 ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

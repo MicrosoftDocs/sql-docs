@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Calculated Measure Representation (Tabular)
   A calculated measure is a named DAX expression evaluated every time it is used.  

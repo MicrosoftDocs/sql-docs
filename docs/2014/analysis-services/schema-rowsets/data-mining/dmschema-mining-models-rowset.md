@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DMSCHEMA_MINING_MODELS rowset"
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DMSCHEMA_MINING_MODELS Rowset
   Enumerates the data mining models in the current catalog. The `DMSCHEMA_MINING_MODELS` rowset includes information such as model names, processing date, and the mining algorithm associated with each mining model.  

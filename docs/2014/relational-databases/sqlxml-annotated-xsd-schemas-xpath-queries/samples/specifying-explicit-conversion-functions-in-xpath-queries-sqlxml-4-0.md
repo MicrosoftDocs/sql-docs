@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], explicit conversion functions"
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Specifying Explicit Conversion Functions in XPath Queries (SQLXML 4.0)

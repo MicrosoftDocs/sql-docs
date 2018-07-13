@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services]"
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 caps.latest.revision: 32
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Custom extensions were detected on the report server (Upgrade Advisor)

@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "restore operations [full-text search]"
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 61
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Back Up and Restore Full-Text Catalogs and Indexes

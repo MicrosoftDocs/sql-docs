@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "HierarchyID element"
 ms.assetid: 6effe47d-e598-41f8-993a-b2bce49fd7dd
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # HierarchyID Element (ASSL)
   Contains the identifier (ID) for a [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md), or [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md) element.  

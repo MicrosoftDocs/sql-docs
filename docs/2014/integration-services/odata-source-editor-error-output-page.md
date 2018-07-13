@@ -13,8 +13,8 @@ f1_keywords:
   - "Sql12.dts.designer.odatasource.erroroutput.f1"
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # OData Source Editor (Error Output Page)

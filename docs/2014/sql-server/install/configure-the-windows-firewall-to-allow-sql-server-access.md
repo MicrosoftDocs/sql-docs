@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "netsh to open firewall ports"
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure the Windows Firewall to Allow SQL Server Access

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Excel Source Editor"
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Excel Source Editor (Error Output Page)

@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Calculated Members in Subselects and Subcubes
   In previous releases, calculated members were not allowed in subselects or subcubes. However, starting with SQL Server 2008 they are allowed and enabled by a connection property. In addition, a new behavior for calculated members, in subselects and subcubes, was introduced in SQL Server 2008 R2.  

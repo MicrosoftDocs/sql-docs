@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, properties"
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Rowset Properties and Behaviors

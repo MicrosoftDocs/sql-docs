@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "property values [SQL Server Native Client]"
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # About OLE DB Properties

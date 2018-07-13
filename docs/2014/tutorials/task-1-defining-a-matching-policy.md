@@ -13,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Task 1: Defining a Matching Policy

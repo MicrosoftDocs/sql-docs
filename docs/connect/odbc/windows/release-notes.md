@@ -1,7 +1,7 @@
 ---
 title: "Release Notes (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2018"
+ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,13 +12,21 @@ ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 caps.latest.revision: 7
 author: MightyPen
-ms.author: genemi
-manager: craigg
+ms.author: v-jizho2
+manager: kenvh
 ---
 # Release Notes
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Release Notes for Microsoft ODBC Driver for SQL Server on Windows.  
+
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows
+
+**Features Added**:
+
+Data Classification for Azure SQL Database and SQL Server
+
+[Bug fixes](../bug-fixes.md)
 
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows
 

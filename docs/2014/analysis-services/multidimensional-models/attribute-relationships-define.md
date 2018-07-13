@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "relationships [Analysis Services], attributes"
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Define Attribute Relationships
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], attributes are the fundamental building block of a dimension. A dimension contains a set of attributes that are organized based on attribute relationships.  

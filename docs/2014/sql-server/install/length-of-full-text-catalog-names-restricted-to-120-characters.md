@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "full-text catalogs names"
 ms.assetid: 50633373-83f6-4ed9-99b9-71f92479a14f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Length of full-text catalog names restricted to 120 characters

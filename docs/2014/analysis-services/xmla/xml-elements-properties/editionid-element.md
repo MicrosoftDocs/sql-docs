@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: f2d1cc7f-8ab5-4b73-a128-ce58d9bb7f96
 caps.latest.revision: 4
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # EditionId Element
   Contains the numeric edition identifier code of the parent [Server Element (ASSL)](../../scripting/objects/server-element-assl.md) element.  

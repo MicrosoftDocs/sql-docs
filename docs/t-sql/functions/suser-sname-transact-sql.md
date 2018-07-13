@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "names [SQL Server], logins"
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

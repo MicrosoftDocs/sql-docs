@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "data-driven subscriptions"
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: 55
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Data-Driven Subscriptions
   A data-driven subscription provides a way to use dynamic subscription data that is retrieved from an external data source at run time. A data-driven subscription can also use static text and default values that you specify when the subscription is defined. You can use data-driven subscriptions to do the following:  

@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 caps.latest.revision: 4
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # General Properties Page, Report Parts (Report Manager)
   Use the Properties page to view and manage the general properties for a report part.  

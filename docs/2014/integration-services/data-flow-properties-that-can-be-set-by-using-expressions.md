@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "property expressions [Integration Services]"
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Flow Properties that Can Be Set by Using Expressions

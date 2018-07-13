@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "CLUSTER_COUNT parameter"
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Microsoft Clustering Algorithm Technical Reference
   This section explains the implementation of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm, including the parameters that you can use to control the behavior of clustering models. It also provides guidance about how to improve performance when you create and process clustering models.  

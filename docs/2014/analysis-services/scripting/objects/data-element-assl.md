@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Data element"
 ms.assetid: e52b1961-7e11-4029-8ab1-84d275845067
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Element (ASSL)
   Contains (in the collection of child [Block Element &#40;ASSL&#41;](block-element-assl.md) elements) the binary contents of a [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) element.  

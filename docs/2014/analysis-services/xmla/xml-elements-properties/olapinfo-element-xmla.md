@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "OlapInfo element"
 ms.assetid: 8828fdd7-c0f7-48ce-a0d0-ab4bc1a995cf
 caps.latest.revision: 27
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # OlapInfo Element (XMLA)
   Contains the axis and cell metadata contained by a [root](root-element-xmla.md) element that uses the [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) data type.  

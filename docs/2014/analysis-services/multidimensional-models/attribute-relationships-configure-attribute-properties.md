@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "rigid relationships (Analysis Services)"
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure Attribute Relationship Properties
   The following table lists and describes the properties of an attribute relationship.  

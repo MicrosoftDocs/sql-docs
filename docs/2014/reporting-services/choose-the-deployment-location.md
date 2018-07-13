@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.rtp.rptwizard.choosedeployment.f1"
 ms.assetid: 3b19b8a3-000d-48a4-b4a2-4f7da078a0c6
 caps.latest.revision: 24
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Choose the Deployment Location
   Use this page of the Report Wizard to set the deployment server and folder for the report server project.  

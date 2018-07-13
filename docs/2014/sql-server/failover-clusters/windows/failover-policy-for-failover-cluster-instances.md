@@ -5,16 +5,15 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "flexible failover policy"
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 43
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Failover Policy for Failover Cluster Instances

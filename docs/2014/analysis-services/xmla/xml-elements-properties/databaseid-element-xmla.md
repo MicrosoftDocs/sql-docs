@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "DatabaseID element"
 ms.assetid: 2df720dd-9b42-449a-9df6-0d12930603f0
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DatabaseID Element (XMLA)
   Identifies a database within a parent element that contains an object reference.  

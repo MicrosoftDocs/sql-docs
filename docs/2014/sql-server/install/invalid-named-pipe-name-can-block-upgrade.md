@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "named pipes"
 ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Invalid named pipe name can block upgrade

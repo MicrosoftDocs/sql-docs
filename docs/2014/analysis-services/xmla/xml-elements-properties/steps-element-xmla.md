@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Steps element"
 ms.assetid: a6821a2a-89ec-418b-b2dd-92adf2ccc20e
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Steps Element (XMLA)
   Specifies the maximum number of steps used by the [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) command to design aggregations.  

@@ -3,10 +3,9 @@ title: "Specify Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-stored-procs"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,9 +14,8 @@ helpviewer_keywords:
   - "output parameters [SQL Server]"
   - "input parameters [SQL Server]"
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Specify Parameters

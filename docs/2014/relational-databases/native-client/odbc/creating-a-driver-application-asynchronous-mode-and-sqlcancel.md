@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: native-client  - "database-engine"
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, asynchronous mode"
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Asynchronous Mode and SQLCancel

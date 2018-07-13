@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "idle time [SQL Server]"
 ms.assetid: 8647b465-d899-4cc7-9640-134a506d0a2e
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Set CPU Idle Time and Duration (SQL Server Management Studio)

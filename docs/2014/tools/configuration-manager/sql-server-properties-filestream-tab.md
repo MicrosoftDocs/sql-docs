@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Properties (FILESTREAM Tab)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, security"
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Access to Files Used by Packages

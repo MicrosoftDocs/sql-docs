@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "total write [SQL Server]"
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;TOTAL_WRITE (Transact-SQL)

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "wizard [DAC], deploy"
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Deploy a Data-tier Application

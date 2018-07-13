@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "FiscalFirstMonth element"
 ms.assetid: 30766baa-ebec-4425-93de-7defe4d6e571
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # FiscalFirstMonth Element (ASSL)
   Defines the first month of the fiscal period for a [TimeBinding](../data-type/binding-data-type-assl.md) element.  

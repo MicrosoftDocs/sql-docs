@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "scenario analysis"
 ms.assetid: 4df5a5c5-1983-4009-a7c5-cd340649fd2f
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # What-If Scenario (Table Analysis Tools for Excel)
   ![What If Scenario button in Table Analysis tools](media/tat-whatif.gif "What If Scenario button in Table Analysis tools")  

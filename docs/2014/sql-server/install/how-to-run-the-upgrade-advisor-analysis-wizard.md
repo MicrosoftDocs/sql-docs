@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Upgrade Advisor Analysis Wizard"
 ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # How to: Run the Upgrade Advisor Analysis Wizard

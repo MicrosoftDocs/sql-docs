@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "variables [Integration Services], mapping parameters to"
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Map Query Parameters to Variables in an Execute SQL Task

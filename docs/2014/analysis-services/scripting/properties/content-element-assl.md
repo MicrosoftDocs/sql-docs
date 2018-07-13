@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Content element"
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Content Element (ASSL)
   Describes the content of the column in the [MiningStructure](../objects/miningstructure-element-assl.md) element.  

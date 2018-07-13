@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "ownership chains [SQL Server]"
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Tutorial: Ownership Chains and Context Switching

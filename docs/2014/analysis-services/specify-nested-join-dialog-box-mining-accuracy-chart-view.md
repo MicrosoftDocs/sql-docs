@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Specify Nested Join dialog box"
 ms.assetid: e6dd5c26-d6ba-4fcb-8c03-c012fea760f1
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specify Nested Join Dialog Box (Mining Accuracy Chart View)
   The **Specify Nested Join** dialog box creates a relationship between the nested table and the case table. To open the **Specify Nested Join** dialog box, select the nested table and click **Modify Join**.  

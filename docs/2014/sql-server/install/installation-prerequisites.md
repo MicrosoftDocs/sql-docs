@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Installation Wizard, SQL Server Component Update page"
 ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Installation Prerequisites

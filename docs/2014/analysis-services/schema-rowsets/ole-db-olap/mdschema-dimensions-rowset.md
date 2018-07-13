@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_DIMENSIONS rowset"
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_DIMENSIONS Rowset
   Describes the shared and private dimensions within a database.  

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "GRANT statement, search property list permissions"
 ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

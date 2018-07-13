@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "PerspectiveDimension data type"
 ms.assetid: c4bc56de-4f42-4ceb-a68d-a4fec92fdfa9
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PerspectiveDimension Data Type (ASSL)
   Defines a primitive data type that represents information about a dimension in a perspective.  

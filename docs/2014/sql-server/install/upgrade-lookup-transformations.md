@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "upgrading Lookup transformation"
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
 caps.latest.revision: 16
-author: "douglaslM"
-ms.author: "douglasl"
+author: mashamsft
+ms.author: douglasl
 manager: craigg
 ---
 # Upgrade Lookup Transformations

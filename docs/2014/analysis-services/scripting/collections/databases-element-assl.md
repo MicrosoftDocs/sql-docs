@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Databases element"
 ms.assetid: 2806a074-d47e-4434-9599-04888783770f
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Databases Element (ASSL)
   Contains the collection of [Database](../objects/database-element-assl.md) elements associated with a [Server](../objects/server-element-assl.md) element.  

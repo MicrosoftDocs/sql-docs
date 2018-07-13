@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "starting SQL Server, minimal configuration"
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Start SQL Server with Minimal Configuration

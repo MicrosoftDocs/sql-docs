@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "stopping traces"
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Pause a Trace (SQL Server Profiler)

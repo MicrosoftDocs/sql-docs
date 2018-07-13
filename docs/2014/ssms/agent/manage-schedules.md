@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ag.job.manageschedules.f1"
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Manage Schedules

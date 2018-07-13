@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], runtime checks"
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # CLR Integration Programming Model Restrictions

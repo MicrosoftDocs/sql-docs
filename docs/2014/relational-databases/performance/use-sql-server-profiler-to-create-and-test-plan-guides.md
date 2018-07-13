@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
+ms.technology: performance
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "query-to-plan guide matching [SQL Server]"
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Use SQL Server Profiler to Create and Test Plan Guides

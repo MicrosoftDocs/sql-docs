@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "verifying report server initializations"
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Initialize a Report Server (SSRS Configuration Manager)

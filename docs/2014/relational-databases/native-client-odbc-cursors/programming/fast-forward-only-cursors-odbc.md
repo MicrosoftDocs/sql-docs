@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "ODBC cursors, fast forward-only"
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Fast Forward-Only Cursors (ODBC)

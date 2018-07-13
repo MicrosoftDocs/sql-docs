@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], metadata"
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Unicode Data and Server Code Pages

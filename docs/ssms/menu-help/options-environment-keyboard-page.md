@@ -36,5 +36,5 @@ The keyboard combination pressed to execute the stored procedure.
 **Stored Procedure**  
 The stored procedure that executes when you press the keyboard shortcut.  
   
-For a list of the keyboard shortcut keys in each scheme, see [SQL Server Management Studio Keyboard Shortcuts](http://msdn.microsoft.com/en-us/98baaac4-0727-4ce4-8bfe-c63793ae69b8).  
+For a list of the keyboard shortcut keys in each scheme, see [SQL Server Management Studio Keyboard Shortcuts](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8).  
   

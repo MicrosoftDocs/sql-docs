@@ -5,7 +5,7 @@ ms.date: "08/01/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 

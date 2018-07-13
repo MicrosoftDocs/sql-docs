@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MiningStructures element"
 ms.assetid: d8144b85-c836-4dcf-96b4-36b9dfd4211d
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MiningStructures Element (ASSL)
   Contains the collection of [MiningStructure](../objects/miningstructure-element-assl.md) elements in a [Database](../objects/database-element-assl.md) element.  

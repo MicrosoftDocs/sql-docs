@@ -14,8 +14,8 @@ f1_keywords:
   - "SQL12.DTS.DESIGNER.DESTINATIONASSIST.F1"
 ms.assetid: 699d80d1-8b0e-4324-8f8d-5fefa3f2af00
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add New Destination Dialog Box

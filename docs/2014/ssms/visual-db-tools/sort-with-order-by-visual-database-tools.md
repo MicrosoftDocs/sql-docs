@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ORDER BY clause [Visual Database Tools]"
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Sort with ORDER BY (Visual Database Tools)

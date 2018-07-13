@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List Job Category Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -60,7 +60,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_help_category (Transact-SQL)](http://msdn.microsoft.com/en-us/8cad1dcc-b43e-43bd-bea0-cb0055c84169).  
+For more information, see [sp_help_category (Transact-SQL)](http://msdn.microsoft.com/8cad1dcc-b43e-43bd-bea0-cb0055c84169).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To list job category information**  

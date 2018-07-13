@@ -5,16 +5,15 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "8680 (Database Engine error)"
 ms.assetid: 79f7270e-e4df-4f4e-bc78-2dcad6a9f140
 caps.latest.revision: 13
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_8680

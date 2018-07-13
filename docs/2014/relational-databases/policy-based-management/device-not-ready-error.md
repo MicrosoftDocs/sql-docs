@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Device Not Ready Error

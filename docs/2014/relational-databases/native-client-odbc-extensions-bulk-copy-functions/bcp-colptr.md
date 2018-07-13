@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
@@ -20,8 +18,8 @@ helpviewer_keywords:
   - "bcp_colptr function"
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # bcp_colptr

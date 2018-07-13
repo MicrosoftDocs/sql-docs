@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], properties"
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Set the Properties of a Task or Container

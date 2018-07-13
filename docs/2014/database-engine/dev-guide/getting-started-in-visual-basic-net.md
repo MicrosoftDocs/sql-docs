@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Visual Basic [SMO]"
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Getting Started in Visual Basic .NET

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "geography data type [SQL Server], UDTs"
 ms.assetid: a167ce3a-50b4-4e77-a884-adb23b586c72
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Remove UDTs named after the reserved GEOMETRY and GEOGRAPHY data types

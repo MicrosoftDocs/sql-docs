@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -15,8 +13,8 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), metadata"
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Additional Table-Valued Parameter Metadata

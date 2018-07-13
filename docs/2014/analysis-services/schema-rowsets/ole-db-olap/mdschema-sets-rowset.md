@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_SETS rowset"
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_SETS Rowset
   Describes any sets that are currently defined in a database, including session-scoped sets.  

@@ -13,8 +13,8 @@ f1_keywords:
   - "vdt.designers.properties.TVO"
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Table-Valued Object Properties (Visual Database Tools)

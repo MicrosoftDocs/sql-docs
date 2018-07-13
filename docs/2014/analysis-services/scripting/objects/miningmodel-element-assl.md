@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MiningModel element"
 ms.assetid: a61d935f-c8f6-457d-ad0c-44f58bb286f5
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MiningModel Element (ASSL)
   Defines a single data mining model.  

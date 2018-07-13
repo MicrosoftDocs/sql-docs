@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "removed statement permissions [SQL Server]"
 ms.assetid: 7f4fbbef-2696-4911-903b-63f6d9e4484a
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Remove statements that modify column-level permissions on system objects

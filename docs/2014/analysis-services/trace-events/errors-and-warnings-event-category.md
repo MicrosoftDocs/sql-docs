@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "warnings events [Analysis Services]"
 ms.assetid: cf7fd5a7-b189-47c3-8e5c-3195897c7eab
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Errors and Warnings Event Category
   The Errors and Warnings event category has the event classes described in the following table.  

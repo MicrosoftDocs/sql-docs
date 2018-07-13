@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "snippets [Transact-SQL], how to insert"
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 caps.latest.revision: 6
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Insert Transact-SQL Snippets

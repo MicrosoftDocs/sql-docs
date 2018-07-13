@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "ssbdiagnose"
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # ssbdiagnose Utility (Service Broker)

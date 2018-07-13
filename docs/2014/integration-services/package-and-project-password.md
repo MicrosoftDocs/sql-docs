@@ -14,8 +14,8 @@ f1_keywords:
   - "sql12.ssis.bids.projectpassword.f1"
 ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Package and Project Password

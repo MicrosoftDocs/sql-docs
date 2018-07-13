@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "performance [CLR integration]"
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Performance of CLR Integration

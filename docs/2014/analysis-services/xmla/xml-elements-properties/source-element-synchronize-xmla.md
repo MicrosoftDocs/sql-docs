@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Source element"
 ms.assetid: 0a857f91-771f-4c5e-8bf7-4bf17442d4df
 caps.latest.revision: 11
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Source Element (Synchronize) (XMLA)
   Represents a source database from which to synchronize a target database during a [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) command.  

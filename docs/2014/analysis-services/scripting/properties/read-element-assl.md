@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Read element"
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Read Element (ASSL)
   Determines whether data or metadata can be read for a given [CubeDimensionPermission](../data-type/permission-data-type-assl.md) or [Permission](../data-type/permission-data-type-assl.md) element.  

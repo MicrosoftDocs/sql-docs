@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "monitoring log shipping [SQL Server]"
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Monitor Log Shipping (Transact-SQL)

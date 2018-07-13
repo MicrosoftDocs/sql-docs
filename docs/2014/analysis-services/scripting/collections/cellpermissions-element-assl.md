@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CellPermissions element"
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CellPermissions Element (ASSL)
   Contains the collection of permissions for cells in the associated [Cube](../objects/cube-element-assl.md) element.  

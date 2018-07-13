@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DISCOVER_XML_METADATA rowset"
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_XML_METADATA Rowset
   Returns an XML document describing a requested object. The rowset that is returned always consists of one row and one column.  

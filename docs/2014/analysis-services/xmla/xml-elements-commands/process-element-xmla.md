@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Process command"
 ms.assetid: 886fd480-c0e6-4c9b-b65e-da47f874d938
 caps.latest.revision: 13
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Process Element (XMLA)
   Processes objects on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  

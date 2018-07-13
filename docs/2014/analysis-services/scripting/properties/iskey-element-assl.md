@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "IsKey element"
 ms.assetid: 523b26c8-5cce-415d-a360-9a0d8724b872
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # IsKey Element (ASSL)
   Indicates whether the column provides the key for the case in a [MiningStructure](../objects/miningstructure-element-assl.md) element.  

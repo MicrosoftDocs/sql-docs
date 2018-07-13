@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.storagedesignwizard.reviewaggregationusage.f1"
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Review Aggregation Usage (Usage-Based Optimiation Wizard)
   Use the **Review Aggregation Usage** page to configure aggregation usage settings.  

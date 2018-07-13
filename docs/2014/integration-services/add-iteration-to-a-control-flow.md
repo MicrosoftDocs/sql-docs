@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "For Loop containers"
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add Iteration to a Control Flow

@@ -13,8 +13,8 @@ f1_keywords:
   - "SQL12.rsconfigtool.executionaccount.F1"
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Execution Account (SSRS Native Mode)

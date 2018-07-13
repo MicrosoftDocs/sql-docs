@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous"
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor - XML - Miscellaneous Page)

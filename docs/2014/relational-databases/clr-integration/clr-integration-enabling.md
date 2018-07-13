@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -15,8 +13,8 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], enabling"
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Enabling CLR Integration

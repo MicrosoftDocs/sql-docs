@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQLServer:Locks"
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, Locks Object

@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_TRACES Rowset
   Provides information about traces that are currently active on the server.  

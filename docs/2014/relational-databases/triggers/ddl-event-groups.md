@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,9 +13,8 @@ helpviewer_keywords:
   - "DDL event groups"
   - "DDL triggers, event groups"
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # DDL Event Groups

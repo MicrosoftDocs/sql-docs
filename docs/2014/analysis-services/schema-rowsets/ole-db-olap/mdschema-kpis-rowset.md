@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_KPIS rowset"
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_KPIS Rowset
   Describes the key performance indicators (KPIs) within a database.  

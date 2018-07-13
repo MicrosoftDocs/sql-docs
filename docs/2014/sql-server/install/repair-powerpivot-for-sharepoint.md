@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9c346ae8-87fa-44e5-b88a-47e804fedf20
 caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Repair PowerPivot for SharePoint

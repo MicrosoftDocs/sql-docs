@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.dm.miningmodeleditor.accuracychart.overview.f1"
 ms.assetid: cbf379d1-0859-414a-a63f-ddc7f789b422
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Mining Accuracy Chart Designer (Data Mining)
   Use the **Mining Accuracy Chart** view to compare the performance of the mining models that are built on the selected mining structure contains.  

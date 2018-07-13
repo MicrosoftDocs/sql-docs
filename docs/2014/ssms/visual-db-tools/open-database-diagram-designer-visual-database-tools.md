@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "diagrams [SQL Server], Database Diagram Designer"
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Open Database Diagram Designer (Visual Database Tools)

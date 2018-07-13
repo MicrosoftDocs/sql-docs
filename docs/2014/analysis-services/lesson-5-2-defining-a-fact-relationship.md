@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Defining a Fact Relationship

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Dimension element"
 ms.assetid: 85093468-e971-4b8e-9ee4-7b264ad01711
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Dimension Element (XMLA)
   Identifies the cube dimension represented by the parent [Object](object-element-dimension-xmla.md) element.  

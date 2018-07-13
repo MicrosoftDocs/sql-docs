@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, executing XPath queries"
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Executing XPath Queries (SQLXML Managed Classes)

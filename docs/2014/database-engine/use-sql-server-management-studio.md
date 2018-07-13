@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], about SQL Server Management Studio"
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Use SQL Server Management Studio

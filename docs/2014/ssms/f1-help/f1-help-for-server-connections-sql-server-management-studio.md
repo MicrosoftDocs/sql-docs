@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Connect to Server dialog box"
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # F1 Help for Server Connections (SQL Server Management Studio)

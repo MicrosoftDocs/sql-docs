@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "protection level for packages [Integration Services]"
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Set or Change the Protection Level of Packages

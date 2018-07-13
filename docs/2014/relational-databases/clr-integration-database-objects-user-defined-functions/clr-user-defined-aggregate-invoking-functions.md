@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
@@ -20,8 +18,8 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Invoking CLR User-Defined Aggregate Functions

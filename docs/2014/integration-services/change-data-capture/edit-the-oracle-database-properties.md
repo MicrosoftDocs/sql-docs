@@ -13,8 +13,8 @@ f1_keywords:
   - "oraProp"
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Edit the Oracle Database Properties

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "change data capture"
 ms.assetid: 6a84aa25-0f31-4be3-b2dd-4f249b8254ae
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Remove the cdc schema if you plan to enable change data capture

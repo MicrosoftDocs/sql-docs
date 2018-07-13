@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "queued updating subscriptions [SQL Server replication]"
 ms.assetid: 97944de3-fbad-4db1-939a-dcd550bf5893
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrading will modify queued updating subscriptions that use Message Queuing

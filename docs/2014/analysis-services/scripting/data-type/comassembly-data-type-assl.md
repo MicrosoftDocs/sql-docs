@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ComAssembly data type"
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
 caps.latest.revision: 49
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ComAssembly Data Type (ASSL)
   Defines a derived data type that represents a COM library associated with a [Server](../objects/server-element-assl.md) or [Database](../objects/database-element-assl.md) element.  

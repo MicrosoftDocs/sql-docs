@@ -17,8 +17,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 73ab6859-9605-419e-bd78-798f68cc66f8
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Breaking Changes to SQL Server Features in SQL Server 2014

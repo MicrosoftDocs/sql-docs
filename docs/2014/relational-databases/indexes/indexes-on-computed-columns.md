@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "precise [SQL Server]"
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Indexes on Computed Columns

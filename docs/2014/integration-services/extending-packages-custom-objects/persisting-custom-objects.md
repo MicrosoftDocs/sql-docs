@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "custom objects [Integration Services], persisting"
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Persisting Custom Objects

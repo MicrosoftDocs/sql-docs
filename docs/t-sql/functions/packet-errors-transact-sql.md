@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "connections [SQL Server], packets"
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;PACKET_ERRORS (Transact-SQL)

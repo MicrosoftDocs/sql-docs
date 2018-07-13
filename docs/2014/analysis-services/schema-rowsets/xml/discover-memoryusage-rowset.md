@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_MEMORYUSAGE Rowset
   Returns the DISCOVER_MEMORYUSAGE statistics for various objects allocated by the server.  

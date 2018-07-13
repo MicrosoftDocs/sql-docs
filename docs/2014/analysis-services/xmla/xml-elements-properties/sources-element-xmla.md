@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Sources element"
 ms.assetid: fefe8f01-4c62-4b70-9bf6-f11d2f01623a
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Sources Element (XMLA)
   Contains a collection of [Source](source-element-xmla.md) elements for the parent [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) element.  

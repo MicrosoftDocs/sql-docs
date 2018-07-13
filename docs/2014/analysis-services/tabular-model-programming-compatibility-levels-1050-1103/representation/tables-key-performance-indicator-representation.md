@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Key Performance Indicator Representation (Tabular)
   A KPI is used to gauge performance of a value, defined by a Base measure, against a Target value  

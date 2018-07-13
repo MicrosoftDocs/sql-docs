@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: native-client  - "database-engine"
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, updating applications"
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 caps.latest.revision: 81
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Updating an Application to SQL Server Native Client from MDAC

@@ -5,8 +5,7 @@ ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Getting Started with AlwaysOn Availability Groups (SQL Server)

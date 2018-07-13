@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ReportingFirstWeekOfMonth element"
 ms.assetid: 29818404-ad45-403f-8fd9-3e3246d301ad
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ReportingFirstWeekOfMonth Element (ASSL)
   Defines the first week of the reporting month for the [TimeBinding](../data-type/binding-data-type-assl.md) element.  

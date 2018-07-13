@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.designer.parameter.f1"
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Parameterize Dialog Box

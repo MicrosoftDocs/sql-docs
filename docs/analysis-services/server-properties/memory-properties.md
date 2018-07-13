@@ -98,6 +98,7 @@ When set to 1, processing is less likely to fail due to memory constraints becau
   
    Setting | Description
 --------|------------
+**-1** | (default) Automatic. The engine will decide which one to use.
 **0** | Windows LFH heap.
 **1** | Analysis Services slot allocator.
 **3** | Each object has its own Analysis Services Heap.

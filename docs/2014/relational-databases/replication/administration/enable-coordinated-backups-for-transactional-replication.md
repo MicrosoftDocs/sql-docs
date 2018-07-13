@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 caps.latest.revision: 30
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Enable Coordinated Backups for Transactional Replication (Replication Transact-SQL Programming)

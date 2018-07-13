@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Mining Model Viewer [Analysis Services], dependency network nodes"
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Find a Specific Node in a Dependency Network
   A dependency network in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mining model can contain many nodes, making it difficult to locate the data you are interested in. To solve this problem, you can use the **Find Node** dialog box on the **Dependency Network** tab of Data Mining Designer to search for a specific node.  

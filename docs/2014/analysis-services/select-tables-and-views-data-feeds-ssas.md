@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.bidtoolset.seltablesviewsdf.f1"
 ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Tables and Views (Data Feeds) (SSAS)
   This page of the **Table Import Wizard** enables you to select the tables and views that you want to import data from. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  

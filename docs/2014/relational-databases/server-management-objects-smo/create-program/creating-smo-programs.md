@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SMO [SQL Server], programming"
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Creating SMO Programs

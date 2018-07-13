@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Query Editor [XMLA]"
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # XMLA Query Editor (Analysis Services - Multidimensional Data)
   Use the XMLA Query Editor to design and execute statements and scripts written in the Multidimensional Expressions (XMLA) language.  

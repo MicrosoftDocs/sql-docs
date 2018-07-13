@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_INPUT_DATASOURCES rowset"
 ms.assetid: 12482fd5-16e3-4171-9cb0-76d0d4f5308e
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_INPUT_DATASOURCES Rowset
   Describes the data sources defined within the database.  

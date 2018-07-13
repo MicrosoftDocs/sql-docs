@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: native-client  - "database-engine"
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "ODBC, transactions"
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Transactions in ODBC

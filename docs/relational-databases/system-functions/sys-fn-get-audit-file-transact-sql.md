@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/16/2017"
@@ -173,7 +173,7 @@ fn_get_audit_file ( file_pattern,
 
 For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing).
+For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](https://docs.microsoft.com/azure/sql-database/sql-database-auditing).
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

@@ -5,8 +5,7 @@ ms.date: "04/26/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "batches [SQL Server], full-text search"
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 66
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Improve the Performance of Full-Text Indexes

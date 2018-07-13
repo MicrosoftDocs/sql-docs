@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], functions"
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Cryptographic functions (Transact-SQL)

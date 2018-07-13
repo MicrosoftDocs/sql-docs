@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "adding data viewers"
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add a Data Viewer to a Data Flow

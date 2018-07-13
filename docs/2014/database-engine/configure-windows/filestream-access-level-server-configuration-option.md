@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "filestream access level"
 ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # filestream access level Server Configuration Option

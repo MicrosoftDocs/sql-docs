@@ -1039,7 +1039,7 @@ GO
   
  If a temporary table is created with a named constraint and the temporary table is created within the scope of a user-defined transaction, only one user at a time can execute the statement that creates the temp table. For example, if a stored procedure creates a temporary table with a named primary key constraint, the stored procedure cannot be executed simultaneously by multiple users.  
 
-## Database scoped global temporary tables ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])
+## Database scoped global temporary tables (Azure SQL Database)
 
 Global temporary tables for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (initiated with ## table name) are stored in tempdb and shared among all users’ sessions across the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For information on SQL table types, see the above section on Create Tables.  
 
@@ -1050,7 +1050,7 @@ Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 > [!IMPORTANT]
 > This feature is available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-### Troubleshooting global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+### Troubleshooting global temporary tables for Azure SQL Database 
 
 For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
 

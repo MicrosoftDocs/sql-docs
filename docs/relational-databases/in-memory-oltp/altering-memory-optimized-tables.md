@@ -26,7 +26,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  
 The ALTER TABLE syntax is used for making changes to the table schema, as well as for adding, deleting, and rebuilding indexes. Indexes are considered part of the table definition:  
   
--   The syntax ALTER TABLE … ADD/DROP/ALTER INDEX is supported only for memory-optimized tables.  
+-   The syntax ALTER TABLE ... ADD/DROP/ALTER INDEX is supported only for memory-optimized tables.  
   
 -   Without using an ALTER TABLE statement, the statements CREATE INDEX and DROP INDEX and ALTER INDEX are *not* supported for indexes on memory-optimized tables.  
   

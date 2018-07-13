@@ -218,7 +218,8 @@ SELECT ag.[name] as 'AG Name',
     ar.replica_server_name as 'Replica Name'
 FROM 	sys.availability_groups ag, 
     sys.availability_replicas ar       
-WHERE	ag.group_id = ar.group_id
+WHERE	ag.group_id = ar.group_id;
+GO
 ```
 
 An example of output from the second WSFC cluster that's participating in a distributed availability group is shown in the following figure. SPAG1 is composed of two replicas: DENNIS and JY. However, the distributed availability group named SPDistAG has the names of the two participating availability groups (SPAG1 and SPAG2) rather than the names of the instances, as with a traditional availability group. 
@@ -234,7 +235,8 @@ sys.availability_replicas ar,
 sys.dm_hadr_availability_replica_states ars       
 WHERE	ar.replica_id = ars.replica_id
 and 	ag.group_id = ar.group_id 
-and	ag.is_distributed = 1
+and	ag.is_distributed = 1;
+GO
 ```
        
        
@@ -254,7 +256,8 @@ WHERE	drs.group_id = ag.group_id
 and	ar.replica_id = ars.replica_id
 and	ars.replica_id = drs.replica_id
 and	dbs.database_id = drs.database_id
-and	ag.is_distributed = 1
+and	ag.is_distributed = 1;
+GO
 ```
 
 ![Performance information for a distributed availability group][13]

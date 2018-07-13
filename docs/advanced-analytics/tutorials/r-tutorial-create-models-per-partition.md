@@ -16,47 +16,44 @@ manager: cgronlun
 
 **(Not for production workloads)**
 
-In SQL Server vNext CTP 2.0, partition-based modeling is the ability to create and train models over stratified data that naturally segments into a given classification scheme. Common examples include partitioning by geographic region, by date and time, by age or gender, and so forth. Given the existence of partitioned data, you can execute script over the entire data set, with the ability to model, train, and score over partitioned data that remains intact over all these operations. 
+In SQL Server vNext CTP 2.0, partition-based modeling is the ability to create and train models over partitioned data. For stratified data that naturally segments into a given classification scheme - such as geographic regions, date and time, age or gender - you can execute script over the entire data set, with the ability to model, train, and score over partitions that remain intact over all these operations. 
 
-In this tutorial, learn about partitioned models using the classic NYC taxi sample data and R script:
+Partition-based modeling is enabled through two new parameters on [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
+
++ **input_data_1_partition_by_columns**, which specifies a column to partition by. In this tutorial, the partition column is the payment method.
++ **input_data_1_order_by_columns** specifies which columns to order by. 
+
+In this tutorial, learn partition-based modeling using the classic NYC taxi sample data and R script. 
 
 > [!div class="checklist"]
-> * Partition and order data based on a payment_type column, which segments fare data into five partitions based on payment method
-> * Create and train models on each partition and store the objects in the database
-> * Predict the probability of tip outcomes over each partition, using sample data reserved for that purpose
-
-Partition-based modeling is enabled through [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Using this system stored procedure and a few new parameters, you can partition and order data programmatically in R, without having to create and manage "micro" models manually. Once partitioned data sets are established, you can call familiar R functions to create and train models used for future predictions.
-
-New parameters on `sp_execute_external_script` that enable partition-based models include:
-
-| Parameter | Usage |
-|-----------|-------|
-| **input_data_1_partition_by_columns** | Specifies which columns to partition by. |
-| **input_data_1_order_by_columns** | Specifies which columns to order by.  |
+> * Partition based on a payment_type column. Values in this column segment data, one partition for each payment types.
+> * Create and train models on each partition and store the objects in the database.
+> * Predict the probability of tip outcomes over each partition model, using sample data reserved for that purpose.
 
 ## Prerequisites
  
-To complete this tutorial, you must have SQL Server, sample data, and a tool for T-SQL query execution such as SQL Server Management Studio. Make sure you have enough memory. If memory is insufficient, you can stream the data using the rowsPerRead parameter on an rx data source.
+To complete this tutorial, you must have SQL Server, sample data, and a tool for T-SQL query execution such as SQL Server Management Studio. 
 
-### Tools for query execution
+### System resources
 
-You can download and install SQL Server Management Studio, or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
+The data set is large and training operations are resource-intensive. If possible, use a system having more than 4 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
 
 ### SQL Server database engine with Machine Learning Services
 
 SQL Server vNext CTP 2.0 or later, with Machine Learning Services installed and configured, is required. You can check server version in Management Studio by executing `SELECT @@Version` as a T-SQL query. Output should be "Microsoft SQL Server vNext (CTP 2.0) - 15.0.x".
 
+### Tools for query execution
+
+You can download and install SQL Server Management Studio, or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
+
 ### Sample data
 
-Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. 
+Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. If you completed other tutorials, you might have the database already.
 
-For this tutorial, we have prepared partitioned data in a sample database, which you can download from Github. Data is stored in five partitions, resulting in five individual models. It contains segmented data sufficient for both training and scoring purposes.
-
-The database filename is NYCTaxiDB.BAK. Copy the file to the Backup folder (C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup) and then restore the file to the database engine instance.
 
 ### R packages
 
-This tutorial uses R installed with Machine Learning Services. You can return a well-formatted list of all R packages currently installed by running the following T-SQL script:
+This tutorial uses R installed with Machine Learning Services. You can verify R installation by returning a well-formatted list of all R packages currently installed with your database engine instance:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -72,23 +69,17 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## Connect to the database
 
-Once prerequisites are met, expand the database objects in Object Explorer to review database contents.
+Once prerequisites are met, expand the database objects in Object Explorer to review the available tables. 
 
-*More information to come, including how to verify the data is partitioned, per this comment "Data is stored in five partitions, resulting in five individual models"*
+You'll use data from table X and Y, and add new stored procedures and models as you step through this tutorial.
 
-## Create and store the partitioned model
+## Define a procedure for creating and training per-partition models
 
 This tutorial wraps all R script in a stored procedure. The following script creates an input dataset, builds a classification model to predict a tip outcome, and stores it in the database.
 
 Among the objects created by this script, you'll see **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**.  Recall that these objects are the mechanism by which partitioned modeling occurs. The parameters are passed as inputs to `sp_execute_external_script` to process partitions with the external script executing once for every partition.
 
-You can run this operation in parallel by combining `partition_by` with `@parallel=1`. If the input query can be parallelized, set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows, but if you want to handle this explicitly, this script includes the parameter as a demonstration.
-
-> [!Tip]
-> For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions not specifically engineered with that capability.
-
-Create a stored procedure that trains models on each partition of the data, using parallelism for faster time to completion.
-You can also use non-Rx functions to train per partition.
+Create a stored procedure that trains models on each partition of the data, [using parallelism](#parallel) for faster time to completion.
 
 
 ```sql
@@ -117,10 +108,10 @@ begin
 	# build classification model to predict a tip outcome
 	duration <- system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet))[3];
 
-	# First, serialize a model and put it into a database table
+	# First, serialize a model to and put it into a database table
     modelbin <- as.raw(serialize(logitObj, NULL));
 
-    # Create the data source
+    # Create the data source. To reduce data size, add rowsPerRead=500000 to cut the dataset by half.
     ds <- RxOdbcData(table="ml_models", connectionString=connStr);
 
     # Store the model in the database
@@ -146,11 +137,20 @@ end;
 go
 ```
 
-## Train the model
+<a name="parallel"></a>
 
-The following scripts train the model. Examples demonstrate two approaches: using an entire data set or partial data.
+### Parallel execution
 
-*How does this training relate to the previous training?  Is this doing the training, or invoking training logic?*
+Notice that the `sp_execute_external_script` inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server vNext CTP 2.0, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
+
+By default, the query optimizer tends to operate under `@parallel=1` on tables having more than 256 rows, but if you can handle this explicitly by setting `@parallel=1` as shown in this script.
+
+> [!Tip]
+> For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the given thread.
+
+## Run the procedure and train the model
+
+In this section, the script trains the model that you created and saved in the previous step. The examples below demonstrate two approaches for training your model: using an entire data set, or a partial data. Training is a resource-intensive operation. If system resources, especially memory, are insufficient for the load, use a subset of the data. The second example provides the syntax.
 
 ```sql
 --Example 1: train on entire dataset
@@ -179,7 +179,7 @@ The result in the models table should be 5 different models since we had 5 parti
 select * from ml_models.
 
  
-## Score data using per-partition models
+## Define a procedure for predicting outcomes
 
 You can use the same parameters for scoring. The following sample contains an R script that will score using the correct model for the partition it is currently processing.
 
@@ -253,7 +253,7 @@ end;
 go
 ```
 
-## Create a table to store prediction
+## Create a table to store predictions
 
 ```sql
 create table prediction_results (tipped_Pred int,
@@ -268,8 +268,7 @@ truncate table prediction_results
 go
 ```
 
-## Execute stored procedure and insert predictions in table
-
+## Run the procedure and save predictions
 ```sql
 insert into prediction_results (tipped_Pred,
 							   payment_type, 
@@ -294,6 +293,7 @@ select * from prediction_results;
 
 To apply [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) and this technique to your own data, review the guidance on how to structure partitioned data sets, call external scripts in stored procedures, and use the RevoScaleR or revoscalepy `rx` functions.
 
+<!--
 ## Old intro
 
 **(Not for production workloads)**
@@ -310,3 +310,4 @@ Partitions are an organizational mechanism for stratified data that naturally se
 You can run this operation in parallel by combining `partition_by` with `@parallel`. If the input query can be parallelized, set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows.
 
 When the scenario is training, one advantage is that any arbitrary training script, even those using non-Microsoft-rx algorithms, can be parallelized by also using the @parallel parameter. Typically, you would have to use RevoScaleR algorithms (with the rx prefix) to obtain parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions not specifically engineered with that capability.
+-->

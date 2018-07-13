@@ -56,7 +56,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  CHANGE_TRACKING_CURRENT_VERSION() function  
  Is used to obtain the current version that will be used the next time when querying changes. This version represents the version of the last committed transaction.  
   
- CHANGE_TRACKING_MIN_VALID_VERSION()function  
+ CHANGE_TRACKING_MIN_VALID_VERSION() function  
  Is used to obtain the minimum valid version that a client can have and still obtain valid results from CHANGETABLE(). The client should check the last synchronization version against the value thatis returned by this function. If the last synchronization version is less than the version returned by this function, the client will be unable to obtain valid results from CHANGETABLE() and will have to reinitialize.  
   
 ### Obtaining Initial Data  

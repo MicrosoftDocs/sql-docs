@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Work with Change Tracking (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"

@@ -155,7 +155,7 @@ FROM OPENJSON(@json)
   WITH (id int 'strict $.id',  
         firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
         age int, dateOfBirth datetime2 '$.dob',
-	skills nvarchar(max) '$.skills' as json) 
+	skills nvarchar(max) '$.info.skills' as json) 
 	outer apply openjson( a.skills ) 
                      with ( skill nvarchar(8) '$' ) as b
 ```  

@@ -32,7 +32,7 @@ Use the query designer in Report Designer to design the dataset. For this tutori
   
 3.  Click **Use a dataset embedded in my report**.  
   
-4.  Select the data souce you created in the previous lesson, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
+4.  Select the data source you created in the previous lesson, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
 5. Select **Text** for the **Query type**.  
   
 6.  Type, or copy and paste, the following Transact-SQL query into the **Query** box.  

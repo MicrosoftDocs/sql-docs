@@ -331,7 +331,7 @@ Some data type changes may cause a change in the data. For example, changing a n
   
 When using Always Encrypted (without secure enclaves), if the column being modified is encrypted using `ENCRYPTED WITH`, you can change the datatype to a compatible datatype (such as INT to BIGINT) but you cannot change any encryption settings.  
 
-When using Always Encrypted with secure enclaves, you can change any encryption setting, as long as the column encryption key protecting the column (and the new column encryption key, if you are changing the key) support enclave computations (i.e are encrypted with enclave-enabled column master keys).Please see [Always Encrypted with secure enclaves &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-with_secure_enclaves_database-engine.md) for details.  
+When using Always Encrypted with secure enclaves, you can change any encryption setting, as long as the column encryption key protecting the column (and the new column encryption key, if you are changing the key) support enclave computations (i.e are encrypted with enclave-enabled column master keys).Please see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) for details.  
   
  *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can be a maximum of 128 characters. For new columns, *column_name* can be omitted for columns created with a **timestamp** data type. The name **timestamp** is used if no *column_name* is specified for a **timestamp** data type column.  
@@ -1319,7 +1319,7 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
 GO  
 ```  
-Please see [Always Encrypted with secure enclaves &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-with_secure_enclaves_database-engine.md) for details.  
+Please see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) for details.  
 
   
 ###  <a name="alter_table"></a> Altering a Table Definition  

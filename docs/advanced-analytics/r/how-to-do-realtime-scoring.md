@@ -210,7 +210,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### Step 3. Call sp_rxPredict
 
-You call sp\_rxPredict as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _@model_ for the model in binary format, and _@inputData_ for the data to use in scoring, defined as a valid SQL query.
+You call sp\_rxPredict as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _\@model_ for the model in binary format, and _\@inputData_ for the data to use in scoring, defined as a valid SQL query.
 
 Because the binary format is the same that is used by the PREDICT function, you can use the models and data table from the preceding example.
 

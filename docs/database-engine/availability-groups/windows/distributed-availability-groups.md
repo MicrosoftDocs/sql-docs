@@ -96,11 +96,11 @@ Here are the three main usage scenarios for a distributed availability group:
 
 ### Disaster recovery and multi-site scenarios
 
-A traditional availability group requires that all servers be part of the same WSFC cluster, which can make spanning multiple data centers challenging. The following figure shows what a traditional multi-site availability group architecture looks like, including the data flow. There is one primary replica that sends transactions to all secondary replicas. This configuration is less flexible in some ways than a distributed availability group. For example, you must implement such things as Active Directory (if applicable) and the witness for a quorum in the WSFC cluster. You might also need to take into account other aspects of a WSFC cluster, such as altering node votes.
+A traditional availability group requires that all servers be part of the same WSFC cluster, which can make spanning multiple data centers challenging. The following figure shows what a traditional multi-site availability group architecture looks like, including the data flow. There is one primary replica that sends transactions to all secondary replicas. This configuration is less in some ways than a distributed availability group. For example, you must implement such things as Active Directory (if applicable) and the witness for a quorum in the WSFC cluster. You might also need to take into account other aspects of a WSFC cluster, such as altering node votes.
 
 ![Traditional multi-site availability group][4]
 
-Distributed availability groups offer a more flexible deployment scenario for availability groups that span multiple data centers. You can even use distributed availability groups where features such as [log shipping]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server) were used in the past. However, unlike traditional availability groups, distributed availability groups cannot have delayed application of transactions. This means that availability groups or distributed availability groups cannot help in the event of human error in which data is incorrectly updated or deleted.
+Distributed availability groups offer a more flexible deployment scenario for availability groups that span multiple data centers. You can even use distributed availability groups where features such as [log shipping]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server) were used in the past for scenarios such as disaster recovery. However, unlike log shipping, distributed availability groups cannot have delayed application of transactions. This means that availability groups or distributed availability groups cannot help in the event of human error in which data is incorrectly updated or deleted.
 
 Distributed availability groups are loosely coupled, which in this case means that they don't require a single WSFC cluster and they're maintained by SQL Server. Because the WSFC clusters are maintained individually and the synchronization is primarily asynchronous between the two availability groups, it's easier to configure disaster recovery at another site. The primary replicas in each availability group synchronize their own secondary replicas.
 
@@ -218,7 +218,8 @@ SELECT ag.[name] as 'AG Name',
     ar.replica_server_name as 'Replica Name'
 FROM 	sys.availability_groups ag, 
     sys.availability_replicas ar       
-WHERE	ag.group_id = ar.group_id
+WHERE	ag.group_id = ar.group_id;
+GO
 ```
 
 An example of output from the second WSFC cluster that's participating in a distributed availability group is shown in the following figure. SPAG1 is composed of two replicas: DENNIS and JY. However, the distributed availability group named SPDistAG has the names of the two participating availability groups (SPAG1 and SPAG2) rather than the names of the instances, as with a traditional availability group. 
@@ -234,7 +235,8 @@ sys.availability_replicas ar,
 sys.dm_hadr_availability_replica_states ars       
 WHERE	ar.replica_id = ars.replica_id
 and 	ag.group_id = ar.group_id 
-and	ag.is_distributed = 1
+and	ag.is_distributed = 1;
+GO
 ```
        
        
@@ -254,7 +256,8 @@ WHERE	drs.group_id = ag.group_id
 and	ar.replica_id = ars.replica_id
 and	ars.replica_id = drs.replica_id
 and	dbs.database_id = drs.database_id
-and	ag.is_distributed = 1
+and	ag.is_distributed = 1;
+GO
 ```
 
 ![Performance information for a distributed availability group][13]

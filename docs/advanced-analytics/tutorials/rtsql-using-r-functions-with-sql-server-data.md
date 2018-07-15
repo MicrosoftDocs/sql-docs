@@ -89,8 +89,9 @@ Many users like to use the system timing functions in R, such as `system.time` a
 
 For an example, see this tutorial: [Create Data Features](../tutorials/walkthrough-create-data-features.md). In this walkthrough, R timing functions are embedded in the solution to compare the performance of two methods for creating features from data: R functions vs. T-SQL functions.
 
-## Next lesson
+## Next steps
 
 Next, you'll build a predictive model using R in SQL Server.
 
-[Create a predictive model](../tutorials/rtsql-create-a-predictive-model-r.md)
+> [!div class="nextstepaction"]
+> [Quickstart: Create a predictive model](rtsql-create-a-predictive-model-r.md)

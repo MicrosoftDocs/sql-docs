@@ -1,18 +1,23 @@
 ---
-title: Predict and plot from model (R in SQL quickstart) | Microsoft Docs
+title: Quickstart to predict and plot from model using R in SQL Server Machine Learning | Microsoft Docs
+description: In this quickstart, learn about scoring using a prebuilt model in R and SQL Server data.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
-ms.topic: tutorial
+ms.date: 07/15/2018  
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Predict and plot from model (R in SQL quickstart)
+# Quickstart: Predict and plot from model using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-To perform _scoring_ using new data, get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
+In this quickstart, use the model you created in the previous quickstart to score predictions against fresh data. To perform _scoring_ using new data, get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
+
+## Prerequisites
+
+This quickstart is an extension of [Create a predictive model](tutorials/rtsql-create-a-predictive-model-r.md).
 
 ## Create the table of new speeds
 
@@ -148,24 +153,11 @@ If you want to do some more elaborate plots, using some of the great graphics pa
 + [Loan Classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/): End-to-end scenario based on insurance data. Requires the **reshape** package.
 + [Create Graphs and Plots Using R](../../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md)
 
-## Conclusions
+## Next steps
 
 Integration of R with SQL Server makes it easier to deploy R solutions at scale, leveraging the best features of R and relational databases, for high-performance data handling and rapid R analytics. 
 
-See these additional resources for more R samples:
+Continue learning about solutions using R with SQL Server through end-to-end scenarios created by the Microsoft Data Science and R Services development teams.
 
-+  [SQL Server R tutorials](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
-
-    Continue learning about solutions using R with SQL Server, through end-to-end scenarios created by the Microsoft Data Science and R Services development teams.
-
-+ [SQL Server Python tutorials](../../advanced-analytics/tutorials/sql-server-python-tutorials.md)
-
-    For SQL Server 2017, use the power of remote compute context and scalable algorithm with the Python language.
-
-+ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
-
-    Learn how to use the new RevoScaleR packages to create models and transform data.
-
-+ [Get Started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
-
-    Learn more about the fast, scalable machine learning algorithms from Microsoft Research.
+> [!div class="nextstepaction"]
+> [SQL Server R tutorials](sql-server-r-tutorials.md)

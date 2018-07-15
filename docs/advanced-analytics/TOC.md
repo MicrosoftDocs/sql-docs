@@ -35,15 +35,17 @@
 ## [Set up R tools](r/set-up-a-data-science-client.md)
 ## [Set up Python tools](python/setup-python-client-tools-sql.md)
 
-# [Tutorials, samples, solutions](tutorials/machine-learning-services-tutorials.md)
+# Quickstarts
 
+## R
+### [Hello World in R and SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
+### [Handle inputs and outputs](tutorials/rtsql-working-with-inputs-and-outputs.md)
+### [Handle data types and objects](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+### [Create a predictive model](tutorials/rtsql-create-a-predictive-model-r.md)
+### [Predict and plot from model](tutorials/rtsql-predict-and-plot-from-model.md)
+
+# [Tutorials](tutorials/machine-learning-services-tutorials.md)
 ## [R](tutorials/sql-server-r-tutorials.md)
-### [R: Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-#### [Working with inputs and outputs](tutorials/rtsql-working-with-inputs-and-outputs.md)
-#### [R and SQL data types and data objects](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
-#### [Using R functions with SQL Server data](tutorials/rtsql-using-r-functions-with-sql-server-data.md)
-#### [Create a predictive model](tutorials/rtsql-create-a-predictive-model-r.md)
-#### [Predict and plot from model](tutorials/rtsql-predict-and-plot-from-model.md)
 ### [R: Data science end-to-end walkthrough](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 #### [Prerequisites for the data science walkthrough](tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)
 #### [Prepare the data](tutorials/walkthrough-prepare-the-data.md)
@@ -53,6 +55,7 @@
 #### [Create data features using SQL and R](tutorials/walkthrough-create-data-features.md)
 #### [Build and save the model](tutorials/walkthrough-build-and-save-the-model.md)
 #### [Deploy and use the model](tutorials/walkthrough-deploy-and-use-the-model.md)
+
 ### [R: Data science deep dive with RevoScaleR](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 #### [Work with SQL Server data](tutorials/deepdive-work-with-sql-server-data-using-r.md)
 #### [Create SQL Server data objects using RxSqlServerData](tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
@@ -69,6 +72,7 @@
 #### [Analyze data in local compute context](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [Move data between SQL Server and XDF file](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [Create a simple simulation](tutorials/deepdive-create-a-simple-simulation.md)
+
 ### [R code in stored procedures](tutorials/sqldev-in-database-r-for-sql-developers.md)
 #### [1 - Get data and scripts](tutorials/sqldev-download-the-sample-data.md)
 #### [2 - Set up the environment](r/sqldev-import-data-to-sql-server-using-powershell.md)
@@ -89,8 +93,11 @@
 #### [Create data features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
-## [Samples](https://github.com/Microsoft/sql-server-samples)
-## [Solutions](tutorials/data-science-scenarios-and-solution-templates.md)
+
+
+# [Samples](https://github.com/Microsoft/sql-server-samples)
+
+# [Solutions](tutorials/data-science-scenarios-and-solution-templates.md)
 
 # [How To](r/sql-server-machine-learning-tasks.md)
 

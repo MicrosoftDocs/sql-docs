@@ -13,7 +13,7 @@ manager: cgronlun
 # Quickstart: "Hello world" R script in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server include R langugage feature support for in-database analytics on resident SQL Server data. You can use open-source R functions, third-party packages, and built-in Microsoft R packages for predictive analystics at scale.
+SQL Server includes R language feature support for in-database analytics on resident SQL Server data. You can use open-source R functions, third-party packages, and built-in Microsoft R packages for predictive analytics at scale.
 
 In this quickstart, you learn key concepts by running a "Hello World" R script inT-SQL, with an introduction to the **sp_execute_external_script** system stored procedure. R script execution is through stored procedures. You can either use the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure and pass R script in as an input parameter as demonstrated in this quickstart, or wrap R script in a [custom stored procedure](sqldev-in-database-r-for-sql-developers.md). 
 

@@ -17,7 +17,7 @@ When you want to run R code in SQL Server, you must wrap R script in a stored pr
 
 ## Prerequisites
 
-A previous quickstart, [Hello World in R and SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
+A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
 
 <a name="bkmk_SSMSBasics"></a>
 

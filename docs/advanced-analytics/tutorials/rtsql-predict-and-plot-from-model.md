@@ -58,7 +58,7 @@ EXEC sp_execute_external_script
             str(predicted.distance);
             OutputDataSet <- cbind(new, ceiling(predicted.distance));
             '
-    , @input_data_1 = N' SELECT speed FROM [dbo].[NewCarSpeed] '
+    , @input_data_1 = N'SELECT speed FROM [dbo].[NewCarSpeed]'
     , @input_data_1_name = N'NewCarData'
     , @params = N'@speedmodel varbinary(max)'
     , @speedmodel = @speedmodel
@@ -66,7 +66,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 ```
 
 + Use a SELECT statement to get a single model from the table, and pass it as an input parameter.
-+  After retrieving the model from the table, call the `unserialize` function on the model.
++ After retrieving the model from the table, call the `unserialize` function on the model.
 
     > [!TIP] 
     > Also check out the new [serialization functions](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) provided by RevoScaleR, which support [realtime scoring](../real-time-scoring.md).
@@ -80,7 +80,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 
 ## Perform scoring in parallel
 
-The predictions came back fairly fast on this tiny data set. But suppose you needed to make lots of predictions very fast? There are many ways to speed up operations in SQL Server, more so if the operations can be processed in  parallel. For scoring in particular, one easy way is to add the *@parallel* parameter to `sp_execute_external_script` and set the value to **1**.
+The predictions came back fairly fast on this tiny data set. But suppose you needed to make lots of predictions very fast? There are many ways to speed up operations in SQL Server, more so if the operations can be processed in  parallel. For scoring in particular, one easy way is to add the *@parallel* parameter to sp_execute_external_script and set the value to **1**.
 
 Let's assume that you have obtained a much bigger table of possible car speeds, including hundreds of thousands of values. There are many sample T-SQL scripts from the community to help you generate number tables, so we won't reproduce those here. Let's just say that you have a column containing many integers, and want to use that as input for `speed` in the model.
 

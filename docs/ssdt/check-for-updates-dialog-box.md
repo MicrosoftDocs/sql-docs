@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.checkforupdates.dialog"
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7

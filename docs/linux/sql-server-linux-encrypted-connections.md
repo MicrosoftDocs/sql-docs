@@ -5,7 +5,7 @@ author: tmullaney
 ms.date: 01/30/2018
 ms.author: meetb 
 manager: craigg
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"

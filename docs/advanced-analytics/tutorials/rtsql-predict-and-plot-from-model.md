@@ -17,7 +17,7 @@ In this quickstart, use the model you created in the previous quickstart to scor
 
 ## Prerequisites
 
-This quickstart is an extension of [Create a predictive model](tutorials/rtsql-create-a-predictive-model-r.md).
+This quickstart is an extension of [Create a predictive model](rtsql-create-a-predictive-model-r.md).
 
 ## Create the table of new speeds
 
@@ -69,7 +69,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 +  After retrieving the model from the table, call the `unserialize` function on the model.
 
     > [!TIP] 
-    > Also check out the new [serialization functions](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) provided by RevoScaleR, which support [realtime scoring](../../advanced-analytics/real-time-scoring.md).
+    > Also check out the new [serialization functions](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) provided by RevoScaleR, which support [realtime scoring](../real-time-scoring.md).
 +  Apply the `rxPredict` function with appropriate arguments to the model, and provide the new input data.
 +  In the example, the `str` function is added during the testing phase, to check the schema of data being returned from R. You can remove the statement later.
 + The column names used in the R script are not necessarily passed to the stored procedure output. Here we've used the WITH RESULTS clause to define some new column names.
@@ -151,7 +151,7 @@ The following example demonstrates how to create a simple graphic using a plotti
 If you want to do some more elaborate plots, using some of the great graphics packages for R, we recommend these articles. Both require the popular **ggplot2** package.
 
 + [Loan Classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/): End-to-end scenario based on insurance data. Requires the **reshape** package.
-+ [Create Graphs and Plots Using R](../../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md)
++ [Create Graphs and Plots Using R](walkthrough-create-graphs-and-plots-using-r.md)
 
 ## Next steps
 

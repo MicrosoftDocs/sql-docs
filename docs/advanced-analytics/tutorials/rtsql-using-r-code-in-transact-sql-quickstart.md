@@ -28,7 +28,7 @@ This exercise requires access to an instance of SQL Server with one of the follo
 
 + A tool for running SQL queries. You can use any application that can connect to a SQL Server database and run T-SQL code. SQL professionals can use SQL Server Management Studio (SSMS) or Visual Studio.
 
-For this tutorial, to show how easy it is to run R inside SQL Server, we've used the new **mssql extension for Visual Studio Code**. VS Code is a free development environment that can run on Linux, macOS, or Windows. The **mssql** extension is a lightweight extension for running T-SQL queries. To install it, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+For this tutorial, to show how easy it is to run R inside SQL Server, we've used the new **mssql extension for Visual Studio Code**. VS Code is a free development environment that can run on Linux, macOS, or Windows. The **mssql** extension is a lightweight extension for running T-SQL queries. To get Visual Studio Code, see [Download and install Visual Studio Code](https://code.visualstudio.com/Download). To add the **mssql** extension, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## Connect to a database and run a Hello World test script
 
@@ -62,12 +62,10 @@ Inputs to this stored procedure include:
 
 ![rsql_basictut_hello1](media/rsql-basictut-hello1.PNG)
 
-If you get any errors from this query, rule out any installation issues. Post-install configuration is required to enable use of external code libraries. See [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
+If you get any errors from this query, rule out any installation issues. Post-install configuration is required to enable use of external code libraries. See [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).Likewise, make sure that the Launchpad service is running. 
 
-Likewise, make sure that the Launchpad service is running. Depending on your environment, you might need to enable the R worker accounts to connect to SQL Server, install additional network libraries, enable remote code execution, or restart the instance after everything is configured. See
+Depending on your environment, you might need to enable the R worker accounts to connect to SQL Server, install additional network libraries, enable remote code execution, or restart the instance after everything is configured. For more information, see
 [R Services Installation and Upgrade FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-+ To get Visual Studio Code, see [Download and install Visual Studio Code](https://code.visualstudio.com/Download).
 
 > [!TIP]
 > In Visual Studio Code, you can highlight the code you want to run and press CTRL+SHIFT+E. If this is too hard to remember, you can change it! See [Customize the shortcut key bindings](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).

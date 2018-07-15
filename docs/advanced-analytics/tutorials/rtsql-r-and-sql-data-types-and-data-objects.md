@@ -10,15 +10,21 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Quickstart: Handle R and SQL data types and data objects in SQL Server Machine Learning
+# Quickstart: Handle data types and objects using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this quickstart, get a hands-on introduction to common issues that occur when moving data between R and SQL Server. The experience you gain through this exercise provides essential background when working with data in your own script.
+
+Common issues to know up front include:
 
 + Data types sometimes do not match
 + Implicit conversions might take place
 + Cast and convert operations are sometimes required
 + R and SQL use different data objects
+
+## Prerequisites
+
+A previous quickstart, [Hello World in R and SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Always return a data frame
 

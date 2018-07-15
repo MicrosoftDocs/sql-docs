@@ -10,12 +10,18 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Quickstart: Handle inputs and outputs (R in SQL quickstart)
+# Quickstart: Handle inputs and outputs using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 When you want to run R code in SQL Server, you must wrap R script in a stored procedure. You can write one, or pass R script to [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This system stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
 
-## <a name="bkmk_SSMSBasics"></a>Create some simple test data
+## Prerequisites
+
+A previous quickstart, [Hello World in R and SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
+
+<a name="bkmk_SSMSBasics"></a>
+
+## Create some simple test data
 
 Create a small table of test data by running the following T-SQL statement:
 

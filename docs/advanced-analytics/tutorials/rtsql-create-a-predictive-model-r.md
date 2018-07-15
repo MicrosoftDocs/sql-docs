@@ -13,7 +13,11 @@ manager: cgronlun
 # Quickstart: Create a predictive model using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this step, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the `cars` dataset included with R, because it is small and easy to understand.
+In this quickstart, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the `cars` dataset included with R, because it is small and easy to understand.
+
+## Prerequisites
+
+A previous quickstart, [Hello World in R and SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Create the source data
 

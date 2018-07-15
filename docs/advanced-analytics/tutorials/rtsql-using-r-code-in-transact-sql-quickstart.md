@@ -15,11 +15,7 @@ manager: cgronlun
 
 SQL Server include R langugage feature support for in-database analytics on resident SQL Server data. You can use open-source R functions, third-party packages, and built-in Microsoft R packages for predictive analystics at scale.
 
-In this quickstart, you learn the basic mechanics of calling an R script from T-SQL. 
-
-R script execution is through stored procedures. You can either use [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) and pass R script in as an input parameter, or wrap R script in a [custom stored procedure](sqldev-in-database-r-for-sql-developers.md). 
-
-This quickstart is a "hello world" introduction to the **sp_execute_external_script** system stored procedure.
+In this quickstart, you learn key concepts by running a "Hello World" R script inT-SQL, with an introduction to the **sp_execute_external_script** system stored procedure. R script execution is through stored procedures. You can either use the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure and pass R script in as an input parameter as demonstrated in this quickstart, or wrap R script in a [custom stored procedure](sqldev-in-database-r-for-sql-developers.md). 
 
 ## Prerequisites
 
@@ -58,15 +54,9 @@ For this tutorial, to show how easy it is to run R inside SQL Server, we've used
 Inputs to this stored procedure include:
 
 + *@language* parameter defines the language extension to call, in this case, R.
-+ *@script* parameter, you define the commands to pass to the R runtime. Your entire R script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable.
-+ *@input_data_1* is data returned by the query is passed to the R runtime, which returns the data to SQL Server as a data frame.
++ *@script* parameter defines the commands passed to the R runtime. Your entire R script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable.
++ *@input_data_1* is data returned by the query, passed to the R runtime, which returns the data to SQL Server as a data frame.
 + WITH RESULT SETS clause defines the schema of the returned data table for SQL Server, adding "Hello World" as the column name, **int** for the data type.
-
-> [!TIP]
-> In Visual Studio Code, you can highlight the code you want to run and press CTRL+SHIFT+E. If this is too hard to remember, you can change it! See [Customize the shortcut key bindings](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).
-> 
-> ![rsql-basictut_hello1code](media/rsql-basictut-hello1code.PNG)
-> 
 
 **Results**
 
@@ -78,6 +68,12 @@ Likewise, make sure that the Launchpad service is running. Depending on your env
 [R Services Installation and Upgrade FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 + To get Visual Studio Code, see [Download and install Visual Studio Code](https://code.visualstudio.com/Download).
+
+> [!TIP]
+> In Visual Studio Code, you can highlight the code you want to run and press CTRL+SHIFT+E. If this is too hard to remember, you can change it! See [Customize the shortcut key bindings](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).
+> 
+> ![rsql-basictut_hello1code](media/rsql-basictut-hello1code.PNG)
+> 
 
 ## Next steps
 

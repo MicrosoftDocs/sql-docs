@@ -1,7 +1,7 @@
 ---
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/22/2018"
+ms.date: "07/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
@@ -28,7 +28,7 @@ manager: craigg
 # sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Executes the script provided as argument at an external location. The script must be written in a supported and registered language. To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  
+  Executes the script provided as argument at an external location. The script must be written in a supported and registered language (R or Python). To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,6 +69,7 @@ sp_execute_external_script
  Default value is "OutputDataSet".  
   
  [ \@parallel = 0 | 1 ]
+
  Enable parallel execution of R scripts by setting the `@parallel` parameter to 1. The default for this parameter is 0 (no parallelism).  
   
  For R scripts that do not use RevoScaleR functions, using the  `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows are distributed according to the **MAXDOP** setting.  
@@ -81,6 +82,7 @@ sp_execute_external_script
  A list of input parameter declarations that are used in the external script.  
   
  [ \@parameter1 = '*value1*'  [ OUT | OUTPUT ] [ ,...n ] ]  
+
  A list of values for the input parameters used by the external script.  
 
 ## Remarks
@@ -114,7 +116,7 @@ Both the `@r_rowsPerRead` parameter for streaming and the `@parallel` argument s
 
 ### Data types
 
-The following data types are not supported when used in the input query or parameters of `sp_execute_external_script` procedure, and return an unsupported type error.  
+The following data types are not supported when used in the input query or parameters of **sp_execute_external_script** procedure, and return an unsupported type error.  
 
 As a workaround, **CAST** the column or value to a supported type in [!INCLUDE[tsql](../../includes/tsql-md.md)] before sending it to the external script.  
   

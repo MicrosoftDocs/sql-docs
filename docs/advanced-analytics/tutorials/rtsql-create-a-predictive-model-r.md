@@ -141,9 +141,9 @@ VALUES ('latest model', @model)
 
 Remember these rules for working with SQL parameters and R variables in `sp_execute_external_script`:
 
-+ All SQL parameters mapped to R script must be listed by name in the _@params_ argument.
-+ To output one of these parameters, add the OUTPUT keyword in the _@params_ list.
-+ After listing the mapped parameters, provide the mapping, line by line, of SQL parameters to R variables, immediately after the _@params_ list.
++ All SQL parameters mapped to R script must be listed by name in the _\@params_ argument.
++ To output one of these parameters, add the OUTPUT keyword in the _\@params_ list.
++ After listing the mapped parameters, provide the mapping, line by line, of SQL parameters to R variables, immediately after the _\@params_ list.
 
 ## Next steps
 

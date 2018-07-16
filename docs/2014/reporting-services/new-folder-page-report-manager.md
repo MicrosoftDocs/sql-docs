@@ -33,7 +33,7 @@ manager: craigg
   
 ## Options  
  **Name**  
- Specify the name of the folder. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. Do not use the characters ; ? : @ & = + , $ / * \< > | " or / when specifying a name.  
+ Specify the name of the folder. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. Do not use the characters ; ? : \@ & = + , $ / * \< > | " or / when specifying a name.  
   
  **Description**  
  Type a description of folder contents. This description appears in the Contents page to users who have permission to access the folder.  

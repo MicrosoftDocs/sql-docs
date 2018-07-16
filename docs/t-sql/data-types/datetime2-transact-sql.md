@@ -37,7 +37,7 @@ Defines a date that is combined with a time of day that is based on 24-hour cloc
 |Property|Value|  
 |--------------|-----------|  
 |Syntax|**datetime2** [ (*fractional seconds precision*) ]|  
-|Usage|DECLARE @MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|Usage|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |Default string literal format<br /><br /> (used for down-level client)|YYYY-MM-DD hh:mm:ss[.fractional seconds]<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows.|  
 |Date range|0001-01-01 through 9999-12-31<br /><br /> January 1,1 CE through December 31, 9999 CE|  
 |Time range|00:00:00 through 23:59:59.9999999|  

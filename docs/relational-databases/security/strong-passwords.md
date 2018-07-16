@@ -50,9 +50,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   Contains or starts with a space character.  
   
--   Starts with the $ or @ character.  
+-   Starts with the $ or \@ character.  
   
- If used in an OLE DB or ODBC connection string, a login or password must not contain the following characters: [] {}() , ; ? * ! @. These characters are used to either initialize a connection or separate connection values.  
+ If used in an OLE DB or ODBC connection string, a login or password must not contain the following characters: [] {}() , ; ? * ! \@. These characters are used to either initialize a connection or separate connection values.  
   
 ## Related Content  
  [Password Policy](../../relational-databases/security/password-policy.md)  

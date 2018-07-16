@@ -47,27 +47,28 @@ sp_execute_external_script
 ```
 
 ## Arguments
-**@language** = N'*language*'
- 
- Indicates the script language. *language* is **sysname**. Valid values are `Python` or `R`. 
+ \@language = N'*language*'  
+ Indicates the script language. *language* is **sysname**.  
+
+ Valid values are `Python` or `R`. 
   
-**@script** = N'*script*'  
- 
+ \@script = N'*script*'  
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  
   
-[ **@input_data_1_name** = N'*input_data_1_name*' ]
- 
- Specifies the name of the variable used to represent the query defined by @input_data_1. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. *input_data_1_name* is **sysname**. Default value is `InputDataSet`.  
+ [ \@input_data_1_name = N'*input_data_1_name*' ]  
+ Specifies the name of the variable used to represent the query defined by \@input_data_1. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. *input_data_1_name* is **sysname**.  
   
-[ **@input_data_1** =  N'*input_data_1*' ]  
- 
+ Default value is `InputDataSet`.  
+  
+ [ \@input_data_1 =  N'*input_data_1*' ]  
  Specifies the input data used by the external script in the form of a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. The data type of *input_data_1* is **nvarchar(max)**.
   
-[ **@output_data_1_name** = N'*output_data_1_name*' ] 
- 
- Specifies the name of the variable in the external script that contains the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. For R, the output must be a data frame. For Python, the output must be a pandas data frame. *output_data_1_name* is **sysname**.  Default value is `OutputDataSet`.  
+ [ \@output_data_1_name =  N'*output_data_1_name*' ]  
+ Specifies the name of the variable in the external script that contains the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. For R, the output must be a data frame. For Python, the output must be a pandas data frame. *output_data_1_name* is **sysname**.  
   
-[ **@parallel** = 0 | 1 ]
+ Default value is "OutputDataSet".  
+  
+ [ \@parallel = 0 | 1 ]
 
  Enable parallel execution of R scripts by setting the `@parallel` parameter to 1. The default for this parameter is 0 (no parallelism).  
   
@@ -77,11 +78,10 @@ sp_execute_external_script
   
  For R scripts that use RevoScaleR functions, parallel processing is handled automatically and you should not specify `@parallel = 1` to the **sp_execute_external_script** call.  
   
-[  **@params** = N'*@parameter_name data_type* [ OUT | OUTPUT ] [ ,...n ]' ]
-
+ [ \@params = N'*\@parameter_name data_type* [ OUT | OUTPUT ] [ ,...n ]' ]  
  A list of input parameter declarations that are used in the external script.  
   
-[  **@parameter1** ='*value1*'  [ OUT | OUTPUT ] [ ,...n ] ] 
+ [ \@parameter1 = '*value1*'  [ OUT | OUTPUT ] [ ,...n ] ]  
 
  A list of values for the input parameters used by the external script.  
 

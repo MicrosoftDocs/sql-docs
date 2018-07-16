@@ -1312,7 +1312,8 @@ GO
  Next, column `C2` is encrypted with with a column encryption key, named CEK1, and randomized encryption. Note that for the below statement to succeed:
 - The column encryption key must be enclave-enabled, i.e. it must be encrypted with a column master key that allows enclave computations;
 - The target SQL Server instance must support Always Encrypted with secure enclaves;
-- The statement must be issued from over a connection set up for Always Encrypted with secure enclaves, and using a supported client driver.    
+- The statement must be issued from over a connection set up for Always Encrypted with secure enclaves, and using a supported client driver.
+- The calling application must have access to the column master key, protecting CEK1.
 
 ```sql  
 ALTER TABLE T3  

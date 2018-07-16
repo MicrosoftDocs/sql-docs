@@ -571,8 +571,9 @@ Specifies to create an index on the table. This can be a clustered index, or a n
   
  **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but it prevents any computations and indexing on encrypted columns, unless your SQL Server instance supports Always Encrypted with secure enclaves. Please see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) for details.
   
- Use deterministic encryption for columns that will be search parameters or grouping parameters, for example a government ID number. Use randomized encryption, for data such as a credit card number, which is not grouped with other records, or used to join tables, and which is not searched for because you use other columns (such as a transaction number) to find the row which contains the encrypted column of interest. If you are using Always Encrypted with secure enclaves, randomized encryption is a recommended encryption type.
+ If you are using Always Encrypted (without secure enclaves), use deterministic encryption for columns that will be search parameters or grouping parameters, for example a government ID number. Use randomized encryption, for data such as a credit card number, which is not grouped with other records, or used to join tables, and which is not searched for because you use other columns (such as a transaction number) to find the row which contains the encrypted column of interest.
 
+ If you are using Always Encrypted with secure enclaves, randomized encryption is a recommended encryption type.
   
  Columns must be of a qualifying data type.  
   

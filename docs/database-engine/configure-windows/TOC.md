@@ -16,6 +16,7 @@
 ## [c2 audit mode Server Configuration Option](c2-audit-mode-server-configuration-option.md)  
 ## [clr enabled Server Configuration Option](clr-enabled-server-configuration-option.md)  
 ## [clr strict security Server Configuration Option](clr-strict-security.md)  
+## [column encryption enclave type Server Configuration Option](configure-column-encryption-enclave-type.md)  
 ## [common criteria compliance enabled Server Configuration Option](common-criteria-compliance-enabled-server-configuration-option.md)  
 ## [contained database authentication Server Configuration Option](contained-database-authentication-server-configuration-option.md)  
 ## [Configure the cost threshold for parallelism Server Configuration Option](configure-the-cost-threshold-for-parallelism-server-configuration-option.md)  

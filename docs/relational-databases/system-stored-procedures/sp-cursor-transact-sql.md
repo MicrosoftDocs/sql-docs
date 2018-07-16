@@ -124,7 +124,7 @@ sp_cursor  cursor, optype, rownum, table
 ## value Parameter  
  There are two alternatives to the rules for using *value* as stated earlier in the Arguments section:  
   
-1.  You can use a name that is '@' pre-pended to the name of the column in the select-list for any named *value* parameters. One advantage of this alternative is that data conversion may not be necessary.  
+1.  You can use a name that is '\@' pre-pended to the name of the column in the select-list for any named *value* parameters. One advantage of this alternative is that data conversion may not be necessary.  
   
 2.  Use a parameter to either submit a complete UPDATE or INSERT statement or use multiple parameters to submit portions of an UPDATE or INSERT statement which SQL Server will then build into a complete statement. Examples of this can be found in the Examples section later in this topic.  
   

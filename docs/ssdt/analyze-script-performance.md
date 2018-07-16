@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.codeanalysis.configuring"
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11

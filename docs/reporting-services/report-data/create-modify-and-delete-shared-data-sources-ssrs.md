@@ -75,7 +75,7 @@ manager: "kfile"
   
 1.  In the web portal, select **New** > **Data Source**. 
   
-4.  Type a name for the item. A name must contain at least one character and it must start with a letter. It can also include certain symbols, but not spaces or the characters ; ? : @ & = + , $ / * < > | " /.  
+4.  Type a name for the item. A name must contain at least one character and it must start with a letter. It can also include certain symbols, but not spaces or the characters ; ? : \@ & = + , $ / * < > | " /.  
   
 5.  Optionally type a description to provide users with information about the connection..  
   

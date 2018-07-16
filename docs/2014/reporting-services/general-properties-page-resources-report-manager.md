@@ -33,7 +33,7 @@ manager: craigg
   
 ## Options  
  **Name**  
- Specify a name for the resource. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the characters ; ? : @ & = + , $ / * \< > | " or / when specifying a name.  
+ Specify a name for the resource. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the characters ; ? : \@ & = + , $ / * \< > | " or / when specifying a name.  
   
  **Description**  
  Type a description of the resource. This description appears in the Contents page to users who have permission to access the resource.  

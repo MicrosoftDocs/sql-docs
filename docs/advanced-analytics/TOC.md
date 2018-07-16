@@ -56,7 +56,6 @@
 #### [6 - Predict outcomes](tutorials/sqldev-operationalize-the-model.md)
 
 ### [Data science end-to-end walkthrough](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
-#### [Prerequisites](tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)
 #### [Prepare data](tutorials/walkthrough-prepare-the-data.md)
 #### [Explore data using SQL](tutorials/walkthrough-view-and-explore-the-data.md)
 #### [Summarize data using R](tutorials/walkthrough-view-and-summarize-data-using-r.md)
@@ -66,7 +65,7 @@
 #### [Deploy and use the model](tutorials/walkthrough-deploy-and-use-the-model.md)
 
 ### [Deep dive with RevoScaleR](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-#### [Prerequisites](tutorials/deepdive-work-with-sql-server-data-using-r.md)
+#### [Create database and permissions](tutorials/deepdive-work-with-sql-server-data-using-r.md)
 #### [Create data objects using RxSqlServerData](tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
 #### [Query and modify data](tutorials/deepdive-query-and-modify-the-sql-server-data.md)
 #### [Define a compute context](tutorials/deepdive-define-and-use-compute-contexts.md)

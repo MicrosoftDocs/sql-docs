@@ -31,19 +31,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## Arguments  
- [ @folder_name = ] *folder_name*  
+ [ \@folder_name = ] *folder_name*  
  The name of the folder that contains the project. The *folder_name* is **nvarchar(128)**.  
   
- [ @project_name = ] *project_name*  
+ [ \@project_name = ] *project_name*  
  The name of project. The *project_name* is **nvarchar(128)**.  
   
- [ @object_type = ] *object_type*  
+ [ \@object_type = ] *object_type*  
  The type of object. Valid values include `20` for a project and `30` for a package. The *object_type* is **smallInt**.  
   
- [ @ object _name = ] *object _name*  
+ [ \@ object _name = ] *object _name*  
  The name of the package. The *object _name* is **nvarchar(260)**.  
   
- [ @parameter_ name = ] *parameter_name*  
+ [ \@parameter_ name = ] *parameter_name*  
  The name of the parameter. The *parameter_ name* is **nvarchar(128)**.  
   
 ## Return Code Value  

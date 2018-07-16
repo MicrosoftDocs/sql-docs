@@ -26,7 +26,7 @@ manager: craigg
  The following section provides information about passing values into parameters and about how each of the parameter attributes is used during a procedure call.  
   
 ## Passing Values into Parameters  
- The parameter values supplied with a procedure call must be constants or a variable; a function name cannot be used as a parameter value. Variables can be user-defined or system variables such as @@spid.  
+ The parameter values supplied with a procedure call must be constants or a variable; a function name cannot be used as a parameter value. Variables can be user-defined or system variables such as \@\@spid.  
   
  The following examples demonstrate passing parameter values to the procedure `uspGetWhereUsedProductID`. They illustrate how to pass parameters as constants and variables and also how to use a variable to pass the value of a function.  
   
@@ -54,15 +54,15 @@ GO
 ```  
   
 ## Specifying Parameter Names  
- When creating a procedure and declaring a parameter name, the parameter name must begin with a single @ character and must be unique in the scope of the procedure.  
+ When creating a procedure and declaring a parameter name, the parameter name must begin with a single \@ character and must be unique in the scope of the procedure.  
   
- Explicitly naming the parameters and assigning the appropriate values to each parameter in a procedure call allows the parameters to be supplied in any order. For example, if the procedure **my_proc** expects three parameters named **@first**, **@second**, and **@third**, the values passed to the procedure can be assigned to the parameter names, such as: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ Explicitly naming the parameters and assigning the appropriate values to each parameter in a procedure call allows the parameters to be supplied in any order. For example, if the procedure **my_proc** expects three parameters named **\@first**, **\@second**, and **\@third**, the values passed to the procedure can be assigned to the parameter names, such as: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  If one parameter value is supplied in the form **@parameter =***value*, all subsequent parameters must be supplied in this manner. If the parameter values are not passed in the form **@parameter =***value*, the values must be supplied in the identical order (left to right) as the parameters are listed in the CREATE PROCEDURE statement.  
+>  If one parameter value is supplied in the form **/@parameter =***value*, all subsequent parameters must be supplied in this manner. If the parameter values are not passed in the form **\@parameter =***value*, the values must be supplied in the identical order (left to right) as the parameters are listed in the CREATE PROCEDURE statement.  
   
 > [!WARNING]  
->  Any parameter passed in the form **@parameter =***value* with the parameter misspelled, will cause [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an error and prevent procedure execution.  
+>  Any parameter passed in the form **\@parameter =***value* with the parameter misspelled, will cause [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an error and prevent procedure execution.  
   
 ## Specifying Parameter Data Types  
  Parameters must be defined with a data type when they are declared in a CREATE PROCEDURE statement. The data type of a parameter determines the type and range of values that are accepted for the parameter when the procedure is called. For example, if you define a parameter with a `tinyint` data type, only numeric values ranging from 0 to 255 are accepted when passed into that parameter. An error is returned if a procedure is executed with a value incompatible with the data type.  
@@ -122,7 +122,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Although parameters for which defaults have been supplied can be omitted, the list of parameters can only be truncated. For example, if a procedure has five parameters, both the fourth and the fifth parameters can be omitted. However the fourth parameter cannot be skipped as long as the fifth parameter is included, unless the parameters are supplied in the form **@parameter =***value*.  
+ Although parameters for which defaults have been supplied can be omitted, the list of parameters can only be truncated. For example, if a procedure has five parameters, both the fourth and the fifth parameters can be omitted. However the fourth parameter cannot be skipped as long as the fifth parameter is included, unless the parameters are supplied in the form **\@parameter =***value*.  
   
 ## Specifying Parameter Direction  
  The direction of a parameter is either input, a value is passed into the body of the procedure, or output, the procedure returns a value to the calling program. The default is an input parameter.  
@@ -160,10 +160,10 @@ GO
   
 ```  
   
- Execute `usp_GetList` to return a list of [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] products (Bikes) that cost less than $700. The OUTPUT parameters **@cost** and **@compareprices** are used with control-of-flow language to return a message in the **Messages** window.  
+ Execute `usp_GetList` to return a list of [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] products (Bikes) that cost less than $700. The OUTPUT parameters **\@cost** and **\@compareprices** are used with control-of-flow language to return a message in the **Messages** window.  
   
 > [!NOTE]  
->  The OUTPUT variable must be defined during the procedure creation and also during the use of the variable. The parameter name and variable name do not have to match. However, the data type and parameter positioning must match (unless **@listprice=** *variable* is used).  
+>  The OUTPUT variable must be defined during the procedure creation and also during the use of the variable. The parameter name and variable name do not have to match. However, the data type and parameter positioning must match (unless **\@listprice=** *variable* is used).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

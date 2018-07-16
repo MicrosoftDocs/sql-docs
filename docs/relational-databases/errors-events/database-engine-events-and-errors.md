@@ -44,7 +44,7 @@ The table contains error message numbers and the description, which is the text 
 |	115	|	15	|	No	|	The FOR UPDATE clause is invalid for statements containing set operators.	|
 |	116	|	15	|	No	|	Only one expression can be specified in the select list when the subquery is not introduced with EXISTS.	|
 |	117	|	15	|	No	|	The %S_MSG name '%.*ls' contains more than the maximum number of prefixes. The maximum is %d.	|
-|	119	|	15	|	No	|	Must pass parameter number %d and subsequent parameters as '@name = value'. After the form '@name = value' has been used, all subsequent parameters must be passed in the form '@name = value'.	|
+|	119	|	15	|	No	|	Must pass parameter number %d and subsequent parameters as '\@name = value'. After the form '\@name = value' has been used, all subsequent parameters must be passed in the form '\@name = value'.	|
 |	120	|	15	|	No	|	The select list for the INSERT statement contains fewer items than the insert list. The number of SELECT values must match the number of INSERT columns.	|
 |	121	|	15	|	No	|	The select list for the INSERT statement contains more items than the insert list. The number of SELECT values must match the number of INSERT columns.	|
 |	122	|	15	|	No	|	The %ls option is allowed only with %ls syntax.	|
@@ -1048,10 +1048,10 @@ The table contains error message numbers and the description, which is the text 
 |	2215	|	16	|	No	|	%sThe value of attribute '%ls' exceeds 4000 characters, the maximum permitted in XML schema documents	|
 |	2216	|	16	|	No	|	%sInvalid XPath value in "%ls".	|
 |	2217	|	16	|	No	|	%s'%ls' or '%ls' expected	|
-|	2218	|	16	|	No	|	%sThere is no attribute named '@%ls'	|
-|	2219	|	16	|	No	|	%sThere is no attribute named '@%ls' in the type '%ls'.	|
-|	2220	|	16	|	No	|	%sThere is no attribute named '@%ls:%ls'	|
-|	2221	|	16	|	No	|	%sThere is no attribute named '@%ls:%ls' in the type '%ls'.	|
+|	2218	|	16	|	No	|	%sThere is no attribute named '\@%ls'	|
+|	2219	|	16	|	No	|	%sThere is no attribute named '\@%ls' in the type '%ls'.	|
+|	2220	|	16	|	No	|	%sThere is no attribute named '\@%ls:%ls'	|
+|	2221	|	16	|	No	|	%sThere is no attribute named '\@%ls:%ls' in the type '%ls'.	|
 |	2222	|	16	|	No	|	%sInvalid source character 0x%02x found in an identifier near '%ls'.	|
 |	2223	|	16	|	No	|	%sSyntax error near '%ls', expected an identifier.	|
 |	2225	|	16	|	No	|	%sA string literal was expected	|
@@ -1172,7 +1172,7 @@ The table contains error message numbers and the description, which is the text 
 |	2369	|	16	|	No	|	%sCannot have more than one group/sequence/choice/all within a restriction or extension. Location: '%ls'.	|
 |	2370	|	16	|	No	|	%sNo more tokens expected at the end of the XQuery expression. Found '%ls'.	|
 |	2371	|	16	|	No	|	%s'%ls' can only be used within a predicate or XPath selector	|
-|	2372	|	16	|	No	|	%sMetadata attribute '@%ls:%ls' may not be used with '%ls'	|
+|	2372	|	16	|	No	|	%sMetadata attribute '\@%ls:%ls' may not be used with '%ls'	|
 |	2373	|	16	|	No	|	%s%ls is not supported with constructed XML	|
 |	2374	|	16	|	No	|	%sA node or set of nodes is required for %ls	|
 |	2375	|	16	|	No	|	%sAggregate function '%ls' expects a sequence argument	|
@@ -2809,7 +2809,7 @@ The table contains error message numbers and the description, which is the text 
 |	6334	|	16	|	No	|	Could not create the XML or spatial index on object '%.*ls' because that object is not a table. Create the index on the base table column.	|
 |	6335	|	16	|	No	|	XML datatype instance has too many levels of nested nodes. Maximum allowed depth is %d levels.	|
 |	6336	|	16	|	No	|	Maximum size of primary index of table '%.*ls' is %d bytes. CREATE XML INDEX requires that such size should be limited to %d bytes	|
-|	6337	|	16	|	No	|	'%.*ls' is not a valid XML Index name because it starts with '%c' character. XML Index name should not start with '#' or '@'	|
+|	6337	|	16	|	No	|	'%.*ls' is not a valid XML Index name because it starts with '%c' character. XML Index name should not start with '#' or '\@'	|
 |	6338	|	10	|	No	|	XML DTD has been stripped from one or more XML fragments. External subsets, if any, have been ignored.	|
 |	6339	|	16	|	No	|	Specified collection '%.*ls' cannot be modified because it is SQL Server built-in XML Schema Collection.	|
 |	6340	|	16	|	No	|	Xml schema collection '%.*ls' referenced by table variable '%.*ls' has been dropped or altered during the execution of the batch. Please re-run the batch.	|
@@ -2998,8 +2998,8 @@ The table contains error message numbers and the description, which is the text 
 |	6826	|	16	|	No	|	Every IDREFS or NMTOKENS column in a FOR XML EXPLICIT query must appear in a separate SELECT clause, and the instances must be ordered directly after the element to which they belong.	|
 |	6827	|	16	|	No	|	FOR XML EXPLICIT queries allow only one XMLTEXT column per tag. Column '%.*ls' declares another XMLTEXT column that is not permitted.	|
 |	6828	|	16	|	No	|	XMLTEXT column '%.*ls' must be of a string data type or of type XML.	|
-|	6829	|	16	|	No	|	FOR XML EXPLICIT and RAW modes currently do not support addressing binary data as URLs in column '%.*ls'. Remove the column, or use the BINARY BASE64 mode, or create the URL directly using the 'dbobject/TABLE[@PK1="V1"]/@COLUMN' syntax.	|
-|	6830	|	16	|	No	|	FOR XML AUTO could not find the table owning the following column '%.*ls' to create a URL address for it. Remove the column, or use the BINARY BASE64 mode, or create the URL directly using the 'dbobject/TABLE[@PK1="V1"]/@COLUMN' syntax.	|
+|	6829	|	16	|	No	|	FOR XML EXPLICIT and RAW modes currently do not support addressing binary data as URLs in column '%.*ls'. Remove the column, or use the BINARY BASE64 mode, or create the URL directly using the 'dbobject/TABLE[\@PK1="V1"]/\@COLUMN' syntax.	|
+|	6830	|	16	|	No	|	FOR XML AUTO could not find the table owning the following column '%.*ls' to create a URL address for it. Remove the column, or use the BINARY BASE64 mode, or create the URL directly using the 'dbobject/TABLE[\@PK1="V1"]/\@COLUMN' syntax.	|
 |	6831	|	16	|	No	|	FOR XML AUTO requires primary keys to create references for '%.*ls'. Select primary keys, or use BINARY BASE64 to obtain binary data in encoded form if no primary keys exist.	|
 |	6832	|	16	|	No	|	FOR XML AUTO cannot generate a URL address for binary data if a primary key is also binary.	|
 |	6833	|	16	|	No	|	Parent tag ID %d is not among the open tags. FOR XML EXPLICIT requires parent tags to be opened first. Check the ordering of the result set.	|
@@ -3766,7 +3766,7 @@ The table contains error message numbers and the description, which is the text 
 |	8317	|	16	|	No	|	Cannot query value '%ls' associated with registry key 'HKLM\%ls'. SQL Server performance counters are disabled.	|
 |	8318	|	16	|	No	|	There was a virtual memory allocation failure during performance counters initialization. SQL Server performance counters are disabled.	|
 |	8319	|	16	|	No	|	Windows kernel object '%ls' already exists. It's not owned by the SQL Server service account. SQL Server performance counters are disabled.	|
-|	8320	|	10	|	No	|	@@REMSERVER will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use the feature. Use linked servers and linked server stored procedures instead.	|
+|	8320	|	10	|	No	|	\@\@REMSERVER will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use the feature. Use linked servers and linked server stored procedures instead.	|
 |	8350	|	10	|	No	|	Use of NOLOCK or READUNCOMMITTED hints in the FROM clause of an UPDATE or DELETE statement on the target table of the statement ('%.*ls') is deprecated. These hints have no effect in this location. Microsoft recommends that you remove these hints from this statement. Support for these hints in this location will be removed in a future version of SQL Server.	|
 |	8351	|	16	|	Yes	|	A trace control request could not be processed because invalid parameters were specified when events were registered. Confirm that the parameters are within valid ranges.	|
 |	8352	|	16	|	Yes	|	Cannot find the requested trace template: id = %ls.	|
@@ -4288,7 +4288,7 @@ The table contains error message numbers and the description, which is the text 
 |	9516	|	16	|	No	|	XQuery: The name or one of the parts of a multi-part name supplied to %S_MSG('%.*ls') is empty. Empty names cannot be used to identify objects, columns or variables in SQL.	|
 |	9517	|	16	|	No	|	XQuery: The name or one of the parts of a multi-part name that starts with '%.*ls' supplied to %S_MSG() is not a valid SQL identifier - it is too long. Maximum length is %d, actual length is %d.	|
 |	9518	|	16	|	No	|	XQuery: The name or one of the parts of a multi-part name that starts with '%.*ls' supplied to %S_MSG() is not a valid SQL identifier - it contains invalid characters.	|
-|	9519	|	16	|	No	|	XQuery: The name supplied to sql:variable('%.*ls') is not a valid SQL variable name. Variable names must start with the '@' symbol followed by at least one character.	|
+|	9519	|	16	|	No	|	XQuery: The name supplied to sql:variable('%.*ls') is not a valid SQL variable name. Variable names must start with the '\@' symbol followed by at least one character.	|
 |	9520	|	16	|	No	|	XQuery: '%.*ls' referenced by sql:variable() is not a valid system function name.	|
 |	9521	|	16	|	No	|	Error processing XML data type. The XML data type instance contains a negative xs:date or xs:dateTime value.	|
 |	9522	|	16	|	No	|	The XQuery modify method is not allowed on sparse column sets.	|
@@ -4553,7 +4553,7 @@ The table contains error message numbers and the description, which is the text 
 |	9948	|	10	|	No	|	Warning: Full-text catalog path '%ls' is invalid. It exceeds the length limit, or it is a relative path, or it is a hidden directory. The full-text catalog cannot be attached.	|
 |	9949	|	10	|	No	|	Warning: All Full-text populations in progress for full-text catalog '%ls' ('%d') in database '%ls' ('%d') are paused. Reason code: %d. Error: %ls. If this message occurs frequently, consult Books Online for indexing performance tuning assistance.	|
 |	9950	|	10	|	No	|	Informational: Full-text catalog health monitor reported a failure for catalog '%ls' ('%d') in database '%ls' ('%d'). Reason code: %d. Error: %ls. The catalog is corrupted and all in-progress populations will be stopped. Use rebuild catalog to recover the failure and start population from scratch.	|
-|	9951	|	10	|	No	|	Warning: Database %.*ls cannot be modified during detach because database is in read-only, standby, or shutdown state. Full-text catalog is not dropped, and '@keepfulltextindexfile = false' is ignored.	|
+|	9951	|	10	|	No	|	Warning: Database %.*ls cannot be modified during detach because database is in read-only, standby, or shutdown state. Full-text catalog is not dropped, and '\@keepfulltextindexfile = false' is ignored.	|
 |	9952	|	10	|	No	|	Informational: Full-text auto change tracking is turned off for table or indexed view '%ls' (table or indexed view ID '%d', database ID '%d') due to fatal crawl error.	|
 |	9953	|	16	|	No	|	The path '%.*ls' has invalid attributes. It needs to be a directory. It must not be hidden, read-only, or on a removable drive.	|
 |	9954	|	16	|	No	|	SQL Server failed to communicate with filter daemon launch service (Windows error: %ls). Full-Text filter daemon process failed to start. Full-text search functionality will not be available.	|
@@ -4717,39 +4717,39 @@ The table contains error message numbers and the description, which is the text 
 |	10331	|	16	|	No	|	ALTER ASSEMBLY failed because serialization layout of type '%s' would change as a result of a change in type '%s' in the updated assembly. Persisted types are not allowed to change serialization layout.	|
 |	10501	|	16	|	No	|	Type '%ls' in assembly '%.*ls' derives from a generic type which is not supported for a CLR Type.	|
 |	[10502](mssqlserver-10502-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because type '%.*ls' provided is not allowed.	|
-|	10503	|	16	|	No	|	Cannot create plan guide '%.*ls' because the statement specified by @stmt and @module_or_batch, or by @plan_handle and @statement_start_offset, matches the existing plan guide '%.*ls' in the database. Drop the existing plan guide before creating the new plan guide.	|
+|	10503	|	16	|	No	|	Cannot create plan guide '%.*ls' because the statement specified by \@stmt and \@module_or_batch, or by \@plan_handle and \@statement_start_offset, matches the existing plan guide '%.*ls' in the database. Drop the existing plan guide before creating the new plan guide.	|
 |	10504	|	16	|	No	|	Operation '%.*ls' is not allowed.	|
-|	10505	|	16	|	No	|	Cannot create plan guide '%.*ls' because parameter @hints is incorrect. Use N'OPTION ( <query_hint> [ ,...n ] )'.	|
-|	10506	|	16	|	No	|	Cannot create plan guide '%.*ls' because value '%.*ls' provided for @module_or_batch is not legal two-part name. Use 'schema_name.object_name'.	|
-|	[10507](mssqlserver-10507-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because parameter @stmt has more than one statement.	|
-|	10508	|	16	|	No	|	Cannot create plan guide '%.*ls' because the statement specified by @stmt and @module_or_batch, or by @plan_handle and @statement_start_offset, does not match any statement in the specified module or batch. Modify the values to match a statement in the module or batch.	|
+|	10505	|	16	|	No	|	Cannot create plan guide '%.*ls' because parameter \@hints is incorrect. Use N'OPTION ( <query_hint> [ ,...n ] )'.	|
+|	10506	|	16	|	No	|	Cannot create plan guide '%.*ls' because value '%.*ls' provided for \@module_or_batch is not legal two-part name. Use 'schema_name.object_name'.	|
+|	[10507](mssqlserver-10507-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because parameter \@stmt has more than one statement.	|
+|	10508	|	16	|	No	|	Cannot create plan guide '%.*ls' because the statement specified by \@stmt and \@module_or_batch, or by \@plan_handle and \@statement_start_offset, does not match any statement in the specified module or batch. Modify the values to match a statement in the module or batch.	|
 |	[10509](mssqlserver-10509-database-engine-error.md)	|	16	|	No	|	Cannot '%ls' plan guide '%.*ls' because it does not exist or you do not have permission. Verify plan guide name and database of current session, and that you have needed permission.	|
-|	10510	|	16	|	No	|	Cannot create plan guide '%.*ls' because the statement specified by @stmt or @statement_start_offset either contains a syntax error or is ineligible for use in a plan guide. Provide a single valid Transact-SQL statement or a valid starting position of the statement within the batch. To obtain a valid starting position, query the 'statement_start_offset' column in the sys.dm_exec_query_stats dynamic management function.	|
+|	10510	|	16	|	No	|	Cannot create plan guide '%.*ls' because the statement specified by \@stmt or \@statement_start_offset either contains a syntax error or is ineligible for use in a plan guide. Provide a single valid Transact-SQL statement or a valid starting position of the statement within the batch. To obtain a valid starting position, query the 'statement_start_offset' column in the sys.dm_exec_query_stats dynamic management function.	|
 |	10512	|	16	|	No	|	Cannot create plan guide '%.*ls' because there is already a plan guide with that name in the database. Use a unique name.	|
-|	10513	|	16	|	No	|	Cannot create plan guide '%.*ls' because object '@module_or_batch' is encrypted. Consider tuning query using other techniques such as indexes and statistics.	|
+|	10513	|	16	|	No	|	Cannot create plan guide '%.*ls' because object '\@module_or_batch' is encrypted. Consider tuning query using other techniques such as indexes and statistics.	|
 |	10515	|	16	|	No	|	Cannot %S_MSG %S_MSG '%.*ls' because it is referenced by plan guide '%.*ls'. Use sp_control_plan_guide to drop the plan guide first. Record the plan guide definition for future use if needed.	|
 |	10516	|	16	|	No	|	Cannot create plan guide '%.*ls' because the module '%.*ls' does not exist or you do not have needed permission.	|
-|	10517	|	16	|	No	|	Cannot create plan guide '%.*ls' because @module_or_batch can not be compiled.	|
+|	10517	|	16	|	No	|	Cannot create plan guide '%.*ls' because \@module_or_batch can not be compiled.	|
 |	10518	|	16	|	No	|	Cannot create plan guide '%.*ls' because you do not have needed permission. Alter database permission required.	|
 |	[10519](mssqlserver-10519-database-engine-error.md)	|	16	|	No	|	Cannot execute sp_control_plan_guide because of insufficient permissions to control plan guide '%.*ls'. Alter permission on object referenced by plan guide, or alter database permission required.	|
-|	[10520](mssqlserver-10520-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the hints specified in @hints cannot be applied to the statement specified by either @stmt or @statement_start_offset. Verify that the hints can be applied to the statement.	|
-|	[10521](mssqlserver-10521-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because @type was specified as '%ls' and a non-NULL value is specified for the parameter '%ls'. This type requires a NULL value for the parameter. Specify NULL for the parameter, or change the type to one that allows a non-NULL value for the parameter.	|
-|	10522	|	16	|	No	|	Cannot create plan guide '%.*ls' because @type was specified as '%ls' and the parameter '%ls' is NULL. This type requires a non-NULL value for the parameter. Specify a non-NULL value for the parameter, or change the type to one that allows a NULL value for the parameter.	|
-|	10523	|	16	|	No	|	Cannot create plan guide '%.*ls' because @hints has illegal value. @hints must be OPTION(PARAMETERIZATION FORCED) or OPTION(PARAMETERIZATION SIMPLE) if @type is 'template'.	|
-|	10524	|	16	|	No	|	Cannot generate query template because @querytext does not contain a valid single query.	|
-|	10525	|	10	|	No	|	Cannot parameterize @querytext.	|
+|	[10520](mssqlserver-10520-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the hints specified in \@hints cannot be applied to the statement specified by either \@stmt or \@statement_start_offset. Verify that the hints can be applied to the statement.	|
+|	[10521](mssqlserver-10521-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because \@type was specified as '%ls' and a non-NULL value is specified for the parameter '%ls'. This type requires a NULL value for the parameter. Specify NULL for the parameter, or change the type to one that allows a non-NULL value for the parameter.	|
+|	10522	|	16	|	No	|	Cannot create plan guide '%.*ls' because \@type was specified as '%ls' and the parameter '%ls' is NULL. This type requires a non-NULL value for the parameter. Specify a non-NULL value for the parameter, or change the type to one that allows a NULL value for the parameter.	|
+|	10523	|	16	|	No	|	Cannot create plan guide '%.*ls' because \@hints has illegal value. \@hints must be OPTION(PARAMETERIZATION FORCED) or OPTION(PARAMETERIZATION SIMPLE) if \@type is 'template'.	|
+|	10524	|	16	|	No	|	Cannot generate query template because \@querytext does not contain a valid single query.	|
+|	10525	|	10	|	No	|	Cannot parameterize \@querytext.	|
 |	10526	|	16	|	No	|	Plan guide '%.*ls' matched statement after it was parameterized automatically by FORCED or SIMPLE parameterization, but the RECOMPILE hint it contains was ignored. RECOMPILE is not supported on automatically parameterized statements. Consider dropping this plan guide or removing RECOMPILE from it.	|
 |	10527	|	16	|	No	|	Cannot drop %S_MSG '%.*ls' because its trigger '%.*ls' is referenced by plan guide '%.*ls'. Use sp_control_plan_guide to drop the plan guide first. Record the plan guide definition for future use if needed.	|
 |	10528	|	16	|	No	|	Cannot create plan guide '%.*ls' because the object '%.*ls' is a temporary object.	|
 |	10529	|	16	|	No	|	Cannot create plan guide '%.*ls' because its name is invalid. Plan guide name cannot begin with a '#' character.	|
-|	10530	|	16	|	No	|	Cannot create plan guide '%.*ls' because there is already a planguide '%.*ls' of @type 'template' on @stmt.	|
-|	[10531](mssqlserver-10531-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the statement specified by @statement_start_offset does not match any statement in specified module or batch. Consider modifying @statement_start_offset to match a statement in module or batch.	|
+|	10530	|	16	|	No	|	Cannot create plan guide '%.*ls' because there is already a planguide '%.*ls' of \@type 'template' on \@stmt.	|
+|	[10531](mssqlserver-10531-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the statement specified by \@statement_start_offset does not match any statement in specified module or batch. Consider modifying \@statement_start_offset to match a statement in module or batch.	|
 |	[10532](mssqlserver-10532-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' from cache because the user does not have adequate permissions. Grant the VIEW SERVER STATE permission to the user creating the plan guide.	|
-|	[10533](mssqlserver-10533-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the batch or module specified by @plan_handle does not contain a statement that is eligible for a plan guide. Specify a different value for @plan_handle.	|
+|	[10533](mssqlserver-10533-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the batch or module specified by \@plan_handle does not contain a statement that is eligible for a plan guide. Specify a different value for \@plan_handle.	|
 |	[10534](mssqlserver-10534-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the plan guide name exceeds 124, the maximum number of characters allowed. Specify a name that contains fewer than 125 characters.	|
-|	[10535](mssqlserver-10535-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the value specified for @params is invalid. Specify the value in the form <parameter_name> <parameter_type>, or specify NULL.	|
+|	[10535](mssqlserver-10535-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the value specified for \@params is invalid. Specify the value in the form <parameter_name> <parameter_type>, or specify NULL.	|
 |	[10536](mssqlserver-10536-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because a plan was not found in the plan cache that corresponds to the specified plan handle. Specify a cached plan handle. For a list of cached plan handles, query the sys.dm_exec_query_stats dynamic management view.	|
-|	[10537](mssqlserver-10537-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the batch or module corresponding to the specified @plan_handle contains more than 1000 eligible statements. Create a plan guide for each statement in the batch or module by specifying a statement_start_offset value for each statement.	|
+|	[10537](mssqlserver-10537-database-engine-error.md)	|	16	|	No	|	Cannot create plan guide '%.*ls' because the batch or module corresponding to the specified \@plan_handle contains more than 1000 eligible statements. Create a plan guide for each statement in the batch or module by specifying a statement_start_offset value for each statement.	|
 |	[10538](mssqlserver-10538-database-engine-error.md)	|	16	|	No	|	Cannot enable plan guide '%.*ls' because the enabled plan guide '%.*ls' contains the same scope and starting offset value of the statement. Disable the existing plan guide before enabling the specified plan guide.	|
 |	[10539](mssqlserver-10539-database-engine-error.md)	|	16	|	No	|	Cannot find the plan guide either because the specified plan guide ID is NULL or invalid, or you do not have permission on the object referenced by the plan guide. Verify that the plan guide ID is valid, the current session is set to the correct database context, and you have ALTER permission on the object referenced by the plan guide or ALTER DATABASE permission.	|
 |	10601	|	16	|	No	|	Cannot create plan guide '%.*ls' from cache because a query plan is not available for the statement with start offset %d.This problem can occur if the statement depends on database objects that have not yet been created. Make sure that all necessary database objects exist, and execute the statement before creating the plan guide.	|
@@ -4793,7 +4793,7 @@ The table contains error message numbers and the description, which is the text 
 |	10721	|	15	|	No	|	An OUTPUT INTO clause is not allowed in a nested INSERT, UPDATE, DELETE, or MERGE statement.	|
 |	10722	|	15	|	No	|	The WHERE CURRENT OF clause is not allowed in a nested INSERT, UPDATE, DELETE, or MERGE statement.	|
 |	10723	|	15	|	No	|	The DISTINCT keyword is not allowed when the FROM clause contains a nested INSERT, UPDATE, DELETE, or MERGE statement.	|
-|	10724	|	15	|	No	|	In a MERGE statement, a variable cannot be set to a column and expression in the same assignment in the SET clause of an UPDATE action. Assignments of the form 'SET @variable = column = expression' are not valid in the SET clause of an UPDATE action in a MERGE statement. Modify the SET clause to only specify assignments of the form 'SET @variable = column' or 'SET @variable = expression'.	|
+|	10724	|	15	|	No	|	In a MERGE statement, a variable cannot be set to a column and expression in the same assignment in the SET clause of an UPDATE action. Assignments of the form 'SET \@variable = column = expression' are not valid in the SET clause of an UPDATE action in a MERGE statement. Modify the SET clause to only specify assignments of the form 'SET \@variable = column' or 'SET \@variable = expression'.	|
 |	10725	|	15	|	No	|	The FORCESEEK hint is not allowed for target tables of INSERT, UPDATE, or DELETE statements.	|
 |	10726	|	15	|	No	|	Cannot use the VARYING option in a DECLARE, CREATE AGGREGATE or CREATE FUNCTION statement.	|
 |	10727	|	15	|	No	|	User defined aggregates do not support default parameters.	|
@@ -5346,7 +5346,7 @@ The table contains error message numbers and the description, which is the text 
 |	13402	|	10	|	No	|	The ability to INSERT NULL values into TIMESTAMP columns will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use DEFAULT instead.	|
 |	13403	|	10	|	No	|	The ability to use string literals as column aliases will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use AS clause instead.	|
 |	13404	|	10	|	No	|	The ability to use '#' and '##' as the name of temporary tables and stored procedures will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.	|
-|	13405	|	10	|	No	|	The ability to use '@' and names that start with '@@' as Transact-SQL identifiers will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.	|
+|	13405	|	10	|	No	|	The ability to use '\@' and names that start with '\@\@' as Transact-SQL identifiers will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.	|
 |	13406	|	10	|	No	|	The ability to use the DEFAULT keyword as a default value will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.	|
 |	13407	|	10	|	No	|	FASTFIRSTROW hint will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use OPTION (FAST n) instead.	|
 |	13408	|	10	|	No	|	%ls will be removed in the next version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.	|
@@ -5366,17 +5366,17 @@ The table contains error message numbers and the description, which is the text 
 |	14009	|	11	|	No	|	There are no articles for publication '%s'.	|
 |	14010	|	16	|	No	|	The remote server '%s' is not defined as a subscription server. Ensure you specify the server name rather than a network alias.	|
 |	14011	|	16	|	No	|	Unable to mark server '%s' as a non SQL Server subscriber.	|
-|	14012	|	16	|	No	|	The @status parameter value must be either 'active' or 'inactive'.	|
+|	14012	|	16	|	No	|	The \@status parameter value must be either 'active' or 'inactive'.	|
 |	14013	|	16	|	No	|	This database is not enabled for publication.	|
-|	14014	|	16	|	No	|	The synchronization method (@sync_method) must be '[bcp] native', '[bcp] character', 'concurrent', 'concurrent_c', 'database snapshot', or 'database snapshot character'.	|
-|	14015	|	16	|	No	|	The replication frequency (@repl_freq) must be either 'continuous' or 'snapshot'.	|
+|	14014	|	16	|	No	|	The synchronization method (\@sync_method) must be '[bcp] native', '[bcp] character', 'concurrent', 'concurrent_c', 'database snapshot', or 'database snapshot character'.	|
+|	14015	|	16	|	No	|	The replication frequency (\@repl_freq) must be either 'continuous' or 'snapshot'.	|
 |	14016	|	16	|	No	|	The publication '%s' already exists.	|
-|	14017	|	16	|	No	|	Invalid @restricted parameter value. Valid options are 'true' or 'false'.	|
+|	14017	|	16	|	No	|	Invalid \@restricted parameter value. Valid options are 'true' or 'false'.	|
 |	14018	|	16	|	No	|	Could not create the publication.	|
-|	14019	|	16	|	No	|	The @operation parameter value must be either add, drop, or alter.	|
+|	14019	|	16	|	No	|	The \@operation parameter value must be either add, drop, or alter.	|
 |	14020	|	16	|	No	|	Could not obtain the column ID for the specified column. Schema replication failed.	|
 |	14021	|	16	|	No	|	The column was not added correctly to the article.	|
-|	14022	|	16	|	No	|	The @property parameter value must be either 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option', or 'destination_owner'.	|
+|	14022	|	16	|	No	|	The \@property parameter value must be either 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option', or 'destination_owner'.	|
 |	14023	|	16	|	No	|	The type must be '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]', '[serializable ]proc exec', or '(view|indexed view|proc|func|aggregate|synonym) schema only'.	|
 |	14024	|	16	|	No	|	The value of property 'subscriber_provider' cannot be NULL.	|
 |	14025	|	10	|	No	|	Article update successful.	|
@@ -5388,7 +5388,7 @@ The table contains error message numbers and the description, which is the text 
 |	14031	|	16	|	No	|	User tables and views are the only valid synchronization objects.	|
 |	14032	|	16	|	No	|	The value of parameter %s cannot be 'all'. It is reserved by replication stored procedures.	|
 |	14033	|	16	|	No	|	Could not change replication frequency because there are active subscriptions on the publication.	|
-|	14034	|	16	|	No	|	The publication name (@publication) cannot be the keyword 'all'.	|
+|	14034	|	16	|	No	|	The publication name (\@publication) cannot be the keyword 'all'.	|
 |	14035	|	16	|	No	|	The replication option '%s' of database '%s' has already been set to true.	|
 |	14036	|	16	|	No	|	Could not enable database for publishing.	|
 |	14037	|	16	|	No	|	The replication option '%s' of database '%s' has been set to false.	|
@@ -5406,7 +5406,7 @@ The table contains error message numbers and the description, which is the text 
 |	14049	|	16	|	No	|	Stored procedures for replication are the only objects that can be used as a filter.	|
 |	14050	|	11	|	No	|	No subscription is on this publication or article.	|
 |	14051	|	16	|	No	|	The parameter value must be 'sync_type' or 'dest_db'.	|
-|	14052	|	16	|	No	|	The @sync_type parameter value must be "automatic", "none", "replication support only", "initialize with backup", or "initialize from lsn".	|
+|	14052	|	16	|	No	|	The \@sync_type parameter value must be "automatic", "none", "replication support only", "initialize with backup", or "initialize from lsn".	|
 |	14053	|	16	|	No	|	The subscription could not be updated at this time.	|
 |	14054	|	10	|	No	|	The subscription was updated successfully.	|
 |	14055	|	10	|	No	|	The subscription does not exist.	|
@@ -5415,10 +5415,10 @@ The table contains error message numbers and the description, which is the text 
 |	14058	|	16	|	No	|	Cannot create the subscription because the subscription already exists in the subscription database. Only one subscription to the same publication is allowed in each subscription database. Drop the subscription and add it again if necessary. If the problem persists, replication metadata might be incorrect; see Books Online for troubleshooting information.	|
 |	14059	|	16	|	No	|	Materialized view articles cannot be created for publications with the properties allow_sync_tran, allow_queued_tran, or allow_dts.	|
 |	14060	|	16	|	No	|	Subscriber parameters specifying provider properties must be NULL for SQL Server subscribers.	|
-|	14061	|	16	|	No	|	The @pre_creation_cmd parameter value must be 'none', 'drop', 'delete', or 'truncate'.	|
+|	14061	|	16	|	No	|	The \@pre_creation_cmd parameter value must be 'none', 'drop', 'delete', or 'truncate'.	|
 |	14062	|	10	|	No	|	The Subscriber was dropped.	|
 |	14063	|	11	|	No	|	The remote server does not exist or has not been designated as a valid Subscriber.	|
-|	14065	|	16	|	No	|	The @status parameter value must be 'initiated', 'active', 'inactive', or 'subscribed'.	|
+|	14065	|	16	|	No	|	The \@status parameter value must be 'initiated', 'active', 'inactive', or 'subscribed'.	|
 |	14066	|	16	|	No	|	The previous status must be 'active', 'inactive', or 'subscribed'.	|
 |	14067	|	16	|	No	|	The status value is the same as the previous status value.	|
 |	14068	|	16	|	No	|	The subscription status of the object could not be changed.	|
@@ -5435,12 +5435,12 @@ The table contains error message numbers and the description, which is the text 
 |	14088	|	16	|	No	|	The table '%s' must have a primary key to be published using the transaction-based method.	|
 |	14089	|	16	|	No	|	The clustered index on materialized view '%s' may not contain nullable columns if it is to be published using the transaction-based method.	|
 |	14090	|	16	|	No	|	Error evaluating article synchronization object after column drop. The filter clause for article '%s' must not reference the dropped column.	|
-|	14091	|	16	|	No	|	The @type parameter passed to sp_helpreplicationdb must be either 'pub' or 'sub'.	|
+|	14091	|	16	|	No	|	The \@type parameter passed to sp_helpreplicationdb must be either 'pub' or 'sub'.	|
 |	14092	|	16	|	No	|	Could not change article because there is an existing subscription to the article.	|
 |	14093	|	16	|	No	|	Cannot grant or revoke access directly on publication '%s' because it uses the default publication access list.	|
-|	14094	|	16	|	No	|	Could not subscribe to article '%s' because heterogeneous Subscriber '%s' does not support the @pre_creation_cmd parameter value 'truncate'.	|
-|	14095	|	16	|	No	|	The value for the @sync_method parameter is not valid. Could not subscribe to publication '%s' because non-SQL Server Subscriber '%s' only supports values of 'character', 'bcp character', 'concurrent_c', and 'database snapshot character' for the @sync_method parameter.	|
-|	14096	|	16	|	No	|	The path and name of the table creation script must be specified if the @pre_creation_cmd parameter value is 'drop'.	|
+|	14094	|	16	|	No	|	Could not subscribe to article '%s' because heterogeneous Subscriber '%s' does not support the \@pre_creation_cmd parameter value 'truncate'.	|
+|	14095	|	16	|	No	|	The value for the \@sync_method parameter is not valid. Could not subscribe to publication '%s' because non-SQL Server Subscriber '%s' only supports values of 'character', 'bcp character', 'concurrent_c', and 'database snapshot character' for the \@sync_method parameter.	|
+|	14096	|	16	|	No	|	The path and name of the table creation script must be specified if the \@pre_creation_cmd parameter value is 'drop'.	|
 |	14097	|	16	|	No	|	The 'status' value must be 'no column names', 'include column names', 'string literals', 'parameters', 'DTS horizontal partitions' or 'no DTS horizontal partitions'.	|
 |	14098	|	16	|	No	|	Cannot drop Distribution Publisher '%s'. The remote Publisher is using '%s' as Distributor. Disable publishing at the Publisher before attempting to drop this relationship.	|
 |	14099	|	16	|	No	|	The server '%s' is already defined as a Distributor. To reconfigure the server as a Distributor, you must first uninstall the exisiting Distributor. Use the stored procedure sp_dropdistributor, or use the Disable Publishing and Distribution Wizard.	|
@@ -5450,11 +5450,11 @@ The table contains error message numbers and the description, which is the text 
 |	14103	|	16	|	No	|	Invalid "%s" value. Valid values are "publisher", "subscriber", or "both".	|
 |	14105	|	10	|	No	|	You have updated the distribution database property '%s' successfully.	|
 |	14106	|	16	|	No	|	Distribution retention periods must be greater than or equal to 0.	|
-|	14107	|	10	|	No	|	The @max_distretention value must be larger than the @min_distretention value.	|
+|	14107	|	10	|	No	|	The \@max_distretention value must be larger than the \@min_distretention value.	|
 |	14108	|	10	|	No	|	Removed %ld history records from %s.	|
-|	14109	|	10	|	No	|	The @security_mode parameter value must be 0 (SQL Server Authentication) or 1 (Windows Authentication).	|
-|	14110	|	16	|	No	|	For stored procedure articles, the @property parameter value must be 'description', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'schema_option', or 'destination_owner'.	|
-|	14111	|	16	|	No	|	The @pre_creation_cmd parameter value must be 'none' or 'drop'.	|
+|	14109	|	10	|	No	|	The \@security_mode parameter value must be 0 (SQL Server Authentication) or 1 (Windows Authentication).	|
+|	14110	|	16	|	No	|	For stored procedure articles, the \@property parameter value must be 'description', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'schema_option', or 'destination_owner'.	|
+|	14111	|	16	|	No	|	The \@pre_creation_cmd parameter value must be 'none' or 'drop'.	|
 |	14112	|	16	|	No	|	This procedure can be executed only against table-based articles.	|
 |	14113	|	16	|	No	|	Could not execute '%s'. Check '%s' in the install directory.	|
 |	14114	|	16	|	No	|	The server '%s' is not configured as a Distributor.	|
@@ -5464,20 +5464,20 @@ The table contains error message numbers and the description, which is the text 
 |	14119	|	16	|	No	|	Could not add the distribution database '%s'. This distribution database already exists.	|
 |	14120	|	16	|	No	|	Could not drop the distribution database '%s'. This distributor database is associated with a Publisher.	|
 |	14121	|	16	|	No	|	Could not drop the Distributor '%s'. This Distributor has associated distribution databases.	|
-|	14122	|	16	|	No	|	The @article parameter value must be 'all' for immediate_sync publications.	|
-|	14123	|	16	|	No	|	The subscription @sync_type parameter value 'manual' is no longer supported.	|
+|	14122	|	16	|	No	|	The \@article parameter value must be 'all' for immediate_sync publications.	|
+|	14123	|	16	|	No	|	The subscription \@sync_type parameter value 'manual' is no longer supported.	|
 |	14124	|	16	|	No	|	A publication must have at least one article before a subscription to it can be created.	|
 |	14126	|	16	|	No	|	You do not have the required permissions to complete the operation.	|
-|	14128	|	16	|	No	|	Invalid @subscription_type parameter value. Valid options are 'push' or 'pull'.	|
-|	14129	|	16	|	No	|	The @status parameter value must be NULL for 'automatic' sync_type when you add subscriptions to an immediate_sync publication.	|
+|	14128	|	16	|	No	|	Invalid \@subscription_type parameter value. Valid options are 'push' or 'pull'.	|
+|	14129	|	16	|	No	|	The \@status parameter value must be NULL for 'automatic' sync_type when you add subscriptions to an immediate_sync publication.	|
 |	14135	|	16	|	No	|	There is no subscription on Publisher '%s', publisher database '%s', publication '%s'.	|
 |	14136	|	16	|	No	|	The keyword 'all' is reserved by replication stored procedures.	|
-|	14137	|	16	|	No	|	The @value parameter value must be either 'true' or 'false'.	|
+|	14137	|	16	|	No	|	The \@value parameter value must be either 'true' or 'false'.	|
 |	14138	|	16	|	No	|	Invalid option name '%s'.	|
 |	14139	|	16	|	No	|	The replication system table '%s' already exists.	|
 |	14143	|	16	|	No	|	Cannot drop Distributor Publisher '%s'. There are Subscribers associated with it in the distribution database '%s'.	|
 |	14144	|	16	|	No	|	Cannot drop Subscriber '%s'. There are subscriptions for it in the publication database '%s'.	|
-|	14146	|	16	|	No	|	The article parameter '@schema_option' cannot be NULL.	|
+|	14146	|	16	|	No	|	The article parameter '\@schema_option' cannot be NULL.	|
 |	14147	|	16	|	No	|	Restricted publications are no longer supported.	|
 |	14148	|	16	|	No	|	Invalid '%s' value. Valid values are 'true' or 'false'.	|
 |	14149	|	10	|	No	|	Removed %ld replication history records in %s seconds (%ld row/secs).	|
@@ -5485,7 +5485,7 @@ The table contains error message numbers and the description, which is the text 
 |	14151	|	18	|	Yes	|	Replication-%s: agent %s failed. %s	|
 |	14152	|	10	|	Yes	|	Replication-%s: agent %s scheduled for retry. %s	|
 |	14153	|	10	|	No	|	Replication-%s: agent %s warning. %s	|
-|	14154	|	16	|	No	|	The Distributor parameter must be '@heartbeat_interval'.	|
+|	14154	|	16	|	No	|	The Distributor parameter must be '\@heartbeat_interval'.	|
 |	14155	|	16	|	No	|	Invalid article ID specified for procedure script generation.	|
 |	14156	|	16	|	No	|	The custom stored procedure calling the format for the %s command specified in the article definition does not match the %s format.	|
 |	14157	|	10	|	Yes	|	The subscription created by Subscriber '%s' to publication '%s' has expired and has been dropped.	|
@@ -5511,7 +5511,7 @@ The table contains error message numbers and the description, which is the text 
 |	14199	|	10	|	No	|	The specified job '%s' is not created for maintenance plans. Verify that the job has at least one step calling xp_sqlmaint.	|
 |	14200	|	16	|	No	|	The specified '%s' is invalid.	|
 |	14201	|	10	|	No	|	0 (all steps) ..	|
-|	14202	|	10	|	No	|	before or after @active_start_time	|
+|	14202	|	10	|	No	|	before or after \@active_start_time	|
 |	14203	|	10	|	No	|	sp_helplogins [excluding Windows NT groups]	|
 |	14204	|	10	|	No	|	0 (non-idle), 1 (executing), 2 (waiting for thread), 3 (between retries), 4 (idle), 5 (suspended), 7 (performing completion actions|
 |	14205	|	10	|	No	|	(unknown)	|
@@ -5553,7 +5553,7 @@ The table contains error message numbers and the description, which is the text 
 |	14241	|	10	|	No	|	Job removed from %ld servers.	|
 |	14242	|	16	|	No	|	Only a system administrator can reassign ownership of a job.	|
 |	14243	|	10	|	No	|	Job '%s' started successfully.	|
-|	14245	|	16	|	No	|	Specify either the @name, @id, or @loginname of the task(s) to be deleted.	|
+|	14245	|	16	|	No	|	Specify either the \@name, \@id, or \@loginname of the task(s) to be deleted.	|
 |	14250	|	16	|	No	|	The specified %s is too long. It must contain no more than %ld characters.	|
 |	14251	|	16	|	No	|	Cannot specify '%s' as the operator to be notified.	|
 |	14252	|	16	|	No	|	Cannot perform this action on a job you do not own.	|
@@ -5576,17 +5576,17 @@ The table contains error message numbers and the description, which is the text 
 |	14270	|	16	|	No	|	Job '%s' is not currently targeted at server '%s'.	|
 |	14271	|	16	|	No	|	A target server cannot be named '%s'.	|
 |	14272	|	16	|	No	|	Object-type and object-name must be supplied as a pair.	|
-|	14273	|	16	|	No	|	You must provide either @job_id or @job_name (and, optionally, @schedule_name), or @schedule_id.	|
+|	14273	|	16	|	No	|	You must provide either \@job_id or \@job_name (and, optionally, \@schedule_name), or \@schedule_id.	|
 |	14274	|	16	|	No	|	Cannot add, update, or delete a job (or its steps or schedules) that originated from an MSX server.	|
 |	14275	|	16	|	No	|	The originating server must be either local server or MSX server.	|
 |	14276	|	16	|	No	|	'%s' is a permanent %s category and cannot be deleted.	|
 |	14277	|	16	|	No	|	The command script does not destroy all the objects that it creates. Revise the command script.	|
 |	14278	|	16	|	No	|	The schedule for this job is invalid (reason: %s).	|
-|	14279	|	16	|	No	|	Supply either @job_name, @job_id or @originating_server.	|
+|	14279	|	16	|	No	|	Supply either \@job_name, \@job_id or \@originating_server.	|
 |	14280	|	16	|	No	|	Supply either a job name (and job aspect), or one or more job filter parameters.	|
-|	14281	|	10	|	No	|	Warning: The @new_owner_login_name parameter is not necessary when specifying a 'DELETE' action.	|
+|	14281	|	10	|	No	|	Warning: The \@new_owner_login_name parameter is not necessary when specifying a 'DELETE' action.	|
 |	14282	|	16	|	No	|	Supply either a date (created or last modified) and a data comparator, or no date parameters at all.	|
-|	14283	|	16	|	No	|	Supply @target_server_groups or @target_servers, or both.	|
+|	14283	|	16	|	No	|	Supply \@target_server_groups or \@target_servers, or both.	|
 |	14284	|	16	|	No	|	Cannot specify a job ID for a new job. An ID will be assigned by the procedure.	|
 |	14285	|	16	|	No	|	Cannot add a local job to a multiserver job category.	|
 |	14286	|	16	|	No	|	Cannot add a multiserver job to a local job category.	|
@@ -5627,7 +5627,7 @@ The table contains error message numbers and the description, which is the text 
 |	14367	|	16	|	No	|	One or more schedules were not deleted because they are being used by at least one other job. Use "sp_detach_schedule" to remove schedules from a job.	|
 |	14368	|	16	|	No	|	Schedule "%s" was not deleted because it is being used by at least one other job. Use "sp_detach_schedule" to remove schedules from a job.	|
 |	14369	|	16	|	No	|	The schedule ID "%s" is used by more than one job. Specify the job_id.	|
-|	14370	|	16	|	No	|	The @originating_server must be either the local server name or the master server (MSX) name for MSX jobs on a target server (TSX).	|
+|	14370	|	16	|	No	|	The \@originating_server must be either the local server name or the master server (MSX) name for MSX jobs on a target server (TSX).	|
 |	14371	|	16	|	No	|	There are two or more schedules named "%s". Specify %s instead of %s to uniquely identify the schedule.	|
 |	14372	|	16	|	No	|	The schedule was not deleted because it is being used by one or more jobs.	|
 |	14373	|	16	|	No	|	Supply either %s or %s to identify the schedule.	|
@@ -5635,7 +5635,7 @@ The table contains error message numbers and the description, which is the text 
 |	14375	|	16	|	No	|	More than one schedule named "%s" is attached to job "%s". Use "sp_update_schedule" to update schedules.	|
 |	14376	|	16	|	No	|	More than one schedule named "%s" is attached to job "%s". Use "sp_detach_schedule" to remove schedules from a job.	|
 |	14377	|	16	|	No	|	The schedule was not attached to the specified job. The schedule owner and the job owner must be the same or the operation must be performed by a sysadmin.	|
-|	14378	|	16	|	No	|	@sysadmin_only flag is no longer supported by SQLAgent and kept here only for backwards compatibility	|
+|	14378	|	16	|	No	|	\@sysadmin_only flag is no longer supported by SQLAgent and kept here only for backwards compatibility	|
 |	14379	|	16	|	No	|	Table '%s' foreign key 'originating_server_id' does not have a matching value in the referenced view 'dbo.sysoriginatingservers_view'.	|
 |	14380	|	16	|	No	|	Field 'originating_server_id' in table sysoriginatingservers is being referenced by either sysjobs or sysschedules.	|
 |	14390	|	16	|	No	|	Only members of role sysadmin can specify the %s parameter.	|
@@ -5655,15 +5655,15 @@ The table contains error message numbers and the description, which is the text 
 |	14415	|	16	|	No	|	The user name cannot be null when using SQL Server authentication.	|
 |	14416	|	16	|	No	|	This stored procedure must be run in msdb.	|
 |	14417	|	16	|	No	|	Cannot delete the monitor server while databases are participating in log shipping.	|
-|	14418	|	16	|	No	|	The specified @backup_file_name was not created from database '%s'.	|
-|	14419	|	16	|	No	|	The specified @backup_file_name is not a database backup.	|
+|	14418	|	16	|	No	|	The specified \@backup_file_name was not created from database '%s'.	|
+|	14419	|	16	|	No	|	The specified \@backup_file_name is not a database backup.	|
 |	[14420](mssqlserver-14420-database-engine-error.md)	|	16	|	Yes	|	The log shipping primary database %s.%s has backup threshold of %d minutes and has not performed a backup log operation for %d minutes. Check agent log and logshipping monitor information.	|
 |	[14421](mssqlserver-14421-database-engine-error.md)	|	16	|	Yes	|	The log shipping secondary database %s.%s has restore threshold of %d minutes and is out of sync. No restore was performed for %d minutes. Restored latency is %d minutes. Check agent log and logshipping monitor information.	|
-|	14422	|	16	|	No	|	Supply either @plan_id or @plan_name.	|
+|	14422	|	16	|	No	|	Supply either \@plan_id or \@plan_name.	|
 |	14423	|	16	|	No	|	Other databases are enlisted on this plan and must be removed before the plan can be deleted.	|
 |	14424	|	16	|	No	|	The database '%s' is already involved in log shipping.	|
 |	14425	|	16	|	No	|	The database '%s' does not seem to be involved in log shipping.	|
-|	14426	|	16	|	No	|	A log shipping monitor is already defined. Call sp_define_log_shipping_monitor with @delete_existing = 1.	|
+|	14426	|	16	|	No	|	A log shipping monitor is already defined. Call sp_define_log_shipping_monitor with \@delete_existing = 1.	|
 |	14427	|	16	|	No	|	A user name is necessary for SQL Server security.	|
 |	14428	|	16	|	No	|	Could not remove the monitor as there are still databases involved in log shipping.	|
 |	14429	|	16	|	No	|	There are still secondary servers attached to this primary.	|
@@ -5671,28 +5671,28 @@ The table contains error message numbers and the description, which is the text 
 |	14440	|	16	|	No	|	Could not set single user mode.	|
 |	14441	|	16	|	No	|	Role change succeeded.	|
 |	14442	|	16	|	No	|	Role change failed.	|
-|	14450	|	16	|	No	|	The specified @backup_file_name was not taken from database '%s'.	|
-|	14451	|	16	|	No	|	The specified @backup_file_name is not a database backup.	|
+|	14450	|	16	|	No	|	The specified \@backup_file_name was not taken from database '%s'.	|
+|	14451	|	16	|	No	|	The specified \@backup_file_name is not a database backup.	|
 |	14500	|	16	|	No	|	Supply either a non-zero message ID, non-zero severity, non-null performance condition, or non-null WMI namespace and query.	|
 |	14501	|	16	|	No	|	An alert ('%s') has already been defined on this condition.	|
-|	14502	|	16	|	No	|	The @target_name parameter must be supplied when specifying an @enum_type of 'TARGET'.	|
-|	14503	|	16	|	No	|	The @target_name parameter should not be supplied when specifying an @enum_type of 'ALL' or 'ACTUAL'.	|
+|	14502	|	16	|	No	|	The \@target_name parameter must be supplied when specifying an \@enum_type of 'TARGET'.	|
+|	14503	|	16	|	No	|	The \@target_name parameter should not be supplied when specifying an \@enum_type of 'ALL' or 'ACTUAL'.	|
 |	14504	|	16	|	No	|	'%s' is the fail-safe operator. You must make another operator the fail-safe operator before '%s' can be dropped.	|
 |	14505	|	16	|	No	|	Specify a null %s when supplying a performance condition.	|
 |	14506	|	16	|	No	|	Cannot set alerts on message ID %ld.	|
 |	14507	|	16	|	No	|	A performance condition must be formatted as: 'object_name|counter_name|instance_name|comparator(> or < or =)|numeric value'.	|
-|	14508	|	16	|	No	|	Specify both @wmi_namespace and @wmi_query.	|
-|	14509	|	16	|	No	|	Specify a valid %s when supplying a @wmi_namespace.	|
-|	14510	|	16	|	No	|	Specify a null %s when supplying a @wmi_namespace.	|
-|	14511	|	16	|	No	|	The @wmi_query could not be executed in the @wmi_namespace provided. Verify that an event class selected in the query exists in the namespace and that the query has the correct syntax.	|
-|	14512	|	16	|	No	|	Specify a valid %s when supplying a @wmi_query.	|
+|	14508	|	16	|	No	|	Specify both \@wmi_namespace and \@wmi_query.	|
+|	14509	|	16	|	No	|	Specify a valid %s when supplying a \@wmi_namespace.	|
+|	14510	|	16	|	No	|	Specify a null %s when supplying a \@wmi_namespace.	|
+|	14511	|	16	|	No	|	The \@wmi_query could not be executed in the \@wmi_namespace provided. Verify that an event class selected in the query exists in the namespace and that the query has the correct syntax.	|
+|	14512	|	16	|	No	|	Specify a valid %s when supplying a \@wmi_query.	|
 |	14513	|	10	|	No	|	Analysis query subsystem	|
 |	14514	|	10	|	No	|	Analysis command subsystem	|
-|	14515	|	16	|	No	|	Only a member of the sysadmin server role can add a job for a different owner with @owner_login_name.	|
+|	14515	|	16	|	No	|	Only a member of the sysadmin server role can add a job for a different owner with \@owner_login_name.	|
 |	14516	|	16	|	No	|	Proxy (%d) is not allowed for subsystem "%s" and user "%s". Grant permission by calling sp_grant_proxy_to_subsystem or sp_grant_login_to_proxy.	|
 |	14517	|	16	|	No	|	A proxy account is not allowed for a Transact-SQL subsystem.	|
 |	14518	|	16	|	No	|	Cannot delete proxy (%d). It is used by at least one jobstep. Change this proxy for all jobsteps first.	|
-|	14519	|	16	|	No	|	Only one of @login_name, @fixed_server_role, or @msdb_role should be specified.	|
+|	14519	|	16	|	No	|	Only one of \@login_name, \@fixed_server_role, or \@msdb_role should be specified.	|
 |	14520	|	16	|	No	|	%s is not a valid SQL Server standard login, Windows NT user, Windows NT group, or msdb database role.	|
 |	14521	|	16	|	No	|	%s is not a valid SQL Server fixed server role, Windows NT user, or Windows NT group.	|
 |	14522	|	16	|	No	|	'"%s" is not a valid role of an msdb database, Windows NT user, or Windows NT group.	|
@@ -5745,18 +5745,18 @@ The table contains error message numbers and the description, which is the text 
 |	14569	|	10	|	No	|	(time critical)	|
 |	14570	|	10	|	No	|	(Job outcome)	|
 |	14571	|	10	|	No	|	No description available.	|
-|	14572	|	10	|	No	|	@freq_interval must be at least 1 for a daily job.	|
-|	14573	|	10	|	No	|	@freq_interval must be a valid day of the week bitmask [Sunday = 1 .. Saturday = 64] for a weekly job.	|
-|	14574	|	10	|	No	|	@freq_interval must be between 1 and 31 for a monthly job.	|
-|	14575	|	10	|	No	|	@freq_relative_interval must be one of 1st (0x1), 2nd (0x2), 3rd [0x4], 4th (0x8) or Last (0x10).	|
-|	14576	|	10	|	No	|	@freq_interval must be between 1 and 10 (1 = Sunday .. 7 = Saturday, 8 = Day, 9 = Weekday, 10 = Weekend-day) for a monthly-relative job.	|
-|	14577	|	10	|	No	|	@freq_recurrence_factor must be at least 1.	|
+|	14572	|	10	|	No	|	\@freq_interval must be at least 1 for a daily job.	|
+|	14573	|	10	|	No	|	\@freq_interval must be a valid day of the week bitmask [Sunday = 1 .. Saturday = 64] for a weekly job.	|
+|	14574	|	10	|	No	|	\@freq_interval must be between 1 and 31 for a monthly job.	|
+|	14575	|	10	|	No	|	\@freq_relative_interval must be one of 1st (0x1), 2nd (0x2), 3rd [0x4], 4th (0x8) or Last (0x10).	|
+|	14576	|	10	|	No	|	\@freq_interval must be between 1 and 10 (1 = Sunday .. 7 = Saturday, 8 = Day, 9 = Weekday, 10 = Weekend-day) for a monthly-relative job.	|
+|	14577	|	10	|	No	|	\@freq_recurrence_factor must be at least 1.	|
 |	14578	|	10	|	No	|	Starts whenever the CPU usage has remained below %ld percent for %ld seconds.	|
 |	14579	|	10	|	No	|	Automatically starts when SQLServerAgent starts.	|
 |	14580	|	10	|	No	|	job	|
 |	14581	|	10	|	No	|	Replication Transaction Queue Reader Subsystem	|
-|	14582	|	16	|	No	|	Only a sysadmin can specify '@output_file_name' parameter for a jobstep.	|
-|	14583	|	16	|	No	|	Only a sysadmin can specify '@database_user_name' parameter.	|
+|	14582	|	16	|	No	|	Only a sysadmin can specify '\@output_file_name' parameter for a jobstep.	|
+|	14583	|	16	|	No	|	Only a sysadmin can specify '\@database_user_name' parameter.	|
 |	14585	|	16	|	No	|	Only the owner of DTS Package '%s' or a member of the sysadmin role may reassign its ownership.	|
 |	14586	|	16	|	No	|	Only the owner of DTS Package '%s' or a member of the sysadmin role may create new versions of it.	|
 |	14587	|	16	|	No	|	Only the owner of DTS Package '%s' or a member of the sysadmin role may drop it or any of its versions.	|
@@ -5782,32 +5782,32 @@ The table contains error message numbers and the description, which is the text 
 |	14607	|	16	|	No	|	%s name is not valid	|
 |	14608	|	16	|	No	|	Either %s or %s parameter needs to be supplied	|
 |	14609	|	16	|	No	|	Mail database to user database association does not exist and therefore cannot be updated	|
-|	14610	|	16	|	No	|	Either @profile_name or @description parameter needs to be specified for update	|
+|	14610	|	16	|	No	|	Either \@profile_name or \@description parameter needs to be specified for update	|
 |	14611	|	16	|	No	|	Account sequence number must be supplied for update	|
 |	14612	|	16	|	No	|	Each principal should have at least one default profile	|
 |	14614	|	16	|	No	|	%s is not a valid mailserver_type	|
-|	14615	|	16	|	No	|	The @username parameter needs to be supplied if the @password is supplied.	|
+|	14615	|	16	|	No	|	The \@username parameter needs to be supplied if the \@password is supplied.	|
 |	14616	|	16	|	No	|	Unable to retrieve the newly created credential [%s] from the credential store.	|
 |	14617	|	16	|	No	|	Mail host database specified is invalid	|
 |	14618	|	16	|	No	|	Parameter '%s' must be specified. This parameter cannot be NULL.	|
 |	14619	|	16	|	No	|	Received an error on the Service Broker conversation with Database Mail. Database Mail may not be available, or may have encountered an error. Check the Database Mail error log for information.	|
 |	14620	|	16	|	No	|	The Service Broker conversation to Database Mail ended without a response from Database Mail. Database Mail may not be available, or may have encountered an error. Check the Database Mail error log for more information.	|
-|	14621	|	16	|	No	|	Parameter @attachmentencoding does not support the value "%s". The attachment encoding must be "MIME".	|
-|	14622	|	16	|	No	|	Parameter @importance does not support the value "%s". Mail importance must be one of LOW, NORMAL, or HIGH.	|
-|	14623	|	16	|	No	|	Parameter @sensitivity does not support the value "%s". Mail sensitivity must be one of NORMAL, PERSONAL, PRIVATE, or CONFIDENTIAL.	|
+|	14621	|	16	|	No	|	Parameter \@attachmentencoding does not support the value "%s". The attachment encoding must be "MIME".	|
+|	14622	|	16	|	No	|	Parameter \@importance does not support the value "%s". Mail importance must be one of LOW, NORMAL, or HIGH.	|
+|	14623	|	16	|	No	|	Parameter \@sensitivity does not support the value "%s". Mail sensitivity must be one of NORMAL, PERSONAL, PRIVATE, or CONFIDENTIAL.	|
 |	14624	|	16	|	No	|	At least one of the following parameters must be specified. "%s".	|
-|	[14265](mssqlserver-14265-database-engine-error.md)	|	16	|	No	|	Parameter @attach_query_result_as_file cannot be 1 (true) when no value is specified for parameter @query. A query must be specified to attach the results of the query.	|
-|	14626	|	16	|	No	|	Parameter @mailformat does not support the value "%s". The mail format must be TEXT or HTML.	|
+|	[14265](mssqlserver-14265-database-engine-error.md)	|	16	|	No	|	Parameter \@attach_query_result_as_file cannot be 1 (true) when no value is specified for parameter \@query. A query must be specified to attach the results of the query.	|
+|	14626	|	16	|	No	|	Parameter \@mailformat does not support the value "%s". The mail format must be TEXT or HTML.	|
 |	14627	|	16	|	No	|	Received error %d while sending a message as part of the %s operation. Database Mail may not be available, or may have encountered an error. Check the Database Mail error log for more information.	|
-|	14628	|	16	|	No	|	The format of the parameter @attachments is incorrect. The file names must be separated by a semicolon ";".	|
+|	14628	|	16	|	No	|	The format of the parameter \@attachments is incorrect. The file names must be separated by a semicolon ";".	|
 |	14629	|	16	|	No	|	There is no configuration parameter named "%s", or the value provided is not of the correct data type.	|
 |	14630	|	16	|	No	|	Database Mail is not permitted to send files with the file extension %s.	|
-|	14631	|	16	|	No	|	The current user ('%s') either does not have permission to access the database specified in the parameter @execute_query_database or cannot impersonate the user specified in the parameter @execute_query_as. Only members of the sysadmin fixed server role and members of the db_owner fixed database role can impersonate another user.	|
-|	14632	|	16	|	No	|	The user name %s specified in @execute_query_as is invalid. There is no user by that name.	|
-|	14633	|	16	|	No	|	The database name "%s" specified in @execute_query_database is invalid. There is no database by that name.	|
+|	14631	|	16	|	No	|	The current user ('%s') either does not have permission to access the database specified in the parameter \@execute_query_database or cannot impersonate the user specified in the parameter \@execute_query_as. Only members of the sysadmin fixed server role and members of the db_owner fixed database role can impersonate another user.	|
+|	14632	|	16	|	No	|	The user name %s specified in \@execute_query_as is invalid. There is no user by that name.	|
+|	14633	|	16	|	No	|	The database name "%s" specified in \@execute_query_database is invalid. There is no database by that name.	|
 |	14634	|	10	|	No	|	Warning: %s'	|
 |	14635	|	10	|	No	|	Mail queued.	|
-|	14636	|	16	|	No	|	No global profile is configured. Specify a profile name in the @profile_name parameter.	|
+|	14636	|	16	|	No	|	No global profile is configured. Specify a profile name in the \@profile_name parameter.	|
 |	14637	|	10	|	No	|	Activation failure.	|
 |	14638	|	10	|	No	|	Activation successful.	|
 |	14639	|	10	|	No	|	The mail queue was started by login "%s".	|
@@ -5856,7 +5856,7 @@ The table contains error message numbers and the description, which is the text 
 |	14684	|	16	|	No	|	Caught error#: %d, Level: %d, State: %d, in Procedure: %s, Line: %d, with Message: %s	|
 |	14685	|	16	|	No	|	Collection set: '%s' does not contain any collection items, so starting the collection set will have no effect.	|
 |	14686	|	16	|	No	|	The MDWInstance and MDWDatabase parameters of the configuration store cannot be null.	|
-|	14687	|	16	|	No	|	Invalid value (%d) of the @cache_window parameter. Allowable values are: -1 (cache all upload data from previous upload failures), 0 (cache no upload data), N (cache data from N previous upload failures, where N >= 1)	|
+|	14687	|	16	|	No	|	Invalid value (%d) of the \@cache_window parameter. Allowable values are: -1 (cache all upload data from previous upload failures), 0 (cache no upload data), N (cache data from N previous upload failures, where N >= 1)	|
 |	14688	|	16	|	No	|	A collection set cannot start when SQL Server Agent is stopped. Start SQL Server Agent.	|
 |	14689	|	16	|	No	|	A collection set cannot start if the management data warehouse is not configured. Run the instmdw.sql script to create and configure the management data warehouse.	|
 |	14690	|	16	|	No	|	Cannot perform this procedure when the collector is enabled. Disable the collector and then try again.	|
@@ -5921,7 +5921,7 @@ The table contains error message numbers and the description, which is the text 
 |	15036	|	16	|	No	|	The data type '%s' does not exist or you do not have permission.	|
 |	15040	|	16	|	No	|	User-defined error messages must have an ID greater than 50000.	|
 |	15041	|	16	|	No	|	User-defined error messages must have a severity level between 1 and 25.	|
-|	15042	|	10	|	No	|	The @with_log parameter is ignored for messages that are not us_english version.	|
+|	15042	|	10	|	No	|	The \@with_log parameter is ignored for messages that are not us_english version.	|
 |	15043	|	16	|	No	|	You must specify 'REPLACE' to overwrite an existing message.	|
 |	15044	|	16	|	No	|	The type "%s" is an unknown backup device type. Use the type "disk" or "tape".	|
 |	15045	|	16	|	No	|	The logical name cannot be NULL.	|
@@ -5997,7 +5997,7 @@ The table contains error message numbers and the description, which is the text 
 |	15137	|	16	|	No	|	An error occurred during the execution of sp_xp_cmdshell_proxy_account. Possible reasons: the provided account was invalid or the '%.*ls' credential could not be created. Error code: '%d'.	|
 |	15138	|	16	|	No	|	The database principal owns a %S_MSG in the database, and cannot be dropped.	|
 |	15141	|	16	|	No	|	The server principal owns one or more %S_MSG(s) and cannot be dropped.	|
-|	15143	|	16	|	No	|	'%s' is not a valid option for the @updateusage parameter. Enter either 'true' or 'false'.	|
+|	15143	|	16	|	No	|	'%s' is not a valid option for the \@updateusage parameter. Enter either 'true' or 'false'.	|
 |	15144	|	16	|	No	|	The role has members. It must be empty before it can be dropped.	|
 |	15145	|	16	|	No	|	An implicit %S_MSG creation has failed. Reason: The %S_MSG may have been dropped or its name may already be in use.	|
 |	15146	|	16	|	No	|	An encryption password must be provided to encrypt the private key of this %S_MSG.	|
@@ -6020,7 +6020,7 @@ The table contains error message numbers and the description, which is the text 
 |	15163	|	16	|	No	|	Invalid timeout value. Valid timeout is between 1 and 7200 sec.	|
 |	15164	|	16	|	No	|	'%.*ls' is not a valid login or cannot be issued impersonation token.	|
 |	15165	|	16	|	No	|	Could not find object '%ls' or you do not have permission.	|
-|	15166	|	10	|	No	|	Warning: User types created via sp_addtype are contained in dbo schema. The @owner parameter if specified is ignored.	|
+|	15166	|	10	|	No	|	Warning: User types created via sp_addtype are contained in dbo schema. The \@owner parameter if specified is ignored.	|
 |	15167	|	16	|	No	|	Cannot generate GUID.	|
 |	15168	|	16	|	No	|	Cannot rename the view '%s' and its columns and indexes because it is a system generated view that was created for optimization purposes.	|
 |	15169	|	16	|	No	|	The server option "%ls" is not available in this edition of SQL Server.	|
@@ -6030,7 +6030,7 @@ The table contains error message numbers and the description, which is the text 
 |	15173	|	16	|	No	|	Login '%s' has granted one or more permission(s). Revoke the permission(s) before dropping the login.	|
 |	15174	|	16	|	No	|	Login '%s' owns one or more database(s). Change the owner of the database(s) before dropping the login.	|
 |	15175	|	16	|	No	|	Login '%s' is aliased or mapped to a user in one or more database(s). Drop the user or alias before dropping the login.	|
-|	15176	|	16	|	No	|	The only valid @parameter value is 'WITH_LOG'.	|
+|	15176	|	16	|	No	|	The only valid \@parameter value is 'WITH_LOG'.	|
 |	15177	|	16	|	No	|	Usage: sp_dropmessage <msg number> [,<language> | 'ALL']	|
 |	15178	|	16	|	No	|	Cannot drop or alter a message with an ID less than 50,000.	|
 |	15179	|	16	|	No	|	The message number %u or specified language version does not exist.	|
@@ -6063,14 +6063,14 @@ The table contains error message numbers and the description, which is the text 
 |	15213	|	16	|	No	|	Warning: The certificate you created has an invalid validity period; its expiration date precedes its start date.	|
 |	15214	|	16	|	No	|	Warning: The certificate you created is expired.	|
 |	15215	|	16	|	No	|	Warning: The certificate you created is not yet valid; its start date is in the future.	|
-|	15216	|	16	|	No	|	'%s' is not a valid option for the @delfile parameter.	|
+|	15216	|	16	|	No	|	'%s' is not a valid option for the \@delfile parameter.	|
 |	15217	|	16	|	No	|	Property cannot be updated or deleted. Property '%.*ls' does not exist for '%.*ls'.	|
 |	15218	|	16	|	No	|	Object '%s' is not a table.	|
 |	15219	|	16	|	No	|	Cannot change the owner of an indexed view.	|
 |	15222	|	16	|	No	|	Remote login option '%s' is not unique.	|
 |	15223	|	11	|	No	|	Error: The input parameter '%s' is not allowed to be null.	|
-|	15224	|	11	|	No	|	Error: The value for the @newname parameter contains invalid characters or violates a basic restriction (%s).	|
-|	15225	|	11	|	No	|	No item by the name of '%s' could be found in the current database '%s', given that @itemtype was input as '%s'.	|
+|	15224	|	11	|	No	|	Error: The value for the \@newname parameter contains invalid characters or violates a basic restriction (%s).	|
+|	15225	|	11	|	No	|	No item by the name of '%s' could be found in the current database '%s', given that \@itemtype was input as '%s'.	|
 |	15226	|	16	|	No	|	Cannot create CLR types from an XML datatype.	|
 |	15227	|	16	|	No	|	The database '%s' cannot be renamed.	|
 |	15229	|	16	|	No	|	The argument specified for the "%.*ls" parameter of stored procedure sp_db_vardecimal_storage_format is not valid. Valid arguments are 'ON' or 'OFF'.	|
@@ -6089,14 +6089,14 @@ The table contains error message numbers and the description, which is the text 
 |	15244	|	16	|	No	|	Only members of the sysadmin role or the database owner may set database options.	|
 |	15246	|	16	|	No	|	Cannot dump the private key of certificate '%s' because the private key cannot be found.	|
 |	15247	|	16	|	No	|	User does not have permission to perform this action.	|
-|	15248	|	11	|	No	|	Either the parameter @objname is ambiguous or the claimed @objtype (%s) is wrong.	|
-|	15249	|	11	|	No	|	Error: Explicit @objtype '%s' is unrecognized.	|
+|	15248	|	11	|	No	|	Either the parameter \@objname is ambiguous or the claimed \@objtype (%s) is wrong.	|
+|	15249	|	11	|	No	|	Error: Explicit \@objtype '%s' is unrecognized.	|
 |	15250	|	16	|	No	|	The database name component of the object qualifier must be the name of the current database.	|
 |	15251	|	16	|	No	|	Invalid '%s' specified. It must be %s.	|
 |	15252	|	16	|	No	|	The primary or foreign key table name must be given.	|
 |	15253	|	11	|	No	|	Syntax error parsing SQL identifier '%s'.	|
 |	15254	|	16	|	No	|	Users other than the database owner or guest exist in the database. Drop them before removing the database.	|
-|	15255	|	11	|	No	|	'%s' is not a valid value for @autofix. The only valid value is 'auto'.	|
+|	15255	|	11	|	No	|	'%s' is not a valid value for \@autofix. The only valid value is 'auto'.	|
 |	15256	|	16	|	No	|	Usage: sp_certify_removable <dbname> [,'auto']	|
 |	15257	|	16	|	No	|	The database that you are attempting to certify cannot be in use at the same time.	|
 |	15258	|	16	|	No	|	The database must be owned by a member of the sysadmin role before it can be removed.	|
@@ -6111,12 +6111,12 @@ The table contains error message numbers and the description, which is the text 
 |	15267	|	16	|	No	|	A security descriptor with name '%s' already exists.	|
 |	15268	|	10	|	Yes	|	Authentication mode is %s.	|
 |	15269	|	16	|	No	|	Logical data device '%s' not created.	|
-|	15271	|	16	|	No	|	Invalid @with_log parameter value. Valid values are 'true' or 'false'.	|
+|	15271	|	16	|	No	|	Invalid \@with_log parameter value. Valid values are 'true' or 'false'.	|
 |	15272	|	10	|	No	|	The %s '%.*s' is not trusted to execute.	|
 |	15273	|	10	|	No	|	The decryption key is incorrect.	|
 |	15274	|	16	|	No	|	Access to the remote server is denied because the current security context is not trusted.	|
 |	15276	|	16	|	No	|	Cannot provision master key passwords for system databases.	|
-|	15277	|	16	|	No	|	The only valid @parameter_value values are 'true' or 'false'.	|
+|	15277	|	16	|	No	|	The only valid \@parameter_value values are 'true' or 'false'.	|
 |	15278	|	16	|	No	|	Login '%s' is already mapped to user '%s' in database '%s'.	|
 |	15279	|	16	|	No	|	You must add the us_english version of this message before you can add the '%s' version.	|
 |	15280	|	16	|	No	|	All localized versions of this message must be dropped before the us_english version can be dropped.	|
@@ -6125,7 +6125,7 @@ The table contains error message numbers and the description, which is the text 
 |	15283	|	16	|	No	|	The name '%s' contains too many characters.	|
 |	15284	|	16	|	No	|	The database principal has granted or denied permissions to objects in the database and cannot be dropped.	|
 |	15285	|	16	|	No	|	The special word '%s' cannot be used for a logical device name.	|
-|	15286	|	16	|	No	|	Terminating this procedure. The @action '%s' is unrecognized. Try 'REPORT', 'UPDATE_ONE', or 'AUTO_FIX'.	|
+|	15286	|	16	|	No	|	Terminating this procedure. The \@action '%s' is unrecognized. Try 'REPORT', 'UPDATE_ONE', or 'AUTO_FIX'.	|
 |	15287	|	16	|	No	|	Terminating this procedure. '%s' is a forbidden value for the login name parameter in this procedure.	|
 |	15288	|	10	|	No	|	Please specify one decryptor to decrypt a key.	|
 |	15289	|	16	|	No	|	Terminating this procedure. Cannot have an open transaction when this is run.	|
@@ -6142,7 +6142,7 @@ The table contains error message numbers and the description, which is the text 
 |	15302	|	11	|	No	|	Database_Name should not be used to qualify owner.object for the parameter into this procedure.	|
 |	15303	|	11	|	No	|	The "user options" config value (%d) was rejected because it would set incompatible options.	|
 |	15304	|	16	|	No	|	The severity level of the '%s' version of this message must be the same as the severity level (%ld) of the us_english version.	|
-|	15305	|	16	|	No	|	The @TriggerType parameter value must be 'insert', 'update', or 'delete'.	|
+|	15305	|	16	|	No	|	The \@TriggerType parameter value must be 'insert', 'update', or 'delete'.	|
 |	15306	|	16	|	No	|	Cannot change the compatibility level of replicated or distributed databases.	|
 |	15307	|	16	|	No	|	Could not change the merge publish option because the server is not set up for replication.	|
 |	15309	|	16	|	No	|	Cannot alter the trustworthy state of the model or tempdb databases.	|
@@ -6169,7 +6169,7 @@ The table contains error message numbers and the description, which is the text 
 |	15330	|	11	|	No	|	There are no matching rows on which to report.	|
 |	15331	|	11	|	No	|	The user '%s' cannot take the action auto_fix due to duplicate SID.	|
 |	15332	|	10	|	No	|	The private key is already set for this file. To change it you should drop and re-create the certificate.	|
-|	15333	|	11	|	No	|	Error: The qualified @oldname references a database (%s) other than the current database.	|
+|	15333	|	11	|	No	|	Error: The qualified \@oldname references a database (%s) other than the current database.	|
 |	15334	|	10	|	No	|	The %S_MSG has a private key that is protected by a user defined password. That password needs to be provided to enable the use of the private key.	|
 |	15335	|	11	|	No	|	Error: The new name '%s' is already in use as a %s name and would cause a duplicate that is not permitted.	|
 |	15336	|	16	|	No	|	Object '%s' cannot be renamed because the object participates in enforced dependencies.	|
@@ -6255,7 +6255,7 @@ The table contains error message numbers and the description, which is the text 
 |	15427	|	16	|	No	|	You must specify a provider name for unknown product '%ls'.	|
 |	15428	|	16	|	No	|	You cannot specify a provider or any properties for product '%ls'.	|
 |	15429	|	16	|	No	|	'%ls' is an invalid product name.	|
-|	15431	|	16	|	No	|	You must specify the @rolename parameter.	|
+|	15431	|	16	|	No	|	You must specify the \@rolename parameter.	|
 |	15432	|	16	|	No	|	Stored procedure '%s' can only be executed at the ad hoc level.	|
 |	15433	|	16	|	No	|	Supplied parameter sid is in use.	|
 |	15434	|	16	|	No	|	Could not drop login '%s' as the user is currently logged in.	|
@@ -6814,8 +6814,8 @@ The table contains error message numbers and the description, which is the text 
 |	18776	|	16	|	No	|	An error occurred while waiting on the article cache access event.	|
 |	18777	|	16	|	No	|	%s: Error initializing MSMQ components	|
 |	18778	|	16	|	No	|	%s: Error opening Microsoft Message Queue %s	|
-|	18780	|	16	|	No	|	You have specified a value for the @dts_package_password parameter. You must also specify a value for the @dts_package_name parameter.	|
-|	18781	|	16	|	No	|	The value specified for the @backupdevicetype parameter is not valid. The value must be 'logical', 'disk', or 'tape'.	|
+|	18780	|	16	|	No	|	You have specified a value for the \@dts_package_password parameter. You must also specify a value for the \@dts_package_name parameter.	|
+|	18781	|	16	|	No	|	The value specified for the \@backupdevicetype parameter is not valid. The value must be 'logical', 'disk', or 'tape'.	|
 |	18782	|	16	|	No	|	Could not locate backup header information for database '%s' in the specified backup device. Specify a backup device that contains a backup of the Publisher database.	|
 |	18783	|	16	|	No	|	The subscription setup script path has been truncated, because the snapshot folder directory path is too long. Reconfigure the Distributor to use a shorter path for this Publisher, and then retry the operation.	|
 |	18784	|	16	|	No	|	The alternate snapshot folder path generated by replication has been truncated. Reconfigure the publication to use a shorter alternate snapshot folder path, and then retry the operation.	|
@@ -6966,7 +6966,7 @@ The table contains error message numbers and the description, which is the text 
 |	20003	|	10	|	No	|	Could not generate nickname for '%s'.	|
 |	20004	|	10	|	No	|	Publication '%s' has the following property: '%s'. SQL Server subscribers below version '%s' will ignore this setting.	|
 |	20005	|	18	|	No	|	%ls: Cannot convert parameter %ls: Resulting colv would have too many entries.	|
-|	20006	|	16	|	No	|	Cannot make the change because the article might be in a publication that has anonymous or client subscriptions. Set @force_reinit_subscription to 1 to acknowledge that such a subscription will be reinitialized.	|
+|	20006	|	16	|	No	|	Cannot make the change because the article might be in a publication that has anonymous or client subscriptions. Set \@force_reinit_subscription to 1 to acknowledge that such a subscription will be reinitialized.	|
 |	20007	|	16	|	No	|	The system tables for merge replication could not be dropped successfully.	|
 |	20008	|	16	|	No	|	The system tables for merge replication could not be created successfully.	|
 |	20009	|	16	|	No	|	The article '%s' could not be added to the publication '%s'.	|
@@ -6974,16 +6974,16 @@ The table contains error message numbers and the description, which is the text 
 |	20011	|	16	|	No	|	Cannot set incompatible publication properties. The 'allow_anonymous' property of a publication depends on the 'immediate_sync' property.	|
 |	20012	|	16	|	No	|	The subscription type '%s' is not allowed on publication '%s'.	|
 |	20013	|	16	|	No	|	The publication property '%s' cannot be changed when there are subscriptions on it.	|
-|	20014	|	16	|	No	|	Invalid @schema_option value.	|
+|	20014	|	16	|	No	|	Invalid \@schema_option value.	|
 |	20015	|	16	|	No	|	Could not remove directory '%ls'. Check the security context of xp_cmdshell and close other processes that may be accessing the directory.	|
-|	20016	|	16	|	No	|	Invalid @subscription_type value. Valid values are 'pull' or 'anonymous'.	|
+|	20016	|	16	|	No	|	Invalid \@subscription_type value. Valid values are 'pull' or 'anonymous'.	|
 |	20017	|	16	|	No	|	The subscription on the Subscriber does not exist.	|
-|	20018	|	16	|	No	|	The @optional_command_line is too long. Use an agent definition file.	|
+|	20018	|	16	|	No	|	The \@optional_command_line is too long. Use an agent definition file.	|
 |	20019	|	16	|	No	|	Replication database option '%s' cannot be set unless the database is a publishing database or a distribution database.	|
 |	20020	|	16	|	No	|	The article resolver supplied is either invalid or nonexistent.	|
 |	20021	|	16	|	No	|	The subscription could not be found.	|
 |	20022	|	16	|	No	|	This article has now settings to disable uploads and compensate_for_errors=true. However, local and anonymous subscribers will behave as if compensate_for_errors=false.	|
-|	20023	|	16	|	No	|	Invalid @subscriber_type value. Valid options are 'local', 'global', or 'anonymous'.	|
+|	20023	|	16	|	No	|	Invalid \@subscriber_type value. Valid options are 'local', 'global', or 'anonymous'.	|
 |	20024	|	16	|	No	|	The alt_snapshot_folder cannot be the same as the working directory.	|
 |	20025	|	16	|	No	|	The publication name must be unique. The specified publication name '%s' has already been used.	|
 |	20026	|	16	|	No	|	The publication '%s' does not exist.	|
@@ -7010,14 +7010,14 @@ The table contains error message numbers and the description, which is the text 
 |	20049	|	16	|	No	|	The priority value should not be larger than 100.0.	|
 |	20050	|	16	|	No	|	The retention period must be greater than or equal to 0, and it must not extend past December 31, 9999.	|
 |	20051	|	16	|	No	|	The Subscriber is not registered.	|
-|	20052	|	16	|	No	|	The @metatype parameter value must be null, 1, 2, 5, or 6.	|
+|	20052	|	16	|	No	|	The \@metatype parameter value must be null, 1, 2, 5, or 6.	|
 |	20053	|	16	|	No	|	An article with a different %s value already exists for object '%s'.	|
 |	20054	|	16	|	No	|	Current database is not enabled for publishing.	|
 |	20055	|	16	|	No	|	Table '%s' cannot be published for merge replication because it has a timestamp column.	|
 |	20056	|	16	|	No	|	Table '%s' cannot be republished.	|
 |	20057	|	16	|	No	|	The profile name '%s' already exists for the specified agent type.	|
-|	20058	|	16	|	No	|	The @agent_type must be 1 (Snapshot), 2 (Logreader), 3 (Distribution), or 4 (Merge)	|
-|	20059	|	16	|	No	|	The @profile_type must be 0 (System) or 1 (Custom)	|
+|	20058	|	16	|	No	|	The \@agent_type must be 1 (Snapshot), 2 (Logreader), 3 (Distribution), or 4 (Merge)	|
+|	20059	|	16	|	No	|	The \@profile_type must be 0 (System) or 1 (Custom)	|
 |	20060	|	16	|	No	|	Compatibility level cannot be smaller than 60.	|
 |	20061	|	16	|	No	|	The compatibility level of this database must be set to 70 or higher to be enabled for merge publishing.	|
 |	20062	|	16	|	No	|	Updating columns with the rowguidcol property is not allowed.	|
@@ -7033,10 +7033,10 @@ The table contains error message numbers and the description, which is the text 
 |	20073	|	16	|	No	|	Articles can be added or changed only at the Publisher.	|
 |	20074	|	16	|	No	|	Only a table object can be published as a "table" article for merge replication.	|
 |	20075	|	16	|	No	|	The 'status' parameter value must be either 'active' or 'unsynced'.	|
-|	20076	|	16	|	No	|	The @sync_mode parameter value must be 'native' or 'character'.	|
+|	20076	|	16	|	No	|	The \@sync_mode parameter value must be 'native' or 'character'.	|
 |	20077	|	16	|	No	|	Problem encountered generating replica nickname.	|
-|	20078	|	16	|	No	|	The @property parameter value must be one of the following: 'sync_type', 'priority', 'description', 'subscriber_security_mode', 'subscriber_login', 'subscriber_password', 'publisher_security_mode', 'publisher_login', 'publisher_password', 'merge_job_login', or 'merge_job_password'.	|
-|	20079	|	16	|	No	|	Invalid @subscription_type parameter value. Valid options are 'push', 'pull', or 'both'.	|
+|	20078	|	16	|	No	|	The \@property parameter value must be one of the following: 'sync_type', 'priority', 'description', 'subscriber_security_mode', 'subscriber_login', 'subscriber_password', 'publisher_security_mode', 'publisher_login', 'publisher_password', 'merge_job_login', or 'merge_job_password'.	|
+|	20079	|	16	|	No	|	Invalid \@subscription_type parameter value. Valid options are 'push', 'pull', or 'both'.	|
 |	20081	|	16	|	No	|	Publication property '%s' cannot be NULL.	|
 |	20084	|	16	|	No	|	Publication '%s' cannot be subscribed to by Subscriber database '%s'.	|
 |	20086	|	16	|	No	|	Publication '%s' does not support the nosync type because it contains a table that does not have a rowguidcol column.	|
@@ -7061,7 +7061,7 @@ The table contains error message numbers and the description, which is the text 
 |	20510	|	16	|	No	|	Updateable Subscriptions: Cannot update identity columns.	|
 |	20511	|	16	|	No	|	Updateable Subscriptions: Cannot update timestamp columns.	|
 |	20512	|	16	|	No	|	Updateable Subscriptions: Rolling back transaction.	|
-|	20513	|	16	|	No	|	Database '%s' does not contain any replication metadata for a row whose ROWGUIDCOL matches the value specified for the @rowguid parameter of sp_showrowreplicainfo. Verify that the value specified for @rowguid parameter is correct.	|
+|	20513	|	16	|	No	|	Database '%s' does not contain any replication metadata for a row whose ROWGUIDCOL matches the value specified for the \@rowguid parameter of sp_showrowreplicainfo. Verify that the value specified for \@rowguid parameter is correct.	|
 |	20514	|	10	|	No	|	A rowcount validation request has been submitted to heterogeneous publisher %s for article %s of publication %s. Validation results will be posted to distribution history.	|
 |	20515	|	16	|	No	|	Updateable Subscriptions: Rows do not match between Publisher and Subscriber. Run the Distribution Agent to refresh rows at the Subscriber.	|
 |	20516	|	16	|	No	|	Updateable Subscriptions: Replicated data is not updatable.	|
@@ -7090,7 +7090,7 @@ The table contains error message numbers and the description, which is the text 
 |	20540	|	10	|	No	|	Replication: agent success	|
 |	20541	|	10	|	No	|	Removes replicated transactions from the distribution database.	|
 |	20542	|	10	|	No	|	Detects and removes expired subscriptions from published databases.	|
-|	20543	|	10	|	No	|	@rowcount_only parameter must be the value 0,1, or 2. 0=7.0 compatible checksum. 1=only check rowcounts. 2=new checksum functionality introduced in version 8.0.	|
+|	20543	|	10	|	No	|	\@rowcount_only parameter must be the value 0,1, or 2. 0=7.0 compatible checksum. 1=only check rowcounts. 2=new checksum functionality introduced in version 8.0.	|
 |	20545	|	10	|	No	|	Default agent profile	|
 |	20546	|	10	|	No	|	Verbose history agent profile.	|
 |	20547	|	10	|	No	|	Agent profile for detailed history logging.	|
@@ -7150,8 +7150,8 @@ The table contains error message numbers and the description, which is the text 
 |	20604	|	10	|	No	|	You do not have permissions to run agents for push subscriptions. Make sure that you specify the agent parameter 'SubscriptionType'.	|
 |	20605	|	10	|	No	|	Invalidated the existing snapshot of the publication. Run the Snapshot Agent again to generate a new snapshot.	|
 |	20606	|	10	|	No	|	Reinitialized subscription(s).	|
-|	20607	|	10	|	No	|	Cannot make the change because a snapshot is already generated. Set @force_invalidate_snapshot to 1 to force the change and invalidate the existing snapshot.	|
-|	20608	|	10	|	No	|	Cannot make the change because there are active subscriptions. Set @force_reinit_subscription to 1 to force the change and reinitialize the active subscriptions.	|
+|	20607	|	10	|	No	|	Cannot make the change because a snapshot is already generated. Set \@force_invalidate_snapshot to 1 to force the change and invalidate the existing snapshot.	|
+|	20608	|	10	|	No	|	Cannot make the change because there are active subscriptions. Set \@force_reinit_subscription to 1 to force the change and reinitialize the active subscriptions.	|
 |	20609	|	16	|	No	|	Cannot attach subscription file '%s'. Make sure that it is a valid subscription copy file.	|
 |	20610	|	16	|	No	|	Cannot run '%s' when the Log Reader Agent is replicating the database.	|
 |	20611	|	16	|	No	|	Cannot add the article. Publications that allow transformable subscriptions with Data Transformation Services (DTS) can only include tables and indexed views that are published as tables.	|
@@ -7167,56 +7167,56 @@ The table contains error message numbers and the description, which is the text 
 |	20621	|	11	|	No	|	Cannot copy a subscription database to an existing database.	|
 |	20622	|	11	|	No	|	Replication database option 'sync with backup' cannot be set on the publishing database because the database is in Simple Recovery mode.	|
 |	20623	|	11	|	No	|	You cannot validate article '%s' unless you have 'SELECT ALL' permission on table '%s'.	|
-|	20624	|	16	|	No	|	The value specified for the @login parameter is not valid. User '%s' is not a user in database '%s'. Add the user account to the database before attempting to execute the stored procedures sp_grant_publication_access or sp_revoke_publication_access.	|
+|	20624	|	16	|	No	|	The value specified for the \@login parameter is not valid. User '%s' is not a user in database '%s'. Add the user account to the database before attempting to execute the stored procedures sp_grant_publication_access or sp_revoke_publication_access.	|
 |	20625	|	16	|	No	|	Cannot create the merge replication publication access list (PAL) database role for publication '%s'. This role is used by replication to control access to the publication. Verify that you have sufficient permissions to create roles in the publication database.	|
-|	20626	|	16	|	No	|	Filter '%s' already exists in publication '%s'. Specify a unique name for the @filtername parameter of sp_addmergefilter.	|
+|	20626	|	16	|	No	|	Filter '%s' already exists in publication '%s'. Specify a unique name for the \@filtername parameter of sp_addmergefilter.	|
 |	20627	|	16	|	No	|	Partition id has to be greater than or equal to 0.	|
 |	20628	|	16	|	No	|	Failed to generate dynamic snapshot.	|
 |	20629	|	16	|	No	|	Failed to get partition id information.	|
-|	20630	|	16	|	No	|	Cannot create partitioned snapshot job. A job already exists for publication '%ls' that uses the values you specified for the @suser_sname and/or @host_name parameters of sp_adddynamicsnapshot_job. If the job that already exists is not working correctly, use sp_dropdynamicsnapshot_job to drop it and create a new one using sp_adddynamicsnapshot_job.	|
+|	20630	|	16	|	No	|	Cannot create partitioned snapshot job. A job already exists for publication '%ls' that uses the values you specified for the \@suser_sname and/or \@host_name parameters of sp_adddynamicsnapshot_job. If the job that already exists is not working correctly, use sp_dropdynamicsnapshot_job to drop it and create a new one using sp_adddynamicsnapshot_job.	|
 |	20631	|	16	|	No	|	Cannot find a location in which to generate a partitioned snapshot. Verify that the there is a valid snapshot folder specified for the publication. This can be the default folder associated with the Distributor or an alternate folder associated with the publication.	|
 |	20632	|	16	|	No	|	Failed to create a dynamic snapshot job to generate the dynamic snapshot.	|
 |	20633	|	16	|	No	|	Cannot start the partitioned snapshot job. Verify that SQL Server Agent is running on the Distributor.	|
 |	20634	|	16	|	No	|	The root publication information could not be found on the republisher.	|
 |	20635	|	16	|	No	|	A push subscription to '%ls' was found. Cannot add a pull subscription agent for a push subscription.	|
 |	20636	|	16	|	No	|	Cannot generate merge replication stored procedures for article '%s'. Stored procedures are generated on the Publisher when the Snapshot Agent runs or when a data definition language action is performed; they are generated on the Subscriber when the snapshot is applied by the Merge Agent. Verify that the agents have the appropriate permissions to create procedures, and that the procedures do not already exist.	|
-|	20637	|	10	|	No	|	The article order specified in the @processing_order parameter of sp_addmergearticle does not reflect the primary key-foreign key relationships between published tables. Article '%s' references one or more articles that will be created after it is created. Change the processing_order property using sp_changemergearticle.	|
-|	20638	|	10	|	No	|	Merge table articles do not support different values for the @source_object and @destination_object parameters of sp_addmergearticle. Either do not specify a value for @destination_object, or specify the same value for both parameters.	|
+|	20637	|	10	|	No	|	The article order specified in the \@processing_order parameter of sp_addmergearticle does not reflect the primary key-foreign key relationships between published tables. Article '%s' references one or more articles that will be created after it is created. Change the processing_order property using sp_changemergearticle.	|
+|	20638	|	10	|	No	|	Merge table articles do not support different values for the \@source_object and \@destination_object parameters of sp_addmergearticle. Either do not specify a value for \@destination_object, or specify the same value for both parameters.	|
 |	20639	|	16	|	No	|	Cannot enable the publication to support non-SQL Server subscriptions because the publication is enabled for updatable subscriptions. To support non-SQL Server subscriptions, drop the existing publication and create a new one with the properties allow_sync_tran and allow_queued_tran set to 'false'.	|
 |	20640	|	16	|	No	|	Cannot change enabled for heterogeneous subscriptions property while there are subscriptions to the publication.	|
 |	20641	|	16	|	No	|	Failed to check if the subset_filterclause has a dynamic function in it.	|
-|	20642	|	16	|	No	|	Cannot add article '%s' with one or more dynamic functions in the subset_filterclause '%s' to publication '%s' because the publication could have active subscriptions. Set @force_reinit_subscription to 1 to add the article and reinitialize all active subscriptions.	|
-|	20643	|	16	|	No	|	Cannot change the value of validate_subscriber_info for publication '%s' because the publication has active subscriptions. Set @force_reinit_subscription to 1 to change the value and reinitialize all active subscriptions.	|
-|	20644	|	16	|	No	|	Invalid value "%s" specified for the parameter @identityrangemangementoption. Valid values are "auto", "manual", or "none".	|
+|	20642	|	16	|	No	|	Cannot add article '%s' with one or more dynamic functions in the subset_filterclause '%s' to publication '%s' because the publication could have active subscriptions. Set \@force_reinit_subscription to 1 to add the article and reinitialize all active subscriptions.	|
+|	20643	|	16	|	No	|	Cannot change the value of validate_subscriber_info for publication '%s' because the publication has active subscriptions. Set \@force_reinit_subscription to 1 to change the value and reinitialize all active subscriptions.	|
+|	20644	|	16	|	No	|	Invalid value "%s" specified for the parameter \@identityrangemangementoption. Valid values are "auto", "manual", or "none".	|
 |	20645	|	16	|	No	|	The property "%s" cannot be modified for publications that are enabled for non-SQL Server subscriptions.	|
 |	20646	|	16	|	No	|	Peer-to-peer publications do not support %s. Change the value for parameter '%s'.	|
 |	20647	|	16	|	No	|	Cannot modify property '%s'. The publication is used in a peer-to-peer topology, which does not allow this property to be modified after the publication is created.	|
-|	20648	|	16	|	No	|	An article already exists for table "%s" with a different value for the @delete_tracking property. The value must be the same for all publications in which the table is published. Use the stored procedures sp_helpmergearticle and sp_changemergearticle to view and modify the property in the other article(s).	|
+|	20648	|	16	|	No	|	An article already exists for table "%s" with a different value for the \@delete_tracking property. The value must be the same for all publications in which the table is published. Use the stored procedures sp_helpmergearticle and sp_changemergearticle to view and modify the property in the other article(s).	|
 |	20649	|	16	|	No	|	Publications enabled for heterogeneous subscriptions do not support %s. Please change the '%s' parameter value.	|
-|	20650	|	16	|	No	|	Cannot enable data definition language (DDL) replication (a value of "true" for the @replicate_ddl parameter) for publication "%s". This is because the compatibility level of the publication is lower than 90RTM. For new publications, in the stored procedure sp_addmergepublication, set the @publication_compatibility_level parameter to 90RTM; for existing publications, use sp_changemergepublication.	|
+|	20650	|	16	|	No	|	Cannot enable data definition language (DDL) replication (a value of "true" for the \@replicate_ddl parameter) for publication "%s". This is because the compatibility level of the publication is lower than 90RTM. For new publications, in the stored procedure sp_addmergepublication, set the \@publication_compatibility_level parameter to 90RTM; for existing publications, use sp_changemergepublication.	|
 |	20651	|	16	|	No	|	Publication "%s" "%s". Therefore the compatibility level of the publication cannot be set to lower than %d. To set the compatibility level lower, disable the feature and then call the stored procedure sp_changemergepublication to lower the compatibility level.	|
 |	20652	|	16	|	No	|	Required metadata for publication '%s' could not be found in the sysmergeschemachange system table. Run the Snapshot Agent again.	|
 |	20653	|	16	|	No	|	Cannot have a dynamic snapshot job with both dynamic_filter_login and dynamic_filter_hostname being NULL.	|
 |	20654	|	16	|	No	|	Dynamic snapshots are only valid for merge publications.	|
 |	20655	|	16	|	No	|	The partitioned snapshot process cannot complete. Cannot retrieve the maximum timestamp information from the MSsnapshot_history table in the distribution database. Ensure that a standard snapshot is up-to-date and available.	|
-|	20656	|	16	|	No	|	The @subset_filterclause parameter cannot reference a computed column.	|
-|	20657	|	16	|	No	|	The value for the @pub_identity_range parameter must be a multiple of the increment for the identity column. The increment for table "%s" and identity column "%s" is %s.	|
-|	20658	|	16	|	No	|	The value for the @identity_range parameter must be a multiple of the increment for the identity column. The increment for table "%s" and identity column "%s" is %s.	|
+|	20656	|	16	|	No	|	The \@subset_filterclause parameter cannot reference a computed column.	|
+|	20657	|	16	|	No	|	The value for the \@pub_identity_range parameter must be a multiple of the increment for the identity column. The increment for table "%s" and identity column "%s" is %s.	|
+|	20658	|	16	|	No	|	The value for the \@identity_range parameter must be a multiple of the increment for the identity column. The increment for table "%s" and identity column "%s" is %s.	|
 |	20659	|	11	|	No	|	The value of IDENT_CURRENT ("%s") is greater than the value in the max_used column of the MSmerge_identity_range system table.	|
-|	20660	|	16	|	No	|	The republisher's republishing range obtained from its publisher is not large enough to allocate the specified @pub_identity_range.	|
-|	20661	|	16	|	No	|	The republisher's republishing range obtained from its publisher is not large enough to allocate the specified @identity_range.	|
+|	20660	|	16	|	No	|	The republisher's republishing range obtained from its publisher is not large enough to allocate the specified \@pub_identity_range.	|
+|	20661	|	16	|	No	|	The republisher's republishing range obtained from its publisher is not large enough to allocate the specified \@identity_range.	|
 |	20662	|	16	|	No	|	The republisher does not have a range of identity values from the root Publisher '%s' that it can assign to its Subscribers. Ensure that the republisher has a server subscription to the publication at the root Publisher, and then run the Merge Agent to synchronize with the root Publisher.	|
-|	20663	|	16	|	No	|	The identity range allocation entry for the Publisher could not be found in the system table MSmerge_identity_range. Ensure that the value for the @identityrangemanagementoption property is "auto".	|
+|	20663	|	16	|	No	|	The identity range allocation entry for the Publisher could not be found in the system table MSmerge_identity_range. Ensure that the value for the \@identityrangemanagementoption property is "auto".	|
 |	20664	|	16	|	No	|	The Publisher cannot be assigned a new range of identity values, because the values for the identity column's data type have all been used. Change the data type in the identity column.	|
 |	20665	|	16	|	No	|	The republisher does not have a range of identity values from the root Publisher that it can assign to its Subscribers. Run the Merge Agent to synchronize with the root Publisher.	|
 |	20666	|	16	|	No	|	Cannot refresh the identity range and/or the check constraint on the Publisher. Ensure the following: that the value in the identity column has not reached the maximum for the data type in the identity column; and that the user who made the last insert has the privileges to drop and re-create the check constraint.	|
 |	20667	|	16	|	No	|	Cannot allocate an identity range for article "%s". The article is not enabled for automatic identity range management.	|
 |	20668	|	16	|	No	|	Not enough range available to allocate a new range for a subscriber.	|
-|	20669	|	16	|	No	|	Object referenced by the given @article or @artid '%s' could not be found.	|
+|	20669	|	16	|	No	|	Object referenced by the given \@article or \@artid '%s' could not be found.	|
 |	20670	|	16	|	No	|	Cannot add, drop, or alter the identity range check constraint for table %s. This constraint is used by replication for automatic identity range management. This error typically occurs if the user who made the last insert in the table does not have permission to make schema changes on the table. If this error occurs at the Publisher, run sp_adjustpublisheridentityrange; if it occurs at the Subscriber, run the Merge Agent.	|
 |	20671	|	16	|	No	|	Cannot find the identity range allocation entry for the Subscriber in the MSmerge_identity_range table. Reinitialize the subscription.	|
-|	20672	|	16	|	No	|	A value for the parameter @host_name was specified, but no articles in the publication use HOST_NAME() for parameterized filtering.	|
-|	20673	|	16	|	No	|	A value for the parameter @host_name was specified, but no articles in the publication use SUSER_SNAME() for parameterized filtering.	|
+|	20672	|	16	|	No	|	A value for the parameter \@host_name was specified, but no articles in the publication use HOST_NAME() for parameterized filtering.	|
+|	20673	|	16	|	No	|	A value for the parameter \@host_name was specified, but no articles in the publication use SUSER_SNAME() for parameterized filtering.	|
 |	20674	|	16	|	No	|	The publication does not use dynamic filtering.	|
 |	20675	|	16	|	No	|	The identity range values cannot be NULL.	|
 |	20676	|	11	|	No	|	Cannot refresh the Publisher identity range for article "%s". Execute the stored procedure sp_adjustpublisheridentityrange to refresh the identity range.	|
@@ -7224,11 +7224,11 @@ The table contains error message numbers and the description, which is the text 
 |	20678	|	11	|	No	|	Could not find the regular snapshot job for the specified publication '%s'.	|
 |	20679	|	11	|	No	|	Cannot execute the stored procedure sp_adjustpublisheridentityrange on the current database because the database is a republisher or a Subscriber. To adjust the identity range at a republisher or a Subscriber, synchronize with the root Publisher.	|
 |	20680	|	16	|	No	|	Failed to get metadata for a batch of rows.	|
-|	20681	|	10	|	No	|	Cannot specify a value of 1, 2, or 3 for the parameter @partition_options because publication "%s" has a compatibility level lower than 90RTM. Use the stored procedure sp_changemergepublication to set publication_compatibility_level to 90RTM.	|
+|	20681	|	10	|	No	|	Cannot specify a value of 1, 2, or 3 for the parameter \@partition_options because publication "%s" has a compatibility level lower than 90RTM. Use the stored procedure sp_changemergepublication to set publication_compatibility_level to 90RTM.	|
 |	20682	|	10	|	No	|	Failed deletion of rows in batched delete attempt on table %s.	|
 |	20683	|	16	|	No	|	Failed batched deletion on download only article %s.	|
 |	20684	|	16	|	No	|	Deleted more rows than expected in the batched delete attempt on table %s. Stop and restart the Merge Agent.	|
-|	20685	|	16	|	No	|	Cannot drop the filter '%s' . The filter specified for the @filtername parameter cannot be found.	|
+|	20685	|	16	|	No	|	Cannot drop the filter '%s' . The filter specified for the \@filtername parameter cannot be found.	|
 |	20686	|	16	|	No	|	Parameter '%s' cannot be NULL or empty when this procedure is run from a '%s' database.	|
 |	20687	|	16	|	No	|	Parameter '%s' must be NULL when this procedure is not being run from a '%s' database.	|
 |	20688	|	16	|	No	|	The tracer token ID (%d) could not be found for Publisher %s, database %s, publication %s. Use the stored procedure sp_helptracertokens to retrieve a list of valid tracer token IDs.	|
@@ -7240,14 +7240,14 @@ The table contains error message numbers and the description, which is the text 
 |	20694	|	16	|	No	|	One or more rows to be updated for table %s contain changes in the column %s, which is used in one or more filters; merge replication cannot use batch processing for these changes. No action is required, but if this condition occurs frequently, verify that data is partitioned optimally. Batch updates can improve the performance of merge replication.	|
 |	20695	|	16	|	No	|	Only %ld out of %ld rows were updated in the batched update procedure for table %s; other rows could not be updated because they have been deleted. No action is required, but if this condition occurs frequently, determine if update-delete conflicts can be avoided. Batch updates can be helpful for performance.	|
 |	20696	|	16	|	No	|	The object %s is marked as shipped by Microsoft (ms_shipped). It cannot be added as an article for merge replication.	|
-|	20697	|	16	|	No	|	Cannot drop article %s from publication %s. In this publication, this is the only article that uses a parameterized filter. Dropping this article changes the publication to a static publication, which requires reinitialization of all Subscribers. To drop the article and reinitialize all active subscriptions, specify a value of 1 for the @force_reinit_subscription parameter of sp_dropmergepublication.	|
-|	20698	|	16	|	No	|	A value for the parameter @host_name was not specified while publication uses HOST_NAME() for dynamic filtering.	|
-|	20699	|	16	|	No	|	A value for the parameter @suser_sname was not specified while publication uses SUSER_SNAME() for dynamic filtering.	|
+|	20697	|	16	|	No	|	Cannot drop article %s from publication %s. In this publication, this is the only article that uses a parameterized filter. Dropping this article changes the publication to a static publication, which requires reinitialization of all Subscribers. To drop the article and reinitialize all active subscriptions, specify a value of 1 for the \@force_reinit_subscription parameter of sp_dropmergepublication.	|
+|	20698	|	16	|	No	|	A value for the parameter \@host_name was not specified while publication uses HOST_NAME() for dynamic filtering.	|
+|	20699	|	16	|	No	|	A value for the parameter \@suser_sname was not specified while publication uses SUSER_SNAME() for dynamic filtering.	|
 |	20701	|	16	|	No	|	The dynamic snapshot job schedule could not be changed on the distributor.	|
 |	20702	|	16	|	No	|	The dynamic snapshot job schedule could not be changed due to one or more errors.	|
 |	20703	|	16	|	No	|	One or more rows inserted in table '%s' were out of partition while the table was published with 'partition_options' set to %d.	|
 |	20704	|	16	|	No	|	The datatype of the identity column of table '%s' is tinyint. tinyint does not have enough numbers available for merge auto identity range. Change the identity column to have a larger datatype and add the merge article with merge auto identity range management.	|
-|	20705	|	10	|	No	|	Cannot set @conflict_logging to 'both' because publication '%s' has a compatibility level lower than 90. Set @publication_compatibility_level to '90RTM' when creating the publication or use sp_changemergepublication to set publication_compatibility_level to '90RTM'.	|
+|	20705	|	10	|	No	|	Cannot set \@conflict_logging to 'both' because publication '%s' has a compatibility level lower than 90. Set \@publication_compatibility_level to '90RTM' when creating the publication or use sp_changemergepublication to set publication_compatibility_level to '90RTM'.	|
 |	20706	|	10	|	No	|	The max or min allowed identity numbers for the identity column could not be found for the given article.	|
 |	20707	|	10	|	No	|	Failed to publish the article with identityrangemanagementoption set to 'auto' due to one or more errors.	|
 |	20708	|	10	|	No	|	An article is not allowed to be part of a logical record when it has a custom business logic resolver.	|
@@ -7264,15 +7264,15 @@ The table contains error message numbers and the description, which is the text 
 |	20719	|	16	|	No	|	sp_changemergelogsettings failed to update log settings. Check the parameter values.	|
 |	20720	|	16	|	No	|	Log settings do not exist for subscriber server '%s', subscriber db '%s', webserver '%s'.	|
 |	20721	|	16	|	No	|	sp_dropmergelogsettings failed to remove log settings.	|
-|	20722	|	16	|	No	|	'%s' failed. The value for parameter '%s' is not valid. Valid values are @support_options [0 - 5], @log_severity [1 - 4], @log_file_size [2,000,000 - 999,000,000], @no_of_log_files [2 - 500], @upload_interval [0 - 40320], @delete_after_upload [0 - 1].	|
+|	20722	|	16	|	No	|	'%s' failed. The value for parameter '%s' is not valid. Valid values are \@support_options [0 - 5], \@log_severity [1 - 4], \@log_file_size [2,000,000 - 999,000,000], \@no_of_log_files [2 - 500], \@upload_interval [0 - 40320], \@delete_after_upload [0 - 1].	|
 |	20723	|	16	|	No	|	Computed column "%s" can only be added to publication after its depending object "%s" is added.	|
 |	20724	|	16	|	No	|	Could not find a valid command line for the dynamic snapshot job with job_id '%s' for publication '%s'.	|
 |	20725	|	16	|	No	|	Unable to update the dynamic snapshot location for the dynamic snapshot job with job_id '%s' in publication '%s'.	|
 |	20726	|	16	|	No	|	Failed to change the dynamic snapshot location in one or more dynamic snapshot jobs for the given publication.	|
-|	20727	|	16	|	No	|	An invalid value was specified for parameter @subscription_type. Valid values are 'push', 'pull', 'both', 'anonymous' or 'all'.	|
+|	20727	|	16	|	No	|	An invalid value was specified for parameter \@subscription_type. Valid values are 'push', 'pull', 'both', 'anonymous' or 'all'.	|
 |	20728	|	16	|	No	|	Failed to restore the max allocated identity value for article '%s' in publication '%s'.	|
 |	20729	|	16	|	No	|	The max identity value allocation for article '%s' in publication '%s' could not be found on the distributor.	|
-|	20730	|	16	|	No	|	Setting @upload_first to 'true' requires the publication to be at publication_compatibility_level of '80RTM' or higher. Use sp_changemergepublication to set publication_compatibility_level to '80RTM' or higher if you want to use this feature.	|
+|	20730	|	16	|	No	|	Setting \@upload_first to 'true' requires the publication to be at publication_compatibility_level of '80RTM' or higher. Use sp_changemergepublication to set publication_compatibility_level to '80RTM' or higher if you want to use this feature.	|
 |	20731	|	16	|	No	|	This edition of SQL Server does not support publications. Dropping existing publications.	|
 |	20732	|	10	|	No	|	Warning: Values of some of the flags specified in the 'schema_option' property are not compatible with the publication's compatibility level. The modified schema_option value of '%s' will be used instead.	|
 |	20733	|	16	|	No	|	One or more rows updated in table '%s' were out of partition while the table was published with 'partition_options' set to %d.	|
@@ -7320,7 +7320,7 @@ The table contains error message numbers and the description, which is the text 
 |	21011	|	16	|	No	|	Deactivated subscriptions.	|
 |	21012	|	16	|	No	|	Cannot change the 'allow_push' property of the publication to "false". There are push subscriptions on the publication.	|
 |	21013	|	16	|	No	|	Cannot change the 'allow_pull' property of the publication to "false". There are pull subscriptions on the publication.	|
-|	21014	|	16	|	No	|	The @optname parameter value must be 'transactional' or 'merge'.	|
+|	21014	|	16	|	No	|	The \@optname parameter value must be 'transactional' or 'merge'.	|
 |	21015	|	16	|	No	|	The replication option '%s' has been set to TRUE already.	|
 |	21016	|	16	|	No	|	The replication option '%s' has been set to FALSE already.	|
 |	21017	|	16	|	No	|	Cannot perform SQL Server 7.0 compatible checksum operation on a merge article that has a vertical or horizontal partition. Rowcount validation and SQL Server 2000 compatible binary checksum operation can be performed on this article.	|
@@ -7335,7 +7335,7 @@ The table contains error message numbers and the description, which is the text 
 |	21026	|	16	|	No	|	Cannot have an anonymous subscription on a publication that does not have an independent agent.	|
 |	21027	|	16	|	No	|	'%s' replication stored procedures are not installed. You must reinstall SQL Server with Replication.	|
 |	21028	|	16	|	No	|	Replication components are not installed on this server. Run SQL Server Setup again and select the option to install replication.	|
-|	21029	|	16	|	No	|	Cannot drop a push subscription entry at the Subscriber unless @drop_push is 'true'.	|
+|	21029	|	16	|	No	|	Cannot drop a push subscription entry at the Subscriber unless \@drop_push is 'true'.	|
 |	21030	|	16	|	No	|	Names of SQL Server replication agents cannot be changed.	|
 |	21031	|	16	|	No	|	'post_script' is not supported for stored procedure articles.	|
 |	21032	|	16	|	No	|	Could not subscribe because non-SQL Server Subscriber '%s' does not support 'sync tran' update mode.	|
@@ -7350,7 +7350,7 @@ The table contains error message numbers and the description, which is the text 
 |	21041	|	16	|	No	|	A remote distribution Publisher is not allowed on this server version.	|
 |	21042	|	16	|	No	|	The distribution Publisher property, 'distributor_password', has no usage and is not supported for a Distributor running on Windows NT 4.0.	|
 |	21043	|	16	|	No	|	The Distributor is not installed.	|
-|	21044	|	16	|	No	|	Cannot ignore the remote Distributor (@ignore_remote_distributor cannot be 1) when enabling the database for publishing or merge publishing.	|
+|	21044	|	16	|	No	|	Cannot ignore the remote Distributor (\@ignore_remote_distributor cannot be 1) when enabling the database for publishing or merge publishing.	|
 |	21045	|	16	|	No	|	Cannot uninstall the Distributor because there are databases enabled for publishing or merge publishing.	|
 |	21046	|	16	|	No	|	Cannot change distribution Publisher property 'distribution_db' because the Publisher is using the current distribution database.	|
 |	21047	|	16	|	No	|	Cannot drop the local distribution Publisher because there are Subscribers defined.	|
@@ -7398,8 +7398,8 @@ The table contains error message numbers and the description, which is the text 
 |	21106	|	16	|	No	|	This edition of SQL Server does not support publications.	|
 |	21107	|	16	|	No	|	'%ls' is not a table or view.	|
 |	21108	|	16	|	No	|	This edition of SQL Server does not support transactional publications.	|
-|	21109	|	16	|	No	|	The parameters @xact_seqno_start and @xact_seqno_end must be identical if @command_id is specified.	|
-|	21110	|	16	|	No	|	@xact_seqno_start and @publisher_database_id must be specified if @command_id is specified.	|
+|	21109	|	16	|	No	|	The parameters \@xact_seqno_start and \@xact_seqno_end must be identical if \@command_id is specified.	|
+|	21110	|	16	|	No	|	\@xact_seqno_start and \@publisher_database_id must be specified if \@command_id is specified.	|
 |	21111	|	16	|	No	|	'%s' is not a valid parameter for the Snapshot Agent.	|
 |	21112	|	16	|	No	|	'%s' is not a valid parameter for the Log Reader Agent.	|
 |	21113	|	16	|	No	|	'%s' is not a valid parameter for the Distribution Agent.	|
@@ -7430,14 +7430,14 @@ The table contains error message numbers and the description, which is the text 
 |	21138	|	16	|	No	|	The 'offload_server' property cannot be the same as the Distributor name.	|
 |	21139	|	16	|	No	|	Could not determine the Subscriber name for distributed agent execution.	|
 |	21140	|	16	|	No	|	Agent execution cannot be distributed to a Subscriber that resides on the same server as the Distributor.	|
-|	21141	|	16	|	No	|	The @change_active flag may not be specified for articles with manual filters or views.	|
+|	21141	|	16	|	No	|	The \@change_active flag may not be specified for articles with manual filters or views.	|
 |	21142	|	16	|	No	|	The SQL Server '%s' could not obtain Windows group membership information for login '%s'. Verify that the Windows account has access to the domain of the login.	|
 |	21143	|	16	|	No	|	The custom stored procedure schema option is invalid for a snapshot publication article.	|
 |	21144	|	16	|	No	|	Cannot subscribe to publication of sync_type 'dump database' because the Subscriber has subscriptions to other publications.	|
 |	21145	|	16	|	No	|	Cannot subscribe to publication %s because the Subscriber has a subscription to a publication of sync_type 'dump database'.	|
-|	21146	|	16	|	No	|	@use_ftp cannot be 'true' while @alt_snapshot_folder is neither NULL nor empty.	|
+|	21146	|	16	|	No	|	\@use_ftp cannot be 'true' while \@alt_snapshot_folder is neither NULL nor empty.	|
 |	21147	|	16	|	No	|	The '%s' database is not published for merge replication.	|
-|	21148	|	16	|	No	|	Both @subscriber and @subscriberdb must be specified with non-null values simultaneously, or both must be left unspecified.	|
+|	21148	|	16	|	No	|	Both \@subscriber and \@subscriberdb must be specified with non-null values simultaneously, or both must be left unspecified.	|
 |	21149	|	16	|	No	|	The '%s' database is not published for transactional or snapshot replication.	|
 |	21150	|	16	|	No	|	Unable to determine the snapshot folder for the specified subscription because the specified Subscriber is not known to the Distributor.	|
 |	21151	|	16	|	No	|	Pre- and post-snapshot commands are not supported for a publication that may support non-SQL Server Subscribers by using the character-mode bcp as the synchronization method.	|
@@ -7445,7 +7445,7 @@ The table contains error message numbers and the description, which is the text 
 |	21153	|	16	|	No	|	Cannot create article '%s'. All articles that are part of a concurrent synchronization publication must use stored procedures to apply changes to the Subscriber.	|
 |	21154	|	16	|	No	|	Cannot change article '%s'. All articles that are part of a concurrent synchronization publication must use stored procedures to apply changes to the Subscriber.	|
 |	21155	|	16	|	No	|	Cannot change article '%s'. articles that are part of a concurrent synchronization publication can not have ins_cmd/del_cmd which exceeds %d characters .	|
-|	21156	|	16	|	No	|	The @status parameter value must be 'initiated' or 'active'.	|
+|	21156	|	16	|	No	|	The \@status parameter value must be 'initiated' or 'active'.	|
 |	21157	|	16	|	No	|	The snapshot compression option can be enabled only for a publication having an alternate snapshot generation folder defined.	|
 |	21158	|	16	|	No	|	For a publication to be enabled for the Internet, the 'ftp_address' property must not be null.	|
 |	21159	|	16	|	No	|	If a publication is enabled for the Internet, the 'alt_snapshot_folder' property must be non-empty.	|
@@ -7463,15 +7463,15 @@ The table contains error message numbers and the description, which is the text 
 |	21171	|	16	|	No	|	Could not find package '%s' in msdb at server '%s'.	|
 |	21172	|	16	|	No	|	The publication has to be in 'character', 'concurrent_c', or 'database snapshot character' bcp mode to allow DTS.	|
 |	21173	|	16	|	No	|	The publication has to be 'independent_agent type' to allow DTS.	|
-|	21174	|	16	|	No	|	Because this publication allows transformable subscriptions using DTS, it requires autogenerated stored procedures and parameterized commands, which are set using default value for the @status.	|
+|	21174	|	16	|	No	|	Because this publication allows transformable subscriptions using DTS, it requires autogenerated stored procedures and parameterized commands, which are set using default value for the \@status.	|
 |	21175	|	16	|	No	|	You cannot change the ins_cmd, upd_cmd, or del_cmd article properties because the publication allows Data Transformation Services or updatable subscriptions.	|
 |	21176	|	16	|	No	|	Only members of the sysadmin fixed server role, db_owner fixed database role, or the creator of the subscription can change the subscription properties.	|
 |	21177	|	16	|	No	|	Could not create column list because it is too long. Create the list manually.	|
 |	21178	|	16	|	No	|	Data Transformation Services (DTS) properties cannot be set because the publication does not allow transformable subscriptions using DTS. To allow transformable subscriptions, you must drop the publication and then and re-create it, specifying that transformable subscriptions are allowed.	|
-|	21179	|	16	|	No	|	Invalid @dts_package_location parameter value. Valid options are 'Distributor' or 'Subscriber'.	|
+|	21179	|	16	|	No	|	Invalid \@dts_package_location parameter value. Valid options are 'Distributor' or 'Subscriber'.	|
 |	21180	|	16	|	No	|	A publication that allows DTS cannot be enabled for updatable subscriptions.	|
-|	21181	|	16	|	No	|	@dts_package_name can be set for push subscriptions only.	|
-|	21182	|	16	|	No	|	The @agent_type parameter must be one of 'distribution', 'merge', or NULL.	|
+|	21181	|	16	|	No	|	\@dts_package_name can be set for push subscriptions only.	|
+|	21182	|	16	|	No	|	The \@agent_type parameter must be one of 'distribution', 'merge', or NULL.	|
 |	21183	|	16	|	No	|	Invalid property name '%s'.	|
 |	21184	|	16	|	No	|	%s parameter is incorrect: it should be '%s', '%s' or '%s'.	|
 |	21185	|	16	|	No	|	The subscription is not initialized or not created for failover mode operations.	|
@@ -7481,7 +7481,7 @@ The table contains error message numbers and the description, which is the text 
 |	21189	|	16	|	No	|	The queue for this subscription with queue_id = '%s' is not empty. Run the Queue Reader Agent to make sure the queue is empty before setting mode from [queued] to [immediate].	|
 |	21190	|	10	|	No	|	Overriding queue check for setting mode from [%s] to [%s].	|
 |	21192	|	16	|	No	|	MSrepl_tran_version column is a predefined column used for replication and can be only of data type uniqueidentifier	|
-|	21193	|	16	|	No	|	@identity_range, @pub_identity_range, or @threshold cannot be NULL when @identityrangemanagementoption is set to AUTO.	|
+|	21193	|	16	|	No	|	\@identity_range, \@pub_identity_range, or \@threshold cannot be NULL when \@identityrangemanagementoption is set to AUTO.	|
 |	21194	|	16	|	No	|	Cannot support identity range management because this table does not have an identity column.	|
 |	21195	|	16	|	No	|	A valid identity range is not available. Check the data type of the identity column.	|
 |	21196	|	16	|	No	|	Identity automation failed.	|
@@ -7511,7 +7511,7 @@ The table contains error message numbers and the description, which is the text 
 |	21220	|	16	|	No	|	Unable to add the article '%s' because a snapshot has been generated for the publication '%s'.	|
 |	21221	|	16	|	No	|	The specified source object must be a view object if it is going to be as a 'view schema only' type article.	|
 |	21222	|	16	|	No	|	The schema options available for a procedure, function, synonym, or aggregate schema article are: 0x00000001, 0x00000020, 0x00001000, 0x00002000, 0x00400000, 0x02000000, 0x08000000, 0x10000000, 0x20000000, 0x40000000, and 0x80000000.	|
-|	21223	|	16	|	No	|	The @pre_creation_command parameter for a schema only article must be either 'none' or 'drop'.	|
+|	21223	|	16	|	No	|	The \@pre_creation_command parameter for a schema only article must be either 'none' or 'drop'.	|
 |	21224	|	16	|	No	|	'%s' is not a valid property for a schema only article.	|
 |	21225	|	16	|	No	|	The 'offload_server' property cannot be NULL or empty if the pull subscription agent is to be enabled for remote activation.	|
 |	21226	|	16	|	No	|	The database '%s' does not have a pull subscription to the specified publication.	|
@@ -7541,7 +7541,7 @@ The table contains error message numbers and the description, which is the text 
 |	21250	|	16	|	No	|	Primary key column '%s' cannot be excluded from a vertical partition.	|
 |	21251	|	16	|	No	|	Publisher '%s', publisher database '%s', publication '%s' could not be removed from the list of synchronization partners.	|
 |	21252	|	16	|	No	|	It is invalid to remove the default Publisher '%s', publication database '%s', and publication '%s' from the list of synchronization partners	|
-|	21253	|	16	|	No	|	Parameter '@add_to_active_directory' cannot be set to TRUE because Active Directory client package is not installed properly on the machine where SQL Server is running.	|
+|	21253	|	16	|	No	|	Parameter '\@add_to_active_directory' cannot be set to TRUE because Active Directory client package is not installed properly on the machine where SQL Server is running.	|
 |	21254	|	16	|	No	|	The Active Directory operation on publication '%s' could not be completed because Active Directory client package is not installed properly on the machine where SQL Server is running.	|
 |	21255	|	16	|	No	|	Column '%s' already exists in table '%s'.	|
 |	21256	|	16	|	No	|	A column used in filter clause '%s' either does not exist in the table '%s' or cannot be excluded from the current partition.	|
@@ -7562,28 +7562,28 @@ The table contains error message numbers and the description, which is the text 
 |	21272	|	16	|	No	|	Cannot clean up the meta data for publication '%s' because other publications are using one or more articles in this publication.	|
 |	21273	|	16	|	No	|	You must upgrade the Subscriber to SQL Server 2000 to create updatable subscriptions when the Publisher is SQL Server 2000 or higher.	|
 |	21274	|	16	|	No	|	Invalid publication name '%s'.	|
-|	21275	|	16	|	No	|	Cannot publish the schema-bound view '%ls'. The value specified for the @type parameter must be "indexed view schema only" (for snapshot or transactional replication) or "indexed view logbased" (for transactional replication only).	|
+|	21275	|	16	|	No	|	Cannot publish the schema-bound view '%ls'. The value specified for the \@type parameter must be "indexed view schema only" (for snapshot or transactional replication) or "indexed view logbased" (for transactional replication only).	|
 |	21276	|	16	|	No	|	The type must be 'table' or '( view | indexed view | proc | func ) schema only'.	|
-|	21277	|	16	|	No	|	Cannot publish the source object '%ls'. The value specified for the @type parameter ("indexed view schema only" or "indexed view logbased") can be used only for indexed views. Either specify a value of "view schema only" for the @type parameter, or modify the view to be schema bound with a unique clustered index.	|
-|	21278	|	16	|	No	|	Cannot publish the source object '%ls'. The value specified for the @type parameter ("indexed view logbased") requires that the view be schema bound with a unique clustered index. Either specify a value of "view schema only" for the @type parameter, or modify the view to be schema bound with a unique clustered index.	|
+|	21277	|	16	|	No	|	Cannot publish the source object '%ls'. The value specified for the \@type parameter ("indexed view schema only" or "indexed view logbased") can be used only for indexed views. Either specify a value of "view schema only" for the \@type parameter, or modify the view to be schema bound with a unique clustered index.	|
+|	21278	|	16	|	No	|	Cannot publish the source object '%ls'. The value specified for the \@type parameter ("indexed view logbased") requires that the view be schema bound with a unique clustered index. Either specify a value of "view schema only" for the \@type parameter, or modify the view to be schema bound with a unique clustered index.	|
 |	21279	|	16	|	No	|	The 'schema_option' property for a merge article cannot be changed after a snapshot is generated for the publication. To change the 'schema_option' property of this article the corresponding merge publication must be dropped and re-created.	|
 |	21280	|	16	|	No	|	Publication '%s' cannot be subscribed to by Subscriber database '%s' because it contains one or more articles that have been subscribed to by the same Subscriber database at transaction level.	|
 |	21281	|	16	|	No	|	Publication '%s' cannot be subscribed to by Subscriber database '%s' because it contains one or more articles that have been subscribed to by the same Subscriber database at merge level.	|
-|	21282	|	16	|	No	|	@identity_range, @pub_identity_range, and @threshold must be NULL when @identityrangemanagementoption is set to 'none' or 'manual'.	|
+|	21282	|	16	|	No	|	\@identity_range, \@pub_identity_range, and \@threshold must be NULL when \@identityrangemanagementoption is set to 'none' or 'manual'.	|
 |	21283	|	16	|	No	|	Column '%s' of table '%s' cannot be excluded from a vertical partition because there is a computed column that depends on it.	|
 |	21284	|	16	|	No	|	Failed to drop column '%s' from table '%s'.	|
 |	21285	|	16	|	No	|	Failed to add column '%s' to table '%s'.	|
 |	21286	|	16	|	No	|	Conflict table '%s' does not exist.	|
-|	21287	|	16	|	No	|	The specified @destination_folder is not a valid path of an existing folder.	|
-|	21288	|	16	|	No	|	Could not create the snapshot directory structure in the specified @destination_folder.	|
+|	21287	|	16	|	No	|	The specified \@destination_folder is not a valid path of an existing folder.	|
+|	21288	|	16	|	No	|	Could not create the snapshot directory structure in the specified \@destination_folder.	|
 |	21289	|	16	|	No	|	Either the snapshot files have not been generated or they have been cleaned up.	|
 |	21290	|	16	|	No	|	The identity range value provided has exceeded the maximum value allowed.	|
 |	21291	|	16	|	No	|	The specified automatic identity support parameters conflict with the settings in another article.	|
 |	21292	|	16	|	No	|	Object '%s' cannot be published twice in the same publication.	|
 |	21293	|	10	|	No	|	Warning: adding updatable subscription for article '%s' may cause data inconsistency as the source table is already subscribed to '%s'	|
-|	21294	|	16	|	No	|	Either @publisher (and @publisher_db) or @subscriber (and @subscriber_db) must be specified, but both cannot be specified.	|
+|	21294	|	16	|	No	|	Either \@publisher (and \@publisher_db) or \@subscriber (and \@subscriber_db) must be specified, but both cannot be specified.	|
 |	21295	|	16	|	No	|	Publication '%s' does not contain any article that uses automatic identity range management.	|
-|	21296	|	16	|	No	|	Parameter @resync_type must be either 0, 1, 2.	|
+|	21296	|	16	|	No	|	Parameter \@resync_type must be either 0, 1, 2.	|
 |	21297	|	16	|	No	|	Invalid resync type. No validation has been performed for this subscription.	|
 |	21298	|	16	|	No	|	Failed to resynchronize this subscription.	|
 |	21299	|	16	|	No	|	Invalid Subscriber partition validation expression '%s'.	|
@@ -7608,7 +7608,7 @@ The table contains error message numbers and the description, which is the text 
 |	21318	|	10	|	No	|	Table '%s' must have at least one column that is included in the vertical partition.	|
 |	21319	|	16	|	No	|	Could not find the Snapshot Agent command line for the specified publication. Check that a valid regular snapshot job exists on the distributor.	|
 |	21320	|	16	|	No	|	The version of the Distributor cannot be lower than the version of the Publisher.	|
-|	21321	|	16	|	No	|	The parameter @dynamic_snapshot_location cannot be an empty string.	|
+|	21321	|	16	|	No	|	The parameter \@dynamic_snapshot_location cannot be an empty string.	|
 |	21322	|	16	|	No	|	This publication logs conflicts on both replicas. Pre-SQL Server 2005 subscribers will not honor this setting.	|
 |	21323	|	16	|	No	|	A dynamic snapshot job can be scheduled only for a publication with dynamic filtering enabled.	|
 |	21324	|	16	|	No	|	A Snapshot Agent must be added for the specified publication before a dynamic snapshot job can be scheduled.	|
@@ -7616,7 +7616,7 @@ The table contains error message numbers and the description, which is the text 
 |	21326	|	16	|	No	|	Could not find the dynamic snapshot job with a '%ls' of '%ls' for the specified publication.	|
 |	21327	|	16	|	No	|	'%ls' is not a valid dynamic snapshot job name.	|
 |	21328	|	16	|	No	|	The specified dynamic snapshot job name '%ls' is already in use. Try the operation again with a different job name.	|
-|	21329	|	16	|	No	|	Only one of the parameters, @dynamic_snapshot_jobid or @dynamic_snapshot_jobname, can be specified with a nondefault value.	|
+|	21329	|	16	|	No	|	Only one of the parameters, \@dynamic_snapshot_jobid or \@dynamic_snapshot_jobname, can be specified with a nondefault value.	|
 |	21330	|	16	|	No	|	Cannot create a sub-directory under the snapshot folder (%ls). Ensure that there is enough disk space available, and that the account under which the Snapshot Agent runs has permissions to create a sub-directory under the snapshot folder.	|
 |	21331	|	16	|	No	|	Cannot copy user script file to the snapshot folder at the Distributor (%ls). Ensure that there is enough disk space available, and that the account under which the Snapshot Agent runs has permissions to write to the snapshot folder and its subdirectories.	|
 |	21332	|	16	|	No	|	Failed to retrieve information about the publication : %ls. Check the name again.	|
@@ -7624,12 +7624,12 @@ The table contains error message numbers and the description, which is the text 
 |	21334	|	16	|	No	|	Cannot initialize Message Queuing-based subscription because the platform is not Message Queuing %s compliant	|
 |	21335	|	16	|	No	|	Warning: column '%s' already exists in the vertical partition.	|
 |	21336	|	16	|	No	|	Warning: column '%s' does not exist in the vertical partition.	|
-|	21337	|	16	|	No	|	Invalid @subscriber_type value. Valid options are 'local' and 'global'.	|
+|	21337	|	16	|	No	|	Invalid \@subscriber_type value. Valid options are 'local' and 'global'.	|
 |	21338	|	16	|	No	|	Cannot execute sp_dropmergearticle if the publication has a Subscriber that is running on a version of SQL Server 2000 or earlier. Drop and re-create the publication without the article '%s' or set the publication compatibility level of publication '%s' to '90RTM' before calling sp_dropmergearticle.	|
 |	21339	|	10	|	No	|	Warning: the publication uses a feature that is only supported only by subscribers running '%s' or higher.	|
 |	21340	|	16	|	No	|	On Demand user script cannot be applied to the snapshot publication.	|
-|	21341	|	16	|	No	|	@dynamic_snapshot_location cannot be a non-empty string while @alt_snapshot_folder is neither empty nor null.	|
-|	21342	|	16	|	No	|	@dynamic_snapshot_location cannot be a non-empty string while @use_ftp is 'true'.	|
+|	21341	|	16	|	No	|	\@dynamic_snapshot_location cannot be a non-empty string while \@alt_snapshot_folder is neither empty nor null.	|
+|	21342	|	16	|	No	|	\@dynamic_snapshot_location cannot be a non-empty string while \@use_ftp is 'true'.	|
 |	21343	|	16	|	No	|	Could not find stored procedure '%s'.	|
 |	21344	|	16	|	No	|	Invalid value specified for %ls parameter.	|
 |	21345	|	16	|	No	|	Excluding the last column in the partition is not allowed.	|
@@ -7648,28 +7648,28 @@ The table contains error message numbers and the description, which is the text 
 |	21358	|	10	|	No	|	Warning: only Subscribers running SQL Server 2000 or later can synchronize with publication '%s' because at least one timestamp column exists in one of its articles.	|
 |	21359	|	10	|	No	|	Warning: only Subscribers running SQL Server 2000 or later can synchronize with publication '%s' because automatic identity ranges are being used.	|
 |	21360	|	10	|	No	|	Warning: only Subscribers running SQL Server 2000 or later can synchronize with publication '%s' because a new article has been added to the publication after its snapshot has been generated.	|
-|	21361	|	16	|	No	|	The specified @agent_jobid is not a valid job id for a '%s' agent job.	|
+|	21361	|	16	|	No	|	The specified \@agent_jobid is not a valid job id for a '%s' agent job.	|
 |	21362	|	16	|	No	|	Merge filter '%s' does not exist.	|
 |	21363	|	16	|	No	|	Failed to add publication '%s' to Active Directory. %s	|
-|	21364	|	16	|	No	|	Could not add article '%s' because a snapshot is already generated. Set @force_invalidate_snapshot to 1 to force this and invalidate the existing snapshot.	|
-|	21365	|	16	|	No	|	Could not add article '%s' because there are active subscriptions. Set @force_reinit_subscription to 1 to force this and reinitialize the active subscriptions.	|
-|	21366	|	16	|	No	|	Could not add filter '%s' because a snapshot is already generated. Set @force_invalidate_snapshot to 1 to force this and invalidate the existing snapshot.	|
-|	21367	|	16	|	No	|	Could not add filter '%s' because there are active subscriptions. Set @force_reinit_subscription to 1 to force this and reinitialize the active subscriptions.	|
+|	21364	|	16	|	No	|	Could not add article '%s' because a snapshot is already generated. Set \@force_invalidate_snapshot to 1 to force this and invalidate the existing snapshot.	|
+|	21365	|	16	|	No	|	Could not add article '%s' because there are active subscriptions. Set \@force_reinit_subscription to 1 to force this and reinitialize the active subscriptions.	|
+|	21366	|	16	|	No	|	Could not add filter '%s' because a snapshot is already generated. Set \@force_invalidate_snapshot to 1 to force this and invalidate the existing snapshot.	|
+|	21367	|	16	|	No	|	Could not add filter '%s' because there are active subscriptions. Set \@force_reinit_subscription to 1 to force this and reinitialize the active subscriptions.	|
 |	21368	|	16	|	No	|	The specified offload server name contains the invalid character '%s'.	|
 |	21369	|	16	|	No	|	Could not remove publication '%s' from Active Directory.	|
 |	21370	|	16	|	No	|	The resync date specified '%s' is not a valid date.	|
 |	21371	|	10	|	No	|	Could not propagate the change on publication '%s' to Active Directory.	|
-|	21372	|	16	|	No	|	Cannot drop filter '%s' from publication '%s' because its snapshot has been run and this publication could have active subscriptions. Set @force_reinit_subscription to 1 to reinitialize all subscriptions and drop the filter.	|
+|	21372	|	16	|	No	|	Cannot drop filter '%s' from publication '%s' because its snapshot has been run and this publication could have active subscriptions. Set \@force_reinit_subscription to 1 to reinitialize all subscriptions and drop the filter.	|
 |	21373	|	11	|	No	|	Could not open database %s. Replication settings and system objects could not be upgraded. If the database is used for replication, run sp_vupgrade_replication in the [master] database when the database is available.	|
 |	21374	|	10	|	No	|	Upgrading distribution settings and system objects in database %s.	|
 |	21375	|	10	|	No	|	Upgrading publication settings and system objects in database %s.	|
 |	21376	|	11	|	No	|	Could not open database %s. Replication settings and system objects could not be upgraded. If the database is used for replication, run sp_vupgrade_replication in the [master] database when the database is available.	|
 |	21377	|	10	|	No	|	Upgrading subscription settings and system objects in database %s.	|
 |	21378	|	16	|	No	|	Could not open distribution database %s because it is offline or being recovered. Replication settings and system objects could not be upgraded. Be sure this database is available and run sp_vupgrade_replication again.	|
-|	21379	|	16	|	No	|	Cannot drop article '%s' from publication '%s' because a snapshot is already generated. Set @force_invalidate_snapshot to 1 to force this and invalidate the existing snapshot.	|
-|	21380	|	16	|	No	|	Cannot add timestamp column without forcing reinitialization. Set @force_reinit_subscription to 1 to force reinitialization.	|
-|	21381	|	16	|	No	|	Cannot add (drop) column to table '%s' because the table belongs to publication(s) with an active updatable subscription. Set @force_reinit_subscription to 1 to force reinitialization.	|
-|	21382	|	16	|	No	|	Cannot drop filter '%s' because a snapshot is already generated. Set @force_invalidate_snapshot to 1 to force this and invalidate the existing snapshot.	|
+|	21379	|	16	|	No	|	Cannot drop article '%s' from publication '%s' because a snapshot is already generated. Set \@force_invalidate_snapshot to 1 to force this and invalidate the existing snapshot.	|
+|	21380	|	16	|	No	|	Cannot add timestamp column without forcing reinitialization. Set \@force_reinit_subscription to 1 to force reinitialization.	|
+|	21381	|	16	|	No	|	Cannot add (drop) column to table '%s' because the table belongs to publication(s) with an active updatable subscription. Set \@force_reinit_subscription to 1 to force reinitialization.	|
+|	21382	|	16	|	No	|	Cannot drop filter '%s' because a snapshot is already generated. Set \@force_invalidate_snapshot to 1 to force this and invalidate the existing snapshot.	|
 |	21383	|	16	|	No	|	Cannot enable a merge publication on this server because the working directory of its Distributors is not using a UNC path.	|
 |	21384	|	16	|	No	|	The specified subscription does not exist or has not been synchronized yet.	|
 |	21385	|	16	|	No	|	Snapshot failed to process publication '%s'. Possibly due to active schema change activity or new articles being added.	|
@@ -7683,7 +7683,7 @@ The table contains error message numbers and the description, which is the text 
 |	21393	|	16	|	No	|	Dropping row filter(%s) for article '%s' in '%s'. Reissue sp_articlefilter and sp_articleview to create a row filter.	|
 |	21394	|	16	|	No	|	Invalid schema option specified for publication that allows updating subscribers. Need to set the schema option to include DRI constraints.	|
 |	21395	|	10	|	No	|	This column cannot be included in a transactional publication because the column ID is greater than 255.	|
-|	21396	|	16	|	No	|	The value specified for the @type parameter of sp_addsubscriber or the @subscriber_type parameter of sp_addsubscription is not valid. See SQL Server Books Online for a list of valid values.	|
+|	21396	|	16	|	No	|	The value specified for the \@type parameter of sp_addsubscriber or the \@subscriber_type parameter of sp_addsubscription is not valid. See SQL Server Books Online for a list of valid values.	|
 |	21397	|	16	|	No	|	The transactions required for synchronizing the nosync subscription created from the specified backup are unavailable at the Distributor. Retry the operation again with a more up-to-date log, differential, or full database backup.	|
 |	21398	|	16	|	No	|	Could not complete setting up the no-sync subscription at the Distributor while the distribution cleanup agent is running. The operation has a greater chance of success if the distribution cleanup agent is temporarily disabled.	|
 |	21399	|	16	|	No	|	The transactions required for synchronizing the subscription with the specified log sequence number (LSN) are unavailable at the Distributor. Specify a higher LSN.	|
@@ -7694,8 +7694,8 @@ The table contains error message numbers and the description, which is the text 
 |	21404	|	10	|	No	|	'%s' is not a valid value for the '%s' parameter. The value must be a positive integer greater than 300 or 0.	|
 |	21405	|	10	|	No	|	'%s' is not a valid value for the '%s' parameter. The value must be an integer greater than or equal to %d.	|
 |	21406	|	10	|	No	|	'%s' is not a valid value for the '%s' parameter. The value must be 0 or 1.	|
-|	21407	|	16	|	No	|	Cannot create the subscription. If you specify a value of "initialize with backup" for the @sync_type parameter, you must subscribe to all articles in the publication by specifying a value of "all" for the @article parameter.	|
-|	21408	|	16	|	No	|	Cannot create the subscription. You must specify a value of "Active" or "Subscribed" for the @status parameter. This is because the value specified for the @sync_type parameter is "initialize with backup" or "replication support only".	|
+|	21407	|	16	|	No	|	Cannot create the subscription. If you specify a value of "initialize with backup" for the \@sync_type parameter, you must subscribe to all articles in the publication by specifying a value of "all" for the \@article parameter.	|
+|	21408	|	16	|	No	|	Cannot create the subscription. You must specify a value of "Active" or "Subscribed" for the \@status parameter. This is because the value specified for the \@sync_type parameter is "initialize with backup" or "replication support only".	|
 |	21409	|	16	|	No	|	Only one of parameters %s and %s can be set.	|
 |	21410	|	16	|	No	|	Snapshot Agent startup message.	|
 |	21411	|	16	|	No	|	Distribution Agent startup message.	|
@@ -7710,13 +7710,13 @@ The table contains error message numbers and the description, which is the text 
 |	21421	|	10	|	No	|	Article '%s' cannot be dropped because there are other articles using it as a join article.	|
 |	21422	|	16	|	No	|	Queue Reader Agent startup message.	|
 |	21423	|	16	|	No	|	Either the publication '%s' does not exist or you do not have sufficient permissions to access it. Ensure that the publication exists and that the account under which the Merge Agent connects to the Publisher is included in the publication access list (PAL).	|
-|	21424	|	16	|	No	|	The @publisher parameter must be NULL for SQL Server publishers.	|
-|	21425	|	16	|	No	|	The @publisher parameter may not be NULL for heterogeneous publishers.	|
+|	21424	|	16	|	No	|	The \@publisher parameter must be NULL for SQL Server publishers.	|
+|	21425	|	16	|	No	|	The \@publisher parameter may not be NULL for heterogeneous publishers.	|
 |	21426	|	16	|	No	|	No shared agent subscription exists for publication '%s' and the subscriber/subscriber database pair '%s'/'%s'.	|
 |	21450	|	16	|	No	|	The replication %s could not be upgraded for %s databases. Ensure that %s is upgraded and execute %s again.	|
 |	21451	|	16	|	No	|	The %s %s (%s) login (%s) password has been changed.	|
 |	21452	|	10	|	No	|	Warning: The %s agent job has been implicitly created and will run under the SQL Server Agent Service Account.	|
-|	21454	|	16	|	No	|	The internal procedure sp_MStran_is_snapshot_required must be executed at the Distributor if the @run_at_distributor parameter has a value of 1. If the problem persists, contact Microsoft Customer Support Services.	|
+|	21454	|	16	|	No	|	The internal procedure sp_MStran_is_snapshot_required must be executed at the Distributor if the \@run_at_distributor parameter has a value of 1. If the problem persists, contact Microsoft Customer Support Services.	|
 |	21456	|	16	|	No	|	Value provided for parameter %s is not valid.	|
 |	21460	|	16	|	No	|	The primary key for source table "%s" includes the timestamp column "%s". Cannot create the article for the specified publication because it allows updating Subscribers.	|
 |	21481	|	16	|	No	|	Cannot create replication subscription(s) in the master database. Choose another database for creating subscriptions.	|
@@ -7726,8 +7726,8 @@ The table contains error message numbers and the description, which is the text 
 |	21486	|	16	|	No	|	An error occurred while logging the tracer token history information. The tracer token could not be posted.	|
 |	21487	|	16	|	No	|	An error occurred while inserting the tracer token to the log. The tracer token could not be posted.	|
 |	21488	|	16	|	No	|	No active subscriptions were found. The publication must have active subscriptions in order to post a tracer token.	|
-|	21489	|	16	|	No	|	A database '%s' already exists. If you intend this to be your distribution database set @existing_db = 1.	|
-|	21490	|	16	|	No	|	The value specified for the %s parameter of sp_mergearticlecolumn must be '%s'. A value of 'true' is allowed only when this procedure is called by another replication procedure. Either set the value of the @schema_replication parameter to 'false' or do not specify a value.	|
+|	21489	|	16	|	No	|	A database '%s' already exists. If you intend this to be your distribution database set \@existing_db = 1.	|
+|	21490	|	16	|	No	|	The value specified for the %s parameter of sp_mergearticlecolumn must be '%s'. A value of 'true' is allowed only when this procedure is called by another replication procedure. Either set the value of the \@schema_replication parameter to 'false' or do not specify a value.	|
 |	21499	|	16	|	No	|	The procedure %s failed to %s the resource %s. Server error = %d.	|
 |	21500	|	10	|	No	|	Invalid subscription type is specified. A subscription to publication '%s' already exists in the database with a different subscription type.	|
 |	21501	|	10	|	No	|	The supplied resolver information does not specify a valid column name to be used for conflict resolution by '%s'.	|
@@ -7753,17 +7753,17 @@ The table contains error message numbers and the description, which is the text 
 |	21522	|	16	|	No	|	This article cannot use the '%s' feature because the publication compatibility level is less than 90. Use sp_changemergepublication to set the publication_compatibility_level of publication '%s' to '90RTM'.	|
 |	21523	|	16	|	No	|	Adding column '%s' to table '%s' failed. Articles can have at most %d columns, including columns that have been filtered.	|
 |	21525	|	16	|	No	|	A lightweight replica must be anonymous.	|
-|	21526	|	16	|	No	|	Article '%s' already belongs to a subscription with a different value for the @lightweight property.	|
+|	21526	|	16	|	No	|	Article '%s' already belongs to a subscription with a different value for the \@lightweight property.	|
 |	21527	|	16	|	No	|	Publication '%s' cannot be added to database '%s', because a publication with a lower compatibility level already exists. All merge publications in a database must have the same compatibility level.	|
 |	21528	|	16	|	No	|	Publication '%s' cannot be added to database '%s', because a publication with a higher compatibility level already exists. All merge publications in a database must have the same compatibiliy level.	|
 |	21530	|	10	|	No	|	The schema change failed during execution of an internal replication procedure. For corrective action, see the other error messages that accompany this error message.	|
 |	21531	|	10	|	No	|	The data definition language (DDL) command cannot be executed at the Subscriber. DDL commands can only be executed at the Publisher. In a republishing hierarchy, DDL commands can only be executed at the root Publisher, not at any of the republishing Subscribers.	|
 |	21532	|	10	|	No	|	Cannot add a data definition language trigger for replicating '%.*ls' events.	|
 |	21533	|	10	|	No	|	Cannot insert information into the schema change tracking table sysmergeschemachange.	|
-|	21535	|	16	|	No	|	The article '%s' is already published in another publication, and is set to use nonoverlapping partitions with multiple subscribers per partition (@partition_options = 2). This setting does not permit the article to be included in more than one publication.	|
+|	21535	|	16	|	No	|	The article '%s' is already published in another publication, and is set to use nonoverlapping partitions with multiple subscribers per partition (\@partition_options = 2). This setting does not permit the article to be included in more than one publication.	|
 |	21537	|	16	|	No	|	The column '%s' in table '%s' is involved in a foreign key relationship with a column in table '%s', but this column was not found in the specified join clause. A logical record relationship between these tables should include this column.	|
 |	21538	|	16	|	No	|	Table '%s' cannot have table '%s' as a parent in a logical record relationship because it already has a different parent table. A logical record relationship allows only one parent table for a given child table.	|
-|	21539	|	16	|	No	|	A logical record relationship, specified by the @filter_type parameter, requires a one-to-one or a one-to-many join from the parent table to the child table. Either change the value of the @filter_type parameter, or set the @join_unique_key parameter to 1.	|
+|	21539	|	16	|	No	|	A logical record relationship, specified by the \@filter_type parameter, requires a one-to-one or a one-to-many join from the parent table to the child table. Either change the value of the \@filter_type parameter, or set the \@join_unique_key parameter to 1.	|
 |	21540	|	16	|	No	|	You cannot drop a column defined as data type uniqueidentifier with the rowguidcol property because merge replication uses this column for tracking. To drop the column, you must first drop the table from all publications and subscriptions.	|
 |	21541	|	16	|	No	|	Cannot complete ALTER TABLE command. Do not execute the command 'ALTER TABLE table_name DISABLE TRIGGER ALL' on a published table. Reissue multiple 'ALTER TABLE table_name DISABLE TRIGGER trigger_name' statements to disable each trigger individually on the given table.	|
 |	21542	|	16	|	No	|	Encountered server error %d while executing <%s>.	|
@@ -7789,35 +7789,35 @@ The table contains error message numbers and the description, which is the text 
 |	21575	|	16	|	No	|	The value specified for the property filter_type is not valid. Valid values are 1 (join filter only), 2 (logical record relation only), and 3 (join filter and logical record relation).	|
 |	21576	|	16	|	No	|	Cannot add a logical record relationship between tables '%s' and '%s' because the foreign key column '%s' in table '%s' allows NULL values. Alter the column to disallow NULL values.	|
 |	21578	|	16	|	No	|	In order to use partition_options of 2 (non overlapping partitions with multiple subscriptions per partition) or 3 (non overlapping partitions one subscription per partition) the publication '%s' must be enabled to use partition groups functionality. Use sp_changemergepublication to set 'use_partition_groups' to 'true'.	|
-|	21579	|	16	|	No	|	Article "%s" in publication "%s" does not qualify for the partition option that you specified. You cannot specify a value of 2 or 3 (nonoverlapping partitions) for the @partition_options parameter because the article is involved in multiple join filters. Either select a value of 0 or 1 for the @partition_options parameter, or drop all but one of the join filters by using sp_dropmergefilter.	|
-|	21580	|	16	|	No	|	Article "%s" in publication "%s" does not qualify for the partition option that you specified. You cannot specify a value of 2 or 3 (nonoverlapping partitions) for the @partition_options parameter because the article is involved in both a row filter and a join filter. Either select a value of 0 or 1 for the @partition_options parameter; drop the join filter by using sp_dropmergefilter; or change the row filter by using sp_changemergepublication.	|
-|	21581	|	16	|	No	|	Article "%s" in publication "%s" does not qualify for the partition option that you specified. You cannot specify a value of 2 or 3 (nonoverlapping partitions) for the @partition_options parameter because the article has a join filter with a join_unique_key value of 0. Either select a value of 0 or 1 for the @partition_options parameter, or use sp_changemergefilter to specify a value of 1 for join_unique_key.	|
-|	21582	|	16	|	No	|	Article "%s" in publication "%s" does not qualify for the partition option that you specified. You cannot specify a value of 2 or 3 (nonoverlapping partitions) for the @partition_options parameter because the article has a direct or indirect join filter relationship with parent article "%s". The parent article does not use the same value for partition_options. Use sp_changemergepublication to change the value for one of the articles.	|
+|	21579	|	16	|	No	|	Article "%s" in publication "%s" does not qualify for the partition option that you specified. You cannot specify a value of 2 or 3 (nonoverlapping partitions) for the \@partition_options parameter because the article is involved in multiple join filters. Either select a value of 0 or 1 for the \@partition_options parameter, or drop all but one of the join filters by using sp_dropmergefilter.	|
+|	21580	|	16	|	No	|	Article "%s" in publication "%s" does not qualify for the partition option that you specified. You cannot specify a value of 2 or 3 (nonoverlapping partitions) for the \@partition_options parameter because the article is involved in both a row filter and a join filter. Either select a value of 0 or 1 for the \@partition_options parameter; drop the join filter by using sp_dropmergefilter; or change the row filter by using sp_changemergepublication.	|
+|	21581	|	16	|	No	|	Article "%s" in publication "%s" does not qualify for the partition option that you specified. You cannot specify a value of 2 or 3 (nonoverlapping partitions) for the \@partition_options parameter because the article has a join filter with a join_unique_key value of 0. Either select a value of 0 or 1 for the \@partition_options parameter, or use sp_changemergefilter to specify a value of 1 for join_unique_key.	|
+|	21582	|	16	|	No	|	Article "%s" in publication "%s" does not qualify for the partition option that you specified. You cannot specify a value of 2 or 3 (nonoverlapping partitions) for the \@partition_options parameter because the article has a direct or indirect join filter relationship with parent article "%s". The parent article does not use the same value for partition_options. Use sp_changemergepublication to change the value for one of the articles.	|
 |	21583	|	16	|	No	|	Cannot update the column in article '%s'. The article has a value of 2 or 3 (nonoverlapping partitions) for the partition_options property, and the column is involved in a row filter and/or a join filter. In this situation, the column cannot be updated at a Subscriber or republisher; it must be updated at the top-level Publisher.	|
 |	21584	|	16	|	No	|	Cannot insert the row for article '%s'. The row does not belong to the Subscriber's partition, and the article has a value of 2 or 3 (nonoverlapping partitions) for the partition_options property. Nonoverlapping partitions do not allow out-of-partition inserts.	|
 |	21585	|	16	|	No	|	Cannot specify custom article ordering in publication '%s' because the publication has a compatibility level lower than 90RTM. Use sp_changemergepublication to set the publication_compatibility_level to 90RTM.	|
 |	21597	|	16	|	No	|	The article includes only the rowguidcol column. You must publish at least one other column.	|
 |	21598	|	16	|	No	|	Modifying DDL triggers created by replication is disallowed since these are required to track DDL changes.	|
-|	21599	|	16	|	No	|	The parameters @article and @join_articlename cannot have the same value. Specify different articles for the two parameters; self-joins are not permitted.	|
+|	21599	|	16	|	No	|	The parameters \@article and \@join_articlename cannot have the same value. Specify different articles for the two parameters; self-joins are not permitted.	|
 |	21600	|	16	|	No	|	Non-SQL Server Publisher [%s] cannot be found. Execute sp_helpdistpublishers to view a list of available Publishers.	|
-|	21601	|	16	|	No	|	The value of the parameter @type must be 'logbased' for Oracle publications.	|
+|	21601	|	16	|	No	|	The value of the parameter \@type must be 'logbased' for Oracle publications.	|
 |	21603	|	16	|	No	|	The refresh of Oracle publisher '%s' by sp_refresh_heterogeneous_publisher was not successful. The Oracle publisher meta data has been retained in its failed state to help in diagnosing the cause of the failure. When the problem has been diagnosed and resolved, rerun sp_refresh_heterogeneous_publisher to complete the refresh.	|
 |	21604	|	16	|	No	|	The non-SQL Server Publisher vendor is not valid. Attempt to add the Publisher again. If the problem persists, contact Microsoft Customer Support Services.	|
 |	21605	|	16	|	No	|	Non-SQL Server Publishers must be configured in the context of the distribution database. Execute sp_adddistpublisher in the context of the distribution database.	|
 |	21606	|	16	|	No	|	Parameter "%s" is for non-SQL Server Publishers only. The value of this parameter must be "%s" for a SQL Server Publisher.	|
 |	21607	|	16	|	No	|	sp_refresh_heterogeneous_publisher was unable to obtain publisher information for Oracle publisher '%s'. sp_refresh_heterogeneous_publisher may only be called to refresh Oracle publishers currently defined at the distributor.	|
-|	21608	|	16	|	No	|	Cannot use a value of TRUE for the parameter @ignore_distributor. The value must be FALSE for a non-SQL Server Publisher.	|
+|	21608	|	16	|	No	|	Cannot use a value of TRUE for the parameter \@ignore_distributor. The value must be FALSE for a non-SQL Server Publisher.	|
 |	21609	|	16	|	No	|	Non-SQL Server publications do not support updatable subscriptions. The properties allow_sync_tran and allow_queued_tran must be "false".	|
 |	21610	|	16	|	No	|	The failed attempt by sp_refresh_heterogeneous_publisher to refresh publisher '%s' did not alter any meta data at the Oracle publisher. Make certain that the correct Oracle publisher has been identified and that the requirements for refreshing the Oracle publisher have been met.	|
 |	21611	|	16	|	No	|	Cannot drop the distribution Publisher "%s" because it has publications defined. Drop the publications first.	|
-|	21612	|	16	|	No	|	For non-SQL Server Publishers, the value of the @sync_method parameter must be "character" or "concurrent_c".	|
+|	21612	|	16	|	No	|	For non-SQL Server Publishers, the value of the \@sync_method parameter must be "character" or "concurrent_c".	|
 |	21613	|	16	|	No	|	Constraint column '%s' not found in table '%s'.	|
 |	21614	|	16	|	No	|	Index column '%s' not found in table '%s',	|
 |	21615	|	16	|	No	|	Unable to find table information for article %s. Local distributor cache may be corrupt.	|
 |	21616	|	16	|	No	|	Cannot find column [%s] in the article. Verify that the column exists in the underlying table, and that it is included in the article.	|
 |	21617	|	16	|	No	|	Unable to run SQL*PLUS. Make certain that a current version of the Oracle client code is installed at the distributor. For addition information, see SQL Server Error 21617 in Troubleshooting Oracle Publishers in SQL Server Books Online.	|
 |	21618	|	16	|	No	|	The Publisher '%s' does not exist. To view a list of Publishers, use the stored procedure sp_helpdistpublisher.	|
-|	21619	|	16	|	No	|	Must provide both @SelectColumnList and @InsColumnList.	|
+|	21619	|	16	|	No	|	Must provide both \@SelectColumnList and \@InsColumnList.	|
 |	21620	|	16	|	No	|	The version of SQL*PLUS that is accessible through the system Path variable is not current enough to support Oracle publishing. Make certain that a current version of the Oracle client code is installed at the distributor. For addition information, see SQL Server Error 21620 in Troubleshooting Oracle Publishers in SQL Server Books Online.	|
 |	21621	|	16	|	No	|	Unable to create the public synonym %s. Verify that the replication administrative user has been granted the CREATE SYNONYM permission.	|
 |	21622	|	16	|	No	|	Unable to grant SELECT permission on the public synonym %s. Verify that the replication administrative user has sufficient permissions.	|
@@ -7831,13 +7831,13 @@ The table contains error message numbers and the description, which is the text 
 |	21630	|	16	|	No	|	Unable to determine whether the table '%s' is still being published. Contact Customer Support Services.	|
 |	21631	|	16	|	No	|	Cannot unpublish table '%s'; the remote call to the Oracle Publisher failed. Verify that the replication administrative user login can connect to the Oracle Publisher using SQL*PLUS. If you can connect but the problem persists, drop and reconfigure Oracle publishing.	|
 |	21632	|	16	|	No	|	The parameter %s is not supported for non-SQL Server publications. The value specified for this parameter must be %s.	|
-|	21633	|	16	|	No	|	The publication '%s' could not be added because non-SQL Server Publishers only support the @sync_method parameter values "character" or "concurrent_c".	|
+|	21633	|	16	|	No	|	The publication '%s' could not be added because non-SQL Server Publishers only support the \@sync_method parameter values "character" or "concurrent_c".	|
 |	21634	|	16	|	No	|	The parameter %s does not support the value '%s' when using non-SQL Server publications. The value must be %s.	|
 |	21635	|	16	|	No	|	An unsupported schema option combination was specified. Non-SQL Server publications only support the following schema options: 0x01, 0x02, 0x10, 0x40, 0x80, 0x4000, and 0x8000.	|
 |	21637	|	16	|	No	|	%s is required for heterogeneous publications.	|
-|	21638	|	16	|	No	|	You have specified a value of '%s' for the @repl_freq parameter of sp_addpublication. For non-SQL Server publications, this requires one of the following values for the @sync_method parameter: %s.	|
-|	21639	|	16	|	No	|	Heterogeneous publishers can not use trusted connections, set @trusted to false.	|
-|	21640	|	16	|	No	|	Non-SQL Server Publishers do not support a value of 1 for the parameter @thirdparty_flag. When executing the stored procedure sp_adddistpublisher, specify a value of 0 for the parameter.	|
+|	21638	|	16	|	No	|	You have specified a value of '%s' for the \@repl_freq parameter of sp_addpublication. For non-SQL Server publications, this requires one of the following values for the \@sync_method parameter: %s.	|
+|	21639	|	16	|	No	|	Heterogeneous publishers can not use trusted connections, set \@trusted to false.	|
+|	21640	|	16	|	No	|	Non-SQL Server Publishers do not support a value of 1 for the parameter \@thirdparty_flag. When executing the stored procedure sp_adddistpublisher, specify a value of 0 for the parameter.	|
 |	21641	|	16	|	No	|	The "%s" parameter is for non-SQL Server Publishers only. It must be NULL for SQL Server Publishers.	|
 |	21642	|	16	|	No	|	Heterogeneous publishers require a linked server. A linked server named '%s' already exists. Please remove linked server or choose a different publisher name.	|
 |	21643	|	16	|	No	|	The value specified for the parameter '%s' must be MSSQLSERVER, ORACLE, or ORACLE GATEWAY.	|
@@ -7846,7 +7846,7 @@ The table contains error message numbers and the description, which is the text 
 |	21646	|	16	|	No	|	The Oracle server [%s] is already defined as the Publisher [%s] on the Distributor [%s].[%s]. Drop the Publisher or drop the public synonym [%s].	|
 |	21647	|	16	|	No	|	The Oracle Publisher support package could not be loaded. Drop the replication administrative user schema and re-create it; ensure it is granted the documented permissions.	|
 |	21649	|	16	|	No	|	Cannot change the property '%s'. Non-SQL Server Publishers do not support this property.	|
-|	21650	|	16	|	No	|	The value specified for @rowcount_only for the article '%s' is not 1. For an article in a publication from a non-SQL Server Publisher, 1 is the only valid setting for this parameter.	|
+|	21650	|	16	|	No	|	The value specified for \@rowcount_only for the article '%s' is not 1. For an article in a publication from a non-SQL Server Publisher, 1 is the only valid setting for this parameter.	|
 |	21651	|	16	|	No	|	Failed to execute the HREPL.%s request to Oracle Publisher '%s'. Verify that the Oracle package code exists on the Publisher, and that the replication administrative user account has sufficient permissions.	|
 |	21653	|	16	|	No	|	The database management system (DBMS) %s %s does not exist. Verify the supported DBMS and versions by querying msdb.dbo.MSdbms.	|
 |	21654	|	16	|	No	|	The data type %s does not exist. Verify the supported data types and mappings by querying msdb.dbo.sysdatatypemappings.	|
@@ -7855,8 +7855,8 @@ The table contains error message numbers and the description, which is the text 
 |	21657	|	16	|	No	|	The data type mapping for %s already exists.	|
 |	21658	|	16	|	No	|	The data type mapping does not exist. Verify the list of mappings by querying msdb.dbo.sysdatatypemappings.	|
 |	21659	|	16	|	No	|	Cannot execute this procedure for a SQL Server Publisher. The Publisher must be a non-SQL Server Publisher.	|
-|	21660	|	16	|	No	|	The value specified for the parameter @full_or_fast for article '%s' must be 0, 1, or 2.	|
-|	21661	|	16	|	No	|	The value specified for the @shutdown_agent parameter for article '%s' must be 0 or 1.	|
+|	21660	|	16	|	No	|	The value specified for the parameter \@full_or_fast for article '%s' must be 0, 1, or 2.	|
+|	21661	|	16	|	No	|	The value specified for the \@shutdown_agent parameter for article '%s' must be 0 or 1.	|
 |	21662	|	16	|	No	|	The source object [%s].[%s] on the non-SQL Server Publisher was either not found or is not supported. If the object exists, verify that it meets the requirements for being published.	|
 |	21663	|	16	|	No	|	Cannot find a valid primary key for the source table [%s].[%s]. A valid primary key is required to publish the table. Add or correct the primary key definition on the source table.	|
 |	21664	|	16	|	No	|	Index [%s] contains unique nullable column.	|
@@ -7884,7 +7884,7 @@ The table contains error message numbers and the description, which is the text 
 |	21686	|	16	|	No	|	The operation "%s" is not valid. Valid operations are "add", "drop", and "help".	|
 |	21687	|	16	|	No	|	Schema filters are supported only for Oracle Publishers. The Publisher "%s" is a "%s" Publisher.	|
 |	21688	|	16	|	No	|	The current login '%s' is not in the publication access list (PAL) of any publication at Publisher '%s'. Use a login that is in the PAL, or add this login to the PAL.	|
-|	21689	|	16	|	No	|	A NULL @schema value is invalid for add and drop schema filter operations.	|
+|	21689	|	16	|	No	|	A NULL \@schema value is invalid for add and drop schema filter operations.	|
 |	21690	|	10	|	No	|	The subscriber db cannot be the same as the publisher db when the subscriber is the same as the publisher	|
 |	21691	|	10	|	No	|	sp_mergesubscription_cleanup should be called on the subscription database	|
 |	21692	|	16	|	No	|	Failed to script the subscriber stored procedures for article '%s' in publication '%s'	|
@@ -7906,18 +7906,18 @@ The table contains error message numbers and the description, which is the text 
 |	21711	|	16	|	No	|	Microsoft SQL Server Upload Only Conflict Resolver	|
 |	21712	|	16	|	No	|	Microsoft SQLServer Stored Procedure Resolver	|
 |	21715	|	16	|	No	|	Cannot register the article resolver %s. This can occur if the account under which SQL Server is running does not have access to the distribution database. Add the class ID and the custom resolver name manually to the MSmerge_articleresolver table in the distribution database.	|
-|	21717	|	16	|	No	|	The article resolver name cannot be an empty string or NULL. Specify a valid value for the @article_resolver parameter.	|
-|	21718	|	16	|	No	|	For a COM resolver, the @resolver_clsid cannot be an empty string or NULL. Specify a valid value for @resolver_clsid.	|
-|	21719	|	10	|	No	|	The Subscriber '%s':'%s' was not marked for reinitialization at the Publisher because the subscription is either anonymous or not valid. Verify that valid values were specified for the @subscriber and @subscriber_db parameters of sp_reinitmergesubscription.	|
-|	21720	|	16	|	No	|	Cannot find a job that matches the ID or name specified in the parameters @dynamic_snapshot_jobid or @dynamic_snapshot_jobname. Verify the values specified for those parameters.	|
+|	21717	|	16	|	No	|	The article resolver name cannot be an empty string or NULL. Specify a valid value for the \@article_resolver parameter.	|
+|	21718	|	16	|	No	|	For a COM resolver, the \@resolver_clsid cannot be an empty string or NULL. Specify a valid value for \@resolver_clsid.	|
+|	21719	|	10	|	No	|	The Subscriber '%s':'%s' was not marked for reinitialization at the Publisher because the subscription is either anonymous or not valid. Verify that valid values were specified for the \@subscriber and \@subscriber_db parameters of sp_reinitmergesubscription.	|
+|	21720	|	16	|	No	|	Cannot find a job that matches the ID or name specified in the parameters \@dynamic_snapshot_jobid or \@dynamic_snapshot_jobname. Verify the values specified for those parameters.	|
 |	21721	|	10	|	No	|	UserScripts	|
 |	21722	|	16	|	No	|	Failed to add an extended trigger for replicating the '%.*ls' event.	|
-|	21723	|	16	|	No	|	The value specified for the @pubid parameter of procedure '%s' is not valid or is NULL. Verify that the Merge Agent is running correctly. Reinitalize the subscription if the problem persists.	|
+|	21723	|	16	|	No	|	The value specified for the \@pubid parameter of procedure '%s' is not valid or is NULL. Verify that the Merge Agent is running correctly. Reinitalize the subscription if the problem persists.	|
 |	21724	|	10	|	No	|	Cannot add the foreign key %s with the CASCADE option because table %s is published. Add the NOT FOR REPLICATION clause to the foreign key definition.	|
 |	21725	|	16	|	No	|	Cannot alter the view. An indexed view replicated as a table cannot be altered to a nonindexed view. Drop the view from the publication before attempting to alter it.	|
 |	21727	|	14	|	No	|	Cannot complete the replication operation. The security check for the current user is failing. Only members of the sysadmin fixed server role, or db_owner or db_ddladmin fixed database roles can perform this operation.	|
 |	21728	|	16	|	No	|	The article can support logical record level conflict detection only if it uses logical record conflict resolution.	|
-|	21729	|	16	|	No	|	The @keep_partition_changes property cannot be set to "true." This is because the @publication_compatibility_level property is set to 90RTM or higher and the @use_partition_groups property is set to "true." Set a lower compatibility level or set the @use_partition_groups property to "false."	|
+|	21729	|	16	|	No	|	The \@keep_partition_changes property cannot be set to "true." This is because the \@publication_compatibility_level property is set to 90RTM or higher and the \@use_partition_groups property is set to "true." Set a lower compatibility level or set the \@use_partition_groups property to "false."	|
 |	21730	|	16	|	No	|	Table '%s' can not be replicated because it contains imprecise Primary Key column, please recreate table without 'persisted' clause and try again.	|
 |	21731	|	16	|	No	|	Cannot add a constraint or default without an explicit name, because the table is included in a publication that replicates DDL events. Specify a unique name for the constraint and then reissue the DDL statement.	|
 |	21732	|	16	|	No	|	Using Data Transformation Services (DTS) packages in replication requires a password that is not NULL or empty. Specify a valid value for parameter '%s'.	|
@@ -7933,7 +7933,7 @@ The table contains error message numbers and the description, which is the text 
 |	21742	|	16	|	No	|	The Oracle Publisher name is '%s' and the Oracle Subscriber name is '%s'. Bidirectional Oracle publishing requires the Oracle Publisher and Subscriber names to be the same.	|
 |	21743	|	16	|	No	|	Unable to retrieve the originator information for the Oracle subscriber '%s'.	|
 |	21744	|	16	|	No	|	Oracle bidirectional publishing requires parameter '%s' to have a value of '%s'.	|
-|	21745	|	16	|	No	|	Cannot generate a filter view or procedure. Verify that the value specified for the @filter_clause parameter of sp_addarticle can be added to the WHERE clause of a SELECT statement to produce a valid query.	|
+|	21745	|	16	|	No	|	Cannot generate a filter view or procedure. Verify that the value specified for the \@filter_clause parameter of sp_addarticle can be added to the WHERE clause of a SELECT statement to produce a valid query.	|
 |	21746	|	16	|	No	|	The '%s' character length must not exceed %d.	|
 |	21747	|	16	|	No	|	Cannot establish a connection to the Oracle Publisher '%s'. Verify connection information and ensure that you can connect to the Publisher through a tool like SQL*PLUS.	|
 |	21748	|	16	|	No	|	The article was dropped at the Distributor, but information at the Publisher '%s' was not dropped. No action is required; the information is cleaned up if the Publisher is dropped.	|
@@ -7941,26 +7941,26 @@ The table contains error message numbers and the description, which is the text 
 |	21750	|	16	|	No	|	The table %s does not have a primary key, which is required for transactional replication. Create a primary key on the table.	|
 |	21751	|	16	|	No	|	Cannot publish view %s as a table because it does not have a unique clustered index. Publish the view as a view, or add a unique clustered index.	|
 |	21752	|	16	|	No	|	The current user %s does not have SELECT permission on the table %s. The user must have SELECT permission to retrieve rows at the Subscriber that have updates pending in the queue.	|
-|	21753	|	16	|	No	|	The table %s, which is specified in the @tablename parameter of sp_getqueuedrows, is not part of any active initialized queued subscription. Ensure your queued subscriptions are properly initialized by running the Snapshot Agent, Distribution Agent, and Queue Reader Agent.	|
+|	21753	|	16	|	No	|	The table %s, which is specified in the \@tablename parameter of sp_getqueuedrows, is not part of any active initialized queued subscription. Ensure your queued subscriptions are properly initialized by running the Snapshot Agent, Distribution Agent, and Queue Reader Agent.	|
 |	21754	|	16	|	No	|	Processing has been terminated. The resultset for sp_getqueuedrows is larger than 16,000, the maximum size that the procedure can return. Run the Queue Reader Agent to flush the queue at the Subscriber before executing this procedure again.	|
 |	21755	|	16	|	No	|	Failed to mark '%s' as a system object.	|
 |	21756	|	16	|	No	|	Based on article settings, table %s should have an identity column, but it does not have one. Verify article settings with sp_helparticle and change them if necessary with sp_changearticle.	|
-|	21757	|	16	|	No	|	The subscription is read-only. The publication that this subscription synchronizes with allows updates at the Subscriber, but a value of 'read-only' was specified for the @update_mode parameter of sp_addsubscription. To allow updates, you must drop and then re-create the subscription, specifying a different value for @update_mode.	|
+|	21757	|	16	|	No	|	The subscription is read-only. The publication that this subscription synchronizes with allows updates at the Subscriber, but a value of 'read-only' was specified for the \@update_mode parameter of sp_addsubscription. To allow updates, you must drop and then re-create the subscription, specifying a different value for \@update_mode.	|
 |	21758	|	16	|	No	|	Cannot find a valid Queue Reader Agent ID for the subscription to Publisher %s, database %s, publication %s. The specified subscription to an updating Subscriber publication is not initialized. Run the Snapshot Agent, Distribution Agent, and Queue Reader Agent to initialize the subscription.	|
 |	21759	|	16	|	No	|	Cannot add the column '%s' to the table '%s'. The table already contains the maximum number of columns allowed for an article in a merge publication (246 columns).	|
 |	21760	|	11	|	No	|	Cannot execute the replication script in the 'master' database; the current session will be terminated. The script must be executed in the distribution database, and the master database cannot serve as the distribution database.	|
 |	21761	|	20	|	No	|	Cannot execute the replication script; the current session will be terminated. Check for any errors returned by SQL Server during execution of the script.	|
 |	21762	|	10	|	No	|	The distribution database '%s' has a compatibility level of %d, which is different from that of the master database. The two compatibility levels must be the same, so the distribution database level is being changed to %d. This is an informational message only. No user action is required.	|
 |	21763	|	16	|	No	|	Message Queuing Service is not running. Start this service and retry the operation.	|
-|	21764	|	16	|	No	|	Cannot create the publication. Specifying a value of 'msmq' for the parameter @queue_type is supported only on Microsoft Windows NT platforms. Specify a value of 'sql' for this parameter.	|
+|	21764	|	16	|	No	|	Cannot create the publication. Specifying a value of 'msmq' for the parameter \@queue_type is supported only on Microsoft Windows NT platforms. Specify a value of 'sql' for this parameter.	|
 |	21765	|	10	|	No	|	The column msrepl_tran_version has been predefined and allows NULLs. This column will be dropped and recreated to not allow NULLs for updating subscribers.	|
-|	21766	|	16	|	No	|	Table %s contains an identity column that is marked as Not For Replication, but the @identitymanagementoption parameter of sp_addarticle is set to 'none'. To support immediate updating subscriptions, specify a value of 'manual' or 'auto' for @identitymanagementoption.	|
+|	21766	|	16	|	No	|	Table %s contains an identity column that is marked as Not For Replication, but the \@identitymanagementoption parameter of sp_addarticle is set to 'none'. To support immediate updating subscriptions, specify a value of 'manual' or 'auto' for \@identitymanagementoption.	|
 |	21767	|	10	|	No	|	Warning: The parameter '%s' is obsolete and is available only for backwards compatibility. It will not be available in future releases. Instead of this parameter, use the parameter '%s'.	|
-|	21768	|	16	|	No	|	When executing sp_adddistributor for a remote Distributor, you must use a password. The password specified for the @password parameter must be the same when the procedure is executed at the Publisher and at the Distributor.	|
+|	21768	|	16	|	No	|	When executing sp_adddistributor for a remote Distributor, you must use a password. The password specified for the \@password parameter must be the same when the procedure is executed at the Publisher and at the Distributor.	|
 |	21769	|	10	|	No	|	Custom data type mappings are not supported. You must validate the correctness of the mapping. If mappings are not compatible, errors will likely occur when moving data from the Publisher to the Subscriber.	|
 |	21770	|	10	|	No	|	Data type mapping from '%s' to '%s' does not exist. Review source and destination data type, length, precision, scale, and nullability. Query the system table msdb.dbo.sysdatatypemappings for a list of supported mappings.	|
 |	21771	|	16	|	No	|	%s is not within the supported range of %d and %d.	|
-|	21772	|	16	|	No	|	Property "%s" requires the parameters @force_invalidate_snapshot and @force_reinit_subscription to be set to "true".	|
+|	21772	|	16	|	No	|	Property "%s" requires the parameters \@force_invalidate_snapshot and \@force_reinit_subscription to be set to "true".	|
 |	21773	|	10	|	No	|	The distribution database '%s' cannot be opened due to inaccessible files. The database will be dropped, but distribution database cleanup tasks will not occur. Check the database and server error logs for more information about why the database files cannot be accessed.	|
 |	21774	|	16	|	No	|	This procedure is supported only for non-SQL Server Publishers. The Publisher '%s', on which you are executing the procedure, is a SQL Server Publisher.	|
 |	21775	|	16	|	No	|	Failed to generate column bitmap for article '%s'.	|
@@ -7972,7 +7972,7 @@ The table contains error message numbers and the description, which is the text 
 |	21781	|	16	|	No	|	Unable to retrieve heterogeneous metadata. Verify connection information	|
 |	21782	|	16	|	No	|	Cannot add primary key column '%s' to article '%s'. If the Publisher is a non-SQL Server Publisher, the primary key could have violated SQL Server limits for number and length of columns. For more information, see errors returned by sp_addarticle.	|
 |	21783	|	16	|	No	|	Cannot add the Publisher triggers and the article log table to the Oracle Publisher for the article '%s'. Verify connection information and ensure that you can connect to the Publisher through a tool like SQL*PLUS. Ensure that the replication administrative user schema has the required permissions.	|
-|	21784	|	16	|	No	|	You must specify a non-NULL value for the @rowfilter parameter.	|
+|	21784	|	16	|	No	|	You must specify a non-NULL value for the \@rowfilter parameter.	|
 |	21785	|	16	|	No	|	Failure to query Oracle XactSet Job attributes for publisher '%s'.	|
 |	21786	|	16	|	No	|	Failure to refresh Oracle XactSet Job for publisher '%s'.	|
 |	21787	|	16	|	No	|	Failure to query Oracle Xact batching enabled flag for publisher '%s'.	|
@@ -7982,7 +7982,7 @@ The table contains error message numbers and the description, which is the text 
 |	21791	|	16	|	No	|	The table '%s.%s' already appears in a transactional publication on Oracle Gateway Publisher '%s'. When using the Oracle Gateway option, a table published using transactional replication can only be included in one publication. To publish this table in more than one publication, you must reconfigure the Oracle Publisher to use the Oracle Complete option.	|
 |	21792	|	16	|	No	|	The table '%s.%s' already appears in the transactional publication '%s' on Publisher '%s'. The Oracle Gateway publishing option (the default) allows a table to be included as an article in any number of snapshot publications, but only in one transactional publication. To publish a table in more than one transactional publication, use the Oracle Complete publishing option. To change publishing options, you must drop and reconfigure the Publisher.	|
 |	21793	|	16	|	No	|	Non-SQL Server Publishers are supported only in the Enterprise and Developer editions of SQL Server. The edition of this instance is %s.	|
-|	21794	|	16	|	No	|	The value specified for the @propertyname parameter is not valid. Use one of the following values: %s.	|
+|	21794	|	16	|	No	|	The value specified for the \@propertyname parameter is not valid. Use one of the following values: %s.	|
 |	21795	|	16	|	No	|	The value specified for property %s is not valid. Use one of the following values: %s.	|
 |	21796	|	16	|	No	|	The property "xactsetjobinterval" must be assigned a value greater than or equal to 0.	|
 |	21797	|	16	|	No	|	Cannot create the agent job. '%s' must be a valid Windows login in the form : 'MACHINE\Login' or 'DOMAIN\Login'. See the documentation for '%s'.	|
@@ -7992,11 +7992,11 @@ The table contains error message numbers and the description, which is the text 
 |	21801	|	16	|	No	|	The stored procedure sp_createagentparameter failed to add one or more parameters to the system table msdb.dbo.MSagentparameterlist. Check for any errors returned by sp_createagentparameter and errors returned by SQL Server during execution of sp_createagentparameter.	|
 |	21802	|	16	|	No	|	The agent profile creation process cannot validate the specified agent parameter value. '%s' is not a valid value for the '%s' parameter. The value must be an integer less than or equal to '%d'. Verify that replication is installed properly.	|
 |	21803	|	16	|	No	|	Cannot update agent parameter metadata. Replication could not insert parameter '%s' into table '%s'. Verify that replication is properly installed. Check errors returned by SQL Server during execution of sp_createagentparameter.	|
-|	21804	|	16	|	No	|	The value '%d' specified for the @agent_type parameter of sp_getagentparameterlist is not valid. Specify a valid value of 1, 2, 3, 4, or 9.	|
+|	21804	|	16	|	No	|	The value '%d' specified for the \@agent_type parameter of sp_getagentparameterlist is not valid. Specify a valid value of 1, 2, 3, 4, or 9.	|
 |	21805	|	16	|	No	|	The agent profile creation process cannot validate the specified agent parameter value. '%s' is not a valid value for the '%s' parameter. The value must be an integer. Verify that replication is installed properly and that sp_add_agent_parameter is invoked with a valid value.	|
 |	21806	|	16	|	No	|	The agent profile creation process cannot validate the specified agent parameter value: the profile_id %d does not exist or it does not support the parameter %s. The value must be an integer. Verify that replication is installed properly and that sp_add_agent_parameter is invoked with a valid value.	|
-|	21807	|	16	|	No	|	For a .NET Assembly Business Logic Handler, the @resolver_clsid must be specified as NULL.	|
-|	21808	|	16	|	No	|	For a .NET Assembly Business Logic Handler, the @resolver_info must contain the class name in '%s' that implements the Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule interface.	|
+|	21807	|	16	|	No	|	For a .NET Assembly Business Logic Handler, the \@resolver_clsid must be specified as NULL.	|
+|	21808	|	16	|	No	|	For a .NET Assembly Business Logic Handler, the \@resolver_info must contain the class name in '%s' that implements the Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule interface.	|
 |	21809	|	10	|	No	|	DDL replication is not enabled for database '%ls' because its compatibility level is less than 80.	|
 |	21810	|	16	|	No	|	Identity column can only be added to a published table with 'Not For Replication' clause	|
 |	21811	|	16	|	No	|	Cannot drop the column '%s' because it is used by replication: it is referenced in a filter or view by article '%s'. To drop the column, you must first remove the filter from the article.	|
@@ -8017,7 +8017,7 @@ The table contains error message numbers and the description, which is the text 
 |	21826	|	16	|	No	|	The property '%s' is valid only for %s subscriptions. Use '%s' for %s subscriptions.	|
 |	21827	|	16	|	No	|	The %s parameters have been deprecated and should no longer be used. For more information, see the '%s' documentation.	|
 |	21828	|	16	|	No	|	The proxy account for jobstep_uid (%s) could not be found.	|
-|	21830	|	16	|	No	|	You cannot specify schema_option 0x4 (script identity as identity rather than the base data type) for article '%s'. The value specified for the parameter @identityrangemanagementoption is NONE. To replicate identity as identity, the value must be MANUAL or AUTO for publications that do not support queued updating subscriptions.	|
+|	21830	|	16	|	No	|	You cannot specify schema_option 0x4 (script identity as identity rather than the base data type) for article '%s'. The value specified for the parameter \@identityrangemanagementoption is NONE. To replicate identity as identity, the value must be MANUAL or AUTO for publications that do not support queued updating subscriptions.	|
 |	21831	|	16	|	No	|	The %s already exists. Use '%s' to change any settings/properties.	|
 |	21832	|	16	|	No	|	Only members of the sysadmin fixed server role can perform this operation without specifying %s.	|
 |	21833	|	16	|	No	|	An error occurred when creating a trace event at Oracle publisher '%s'. The trace event could not be posted.	|
@@ -8026,7 +8026,7 @@ The table contains error message numbers and the description, which is the text 
 |	21836	|	16	|	No	|	The distribution agent must be run in single subscription stream mode prior to resetting the subscription xact_seqno.	|
 |	21837	|	16	|	No	|	A replication agent job (%s) for this subscription already exists.	|
 |	21838	|	16	|	No	|	The %s parameter(s) have been deprecated from this procedure. The value(s) should now be specified when calling '%s'.	|
-|	21839	|	16	|	No	|	Article '%s' can not support schema_option 0x20 or 0x2000000000 because it contains computed column, check/default constraint or primary key which is based on CLR type column, change @schema_option setting and try again.	|
+|	21839	|	16	|	No	|	Article '%s' can not support schema_option 0x20 or 0x2000000000 because it contains computed column, check/default constraint or primary key which is based on CLR type column, change \@schema_option setting and try again.	|
 |	21840	|	16	|	No	|	Can not add CLR type based computed column or check constraint to table '%s' because article '%s' supports schema_option 0x20.	|
 |	21841	|	10	|	No	|	DDL replication is forcing reinitialization because either publication'%s' uses character mode bcp, or timestamp/identity column is being replicated as base type only for article '%s'.	|
 |	21842	|	16	|	No	|	%s can only be specified/changed for heterogeneous publications when %s is set to %s.	|
@@ -8107,10 +8107,10 @@ The table contains error message numbers and the description, which is the text 
 |	22519	|	16	|	No	|	Cannot add a logical record relationship between tables "%s" and "%s" because a text, image, ntext, xml, varchar(max), nvarchar(max), or varbinary(max) column was referenced in the join clause.	|
 |	22520	|	10	|	No	|	A filtering type changed for the article. Any pending or future changes made in this article by a Subscriber in a given partition will no longer be propagated to Subscribers in other partitions. Check the documentation for details.	|
 |	22521	|	10	|	No	|	Unable to synchronize the row because the row was updated by a different process outside of replication.	|
-|	22522	|	16	|	No	|	Article '%s' cannot be published because it is published in another merge publication. An article that has a value of 3 for the @partition_options parameter of sp_addmergearticle (nonoverlapping partitions with a single subscription per partition) cannot be included in multiple publications or subscriptions, and cannot be republished. To include the article in multiple publications, use sp_changemergearticle to specify a different value for the partition_options property of the existing article.	|
-|	22523	|	16	|	No	|	An article cannot use @partition_options 2 or 3 (nonoverlapping partitions) and be a part of a logical record relationship at the same time. Check article "%s".	|
-|	22524	|	16	|	No	|	Article '%s' is published in another merge publication, with a different value specified for the @partition_options parameter of sp_addmergearticle. The specified value must be the same in all merge publications. Either specify the same value as the existing article or change the existing article using sp_changemergearticle.	|
-|	22525	|	16	|	No	|	The publication "%s" cannot allow multiple subscriptions per partition if it contains articles using @partition_options = 3.	|
+|	22522	|	16	|	No	|	Article '%s' cannot be published because it is published in another merge publication. An article that has a value of 3 for the \@partition_options parameter of sp_addmergearticle (nonoverlapping partitions with a single subscription per partition) cannot be included in multiple publications or subscriptions, and cannot be republished. To include the article in multiple publications, use sp_changemergearticle to specify a different value for the partition_options property of the existing article.	|
+|	22523	|	16	|	No	|	An article cannot use \@partition_options 2 or 3 (nonoverlapping partitions) and be a part of a logical record relationship at the same time. Check article "%s".	|
+|	22524	|	16	|	No	|	Article '%s' is published in another merge publication, with a different value specified for the \@partition_options parameter of sp_addmergearticle. The specified value must be the same in all merge publications. Either specify the same value as the existing article or change the existing article using sp_changemergearticle.	|
+|	22525	|	16	|	No	|	The publication "%s" cannot allow multiple subscriptions per partition if it contains articles using \@partition_options = 3.	|
 |	22526	|	16	|	No	|	An invalid value was specified for %s. Valid values are 0 (none), 1 (enforced partitions), 2 (nonoverlapping partitions with multiple subscriptions per partition), and 3 (nonoverlapping partitions with single subscription per partition).	|
 |	22527	|	16	|	No	|	Invalid value specified for %s. Valid values are 'day', 'days', 'dd', 'year', 'years', 'yy', 'yyyy', 'month', 'months', 'mm', 'week', 'weeks', 'wk', 'hour', 'hours', 'hh', 'minute', 'minutes', 'mi'.	|
 |	22528	|	16	|	No	|	Cannot use a retention period unit other than "days" for publication "%s" because the compatibility level of the publication is lower than 90. Use sp_changemergepublication to set publication_compatibility_level to 90RTM.	|
@@ -8127,8 +8127,8 @@ The table contains error message numbers and the description, which is the text 
 |	22539	|	16	|	No	|	Use of parameters %s is invalid when parameter %s is set to %s.	|
 |	22540	|	16	|	No	|	Cannot change publication "%s" to use sync_mode of "character", because it contains one or more logical record relationships.	|
 |	22541	|	16	|	No	|	Cannot add a logical record relationship in publication "%s" because it uses sync_mode of "character" and could have SQL Server Compact Edition subscribers.	|
-|	22542	|	16	|	No	|	Invalid value for property @subscriber_upload_options. Valid values are 0 (allow uploads), 1 (disable uploads), 2 (disable uploads prohibit subscriber changes), and 3 (disable_outofpartition_subscriber_changes).	|
-|	22543	|	16	|	No	|	When the publication property @allow_partition_realignment is set to "false", the article property @subscriber_upload_options for all articles in the publication must be set to disable uploads.	|
+|	22542	|	16	|	No	|	Invalid value for property \@subscriber_upload_options. Valid values are 0 (allow uploads), 1 (disable uploads), 2 (disable uploads prohibit subscriber changes), and 3 (disable_outofpartition_subscriber_changes).	|
+|	22543	|	16	|	No	|	When the publication property \@allow_partition_realignment is set to "false", the article property \@subscriber_upload_options for all articles in the publication must be set to disable uploads.	|
 |	22544	|	10	|	No	|	Warning: The procedure sp_mergecleanupmetadata has been deprecated. In SQL Server 2000 SP1 and later, the merge agent calls sp_mergemetadataretentioncleanup every time it runs, so manual cleanup of metadata is not needed. Ignoring passed-in parameters and calling sp_mergemetadataretentioncleanup.	|
 |	22545	|	16	|	No	|	Cannot add a logical record relationship in publication "%s" because it allows Web synchronization.	|
 |	22546	|	16	|	No	|	Cannot change publication "%s" to allow Web synchronization because it contains one or more logical record relationships.	|
@@ -8137,8 +8137,8 @@ The table contains error message numbers and the description, which is the text 
 |	22549	|	16	|	No	|	A shared distribution agent (%s) already exists for this subscription.	|
 |	22550	|	16	|	No	|	Cannot drop identity column "%s" from the vertical partition when identityrangemanagementoption is set to auto.	|
 |	22551	|	16	|	No	|	The type "%s" is invalid. Valid types are "merge", "tran", and "both".	|
-|	22552	|	16	|	No	|	A valid value for parameter "@resync_date_str" needs to be provided when "@resync_type" is set to 2.	|
-|	22553	|	16	|	No	|	The parameter "@resync_type" is set to "%d" but this subscription has never been successfully validated.	|
+|	22552	|	16	|	No	|	A valid value for parameter "\@resync_date_str" needs to be provided when "\@resync_type" is set to 2.	|
+|	22553	|	16	|	No	|	The parameter "\@resync_type" is set to "%d" but this subscription has never been successfully validated.	|
 |	22554	|	16	|	No	|	Cannot change publication "%s" to use the sync_mode of "character" because it uses a retention period unit other than "day". Use sp_changemergepublication to set the retention period unit to "day".	|
 |	22555	|	16	|	No	|	Cannot set the retention period unit to a value other than "day" for publication "%s" because it uses the sync_mode of "character" and may have SQL Server Compact Edition subscribers.	|
 |	22556	|	16	|	No	|	Invalid value for the property "%s". Valid values are 1 and 0.	|
@@ -8163,7 +8163,7 @@ The table contains error message numbers and the description, which is the text 
 |	22575	|	16	|	No	|	When article property 'published_in_tran_pub' is set to 'true' then article property 'upload_options' has to be set to disable uploads.	|
 |	22576	|	10	|	No	|	Invalid failover_mode value of %d was specified for [%s].[%s].[%s], setting to 0 [immediate].	|
 |	22577	|	16	|	No	|	Failed to add subscription because the allowed number of %s subscriptions for SQL Workgroup Edition Publisher '%s' would be exceeded. The maximum allowed number is %d.	|
-|	22578	|	16	|	No	|	Cannot change publication "%s" to disallow use_partition_groups because it contains one or more logical record relationships. When using logical record relationships the publication must set the @use_partition_groups property to 'true'.	|
+|	22578	|	16	|	No	|	Cannot change publication "%s" to disallow use_partition_groups because it contains one or more logical record relationships. When using logical record relationships the publication must set the \@use_partition_groups property to 'true'.	|
 |	22579	|	16	|	No	|	The subscription to publication '%s' was not found but a shared agent does exist. To specify a subscription to a publication that is replicated via a shared agent specify '%s' for the publication name.	|
 |	22580	|	16	|	No	|	Cannot publish database '%s' because it is marked as published on a different server. Before attempting to publish this database, execute sp_replicationdboption, specifying a value of FALSE for 'publish' and 'merge publish'.	|
 |	22581	|	16	|	No	|	Article '%s' cannot be added or modified in publication '%s'. The replication of FILESTREAM columns is not supported for publications that have a 'sync_mode' of 1 (character mode). Specify a 'sync_mode' of 0 (native mode) for the publication by using sp_addmergepublication or sp_changemergepublication, or partition the article vertically so that the FILESTREAM column is not replicated.	|
@@ -8181,7 +8181,7 @@ The table contains error message numbers and the description, which is the text 
 |	22807	|	16	|	No	|	The publication property '%s' cannot be modified because the peer-to-peer publication '%s' is not enabled for conflict detection. To enable the publication for conflict detection, use sp_configure_peerconflictdetection.	|
 |	22808	|	16	|	No	|	Cannot execute procedure '%s'. Publication '%s' must be enabled for peer-to-peer replication before you execute this procedure. To enable the publication for peer-to-peer replication, use sp_changepublication.	|
 |	22809	|	10	|	No	|	The existing conflict table '%s' was dropped.	|
-|	22810	|	16	|	No	|	The @action parameter value is not valid. Valid values are 'enable' and 'disable'.	|
+|	22810	|	16	|	No	|	The \@action parameter value is not valid. Valid values are 'enable' and 'disable'.	|
 |	22811	|	16	|	No	|	The roundtrip time-out must be greater than 0.	|
 |	22812	|	10	|	No	|	The roundtrip '%s' finished with timeout: %d seconds.	|
 |	22813	|	10	|	No	|	The topology contains peer node versions that do not support conflict detection. To use conflict detection, ensure that all nodes in the topology are SQL Server 2008 or later versions.	|
@@ -8199,7 +8199,7 @@ The table contains error message numbers and the description, which is the text 
 |	22825	|	10	|	No	|	An insert-insert conflict between peer %d (incoming) and peer %d (on disk) was detected and resolved. The incoming insert was applied to peer %d.	|
 |	22827	|	16	|	No	|	Peer-to-peer conflict detection alert	|
 |	22828	|	16	|	No	|	The publication '%s' was already %s for peer-to-peer conflict detection.	|
-|	22829	|	16	|	No	|	The command %s failed. The values specified for the @ins_cmd, @del_cmd or @upd_cmd cannot be appended with schema name %s within the size limit %d.	|
+|	22829	|	16	|	No	|	The command %s failed. The values specified for the \@ins_cmd, \@del_cmd or \@upd_cmd cannot be appended with schema name %s within the size limit %d.	|
 |	22830	|	16	|	No	|	Could not update the metadata that indicates database %s is enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22831	|	16	|	No	|	Could not update the metadata that indicates database %s is not enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22832	|	16	|	No	|	Could not update the metadata that indicates table %s is enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
@@ -8211,17 +8211,17 @@ The table contains error message numbers and the description, which is the text 
 |	22838	|	16	|	No	|	All columns of a CDC unique index must be defined as NOT NULL. Index '%s' selected as the CDC unique index for source table '%s.%s' does not meet this requirement. Define all columns of the selected index as NOT NULL or select another unique index as the CDC index and resubmit the request.	|
 |	22840	|	16	|	No	|	The application lock request '%s' needed to modify Change Data Capture metadata was not granted. The value returned from the request was %d: -1 = timeout; -2 = canceled; -3 = deadlock victim; -999 validation or other call error. Examine the error cause and resbmit the request.	|
 |	22841	|	16	|	No	|	Could not upgrade the metadata for database '%s' that is enabled for Change Data Capture. The failure occurred when executing the action '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
-|	22842	|	16	|	No	|	ALTER TABLE SWITCH statement failed because the partitioned destination table is enabled for Change Data Capture and does not have @allow_partition_switch set to 1.	|
-|	22843	|	16	|	No	|	ALTER TABLE SWITCH statement failed because the partitioned source table is enabled for Change Data Capture and does not have @allow_partition_switch set to 1.	|
+|	22842	|	16	|	No	|	ALTER TABLE SWITCH statement failed because the partitioned destination table is enabled for Change Data Capture and does not have \@allow_partition_switch set to 1.	|
+|	22843	|	16	|	No	|	ALTER TABLE SWITCH statement failed because the partitioned source table is enabled for Change Data Capture and does not have \@allow_partition_switch set to 1.	|
 |	22844	|	16	|	No	|	The '%s' option must be either 1 or 0.	|
 |	22850	|	16	|	No	|	The threshold value specified for the Change Data Capture cleanup process must be greater than 0. When creating or modifying the cleanup job, specify a positive threshold value. If this error is encountered when executing the sys.sp_cdc_cleanup_change_table stored procedure, reset the threshold value associated with the job to a non-negative value by using the sp_cdc_change_job stored procedure.	|
 |	22851	|	16	|	No	|	Could not update cdc.change_tables to indicate a change in the low water mark for database %s.	|
 |	22852	|	10	|	No	|	Could not delete change table entries made obsolete by a change in one or more low water marks for capture instances of database %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22853	|	10	|	No	|	Could not delete obsolete entries in the cdc.lsn_time_mapping table for database %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22854	|	16	|	No	|	Can not enable Change Data Capture on table '%s' or add ColumnSet column to it because CDC does not support ColumnSet.	|
-|	22855	|	10	|	No	|	Warning: The @allow_partition_switch parameter is set to 1. Change data capture will not track changes introduced in the table resulting from a partition switch which will cause data inconsistency when changes are consumed. Refer to books online for more information about partition switching behavior when using Change Data Capture.	|
-|	22856	|	10	|	No	|	Warning: The @allow_partition_switch parameter is set to 0. ALTER TABLE ... SWITCH PARTITION statement will be disallowed on this partitioned table. Refer to books online for more information about partition switching behavior when using Change Data Capture.	|
-|	22857	|	10	|	No	|	Warning: The @allow_partition_switch parameter must be 1 for tables that are not partitioned. The explicit setting of the parameter to 0 was ignored. Refer to books online for more information about partition switching behavior when using Change Data Capture.	|
+|	22855	|	10	|	No	|	Warning: The \@allow_partition_switch parameter is set to 1. Change data capture will not track changes introduced in the table resulting from a partition switch which will cause data inconsistency when changes are consumed. Refer to books online for more information about partition switching behavior when using Change Data Capture.	|
+|	22856	|	10	|	No	|	Warning: The \@allow_partition_switch parameter is set to 0. ALTER TABLE ... SWITCH PARTITION statement will be disallowed on this partitioned table. Refer to books online for more information about partition switching behavior when using Change Data Capture.	|
+|	22857	|	10	|	No	|	Warning: The \@allow_partition_switch parameter must be 1 for tables that are not partitioned. The explicit setting of the parameter to 0 was ignored. Refer to books online for more information about partition switching behavior when using Change Data Capture.	|
 |	22858	|	16	|	No	|	Unable to add entries to the Change Data Capture LSN time mapping table to reflect dml changes applied to the tracked tables. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22859	|	16	|	No	|	Log Scan process failed in processing log records. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22860	|	16	|	No	|	Log scan process failed in processing a ddl log record. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
@@ -8235,7 +8235,7 @@ The table contains error message numbers and the description, which is the text 
 |	22904	|	16	|	No	|	Caller is not authorized to initiate the requested action. DBO privileges are required.	|
 |	22905	|	10	|	No	|	Database '%s' is already enabled for Change Data Capture. Ensure that the correct database context is set, and retry the operation. To report on the databases enabled for Change Data Capture, query the is_cdc_enabled column in the sys.databases catalog view.	|
 |	22906	|	16	|	No	|	The database '%s' cannot be enabled for Change Data Capture because a database user named 'cdc' or a schema named 'cdc' already exists in the current database. These objects are required exclusively by Change Data Capture. Drop or rename the user or schema and retry the operation.	|
-|	22907	|	16	|	No	|	Parameter @role_name cannot be empty. Specify a value for @role_name and retry the operation. Supply null as the value if no role is to be used to gate access to captured change data.	|
+|	22907	|	16	|	No	|	Parameter \@role_name cannot be empty. Specify a value for \@role_name and retry the operation. Supply null as the value if no role is to be used to gate access to captured change data.	|
 |	22908	|	16	|	No	|	Could not create the Change Data Capture objects in database '%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22909	|	16	|	No	|	Failed to cleanup the cdc.lsn_time_mapping table in database '%s' when the last database table enabled for Change Data Capture was disabled. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22910	|	16	|	No	|	The cleanup request for database '%s' failed. The database is not enabled for Change Data Capture.	|
@@ -8246,11 +8246,11 @@ The table contains error message numbers and the description, which is the text 
 |	22918	|	16	|	No	|	One or more columns in the list of included columns was not a captured column of the change table %s.	|
 |	22919	|	16	|	No	|	One or more columns in the list of columns needing update flags was not a captured column of the change table %s.	|
 |	22920	|	16	|	No	|	The named capture instance %s does not exist for database %s.	|
-|	22921	|	16	|	No	|	Unable to generate scripts for all capture instances that the caller is authorized to access. To generate all such scripts, the parameters @column_list and @update_flag_list must both be null or empty.'	|
+|	22921	|	16	|	No	|	Unable to generate scripts for all capture instances that the caller is authorized to access. To generate all such scripts, the parameters \@column_list and \@update_flag_list must both be null or empty.'	|
 |	22923	|	16	|	No	|	Could not compute the new low endpoint for database '%s' from retention %d. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22924	|	16	|	No	|	Could not clean up change tables for database '%s'. A failure occurred when attempting to clean up the database change tables based upon the current retention time. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
-|	22925	|	16	|	No	|	The number of columns captured by capture instance '%s' exceeds the maximum allowed number: %d. Use the @captured_columns_list parameter to specify a subset of the columns less than or equal to the maximum allowed and resubmit the request.	|
-|	22926	|	16	|	No	|	Could not create a capture instance because the capture instance name '%s' already exists in the current database. Specify an explicit unique name for the parameter @capture_instance.	|
+|	22925	|	16	|	No	|	The number of columns captured by capture instance '%s' exceeds the maximum allowed number: %d. Use the \@captured_columns_list parameter to specify a subset of the columns less than or equal to the maximum allowed and resubmit the request.	|
+|	22926	|	16	|	No	|	Could not create a capture instance because the capture instance name '%s' already exists in the current database. Specify an explicit unique name for the parameter \@capture_instance.	|
 |	22927	|	16	|	No	|	Capture instance name '%s' exceeds the length limit of 100 characters. Specify a name that satisfies the length constraint.	|
 |	22928	|	16	|	No	|	Index name '%s' is not an index for table '%s.%s'. Specify a valid index name for the table.	|
 |	22929	|	16	|	No	|	Index '%s' must be either a primary key or a unique index for table '%s.%s'. Specify an index that meets at least one of these requirements.	|
@@ -8258,11 +8258,11 @@ The table contains error message numbers and the description, which is the text 
 |	22931	|	16	|	No	|	Source table '%s.%s' does not exist in the current database. Ensure that the correct database context is set. Specify a valid schema and table name for the database.	|
 |	22932	|	16	|	No	|	Capture instance name '%s' is invalid. Specify a valid name. See the topic 'Identifiers' in SQL Server Books Online for object name rules.	|
 |	22938	|	16	|	No	|	Role name '%s' is invalid. Specify a valid name. See the topic 'Identifiers' in SQL Server Books Online for object name rules.	|
-|	22939	|	16	|	No	|	The parameter @supports_net_changes is set to 1, but the source table does not have a primary key defined and no alternate unique index has been specified.	|
+|	22939	|	16	|	No	|	The parameter \@supports_net_changes is set to 1, but the source table does not have a primary key defined and no alternate unique index has been specified.	|
 |	22940	|	16	|	No	|	Could not remove DDL history entries in the Change Data Capture metadata for capture instance '%s' and source table '%s.%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22941	|	16	|	No	|	Could not retrieve column information for index '%s' of source table '%s.%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
-|	22942	|	16	|	No	|	Columns specified in the captured column list could not be mapped to columns in source table '%s.%s'. Verify that the columns specified in the parameter @captured_column_list are delimited properly and match columns in the source table.	|
-|	22943	|	16	|	No	|	Columns used to uniquely identify a row for net change tracking must be included in the list of captured columns. Add either the primary key columns of the source table, or the columns defined for the index specified in the parameter @index_name to the list of captured columns and retry the operation.	|
+|	22942	|	16	|	No	|	Columns specified in the captured column list could not be mapped to columns in source table '%s.%s'. Verify that the columns specified in the parameter \@captured_column_list are delimited properly and match columns in the source table.	|
+|	22943	|	16	|	No	|	Columns used to uniquely identify a row for net change tracking must be included in the list of captured columns. Add either the primary key columns of the source table, or the columns defined for the index specified in the parameter \@index_name to the list of captured columns and retry the operation.	|
 |	22944	|	16	|	No	|	Could not create the specified database role '%s' for gating access to change table '%s.%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22945	|	16	|	No	|	Could not add column information to the cdc.index_columns system table for the specified index for source table '%s.%s. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22946	|	16	|	No	|	Could not add column information to the cdc.captured_columns system table for source table '%s.%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
@@ -8288,9 +8288,9 @@ The table contains error message numbers and the description, which is the text 
 |	22966	|	16	|	No	|	Could not create table dbo.systranschemas in database '%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22967	|	16	|	No	|	Could not create a clustered index for table dbo.systranschemas in database '%s'. Refer to previous errors in the current session to identify the cause and correct any associated problems.	|
 |	22968	|	16	|	No	|	Could not create DDL trigger '%s' when enabling Change Data Capture for database '%s'. Additional messages in the SQL Server error log and system event log may provide more detail.	|
-|	22970	|	16	|	No	|	The value for parameter @maxscans specified for the Change Data Capture job must be greater than 0.	|
+|	22970	|	16	|	No	|	The value for parameter \@maxscans specified for the Change Data Capture job must be greater than 0.	|
 |	22971	|	16	|	No	|	Could not allocate memory for the log reader history cache. Verify that SQL Server has sufficient memory for all operations. Check the physical and virtual settings on the server and examine memory usage to see if another application is excessively consuming memory.	|
-|	22972	|	16	|	No	|	When calling stored procedure [sys].sp_cdc_help_change_data capture, if either @source_schema or @source_name is non-null and non-empty, the other parameter must also be non-null and non-empty.	|
+|	22972	|	16	|	No	|	When calling stored procedure [sys].sp_cdc_help_change_data capture, if either \@source_schema or \@source_name is non-null and non-empty, the other parameter must also be non-null and non-empty.	|
 |	22973	|	16	|	No	|	The specified filegroup '%s' is not a valid filegroup for database '%s'. Specify a valid existing filegroup or create the named filegroup, and retry the operation.	|
 |	22974	|	16	|	No	|	Tables contained in the cdc schema cannot be enabled for Change Data Capture.	|
 |	22975	|	16	|	No	|	Source table '%s' contains one of the following reserved column names: __$start_lsn, __$end_lsn, __$seqval, __$operation, and __$update_mask. To enable Change Data Capture for this table, specify a captured column list and ensure that these columns are excluded from the list.	|
@@ -8308,16 +8308,16 @@ The table contains error message numbers and the description, which is the text 
 |	22987	|	16	|	No	|	Change Data Capture population failed writing blob data for one or more large object columns. Verify that SQL Server has sufficient memory for all operations. Check the physical and virtual memory settings on the server and examine memory usage to see if another application is consuming excessive memory.	|
 |	22988	|	16	|	No	|	This instance of SQL Server is the %s. Change data capture is only available in the Enterprise, Developer, and Enterprise Evaluation editions.	|
 |	22989	|	16	|	No	|	Could not enable Change Data Capture for database '%s'. Change data capture is not supported on system databases, or on a distribution database.	|
-|	22990	|	16	|	No	|	The value specified for the parameter @pollinginterval cannot exceed 24 hours or be less than 0. Specify a polling interval (in seconds) that is less than or equal to 24 hours (86,400 seconds).	|
-|	22991	|	16	|	No	|	The value specified for the parameter @maxtrans must be greater than 0.	|
-|	22992	|	16	|	No	|	The specified @job_type, %s, is not supported. The value specified for the parameter @job_type must be N'capture' to indicate a capture job, or N'cleanup' to indicate a cleanup job.	|
+|	22990	|	16	|	No	|	The value specified for the parameter \@pollinginterval cannot exceed 24 hours or be less than 0. Specify a polling interval (in seconds) that is less than or equal to 24 hours (86,400 seconds).	|
+|	22991	|	16	|	No	|	The value specified for the parameter \@maxtrans must be greater than 0.	|
+|	22992	|	16	|	No	|	The specified \@job_type, %s, is not supported. The value specified for the parameter \@job_type must be N'capture' to indicate a capture job, or N'cleanup' to indicate a cleanup job.	|
 |	22993	|	16	|	No	|	The Change Data Capture job table containing job information for database '%s' cannot be found in the msdb system database. Run the stored procedure 'sys.sp_cdc_add_job' to create the appropriate CDC capture or cleanup job. The stored procedure will create the required job table.	|
 |	22994	|	16	|	No	|	The retention value specified for the Change Data Capture cleanup process must be greater than 0 and less than or equal to 52594800. When creating or modifying the cleanup job, specify a retention value (in minutes) that is within that range. If this error is encountered when executing the sys.sp_cdc_cleanup_change_table stored procedure, reset the retention value associated with the job to a non-negative value less than 52594800 by using the sp_cdc_change_job stored procedure.	|
-|	22995	|	16	|	No	|	A value for the parameter @retention cannot be specified when the job type is 'capture'. Specify NULL for the parameter, or omit the parameter from the statement.	|
-|	22996	|	16	|	No	|	When adding or modifying the CDC cleanup job, @pollinginterval, @maxtrans, @maxscans, and @continuous may not be assigned non-null values.	|
+|	22995	|	16	|	No	|	A value for the parameter \@retention cannot be specified when the job type is 'capture'. Specify NULL for the parameter, or omit the parameter from the statement.	|
+|	22996	|	16	|	No	|	When adding or modifying the CDC cleanup job, \@pollinginterval, \@maxtrans, \@maxscans, and \@continuous may not be assigned non-null values.	|
 |	22997	|	16	|	No	|	The Change Data Capture '%s' job does not exist in the system table 'msdb.dbo.cdc_jobs'. Use the stored procedure 'sys.sp_cdc_add_job' to add the Change Data Capture job.	|
-|	22998	|	16	|	No	|	The value specified for the parameter @continuous must be 0 or 1.	|
-|	22999	|	16	|	No	|	The value specified for the parameter @pollinginterval must be null or 0 when the stored procedure 'sys.sp_cdc_scan' is not being run in continuous mode.	|
+|	22998	|	16	|	No	|	The value specified for the parameter \@continuous must be 0 or 1.	|
+|	22999	|	16	|	No	|	The value specified for the parameter \@pollinginterval must be null or 0 when the stored procedure 'sys.sp_cdc_scan' is not being run in continuous mode.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 23,000 to 25,999
@@ -8408,14 +8408,14 @@ The table contains error message numbers and the description, which is the text 
 |	23997	|	16	|	No	|	System error occurred {ErrorCode: %d}.	|
 |	23998	|	16	|	No	|	Not enough memory available in the system to process the request.	|
 |	23999	|	16	|	No	|	Unspecified error(s) occurred.	|
-|	25002	|	16	|	No	|	The specified Publisher is not enabled as a remote Publisher at this Distributor. Ensure the value specified for the parameter @publisher is correct, and that the Publisher is enabled as a remote Publisher at the Distributor.	|
+|	25002	|	16	|	No	|	The specified Publisher is not enabled as a remote Publisher at this Distributor. Ensure the value specified for the parameter \@publisher is correct, and that the Publisher is enabled as a remote Publisher at the Distributor.	|
 |	25003	|	16	|	No	|	Upgrade of the distribution database MSmerge_subscriptions table failed. Rerun the upgrade procedure in order to upgrade the distribution database.	|
 |	25005	|	16	|	No	|	It is invalid to drop the default constraint on the rowguid column that is used by merge replication.	|
 |	25006	|	16	|	No	|	The new column cannot be added to article '%s' because it has more than %d replicated columns.	|
 |	25007	|	16	|	No	|	Cannot synchronize the subscription because the schemas of the article at the Publisher and the Subscriber do not match. It is likely that pending schema changes have not yet been propagated to the Subscriber. Run the Merge Agent again to propagate the changes and synchronize the data.	|
 |	25008	|	16	|	No	|	The merge replication views could not be regenerated after performing the data definition language (DDL) operation.	|
 |	25009	|	16	|	No	|	Invalid value '%s' specified while executing sp_changemergearticle on article '%s' for the 'identityrangemanagementoption' property.	|
-|	25010	|	16	|	No	|	The constraint is used by merge replication for identity management and cannot be dropped directly. Execute sp_changemergearticle @publication, @article, "identityrangemanagementoption", "none" to disable merge identity management, which will also drop the constraint.	|
+|	25010	|	16	|	No	|	The constraint is used by merge replication for identity management and cannot be dropped directly. Execute sp_changemergearticle \@publication, \@article, "identityrangemanagementoption", "none" to disable merge identity management, which will also drop the constraint.	|
 |	25012	|	16	|	No	|	Cannot add an identity column since the table is published for merge replication.	|
 |	25013	|	16	|	No	|	Cannot perform alter table because the table is published in one or more publications with a publication_compatibility_level of lower than '90RTM'. Use sp_repladdcolumn or sp_repldropcolumn.	|
 |	25014	|	16	|	No	|	sp_repladdcolumn does not allow adding columns of datatypes that are new to this release.	|
@@ -8426,7 +8426,7 @@ The table contains error message numbers and the description, which is the text 
 |	25019	|	16	|	No	|	The logical record relationship between articles "%s" and "%s" cannot be added because at least one of the articles has a constraint with a CASCADE action defined.	|
 |	25020	|	16	|	No	|	The article cannot be created on table '%s' because it has more than %d columns and column-level tracking is being used. Either reduce the number of columns in the table or change to row-level tracking.	|
 |	25021	|	16	|	No	|	Replication stored procedure sp_MSupdategenhistory failed to update the generation '%s'. This generation will be retried in the next merge.	|
-|	25022	|	16	|	No	|	The snapshot storage option (@snapshot_storage_option) must be 'file system', or 'database'.	|
+|	25022	|	16	|	No	|	The snapshot storage option (\@snapshot_storage_option) must be 'file system', or 'database'.	|
 |	25023	|	16	|	No	|	Stored procedures containing table-value parameters cannot be published as '[serializable] proc exec' articles.	|
 |	25024	|	16	|	No	|	A snapshot storage option of 'database' is incompatible with the use of character mode bcp for snapshot generation.	|
 |	25025	|	16	|	No	|	Cannot add a sparse column or a sparse column set because the table is published for merge replication. Merge replication does not support sparse columns.	|
@@ -8836,7 +8836,7 @@ The table contains error message numbers and the description, which is the text 
 |	32025	|	16	|	No	|	Primary Server %s, Database %s has active log shipping secondary database(s) on the secondary. Drop the secondary database(s) first.	|
 |	32026	|	10	|	No	|	Log shipping Primary Server Alert.	|
 |	32027	|	10	|	No	|	Log shipping Secondary Server Alert.	|
-|	32028	|	16	|	No	|	Invalid value = %d for parameter @threshold_alert was specified.	|
+|	32028	|	16	|	No	|	Invalid value = %d for parameter \@threshold_alert was specified.	|
 |	32029	|	10	|	No	|	Log shipping backup agent [%s] has verified log backup file '%s.wrk' and renamed it as '%s.trn'. This is an informational message only. No user action is required.	|
 |	32030	|	10	|	No	|	Could not query monitor information for log shipping primary %s.%s from monitor server %s.	|
 |	32031	|	10	|	No	|	Could not query monitor information for log shipping secondary %s.%s from monitor server %s.	|
@@ -8861,7 +8861,7 @@ The table contains error message numbers and the description, which is the text 
 |	32050	|	16	|	No	|	Alerts cannot be created on the system databases, master, msdb, model or tempdb.	|
 |	32051	|	10	|	No	|	System administrator privilege is required to update the base table. The base table was not updated.	|
 |	32052	|	16	|	No	|	Parameter '%s' cannot be null or empty. Specify a value for the named parameter and retry the operation.	|
-|	32053	|	16	|	No	|	The server name, given by '@@servername', is currently null.	|
+|	32053	|	16	|	No	|	The server name, given by '\@\@servername', is currently null.	|
 |	32054	|	16	|	No	|	There was an error establishing a link to the remote monitor server.	|
 |	32055	|	16	|	No	|	There was an error configuring the remote monitor server.	|
 |	33001	|	16	|	No	|	Cannot drop the option because the option is not specified on %S_MSG.	|
@@ -9034,13 +9034,13 @@ The table contains error message numbers and the description, which is the text 
 |	35002	|	16	|	No	|	Server type and parent Server Group type are not the same	|
 |	35003	|	16	|	No	|	Cannot move node to one of its children	|
 |	35004	|	16	|	No	|	Could not find server group	|
-|	35005	|	16	|	No	|	An invalid value NULL was passed in for @server_group_id.	|
-|	35006	|	16	|	No	|	An invalid value NULL was passed in for @server_id.	|
+|	35005	|	16	|	No	|	An invalid value NULL was passed in for \@server_group_id.	|
+|	35006	|	16	|	No	|	An invalid value NULL was passed in for \@server_id.	|
 |	35007	|	16	|	No	|	Could not find shared registered server.	|
 |	35008	|	16	|	No	|	Cannot delete system shared server groups.	|
-|	35009	|	16	|	No	|	An invalid value NULL was passed in for @server_type.	|
-|	35010	|	16	|	No	|	An invalid value %d was passed in for parameter @server_type.	|
-|	35011	|	16	|	No	|	The @server_name parameter cannot be a relative name.	|
+|	35009	|	16	|	No	|	An invalid value NULL was passed in for \@server_type.	|
+|	35010	|	16	|	No	|	An invalid value %d was passed in for parameter \@server_type.	|
+|	35011	|	16	|	No	|	The \@server_name parameter cannot be a relative name.	|
 |	35012	|	16	|	No	|	You cannot add a shared registered server with the same name as the Configuration Server.	|
 |	[41030](mssqlserver-41030-database-engine-error.md)	|		|		|	Failed to open the Windows Server Failover Clustering registry subkey '%.*ls' (Error code %d).  The parent key is the cluster root key.  The WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. If the corresponding availability group has been dropped, this error is expected. For information about this error code, see "System Error Codes" in the Windows Development documentation.	|
 |	[41301](mssqlserver-41301-database-engine-error.md)	|		|		|	A previous transaction that the current transaction took a dependency on has aborted, and the current transaction can no longer commit.|	|

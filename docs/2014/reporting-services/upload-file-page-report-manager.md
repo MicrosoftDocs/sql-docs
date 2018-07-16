@@ -48,7 +48,7 @@ manager: craigg
  Click to choose a file from the file system.  
   
  **Name**  
- Type the name of the file, as it will appear in the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. Do not use the characters ; ? : @ & = + , $ * \< > | " or / when specifying an item name.  
+ Type the name of the file, as it will appear in the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. Do not use the characters ; ? : \@ & = + , $ * \< > | " or / when specifying an item name.  
   
  **Overwrite item if it exists**  
  Select this check box if you want to replace an existing item with a newer version. To overwrite an existing version, the name of the new item and the existing item must be an exact match.  

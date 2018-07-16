@@ -5,13 +5,11 @@ description: Display snippets of updated content for recently changed in documen
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-
 ms.component: ssdt
 ms.date: 04/28/2018
 ---

@@ -46,13 +46,13 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## Parameters  
- @ *retval*  
+ \@ *retval*  
  Is a return value.  
   
- @ *param1*  
+ \@ *param1*  
  Is an input parameter.  
   
- @ *param2*  
+ \@ *param2*  
  Is an input/output parameter.  
   
 > [!CAUTION]  

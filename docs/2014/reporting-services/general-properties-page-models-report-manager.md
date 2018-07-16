@@ -35,7 +35,7 @@ manager: craigg
  **Name**  
  Specifies the name of the model. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the following characters when specifying a name:  
   
- ; ? : @ & = + , $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Description**  
  Type a description of the model. This description appears in the Contents page to users who have permission to access the modelt.  

@@ -31,7 +31,7 @@ manager: craigg
   
 ## Options  
  **Name**  
- Specify a name for the report. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. Do not use the characters ; ? : @ & = + , $ * \< >  
+ Specify a name for the report. A name must contain at least one alphanumeric character. It can also include spaces and certain symbols. Do not use the characters ; ? : \@ & = + , $ * \< >  
   
  " or / when specifying a name.  
   

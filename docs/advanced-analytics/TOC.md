@@ -73,7 +73,7 @@
 #### [Create and run R scripts](tutorials/deepdive-create-and-run-r-scripts.md)
 #### [Visualize data](tutorials/deepdive-visualize-sql-server-data-using-r.md)
 #### [Create models](tutorials/deepdive-create-models.md)
-#### [Score new Data](tutorials/deepdive-score-new-data.md)
+#### [Score new data](tutorials/deepdive-score-new-data.md)
 #### [Transform data](tutorials/deepdive-transform-data-using-r.md)
 #### [Load data into memory using rxImport](tutorials/deepdive-load-data-into-memory-using-rximport.md)
 #### [Create a table using rxDataStep](tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
@@ -83,15 +83,15 @@
 #### [Create a simple simulation](tutorials/deepdive-create-a-simple-simulation.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
-### [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
+### [Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
 #### [Wrap Python in a stored procedure](tutorials/wrap-python-in-tsql-stored-procedure.md)
 #### [Train and score from a Python model in SQL Server](tutorials/train-score-using-python-in-tsql.md)
 #### [Create a model using revoscalepy in a SQL Server compute context](tutorials/use-python-revoscalepy-to-create-model.md)
-### [Python: In-Database analytics for SQL developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
-#### [Download sample data](tutorials/sqldev-py1-download-the-sample-data.md)
-#### [Import data to SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
+### [Learn in-database analytics](tutorials/sqldev-in-database-python-for-sql-developers.md)
+#### [Get data and scripts](tutorials/sqldev-py1-download-the-sample-data.md)
+#### [Import data](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
 #### [Explore and visualize data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
-#### [Create data features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
+#### [Create data features](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
 
@@ -150,14 +150,14 @@
 ### [Using R code profiling functions](r/using-r-code-profiling-functions.md)
 ### [Monitor Machine Learning Services using custom reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-# [Reference](r/machine-learning-services-r-reference.md)
+# [Package reference](r/machine-learning-services-r-reference.md)
 
-## [MicrosoftML](using-the-microsoftml-package.md)
-## [RevoScaleR](r/revoscaler-overview.md)
-### [RevoScaleR functions for SQL Server data](r/scaler-functions-for-working-with-sql-server-data.md)
-## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
-## [revoscalepy](python/what-is-revoscalepy.md)
+## [MicrosoftML in SQL](using-the-microsoftml-package.md)
+## [RevoScaleR in SQL](r/revoscaler-overview.md)
+## [RevoScaleR function list for SQL Server data](r/scaler-functions-for-working-with-sql-server-data.md)
+## [sqlrutils in SQL](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+## [olapR in SQL](r/how-to-create-mdx-queries-using-olapr.md)
+## [revoscalepy in SQL](python/what-is-revoscalepy.md)
 
 # Resources
 

@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "07/18/2018"
+ms.date: "07/19/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -20,8 +20,8 @@ manager: craigg
 
 ## July 2018 (July Public Preview)
 
-release date: July 18, 2018  
-version: 0.31.3
+release date: July 19, 2018  
+version: 0.31.4
 
 The *July Public Preview* focuses on the initial release of the SQL Server Agent configuration scenarios, SQL Server Profiler session and view template enhancements, and continued bug fixes for customer reported GitHub issues. This release contains the following highlights:  
 

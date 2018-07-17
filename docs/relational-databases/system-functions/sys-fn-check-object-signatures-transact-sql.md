@@ -44,17 +44,17 @@ fn_ check_object_signatures (
 ```  
   
 ## Arguments  
- { '@*class*' }  
+ { '\@*class*' }  
  Identifies the type of thumbprint being provided:  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- @*class* is **sysname**.  
+ \@*class* is **sysname**.  
   
- { @*thumbprint* }  
- SHA-1 hash of the certificate with which the key is encrypted, or the GUID of the asymmetric key with which the key is encrypted. @*thumbprint* is **varbinary(20)**.  
+ { \@*thumbprint* }  
+ SHA-1 hash of the certificate with which the key is encrypted, or the GUID of the asymmetric key with which the key is encrypted. \@*thumbprint* is **varbinary(20)**.  
   
 ## Tables Returned  
  The following table lists the columns that **fn_check_object_signatures** returns.  

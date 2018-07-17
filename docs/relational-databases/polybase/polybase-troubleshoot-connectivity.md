@@ -8,7 +8,7 @@ ms.suite: "sql"
 ms.custom: ""
 ms.tgt_pltfrm: na
 ms.devlang: 
-ms.topic: article
+ms.topic: conceptual
 ms.date: 07/19/2017"
 ms.prod: sql
 ms.prod_service: "polybase, sql-data-warehouse, pdw"

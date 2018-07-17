@@ -214,7 +214,7 @@ The ODBC content in this section focuses on accessing either SQL Server or Azure
 
 ## ![PHP logo][image-ref-360-php] PHP
 
-You can use PHP to interact with SQL Server. The root of our Node.js documentation is [here](./php/index.md).
+You can use PHP to interact with SQL Server. The root of our PHP documentation is [here](./php/index.md).
 
 #### Code examples
 

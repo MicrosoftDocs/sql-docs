@@ -6,7 +6,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index online operations [SQL Server]"
   - "online index operations"

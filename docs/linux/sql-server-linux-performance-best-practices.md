@@ -13,7 +13,7 @@ ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
-# Performance best practices and configuration guidelines for SQL Server 2017 on Linux
+# Performance best practices and configuration guidelines for SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

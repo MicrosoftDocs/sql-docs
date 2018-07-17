@@ -3,7 +3,6 @@ title: "ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2018"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -26,9 +25,8 @@ helpviewer_keywords:
   - "collations [SQL Server], modifying"
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-caps.latest.revision: 282
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

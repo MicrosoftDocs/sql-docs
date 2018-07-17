@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSmerge_genhistory system table"
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSmerge_genhistory (Transact-SQL)

@@ -4,7 +4,7 @@ description: This article provides answers to frequently asked questions about S
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/22/2018
+ms.date: 07/17/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
@@ -84,6 +84,9 @@ The following sections provide common questions and answers for SQL Server runni
 1. **What tools are available to monitor SQL Server performance on Linux?**
 
    You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), work remotely in SQL Server Management Studio (SSMS) from Windows.
+
+   > [!TIP]
+   > One way to improve performance is to properly configure your Linux operating system and the SQL Server insance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
 ## Administration
 

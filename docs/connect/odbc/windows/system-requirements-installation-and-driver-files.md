@@ -51,7 +51,7 @@ The driver is installed when you run `msodbcsql.msi` from one of the following l
 - [Download the Microsoft ODBC Driver 11 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=36434). 
 
 [!NOTE]
-For those who have Driver 17.1.0.1 installed it is recommended that they uninstall this driver version manually prior to installing Driver 17.2.0.1 or above
+For those who have Driver 17.1.0.1 installed, it is recommended that it be uninstalled manually prior to installing Driver 17.2.0.1 or above
 
 It can be installed side-by-side with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client.  
 

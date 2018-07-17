@@ -50,6 +50,9 @@ The driver is installed when you run `msodbcsql.msi` from one of the following l
 - [Download the Microsoft ODBC Driver 13 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Download the Microsoft ODBC Driver 11 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=36434). 
 
+[!NOTE]
+For those who have Driver 17.1.0.1 installed it is recommended that they uninstall this driver version manually prior to installing Driver 17.2.0.1 or above
+
 It can be installed side-by-side with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client.  
 
 When you invoke `msodbcsql.msi`, only the client components are installed by default. The client components are files that support running an application that was developed using the driver. To install the SDK components, specify `ADDLOCAL=ALL` on the command line. For example:  

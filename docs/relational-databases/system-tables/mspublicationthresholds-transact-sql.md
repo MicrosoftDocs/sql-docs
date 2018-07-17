@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSpublicationthresholds system table"
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSpublicationthresholds (Transact-SQL)

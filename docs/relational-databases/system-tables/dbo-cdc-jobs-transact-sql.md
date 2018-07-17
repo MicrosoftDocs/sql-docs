@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "dbo.cdc_jobs"
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # dbo.cdc_jobs (Transact-SQL)

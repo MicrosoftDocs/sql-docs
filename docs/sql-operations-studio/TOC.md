@@ -14,6 +14,8 @@
 # How-to guides
 ## [Dashboards & insight widgets](insight-widgets.md)
 ## [Extensions](extensions.md)
+### [SQL Server Agent](sql-server-agent-extension.md)
+### [SQL Server Profiler](sql-server-profiler-extension.md)
 ## [Code snippets](code-snippets.md)
 ## [Integrated terminal (PowerShell, Bash)](integrated-terminal.md)
 ## [Keyboard shortcuts](keyboard-shortcuts.md)

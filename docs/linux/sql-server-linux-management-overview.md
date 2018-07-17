@@ -20,6 +20,7 @@ ms.custom: "sql-linux"
 There are several ways to manage SQL Server 2017 on Linux. The following section provides a quick overview of different management tools and techniques with pointers to more resources.
 
 ## mssql-conf 
+
 The **mssql-conf** tool configures SQL Server on Linux. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## Transact-SQL

@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_logevent"
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # xp_logevent (Transact-SQL)

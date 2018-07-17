@@ -151,7 +151,12 @@ DEFAULT
 *constant_expression*  
  Is a literal value, a NULL, or a system function used as the default column value. If used in conjunction with a column defined to be of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] user-defined type, the implementation of the type must support an implicit conversion from the *constant_expression* to the user-defined type.  
   
-WITH VALUES  
+WITH VALUES   
+ When adding a column AND a DEFAULT constraint, if the column allows NULLS using WITH VALUES will, for existing rows, set the new column's value to the value given in DEFAULT *constant_expression*. 
+ If the column being added does not allow NULLS, for existing rows, the column's value will always be set to the value given in the DEFAULT *constant expression*. 
+ Starting in SQL Server 2012 this may be a meta data operation [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ If this is used when the related column isn't also being added then it has no effect.
+ 
  Specifies that the value given in DEFAULT *constant_expression* is stored in a new column that is added to existing rows. If the added column allows null values and WITH VALUES is specified, the default value is stored in the new column that is added to existing rows. If WITH VALUES is not specified for columns that allow nulls, the value NULL is stored in the new column, in existing rows. If the new column does not allow nulls, the default value is stored in new rows regardless of whether WITH VALUES is specified.  
   
 IDENTITY  

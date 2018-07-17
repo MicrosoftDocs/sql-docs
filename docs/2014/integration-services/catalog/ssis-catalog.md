@@ -58,7 +58,7 @@ manager: craigg
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   
@@ -76,7 +76,7 @@ manager: craigg
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   

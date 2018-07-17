@@ -57,7 +57,7 @@ BOOL SQLValidDSN(
 ## Comments  
  **SQLValidDSN** is called by a driver's [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) to check the length of the data source name and the validity of the individual characters in the data source name. It checks whether the length of the name is greater than SQL_MAX_DSN_LENGTH, as defined in Sqlext.h. (The length of the data source name is also checked by [SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md).) **SQLValidDSN** checks whether any of the following invalid characters are included in the data source name:  
   
- [ ] { } ( ) , ; ? * = ! @ \  
+ [ ] { } ( ) , ; ? * = ! \@ \  
   
 ## Related Functions  
   

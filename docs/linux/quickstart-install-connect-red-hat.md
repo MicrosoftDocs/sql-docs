@@ -4,8 +4,8 @@ description:  This quickstart shows how to install SQL Server 2017 or SQL Server
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/08/2018
-ms.topic: article
+ms.date: 02/22/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.component: ""

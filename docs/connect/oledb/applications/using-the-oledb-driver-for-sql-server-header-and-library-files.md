@@ -34,7 +34,7 @@ manager: craigg
   
  The OLE DB Driver for SQL Server header and library files are installed in the following location:  
   
- *%PROGRAM FILES%*\Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
+ *%PROGRAM FILES%*\Microsoft SQL Server\Client SDK\OLEDB\181\SDK  
   
  The OLE DB Driver for SQL Server header file (msoledbsql.h) can be used to add OLE DB Driver for SQL Server data access functionality to your custom applications. The OLE DB Driver for SQL Server header file contains all of the definitions, attributes, properties, and interfaces needed to take advantage of the new features introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

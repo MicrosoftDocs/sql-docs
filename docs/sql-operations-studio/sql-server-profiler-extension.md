@@ -2,7 +2,7 @@
 title: SQL Operations Studio (preview) SQL Server Profiler extension | Microsoft Docs
 description: SQL Server Profiler extension for SQL Operations Studio (preview)
 ms.custom: "tools|sos"
-ms.date: "07/18/2018"
+ms.date: "07/19/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.suite: "sql"
@@ -21,7 +21,7 @@ Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an eas
 Extensions are provided by the SQL Operations Studio team (Microsoft), as well as the 3rd party community (you!). For details about creating extensions, see [Get started with Extensibility](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
 
 
-## Add SQL Operations Studio extensions
+## Install the SQL Server Profiler extension
 
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
 2. Select an available extension to view it's details.

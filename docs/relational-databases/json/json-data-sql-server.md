@@ -155,9 +155,9 @@ FROM OPENJSON(@json)
   WITH (id int 'strict $.id',  
         firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
         age int, dateOfBirth datetime2 '$.dob',
-	skills nvarchar(max) '$.skills' as json) 
-	outer apply openjson( a.skills ) 
-                     with ( skill nvarchar(8) '$' ) as b
+	skills nvarchar(max) '$.info.skills' as json) 
+	outer apply openjson( skills ) 
+                     with ( skill nvarchar(8) '$' )
 ```  
 **skills** array is returned in the first `OPENJSON` as original JSON text fragment and passed to another `OPENJSON` function using `APPLY` operator. The second `OPENJSON` function will parse JSON array and return string values as single column rowset that will be joined with the result of the first `OPENJSON`. 
 The result of this query is shown in the following table:

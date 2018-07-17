@@ -338,10 +338,10 @@ manager: craigg
   
 1.  In the Report Data pane, expand **Parameters**.  
   
-2.  Right-click @ProductProductCategoryName, and then click **Parameter Properties**.  
+2.  Right-click \@ProductProductCategoryName, and then click **Parameter Properties**.  
   
     > [!NOTE]  
-    >  The @ character next to the name indicates that this is a parameter.  
+    >  The \@ character next to the name indicates that this is a parameter.  
   
 3.  On the **General** tab, click **Hidden**.  
   

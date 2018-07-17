@@ -5,7 +5,7 @@ author: meet-bhagdev
 ms.author: meetb 
 manager: craigg
 ms.date: 04/19/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"

@@ -137,7 +137,7 @@ manager: craigg
  The generated HTML page results that appear will be similar to the following sample output:  
   
 ##### Server-side processing  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ Page Generated \@ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
   

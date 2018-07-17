@@ -2,14 +2,10 @@
 title: "Using System.Transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
@@ -23,8 +19,7 @@ ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Using System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

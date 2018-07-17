@@ -1,17 +1,13 @@
 ---
 title: "Converting MySQL Databases (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +15,7 @@ ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Converting MySQL Databases (MySQLToSQL)
 After you have connected to MySQL, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, and set project and data mapping options, you can convert MySQL database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects.  
@@ -39,8 +34,8 @@ The following table shows which MySQL objects are converted, and the resulting [
 |||  
 |-|-|  
 |**MySQL Objects**|**Resulting SQL Server Objects**|  
-|Tables with dependent objects such as indexes|SSMA creates tables with dependent objects. Table is converted with all indexes and constraints. Indexes are converted into separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects.<br /><br />**Spatial data type mapping** can be performed only at table node level.<br /><br />For more information on the Table Conversion settings, see [Conversion Settings](http://msdn.microsoft.com/en-us/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
-|Functions|If the function can be directly converted to Transact-SQL, SSMA creates a function. In some cases, the function must be converted to a stored procedure. This can be done by using **Function Conversion** in Project Settings. In this case, SSMA creates a stored procedure and a function that calls the stored procedure.<br /><br />**Choices Given:**<br /><br />Convert according to project settings<br /><br />Convert to function<br /><br />Convert to stored procedure<br /><br />For more information on Function Conversion settings, see [Conversion Settings](http://msdn.microsoft.com/en-us/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
+|Tables with dependent objects such as indexes|SSMA creates tables with dependent objects. Table is converted with all indexes and constraints. Indexes are converted into separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects.<br /><br />**Spatial data type mapping** can be performed only at table node level.<br /><br />For more information on the Table Conversion settings, see [Conversion Settings](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
+|Functions|If the function can be directly converted to Transact-SQL, SSMA creates a function. In some cases, the function must be converted to a stored procedure. This can be done by using **Function Conversion** in Project Settings. In this case, SSMA creates a stored procedure and a function that calls the stored procedure.<br /><br />**Choices Given:**<br /><br />Convert according to project settings<br /><br />Convert to function<br /><br />Convert to stored procedure<br /><br />For more information on Function Conversion settings, see [Conversion Settings](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
 |Procedures|If the procedure can be directly converted to Transact-SQL, SSMA creates a stored procedure. In some cases a stored procedure must be called in an autonomous transaction. In this case, SSMA creates two stored procedures: one that implements the procedure, and another that is used for calling the implementing stored procedure.|  
 |Database Conversion|Databases as MySQL objects are not directly converted by SSMA for MySQL. MySQL databases are treated more like a schema names and all the physical parameters are lost during conversion. SSMA for MySQL uses [Mapping MySQL Databases to SQL Server Schemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) to map objects from MySQL database to appropriate SQL Server database/schema pair.|  
 |Trigger Conversion|**SSMA creates triggers based on the following rules:**<br /><br />BEFORE triggers are converted into INSTEAD OF T-SQL triggers<br /><br />AFTER triggers are converted into AFTER T-SQL triggers with or without iterations per rows.|  

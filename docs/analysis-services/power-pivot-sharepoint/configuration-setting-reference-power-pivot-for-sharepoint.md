@@ -1,25 +1,14 @@
 ---
 title: "Configuration Setting Reference (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configuration Setting Reference (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,8 +70,8 @@ ms.workload: "Inactive"
 |----------|-------------|------------------|-----------------|  
 |Start time|04:00 a.m.|1 to 12 hours, where the value is a valid integer within that range.<br /><br /> Type is Time.|Sets the lower limit of a business hour range.|  
 |End time|08:00 p.m.|1 to 12 hours, where the value is a valid integer within that range.<br /><br /> Type is Time.|Sets the upper limit of a business hour range.|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Unattended Data Refresh Account|None|A target application ID|This account is used to run data refresh jobs on behalf of a schedule owner.<br /><br /> The unattended data refresh account must be defined in advance before it can be referenced in the service application configuration page. For more information, see [Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
-|Allow users to enter custom Windows credentials|Enabled|Boolean|Determines whether the scheduled data refresh configuration page shows an option that allows a schedule owner to specify Windows user account and password to run a data refresh job.<br /><br /> Secure Store Service must be enabled in order for this option to work. For more information, see [Configure Stored Credentials for Power Pivot Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Unattended Data Refresh Account|None|A target application ID|This account is used to run data refresh jobs on behalf of a schedule owner.<br /><br /> The unattended data refresh account must be defined in advance before it can be referenced in the service application configuration page. For more information, see [Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
+|Allow users to enter custom Windows credentials|Enabled|Boolean|Determines whether the scheduled data refresh configuration page shows an option that allows a schedule owner to specify Windows user account and password to run a data refresh job.<br /><br /> Secure Store Service must be enabled in order for this option to work. For more information, see [Configure Stored Credentials for Power Pivot Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).|  
 |Maximum Processing History Length|365|1 to 5000 days|Determines how long data refresh history is retained in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application database. For more information, see [Power Pivot Usage Data Collection](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).|  
   
 ##  <a name="UsageData"></a> Usage Data Collection  
@@ -99,7 +88,7 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Create and Configure a Power Pivot Service Application in Central Administration](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [Power Pivot Data Refresh with SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [Power Pivot Data Refresh with SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Configure Usage Data Collection for &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

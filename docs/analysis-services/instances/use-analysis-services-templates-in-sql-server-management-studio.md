@@ -1,25 +1,14 @@
 ---
 title: "Use Analysis Services Templates in SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Use Analysis Services Templates in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -27,18 +16,6 @@ ms.workload: "Inactive"
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides a set of templates to help you quickly create XMLA scripts, DMX or MDX queries, create KPIs in a cube or tabular model, script backup and restore operations, and perform many other tasks. Templates are located in the **Template Explorer** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  This topic includes a list of the templates for multidimensional models and tabular models, and provides examples of how to build an MDX query and XMLA statement by using the Metadata Explorer and the Template Explorer.  
-  
- This topic includes the following sections:  
-  
- [Open an Analysis Services Template](#bkmk_usingTE)  
-  
- [Build and Run an MDX Query on a Tabular Model using a Template](#BKMK_Building_Queries)  
-  
- [Create XMLA Script from a Template](#bkmk_backup)  
-  
- [Generate a Schema Rowset Query using an XMLA Template](#bkmk_schemarowset)  
-  
- [Analysis Services Template Reference](#bkmk_Ref)  
   
  This topic does not cover DMX templates. For examples of how to create data mining queries using the templates, see [Create a DMX Query in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md) or [Create a Singleton Prediction Query from a Template](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md).  
   
@@ -65,7 +42,7 @@ ms.workload: "Inactive"
  This example shows you how to create an MDX query in SQL Server Management Studio, using a tabular model database as the data source. To repeat this example on your computer, you can [download the Adventureworks tabular model sample project](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  You cannot use MDX queries against tabular models that have been deployed in Direct Query mode. You can, however, send equivalent queries by using the DAX table queries with the EVALUATE command. For more information, see [DAX Query Parameters](http://msdn.microsoft.com/en-us/c5841b4e-3395-4237-815b-9822a691e544).  
+>  You cannot use MDX queries against tabular models that have been deployed in Direct Query mode. You can, however, send equivalent queries by using the DAX table queries with the EVALUATE command. For more information, see [DAX Query Parameters](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544).  
   
 #### Create an MDX query from a template  
   

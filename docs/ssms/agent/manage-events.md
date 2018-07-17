@@ -2,16 +2,14 @@
 title: "Manage Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "event forwarding servers [SQL Server]"
   - "events [SQL Server], forwarding"
@@ -24,8 +22,8 @@ ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Manage Events
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +84,7 @@ The following are common tasks for managing events in a multiserver environment:
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
 ## Running Event-Triggered Jobs  
 You can define a job to be executed in response to an alert. For example, you can execute a job that corrects or further diagnoses a problem detected by the alert.  
@@ -95,5 +93,5 @@ You can define a job to be executed in response to an alert. For example, you ca
 > Because a job can raise an event, be careful not to create a recursive alert-job loop.  
   
 ## See Also  
-[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/44bee7d9-7517-4071-99be-8b36f979c7cc)  
+[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   

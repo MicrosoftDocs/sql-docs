@@ -3,14 +3,11 @@ title: "sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
 ms.custom: ""
 ms.date: "07/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,8 +24,8 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 caps.latest.revision: 37
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,9 +86,9 @@ JSON document in `state` column contains the reason that describes why is the re
  Statistic in the details column do not show runtime plan statistics (for example, current CPU time). The recommendation details are taken at the time of regression detection and describe why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified performance regression. Use `regressedPlanId` and `recommendedPlanId` to query [Query Store catalog views](../../relational-databases/performance/how-query-store-collects-data.md) to find exact runtime plan statistics.
 
 ## Using tuning recommendations information  
- You can use the following query to get the T-SQL script that will fix the issue:  
+You can use the following query to get the [!INCLUDE[tsql](../../includes/tsql-md.md)] script that will fix the issue:  
  
-```
+```sql
 SELECT name, reason, score,
 		JSON_VALUE(details, '$.implementationDetails.script') as script,
 		details.* 

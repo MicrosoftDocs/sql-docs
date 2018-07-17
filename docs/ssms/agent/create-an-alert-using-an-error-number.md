@@ -2,16 +2,14 @@
 title: "Create an Alert Using an Error Number | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "alerts [SQL Server], creating"
   - "SQL Server Agent, alerts"
@@ -20,8 +18,8 @@ ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create an Alert Using an Error Number
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -109,5 +107,5 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
     GO  
     ```  
   
-For more information, see [sp_add_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09).  
+For more information, see [sp_add_alert (Transact-SQL)](http://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09).  
   

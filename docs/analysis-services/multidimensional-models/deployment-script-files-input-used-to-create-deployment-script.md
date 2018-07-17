@@ -1,33 +1,14 @@
 ---
 title: "Understanding the Input Files Used to Create the Deployment Script | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/27/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "input files [Analysis Services]"
-  - "Analysis Services Deployment Wizard, scripts"
-  - "deploying [Analysis Services], input files"
-  - "Analysis Services Deployment Wizard, input files"
-  - "scripts [Analysis Services], deployment"
-  - "Analysis Services deployments, input files"
-  - "modifying input files"
-ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Deployment Script Files - Input Used to Create Deployment Script
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

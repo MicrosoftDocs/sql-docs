@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "10015"
   - "sql13.rtp.rptdesigner.dataview.smqlquerydesigner.f1"
@@ -25,7 +24,6 @@ caps.latest.revision: 31
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Report Model Query Designer User Interface
   Report Designer provides two query designers to help you specify which data from a Report Server Model data source you want to use in a report. Use the graphical query designer to explore and choose model entities and entity fields. Use the text-based query designer to work directly with a Semantic Model Definition Language (SMDL) specification in XML format.  

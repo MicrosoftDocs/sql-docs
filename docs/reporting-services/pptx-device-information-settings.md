@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/11/2015"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -23,7 +22,6 @@ caps.latest.revision: 6
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # PPTX Device Information Settings
   The following table lists the device information settings for rendering [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports in the PPTX format.  

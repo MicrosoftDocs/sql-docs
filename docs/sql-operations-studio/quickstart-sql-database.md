@@ -3,8 +3,8 @@ title: "Quickstart: Connect and query an Azure SQL database using SQL Operations
 description: This quickstart shows how to use SQL Operations Studio (preview) to connect to a SQL database and run a query
 ms.custom: "tools|sos"
 ms.date: "03/08/2018"
-ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sstein"
+ms.prod: sql
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,7 +13,6 @@ ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database
 
@@ -149,7 +148,7 @@ The query editor is still connected to the *master* database, but we want to cre
 ## Clean up resources
 
 Other articles in this collection build upon this quickstart. If you plan to continue on to work with subsequent quickstarts, do not clean up the resources created in this quickstart. If you do not plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
-Clean up resources by deleting the resource groups you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Clean up resources by deleting the resource groups you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## Next steps
 

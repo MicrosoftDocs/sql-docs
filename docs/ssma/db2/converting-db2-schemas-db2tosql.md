@@ -1,17 +1,13 @@
 ---
 title: "Converting DB2 Schemas (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-db2"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +15,7 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Converting DB2 Schemas (DB2ToSQL)
 After you have connected to DB2, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and set project and data mapping options, you can convert DB2 database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects.  
@@ -152,7 +147,7 @@ For each item that could not be converted, you have to determine what you want t
 -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer and DB2 Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and migrating data from DB2.  
   
 ## Next Step  
-The next step in the migration process is to [Load the converted objects into SQL Server](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
+The next step in the migration process is to [Load the converted objects into SQL Server](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
 ## See Also  
 [Migrating DB2 Data into SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

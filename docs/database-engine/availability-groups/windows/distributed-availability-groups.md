@@ -2,28 +2,23 @@
 title: "Distributed availability groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/12/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-- "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], distributed"
 ms.assetid: 
 caps.latest.revision: 
-author: "allanhirt"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: "MashaMSFT"
+ms.author: mathoma
+manager: craigg
 ---
 # Distributed availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Distributed availability groups are a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups feature. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+Distributed availability groups are a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups feature. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation).
 
 > [!NOTE]
 > "DAG" is not the official abbreviation for *distributed availability group*, because the abbreviation is already used for the Exchange Database Availability Group feature. This Exchange feature has no relation to SQL Server availability groups or distributed availability groups.
@@ -47,10 +42,13 @@ You can configure the data movement in distributed availability groups as synchr
 
 ![Distributed availability group and its data movement][2]
 
-The only way to make AG 2's primary replica accept inserts, updates, and deletions is to manually fail over the distributed availability group from AG 1. In the preceding figure, because AG 1 contains the writeable copy of the database, issuing a failover makes AG 2 the availability group that can handle inserts, updates, and deletions. For information about how to fail over one distributed availability group to another, see [Failover to a secondary availability group]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
+The only way to make AG 2's primary replica accept inserts, updates, and deletions is to manually fail over the distributed availability group from AG 1. In the preceding figure, because AG 1 contains the writeable copy of the database, issuing a failover makes AG 2 the availability group that can handle inserts, updates, and deletions. For information about how to fail over one distributed availability group to another, see [Failover to a secondary availability group]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
 
 > [!NOTE]
 > Distributed availability groups in SQL Server 2016 support failover only from one availability group to another by using the option FORCE_FAILOVER_ALLOW_DATA_LOSS.
+
+> [!NOTE]
+> When using transactional replication with distributed availability groups the forwarder replica can't be configured as a publisher.
 
 ## SQL Server version and edition requirements for distributed availability groups
 
@@ -86,7 +84,7 @@ The individual WSFC clusters and their corresponding availability groups follow 
 
 When both WSFC clusters are joined to the same domain (not trusted domains), you don't need to do anything special when you create the distributed availability group. For availability groups and WSFC clusters that are not joined to the same domain, use certificates to make the distributed availability group work, much in the way that you might create an availability group for a domain-independent availability group. To see how to configure certificates for a distributed availability group, follow steps 3-13 under [Create a domain-independent availability group](domain-independent-availability-groups.md#create-a-domain-independent-availability-group).
 
-With a distributed availability group, the primary replicas in each underlying availability group must have each other's certificates. If you already have endpoints that are not using certificates, reconfigure those endpoints by using [ALTER ENDPOINT](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-endpoint-transact-sql) to reflect the use of certificates.
+With a distributed availability group, the primary replicas in each underlying availability group must have each other's certificates. If you already have endpoints that are not using certificates, reconfigure those endpoints by using [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) to reflect the use of certificates.
 
 ## Distributed availability group usage scenarios
 
@@ -98,11 +96,11 @@ Here are the three main usage scenarios for a distributed availability group:
 
 ### Disaster recovery and multi-site scenarios
 
-A traditional availability group requires that all servers be part of the same WSFC cluster, which can make spanning multiple data centers challenging. The following figure shows what a traditional multi-site availability group architecture looks like, including the data flow. There is one primary replica that sends transactions to all secondary replicas. This configuration is less flexible in some ways than a distributed availability group. For example, you must implement such things as Active Directory (if applicable) and the witness for a quorum in the WSFC cluster. You might also need to take into account other aspects of a WSFC cluster, such as altering node votes.
+A traditional availability group requires that all servers be part of the same WSFC cluster, which can make spanning multiple data centers challenging. The following figure shows what a traditional multi-site availability group architecture looks like, including the data flow. There is one primary replica that sends transactions to all secondary replicas. This configuration is less in some ways than a distributed availability group. For example, you must implement such things as Active Directory (if applicable) and the witness for a quorum in the WSFC cluster. You might also need to take into account other aspects of a WSFC cluster, such as altering node votes.
 
 ![Traditional multi-site availability group][4]
 
-Distributed availability groups offer a more flexible deployment scenario for availability groups that span multiple data centers. You can even use distributed availability groups where features such as [log shipping]( https://docs.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server) were used in the past. However, unlike traditional availability groups, distributed availability groups cannot have delayed application of transactions. This means that availability groups or distributed availability groups cannot help in the event of human error in which data is incorrectly updated or deleted.
+Distributed availability groups offer a more flexible deployment scenario for availability groups that span multiple data centers. You can even use distributed availability groups where features such as [log shipping]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server) were used in the past for scenarios such as disaster recovery. However, unlike log shipping, distributed availability groups cannot have delayed application of transactions. This means that availability groups or distributed availability groups cannot help in the event of human error in which data is incorrectly updated or deleted.
 
 Distributed availability groups are loosely coupled, which in this case means that they don't require a single WSFC cluster and they're maintained by SQL Server. Because the WSFC clusters are maintained individually and the synchronization is primarily asynchronous between the two availability groups, it's easier to configure disaster recovery at another site. The primary replicas in each availability group synchronize their own secondary replicas.
 
@@ -145,7 +143,7 @@ The following figure shows AG 1 as the primary replica for two different distrib
 
 In both preceding examples, there can be up to 27 total replicas across the three availability groups, all of which can be used for read-only queries. 
 
-[Read-only routing]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) does not completely work with Distributed Availability Groups. More specifically,
+[Read-only routing]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) does not completely work with Distributed Availability Groups. More specifically,
 
 1. Read-Only Routing can be configured and will work for the primary availability group of the distributed availability group. 
 2. Read-Only Routing can be configured, but will not work for the secondary availability group of the distributed availability group. All queries, if they use the listener to connect to the secondary availability group, go to the primary replica of the secondary availability group. Otherwise, you need to configure each replica to allow all connections as a secondary replica and access them directly. However, read-only routing will work if the secondary availability group becomes primary after a failover. This behavior might be changed in an update to SQL Server 2016 or in a future version of SQL Server.
@@ -153,7 +151,7 @@ In both preceding examples, there can be up to 27 total replicas across the thre
 
 ## Initialize secondary availability groups in a distributed availability group
 
-Distributed availability groups were designed with [automatic seeding]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) to be the main method used to initialize the primary replica on the second availability group. A full database restore on the primary replica of the second availability group is possible if you do the following:
+Distributed availability groups were designed with [automatic seeding]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) to be the main method used to initialize the primary replica on the second availability group. A full database restore on the primary replica of the second availability group is possible if you do the following:
 
 1. Restore the database backup WITH NORECOVERY.
 2. If necessary, restore the proper transaction log backups WITH NORECOVERY.
@@ -164,7 +162,7 @@ When you add the second availability group's primary replica to the distributed 
 
 * The output shown in `sys.dm_hadr_automatic_seeding` on the primary replica of the second availability group will display a `current_state` of FAILED with the reason "Seeding Check Message Timeout."
 
-* The current SQL Server log on the primary replica of the second availability group will show that seeding worked and that the [LSNs]( https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) were synchronized.
+* The current SQL Server log on the primary replica of the second availability group will show that seeding worked and that the [LSNs]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) were synchronized.
 
 * The output shown in `sys.dm_hadr_automatic_seeding` on the primary replica of the first availability group will show a current_state of COMPLETED. 
 
@@ -218,9 +216,9 @@ The same concepts hold true when you use the dynamic management views. By using 
 SELECT ag.[name] as 'AG Name', 
     ag.Is_Distributed, 
     ar.replica_server_name as 'Replica Name'
-FROM 	sys.availability_groups ag, 
-    sys.availability_replicas ar       
-WHERE	ag.group_id = ar.group_id
+FROM 	sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar       
+    ON	ag.group_id = ar.group_id
 ```
 
 An example of output from the second WSFC cluster that's participating in a distributed availability group is shown in the following figure. SPAG1 is composed of two replicas: DENNIS and JY. However, the distributed availability group named SPDistAG has the names of the two participating availability groups (SPAG1 and SPAG2) rather than the names of the instances, as with a traditional availability group. 
@@ -231,12 +229,12 @@ In SQL Server Management Studio, any status shown on the Dashboard and other are
 
 ```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM 	sys.availability_groups ag, 
-sys.availability_replicas ar,       
-sys.dm_hadr_availability_replica_states ars       
-WHERE	ar.replica_id = ars.replica_id
-and 	ag.group_id = ar.group_id 
-and	ag.is_distributed = 1
+FROM 	sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar
+    ON ag.group_id = ar.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars       
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
        
        
@@ -247,16 +245,16 @@ To further extend the previous query, you can also see the underlying performanc
 
 ```
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM 	sys.databases dbs,
-	sys.availability_groups ag,
-	sys.availability_replicas ar,
-	sys.dm_hadr_availability_replica_states ars,
-	sys.dm_hadr_database_replica_states drs
-WHERE	drs.group_id = ag.group_id
-and	ar.replica_id = ars.replica_id
-and	ars.replica_id = drs.replica_id
-and	dbs.database_id = drs.database_id
-and	ag.is_distributed = 1
+FROM 	sys.databases dbs
+  INNER JOIN sys.dm_hadr_database_replica_states drs
+    ON dbs.database_id = drs.database_id
+  INNER JOIN sys.availability_groups ag
+    ON drs.group_id = ag.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id = drs.replica_id
+  INNER JOIN sys.availability_replicas ar
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
 
 ![Performance information for a distributed availability group][13]

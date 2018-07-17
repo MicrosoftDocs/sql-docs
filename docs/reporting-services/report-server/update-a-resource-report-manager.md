@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-server"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "updating resources"
   - "resources [Reporting Services], updating"
@@ -21,7 +20,6 @@ caps.latest.revision: 17
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Update a Resource (Report Manager)
   You can update a resource by replacing it with a newer version. Resources are items stored on a report server that contain content from a file that you upload. You can replace an existing resource by importing new or different file content into the existing resource. Updating a resource provides a way to update content while preserving existing properties and security settings on the resource.  

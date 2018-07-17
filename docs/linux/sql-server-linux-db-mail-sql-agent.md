@@ -5,16 +5,13 @@ author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.date: 02/20/2018
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.topic: conceptual
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: tbd
-ms.workload: "Inactive"
 ---
 # DB Mail and Email Alerts with SQL Agent on Linux
 
@@ -96,7 +93,7 @@ You can use the mssql-conf utility or environment variables to register your DB 
 
 ```bash
 # via mssql-conf
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile default
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 # via environment variable
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```

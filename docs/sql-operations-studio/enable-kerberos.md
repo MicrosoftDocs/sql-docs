@@ -3,17 +3,16 @@ title: Use Active Directory Authentication (Kerberos) when connecting with SQL O
 description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Operations Studio (preview)
 ms.custom: "tools|sos"
 ms.date: "11/17/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sstein"
+ms.prod: sql
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "meet-bhagdev"
 ms.author: "meetb"
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
 
@@ -24,7 +23,7 @@ In order to use Integrated Authentication (Windows Authentication) on macOS or L
 ## Prerequisites
 
 - Access to a Windows domain-joined machine in order to query your Kerberos Domain Controller.
-- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. More information on setting up Sql Server to authenticate using Kerberos can be found [here](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). There should be SPNs registered for each instance of Sql Server you are trying to connect to. Details about the format of SQL Server SPNs are listed [here](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. More information on setting up Sql Server to authenticate using Kerberos can be found [here](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). There should be SPNs registered for each instance of Sql Server you are trying to connect to. Details about the format of SQL Server SPNs are listed [here](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## Checking if Sql Server has Kerberos Setup

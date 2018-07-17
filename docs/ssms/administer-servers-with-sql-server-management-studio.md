@@ -2,16 +2,14 @@
 title: "Administer Servers with SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], servers"
   - "servers [SQL Server], administering"
@@ -19,8 +17,7 @@ ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 caps.latest.revision: 7
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Administer Servers with SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +26,7 @@ ms.workload: "Inactive"
 The tool components of [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] include Registered Servers, Object Explorer, Solution Explorer, Template Explorer, the Object Explorer Details page, and the document window. To display a tool, on the **View** menu, click the tool name. To display the Query Editor tool, click the **New Query** button on the toolbar.  
   
 > [!IMPORTANT]  
-> Network traffic between [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] is unencrypted by default. Do not work with sensitive data (including passwords) in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] unless you have established an encrypted connection. For more information, see [How to: Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](http://msdn.microsoft.com/en-us/e1e55519-97ec-4404-81ef-881da3b42006).  
+> Network traffic between [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] is unencrypted by default. Do not work with sensitive data (including passwords) in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] unless you have established an encrypted connection. For more information, see [How to: Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006).  
   
 Use [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] to:  
   
@@ -63,5 +60,5 @@ To start and stop [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] or [!IN
   
 ## See Also  
 [Use SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[How to: View server properties (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[How to: View server properties (SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

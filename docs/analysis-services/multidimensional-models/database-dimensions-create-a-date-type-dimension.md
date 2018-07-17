@@ -1,32 +1,14 @@
 ---
 title: "Create a Date type Dimension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "time dimensions [Analysis Services]"
-  - "dimensions [Analysis Services], time"
-  - "adding time intelligence"
-  - "server time dimensions [Analysis Services]"
-  - "calendars [Analysis Services]"
-  - "time intelligence [Analysis Services]"
-ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Database Dimensions - Create a Date type Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

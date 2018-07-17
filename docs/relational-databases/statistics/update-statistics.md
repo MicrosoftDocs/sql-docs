@@ -2,25 +2,20 @@
 title: "Update Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "statistics"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-statistics"
+ms.technology: performance
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "updating statistics"
   - "statistics [SQL Server], updating"
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
-caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Update Statistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +68,7 @@ ms.workload: "Inactive"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- The following example updates the statistics for the AK_SalesOrderDetail_rowguid index of the SalesOrderDetail table.   
@@ -89,7 +84,7 @@ ms.workload: "Inactive"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- The following example updates the statistics for all indexes on the SalesOrderDetail table.   
@@ -107,7 +102,7 @@ ms.workload: "Inactive"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- The following example updates the statistics for all tables in the database.   

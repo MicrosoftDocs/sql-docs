@@ -1,17 +1,13 @@
 ---
 title: "Converting Oracle Schemas (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Conversion Results"
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
@@ -19,7 +15,6 @@ caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "On Demand"
 ---
 # Converting Oracle Schemas (OracleToSQL)
 After you have connected to Oracle, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and set project and data mapping options, you can convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects.  
@@ -116,7 +111,7 @@ For each item that could not be converted, you have to determine what you want t
 -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer and Oracle Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and migrating data from Oracle.  
   
 ## Next Step  
-The next step in the migration process is to [Load the converted objects into SQL Server](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a).  
+The next step in the migration process is to [Load the converted objects into SQL Server](http://msdn.microsoft.com/a8ae33b2-1883-4785-922b-ea0e31c0b37a).  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

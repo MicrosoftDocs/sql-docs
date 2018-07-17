@@ -2,16 +2,14 @@
 title: "External Tools Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "adding external tools"
   - "external tools [SQL Server Management Studio]"
@@ -20,8 +18,7 @@ ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # External Tools Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +50,7 @@ Specify the path to the file to launch.
 Specify the variables that are passed to the tool when the tool is selected on the menu. Arguments can specify values that are passed to the tool or command when it is launched. For example, a value can specify a file name or directory. Use the arrow button to select from a list of predefined arguments. You can add more than one. For a complete list of predefined arguments and their definitions, see [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). You can also enter custom arguments (for example, command line switches), depending on the command or tool you use.  
   
 **Use Output window**  
-Opens the [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] Output window to display output of the command being run. Not all tools present output in a format that can be presented in the Output window. For more information, see [Output Window](http://msdn.microsoft.com/en-us/9808e00c-c8f6-45cc-896e-192b8420f747).  
+Opens the [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] Output window to display output of the command being run. Not all tools present output in a format that can be presented in the Output window. For more information, see [Output Window](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747).  
   
 **Treat output as Unicode**  
 Interprets the output as Unicode.  

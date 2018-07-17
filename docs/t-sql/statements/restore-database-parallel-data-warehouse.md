@@ -1,23 +1,20 @@
----
+﻿---
 title: "RESTORE DATABASE (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -128,7 +125,7 @@ Restoring a backup to an appliance with a larger number of Compute nodes grows t
   
 For example, when restoring a 60 GB database from a 2-node appliance (30 GB per node) to a 6-node appliance, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] creates a 180 GB database (6 nodes with 30 GB per node) on the 6-node appliance. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] initially restores the database to 2 nodes to match the source configuration, and then redistributes the data to all 6 nodes.  
   
- After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md) to shrink the database file sizes.  
+ After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw) to shrink the database file sizes.  
   
 ## Limitations and Restrictions  
  For these limitations and restrictions, the source appliance is the appliance from which the database backup was created, and the target appliance is the appliance to which the database will be restored.  

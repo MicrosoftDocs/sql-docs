@@ -1,37 +1,14 @@
 ---
 title: "Locations Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Locations Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#Locations"
-  - "urn:schemas-microsoft-com:xml-analysis#Locations"
-  - "microsoft.xml.analysis.locations"
-helpviewer_keywords: 
-  - "Locations element"
-ms.assetid: 630929cb-f0dc-472a-86bc-28b67e907c3d
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Locations Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,7 +18,7 @@ ms.workload: "Inactive"
   
 ```xml  
   
-< Backup> <!-- or one of the elements listed below in the Element Relationships table -->  
+< Backup> <!-- or one of the elements listed below in the Element relationships table -->  
    ...  
    <Locations>  
       <Location>...</Location>  
@@ -50,7 +27,7 @@ ms.workload: "Inactive"
 </Backup>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -58,7 +35,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -67,7 +44,7 @@ ms.workload: "Inactive"
   
 ## Remarks  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

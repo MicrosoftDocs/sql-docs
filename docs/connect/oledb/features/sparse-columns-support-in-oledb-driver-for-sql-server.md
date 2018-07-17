@@ -2,15 +2,13 @@
 title: "Sparse Columns Support in OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Sparse columns support in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.date: "06/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "oledb|features"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,11 +16,12 @@ helpviewer_keywords:
   - "sparse columns, OLE DB"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Sparse Columns Support in OLE DB Driver for SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server supports sparse columns. For more information about sparse columns in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Use Sparse Columns](../../../relational-databases/tables/use-sparse-columns.md) and [Use Column Sets](../../../relational-databases/tables/use-column-sets.md).  
   
@@ -62,6 +61,6 @@ ms.workload: "Inactive"
  However, if **queryout** is used for export and you reference sparse columns that are members of the sparse column set by name, you cannot perform a direct import into a similarly structured table. This is because BCP uses metadata consistent with a **select \*** operation for the import and is unable to match **column_set** member columns with this metadata. To import **column_set** member columns individually, you must define a view on the table that references the desired **column_set** columns, and you must perform the import operation using the view.  
   
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

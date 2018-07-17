@@ -2,11 +2,10 @@
 title: "IBCPSession::BCPDone (OLE DB) | Microsoft Docs"
 description: "IBCPSession::BCPDone (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-interfaces"
+ms.component: "oledb|ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -20,17 +19,18 @@ helpviewer_keywords:
   - "BCPDone method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Commits the remaining rows to be sent to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
-```  
+```cpp  
   
 HRESULT BCPDone(void);  
 ```  
@@ -50,7 +50,7 @@ HRESULT BCPDone(void);
   
  The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] must be executed before running this sample:  
   
-```  
+```sql  
 create table fltest(col1 int, col2 int, col3 image)  
 insert into fltest values (1, 1, 0x0FF)  
 insert into fltest values (2, 2, 0xF00)  
@@ -66,9 +66,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
- You will need to specify msoledbsql.lib when compiling this sample.  
-  
-```  
+```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
 #define INITGUID  
 #define MAX_ROWS  100  

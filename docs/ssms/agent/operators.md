@@ -2,16 +2,14 @@
 title: "Operators | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "operators (users) [Database Engine]"
   - "fail-safe operator [SQL Server]"
@@ -29,8 +27,8 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Operators
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -126,8 +124,8 @@ You must set up one or more of the following in order to notify an operator:
 |-|-|  
 |**Tasks**|**Topic**|  
 |Tasks related to creating an operator|[Create an Operator](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## See Also  
-[Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
   

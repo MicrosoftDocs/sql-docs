@@ -1,24 +1,17 @@
 ---
-title: "Configure SQL Server PDW for Remote Table Copies (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
-caps.latest.revision: 11
-
+title: Configure Parallel Data Warehouse for remote table copies | Microsoft Docs
+description: Describes how to configure Parallel Data Warehouse to use the remote table copy feature to copy tables to SMP SQL Server databases on non-appliance servers.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Configure SQL Server PDW for Remote Table Copies
+
+# Configure Parallel Data Warehouse for remote table copies
 Describes how to configure SQL Server PDW to use the remote table copy feature to copy tables to SMP SQL Server databases on non-appliance servers.  
   
 This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md).  

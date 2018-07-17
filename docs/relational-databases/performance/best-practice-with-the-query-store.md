@@ -2,23 +2,21 @@
 title: "Best Practice with the Query Store | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, best practices"
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 caps.latest.revision: 24
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Best Practice with the Query Store
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,9 +25,9 @@ ms.workload: "On Demand"
   
 ##  <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has set of user interfaces designed for configuring Query Store as well as for consuming collected data about your workload.  
-Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
+Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).  
   
- For a quick description on how to use Query Store in troubleshooting scenarios refer to [Query Store @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
+ For a quick description on how to use Query Store in troubleshooting scenarios refer to [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ##  <a name="Insight"></a> Use Query Performance Insight in Azure SQL Database  
  If you run Query Store in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] you can use **Query Performance Insight** to analyze DTU consumption over time.  

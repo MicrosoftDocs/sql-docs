@@ -2,16 +2,14 @@
 title: "Options (Environment - Keyboard Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-menu"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL"
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard"
@@ -19,8 +17,7 @@ ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Options (Environment - Keyboard Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,5 +36,5 @@ The keyboard combination pressed to execute the stored procedure.
 **Stored Procedure**  
 The stored procedure that executes when you press the keyboard shortcut.  
   
-For a list of the keyboard shortcut keys in each scheme, see [SQL Server Management Studio Keyboard Shortcuts](http://msdn.microsoft.com/en-us/98baaac4-0727-4ce4-8bfe-c63793ae69b8).  
+For a list of the keyboard shortcut keys in each scheme, see [SQL Server Management Studio Keyboard Shortcuts](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8).  
   

@@ -2,22 +2,18 @@
 title: "Connection Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 caps.latest.revision: 37
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Connection Options
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +47,7 @@ This topic lists the options that are permitted in the associative array (when u
 |TraceFile|String|Specifies the path for the file used for trace data.|No value set.|  
 |TraceOn|1 or **true** to enable tracing.<br /><br />0 or **false** to disable tracing.|Specifies whether ODBC tracing is enabled (1 or **true**) or disabled (0 or **false**) for the connection being established.|**false** (0)|  
 |TransactionIsolation|The SQLSRV driver uses the following values:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />The PDO_SQLSRV driver uses the following values:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Specifies the transaction isolation level.<br /><br />For more information about transaction isolation, see [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) in the SQL Server documentation.|SQLSRV_TXN_READ_COMMITTED<br /><br />or<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|TransparentNetworkIPResolution|**Enabled** or **Disabled**|Affects the connection sequence when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname.<br /><br />It interacts with MultiSubnetFailover to provide different connection sequences. For more information, see [Using Transparent Network IP Resolution](https://docs.microsoft.com/en-us/sql/connect/odbc/using-transparent-network-ip-resolution).|Enabled|
+|TransparentNetworkIPResolution|**Enabled** or **Disabled**|Affects the connection sequence when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname.<br /><br />It interacts with MultiSubnetFailover to provide different connection sequences. For more information, see [Using Transparent Network IP Resolution](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Enabled|
 |TrustServerCertificate|1 or **true** to trust certificate.<br /><br />0 or **false** to not trust certificate.|Specifies whether the client should trust (1 or **true**) or reject (0 or **false**) a self-signed server certificate.|**false** (0)|  
 |UID<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the User ID to be used when connecting with SQL Server Authentication<sup>4</sup>.|No value set.|  
 |WSID|String|Specifies the name of the computer for tracing.|No value set.|  

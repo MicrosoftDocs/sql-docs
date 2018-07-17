@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server-web-service"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -25,7 +24,6 @@ caps.latest.revision: 34
 author: "markingmyname"
 author: "markingmyname"
 ms.author: "maghan"
-ms.workload: "Inactive"
 ---
 # The Role of SOAP in Reporting Services
   The Report Server Web service uses Simple Object Access Protocol (SOAP) messaging to send text-based commands over a network. These commands take the form of XML text that is sent over the World Wide Web using HTTP. By using SOAP as its communication protocol, the Report Server Web service allows applications and components to exchange data with the report server using an open and widely accepted infrastructure. The SOAP standard is defined at www.w3.org/TR/SOAP.  

@@ -2,14 +2,11 @@
 title: "OPENXML (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,8 +22,7 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|Defaults to **attribute-centric** mapping.|  
 |**1**|Use the **attribute-centric** mapping. Can be combined with XML_ELEMENTS. In this case, **attribute-centric** mapping is applied first, and then **element-centric** mapping is applied for all columns that are not yet dealt with.|  
 |**2**|Use the **element-centric** mapping. Can be combined with XML_ATTRIBUTES. In this case, **attribute-centric** mapping is applied first, and then **element-centric** mapping is applied for all columns not yet dealt with.|  
-|**8**|Can be combined (logical OR) with XML_ATTRIBUTES or XML_ELEMENTS. In the context of retrieval, this flag indicates that the consumed data should not be copied to the overflow property **@mp:xmltext**.|  
+|**8**|Can be combined (logical OR) with XML_ATTRIBUTES or XML_ELEMENTS. In the context of retrieval, this flag indicates that the consumed data should not be copied to the overflow property **\@mp:xmltext**.|  
   
  *SchemaDeclaration*  
  Is the schema definition of the form: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [*ColPattern* | *MetaProperty*]...]  

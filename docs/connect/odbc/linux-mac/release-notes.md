@@ -1,26 +1,46 @@
 ---
 title: "Release Notes - Microsoft ODBC Driver for SQL Server on Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.date: "06/29/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+ms.topic: conceptual
+author: MightyPen
+ms.author: v-jizho2
+manager: kenvh
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS
+
+**New distributions supported**:
+Ubuntu 18.04
+
+**Features Added**:
+
+Data Classification for Azure SQL Database and SQL Server
+
+SQLBrowseConnect
+
+Dynamic dependency on `libcurl`:
+- Starting with this version, the `libcurl` package is not an explict dependency. The `libcurl` package for OpenSSL or NSS is required when using Azure Key Vault or Azure Active Directory authentication. If you encounter an error regarding `libcurl`, ensure it is installed.
+
+Idle Connection Resiliency with ConnectRetryCount and ConnectRetryInterval keywords in connection string (For more information, see [Connection Resiliency in the Windows ODBC Driver](../windows/connection-resiliency-in-the-windows-odbc-driver.md)):
+- Use `SQL_COPT_SS_CONNECT_RETRY_COUNT`(read only) to retrieve the number of connection retry attempts.
+- Use `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(read only) to retrieve the length of the connection retry interval.
+- Connection will be retried once by default.
+
+
+[Bug fixes](../bug-fixes.md)
+
+
+
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS
 
 **Features Added**:
 

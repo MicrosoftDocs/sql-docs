@@ -1,15 +1,12 @@
----
+﻿---
 title: "DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -36,10 +33,10 @@ helpviewer_keywords:
   - "displaying distribution statistics"
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 caps.latest.revision: 75
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Active"
+author: uc-msft
+ms.author: umajay
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

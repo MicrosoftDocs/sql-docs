@@ -3,8 +3,8 @@ title: "Quickstart: Connect and query SQL Server using SQL Operations Studio (pr
 description: This quickstart shows how to use SQL Operations Studio (preview) to connect to SQL Server and run a query
 ms.custom: "tools|sos"
 ms.date: "03/08/2018"
-ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sstein"
+ms.prod: sql
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,7 +13,6 @@ ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
-ms.workload: "Inactive"
 ---
 
 # Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -27,8 +26,8 @@ To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-s
 
 If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password!):
 - [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS - Download SQL Server 2017 on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - You only need to follow the steps up to *Create and Query Data*.
+- [macOS - Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) - You only need to follow the steps up to *Create and Query Data*.
 
 
 ## Connect to a SQL Server

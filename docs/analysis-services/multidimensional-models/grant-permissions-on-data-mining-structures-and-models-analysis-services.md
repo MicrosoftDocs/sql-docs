@@ -1,35 +1,14 @@
 ---
 title: "Grant permissions on data mining structures and models (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.miningmodels.f1"
-helpviewer_keywords: 
-  - "data mining [Analysis Services], security"
-  - "permissions [Analysis Services], mining models"
-  - "mining models [Analysis Services], security"
-  - "mining structures [Analysis Services], security"
-  - "permissions [Analysis Services], mining structures"
-  - "user access rights [Analysis Services], mining structures"
-  - "user access rights [Analysis Services], mining models"
-ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Grant permissions on data mining structures and models (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -1,44 +1,19 @@
 ---
 title: "MDX Function Reference (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "member functions [MDX]"
-  - "level functions [MDX]"
-  - "MDX [Analysis Services], functions"
-  - "array functions"
-  - "string functions"
-  - "Multidimensional Expressions [Analysis Services], functions"
-  - "hierarchy functions [MDX]"
-  - "numeric functions [MDX]"
-  - "tuple functions"
-  - "subcube functions [MDX]"
-  - "functions [MDX]"
-  - "logical functions [MDX]"
-  - "set functions [MDX]"
-ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "On Demand"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Function Reference (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides for the use of functions in Multidimensional Expressions (MDX) syntax. Functions can be used in any valid MDX statement, and are frequently used in queries, custom rollup definitions, and other calculations. This section provides information about the MDX functions included with [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+
+  Analysis Services provides for the use of functions in Multidimensional Expressions (MDX) syntax. Functions can be used in any valid MDX statement, and are frequently used in queries, custom rollup definitions, and other calculations. This section provides information about the MDX functions.  
   
  You can use the following tables to find functions by their category of return value, or you can select a function by name from the alphabetical list in the table of contents.  
   

@@ -2,22 +2,18 @@
 title: "Using Kerberos Integrated Authentication to Connect to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using Kerberos Integrated Authentication to Connect to SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -69,9 +65,9 @@ ms.workload: "On Demand"
 ## Service Principal Names  
  A service principal name (SPN) is the name by which a client uniquely identifies an instance of a service.  
   
- You can specify the SPN using the **serverSpn** connection property, or simply let the driver build it for you (the default).  This property is in the form of: “MSSQLSvc/fqdn:port@REALM” where fqdn is the fully-qualified domain name, port is the port number, and REALM is the Kerberos realm of the SQL Server in upper-case letters.  The realm portion of this property is optional if your Kerberos configuration’s default realm is the same realm as that of the Server and is not included by default.  If you wish to support a cross-realm authentication scenario where the default realm in the Kerberos configuration is different than the realm of the Server, then you must set the SPN with the serverSpn property.  
+ You can specify the SPN using the **serverSpn** connection property, or simply let the driver build it for you (the default).  This property is in the form of: “MSSQLSvc/fqdn:port\@REALM” where fqdn is the fully-qualified domain name, port is the port number, and REALM is the Kerberos realm of the SQL Server in upper-case letters.  The realm portion of this property is optional if your Kerberos configuration’s default realm is the same realm as that of the Server and is not included by default.  If you wish to support a cross-realm authentication scenario where the default realm in the Kerberos configuration is different than the realm of the Server, then you must set the SPN with the serverSpn property.  
   
- For example, your SPN might look like: “MSSQLSvc/some-server.zzz.corp.contoso.com:1433@ZZZZ.CORP.CONTOSO.COM”  
+ For example, your SPN might look like: “MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ.CORP.CONTOSO.COM”  
   
  For more information about service principal names (SPNs), see:  
   
@@ -163,7 +159,7 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 ## Verifying that SQL Server Can be Accessed via Kerberos  
  Run the following query in SQL Server Management Studio:  
   
- **select auth_scheme from sys.dm_exec_connections where session_id=@@spid**  
+ **select auth_scheme from sys.dm_exec_connections where session_id=\@\@spid**  
   
  Make sure that you have the necessary permission to run this query.  
 

@@ -1,17 +1,13 @@
 ---
 title: "Mapping Oracle and SQL Server Data Types (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Type Mapping Inheritance"
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
@@ -19,7 +15,6 @@ caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Mapping Oracle and SQL Server Data Types (OracleToSQL)
 Oracle database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database types. When you convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects, you must specify how to map data types from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
@@ -90,7 +85,7 @@ The following procedure shows how to map data types at the project, database, or
         You cannot remove inherited mappings. However, inherited mappings are overridden by custom mappings on a specific object or object category.  
   
 ## Next Steps  
-The next step in the migration process is to either [create an assessment report](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) or [convert Oracle database objects to SQL Server syntax](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). If you create an assessment report, Oracle objects are automatically converted during the assessment.  
+The next step in the migration process is to either [create an assessment report](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) or [convert Oracle database objects to SQL Server syntax](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). If you create an assessment report, Oracle objects are automatically converted during the assessment.  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

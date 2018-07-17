@@ -2,16 +2,14 @@
 title: "Give Others Ownership of a Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], owners"
   - "owners [SQL Server], jobs"
@@ -20,8 +18,8 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Give Others Ownership of a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +75,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 2.  On the toolbar, click **New Query**.  
   
-3.  In the query window, enter the following statements that use the [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/en-us/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) system stored procedure. The following example reassigns all jobs from `danw` to `françoisa`.  
+3.  In the query window, enter the following statements that use the [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) system stored procedure. The following example reassigns all jobs from `danw` to `françoisa`.  
   
     ```  
     USE msdb ;  
@@ -93,7 +91,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 ## <a name="SMOProc2"></a>Using SQL Server Management Objects  
 **To give others ownership of a job**  
   
-1.  Call the **Job** class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For example code, see [Scheduling Automatic Administrative Tasks in SQL Server Agent](http://msdn.microsoft.com/en-us/900242ad-d6a2-48e9-8a1b-f0eea4413c16).  
+1.  Call the **Job** class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For example code, see [Scheduling Automatic Administrative Tasks in SQL Server Agent](http://msdn.microsoft.com/900242ad-d6a2-48e9-8a1b-f0eea4413c16).  
   
 ## See Also  
 [Implement Jobs](../../ssms/agent/implement-jobs.md)  

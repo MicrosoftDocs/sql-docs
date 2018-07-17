@@ -2,26 +2,22 @@
 title: "Connecting to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data source names"
   - "connection string keywords"
   - "DSNs"
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 caps.latest.revision: 41
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Connecting to SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -69,7 +65,7 @@ You can use Secure Sockets Layer (SSL) to encrypt connections to [!INCLUDE[ssNoV
 
 Enabling encryption increases security at the expense of performance.
 
-For more information, see [Encrypting Connections to SQL Server](http://go.microsoft.com/fwlink/?LinkId=220900) and [Using Encryption Without Validation](https://docs.microsoft.com/en-us/sql/relational-databases/native-client/features/using-encryption-without-validation).
+For more information, see [Encrypting Connections to SQL Server](http://go.microsoft.com/fwlink/?LinkId=220900) and [Using Encryption Without Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
 Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the server login credentials (user name and password) are always encrypted. The following table shows the effect of the **Encrypt** and **TrustServerCertificate** settings.  
 

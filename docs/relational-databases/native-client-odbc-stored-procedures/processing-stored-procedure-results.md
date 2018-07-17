@@ -1,15 +1,12 @@
----
+﻿---
 title: "Processing Stored Procedure Results | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-odbc-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,11 +14,10 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, stored procedures"
   - "stored procedures [ODBC], results"
 ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
-caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Processing Stored Procedure Results
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

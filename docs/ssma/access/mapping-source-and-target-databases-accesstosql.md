@@ -1,17 +1,13 @@
 ---
 title: "Mapping Source and Target Databases (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-access"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -27,8 +23,7 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Mapping Source and Target Databases (AccessToSQL)
 When you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you need to specify a target database for migration. If you have multiple Access databases you can map them to multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases (or schemas) or to multiple schemas under the connected SQL Azure database.  
@@ -73,8 +68,8 @@ If you customize the mapping between an Access database and a [!INCLUDE[ssNoVers
 1.  Under the schema mapping tab, select any row and click **Reset to Default** to revert to the default database and schema.  
   
 ## Next Step  
-The next step in the migration process is [converting database objects](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+The next step in the migration process is [converting database objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

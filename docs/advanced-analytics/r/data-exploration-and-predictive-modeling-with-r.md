@@ -1,23 +1,15 @@
 ---
-title: "Data Exploration and Predictive Modeling with R | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/18/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Data exploration and predictive modeling with R in SQL Server Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Data Exploration and Predictive Modeling with R
+# Data exploration and predictive modeling with R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes improvements to the data science process that are possible through integration with SQL Server.
@@ -92,7 +84,7 @@ When using the RevoScaleR package to connect to [!INCLUDE[ssNoVersion](../../inc
 For examples of how to create and work with data sources and execution contexts,  see these tutorials:
 
 + [Data Science Deep Dive](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [Data Analysis using Microsoft R](https://msdn.microsoft.com/en-us/microsoft-r/data-analysis-in-microsoft-r)
++  [Data Analysis using Microsoft R](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
 ## Deploy R Code to Production
 

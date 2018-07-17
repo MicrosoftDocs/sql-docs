@@ -2,26 +2,25 @@
 title: "OLE DB How-to Topics | Microsoft Docs"
 description: "OLE DB how-to topics"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-how-to"
+ms.component: "oledb|ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, how-to topics"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # OLE DB How-to Topics
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   To use the OLE DB Driver for SQL Server, you have to understand how to make a connection to the server, execute the command, and process the results.  
   
@@ -60,6 +59,6 @@ ms.workload: "Inactive"
 -   [Use Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

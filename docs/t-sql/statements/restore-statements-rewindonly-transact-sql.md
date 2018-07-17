@@ -2,14 +2,11 @@
 title: "RESTORE REWINDONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,10 +23,9 @@ helpviewer_keywords:
   - "RESTORE REWINDONLY statement"
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: 50
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # RESTORE Statements - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,8 +84,6 @@ FROM <backup_device> [ ,...n ]
  Specifies that the tape is automatically rewound and unloaded when the RESTORE is finished. UNLOAD is set by default when a new user session is started. It remains set until NOUNLOAD is specified. This option is used only for tape devices. If a non-tape device is being used for RESTORE, this option is ignored.  
   
  NOUNLOAD  
- Specifies that the tape is not unloaded automatically from the tape drive after a RESTORE. NOUNLOAD remains set until UNLOAD is specified.  
-  
  Specifies that the tape is not unloaded automatically from the tape drive after a RESTORE. NOUNLOAD remains set until UNLOAD is specified.  
   
 ## General Remarks  

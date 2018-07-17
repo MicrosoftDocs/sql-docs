@@ -2,16 +2,14 @@
 title: "View Information About an Operator | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
   - "viewing operators"
@@ -23,8 +21,8 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View Information About an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -104,5 +102,5 @@ For details about the permissions of these roles, see [SQL Server Agent Fixed Da
     GO  
     ```  
   
-For more information, see [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/caedc43d-44b8-415a-897e-92923f6de3b8).  
+For more information, see [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8).  
   

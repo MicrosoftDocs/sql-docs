@@ -1,17 +1,13 @@
 ---
 title: "Loading Converted Database Objects into SQL Server (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Synchronization, Securing Objects in SQL Server"
   - "Synchronization,Scripting Objects"
@@ -20,7 +16,6 @@ caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Loading Converted Database Objects into SQL Server (OracleToSQL)
 After you have converted Oracle schemas to SQL Server, you can load the resulting database objects into SQL Server. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of SQL Server database.  
@@ -109,7 +104,7 @@ You can also run scripts from the command line by using the **sqlcmd** utility, 
 After you have loaded the converted database objects into SQL Server, you can grant and deny permissions on those objects. It is a good idea to do this before migrating data to SQL Server. For information about how to help secure objects in SQL Server, see "Security Considerations for Databases and Database Applications" in SQL Server Books Online.  
   
 ## Next Step  
-The next step in the migration process is to [Migrate data into SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13).  
+The next step in the migration process is to [Migrate data into SQL Server](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13).  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

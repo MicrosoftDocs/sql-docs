@@ -1,36 +1,14 @@
 ---
 title: "Handling Errors and Warnings (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "errors [XML for Analysis]"
-  - "inline errors [XMLA]"
-  - "SOAP faults [XML for Analysis]"
-  - "XML for Analysis, errors"
-  - "faults [XML for Analysis]"
-  - "messages [XML for Analysis]"
-  - "XMLA, errors"
-  - "warnings [XML for Analysis]"
-  - "inline warnings [XMLA]"
-ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Handling Errors and Warnings (XMLA)
   Error handling is required when an XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) method call does not run, runs successfully but generates errors or warnings, or runs successfully but returns results that contain errors.  

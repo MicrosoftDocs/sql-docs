@@ -2,24 +2,20 @@
 title: "Using Integrated Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "integrated authentication"
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using Integrated Authentication
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,7 +70,7 @@ Before reuse, an application must reset pooled connections by executing `sp_rese
 
 ## Using Active Directory to Manage User Identities
 
-An application system administrator does not have to manage separate sets of login credentials for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. It is possible to configure Active Directory as a key distribution center (KDC) for Integrated Authentication. See [Microsoft Kerberos](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378747(v=vs.85).aspx) for more information.
+An application system administrator does not have to manage separate sets of login credentials for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. It is possible to configure Active Directory as a key distribution center (KDC) for Integrated Authentication. See [Microsoft Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747(v=vs.85).aspx) for more information.
 
 ## Using Linked Server and Distributed Queries
 

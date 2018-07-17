@@ -1,17 +1,13 @@
----
+﻿---
 title: "Connect to the Database Engine With sqlcmd | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-scripting"
+ms.prod: sql
+ms.technology: scripting
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sqlcmd utility, Database Engine connections"
   - "Named Pipes [SQL Server], sqlcmd utility"
@@ -22,10 +18,10 @@ helpviewer_keywords:
   - "client protocols [SQL Server]"
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 caps.latest.revision: 20
-author: "mightypen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Active"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sqlcmd - Connect to the Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

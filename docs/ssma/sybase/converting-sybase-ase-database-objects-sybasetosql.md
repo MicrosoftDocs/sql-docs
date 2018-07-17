@@ -2,16 +2,12 @@
 title: "Converting Sybase ASE Database Objects (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -21,8 +17,7 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Converting SAP ASE database objects (SybaseToSQL)
 After you have connected to SAP Adaptive Server Enterprise (ASE), connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL and set project and data mapping options, you can convert SAP Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL database objects.  
@@ -129,7 +124,7 @@ For each item that could not be converted, you have to determine what you want t
 -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL and migrating data from SAP ASE.  
   
 ## Next steps  
-The next step in the migration process is [Loading Converted Database Objects into SQL Server/ SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06).  
+The next step in the migration process is [Loading Converted Database Objects into SQL Server/ SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
 ## See also  
 [Migrating SAP ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

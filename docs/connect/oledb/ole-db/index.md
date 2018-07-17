@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/connect/oledb/ole-db/sql-server-native-client-ole-db
+redirect_url: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming
 ---

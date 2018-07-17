@@ -1,23 +1,18 @@
 ---
 title: "User Interface Reference (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
 caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # User Interface Reference (OracleToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle.  
@@ -33,7 +28,7 @@ The following table lists the SSMA dialog boxes:
 |[Connect To Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|Use the **Connect to Oracle** dialog box to connect to the Oracle database that you want to migrate.|  
 |[Connect to SQL Server  &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-sql-server-oracletosql.md)|Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to which you want to migrate.|  
 |[Data Migration Report  &#40;OracleToSQL&#41;](../../ssma/oracle/data-migration-report-oracletosql.md)|Displays the results of migrating data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Data Migration Settings](http://msdn.microsoft.com/en-us/91f7f558-025d-4f4d-ac2c-aa095e7d1ace)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
+|[Data Migration Settings](http://msdn.microsoft.com/91f7f558-025d-4f4d-ac2c-aa095e7d1ace)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
 |[Edit Type Mapping &#40;OracleToSQL&#41;](../../ssma/oracle/edit-type-mapping-oracletosql.md)|Use the **New Type Mapping** or **Edit Type Mapping** dialog boxes to create or modify the mapping of data types between the source and target databases and database objects.|  
 |[Global Settings &#40;Editor&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-editor-oracletosql.md)|Use the Editor page of the **Global Settings** dialog box to configure code editor options.|  
 |[Global Settings &#40;Dialogs&#41;  &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-dialogs-oracletosql.md)|Use the Dialogs page of the **Global Settings** dialog box to configure default dialog box and warning settings.|  

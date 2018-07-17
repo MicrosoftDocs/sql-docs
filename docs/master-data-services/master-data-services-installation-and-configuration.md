@@ -2,10 +2,8 @@
 title: "Master Data Services Installation and Configuration | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -14,12 +12,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 44
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Active"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Master Data Services Installation and Configuration
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This article covers how to install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 R2 machine, set up the MDS database and website, and deploy the sample models and data. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) enables your organization to manage a trusted version of data.   
   
 > [!NOTE] 
@@ -34,7 +34,7 @@ For links to videos and other training resources to help you learn [!INCLUDE[ssM
   
 > **Download**  
 >-   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
+>-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
  
 > **Can't create an MDS web site?**
 >>Check out this Microsoft support article for instructions on how to resolve this problem.

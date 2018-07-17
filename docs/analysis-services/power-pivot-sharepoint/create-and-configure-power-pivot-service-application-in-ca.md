@@ -1,25 +1,14 @@
 ---
 title: "Create and Configure Power Pivot Service Application in CA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create and Configure Power Pivot Service Application in CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -111,9 +100,9 @@ ms.workload: "Inactive"
   
 9. In Data Refresh, in **Business Hours**, you can specify a range of hours that defines a business day. Data refresh schedules can run after the close of a business day to pick up transactional data that was generated during normal business hours.  
   
-10. In **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Unattended Data Refresh Account**, you can specify a predefined Secure Store Service target application that stores a predefined account for running [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data refresh jobs. Be sure to specify the target application name, and not the ID. The target application for unattended data refresh is created automatically if you used the New Server option in SQL Server Setup to install [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Otherwise, you must create the target application manually. For instructions on how to configure the account, see [Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+10. In **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Unattended Data Refresh Account**, you can specify a predefined Secure Store Service target application that stores a predefined account for running [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data refresh jobs. Be sure to specify the target application name, and not the ID. The target application for unattended data refresh is created automatically if you used the New Server option in SQL Server Setup to install [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Otherwise, you must create the target application manually. For instructions on how to configure the account, see [Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
-11. In **Allow users to enter custom Windows credentials**, you can select or clear the checkbox to specify whether schedule owners can enter arbitrary Windows credentials to run a data refresh schedule. If you select this checkbox, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application will create and manage a target application each set of stored credentials. For more information, see [Configure Stored Credentials for Power Pivot Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
+11. In **Allow users to enter custom Windows credentials**, you can select or clear the checkbox to specify whether schedule owners can enter arbitrary Windows credentials to run a data refresh schedule. If you select this checkbox, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application will create and manage a target application each set of stored credentials. For more information, see [Configure Stored Credentials for Power Pivot Data Refresh (Power Pivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
   
 12. In **Maximum Processing History Length**, you can specify how long to retain a historical record of data refresh processing. This information appears in data refresh history pages that are kept for each workbook that uses data refresh. It also appears in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard.  
   

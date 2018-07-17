@@ -1,25 +1,21 @@
 ---
 title: "Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.date: "07/03/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "driver, installing"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MightyPen
+ms.author: v-jizho2
+manager: kenvh
 ---
 # Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -107,7 +103,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ``` 
 
-### Ubuntu 14.04, 16.04 and 17.10
+### Ubuntu 14.04, 16.04, 17.10 and 18.04
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -124,6 +120,9 @@ curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sou
 #Ubuntu 17.10
 curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+#Ubuntu 18.04
+curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql17
@@ -135,6 +134,8 @@ source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install unixodbc-dev
 ```
+> [!NOTE]
+> Driver version 17.2 or higher is required for Ubuntu 18.04 support.
 
 ### OS X 10.11 (El Capitan), macOS 10.12 (Sierra), and macOS 10.13 (High Sierra)
 

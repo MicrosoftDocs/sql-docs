@@ -4,17 +4,14 @@ description:  This quickstart shows how to install SQL Server 2017 on SUSE Linux
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/22/2018
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.date: 07/16/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.workload: "On Demand"
 ---
 # Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server
 
@@ -114,13 +111,5 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-> [!TIP]
-> **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. Other tools include:
->
-> * [SQL Server Operations Studio (Preview)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
-> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
-> * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

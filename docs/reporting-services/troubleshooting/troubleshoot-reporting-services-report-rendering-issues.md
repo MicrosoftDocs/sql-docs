@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "02/27/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "troubleshooting"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,13 +11,12 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 caps.latest.revision: 4
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Reporting Services Report Rendering Issues
 After the report data and layout information is combined, the compiled report is sent to a report renderer. For example, when you preview a report locally, you are using the HTML renderer to view the compiled report. Use this topic to help troubleshoot issues specific to report rendering.   

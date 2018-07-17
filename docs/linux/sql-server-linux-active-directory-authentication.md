@@ -5,17 +5,14 @@ author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb 
 manager: craigg
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.topic: conceptual
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"
-ms.workload: "On Demand"
 ---
 # Tutorial: Use Active Directory authentication with SQL Server on Linux
 
@@ -73,7 +70,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
       ```/etc/network/interfaces
       <...>
       # The primary network interface
-      auth eth0
+      auto eth0
       iface eth0 inet dhcp
       dns-nameservers **<AD domain controller IP address>**
       dns-search **<AD domain name>**
@@ -167,7 +164,7 @@ For more information, see the Red Hat documentation for [Discovering and Joining
 ## <a id="createuser"></a> Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 
   > [!NOTE]
-  > The next steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
+  > The next steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
 
 1. On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. This example names the account "mssql," but the account name can be anything you like. You will be prompted to enter a new password for the account:
 

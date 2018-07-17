@@ -1,48 +1,68 @@
 ---
-title: "Load data from or to Excel with SSIS | Microsoft Docs"
-ms.description: "Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations."
-ms.date: "03/27/2018"
-ms.prod: "sql-non-specified"
+title: "Import from Excel or export to Excel with SSIS | Microsoft Docs"
+description: "Learn how to import or export Excel data with SQL Server Integration Services (SSIS), along with prerequisites, known issues, and limitations."
+ms.date: "06/29/2018"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "integration-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
-# Load data from or to Excel with SQL Server Integration Services (SSIS)
+# Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)
 
-This article describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). The article also describes prerequisites, limitations, and known issues.
+This article describes the connection information that you have to provide, and the settings that you have to configure, to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS).
 
-You can import data from Excel or export data to Excel by creating an SSIS package and using the Excel Connection Manager and the Excel Source or the Excel Destination. You can also use the SQL Server Import and Export Wizard, which is built on SSIS.
+The following sections contain the information you need to use Excel successfully with SSIS, and to understand and troubleshoot common problems:
 
-## Get the files you need to connect to Excel
+1.  The [tools](#tools) you can use.
+
+2.  The [files](#files-you-need) you need.
+
+3.  The connection information that you have to provide, and the settings that you have to configure, when you load data from or to Excel.
+    -   [Specify Excel](#specify-excel) as your data source.
+    -   Provide the [Excel file name and path](#excel-file).
+    -   Select the [Excel version](#excel-version).
+    -   Specify whether the [first row contains column names](#first-row).
+    -   Provide the [worksheet or range that contains the data](#sheets-ranges).
+
+4.  Known issues and limitations.
+    -   Issues with [data types](#issues-types).
+    -   Issues with [importing](#issues-importing).
+    -   Issues with [exporting](#issues-exporting).
+
+## <a name="tools"></a> Tools you can use
+
+You can import data from Excel or export data to Excel by using one of the following tools:
+
+-   **SQL Server Integration Services (SSIS)**. Create an SSIS package that uses the Excel Source or the Excel Destination with the Excel Connection Manager. (This article does not describe how to design SSIS packages.)
+
+-   The **SQL Server Import and Export Wizard**, which is built on SSIS. For more info, see [Import and Export Data with the SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) and [Connect to an Excel Data Source (SQL Server Import and Export Wizard)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
+
+## <a name="files-you-need"></a> Get the files you need to connect to Excel
 
 Before you can import data from Excel or export data to Excel, you may have to download the connectivity components for Excel if they're not already installed. The connectivity components for Excel are not installed by default.
 
-Download the latest version of the connectivity components for Excel here:
-[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
-  
-The latest version of the components can open files created by earlier versions of Excel.
+Download the latest version of the connectivity components for Excel here: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920). The latest version of the components can open files created by earlier versions of Excel.
 
-Make sure that you download the Access Database Engine 2016 *Redistributable* and not the Microsoft Access 2016 *Runtime*.
+### Notes about the download and installation
 
-If the computer already has a 32-bit version of Office, then you have to install the 32-bit version of the components. You also have to ensure that you run the SSIS package in 32-bit mode, or run the 32-bit version of the Import and Export Wizard.
+-   Make sure that you download the Access Database Engine 2016 *Redistributable* and not the Microsoft Access 2016 *Runtime*.
 
-If you have an Office 365 subscription, you may see an error message when you run the installer. The error indicates that you can't install the download side by side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
+-   If the computer already has a 32-bit version of Office, then you have to install the 32-bit version of the components. You also have to ensure that you run the SSIS package in 32-bit mode, or run the 32-bit version of the Import and Export Wizard.
 
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+-   If you have an Office 365 subscription, you may see an error message when you run the installer. The error indicates that you can't install the download side by side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
 
-If you have trouble installing the 2016 redistributable, install the 2010 redistributable instead from here: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (There is no redistributable for Excel 2013.)
+    `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## Get started
+    If you have trouble installing the 2016 redistributable, install the 2010 redistributable instead from here: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (There is no redistributable for Excel 2013.)
+
+## <a name="specify-excel"></a> Specify Excel as your data source
 
 The first step is to indicate that you want to connect to Excel.
 
@@ -60,7 +80,7 @@ In the Import and Export Wizard, on the **Choose a Data Source** or **Choose a D
 
 If you don't see Excel in the list of data sources, make sure you're running the 32-bit wizard. The Excel connectivity components are typically 32-bit files and aren't visible in the 64-bit wizard.
 
-## Excel file and file path
+## <a name="excel-file"></a> Excel file and file path
 
 The first piece of info to provide is the path and file name for the Excel file. You provide this info in the **Excel Connection Manager Editor** in an SSIS package, or on the **Choose a Data Source** or **Choose a Destination** page of the Import and Export Wizard.
 
@@ -75,7 +95,7 @@ Or, click **Browse** to locate the spreadsheet by using the **Open** dialog box.
 > [!IMPORTANT]
 > You can't connect to a password-protected Excel file.
 
-## Excel version
+## <a name="excel-version"></a> Excel version
 
 The second piece of info to provide is the version of the Excel file. You provide this info in the **Excel Connection Manager Editor** in an SSIS package, or on the **Choose a Data Source** or **Choose a Destination** page of the Import and Export Wizard.
 
@@ -83,7 +103,7 @@ Select the version of Microsoft Excel that was used to create the file, or anoth
 
 You may not be able to select newer Excel versions in the list if you only have older versions of the connectivity components installed. The **Excel version** list includes all the versions of Excel supported by SSIS. The presence of items in this list does not indicate that the required connectivity components are installed. For example, **Microsoft Excel 2016** appears in the list even if you have not installed the 2016 connectivity components.
 
-## First row has column names
+## <a name="first-row"></a> First row has column names
 
 If you're importing data from Excel, the next step is to indicate whether the first row of the data contains column names. You provide this info in the **Excel Connection Manager Editor** in an SSIS package, or on the **Choose a Data Source** page of the Import and Export Wizard.
 
@@ -93,7 +113,7 @@ If you're importing data from Excel, the next step is to indicate whether the fi
 
 If you're exporting data from Excel, and you enable this option, the first row of exported data includes the column names.
 
-## Worksheets and ranges
+## <a name="sheets-ranges"></a> Worksheets and ranges
 
 There are three types of Excel objects that you can use as the source or destination for your data: a worksheet, a named range, or an unnamed range of cells that you specify with its address.
 
@@ -142,7 +162,7 @@ After you select or enter the Excel objects to import or export, you can also do
 
 -   Preview sample data to make sure it's what you expect by selecting **Preview**.
 
-## Issues with data types
+## <a name="issues-types"></a>Issues with data types
 
 ### Data types
 
@@ -175,7 +195,7 @@ Here are some examples of the conversions that may be required:
 > [!TIP]
 > If you're using the Import and Export Wizard, and your data requires some of these conversions, the wizard configures the necessary conversions for you. As a result, even when you want to use an SSIS package, it may be useful to create the initial package by using the Import and Export Wizard. Let the wizard create and configure connection managers, sources, transformations, and destinations for you.
 
-## Issues with importing
+## <a name="issues-importing"></a> Issues with importing
 
 ### Empty rows
 
@@ -205,7 +225,7 @@ To import data from a memo column without truncation, you have two options:
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## Issues with exporting
+## <a name="issues-exporting"></a> Issues with exporting
 
 ### Create a new destination file
 

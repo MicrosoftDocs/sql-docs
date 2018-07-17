@@ -1,21 +1,13 @@
 ---
-title: "Extended events for monitoring PREDICT statements | Microsoft Docs"
-titleSuffix: "SQL Server"
-ms.custom: ""
-ms.date: "03/01/2018"
-ms.prod: "machine-learning-services"
-ms.prod_service: "machine-learning-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Extended events for monitoring PREDICT statements | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 
 # Extended events for monitoring PREDICT statements

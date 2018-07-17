@@ -2,16 +2,14 @@
 title: "Delete a SQL Server Agent Proxy | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting SQL Server Agent proxies"
   - "proxies [SQL Server Agent], deleting"
@@ -20,8 +18,8 @@ ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -99,5 +97,5 @@ Only members of the **sysadmin** fixed server role can create, modify, or delete
     GO  
     ```  
   
-For more information, see [sp_delete_proxy (Transact-SQL)](http://msdn.microsoft.com/en-us/44a1db13-b7f2-4dab-a1b5-b8dafb41737c).  
+For more information, see [sp_delete_proxy (Transact-SQL)](http://msdn.microsoft.com/44a1db13-b7f2-4dab-a1b5-b8dafb41737c).  
   

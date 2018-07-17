@@ -2,16 +2,12 @@
 title: "User Interface Reference (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +15,7 @@ ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # User Interface Reference (SybaseToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Sybase.  
@@ -35,7 +30,7 @@ This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssno
 |[Connect to Azure SQL DB  &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-azure-sql-db-sybasetosql.md)|Use the **Connect to SQL Azure** dialog box to connect to the instance of SQL Azure to which you want to migrate.|  
 |[Connect to Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)|Use the **Connect to Sybase** dialog box to connect to ASE.|  
 |[Data Migration Report &#40;SybaseToSQL&#41;](../../ssma/sybase/data-migration-report-sybasetosql.md)|Displays the results of migrating data from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.|  
-|[Data Migration Settings](http://msdn.microsoft.com/en-us/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
+|[Data Migration Settings](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
 |[Edit Type Mapping &#40;SybaseToSQL&#41;](../../ssma/sybase/edit-type-mapping-sybasetosql.md)|Use the **New Type Mapping** or **Edit Type Mapping** dialog box to create or edit the mapping of data types between the source and target databases and database objects.|  
 |[Global Settings &#40;Editor&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Use the Editor page of the **Global Settings** dialog box to configure code editor options.|  
 |[Global Settings &#40;Dialogs&#41;  &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Use the Editor page of the **Global Settings** dialog box to configure default dialog and warning settings.|  

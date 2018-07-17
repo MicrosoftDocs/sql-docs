@@ -2,16 +2,14 @@
 title: "Modify the Target Servers for a Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying target servers"
   - "SQL Server Agent jobs, target servers"
@@ -20,8 +18,8 @@ ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modify the Target Servers for a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,7 +86,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-For more information, see [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/en-us/485252cc-0081-490a-9bd1-cbbd68eea286).  
+For more information, see [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286).  
   
 ## See Also  
 [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  

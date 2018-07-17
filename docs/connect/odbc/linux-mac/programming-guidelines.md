@@ -2,20 +2,16 @@
 title: "Programming Guidelines (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Programming Guidelines
 
@@ -41,7 +37,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 -   [Running Stored Procedures](http://msdn.microsoft.com/library/ms131440.aspx)
 -   [Sparse Columns Support (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL encryption](http://msdn.microsoft.com/library/ms131691.aspx)
--   [Table Valued Parameters](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
+-   [Table Valued Parameters](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 and UTF-16 for command and data API](http://msdn.microsoft.com/library/ff878241.aspx)
 -   [Using Catalog Functions](http://msdn.microsoft.com/library/ms131490.aspx)  
 
@@ -50,7 +46,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 The following features have not been verified to work correctly in this release of the ODBC driver on macOS and Linux:
 
 -   Failover Cluster Connection
--   [Transparent Network IP Resolution](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (before ODBC Driver 17)
+-   [Transparent Network IP Resolution](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (before ODBC Driver 17)
 -   [Advanced Driver Tracing](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 The following features are not available in this release of the ODBC driver on macOS and Linux: 
@@ -114,13 +110,13 @@ To avoid this data loss when binding input parameters, specify a Unicode SQL cha
 
 For more information about collations and encodings, see [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
 
-There are some encoding conversion differences between Windows and several versions of the iconv library on Linux and macOS. Text data in codepage 1255 (Hebrew) has one code point (0xCA) that behaves differently upon conversion to Unicode. On Windows, this character converts to the UTF-16 code point of 0x05BA. On macOS and Linux with libiconv versions earlier than 1.15, it converts to 0x00CA. On Linux with iconv libraries that do not support the 2003 revision of Big5/CP950 (named `BIG5-2003`), characters added with that revision will not convert correctly.
+There are some encoding conversion differences between Windows and several versions of the iconv library on Linux and macOS. Text data in codepage 1255 (Hebrew) has one code point (0xCA) that behaves differently upon conversion to Unicode. On Windows, this character converts to the UTF-16 code point of 0x05BA. On macOS and Linux with libiconv versions earlier than 1.15, it converts to 0x00CA. On Linux with iconv libraries that do not support the 2003 revision of Big5/CP950 (named `BIG5-2003`), characters added with that revision will not convert correctly. In codepage 932 (Japanese, Shift-JIS), the result of decoding of characters not originally defined in the encoding standard also differs. For example, the byte 0x80 converts to U+0080 on Windows but may become U+30FB on Linux and macOS, depending on iconv version.
 
 In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates are split across SQLPutData buffers, it results in data corruption. Use buffers for streaming SQLPutData that do not end in partial character encodings. This limitation has been removed with ODBC Driver 17.
 
 ## Additional Notes  
 
-1.  You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:  
+1.  You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:  
 
     ```
     sqlcmd –U <user> -P <pwd> -S <host>,33000

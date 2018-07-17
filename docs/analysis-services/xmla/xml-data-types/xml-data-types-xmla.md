@@ -1,31 +1,14 @@
 ---
 title: "XML Data Types (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "XML data types [XMLA]"
-  - "data types [XML for Analysis]"
-  - "XMLA, data types"
-  - "XML for Analysis, data types"
-ms.assetid: 979b5384-90d9-4e09-9286-1d1eafdc4864
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # XML Data Types (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +20,7 @@ ms.workload: "Inactive"
 |----------------|-----------------|  
 |Boolean|The standard XML **boolean** data type.|  
 |Decimal|The standard XML **decimal** data type.|  
-|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|A namespace on the **root** element. This namespace is returned when an XMLA command does not return a result because either the XMLA command does not normally return a result or because an error occurred on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance while executing the XMLA command.|  
+|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|A namespace on the **root** element. This namespace is returned when an XMLA command does not return a result because either the XMLA command does not normally return a result or because an error occurred on the Analysis Services instance while executing the XMLA command.|  
 |[EnumString](../../../analysis-services/xmla/xml-data-types/enumstring-data-type-xmla.md)|A set of named string constants for a given enumerator.|  
 |Integer|The standard XML **int** data type.|  
 |[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|Multidimensional data returned by the *Result* parameter of the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.|  
@@ -48,7 +31,7 @@ ms.workload: "Inactive"
   
  For complete descriptions of the standard XML data types, see the World Wide Web Consortium (WC3) candidate recommendation.  
   
-## See Also  
+## See also
  [XML Elements &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [XML for Analysis  &#40;XMLA&#41; Reference](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   

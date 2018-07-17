@@ -6,14 +6,11 @@ ms.author: mikeray
 manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux,mvc"
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.technology: linux
 ---
 # Configure a SQL Server container in Kubernetes for high availability
 
@@ -51,7 +48,7 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 * **Kubernetes cluster**
    - The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) to manage the cluster. 
 
-   - See [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
+   - See [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
 
    >[!NOTE]
    >To protect against node failure, a Kubernetes cluster requires more than one node.
@@ -274,9 +271,9 @@ If you configured the container as described, you can connect with an applicatio
 
 You can use the following applications to connect to the SQL Server instance. 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssms)
+* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
-* [SSDT](http://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
    
@@ -326,6 +323,6 @@ In this tutorial, you learned how to deploy SQL Server containers to a Kubernete
 ## Next steps
 
 > [!div class="nextstepaction"]
->[Introduction to Kubernetes](http://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
+>[Introduction to Kubernetes](http://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 

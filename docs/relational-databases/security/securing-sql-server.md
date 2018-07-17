@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 caps.latest.revision: 31
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 ---
 # Securing SQL Server

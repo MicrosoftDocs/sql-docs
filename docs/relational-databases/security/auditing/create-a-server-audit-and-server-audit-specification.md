@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 21
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 ---
 # Create a Server Audit and Server Audit Specification

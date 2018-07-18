@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 ---
 # SQL Server Audit Records

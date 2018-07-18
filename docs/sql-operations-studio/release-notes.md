@@ -25,8 +25,8 @@ version: 0.31.4
 
 The *July Public Preview* focuses on the initial release of the SQL Server Agent configuration scenarios, SQL Server Profiler session and view template enhancements, and continued bug fixes for customer reported GitHub issues. This release contains the following highlights:  
 
-- SQL Server Agent for SQL Operations Studio extension improvements.
-- SQL Server Profiler for SQL Operations Studio extension improvements.
+- [SQL Server Agent for SQL Operations Studio extension](sql-server-agent-extension.md) improvements.
+- [SQL Server Profiler for SQL Operations Studio extension](sql-server-profiler-extension.md) improvements.
 - Fix GitHub Issues:
  - Fix [issue 728](https://github.com/Microsoft/sqlopsstudio/issues/728): No response to Add Connection on macOS
  - Fix [issue 1612](https://github.com/Microsoft/sqlopsstudio/issues/1612): Results grid text display is messed up by international characters

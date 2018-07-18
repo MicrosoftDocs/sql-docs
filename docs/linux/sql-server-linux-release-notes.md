@@ -63,9 +63,9 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU9"></a> CU8 (July 2018)
+## <a id="CU9"></a> CU9 (July 2018)
 
-This is the Cumulative Update 9 (CU9) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3029.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4229789](https://support.microsoft.com/en-us/help/4229789).
+This is the Cumulative Update 9 (CU9) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3030.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4229789](https://support.microsoft.com/en-us/help/4229789).
 
 ### Package details
 

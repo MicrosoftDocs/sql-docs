@@ -26,21 +26,19 @@ version: 0.31.4
 The *July Public Preview* focuses on the initial release of the SQL Server Agent configuration scenarios, SQL Server Profiler session and view template enhancements, and continued bug fixes for customer reported GitHub issues. This release contains the following highlights:  
 
 - [SQL Server Agent for SQL Operations Studio extension](sql-server-agent-extension.md) improvements
-  - Added view of Alerts, Operators, and Proxies and icons on left pane
-  - Added dialogs for New Job, New Job Step, New Alert, and New Operator
-  - Added Delete Job, Delete Alert, and Delete Operator (right-click)
-  - Added Previous Runs visualization
-  - Added Filters for each column name
+ - Added view of Alerts, Operators, and Proxies and icons on left pane
+ - Added dialogs for New Job, New Job Step, New Alert, and New Operator
+ - Added Delete Job, Delete Alert, and Delete Operator (right-click)
+ - Added Previous Runs visualization
+ - Added Filters for each column name
 - [SQL Server Profiler for SQL Operations Studio extension](sql-server-profiler-extension.md) improvements
-  - Added Hotkeys to quickly launch and start/stop Profiler
-  - Added 5 Default Templates to view Extended Events
-  - Added Server/Database connection name
-  - Added support for Azure SQL Database instances
-  - Added suggestion to exit Profiler when tab is closed when Profiler is still running
+ - Added Hotkeys to quickly launch and start/stop Profiler
+ - Added 5 Default Templates to view Extended Events
+ - Added Server/Database connection name
+ - Added support for Azure SQL Database instances
+ - Added suggestion to exit Profiler when tab is closed when Profiler is still running
 - Release of Combine Scripts Extension
 - Wizard and Dialog Extensibility points added for Extension Authors
-
-
 - Fix GitHub Issues:
  - Fix [issue 728](https://github.com/Microsoft/sqlopsstudio/issues/728): No response to Add Connection on macOS
  - Fix [issue 1612](https://github.com/Microsoft/sqlopsstudio/issues/1612): Results grid text display is messed up by international characters

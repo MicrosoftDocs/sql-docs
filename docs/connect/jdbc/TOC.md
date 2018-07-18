@@ -38,6 +38,7 @@
 ## [Using Adaptive Buffering](using-adaptive-buffering.md)
 ## [Sparse Columns](sparse-columns.md)
 ## [Prepared Statement Metadata Caching for the JDBC Driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
+## [Using Bulk Copy API for Batch Insert Operation](using-bulk-copy-api-for-batch-insert-operation.md)
 
 # [Diagnosing Problems with the JDBC Driver](diagnosing-problems-with-the-jdbc-driver.md)
 ## [Handling Errors](handling-errors.md)
@@ -130,3 +131,4 @@
 ### [Using Statements with Stored Procedures](using-statements-with-stored-procedures.md)
 ### [Azure Key Vault sample version 6.0.0](azure-key-vault-sample-version-6.0.0.md)
 ### [Azure Key Vault sample version 6.2.2](azure-key-vault-sample-version-6.2.2.md)
+### [Using Spatial Datatypes](using-spatial-datatypes.md)

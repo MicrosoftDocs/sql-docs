@@ -1,7 +1,7 @@
 ---
 title: "Connecting to an Azure SQL database | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/19/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -20,11 +20,9 @@ manager: craigg
 
   This topic discusses issues when using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information about connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
   
--   [SQL Azure Database](http://go.microsoft.com/fwlink/?LinkID=202490)  
+-   [SQL Azure Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
--   [How to: Connect to SQL Azure Using JDBC](http://msdn.microsoft.com/library/gg715284.aspx)  
-  
--   [Using SQL Azure in Java](http://msdn.microsoft.com/library/windowsazure/hh749029(VS.103).aspx)
+-   [How to: Connect to SQL Azure Using JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 -   [Connecting using Azure Active Directory Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   

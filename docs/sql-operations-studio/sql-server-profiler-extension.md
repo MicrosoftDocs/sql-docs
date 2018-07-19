@@ -14,7 +14,7 @@ author: "yualan"
 ms.author: "alayu"
 manager: craigg
 ---
-# SQL Server Profiler Extension
+# SQL Server Profiler extension
 
 The SQL Server Profiler extension provides a simple SQL Server tracing solution similar to SQL Server Management Studio (SSMS) Profiler except built using XEvents. SQL Server Profiler is very easy to use and has good default values for the most common tracing configurations. The UX is optimized for browsing through events and viewing the associated Transact-SQL (T-SQL) text. The SQL Server Profiler for SQL Operations Studio also assumes good default values for collecting T-SQL execution activities with an easy to use UX.
 
@@ -30,7 +30,7 @@ The SQL Server Profiler extension provides a simple SQL Server tracing solution 
 ## Install the SQL Server Profiler extension
 
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
-2. Select an available extension to view it's details.
+2. Select an available extension to view its details.
 
    ![profiler extension manager](media/extensions/sql-server-profiler-extension/profiler-extension.png)
 
@@ -45,7 +45,7 @@ The SQL Server Profiler extension provides a simple SQL Server tracing solution 
     ![profiler extension manager](media/extensions/sql-server-profiler-extension/view-profiler.png)    
 1. To stop Profiler, type **Alt + S.** This hotkey is a toggle.
 
-## Next Steps
+## Next steps
 
 To learn more about Profiler and extended events, see [Extended Events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
 

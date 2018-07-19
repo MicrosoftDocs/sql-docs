@@ -36,7 +36,7 @@ SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following 
 | Python tools | The built-in Python command line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
 | Anaconda | Anaconda is an open-source distribution of Python and essential packages. |
 | Python samples and scripts | As with R, Python includes built-in data sets  and scripts. Find the revoscalepy data at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
-| Pre-trained models in R and Python | Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. The setup program for Microsoft Machine Learning Server provides the models, which you can install free of charge. For more information, see [Install pretrained machine learning models on SQL Server](install-pretrained-models-sql-server.md). |
+| Pre-trained models in R and Python | Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. The setup program for Microsoft Machine Learning Server provides the models, which you can install free of charge. For more information, see [Install pretrained machine learning models on SQL Server](../install/sql-pretrained-models-install.md). |
 
 ## Get started step-by-step
 

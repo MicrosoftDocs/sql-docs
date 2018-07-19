@@ -16,19 +16,15 @@ manager: craigg
 ---
 # SQL Server Profiler Extension
 
-The SQL Server Profiler extension provides a simple SQL Server tracing solution similar to SSMS Profiler except built using XEvents. SSMS Profiler is very easy to use and has good default values for the most common tracing configurations. The UX is optimized for browsing through events and viewing the associated T-SQL text. The SQL Server Profiler for SQL Operations Studio also assumes good default values for collecting T-SQL execution activities with an easy to use UX.
+The SQL Server Profiler extension provides a simple SQL Server tracing solution similar to SQL Server Management Studio (SSMS) Profiler except built using XEvents. SQL Server Profiler is very easy to use and has good default values for the most common tracing configurations. The UX is optimized for browsing through events and viewing the associated Transact-SQL (T-SQL) text. The SQL Server Profiler for SQL Operations Studio also assumes good default values for collecting T-SQL execution activities with an easy to use UX.
 
 **Common SQL Profiler use-cases:**
 
--Stepping through problem queries to find the cause of the problem.
-
--Finding and diagnosing slow-running queries.
-
--Capturing the series of Transact-SQL statements that lead to a problem.
-
--Monitoring the performance of SQL Server to tune workloads.
-
--Correlating performance counters to diagnose problems.
+- Stepping through problem queries to find the cause of the problem.
+- Finding and diagnosing slow-running queries.
+- Capturing the series of Transact-SQL statements that lead to a problem.
+- Monitoring the performance of SQL Server to tune workloads.
+- Correlating performance counters to diagnose problems.
 
 
 ## Install the SQL Server Profiler extension
@@ -51,7 +47,7 @@ The SQL Server Profiler extension provides a simple SQL Server tracing solution 
 
 ## Next Steps
 
-To learn more about Profiler and extended events, [check our documentation.](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events?view=sql-server-2017)
+To learn more about Profiler and extended events, see [Extended Events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
 
 
 

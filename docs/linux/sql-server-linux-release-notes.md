@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 07/17/2018
+ms.date: 07/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
@@ -65,7 +65,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 
 ## <a id="CU9"></a> CU9 (July 2018)
 
-This is the Cumulative Update 9 (CU9) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3030.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4229789](https://support.microsoft.com/en-us/help/4229789).
+This is the Cumulative Update 9 (CU9) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3030.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4341265](https://support.microsoft.com/en-us/help/4341265).
 
 ### Package details
 
@@ -79,7 +79,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU8"></a> CU8 (June 2018)
 
-This is the Cumulative Update 8 (CU8) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3029.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4229789](https://support.microsoft.com/en-us/help/4229789).
+This is the Cumulative Update 8 (CU8) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3029.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4338363](https://support.microsoft.com/en-us/help/4338363).
 
 ### Package details
 

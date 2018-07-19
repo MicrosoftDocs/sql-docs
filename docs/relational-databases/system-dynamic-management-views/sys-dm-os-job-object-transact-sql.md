@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2018"
@@ -33,9 +33,6 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 Returns a single row describing the configuration of the job object that manages the SQL Server process, as well as certain resource consumption statistics at the job object level. Returns an empty set if SQL Server is not running in a job object. 
 
 A job object is a Windows construct that implements CPU, memory, and IO resource governance at the operating system level. For more information about job objects, see [Job Objects](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
-
-> [!NOTE]
-> The sys.dm_os_job_object DMV may currently appear as sys.dm_job_object. This is temporary: `sys.dm_os_job_object` will be the permanent name of this DMV. 
   
 |Columns|Data Type|Description|  
 |-------------|---------------|-----------------|  

@@ -169,6 +169,9 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 >>>
 ```
 
+> [!NOTE]
+> If demo scripts fail, check the file location first. On systems having multiple instances of SQL Server, or for instances that run side-by-side with standalone versions, it's possible for the installation script to mis-read the environment and place the files in the wrong location. Usually, manually copying the files to the correct mxlib folder fixes the problem.
+
 ## Examples using pre-trained models
 
 The following links include walkthroughs and example code invoking the pretrained models.

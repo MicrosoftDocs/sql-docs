@@ -28,7 +28,10 @@ Functions invoking the pretrained models are listed in the following table.
 
 SQL Server with R or Python, with the [MicrosoftML package for R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) or [microsoftml package for Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package).
 
-  + [SQL Server 2016 R Services](sql-r-services-windows-install.md), with upgraded R components as documented in [Upgrade machine learning (R and Python) components](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). This step is necessary for adding MicrosoftML to your installation. Recall that SQL Server 2016 is R-only so only the R components can be upgraded. To add Python integration, you must have SQL Server 2017.
+  + [SQL Server 2016 R Services](sql-r-services-windows-install.md), with upgraded R components as documented in [Upgrade machine learning (R and Python) components](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). 
+  
+   This step is necessary for adding MicrosoftML to your installation. Recall that SQL Server 2016 is R-only so only the R components can be upgraded. To add Python integration, you must have SQL Server 2017.
+
   + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) with R, Python, or both. This version includes the required libraries. Component upgrade is not necessary for this version.
 
 External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for additional configuration and verification.
@@ -67,23 +70,23 @@ Click [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) to download the file **In
 1. Start PowerShell. On the task bar, right-click the PowerShell program icon and select **Run as administrator**.
 2. Enter a fully-qualified path to the installation script file and include the instance name. Assuming the Downloads folder and a default instance, the command might look like this:
 
-```powershell
-PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
-```
+   ```powershell
+   PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
+   ```
 
 **Output**
 
 On an internet-connected SQL Server 2017 Machine Learning default instance with R and Python, you should see messages similar to the following.
 
-```powershell
-MSSQL14.MSSQLSERVER
-        Verifying R models [9.2.0.24]
-        Downloading R models [C:\Users\<user-name>\AppData\Local\Temp]
-        Installing R models [C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\]
-        Verifying Python models [9.2.0.24]
-        Installing Python models [C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\]
-PS C:\WINDOWS\system32>
-```
+    ```powershell
+    MSSQL14.MSSQLSERVER
+            Verifying R models [9.2.0.24]
+            Downloading R models [C:\Users\<user-name>\AppData\Local\Temp]
+            Installing R models [C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\]
+            Verifying Python models [9.2.0.24]
+            Installing Python models [C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\]
+    PS C:\WINDOWS\system32>
+    ```
 
 <a name="verify"> </a>
 
@@ -119,17 +122,17 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 3. Press Enter to view the sentiment scores. Output should be as follows:
 
-```
-> sentimentScores
-                                           Review SentimentScore
-1           I really did not like the taste of it      0.4617899
-2                 It was surprisingly quite good!      0.9601924
-3 I will never ever ever go to that place again!!      0.3103435
-  PredictedRating
-1            BLAH
-2     AWESOMENESS
-3            BLAH
-```
+    ```
+    > sentimentScores
+                                            Review SentimentScore
+    1           I really did not like the taste of it      0.4617899
+    2                 It was surprisingly quite good!      0.9601924
+    3 I will never ever ever go to that place again!!      0.3103435
+    PredictedRating
+    1            BLAH
+    2     AWESOMENESS
+    3            BLAH
+    ```
 
 ### Python verification steps
 
@@ -161,14 +164,14 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 3. Press Enter to print the scores. Output should be as follows:
 
-```
->>> print(sentiment_scores)
-                                            review    scores         eval
-0            I really did not like the taste of it  0.461790         BLAH
-1                  It was surprisingly quite good!  0.960192  AWESOMENESS
-2  I will never ever ever go to that place again!!  0.310344         BLAH
->>>
-```
+    ```
+    >>> print(sentiment_scores)
+                                                review    scores         eval
+    0            I really did not like the taste of it  0.461790         BLAH
+    1                  It was surprisingly quite good!  0.960192  AWESOMENESS
+    2  I will never ever ever go to that place again!!  0.310344         BLAH
+    >>>
+    ```
 
 > [!NOTE]
 > If demo scripts fail, check the file location first. On systems having multiple instances of SQL Server, or for instances that run side-by-side with standalone versions, it's possible for the installation script to mis-read the environment and place the files in the wrong location. Usually, manually copying the files to the correct mxlib folder fixes the problem.

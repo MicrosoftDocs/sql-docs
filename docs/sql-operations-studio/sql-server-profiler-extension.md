@@ -16,9 +16,19 @@ manager: craigg
 ---
 # SQL Server Profiler Extension
 
-Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation. 
+The SQL Server Profiler extension provides a simple SQL Server tracing solution similar to SSMS Profiler except built using XEvents. SSMS Profiler is very easy to use and has good default values for the most common tracing configurations. The UX is optimized for browsing through events and viewing the associated T-SQL text. The SQL Server Profiler for SQL Operations Studio also assumes good default values for collecting T-SQL execution activities with an easy to use UX.
 
-Extensions are provided by the SQL Operations Studio team (Microsoft), as well as the 3rd party community (you!). For details about creating extensions, see [Get started with Extensibility](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
+**Common SQL Profiler use-cases:**
+
+-Stepping through problem queries to find the cause of the problem.
+
+-Finding and diagnosing slow-running queries.
+
+-Capturing the series of Transact-SQL statements that lead to a problem.
+
+-Monitoring the performance of SQL Server to tune workloads.
+
+-Correlating performance counters to diagnose problems.
 
 
 ## Install the SQL Server Profiler extension
@@ -26,14 +36,24 @@ Extensions are provided by the SQL Operations Studio team (Microsoft), as well a
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
 2. Select an available extension to view it's details.
 
-   ![extension manager](media/extensions/extension-manager.png)
+   ![profiler extension manager](media/extensions/sql-server-profiler-extension/profiler-extension.png)
 
 1. Select the extension you want and **Install** it.
 2. Select **Reload** to enable the extension (only required the first time you install an extension).
-1. Navigate to your management dashboard by right-clicking your server or database and selecting **Manage**.
-2. Installed extensions appear as tabs on your management dashboard:
 
-   ![extension manager](media/extensions/dashboard-extensions.png)
+## Start Profiler
+
+1. To start Profiler, first make a connection to a server in the Servers tab.
+2. After you make a connection, type **Alt + P** to launch Profiler.
+3. To start Profiler, type **Alt + S.** You can now start seeing Extended Events.
+    ![profiler extension manager](media/extensions/sql-server-profiler-extension/view-profiler.png)    
+1. To stop Profiler, type **Alt + S.** This hotkey is a toggle.
+
+## Next Steps
+
+To learn more about Profiler and extended events, [check our documentation.](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events?view=sql-server-2017)
+
+
 
 
 

@@ -16,24 +16,35 @@ manager: craigg
 ---
 # SQL Server Agent Extension
 
-Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation. 
+The SQL Server Agent Extension is an extension for managing and troubleshooting SQL Agent jobs and configuration. This extension is currently in preview.
 
-Extensions are provided by the SQL Operations Studio team (Microsoft), as well as the 3rd party community (you!). For details about creating extensions, see [Get started with Extensibility](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
-
+Key actions include:
+- List SQL Server Agent Jobs Configured on a SQL Server
+- View Job History with job execution results
+- Basic Job Control to start and stop jobs
 
 ## Install the SQL Server Agent extension
 
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
 2. Select an available extension to view it's details.
 
-   ![extension manager](media/extensions/extension-manager.png)
+   ![install agent](media/extensions/sql-server-agent-extension/install-sql-agent.png)
 
 1. Select the extension you want and **Install** it.
 2. Select **Reload** to enable the extension (only required the first time you install an extension).
 1. Navigate to your management dashboard by right-clicking your server or database and selecting **Manage**.
 2. Installed extensions appear as tabs on your management dashboard:
 
-   ![extension manager](media/extensions/dashboard-extensions.png)
+   ![view agent](media/extensions/sql-server-agent-extension/view-sql-agent.png)
 
+## View Jobs
+
+When you connect to the SQL Server Agent extension, the first thing you see is a list of all your Agent jobs.
+
+   ![view jobs](media/extensions/sql-server-agent-extension/job-view.png)
+
+## Next Steps
+
+To learn more about SQL Server Agent, [check our documentation.](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017)
 
 

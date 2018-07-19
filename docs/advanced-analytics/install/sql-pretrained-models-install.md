@@ -13,20 +13,22 @@ manager: cgronlun
 # Install pre-trained machine learning models on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to add free pre-trained, ready-to-use machine learning models for *sentiment analysis* and *image featurization* to a database engine instance of SQL Server that has R or Python integration. The pre-trained models are built by Microsoft and are added to an existing instance using a PowerShell script. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
+This article explains how to add free, pre-trained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server database engine instance having R or Python integration. The pre-trained models are built by Microsoft and ready-to-use. You can add them to an existing instance using a PowerShell script. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
 
-Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view or modify the models, or treat them as an independent resource that could be used with custom code or paired other functions. 
+Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view or modify the models, or treat them as an independent resource in custom code or paired other functions. 
 
-Functions invoking the pretrained models include:
+Functions invoking the pretrained models are listed in the following table.
 
-+ [getSentiment (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) - or [get_sentiment (Python)](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) - used for a positive-negative sentiment score over text inputs.
-+ [featurizeImage (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) - or [featurize_image (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) - used for extracting information over image file inputs.
+| R function (MicrosoftML) | Python function (microsoftml) | Usage |
+|--------------------------|-------------------------------|-------|
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Generates  positive-negative sentiment score over text inputs. For more information, see this [blog post](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/).|
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extracts text information from image file inputs. For more information, see this [blog post](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/). |
 
 ## Prerequisites
 
 SQL Server with R or Python, with the [MicrosoftML package for R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) or [microsoftml package for Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package).
 
-  + [SQL Server 2016 R Services](sql-r-services-windows-install.md), with upgraded R components as documented in [Upgrade machine learning (R and Python) components](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server?). This step is necessary for adding MicrosoftML to your installation. SQL Server 2016 is R-only. To use Python, you must have SQL Server 2017.
+  + [SQL Server 2016 R Services](sql-r-services-windows-install.md), with upgraded R components as documented in [Upgrade machine learning (R and Python) components](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). This step is necessary for adding MicrosoftML to your installation. Recall that SQL Server 2016 is R-only so only the R components can be upgraded. To add Python integration, you must have SQL Server 2017.
   + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) with R, Python, or both. This version includes the required libraries. Component upgrade is not necessary for this version.
 
 External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for additional configuration and verification.
@@ -42,6 +44,7 @@ Machine learning algorithms are computationally intensive. We recommend 16 GB RA
 The install paths for R and Python models are as follows:
 
 + For R: C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64
+
 + For Python: C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs 
 
 Model file names are listed below:
@@ -94,7 +97,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 2. Paste in the following R script at the command prompt.
 
-    ``r
+    ```r
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -126,8 +129,6 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 1            BLAH
 2     AWESOMENESS
 3            BLAH
-
-
 ```
 
 ### Python verification steps
@@ -136,7 +137,7 @@ First, check for the new files in the [mxlibs folder](#file-location). Next, run
 
 2. Paste in the following Python script at the command prompt
 
-    ``python
+    ```python
     import numpy
     import pandas
     from microsoftml import rx_logistic_regression, rx_featurize, rx_predict, get_sentiment

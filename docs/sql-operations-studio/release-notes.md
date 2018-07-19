@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "06/20/2018"
+ms.date: "07/19/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -16,7 +16,51 @@ manager: craigg
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download the June Public Preview](download.md)**
+**[Download the July Public Preview](download.md)**
+
+## July 2018 (July Public Preview)
+
+release date: July 19, 2018  
+version: 0.31.4
+
+The *July Public Preview* focuses on the initial release of the SQL Server Agent configuration scenarios, SQL Server Profiler session and view template enhancements, and continued bug fixes for customer reported GitHub issues. This release contains the following highlights:  
+
+- [SQL Server Agent for SQL Operations Studio extension](sql-server-agent-extension.md) improvements
+ - Added view of Alerts, Operators, and Proxies and icons on left pane
+ - Added dialogs for New Job, New Job Step, New Alert, and New Operator
+ - Added Delete Job, Delete Alert, and Delete Operator (right-click)
+ - Added Previous Runs visualization
+ - Added Filters for each column name
+- [SQL Server Profiler for SQL Operations Studio extension](sql-server-profiler-extension.md) improvements
+ - Added Hotkeys to quickly launch and start/stop Profiler
+ - Added 5 Default Templates to view Extended Events
+ - Added Server/Database connection name
+ - Added support for Azure SQL Database instances
+ - Added suggestion to exit Profiler when tab is closed when Profiler is still running
+- Release of Combine Scripts Extension
+- Wizard and Dialog Extensibility points added for Extension Authors
+- Fix GitHub Issues:
+ - Fix [issue 728](https://github.com/Microsoft/sqlopsstudio/issues/728): No response to Add Connection on macOS
+ - Fix [issue 1612](https://github.com/Microsoft/sqlopsstudio/issues/1612): Results grid text display is messed up by international characters
+ - Fix [issue 1693](https://github.com/Microsoft/sqlopsstudio/issues/1693): Backup dialog: File browser UI is broken
+ - Fix [issue 1713](https://github.com/Microsoft/sqlopsstudio/issues/1713): Number of rows affected
+ - Fix [issue 1718](https://github.com/Microsoft/sqlopsstudio/issues/1718): Unable to connect to any datasource
+ - Fix [issue 1719](https://github.com/Microsoft/sqlopsstudio/issues/1719): TypeError when Connecting to Server
+ - Fix [issue 1724](https://github.com/Microsoft/sqlopsstudio/issues/1724): Extension dialogs have stopped working
+ - Fix [issue 1749](https://github.com/Microsoft/sqlopsstudio/issues/1749): BUG: HTML data in a column gets interpreted
+ - Fix [issue 1789](https://github.com/Microsoft/sqlopsstudio/issues/1789): Extensibility: if you add a connection provider uninstall will never remove it from the list
+ - Fix [issue 1791](https://github.com/Microsoft/sqlopsstudio/issues/1791): Sqlops Extensions: queryeditor.connect() connects to the target database, but UI does not show the editor is connected
+ - Fix [issue 1799](https://github.com/Microsoft/sqlopsstudio/issues/1799): Top 10 DB Size chart does not work on case sensitive instances
+ - Fix [issue 1814](https://github.com/Microsoft/sqlopsstudio/issues/1814): sqlops.d.ts typo causing implicit 'any' type definition
+ - Fix [issue 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): Error de Ortografia
+ - Fix [issue 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): Setting iconPath in ButtonComponent after component() is called does not change icon
+ - Fix [issue 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): Better Table organization
+ - Fix [issue 1845](https://github.com/Microsoft/sqlopsstudio/issues/1845): Bug Scroll change tab query
+ - Fix [issue 1847](https://github.com/Microsoft/sqlopsstudio/issues/1847): MFA Login to Azure SQL Databases
+
+
+For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
+
 
 
 ## June 2018 (June Public Preview)
@@ -41,9 +85,6 @@ The *June Public Preview* contains the following highlights:
   - Fix [issue 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH' keyword crashes SQL Tools Service.
   - Fix [issue 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): "New Profiler" context menu option in Object Explorer does nothing.
   - Fix [issue 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): Query editor "Explain" query plan is broken.
-
-
-For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 ## May 2018 (May Public Preview)

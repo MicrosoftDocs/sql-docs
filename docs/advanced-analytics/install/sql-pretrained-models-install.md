@@ -24,9 +24,14 @@ Functions invoking the pretrained models include:
 
 ## Prerequisites
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md) or [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) with R, Python, or both.
-+ External scripts are enabled. LaunchPad service is running. Installation instructions in the above links provide the steps.
-+ You must have administrator rights on the computer and SQL Server to add this feature.
+SQL Server with R or Python, with the [MicrosoftML package for R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) or [microsoftml package for Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package).
+
+  + [SQL Server 2016 R Services](sql-r-services-windows-install.md), with upgraded R components as documented in [Upgrade machine learning (R and Python) components](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server?). This step is necessary for adding MicrosoftML to your installation. SQL Server 2016 is R-only. To use Python, you must have SQL Server 2017.
+  + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) with R, Python, or both. This version includes the required libraries. Component upgrade is not necessary for this version.
+
+External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for additional configuration and verification.
+
+You must have administrator rights on the computer and SQL Server to add pre-trained models.
 
 Machine learning algorithms are computationally intensive. We recommend 16 GB RAM to complete the tutorial walkthroughs using all of the sample data.
 

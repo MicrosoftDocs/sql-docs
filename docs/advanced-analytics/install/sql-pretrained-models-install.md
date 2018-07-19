@@ -13,26 +13,26 @@ manager: cgronlun
 # Install pre-trained machine learning models on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to add free, pre-trained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server database engine instance having R or Python integration. The pre-trained models are built by Microsoft and ready-to-use. You can add them to an existing instance using a PowerShell script. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
+This article explains how to add free pre-trained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server database engine instance having R or Python integration. The pre-trained models are built by Microsoft and ready-to-use, easily added to an existing instance using a PowerShell script. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
 
-Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view or modify the models, or treat them as an independent resource in custom code or paired other functions. 
+Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view, customize, or retrain the models, nor can you treat them as an independent resource in custom code or paired other functions. 
 
 Functions invoking the pretrained models are listed in the following table.
 
 | R function (MicrosoftML) | Python function (microsoftml) | Usage |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Generates  positive-negative sentiment score over text inputs. For more information, see this [blog post](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/).|
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extracts text information from image file inputs. For more information, see this [blog post](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/). |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Generates  positive-negative sentiment score over text inputs. [Learn more...](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/).|
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extracts text information from image file inputs. [Learn more...](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/). |
 
 ## Prerequisites
 
 SQL Server with R or Python, with the [MicrosoftML package for R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) or [microsoftml package for Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package).
 
+  + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) with R, Python, or both. This version includes the required libraries. Component upgrade is not necessary for this version.
+
   + [SQL Server 2016 R Services](sql-r-services-windows-install.md), with upgraded R components as documented in [Upgrade machine learning (R and Python) components](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). 
   
-   This step is necessary for adding MicrosoftML to your installation. Recall that SQL Server 2016 is R-only so only the R components can be upgraded. To add Python integration, you must have SQL Server 2017.
-
-  + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) with R, Python, or both. This version includes the required libraries. Component upgrade is not necessary for this version.
+   This step is necessary for adding MicrosoftML to your installation. Recall that SQL Server 2016 is R-only so only the R components can be upgraded. For Python integration, you must have SQL Server 2017.
 
 External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for additional configuration and verification.
 
@@ -78,15 +78,15 @@ Click [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) to download the file **In
 
 On an internet-connected SQL Server 2017 Machine Learning default instance with R and Python, you should see messages similar to the following.
 
-    ```powershell
-    MSSQL14.MSSQLSERVER
-            Verifying R models [9.2.0.24]
-            Downloading R models [C:\Users\<user-name>\AppData\Local\Temp]
-            Installing R models [C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\]
-            Verifying Python models [9.2.0.24]
-            Installing Python models [C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\]
-    PS C:\WINDOWS\system32>
-    ```
+   ```powershell
+   MSSQL14.MSSQLSERVER
+        Verifying R models [9.2.0.24]
+        Downloading R models [C:\Users\<user-name>\AppData\Local\Temp]
+        Installing R models [C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\]
+        Verifying Python models [9.2.0.24]
+        Installing Python models [C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\]
+   PS C:\WINDOWS\system32>
+   ```
 
 <a name="verify"> </a>
 

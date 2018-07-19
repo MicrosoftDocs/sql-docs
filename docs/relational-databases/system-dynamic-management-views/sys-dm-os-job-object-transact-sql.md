@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2018"

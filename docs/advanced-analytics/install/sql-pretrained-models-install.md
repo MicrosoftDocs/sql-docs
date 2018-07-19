@@ -13,14 +13,14 @@ manager: cgronlun
 # Install pre-trained machine learning models on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to add free pre-trained, ready-to-use machine learning models for *sentiment analysis* and *image featurization* to an (In-Database) instance of SQL Server that already has R Services or SQL Server Machine Learning Services (R or Python) installed. The pre-trained models are built by Microsoft and are added to an existing SQL Server instance using a PowerShell script. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
+This article explains how to add free pre-trained, ready-to-use machine learning models for *sentiment analysis* and *image featurization* to a database engine instance of SQL Server that has R or Python integration. The pre-trained models are built by Microsoft and are added to an existing instance using a PowerShell script. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
 
-Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view or modify the models or treat them as an independent resource that could be used with custom code or paired other functions. 
+Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view or modify the models, or treat them as an independent resource that could be used with custom code or paired other functions. 
 
 Functions invoking the pretrained models include:
 
-+ [getSentiment (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) or [get_sentiment (Python)](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) used for a positive-negative sentiment score over text inputs.
-+ [featurizeImage (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) or [featurize_image (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) used for extracting information over image file inputs.
++ [getSentiment (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) - or [get_sentiment (Python)](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) - used for a positive-negative sentiment score over text inputs.
++ [featurizeImage (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) - or [featurize_image (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) - used for extracting information over image file inputs.
 
 ## Prerequisites
 

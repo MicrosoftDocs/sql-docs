@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/13/2018"

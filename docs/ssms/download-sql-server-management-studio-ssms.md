@@ -39,9 +39,9 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 17.x is the latest generation of *SQL Server Management Studio* and provides support for SQL Server 2017.
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802) (no previous version of SSMS 17.x is required on the computer)**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1 Upgrade Package (upgrades 17.x to 17.8.1)](https://go.microsoft.com/fwlink/?linkid=875804)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1 Upgrade Package](https://go.microsoft.com/fwlink/?linkid=875804) (upgrades 17.x to 17.8.1; a previous version of SSMS 17.x is required on the computer)**
 
 
 **Version Information**

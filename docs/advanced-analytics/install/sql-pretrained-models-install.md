@@ -26,19 +26,15 @@ Functions invoking the pretrained models are listed in the following table.
 
 ## Prerequisites
 
-SQL Server with R or Python, with the [MicrosoftML package for R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) or [microsoftml package for Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package).
+[SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) with R, Python, or both. 
 
-  + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) with R, Python, or both. This version includes the required libraries. Component upgrade is not necessary for this version.
-
-  + [SQL Server 2016 R Services](sql-r-services-windows-install.md), with upgraded R components as documented in [Upgrade machine learning (R and Python) components](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). 
+[SQL Server 2016 R Services](sql-r-services-windows-install.md) customers can use a different approach. For SQL Server 2016, upgrading R components is required to add the [MicrosoftML package](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), as documented in [Upgrade machine learning (R and Python) components](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). When you upgrade R components, you can simultaneously add the pre-trained models, which makes running the PowerShell script redundant. However, if you already upgraded but missed adding the pre-trained models the first time around, you can run the PowerShell script as described in this article. Before you do, confirm that the MicrosoftML library exists at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library.
   
-   This step is necessary for adding MicrosoftML to your installation. Recall that SQL Server 2016 is R-only so only the R components can be upgraded. For Python integration, you must have SQL Server 2017.
-
 External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for additional configuration and verification.
 
 You must have administrator rights on the computer and SQL Server to add pre-trained models.
 
-Machine learning algorithms are computationally intensive. We recommend 16 GB RAM to complete the tutorial walkthroughs using all of the sample data.
+Machine learning algorithms are computationally intensive. We recommend 16 GB RAM for low-to-moderate workloads, including completion of the tutorial walkthroughs using all of the sample data.
 
 <a name="file-location"></a>
 

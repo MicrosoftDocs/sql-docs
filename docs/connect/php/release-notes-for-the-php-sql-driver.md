@@ -1,7 +1,7 @@
 ---
 title: "Release Notes for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "07/20/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,6 +21,14 @@ manager: craigg
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## What's New in Version 5.3
+
+- Support for Microsoft ODBC Driver 17.2 on all platforms
+- Support for macOS High Sierra (requires ODBC Driver 17 and above)
+- Support for Azure Key Vault for Always Encrypted for basic CRUD functionalities such that Always Encrypted feature is available to all supported Windows, Linux or macOS platforms [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Support Ubuntu 18.04 LTS (requires ODBC Driver 17.2)
+- Support for Connection Resiliency in Linux or macOS as well (requires ODBC Driver 17.2)
 
 ## What's New in Version 5.2
 

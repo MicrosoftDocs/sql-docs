@@ -2,7 +2,7 @@
 title: Extend the functionality of SQL Operations Studio (preview) | Microsoft Docs
 description: Add extensions to SQL Operations Studio (preview)
 ms.custom: "tools|sos"
-ms.date: "03/28/2018"
+ms.date: "07/19/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.suite: "sql"

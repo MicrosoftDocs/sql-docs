@@ -6,6 +6,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/r/install-pretrained-models-sql-server.md",
+            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/install/sql-pretrained-models-install",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md",
             "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough",
             "redirect_document_id": false

@@ -31,9 +31,11 @@ The Microsoft JDBC API Reference documentation is hosted for your viewing on the
 
 JavaDoc.io has our JDBC reference documentation starting with version 6.0.
 
-#### Only Legacy JDBC Documentation Here on Docs
+#### Only Legacy JDBC Documentation is Here on Docs
 
-The JDBC API Reference documentation articles here on **https://docs.microsoft.com/sql/connect/jdbc/reference/** are no longer being updated when the JDBC classes are updated for new releases. However, the articles here do contain reference for JDBC versions 4.1 and 4.2, along with some for 6.0 and some later versions.
+The JDBC API Reference documentation articles here on **https://docs.microsoft.com/sql/connect/jdbc/reference/** are no longer being updated when the JDBC classes are updated for new releases. However, the articles here do contain all the reference for JDBC versions 4.1 and 4.2.
+
+Documentation for JDBC version 6.0, and some later versions, is also here. But for any version 6.0 or later, use the JavaDoc.io website.
 
 
 

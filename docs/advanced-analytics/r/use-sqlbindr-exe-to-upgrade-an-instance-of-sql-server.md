@@ -4,7 +4,7 @@ description: Upgrade R and Python in SQL Server 2016 Services or SQL Server 2017
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/05/2018  
+ms.date: 07/19/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -28,7 +28,7 @@ For SQL Server 2017 Machine Learning Services, you would consider binding only w
 
 **SQL Server 2016 binding considerations**
 
-For SQL Server 2016 R Services customers, binding provides updated R packages, new packages not part of the original installation, and pretrained models, all of which can further be refreshed at each new major and minor release of Microsoft Machine Learning Server. Binding does not give you Python support, which is a SQL Server 2017 feature. 
+For SQL Server 2016 R Services customers, binding provides updated R packages, new packages not part of the original installation ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)), and [pretrained models](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), all of which can further be refreshed at each new major and minor release of Microsoft Machine Learning Server. Binding does not give you Python support, which is a SQL Server 2017 feature. 
 
 ## Version map
 
@@ -64,7 +64,7 @@ Anaconda 4.2 over Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 
 ## How component upgrade works
 
-Component upgrade is through *binding* a SQL Server 2016 R Services instance (or a SQL Server 2017 Machine Learning Services instance) to [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). 
+Component upgrade occurs when you *bind* a SQL Server 2016 R Services instance (or a SQL Server 2017 Machine Learning Services instance) to [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). This process basically overwrites the contents of C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES as installed by SQL Server Setup with the contents of C:\Program Files\Microsoft\ML Server\R_SERVER. 
 
 Microsoft Machine Learning Server is an on-premises server product separate from SQL Server, but with the same interpreters and packages. Binding swaps out the SQL Server service update mechanism so that you can use the R and Python packages shipping with Microsoft Machine Learning Server, which are often newer than those installed by SQL Server. Switching support polices is an attractive option for data science teams who require newer generation R and Python modules for their solutions. 
 
@@ -108,6 +108,8 @@ Microsoft Machine Learning Setup detects the existing features and SQL Server ve
     WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
     ```
 
+1. Close down SSMS and any other tools having an open connection to SQL Server. Binding overwrites program files. If SQL Server has open sessions, binding will fail with bind error code 6.
+
 1. Download Microsoft Machine Learning Server onto the computer that has the instance you want to upgrade. We recommend the [latest version](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer).
 
 1. Unzip the folder and start ServerSetup.exe, located under MLSWIN93.
@@ -116,7 +118,11 @@ Microsoft Machine Learning Setup detects the existing features and SQL Server ve
 
 1. On **Configure the installation**, confirm the components to upgrade, and review the list of compatible instances. 
 
+   This step is very important.
+
    On the left, choose every feature that you want to keep or upgrade. You cannot upgrade some features and not others. An empty checkbox removes that feature, assuming it is currently installed. In the screenshot, given an instance of SQL Server 2016 R Services (MSSQL13), R and the R version of the pre-trained models are selected. This configuration is valid because SQL Server 2016 supports R but not Python.
+
+   If you are upgrading components on SQL Server 2016 R Services, do not select the Python feature. You cannot add Python to SQL Server 2016 R Services.
 
    On the right, select the checkbox next to the instance name. If no instances are listed, you have an incompatible combination. If you do not select an instance, a new standalone installation of Machine Learning Server is created, and the SQL Server libraries are unchanged. If you can't select an instance, it might not be at [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). 
 
@@ -281,7 +287,7 @@ MLS Installer and SqlBindR both return the following error codes and messages.
 |Bind error 3 | Invalid instance | An instance exists, but is not valid for binding. |
 |Bind error 4 | Not bindable | |
 |Bind error 5 | Already bound | You ran the *bind* command, but the specified instance is already bound. |
-|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the MLS installer without selecting any features. Binding requires that you select both an MSSQL instance and R and Python, assuming the instance is SQL Server 2017.|
+|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the MLS installer without selecting any features. Binding requires that you select both an MSSQL instance and R and Python, assuming the instance is SQL Server 2017. This error also occurs if SqlBindR could not write to the Program Files folder. Open sessions or handles to SQL Server will cause this error to occur. If you get this error, reboot the computer and redo the binding steps before starting any new sessions.|
 |Bind error 7 | Not bound | The database engine instance has R Services or SQL Server Machine Learning Services. The instance is not bound to Microsoft Machine Learning Server. |
 |Bind error 8 | Unbind failed | An error occurred while unbinding the instance. |
 |Bind error 9 | No instances found | No database engine instances were found on this computer. |

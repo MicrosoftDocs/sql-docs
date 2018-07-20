@@ -443,7 +443,8 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
-FROM FactInternetSalesGROUP BY OrderDateKey, DueDateKey   
+FROM FactInternetSales
+GROUP BY OrderDateKey, DueDateKey   
 ORDER BY OrderDateKey;  
 ```  
   

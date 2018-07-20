@@ -1,7 +1,7 @@
 ---
 title: "JDBC Driver API Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2018"
+ms.date: "07/19/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -16,10 +16,29 @@ ms.author: genemi
 manager: craigg
 ---
 # JDBC Driver API Reference
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides an API that can be used within Java programming code to connect to and interact with a [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.  
-  
+The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides an API that can be used within Java programming code to connect to and interact with a [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.
+
+
+
+### JavaDoc.io Website is Primary
+
+The Microsoft JDBC API Reference documentation is hosted for your viewing on the JavaDoc.io website. JavaDoc.io is now our primary website for JDBC reference documentation. Our JDBC reference documentation on JavaDoc.io is available at the following direct link:
+
+- [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
+
+JavaDoc.io has our JDBC reference documentation starting with version 6.0.
+
+#### Only Legacy JDBC Documentation Here on Docs
+
+The JDBC API Reference documentation articles here on **https://docs.microsoft.com/sql/connect/jdbc/reference/** are no longer being updated when the JDBC classes are updated for new releases. However, the articles here do contain reference for JDBC versions 4.1 and 4.2, along with some for 6.0 and some later versions.
+
+
+
+### Important Notes
+
 > [!NOTE]  
 >  For conceptual information about using the JDBC driver, see [Overview of the JDBC Driver](../../../connect/jdbc/overview-of-the-jdbc-driver.md).  
   
@@ -44,6 +63,8 @@ manager: craigg
 >   
 >  Microsoft JDBC Driver 4.1 supports compilation with JDK 5.0, 6.0, and 7.0.  
 
+
+
 ## Interfaces  
   
 |Interface Name|Description|  
@@ -53,7 +74,10 @@ manager: craigg
 |[SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|Represents a list of properties specific to connecting to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using a [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|Represents the basic implementation of JDBC prepared statement functionality.|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|Represents a JDBC result set.|  
-|[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|Represents the basic implementation of JDBC statement functionality.|  
+|[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|Represents the basic implementation of JDBC statement functionality.|
+| &nbsp; | &nbsp; |
+
+
   
 ## Classes  
   
@@ -81,9 +105,11 @@ manager: craigg
 |[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)|Implements ISQLServerStatement.|  
 |[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)|Represents JDBC connections that can participate in distributed (XA) transactions.|  
 |[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)|Represents a factory for [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) objects that is used internally.|  
-|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|Represents an XAResource for XA distributed transaction management.|  
-  
+|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|Represents an XAResource for XA distributed transaction management.|
+| &nbsp; | &nbsp; |
+
+
+
 ## See Also  
- [Overview of the JDBC Driver](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
-  
+ [Overview of the JDBC Driver](../../../connect/jdbc/overview-of-the-jdbc-driver.md)
+

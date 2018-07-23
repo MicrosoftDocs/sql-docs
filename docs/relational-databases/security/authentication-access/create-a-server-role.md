@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

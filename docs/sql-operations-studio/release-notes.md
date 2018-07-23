@@ -55,8 +55,6 @@ The *July Public Preview* focuses on the initial release of the SQL Server Agent
  - Fix [issue 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): Error de Ortografia
  - Fix [issue 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): Setting iconPath in ButtonComponent after component() is called does not change icon
  - Fix [issue 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): Better Table organization
- - Fix [issue 1845](https://github.com/Microsoft/sqlopsstudio/issues/1845): Bug Scroll change tab query
- - Fix [issue 1847](https://github.com/Microsoft/sqlopsstudio/issues/1847): MFA Login to Azure SQL Databases
 
 
 For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).

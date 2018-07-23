@@ -44,7 +44,6 @@ SQL Content writers frequently need to include the name of the product and versi
 | File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|
 | appliesto-ss-asdb-asdw-xxx-md.md	|	`[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]`	| [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]	|
-|	appliesto-ss-asdb-asdw-pdw-asdbmi-md.md	|	`[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md.md](../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]`	| [!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md.md](../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]	|
 |	appliesto-ss-asdb-asdw-pdw-md.md	|	`[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]`	| [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]	|
 |	appliesto-ss-asdb-xxxx-pdw-md.md	|	`[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]`	| [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]	|
 |	appliesto-ss-asdb-xxxx-xxx-md.md	|	`[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]`	| [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]	|

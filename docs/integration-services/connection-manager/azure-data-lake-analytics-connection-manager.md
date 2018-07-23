@@ -41,12 +41,12 @@ The Data Lake Analytics connection manager is a component of the [SQL Server Int
 
     a.  If you select the **Azure AD User Identity** authentication option:
         
-      1. Provide values for the **User Name** and **Password** fields. 
+        1. Provide values for the **User Name** and **Password** fields. 
     
-      2. To test the connection, select **Test Connection**. If you or the tenant administrator didn't previously consent to allow SSIS to access your Data Lake Analytics account, select **Accept** when prompted. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+        2. To test the connection, select **Test Connection**. If you or the tenant administrator didn't previously consent to allow SSIS to access your Data Lake Analytics account, select **Accept** when prompted. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
-      >   [!NOTE] 
-      > When you select the **Azure AD User Identity** authentication option, multi-factor authentication and Microsoft account authentication are not supported.
+        >   [!NOTE] 
+        > When you select the **Azure AD User Identity** authentication option, multi-factor authentication and Microsoft account authentication are not supported.
     
     b. If you select the **Azure AD Service Identity** authentication option:
 

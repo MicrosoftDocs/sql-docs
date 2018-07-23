@@ -1,10 +1,11 @@
 # [Overview](functions.md)  
 
 # [Aggregate](aggregate-functions-transact-sql.md)  
+## [APPROX_COUNT_DISTINCT](approx-count-distinct-transact-sql.md)  
 ## [AVG](avg-transact-sql.md)  
 ## [CHECKSUM_AGG](checksum-agg-transact-sql.md)  
 ## [COUNT](count-transact-sql.md)  
-## [COUNT_BIG](count-big-transact-sql.md)  
+## [COUNT_BIG](count-big-transact-sql.md)    
 ## [GROUPING](grouping-transact-sql.md)  
 ## [GROUPING_ID](grouping-id-transact-sql.md)  
 ## [MAX](max-transact-sql.md)  

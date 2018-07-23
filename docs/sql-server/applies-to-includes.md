@@ -17,24 +17,23 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 
 # SQL 'Applies to' and 'Includes'
-Includes in markdown allow us to have reference text in our documentation that can be easily modified without modifying the actual text in the documentation. There are three types of includes in the SQL world - SQL Versions, Applies to, and referential text. SQL Versions are used to indicate the version of SQL being discussed (SQL 2016 vs 2017), and the applies to indicate what version of SQL the document applies to (SQL on WIndows vs Azure SQL DB). Referential text is anything that doesn't fall in the other two categories, such as the Get Help include - a list of links that customers can use to get help with SQL. 
+Includes in Markdown allow for references in the documentation that can be easily modified without modifying the actual text of individual articles. There are three types of includes in the SQL content world - SQL Versions, Applies-to, and referential text. SQL  Versions are used to indicate the version of SQL being discussed (such as SQL 2016 vs 2017), and the applies-to indicate what version of SQL Server the document applies to (SQL Server on Linux vs Azure SQL Database). Referential text are includes that don't fall in the other two categories, such as the Get Help include - a list of links that customers can use to get help with SQL. 
 
-This article is meant to be used as a reference point for the first two type of includes. 
+This article is meant to be used as a reference point for just the first two types of includes. 
 
 ## SQL Server Version includes
 
-As SQL Content writers, we frequently need to include the name of the product we're discussing, along with the version number. The benefit of using an include is that if the SQL Server version ever changes, instead of changing this value manually in every single topic, we just change the include, and then it updates across the entire documentation set. These were used more frequently in the past, but as a content team we have moved away from it from the most part with the exception of new versions of SQL - such as SQL vNext. Since we don't know what version SQL vNext is going to be, it makes sense to refer to it via an include so that, when the name is made public, we can just modify the include, instead of modifying the text everywhere. 
+SQL Content writers frequently need to include the name of the product and version of SQL Server. This way, if something changes in the name, the include is updated instead of manually updating the value in every single article. SQL Server vNext refers to a future release of SQL that does not yet have a version number and is the exception to this.  
 
 |SQL Version| File Name| Markdown (may need to modify path) |Text|
 | :------------  | :-------------| :----------| :-------------------|
 |	SQL 2012	|	sssql11-md.md	|	`[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]`	|	SQL Server 2012 (11.x)	|
-|	SQL 2012	|	sssql11_md.md	|	`[!INCLUDE[ssSQL11](../includes/sssql11_md.md)]`	|	SQL Server 2012 (11.x)	|
 |	SQL 2012 SP1	|	sssql11sp1-md.md	|	`[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]`	|	SQL Server 2012 SP1 (11.0.3x)	|
 |	SQL 2014	|	sssql14-md.md	|	`[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]`	|	SQL Server 2014 (12.x)	|
 |	SQL 2016	|	sssql15-md.md	|	`[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]`	|	SQL Server 2016 (13.x)	|
 |	SQL 2017	|	sssql17-md.md	|	`[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]`	|	SQL Server 2017 (14.x)	|
 |	SQL 2017	|	sssqlv14-md.md	|	`[!INCLUDE[sssqlv14](../includes/sssqlv14-md.md)]`	|	SQL Server 2017 (14.x)	|
-|	SQL vNext	|	sssqlv15-md.md	|	Idk can't find an example of this, maybe `[!INCLUDE[sssqlv15-md](../includes/sssqlv14-md.md)]` ?	|	SQL Server vNext	|
+|	SQL vNext	|	sssqlv15-md.md	|	`[!INCLUDE[sssqlv15-md](../includes/sssqlv14-md.md)]` ?	|	SQL Server vNext	|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
 
@@ -62,7 +61,7 @@ As SQL Content writers, we frequently need to include the name of the product we
 |&nbsp; | &nbsp; | &nbsp; |  
  
 ## SQL Server Version specific applies-to
-These applies to specifically indicate which versions of SQL the documentation applies to. 
+These applies-to specify which versions of SQL the documentation applies to. 
 
  File Name| Markdown (may need to modify path) |Image|
 | :-------------| :----------| :-------------------|

@@ -23,7 +23,7 @@ This article is meant to be used as a reference point for just the first two typ
 
 ## SQL Server Version includes
 
-SQL Content writers frequently need to include the name of the product and version of SQL Server. This way, if something changes in the name, the include is updated instead of manually updating the value in every single article. SQL Server vNext refers to a future release of SQL that does not yet have a version number and is the exception to this.  
+SQL Content writers frequently need to include the name of the product and version of SQL Server. This way, if something changes in the name, the include is updated instead of manually updating the value in every single article. These includes are used as placeholders for product names but have not been consistently used in all SQL documentation. SQL Server vNext refers to a future release of SQL that does not yet have a version number and is the exception to this.  
 
 |SQL Version| File Name| Markdown (may need to modify path) |Text|
 | :------------  | :-------------| :----------| :-------------------|

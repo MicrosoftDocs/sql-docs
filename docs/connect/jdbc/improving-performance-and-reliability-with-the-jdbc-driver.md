@@ -2,7 +2,7 @@
 ---
 title: "Improving Performance and Reliability with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2018"
+ms.date: "07/19/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -33,6 +33,7 @@ manager: craigg
 |[Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md)|Describes an adaptive buffering feature, which is designed to retrieve any kind of large-value data without the overhead of server cursors.|  
 |[Sparse Columns](../../connect/jdbc/sparse-columns.md)|Discusses the JDBC driver's support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sparse columns.|  
 |[Prepared Statement Metadata Caching for the JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Discusses the techniques for improving performance with prepared statement queries.|
+|[Using Bulk Copy API for Batch Insert Operation](../../connect/jdbc/using-bulk-copy-api-for-batch-insert-operation.md)|Describes how to enable Bulk Copy API for batch insert operations and its benefits.|
   
 ## See Also  
  [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -1,5 +1,6 @@
 ---
 title: "Azure Data Lake Analytics task | Microsoft Docs"
+description: You can submit U-SQL jobs to Azure Data Lake Analytics service with the Data Lake Analytics task.
 ms.custom: ""
 ms.date: "05/18/2018"
 ms.prod: sql

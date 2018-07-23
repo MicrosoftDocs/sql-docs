@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/26/2017"

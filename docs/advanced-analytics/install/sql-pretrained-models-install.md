@@ -17,7 +17,7 @@ This article explains how to use Powershell to add free pre-trained machine lear
 
 Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view, customize, or retrain the models, nor can you treat them as an independent resource in custom code or paired other functions. 
 
-You use the pretrained models by calling functions in the Microsoft machine learning libraries. Functions invoking the pretrained models are listed in the following table.
+To use the pretrained models, call the functions listed in the following table.
 
 | R function (MicrosoftML) | Python function (microsoftml) | Usage |
 |--------------------------|-------------------------------|-------|
@@ -32,11 +32,11 @@ You must have administrator rights on the computer and SQL Server to add pre-tra
 
 External scripts must be enabled and SQL Server LaunchPad service must be running. Installation instructions provide the steps for enabling and verifying these capabilities. 
 
-[MicrosoftML R package](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) or [microsoftml Python package](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package), into which the pre-trained models are installed.
+[MicrosoftML R package](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) or [microsoftml Python package](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) contain the pre-trained models.
 
-+ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) includes both language versions of the machine learning libraries, so this prerequisite is met with no further action on your part. Because the libraries are present, you can use the PowerShell script described in this article to add the pre-trained models to these libraries.
++ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) includes both language versions of the machine learning library, so this prerequisite is met with no further action on your part. Because the libraries are present, you can use the PowerShell script described in this article to add the pre-trained models to these libraries.
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md), which is R only, does not include [MicrosoftML package](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) out of the box. To add MicrosoftML, you must do a [component upgrade]((../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)). One advantage of the component upgrade is that you can simultaneously add the pre-trained models, which makes running the PowerShell script unnecessary. However, if you already upgraded but missed adding the pre-trained models the first time around, you can run the PowerShell script as described in this article. It works for both versions of SQL Server. Before you do, confirm that the MicrosoftML library exists at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library.
++ [SQL Server 2016 R Services](sql-r-services-windows-install.md), which is R only, does not include [MicrosoftML package](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) out of the box. To add MicrosoftML, you must do a [component upgrade](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). One advantage of the component upgrade is that you can simultaneously add the pre-trained models, which makes running the PowerShell script unnecessary. However, if you already upgraded but missed adding the pre-trained models the first time around, you can run the PowerShell script as described in this article. It works for both versions of SQL Server. Before you do, confirm that the MicrosoftML library exists at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library.
 
 
 <a name="file-location"></a>

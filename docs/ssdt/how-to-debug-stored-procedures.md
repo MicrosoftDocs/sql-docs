@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG"
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52

@@ -23,8 +23,6 @@ Ubuntu 18.04
 
 **Features Added**:
 
-UTF8 server encoding
-
 Data Classification for Azure SQL Database and SQL Server
 
 SQLBrowseConnect

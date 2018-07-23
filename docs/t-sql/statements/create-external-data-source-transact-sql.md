@@ -193,6 +193,8 @@ For a step-by-step tutorial on RDBMS, see [Getting started with cross-database q
 **BLOB_STORAGE**   
 For bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage and container. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.   
 The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For an example of accessing blob storage, see example F of [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
+>[!NOTE] 
+>To load from Azure Blob storage into SQL DW or Parallel Data Warehouse, the Secret must be the Azure Storage Key.
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  

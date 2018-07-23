@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Change Steps of a SQL Server Agent Master Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -93,5 +93,5 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
     GO  
     ```  
   
-For more information, see [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/e158802c-c347-4a5d-bf75-c03e5ae56e6b).  
+For more information, see [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b).  
   

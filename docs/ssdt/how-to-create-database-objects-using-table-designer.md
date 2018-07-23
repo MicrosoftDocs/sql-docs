@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.scriptpanel"
   - "sql.data.tools.design.table.context.view"

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 caps.latest.revision: 20
 author: "stevestein"

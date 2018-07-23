@@ -41,7 +41,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## Arguments  
- @objname = '*@objname*'  
+ \@objname = '*\@objname*'  
  The name of the Stretch-enabled SQL Server table.  
   
 ## Return Code Values  

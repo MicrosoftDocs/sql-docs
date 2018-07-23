@@ -75,8 +75,8 @@ manager: kfile
   
 |Function|Description|  
 |--------------|-----------------|  
-|[USERNAME Function (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)|Returns the domain\ username of the user currently logged on.|  
-|[CUSTOMDATA Function (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Returns the CustomData property in a connection string.|  
+|[USERNAME Function (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|Returns the domain\ username of the user currently logged on.|  
+|[CUSTOMDATA Function (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Returns the CustomData property in a connection string.|  
   
  You can use the LOOKUPVALUE function to return values for a column in which the Windows user name is the same as the user name returned by the USERNAME function or a string returned by the CustomData function. Queries can then be restricted where the values returned by LOOKUPVALUE match values in the same or related table.  
   
@@ -119,8 +119,8 @@ manager: kfile
 ## See Also  
  [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Analyze in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME Function (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [LOOKUPVALUE Function (DAX)](http://msdn.microsoft.com/en-us/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [CUSTOMDATA Function (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME Function (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [LOOKUPVALUE Function (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
+ [CUSTOMDATA Function (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

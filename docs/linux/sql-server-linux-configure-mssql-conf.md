@@ -5,7 +5,7 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 06/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
@@ -54,7 +54,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 ## <a id="agent"></a> Enable SQL Server Agent
 
-The **sqlagent.enabled** setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, SQL Server Agent is disabled. If **sqlagent.enabled** is not present in the mssql.conf settings file, then SQL Server internally assumes that SQL Server Agent is enabled.
+The **sqlagent.enabled** setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, SQL Server Agent is disabled. If **sqlagent.enabled** is not present in the mssql.conf settings file, then SQL Server internally assumes that SQL Server Agent is disabled.
 
 To change this settings, use the following steps:
 

@@ -81,7 +81,7 @@ manager: craigg
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- The stored procedure expects the variables, `@StartProductID` and `@CheckDate`, to provide parameter values. The order in which the parameters appear in the **Mappings** list is irrelevant. The only requirement is that the parameter names match the variable names in the stored procedure, including the @ sign.  
+ The stored procedure expects the variables, `@StartProductID` and `@CheckDate`, to provide parameter values. The order in which the parameters appear in the **Mappings** list is irrelevant. The only requirement is that the parameter names match the variable names in the stored procedure, including the \@ sign.  
   
 ### Mapping Parameters to Variables  
  The parameters are mapped to variables that provide the parameter values at run time. The variables are typically user-defined variables, although you can also use the system variables that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides. If you use user-defined variables, make sure that you set the data type to a type that is compatible with the data type of the column that the mapped parameter references. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  

@@ -38,7 +38,7 @@ Defines a date that is combined with a time of a day that has time zone awarenes
 |Property|Value|  
 |---|---|
 |Syntax|**datetimeoffset** [ (*fractional seconds precision*) ]|  
-|Usage|DECLARE @MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|Usage|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Default string literal formats (used for down-level client)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows.|  
 |Date range|0001-01-01 through 9999-12-31<br /><br /> January 1, 1 CE through December 31, 9999 CE|  
 |Time range|00:00:00 through 23:59:59.9999999 (fractional seconds are not supported in Informatica)|  

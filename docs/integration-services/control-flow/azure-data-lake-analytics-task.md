@@ -84,7 +84,7 @@ Use the **Parameter Mapping** page of the **Azure Data Lake Analytics Task Edito
 
 - **Variable Name:** After you have added a parameter mapping by clicking **Add**, select a system or user-defined variable from the list or click \<**New variable...**> to add a new variable by using the **Add Variable** dialog box. **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)  
 
-- **Parameter Name:** Provide a parameter/variable name in U-SQL script. Make sure the the parameter name starts with the @ sign, like @Param1. 
+- **Parameter Name:** Provide a parameter/variable name in U-SQL script. Make sure the the parameter name starts with the \@ sign, like \@Param1. 
 
 Here is an example of how to pass parameters to U-SQL script.
 
@@ -116,12 +116,12 @@ OUTPUT @rs1
       USING Outputters.Tsv(quoting:false, dateTimeFormat:null);
 ```
 
-In above script example, the input and output paths are defined in **@in** and **@out** parameters. The values for **@in** and **@out** parameters in the U-SQL script are passed dynamically by Parameter Mapping configuration.
+In above script example, the input and output paths are defined in **\@in** and **\@out** parameters. The values for **\@in** and **\@out** parameters in the U-SQL script are passed dynamically by Parameter Mapping configuration.
 
 |Variable Name|Parameter Name|
 |-------------|--------------|
-|User: Variable1|@in|
-|User: Variable2|@out| 
+|User: Variable1|\@in|
+|User: Variable2|\@out| 
 
 ## Expression Page Configuration
 

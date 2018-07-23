@@ -25,7 +25,7 @@ In this lesson, you will create a credential to store the security information t
 A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. The credential stores the URI path of the storage container and the shared access signature for this container.  
   
 > [!NOTE]  
-> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the [deprecated syntax](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) documented here to create a SQL Server credential based on your storage account key.  
+> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the [deprecated syntax](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) documented here to create a SQL Server credential based on your storage account key.  
   
 ## Create SQL Server credential  
 To create a SQL Server credential, follow these steps:  

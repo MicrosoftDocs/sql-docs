@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datacompare.f1"
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071

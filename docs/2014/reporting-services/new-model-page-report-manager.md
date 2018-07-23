@@ -39,7 +39,7 @@ manager: craigg
  **Name**  
  Specifies the name of the model. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the following characters when specifying a name:  
   
- ; ? : @ & = + , $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Description**  
  Shows a description of the model. Users who view this item through Report Manager see this description when browsing the folder hierarchy.  

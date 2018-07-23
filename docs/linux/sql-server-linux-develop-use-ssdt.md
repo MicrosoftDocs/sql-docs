@@ -5,7 +5,7 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 
 ms.component: ""
@@ -110,6 +110,6 @@ For more information about developing a database with SQL Data Tools, see [SSDT 
 
 [Download and Install Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
-[SSDT MSDN documents]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
+[SSDT MSDN documents]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

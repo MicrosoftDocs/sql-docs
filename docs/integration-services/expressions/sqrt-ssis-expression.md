@@ -62,7 +62,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  In expressions, variable names always include the @ prefix.  
+>  In expressions, variable names always include the \@ prefix.  
   
 ## See Also  
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

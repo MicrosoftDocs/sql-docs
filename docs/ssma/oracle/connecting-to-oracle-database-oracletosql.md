@@ -120,7 +120,7 @@ Metadata about the Oracle database is not automatically refreshed. The metadata 
   
 ## Next Step  
   
--   The next step in the migration process is to [Connect to an instance of SQL Server](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f).  
+-   The next step in the migration process is to [Connect to an instance of SQL Server](http://msdn.microsoft.com/1b2a8059-1829-4904-a82f-9c06de1e245f).  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

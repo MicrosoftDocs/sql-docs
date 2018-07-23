@@ -122,7 +122,7 @@ These applies-to specify which versions of SQL the documentation applies to.
 | :-------------| :----------| :-------------------|
 |	ssrs-appliesto-2017-and-later.md	|	`[!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)]`	| [!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)]	|
 |	ssrs-appliesto-not-pbirs.md	|	`[!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)]`	| [!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)]	|
-|	ssrs-appliesto-pbirs.md	|	`[!INCLUDE[ssrs-appliesto-pbirs.md](../includes/ssrs-appliesto-pbirs.md)]`	| [!INCLUDE[ssrs-appliesto-pbirs.md](includes/ssrs-appliesto-pbirs.md)]	|
+|	ssrs-appliesto-pbirs.md	|	`[!INCLUDE[ssrs-appliesto-pbirs.md](../includes/ssrs-appliesto-pbirs.md)]`	| [!INCLUDE[ssrs-appliesto-pbirs.md](../includes/ssrs-appliesto-pbirs.md)]	|
 |	ssrs-appliesto-sharepoint-2013-2016.md	|	`[!INCLUDE[ssrs-appliesto-sharepoint-2013-2016.md](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]`	| [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016.md](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]	|
 |	ssrs-appliesto-sql2016-preview.md	|	`[!INCLUDE[ssrs-appliesto-sql2016-preview.md](../includes/ssrs-appliesto-sql2016-preview.md)]`	| [!INCLUDE[ssrs-appliesto-sql2016-preview.md](../includes/ssrs-appliesto-sql2016-preview.md)]	|
 |&nbsp; | &nbsp; | &nbsp; |  

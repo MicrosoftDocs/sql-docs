@@ -2,7 +2,7 @@
 title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: ""
-ms.date: "07/19/2018"
+ms.date: "07/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -45,6 +45,8 @@ With table variable deferred compilation, compilation of a statement that refere
 
 ## Approximate query processing
 Approximate query processing is a new family of features that are designed to provide aggregations across large data sets where responsiveness is more critical than absolute precision.  An example might be calculating a COUNT(DISTINCT()) across 10 billion rows, for display on a dashboard.  In this case, absolute precision is not important, but responsiveness is critical. The new APPROX_COUNT_DISTINCT aggregate function returns the approximate number of unique non-null values in a group.
+
+For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/functions/approx-count-distinct-transact-sql.md).
 
 ## See also
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

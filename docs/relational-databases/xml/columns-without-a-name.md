@@ -49,20 +49,16 @@ GO
   
  This is the partial result:  
   
- `<row>`  
-  
- `<ProductModelID>7</ProductModelID>`  
-  
- `<Name>HL Touring Frame</Name>`  
-  
- `<MI:Location ...LocationID="10" ...></MI:Location>`  
-  
- `<MI:Location ...LocationID="20" ...></MI:Location>`  
-  
- `...`  
-  
- `</row>`  
-  
+```
+<row>  
+  <ProductModelID>7</ProductModelID>`  
+  <Name>HL Touring Frame</Name>`  
+  <MI:Location ...LocationID="10" ...></MI:Location>`  
+  <MI:Location ...LocationID="20" ...></MI:Location>`  
+  ...  
+</row>`  
+```
+
 ## See Also  
  [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   

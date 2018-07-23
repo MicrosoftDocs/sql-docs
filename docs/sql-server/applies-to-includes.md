@@ -17,7 +17,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 
 # SQL 'Applies to' and 'Includes'
-Includes in Markdown allow for references in the documentation that can be easily modified without modifying the actual text of individual articles. There are three types of includes in the SQL content world - SQL Versions, Applies-to, and referential text. SQL  Versions are used to indicate the version of SQL being discussed (such as SQL 2016 vs 2017), and the applies-to indicate what version of SQL Server the document applies to (SQL Server on Linux vs Azure SQL Database). Referential text are includes that don't fall in the other two categories, such as the Get Help include - a list of links that customers can use to get help with SQL. 
+References in the documentation can be easily modified without changing the actual text of individual articles by using 'Includes' in Markdown. There are three types of includes in the SQL content world - SQL Versions, Applies-to, and referential text. SQL  Versions are used to indicate the version of SQL being discussed (such as SQL 2016 vs 2017), and the applies-to indicate what version of SQL Server the document applies to (SQL Server on Linux vs Azure SQL Database). Referential text are includes that don't fall in the other two categories, such as the Get Help include - a list of links that customers can use to get help with SQL. 
 
 This article is meant to be used as a reference point for just the first two types of includes. 
 

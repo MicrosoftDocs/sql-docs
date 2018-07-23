@@ -59,7 +59,7 @@ There are currently these limitations that apply to this feature.
 1. Insert queries that contain non-parameterized values (e.g. INSERT INTO TABLE VALUES (?, **2**)) are not supported. Wildcards (?) are the only supported parameters for this function.
 2. Insert queries that contain INSERT-SELECT expressions (e.g. INSERT INTO TABLE **SELECT * FROM TABLE2**) are not supported.
 3. Insert queries that contain multiple VALUE expressions (e.g. INSERT INTO TABLE VALUES **(1, 2) (3, 4)**) are not supported.
-4. Insert queries that are followed by the OPTION clause or joined with other queries that are not part of the INSERT query are not supported.
+4. Insert queries that are followed by the OPTION clause, joined with multiple tables, or followed by another query are not supported.
 
 If the query fails due to non-SQL server related errors, the driver will log the error message and fallback to the original logic for batch insert.
 

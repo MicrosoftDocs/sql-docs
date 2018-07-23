@@ -16,9 +16,11 @@ ms.author: genemi
 manager: craigg
 ---
 # Azure Key Vault Sample Version 7.0.0
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-##  Sample application using Azure Key Vault feature
+## Sample application using Azure Key Vault feature
+
 This application is runnable using JDBC Driver 7.0 and above and Azure-Keyvault (version 1.0.0),  Adal4j (version 1.6.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
@@ -46,245 +48,246 @@ import com.microsoft.sqlserver.jdbc.SQLServerKeyVaultAuthenticationCallback;
 
 public class AKV_7_0_0 {
 
-	private static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
-    static String applicationClientID = "ba2814e5-8dc6-4b68-bb68-2f8d6c37a0a5"; 
+    private static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
+    static String applicationClientID = "ba2814e5-8dc6-4b68-bb68-2f8d6c37a0a5";
     static String applicationKey = "/V1e1IvJ8o2+CYSMvOC13kpOhdb6qkd1T6F9UTqNods=";
-    static String keyID = "https://cheenaakv.vault.azure.net/keys/AKVTest/884a78a7fb7749fcb973be64e2efe5f0"; 
+    static String keyID = "https://cheenaakv.vault.azure.net/keys/AKVTest/884a78a7fb7749fcb973be64e2efe5f0";
     static String cmkName = "AKV_CMK_JDBC";
     static String cekName = "AKV_CEK_JDBC";
     static String akvTable = "akvTable";
-	
-	static String createTableSQL = "create table " + akvTable + " ("
-			+ "PlainNvarcharMax nvarchar(max) null,"
-			+ "RandomizedNvarcharMax nvarchar(max) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (ENCRYPTION_TYPE = RANDOMIZED, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', COLUMN_ENCRYPTION_KEY = "
-			+ cekName + ") NULL,"
-			+ "DeterministicNvarcharMax nvarchar(max) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', COLUMN_ENCRYPTION_KEY = "
-			+ cekName + ") NULL" + ");";
 
-	public static void main(String[] args)
-			throws ClassNotFoundException, Exception {
-		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-		try (Connection connection = DriverManager.getConnection(connectionUrl);
-				Statement statement = connection.createStatement()) {
-			statement.execute("DBCC FREEPROCCACHE");
-			
-			System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback' and 'executorService(null)'");
-			/* Constructor added in 6.0.0 driver version and removed in 6.2.2 driver, now added back in 7.0.0 driver
-			 * [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility]
-			 * This constructor is marked @deprecated since it no longer uses 'ExecutorService' parameter passed. */
-			@SuppressWarnings("deprecation")
-			SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider1 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
-					tryAuthenticationCallback(), null);
-			setupKeyStoreProviders(akvProvider1.getName(), akvProvider1);
-			testAKV(akvProvider1.getName(), akvProvider1, connection, statement);
+    static String createTableSQL = "create table " + akvTable + " ("
+            + "PlainNvarcharMax nvarchar(max) null,"
+            + "RandomizedNvarcharMax nvarchar(max) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (ENCRYPTION_TYPE = RANDOMIZED, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', COLUMN_ENCRYPTION_KEY = "
+            + cekName + ") NULL,"
+            + "DeterministicNvarcharMax nvarchar(max) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', COLUMN_ENCRYPTION_KEY = "
+            + cekName + ") NULL" + ");";
 
-			statement.execute("DBCC FREEPROCCACHE");
-			System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback'");
-			/* Constructor added in 7.0.0 driver version [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility] 
-			 * This constructor is recommended to replace the above deprecated constructor */
-			SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider2 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
-					tryAuthenticationCallback());
-			testAKV(akvProvider2.getName(), akvProvider2, connection, statement);
+    public static void main(String[] args)
+            throws ClassNotFoundException, Exception {
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        try (Connection connection = DriverManager.getConnection(connectionUrl);
+                Statement statement = connection.createStatement()) {
+            statement.execute("DBCC FREEPROCCACHE");
 
-			statement.execute("DBCC FREEPROCCACHE");
-			System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'clientId' and 'clientKey'");
-			/* Constructor added in 6.2.2 driver version [Continued Support] */
-			SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider3 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
-					applicationClientID, applicationKey);
-			testAKV(akvProvider3.getName(), akvProvider3, connection, statement);
-			System.exit(0);
-		}
-	}
+            System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback' and 'executorService(null)'");
+            /* Constructor added in 6.0.0 driver version and removed in 6.2.2 driver, now added back in 7.0.0 driver
+             * [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility]
+             * This constructor is marked @deprecated since it no longer uses 'ExecutorService' parameter passed. */
+            @SuppressWarnings("deprecation")
+            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider1 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
+                    tryAuthenticationCallback(), null);
+            setupKeyStoreProviders(akvProvider1.getName(), akvProvider1);
+            testAKV(akvProvider1.getName(), akvProvider1, connection, statement);
+
+            statement.execute("DBCC FREEPROCCACHE");
+            System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback'");
+            /* Constructor added in 7.0.0 driver version [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility]
+             * This constructor is recommended to replace the above deprecated constructor */
+            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider2 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
+                    tryAuthenticationCallback());
+            testAKV(akvProvider2.getName(), akvProvider2, connection, statement);
+
+            statement.execute("DBCC FREEPROCCACHE");
+            System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'clientId' and 'clientKey'");
+            /* Constructor added in 6.2.2 driver version [Continued Support] */
+            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider3 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
+                    applicationClientID, applicationKey);
+            testAKV(akvProvider3.getName(), akvProvider3, connection, statement);
+            System.exit(0);
+        }
+    }
 
 
 
-	private static SQLServerKeyVaultAuthenticationCallback tryAuthenticationCallback()
-			throws URISyntaxException, SQLServerException {
-		SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {
+    private static SQLServerKeyVaultAuthenticationCallback tryAuthenticationCallback()
+            throws URISyntaxException, SQLServerException {
+        SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {
 
-			@Override
-			public String getAccessToken(String authority, String resource,
-					String scope) {
-				AuthenticationResult result = null;
-				try {
-					ExecutorService service = Executors.newFixedThreadPool(1);
-					AuthenticationContext context = new AuthenticationContext(
-							authority, false, service);
-					ClientCredential cred = new ClientCredential(
-							applicationClientID, applicationKey);
-					Future<AuthenticationResult> future = context
-							.acquireToken(resource, cred, null);
-					result = future.get();
-					service.shutdown();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-				return result.getAccessToken();
-			}
-		};
-		
-		return authenticationCallback;
-		
-	}
-	
-	private static void testAKV(String CUSTOM_AKV_PROVIDER_NAME,
-			SQLServerColumnEncryptionKeyStoreProvider akvProvider,
-			Connection connection, Statement statement)
-			throws SQLException, InterruptedException {
+            @Override
+            public String getAccessToken(String authority, String resource,
+                    String scope) {
+                AuthenticationResult result = null;
+                try {
+                    ExecutorService service = Executors.newFixedThreadPool(1);
+                    AuthenticationContext context = new AuthenticationContext(
+                            authority, false, service);
+                    ClientCredential cred = new ClientCredential(
+                            applicationClientID, applicationKey);
+                    Future<AuthenticationResult> future = context
+                            .acquireToken(resource, cred, null);
+                    result = future.get();
+                    service.shutdown();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return result.getAccessToken();
+            }
+        };
 
-		dropTable(statement);
-		dropKeys(statement);
+        return authenticationCallback;
 
-		System.out.println("createCMK");
-		createCMK(CUSTOM_AKV_PROVIDER_NAME, statement);
+    }
 
-		System.out.println("createCEK");
-		createCEK(akvProvider, statement);
+    private static void testAKV(String CUSTOM_AKV_PROVIDER_NAME,
+            SQLServerColumnEncryptionKeyStoreProvider akvProvider,
+            Connection connection, Statement statement)
+            throws SQLException, InterruptedException {
 
-		System.out.println("create Table");
-		statement.execute(createTableSQL);
+        dropTable(statement);
+        dropKeys(statement);
 
-		System.out.println("populate");
-		populateCharNormalCase(connection);
+        System.out.println("createCMK");
+        createCMK(CUSTOM_AKV_PROVIDER_NAME, statement);
 
-		System.out.println("run the test");
-		testChar(statement);
-	}
+        System.out.println("createCEK");
+        createCEK(akvProvider, statement);
 
-	/**
-	 * Sets up keystore
-	 * 
-	 * @param CUSTOM_AKV_PROVIDER_NAME
-	 * @param akvProvider
-	 * @throws SQLServerException
-	 */
-	private static void setupKeyStoreProviders(String CUSTOM_AKV_PROVIDER_NAME,
-			SQLServerColumnEncryptionKeyStoreProvider akvProvider)
-			throws SQLServerException {
-		Map<String, SQLServerColumnEncryptionKeyStoreProvider> map1 = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
-		map1.put(CUSTOM_AKV_PROVIDER_NAME, akvProvider);
-		SQLServerConnection.registerColumnEncryptionKeyStoreProviders(map1);
-	}
+        System.out.println("create Table");
+        statement.execute(createTableSQL);
 
-	/**
-	 * Cleans and drops tables
-	 * 
-	 * @throws SQLException
-	 */
-	private static void dropTable(Statement statement) throws SQLException {
-		statement.executeUpdate("if object_id('" + akvTable
-				+ "','U') is not null" + " drop table " + akvTable);
-	}
+        System.out.println("populate");
+        populateCharNormalCase(connection);
 
-	/**
-	 * Drops CMKs and CEKs
-	 * 
-	 * @throws SQLException
-	 */
-	private static void dropKeys(Statement statement) throws SQLException {
-		statement.executeUpdate(
-				"if exists (SELECT name from sys.column_encryption_keys where name='"
-						+ cekName + "')" + " begin"
-						+ " drop column encryption key " + cekName + " end");
-		statement.executeUpdate(
-				"if exists (SELECT name from sys.column_master_keys where name='"
-						+ cmkName + "')" + " begin" + " drop column master key "
-						+ cmkName + " end");
-	}
+        System.out.println("run the test");
+        testChar(statement);
+    }
 
-	/**
-	 * Creates CMK using the keystore
-	 * 
-	 * @param CUSTOM_AKV_PROVIDER_NAME
-	 * @throws SQLException
-	 */
-	private static void createCMK(String CUSTOM_AKV_PROVIDER_NAME,
-			Statement statement) throws SQLException {
-		String _createColumnMasterKeyTemplate = String.format(
-				"CREATE COLUMN MASTER KEY [%s] WITH ( KEY_STORE_PROVIDER_NAME = '%s', KEY_PATH = '%s');",
-				cmkName, CUSTOM_AKV_PROVIDER_NAME, keyID);
-		statement.execute(_createColumnMasterKeyTemplate);
-	}
+    /**
+     * Sets up keystore
+     *
+     * @param CUSTOM_AKV_PROVIDER_NAME
+     * @param akvProvider
+     * @throws SQLServerException
+     */
+    private static void setupKeyStoreProviders(String CUSTOM_AKV_PROVIDER_NAME,
+            SQLServerColumnEncryptionKeyStoreProvider akvProvider)
+            throws SQLServerException {
+        Map<String, SQLServerColumnEncryptionKeyStoreProvider> map1 = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
+        map1.put(CUSTOM_AKV_PROVIDER_NAME, akvProvider);
+        SQLServerConnection.registerColumnEncryptionKeyStoreProviders(map1);
+    }
 
-	/**
-	 * Creates CEK
-	 * 
-	 * @param storeProvider
-	 * @throws SQLServerException
-	 * @throws SQLException
-	 */
-	private static void createCEK(
-			SQLServerColumnEncryptionKeyStoreProvider storeProvider,
-			Statement statement) throws SQLServerException, SQLException {
-		String letters = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-		byte[] valuesDefault = letters.getBytes();
-		byte[] key = storeProvider.encryptColumnEncryptionKey(keyID, "RSA_OAEP",
-				valuesDefault);
-		String cekSql = "CREATE COLUMN ENCRYPTION KEY " + cekName
-				+ " WITH VALUES " + "(COLUMN_MASTER_KEY = " + cmkName
-				+ ", ALGORITHM = 'RSA_OAEP', ENCRYPTED_VALUE = 0x"
-				+ bytesToHexString(key, key.length) + ")" + ";";
-		statement.execute(cekSql);
-	}
+    /**
+     * Cleans and drops tables
+     *
+     * @throws SQLException
+     */
+    private static void dropTable(Statement statement) throws SQLException {
+        statement.executeUpdate("if object_id('" + akvTable
+                + "','U') is not null" + " drop table " + akvTable);
+    }
 
-	/**
-	 * 
-	 * @param b
-	 *            byte value
-	 * @param length
-	 *            length of the array
-	 * @return
-	 */
-	final static char[] hexChars = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
-			'9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    /**
+     * Drops CMKs and CEKs
+     *
+     * @throws SQLException
+     */
+    private static void dropKeys(Statement statement) throws SQLException {
+        statement.executeUpdate(
+                "if exists (SELECT name from sys.column_encryption_keys where name='"
+                        + cekName + "')" + " begin"
+                        + " drop column encryption key " + cekName + " end");
+        statement.executeUpdate(
+                "if exists (SELECT name from sys.column_master_keys where name='"
+                        + cmkName + "')" + " begin" + " drop column master key "
+                        + cmkName + " end");
+    }
 
-	private static String bytesToHexString(byte[] b, int length) {
-		StringBuilder sb = new StringBuilder(length * 2);
-		for (int i = 0; i < length; i++) {
-			int hexVal = b[i] & 0xFF;
-			sb.append(hexChars[(hexVal & 0xF0) >> 4]);
-			sb.append(hexChars[(hexVal & 0x0F)]);
-		}
-		return sb.toString();
-	}
+    /**
+     * Creates CMK using the keystore
+     *
+     * @param CUSTOM_AKV_PROVIDER_NAME
+     * @throws SQLException
+     */
+    private static void createCMK(String CUSTOM_AKV_PROVIDER_NAME,
+            Statement statement) throws SQLException {
+        String _createColumnMasterKeyTemplate = String.format(
+                "CREATE COLUMN MASTER KEY [%s] WITH ( KEY_STORE_PROVIDER_NAME = '%s', KEY_PATH = '%s');",
+                cmkName, CUSTOM_AKV_PROVIDER_NAME, keyID);
+        statement.execute(_createColumnMasterKeyTemplate);
+    }
 
-	/**
-	 * Populates the table
-	 * 
-	 * @throws SQLException
-	 */
-	private static void populateCharNormalCase(Connection connection)
-			throws SQLException {
-		String sql = "insert into " + akvTable + " values(?,?,?)";
-		try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
-			for (int i = 1; i <= 5; i++) { //Insert 5 rows
-				for (int j = 1; j <= 3; j++) {
-					pstmt.setNString(j, "Row " + i + " Column " + j);
-				}
-				pstmt.execute();
-			}
-		}
-	}
+    /**
+     * Creates CEK
+     *
+     * @param storeProvider
+     * @throws SQLServerException
+     * @throws SQLException
+     */
+    private static void createCEK(
+            SQLServerColumnEncryptionKeyStoreProvider storeProvider,
+            Statement statement) throws SQLServerException, SQLException {
+        String letters = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        byte[] valuesDefault = letters.getBytes();
+        byte[] key = storeProvider.encryptColumnEncryptionKey(keyID, "RSA_OAEP",
+                valuesDefault);
+        String cekSql = "CREATE COLUMN ENCRYPTION KEY " + cekName
+                + " WITH VALUES " + "(COLUMN_MASTER_KEY = " + cmkName
+                + ", ALGORITHM = 'RSA_OAEP', ENCRYPTED_VALUE = 0x"
+                + bytesToHexString(key, key.length) + ")" + ";";
+        statement.execute(cekSql);
+    }
 
-	/**
-	 * Rerieves the table
-	 * 
-	 * @throws SQLException
-	 */
-	private static void testChar(Statement statement) throws SQLException {
-		try (ResultSet rs = statement
-				.executeQuery("select * from " + akvTable);) {
-			int numberOfColumns = rs.getMetaData().getColumnCount();
-			while (rs.next()) {
-				for (int i = 1; i <= numberOfColumns; i++) {
-					System.out.println(rs.getString(i));
-				}
-			}
-		}
-	}
+    /**
+     *
+     * @param b
+     *            byte value
+     * @param length
+     *            length of the array
+     * @return
+     */
+    final static char[] hexChars = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
+            '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+
+    private static String bytesToHexString(byte[] b, int length) {
+        StringBuilder sb = new StringBuilder(length * 2);
+        for (int i = 0; i < length; i++) {
+            int hexVal = b[i] & 0xFF;
+            sb.append(hexChars[(hexVal & 0xF0) >> 4]);
+            sb.append(hexChars[(hexVal & 0x0F)]);
+        }
+        return sb.toString();
+    }
+
+    /**
+     * Populates the table
+     *
+     * @throws SQLException
+     */
+    private static void populateCharNormalCase(Connection connection)
+            throws SQLException {
+        String sql = "insert into " + akvTable + " values(?,?,?)";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            for (int i = 1; i <= 5; i++) { //Insert 5 rows
+                for (int j = 1; j <= 3; j++) {
+                    pstmt.setNString(j, "Row " + i + " Column " + j);
+                }
+                pstmt.execute();
+            }
+        }
+    }
+
+    /**
+     * Rerieves the table
+     *
+     * @throws SQLException
+     */
+    private static void testChar(Statement statement) throws SQLException {
+        try (ResultSet rs = statement
+                .executeQuery("select * from " + akvTable);) {
+            int numberOfColumns = rs.getMetaData().getColumnCount();
+            while (rs.next()) {
+                for (int i = 1; i <= numberOfColumns; i++) {
+                    System.out.println(rs.getString(i));
+                }
+            }
+        }
+    }
 }
 ```
 
-## See Also  
+## See Also
+
 [Azure Key Vault Sample Version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
 [Azure Key Vault Sample Version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

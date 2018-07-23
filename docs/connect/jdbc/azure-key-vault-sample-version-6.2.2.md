@@ -16,14 +16,14 @@ ms.author: genemi
 manager: craigg
 ---
 # Azure Key Vault Sample Version 6.2.2
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-##  Sample application using Azure Key Vault feature
-This application is runnable using JDBC Driver 6.2.2 and 6.4.0 and Azure-Keyvault (version 1.0.0),  Adal4j (version 1.4.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
+## Sample application using Azure Key Vault feature
+
+This application is runnable using JDBC Driver 6.2.2 and 6.4.0 and Azure-Keyvault (version 1.0.0),  Adal4j (version 1.4.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
-package com.customer.issue;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -39,10 +39,10 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 public class AKV_6_2_2 {
 
-	private static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
-	static String applicationClientID = "Your Client ID";
-	static String applicationKey = "Your Application Key";
-	static String keyID = "Your Key ID";
+    private static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
+    static String applicationClientID = "Your Client ID";
+    static String applicationKey = "Your Application Key";
+    static String keyID = "Your Key ID";
 	static String cmkName = "AKV_CMK_JDBC";
 	static String cekName = "AKV_CEK_JDBC";
 	static String akvTable = "akvTable";
@@ -241,6 +241,7 @@ public class AKV_6_2_2 {
 
 ```
 
-## See Also  
+## See Also
+
 [Azure Key Vault Sample Version 7.0.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.0.md)  
 [Azure Key Vault Sample Version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

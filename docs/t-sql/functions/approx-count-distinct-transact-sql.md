@@ -1,7 +1,7 @@
 ---
 title: "APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/20/2018"
+ms.date: "07/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -19,7 +19,7 @@ manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # APPROX_COUNT_DISTINCT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
 
 This function returns the approximate number of unique non-null values in a group. 
   

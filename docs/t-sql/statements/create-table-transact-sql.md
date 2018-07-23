@@ -1628,22 +1628,22 @@ CREATE TABLE Customers (
 ```
 
 ### S. Create an inline filtered index 
-Creates a tables with an inline filtered index.
+Creates a table with an inline filtered index.
   
-  ```
+```
   CREATE TABLE t1 
  (
       c1 int,
       index IX1  (c1) WHERE c1 > 0   
  )
 GO
- ```
+```
  
  
 ### T. Create a temporary table with an anonymously named compound primary key
-Creates a tables with an anonymously named compound primary key. This is useful to avoid run-time conflicts where two session-scoped temp tables, each in a separate session, use the same name for a constraint. 
+Creates a table with an anonymously named compound primary key. This is useful to avoid run-time conflicts where two session-scoped temp tables, each in a separate session, use the same name for a constraint. 
   
-  ```
+```
   CREATE TABLE #tmp 
  (
       c1 int,
@@ -1651,8 +1651,9 @@ Creates a tables with an anonymously named compound primary key. This is useful 
       PRIMARY KEY CLUSTERED ([c1], [c2])
  )
 GO
- ```
- If you explicitly name the constraint, the second session will generate an error such as:
+```
+
+If you explicitly name the constraint, the second session will generate an error such as:
  
 ```
 Msg 2714, Level 16, State 5, Line 1
@@ -1660,6 +1661,7 @@ There is already an object named 'PK_#tmp' in the database.
 Msg 1750, Level 16, State 1, Line 1
 Could not create constraint or index. See previous errors.
 ```
+
 The problem arises from the fact that while the temp table name is uniquified, the constraint names are not.
   
 ## See Also  

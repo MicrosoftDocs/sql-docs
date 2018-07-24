@@ -43,13 +43,13 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 An expression of type **sysname** that represents the filegroup name for which `FILEGROUPPROPERTY` returns the named property information.  
   
  *property*  
-An expression of type **varchar(128)** that returns the name of the filegroup property. *Property* can have one of these values:  
+An expression of type **varchar(128)** that returns the name of the filegroup property. *Property* can return one of these values:  
   
 |Value|Description|Value returned|  
 |-----------|-----------------|--------------------|  
-|**IsReadOnly**|Filegroup is read-only.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = invalid input.|  
-|**IsUserDefinedFG**|Filegroup is a user-defined filegroup.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = invalid input.|  
-|**IsDefault**|Filegroup is the default filegroup.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = invalid input.|  
+|**IsReadOnly**|Filegroup is read-only.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Invalid input.|  
+|**IsUserDefinedFG**|Filegroup is a user-defined filegroup.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Invalid input.|  
+|**IsDefault**|Filegroup is the default filegroup.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Invalid input.|  
   
 ## Return Types  
 **int**  

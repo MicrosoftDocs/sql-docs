@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/26/2017"
+ms.date: "07/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -25,6 +25,9 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option. 
   
  For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
+ 
+> [!IMPORTANT]
+> If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](http://support.microsoft.com/help/4340759) as soon as possible. 
   
 ##  <a name="Enabling"></a> Enabling the Query Store  
  Query Store is not active for new databases by default.  
@@ -51,7 +54,10 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
 For more syntax options related to the query store, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 > [!NOTE]  
->  You cannot enable the query store for the **master** or **tempdb** database.  
+> You cannot enable the query store for the **master** or **tempdb** database.  
+ 
+> [!IMPORTANT]
+> For information on enabling Query Store and keeping it adjusted to your workload, refer to [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
  
 ## <a name="About"></a> Information in the Query Store  
  Execution plans for any specific query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically evolve over time due to a number of different reasons such as statistics changes, schema changes, creation/deletion of indexes, etc. The procedure cache (where cached query plans are stored) only stores the latest execution plan. Plans also get evicted from the plan cache due to memory pressure. As a result, query performance regressions caused by execution plan changes can be non-trivial and time consuming to resolve.  

@@ -39,7 +39,7 @@ manager: craigg
  **Parameter Name**  
  Provide a parameter name.  
   
- Depending on the connection manager type that the task uses, you must use numbers or parameter names. Some connection manager types require that the first character of the parameter name is the @ sign , specific names like @Param1, or column names as parameter names.  
+ Depending on the connection manager type that the task uses, you must use numbers or parameter names. Some connection manager types require that the first character of the parameter name is the \@ sign , specific names like \@Param1, or column names as parameter names.  
   
  **Related Topics:** [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

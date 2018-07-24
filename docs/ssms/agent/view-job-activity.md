@@ -1,4 +1,4 @@
-﻿---
+---
 title: "View Job Activity | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -84,5 +84,5 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_help_jobactivity (Transact-SQL)](http://msdn.microsoft.com/en-us/d344864f-b4d3-46b1-8933-b81dec71f511).  
+For more information, see [sp_help_jobactivity (Transact-SQL)](http://msdn.microsoft.com/d344864f-b4d3-46b1-8933-b81dec71f511).  
   

@@ -40,7 +40,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## Arguments  
- @objname = '*@objname*'  
+ \@objname = '*\@objname*'  
  The name of the Stretch-enabled SQL Server table.  
   
 ## Permissions  

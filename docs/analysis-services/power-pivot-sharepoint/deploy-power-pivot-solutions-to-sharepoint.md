@@ -42,7 +42,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  The return value should be **false**. If it is **true**, you cannot access [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data with this web application.  
   
 ##  <a name="bkmk_farm"></a> Step 1: Deploy the Farm Solution  
- This section shows you how to deploy solutions using PowerShell, but you can also use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool to complete this task. For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ This section shows you how to deploy solutions using PowerShell, but you can also use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool to complete this task. For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  This task only needs to be performed once, after you install [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.  
   
@@ -113,7 +113,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Click **Retract Solution**.  
   
- If you encounter server deployment issues that you trace back to the farm solution, you can redeploy it by running the **Repair** option in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool. Repair operations via the tool is preferred because it requires fewer steps on your part. For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ If you encounter server deployment issues that you trace back to the farm solution, you can redeploy it by running the **Repair** option in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool. Repair operations via the tool is preferred because it requires fewer steps on your part. For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  If you still want to re-deploy all solutions, be sure to do so in this order:  
   

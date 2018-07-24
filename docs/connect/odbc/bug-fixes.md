@@ -1,7 +1,7 @@
 ---
 title: "List of bugs fixed | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2018"
+ms.date: "06/29/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -14,12 +14,25 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: "v-makouz"
-ms.author: genemi
+ms.author: v-jizho2
 manager: "kenvh"
 ---
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+
+- Fixed an error message about Azure Active Directory Authentication
+- Fixed encoding detection when locale environment variables are set differently
+- Fixed a crash upon disconnect with connection recovery in progress
+- Fixed detection of connection liveness
+- Fixed incorrect detection of closed sockets
+- Fixed an infinite wait when attempting to release a statement handle during failed recovery
+- Fixed incorrect uninstallation behavior when both version 13 and 17 are installed on Windows
+- Fixed decryption behavior on older Windows platform (Windows 7, 8 and Server 2012)
+- Fixed a cache issue when using ADAL Authentication on Windows
+- Fixed an issue which was locking and overwriting trace logs on Windows
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 

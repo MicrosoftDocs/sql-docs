@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete One or More Jobs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -91,7 +91,7 @@ Unless you are a member of the **sysadmin** fixed server role, you can only dele
     GO  
     ```  
   
-For more information, see [sp_delete_job (Transact-SQL)](http://msdn.microsoft.com/en-us/b85db6e4-623c-41f1-9643-07e5ea38db09).  
+For more information, see [sp_delete_job (Transact-SQL)](http://msdn.microsoft.com/b85db6e4-623c-41f1-9643-07e5ea38db09).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To delete multiple jobs**  

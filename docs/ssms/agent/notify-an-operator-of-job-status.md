@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Notify an Operator of Job Status | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -108,7 +108,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd).  
+For more information, see [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To notify an operator of job status**  

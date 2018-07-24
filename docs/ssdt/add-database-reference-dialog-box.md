@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.adddatabasereference.dialog"
 ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893

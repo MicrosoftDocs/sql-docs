@@ -1,4 +1,4 @@
-﻿---
+---
 title: "GROUP BY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -443,7 +443,8 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
-FROM FactInternetSalesGROUP BY OrderDateKey, DueDateKey   
+FROM FactInternetSales
+GROUP BY OrderDateKey, DueDateKey   
 ORDER BY OrderDateKey;  
 ```  
   

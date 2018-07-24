@@ -5,7 +5,7 @@ services: sql-server
 documentationcenter: NA
 ms.suite: "sql"
 ms.devlang: NA
-ms.topic: article
+ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: ""
 ms.date: 09/17/2017    

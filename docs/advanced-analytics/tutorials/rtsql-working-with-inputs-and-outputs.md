@@ -1,20 +1,27 @@
 ---
-title: Working with inputs and outputs (R in SQL quickstart) | Microsoft Docs
+title: Quickstart for working with inputs and outputs in R (SQL Server Machine Learning) | Microsoft Docs
+description: In this quickstart for R script in SQL Server, learn how to structure inputs and outputs to the sp_execute_external_script system stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
-ms.topic: tutorial
+ms.date: 07/15/2018  
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Working with inputs and outputs (R in SQL quickstart)
+# Quickstart: Handle inputs and outputs using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-When you want to run R code in SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
+When you want to run R code in SQL Server, you must wrap R script in a stored procedure. You can write one, or pass R script to [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This system stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
 
-## <a name="bkmk_SSMSBasics"></a>Create some simple test data
+## Prerequisites
+
+A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
+
+<a name="bkmk_SSMSBasics"></a>
+
+## Create some simple test data
 
 Create a small table of test data by running the following T-SQL statement:
 
@@ -34,11 +41,8 @@ SELECT * FROM RTestData
 
 **Results**
 
-|col1|
-|------|
-|*1*|
-|*10*|
-|*100*|
+![Contents of the RTestData table](media/quickstart-r-working-input-outputs-results-1.png)
+
 
 ## Get the same data using R script
 
@@ -61,7 +65,6 @@ It gets the data from the table, makes a round trip through the R runtime, and r
 
 **Comments**
 
-+ In Management Studio, tabular results are returned in the **Values** pane. Messages returned by the R runtime are provided in the **Messages** pane.
 + The *@language* parameter defines the language extension to call, in this case, R.
 + In the *@script* parameter, you define the commands to pass to the R runtime. Your entire R script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable.
 + The data returned by the query is passed to the R runtime, which returns the data to SQL Server as a data frame.
@@ -85,8 +88,7 @@ EXECUTE sp_execute_external_script
 
 Did you get the error, "object SQL\_in not found"? That's because R is case-sensitive! In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*.
 
-That's because R is case-sensitive. In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*.
-Try correcting **only** the *SQL_In* variable and re-run the stored procedure.
+Try correcting **only** the *SQL_In* variable to *@script* and re-run the stored procedure.
 
 Now you get a **different** error:
 
@@ -120,13 +122,11 @@ EXECUTE sp_execute_external_script
 
 **Results**
 
-*Col1*
-*hello*
-<code>   </code>
-*world*
+![Query results using @script as input](media/quickstart-r-working-input-outputs-results-3.png)
 
-## Next lesson
+## Next steps
 
-You'll examine some of the problems that you might encounter when passing data between R and SQL Server, such as implicit conversions and differences in tabular data between R and SQL.
+Examine some of the problems that you might encounter when passing data between R and SQL Server, such as implicit conversions and differences in tabular data between R and SQL.
 
-[R and SQL data types and data objects](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+> [!div class="nextstepaction"]
+> [Quickstart: Handle data types and objects](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)

@@ -137,7 +137,7 @@ Update the following Transact-SQL script for your environment on all SQL Server 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_PORT = **<5022>**)
-    FOR DATA_MIRRORING (
+    FOR DATABASE_MIRRORING (
 	    ROLE = ALL,
 	    AUTHENTICATION = CERTIFICATE dbm_certificate,
 		ENCRYPTION = REQUIRED ALGORITHM AES
@@ -151,7 +151,7 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_PORT = **<5022>**)
-    FOR DATA_MIRRORING (
+    FOR DATABASE_MIRRORING (
 	    ROLE = WITNESS,
 	    AUTHENTICATION = CERTIFICATE dbm_certificate,
 		ENCRYPTION = REQUIRED ALGORITHM AES

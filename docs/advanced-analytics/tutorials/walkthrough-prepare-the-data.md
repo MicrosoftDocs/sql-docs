@@ -299,4 +299,3 @@ The T-SQL queries used in this walkthrough have been tested and can be run as-is
 
 [End-to-end data science walkthrough for R and SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
-[Prerequisites for the data science walkthrough](walkthrough-prerequisites-for-data-science-walkthroughs.md)

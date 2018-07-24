@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSdistpublishers system table"
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSdistpublishers (Transact-SQL)
@@ -42,6 +42,8 @@ manager: craigg
 |**trusted**|**bit**|Indicates whether the remote Publisher uses the same password as the local Distributor:<br /><br /> **0** = A password is needed at the remote Publisher to connect to the Distributor.<br /><br /> **1** = No password is needed.|  
 |**third_party**|**bit**|Whether the Publisher is an installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.**1** = Heterogeneous data source.|  
 |**publisher_type**|**sysname**|Publisher type:<br /><br /> **MSSQLSERVER** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.<br /><br /> **ORACLE** = standard Oracle Publisher.<br /><br /> **ORACLE GATEWAY** = Oracle Gateway Publisher.|  
+|**storage_connection_string**|**nvarchar(779)**|Value of Azure SQL Database storage connection string.|  
+
   
 ## See Also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -1,18 +1,14 @@
 ---
 title: Updated - Tools for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Tools for Microsoft SQL Server.
-
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-
-ms.component: tools
 ms.date: 04/28/2018
 ---
 # New and Recently Updated: Tools for SQL Server

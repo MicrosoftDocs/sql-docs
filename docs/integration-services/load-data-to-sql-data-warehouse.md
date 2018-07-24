@@ -5,7 +5,7 @@ documentationcenter: NA
 ms.service: sql-data-warehouse
 ms.component: data-movement
 ms.devlang: NA
-ms.topic: article
+ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018

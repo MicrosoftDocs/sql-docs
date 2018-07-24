@@ -4,12 +4,11 @@ description: Display snippets of updated content for recently changed in documen
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.component: ssma
 ms.date: 04/28/2018
 ---
 # New and Recently Updated: SQL Server Migration Assistant (SSMA)

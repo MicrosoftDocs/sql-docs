@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: linux
 ms.tgt_pltfrm: ""
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 34
 author: "MikeRayMSFT"

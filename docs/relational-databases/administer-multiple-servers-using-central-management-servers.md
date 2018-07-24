@@ -31,7 +31,7 @@ manager: craigg
 ## What is a Central Management Server and server groups?  
  An instance of SQL Server designated as a Central Management Server maintains server groups that contain the connection information for one or more instances. You can execute [!INCLUDE[tsql](../includes/tsql-md.md)] statements and Policy-Based Management policies at the same time against server groups. You can also view the log files on instances managed through a Central Management Server. 
  
- Basically a Central management Server is central repository containing a list of your managed servers. Versions earlier than [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] cannot be designated as a Central Management Server.  
+ Basically, a Central Management Server is a central repository containing a list of your managed servers. Versions earlier than [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] cannot be designated as a Central Management Server.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] statements can also be executed against local server groups in Registered Servers.  
   

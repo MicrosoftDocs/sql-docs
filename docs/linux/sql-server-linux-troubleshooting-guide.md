@@ -5,7 +5,7 @@ author: annashres
 ms.author: anshrest 
 manager: craigg
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
@@ -187,6 +187,14 @@ As a last resort, you can choose to rebuild the master and model databases back 
    ```bash
    sudo systemctl start mssql-server
    ```
+
+## Improve performance
+
+There are many factors that affect performance, including database design, hardware, and workload demands. If you are looking to improve performance, start by reviewing the best practices in the article, [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md). Then explore some of the avilable tools for troubleshooting performance problems.
+
+- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [System dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Performance Dashboard in SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
 
 ## Common issues
 

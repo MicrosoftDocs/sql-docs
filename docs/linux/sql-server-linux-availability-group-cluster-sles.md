@@ -235,9 +235,9 @@ Refer to [SLES Administration Guid](https://www.suse.com/documentation/sle-ha-12
 
 ## Enable Pacemaker
 
-From one node in the cluster, enable Pacemaker so that it can automatically start.
+Enable Pacemaker so that it automatically starts.
 
-Run the following command.
+Run the following command on every node in the cluster.
 
 ```bash
 systemctl enable pacemaker

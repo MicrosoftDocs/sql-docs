@@ -41,7 +41,7 @@ manager: craigg
 - Enable or disable collection of execution statistics for natively compiled T-SQL modules.
 - Enable or disable online by default options for DDL statements that support the ONLINE= syntax.
 - Enable or disable resumable by default options for DDL statements that support the RESUMABLE= syntax.
-- Enable the auto-dropping of global temporary tables 
+- Enable or disable the auto-drop functionality of global temporary tables 
 
 ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -205,7 +205,10 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 **Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
 
-Enables you to set the auto drop for global temporary tables. The default is ON, which  sets the auto drop as it functions today (see [Global Temporary Tables](create-table-transact-sql.md)). When set to OFF, the temporary tables must be manually dropped using DROP TABLE ##TempTable command or will be dropped once the TEMPDB restarts. 
+Allows setting the auto drop functionality for [global temporary tables](create-table-transact-sql.md). The default is ON, which means that the global temporary tables are automatically dropped when not in use by any session. When set to OFF, global temporary tables need to be explicitly dropped using a DROP TABLE statement or will be automatically dropped on server restart. 
+
+- In Azure SQL Database logical server, this option can be set in the individual user databases of the logical server.
+- In SQL Server and Azure SQL Database Managed Instance, this option is set in TEMPDB and the setting of the individual user databases has no effect.
 
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER ANY DATABASE SCOPE CONFIGURATION   

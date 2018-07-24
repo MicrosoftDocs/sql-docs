@@ -109,7 +109,7 @@ Because **table** variables have limited scope and are not part of the persisten
   
 Table variables cannot be altered after creation.
 
-### Table variable deferred compilation
+## Table variable deferred compilation
 **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial plan compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts. This accurate row count information will then be used for optimizing downstream plan operations.
 
 > [!NOTE]

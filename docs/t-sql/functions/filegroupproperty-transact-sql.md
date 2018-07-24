@@ -28,7 +28,7 @@ manager: craigg
 # FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-This function returns the specified filegroup property value for a specified filegroup value and a specified property name value.  
+This function returns the filegroup property value for a specified name  and filegroup value.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,10 +40,10 @@ FILEGROUPPROPERTY ( filegroup_name, property )
   
 ## Arguments  
  *filegroup_name*  
-An expression of type **sysname** representing the filegroup name for which `FILEGROUPPROPERTY` will return the named property information.  
+An expression of type **sysname** that represents the filegroup name for which `FILEGROUPPROPERTY` returns the named property information.  
   
  *property*  
-An expression of type **varchar(128)** holding the name of the filegroup property to return. *property* can have one of these values:  
+An expression of type **varchar(128)** that returns the name of the filegroup property. *Property* can have one of these values:  
   
 |Value|Description|Value returned|  
 |-----------|-----------------|--------------------|  
@@ -55,7 +55,7 @@ An expression of type **varchar(128)** holding the name of the filegroup propert
 **int**  
   
 ## Remarks  
-*filegroup_name* corresponds to the **name** column of the **sys.filegroups** catalog view.  
+*filegroup_name* corresponds to the **name** column from the **sys.filegroups** catalog view.  
   
 ## Examples  
 This example returns the `IsDefault` property setting for the primary filegroup in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  

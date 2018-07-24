@@ -40,9 +40,10 @@ manager: craigg
 - Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time.  
 - Enable or disable collection of execution statistics for natively compiled T-SQL modules.
 - Enable or disable online by default options for DDL statements that support the ONLINE= syntax.
-- Enable or disable resumable by default options for DDL statements that support the RESUMABLE= syntax. 
+- Enable or disable resumable by default options for DDL statements that support the RESUMABLE= syntax.
+- Enable the auto-dropping of global temporary tables 
 
- ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

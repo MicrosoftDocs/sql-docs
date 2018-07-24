@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/142018"
+ms.date: "07/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -67,6 +67,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 }  
 ```  
   
@@ -198,6 +199,12 @@ This value elevates operations that support RESUMABLE. Operations that do not su
 
 > [!NOTE]
 > You can override the default setting by submitting a statement with the RESUMABLE option specified. 
+
+GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+
+**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+
+Enables you to set the auto drop for global temporary tables. The default is ON, which  sets the auto drop as it functions today ( see [Global Temporary Tables](create-table-transact-sql.md) ). When set to OFF, the temporary tables must be manually dropped using DROP TABLE ##TempTable command or will be dropped once the TEMPDB restarts. 
 
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER ANY DATABASE SCOPE CONFIGURATION   

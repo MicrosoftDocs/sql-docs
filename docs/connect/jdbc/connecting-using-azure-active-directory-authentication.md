@@ -91,7 +91,7 @@ public class AADIntegrated {
 }
 ```
 Running this example on a client machine automatically uses your Kerberos ticket and no password is required. If a connection is established, you should see the following message:
-```java
+```
 You have successfully logged on as: <your domain user name>
 ```
 
@@ -200,7 +200,7 @@ public class AADUserPassword {
 }
 ```
 If connection is established, you should see the following message as output:
-```java
+```
 You have successfully logged on as: <your user name>
 ```
 

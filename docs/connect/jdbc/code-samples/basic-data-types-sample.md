@@ -29,7 +29,7 @@ manager: craigg
   
  Create the following table and sample data in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database:  
   
-```  
+```sql
 use AdventureWorks  
 CREATE TABLE DataTypesTable   
    (Col1 int IDENTITY,   

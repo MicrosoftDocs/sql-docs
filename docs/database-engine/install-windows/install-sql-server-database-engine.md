@@ -35,7 +35,7 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
   
 -   Replication - is an optional component  
 
--   [Machine Learning Services (In-Database) with R and Python](../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
+-   [Machine Learning Services (In-Database) with R and Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
 
 -   Full-Text Search - is an optional component  
   

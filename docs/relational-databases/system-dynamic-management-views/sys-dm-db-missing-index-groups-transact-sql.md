@@ -42,6 +42,9 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  Information returned by **sys.dm_db_missing_index_groups** is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling.  
   
  Neither column of the output result set is a key, but together they form an index key.  
+
+  >[!NOTE]
+  >The result set for this DMV is limited to 600 rows. If more than 600 missing indexes exist, these need to be addressed before new missing indexes are visible. 
   
 ## Permissions  
  To query this dynamic management view, users must be granted the VIEW SERVER STATE permission or any permission that implies the VIEW SERVER STATE permission.  

@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2017"
+ms.date: "07/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -65,7 +65,7 @@ For step-by-step instructions, see: Configuring HGS Attestation.pdf
 
 ## Install tools
 
-On the client/development computer:
+Install the following tools on the client/development computer:
 
 1.  Install [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2.  Install [SSMS 18.0 or later](../../../ssms/download-sql-server-management-studio-ssms.md).
@@ -76,16 +76,13 @@ On the client/development computer:
     3.  Open a PowerShell window and execute the following commands:
 
         ```powershell
-        Register-PSRepository -Name LocalRepository -SourceLocation
-                “\<your local folder\>” -PublishLocation “\<your local
-                folder\>”  
-        Install-Module -Repository LocalRepository -Name SqlServer
-                -Force
+        Register-PSRepository -Name LocalRepository -SourceLocation "\<your local folder\>" -PublishLocation "\<your local folder\>"  
+        Install-Module -Repository LocalRepository -Name SqlServer -Force
         ```
 
 4.  Install [Visual Studio (2017 recommended)](https://visualstudio.microsoft.com/downloads/).
 5.  Install [Developer Pack for .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
-6.  Install NuGet packages for application development:
+6.  Install the following NuGet packages:
     
     1. Download Always Encrypted Enclave Providers Pre-Release EULA.rtf and Azure Key Vault Always Encrypted Provider Pre-Release EULA.rtf from MS Collaborate. If you accept the EULAs, proceed to the next step.
     2. Download *microsoft.sqlserver.management.alwaysencrypted.azurekeyvaultprovider.150.16160.0.nupkg* and *microsoft.sqlserver.management.alwaysencrypted.enclaveproviders.150.16160.0.nupkg* save the in a local folder, for example, C:\\LocalRepository.
@@ -196,35 +193,26 @@ On the client/development computer, open Windows PowerShell ISE, copy the follow
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
-
 $cert = New-SelfSignedCertificate -Subject "\<Subject Name\>" -CertStoreLocation Cert:CurrentUser\\My -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage DataEncipherment -KeySpec KeyExchange
 
 # Import the SqlServer module.
-
 Import-Module "SqlServer"
 
 # Connect to your database. Provide the server/db name. Modify the connection string, if needed.
-
 $serverName = "<server name>"
 $databaseName = "<database name>"
 $connStr = "Data Source = " + $serverName + "; Initial Catalog = " + $databaseName + "; Integrated Security = true"
-
 $database = Get-SqlDatabase -ConnectionString $connStr
 
 # Create a SqlColumnMasterKeySettings object for your column master key.
-
 $cmkSettings = New-SqlCertificateStoreColumnMasterKeySettings -CertificateStoreLocation "CurrentUser" -Thumbprint $cert.Thumbprint -AllowEnclaveComputations
 
 # Create column master key metadata in the database.
-
 $cmkName = "<column master key name in the database>"
-
 New-SqlColumnMasterKey -Name $cmkName -InputObject $database -ColumnMasterKeySettings $cmkSettings
 
 # Generate a column encryption key, encrypt it with the column master key and create column encryption key metadata in the database.
-
 $cekName = "<column encryption key name in the database>"
-
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
@@ -240,11 +228,9 @@ This can be also done using Azure portal. For details, see [Manage your key vaul
 
 ```powershell
 Import-Module AzureRM
+Connect-AzureRmAccount
 
-Login-AzureRmAccount
-
-# Provide the below values
-
+# User values
 $SubscriptionId = "<Azure SubscriptionId>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<datacenter location>"
@@ -274,18 +260,15 @@ $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destinatio
 # Import the SqlServer module.
 Import-Module "SqlServer" -Version
 
-# Connect to your database. Provide the server/db name. You can also modify the connection string, if needed.
+# Connect to your database. Provide the server and db name. If needed, modify the connection string.
 $serverName = "<server name>"
 $databaseName = "<database name>"
-$connStr = "Data Source = " + $serverName + "; Initial Catalog = " +
-$databaseName + "; Integrated Security = true"
+$connStr = "Data Source = " + $serverName + "; Initial Catalog = " + $databaseName + "; Integrated Security = true"
 $database = Get-SqlDatabase -ConnectionString $connStr
 
-# Authenticate to Azure
-# Note: authentication needs to be done before New-SqlAzureKeyVaultColumnMasterKeySettings,
-# because -AllowEnclaveComputations will cause New-SqlAzureKeyVaultColumnMasterKeySettings 
-# to call Azure Key Vault to generate the signature of the column master key.
-
+# Authenticate to Azure before calling New-SqlAzureKeyVaultColumnMasterKeySettings,
+# because -AllowEnclaveComputations causes a call to Azure Key Vault
+# to generate the signature of the column master key.
 Add-SqlAzureAuthenticationContext -Interactive
 
 # Create a SqlColumnMasterKeySettings object for your column master key.

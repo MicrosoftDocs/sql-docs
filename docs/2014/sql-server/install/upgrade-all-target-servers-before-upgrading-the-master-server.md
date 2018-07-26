@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "master servers [SQL Server Agent]"
 ms.assetid: 2c231793-3878-4a5e-a425-1fa0d787ba84
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade all target servers before upgrading the master server

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.designer.odbcsource.errorhandling.f1"
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # ODBC Source Editor (Error Output Page)

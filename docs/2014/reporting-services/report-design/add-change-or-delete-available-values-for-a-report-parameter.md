@@ -15,9 +15,9 @@ f1_keywords:
   - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 caps.latest.revision: 10
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Add, Change, or Delete Available Values for a Report Parameter (Report Builder and SSRS)
   After you create a report parameter, you can specify a list of available values to display to the user. An available values list limits the choices a user can make to only valid values for the parameter.  

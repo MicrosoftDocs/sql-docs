@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Unpivot Transformation Editor"
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Unpivot Transformation Editor

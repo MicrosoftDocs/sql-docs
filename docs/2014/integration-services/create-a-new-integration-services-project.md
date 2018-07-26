@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SSIS projects, creating"
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Create a New Integration Services Project

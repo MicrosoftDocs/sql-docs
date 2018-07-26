@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MembersWithData element"
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MembersWithData Element (ASSL)
   Determines whether to display data members for non-leaf members in the parent attribute.  

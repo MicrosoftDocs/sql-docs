@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Script Transformation Editor"
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Script Transformation Editor (Input Columns Page)

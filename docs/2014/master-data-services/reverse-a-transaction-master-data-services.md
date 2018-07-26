@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "transactions [Master Data Services], reversing"
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Reverse a Transaction (Master Data Services)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "About dialog box"
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # About Dialog Box

@@ -16,8 +16,8 @@ f1_keywords:
   - "sql12.dts.configwizard.welcome.f1"
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Package Configuration Wizard UI Reference

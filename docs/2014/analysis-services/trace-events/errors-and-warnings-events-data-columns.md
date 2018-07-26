@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "Errors and Warnings event category [SQL Server]"
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Errors and Warnings Events Data Columns
   The Security Audit event category has the following event class:  

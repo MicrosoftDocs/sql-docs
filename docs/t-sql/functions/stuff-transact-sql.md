@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "inserting data"
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Perspective element"
 ms.assetid: 0442334c-8b00-4451-ad81-02e58c735e8f
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Perspective Element (ASSL)
   Defines details for a perspective of a [Cube](cube-element-assl.md) element.  

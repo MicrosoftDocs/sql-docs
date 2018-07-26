@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Multidimensional Model Programming
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several APIs that you can use to program against an Analysis Services instance and the multidimensional databases that it makes available. This section describes the approaches available to developers who want to create custom applications using Analysis Services multidimensional solutions. You can use this information to choose the programming interface that best meets the requirements of a particular project. Analysis Services development projects can be based on managed or non-managed code that runs on a Windows platform, or other platforms that support HTTP access.  

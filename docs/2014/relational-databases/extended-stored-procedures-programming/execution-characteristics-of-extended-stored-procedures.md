@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "executing extended stored procedures [SQL Server]"
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Execution Characteristics of Extended Stored Procedures
@@ -46,13 +46,13 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## Parameters  
- @ *retval*  
+ \@ *retval*  
  Is a return value.  
   
- @ *param1*  
+ \@ *param1*  
  Is an input parameter.  
   
- @ *param2*  
+ \@ *param2*  
  Is an input/output parameter.  
   
 > [!CAUTION]  

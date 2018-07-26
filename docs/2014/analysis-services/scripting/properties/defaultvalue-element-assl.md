@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DefaultValue element"
 ms.assetid: 87e964a3-f317-46c3-98c7-b3621765c77b
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DefaultValue Element (ASSL)
   Contains the read-only default value of the associated [ServerProperty](../objects/serverproperty-element-assl.md) element.  

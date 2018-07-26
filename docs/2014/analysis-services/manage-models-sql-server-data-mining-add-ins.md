@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "mining models, exporting"
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Manage Models (SQL Server Data Mining Add-ins)
   ![Manage Models button, Data Mining ribbon](media/dmc-manage.gif "Manage Models button, Data Mining ribbon")  

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "LogFileSize element"
 ms.assetid: d2135e68-57a9-4144-8403-9627041f2a58
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # LogFileSize Element (ASSL)
   Specifies the maximum log file size, in megabytes.  

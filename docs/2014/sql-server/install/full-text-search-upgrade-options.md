@@ -14,8 +14,8 @@ f1_keywords:
   - "Upgrade options, Full-Text Search"
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full-Text Search Upgrade Options

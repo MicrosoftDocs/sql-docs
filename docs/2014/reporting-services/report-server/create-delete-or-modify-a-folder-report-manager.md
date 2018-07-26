@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "folders [Reporting Services], modifying"
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 48
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Create, Delete, or Modify a Folder (Report Manager)
   You can create folders to organize and manage the items you publish to a report server. Creating folders can help users find reports of interest to them. For content managers, folders provide a framework for applying permissions. You can create role assignments on specific folders to restrict access to reports that are in development or that should not be widely distributed.  
@@ -33,7 +33,7 @@ manager: "mblythe"
   
      The **New Folder** page opens.  
   
-3.  Type a folder name. A folder name can include spaces, but cannot include reserved characters that are used for URL encoding: ; ? : @ & = + , $ / * \< > |. You cannot type a series of folder names to create several folders at once.  
+3.  Type a folder name. A folder name can include spaces, but cannot include reserved characters that are used for URL encoding: ; ? : \@ & = + , $ / * \< > |. You cannot type a series of folder names to create several folders at once.  
   
 4.  Optionally type a description.  
   

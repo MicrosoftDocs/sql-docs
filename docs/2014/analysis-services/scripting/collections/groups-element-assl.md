@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Groups element"
 ms.assetid: 62196435-83a8-4a0a-8be1-7dfc986dc6c5
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Groups Element (ASSL)
   Contains the collection of groups of members bound to an attribute.  

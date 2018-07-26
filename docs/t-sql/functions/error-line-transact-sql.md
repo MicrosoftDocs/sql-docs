@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "CATCH block"
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ERROR_LINE (Transact-SQL)

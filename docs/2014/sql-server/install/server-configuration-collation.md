@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "collation configuration"
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Server Configuration - Collation

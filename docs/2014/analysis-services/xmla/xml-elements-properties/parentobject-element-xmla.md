@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "ParentObject element"
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
 caps.latest.revision: 16
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ParentObject Element (XMLA)
   Contains the identifier of the parent object under which to create the objects defined by the parent [Create](../xml-elements-commands/create-element-xmla.md) element.  

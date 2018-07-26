@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Select a Column dialog box"
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select a Column Dialog Box (Mining Structure View)
   Use the **Select a Column** dialog box to add columns to the mining structure. The dialog contains different options depending on whether you are working with an OLAP mining model or a relational mining model.  

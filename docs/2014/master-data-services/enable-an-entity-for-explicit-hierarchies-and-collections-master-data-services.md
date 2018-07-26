@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "entities [Master Data Services], enabling for explicit hierarchies"
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Enable an Entity for Explicit Hierarchies and Collections (Master Data Services)

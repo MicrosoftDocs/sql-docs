@@ -14,9 +14,9 @@ f1_keywords:
   - "10130"
 ms.assetid: 03584db6-9bc0-4866-9f6d-18895322ea87
 caps.latest.revision: 9
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Cube Selection Dialog Box
   Use the **Cube Selection** dialog box to select a different cube as a data source for your report. By selecting a different cube, your query may no longer be valid.  

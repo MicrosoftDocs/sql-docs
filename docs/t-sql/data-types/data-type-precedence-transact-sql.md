@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "precedence [SQL Server], data types"
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Data type precedence (Transact-SQL)

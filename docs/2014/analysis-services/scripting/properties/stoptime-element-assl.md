@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "StopTime element"
 ms.assetid: 6f863d53-033b-46e0-9837-e891e739b4b0
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # StopTime Element (ASSL)
   Specifies the date and time at which a [Trace](../objects/trace-element-assl.md) element should stop.  

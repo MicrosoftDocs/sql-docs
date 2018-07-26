@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "dimensions [Analysis Services], XML for Analysis"
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Inserting, Updating, and Dropping Members (XMLA)
   You can use the [Insert](../xmla/xml-elements-commands/insert-element-xmla.md), [Update](../xmla/xml-elements-commands/update-element-xmla.md), and [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) commands in XML for Analysis (XMLA) to respectively insert, update, or delete members from a write-enabled dimension. For more information about write-enabled dimensions, see [Write-Enabled Dimensions](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "event classes [SQL Server], TSQL event category"
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # TSQL Event Category

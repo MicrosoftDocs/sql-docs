@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "locales [Integration Services]"
 ms.assetid: dfe835b1-ea52-4e18-a23a-5188c5b6f013
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Standard Parse

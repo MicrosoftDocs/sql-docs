@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "data types [SQL Server], date and time"
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -37,7 +37,7 @@ Defines a date in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Property|Value|  
 |--------------|-----------|  
 |Syntax|**date**|  
-|Usage|DECLARE @MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|Usage|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Default string literal format<br /><br /> (used for down-level client)|YYYY-MM-DD<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows.|  
 |Range|0001-01-01 through 9999-12-31 (1582-10-15 through 9999-12-31 for Informatica)<br /><br /> January 1, 1 CE through December 31, 9999 CE (October 15, 1582 CE through December 31, 9999 CE for Informatica)|  
 |Element ranges|YYYY is four digits from 0001 to 9999 that represent a year. For Informatica, YYYY is limited to the range 1582 to 9999.<br /><br /> MM is two digits from 01 to 12 that represent a month in the specified year.<br /><br /> DD is two digits from 01 to 31, depending on the month, that represent a day of the specified month.|  

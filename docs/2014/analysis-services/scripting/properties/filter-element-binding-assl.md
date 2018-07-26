@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Filter element"
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Filter Element (Binding) (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that filters the contents of the parent element.  

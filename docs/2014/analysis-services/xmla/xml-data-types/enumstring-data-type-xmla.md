@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "EnumString data type"
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # EnumString Data Type (XMLA)
   Defines a derived data type that represents a set of named constants for a given enumerator.  

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DISCOVER_SCHEMA_ROWSETS rowset"
 ms.assetid: e5012aa0-6ef8-497f-96c1-2772e2394f62
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_SCHEMA_ROWSETS Rowset
   Returns the names, restrictions, description, and other information for all enumeration values and any additional provider-specific enumeration values supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider.  

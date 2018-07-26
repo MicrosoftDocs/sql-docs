@@ -3,12 +3,9 @@ title: "Create DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-dml"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "testing column changes"
   - "results [SQL Server], DML triggers"
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

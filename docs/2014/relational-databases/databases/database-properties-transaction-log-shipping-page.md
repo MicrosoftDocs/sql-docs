@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.databaseproperties.logshipping.f1"
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Properties (Transaction Log Shipping Page)

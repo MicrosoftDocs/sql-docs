@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "peer-to-peer transactional replication"
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Peer-to-Peer Transactional Replication

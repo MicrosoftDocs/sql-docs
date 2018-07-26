@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ClassifiedColumns element"
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ClassifiedColumns Element (ASSL)
   Contains the collection of related columns that are classified by the [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) element.  

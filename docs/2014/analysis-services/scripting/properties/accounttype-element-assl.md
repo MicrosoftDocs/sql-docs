@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "AccountType element"
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # AccountType Element (ASSL)
   Contains the name of an account type defined in a [Database](../objects/database-element-assl.md) element.  

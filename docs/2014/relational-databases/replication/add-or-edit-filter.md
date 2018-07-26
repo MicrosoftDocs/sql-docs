@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.rep.newpubwizard.addeditfilter.f1"
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add or Edit Filter

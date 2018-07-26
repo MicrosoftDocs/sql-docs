@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "checking out files"
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Manage Checkouts

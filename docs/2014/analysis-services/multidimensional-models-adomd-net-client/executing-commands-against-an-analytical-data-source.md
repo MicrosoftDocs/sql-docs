@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "ADOMD.NET, commands"
 ms.assetid: 1a958e5f-fc18-480b-9706-fc44e3b1d534
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Executing Commands Against an Analytical Data Source
   After establishing a connection to an analytical data source, you can use an <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> object to run commands against and return results from that data source. These commands can retrieve data by using Multidimensional Expressions (MDX), Data Mining Extensions (DMX), or even a limited syntax of SQL. Additionally, you can use Analysis Services Scripting Language (ASSL) commands to modify the underlying database.  

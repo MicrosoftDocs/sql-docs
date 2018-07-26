@@ -13,8 +13,8 @@ dev_langs:
   - "TSQL"
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

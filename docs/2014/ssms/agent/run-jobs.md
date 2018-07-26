@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "manual job processing [SQL Server]"
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Run Jobs

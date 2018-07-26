@@ -5,7 +5,7 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 04/06/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
@@ -79,6 +79,8 @@ You can install SQL Server on Linux from the command line. For instructions, see
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a id="upgrade"></a> Update SQL Server
 
@@ -196,6 +198,10 @@ If your Linux machine does not have access to the online repositories used in th
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
+## Licensing and pricing
+
+SQL Server is licensed the same for Linux and Windows. For more information about SQL Server licensing and pricing, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
 ## Optional SQL Server features
 
 After installation, you can also install or enable optional SQL Server features.
@@ -203,7 +209,7 @@ After installation, you can also install or enable optional SQL Server features.
 - [SQL Server command-line tools](sql-server-linux-setup-tools.md)
 - [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 - [SQL Server Full Text Search](sql-server-linux-setup-full-text-search.md)
-- [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
+- [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2119b7ba-2e52-44bf-ac57-82c2d46a48ff
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Changes to behavior of string-length and substring

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Security element"
 ms.assetid: 0b601f69-d16d-4d10-9361-b8afaa6ed357
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Security Element (XMLA)
   Specifies how to back up or restore security definitions, such as roles and permissions, during a [Backup](../xml-elements-commands/backup-element-xmla.md) or [Restore](../xml-elements-commands/restore-element-xmla.md) command.  

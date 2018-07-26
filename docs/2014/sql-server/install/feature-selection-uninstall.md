@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 33fa3b75-3257-44e1-919e-3d2ff12accbc
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Feature Selection (Uninstall)

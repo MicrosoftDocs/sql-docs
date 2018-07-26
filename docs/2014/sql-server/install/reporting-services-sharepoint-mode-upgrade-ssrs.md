@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Upgrade SharePoint Mode [Reporting Services]"
 ms.assetid: 5f73fb9d-86bb-4d9e-8a8e-37b59d735df3
 caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Reporting Services SharePoint Mode Upgrade (SSRS)

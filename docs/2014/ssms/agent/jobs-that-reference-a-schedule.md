@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Jobs Referencing a Schedule dialog box"
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Jobs That Reference a Schedule

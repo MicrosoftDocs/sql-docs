@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DefaultMeasure element"
 ms.assetid: ceac8b3d-ebae-463f-9e8c-506281d42792
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DefaultMeasure Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that defines the default measure for a [Cube](../objects/cube-element-assl.md) or [Perspective](../objects/perspective-element-assl.md) element.  

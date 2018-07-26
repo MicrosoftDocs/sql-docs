@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,8 +16,8 @@ helpviewer_keywords:
   - "queries [CLR integration]"
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Working with User-Defined Types in SQL Server

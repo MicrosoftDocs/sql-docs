@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "reports [Upgrade Advisor], viewing"
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # How to: View an Upgrade Advisor Report

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "numeric data type, about numeric data type"
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server Agent]"
 ms.assetid: cd2d08c3-4e56-4034-8b68-0c78df8b5471
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrading will change the SQL Server Agent User Proxy Account to the temporary UpgradedProxyAccount

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Boolean functions"
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Specifying Boolean Functions in XPath Queries (SQLXML 4.0)

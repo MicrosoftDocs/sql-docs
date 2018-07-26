@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Merge Transformation Editor"
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Merge Transformation Editor

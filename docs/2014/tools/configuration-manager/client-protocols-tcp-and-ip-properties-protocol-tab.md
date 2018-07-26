@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "client protocols [SQL Server]"
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 caps.latest.revision: 24
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Client Protocols - TCP and IP Properties (Protocol Tab)

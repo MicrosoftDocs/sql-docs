@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "multiserver environments [SQL Server]"
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Multiserver Environment

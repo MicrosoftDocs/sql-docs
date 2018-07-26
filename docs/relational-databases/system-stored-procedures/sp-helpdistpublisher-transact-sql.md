@@ -61,6 +61,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**thirdparty_flag**|**bit**|Whether the publication is enabled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or by a third party application:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, or Oracle Gateway Publisher.<br /><br /> **1** = Publisher has been integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using a third-party application.|  
 |**publisher_type**|**sysname**|Type of Publisher; can be one of the following:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|Name of the OLE DB data source on the Publisher.|  
+|**storage_connection_string**|**nvarchar(4000)**|Storage access key for working directory when distributor or publisher in Azure SQL Database.|  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

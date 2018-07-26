@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DimensionID element"
 ms.assetid: 00262781-4216-4a19-8bdc-d46647f42165
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DimensionID Element (ASSL)
   Contains the identifier (ID) of the dimension.  

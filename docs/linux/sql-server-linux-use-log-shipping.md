@@ -5,7 +5,7 @@ author: meet-bhagdev
 ms.author: meetb 
 manager: craigg
 ms.date: 04/19/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
@@ -29,7 +29,7 @@ As described in the this picture, a log shipping session involves the following 
 - Restoring the transaction log backup file on the secondary SQL Server instances
 
 ## Prerequisites
-- [Install SQL Server Agent on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
+- [Install SQL Server Agent on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## Setup a network share for Log Shipping using CIFS 
 

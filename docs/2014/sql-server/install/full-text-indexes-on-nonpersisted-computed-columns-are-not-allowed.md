@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "full-text indexes"
 ms.assetid: cba737f7-b187-47d0-8458-23dc18d18aca
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Full-text indexes on nonpersisted, computed columns are not allowed

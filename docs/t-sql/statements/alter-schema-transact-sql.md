@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "modifying schemas"
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "Command Events event category"
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Command Events Data Columns
   The following table lists the data columns for each event class in the **Command Events** event category.  

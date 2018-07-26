@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "DataSourceType element"
 ms.assetid: f5a348b1-911b-4139-832e-4bcb6d80a728
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSourceType Element (XMLA)
   Indicates whether a [Location](location-element-xmla.md) element specified for a [Restore](../xml-elements-commands/restore-element-xmla.md) or [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) command is local or remote.  

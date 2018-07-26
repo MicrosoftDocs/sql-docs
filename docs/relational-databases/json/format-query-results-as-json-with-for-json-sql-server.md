@@ -3,12 +3,9 @@ title: "Format Query Results as JSON with FOR JSON (SQL Server) | Microsoft Docs
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "JSON, exporting"
   - "exporting JSON"
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
-caps.latest.revision: 31
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], multiuser environments"
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Multiuser Environments (Visual Database Tools)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "IS_OBJECTSIGNED function"
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # IS_OBJECTSIGNED (Transact-SQL)

@@ -5,17 +5,15 @@ ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fast forward-only cursors"
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Obtain a FAST_FORWARD Cursor

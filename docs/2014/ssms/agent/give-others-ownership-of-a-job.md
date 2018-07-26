@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, owners"
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Give Others Ownership of a Job

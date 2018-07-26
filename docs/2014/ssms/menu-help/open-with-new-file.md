@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Open With dialog box"
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Open With (New File)

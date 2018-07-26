@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DataSourceView element"
 ms.assetid: cda26126-8af2-4519-8237-f4a57976a284
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DataSourceView Element (ASSL)
   Defines a data source view used by a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [Database](database-element-assl.md) element.  

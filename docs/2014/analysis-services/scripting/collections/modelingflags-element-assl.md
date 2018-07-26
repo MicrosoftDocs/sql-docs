@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ModelingFlags element"
 ms.assetid: 83968c1e-aae8-4657-aa53-d971de0dc834
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ModelingFlags Element (ASSL)
   Contains the collection of [ModelingFlag](../objects/modelingflag-element-assl.md) elements for a column in a [MiningStructure](../objects/miningstructure-element-assl.md) or a [MiningModel](../objects/miningmodel-element-assl.md).  

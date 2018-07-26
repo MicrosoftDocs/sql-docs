@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Alter command"
 ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
 caps.latest.revision: 14
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Alter Element (XMLA)
   Contains Analysis Services Scripting Language (ASSL) elements used by the [Execute](../xml-elements-methods-execute.md) method to alter objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

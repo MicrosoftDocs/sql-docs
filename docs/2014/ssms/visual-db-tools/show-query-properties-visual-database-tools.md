@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "queries [SQL Server], properties"
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Show Query Properties (Visual Database Tools)

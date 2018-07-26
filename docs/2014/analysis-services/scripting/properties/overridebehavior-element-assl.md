@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "OverrideBehavior element"
 ms.assetid: 6a5b361a-6061-4b73-b1a7-1237fb77606c
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # OverrideBehavior Element (ASSL)
   Indicates the override behavior of the relationship described by an [AttributeRelationship](../objects/attributerelationship-element-assl.md) element.  

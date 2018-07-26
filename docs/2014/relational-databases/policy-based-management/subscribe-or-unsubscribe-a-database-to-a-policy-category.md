@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.dmf.groupsubscription.f1"
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Subscribe or Unsubscribe a Database  to a Policy Category

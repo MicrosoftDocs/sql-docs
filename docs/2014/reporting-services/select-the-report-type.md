@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.rtp.rptwizard.selectreporttype.f1"
 ms.assetid: 725bf110-31a9-4220-afaa-c56c0a39d458
 caps.latest.revision: 23
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Select the Report Type
   Use this page of the Report Wizard to select either a tabular report or a matrix report.  

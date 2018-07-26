@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Enlist a Target Server to a Master Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -57,7 +57,7 @@ Full Secure Sockets Layer (SSL) encryption and certificate validation is enabled
   
 #### To enlist a target server  
   
-1.  Use the **sp_msx_enlist** stored procedure.  For more information, see [sp_msx_enlist (Transact-SQL)](http://msdn.microsoft.com/en-us/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)  
+1.  Use the **sp_msx_enlist** stored procedure.  For more information, see [sp_msx_enlist (Transact-SQL)](http://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)  
   
 ## See Also  
 [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  

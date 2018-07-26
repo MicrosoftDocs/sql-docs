@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Script Transformation Editor"
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Script Transformation Editor (Script Page)

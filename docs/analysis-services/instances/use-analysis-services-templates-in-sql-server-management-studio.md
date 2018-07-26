@@ -42,7 +42,7 @@ manager: kfile
  This example shows you how to create an MDX query in SQL Server Management Studio, using a tabular model database as the data source. To repeat this example on your computer, you can [download the Adventureworks tabular model sample project](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  You cannot use MDX queries against tabular models that have been deployed in Direct Query mode. You can, however, send equivalent queries by using the DAX table queries with the EVALUATE command. For more information, see [DAX Query Parameters](http://msdn.microsoft.com/en-us/c5841b4e-3395-4237-815b-9822a691e544).  
+>  You cannot use MDX queries against tabular models that have been deployed in Direct Query mode. You can, however, send equivalent queries by using the DAX table queries with the EVALUATE command. For more information, see [DAX Query Parameters](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544).  
   
 #### Create an MDX query from a template  
   

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "RADIANS function"
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

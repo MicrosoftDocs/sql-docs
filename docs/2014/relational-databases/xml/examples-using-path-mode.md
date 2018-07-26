@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "PATH FOR XML mode, examples"
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Examples: Using PATH Mode
@@ -120,7 +120,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## Specifying XPath-like column names  
- In the following query the `ProductModelID` column name specified starts with '@' and does not contain a slash mark ('/'). Therefore, an attribute of the <`row`> element that has the corresponding column value is created in the resulting XML.  
+ In the following query the `ProductModelID` column name specified starts with '\@' and does not contain a slash mark ('/'). Therefore, an attribute of the <`row`> element that has the corresponding column value is created in the resulting XML.  
   
 ```  
 USE AdventureWorks2012;  

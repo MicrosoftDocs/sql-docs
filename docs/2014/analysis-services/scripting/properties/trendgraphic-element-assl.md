@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "TrendGraphic element"
 ms.assetid: 7448fd80-3072-4d85-b3a0-6606d1d20885
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # TrendGraphic Element (ASSL)
   Contains the recommended graphical representation of the trend of the [Kpi](../objects/kpi-element-assl.md) element.  

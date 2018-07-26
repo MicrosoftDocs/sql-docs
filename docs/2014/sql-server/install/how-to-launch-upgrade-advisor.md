@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Upgrade Advisor [SQL Server], launching"
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # How to: Launch Upgrade Advisor

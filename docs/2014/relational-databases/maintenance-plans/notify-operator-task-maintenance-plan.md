@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Notify Operator Task dialog box"
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Notify Operator Task (Maintenance Plan)

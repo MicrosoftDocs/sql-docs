@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.technology: search
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -14,8 +13,8 @@ f1_keywords:
   - "sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1"
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full-Text Stoplist Properties

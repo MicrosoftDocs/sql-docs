@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Add SSIS Connection Manager"
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add SSIS Connection Manager

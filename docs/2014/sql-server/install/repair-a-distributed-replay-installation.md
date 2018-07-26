@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6fcd8ca8-1ceb-457d-9545-096c74e274d7
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Repair a Distributed Replay Installation

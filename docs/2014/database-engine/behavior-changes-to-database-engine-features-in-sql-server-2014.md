@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transact-SQL behavior changes"
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 caps.latest.revision: 134
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Behavior Changes to Database Engine Features in SQL Server 2014

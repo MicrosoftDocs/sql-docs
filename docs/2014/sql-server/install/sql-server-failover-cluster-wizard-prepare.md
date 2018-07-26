@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c446730a-cc71-4aaa-b142-99fd004ffb1a
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Failover Cluster Wizard - Prepare

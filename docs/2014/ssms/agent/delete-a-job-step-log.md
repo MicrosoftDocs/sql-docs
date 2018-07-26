@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "removing job step logs"
 ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete a Job Step Log

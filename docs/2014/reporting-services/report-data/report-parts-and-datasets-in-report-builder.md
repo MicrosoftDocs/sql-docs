@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Report Parts and Datasets in Report Builder
   In Report Builder, the easiest way to include data in a report is to add report parts from the Report Part Gallery. Report parts contain the datasets that they depend on, which are known as *dependent datasets*. Dependent datasets are based on shared data sources and can be either embedded datasets or shared datasets.  

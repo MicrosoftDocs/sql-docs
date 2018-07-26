@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, properties"
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # View Package Objects

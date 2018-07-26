@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "hierarchies [Analysis Services Scripting Language]"
 ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Analysis Services Scripting Language XML Element Hierarchy (ASSL)
   The following table displays the hierarchy of objects in the Analysis Services Scripting Language (ASSL).  

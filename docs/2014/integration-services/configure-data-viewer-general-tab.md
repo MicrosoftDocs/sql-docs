@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Configure Data Viewer dialog box"
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Configure Data Viewer (General Tab)

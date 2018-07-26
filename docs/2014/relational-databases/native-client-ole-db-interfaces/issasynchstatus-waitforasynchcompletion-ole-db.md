@@ -5,9 +5,7 @@ ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
@@ -18,8 +16,8 @@ helpviewer_keywords:
   - "WaitForAsynchCompletion method"
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)

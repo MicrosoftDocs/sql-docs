@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Select Language dialog box"
 ms.assetid: a85a106f-ff47-4b9e-ac62-4942e214df3b
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Language Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Select Language** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to select a language for a new translation. You can display the **Select Language** dialog box by:  

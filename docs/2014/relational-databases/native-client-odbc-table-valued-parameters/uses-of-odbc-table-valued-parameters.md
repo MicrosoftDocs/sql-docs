@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -15,8 +13,8 @@ helpviewer_keywords:
   - "ODBC, table-valued parameters"
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Uses of ODBC Table-Valued Parameters

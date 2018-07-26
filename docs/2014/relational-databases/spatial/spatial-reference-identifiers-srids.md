@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SRID"
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Spatial Reference Identifiers (SRIDs)

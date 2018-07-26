@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 

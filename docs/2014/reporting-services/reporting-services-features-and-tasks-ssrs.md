@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "development [Reporting Services]"
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 caps.latest.revision: 39
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Reporting Services Features and Tasks (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foundational content is organized by reports and report features, report server features, and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] product features.  

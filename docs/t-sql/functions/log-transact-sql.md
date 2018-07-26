@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "LOG function"
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

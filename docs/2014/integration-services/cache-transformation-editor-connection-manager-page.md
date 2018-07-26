@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.cachetranscon.f1"
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Cache Transformation Editor (Connection Manager Page)

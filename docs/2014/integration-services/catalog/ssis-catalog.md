@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # SSIS Catalog
@@ -58,7 +58,7 @@ manager: craigg
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   
@@ -76,7 +76,7 @@ manager: craigg
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   

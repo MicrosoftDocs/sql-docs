@@ -36,8 +36,8 @@ helpviewer_keywords:
   - "analyzing system [Upgrade Advisor], reports"
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Using Reports

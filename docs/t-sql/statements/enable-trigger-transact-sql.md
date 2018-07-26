@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "ENABLE TRIGGER statement"
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ENABLE TRIGGER (Transact-SQL)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Configuration Manager, help"
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # SQL Server Configuration Manager Help

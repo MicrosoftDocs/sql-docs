@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MeasureQualification element"
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MeasureQualificaton Element (ASSL)
   Determines whether a prefix is applied to measures in the [MeasureGroup](../objects/group-element-assl.md).  

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "For Each Item Columns dialog box"
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # For Each Item Columns Dialog Box UI Reference

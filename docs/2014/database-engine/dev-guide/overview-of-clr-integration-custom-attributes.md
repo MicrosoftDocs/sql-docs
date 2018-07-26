@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "building database objects [CLR integration], custom attributes"
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Overview of CLR Integration Custom Attributes

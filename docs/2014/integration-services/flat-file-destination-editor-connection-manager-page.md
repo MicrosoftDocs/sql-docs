@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Flat File Destination Editor"
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Flat File Destination Editor (Connection Manager Page)

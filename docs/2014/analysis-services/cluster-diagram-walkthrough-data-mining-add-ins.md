@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "data mining layout toolbar"
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cluster Diagram Walkthrough (Data Mining Add-ins)
   After you have created a clustering model, you can import it into Visio using the **Cluster** shape and then continue to customize and enhance the layout. The **Data Mining Shapes for Visio** include the following custom controls for working with data mining diagrams:  

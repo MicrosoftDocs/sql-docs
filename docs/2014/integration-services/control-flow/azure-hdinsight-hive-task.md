@@ -14,8 +14,8 @@ f1_keywords:
   - "sql11.dts.designer.afphivetask.f1"
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Azure HDInsight Hive Task

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ReferenceMeasureGroupDimension data type"
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ReferenceMeasureGroupDimension Data Type (ASSL)
   Defines a derived data type that represents a dimension that is indirectly related to the fact table through an intermediate dimension. (For example, a Sales measure group can reference a Geography dimension, which is related through the Customer dimension.)  

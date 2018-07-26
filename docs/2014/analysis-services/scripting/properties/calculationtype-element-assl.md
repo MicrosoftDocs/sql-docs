@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CalculationType element"
 ms.assetid: b974b3d3-fbf7-4d77-8f6e-4e05a258fe84
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # CalculationType Element (ASSL)
   Describes the type of calculation defined in the associated [CalculationProperty](../objects/calculationproperty-element-assl.md) element.  

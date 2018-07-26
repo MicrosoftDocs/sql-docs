@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "file names [SQL Server], FILEPROPERTY"
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # FILEPROPERTY (Transact-SQL)

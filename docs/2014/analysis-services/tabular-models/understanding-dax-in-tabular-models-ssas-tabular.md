@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Understanding DAX in Tabular Models (SSAS Tabular)
   Data Analysis Expressions (DAX) is the formula language used to create custom calculations in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel workbooks and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model projects. DAX formulas include functions, operators, and values to perform advanced calculations on data in tables and columns.  

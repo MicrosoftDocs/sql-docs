@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "user IDs [SQL Server]"
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_enumgroups"
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # xp_enumgroups (Transact-SQL)

@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "SQLGetDescField function"
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLGetDescField

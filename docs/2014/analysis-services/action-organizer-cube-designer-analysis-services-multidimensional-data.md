@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.asvs.cubeeditor.actionsview.organizerpane.f1"
 ms.assetid: 147b4622-e9fa-4537-9dbb-9e595c0f55bc
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Action Organizer (Actions Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Action Organizer** pane on the **Actions** tab in Cube Designer to access the actions contained in the specified cube.  

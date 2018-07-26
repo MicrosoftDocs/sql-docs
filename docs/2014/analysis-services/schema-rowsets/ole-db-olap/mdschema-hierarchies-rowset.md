@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MDSCHEMA_HIERARCHIES rowset"
 ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MDSCHEMA_HIERARCHIES Rowset
   Describes each hierarchy within a particular dimension.  

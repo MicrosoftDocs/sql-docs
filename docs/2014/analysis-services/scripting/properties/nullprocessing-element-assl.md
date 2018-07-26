@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "NullProcessing element"
 ms.assetid: 697be5c6-e9a6-4f74-9ff4-5f31400c2178
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # NullProcessing Element (ASSL)
   Defines how null values are processed.  

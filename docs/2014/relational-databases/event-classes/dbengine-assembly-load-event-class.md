@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 topic_type: 
   - "apiref"
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mikeraymsft
+ms.author: mikeray
 manager: craigg
 ---
 # Assembly Load Event Class

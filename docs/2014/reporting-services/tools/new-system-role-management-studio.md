@@ -13,9 +13,9 @@ f1_keywords:
   - "sql12.swb.reportserver.newsystemrole.f1"
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 caps.latest.revision: 27
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # New System Role (Management Studio)
   Use this page to create a system-level role definition. A system role definition specifies a set of system-level tasks that apply to a report server as whole.  
@@ -27,7 +27,7 @@ manager: "mblythe"
  **Name**  
  Type the name of the role definition. A role definition name must be unique within the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the following characters when specifying a name:  
   
- ; ? : @ & = + , $ / * \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

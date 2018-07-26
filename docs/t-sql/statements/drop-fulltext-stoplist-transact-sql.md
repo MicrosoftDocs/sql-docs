@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "stopwords [full-text search]"
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP FULLTEXT STOPLIST (Transact-SQL)

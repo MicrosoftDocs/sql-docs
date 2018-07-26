@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MemberUniqueNameStyle element"
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MemberUniqueNameStyle Element (ASSL)
   Determines how unique names are generated for members of hierarchies contained within the [CubeDimension](../data-type/dimension-data-type-assl.md) element.  

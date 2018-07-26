@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "customer service [SQL Server]"
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Accessibility for People with Disabilities

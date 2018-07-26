@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "nested triggers option"
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure the nested triggers Server Configuration Option

@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Data Mining Model Designer"
 ms.assetid: a7ad4cef-4567-4b84-8b70-0bd81e7b2e1e
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Model Designer (Analysis Services - Data Mining)
   This section contains the F1 Help topics for the Data Mining Model Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. You will use this design space to create, manage, and work with data mining models.  

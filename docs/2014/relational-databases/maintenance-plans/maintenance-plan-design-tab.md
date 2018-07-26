@@ -15,8 +15,8 @@ f1_keywords:
   - "sql12.swb.maint.maintplanproperties.optimizations.f1"
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Maintenance Plan (Design Tab)

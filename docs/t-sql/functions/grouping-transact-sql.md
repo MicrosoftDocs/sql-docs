@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "CUBE operator"
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # GROUPING (Transact-SQL)

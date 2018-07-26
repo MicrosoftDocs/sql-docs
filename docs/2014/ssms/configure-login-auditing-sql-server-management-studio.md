@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "logins [SQL Server], auditing"
 ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
 caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Configure Login Auditing (SQL Server Management Studio)

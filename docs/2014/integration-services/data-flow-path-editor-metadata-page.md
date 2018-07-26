@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Data Flow Path Editor dialog box"
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Flow Path Editor (Metadata Page)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Dimensions element"
 ms.assetid: 104e3154-92e9-4c6b-9cf3-e3f3fc712b28
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Dimensions Element (ASSL)
   Contains the collection of dimensions associated with the parent element.  

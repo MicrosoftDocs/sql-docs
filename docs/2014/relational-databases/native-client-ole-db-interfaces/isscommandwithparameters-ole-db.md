@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
@@ -18,8 +16,8 @@ helpviewer_keywords:
   - "ISSCommandWithParameters interface"
 ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # ISSCommandWithParameters (OLE DB)

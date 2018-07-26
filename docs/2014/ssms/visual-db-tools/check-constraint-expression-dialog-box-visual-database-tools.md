@@ -13,8 +13,8 @@ f1_keywords:
   - "vdt.dlgbox.checkconstraintexpression"
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Check Constraint Expression Dialog Box (Visual Database Tools)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "upgrade process [Upgrade Advisor]"
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Process Overview

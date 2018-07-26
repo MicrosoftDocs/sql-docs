@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DISCOVER_DATASOURCES rowset"
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DISCOVER_DATASOURCES Rowset
   Returns a list of the XML for Analysis (XMLA) provider data sources that are available on the server or Web service. The published data sources are returned from a URL of the application Web server. The client can connect to one of the data sources in this list.  

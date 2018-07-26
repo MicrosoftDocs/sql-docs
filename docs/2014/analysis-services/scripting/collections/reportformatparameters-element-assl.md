@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ReportFormatParameters element"
 ms.assetid: f2e677bf-7b6b-4ce4-b0ec-75a4999306c9
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ReportFormatParameters Element (ASSL)
   Contains the collection of [ReportFormatParameter](../objects/reportformatparameter-element-asl.md) elements for a [ReportAction](../data-type/action-data-type-assl.md) element.  

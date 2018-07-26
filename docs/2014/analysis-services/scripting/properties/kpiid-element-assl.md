@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "KpiID element"
 ms.assetid: a76395bc-bc84-40f8-9770-6275842f93b5
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # KpiID Element (ASSL)
   Contains an identifier (ID) that associates a [Kpi](../objects/kpi-element-assl.md) element with a [Perspective](../objects/perspective-element-assl.md) element.  

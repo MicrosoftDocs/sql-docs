@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Replication Monitor, about Replication Monitor"
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: 39
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Overview of the Replication Monitor Interface

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "ErrorCode element"
 ms.assetid: da187661-b15e-4b95-8b49-7820ebcced40
 caps.latest.revision: 10
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ErrorCode Element (XMLA)
   Contains the numeric return code of the parent [Error](error-element-xmla.md) element.  

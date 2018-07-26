@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "MiningModelID element"
 ms.assetid: fada8720-1590-44be-bafc-0ab3612b00e5
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # MiningModelID Element (ASSL)
   Associates a mining model with a data mining dimension.  

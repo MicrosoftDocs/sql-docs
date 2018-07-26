@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Mining Model Viewer [Analysis Services], itemsets"
 ms.assetid: 3ed919ea-8598-45d2-a4a0-b1b3357a4ab1
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Filter an Itemset in an Association Rules Model
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can filter the itemsets that are displayed in the **Itemsets** tab of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules Viewer.  

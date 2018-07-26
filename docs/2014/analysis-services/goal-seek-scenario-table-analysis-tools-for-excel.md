@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "goal seek scenario"
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Goal Seek Scenario (Table Analysis Tools for Excel)
   ![Goal Seek button in Table Analysis tools](media/tat-goalseek.gif "Goal Seek button in Table Analysis tools")  

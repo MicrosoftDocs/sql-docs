@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "resetting encryption keys"
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Delete and Re-create Encryption Keys  (SSRS Configuration Manager)

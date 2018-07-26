@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 caps.latest.revision: 5
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Change a Chart Type (Report Builder and SSRS)
   When you first insert a chart into a report, the **Select Chart Type** dialog appears. If you cancel this dialog, a Column chart type is added by default.  

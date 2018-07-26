@@ -3,7 +3,6 @@ title: "SELECT (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -14,10 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "SELECT statement [SQL Server], SQL graph"
   - "SQL graph, SELECT statement"
-ms.assetid: 
-caps.latest.revision: 1
-author: "shkale-msft"
-ms.author: "shkale"
+author: shkale-msft
+ms.author: shkale
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

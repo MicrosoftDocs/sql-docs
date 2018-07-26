@@ -13,8 +13,8 @@ dev_langs:
   - "TSQL"
 ms.assetid: 0a6e4985-9601-4877-942a-cf53f6932958
 caps.latest.revision: 4
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Data Type Functions (Transact-SQL)

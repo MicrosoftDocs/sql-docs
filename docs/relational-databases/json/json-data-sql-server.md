@@ -3,19 +3,15 @@ title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 helpviewer_keywords: 
   - "JSON"
   - "JSON, built-in support"
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 47
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
@@ -159,9 +155,9 @@ FROM OPENJSON(@json)
   WITH (id int 'strict $.id',  
         firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
         age int, dateOfBirth datetime2 '$.dob',
-	skills nvarchar(max) '$.skills' as json) 
-	outer apply openjson( a.skills ) 
-                     with ( skill nvarchar(8) '$' ) as b
+	skills nvarchar(max) '$.info.skills' as json) 
+	outer apply openjson( skills ) 
+                     with ( skill nvarchar(8) '$' )
 ```  
 **skills** array is returned in the first `OPENJSON` as original JSON text fragment and passed to another `OPENJSON` function using `APPLY` operator. The second `OPENJSON` function will parse JSON array and return string values as single column rowset that will be joined with the result of the first `OPENJSON`. 
 The result of this query is shown in the following table:

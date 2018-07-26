@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "OptimizedState element"
 ms.assetid: 120dcc4c-8fe8-4471-bbd6-99ad534364f0
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # OptimizedState Element (ASSL)
   Determines the level of optimization that is applied to the hierarchy.  

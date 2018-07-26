@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "URL reservations"
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # URL Reservation Syntax  (SSRS Configuration Manager)

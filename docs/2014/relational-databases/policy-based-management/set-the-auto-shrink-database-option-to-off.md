@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Set the AUTO_SHRINK Database Option to OFF

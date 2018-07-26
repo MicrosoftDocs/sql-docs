@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.browseservers.local.f1"
 ms.assetid: c9c5db1c-79f5-4e79-a36e-13f118daac46
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Browse for Servers (Local Servers)

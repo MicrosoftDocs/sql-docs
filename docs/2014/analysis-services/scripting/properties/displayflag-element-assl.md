@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DisplayFlag element"
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DisplayFlag Element (ASSL)
   Contains a read-only hint that indicates whether user interface components should display the associated [ServerProperty](../objects/serverproperty-element-assl.md) element.  

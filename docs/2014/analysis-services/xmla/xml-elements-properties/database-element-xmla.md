@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Database element"
 ms.assetid: 2ded06c4-4eaf-4ccb-a416-41ee51ced8bc
 caps.latest.revision: 12
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Database Element (XMLA)
   Identifies the database that contains the dimension represented by the parent [Object](object-element-dimension-xmla.md) element.  

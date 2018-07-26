@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "traces [SQL Server], events"
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Filter Events in a Trace (SQL Server Profiler)

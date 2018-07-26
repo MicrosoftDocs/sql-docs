@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "XML, validating"
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Validate XML with the XML Task

@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9ba8299e-b990-4f77-a3c0-eee64e1f4281
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Power View for Multidimensional Models
   Microsoft SQL Server 2014 Analysis Services multidimensional models support ad-hoc data analysis, exploration, and visualization by using Microsoft Power View.  

@@ -95,7 +95,7 @@ LILAS      Carlos Gonzlez
   
  Because the <`Customer`> elements do not have any subelements, if the same SELECT statement is executed with *flags* set to **2** to indicate element-centric mapping, the values of **CustomerID** and **ContactName** for both the customers are returned as NULL.  
   
- The @xmlDocument can also be of **xml** type or of **(n)varchar(max)** type.  
+ The \@xmlDocument can also be of **xml** type or of **(n)varchar(max)** type.  
   
  If <`CustomerID`> and <`ContactName`> in the XML document are subelements, the element-centric mapping retrieves the values.  
   
@@ -468,7 +468,7 @@ EXEC sp_xml_removedocument @docHandle
   
  The OPENXML statement illustrates the following:  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) ends with an XML attribute, **ProductID**. In the resulting rowset, a row is created for each attribute node selected in the XML document.  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) ends with an XML attribute, **ProductID**. In the resulting rowset, a row is created for each attribute node selected in the XML document.  
   
 -   In this example, the *flags* parameter is not specified. Instead, the mappings are specified by the *ColPattern* parameter.  
   
@@ -476,9 +476,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   The XPath pattern (**.**) specified as *ColPattern* for the **ProdID** column in the rowset identifies the context node, current node. As per the *rowpattern* specified, it is the **ProductID** attribute of the <`OrderDetail`> element.  
   
--   The *ColPattern*, **../@Quantity**, specified for the **Qty** column in the rowset identifies the **Quantity** attribute of the parent, <`OrderDetail`>, node of the context node, \<ProductID>.  
+-   The *ColPattern*, **../\@Quantity**, specified for the **Qty** column in the rowset identifies the **Quantity** attribute of the parent, <`OrderDetail`>, node of the context node, \<ProductID>.  
   
--   Similarly, the *ColPattern*, **../../@OrderID**, specified for the **OID** column in the rowset identifies the **OrderID** attribute of the parent, <`Order`>, of the parent node of the context node. The parent node is <`OrderDetail`>, and the context node is <`ProductID`>.  
+-   Similarly, the *ColPattern*, **../../\@OrderID**, specified for the **OID** column in the rowset identifies the **OrderID** attribute of the parent, <`Order`>, of the parent node of the context node. The parent node is <`OrderDetail`>, and the context node is <`ProductID`>.  
   
  The SELECT statement then retrieves all the columns in the rowset provided by OPENXML.  
   
@@ -576,7 +576,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Specifically, you are passing an **xml** type variable (@x) to the **sp_xml_preparedocument()** function.  
+ Specifically, you are passing an **xml** type variable (\@x) to the **sp_xml_preparedocument()** function.  
   
  This is the result:  
   

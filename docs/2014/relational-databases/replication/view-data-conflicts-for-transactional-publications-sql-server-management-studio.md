@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "viewing conflict information"
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 caps.latest.revision: 36
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View Data Conflicts for Transactional Publications (SQL Server Management Studio)

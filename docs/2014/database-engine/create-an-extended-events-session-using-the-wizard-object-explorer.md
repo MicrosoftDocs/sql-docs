@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "Sql11.ssms.XeWizard.SelectEvents.f1"
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Create an Extended Events Session Using the Wizard (Object Explorer)

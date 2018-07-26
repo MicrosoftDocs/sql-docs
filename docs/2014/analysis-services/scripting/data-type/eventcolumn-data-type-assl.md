@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "EventColumn data type"
 ms.assetid: c0009f1d-d136-4155-9a1b-7baacda4b552
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # EventColumn Data Type (ASSL)
   Defines a primitive data type that represents a column of information to be captured for an [Event](../objects/event-element-assl.md) element as part of a [Trace](../objects/trace-element-assl.md) element.  

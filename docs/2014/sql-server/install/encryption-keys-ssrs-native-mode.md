@@ -13,8 +13,8 @@ f1_keywords:
   - "SQL12.rsconfigtool.encryptionkeypanel.F1"
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Encryption Keys (SSRS Native Mode)

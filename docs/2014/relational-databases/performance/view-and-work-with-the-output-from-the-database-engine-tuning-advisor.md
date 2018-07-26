@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "viewing tuning output"
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # View and Work with the Output from the Database Engine Tuning Advisor

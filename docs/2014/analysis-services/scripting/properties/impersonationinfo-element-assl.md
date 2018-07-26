@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ImpersonationInfo element"
 ms.assetid: d4b9c372-1023-43f7-97e9-b0a90f544fbb
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ImpersonationInfo Element (ASSL)
   Contains the information that is used to determine impersonation behavior when accessing or executing an assembly.  

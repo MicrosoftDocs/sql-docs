@@ -13,8 +13,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Text_Editor.File_Extension"
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor - File Extension Page)

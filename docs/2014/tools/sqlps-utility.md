@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "PowerShell [SQL Server], sqlps utility"
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: 20
-author: "mgblythe"
-ms.author: "mblythe"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sqlps Utility

@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.swb.registerserver.general.dts.f1"
 ms.assetid: b586b736-344b-4e42-83ee-96f66ad433a5
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # New or Edit Server Registration (General Tab) (SSIS)

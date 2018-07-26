@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Web service [Reporting Services], application integration"
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 caps.latest.revision: 44
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Integrating Reporting Services Using SOAP

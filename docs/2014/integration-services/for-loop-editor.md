@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.forloopcontainer.f1"
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # For Loop Editor

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Configuration Manager, managing services"
 ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
 caps.latest.revision: 25
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Managing Services How-to Topics (SQL Server Configuration Manager)

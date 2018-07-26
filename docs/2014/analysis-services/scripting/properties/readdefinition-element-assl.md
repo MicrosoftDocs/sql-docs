@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ReadDefinition element"
 ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ReadDefinition Element (ASSL)
   Determines whether members can read the definition of the database or the definition of objects in the database.  

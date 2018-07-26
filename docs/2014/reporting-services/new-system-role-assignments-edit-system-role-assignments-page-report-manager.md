@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 caps.latest.revision: 26
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # New System Role Assignments: Edit System Role Assignments Page (Report Manager)
   Use the New System Role Assignments or Edit System Role Assignments page to define security for the report server. All security is defined through role assignments that map specific users or groups to the tasks that they can perform. The task list is represented as a role definition that you select when making the role assignment.  

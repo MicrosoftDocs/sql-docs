@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "wait time for lock releases [SQL Server]"
 ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

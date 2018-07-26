@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "queries [SQL Server], creating"
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Queries using Something Besides a Table (Visual Database Tools)

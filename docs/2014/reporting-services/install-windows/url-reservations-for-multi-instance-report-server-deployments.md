@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "URL reservations"
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 caps.latest.revision: 5
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # URL Reservations for Multi-Instance Report Server Deployments  (SSRS Configuration Manager)

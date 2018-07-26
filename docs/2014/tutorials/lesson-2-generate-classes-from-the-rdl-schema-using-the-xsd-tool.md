@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
 caps.latest.revision: 13
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: craigg-msft
+ms.author: douglasl
+manager: craigg
 ---
 # Lesson 2: Generate Classes from the RDL Schema using the xsd Tool
   After you have created your [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] project, the next step is to retrieve a local copy of the report definition schema and run the XML Schema Definition Tool (Xsd.exe).  

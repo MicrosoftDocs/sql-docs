@@ -3,10 +3,9 @@ title: "Common Language Runtime (CLR) Integration Programming Concepts | Microso
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "CLR [SQL Server] See common language runtime [SQL Server]"

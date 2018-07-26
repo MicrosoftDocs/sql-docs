@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.foreachloopcontainer.general.f1"
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Foreach Loop Editor (General Page)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ID element"
 ms.assetid: ea3ce0f4-9084-45d0-8150-73afb7005af2
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ID Element (ASSL)
   Contains the unique identifier (ID) of the parent element.  

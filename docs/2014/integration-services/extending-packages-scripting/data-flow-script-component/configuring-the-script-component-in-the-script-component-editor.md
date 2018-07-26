@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Script component [Integration Services], configuring"
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Configuring the Script Component in the Script Component Editor

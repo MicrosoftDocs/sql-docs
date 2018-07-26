@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.dts.designer.rawfiledestinationconnectionmanager.f1"
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Raw File Destination Editor (Connection Manager Page)

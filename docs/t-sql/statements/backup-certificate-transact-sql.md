@@ -1,4 +1,4 @@
-﻿---
+---
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -77,14 +77,16 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  Is the password that is used to encrypt the private key before writing the key to the backup file. The password is subject to complexity checks.  
   
  *decryption_password*  
- Is the password that is used to decrypt the private key before backing up the key.  
+ Is the password that is used to decrypt the private key before backing up the key. This is not necessary if the certificate is encrypted by the master key. 
   
 ## Remarks  
  If the private key is encrypted with a password in the database, the decryption password must be specified.  
   
  When you back up the private key to a file, encryption is required. The password used to protect the backed up certificate is not the same password that is used to encrypt the private key of the certificate.  
   
- To restore a backed up certificate, use the [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)statement.  
+ To restore a backed up certificate, use the [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)statement.
+ 
+ When performing a backup the files will be ACLd to the service account of the SQL Server instance. If you need to restore the certificate to a server running under a different account you will need to adjust the permissions on the files so that they are able to be read by the new account. 
   
 ## Permissions  
  Requires CONTROL permission on the certificate and knowledge of the password that is used to encrypt the private key. If only the public part of the certificate is backed up, requires some permission on the certificate and that the caller has not been denied VIEW permission on the certificate.  

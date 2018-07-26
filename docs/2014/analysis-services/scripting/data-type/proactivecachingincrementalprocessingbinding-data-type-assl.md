@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ProactiveCachingIncrementalProcessingBinding data type"
 ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # ProactiveCachingIncrementalProcessingBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to the [ProactiveCaching](../objects/proactivecaching-element-assl.md) element about the status of the process of rebuilding the cache.  

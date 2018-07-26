@@ -37,7 +37,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 -   [Running Stored Procedures](http://msdn.microsoft.com/library/ms131440.aspx)
 -   [Sparse Columns Support (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL encryption](http://msdn.microsoft.com/library/ms131691.aspx)
--   [Table Valued Parameters](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
+-   [Table Valued Parameters](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 and UTF-16 for command and data API](http://msdn.microsoft.com/library/ff878241.aspx)
 -   [Using Catalog Functions](http://msdn.microsoft.com/library/ms131490.aspx)  
 
@@ -46,7 +46,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 The following features have not been verified to work correctly in this release of the ODBC driver on macOS and Linux:
 
 -   Failover Cluster Connection
--   [Transparent Network IP Resolution](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (before ODBC Driver 17)
+-   [Transparent Network IP Resolution](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (before ODBC Driver 17)
 -   [Advanced Driver Tracing](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 The following features are not available in this release of the ODBC driver on macOS and Linux: 
@@ -116,7 +116,7 @@ In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates
 
 ## Additional Notes  
 
-1.  You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:  
+1.  You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:  
 
     ```
     sqlcmd –U <user> -P <pwd> -S <host>,33000

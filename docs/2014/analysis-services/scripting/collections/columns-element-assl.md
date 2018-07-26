@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Columns element"
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Columns Element (ASSL)
   Contains the collection of columns associated with the parent element.  

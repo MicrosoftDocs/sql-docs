@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Delete element"
 ms.assetid: 76201b18-11e9-4815-9287-27a068d8fbc5
 caps.latest.revision: 14
-author: "mgblythe"
-ms.author: "mblythe"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Delete Element (XMLA)
   Deletes an object on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  

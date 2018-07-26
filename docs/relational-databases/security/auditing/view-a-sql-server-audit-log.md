@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 caps.latest.revision: 12
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 ---
 # View a SQL Server Audit Log

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 caps.latest.revision: 18
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Using the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2018"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -113,7 +113,7 @@ manager: craigg
   
  When the driver is loaded, you can establish a connection by using a connection URL and the getConnection method of the DriverManager class:  
   
-```  
+```java
 String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
    "databaseName=AdventureWorks;user=MyUserName;password=*****;";  
 Connection con = DriverManager.getConnection(connectionUrl);  

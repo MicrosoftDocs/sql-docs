@@ -33,9 +33,9 @@ The following sections provide common questions and answers for SQL Server runni
 
    SQL Server is licensed the same way for both Windows and Linux. In fact, you license SQL Server and then you can choose to use that license on the platform of your choice. For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
-1. **What SQL Server features are not supported on Linux?**
+1. **Is SQL Server on Linux the same as on Windows?**
 
-   For a list of features that are not supported on Linux, see the [Unsupported features & services](sql-server-linux-release-notes.md#Unsupported). Also review the [Known issues](sql-server-linux-release-notes.md#known-issues). Unless specified in these lists, other SQL Server features and services are supported on Linux.
+   The Core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that are not supported on Linux, see the [Unsupported features & services](sql-server-linux-release-notes.md#Unsupported). Also review the [Known issues](sql-server-linux-release-notes.md#known-issues). Unless specified in these lists, other SQL Server features and services are supported on Linux.
 
 1. **What is the support policy for SQL Server?**
 

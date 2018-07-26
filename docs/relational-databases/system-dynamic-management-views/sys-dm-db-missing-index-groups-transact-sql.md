@@ -44,7 +44,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  Neither column of the output result set is a key, but together they form an index key.  
 
   >[!NOTE]
-  >The result set for this DMV is limited to 600 rows. If more than 600 missing indexes exist, these need to be addressed before new missing indexes are visible. 
+  >The result set for this DMV is limited to 600 rows. If more than 600 missing indexes exist, new missing indexes will not be visible until some of the older missing indexes are addressed.  
   
 ## Permissions  
  To query this dynamic management view, users must be granted the VIEW SERVER STATE permission or any permission that implies the VIEW SERVER STATE permission.  

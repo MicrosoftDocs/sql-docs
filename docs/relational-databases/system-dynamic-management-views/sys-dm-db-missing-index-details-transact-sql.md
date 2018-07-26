@@ -50,7 +50,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  To determine which missing index groups a particular missing index is part of, you can query the **sys.dm_db_missing_index_groups** dynamic management view by equijoining it with **sys.dm_db_missing_index_details** based on the **index_handle** column.  
 
   >[!NOTE]
-  >The result set for this DMV is limited to 600 rows. If more than 600 missing indexes exist, these need to be addressed before new missing indexes are visible. 
+  >The result set for this DMV is limited to 600 rows. If more than 600 missing indexes exist, new missing indexes will not be visible until some of the older missing indexes are addressed. 
   
 ## Using Missing Index Information in CREATE INDEX Statements  
  To convert the information returned by **sys.dm_db_missing_index_details** into a CREATE INDEX statement for both memory-optimized and disk-based indexes, equality columns should be put before the inequality columns, and together they should make the key of the index. Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. To determine an effective order for the equality columns, order them based on their selectivity: list the most selective columns first (leftmost in the column list).  

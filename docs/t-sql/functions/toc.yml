@@ -534,7 +534,7 @@
     href: partition-transact-sql.md
   - name: "@@ERROR"
     href: error-transact-sql.md
-  - name: @@IDENTITY"
+  - name: "@@IDENTITY"
     href: identity-transact-sql.md
   - name: "@@PACK_RECEIVED"
     href: pack-received-transact-sql.md

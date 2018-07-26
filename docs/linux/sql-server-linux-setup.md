@@ -205,6 +205,10 @@ If your Linux machine does not have access to the online repositories used in th
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
+## Licensing and pricing
+
+SQL Server is licensed the same for Linux and Windows. For more information about SQL Server licensing and pricing, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
 ## Optional SQL Server features
 
 After installation, you can also install or enable optional SQL Server features.
@@ -212,7 +216,7 @@ After installation, you can also install or enable optional SQL Server features.
 - [SQL Server command-line tools](sql-server-linux-setup-tools.md)
 - [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 - [SQL Server Full Text Search](sql-server-linux-setup-full-text-search.md)
-- [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
+- [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

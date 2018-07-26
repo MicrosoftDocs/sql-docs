@@ -1,7 +1,7 @@
 ---
 title: "Using Table-Valued Parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -50,14 +50,14 @@ manager: craigg
 ## Creating Table-Valued Parameter Types  
  Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL CREATE TYPE statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](http://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  After creating a table type, you can declare table-valued parameters based on that type. The following Transact-SQL fragment demonstrates how to declare a table-valued parameter in a stored procedure definition. Note that the READONLY keyword is required for declaring a table-valued parameter.  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -67,7 +67,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  The following Transact-SQL UPDATE statement demonstrates how to use a table-valued parameter by joining it to the Categories table. When you use a table-valued parameter with a JOIN in a FROM clause, you must also alias it, as shown here, where the table-valued parameter is aliased as "ec":  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -76,7 +76,7 @@ UPDATE dbo.Categories
   
  This Transact-SQL example demonstrates how to select rows from a table-valued parameter to perform an INSERT in a single set-based operation.  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
@@ -98,7 +98,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
  The following two code fragments demonstrate how to configure a table-valued parameter with a SQLServerPreparedStatement and with a SQLServerCallableStatement to insert data. Here sourceTVPObject can be a SQLServerDataTable, or a ResultSet or an ISQLServerDataRecord object. The examples assume connection is an active Connection object.  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =   
     (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
@@ -106,7 +106,7 @@ pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);
 pStmt.execute();  
 ```  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerCallableStatement.  
 SQLServerCallableStatement pStmt =   
     (SQLServerCallableStatement) connection.prepareCall("exec usp_InsertCategories ?");       
@@ -120,7 +120,7 @@ pStmt.execute();
 ## Passing a Table-Valued Parameter as a SQLServerDataTable Object  
  Beginning with Microsoft JDBC Driver 6.0 for SQL Server, the SQLServerDataTable class represents an in-memory table of relational data. This example demonstrates how to construct a table-valued parameter from in-memory data using the SQLServerDataTable object. The code first creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create an in-memory data table.  
@@ -148,7 +148,7 @@ pStmt.execute();
 ## Passing a Table-Valued Parameter as a ResultSet Object  
  This example demonstrates how to stream rows of data from a ResultSet to a table-valued parameter. The code first retrieves data from a source table in a creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create the source ResultSet object. Here SourceCategories is a table defined with the same schema as Categories table.   
@@ -168,7 +168,7 @@ pStmt.execute();
 ## Passing a Table-Valued Parameter as an ISQLServerDataRecord Object  
  Beginning with Microsoft JDBC Driver 6.0 for SQL Server, a new interface ISQLServerDataRecord is available for streaming data (depending on how the user provides the implementation for it) using a table-valued parameter. The following example demonstrates how to implement the ISQLServerDataRecord interface and how to pass it as a table-valued parameter. For simplicity, the following example passes just one row with hardcoded values to the table-valued parameter. Ideally, the user would implement this interface to stream rows from any source, for example from text files.  
   
-```  
+```java
 class MyRecords implements ISQLServerDataRecord  
 {  
     int currentRow = 0;  

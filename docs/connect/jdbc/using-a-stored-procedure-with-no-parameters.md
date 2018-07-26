@@ -1,7 +1,7 @@
 ---
 title: "Using a Stored Procedure with No Parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -29,7 +29,7 @@ manager: craigg
   
  As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:  
   
-```  
+```sql
 CREATE PROCEDURE GetContactFormalNames   
 AS  
 BEGIN  
@@ -38,26 +38,20 @@ BEGIN
 END  
 ```  
   
- This stored procedure returns a single result set that contains one column of data, which is a combination of the title, first name, and last name of the top ten contacts that are in the Person.Contact table.  
+ This stored procedure returns a single result set that contains one column of data, which is a combination of the title, first name, and last name of the top 10 contacts that are in the Person.Contact table.  
   
  In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method is used to call the GetContactFormalNames stored procedure.  
   
-```  
-public static void executeSprocNoParams(Connection con) {  
-   try {  
-      Statement stmt = con.createStatement();  
-      ResultSet rs = stmt.executeQuery("{call dbo.GetContactFormalNames}");  
-  
-      while (rs.next()) {  
-         System.out.println(rs.getString("FormalName"));  
-      }  
-      rs.close();  
-      stmt.close();  
-   }  
-   catch (Exception e) {  
-      e.printStackTrace();  
-   }  
-}  
+```java  
+public static void executeSprocNoParams(Connection con) throws SQLException {  
+    try(Statement stmt = con.createStatement();) {  
+
+        ResultSet rs = stmt.executeQuery("{call dbo.GetContactFormalNames}");  
+        while (rs.next()) {  
+            System.out.println(rs.getString("FormalName"));  
+        }  
+    }  
+}
 ```  
   
 ## See Also  

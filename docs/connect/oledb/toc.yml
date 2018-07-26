@@ -1,0 +1,18 @@
+- name: Microsoft OLE DB Driver for SQL Server
+  href: oledb-driver-for-sql-server.md
+- name: Features +
+  href: ../oledb/features/oledb-driver-for-sql-server-features.md
+- name: Applications +
+  href: ../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md
+- name: OLE DB Programming +
+  href: ../oledb/ole-db/oledb-driver-for-sql-server-programming.md
+- name: Release notes for the Microsoft OLE DB Driver for SQL Server
+  href: release-notes-for-oledb-driver-for-sql-server.md
+- name: Download Microsoft OLE DB Driver for SQL Server
+  href: download-oledb-driver-for-sql-server.md
+- name: Finding More OLE DB Driver for SQL Server Information
+  href: finding-more-oledb-driver-for-sql-server-information.md
+- name: System Requirements for OLE DB Driver for SQL Server
+  href: system-requirements-for-oledb-driver-for-sql-server.md
+- name: When to Use OLE DB Driver for SQL Server
+  href: when-to-use-oledb-driver-for-sql-server.md

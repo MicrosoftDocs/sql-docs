@@ -1,0 +1,371 @@
+- name: Visual Database Tools
+  href: visual-database-tools.md
+- name: Design Database Diagrams (Visual Database Tools)
+  href: design-database-diagrams-visual-database-tools.md
+  items:
+  - name: Understand Database Diagram Ownership (Visual Database Tools)
+    href: understand-database-diagram-ownership-visual-database-tools.md
+  - name: Navigate in Database Diagram Designer (Visual Database Tools)
+    href: navigate-in-database-diagram-designer-visual-database-tools.md
+  - name: Set Up Database Diagram Designer (Visual Database Tools)
+    href: set-up-database-diagram-designer-visual-database-tools.md
+  - name: Upgrade Database Diagrams from Previous Editions (Visual Database Tools)
+    href: upgrade-database-diagrams-from-previous-editions-visual-database-tools.md
+  - name: Open Database Diagram Designer (Visual Database Tools)
+    href: open-database-diagram-designer-visual-database-tools.md
+  - name: Work with Database Diagrams (Visual Database Tools)
+    href: work-with-database-diagrams-visual-database-tools.md
+  - name: Create a New Database Diagram (Visual Database Tools)
+    href: create-a-new-database-diagram-visual-database-tools.md
+  - name: Save Database Diagrams (Visual Database Tools)
+    href: save-database-diagrams-visual-database-tools.md
+  - name: Open Database Diagrams (Visual Database Tools)
+    href: open-database-diagrams-visual-database-tools.md
+  - name: Delete a Database Diagram (Visual Database Tools)
+    href: delete-a-database-diagram-visual-database-tools.md
+  - name: Rename a Database Diagram (Visual Database Tools)
+    href: rename-a-database-diagram-visual-database-tools.md
+  - name: Discard Changes Made to Diagrams (Visual Database Tools)
+    href: discard-changes-made-to-diagrams-visual-database-tools.md
+  - name: Reconcile a Database Diagram with a Modified Database (Visual Database Tools)
+    href: reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md
+  - name: Show Diagram Properties (Visual Database Tools)
+    href: show-diagram-properties-visual-database-tools.md
+  - name: Copy an Image of a Database Diagram to the Clipboard (Visual Database Tools)
+    href: copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md
+  - name: Work with Tables in Database Diagram (Visual Database Tools)
+    href: work-with-tables-in-database-diagram-visual-database-tools.md
+  - name: Add Tables to Diagrams (Visual Database Tools)
+    href: add-tables-to-diagrams-visual-database-tools.md
+  - name: Add Related Tables to Diagrams (Visual Database Tools)
+    href: add-related-tables-to-diagrams-visual-database-tools.md
+  - name: Save Selected Tables on a Diagram (Visual Database Tools)
+    href: save-selected-tables-on-a-diagram-visual-database-tools.md
+  - name: Copy Tables from One Database Diagrams to Another (Visual Database Tools)
+    href: copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md
+  - name: Remove Tables from Database Diagrams (Visual Database Tools)
+    href: remove-tables-from-database-diagrams-visual-database-tools.md
+  - name: Create Relationships Between Tables on a Diagram (Visual Database Tools)
+    href: create-relationships-between-tables-on-a-diagram-visual-database-tools.md
+  - name: Map Many-to-Many Relationships (Visual Database Tools)
+    href: map-many-to-many-relationships-visual-database-tools.md
+  - name: Draw Reflexive Relationships (Visual Database Tools)
+    href: draw-reflexive-relationships-visual-database-tools.md
+  - name: Work with Diagram Layout (Visual Database Tools)
+    href: work-with-diagram-layout-visual-database-tools.md
+  - name: Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)
+    href: customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md
+  - name: Add Text Annotations to Diagrams (Visual Database Tools)
+    href: add-text-annotations-to-diagrams-visual-database-tools.md
+  - name: Autosize Selected Tables in Diagrams (Visual Database Tools)
+    href: autosize-selected-tables-in-diagrams-visual-database-tools.md
+  - name: Arrange Tables in Diagrams (Visual Database Tools)
+    href: arrange-tables-in-diagrams-visual-database-tools.md
+  - name: Change the Font Color, Size, and Style in Diagrams (Visual Database Tools)
+    href: change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md
+  - name: "Walkthrough: Adding and Changing a Database Diagram"
+    href: walkthrough-adding-and-changing-a-database-diagram.md
+  - name: Visual Database Tool Designers (Visual Database Tools)
+    href: visual-database-tool-designers.md
+  - name: Multiuser Environments (Visual Database Tools)
+    href: multiuser-environments-visual-database-tools.md
+    items:
+    - name: Permissions and Visual Database Tools (Visual Database Tools)
+      href: permissions-and-visual-database-tools-visual-database-tools.md
+    - name: Reconcile Changes Made by Multiple Users (Visual Database Tools)
+      href: reconcile-changes-made-by-multiple-users-visual-database-tools.md
+    - name: Issues of Database Evolution (Visual Database Tools)
+      href: issues-of-database-evolution-visual-database-tools.md
+    - name: Development, Test, and Production Databases (Visual Database Tools)
+      href: development-test-and-production-databases-visual-database-tools.md
+- name: Design Tables (Visual Database Tools)
+  href: design-tables-visual-database-tools.md
+  items:
+  - name: Open Table Designer (Visual Database Tools)
+    href: ../../database-engine/open-table-designer-visual-database-tools.md
+  - name: Save Your Work in Table Designer (Visual Database Tools)
+    href: ../../database-engine/save-your-work-in-table-designer-visual-database-tools.md
+- name: Design Queries and Views How-to Topics (Visual Database Tools)
+  href: design-queries-and-views-how-to-topics-visual-database-tools.md
+  items:
+  - name: Open the Query and View Designer (Visual Database Tools)
+    href: open-the-query-and-view-designer-visual-database-tools.md
+  - name: Navigate in the Query and View Designer (Visual Database Tools)
+    href: navigate-in-the-query-and-view-designer-visual-database-tools.md
+  - name: Query and View Designer Tools (Visual Database Tools)
+    href: query-and-view-designer-tools-visual-database-tools.md
+  - name: Display Query and View Designer Panes (Visual Database Tools)
+    href: display-query-and-view-designer-panes-visual-database-tools.md
+  - name: Diagram Pane (Visual Database Tools)
+    href: diagram-pane-visual-database-tools.md
+  - name: Criteria Pane (Visual Database Tools)
+    href: criteria-pane-visual-database-tools.md
+  - name: SQL Pane (Visual Database Tools)
+    href: sql-pane-visual-database-tools.md
+  - name: Results Pane (Visual Database Tools)
+    href: results-pane-visual-database-tools.md
+  - name: SQL Editor (Visual Database Tools)
+    href: sql-editor-visual-database-tools.md
+  - name: Types of Queries (Visual Database Tools)
+    href: types-of-queries-visual-database-tools.md
+  - name: Supported Query Types (Visual Database Tools)
+    href: supported-query-types-visual-database-tools.md
+  - name: Create Full-Text Search Queries (Visual Database Tools)
+    href: create-full-text-search-queries-visual-database-tools.md
+  - name: Create Insert Results Queries (Visual Database Tools)
+    href: create-insert-results-queries-visual-database-tools.md
+  - name: Create Insert Values Queries (Visual Database Tools)
+    href: create-insert-values-queries-visual-database-tools.md
+  - name: Create Make Table Queries (Visual Database Tools)
+    href: create-make-table-queries-visual-database-tools.md
+  - name: Create Delete Queries (Visual Database Tools)
+    href: create-delete-queries-visual-database-tools.md
+  - name: Create UNION Queries (Visual Database Tools)
+    href: create-union-queries-visual-database-tools.md
+  - name: Create Update Queries (Visual Database Tools)
+    href: create-update-queries-visual-database-tools.md
+  - name: Work with Data in the Results Pane (Visual Database Tools)
+    href: work-with-data-in-the-results-pane-visual-database-tools.md
+  - name: Rules for Updating Results (Visual Database Tools)
+    href: rules-for-updating-results-visual-database-tools.md
+  - name: Add New Rows in the Results Pane (Visual Database Tools)
+    href: add-new-rows-in-the-results-pane-visual-database-tools.md
+  - name: Edit Rows in the Results Pane (Visual Database Tools)
+    href: edit-rows-in-the-results-pane-visual-database-tools.md
+  - name: Delete Rows in the Results Pane (Visual Database Tools)
+    href: delete-rows-in-the-results-pane-visual-database-tools.md
+  - name: Sort and Group Query Results (Visual Database Tools)
+    href: sort-and-group-query-results-visual-database-tools.md
+    items:
+    - name: Sort Rows (Visual Database Tools)
+      href: sort-rows-visual-database-tools.md
+    - name: Collapse Groups of Rows (Visual Database Tools)
+      href: collapse-groups-of-rows-visual-database-tools.md
+    - name: Sort with ORDER BY (Visual Database Tools)
+      href: sort-with-order-by-visual-database-tools.md
+    - name: Sort in Ascending or Descending Order (Visual Database Tools)
+      href: sort-in-ascending-or-descending-order-visual-database-tools.md
+    - name: Sort Multiple Columns in Queries (Visual Database Tools)
+      href: sort-multiple-columns-in-queries-visual-database-tools.md
+    - name: Group Rows in Query Results (Visual Database Tools)
+      href: group-rows-in-query-results-visual-database-tools.md
+    - name: Specify Conditions for Groups (Visual Database Tools)
+      href: specify-conditions-for-groups-visual-database-tools.md
+    - name: Reorder Output Columns (Visual Database Tools)
+      href: reorder-output-columns-visual-database-tools.md
+  - name: Summarize Query Results (Visual Database Tools)
+    href: summarize-query-results-visual-database-tools.md
+    items:
+    - name: Work with Columns in Aggregate Queries (Visual Database Tools)
+      href: work-with-columns-in-aggregate-queries-visual-database-tools.md
+    - name: Count Rows in a Table (Visual Database Tools)
+      href: count-rows-in-a-table-visual-database-tools.md
+    - name: Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools)
+      href: summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md
+    - name: Summarize or Aggregate Values Using Custom Expressions (Visual Database Tools)
+      href: summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md
+  - name: Clear Query Results (Visual Database Tools)
+    href: clear-query-results-visual-database-tools.md
+  - name: Print Query Results (Visual Database Tools)
+    href: print-query-results-visual-database-tools.md
+  - name: Copy Query Results (Visual Database Tools)
+    href: copy-query-results-visual-database-tools.md
+  - name: Remove Columns from Query Results (Visual Database Tools)
+    href: remove-columns-from-query-results-visual-database-tools.md
+  - name: Perform Basic Operations with Queries (Visual Database Tools)
+    href: perform-basic-operations-with-queries-visual-database-tools.md
+  - name: Create Queries (Visual Database Tools)
+    href: create-queries-visual-database-tools.md
+  - name: Open Queries (Visual Database Tools)
+    href: open-queries-visual-database-tools.md
+  - name: Run Queries (Visual Database Tools)
+    href: run-queries-visual-database-tools.md
+  - name: Stop a Query (Visual Database Tools)
+    href: stop-a-query-visual-database-tools.md
+  - name: Save Queries (Visual Database Tools)
+    href: save-queries-visual-database-tools.md
+  - name: Verify Queries (Visual Database Tools)
+    href: verify-queries-visual-database-tools.md
+  - name: Modify Queries (Visual Database Tools)
+    href: modify-queries-visual-database-tools.md
+  - name: Delete Queries (Visual Database Tools)
+    href: delete-queries-visual-database-tools.md
+  - name: Copy Queries (Visual Database Tools)
+    href: copy-queries-visual-database-tools.md
+  - name: Rename Queries (Visual Database Tools)
+    href: rename-queries-visual-database-tools.md
+  - name: Discard Changes Made to Queries (Visual Database Tools)
+    href: discard-changes-made-to-queries-visual-database-tools.md
+  - name: Add Tables to Queries (Visual Database Tools)
+    href: add-tables-to-queries-visual-database-tools.md
+  - name: Add Derived Tables to Queries (Visual Database Tools)
+    href: add-derived-tables-to-queries-visual-database-tools.md
+  - name: Remove Tables from Queries (Visual Database Tools)
+    href: remove-tables-from-queries-visual-database-tools.md
+  - name: Add Columns to Queries (Visual Database Tools)
+    href: add-columns-to-queries-visual-database-tools.md
+  - name: Remove Columns from Queries (Visual Database Tools)
+    href: remove-columns-from-queries-visual-database-tools.md
+  - name: Create Column Aliases (Visual Database Tools)
+    href: create-column-aliases-visual-database-tools.md
+  - name: Create Table Aliases (Visual Database Tools)
+    href: create-table-aliases-visual-database-tools.md
+  - name: Show Query Properties (Visual Database Tools)
+    href: show-query-properties-visual-database-tools.md
+  - name: Create Queries using Something Besides a Table (Visual Database Tools)
+    href: create-queries-using-something-besides-a-table-visual-database-tools.md
+  - name: Show Column Names in the Diagram Pane (Visual Database Tools)
+    href: show-column-names-in-the-diagram-pane-visual-database-tools.md
+  - name: Use the Query and View Designer with International Data (Visual Database Tools)
+    href: use-the-query-and-view-designer-with-international-data-visual-database-tools.md
+  - name: Specify Search Criteria (Visual Database Tools)
+    href: specify-search-criteria-visual-database-tools.md
+  - name: Rules for Entering Search Values (Visual Database Tools)
+    href: rules-for-entering-search-values-visual-database-tools.md
+  - name: Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)
+    href: conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md
+  - name: Specify Search Conditions (Visual Database Tools)
+    href: specify-search-conditions-visual-database-tools.md
+  - name: Specify Multiple Search Conditions for One Column (Visual Database Tools)
+    href: specify-multiple-search-conditions-for-one-column-visual-database-tools.md
+  - name: Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)
+    href: specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md
+  - name: Specify the TOP Clause in Queries (Visual Database Tools)
+    href: specify-the-top-clause-in-queries-visual-database-tools.md
+  - name: Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)
+    href: use-having-and-where-clauses-in-the-same-query-visual-database-tools.md
+  - name: Select Rows That Do Not Match a Value (Visual Database Tools)
+    href: select-rows-that-do-not-match-a-value-visual-database-tools.md
+  - name: Include or Exclude Rows (Visual Database Tools)
+    href: include-or-exclude-rows-visual-database-tools.md
+  - name: Exclude Duplicate Rows (Visual Database Tools)
+    href: exclude-duplicate-rows-visual-database-tools.md
+  - name: Combine Conditions When AND Has Precedence (Visual Database Tools)
+    href: combine-conditions-when-and-has-precedence-visual-database-tools.md
+  - name: Combine Conditions When OR Has Precedence (Visual Database Tools)
+    href: combine-conditions-when-or-has-precedence-visual-database-tools.md
+  - name: Create Subqueries (Visual Database Tools)
+    href: create-subqueries-visual-database-tools.md
+  - name: Query with Joins (Visual Database Tools)
+    href: query-with-joins-visual-database-tools.md
+  - name: Modify Join Operators (Visual Database Tools)
+    href: modify-join-operators-visual-database-tools.md
+  - name: How the Query and View Designer Represents Joins (Visual Database Tools)
+    href: how-the-query-and-view-designer-represents-joins-visual-database-tools.md
+  - name: Join Tables Automatically (Visual Database Tools)
+    href: join-tables-automatically-visual-database-tools.md
+  - name: Join Tables Manually (Visual Database Tools)
+    href: join-tables-manually-visual-database-tools.md
+  - name: Join Tables on Multiple Columns (Visual Database Tools)
+    href: join-tables-on-multiple-columns-visual-database-tools.md
+  - name: Create Outer Joins (Visual Database Tools)
+    href: create-outer-joins-visual-database-tools.md
+  - name: Remove Joins (Visual Database Tools)
+    href: remove-joins-visual-database-tools.md
+  - name: Create Self-Joins Automatically (Visual Database Tools)
+    href: create-self-joins-automatically-visual-database-tools.md
+  - name: Create Self-Joins Manually (Visual Database Tools)
+    href: create-self-joins-manually-visual-database-tools.md
+  - name: View Join Properties (Visual Database Tools)
+    href: view-join-properties-visual-database-tools.md
+  - name: Query with Parameters (Visual Database Tools)
+    href: query-with-parameters-visual-database-tools.md
+  - name: Parameter Queries (Visual Database Tools)
+    href: parameter-queries-visual-database-tools.md
+  - name: Create Queries with Unnamed Parameters (Visual Database Tools)
+    href: create-queries-with-unnamed-parameters-visual-database-tools.md
+- name: Visual Database Tools F1 Help
+  href: visual-database-tools-f1-help.md
+  items:
+  - name: Save (Not Permitted) Dialog Box
+    href: save-not-permitted-dialog-box.md
+  - name: Object Already Exists
+    href: object-already-exists.md
+  - name: Add Table Dialog Box (Database Designer) (Visual Database Tools)
+    href: add-table-dialog-box-database-designer-visual-database-tools.md
+  - name: Add Table Dialog Box (Query and View Designers) (Visual Database Tools)
+    href: add-table-dialog-box-query-and-view-designers-visual-database-tools.md
+  - name: Check Constraint Dialog Box (Visual Database Tools)
+    href: check-constraint-dialog-box-visual-database-tools.md
+  - name: Check Constraint Expression Dialog Box (Visual Database Tools)
+    href: check-constraint-expression-dialog-box-visual-database-tools.md
+  - name: Choose Name Dialog Box (Visual Database Tools)
+    href: choose-name-dialog-box-visual-database-tools.md
+  - name: Choose Target Table for Insert Results Dialog Box (Visual Database Tools)
+    href: choose-target-table-for-insert-results-dialog-box-visual-database-tools.md
+  - name: Choose Target Table for Insert Values Dialog Box (Visual Database Tools)
+    href: choose-target-table-for-insert-values-dialog-box-visual-database-tools.md
+  - name: Collation Dialog Box (Visual Database Tools)
+    href: collation-dialog-box-visual-database-tools.md
+  - name: Color Dialog Box (Visual Database Tools)
+    href: color-dialog-box-visual-database-tools.md
+  - name: Column List Dialog Box (Visual Database Tools)
+    href: column-list-dialog-box-visual-database-tools.md
+  - name: Column Properties (Visual Database Tools)
+    href: column-properties-visual-database-tools.md
+  - name: Column Selection Dialog Box (Visual Database Tools)
+    href: column-selection-dialog-box-visual-database-tools.md
+  - name: Database Changes Detected Dialog Box (Visual Database Tools)
+    href: database-changes-detected-dialog-box-visual-database-tools.md
+  - name: Data Type Change Required Dialog Box (Visual Database Tools)
+    href: data-type-change-required-dialog-box-visual-database-tools.md
+  - name: Delete Table Dialog Box (Visual Database Tools)
+    href: delete-table-dialog-box-visual-database-tools.md
+  - name: Description Property Dialog Box (Visual Database Tools)
+    href: description-property-dialog-box-visual-database-tools.md
+  - name: Full-Text Index Columns Dialog Box (Visual Database Tools)
+    href: full-text-index-columns-dialog-box-visual-database-tools.md
+  - name: Full-Text Index Dialog Box (Visual Database Tools)
+    href: full-text-index-dialog-box-visual-database-tools.md
+  - name: Go To Line Dialog Box
+    href: go-to-line-dialog-box.md
+  - name: Indexes and Keys Dialog Box (Visual Database Tools)
+    href: indexes-keys-dialog-box-visual-database-tools.md
+  - name: Index Columns Dialog Box (Visual Database Tools)
+    href: index-columns-dialog-box-visual-database-tools.md
+  - name: Join Dialog Box (Visual Database Tools)
+    href: join-dialog-box-visual-database-tools.md
+  - name: Location Dialog Box (Visual Database Tools)
+    href: location-dialog-box-visual-database-tools.md
+  - name: Make Table Dialog Box (Visual Database Tools)
+    href: make-table-dialog-box-visual-database-tools.md
+  - name: Open File Dialog Box
+    href: open-file-dialog-box.md
+  - name: Partition Column List Dialog Box (Visual Database Tools)
+    href: partition-column-list-dialog-box-visual-database-tools.md
+  - name: Post-Save Notifications Dialog Box (Visual Database Tools)
+    href: post-save-notifications-dialog-box-visual-database-tools.md
+  - name: Print Dialog Box
+    href: print-dialog-box.md
+  - name: Page Setup Dialog Box
+    href: page-setup-dialog-box.md
+  - name: Query Definitions Differ Dialog Box (Visual Database Tools)
+    href: query-definitions-differ-dialog-box-visual-database-tools.md
+  - name: Query Parameters Dialog Box (Visual Database Tools)
+    href: query-parameters-dialog-box-visual-database-tools.md
+  - name: Query Properties (Visual Database Tools)
+    href: query-properties-visual-database-tools.md
+  - name: Save Change Script Dialog Box (Visual Database Tools)
+    href: save-change-script-dialog-box-visual-database-tools.md
+  - name: Save Dialog Box (Visual Database Tools)
+    href: save-dialog-box-visual-database-tools.md
+  - name: Spatial Indexes Dialog Box (Visual Database Tools)
+    href: spatial-indexes-dialog-box-visual-database-tools.md
+  - name: SQL Comment Dialog Box (Visual Database Tools)
+    href: sql-comment-dialog-box-visual-database-tools.md
+  - name: SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)
+    href: sql-syntax-errors-encountered-dialog-box-visual-database-tools.md
+  - name: Tables and Columns Dialog Box (Visual Database Tools)
+    href: tables-and-columns-dialog-box-visual-database-tools.md
+  - name: Table Properties (Visual Database Tools)
+    href: table-properties-visual-database-tools.md
+  - name: Table-Valued Object (Column) Properties (Visual Database Tools)
+    href: table-valued-object-column-properties-visual-database-tools.md
+  - name: Table-Valued Object Properties (Visual Database Tools)
+    href: table-valued-object-properties-visual-database-tools.md
+  - name: Update Table Dialog Box (Visual Database Tools)
+    href: update-table-dialog-box-visual-database-tools.md
+  - name: Validation Warnings Dialog Box (Visual Database Tools)
+    href: validation-warnings-dialog-box-visual-database-tools.md
+  - name: XML Indexes Dialog Box (Visual Database Tools)
+    href: xml-indexes-dialog-box-visual-database-tools.md

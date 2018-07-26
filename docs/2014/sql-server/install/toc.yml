@@ -1,0 +1,444 @@
+- name: SQL Server 2014 Upgrade Advisor
+  href: sql-server-2014-upgrade-advisor.md
+- name: Installing Upgrade Advisor
+  href: installing-upgrade-advisor.md
+  items:
+  - name: Upgrade Advisor Prerequisites
+    href: upgrade-advisor-prerequisites.md
+  - name: Installing Upgrade Advisor from the Command Prompt
+    href: installing-upgrade-advisor-from-the-command-prompt.md
+- name: Working with Upgrade Advisor
+  href: working-with-upgrade-advisor.md
+- name: Overview of Upgrade Advisor
+  href: overview-of-upgrade-advisor.md
+  items:
+  - name: Upgrade Process Overview
+    href: upgrade-process-overview.md
+  - name: Upgrade Advisor Overview
+    href: upgrade-advisor-overview.md
+  - name: Running Upgrade Advisor (User Interface)
+    href: running-upgrade-advisor-user-interface.md
+  - name: Running Upgrade Advisor (Command Prompt)
+    href: running-upgrade-advisor-command-prompt.md
+  - name: Using Reports
+    href: using-reports.md
+  - name: Upgrade Advisor Errors
+    href: upgrade-advisor-errors.md
+- name: Upgrade Advisor How-to Topics
+  href: upgrade-advisor-how-to-topics.md
+  items:
+  - name: "How to: Install Upgrade Advisor"
+    href: how-to-install-upgrade-advisor.md
+  - name: "How to: Launch Upgrade Advisor"
+    href: how-to-launch-upgrade-advisor.md
+  - name: "How to: Run the Upgrade Advisor Analysis Wizard"
+    href: how-to-run-the-upgrade-advisor-analysis-wizard.md
+  - name: "How to: View an Upgrade Advisor Report"
+    href: how-to-view-an-upgrade-advisor-report.md
+  - name: "How to: Filter Reports"
+    href: how-to-filter-reports.md
+  - name: "How to: Export Reports"
+    href: how-to-export-reports.md
+- name: User Interface Reference
+  href: upgrade-advisor-user-interface-reference.md
+  items:
+  - name: SQL Server Components
+    href: sql-server-components.md
+  - name: Connection Parameters
+    href: connection-parameters.md
+  - name: SQL Server Parameters
+    href: sql-server-parameters.md
+  - name: Analysis Services Parameters
+    href: analysis-services-parameters.md
+  - name: Reporting Services Parameters
+    href: reporting-services-parameters.md
+  - name: Integration Services Parameters
+    href: integration-services-parameters.md
+  - name: Confirm Upgrade Advisor Settings
+    href: confirm-upgrade-advisor-settings.md
+  - name: Upgrade Advisor Progress
+    href: upgrade-advisor-progress.md
+- name: Resolving Upgrade Issues
+  href: resolving-upgrade-issues.md
+  items:
+  - name: Late-Breaking Upgrade Issues
+    href: late-breaking-upgrade-issues.md
+  - name: Database Engine Upgrade Issues
+    href: database-engine-upgrade-issues.md
+    items:
+    - name: 0xFFFF character is not valid as an object identifier
+      href: 0xffff-character-is-not-valid-as-an-object-identifier.md
+    - name: After upgrade, new reserved keywords cannot be used as identifiers
+      href: after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers.md
+    - name: Changes to behavior of string-length and substring
+      href: changes-to-behavior-of-string-length-and-substring.md
+    - name: Changes to behavior in syslockinfo and sp_lock
+      href: changes-to-behavior-in-syslockinfo-and-sp-lock.md
+    - name: Changes to behavior of trace flags
+      href: changes-to-behavior-of-trace-flags.md
+    - name: Changes to CPU and memory limits for SQL Server Reporting Services Standard and Enterprise
+      href: cpu-memory-limits-changes-sql-server-reporting-services-standard-enterprise.md
+    - name: "Changes to the storage format for types xs:dateTime, xs:date, and xs:time"
+      href: changes-to-the-storage-format-for-types-xs-datetime-xs-date-and-xs-time.md
+    - name: Column aliases in ORDER BY clause cannot be prefixed by table alias
+      href: column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias.md
+    - name: Deprecated DBCC commands have now been removed
+      href: deprecated-dbcc-commands-have-now-been-removed.md
+    - name: Detach database ID 32767
+      href: detach-database-id-32767.md
+    - name: Dormant SQL Server 6.5 logins cannot be upgraded
+      href: dormant-sql-server-6-5-logins-cannot-be-upgraded.md
+    - name: FOR BROWSE is not allowed in views in 90 or later compatibility modes
+      href: for-browse-is-not-allowed-in-views-in-90-or-later-compatibility-modes.md
+    - name: FOR XML AUTO queries return derived table references in 90 or later compatibility modes
+      href: for-xml-auto-queries-return-derived-table-references-90-later-compatibility-mode.md
+    - name: INFORMATION_SCHEMA.SCHEMATA returns schema names in a database, not databases in an instance
+      href: information-schema-schemata-returns-schema-names-not-databases.md
+    - name: Invalid named pipe name can block upgrade
+      href: invalid-named-pipe-name-can-block-upgrade.md
+    - name: Large backup or restore history tables make upgrade appear to not respond
+      href: large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond.md
+    - name: Large constants are typed as large-value types in 90 or later compatibility modes
+      href: large-constants-typed-as-large-value-types-90-later-compatibility-mode.md
+    - name: Log shipping will not run after upgrading
+      href: log-shipping-will-not-run-after-upgrading.md
+    - name: Modify applications to expect bigint values from sysperfinfo.cntr_value
+      href: modify-applications-to-expect-bigint-values-from-sysperfinfo-cntr-value.md
+    - name: Modify connections that use Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk, or NWLink IPX SPX network protocols
+      href: modify-connections-banyan-vines-spp-multiprotocol-appletalk-nwlink-ipx-spx.md
+    - name: Modify indexes that depend on the return type of HOST_ID
+      href: modify-indexes-that-depend-on-the-return-type-of-host-id.md
+    - name: Modify UPDATETEXT statements that read and write to binary large objects (BLOBs)
+      href: modify-updatetext-statements-that-read-and-write-to-binary-large-objects-blobs.md
+    - name: Nested AFTER trigger fires even when trigger nesting is OFF
+      href: nested-after-trigger-fires-even-when-trigger-nesting-is-off.md
+    - name: New column in output of sp_helptrigger may impact applications
+      href: new-column-in-output-of-sp-helptrigger-may-impact-applications.md
+    - name: osql no longer supports the ED and !! commands
+      href: osql-no-longer-supports-the-ed-and-commands.md
+    - name: Outer join operators *= and =* are not supported in 90 or later compatibility modes
+      href: outer-join-operators-and-are-not-supported-in-90-or-later-compatibility-modes.md
+    - name: Read-only databases cannot be upgraded
+      href: read-only-databases-cannot-be-upgraded.md
+    - name: Remove calls to the deprecated DBCC CONCURRENCYVIOLATION command
+      href: remove-calls-to-the-deprecated-dbcc-concurrencyviolation-command.md
+    - name: Remove colon following reserved keyword
+      href: remove-colon-following-reserved-keyword.md
+    - name: Remove DDL operations on the inserted and deleted tables inside DML triggers
+      href: remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers.md
+    - name: Remove references to deprecated system stored procedures
+      href: remove-references-to-deprecated-system-stored-procedures.md
+    - name: Remove references to undocumented system tables
+      href: remove-references-to-undocumented-system-tables.md
+    - name: Remove statements that drop system objects
+      href: remove-statements-that-drop-system-objects.md
+    - name: Remove statements that modify column-level permissions on system objects
+      href: remove-statements-that-modify-column-level-permissions-on-system-objects.md
+    - name: Remove statements that modify system objects
+      href: remove-statements-that-modify-system-objects.md
+    - name: Remove the cdc schema if you plan to enable change data capture
+      href: remove-the-cdc-schema-if-you-plan-to-enable-change-data-capture.md
+    - name: Rename logins matching fixed server role names
+      href: rename-logins-matching-fixed-server-role-names.md
+    - name: Remove UDT's named after the reserved DATE and TIME data types
+      href: remove-udt-s-named-after-the-reserved-date-and-time-data-types.md
+    - name: Remove UDT's named after the reserved ORDPATH data type
+      href: remove-udt-s-named-after-the-reserved-ordpath-data-type.md
+    - name: Remove UDTs named after the reserved GEOMETRY and GEOGRAPHY data types
+      href: remove-udts-named-after-the-reserved-geometry-and-geography-data-types.md
+    - name: Rename user sys
+      href: rename-user-sys.md
+    - name: SERVERPROPERTY returns correct result for LCID property in SQL Server 2005
+      href: serverproperty-returns-correct-result-for-lcid-property-in-sql-server-2005.md
+    - name: Service account requirements for upgrading to SQL Server 2008 on a domain controller
+      href: service-account-requirements-upgrade-sql-server-2008-on-domain-controller.md
+    - name: Specify the WITH keyword when using table hints in 90 compatibility mode
+      href: specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode.md
+    - name: SQL Server native SOAP support is discontinued in this version of SQL Server.
+      href: sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server.md
+    - name: Table hints in indexed view definitions are ignored in 80 compatibility mode and are not allowed in 90 mode or later
+      href: table-hints-indexed-views-ignored-80-compatibility-mode-not-allowed-90-later.md
+    - name: Update OPENXML XPath expressions to remove unsupported functions
+      href: update-openxml-xpath-expressions-to-remove-unsupported-functions.md
+    - name: Use sp_rename to rename duplicate index name
+      href: use-sp-rename-to-rename-duplicate-index-name.md
+    - name: Use the full path to register extended stored procedure DLL names
+      href: use-the-full-path-to-register-extended-stored-procedure-dll-names.md
+    - name: User-defined functions are not allowed in system_function_schema
+      href: user-defined-functions-are-not-allowed-in-system-function-schema.md
+    - name: Verify all filegroups are writeable during the upgrade process
+      href: verify-all-filegroups-are-writeable-during-the-upgrade-process.md
+    - name: Verify autogrow is turned on for all data and log files during the upgrade process
+      href: verify-autogrow-turned-on-for-all-data-and-log-files-during-upgrade.md
+    - name: Verify that no database files are on compressed drives during the upgrade process
+      href: verify-no-database-files-on-compressed-drives-during-upgrade.md
+    - name: Warning about client side usage of GEOMETRY, GEOGRAPHY and HIERARCHYID
+      href: warning-about-client-side-usage-of-geometry-geography-and-hierarchyid.md
+    - name: Web Assistant stored procedures have been removed
+      href: web-assistant-stored-procedures-have-been-removed.md
+    - name: Winsock Proxy configuration not supported
+      href: winsock-proxy-configuration-not-supported.md
+    - name: WITH CHECK OPTION is not supported in views that contain TOP in 90 or later compatibility modes
+      href: with-check-option-not-supported-in-top-views-90-later-compatibility-mode.md
+    - name: WITH ROWS is not supported in CREATE STATISTICS statements in the compatibility mode of 90 or later
+      href: with-rows-not-supported-in-create-statistics-statements-90-later-compatibility-mode.md
+    - name: Other Database Engine Upgrade Issues
+      href: other-database-engine-upgrade-issues.md
+      items:
+      - name: Database mirroring deprecation announcement.
+        href: database-mirroring-deprecation-announcement.md
+  - name: Full-Text Search Upgrade Issues
+    href: full-text-search-upgrade-issues.md
+    items:
+    - name: Full-Text Search has changed since SQL Server 2008
+      href: full-text-search-has-changed-since-sql-server-2008.md
+    - name: Full-Text Search word breakers and filters significantly improved in SQL Server 2005 and SQL Server 2008
+      href: full-text-search-word-breakers-filters-improved-sql-server-2005-2008.md
+    - name: Length of full-text catalog names restricted to 120 characters
+      href: length-of-full-text-catalog-names-restricted-to-120-characters.md
+    - name: The Microsoft Full-Text Engine for SQL Server will not load unsigned third-party components by default
+      href: full-text-engine-sql-server-default-will-not-load-third-party-components.md
+    - name: Modify stored procedures that use discontinued Full-Text Search properties
+      href: modify-stored-procedures-that-use-discontinued-full-text-search-properties.md
+    - name: Full-text indexes on nonpersisted, computed columns are not allowed
+      href: full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed.md
+    - name: Full-text indexes on master, tempdb and model databases are not supported
+      href: full-text-indexes-on-master-tempdb-and-model-databases-are-not-supported.md
+    - name: Upgrading will cause Full-Text Search to use instance-level, not global, word breakers and filters by default
+      href: full-text-search-uses-instance-not-global-level-defaults-after-upgrade.md
+    - name: After upgrade, Full-Text Search will not allow predicates in OUTPUT INTO expression
+      href: full-text-search-will-not-allow-predicates-in-output-into-expressions-after-upgrade.md
+  - name: Replication Upgrade Issues
+    href: replication-upgrade-issues.md
+    items:
+    - name: Upgrading will modify queued updating subscriptions that use Message Queuing
+      href: upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing.md
+    - name: Other Replication Upgrade Issues
+      href: other-replication-upgrade-issues.md
+  - name: Reporting Services Upgrade Issues (Upgrade Advisor)
+    href: reporting-services-upgrade-issues-upgrade-advisor.md
+    items:
+    - name: Client certificates on the report server web site (Upgrade Advisor)
+      href: client-certificates-on-the-report-server-web-site-upgrade-advisor.md
+    - name: Custom extensions were detected on the report server (Upgrade Advisor)
+      href: custom-extensions-were-detected-on-the-report-server-upgrade-advisor.md
+    - name: Custom report items were detected on the report server (Upgrade Advisor)
+      href: custom-report-items-were-detected-on-the-report-server-upgrade-advisor.md
+    - name: IIS backward compatibility components were not detected (Upgrade Advisor)
+      href: iis-backward-compatibility-components-were-not-detected-upgrade-advisor.md
+    - name: IP address restriction detected (Upgrade Advisor)
+      href: ip-address-restriction-detected-upgrade-advisor.md
+    - name: ISAPI filters detected on the report server site (Upgrade Advisor)
+      href: isapi-filters-detected-on-the-report-server-site-upgrade-advisor.md
+    - name: Obsolete extensions were detected on the report server computer (Upgrade Advisor)
+      href: obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor.md
+    - name: Report server database is not configured (Upgrade Advisor)
+      href: report-server-database-is-not-configured-upgrade-advisor.md
+    - name: SQL Server 2005 Report Server Web Service group detected (Upgrade Advisor)
+      href: sql-server-2005-report-server-web-service-group-detected-upgrade-advisor.md
+    - name: Virtual directories are unspecified (Upgrade Advisor)
+      href: virtual-directories-are-unspecified-upgrade-advisor.md
+    - name: Virtual directory has unsupported authentication method (Upgrade Advisor)
+      href: virtual-directory-has-unsupported-authentication-method-upgrade-advisor.md
+    - name: Changes to CPU and memory limits for SQL Server Standard and Enterprise (Upgrade Advisor)
+      href: cpu-memory-limits-changes-sql-server-standard-enterprise-upgrade-advisor.md
+    - name: Domain accounts required for SharePoint farm (Upgrade Advisor)
+      href: domain-accounts-required-for-sharepoint-farm-upgrade-advisor.md
+    - name: Direct Browsing to Report Server (Upgrade Advisor)
+      href: direct-browsing-to-report-server-upgrade-advisor.md
+    - name: Microsoft SharePoint 2007 is Installed (Upgrade Advisor)
+      href: microsoft-sharepoint-2007-is-installed-upgrade-advisor.md
+    - name: Microsoft SQL Server Reporting Services SharePoint Shared Service is Installed Side by Side (Upgrade Advisor)
+      href: sql-server-reporting-services-sharepoint-shared-service-side-by-side-upgrade-advisor.md
+    - name: Incompatible Database Engine Server Collation (Upgrade Advisor)
+      href: incompatible-database-engine-server-collation-upgrade-advisor.md
+    - name: Other Reporting Services Upgrade Issues
+      href: other-reporting-services-upgrade-issues.md
+  - name: SQL Server Agent Upgrade Issues
+    href: sql-server-agent-upgrade-issues.md
+    items:
+    - name: Database maintenance plans superseded
+      href: database-maintenance-plans-superseded.md
+    - name: Only sysadmin users can write job step log files to the file system
+      href: only-sysadmin-users-can-write-job-step-log-files-to-the-file-system.md
+    - name: Replace usage of the xp_sqlagent_proxy_account extended stored procedure with new stored procedures
+      href: replace-xp-sqlagent-proxy-account-extended-sp-with-new-stored-procedures.md
+    - name: SQL Server Agent log shipping job category causes upgrade to fail
+      href: sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md
+    - name: SQL Server Agent Service cannot use SQL Server Authentication
+      href: sql-server-agent-service-cannot-use-sql-server-authentication.md
+    - name: Update token syntax in SQL Server Agent job steps
+      href: update-token-syntax-in-sql-server-agent-job-steps.md
+    - name: Upgrade all target servers before upgrading the master server
+      href: upgrade-all-target-servers-before-upgrading-the-master-server.md
+    - name: Upgrading will change the SQL Server Agent User Proxy Account to the temporary UpgradedProxyAccount
+      href: upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md
+- name: Setup and Servicing Installation
+  href: setup-and-servicing-installation.md
+  items:
+  - name: Licensing Considerations for SQL Server
+    href: licensing-considerations-for-sql-server.md
+- name: Overview of SQL Server Setup Documentation
+  href: overview-of-sql-server-setup-documentation.md
+- name: SQL Server 2014 Setup User Interface
+  href: sql-server-2014-setup-user-interface.md
+- name: SQL Server Setup User Interface Reference
+  href: sql-server-setup-user-interface-reference.md
+  items:
+  - name: Accept License Terms
+    href: accept-license-terms.md
+  - name: Add SQL Server Failover Cluster Node
+    href: add-sql-server-failover-cluster-node.md
+  - name: Analysis Services Configuration - Account Provisioning
+    href: analysis-services-configuration-account-provisioning.md
+  - name: Analysis Services Configuration - Data Directories
+    href: analysis-services-configuration-data-directories.md
+  - name: Cluster Disk Selection
+    href: cluster-disk-selection.md
+  - name: Cluster Network Configuration
+    href: cluster-network-configuration.md
+  - name: Cluster Node Configuration
+    href: cluster-node-configuration.md
+  - name: Cluster Node Configuration (Complete)
+    href: cluster-node-configuration-complete.md
+  - name: Cluster Resource Group
+    href: cluster-resource-group.md
+  - name: Cluster Security Policy
+    href: cluster-security-policy.md
+  - name: Complete - Complete Image
+    href: complete-complete-image.md
+  - name: Complete Image Progress
+    href: complete-image-progress.md
+  - name: Complete Image Rules
+    href: complete-image-rules.md
+  - name: Complete - Prepare Image
+    href: complete-prepare-image.md
+  - name: Complete - Repair
+    href: complete-repair.md
+  - name: Complete - Upgrade
+    href: complete-upgrade.md
+  - name: Database Engine Configuration - Account Provisioning
+    href: database-engine-configuration-account-provisioning.md
+  - name: Database Engine Configuration - Data Directories
+    href: database-engine-configuration-data-directories.md
+  - name: Database Engine Configuration - Filestream
+    href: database-engine-configuration-filestream.md
+  - name: Database Engine Configuration - User Instance
+    href: database-engine-configuration-user-instance.md
+  - name: Distributed Replay Controller Configuration
+    href: distributed-replay-controller-configuration.md
+  - name: Distributed Replay Client Configuration
+    href: distributed-replay-client-configuration.md
+  - name: Edition Upgrade Rules
+    href: edition-upgrade-rules.md
+  - name: Failover cluster report
+    href: failover-cluster-report.md
+  - name: Feature Review
+    href: feature-review.md
+  - name: Installation Rules
+    href: installation-rules.md
+  - name: Feature Rules
+    href: feature-rules.md
+  - name: Feature Selection
+    href: feature-selection.md
+  - name: Feature Selection (Uninstall)
+    href: feature-selection-uninstall.md
+  - name: Select Features (Upgrade)
+    href: select-features-upgrade.md
+  - name: Full-Text Search Upgrade Options
+    href: full-text-search-upgrade-options.md
+  - name: Complete - Installation
+    href: complete-installation.md
+  - name: Installation Prerequisites
+    href: installation-prerequisites.md
+  - name: Installation Progress
+    href: installation-progress.md
+  - name: Installation Type
+    href: installation-type.md
+  - name: Instance Configuration
+    href: instance-configuration.md
+  - name: Instance Selection (Uninstall)
+    href: instance-selection-uninstall.md
+  - name: Instance Selection (Upgrade)
+    href: instance-selection-upgrade.md
+  - name: Select Instance
+    href: select-instance.md
+  - name: Post Uninstall
+    href: post-uninstall.md
+  - name: Prepare Image Progress
+    href: prepare-image-progress.md
+  - name: Prepare Image Rules
+    href: prepare-image-rules.md
+  - name: Prepare Image Type
+    href: prepare-image-type.md
+  - name: Product Key
+    href: product-key.md
+  - name: Progress (Uninstall)
+    href: progress-uninstall.md
+  - name: Ready to Complete Image
+    href: ready-to-complete-image.md
+  - name: Ready to Install
+    href: ready-to-install.md
+  - name: Ready to Prepare Image
+    href: ready-to-prepare-image.md
+  - name: Ready to Repair
+    href: ready-to-repair.md
+  - name: Remove SQL Server Failover Cluster Node
+    href: remove-sql-server-failover-cluster-node.md
+  - name: Repair Progress
+    href: repair-progress.md
+  - name: Reporting Services Configuration Options
+    href: reporting-services-configuration-options-ssrs.md
+  - name: Reporting Services SharePoint Mode Upgrade
+    href: reporting-services-sharepoint-mode-upgrade-ssrs.md
+  - name: Reporting Services SharePoint Mode Authentication
+    href: reporting-services-sharepoint-mode-authentication.md
+  - name: Select a Prepared Instance
+    href: select-a-prepared-instance.md
+  - name: Server Configuration - Collation
+    href: server-configuration-collation.md
+  - name: Server Configuration - Service Accounts
+    href: server-configuration-service-accounts.md
+  - name: Setup Role
+    href: setup-role.md
+  - name: SQL Server Failover Cluster Wizard - Complete
+    href: sql-server-failover-cluster-wizard-complete.md
+  - name: SQL Server Failover Cluster Wizard - Install
+    href: sql-server-failover-cluster-wizard-install.md
+  - name: SQL Server Failover Cluster Wizard - Prepare
+    href: sql-server-failover-cluster-wizard-prepare.md
+  - name: Ready to Upgrade
+    href: ready-to-upgrade.md
+  - name: Install Rules
+    href: install-rules.md
+  - name: Uninstallation rules
+    href: uninstallation-rules.md
+  - name: Upgrade Progress
+    href: upgrade-progress.md
+  - name: Feature Rules (Upgrade)
+    href: feature-rules-upgrade.md
+  - name: Verify Uninstall Options
+    href: verify-uninstall-options.md
+- name: SQL Server Servicing Installation
+  href: sql-server-servicing-installation.md
+  items:
+  - name: Installing Updates from the Command Prompt
+    href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
+  - name: "How to: Validate Successful Installation of a SQL Server Update"
+    href: how-to-validate-successful-installation-of-a-sql-server-update.md
+  - name: Overview of SQL Server Servicing Installation
+    href: overview-of-sql-server-servicing-installation.md
+  - name: Welcome
+    href: welcome.md
+  - name: License terms
+    href: license-terms.md
+  - name: Select Features
+    href: select-features.md
+  - name: Check Files In Use
+    href: check-files-in-use.md
+  - name: Ready to Update
+    href: ready-to-update.md
+  - name: Update Progress
+    href: update-progress.md
+  - name: Complete
+    href: complete.md

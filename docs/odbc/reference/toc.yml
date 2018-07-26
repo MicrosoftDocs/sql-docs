@@ -1,0 +1,106 @@
+- name: Introduction to ODBC
+  href: introduction-to-odbc.md
+- name: Installation +
+  href: ../../odbc/reference/install/odbc-subkey.md
+- name: Develop Applications +
+  href: ../../odbc/reference/develop-app/checking-feature-support-and-variability.md
+- name: Develop Drivers +
+  href: ../../odbc/reference/develop-driver/developing-an-odbc-driver.md
+- name: Syntax +
+  href: ../../odbc/reference/syntax/odbc-reference.md
+- name: Appendixes +
+  href: ../../odbc/reference/appendixes/odbc-appendixes.md
+- name: ODBC Programmer's Reference
+  href: odbc-programmer-s-reference.md
+- name: What's New in ODBC 3.8
+  href: what-s-new-in-odbc-3-8.md
+- name: Sample ODBC Program
+  href: sample-odbc-program.md
+  items:
+  - name: ODBC Overview
+    href: odbc-overview.md
+    items:
+    - name: Why Was ODBC Created?
+      href: why-was-odbc-created.md
+    - name: What Is ODBC?
+      href: what-is-odbc.md
+    - name: ODBC and the Standard CLI
+      href: odbc-and-the-standard-cli.md
+  - name: Introduction to SQL and ODBC
+    href: introduction-to-sql-and-odbc.md
+    items:
+    - name: Structured Query Language (SQL)
+      href: structured-query-language-sql.md
+      items:
+      - name: Processing a SQL Statement
+        href: processing-a-sql-statement.md
+      - name: Embedded SQL
+        href: embedded-sql.md
+        items:
+        - name: Embedded SQL Example
+          href: embedded-sql-example.md
+        - name: Compiling an Embedded SQL Program
+          href: compiling-an-embedded-sql-program.md
+        - name: Static SQL
+          href: static-sql.md
+        - name: Dynamic SQL
+          href: dynamic-sql.md
+      - name: SQL Modules
+        href: sql-modules.md
+      - name: Call-Level Interfaces
+        href: call-level-interfaces.md
+    - name: Database Access Architecture
+      href: database-access-architecture.md
+      items:
+      - name: Network Database Access
+        href: network-database-access.md
+      - name: Standard Database Access Architectures
+        href: standard-database-access-architectures.md
+        items:
+        - name: Standard Programming Interface
+          href: standard-programming-interface.md
+        - name: Standard Data Stream Protocol
+          href: standard-data-stream-protocol.md
+        - name: Standard Gateway
+          href: standard-gateway.md
+      - name: The ODBC Solution
+        href: the-odbc-solution.md
+  - name: ODBC Architecture
+    href: odbc-architecture.md
+    items:
+    - name: Applications
+      href: applications.md
+    - name: The Driver Manager
+      href: the-driver-manager.md
+    - name: Drivers
+      href: drivers.md
+      items:
+      - name: Driver Tasks
+        href: driver-tasks.md
+      - name: Driver Architecture
+        href: driver-architecture.md
+        items:
+        - name: File-Based Drivers
+          href: file-based-drivers.md
+        - name: DBMS-Based Drivers
+          href: dbms-based-drivers.md
+        - name: Network Example
+          href: network-example.md
+        - name: Other Driver Architectures
+          href: other-driver-architectures.md
+    - name: Data Sources
+      href: data-sources.md
+      items:
+      - name: Types of Data Sources
+        href: types-of-data-sources.md
+        items:
+        - name: Machine Data Sources
+          href: machine-data-sources.md
+        - name: File Data Sources
+          href: file-data-sources.md
+      - name: Using Data Sources
+        href: using-data-sources.md
+      - name: Data Source Example
+        href: data-source-example.md
+  - name: ODBC 64-Bit Information
+    href: odbc-64-bit-information.md

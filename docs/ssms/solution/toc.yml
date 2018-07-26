@@ -1,0 +1,46 @@
+- name: Solution Explorer
+  href: solution-explorer.md
+- name: Copy Items in a Solution
+  href: copy-items-in-a-solution.md
+- name: Files That Manage Solutions and Projects
+  href: files-that-manage-solutions-and-projects.md
+- name: Solutions (SQL Server Management Studio)
+  href: solutions-sql-server-management-studio.md
+- name: Associate a Query with a Connection in a Project
+  href: associate-a-query-with-a-connection-in-a-project.md
+- name: Projects (SQL Server Management Studio)
+  href: projects-sql-server-management-studio.md
+- name: Move Items in a Solution
+  href: move-items-in-a-solution.md
+- name: Manage Files with Encoding
+  href: manage-files-with-encoding.md
+- name: Change the Connection Associated with a Query
+  href: change-the-connection-associated-with-a-query.md
+- name: Add an Existing Project to a Solution
+  href: add-an-existing-project-to-a-solution.md
+- name: Create a Project
+  href: create-a-project.md
+- name: Add New Items to a Project
+  href: add-new-items-to-a-project.md
+- name: Delete a Solution
+  href: delete-a-solution.md
+- name: Open an Existing Solution
+  href: open-an-existing-solution.md
+- name: View Project Properties
+  href: view-project-properties.md
+- name: Remove or Delete an Item or Project
+  href: remove-or-delete-an-item-or-project.md
+- name: Miscellaneous Files
+  href: miscellaneous-files.md
+- name: Change the Default Location for Projects
+  href: change-the-default-location-for-projects.md
+- name: Rename Solutions and Project Items
+  href: rename-solutions-and-project-items.md
+- name: Close a Solution
+  href: close-a-solution.md
+- name: View or Change the Properties of a Connection in a Project
+  href: view-or-change-the-properties-of-a-connection-in-a-project.md
+- name: Add Existing Items to a Project
+  href: add-existing-items-to-a-project.md
+- name: Create a New Solution
+  href: create-a-new-solution.md

@@ -54,7 +54,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  Information returned by **sys.dm_db_missing_index_group_stats** is updated by every query execution, not by every query compilation or recompilation. Usage statistics are not persisted and are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep the usage statistics after server recycling.  
 
   >[!NOTE]
-  >The result set for this DMV is limited to 600 rows. If more than 600 missing indexes exist, new missing indexes will not be visible until some of the older missing indexes are addressed. 
+  >The result set for this DMV is limited to 600 rows. Each row contains one missing index. If you have more than 600 missing indexes, you should address the existing missing indexes so you can then view the newer ones.
   
 ## Permissions  
  To query this dynamic management view, users must be granted the VIEW SERVER STATE permission or any permission that implies the VIEW SERVER STATE permission.  

@@ -1,16 +1,14 @@
-public static void executeStatement(Connection con) {
-   try {
-      String SQL = "SELECT TOP 10 * FROM Person.Contact";
-      Statement stmt = con.createStatement();
-      ResultSet rs = stmt.executeQuery(SQL);
+public static void executeStatement(Connection con){
+    try(Statement stmt = con.createStatement();) {
+        String SQL = "SELECT TOP 10 * FROM Person.Contact";
+        ResultSet rs = stmt.executeQuery(SQL);
 
-      while (rs.next()) {
-         System.out.println(rs.getString(4) + " " + rs.getString(6));
-      }
-      rs.close();
-      stmt.close();
-   }
-   catch (Exception e) {
-      e.printStackTrace();
-   }
+        while (rs.next()) {
+            System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));
+        }
+    }
+    // Handle any errors that may have occurred.
+    catch (SQLException e) {
+        e.printStackTrace();
+    }
 }

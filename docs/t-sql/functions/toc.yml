@@ -59,33 +59,33 @@
 - name: Configuration
   href: configuration-functions-transact-sql.md
   items:
-  - name: @@DBTS
+  - name: "@@DBTS"
     href: dbts-transact-sql.md
-  - name: @@LANGID
+  - name: "@@LANGID"
     href: langid-transact-sql.md
-  - name: @@LANGUAGE
+  - name: "@@LANGUAGE"
     href: language-transact-sql.md
-  - name: @@LOCK_TIMEOUT
+  - name: "@@LOCK_TIMEOUT"
     href: lock-timeout-transact-sql.md
-  - name: @@MAX_CONNECTIONS
+  - name: "@@MAX_CONNECTIONS"
     href: max-connections-transact-sql.md
-  - name: @@MAX_PRECISION
+  - name: "@@MAX_PRECISION"
     href: max-precision-transact-sql.md
-  - name: @@NESTLEVEL
+  - name: "@@NESTLEVEL"
     href: nestlevel-transact-sql.md
-  - name: @@OPTIONS
+  - name: "@@OPTIONS"
     href: options-transact-sql.md
-  - name: @@REMSERVER
+  - name: "@@REMSERVER"
     href: remserver-transact-sql.md
-  - name: @@SERVERNAME
+  - name: "@@SERVERNAME"
     href: servername-transact-sql.md
-  - name: @@SERVICENAME
+  - name: "@@SERVICENAME"
     href: servicename-transact-sql.md
-  - name: @@SPID
+  - name: "@@SPID"
     href: spid-transact-sql.md
-  - name: @@TEXTSIZE
+  - name: "@@TEXTSIZE"
     href: textsize-transact-sql.md
-  - name: @@VERSION
+  - name: "@@VERSION"
     href: version-transact-sql-configuration-functions.md
 - name: Conversion
   href: conversion-functions-transact-sql.md
@@ -156,9 +156,9 @@
 - name: Cursor
   href: cursor-functions-transact-sql.md
   items:
-  - name: @@CURSOR_ROWS
+  - name: "@@CURSOR_ROWS"
     href: cursor-rows-transact-sql.md
-  - name: @@FETCH_STATUS
+  - name: "@@FETCH_STATUS"
     href: fetch-status-transact-sql.md
   - name: CURSOR_STATUS
     href: cursor-status-transact-sql.md
@@ -180,7 +180,7 @@
 - name: Date and time
   href: date-and-time-data-types-and-functions-transact-sql.md
   items:
-  - name: @@DATEFIRST
+  - name: "@@DATEFIRST"
     href: datefirst-transact-sql.md
   - name: CURRENT_TIMESTAMP
     href: current-timestamp-transact-sql.md
@@ -299,7 +299,7 @@
 - name: Metadata
   href: metadata-functions-transact-sql.md
   items:
-  - name: @@PROCID
+  - name: "@@PROCID"
     href: procid-transact-sql.md
   - name: APP_NAME
     href: app-name-transact-sql.md
@@ -532,15 +532,15 @@
   items:
   - name: $PARTITION
     href: partition-transact-sql.md
-  - name: @@ERROR
+  - name: "@@ERROR"
     href: error-transact-sql.md
-  - name: @@IDENTITY
+  - name: @@IDENTITY"
     href: identity-transact-sql.md
-  - name: @@PACK_RECEIVED
+  - name: "@@PACK_RECEIVED"
     href: pack-received-transact-sql.md
-  - name: @@ROWCOUNT
+  - name: "@@ROWCOUNT"
     href: rowcount-transact-sql.md
-  - name: @@TRANCOUNT
+  - name: "@@TRANCOUNT"
     href: trancount-transact-sql.md
   - name: BINARY_CHECKSUM 
     href: binary-checksum-transact-sql.md
@@ -601,25 +601,25 @@
 - name: System Statistical
   href: system-statistical-functions-transact-sql.md
   items:
-  - name: @@CONNECTIONS
+  - name: "@@CONNECTIONS"
     href: connections-transact-sql.md
-  - name: @@CPU_BUSY
+  - name: "@@CPU_BUSY"
     href: cpu-busy-transact-sql.md
-  - name: @@IDLE
+  - name: "@@IDLE"
     href: idle-transact-sql.md
-  - name: @@IO_BUSY
+  - name: "@@IO_BUSY"
     href: io-busy-transact-sql.md
-  - name: @@PACK_SENT
+  - name: "@@PACK_SENT"
     href: pack-sent-transact-sql.md
-  - name: @@PACKET_ERRORS
+  - name: "@@PACKET_ERRORS"
     href: packet-errors-transact-sql.md
-  - name: @@TIMETICKS
+  - name: "@@TIMETICKS"
     href: timeticks-transact-sql.md
-  - name: @@TOTAL_ERRORS
+  - name: "@@TOTAL_ERRORS"
     href: total-errors-transact-sql.md
-  - name: @@TOTAL_READ
+  - name: "@@TOTAL_READ"
     href: total-read-transact-sql.md
-  - name: @@TOTAL_WRITE
+  - name: "@@TOTAL_WRITE"
     href: total-write-transact-sql.md
 - name: Text and Image
   items:

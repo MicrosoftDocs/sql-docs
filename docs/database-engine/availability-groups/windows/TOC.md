@@ -37,9 +37,9 @@
 ## Interoperability with other features
 ### Replication, CT, & CDC
 #### [Configure replication](configure-replication-for-always-on-availability-groups-sql-server.md)
-#### [Change tracking and change data capture](replicate-track-change-data-capture-always-on-availability.md) 
 #### [Publication database](maintaining-an-always-on-publication-database-sql-server.md)  
-#### [Subscribers](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
+#### [Subscribers](replication-subscribers-and-always-on-availability-groups-sql-server.md) 
+#### [Change tracking and change data capture](replicate-track-change-data-capture-always-on-availability.md)  
 ### [Contained databases](contained-databases-with-always-on-availability-groups-sql-server.md)  
 ### [Database snapshots](database-snapshots-with-always-on-availability-groups-sql-server.md)  
 ### [Distributed transactions](transactions-always-on-availability-and-database-mirroring.md)  

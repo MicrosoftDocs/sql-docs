@@ -1,7 +1,7 @@
 ---
 title: "Understanding Data Type Conversions | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -31,7 +31,7 @@ manager: craigg
   
 -   **Converted (y)**: Conversions from numeric server types to Java language types where the conversion is regular and follows Java language conversion rules. For these conversions, precision is always truncated—never rounded—and overflow is handled as modulo of the destination type, which is smaller. For example, calling getInt on an underlying **decimal** column that contains "1.9999" will return "1", or if the underlying **decimal** value is "3000000000" then the **int** value overflows to "-1294967296".  
   
--   **Data Dependent (z)**: Conversions from underlying character types to numeric types require that the character types contain values that can be converted into that type. No other conversions are performed. If the value is too large for the getter type, the value is not valid. For example, if getInt is called on a varchar(50) column that contains "53", the value is returned as an **int**; but if the underlying value is "xyz" or "3000000000", an error is thrown.  
+-   **Data Dependent (z)**: Conversions from underlying character types to numeric types require that the character types contain values that can be converted into that type. No other conversions are performed. If the value is too large for the getter type, the value isn't valid. For example, if getInt is called on a varchar(50) column that contains "53", the value is returned as an **int**; but if the underlying value is "xyz" or "3000000000", an error is thrown.  
   
  If getString is called on a **binary**, **varbinary**, **varbinary(max)**, or **image** column data type, the value is returned as a hexadecimal string value.  
   
@@ -46,13 +46,13 @@ manager: craigg
   
 -   **Converted (y)**: Conversions from numeric server types to Java language types where the conversion is regular and follows Java language conversion rules. For these conversions, precision is always truncated (never rounded) and overflow is handled as modulo of the destination (the smaller) type. For example, calling updateDecimal on an underlying **int** column that contains "1.9999" will return "1", or if the underlying **decimal** value is "3000000000" then the **int** value overflows to "-1294967296".  
   
--   **Data Dependent (z)**: Conversions from underlying source data types to destination data types require that the contained values can be converted into the destination types. No other conversions are performed. If the value is too large for the getter type, the value is not valid. For example, if updateString is called on an int column that contains "53", the update succeeds; but if the underlying String value is "foo" or "3000000000", an error is thrown.  
+-   **Data Dependent (z)**: Conversions from underlying source data types to destination data types require that the contained values can be converted into the destination types. No other conversions are performed. If the value is too large for the getter type, the value isn't valid. For example, if updateString is called on an int column that contains "53", the update succeeds; but if the underlying String value is "foo" or "3000000000", an error is thrown.  
   
  When updateString is called on a **binary**, **varbinary**, **varbinary(max)**, or **image** column data type, it handles the String value as a hexadecimal string value.  
   
  When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] column data type is **XML**, the data value must be a valid **XML**. When calling updateBytes, updateBinaryStream, or updateBlob methods, the data value should be the hexadecimal string representation of the XML characters. For example:  
   
-```  
+```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
 ```  
   
@@ -73,13 +73,13 @@ manager: craigg
   
 -   **Converted (y)**: Conversions from a Java **numeric** type to an underlying server **numeric** type that is smaller. This conversion is regular and follows [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conversion conventions. Precision is always truncated (never rounded) and overflow throws an unsupported conversion error. For example, using updateDecimal with a value of "1.9999" on an underlying integer column results in a "1" in the destination column; but if "3000000000" is passed, the driver throws an error.  
   
--   **Data Dependent (z)**: Conversions from a Java **String** type to the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type depends on the following conditions: The driver sends the **String** value to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] performs conversions, if necessary. If the sendStringParametersAsUnicode is set to true and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] does not allow converting **nvarchar** to **image** and throws an SQLServerException. If the sendStringParametersAsUnicode is set to false and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] allows converting **varchar** to **image** and does not throw an exception.  
+-   **Data Dependent (z)**: Conversions from a Java **String** type to the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type depends on the following conditions: The driver sends the **String** value to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] performs conversions, if necessary. If the sendStringParametersAsUnicode is set to true and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] doesn't allow converting **nvarchar** to **image** and throws an SQLServerException. If the sendStringParametersAsUnicode is set to false and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] allows converting **varchar** to **image** and doesn't throw an exception.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] performs the conversions and passes errors back to the JDBC driver when there are problems.  
   
  When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] column data type is **XML**, the data value must be a valid **XML**. When calling updateBytes, updateBinaryStream, or updateBlob methods, the data value should be the hexadecimal string representation of the XML characters. For example:  
   
-```  
+```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
 ```  
   
@@ -102,13 +102,13 @@ manager: craigg
   
 -   **Converted (y)**: Conversions from a Java **numeric** type to an underlying server **numeric** type that is smaller. This conversion is regular and follows [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conversion conventions. Precision is always truncated—never rounded—and overflow throws an unsupported conversion error. For example, using updateDecimal with a value of "1.9999" on an underlying integer column results in a "1" in the destination column; but if "3000000000" is passed, the driver throws an error.  
   
--   **Data Dependent (z)**: Conversions from a Java **String** type to the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type depends on the following conditions: The driver sends the **String** value to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] performs conversions, if necessary. If the sendStringParametersAsUnicode connection property is set to true and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] does not allow converting **nvarchar** to **image** and throws an SQLServerException. If the sendStringParametersAsUnicode is set to false and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] allows converting **varchar** to **image** and does not throw an exception.  
+-   **Data Dependent (z)**: Conversions from a Java **String** type to the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type depends on the following conditions: The driver sends the **String** value to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] performs conversions, if necessary. If the sendStringParametersAsUnicode connection property is set to true and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] doesn't allow converting **nvarchar** to **image** and throws an SQLServerException. If the sendStringParametersAsUnicode is set to false and the underlying [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type is **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] allows converting **varchar** to **image** and doesn't throw an exception.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] performs the bulk of the set conversions and passes errors back to the JDBC driver when there are problems. Client-side conversions are the exception and are performed only in the case of **date**, **time**, **timestamp**, **Boolean**, and **String** values.  
   
  When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] column data type is **XML**, the data value must be a valid **XML**. When calling setObject(byte[], SQLXML), setObject(inputStream, SQLXML), or setObject(Blob, SQLXML) methods, the data value should be the hexadecimal string representation of the XML characters. For example:  
   
-```  
+```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
 ```  
   

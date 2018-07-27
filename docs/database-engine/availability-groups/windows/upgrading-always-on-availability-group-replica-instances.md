@@ -170,14 +170,15 @@ Observe the following guidelines when performing server upgrades or updates in o
 To perform a rolling upgrade of a distributed availability group, first upgrade all of the secondary replicas. Next, failover the forwarder, and upgrade the last remaining instance of the second availability group. Once all other replicas have been upgraded, failover the global primary, and upgrade the last remaining instance of the first availability group. A detailed diagram with steps is provided below. 
 
 ### Steps to upgrade a distributed availability group
-1. Upgrade and restart the secondary replicas of the second availability group.
-2. Upgrade and restart the secondary replicas of the first availability group.
+1. Upgrade and restart all secondary replica instances of the second availability group (the downstream).
+2. Upgrade and restart all secondary replica instances of the first availability group (the upstream).
 3. Fail over the forwarder primary to an upgraded secondary replica of the secondary availability group.
-4. Upgrade the last remaining instance of the secondary availability group.
-5. Restart the newly upgraded server.
-6. Fail over the global primary to an upgraded secondary of the first availability group.
-7. Upgrade the last remaining instance of the primary availability group.
-8. Restart the newly upgraded server.
+4. Upgrade and restart the last remaining instance of the secondary availability group.
+5. Fail over the global primary to an upgraded secondary of the first availability group.
+6. Upgrade the last remaining instance of the primary availability group.
+7. Restart the newly upgraded server.
+
+
 
 ### Diagram for a rolling upgrade of a distributed availability group
 
@@ -189,7 +190,8 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 | &nbsp; | &nbsp; | &nbsp; |
 
 ![Instances in distributed AG](media/rolling-upgrade-dag-diagram.png)
-![Instances in distributed AG](media/rolling-upgrade-dag-diagram2.png)
+
+The steps to upgrade the instances in this diagram: 
 
 1. Upgrade NODE4\SQLAG (secondary of AG2) and restart the server. 
 2. Upgrade NODE2\SQLAG (secondary of AG1) and restart the server. 
@@ -198,6 +200,7 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 5. Fail AG2 over from NODE1\SQLAG to NODE2\SQLAG and verify synchronization. 
 6. Upgrade NODE1\SQLAG and restart the server. 
 
+If a third replica existed in each availability group, it would be upgraded before NODE3\SQLAG and NODE1\SQLAG. 
 
 
 ## Special steps for change data capture or replication

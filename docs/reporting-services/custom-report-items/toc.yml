@@ -1,0 +1,14 @@
+- name: Creating a Custom Report Item Design-Time Component
+  href: creating-a-custom-report-item-design-time-component.md
+- name: Creating a Custom Report Item Run-Time Component
+  href: creating-a-custom-report-item-run-time-component.md
+- name: Custom Report Item Architecture
+  href: custom-report-item-architecture.md
+- name: Custom Report Item Class Libraries
+  href: custom-report-item-class-libraries.md
+- name: Custom Report Item Implementation Requirements
+  href: custom-report-item-implementation-requirements.md
+- name: Custom Report Items
+  href: custom-report-items.md
+- name: "How to: Deploy a Custom Report Item"
+  href: how-to-deploy-a-custom-report-item.md

@@ -1,0 +1,247 @@
+- name: Tools
+  href: reporting-services-tools.md
+- name: "Tutorial: How to Locate and Start Reporting Services Tools"
+  href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+- name: Reporting Services in SQL Server Data Tools
+  href: reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+  - name: Design Reports with Report Designer
+    href: design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+    items:
+    - name: Add a New or Existing Report to a Report Project
+      href: add-a-new-or-existing-report-to-a-report-project-ssrs.md
+    - name: Import Reports from Microsoft Access
+      href: ../import-reports-from-microsoft-access-reporting-services.md
+      items:
+      - name: Supported Access Report Features
+        href: ../supported-access-report-features-ssrs.md
+    - name: Query Design Tools in Report Designer in SQL Server Data Tools
+      href: ../report-data/query-design-tools-ssrs.md
+  - name: Deployment and Version Support in SQL Server Data Tools
+    href: deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+  - name: URL Examples for Published Report Items on a Report Server in SharePoint Mode (SSRS)
+    href: url-examples-for-items-on-a-report-server-sharepoint-mode.md
+  - name: Set Deployment Properties
+    href: set-deployment-properties-reporting-services.md
+  - name: Dock the Report Data Pane in Report Designer
+    href: dock-the-report-data-pane-in-report-designer-ssrs.md
+  - name: Report Wizard Help
+    href: ../report-wizard-help.md
+    items:
+    - name: Welcome to the Report Wizard
+      href: ../welcome-to-the-report-wizard.md
+    - name: Select the Data Source
+      href: ../select-the-data-source.md
+    - name: Design the Query
+      href: ../design-the-query.md
+    - name: Query Builder
+      href: ../query-builder-report-wizard.md
+    - name: Select the Report Type
+      href: ../select-the-report-type.md
+    - name: Design the Table
+      href: ../design-the-table-report-wizard.md
+    - name: Design the Matrix
+      href: ../design-the-matrix.md
+    - name: Choose the Table Layout
+      href: ../choose-the-table-layout.md
+    - name: Choose the Table Style or Choose the Matrix Style
+      href: ../choose-the-table-style-or-choose-the-matrix-style.md
+    - name: Choose the Deployment Location
+      href: ../choose-the-deployment-location.md
+    - name: Complete the Report Wizard
+      href: ../complete-the-report-wizard.md
+  - name: Report Designer F1 Help
+    href: report-designer-f1-help.md
+    items:
+    - name: Document Outline
+      href: document-outline.md
+    - name: Design View
+      href: design-view.md
+    - name: Preview View
+      href: preview-view.md
+    - name: Grouping Pane
+      href: grouping-pane.md
+    - name: Project Property Pages Dialog Box
+      href: project-property-pages-dialog-box.md
+    - name: Add Reference Dialog Box
+      href: ../add-reference-dialog-box.md
+    - name: Column Visibility Dialog Box
+      href: ../column-visibility-dialog-box.md
+    - name: Delete Group Dialog Box
+      href: ../delete-group-dialog-box.md
+    - name: Delete Columns Dialog Box
+      href: ../delete-columns-dialog-box.md
+    - name: Delete Rows Dialog Box
+      href: ../delete-rows-dialog-box.md
+    - name: Reporting Services Login Dialog Box (SSRS)
+      href: reporting-services-login-dialog-box-ssrs.md
+    - name: Row Visibility Dialog Box
+      href: ../row-visibility-dialog-box.md
+- name: Reporting Services in SQL Server Management Studio
+  href: reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+  - name: Set Report Server Properties
+    href: set-report-server-properties-management-studio.md
+  - name: Delete an Item
+    href: delete-an-item-management-studio.md
+  - name: Connect to a Report Server in Management Studio
+    href: connect-to-a-report-server-in-management-studio.md
+  - name: Report Server in Management Studio F1 Help
+    href: report-server-in-management-studio-f1-help.md
+    items:
+    - name: Cancel Report Server Jobs
+      href: cancel-report-server-jobs-management-studio.md
+    - name: Delete Catalog Items
+      href: delete-catalog-items-management-studio.md
+    - name: Job Properties
+      href: job-properties-management-studio.md
+    - name: New Shared Schedule
+      href: new-shared-schedule-management-studio.md
+    - name: New System Role
+      href: new-system-role-management-studio.md
+    - name: New User Role
+      href: new-user-role-management-studio.md
+    - name: Schedule Properties (General Page)
+      href: schedule-properties-general-page.md
+    - name: Schedule Properties (Reports Page)
+      href: schedule-properties-reports-page.md
+    - name: Server Properties (General Page)
+      href: report-server-properties-general-page.md
+    - name: Server Properties (Execution Page)
+      href: server-properties-execution-page.md
+    - name: Server Properties (History Page)
+      href: server-properties-history-page.md
+    - name: Server Properties (Logging Page)
+      href: server-properties-logging-page.md
+    - name: Server Properties (Security Page)
+      href: server-properties-security-page-reporting-services.md
+    - name: Server Properties (Advanced Page)
+      href: server-properties-advanced-page-reporting-services.md
+    - name: System Role Properties
+      href: system-role-properties-management-studio.md
+    - name: User Role Properties
+      href: user-role-properties-management-studio.md
+- name: Report Builder
+  href: report-builder-authoring-environment-ssrs.md
+- name: Report Manager  (SSRS Native Mode)
+  href: ../report-manager-ssrs-native-mode.md
+  items:
+  - name: Report Manager F1 Help
+    href: ../report-manager-f1-help.md
+    items:
+    - name: Cache Refresh Option
+      href: ../cache-refresh-options-report-manager.md
+    - name: Caching Page, Shared Datasets
+      href: ../caching-page-shared-datasets-report-manager.md
+    - name: Choose Link Page
+      href: ../choose-link-page-report-manager.md
+    - name: Choose Item Location Page
+      href: ../choose-item-location-page-report-manager.md
+    - name: Clickthrough Reports Page
+      href: ../clickthrough-reports-page-report-manager.md
+    - name: Contents Page
+      href: ../contents-page-report-manager.md
+    - name: Create Data-driven Subscription Page
+      href: ../create-data-driven-subscription-page-report-manager.md
+    - name: Data Source Selection Page
+      href: ../data-source-selection-page-report-manager.md
+    - name: Data Sources Properties Page
+      href: ../data-sources-properties-page-report-manager.md
+    - name: Dependent Items Page
+      href: ../dependent-items-page-report-manager.md
+    - name: Error Page
+      href: ../error-page-report-manager.md
+    - name: Execution Properties Page
+      href: ../processing-options-properties-page-report-manager.md
+    - name: General Properties Page, Folders
+      href: ../general-properties-page-folders-report-manager.md
+    - name: General Properties Page, Models
+      href: ../general-properties-page-models-report-manager.md
+    - name: General Properties Page, Report Parts
+      href: ../general-properties-page-report-parts-report-manager.md
+    - name: General Properties Page, Reports
+      href: ../general-properties-page-reports-report-manager.md
+    - name: General Properties Page, Resources
+      href: ../general-properties-page-resources-report-manager.md
+    - name: General Properties Page, Shared Data Sources
+      href: ../general-properties-page-shared-data-sources-report-manager.md
+    - name: General Properties Page, Shared Datasets
+      href: ../general-properties-page-shared-datasets-report-manager.md
+    - name: Snapshot Options Properties Page
+      href: ../snapshot-options-properties-page-report-manager.md
+    - name: Model Item Security Page
+      href: ../model-item-security-page-report-manager.md
+    - name: Move Items Page
+      href: ../move-items-page-report-manager.md
+    - name: My Subscriptions Page
+      href: ../my-subscriptions-page-report-manager.md
+    - name: New Data Source Page
+      href: ../new-data-source-page-report-manager.md
+    - name: New Folder Page
+      href: ../new-folder-page-report-manager.md
+    - name: New Linked Report Page
+      href: ../new-linked-report-page-report-manager.md
+    - name: New Model Page
+      href: ../new-model-page-report-manager.md
+    - name: "New Role Assignment: Edit Role Assignment Page"
+      href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
+    - name: "New Schedule: Edit Schedule Page"
+      href: ../new-schedule-edit-schedule-page-report-manager.md
+    - name: New Subscription or Edit Subscription Page
+      href: ../new-subscription-or-edit-subscription-page-report-manager.md
+    - name: "New System Role Assignments: Edit System Role Assignments Page"
+      href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
+    - name: Parameters Properties Page
+      href: ../parameters-properties-page-report-manager.md
+    - name: Report History Page
+      href: ../report-history-page-report-manager.md
+    - name: Search Page
+      href: ../search-page-report-manager.md
+    - name: Security Page (Site Settings)
+      href: ../security-page-site-settings-report-manager.md
+    - name: Security Properties Page, Items
+      href: ../security-properties-page-items-report-manager.md
+    - name: Schedules Page
+      href: ../schedules-page-report-manager.md
+    - name: Shared Dataset Selection Page (Report Manager)
+      href: ../shared-dataset-selection-page-report-manager.md
+    - name: Site Settings Page (Report Manager)
+      href: ../site-settings-page-report-manager.md
+    - name: Subscriptions Page
+      href: ../subscriptions-page-report-manager.md
+    - name: Upload File Page
+      href: ../upload-file-page-report-manager.md
+    - name: View Page, Reports
+      href: ../view-page-reports-report-manager.md
+    - name: View Page, Resources
+      href: ../view-page-resources-report-manager.md
+  - name: Create a Model Using Report Manager
+    href: ../create-a-model-using-report-manager.md
+  - name: Link a Report to a Model as a Clickthrough Report
+    href: ../link-a-report-to-a-model-as-a-clickthrough-report.md
+  - name: Customize Style Sheets for HTML Viewer and Report Manager
+    href: ../customize-style-sheets-for-html-viewer-and-report-manager.md
+- name: Scripting and PowerShell with Reporting Services
+  href: scripting-and-powershell-with-reporting-services.md
+  items:
+  - name: Script with the rs.exe Utility and the Web Service
+    href: script-with-the-rs-exe-utility-and-the-web-service.md
+  - name: Format a Reporting Services Script File
+    href: format-a-reporting-services-script-file.md
+  - name: Run a Reporting Services Script File
+    href: run-a-reporting-services-script-file.md
+  - name: Script Deployment and Administrative Tasks
+    href: script-deployment-and-administrative-tasks.md
+  - name: Sample Reporting Services rs.exe Script to Migrate Content between Report Servers
+    href: sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+  - name: Access the Reporting Services WMI Provider
+    href: access-the-reporting-services-wmi-provider.md
+- name: Report Server Command Prompt Utilities
+  href: report-server-command-prompt-utilities-ssrs.md
+  items:
+  - name: rskeymgmt Utility
+    href: rskeymgmt-utility-ssrs.md
+  - name: rsconfig Utility
+    href: rsconfig-utility-ssrs.md
+  - name: RS.exe Utility (SSRS)
+    href: rs-exe-utility-ssrs.md

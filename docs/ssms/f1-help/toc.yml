@@ -1,0 +1,40 @@
+- name: F1 Help for Server Connections (SSMS)
+  href: f1-help-for-server-connections-sql-server-management-studio.md
+- name: Connect to Microsoft Azure Storage
+  href: connect-to-microsoft-azure-storage.md
+- name: Connect to Any SQL Server Component from SQL Server Management Studio
+  href: connect-to-any-sql-server-component-from-sql-server-management-studio.md
+- name: Connection Properties Dialog Box
+  href: connection-properties-dialog-box.md
+- name: Connect to Server - Database Engine
+  href: connect-to-server-database-engine.md
+- name: Connect to Server - Properties Page - Database Engine
+  href: connect-to-server-connection-properties-page-database-engine.md
+- name: Connect to Server - Login - Database Engine
+  href: connect-to-server-login-page-database-engine.md
+- name: Login - Connect to SSAS Server
+  href: connect-to-server-login-page-analysis-services.md
+- name: Connect to SSAS
+  href: connect-to-server-analysis-services.md
+- name: Connect to SSAS Server (Connection Properties Page)
+  href: connect-to-server-connection-properties-page-analysis-services.md
+- name: Login - Connect to SSRS Server
+  href: connect-to-server-login-page-reporting-services.md
+- name: Connect to SSRS Server
+  href: connect-to-server-reporting-services.md
+- name: Connect to SSRS Server (Connection Properties Page)
+  href: connect-to-server-connection-properties-page-reporting-services.md
+- name: Browse for Servers (Local Servers)
+  href: browse-for-servers-local-servers.md
+- name: Connect to Server (Additional Connection Parameters)
+  href: connect-to-server-additional-connection-parameters-page.md
+- name: Browse for Servers (Network Servers)
+  href: browse-for-servers-network-servers.md
+- name: Password Expired
+  href: password-expired.md
+- name: Connect to SSIS Server
+  href: connect-to-server-integration-services.md
+- name: Connect to SSIS Server (Login Page)
+  href: connect-to-server-login-page-integration-services.md
+- name: Connect to SSIS Server (Connection Properties Page)
+  href: connect-to-server-connection-properties-page-integration-services.md

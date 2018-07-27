@@ -1,0 +1,23 @@
+- name: Integrating Reporting Services into Applications
+  href: integrating-reporting-services-into-applications.md
+  items:
+  - name: Choosing Between URL Access and SOAP
+    href: choosing-between-url-access-and-soap.md
+  - name: Integrating Reporting Services Using URL Access
+    href: integrating-reporting-services-using-url-access.md
+  - name: Using URL Access in a Web Application
+    href: integrating-reporting-services-using-url-access-web-application.md
+  - name: Using URL Access in a Windows Application
+    href: integrating-reporting-services-using-url-access-windows-application.md
+  - name: Integrating Reporting Services Using SOAP
+    href: integrating-reporting-services-using-soap.md
+  - name: Using the SOAP API in a Windows Application
+    href: integrating-reporting-services-using-soap-windows-application.md
+  - name: Using the SOAP API in a Web Application
+    href: integrating-reporting-services-using-soap-web-application.md
+  - name: Integrating Reporting Services Using the ReportViewer Controls
+    href: integrating-reporting-services-using-reportviewer-controls.md
+  - name: Using the WinForms ReportViewer Control
+    href: using-the-winforms-reportviewer-control.md
+  - name: Using the WebForms ReportViewer Control
+    href: using-the-webforms-reportviewer-control.md

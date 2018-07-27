@@ -1,0 +1,49 @@
+- name: Getting Started (SQL Server 2014)
+  href: getting-started-sql-server-2014.md
+- name: SQL Server 2014 Product Specifications
+  href: sql-server-2014-product-specifications.md
+  items:
+  - name: Compute Capacity Limits by Edition of SQL Server
+    href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
+  - name: Editions and Components of SQL Server 2014
+    href: ../sql-server/editions-and-components-of-sql-server-2016.md
+  - name: Features Supported by the Editions of SQL Server 2014
+    href: features-supported-by-the-editions-of-sql-server-2014.md
+  - name: Maximum Capacity Specifications for SQL Server
+    href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
+- name: What's New in SQL Server 2014
+  href: ../sql-server/what-s-new-in-sql-server-2016.md
+- name: Introduction to SQL Server 2014 Hybrid Cloud
+  href: introduction-to-sql-server-2014-hybrid-cloud.md
+- name: Quick-Start Installation of SQL Server 2014
+  href: quick-start-installation-of-sql-server-2014.md
+- name: Getting Assistance
+  href: getting-assistance-sql-server-2014.md
+  items:
+  - name: Getting SQL Server Assistance
+    href: getting-sql-server-assistance.md
+  - name: Accessibility for People with Disabilities
+    href: accessibility-for-people-with-disabilities.md
+  - name: Providing Feedback for SQL Server 2014
+    href: providing-feedback-for-sql-server-2014.md
+- name: Backward Compatibility
+  href: backward-compatibility.md
+  items:
+  - name: SQL Server Backward Compatibility
+    href: sql-server-backward-compatibility.md
+  - name: Deprecated SQL Server Features in SQL Server 2014
+    href: deprecated-sql-server-features-in-sql-server-2014.md
+  - name: Discontinued SQL Server Features in SQL Server 2014
+    href: discontinued-sql-server-features-in-sql-server-2014.md
+  - name: Breaking Changes to SQL Server Features in SQL Server 2014
+    href: breaking-changes-to-sql-server-features-in-sql-server-2014.md
+  - name: Behavior Changes to SQL Server Features in SQL Server 2014
+    href: behavior-changes-to-sql-server-features-in-sql-server-2014.md
+- name: Documentation for SQL Server 2014 Tools and Add-in Components
+  href: documentation-for-sql-server-2014-tools-and-add-in-components.md
+- name: About the SQL Server License Terms
+  href: about-the-sql-server-license-terms.md
+- name: Legal Notice for Documentation
+  href: legal-notice-for-documentation.md
+- name: Microsoft SQL Server Privacy Statement
+  href: microsoft-sql-server-privacy-statement.md

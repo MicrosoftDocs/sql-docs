@@ -1,7 +1,7 @@
 ---
 title: "PDO::prepare | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/20/2018"
+ms.date: "07/27/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -138,12 +138,13 @@ print_r($row);
 
 This example shows how to use the PDO::prepare method with PDO::ATTR_EMULATE_PREPARES set to true. 
 
+```
 <?php
 $serverName = "yourservername";
 $username = "yourusername";
 $password = "yourpassword";
 $database = "tempdb";
-$conn = new PDO("sqlsrv:server = $serverName; Database = $database",  $username, $password);
+$conn = new PDO("sqlsrv:server = $serverName; Database = $database", $username, $password);
 
 $pdo_options = array();
 $pdo_options[PDO::ATTR_EMULATE_PREPARES] = true;
@@ -171,6 +172,7 @@ foreach ($stmt as $row) {
 unset($stmt);
 unset($conn);
 ?>
+```
 
 The PDO_SQLSRV driver internally replaces all the placeholders with the parameters that are bound by [PDOStatement::bindParam()](../../connect/php/pdostatement-bindparam.md). Therefore, a SQL query string with no placeholders is sent to the server. Consider this example,
 
@@ -189,7 +191,7 @@ Information on :cus_name parameter
 Information on :con_name parameter
 ```
 
-The server will execute the query using its parameterized query feature for binding parameters. On the other hand, with emulate prepare set to true, the data sent to the server is essentially this:
+The server will execute the query using its parameterized query feature for binding parameters. On the other hand, with emulate prepare set to true, the query sent to the server is essentially:
 
 ```
 "INSERT into Customers (CustomerName, ContactName) VALUES ('Cardinal', 'Tom B. Erichsen')"
@@ -199,7 +201,7 @@ The server will execute the query using its parameterized query feature for bind
 
 If user wishes to bind parameters with different encodings (for instance, UTF-8 or binary), user should clearly specify the encoding in the PHP script.
 
-The PDO_SQLSRV driver first checks the encoding specified in `PDO::bindParam()` (e.g., `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`). 
+The PDO_SQLSRV driver first checks the encoding specified in `PDO::bindParam()` (for example, `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`). 
 
 If not found, the driver checks if any encoding is set in `PDO::prepare()` or `PDOStatement::setAttribute()`. Otherwise, the driver will use the encoding specified in `PDO::__construct()` or `PDO::setAttribute()`.
 
@@ -210,8 +212,8 @@ As you can see, binding is done internally by the driver. A valid query is sent 
 1. It does not work for parameters that are bound as `PDO::PARAM_INPUT_OUTPUT`.
     - When the user specifies `PDO::PARAM_INPUT_OUTPUT` in `PDO::bindParam()`, a PDO exception is thrown.
 2. It does not work for parameters that are bound as output parameters.
-    - When the user creates a prepared statement with placeholders that are meant for output parameters (i.e., having an equal sign immediately after a placeholder (e.g., `SELECT ? = COUNT(*) FROM Table1`)), a PDO exception is thrown.
-    - When the user creates a prepared statement that calls a procedure and with a placeholder as argument for an output parameter, no exception is thrown since the driver cannot detect the output parameter. However, the variable that the user provides for the output parameter will not be changed as expected in a non-emulate-prepared statement.
+    - When the user creates a prepared statement with placeholders that are meant for output parameters (that is, having an equal sign immediately after a placeholder, like `SELECT ? = COUNT(*) FROM Table1`), a PDO exception is thrown.
+    - When a prepared statement invokes a stored procedure with a placeholder as the argument for an output parameter, no exception is thrown because the driver cannot detect the output parameter. However, the variable that the user provides for the output parameter will remain unchanged.
 3. Duplicated placeholders for a binary encoded parameter will not work
 
 ## See Also  

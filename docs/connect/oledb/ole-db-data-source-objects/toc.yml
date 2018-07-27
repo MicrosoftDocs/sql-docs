@@ -1,0 +1,14 @@
+- name: Data Source Objects (OLE DB)
+  href: data-source-objects-ole-db.md
+- name: Data Source Information Properties
+  href: data-source-information-properties.md
+- name: Data Source Properties (OLE DB)
+  href: data-source-properties-ole-db.md
+- name: Initialization and Authorization Properties
+  href: initialization-and-authorization-properties.md
+- name: Persisted Data Source Objects
+  href: persisted-data-source-objects.md
+- name: Session Properties - OLE DB Driver for SQL Server
+  href: session-properties-oledb-driver-for-sql-server.md
+- name: Sessions
+  href: sessions.md

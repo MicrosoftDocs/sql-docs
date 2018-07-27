@@ -169,7 +169,7 @@ Observe the following guidelines when performing server upgrades or updates in o
 ## Rolling upgrade of a distributed Availability Group
 To perform a rolling upgrade of a distributed availability group, first upgrade all of the secondary replicas. Next, failover the forwarder, and upgrade the last remaining instance of the second availability group. Once all other replicas have been upgraded, failover the global primary, and upgrade the last remaining instance of the first availability group. A detailed diagram with steps is provided below. 
 
-### Steps to upgrade a distributed availability group
+### General steps to upgrade a distributed availability group
 1. Upgrade and restart all secondary replica instances of the second availability group (the downstream).
 2. Upgrade and restart all secondary replica instances of the first availability group (the upstream).
 3. Fail over the forwarder primary to an upgraded secondary replica of the secondary availability group.
@@ -179,8 +179,7 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 7. Restart the newly upgraded server.
 
 
-
-### Diagram for a rolling upgrade of a distributed availability group
+### Diagram example for a rolling upgrade of a distributed availability group
 
 | Availability group | Primary replica | Secondary Replica|
 | :------ | :----------------------------- |  :------ |

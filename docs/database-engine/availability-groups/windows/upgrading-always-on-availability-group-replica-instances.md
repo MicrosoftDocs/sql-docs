@@ -166,6 +166,37 @@ Observe the following guidelines when performing server upgrades or updates in o
 > [!NOTE]  
 >  In many cases, after the rolling upgrade is completed, you will fail back to the original primary replica. 
 
+## Rolling upgrade of a distributed Availability Group
+To perform a rolling upgrade of a distributed availability group, first upgrade all of the secondary replicas. Next, failover the forwarder, and upgrade the last remaining instance of the second availability group. Once all other replicas have been upgraded, failover the global primary, and upgrade the last remaining instance of the first availability group. A detailed diagram with steps is provided below. 
+
+### Steps to upgrade a distributed availability group
+1. Upgrade and restart the secondary replicas of the second availability group.
+2. Upgrade and restart the secondary replicas of the first availability group.
+3. Fail over the forwarder primary to an upgraded secondary replica of the secondary availability group.
+4. Upgrade the last remaining instance of the secondary availability group.
+5. Restart the newly upgraded server.
+6. Fail over the global primary to an upgraded secondary of the first availability group.
+7. Upgrade the last remaining instance of the primary availability group.
+8. Restart the newly upgraded server.
+
+### Diagram for a rolling upgrade of a distributed availabilty group
+
+| Availability group | Primary replica | Secondary Replica|
+| :------ | :----------------------------- |  :------ |
+| AG1 | NODE1\SQLAG | NODE2\SQLAG|
+| AG2 | NODE3\SQLAG | NODE4\SQLAG|
+| Distributedag| AG1 | AG2|
+| &nbsp; | &nbsp; | &nbsp; |
+
+1. Upgrade NODE4\SQLAG (secondary of AG2) and restart the server. . 
+2. Upgrade NODE2\SQLAG (secondary of AG1) and restart the server. 
+3. Fail AG2 over from NODE3\SQLAG to NODE4\SQLAG and verify synchronization. 
+4. Upgrade NODE3\SQLAG and restart the server. 
+5. Fail AG2 over from NODE1\SQLAG to NODE2\SQLAG and verify synchronization. 
+6. Upgrade NODE1\SQLAG and restart the server. 
+
+
+
 ## Special steps for change data capture or replication
 
 Depending on the update being applied, additional steps may be required for AG replica databases that are enabled for change data capture or replication. Refer to the release notes for the update to determine if the following steps are required:

@@ -1,0 +1,10 @@
+- name: Report Server Web Service
+  href: report-server-web-service.md
+- name: Accessing the SOAP API
+  href: accessing-the-soap-api.md
+- name: The Role of SOAP in Reporting Services
+  href: the-role-of-soap-in-reporting-services.md
+- name: Report Server Web Service Methods +
+  href: ./methods/report-server-web-service-methods.md?toc=%2fsql%2freporting-services%2freport-server-web-service%2fmethods%2ftoc.json
+- name: Building Applications Using the Web Service and the .NET Framework +
+  href: ./net-framework/building-applications-using-the-web-service-and-the-net-framework.md?toc=%2fsql%2freporting-services%2freport-server-web-service%2fnet-framework%2ftoc.json

@@ -1,0 +1,149 @@
+- name: "Deprecated: RDS API Reference"
+  href: rds-api-reference.md
+- name: RDS Objects
+  href: rds-objects.md
+  items:
+  - name: DataControl Object (RDS)
+    href: datacontrol-object-rds.md
+    items:
+    - name: DataControl Object (RDS) Properties, Methods, and Events
+      href: datacontrol-object-rds-properties-methods-and-events.md
+  - name: DataFactory Object (RDSServer)
+    href: datafactory-object-rdsserver.md
+    items:
+    - name: DataFactory Object (RDSServer) Properties, Methods, and Events
+      href: datafactory-object-rdsserver-properties-methods-and-events.md
+  - name: DataSpace Object (RDS)
+    href: dataspace-object-rds.md
+    items:
+    - name: DataSpace Object (RDS) Properties, Methods, and Events
+      href: dataspace-object-rds-properties-methods-and-events.md
+  - name: IRDSService Interface (RDS)
+    href: irdsservice-interface-rds.md
+- name: RDS Properties
+  href: rds-properties.md
+  items:
+  - name: Connect Property (RDS)
+    href: connect-property-rds.md
+  - name: ExecuteOptions Property (RDS)
+    href: executeoptions-property-rds.md
+  - name: FetchOptions Property (RDS)
+    href: fetchoptions-property-rds.md
+  - name: FilterColumn Property (RDS)
+    href: filtercolumn-property-rds.md
+  - name: FilterCriterion Property (RDS)
+    href: filtercriterion-property-rds.md
+  - name: FilterValue Property (RDS)
+    href: filtervalue-property-rds.md
+  - name: Handler Property (RDS)
+    href: handler-property-rds.md
+  - name: InternetTimeout Property (RDS)
+    href: internettimeout-property-rds.md
+  - name: ReadyState Property (RDS)
+    href: readystate-property-rds.md
+  - name: Recordset, SourceRecordset Properties (RDS)
+    href: recordset-sourcerecordset-properties-rds.md
+  - name: Server Property (RDS)
+    href: server-property-rds.md
+  - name: SortColumn Property (RDS)
+    href: sortcolumn-property-rds.md
+  - name: SortDirection Property (RDS)
+    href: sortdirection-property-rds.md
+  - name: SQL Property
+    href: sql-property.md
+  - name: URL Property (RDS)
+    href: url-property-rds.md
+- name: RDS Methods
+  href: rds-methods.md
+  items:
+  - name: Cancel Method (RDS)
+    href: cancel-method-rds.md
+  - name: CancelUpdate Method (RDS)
+    href: cancelupdate-method-rds.md
+  - name: ConvertToString Method (RDS)
+    href: converttostring-method-rds.md
+  - name: CreateObject Method (RDS)
+    href: createobject-method-rds.md
+  - name: CreateRecordset Method (RDS)
+    href: createrecordset-method-rds.md
+  - name: Execute Method (RDS)
+    href: execute-method-rds.md
+  - name: Execute21 Method (RDS)
+    href: execute21-method-rds.md
+  - name: InvokeService (RDS)
+    href: invokeservice-rds.md
+  - name: MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)
+    href: movefirst-movelast-movenext-and-moveprevious-methods-rds.md
+  - name: Query Method (RDS)
+    href: query-method-rds.md
+  - name: Refresh Method (RDS)
+    href: refresh-method-rds.md
+  - name: Reset Method (RDS)
+    href: reset-method-rds.md
+  - name: SubmitChanges Method (RDS)
+    href: submitchanges-method-rds.md
+  - name: Synchronize Method (RDS)
+    href: synchronize-method-rds.md
+  - name: Synchronize21 Method (RDS)
+    href: synchronize21-method-rds.md
+- name: RDS Events
+  href: rds-events.md
+  items:
+  - name: onError Event (RDS)
+    href: onerror-event-rds.md
+  - name: onReadyStateChange Event (RDS)
+    href: onreadystatechange-event-rds.md
+- name: RDS Code Examples
+  href: rds-code-examples.md
+  items:
+  - name: RDS Code Examples in Visual Basic
+    href: rds-code-examples-in-visual-basic.md
+    items:
+    - name: Handler Property Example (VB)
+      href: handler-property-example-vb.md
+    - name: InternetTimeout Property Example (VB)
+      href: internettimeout-property-example-vb.md
+  - name: RDS Code Examples in VBScript
+    href: rds-code-examples-in-vbscript.md
+    items:
+    - name: Cancel Method Example (VBScript)
+      href: cancel-method-example-vbscript.md
+    - name: CancelUpdate Method Example (VBScript)
+      href: cancelupdate-method-example-vbscript.md
+    - name: Connect Property Example (VBScript)
+      href: connect-property-example-vbscript.md
+    - name: ConvertToString Method Example (VBScript)
+      href: converttostring-method-example-vbscript.md
+    - name: CreateRecordset Method Example (VBScript)
+      href: createrecordset-method-example-vbscript.md
+    - name: DataControl Object Example (VBScript)
+      href: datacontrol-object-example-vbscript.md
+    - name: DataSpace Object and CreateObject Method Example (VBScript)
+      href: dataspace-object-and-createobject-method-example-vbscript.md
+    - name: DataFactory Object, Query Method, and CreateObject Method Example (VBScript)
+      href: datafactory-object-query-method-and-createobject-method-example-vbscript.md
+    - name: ExecuteOptions and FetchOptions Properties Example (VBScript)
+      href: executeoptions-and-fetchoptions-properties-example-vbscript.md
+    - name: Filter Column, Criterion, Value, SortColumn, and SortDirection Properties and Reset Method Example (VBScript)
+      href: filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md
+    - name: ReadyState Property Example (VBScript)
+      href: readystate-property-example-vbscript.md
+    - name: Recordset and SourceRecordset Properties Example (VBScript)
+      href: recordset-and-sourcerecordset-properties-example-vbscript.md
+    - name: Refresh Method Example (VBScript)
+      href: refresh-method-example-vbscript.md
+    - name: Server Property Example (VBScript)
+      href: server-property-example-vbscript.md
+    - name: SQL Property Example (VBScript)
+      href: sql-property-example-vbscript.md
+    - name: SubmitChanges Method Example (VBScript)
+      href: submitchanges-method-example-vbscript.md
+    - name: URL Property Example (VBScript)
+      href: url-property-example-vbscript.md
+  - name: RDS Code Examples in Visual C++
+    href: rds-code-examples-in-visual-c.md
+    items:
+    - name: Handler Property Example (VC++)
+      href: handler-property-example-vc.md
+    - name: InternetTimeout Property Example (VC++)
+      href: internettimeout-property-example-vc.md

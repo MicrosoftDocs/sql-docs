@@ -1,0 +1,77 @@
+- name: Overview
+  href: indexes.md
+- name: Heaps (Tables without Clustered Indexes)
+  href: heaps-tables-without-clustered-indexes.md
+- name: Clustered and Nonclustered Indexes Described
+  href: clustered-and-nonclustered-indexes-described.md
+  items:
+  - name: Create Clustered Indexes
+    href: create-clustered-indexes.md
+  - name: Create Nonclustered Indexes
+    href: create-nonclustered-indexes.md
+  - name: Create Unique Indexes
+    href: create-unique-indexes.md
+  - name: Create Filtered Indexes
+    href: create-filtered-indexes.md
+  - name: Create Indexes with Included Columns
+    href: create-indexes-with-included-columns.md
+  - name: Delete an Index
+    href: delete-an-index.md
+  - name: Modify an Index
+    href: modify-an-index.md
+  - name: Move an Existing Index to a Different Filegroup
+    href: move-an-existing-index-to-a-different-filegroup.md
+  - name: Indexes on Computed Columns
+    href: indexes-on-computed-columns.md
+  - name: SORT_IN_TEMPDB Option for Indexes
+    href: sort-in-tempdb-option-for-indexes.md
+  - name: Disable Indexes and Constraints
+    href: disable-indexes-and-constraints.md
+  - name: Enable Indexes and Constraints
+    href: enable-indexes-and-constraints.md
+  - name: Rename Indexes
+    href: rename-indexes.md
+  - name: Set Index Options
+    href: set-index-options.md
+  - name: Disk Space Requirements for Index DDL Operations
+    href: disk-space-requirements-for-index-ddl-operations.md
+    items:
+    - name: Transaction Log Disk Space for Index Operations
+      href: transaction-log-disk-space-for-index-operations.md
+    - name: Index Disk Space Example
+      href: index-disk-space-example.md
+  - name: Reorganize and Rebuild Indexes
+    href: reorganize-and-rebuild-indexes.md
+  - name: Specify Fill Factor for an Index
+    href: specify-fill-factor-for-an-index.md
+  - name: Perform Index Operations Online
+    href: perform-index-operations-online.md
+    items:
+    - name: How Online Index Operations Work
+      href: how-online-index-operations-work.md
+    - name: Guidelines for Online Index Operations
+      href: guidelines-for-online-index-operations.md
+  - name: Configure Parallel Index Operations
+    href: configure-parallel-index-operations.md
+  - name: Index Properties F1 Help
+    href: index-properties-f1-help.md
+- name: Columnstore indexes
+  items:
+  - name: Overview
+    href: columnstore-indexes-overview.md
+  - name: Architecture
+    href: ../../relational-databases/sql-server-index-design-guide.md#columnstore_index
+  - name: Design Guidance
+    href: columnstore-indexes-design-guidance.md
+  - name: Data loading Guidance
+    href: columnstore-indexes-data-loading-guidance.md
+  - name: What's new
+    href: columnstore-indexes-what-s-new.md
+  - name: Query performance
+    href: columnstore-indexes-query-performance.md
+  - name: Real-time operational analytics
+    href: get-started-with-columnstore-for-real-time-operational-analytics.md
+  - name: Data Warehouse
+    href: columnstore-indexes-data-warehouse.md
+  - name: Defragment
+    href: columnstore-indexes-defragmentation.md

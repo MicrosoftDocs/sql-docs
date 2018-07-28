@@ -1,7 +1,0 @@
-# [Overview](sql-server-audit-database-engine.md)  
-# [Action Groups and Actions](sql-server-audit-action-groups-and-actions.md)  
-# [Audit Records](sql-server-audit-records.md)  
-# [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md)  
-# [Create a Server Audit and Database Audit Specification](create-a-server-audit-and-database-audit-specification.md)  
-# [View a SQL Server Audit Log](view-a-sql-server-audit-log.md)  
-# [Write SQL Server Audit Events to the Security Log](write-sql-server-audit-events-to-the-security-log.md)  

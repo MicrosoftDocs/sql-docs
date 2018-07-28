@@ -1,0 +1,146 @@
+- name: SQL Server Configuration Manager Help
+  href: sql-server-configuration-manager-help.md
+- name: SQL Server Services
+  href: sql-server-services.md
+- name: Analysis Server <server> (SQL Server Configuration Manager)
+  href: analysis-server-server-sql-server-configuration-manager.md
+  items:
+  - name: Analysis Server Properties (Log On Tab)
+    href: analysis-server-properties-log-on-tab.md
+  - name: Analysis Server Properties (Service Tab)
+    href: analysis-server-properties-service-tab.md
+  - name: Analysis Server Properties (Advanced Tab)
+    href: analysis-server-properties-advanced-tab.md
+- name: Notification Services (SQL Server Configuration Manager)
+  href: notification-services-sql-server-configuration-manager.md
+  items:
+  - name: NS$<service name> Properties (Log On Tab)
+    href: ns-service-name-properties-log-on-tab.md
+  - name: NS$<service name> Properties (Service Tab)
+    href: ns-service-name-properties-service-tab.md
+  - name: NS$<service name> Properties (Advanced Tab)
+    href: ns-service-name-properties-advanced-tab.md
+- name: Report Server <server> (SQL Server Configuration Manager)
+  href: report-server-server-sql-server-configuration-manager.md
+  items:
+  - name: Report Server Properties (Log On Tab)
+    href: report-server-properties-log-on-tab.md
+  - name: Report Server Properties (Service Tab)
+    href: report-server-properties-service-tab.md
+  - name: Report Server Properties (Advanced Tab)
+    href: report-server-properties-advanced-tab.md
+- name: SQL Server Agent <server> (SQL Server Configuration Manager)
+  href: sql-server-agent-server-sql-server-configuration-manager.md
+  items:
+  - name: SQL Server Agent Properties (Log On Tab)
+    href: sql-server-agent-properties-log-on-tab.md
+  - name: SQL Server Agent Properties (Advanced Tab)
+    href: sql-server-agent-properties-advanced-tab.md
+  - name: SQL Server Agent Properties (Service Tab)
+    href: sql-server-agent-properties-service-tab.md
+- name: SQL Server Browser (SQL Server Configuration Manager)
+  href: sql-server-browser-sql-server-configuration-manager.md
+  items:
+  - name: SQL Server Browser Properties (Log On Tab)
+    href: sql-server-browser-properties-log-on-tab.md
+  - name: SQL Server Browser Properties (Service Tab)
+    href: sql-server-browser-properties-service-tab.md
+  - name: SQL Server Browser Properties (Advanced Tab)
+    href: sql-server-browser-properties-advanced-tab.md
+- name: SQL Server <server> (SQL Server Configuration Manager)
+  href: sql-server-server-sql-server-configuration-manager.md
+  items:
+  - name: SQL Server Properties (Log On Tab)
+    href: sql-server-properties-log-on-tab.md
+  - name: SQL Server Properties (Service Tab)
+    href: sql-server-properties-service-tab.md
+  - name: SQL Server Properties (FILESTREAM Tab)
+    href: sql-server-properties-filestream-tab.md
+  - name: SQL Server Properties (AlwaysOn High Availability Tab)
+    href: sql-server-properties-alwayson-high-availability-tab.md
+  - name: SQL Server Properties (Startup Parameters Tab)
+    href: sql-server-properties-startup-parameters-tab.md
+  - name: SQL Server Properties (Advanced Tab)
+    href: sql-server-properties-advanced-tab.md
+- name: SQL Server Integration Services 10.0 (SQL Server Configuration Manager)
+  href: sql-server-integration-services-10-0-sql-server-configuration-manager.md
+  items:
+  - name: SQL Server Integration Services Properties (Log On Tab)
+    href: sql-server-integration-services-properties-log-on-tab.md
+  - name: SQL Server Integration Services Properties (Service Tab)
+    href: sql-server-integration-services-properties-service-tab.md
+  - name: SQL Server Integration Services Properties (Advanced Tab)
+    href: sql-server-integration-services-properties-advanced-tab.md
+- name: SQL Full-text Filter Daemon Launcher (SQL Server Configuration Manager)
+  href: sql-full-text-filter-daemon-launcher-sql-server-configuration-manager.md
+  items:
+  - name: SQL Full-text Filter Daemon Launcher (Log On Tab)
+    href: sql-full-text-filter-daemon-launcher-log-on-tab.md
+  - name: SQL Full-text Filter Daemon Launcher (Service Tab)
+    href: sql-full-text-filter-daemon-launcher-service-tab.md
+  - name: SQL Full-text Filter Daemon Launcher (Advanced)
+    href: sql-full-text-filter-daemon-launcher-advanced.md
+- name: Unknown Service (Log On Tab)
+  href: unknown-service-log-on-tab.md
+- name: SQL Server Network Configuration
+  href: sql-server-network-configuration.md
+  items:
+  - name: Protocols for <server> (SQL Server Configuration Manager)
+    href: protocols-for-server-sql-server-configuration-manager.md
+  - name: Protocols for MSSQLSERVER Properties (Flags Tab)
+    href: protocols-for-mssqlserver-properties-flags-tab.md
+  - name: Protocols for MSSQLSERVER Properties (Certificate Tab)
+    href: protocols-for-mssqlserver-properties-certificate-tab.md
+  - name: Protocols for MSSQLSERVER Properties (Advanced Tab)
+    href: protocols-for-mssqlserver-properties-advanced-tab.md
+- name: Shared Memory Properties
+  href: shared-memory-properties.md
+- name: Named Pipes Properties
+  href: named-pipes-properties.md
+- name: TCP/IP Properties (Protocols Tab)
+  href: tcp-ip-properties-protocols-tab.md
+- name: TCP/IP Properties (IP Addresses Tab)
+  href: tcp-ip-properties-ip-addresses-tab.md
+- name: SQL Native Client 11.0 Configuration
+  href: sql-native-client-11-0-configuration.md
+  items:
+  - name: SQL Server Native Client Configuration Properties (Flags Tab)
+    href: sql-server-native-client-configuration-properties-flags-tab.md
+  - name: Client Protocols (SQL Server Configuration Manager)
+    href: client-protocols-sql-server-configuration-manager.md
+  - name: Client Protocols Properties (Order Tab)
+    href: client-protocols-properties-order-tab.md
+  - name: Client Protocols - Shared Memory Properties (Protocol Tab)
+    href: client-protocols-shared-memory-properties-protocol-tab.md
+  - name: Client Protocols - TCP and IP Properties (Protocol Tab)
+    href: client-protocols-tcp-and-ip-properties-protocol-tab.md
+  - name: Client Protocols - Named Pipes Properties (Protocol Tab)
+    href: client-protocols-named-pipes-properties-protocol-tab.md
+- name: Aliases (SQL Server Configuration Manager)
+  href: aliases-sql-server-configuration-manager.md
+  items:
+  - name: New Alias (Alias Tab)
+    href: new-alias-alias-tab.md
+  - name: <Alias> Properties (Alias Tab)
+    href: alias-properties-alias-tab.md
+  - name: Creating a Valid Connection String Using Shared Memory Protocol
+    href: creating-a-valid-connection-string-using-shared-memory-protocol.md
+  - name: Creating a Valid Connection String Using TCP IP
+    href: creating-a-valid-connection-string-using-tcp-ip.md
+  - name: Creating a Valid Connection String Using Named Pipes
+    href: creating-a-valid-connection-string-using-named-pipes.md
+- name: SQL Server Browser Service
+  href: sql-server-browser-service.md
+- name: Connecting Using IPv6
+  href: connecting-using-ipv6.md
+- name: Choosing a Network Protocol
+  href: choosing-a-network-protocol.md
+- name: Monitoring the Error Logs
+  href: monitoring-the-error-logs.md
+  items:
+  - name: Viewing the SQL Server Error Log
+    href: viewing-the-sql-server-error-log.md
+  - name: Viewing the Windows Application Log
+    href: viewing-the-windows-application-log.md
+- name: About the SQL Server License Terms (SSCM)
+  href: about-the-sql-server-license-terms-sscm.md

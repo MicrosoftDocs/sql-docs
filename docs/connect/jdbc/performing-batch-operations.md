@@ -1,7 +1,7 @@
 ---
 title: "Performing Batch Operations | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -29,7 +29,7 @@ manager: craigg
   
  As an example, create the following table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   
@@ -38,7 +38,7 @@ CREATE TABLE TestTable
   
  In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, the addBatch method is used to create the statements to be executed, and the executeBatch method is called to submit the batch to the database.  
   
-```  
+```java
 public static void executeBatchUpdate(Connection con) {  
    try {  
       Statement stmt = con.createStatement();  

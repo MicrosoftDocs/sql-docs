@@ -1,7 +1,7 @@
 ---
 title: "Azure Key Vault Sample Version 6.2.2 | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2018"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -24,6 +24,7 @@ manager: craigg
 This application is runnable using JDBC Driver 6.2.2 and 6.4.0 and Azure-Keyvault (version 1.0.0),  Adal4j (version 1.4.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

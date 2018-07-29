@@ -1,0 +1,14 @@
+- name: Failover cluster installation on SQL Server
+  href: sql-server-failover-cluster-installation.md
+- name: Add or remove nodes in a failover cluster (setup)
+  href: add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+- name: Before installing failover clustering
+  href: before-installing-failover-clustering.md
+- name: Create a failover cluster (setup)
+  href: create-a-new-sql-server-failover-cluster-setup.md
+- name: Install client tools on a failover cluster
+  href: install-client-tools-on-a-sql-server-failover-cluster.md
+- name: Remove a failover cluster (setup)
+  href: remove-a-sql-server-failover-cluster-instance-setup.md
+- name: Rename a failover cluster
+  href: rename-a-sql-server-failover-cluster-instance.md

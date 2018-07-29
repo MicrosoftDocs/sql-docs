@@ -1,6 +1,0 @@
-# [Handling Errors and Messages](handling-errors-and-messages.md)
-# [Diagnostic Records and Fields](diagnostic-records-and-fields.md)
-# [Error Messages](error-messages.md)
-# [Native Error Numbers](native-error-numbers.md)
-# [Processing Statements That Generate Messages](processing-statements-that-generate-messages.md)
-# [SQLSTATE (ODBC Error Codes)](sqlstate-odbc-error-codes.md)

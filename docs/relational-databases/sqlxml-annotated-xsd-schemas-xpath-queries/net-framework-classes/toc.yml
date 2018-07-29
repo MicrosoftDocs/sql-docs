@@ -1,0 +1,26 @@
+- name: SQLXML 4.0 .NET Framework Support - Managed Classes
+  href: sqlxml-4-0-net-framework-support-managed-classes.md
+- name: Accessing SQLXML Functionality in the .NET Environment
+  href: accessing-sqlxml-functionality-in-the-net-environment.md
+- name: Applying an XSL Transformation (SQLXML Managed Classes)
+  href: applying-an-xsl-transformation-sqlxml-managed-classes.md
+- name: Executing SQL Queries (SQLXML Managed Classes)
+  href: executing-sql-queries-sqlxml-managed-classes.md
+- name: Executing SQL Queries by Using the ExecuteXMLReader Method
+  href: executing-sql-queries-by-using-the-executexmlreader-method.md
+- name: Executing Template Files by Using the CommandStream Property
+  href: executing-template-files-by-using-the-commandstream-property.md
+- name: Executing Template Files by Using the CommandText Property
+  href: executing-template-files-by-using-the-commandtext-property.md
+- name: Executing XPath Queries (SQLXML Managed Classes)
+  href: executing-xpath-queries-sqlxml-managed-classes.md
+- name: Executing XPath Queries with Namespaces (SQLXML Managed Classes)
+  href: executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md
+- name: Processing XML on the Client Side (SQLXML Managed Classes)
+  href: processing-xml-on-the-client-side-sqlxml-managed-classes.md
+- name: SQLXML Managed Classes - SqlXmlAdapter Object
+  href: sqlxml-managed-classes-sqlxmladapter-object.md
+- name: SQLXML Managed Classes - SqlXmlCommand Object
+  href: sqlxml-managed-classes-sqlxmlcommand-object.md
+- name: SQLXML Managed Classes - SqlXmlParameter Object
+  href: sqlxml-managed-classes-sqlxmlparameter-object.md

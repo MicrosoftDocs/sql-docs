@@ -1,7 +1,7 @@
 ---
 title: "Connection Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -50,7 +50,7 @@ This topic lists the options that are permitted in the associative array (when u
 |TraceFile|String|Specifies the path for the file used for trace data.|No value set.|  
 |TraceOn|1 or **true** to enable tracing.<br /><br />0 or **false** to disable tracing.|Specifies whether ODBC tracing is enabled (1 or **true**) or disabled (0 or **false**) for the connection being established.|**false** (0)|  
 |TransactionIsolation|The SQLSRV driver uses the following values:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />The PDO_SQLSRV driver uses the following values:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Specifies the transaction isolation level.<br /><br />For more information about transaction isolation, see [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) in the SQL Server documentation.|SQLSRV_TXN_READ_COMMITTED<br /><br />or<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|TransparentNetworkIPResolution|**Enabled** or **Disabled**|Affects the connection sequence when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname.<br /><br />It interacts with MultiSubnetFailover to provide different connection sequences. For more information, see [Transparent NetworkIP Resolution](#TNIR) below or [Using Transparent Network IP Resolution](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Enabled|
+|TransparentNetworkIPResolution|**Enabled** or **Disabled**|Affects the connection sequence when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname.<br /><br />It interacts with MultiSubnetFailover to provide different connection sequences. For more information, see [Transparent Network IP Resolution](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md#TNIR) or [Using Transparent Network IP Resolution](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Enabled|
 |TrustServerCertificate|1 or **true** to trust certificate.<br /><br />0 or **false** to not trust certificate.|Specifies whether the client should trust (1 or **true**) or reject (0 or **false**) a self-signed server certificate.|**false** (0)|  
 |UID<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the User ID to be used when connecting with SQL Server Authentication<sup>4</sup>.|No value set.|  
 |WSID|String|Specifies the name of the computer for tracing.|No value set.|  
@@ -64,38 +64,6 @@ This topic lists the options that are permitted in the associative array (when u
 4. The *UID* and *PWD* attributes must both be set when connecting with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication.  
 
 Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
-
-<a name="TNIR" />
-## Transparent NetworkIP Resolution (TNIR)
-
-Transparent Network IP Resolution is a revision of the existing MultiSubnetFailover feature. It affects the connection sequence of the driver when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. Together with MultiSubnetFailover they provide the following three connection sequences: 
-
-1. TNIR Enabled & MultiSubnetFailover Disabled: One IP is attempted, followed by all IPs in parallel
-2. TNIR Enabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
-3. TNIR Disabled & MultiSubnetFailover Disabled: All IPs are attempted one after another
-4. TNIR Disabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
-
-TNIR is enabled by default, and MultiSubnetFailover is Disabled by default.
-
-This is an example of enabling both TNIR and MultiSubnetFailover using the PDO_SQLSRV driver:
-
-```
-<?php
-$serverName = "yourservername";
-$username = "yourusername";
-$password = "yourpassword";
-$connectionString = "sqlsrv:Server=$serverName; TransparentNetworkIPResolution=Enabled; MultiSubnetFailover=yes";
-try {
-    $conn = new PDO($connectionString, $username, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    // your code 
-    // more of your code
-    // when done, close the connection
-    unset($conn);
-} catch(PDOException $e) {
-    print_r($e->errorInfo);
-}
-?>
-```
 
 ## See Also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)  

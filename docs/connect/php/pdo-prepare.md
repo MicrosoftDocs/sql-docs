@@ -136,7 +136,7 @@ print_r($row);
 
 ## Example 
 
-This example shows how to use the PDO::prepare method with PDO::ATTR_EMULATE_PREPARES set to true. 
+This example shows how to use the PDO::prepare method with `PDO::ATTR_EMULATE_PREPARES` set to true. 
 
 ```
 <?php
@@ -183,7 +183,7 @@ $statement->bindParam(:con_name, "Tom B. Erichsen");
 $statement->execute();
 ```
 
-With emulate prepare set to false (the default case), the data sent to the database is:
+With `PDO::ATTR_EMULATE_PREPARES` set to false (the default case), the data sent to the database is:
 
 ```
 "INSERT into Customers (CustomerName, ContactName) VALUES (:cus_name, :con_name)"
@@ -191,11 +191,17 @@ Information on :cus_name parameter
 Information on :con_name parameter
 ```
 
-The server will execute the query using its parameterized query feature for binding parameters. On the other hand, with emulate prepare set to true, the query sent to the server is essentially:
+The server will execute the query using its parameterized query feature for binding parameters. On the other hand, with `PDO::ATTR_EMULATE_PREPARES` set to true, the query sent to the server is essentially:
 
 ```
 "INSERT into Customers (CustomerName, ContactName) VALUES ('Cardinal', 'Tom B. Erichsen')"
 ```
+
+Setting `PDO::ATTR_EMULATE_PREPARES` to true can bypass some restrictions in SQL Server. For example, SQL Server does not support named or positional parameters in some Transact-SQL clauses. Besides, SQL Server has a limit of binding 2100 parameters.
+
+> [!NOTE]
+> With emulate prepares set to true, the security of parameterized queries is not in effect. Therefore, your application
+> should ensure that the data that is bound to the parameter(s) does not contain malicious Transact-SQL code.
 
 ### Encoding
 

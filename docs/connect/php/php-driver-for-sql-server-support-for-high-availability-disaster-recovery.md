@@ -1,7 +1,7 @@
 ---
 title: "Support for High Availability, Disaster Recovery for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -57,7 +57,39 @@ If read-only routing is not in effect, connecting to a secondary replica locatio
 2.  If an application uses **ApplicationIntent=ReadWrite** (discussed below) and the secondary replica location is configured for read-only access.  
   
 A connection will fail if a primary replica is configured to reject read-only workloads and the connection string contains **ApplicationIntent=ReadOnly**.  
-  
+
+<a name="TNIR" />
+## Transparent Network IP Resolution (TNIR)
+
+Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. It affects the connection sequence of the driver when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. Together with MultiSubnetFailover they provide the following four connection sequences: 
+
+1. TNIR Enabled & MultiSubnetFailover Disabled: One IP is attempted, followed by all IPs in parallel
+2. TNIR Enabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
+3. TNIR Disabled & MultiSubnetFailover Disabled: All IPs are attempted one after another
+4. TNIR Disabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
+
+TNIR is enabled by default, and MultiSubnetFailover is Disabled by default.
+
+This is an example of enabling both TNIR and MultiSubnetFailover using the PDO_SQLSRV driver:
+
+```
+<?php
+$serverName = "yourservername";
+$username = "yourusername";
+$password = "yourpassword";
+$connectionString = "sqlsrv:Server=$serverName; TransparentNetworkIPResolution=Enabled; MultiSubnetFailover=yes";
+try {
+    $conn = new PDO($connectionString, $username, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    // your code 
+    // more of your code
+    // when done, close the connection
+    unset($conn);
+} catch(PDOException $e) {
+    print_r($e->errorInfo);
+}
+?>
+```
+
 ## Upgrading to Use Multi-Subnet Clusters from Database Mirroring  
 A connection error will occur if the **MultiSubnetFailover** and **Failover_Partner** connection keywords are present in the connection string. An error will also occur if **MultiSubnetFailover** is used and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] returns a failover partner response indicating it is part of a database mirroring pair.  
   

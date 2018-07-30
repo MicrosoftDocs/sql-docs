@@ -200,8 +200,7 @@ The server will execute the query using its parameterized query feature for bind
 Setting `PDO::ATTR_EMULATE_PREPARES` to true can bypass some restrictions in SQL Server. For example, SQL Server does not support named or positional parameters in some Transact-SQL clauses. Besides, SQL Server has a limit of binding 2100 parameters.
 
 > [!NOTE]
-> With emulate prepares set to true, the security of parameterized queries is not in effect. Therefore, your application
-> should ensure that the data that is bound to the parameter(s) does not contain malicious Transact-SQL code.
+> With emulate prepares set to true, the security of parameterized queries is not in effect. Therefore, your application should ensure that the data that is bound to the parameter(s) does not contain malicious Transact-SQL code.
 
 ### Encoding
 

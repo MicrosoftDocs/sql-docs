@@ -58,7 +58,6 @@ If read-only routing is not in effect, connecting to a secondary replica locatio
   
 A connection will fail if a primary replica is configured to reject read-only workloads and the connection string contains **ApplicationIntent=ReadOnly**.  
 
-<a name="TNIR" />
 ## Transparent Network IP Resolution (TNIR)
 
 Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. It affects the connection sequence of the driver when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. Together with MultiSubnetFailover they provide the following four connection sequences: 

@@ -1,5 +1,5 @@
 ---
-title: "Azure Key Vault Sample Version 6.2.2 | Microsoft Docs"
+title: "Azure Key Vault Sample Version 7.0.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2018"
 ms.prod: sql
@@ -9,7 +9,6 @@ ms.suite: "sql"
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-ms.assetid:
 caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi

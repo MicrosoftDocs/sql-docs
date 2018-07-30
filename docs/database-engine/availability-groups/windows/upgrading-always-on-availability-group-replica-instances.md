@@ -128,7 +128,7 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 6.  Upgrade or update PRIMARY1  
   
-## Upgrade Update SQL Server Instances with Multiple AGs  
+## Upgrade or Update SQL Server Instances with Multiple AGs  
  If you are running multiple AGs with primary replicas on separate server nodes (an Active/Active configuration), the upgrade path involves more failover steps to preserve high availability in the process. Suppose you are running three AGs on three server nodes with all replicas in synchronous commit mode as shown in the following table:  
   
 |AG|Node1|Node2|Node3|  
@@ -169,14 +169,20 @@ Observe the following guidelines when performing server upgrades or updates in o
 ## Rolling upgrade of a distributed Availability Group
 To perform a rolling upgrade of a distributed availability group, first upgrade all of the secondary replicas. Next, failover the forwarder, and upgrade the last remaining instance of the second availability group. Once all other replicas have been upgraded, failover the global primary, and upgrade the last remaining instance of the first availability group. A detailed diagram with steps is provided below. 
 
+ Based on your specific implementation, your upgrade path may vary, and the downtime that client applications experience may vary as well.  
+  
+> [!NOTE]  
+>  In many cases, after the rolling upgrade is completed, you will fail back to the original primary replicas. 
+
 ### General steps to upgrade a distributed availability group
 1. Upgrade and restart all secondary replica instances of the second availability group (the downstream).
 2. Upgrade and restart all secondary replica instances of the first availability group (the upstream).
 3. Fail over the forwarder primary to an upgraded secondary replica of the secondary availability group.
-4. Upgrade and restart the last remaining instance of the secondary availability group.
-5. Fail over the global primary to an upgraded secondary of the first availability group.
-6. Upgrade the last remaining instance of the primary availability group.
-7. Restart the newly upgraded server.
+4. Wait for data synchronization. The databases should show as synchronized on all replicas. 
+5. Upgrade and restart the last remaining instance of the secondary availability group.
+6. Fail over the global primary to an upgraded secondary of the first availability group.
+7. Upgrade the last remaining instance of the primary availability group.
+8. Restart the newly upgraded server.
 
 
 ### Diagram example for a rolling upgrade of a distributed availability group

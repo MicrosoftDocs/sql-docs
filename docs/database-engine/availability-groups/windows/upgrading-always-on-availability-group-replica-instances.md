@@ -178,7 +178,7 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 1. Upgrade and restart all secondary replica instances of the second availability group (the downstream).
 2. Upgrade and restart all secondary replica instances of the first availability group (the upstream).
 3. Fail over the forwarder primary to an upgraded secondary replica of the secondary availability group.
-4. Wait for data synchronization. The databases should show as synchronized on all replicas. 
+4. Wait for data synchronization. The databases should show as synchronized on all synchronous-commit replicas. 
 5. Upgrade and restart the last remaining instance of the secondary availability group.
 6. Fail over the global primary to an upgraded secondary of the first availability group.
 7. Upgrade the last remaining instance of the primary availability group.

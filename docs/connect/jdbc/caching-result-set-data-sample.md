@@ -52,26 +52,6 @@ In the following example, the sample code makes a connection to the [!INCLUDE[ss
 Next, the sample code calls the custom timerTest method, passing as arguments the fetch size to use and the result set. The timerTest method then sets the fetch size of the result set by using the setFetchSize method, sets the start time of the test, and then iterates through the result set with a `While` loop. As soon as the `While` loop is exited, the code sets the stop time of the test, and then displays the result of the test including the fetch size, the number of rows processed, and the time it took to execute the test.
 
 ```java
-/*=====================================================================
-File: 	 CacheResultSet.java
-Summary: This Microsoft JDBC Driver for SQL Server sample application
-         demonstrates how to use a result set to retrieve a large set
-         of data from a SQL Server database. In addition, it
-         demonstrates how to control the amount of data that is fetched
-         from the database and cached on the client.
----------------------------------------------------------------------
-This file is part of the Microsoft JDBC Driver for SQL Server Code Samples.
-Copyright (C) Microsoft Corporation.  All rights reserved.
- 
-This source code is intended only as a supplement to Microsoft
-Development Tools and/or on-line documentation.  See these other
-materials for detailed information regarding Microsoft code samples.
- 
-THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
-ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
-PARTICULAR PURPOSE.
-=====================================================================*/
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;

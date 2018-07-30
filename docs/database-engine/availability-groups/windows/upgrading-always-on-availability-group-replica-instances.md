@@ -191,22 +191,27 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 | :------ | :----------------------------- |  :------ |
 | AG1 | NODE1\SQLAG | NODE2\SQLAG|
 | AG2 | NODE3\SQLAG | NODE4\SQLAG|
-| Distributedag| AG1 | AG2|
+| Distributedag| AG1 (global) | AG2 (forwarder) |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ![Instances in distributed AG](media/rolling-upgrade-dag-diagram.png)
 
 The steps to upgrade the instances in this diagram: 
 
-1. Upgrade NODE4\SQLAG (secondary of AG2) and restart the server. 
-2. Upgrade NODE2\SQLAG (secondary of AG1) and restart the server. 
-3. Fail AG2 over from NODE3\SQLAG to NODE4\SQLAG and verify synchronization. 
-4. Upgrade NODE3\SQLAG and restart the server. 
-5. Fail AG2 over from NODE1\SQLAG to NODE2\SQLAG and verify synchronization. 
-6. Upgrade NODE1\SQLAG and restart the server. 
+1. Upgrade NODE4\SQLAG (secondary of AG2) and restart the server. Verify synchronization with NODE3\SQLAG. 
+2. Upgrade NODE2\SQLAG (secondary of AG1) and restart the server. Verify synchronization with NODE1\SQLAG.
+3. Fail AG2 over from NODE3\SQLAG to NODE4\SQLAG. Verify synchronization with the global primary. 
+4. Upgrade NODE3\SQLAG and restart the server. Verify synchronization with NODE4\SQLAG. 
+5. Fail AG1 over from NODE1\SQLAG to NODE2\SQLAG. Verify synchronization with the globall primary.  
+6. Upgrade NODE1\SQLAG and restart the server. Verify synchronization with NODE2\SQLAG. 
+7. (optional) Fail back to the original primary replicas.
+    a. Fail AG2 over from NODE4\SQLAG to NODE3\SQLAG. Verify synchronization. 
+    b. Fail AG1 over from NODE2\SQLAG to NODE1\SQLAG> Verify synchronization. 
 
 If a third replica existed in each availability group, it would be upgraded before NODE3\SQLAG and NODE1\SQLAG. 
 
+ >[!NOTE]
+ > When verifying synchronization, be sure to verify both across the AG, and across the Distributed AG. The synchronous-commit replicas within an AG should be synchronized, and the global primary should be synchronized with the forwarder. 
 
 ## Special steps for change data capture or replication
 

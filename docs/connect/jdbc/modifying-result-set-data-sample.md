@@ -15,30 +15,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
+
 # Modifying Result Set Data Sample
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve an updateable set of data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Then, using methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object, it inserts, modifies, and then finally deletes a row of data from the set of data.  
-  
- The code file for this sample is named UpdateRS.java, and it can be found in the following location:  
-  
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\resultsets  
-  
-## Requirements  
- To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve an updateable set of data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Then, using methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object, it inserts, modifies, and then finally deletes a row of data from the set of data.
+
+The code file for this sample is named UpdateResultSet.java, and it can be found in the following location:
+
+```bash
+\<_installation directory_>\mssql-jdbc...\\<_version_>\\<_language_>\samples\resultsets
+```
+
+## Requirements
+
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## Example  
- In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updateable SQLServerResultSet object.  
-  
- Next, the sample code uses the [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) method to move the result set cursor to the insert row, uses a series of [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) methods to insert data into the new row, and then calls the [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) method to persist the new row of data back to the database.  
-  
- After inserting the new row of data, the sample code uses an SQL statement to retrieve the previously inserted row, and then uses the combination of updateString and [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) methods to update the row of data and again persist it back to the database.  
-  
- Finally, the sample code retrieves the previously updated row of data and then deletes it from the database using the [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) method.  
-  
+> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## Example
+
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updateable SQLServerResultSet object.
+
+Next, the sample code uses the [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) method to move the result set cursor to the insert row, uses a series of [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) methods to insert data into the new row, and then calls the [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) method to persist the new row of data back to the database.
+
+After inserting the new row of data, the sample code uses an SQL statement to retrieve the previously inserted row, and then uses the combination of updateString and [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) methods to update the row of data and again persist it back to the database.
+
+Finally, the sample code retrieves the previously updated row of data and then deletes it from the database using the [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) method.
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -46,7 +52,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UpdateRS {
+public class UpdateResultSet {
 
     public static void main(String[] args) {
 
@@ -101,9 +107,8 @@ public class UpdateRS {
         }
     }
 }
-```  
-  
-## See Also  
- [Working with Result Sets](../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+```
+
+## See Also
+
+[Working with Result Sets](../../connect/jdbc/working-with-result-sets.md)

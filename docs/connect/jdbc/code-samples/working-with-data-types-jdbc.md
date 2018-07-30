@@ -30,11 +30,11 @@ The topics in this section describe how to use the JDBC driver data types to acc
   
 ## In This Section  
   
-|Topic|Description|  
-|-----------|-----------------|  
-|[Basic Data Types Sample](../../../connect/jdbc/basic-data-types-sample.md)|Describes how to use result set getter methods to retrieve basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data type values, and how to use result set update methods to update those values.|  
-|[SQLXML Data Type Sample](../../../connect/jdbc/sqlxml-data-type-sample.md)|Describes how to store an XML data in a relational database, how to retrieve an XML data from a database, and how to parse an XML data with the **SQLXML** Java data type.|
-|[Spatial Data Types Sample](../../../connect/jdbc/using-spatial-datatypes.md)|Describes how to store Spatial Datatypes in SQL Server and how to retrieve these types back from SQL Server. Also discusses how to use newly defined classes **Geometry** and **Geography** from the driver, for managing Java reference of these datatypes.|
+| Topic                                                                         | Description                                                                                                                                                                                                                                                  |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Basic Data Types Sample](../../../connect/jdbc/basic-data-types-sample.md)   | Describes how to use result set getter methods to retrieve basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data type values, and how to use result set update methods to update those values.                                             |
+| [SQLXML Data Type Sample](../../../connect/jdbc/sqlxml-data-type-sample.md)   | Describes how to store an XML data in a relational database, how to retrieve an XML data from a database, and how to parse an XML data with the **SQLXML** Java data type.                                                                                   |
+| [Spatial Data Types Sample](../../../connect/jdbc/using-spatial-datatypes.md) | Describes how to store Spatial Datatypes in SQL Server and how to retrieve these types back from SQL Server. Also discusses how to use newly defined classes **Geometry** and **Geography** from the driver, for managing Java reference of these datatypes. |
   
 ## See Also
 

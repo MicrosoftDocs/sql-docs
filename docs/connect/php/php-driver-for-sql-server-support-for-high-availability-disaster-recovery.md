@@ -52,9 +52,9 @@ Use the following guidelines to connect to a server in an availability group:
   
 If read-only routing is not in effect, connecting to a secondary replica location in an availability group will fail in the following situations:  
   
-1.  If the secondary replica location is not configured to accept connections.  
+- If the secondary replica location is not configured to accept connections.  
   
-2.  If an application uses **ApplicationIntent=ReadWrite** (discussed below) and the secondary replica location is configured for read-only access.  
+- If an application uses **ApplicationIntent=ReadWrite** (discussed below) and the secondary replica location is configured for read-only access.  
   
 A connection will fail if a primary replica is configured to reject read-only workloads and the connection string contains **ApplicationIntent=ReadOnly**.  
 
@@ -62,10 +62,10 @@ A connection will fail if a primary replica is configured to reject read-only wo
 
 Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. It affects the connection sequence of the driver when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. Together with MultiSubnetFailover they provide the following four connection sequences: 
 
-1. TNIR Enabled & MultiSubnetFailover Disabled: One IP is attempted, followed by all IPs in parallel
-2. TNIR Enabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
-3. TNIR Disabled & MultiSubnetFailover Disabled: All IPs are attempted one after another
-4. TNIR Disabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
+- TNIR Enabled & MultiSubnetFailover Disabled: One IP is attempted, followed by all IPs in parallel
+- TNIR Enabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
+- TNIR Disabled & MultiSubnetFailover Disabled: All IPs are attempted one after another
+- TNIR Disabled & MultiSubnetFailover Enabled: All IPs are attempted in parallel
 
 TNIR is enabled by default, and MultiSubnetFailover is Disabled by default.
 

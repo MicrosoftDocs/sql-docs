@@ -214,12 +214,12 @@ If not found, the driver checks if any encoding is set in `PDO::prepare()` or `P
 
 As you can see, binding is done internally by the driver. A valid query is sent to the server for execution without any parameter. Compared to the regular case, some limitations result when the parameterized query feature is not in use.
 
-1. It does not work for parameters that are bound as `PDO::PARAM_INPUT_OUTPUT`.
+- It does not work for parameters that are bound as `PDO::PARAM_INPUT_OUTPUT`.
     - When the user specifies `PDO::PARAM_INPUT_OUTPUT` in `PDO::bindParam()`, a PDO exception is thrown.
-2. It does not work for parameters that are bound as output parameters.
+- It does not work for parameters that are bound as output parameters.
     - When the user creates a prepared statement with placeholders that are meant for output parameters (that is, having an equal sign immediately after a placeholder, like `SELECT ? = COUNT(*) FROM Table1`), a PDO exception is thrown.
     - When a prepared statement invokes a stored procedure with a placeholder as the argument for an output parameter, no exception is thrown because the driver cannot detect the output parameter. However, the variable that the user provides for the output parameter will remain unchanged.
-3. Duplicated placeholders for a binary encoded parameter will not work
+- Duplicated placeholders for a binary encoded parameter will not work
 
 ## See Also  
 [PDO Class](../../connect/php/pdo-class.md)

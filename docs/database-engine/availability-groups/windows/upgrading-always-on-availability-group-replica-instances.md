@@ -175,14 +175,15 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 >  In many cases, after the rolling upgrade is completed, you will fail back to the original primary replicas. 
 
 ### General steps to upgrade a distributed availability group
-1. Upgrade and restart all secondary replica instances of the second availability group (the downstream).
-2. Upgrade and restart all secondary replica instances of the first availability group (the upstream).
+1. Upgrade and restart all secondary replica instances of the second availability group (the downstream). Verify synchronization within the AG and within the Distributed AG. 
+2. Upgrade and restart all secondary replica instances of the first availability group (the upstream). Verify synchronization within the AG and within the Distributed AG. 
 3. Fail over the forwarder primary to an upgraded secondary replica of the secondary availability group.
 4. Wait for data synchronization. The databases should show as synchronized on all synchronous-commit replicas. 
-5. Upgrade and restart the last remaining instance of the secondary availability group.
-6. Fail over the global primary to an upgraded secondary of the first availability group.
-7. Upgrade the last remaining instance of the primary availability group.
-8. Restart the newly upgraded server.
+5. Upgrade and restart the last remaining instance of the secondary availability group. Verify synchronization within the AG and within the Distributed AG. 
+6. Fail over the global primary to an upgraded secondary of the first availability group. Verify synchronization within the AG and within the Distributed AG. 
+7. Upgrade the last remaining instance of the primary availability group. Verify synchronization within the AG and within the Distributed AG. 
+8. Restart the newly upgraded server. Verify synchronization within the AG and within the Distributed AG. 
+9. (optional) Fail both availability groups to their original primary replicas.  Verify synchronization within the AG and within the Distributed AG. 
 
 
 ### Diagram example for a rolling upgrade of a distributed availability group
@@ -210,8 +211,6 @@ The steps to upgrade the instances in this diagram:
 
 If a third replica existed in each availability group, it would be upgraded before NODE3\SQLAG and NODE1\SQLAG. 
 
- >[!NOTE]
- > When verifying synchronization, be sure to verify both across the AG, and across the Distributed AG. The synchronous-commit replicas within an AG should be synchronized, and the global primary should be synchronized with the forwarder. 
 
 ## Special steps for change data capture or replication
 

@@ -20,9 +20,9 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Using Bulk Copy API for batch insert operation is supported starting from JDBC driver preview release 6.5.4. This feature allows the users to utilize Bulk Copy API underneath when executing batch insert operations against Azure Data Warehouses, which improves the performance significantly. This feature aims to achieve the performance improvement while inserting the same data as the driver would have with regular batch insert operation, by parsing the user's SQL Query and leveraging the Bulk Copy API in lieu of the usual batch insert operation. This page shows various ways to enable the Bulk Copy API for batch insert feature, as well as its limitations. This page contains a small sample code at the end that demonstrates a usage and the performance increase as well.
+Microsoft JDBC Driver 7.0 for SQL Server supports using Bulk Copy API for batch insert operations for Azure Data Warehouse. This feature allows users to enable driver to perform Bulk Copy operation underneath when executing batch insert operations. The driver aims to achieve improvement in performance while inserting the same data as the driver would have with regular batch insert operation. The driver parses the user's SQL Query, leveraging the Bulk Copy API in lieu of the usual batch insert operation. Below are various ways to enable the Bulk Copy API for batch insert feature, as well as the list of its limitations. This page also contains a small sample code that demonstrates a usage and the performance increase as well.
 
-This feature is only applicable to PreparedStatement and CallableStatement's executeBatch & executeLargeBatch APIs.
+This feature is only applicable to PreparedStatement and CallableStatement's `executeBatch()` & `executeLargeBatch()` APIs.
 
 ## Pre-Requisites
 
@@ -49,7 +49,7 @@ Calling **SQLServerConnection.setUseBulkCopyForBatchInsert(true)** enables this 
 
 **SQLServerConnection.getUseBulkCopyForBatchInsert()** retrieves the current value for **useBulkCopyForBatchInsert** connection property.
 
-Note that the value for **useBulkCopyForBatchInsert** stays constant for each PreparedStatement at the time of its initialization, and subsequent calls to **SQLServerConnection.setUseBulkCopyForBatchInsert()** will not affect the already created PreparedStatement with regard to the value for **useBulkCopyForBatchInsert**.
+The value for **useBulkCopyForBatchInsert** stays constant for each PreparedStatement at the time of its initialization. Any subsequent calls to **SQLServerConnection.setUseBulkCopyForBatchInsert()** will not affect the already created PreparedStatement with regard to its value.
 
 ### 3. Enabling with setUseBulkCopyForBatchInsert() method from SQLServerDataSource object
 
@@ -59,13 +59,13 @@ Similar to above, but using SQLServerDataSource to create a SQLServerConnection 
 
 There are currently these limitations that apply to this feature.
 
-1. Insert queries that contain non-parameterized values (e.g. INSERT INTO TABLE VALUES (?, **2**)) are not supported. Wildcards (?) are the only supported parameters for this function.
-2. Insert queries that contain INSERT-SELECT expressions (e.g. INSERT INTO TABLE **SELECT * FROM TABLE2**) are not supported.
-3. Insert queries that contain multiple VALUE expressions (e.g. INSERT INTO TABLE VALUES **(1, 2) (3, 4)**) are not supported.
-4. Insert queries that are followed by the OPTION clause, joined with multiple tables, or followed by another query are not supported.
-5. Due to the limitations of Bulk Copy API, DATETIME, SMALLDATETIME, GEOMETRY and GEOGRAPHY data types are not supported for this feature.
+1. Insert queries that contain non-parameterized values (for example, `INSERT INTO TABLE VALUES (?, 2`)), are not supported. Wildcards (?) are the only supported parameters for this function.
+2. Insert queries that contain INSERT-SELECT expressions (for example, `INSERT INTO TABLE SELECT * FROM TABLE2`), are not supported.
+3. Insert queries that contain multiple VALUE expressions (for example, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), are not supported.
+4. Insert queries that are followed by the OPTION clause, joined with multiple tables, or followed by another query, are not supported.
+5. Due to the limitations of Bulk Copy API, `DATETIME`, `SMALLDATETIME`,`GEOMETRY`, and `GEOGRAPHY` data types, are not supported for this feature.
 
-If the query fails due to non-SQL server related errors, the driver will log the error message and fallback to the original logic for batch insert.
+If the query fails because of non "SQL server" related errors, the driver will log the error message and fallback to the original logic for batch insert.
 
 ## Example
 
@@ -76,6 +76,8 @@ Below is an example code that demonstrates the use case for a batch insert opera
     {
         String tableName = "batchTest";
         String tableNameBulkCopyAPI = "batchTestBulk";
+
+        String azureDWconnectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(azureDWconnectionUrl); // connects to an Azure Data Warehouse.
                 Statement stmt = con.createStatement();

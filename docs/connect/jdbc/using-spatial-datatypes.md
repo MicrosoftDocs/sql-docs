@@ -103,15 +103,15 @@ These are the new public APIs that have been introduced with this addition, in t
 
 |Method|Description|
 |:------|:----------|
-|Geometry STGeomFromText(String wkt, int srid)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
+|Geometry STGeomFromText(String wkt, int SRID)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
 |Geometry STGeomFromWKB(byte[] wkb)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
-|Geometry deserialize(byte[] wkb)| Constructor for a Geometry instance from an internal SQL Server format for spatial data.
+|Geometries deserialize(byte[] wkb)| Constructor for a Geometry instance from an internal SQL Server format for spatial data.
 |Geometry parse(String wkt)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Spatial Reference Identifier is defaulted to 0.
-|Geometry point(double x, double y, int srid)| Constructor for a Geometry instance that represents a Point instance from its X and Y values and a Spatial Reference Identifier.
+|Geometry point(double x, double y, int SRID)| Constructor for a Geometry instance that represents a Point instance from its X and Y values and a Spatial Reference Identifier.
 |String STAsText()| Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a Geometry instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.
 |byte[] STAsBinary()| Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a Geometry instance. This value will not contain any Z or M values carried by the instance.
 |byte[] serialize()| Returns the bytes that represent an internal SQL Server format of Geometry type.
-|boolean hasM()| Returns if the object contains a M (measure) value.
+|boolean hasM()| Returns if the object contains an M (measure) value.
 |boolean hasZ()| Returns if the object contains a Z (elevation) value.
 |Double getX()| Returns the X coordinate value.
 |Double getY()| Returns the Y coordinate value.
@@ -128,15 +128,15 @@ These are the new public APIs that have been introduced with this addition, in t
 
 |Method|Description|
 |:------|:----------|
-|Geography STGeomFromText(String wkt, int srid)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
+|Geography STGeomFromText(String wkt, int SRID)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
 |Geography STGeomFromWKB(byte[] wkb)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
 |Geography deserialize(byte[] wkb)| Constructor for a Geography instance from an internal SQL Server format for spatial data.
 |Geography parse(String wkt)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Spatial Reference Identifier is defaulted to 0.
-|Geography point(double lat, double lon, int srid)| Constructor for a Geography instance that represents a Point instance from its latitude and longitude values and a Spatial Reference Identifier.
+|Geography point(double lat, double lon, int SRID)| Constructor for a Geography instance that represents a Point instance from its latitude and longitude values and a Spatial Reference Identifier.
 |String STAsText()| Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a Geography instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.
 |byte[] STAsBinary())| Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a Geography instance. This value will not contain any Z or M values carried by the instance.
 |byte[] serialize()| Returns the bytes that represent an internal SQL Server format of Geography type.
-|boolean hasM()| Returns if the object contains a M (measure) value.
+|boolean hasM()| Returns if the object contains an M (measure) value.
 |boolean hasZ()| Returns if the object contains a Z (elevation) value.
 |Double getLatitude()| Returns the latitude value.
 |Double getLongitude()| Returns the longitude value.
@@ -149,12 +149,13 @@ These are the new public APIs that have been introduced with this addition, in t
 |String asTextZM()| Returns the Well-Known Text (WKT) representation of the Geography object.
 |String toString()| Returns the String representation of the Geography object.
 
-##  Limitations of Spatial Datatypes
+## Limitations of Spatial Datatypes
+
 1. The spatial sub-datatypes **CircularString**, **CompoundCurve**, **CurvePolygon**, and **FullGlobe** are only supported starting from SQL Server 2012 and above.
 
 2. Always Encrypted cannot be used with spatial datatypes.
 
-3. Stored procedures, TVP and BulkCopy operations are currently not supported with spatial datatypes.
+3. Stored procedures, TVP, and BulkCopy operations are currently not supported with spatial datatypes.
 
 ## See Also
 

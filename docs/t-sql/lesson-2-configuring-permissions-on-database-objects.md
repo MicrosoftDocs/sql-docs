@@ -47,8 +47,8 @@ By default, administrators on your computer have full access to [!INCLUDE[ssNoVe
 4.  In the **Password** and **Confirm password** box, type a strong password, and then click **Create** to create a new local Windows user.  
   
 ### Create a SQL login  
-  
-1.  In a Query Editor window of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], type and execute the following code replacing `computer_name` with the name of your computer. `FROM WINDOWS` indicates that Windows will authenticate the user. The optional `DEFAULT_DATABASE` argument connects `Mary` to the `TestData` database, unless her connection string indicates another database. This statement introduces the semicolon as an optional termination for a [!INCLUDE[tsql](../includes/tsql-md.md)] statement.  
+
+In a Query Editor window of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], type and execute the following code replacing `computer_name` with the name of your computer. `FROM WINDOWS` indicates that Windows will authenticate the user. The optional `DEFAULT_DATABASE` argument connects `Mary` to the `TestData` database, unless her connection string indicates another database. This statement introduces the semicolon as an optional termination for a [!INCLUDE[tsql](../includes/tsql-md.md)] statement.
   
   ```sql  
   CREATE LOGIN [computer_name\Mary]  
@@ -69,15 +69,15 @@ To grant Mary access, switch to the **TestData** database, and then use the CREA
   
 ### To create a user in a database  
   
-1.  Type and execute the following statements (replacing `computer_name` with the name of your computer) to grant `Mary` access to the `TestData` database.  
+Type and execute the following statements (replacing `computer_name` with the name of your computer) to grant `Mary` access to the `TestData` database.
   
-  ```sql  
-  USE [TestData];  
-  GO  
-  
-  CREATE USER [Mary] FOR LOGIN [computer_name\Mary];  
-  GO    
-  ```  
+ ```sql  
+ USE [TestData];  
+ GO  
+ 
+ CREATE USER [Mary] FOR LOGIN [computer_name\Mary];  
+ GO    
+ ```  
   
  Now, Mary has access to both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the `TestData` database.  
 
@@ -86,8 +86,7 @@ To grant Mary access, switch to the **TestData** database, and then use the CREA
 As an administrator, you can execute the SELECT from the **Products** table and the **vw_Names** view, and execute the **pr_Names** procedure; however, Mary cannot. To grant Mary the necessary permissions, use the GRANT statement.  
 
 ### Grant permission to stored prcoedure  
-  
-1.  Execute the following statement to give `Mary` the `EXECUTE` permission for the `pr_Names` stored procedure.  
+Execute the following statement to give `Mary` the `EXECUTE` permission for the `pr_Names` stored procedure.
   
     ```  
     GRANT EXECUTE ON pr_Names TO Mary;  

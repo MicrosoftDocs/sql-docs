@@ -34,7 +34,7 @@ After you have run the query in the Statement object and the data is returned to
 The code file for this sample is named CacheRS.java, and it can be found in the following location:  
 
 ```bash  
-\<*installation directory*>\mssql-jdbc...\<*version*>\\<*language*>\samples\resultsets  
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets  
 ```
 
 ## Requirements  

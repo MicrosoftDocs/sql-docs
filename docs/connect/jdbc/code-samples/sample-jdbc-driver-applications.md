@@ -24,7 +24,7 @@ The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample appl
 All the sample applications are contained in *.java code files that can be compiled and run on your local computer, and they are located in various subfolders in the following location:  
 
 ```bash
-\<*installation directory*>\mssql-jdbc...\<*version*>\<*language*>\samples  
+\<installation directory>\sqljdbc_<version>\<language>\samples  
 ```
 
  The topics in this section describe how to configure and run the sample applications, and include a discussion of what the sample applications demonstrate.  

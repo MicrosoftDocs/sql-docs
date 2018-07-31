@@ -26,7 +26,7 @@ In the [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssVersion
   
 The **adaptive** value is the default buffering mode and the JDBC driver buffers the minimum possible data when necessary. For more information about using adaptive buffering, see [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
   
- The topics in this section describe different ways that you can use to retrieve large-value data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.  
+The topics in this section describe different ways that you can use to retrieve large-value data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.  
   
 ## In This Section  
   

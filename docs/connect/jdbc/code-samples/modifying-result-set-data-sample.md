@@ -24,7 +24,9 @@ This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample app
 
 The code file for this sample is named UpdateRS.java, and it can be found in the following location:
 
-\<_installation directory_>\mssql-jdbc...\\<_version_>\\<_language_>\samples\resultsets
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets
+```
 
 ## Requirements
 

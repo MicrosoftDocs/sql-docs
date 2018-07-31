@@ -25,7 +25,7 @@ This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample app
 The code file for this sample is named RetrieveRS.java, and it can be found in the following location:
 
 ```bash
-\<*installation directory*>\mssql-jdbc...\<*version*>\\<*language*>\samples\resultsets  
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets  
 ```
 
 ## Requirements

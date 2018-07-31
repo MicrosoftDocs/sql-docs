@@ -24,7 +24,9 @@ This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample app
 
 The code file for this sample is named UpdateLargeData.java, and can be found in the following location:
 
-\<_installation directory_>\mssql-jdbc...\\<_version_>\\<_language_>\samples\adaptive
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\adaptive
+```
 
 ## Requirements
 

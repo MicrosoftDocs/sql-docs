@@ -187,7 +187,7 @@ sqlsrv_close($conn);
 ```
 
 ## Example
-This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/en-us/sql/t-sql/data-types/sql-variant-transact-sql?view=sql-server-2017) types and fetch the inserted data.
+This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types and fetch the inserted data.
 
 ```
 <?php

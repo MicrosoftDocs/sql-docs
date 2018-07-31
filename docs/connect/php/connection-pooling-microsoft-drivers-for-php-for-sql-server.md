@@ -42,9 +42,9 @@ For information about other connection attributes, see [Connection Options](../.
 ### Linux and macOS
 The *ConnectionPooling* attribute cannot be used to enable/disable connection pooling. 
 
-Connection pooling can be enabled/disabled by editing [odbcinst.ini](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux?view=sql-server-2017) configuration file. The driver should be reloaded for the changes to take effect.
+Connection pooling can be enabled/disabled by editing the odbcinst.ini configuration file. The driver should be reloaded for the changes to take effect.
 
-Setting `Pooling` to `Yes` and a positive `CPTimeout`value in odbcinst.ini enables connection pooling. 
+Setting `Pooling` to `Yes` and a positive `CPTimeout`value in the odbcinst.ini file enables connection pooling. 
 ```
 [ODBC]
 Pooling=Yes
@@ -66,16 +66,16 @@ UsageCount=1
 CPTimeout=120
 ```
 
-Setting `Pooling` to `No` in odbcinst.ini forces the driver to create a new connection.
+Setting `Pooling` to `No` in the odbcinst.ini file forces the driver to create a new connection.
 ```
 [ODBC]
 Pooling=No
 ```
 
 ## Remarks
-- In Linux or macOS, all connections will be pooled if pooling is enabled in the odbcinst.ini file. This means, ConnectionPooling connection option has no effect. To disable pooling, in odbcinst.ini, set Pooling=No and reload the drivers.
--- unixODBC <= 2.3.4 (Linux and macOS) might not return proper diagnostic information, such as error messages, warnings and informative messages
--- for this reason, SQLSRV and PDO_SQLSRV drivers might not be able to properly fetch long data (such as xml, binary) as strings. Long data can be fetched as streams as a workaround. See the example below for SQLSRV.
+- In Linux or macOS, all connections will be pooled if pooling is enabled in the odbcinst.ini file. This means the ConnectionPooling connection option has no effect. To disable pooling, set Pooling=No in the odbcinst.ini file and reload the drivers.
+  - unixODBC <= 2.3.4 (Linux and macOS) might not return proper diagnostic information, such as error messages, warnings and informative messages
+  - for this reason, SQLSRV and PDO_SQLSRV drivers might not be able to properly fetch long data (such as xml, binary) as strings. Long data can be fetched as streams as a workaround. See the example below for SQLSRV.
 
 ```
 <?php

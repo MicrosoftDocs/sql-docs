@@ -24,7 +24,7 @@ The following are important points to note about connection pooling in the [!INC
   
 -   The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] uses ODBC connection pooling.  
   
--   By default, connection pooling is enabled in Windows. In Linux and macOS, connections are pooled only if connection pooling is enabled for ODBC (see [Enabling/Disabling connection pooling](#enabling-disabling-connection-pooling)). When connection pooling is enabled and you connect to a server, the driver attempts to use a pooled connection before it creates a new one. If an equivalent connection is not found in the pool, a new connection is created and added to the pool. The driver determines whether connections are equivalent based on a comparison of connection strings.  
+-   By default, connection pooling is enabled in Windows. In Linux and macOS, connections are pooled only if connection pooling is enabled for ODBC (see [Enabling/Disabling connection pooling](#enablingdisabling-connection-pooling)). When connection pooling is enabled and you connect to a server, the driver attempts to use a pooled connection before it creates a new one. If an equivalent connection is not found in the pool, a new connection is created and added to the pool. The driver determines whether connections are equivalent based on a comparison of connection strings.  
   
 -   When a connection from the pool is used, the connection state is reset.  
   

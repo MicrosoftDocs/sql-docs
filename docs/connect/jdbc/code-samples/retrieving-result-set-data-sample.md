@@ -22,7 +22,7 @@ manager: craigg
 
 This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve a set of data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database, and then display that data.
 
-The code file for this sample is named RetrieveRS.java, and it can be found in the following location:
+The code file for this sample is named RetrieveResultSet.java, and it can be found in the following location:
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\resultsets  

@@ -29,7 +29,7 @@ The Document Object Model (DOM) provides a programmatic representation of XML do
 > [!IMPORTANT]  
 > In order to use the SAX parser API, you must import the standard SAX implementation from the javax.xml package.
 
-The code file for this sample is named SQLXMLExample.java, and it can be found in the following location:
+The code file for this sample is named SqlXmlDataType.java, and it can be found in the following location:
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\datatypes

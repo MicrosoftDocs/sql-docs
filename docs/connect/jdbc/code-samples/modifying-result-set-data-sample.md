@@ -22,7 +22,7 @@ manager: craigg
 
 This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve an updateable set of data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database. Then, using methods of the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object, it inserts, modifies, and then finally deletes a row of data from the set of data.
 
-The code file for this sample is named UpdateRS.java, and it can be found in the following location:
+The code file for this sample is named UpdateResultSet.java, and it can be found in the following location:
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\resultsets

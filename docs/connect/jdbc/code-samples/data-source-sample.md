@@ -22,7 +22,7 @@ manager: craigg
 
 This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to connect to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using a data source object. It also demonstrates how to retrieve data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using a stored procedure.
 
-The code file for this sample is named ConnectDS.java, and it can be found in the following location:
+The code file for this sample is named ConnectDataSource.java, and it can be found in the following location:
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\connections

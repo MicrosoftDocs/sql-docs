@@ -31,7 +31,7 @@ To set a limit on the number of rows cached on the client, you must first use a 
   
 After you have run the query in the Statement object and the data is returned to the client as a result set, you can call the setFetchSize method to control how much data is retrieved from the database at one time. For example, if you have a table that 100 rows of data, and you set the fetch size to 10, only 10 rows of data will be cached on the client at any time. Although this will slow down the speed at which the data is processed, it has the advantage of using less memory on the client, which can be especially useful when you need to process large amounts of data.  
   
-The code file for this sample is named CacheRS.java, and it can be found in the following location:  
+The code file for this sample is named CacheResultSet.java, and it can be found in the following location:  
 
 ```bash  
 \<installation directory>\sqljdbc_<version>\<language>\samples\resultsets  

@@ -25,15 +25,15 @@ For the purpose of managing sensitive data SQL Server and Azure SQL Server intro
 
 See [SQL Data Discovery and Classification](https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) for more information on how to assign classification to columns.
 
-Microsoft ODBC Driver 17.2 allows the retrieval of this metadata via SQLGetDescField or SQLColAttribute using SQL_CA_SS_DATA_CLASSIFICATION field identifier.
+Microsoft ODBC Driver 17.2 allows the retrieval of this metadata via SQLGetDescField using SQL_CA_SS_DATA_CLASSIFICATION field identifier.
 
 ## Format
-SQLGetDescField or SQLColAttribute number starting from 1 will return:
+SQLGetDescField number starting from 1 will return:
 -	Version of Data Classification information
 -	Number of SENSITIVITYPROPERTY elements for column
 -	Array of pairs, where each pair consists of two USHORT offsets (from the beginning of the data) to the 
-    - name of the sensitivity label in names array or USHORT_MAX if there no sensitivity label
-    - name of the information type in names array or USHORT_MAX if there no information type
+    - name of the sensitivity label in names array or USHORT_MAX if there is no sensitivity label
+    - name of the information type in names array or USHORT_MAX if there is no information type
 
 For the hybrid option requirements SQLBatch processing changes and data organization is the same as for record field option.
 In case if the Data Classification feature is not supported by SQL Server, specific error code should be returned.
@@ -41,14 +41,14 @@ In case if the Data Classification feature is not supported by SQL Server, speci
 
 Returned data should have the following format:
 
-|Field Name|Type|
+|Field Name|Type (number of elements)|
 |-------------------|--------------------| 
 |SensitivityLabelsCount|USHORT|
-|SensitivityLabels|SENSITIVITYLABEL * SensitivityLabelsCount|
+|SensitivityLabels|SENSITIVITYLABEL x SensitivityLabelsCount|
 |InformationTypesCount|USHORT|
-|InformationTypes|SENSITIVITYINFORMATIONTYPE* InformationTypesCount|
+|InformationTypes|SENSITIVITYINFORMATIONTYPE x InformationTypesCount|
 |NumResultColumns|USHORT|
-|ColumnData|COLUMNSENSITIVITYMETADATA * NumResultColumns|
+|ColumnData|COLUMNSENSITIVITYMETADATA x NumResultColumns|
 
 
 <br><br>
@@ -58,6 +58,10 @@ SENSITIVITYLABEL is defined as:
 |-------------------|--------------------|  
 |Name|B_VARCHAR|  
 |Id|B_VARCHAR|
+
+Note: B_VARCHAR is a variable-length character stream which is defined by a length field followed by the data in Unicode characters. If the string is empty it will have only one byte which is 0.
+
+This type is defined in TDS specification, see [Tabular Data Stream Protocol](https://msdn.microsoft.com/en-us/library/dd304523.aspx) for more information.
 
 <br><br>
 SENSITIVITYINFORMATIONTYPE is defined as: 
@@ -71,10 +75,10 @@ SENSITIVITYINFORMATIONTYPE is defined as:
 <br><br>
 COLUMNSENSITIVITYMETADATA is defined as: 
 
-|Field Name|Type|
+|Field Name|Type (number of elements)|
 |-------------------|--------------------|
 |NumSensitivityProperties|USHORT| 
-|SourceData|SENSITIVITYPROPERTY * NumSensitivityProperties|
+|SourceData|SENSITIVITYPROPERTY x NumSensitivityProperties|
 
 
 <br><br>

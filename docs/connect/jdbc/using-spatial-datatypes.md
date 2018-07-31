@@ -1,7 +1,7 @@
 ---
 title: "Using Spatial Datatypes | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2018"
+ms.date: "07/30/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -60,11 +60,10 @@ A sample script to insert a Geometry value would be:
 ```java
 String geoWKT = "LINESTRING(1 0, 0 1, -1 0)";
 Geometry geomWKT = Geometry.STGeomFromText(geoWKT, 0);
-try(SQLServerPreparedStatement pstmt = (SQLServerPreparedStatement)con.prepareStatement("insert into geomTable values (?)")) {
-    pstmt.setGeometry(1, geomWKT);  
-    pstmt.execute();
-}
-```
+SQLServerPreparedStatement pstmt = (SQLServerPreparedStatement) connection.prepareStatement("insert into sampleTable values (?)");
+pstmt.setGeometry(1, geomWKT);  
+pstmt.execute();
+``` 
 
 The same can be done for the Geography counterpart, using a Geography column and **setGeography()** method.
 
@@ -80,8 +79,77 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 The same can be done for the Geography counterpart, using a Geography column and **getGeography()** method.
 
-## Limitations of Spatial Datatypes
+## Newly introduced APIs
 
+These are the new public APIs that have been introduced with this addition, in the classes **SQLServerPreparedStatement**, **SQLServerResultSet**, **Geometry**, and **Geography**.
+
+### SQLServerPreparedStatement
+
+|Method|Description|
+|:------|:----------|
+|void setGeometry(int n, Geometry x)| Sets the designated parameter to the given microsoft.sql.Geometry Class object.
+|void setGeography(int n, Geography x)| Sets the designated parameter to the given microsoft.sql.Geography Class object.
+
+### SQLServerResultSet
+
+|Method|Description|
+|:------|:----------|
+|Geometry getGeometry(int colunIndex)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geometry object in the Java programming language.
+|Geometry getGeometry(String columnName)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geometry object in the Java programming language.
+|Geography getGeography(int colunIndex)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geography object in the Java programming language.
+|Geography getGeography(String columnName)| Returns the value of the designated column in the current row of this ResultSet object as a com.microsoft.sqlserver.jdbc.Geography object in the Java programming language.
+
+### Geometry
+
+|Method|Description|
+|:------|:----------|
+|Geometry STGeomFromText(String wkt, int srid)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
+|Geometry STGeomFromWKB(byte[] wkb)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
+|Geometry deserialize(byte[] wkb)| Constructor for a Geometry instance from an internal SQL Server format for spatial data.
+|Geometry parse(String wkt)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Spatial Reference Identifier is defaulted to 0.
+|Geometry point(double x, double y, int srid)| Constructor for a Geometry instance that represents a Point instance from its X and Y values and a Spatial Reference Identifier.
+|String STAsText()| Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a Geometry instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.
+|byte[] STAsBinary()| Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a Geometry instance. This value will not contain any Z or M values carried by the instance.
+|byte[] serialize()| Returns the bytes that represent an internal SQL Server format of Geometry type.
+|boolean hasM()| Returns if the object contains a M (measure) value.
+|boolean hasZ()| Returns if the object contains a Z (elevation) value.
+|Double getX()| Returns the X coordinate value.
+|Double getY()| Returns the Y coordinate value.
+|Double getM()| Returns the M (measure) value of the object.
+|Double getZ()| Returns the Z (elevation) value of the object.
+|int getSrid()| Returns the Spatial Reference Identifier (SRID) value.
+|boolean isNull()| Returns if the Geometry object is null.
+|int STNumPoints()| Returns the number of points in the Geometry object.
+|String STGeometryType()| Returns the Open Geospatial Consortium (OGC) type name represented by a geometry instance.
+|String asTextZM()| Returns the Well-Known Text (WKT) representation of the Geometry object.
+|String toString()| Returns the String representation of the Geometry object.
+
+### Geography
+
+|Method|Description|
+|:------|:----------|
+|Geography STGeomFromText(String wkt, int srid)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
+|Geography STGeomFromWKB(byte[] wkb)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
+|Geography deserialize(byte[] wkb)| Constructor for a Geography instance from an internal SQL Server format for spatial data.
+|Geography parse(String wkt)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Spatial Reference Identifier is defaulted to 0.
+|Geography point(double lat, double lon, int srid)| Constructor for a Geography instance that represents a Point instance from its latitude and longitude values and a Spatial Reference Identifier.
+|String STAsText()| Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a Geography instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.
+|byte[] STAsBinary())| Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a Geography instance. This value will not contain any Z or M values carried by the instance.
+|byte[] serialize()| Returns the bytes that represent an internal SQL Server format of Geography type.
+|boolean hasM()| Returns if the object contains a M (measure) value.
+|boolean hasZ()| Returns if the object contains a Z (elevation) value.
+|Double getLatitude()| Returns the latitude value.
+|Double getLongitude()| Returns the longitude value.
+|Double getM()| Returns the M (measure) value of the object.
+|Double getZ()| Returns the Z (elevation) value of the object.
+|int getSrid()| Returns the Spatial Reference Identifier (SRID) value.
+|boolean isNull()| Returns if the Geography object is null.
+|int STNumPoints()| Returns the number of points in the Geography object.
+|String STGeographyType()| Returns the Open Geospatial Consortium (OGC) type name represented by a geography instance.
+|String asTextZM()| Returns the Well-Known Text (WKT) representation of the Geography object.
+|String toString()| Returns the String representation of the Geography object.
+
+##  Limitations of Spatial Datatypes
 1. The spatial sub-datatypes **CircularString**, **CompoundCurve**, **CurvePolygon**, and **FullGlobe** are only supported starting from SQL Server 2012 and above.
 
 2. Always Encrypted cannot be used with spatial datatypes.
@@ -90,4 +158,4 @@ The same can be done for the Geography counterpart, using a Geography column and
 
 ## See Also
 
-[Working with Data Types (JDBC)](../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)
+[Spatial Data Types Sample (JDBC)](../../connect/jdbc/code-samples/spatial-data-types-sample.md)

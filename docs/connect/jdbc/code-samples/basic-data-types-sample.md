@@ -16,53 +16,39 @@ ms.author: genemi
 manager: craigg
 ---
 # Basic Data Types Sample
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to use result set getter methods to retrieve basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data type values, and how to use result set update methods to update those values.  
+This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to use result set getter methods to retrieve basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data type values, and how to use result set update methods to update those values.  
   
- The code file for this sample is named BasicDT.java, and it can be found in the following location:  
-  
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\datatypes  
-  
+The code file for this sample is named BasicDT.java, and it can be found in the following location:  
+
+```bash
+\<*installation directory*>\mssql-jdbc...\<*version*>\\<*language*>\samples\datatypes  
+```
+
 ## Requirements  
- To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
+
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
- Create the following table and sample data in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database:  
-  
-```sql
-use AdventureWorks  
-CREATE TABLE DataTypesTable   
-   (Col1 int IDENTITY,   
-    Col2 char,  
-    Col3 varchar(50),   
-    Col4 bit,  
-    Col5 decimal(18, 2),  
-    Col6 money,  
-    Col7 datetime,  
-    Col8 date,  
-    Col9 time,  
-    Col10 datetime2,  
-    Col11 datetimeoffset  
-    );  
-  
-INSERT INTO DataTypesTable   
-VALUES ('A', 'Some text.', 0, 15.25, 10.00, '01/01/2006 23:59:59.991', '01/01/2006', '23:59:59', '01/01/2006 23:59:59.12345', '01/01/2006 23:59:59.12345 -1:00')  
-```  
-  
+Create the following table and sample data in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database:
+
 > [!NOTE]  
->  The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
-## Example  
- In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database, and then retrieves a single row of data from the DataTypesTable test table. The custom displayRow method is then called to display all the data in the result set using various get\<Type> methods of the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) class.  
+## Example
+
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] database, and then retrieves a single row of data from the DataTypesTable test table. The custom displayRow method is then called to display all the data in the result set using various get\<Type> methods of the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) class.  
   
- Next, the sample uses various update\<Type> methods of the SQLServerResultSet class to update the data in the result set, and then calls the [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) method to persist that data back to the database.  
+Next, the sample uses various update\<Type> methods of the SQLServerResultSet class to update the data in the result set, and then calls the [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) method to persist that data back to the database.  
   
- Finally, the sample refreshes the data in the result set and then calls the custom displayRow method again to display it.  
-  
+Finally, the sample refreshes the data in the result set and then calls the custom displayRow method again to display it.  
+
 ```java
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -73,16 +59,21 @@ import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 
 import microsoft.sql.DateTimeOffset;
 
-public class BasicDT {
+public class BasicDataTypes {
+    private static final String tableName = "DataTypesTable";
+
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);) {
 
-            String SQL = "SELECT * FROM DataTypesTable";
+            dropAndCreateTable(stmt);
+            insertOriginalData(con);
+
+            String SQL = "SELECT * FROM " + tableName;
             ResultSet rs = stmt.executeQuery(SQL);
             rs.next();
             displayRow("ORIGINAL DATA", rs);
@@ -132,10 +123,38 @@ public class BasicDT {
                 ((SQLServerResultSet) rs).getDateTimeOffset(11)); // SQL datetimeoffset type.
         System.out.println();
     }
+
+    private static void dropAndCreateTable(Statement stmt) throws SQLException {
+        stmt.executeUpdate("if object_id('" + tableName + "','U') is not null" + " drop table " + tableName);
+
+        String sql = "create table " + tableName + " (" + "c1 int, " + "c2 char(20), " + "c3 varchar(20), " + "c4 bit, "
+                + "c5 decimal(10,5), " + "c6 money, " + "c7 datetime, " + "c8 date, " + "c9 time(7), "
+                + "c10 datetime2(7), " + "c11 datetimeoffset(7), " + ");";
+
+        stmt.execute(sql);
+    }
+
+    private static void insertOriginalData(Connection con) throws SQLException {
+        String sql = "insert into " + tableName + " values( " + "?,?,?,?,?,?,?,?,?,?,?" + ")";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setObject(1, 100);
+            pstmt.setObject(2, "original text");
+            pstmt.setObject(3, "original text");
+            pstmt.setObject(4, false);
+            pstmt.setObject(5, 12.34);
+            pstmt.setObject(6, 56.78);
+            pstmt.setObject(7, new java.util.Date(1453500034839L));
+            pstmt.setObject(8, new java.util.Date(1453500034839L));
+            pstmt.setObject(9, new java.util.Date(1453500034839L));
+            pstmt.setObject(10, new java.util.Date(1453500034839L));
+            pstmt.setObject(11, new java.util.Date(1453500034839L));
+            pstmt.execute();
+        }
+    }
 }
-```  
-  
+```
+
 ## See Also  
- [Working with Data Types &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
-  
+
+[Working with Data Types &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
   

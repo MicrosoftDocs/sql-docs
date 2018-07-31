@@ -20,6 +20,8 @@
   href: working-with-large-data.md
 - name: Basic Data Types Sample
   href: basic-data-types-sample.md
+- name: Spatial Data Type Sample
+  href: spatial-data-type-sample.md
 - name: Reading Large Data with Stored Procedures Sample
   href: reading-large-data-with-stored-procedures-sample.md
 - name: Working with Result Sets
@@ -28,3 +30,5 @@
   href: retrieving-result-set-data-sample.md
 - name: Caching Result Set Data Sample
   href: caching-result-set-data-sample.md
+- name: Data Discovery and Classification Sample
+  href: data-discovery-and-classification-sample.md

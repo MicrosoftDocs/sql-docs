@@ -1011,6 +1011,61 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/t-sql/lesson-1-1-creating-a-database.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-1-2-creating-a-table.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-1-4-reading-the-data-in-a-table.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-1-5-summary-creating-database-objects.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-1-creating-a-login.md",
+            "redirect_url": "/sql/t-sql/lesson-2-configuring-permissions-on-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-2-granting-access-to-a-database.md",
+            "redirect_url": "/sql/t-sql/lesson-2-configuring-permissions-on-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-3-creating-views-and-stored-procedures.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-4-granting-access-to-a-database-object.md",
+            "redirect_url": "/sql/t-sql/lesson-2-configuring-permissions-on-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md",
+            "redirect_url": "/sql/t-sql/lesson-2-configuring-permissions-on-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-3-1-deleting-database-objects.md",
+            "redirect_url": "/sql/t-sql/lesson-3-deleting-database-objects",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/connect/php/download-microsoft-php-driver-for-sql-server.md",
             "redirect_url": "/sql/connect/php/microsoft-php-driver-for-sql-server",
             "redirect_document_id": false

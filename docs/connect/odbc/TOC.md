@@ -12,5 +12,6 @@
 ## [Using Always Encrypted](using-always-encrypted-with-the-odbc-driver.md)
 ## [Using Azure Active Directory](using-azure-active-directory.md)
 ## [Using Transparent Network IP Resolution](using-transparent-network-ip-resolution.md)
+## [Data Classification](data-classification.md)
 
 # [Bug Fixes](bug-fixes.md)

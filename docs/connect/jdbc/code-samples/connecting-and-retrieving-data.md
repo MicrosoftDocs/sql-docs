@@ -37,5 +37,5 @@ The topics in this section describe the different ways in which you can connect 
   
 ## See Also
 
-[Sample JDBC Driver Applications](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[Sample JDBC Driver Applications](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
   

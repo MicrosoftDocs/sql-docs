@@ -62,4 +62,4 @@ Finally, the sample code displays the data returned with the OUT parameters and 
 
 ## See Also
 
-[Working with Large Data](../../../connect/jdbc/working-with-large-data.md)
+[Working with Large Data](../../../connect/jdbc/code-samples/working-with-large-data.md)

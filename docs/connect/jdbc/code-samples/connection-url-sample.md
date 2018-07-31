@@ -73,4 +73,4 @@ public class ConnectURL {
 
 ## See Also
 
-[Connecting and Retrieving Data](../../../connect/jdbc/connecting-and-retrieving-data.md)
+[Connecting and Retrieving Data](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)

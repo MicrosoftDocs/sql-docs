@@ -49,4 +49,4 @@ The default behavior of the driver is "**adaptive.**" However, for the forward-o
 
 ## See Also
 
-[Working with Large Data](../../../connect/jdbc/working-with-large-data.md)
+[Working with Large Data](../../../connect/jdbc/code-samples/working-with-large-data.md)

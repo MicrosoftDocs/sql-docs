@@ -110,4 +110,4 @@ public class UpdateResultSet {
 
 ## See Also
 
-[Working with Result Sets](../../../connect/jdbc/working-with-result-sets.md)
+[Working with Result Sets](../../../connect/jdbc/code-samples/working-with-result-sets.md)

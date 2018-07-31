@@ -38,5 +38,5 @@ The **adaptive** value is the default buffering mode and the JDBC driver buffers
   
 ## See Also
 
-[Sample JDBC Driver Applications](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[Sample JDBC Driver Applications](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

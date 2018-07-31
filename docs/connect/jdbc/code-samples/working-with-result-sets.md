@@ -39,5 +39,5 @@ The topics in this section describe different ways that you can use a result set
   
 ## See Also  
 
-[Sample JDBC Driver Applications](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[Sample JDBC Driver Applications](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

@@ -38,4 +38,4 @@ The topics in this section describe how to use the JDBC driver data types to acc
   
 ## See Also
 
-[Sample JDBC Driver Applications](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[Sample JDBC Driver Applications](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  

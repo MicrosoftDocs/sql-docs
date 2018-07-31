@@ -95,5 +95,5 @@ public class SpatialDataTypes {
 
 ## See Also  
 
-[Working with Data Types &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
+[Working with Data Types &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   

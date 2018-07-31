@@ -47,4 +47,4 @@ Finally, the sample code iterates through the rows of data that are in the resul
 
 ## See Also
 
-[Working with Large Data](../../../connect/jdbc/working-with-large-data.md)
+[Working with Large Data](../../../connect/jdbc/code-samples/working-with-large-data.md)

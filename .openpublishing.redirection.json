@@ -1041,6 +1041,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/t-sql/lesson-2-2-granting-access-to-a-database.md",
+            "redirect_url": "/sql/t-sql/lesson-2-configuring-permissions-on-database-objects",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/t-sql/lesson-2-3-creating-views-and-stored-procedures.md",
             "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
             "redirect_document_id": false

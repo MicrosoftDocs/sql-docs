@@ -17,11 +17,9 @@
 - name: "Tutorial: Writing Transact-SQL Statements"
   href: tutorial-writing-transact-sql-statements.md
   items:
-  - name: "Lesson 1: Creating Database Objects"
+  - name: "Lesson 1: Create & query database objects"
     href: lesson-1-creating-database-objects.md
-    items:
-    - name: Lesson 1-1 - Create & query database
-  - name: "Lesson 2: Configure Permissions on Database Objects"
+  - name: "Lesson 2: Configure permissions on database objects"
     href: lesson-2-configuring-permissions-on-database-objects.md
   - name: "Lesson 3: Delete database objects"
     href: lesson-3-deleting-database-objects.md

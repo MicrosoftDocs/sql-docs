@@ -223,60 +223,56 @@ For this example, you will use CREATE VIEW to create a view that selects only tw
   
 ### Create a view  
   
-1.  Execute the following statement to create a very simple view that executes a select statement, and returns the names and prices of our products to the user.  
+Execute the following statement to create a very simple view that executes a select statement, and returns the names and prices of our products to the user.  
   
-    ```  
-    CREATE VIEW vw_Names  
-       AS  
-       SELECT ProductName, Price FROM Products;  
-    GO  
-  
-    ```  
+  ```sql  
+  CREATE VIEW vw_Names  
+     AS  
+     SELECT ProductName, Price FROM Products;  
+  GO    
+  ```  
   
 ### Test the view  
   
-1.  Views are treated just like tables. Use a `SELECT` statement to access a view.  
+Views are treated just like tables. Use a `SELECT` statement to access a view.  
   
-    ```  
-    SELECT * FROM vw_Names;  
-    GO  
-  
-    ```  
+  ```sql  
+  SELECT * FROM vw_Names;  
+  GO   
+  ```  
   
 ### Create a stored procedure  
   
-1.  The following statement creates a stored procedure name `pr_Names`, accepts an input parameter named `@VarPrice` of data type `money`. The stored procedure prints the statement `Products less than` concatenated with the input parameter that is changed from the `money` data type into a `varchar(10)` character data type. Then, the procedure executes a `SELECT` statement on the view, passing the input parameter as part of the `WHERE` clause. This returns all products that cost less than the input parameter value.  
+The following statement creates a stored procedure name `pr_Names`, accepts an input parameter named `@VarPrice` of data type `money`. The stored procedure prints the statement `Products less than` concatenated with the input parameter that is changed from the `money` data type into a `varchar(10)` character data type. Then, the procedure executes a `SELECT` statement on the view, passing the input parameter as part of the `WHERE` clause. This returns all products that cost less than the input parameter value.  
   
-    ```  
-    CREATE PROCEDURE pr_Names @VarPrice money  
-       AS  
-       BEGIN  
-          -- The print statement returns text to the user  
-          PRINT 'Products less than ' + CAST(@VarPrice AS varchar(10));  
-          -- A second statement starts here  
-          SELECT ProductName, Price FROM vw_Names  
-                WHERE Price < @varPrice;  
-       END  
-    GO  
-  
-    ```  
+  ```sql  
+  CREATE PROCEDURE pr_Names @VarPrice money  
+     AS  
+     BEGIN  
+        -- The print statement returns text to the user  
+        PRINT 'Products less than ' + CAST(@VarPrice AS varchar(10));  
+        -- A second statement starts here  
+        SELECT ProductName, Price FROM vw_Names  
+              WHERE Price < @varPrice;  
+     END  
+  GO    
+  ```  
   
 ### Test the stored procedure  
   
-1.  To test the stored procedure, type and execute the following statement. The procedure should return the names of the two products entered into the `Products` table in Lesson 1 with a price that is less than `10.00`.  
+To test the stored procedure, type and execute the following statement. The procedure should return the names of the two products entered into the `Products` table in Lesson 1 with a price that is less than `10.00`.  
   
-    ```  
-    EXECUTE pr_Names 10.00;  
-    GO  
-  
-    ```  
+  ```sql  
+  EXECUTE pr_Names 10.00;  
+  GO  
+  ```  
 
 ## Next steps
-The next article teaches you how to configure permissions on database objects. 
+The next article teaches you how to configure permissions on database objects. The objects created in lesson 1 will also be used in lesson 2. 
 
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
-> [Next steps](lesson-2-configuring-permissions-on-database-objects)
+> [Next steps](../t-sql/lesson-2-configuring-permissions-on-database-objects)
   
   
   

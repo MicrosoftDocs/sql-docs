@@ -23,7 +23,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 Granting a user access to a database involves three steps. First, you create a login. The login lets the user connect to the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Then you configure the login as a user in the specified database. And finally, you grant that user permission to database objects. This lesson shows you these three steps, and shows you how to create a view and a stored procedure as the object.  
 
   >[!NOTE]
-  > This lesson relies on objects created in [Lesson 1 - Creating database objects](lesson-1-creating-database-objects.md). Complete Lesson 1 before continuing on to lesson 2. 
+  > This lesson relies on objects created in [Lesson 1 - Create database objects](lesson-1-creating-database-objects.md). Complete Lesson 1 before continuing on to lesson 2. 
 
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server instance. 
@@ -35,7 +35,6 @@ If you don't have access to a SQL Server instance, select your platform from the
 - **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
   
 ## Create a login
-!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 To access the [!INCLUDE[ssDE](../includes/ssde-md.md)], users require a login. The login can represent the user's identity as a Windows account or as a member of a Windows group, or the login can be a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login that exists only in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Whenever possible you should use Windows Authentication.  
   
 By default, administrators on your computer have full access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For this lesson, we want to have a less privileged user; therefore, you will create a new local Windows Authentication account on your computer. To do this, you must be an administrator on your computer. Then you will grant that new user access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -108,5 +107,5 @@ The next article teaches you how to remove database objects you created in the o
 
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
-> [Next steps](lesson-3-deleting-database-objects)
+>[Next steps](lesson-3-deleting-database-objects.md)
   

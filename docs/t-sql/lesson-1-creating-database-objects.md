@@ -272,7 +272,7 @@ The next article teaches you how to configure permissions on database objects. T
 
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
-> [Next steps](../t-sql/lesson-2-configuring-permissions-on-database-objects)
+> [Next steps](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   
   

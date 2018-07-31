@@ -212,8 +212,8 @@ The steps to upgrade the instances in this diagram:
 6. Fail AG1 over from NODE1\SQLAG to NODE2\SQLAG. 
 7. Upgrade NODE1\SQLAG and restart the server. 
 8. (optional) Fail back to the original primary replicas.
-    a. Fail AG2 over from NODE4\SQLAG to NODE3\SQLAG.  
-    b. Fail AG1 over from NODE2\SQLAG to NODE1\SQLAG>  
+    1. Fail AG2 over from NODE4\SQLAG to NODE3\SQLAG.  
+    2. Fail AG1 over from NODE2\SQLAG to NODE1\SQLAG>
 
 If a third replica existed in each availability group, it would be upgraded before NODE3\SQLAG and NODE1\SQLAG. 
 

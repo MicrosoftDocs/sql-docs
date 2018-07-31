@@ -88,10 +88,10 @@ As an administrator, you can execute the SELECT from the **Products** table and 
 ### Grant permission to stored prcoedure  
 Execute the following statement to give `Mary` the `EXECUTE` permission for the `pr_Names` stored procedure.
   
-    ```  
-    GRANT EXECUTE ON pr_Names TO Mary;  
-    GO  
-    ```  
+  ```sql  
+  GRANT EXECUTE ON pr_Names TO Mary;  
+  GO  
+  ```  
   
 In this scenario, Mary can only access the **Products** table by using the stored procedure. If you want Mary to be able to execute a SELECT statement against the view, then you must also execute `GRANT SELECT ON vw_Names TO Mary`. To remove access to database objects, use the REVOKE statement.  
   

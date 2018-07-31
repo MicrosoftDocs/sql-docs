@@ -16,7 +16,7 @@ ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Lesson 1: Create & Query Database Objects
+# Lesson 1: Create and query database objects
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 This lesson shows you how to create a database, create a table in the database, and then access and change the data in the table. Because this lesson is an introduction to using [!INCLUDE[tsql](../includes/tsql-md.md)], it does not use or describe the many options that are available for these statements.  
   
@@ -144,8 +144,7 @@ The basic syntax is: INSERT, table name, column list, VALUES, and then a list of
    ```  
   
 ### Update the products table  
-  
-1.  Type and execute the following `UPDATE` statement to change the `ProductName` of the second product from `Screwdriver`, to `Flat Head Screwdriver`.  
+Type and execute the following `UPDATE` statement to change the `ProductName` of the second product from `Screwdriver`, to `Flat Head Screwdriver`.  
   
   ```sql  
   UPDATE dbo.Products  

@@ -40,13 +40,13 @@ The Microsoft JDBC Driver 7.0 for SQL Server now implements `beginRequest()` and
 
 The Microsoft JDBC Driver 7.0 for SQL Server provides support for 'SQL Data Discovery and Classification' feature with any target database that supports this feature. The driver now exposes `SQLServerResultSet.getSensitivityClassification()` APIs to extract this information from the fetched ResultSet.
 
-For more information about how to use this feature with JDBC Driver, refer sample [here](../../connect/jdbc/code-samples/data-discovery-and-classification-sample.md).
+For more information about how to use this feature with JDBC Driver, refer sample [here](../../connect/jdbc/data-discovery-and-classification-sample.md).
 
 ### Added new connection property: useBulkCopyForBatchInsert
 
 The Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, 'useBulkCopyForBatchInsert', which is only supported for **Azure Data Warehouse**.
 
-This property is **disabled** by default and can be enabled to increase performance of user applications when pushing large amounts data to Azure Data Warehouse. Enabling this property changes the behavior of Batch Insert operations to switch to Bulk Copy operations with user provided data. For more information about this property and its limitations, refer [here](../../connect/jdbc/using-bulk-copy-api-for-batch-insert-operation.md). 
+This property is **disabled** by default and can be enabled to increase performance of user applications when pushing large amounts data to Azure Data Warehouse. Enabling this property changes the behavior of Batch Insert operations to switch to Bulk Copy operations with user provided data. For more information about this property and its limitations, refer [here](../../connect/jdbc/using-bulk-copy-api-for-batch-insert-operation.md).
 
 ### Added new connection property: cancelQueryTimeout
 

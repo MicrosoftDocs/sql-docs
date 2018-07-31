@@ -159,4 +159,4 @@ These are the new public APIs that have been introduced with this addition, in t
 
 ## See Also
 
-[Spatial Data Types Sample (JDBC)](../../connect/jdbc/code-samples/spatial-data-types-sample.md)
+[Spatial Data Types Sample (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

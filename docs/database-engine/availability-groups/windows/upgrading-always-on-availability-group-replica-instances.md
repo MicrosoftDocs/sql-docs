@@ -175,15 +175,18 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 >  In many cases, after the rolling upgrade is completed, you will fail back to the original primary replicas. 
 
 ### General steps to upgrade a distributed availability group
-1. Upgrade and restart all secondary replica instances of the second availability group (the downstream). Verify synchronization within the AG and within the Distributed AG. 
-2. Upgrade and restart all secondary replica instances of the first availability group (the upstream). Verify synchronization within the AG and within the Distributed AG. 
+1. Upgrade and restart all secondary replicas of the second availability group (the downstream). 
+2. Upgrade and restart all secondary replicas of the first availability group (the upstream). 
 3. Fail over the forwarder primary to an upgraded secondary replica of the secondary availability group.
 4. Wait for data synchronization. The databases should show as synchronized on all synchronous-commit replicas. 
-5. Upgrade and restart the last remaining instance of the secondary availability group. Verify synchronization within the AG and within the Distributed AG. 
-6. Fail over the global primary to an upgraded secondary of the first availability group. Verify synchronization within the AG and within the Distributed AG. 
-7. Upgrade the last remaining instance of the primary availability group. Verify synchronization within the AG and within the Distributed AG. 
-8. Restart the newly upgraded server. Verify synchronization within the AG and within the Distributed AG. 
-9. (optional) Fail both availability groups to their original primary replicas.  Verify synchronization within the AG and within the Distributed AG. 
+5. Upgrade and restart the last remaining instance of the secondary availability group. 
+6. Fail over the global primary to an upgraded secondary of the first availability group.  
+7. Upgrade the last remaining instance of the primary availability group.
+8. Restart the newly upgraded server. 
+9. (optional) Fail both availability groups to their original primary replicas.  
+
+>[!IMPORTANT]
+> Verify synchronization between every step. Before proceeding to the next step, confirm that your synchronous-commit replicas are synchronized within the availability group, and that your global primary is synchronized with the forwarder in the distributed AG. 
 
 
 ### Diagram example for a rolling upgrade of a distributed availability group
@@ -197,19 +200,23 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 
 ![Instances in distributed AG](media/rolling-upgrade-dag-diagram.png)
 
+
 The steps to upgrade the instances in this diagram: 
 
-1. Upgrade NODE4\SQLAG (secondary of AG2) and restart the server. Verify synchronization with NODE3\SQLAG. 
-2. Upgrade NODE2\SQLAG (secondary of AG1) and restart the server. Verify synchronization with NODE1\SQLAG.
-3. Fail AG2 over from NODE3\SQLAG to NODE4\SQLAG. Verify synchronization with the global primary. 
-4. Upgrade NODE3\SQLAG and restart the server. Verify synchronization with NODE4\SQLAG. 
-5. Fail AG1 over from NODE1\SQLAG to NODE2\SQLAG. Verify synchronization with the globall primary.  
-6. Upgrade NODE1\SQLAG and restart the server. Verify synchronization with NODE2\SQLAG. 
+1. Upgrade NODE4\SQLAG (secondary of AG2) and restart the server.
+2. Upgrade NODE2\SQLAG (secondary of AG1) and restart the server. 
+3. Fail AG2 over from NODE3\SQLAG to NODE4\SQLAG. 
+4. Upgrade NODE3\SQLAG and restart the server. 
+5. Fail AG1 over from NODE1\SQLAG to NODE2\SQLAG. 
+6. Upgrade NODE1\SQLAG and restart the server. 
 7. (optional) Fail back to the original primary replicas.
-    a. Fail AG2 over from NODE4\SQLAG to NODE3\SQLAG. Verify synchronization. 
-    b. Fail AG1 over from NODE2\SQLAG to NODE1\SQLAG> Verify synchronization. 
+    a. Fail AG2 over from NODE4\SQLAG to NODE3\SQLAG.  
+    b. Fail AG1 over from NODE2\SQLAG to NODE1\SQLAG>  
 
 If a third replica existed in each availability group, it would be upgraded before NODE3\SQLAG and NODE1\SQLAG. 
+
+>[!IMPORTANT]
+> Verify synchronization between every step. Before proceeding to the next step, verify that your replicas are synchronized within the availability group, and that your global primary is synchronized with the forwarder in the distributed AG. 
 
 
 ## Special steps for change data capture or replication

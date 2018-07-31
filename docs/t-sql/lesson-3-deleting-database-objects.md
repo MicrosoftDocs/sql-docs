@@ -1,7 +1,7 @@
 ﻿---
-title: "Lesson 3: Deleting Database Objects | Microsoft Docs"
+title: "T-SQL Tutorial: Delete database objects | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "07/30/2018"
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ""
@@ -19,7 +19,7 @@ ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Lesson 3: Deleting Database Objects
+# Lesson 3: Delete database objects
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 This short lesson removes the objects that you created in Lesson 1 and Lesson 2, and then drops the database.  
   

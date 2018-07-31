@@ -1,7 +1,7 @@
 ﻿---
-title: "Lesson 1: Creating Database Objects | Microsoft Docs"
+title: "T-SQL Tutorial: Create & query database objects| Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/30/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +16,7 @@ ms.author: mikeray
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Lesson 1: Creating Database Objects
+# Lesson 1: Create & Query Database Objects
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 This lesson shows you how to create a database, create a table in the database, and then access and change the data in the table. Because this lesson is an introduction to using [!INCLUDE[tsql](../includes/tsql-md.md)], it does not use or describe the many options that are available for these statements.  
   

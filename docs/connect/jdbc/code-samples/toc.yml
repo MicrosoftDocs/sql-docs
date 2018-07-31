@@ -21,7 +21,7 @@
 - name: Basic Data Types Sample
   href: basic-data-types-sample.md
 - name: Spatial Data Type Sample
-  href: spatial-data-type-sample.md
+  href: spatial-data-types-sample.md
 - name: Reading Large Data with Stored Procedures Sample
   href: reading-large-data-with-stored-procedures-sample.md
 - name: Working with Result Sets

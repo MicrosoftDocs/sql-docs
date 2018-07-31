@@ -61,7 +61,7 @@ public class ConnectDataSource {
         ds.setPassword("<password>");
         ds.setServerName("<server>");
         ds.setPortNumber(Integer.parseInt("<port>"));
-        ds.setDatabaseName("<database>");
+        ds.setDatabaseName("AdventureWorks");
 
         try (Connection con = ds.getConnection();
                 CallableStatement cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");) {

@@ -17,9 +17,9 @@ manager: craigg
 
 # SQL Data Discovery and Classification
 
-[!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to use result set getter methods to retrieve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 'SQL Data Discovery and Classification information' from the tables holding such information.
+This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to use result set getter methods to retrieve [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 'SQL Data Discovery and Classification information' from the tables holding such information.
   
 The code file for this sample is named DataDiscoveryAndClassification.java, and it can be found in the following location:  
 
@@ -29,7 +29,7 @@ The code file for this sample is named DataDiscoveryAndClassification.java, and 
 
 ## Requirements  
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../jdbc/using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../jdbc/using-the-jdbc-driver.md).
 
 ```java
 import java.sql.Connection;

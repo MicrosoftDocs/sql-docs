@@ -16,9 +16,9 @@ manager: craigg
 ---
 # Spatial Data Types Sample
 
-[!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to create, insert and retrieve Spatial Data types (Geometry and Geography).
+This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to create, insert and retrieve Spatial Data types (Geometry and Geography).
   
 The code file for this sample is named SpatialDataTypes.java, and it can be found in the following location:  
 
@@ -28,10 +28,10 @@ The code file for this sample is named SpatialDataTypes.java, and it can be foun
 
 ## Requirements  
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).  
 
 > [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## Example
 
@@ -95,5 +95,5 @@ public class SpatialDataTypes {
 
 ## See Also  
 
-[Working with JDBC Data Types](../../../connect/jdbc/working-with-data-types-jdbc.md)  
+[Working with JDBC Data Types](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

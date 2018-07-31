@@ -199,7 +199,7 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 | Distributedag| AG1 (global) | AG2 (forwarder) |
 | &nbsp; | &nbsp; | &nbsp; |
 
-![Instances in distributed AG](media/rolling-upgrade-dag-diagram.png)
+![Example diagram for distributed AG](media/rolling-upgrade-dag-diagram.png)
 
 
 The steps to upgrade the instances in this diagram: 

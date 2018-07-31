@@ -23,7 +23,7 @@ This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample applic
 The code file for this sample is named SpatialDataTypes.java, and it can be found in the following location:  
 
 ```bash
-\<*installation directory*>\mssql-jdbc...\<*version*>\\<*language*>\samples\datatypes  
+\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
 ```
 
 ## Requirements  

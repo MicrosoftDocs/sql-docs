@@ -25,7 +25,7 @@ This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample applic
 The code file for this sample is named UpdateResultSet.java, and it can be found in the following location:
 
 ```bash
-\<_installation directory_>\mssql-jdbc...\\<_version_>\\<_language_>\samples\resultsets
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets
 ```
 
 ## Requirements

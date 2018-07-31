@@ -24,7 +24,7 @@ This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample applic
 The code file for this sample is named DataDiscoveryAndClassification.java, and it can be found in the following location:  
 
 ```bash
-\<*installation directory*>\mssql-jdbc...\<*version*>\\<*language*>\samples\dataclassification  
+\<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
 ```
 
 ## Requirements  

@@ -35,7 +35,7 @@ After you have run the query contained in the Statement object and the data is r
 The code file for this sample is named CacheResultSet.java, and it can be found in the following location:
 
 ```bash
-\<_installation directory_>\mssql-jdbc...\\<_version_>\\<_language_>\samples\resultsets
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets
 ```
 
 ## Requirements

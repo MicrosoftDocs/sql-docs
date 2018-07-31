@@ -24,6 +24,12 @@ Sparse columns are ordinary columns that have an optimized storage for null valu
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 supports sparse columns when you connect to a [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (or later) server. You can use [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), or [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) to determine which column is sparse and which column is the column set column.
 
+The code file for this sample is named SparseColumns.java, and it can be found in the following location:  
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\sparse  
+```
+
 Column sets are computed columns that return all sparse columns in untyped XML form. You should consider using column sets when the number of columns in a table is large or greater than 1024 or operating on individual sparse columns is cumbersome. A column set can contain up to 30,000 columns.
 
 ## Example

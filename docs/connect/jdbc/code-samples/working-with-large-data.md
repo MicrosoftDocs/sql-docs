@@ -32,9 +32,9 @@ The **adaptive** value is the default buffering mode and the JDBC driver buffers
   
 | Topic                                                                                                                         | Description                                                              |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [Reading Large Data Sample](../../../connect/jdbc/reading-large-data-sample.md)                                               | Describes how to use a SQL statement to retrieve large-value data.       |
-| [Reading Large Data with Stored Procedures Sample](../../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | Describes how to retrieve a large CallableStatement OUT parameter value. |
-| [Updating Large Data Sample](../../../connect/jdbc/updating-large-data-sample.md)                                             | Describes how to update a large-value data in a database.                |
+| [Reading Large Data Sample](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | Describes how to use a SQL statement to retrieve large-value data.       |
+| [Reading Large Data with Stored Procedures Sample](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Describes how to retrieve a large CallableStatement OUT parameter value. |
+| [Updating Large Data Sample](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | Describes how to update a large-value data in a database.                |
   
 ## See Also
 

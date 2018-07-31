@@ -33,9 +33,9 @@ The topics in this section describe different ways that you can use a result set
   
 | Topic                                                                                           | Description                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Retrieving Result Set Data Sample](../../../connect/jdbc/retrieving-result-set-data-sample.md) | Describes how to use a result set to retrieve data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database and display it.                                                         |
-| [Modifying Result Set Data Sample](../../../connect/jdbc/modifying-result-set-data-sample.md)   | Describes how to use a result set to insert, retrieve, and modify data in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.                                                      |
-| [Caching Result Set Data Sample](../../../connect/jdbc/caching-result-set-data-sample.md)       | Describes how to use a result set to retrieve large amounts of data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database, and to control how that data is cached on the client. |
+| [Retrieving Result Set Data Sample](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Describes how to use a result set to retrieve data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database and display it.                                                         |
+| [Modifying Result Set Data Sample](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Describes how to use a result set to insert, retrieve, and modify data in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.                                                      |
+| [Caching Result Set Data Sample](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Describes how to use a result set to retrieve large amounts of data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database, and to control how that data is cached on the client. |
   
 ## See Also  
 

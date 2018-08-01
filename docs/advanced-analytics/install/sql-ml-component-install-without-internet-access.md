@@ -1,9 +1,10 @@
 ---
 title: Install SQL Server machine learning components without internet access | Microsoft Docs
+description: Offline or disconnected Machine Learning R and Pytyon setup on isolated SQL Server instance.
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 05/02/2018
+ms.date: 08/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -14,21 +15,42 @@ manager: cgronlun
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.
 
-## Get the installation media
+## 1 - Get the installation media
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 > [!NOTE]  
 > For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
+
+<a name = "bkmk_OtherComponents"></a>
+
+## 2 - Prerequisites
+
+Depending on your environment, you might need to make local copies of installers for the following prerequisites.
+
+Component  |Version
+---------|---------
+[Microsoft AS OLE DB Provider for SQL Server 2016](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
+[Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1
+[Microsoft MPI](https://go.microsoft.com/fwlink/?linkid=834316)     | 7.1.12437.25
+[Microsoft Visual C++ 2013 Redistributable](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
+[Microsoft Visual C++ 2015 Redistributable](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
+
  
- ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement 
+ <a name="bkmk_ga_instalpatch"></a>
+
+ ###  Install patch requirement 
 
 Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server. If this update to the VC runtime binaries is not installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server follow the instructions at [SQL Server Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries.  
 
 
-## Download .cab files
+## 3a - Download 2017 .cabs
 
-On an internet-connected server, download the .cab files required for an offline installation. The setup program uses the .cab files to install supplemental features.
+SQL Server 2017 machine learning instances consist of the database engine instance with extra components for R and Python integration. R and Python features are added through .cab files. For SQL Server 2017 installations, the initial release is the baseline installation, over which you can install any cumulative update. The name "cumulative update" is self-evident, but its worth noting that you can skip CUs. Only the initial release is required.
+
+On an internet-connected server, download the .cab files required for an offline installation. 
+
+Put the CAB files in a convenient folder such as **Downloads** or the setup user's temp folder: C:\Users<user-name>\AppData\Local\Temp.
 
 Release  |Download link  |
 ---------|---------|
@@ -73,8 +95,11 @@ Microsoft R Server      |no change; use previous|
 Microsoft Python Open     |no change; use previous|
 Microsoft Python Server    |no change; use previous|
 
+<a name="bkmk_2016Installers"></a>
 
-### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
+## 3b - Download 2016 .cabs
+
+For SQL Server 2016 R Services, baseline releases are either the RTM version or a service pack version. Cumulative updates 1-7 are installed over the RTM release. Cumulative updates 8-
 
 > [!IMPORTANT]
 > 
@@ -127,27 +152,16 @@ Microsoft R Server    |no change; use previous |
 
 If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-### <a name = "bkmk_OtherComponents"></a>Additional prerequisites
 
-Depending on your environment, you might need to make local copies of installers for the following prerequisites.
+## 4- Transfer files
 
-Component  |Version
----------|---------
-[Microsoft AS OLE DB Provider for SQL Server 2016](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
-[Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1
-[Microsoft MPI](https://go.microsoft.com/fwlink/?linkid=834316)     | 7.1.12437.25
-[Microsoft Visual C++ 2013 Redistributable](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
-[Microsoft Visual C++ 2015 Redistributable](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
-
-## Transfer files
-
-Transfer the zipped SQL Server installation media and the files you already downloaded to the computer on which you are installing setup.
+Transfer the zipped SQL Server installation media and the .cab files you already downloaded to the computer on which you are installing setup.
 
 Put the CAB files in a convenient folder such as **Downloads** or the setup user's temp folder: C:\Users<user-name>\AppData\Local\Temp.
 
 Put the en_sql_server_2017.iso file in a convenient folder. Double-click **setup.exe** to begin installation.
 
-### Run Setup
+## 5 - Run Setup
 
 When you run SQL Server setup on a computer disconnected from the internet, Setup adds an **Offline installation** page to the wizard so that you can specify the location of the .cab files you copied in the previous step.
 
@@ -161,38 +175,44 @@ When you run SQL Server setup on a computer disconnected from the internet, Setu
 
 After installation is finished, restart the service and then configure the server to enable script execution as described in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md).
 
-## Slipstream upgrades for offline servers
+## Slipstream upgrades
 
 Slipstream setup refers to the ability to apply a patch or update to a failed instance installation, to repair existing problems. The advantage of this method is that the SQL Server is updated at the same time that you perform setup, avoiding a separate restart later.
 
-+ If the server does not have Internet access, you must download the SQL Server installer, and then download matching versions of the R component installers **before** beginning the update process.  The R components are not included by default with SQL Server.
+When a server does not have Internet access, you must download the SQL Server installer, and then download matching versions of the R component installers **before** beginning the update process. The R components are not included by default with SQL Server.
 
-+ If you are adding these components to an existing installation, use the updated version of the SQL Server installer, and the corresponding updated version of the additional components. When you specify that the R feature is to be installed, the installer looks for the matching version of the installers for the machine learning components.
+If you are adding these components to an existing installation, use the updated version of the SQL Server installer, and the corresponding updated version of the additional components. When you specify that the R feature is to be installed, the installer looks for the matching version of the installers for the machine learning components.
 
-## Get help
+## Apply cumulative updates (offline installation)
 
-Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
++ [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
++ [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
 
-* [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+Start with a baseline installation:
++ SQL Server 2016 RTM Database Engine
++ SQL Server 2016 SP1 Database Engine
++ SQL Server 2016 SP2 Database Engine
++ SQL Server 2017 initial release Database engine
 
-To check the installation status of the instance and fix common issues, try these custom reports.
+Download .cabs 
 
-* [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
-
-This article by the R Services Support team demonstrates how to perform an unattended install or upgrade of R services in SQL Server 2016: [Deploying R Services on Computers without Internet Access](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
-
++ Download .cabs for R and Python (SQL Server 2017 only) and transfer to the offline server.
++ Run SQL Server Setup:
+    choosing options in the Feature tree for Database Engine and Machine Learning Services
+    specifying the location of the .cab files
+    accepting the EULAs
 
 ## Next steps
 
-R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+An initial offline installation of either SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services requires the same configuration as an online installation:
 
-+ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Restart the service](sql-machine-learning-services-windows-install.md#restart-the-service) (for SQL Server 2016, click [here](sql-r-services-windows-install.md#restart-the-service)).
++ [Enable external script execution](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#bkmk_enableFeature)).
++ [Verify installation](sql-machine-learning-services-windows-install.md#verify-installation)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#verify-installation)).
++ [Additional configuration as needed](sql-machine-learning-services-windows-install.md#additional-configuration)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#bkmk_FollowUp)).
 
-Python developers can learn how to use Python with SQL Server by following these tutorials:
+To check the installation status of the instance and fix common issues, see [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-+ [Tutorial: Run Python in T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: In-database analytics for Python developers](../tutorials/sqldev-in-database-python-for-sql-developers.md)
+For help with any unfamiliar messages or log entries, see [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
-To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
 

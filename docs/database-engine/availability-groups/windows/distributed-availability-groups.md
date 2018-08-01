@@ -1,7 +1,7 @@
 ---
 title: "Distributed availability groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/12/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -168,9 +168,9 @@ When you add the second availability group's primary replica to the distributed 
 
 * Seeding also has different behavior with distributed availability groups. For seeding to begin on the second replica, you must issue the command `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE` command on the replica. Although this condition is still true of any secondary replica that participates in the underlying availability group, the primary replica of the second availability group already has the right permissions to allow seeding to begin after it is added to the distributed availability group. 
 
-### View distributed availability group information 
-	
-As mentioned earlier, a distributed availability group is a SQL Server-only construct, and it is not seen in the underlying WSFC cluster. The following figure shows two different WSFC clusters (CLUSTER_A and CLUSTER_B), each with its own availability groups. Only AG1 in CLUSTER_A and AG2 in CLUSTER_B are discussed here. 
+## Monitor distributed availability group health
+
+A distributed availability group is a SQL Server-only construct, and it is not seen in the underlying WSFC cluster. The following figure shows two different WSFC clusters (CLUSTER_A and CLUSTER_B), each with its own availability groups. Only AG1 in CLUSTER_A and AG2 in CLUSTER_B are discussed here. 
 
 <!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
 <a name="fig7"></a>
@@ -210,9 +210,12 @@ As shown in the following figure, secondary replicas show nothing in SQL Server 
 
 ![View in SQL Server Management Studio of a secondary replica][10]
 
+### DMV to list all availability replica names
+
 The same concepts hold true when you use the dynamic management views. By using the following query, you can see all the availability groups (regular and distributed) and the nodes participating in them. This result is displayed only if you query the primary replica in one of the WSFC clusters that are participating in the distributed availability group. There is a new column in the dynamic management view `sys.availability_groups` named `is_distributed`, which is 1 when the availability group is a distributed availability group. To see this column:
 
 ```sql
+-- shows replicas associated with availability groups
 SELECT ag.[name] as 'AG Name', 
     ag.Is_Distributed, 
     ar.replica_server_name as 'Replica Name'
@@ -225,9 +228,12 @@ An example of output from the second WSFC cluster that's participating in a dist
 
 ![Example output of the preceding query][11]
 
+### DMV to list Distribtued AG health
+
 In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
 
 ```sql
+-- shows sync status of distributed AG
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
 FROM 	sys.availability_groups ag
   INNER JOIN sys.availability_replicas ar
@@ -240,10 +246,12 @@ WHERE ag.is_distributed = 1
        
 ![Distributed availability group status][12]
 
+### DMV to view underlying performance
 
 To further extend the previous query, you can also see the underlying performance via the dynamic management views by adding in `sys.dm_hadr_database_replicas_states`. The dynamic management view currently stores information about the second availability group only. The following example query, run on the primary availability group, produces the sample output shown below:
 
-```
+```sql
+-- shows underlying performance of distributed AG
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
 FROM 	sys.databases dbs
   INNER JOIN sys.dm_hadr_database_replica_states drs
@@ -258,6 +266,124 @@ WHERE ag.is_distributed = 1
 ```
 
 ![Performance information for a distributed availability group][13]
+
+### DMV to view performance counters for distributed AG
+The below query displays performance counters specifically associated with the distributed availability group. 
+
+
+```sql
+-- displays OS performance counters related to the distributedag named 'distributedag'
+select * from sys.dm_os_performance_counters where instance_name like '%distributed%'
+```
+  ![DMV displaying OS performance counters for DAG](media/distributed availability group/dmv-os-performance-counters.png)
+
+ >[!NOTE]
+ >The like filter should have the name of the distributed availability group. In this example, the name of the distributed availability group is 'distributedag'. Change the like modifier to reflect the name of your distributed availability group.  
+
+### DMV to display health of both AG and Distributed AG
+The below query displays a wealth of information about the health of both the availability group, and the distributed availability group.
+
+Credit to Tracy Boggiano's blog entry.
+
+```sql
+-- displays sync status, send rate, and redo rate of availability groups, including distributed AG
+SELECT ag.name as 'Distributed AG', 
+	ar.replica_server_name as 'AG', 
+	dbs.name as 'Database', 
+	ars.role_desc, 
+	drs.synchronization_health_desc, 
+	drs.log_send_queue_size, 
+	drs.log_send_rate, 
+	drs.redo_queue_size, 
+	drs.redo_rate,
+	drs.suspend_reason_desc,
+	drs.last_sent_time,
+	drs.last_received_time,
+	drs.last_hardened_time,
+	drs.last_redone_time,
+	drs.last_commit_time,
+	drs.secondary_lag_seconds
+FROM sys.databases dbs 
+    INNER JOIN sys.dm_hadr_database_replica_states drs on dbs.database_id = drs.database_id
+	INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id
+	INNER JOIN sys.dm_hadr_availability_replica_states ars ON ars.replica_id = drs.replica_id
+    INNER JOIN sys.availability_replicas ar ON ar.replica_id = ars.replica_id
+--WHERE ag.is_distributed = 1
+```
+
+![DMV displaying AG health information](media/distributed availability group/dmv-sync-status-send-rate.png)
+
+[Credit to Tracy Boggiano's blog entry.](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
+
+### DMVs to view metadata of distributed AG
+The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. 
+
+```sql
+SELECT r.replica_server_name, r.endpoint_url,
+rs.connected_state_desc, rs.role_desc, rs.operational_state_desc,
+rs.recovery_health_desc,rs.synchronization_health_desc,
+r.availability_mode_desc, r.failover_mode_desc
+FROM sys.dm_hadr_availability_replica_states rs 
+INNER JOIN sys.availability_replicas r
+ON rs.replica_id=r.replica_id
+ORDER BY r.replica_server_name    
+```
+![DMV displaying metadata information about DAG](media/distributed availability group/dmv-metadata-dag1.png)
+
+[Credit to MSSQLTips.](https://www.mssqltips.com/sqlservertip/5053/setup-and-implement-sql-server-2016-always-on-distributed-availability-groups)
+
+
+```sql
+-- shows endpoint url and sync state for ag, and dag
+   select
+    ag.name as group_name,
+    ag.is_distributed,
+    ar.replica_server_name as replica_name,
+    ar.endpoint_url,
+    ar.availability_mode_desc,
+    ar.failover_mode_desc,
+    ar.primary_role_allow_connections_desc as allow_connections_primary,
+    ar.secondary_role_allow_connections_desc as allow_connections_secondary,
+    ar.seeding_mode_desc as seeding_mode
+from sys.availability_replicas as ar
+join sys.availability_groups as ag
+    on ar.group_id = ag.group_id;
+go
+```
+
+![DMV displaying metadata information about DAG](media/distributed availability group/dmv-metadata-dag2.png)
+
+[Credit to David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+### DMV to show current state of seeding
+The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. 
+
+```sql
+-- shows current_state of seeding 
+select
+    ag.name as aag_name,
+    ar.replica_server_name,
+    d.name as database_name,
+    has.current_state,
+    has.failure_state_desc as failure_state,
+    has.error_code,
+    has.performed_seeding,
+    has.start_time,
+    has.completion_time,
+    has.number_of_attempts
+from sys.dm_hadr_automatic_seeding as has
+join sys.availability_groups as ag
+    on ag.group_id = has.ag_id
+join sys.availability_replicas as ar
+    on ar.replica_id = has.ag_remote_replica_id
+join sys.databases as d
+    on d.group_database_id = has.ag_db_id
+```
+
+![DMV displaying seeding information for AG](media/distributed availability group/dmv-seeding.png)
+
+[Credit to David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
 
 
 ### Next steps 

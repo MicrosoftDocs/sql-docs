@@ -20,7 +20,7 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve an updateable set of data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Then, using methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object, it inserts, modifies, and then finally deletes a row of data from the set of data.
+This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve an updatable set of data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Then, using methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object, it inserts, modifies, and then finally deletes a row of data from the set of data.
 
 The code file for this sample is named UpdateResultSet.java, and it can be found in the following location:
 
@@ -37,7 +37,7 @@ To run this sample application, you must set the classpath to include the mssql-
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updateable SQLServerResultSet object.
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updatable SQLServerResultSet object.
 
 Next, the sample code uses the [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) method to move the result set cursor to the insert row, uses a series of [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) methods to insert data into the new row, and then calls the [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) method to persist the new row of data back to the database.
 

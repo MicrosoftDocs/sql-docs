@@ -1,7 +1,7 @@
 ---
 title: "Connecting to an Azure SQL database | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

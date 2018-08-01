@@ -1,7 +1,7 @@
 ---
 title: "Feature Dependencies of Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

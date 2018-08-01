@@ -41,10 +41,6 @@ import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 import com.microsoft.sqlserver.jdbc.dataclassification.SensitivityProperty;
 
 
-/**
- * SQL Server feature documentation reference:
- * https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017
- */
 public class DataDiscoveryAndClassification {
 
     private static boolean featureSupported = false;

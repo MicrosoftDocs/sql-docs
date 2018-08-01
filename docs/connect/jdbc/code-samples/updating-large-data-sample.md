@@ -41,7 +41,7 @@ In the following example, the sample code makes a connection to the [!INCLUDE[ss
 
 Next, the sample code sets the response buffering mode as "**adaptive**" by using the [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) class and also demonstrates how to get the adaptive buffering mode.
 
-Then, it runs the SQL statement, and places the data that it returns into an updateable [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object.
+Then, it runs the SQL statement, and places the data that it returns into an updatable [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object.
 
 Finally, the sample code iterates through the rows of data that are in the result set. If it finds an empty document summary, it uses the combination of [updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) and [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) methods to update the row of data and again persist it to the database. If there's already data, it uses the [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) method to display some of the data.
 

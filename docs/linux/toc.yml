@@ -170,6 +170,23 @@
           href: sql-server-linux-availability-group-configure-rs.md
       - name: Configure cross-platform (Windows and Linux)
         href: sql-server-linux-availability-group-cross-platform.md
+    - name: High availability for containers
+      items:
+        - name: overview
+          href: sql-server-linux-container-ha-overview.md
+        - name: Always On Availability groups for SQL Server containers
+          href: sql-server-ag-kubernetes.md
+          items: 
+          - name: SQL Server operator
+            href: sql-server-linux-kubernetes-operator.md
+          - name: SQL Server stateful set
+            href: sql-server-linux-kubernetes-spec.md
+          - name: Fail over primary replica
+            href: sql-server-linux-kubernetes-failover-job.md
+          - name: Rotate credentials
+            href: sql-server-linux-kubernetes-rotate-credentials.md
+          - name: Create listener services for secondary replicas
+            href: sql-server-linux-kubernetes-secondary-replica-listeners.md)
   - name: Security
     href: sql-server-linux-security-overview.md
     items:

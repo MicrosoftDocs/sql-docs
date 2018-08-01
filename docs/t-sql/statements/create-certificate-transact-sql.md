@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/19/2018"
@@ -152,7 +152,7 @@ CREATE CERTIFICATE certificate_name
  Is the date on which the certificate becomes valid. If not specified, START_DATE is set equal to the current date. START_DATE is in UTC time and can be specified in any format that can be converted to a date and time.  
   
  EXPIRY_DATE ='*datetime*'  
- Is the date on which the certificate expires. If not specified, EXPIRY_DATE is set to a date one year after START_DATE. EXPIRY_DATE is in UTC time and can be specified in any format that can be converted to a date and time. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker checks the expiration date. However, expiration is not enforced when the certificate is used for encryption.  
+ Is the date on which the certificate expires. If not specified, EXPIRY_DATE is set to a date one year after START_DATE. EXPIRY_DATE is in UTC time and can be specified in any format that can be converted to a date and time. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker checks the expiration date. Backup with Encryption using certificates also checks the expiration date and will not allow a new backup to be created with an expired certificate, but will allow restores with an expired certificate. However, expiration is not enforced when the certificate is used for database encryption or Always Encrypted.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Makes the certificate available to the initiator of a [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog conversation. The default value is ON.  

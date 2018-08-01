@@ -186,7 +186,7 @@
           - name: Rotate credentials
             href: sql-server-linux-kubernetes-rotate-credentials.md
           - name: Create listener services for secondary replicas
-            href: sql-server-linux-kubernetes-secondary-replica-listeners.md)
+            href: sql-server-linux-kubernetes-secondary-replica-listeners.md
   - name: Security
     href: sql-server-linux-security-overview.md
     items:

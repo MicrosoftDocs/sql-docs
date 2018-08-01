@@ -17,7 +17,7 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 
 # Always Encrypted with Secure Enclaves
 
-Always Encrypted with secure enclaves extends the existing [Always Encrypted](always-encrypted-database-engine.md) feature to enable richer functionality on sensitive data, while keeping the data confidential.
+Always Encrypted with secure enclaves provides additional functionality to the existing [Always Encrypted](always-encrypted-database-engine.md) feature.
 
 Introduced in SQL Server 2016, Always Encrypted is an encryption technology that protects the confidentiality of sensitive data from malware and high-privileged, but unauthorized users of SQL Server, including DBAs, computer admins, and cloud admins. Until now, Always Encrypted protected the data by encrypting it on the client side and never allowing the data or the corresponding cryptographic keys to appear in plaintext inside the SQL Server Engine. As a result, the functionality on encrypted columns inside the database was severely restricted. The only operation SQL Server could perform on encrypted data was equality comparisons (and equality comparisons were only available with deterministic encryption). All other operations, including cryptographic operations (initial data encryption or key rotation), or rich computations (for example, pattern matching) were not supported inside the database. Customers needed to move the data outside of the database and perform these operations on the client-side.
 

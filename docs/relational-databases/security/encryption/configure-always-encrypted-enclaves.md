@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/20/2017"
+ms.date: "07/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -89,7 +89,7 @@ Install the following tools on the client/development computer:
         
     The first NuGet package implements client-side logic for the driver to attest and interact with secure enclaves. The second NuGet package contains the Microsoft Azure Key Vault Provider for Always Encrypted Column Master Keys. Both packages are intended and it is intended to be used in Visual Studio projects. For instructions on how to consume the NuGet package in a Visual Studio project see the Develop Applications issuing Rich Queries in Visual Studio section later in this document.
 
-### Configure a secure enclave for Always Encrypted
+### Configure a secure enclave
 
 On the client/development computer:
 
@@ -133,21 +133,18 @@ EXEC sys.sp\_configure 'column encryption enclave type', 1
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
-## Provision Enclave-enabled Keys
+## Provision enclave-enabled keys
 
 Prerequisites:
 
-  - Before provisioning the keys, you need to create your database (for example, by restoring it from a backup file) on the SQL Server instance with the secure enclave loaded.
+Before provisioning keys, you need to create your database (for example, by restoring it from a backup file) on the SQL Server instance with the secure enclave loaded.
 
-The introduction of enclave-enabled keys does not fundamentally change key provisioning (and, more broadly, key management) workflows for Always Encrypted, which are documented here:[https://docs.microsoft.com/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted).
+The introduction of enclave-enabled keys does not fundamentally change the [key provisioning and key management workflows for Always Encrypted](overview-of-key-management-for-always-encrypted.md). The only change is in the column master key provisioning workflow, where you can now mark the key as enclave-enabled (by default, column master keys, are not enclave-enabled). When you specify the new column master key is to be enclave-enabled, a couple things happen:
 
-The only change is in the column master key provisioning workflow. When you provision a column master key, using an Always Encrypted key provisioning tool (PowerShell), you can mark the key as enclave-enabled (by default, column master keys, are not enclave-enabled). When you specify the new column master key is to be enclave-enabled, the tool:
+- Sets the **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database.
+- Digitally signs column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**). The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
 
-  - Sets the ENCLAVE\_COMPUTATIONS property in the column master key metadata in the database.
-
-  - Digitally signs column master key property values (including the setting of ENCLAVE\_COMPUTATIONS). The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the ENCLAVE\_COMPUTATIONS setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
-
-The ENCLAVE\_COMPUTATIONS property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the ENCLAVE\_COMPUTATIONS property than the original key, via a process called a column master key rotation, which is discussed in a later section.
+The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a column master key rotation, which is discussed in a later section.
 
 To provision an enclave-enabled column encryption key, you just need to make sure that the column master key, encrypting the column encryption key, is enclave-enabled.
 
@@ -155,36 +152,34 @@ The following limitations apply to provisioning enclave-enabled keys **during th
 
 - Enclave-enabled **column master keys must be stored in Windows Certificate Store or in Azure Key Vault**. Storing enclave-enabled column master keys in other types of key stores (hardware security modules or custom key stores) is not supported.
 
-### Provision enclave-enabled keys using SSMS
+### **Provision enclave-enabled keys using SQL Server Management Studio (SSMS)**
 
-On the client/development computer:
+The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
 
 1. Connect to your database using SSMS.
-2. In Object Explorer, navigate to your database and then navigate to
-   Always Encrypted \> Always Encrypted Keys.
-3. Provision a new enclave-enabled column master key.
+2. In **Object Explorer**, expand your database and navigate to **Security** > **Always Encrypted Keys**.
+3. Provision a new enclave-enabled column master key:
     
-    1. Right click on the Always Encrypted Keys folder and select **New Column Master Key…**.
+    1. Right click **Always Encrypted Keys** and select **New Column Master Key…**.
     2. Select your column master key name.
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
-    4. Check the Allow enclave computations checkbox.
+    4. Select **Allow enclave computations**.
     5. If you selected Azure Key Vault, sign in to Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
-    6. Select your key or create it.
+    6. Select your key if it already exists, or follow the directions on the form to create a new key.
     7. Click **OK**.
         
         ![Allow enclave computations](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
-4.  Create a new enclave-enabled column encryption key.
+4.  Create a new enclave-enabled column encryption key:
 
-    1. Right click on the Always Encrypted Keys folder and select **New Column Encryption Key**.
-    2. Select a name for column encryption key and select the column master key, you created in the previous steps.
-    3. Click **OK**.
+    1. Right click **Always Encrypted Keys** and select **New Column Encryption Key**.
+    2. Enter a name for the new column encryption key.
+    3. In the **Column master key** dropdown, select the column master key you created in the previous steps.
+    4. Click **OK**.
 
-### Provision enclave-enabled keys using PowerShell
+### **Provision enclave-enabled keys using PowerShell**
 
-The following sections provide sample PowerShell scripts for
-provisioning enclave-enabled keys. The steps that are specific (new) to
-Always Encrypted with secure enclaves are highlighted. For more information (not specific to Always Encrypted with secure enclaves) about provisioning keys using PowerShell, see [Configure Always Encrypted Keys using PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
+The following sections provide sample PowerShell scripts for provisioning enclave-enabled keys. The steps that are specific (new) to Always Encrypted with secure enclaves are highlighted. For more information (not specific to Always Encrypted with secure enclaves) about provisioning keys using PowerShell, see [Configure Always Encrypted Keys using PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
 **Provisioning Enclave-Enabled Keys – Windows Certificate Store**
 
@@ -286,14 +281,14 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 ## Identify Enclave-enabled Keys and Columns
 
-1. To list column master keys, configured in your database, you can query the sys.column\_master\_keys catalog view (for example, in SSMS). The new allow\_enclave\_computations column has been added to the view. It indicates whether a column master key is enclave-enabled.
+To list column master keys, configured in your database, you can query the **sys.column_master_keys** catalog view (for example, in SSMS). The new **allow_enclave_computations** column has been added to the view. It indicates whether a column master key is enclave-enabled.
 
 ```sql
 SELECT name, allow_enclave_computations
 FROM sys.column_master_keys
 ```
 
-2. To determine which column encryption keys are encrypted with enclave-enabled column encryption keys (and, thus, are enclave-enabled), you need to join sys.column_master_keys, sys.column_encryption_key_values, and sys.column_encryption_keys.
+To determine which column encryption keys are encrypted with enclave-enabled column encryption keys (and, thus, are enclave-enabled), you need to join **sys.column_master_keys**, **sys.column_encryption_key_values**, and **sys.column_encryption_keys**.
 
 
 ```sql
@@ -307,7 +302,7 @@ JOIN sys.column_encryption_keys cek
    ON cekv.column_encryption_key_id = cek.column_encryption_key_id
 ```
 
-3. To determine which columns are enclave-enabled (the columns that are encrypted with column encryption keys that are enclave-enabled), use the following query:
+To determine which columns are enclave-enabled (the columns that are encrypted with column encryption keys that are enclave-enabled), use the following query:
 
 ```sql
 SELECT c.name AS column_name

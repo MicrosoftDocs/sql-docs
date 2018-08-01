@@ -44,7 +44,7 @@ The *ConnectionPooling* attribute cannot be used to enable/disable connection po
 
 Connection pooling can be enabled/disabled by editing the odbcinst.ini configuration file. The driver should be reloaded for the changes to take effect.
 
-Setting `Pooling` to `Yes` and a positive `CPTimeout`value in the odbcinst.ini file enables connection pooling. 
+Setting `Pooling` to `Yes` and a positive `CPTimeout` value in the odbcinst.ini file enables connection pooling. 
 ```
 [ODBC]
 Pooling=Yes

@@ -17,6 +17,7 @@ applies_to:
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Integrating Reporting Services into Applications
 

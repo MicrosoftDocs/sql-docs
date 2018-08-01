@@ -1,0 +1,20 @@
+- name: Date and Time Improvements (OLE DB)
+  href: date-and-time-improvements-ole-db.md
+- name: Bulk Copy Changes for Enhanced Date and Time Types (OLE DB)
+  href: bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md
+- name: Comparability for IRowsetFind
+  href: comparability-for-irowsetfind.md
+- name: Conversions (OLE DB)
+  href: conversions-ole-db.md
+- name: Conversions Performed from Client to Server
+  href: conversions-performed-from-client-to-server.md
+- name: Conversions Performed from Server to Client
+  href: conversions-performed-from-server-to-client.md
+- name: Data Type Support for OLE DB Date and Time Improvements
+  href: data-type-support-for-ole-db-date-and-time-improvements.md
+- name: Metadata - Date and Time and Schema Rowsets
+  href: metadata-date-and-time-and-schema-rowsets.md
+- name: Metadata - Parameter and Rowset
+  href: metadata-parameter-and-rowset.md
+- name: OLE DB API Support for Date and Time Enhancements
+  href: ole-db-api-support-for-date-and-time-enhancements.md

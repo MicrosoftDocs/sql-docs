@@ -1,7 +1,7 @@
 ---
 title: "Understanding XA Transactions | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/11/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -37,13 +37,13 @@ manager: craigg
 ## Guidelines and Limitations when Using XA Transactions  
  The following additional guidelines apply to tightly coupled transactions:  
   
--   When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you may notice that the current version of MS DTC does not support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and the work that is performed by loosely coupled XA branches is isolated from one another.  
+-   When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you may notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and the work that is performed by loosely coupled XA branches is isolated from one another.  
   
      The hotfix provided at [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653) enables the support for tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see one another's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 -   A [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows the applications to use tightly coupled XA transactions, which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -80,7 +80,7 @@ manager: craigg
     > [!NOTE]  
     >  If you are using XA transactions with a 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], use the sqljdbc_xa.dll file in the x86 folder, even if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is installed on a x64 processor. If you are using XA transactions with a 64-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] on the x64 processor, use the sqljdbc_xa.dll file in the x64 folder.  
   
-2.  Execute the database script xa_install.sql on every [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance that will participate in distributed transactions. This script installs the extended stored procedures that are called by sqljdbc_xa.dll. These extended stored procedures implement distributed transaction and XA support for the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. You will need to run this script as an administrator of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance.  
+2.  Execute the database script xa_install.sql on every [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance that will participate in distributed transactions. This script installs the extended stored procedures that are called by sqljdbc_xa.dll. These extended stored procedures implement distributed transaction and XA support for the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. You'll need to run this script as an administrator of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance.  
   
 3.  To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role.  
   
@@ -90,7 +90,7 @@ manager: craigg
   
 1.  Open the LOG directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] computer that will participate in distributed transactions. Select and open the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "ERRORLOG" file. Search for "Using 'SQLJDBC_XA.dll' version ..." phrase in the "ERRORLOG" file.  
   
-2.  Open the Binn directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] computer that will participate in distributed transactions.Select sqljdbc_xa.dll assembly.  
+2.  Open the Binn directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] computer that will participate in distributed transactions. Select sqljdbc_xa.dll assembly.  
   
     -   On Windows Vista or later: Right-click sqljdbc_xa.dll and then select Properties. Then click the **Details** tab. The **File Version** field shows the version of sqljdbc_xa.dll that is currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance.  
   
@@ -99,7 +99,7 @@ manager: craigg
 ###  <a name="BKMK_ServerSide"></a> Configuring server-side timeout settings for automatic rollback of unprepared transactions  
   
 > [!WARNING]  
->  This server-side option is new with Microsoft JDBC Driver 4.2 (and higher) for SQL Server. To get the updated behavior, make sure the sqljdbc_xa.dll on the server is updated. For more details on setting client side timeouts, see [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+>  This server-side option is new with Microsoft JDBC Driver 4.2 (and higher) for SQL Server. To get the updated behavior, make sure the sqljdbc_xa.dll on the server is updated. For more information on setting client side timeouts, see [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
   
  There are two registry settings (DWORD values) to control the timeout behavior of distributed transactions:  
   
@@ -114,7 +114,7 @@ manager: craigg
 > [!NOTE]  
 >  For 32-bit SQL Server running in 64-bit machines, the registry settings should be created under the following key: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
   
- A timeout value is set for each transaction when it is started and the transaction is rolled back by the SQL Server if the timeout expires. The timeout is determined depending on these registry settings and depending on what the user has specified through XAResource.setTransactionTimeout(). A few examples on how these timeout values are interpreted as follows:  
+ A timeout value is set for each transaction when it's started and the transaction is rolled back by the SQL Server if the timeout expires. The timeout is determined depending on these registry settings and depending on what the user has specified through XAResource.setTransactionTimeout(). A few examples on how these timeout values are interpreted as follows:  
   
 -   XADefaultTimeout = 0, XAMaxTimeout = 0  
   
@@ -122,11 +122,11 @@ manager: craigg
   
 -   XADefaultTimeout = 60, XAMaxTimeout = 0  
   
-     Means all transactions will have a 60 seconds timeout if the client does not specify any timeout. If the client specifies a timeout, then that timeout value will be used. No maximum value for timeout is enforced.  
+     Means all transactions will have a 60 seconds timeout if the client doesn't specify any timeout. If the client specifies a timeout, then that timeout value will be used. No maximum value for timeout is enforced.  
   
 -   XADefaultTimeout = 30, XAMaxTimeout = 60  
   
-     Means all transactions will have a 30 seconds timeout if the client does not specify any timeout. If client specifies any timeout, then the client’s timeout will be used as long as it is less than 60 seconds (the max value).  
+     Means all transactions will have a 30 seconds timeout if the client doesn't specify any timeout. If client specifies any timeout, then the client’s timeout will be used as long as it is less than 60 seconds (the max value).  
   
 -   XADefaultTimeout = 0, XAMaxTimeout = 30  
   
@@ -142,12 +142,12 @@ manager: craigg
   
 2.  Copy the new sqljdbc_xa.dll from the JDBC driver installation directory to the Binn directory of every [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] computer that will participate in distributed transactions.  
   
-     The new DLL will be loaded when an extended procedure in sqljdbc_xa.dll is called. You do not need to restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to load the new definitions.  
+     The new DLL will be loaded when an extended procedure in sqljdbc_xa.dll is called. You don't need to restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to load the new definitions.  
   
 ### Configuring the User-Defined Roles  
  To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role. For example, use the following [!INCLUDE[tsql](../../includes/tsql_md.md)] code to add a user named 'shelby' (SQL standard login user named 'shelby') to the SqlJDBCXAUser role:  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -155,11 +155,11 @@ GO
 EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
 ```  
   
- SQL user-defined roles are defined per database. To create your own role for security purposes, you will have to define the role in each database, and add users in a per database manner. The SqlJDBCXAUser role is strictly defined in the master database because it is used to grant access to the SQL JDBC extended stored procedures that reside in master. You will have to first grant individual users access to master, and then grant them access to the SqlJDBCXAUser role while you are logged into the master database.  
+ SQL user-defined roles are defined per database. To create your own role for security purposes, you'll have to define the role in each database, and add users in a per database manner. The SqlJDBCXAUser role is strictly defined in the master database because it's used to grant access to the SQL JDBC extended stored procedures that reside in master. You'll have to first grant individual users access to master, and then grant them access to the SqlJDBCXAUser role while you're logged into the master database.  
   
 ## Example  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  

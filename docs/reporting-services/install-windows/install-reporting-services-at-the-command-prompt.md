@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Install Reporting Services 2016 at the Command Prompt
 

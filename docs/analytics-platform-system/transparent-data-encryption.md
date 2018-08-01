@@ -118,7 +118,7 @@ The following table provides links and explanations of TDE commands and function
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Creates a key that is used to encrypt a database.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Changes the key that is used to encrypt a database.|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Removes the key that was used to encrypt a database.|  
-|[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
   
 ## Catalog Views and Dynamic Management Views  
 The following table shows TDE catalog views and dynamic management views.  
@@ -273,7 +273,7 @@ The following links contain general information about how SQL Server manages enc
 
   
 ## See Also  
-[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Data Source Sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -15,28 +15,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
+
 # Data Source Sample
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to connect to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using a data source object. It also demonstrates how to retrieve data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using a stored procedure.  
-  
- The code file for this sample is named ConnectDS.java, and it can be found in the following location:  
-  
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\samples\connections  
-  
-## Requirements  
- To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to connect to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using a data source object. It also demonstrates how to retrieve data from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using a stored procedure.
+
+The code file for this sample is named ConnectDataSource.java, and it can be found in the following location:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\connections
+```
+
+## Requirements
+
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## Example  
- In the following example, the sample code sets various connection properties by using setter methods of the [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) object, and then calls the [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) method of the SQLServerDataSource object to return a [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
-  
- Next, the sample code uses the [prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) method of the SQLServerConnection object to create a [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) object, and then the [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) method is called to execute the stored procedure.  
-  
- Finally, the sample uses the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object returned from the executeQuery method to iterate through the results returned by the stored procedure.  
-  
+> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## Example
+
+In the following example, the sample code sets various connection properties by using setter methods of the [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) object, and then calls the [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) method of the SQLServerDataSource object to return a [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.
+
+Next, the sample code uses the [prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) method of the SQLServerConnection object to create a [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) object, and then the [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) method is called to execute the stored procedure.
+
+Finally, the sample uses the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object returned from the executeQuery method to iterate through the results returned by the stored procedure.
+
 ```java
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -45,7 +51,7 @@ import java.sql.SQLException;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class ConnectDS {
+public class ConnectDataSource {
 
     public static void main(String[] args) {
 
@@ -54,10 +60,10 @@ public class ConnectDS {
         ds.setUser("<user>");
         ds.setPassword("<password>");
         ds.setServerName("<server>");
-        ds.setPortNumber(<port>);
+        ds.setPortNumber(Integer.parseInt("<port>"));
         ds.setDatabaseName("AdventureWorks");
 
-        try (Connection con = ds.getConnection(); 
+        try (Connection con = ds.getConnection();
                 CallableStatement cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");) {
             // Execute a stored procedure that returns some data.
             cstmt.setInt(1, 50);
@@ -76,9 +82,8 @@ public class ConnectDS {
         }
     }
 }
-```  
-  
-## See Also  
- [Connecting and Retrieving Data](../../../connect/jdbc/connecting-and-retrieving-data.md)  
-  
-  
+```
+
+## See Also
+
+[Connecting and Retrieving Data](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)

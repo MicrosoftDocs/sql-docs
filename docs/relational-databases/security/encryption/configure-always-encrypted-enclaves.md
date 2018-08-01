@@ -1,5 +1,5 @@
 ---
-title: "Configure Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
+title: "Configure Always Encrypted with Secure Enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
 ms.prod: sql
@@ -15,7 +15,7 @@ manager: craigg
 monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 
-# Always Encrypted with Secure Enclaves
+# Configure Always Encrypted with secure enclaves
 
 Always Encrypted with secure enclaves extends the existing [Always Encrypted](always-encrypted-database-engine.md) feature to enable richer functionality on sensitive data while keeping the data confidential.
 

@@ -1,7 +1,7 @@
 ---
 title: "Spatial Data Types Sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

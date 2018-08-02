@@ -147,7 +147,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
   
  When you identify a query with sub-optimal performance, your action depends on the nature of the problem.  
   
--   If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to force [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to always use the optimal plan for future executions.  
+-   If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to force it. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to force the plan in the optimizer. If plan forcing fails, an XEvent is fired and the optimizer is instructed to optimize in the normal way. 
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 

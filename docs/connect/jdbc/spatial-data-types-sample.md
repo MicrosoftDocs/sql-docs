@@ -1,5 +1,5 @@
 ---
-title: "Spatial Data Types Sample | Microsoft Docs"
+title: "Spatial Data Types Sample for MSSQL JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2018"
 ms.prod: sql

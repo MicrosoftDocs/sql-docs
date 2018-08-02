@@ -1,5 +1,5 @@
 ---
-title: "Using Bulk Copy API for Batch Insert Operation | Microsoft Docs"
+title: "Using Bulk Copy API for Batch Insert Operation for MSSQL JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2018"
 ms.prod: sql
@@ -28,8 +28,8 @@ This feature is only applicable to PreparedStatement and CallableStatement's `ex
 
 There are two prerequisites to enable Bulk Copy API for batch insert.
 
-1. The server must be Azure Data Warehouse.
-2. The query must be an insert query (the query may contain comments, but the query must start with the INSERT keyword for this feature to come into effect).
+* The server must be Azure Data Warehouse.
+* The query must be an insert query (the query may contain comments, but the query must start with the INSERT keyword for this feature to come into effect).
 
 ## Enabling Bulk Copy API for batch insert
 
@@ -55,15 +55,15 @@ The value for **useBulkCopyForBatchInsert** stays constant for each PreparedStat
 
 Similar to above, but using SQLServerDataSource to create a SQLServerConnection object. Both methods achieve the same result.
 
-## Known Limitations
+## Known limitations
 
 There are currently these limitations that apply to this feature.
 
-1. Insert queries that contain non-parameterized values (for example, `INSERT INTO TABLE VALUES (?, 2`)), are not supported. Wildcards (?) are the only supported parameters for this function.
-2. Insert queries that contain INSERT-SELECT expressions (for example, `INSERT INTO TABLE SELECT * FROM TABLE2`), are not supported.
-3. Insert queries that contain multiple VALUE expressions (for example, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), are not supported.
-4. Insert queries that are followed by the OPTION clause, joined with multiple tables, or followed by another query, are not supported.
-5. Due to the limitations of Bulk Copy API, `DATETIME`, `SMALLDATETIME`,`GEOMETRY`, and `GEOGRAPHY` data types, are not supported for this feature.
+* Insert queries that contain non-parameterized values (for example, `INSERT INTO TABLE VALUES (?, 2`)), are not supported. Wildcards (?) are the only supported parameters for this function.
+* Insert queries that contain INSERT-SELECT expressions (for example, `INSERT INTO TABLE SELECT * FROM TABLE2`), are not supported.
+* Insert queries that contain multiple VALUE expressions (for example, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), are not supported.
+* Insert queries that are followed by the OPTION clause, joined with multiple tables, or followed by another query, are not supported.
+* Due to the limitations of Bulk Copy API, `DATETIME`, `SMALLDATETIME`,`GEOMETRY`, and `GEOGRAPHY` data types, are not supported for this feature.
 
 If the query fails because of non "SQL server" related errors, the driver will log the error message and fallback to the original logic for batch insert.
 

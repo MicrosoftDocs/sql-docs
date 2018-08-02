@@ -207,10 +207,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups, the specified Azure AD user belongs to, must exist in the database, and must have the CONNECT permission (except for Azure Active Directory server admin or group)
 
-
 ## Connecting using Access Token
-Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to SQL Azure Database. Note that accessToken can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It can't be used in the connection string.
- 
+Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to SQL Azure Database.
+
+> [!NOTE] 
+> **accessToken** can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It can't be used in the connection string.
+
 The example below contains a simple Java application that connects to Azure SQL Database using access token-based authentication. Before building and running the example, perform the following steps:
 1.	Create an application account in Azure Active Directory for your service.
 	1. Sign in to the Azure portal.

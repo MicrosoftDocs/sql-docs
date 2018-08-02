@@ -118,8 +118,7 @@ public class SparseColumns {
                                 for (int n = 0; n < sparseColumnList.getLength(); ++n) {
                                     Node sparseColumnNode = sparseColumnList.item(n);
                                     String columnName = sparseColumnNode.getNodeName();
-                                    // Note that the column value is not in the sparseColumNode, it is the value of
-                                    // the
+                                    // The column value is not in the sparseColumNode, it is the value of the
                                     // first child of it
                                     Node sparseColumnValueNode = sparseColumnNode.getFirstChild();
                                     String columnValue = sparseColumnValueNode.getNodeValue();

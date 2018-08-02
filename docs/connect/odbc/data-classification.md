@@ -21,73 +21,91 @@ manager: "kenvh"
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## Overview
-For the purpose of managing sensitive data SQL Server and Azure SQL Server introduced the ability to provide database columns with sensitivity metadata that allows the client application to handle different types of sensitive data (such as health, financial, etc.) in accordance with data protection policies.
+For the purpose of managing sensitive data, SQL Server and Azure SQL Server introduced the ability to provide database columns with sensitivity metadata that allows the client application to handle different types of sensitive data (such as health, financial, etc.) in accordance with data protection policies.
 
 See [SQL Data Discovery and Classification](https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) for more information on how to assign classification to columns.
 
 Microsoft ODBC Driver 17.2 allows the retrieval of this metadata via SQLGetDescField using SQL_CA_SS_DATA_CLASSIFICATION field identifier.
 
 ## Format
-SQLGetDescField number starting from 1 will return:
--	Version of Data Classification information
--	Number of SENSITIVITYPROPERTY elements for column
--	Array of pairs, where each pair consists of two USHORT offsets (from the beginning of the data) to the 
-    - name of the sensitivity label in names array or USHORT_MAX if there is no sensitivity label
-    - name of the information type in names array or USHORT_MAX if there is no information type
+SQLGetDescField has the following syntax:
 
-For the hybrid option requirements SQLBatch processing changes and data organization is the same as for record field option.
-In case if the Data Classification feature is not supported by SQL Server, specific error code should be returned.
+```  
+SQLRETURN SQLGetDescField(  
+     SQLHDESC        DescriptorHandle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     FieldIdentifier,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
+```
+*DescriptorHandle*  
+ [Input] IRD(Implementation Row Descriptor) handle. Can be retrieved by a call to SQLGetStmtAttr with SQL_ATTR_IMP_ROW_DESC statment attribute
+  
+ *RecNumber*  
+ [Input] Should be set to 0
+  
+ *FieldIdentifier*  
+ [Input] Should be set to SQL_CA_SS_DATA_CLASSIFICATION
+  
+ *ValuePtr*  
+ [Output] Output buffer
+  
+ *BufferLength*  
+ [Input] Length of output buffer in bytes
 
+ *StringLengthPtr*
+ [Output] Pointer to the buffer in which to return the total number of bytes (excluding the number of bytes required for the null-termination character) available to return in *ValuePtr.
+ 
+Note: If the size of the buffer is unknown it can be determined by calling SQLGetDescField with *ValuePtr* as NULL and examining the value of *StringLengthPtr*.
+ 
+If Data Classification information is not available, an *Invalid Descriptor Field* error will be returned.
 
-Returned data should have the following format:
+Upon successful call to SQLGetDescField the *ValuePtr* will contain the following data:
 
-|Field Name|Type (number of elements)|
-|-------------------|--------------------| 
-|SensitivityLabelsCount|USHORT|
-|SensitivityLabels|SENSITIVITYLABEL x SensitivityLabelsCount|
-|InformationTypesCount|USHORT|
-|InformationTypes|SENSITIVITYINFORMATIONTYPE x InformationTypesCount|
-|NumResultColumns|USHORT|
-|ColumnData|COLUMNSENSITIVITYMETADATA x NumResultColumns|
+ `nn nn [n *sensitivitylabels*] tt tt [t *informationtype*s] cc cc [c *columnsensitivitys*]`
 
+*sensitivitylabel* and *informationtype*  are both of the form
 
-<br><br>
-SENSITIVITYLABEL is defined as:
+ `nn [n bytes name] ii [i bytes id]`
 
-|Field Name|Type|
-|-------------------|--------------------|  
-|Name|B_VARCHAR|  
-|Id|B_VARCHAR|
+*columnsensitivity* is of the form
 
-Note: B_VARCHAR is a variable-length character stream which is defined by a length field followed by the data in Unicode characters. If the string is empty it will have only one byte which is 0.
+ `nn nn [n *sensitivityprops*]`
 
-This type is defined in TDS specification, see [Tabular Data Stream Protocol](https://msdn.microsoft.com/en-us/library/dd304523.aspx) for more information.
+For each column (c), n 4-byte 7 *sensitivityprops* are present:
 
-<br><br>
-SENSITIVITYINFORMATIONTYPE is defined as: 
+ `ss ss tt tt`
 
-|Field Name|Type|
-|-------------------|--------------------|  
-|Name|B_VARCHAR|  
-|Id|B_VARCHAR|
+s - index into the *sensitivitylabels* array, FF FF if not labeled
+t - index into the *informationtypes* array, FF FF if not labeled
 
+Data can expressed using the following structs:
 
-<br><br>
-COLUMNSENSITIVITYMETADATA is defined as: 
+```
+struct IDnamePair {
+ BYTE nameLen;
+ BYTE name[nameLen];
+ BYTE idLen;
+ BYTE id[idLen];
+};
 
-|Field Name|Type (number of elements)|
-|-------------------|--------------------|
-|NumSensitivityProperties|USHORT| 
-|SourceData|SENSITIVITYPROPERTY x NumSensitivityProperties|
+struct SensitivityProp {
+ USHORT labelIdx;
+ USHORT infoTypeIdx;
+};
 
+USHORT nLabels;
+struct IDnamePair labels[nLabels];
+USHORT nInfoTypes;
+struct IDnamePair infotypes[nInfoTypes];
+USHORT nColumns;
+struct {
+ USHORT nProps;
+ struct SensitivityProp[nProps];
 
-<br><br>
-SENSITIVITYPROPERTY is defined as: 
-
-|Field Name|Type|
-|-------------------|--------------------|
-|SensitivityLabelIndex|USHORT, index into SensitivityLabels<p>USHORT_MAX if there is no sensitivity label|
-|InformationTypeIndex|USHORT, index into InformationTypes<p>USHORT_MAX if there is no info type|
+} columnClassification[nColumns];
+```
 
 
 ## Code Sample

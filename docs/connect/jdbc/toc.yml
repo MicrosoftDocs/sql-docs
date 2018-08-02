@@ -103,6 +103,8 @@
       href: basic-data-types-sample.md
     - name: SQLXML Data Type Sample
       href: sqlxml-data-type-sample.md
+    - name: Spatial Data Types Sample
+      href: spatial-data-types-sample.md
   - name: Working with Result Sets
     href: working-with-result-sets.md
     items:
@@ -121,6 +123,8 @@
       href: reading-large-data-with-stored-procedures-sample.md
     - name: Updating Large Data Sample
       href: updating-large-data-sample.md
+  - name: Data Discovery and Classification Sample
+    href: data-discovery-classification-sample.md
 - name: Compliance and Legal for the JDBC SQL Driver
   href: compliance-and-legal-for-the-jdbc-sql-driver.md
   items:
@@ -163,6 +167,8 @@
       href: using-parameter-metadata.md
     - name: Using Basic Data Types
       href: using-basic-data-types.md
+    - name: Using Spatial Datatypes
+      href: use-spatial-datatypes.md
     - name: Understanding Transactions
       href: understanding-transactions.md
     - name: Working with a Connection
@@ -241,6 +247,8 @@
       href: wrappers-and-interfaces.md
     - name: Using Bulk Copy with the JDBC Driver
       href: using-bulk-copy-with-the-jdbc-driver.md
+    - name: Using Bulk Copy API for batch insert operation
+      href: use-bulk-copy-api-batch-insert-operation.md
     - name: Using a Stored Procedure with Output Parameters
       href: using-a-stored-procedure-with-output-parameters.md
     - name: Performing Batch Operations
@@ -257,3 +265,5 @@
       href: azure-key-vault-sample-version-6.0.0.md
     - name: Azure Key Vault sample version 6.2.2
       href: azure-key-vault-sample-version-6.2.2.md
+    - name: Azure Key Vault sample version 7.0.0
+      href: azure-key-vault-sample-version-7-0-0.md

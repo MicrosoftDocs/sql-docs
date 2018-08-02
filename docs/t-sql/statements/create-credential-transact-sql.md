@@ -1,4 +1,4 @@
----
+﻿---
 title: "CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2017"
@@ -27,7 +27,7 @@ caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

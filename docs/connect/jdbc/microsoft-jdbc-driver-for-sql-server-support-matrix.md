@@ -1,7 +1,7 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server Support Matrix | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2018"
+ms.date: "07/19/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,7 +21,7 @@ manager: craigg
   This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.  
   
 ## Microsoft JDBC Driver Support Lifecycle Matrix and Policy  
- The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0, 4.x and 6.x have five year Mainstream support from the driver release date. Mainstream support is defined on the  Microsoft support lifecycle website.  
+ The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0, 4.x, 6.x, and 7.x have five year Mainstream support from the driver release date. Mainstream support is defined on the Microsoft support lifecycle website.  
   
  Extended and custom support options are not available for the Microsoft JDBC Driver.  
     
@@ -29,7 +29,8 @@ manager: craigg
   
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|  
-|Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|January 22, 2023|    
+|Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|July 31, 2023|  
+|Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|February 27, 2023|    
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|June 30, 2022|    
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|July 14, 2021|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|August 24, 2020|  
@@ -79,7 +80,8 @@ manager: craigg
   
 |JDBC Driver Version|JRE Versions|JDBC API Version| 
 |-|-|-|  
-|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (partially)|  
+|7.0|1.8, 10|4.2, 4.3 (partially)|  
+|6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (partially)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  

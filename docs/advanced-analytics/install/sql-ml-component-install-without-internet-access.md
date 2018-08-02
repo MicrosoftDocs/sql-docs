@@ -15,36 +15,108 @@ manager: cgronlun
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.
 
-## 1 - Get the installation media
+In-database analytics consist of the database engine instance, plus dditional components for R and Python integration. Language-specific features are added through .cab files. 
 
-[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
+## SQL Server 2017 offline install
 
-> [!NOTE]  
-> For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
+SQL Server 2017 does not have service packs. It's the first release of SQL Server to use the initial release as the only base line, with servicing through cumulative updates only. Start with the initial release and .cab files below, and then apply the latest cumulative update later.
 
-<a name = "bkmk_OtherComponents"></a>
+### 1 - Download 2017 .cabs
 
-## 2 - Prerequisites
+On a computer having an internet connection, download the .cab files used to install in-database analytics. 
 
-Depending on your environment, you might need to make local copies of installers for the following prerequisites.
+Release  |Download link  |
+---------|---------------|
+Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
+Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
+Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
-Component  |Version
----------|---------
-[Microsoft AS OLE DB Provider for SQL Server 2016](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
-[Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1
-[Microsoft MPI](https://go.microsoft.com/fwlink/?linkid=834316)     | 7.1.12437.25
-[Microsoft Visual C++ 2013 Redistributable](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
-[Microsoft Visual C++ 2015 Redistributable](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
+###  2 - Get SQL Server 2017 installation media
 
- 
- <a name="bkmk_ga_instalpatch"></a>
+Offline installation requires SQL Server installation media that you download to your computer. 
 
- ###  Install patch requirement 
+1. On a computer having an internet connection, download the [SQL Server 2017 setup program](https://www.microsoft.com/sql-server/sql-server-downloads). 
 
-Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server. If this update to the VC runtime binaries is not installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server follow the instructions at [SQL Server Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries.  
+2. Double-click setup and choose the **Download Media** installation type. With this option, setup creates a local .iso (or .cab) file containing the installation media.
+
+   ![Choose the download media installation type](media/offline-download-tile.png "Download media")
+
+## SQL Server 2016 offline install
+
+SQL Server 2016 in-database analytics is R-only, with just two .cab files for product packages and Microsoft's distribution of open-source R, respectively. Start by installing any one of these releases: RTM, SP 1, SP 2. Once a base installation is in place, cumulative updates can be applied as a next step.
+
+### 1 - Download 2016 .cabs
+
+On a computer having an internet connection, download the .cab files used by setup to install in-database analytics. 
+
+Release  |Download link  |
+---------|---------|
+**SQL Server 2016 RTM**     |
+Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)
+Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)
+**SQL Server 2016 SP 1**     |
+Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
+Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
+**SQL Server 2016 SP 2**     |
 
 
-## 3a - Download 2017 .cabs
+### 2 - Get SQL Server 2016 installation media
+
+You can install SQL Server 2016 RTM, SP 1, or SP 2 as your first installation on the target computer. Any of these versions can accept a cumulative update.
+
+One way to get an .iso file containing the installation media is through [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/). Sign in, and then use the **Downloads** link to find the SQL Server 2016 release you want to install. The download is in the form of an .iso file, which you can copy to the target computer for an offline installation.
+
+## Transfer files
+
+Copy the SQL Server installation media (.iso or .cab) and in-database analytics .cab files to the target computer.
+
+Put the CAB files in a convenient folder such as **Downloads** or the setup user's temp folder: `C:\Users\<user-name>\AppData\Local\Temp`.
+
+Put the media file in the same folder on the target machine. 
+
+![List of files to be transferred](media/offline-file-list.png "File list")
+
+## Run Setup
+
+When you run SQL Server setup on a computer disconnected from the internet, Setup adds an **Offline installation** page to the wizard so that you can specify the location of the .cab files you copied in the previous step.
+
+1. To begin installation, double-click the .iso or .cab file to access the installation media.
+
+   ![List of files to be transferred](media/offline-file-list.png "File list")
+
+2. Right-click **setup.exe** and run as administrator.
+
+3. When the setup wizard displays the licensing page for open source R or Python components, click  **Accept**. Acceptance of licensing terms allows you to proceed to the next step.
+
+4. In the **Offline installation** page, in **Install Path**, specify the folder containing the .cab files you copied earlier.
+
+   ![Wizard page for cab folder selection](media/screenshot-sql-offline-cab-page.png "CAB folder")
+
+5. Continue following the on-screen prompts to complete the installation.
+
+## Post-install configuration
+
+After installation is finished, restart the service and then configure the server to enable script execution as described in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md).
+
+
+## Next steps
+
+An initial offline installation of either SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services requires the same configuration as an online installation:
+
++ [Restart the service](sql-machine-learning-services-windows-install.md#restart-the-service) (for SQL Server 2016, click [here](sql-r-services-windows-install.md#restart-the-service)).
++ [Enable external script execution](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#bkmk_enableFeature)).
++ [Verify installation](sql-machine-learning-services-windows-install.md#verify-installation)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#verify-installation)).
++ [Additional configuration as needed](sql-machine-learning-services-windows-install.md#additional-configuration)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#bkmk_FollowUp)).
+
+To check the installation status of the instance and fix common issues, see [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
+
+For help with any unfamiliar messages or log entries, see [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+
+
+
+
+## 3 - Download .cabs
 
 SQL Server 2017 machine learning instances consist of the database engine instance with extra components for R and Python integration. R and Python features are added through .cab files. For SQL Server 2017 installations, the initial release is the baseline installation, over which you can install any cumulative update. The name "cumulative update" is self-evident, but its worth noting that you can skip CUs. Only the initial release is required.
 
@@ -153,27 +225,6 @@ Microsoft R Server    |no change; use previous |
 If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 
-## 4- Transfer files
-
-Transfer the zipped SQL Server installation media and the .cab files you already downloaded to the computer on which you are installing setup.
-
-Put the CAB files in a convenient folder such as **Downloads** or the setup user's temp folder: C:\Users<user-name>\AppData\Local\Temp.
-
-Put the en_sql_server_2017.iso file in a convenient folder. Double-click **setup.exe** to begin installation.
-
-## 5 - Run Setup
-
-When you run SQL Server setup on a computer disconnected from the internet, Setup adds an **Offline installation** page to the wizard so that you can specify the location of the .cab files you copied in the previous step.
-
-1. Start the SQL Server setup wizard.
-
-2. When the setup wizard displays the licensing page for open source R or Python components, click  **Accept**. Acceptance of licensing terms allows you to proceed to the next step.
-
-3. In the **Offline installation** page, in **Install Path**, specify the folder containing the .cab files you copied earlier.
-
-4. Continue following the on-screen prompts to complete the installation.
-
-After installation is finished, restart the service and then configure the server to enable script execution as described in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md).
 
 ## Slipstream upgrades
 
@@ -201,18 +252,4 @@ Download .cabs
     choosing options in the Feature tree for Database Engine and Machine Learning Services
     specifying the location of the .cab files
     accepting the EULAs
-
-## Next steps
-
-An initial offline installation of either SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services requires the same configuration as an online installation:
-
-+ [Restart the service](sql-machine-learning-services-windows-install.md#restart-the-service) (for SQL Server 2016, click [here](sql-r-services-windows-install.md#restart-the-service)).
-+ [Enable external script execution](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#bkmk_enableFeature)).
-+ [Verify installation](sql-machine-learning-services-windows-install.md#verify-installation)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#verify-installation)).
-+ [Additional configuration as needed](sql-machine-learning-services-windows-install.md#additional-configuration)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#bkmk_FollowUp)).
-
-To check the installation status of the instance and fix common issues, see [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
-
-For help with any unfamiliar messages or log entries, see [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
-
 

@@ -77,7 +77,7 @@ When you run SQL Server Setup on a computer disconnected from the internet, Setu
 
 2. Right-click **setup.exe** and run as administrator.
 
-3. When the setup wizard displays the licensing page for open source R or Python components, click  **Accept**. Acceptance of licensing terms allows you to proceed to the next step.
+3. When the setup wizard displays the licensing page for open-source R or Python components, click  **Accept**. Acceptance of licensing terms allows you to proceed to the next step.
 
 4. When you get to the **Offline installation** page, in **Install Path**, specify the folder containing the CAB files you copied earlier.
 

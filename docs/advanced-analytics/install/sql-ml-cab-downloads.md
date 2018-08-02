@@ -11,11 +11,11 @@ ms.author: heidist
 manager: cgronlun
 ---
 
-# CAB downloads for cumulative updates on SQL Server in-database analytics instances
+# CAB downloads for cumulative updates of SQL Server in-database analytics instances
 
-Database engine instances configured for in-database analytics have extra R and Python components in CAB file delivery, installed and serviced by SQL Server Setup. 
+Database engine instances configured for in-database analytics have extra R and Python components in CAB files, installed and serviced by SQL Server Setup. 
 
-On servers connected to the internet, updates are typically applied through Windows update. Disconnected servers are updated manually. This article provides download links to CAB files for each cumulative update of SQL Server 2017 Machine Learning Services (R and Python) or SQL Server 2016 R Services so that you can update servers disconnected from the internet. 
+On servers connected to the internet, updates are typically applied through Windows update. Disconnected servers are updated manually. This article provides download links to CAB files for each cumulative update of SQL Server 2017 Machine Learning Services (R and Python) or SQL Server 2016 R Services so that you can mnaully update servers disconnected from the internet. 
 
 For SQL Server 2017 Machine Learning Services, the initial release is the baseline installation, over which you can install any cumulative update. 
 For SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. For more information about CAB file installation, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md).

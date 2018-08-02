@@ -45,7 +45,7 @@ caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options 
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Parallel Data Warehouse
 ms.custom: ""
@@ -40,7 +40,7 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE DATABASE
 

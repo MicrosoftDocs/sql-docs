@@ -1,4 +1,4 @@
----
+﻿---
 title: "SET ANSI_NULLS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"
@@ -28,7 +28,7 @@ caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

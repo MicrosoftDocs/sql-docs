@@ -136,7 +136,8 @@ Additionally, session 10 and session 11 must be committed together. However, Dis
 
 This example results in a state in which no sessions are executing their commands. When the time that is specified in the **QueryTimeout** property is reached, Distribution Agent cancels all the sessions.
 
-**Note:** By default, the value of the **QueryTimeout** property is 5 minutes.
+[!Note]
+By default, the value of the **QueryTimeout** property is 5 minutes.
 
 You may notice the following trends from the Distribution Agent performance counters during this query time-out period: 
 

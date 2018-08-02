@@ -1,4 +1,4 @@
----
+﻿---
 title: "PREDICT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/02/2018"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

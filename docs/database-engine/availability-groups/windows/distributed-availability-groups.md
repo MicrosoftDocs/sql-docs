@@ -302,7 +302,7 @@ The below query displays performance counters specifically associated with the d
  >The `LIKE` filter should have the name of the distributed availability group. In this example, the name of the distributed availability group is 'distributedag'. Change the `LIKE` modifier to reflect the name of your distributed availability group.  
 
 ### DMV to display health of both AG and Distributed AG
-The below query displays a wealth of information about the health of both the availability group, and the distributed availability group.
+The below query displays a wealth of information about the health of both the availability group, and the distributed availability group. [Thanks Tracy Boggiano!](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
 
  ```sql
  -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
@@ -338,10 +338,8 @@ The below query displays a wealth of information about the health of both the av
 
 ![Health of AG and distributed AG](./media/distributed-availability-group/dmv-sync-status-send-rate.png)
 
-[Credit to Tracy Boggiano](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
-
 ### DMVs to view metadata of distributed AG
-The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. 
+The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group.  [Thanks David Barbarin!](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
 
 
@@ -366,10 +364,10 @@ The below queries will display information about endpoint URLs used by the avail
 
 ![metadata DMV for distributed AG](./media/distributed-availability-group/dmv-metadata-dag2.png)
 
-[Credit to David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
 
 ### DMV to show current state of seeding
-The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. 
+The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. [Thanks again David Barbarin!](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
  ```sql
  -- shows current_state of seeding 
@@ -397,8 +395,6 @@ The below query displays information about the current state of seeding. This is
 
 ![Current state of seeding](./media/distributed-availability-group/dmv-seeding.png)
 
-
-[Credit to David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
 
 

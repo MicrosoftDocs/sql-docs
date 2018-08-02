@@ -279,7 +279,7 @@ The below query displays performance counters specifically associated with the d
  select * from sys.dm_os_performance_counters where instance_name like '%distributed%'
  ```
 
-![DMV displaying OS performance counters for DAG](media/distributed availability group/dmv-os-performance-counters.png)
+![DMV displaying OS performance counters for DAG](./media/distributed availability group/dmv-os-performance-counters.png)
 
 
  >[!NOTE]
@@ -314,7 +314,7 @@ The below query displays a wealth of information about the health of both the av
  --WHERE ag.is_distributed = 1
  ```
 
-![Health of AG and distributed AG](media/distributed availability group/dmv-sync-status-send-rate.png)
+![Health of AG and distributed AG](./media/distributed availability group/dmv-sync-status-send-rate.png)
 
 [Credit to Tracy Boggiano's blog entry](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
 
@@ -323,16 +323,26 @@ The below queries will display information about endpoint URLs used by the avail
 
  ```sql
  -- View endpoint_url and sync status of replicas in distributed AG
- SELECT ar.replica_server_name, ars.is_local, ars.synchronization_health_desc, ars.connected_state_desc, ar.endpoint_url,
- ars.connected_state_desc, ars.role_desc, ars.operational_state_desc, ars.recovery_health_desc,
- ar.availability_mode_desc, ar.failover_mode_desc
+ SELECT ar.replica_server_name, 
+     ars.is_local, 
+     ars.synchronization_health_desc, 
+     ars.connected_state_desc, 
+     ar.endpoint_url,
+     ars.connected_state_desc, 
+     ars.role_desc, 
+     ars.operational_state_desc, 
+     ars.recovery_health_desc,
+     ar.availability_mode_desc, 
+     ar.failover_mode_desc
  FROM sys.dm_hadr_availability_replica_states ars 
- INNER JOIN sys.availability_replicas ar ON ars.replica_id=ar.replica_id
+     INNER JOIN sys.availability_replicas ar
+          ON ars.replica_id=ar.replica_id
  ORDER BY ar.replica_server_name    
+   
  ```
 
 
-![distributed AG metadata](media/distributed availability group/dmv-metadata-dag1.png)
+![distributed AG metadata](./media/distributed availability group/dmv-metadata-dag1.png)
 
 
  ```sql
@@ -354,7 +364,7 @@ The below queries will display information about endpoint URLs used by the avail
  ```
 
 
-![metadata DMV for distributed AG](media/distributed availability group/dmv-metadata-dag2.png)
+![metadata DMV for distributed AG](./media/distributed availability group/dmv-metadata-dag2.png)
 
 [Credit to David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
@@ -384,7 +394,7 @@ join sys.databases as d
 ```
 
 
-![Current state of seeding](media/distributed availability group/dmv-seeding.png)
+![Current state of seeding](./media/distributed availability group/dmv-seeding.png)
 
 
 [Credit to David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)

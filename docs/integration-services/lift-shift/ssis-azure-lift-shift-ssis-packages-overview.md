@@ -69,7 +69,7 @@ To connect to files and file shares, see [Open and save files on premises and in
 
 When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to various **Azure** data sources and to **Excel and Access** files, in addition to the data sources supported by the built-in components.
 
-You can also install additional components - for example, you can install a driver that's not installed by default. For more info, see [Customize setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+You can also install additional components - for example, you can install a driver that's not installed by default. For more info, see [Customize setup for the Azure-SSIS integration runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 If you have an Enterprise Edition license, additional components are available. For more info, see [Provision Enterprise Edition for the Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition).
 

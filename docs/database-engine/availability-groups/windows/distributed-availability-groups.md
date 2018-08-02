@@ -216,8 +216,10 @@ The same concepts hold true when you use the dynamic management views. By using 
 
 ```sql
 -- shows replicas associated with availability groups
-SELECT ag.[name] AS [AG Name], ag.Is_Distributed, 
-  ar.replica_server_name AS [Replica Name]
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.Is_Distributed, 
+   ar.replica_server_name AS [Replica Name]
 FROM sys.availability_groups AS ag 
 INNER JOIN sys.availability_replicas AS ar       
 ON ag.group_id = ar.group_id;
@@ -252,9 +254,16 @@ To further extend the previous query, you can also see the underlying performanc
 
 ```sql
 -- shows underlying performance of distributed AG
-SELECT ag.[name] AS [Distributed AG Name], ar.replica_server_name AS [Underlying AG], dbs.[name] AS [Database], 
-       ars.role_desc AS [Role], drs.synchronization_health_desc AS [Sync Status], drs.log_send_queue_size, 
-    drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
+SELECT 
+   ag.[name] AS [Distributed AG Name], 
+   ar.replica_server_name AS [Underlying AG], 
+   dbs.[name] AS [Database],
+   ars.role_desc AS [Role],
+   drs.synchronization_health_desc AS [Sync Status],
+   drs.log_send_queue_size,
+   drs.log_send_rate, 
+   drs.redo_queue_size, 
+  drs.redo_rate
 FROM sys.databases AS dbs
 INNER JOIN sys.dm_hadr_database_replica_states AS drs
 ON dbs.database_id = drs.database_id
@@ -276,23 +285,23 @@ The below query displays performance counters specifically associated with the d
 
  ```sql
  -- displays OS performance counters related to the distributedag named 'distributedag'
- select * from sys.dm_os_performance_counters where instance_name like '%distributed%'
+ SELECT * FROM sys.dm_os_performance_counters WHERE instance_name LIKE '%distributed%'
  ```
 
  ![DMV displaying OS performance counters for DAG](media/distributed-availability-group/dmv-os-performance-counters.png)
 
 
  >[!NOTE]
- >The like filter should have the name of the distributed availability group. In this example, the name of the distributed availability group is 'distributedag'. Change the like modifier to reflect the name of your distributed availability group.  
+ >The LIKE filter should have the name of the distributed availability group. In this example, the name of the distributed availability group is 'distributedag'. Change the LIKE modifier to reflect the name of your distributed availability group.  
 
 ### DMV to display health of both AG and Distributed AG
 The below query displays a wealth of information about the health of both the availability group, and the distributed availability group.
 
  ```sql
  -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
- SELECT ag.name as 'Distributed AG', 
- 	ar.replica_server_name as 'AG', 
- 	dbs.name as 'Database', 
+ SELECT ag.name AS 'Distributed AG', 
+ 	ar.replica_server_name AS 'AG', 
+ 	dbs.name AS 'Database', 
  	ars.role_desc, 
 	drs.synchronization_health_desc, 
 	drs.log_send_queue_size, 
@@ -307,10 +316,10 @@ The below query displays a wealth of information about the health of both the av
 	drs.last_commit_time,
 	drs.secondary_lag_seconds
  FROM sys.databases dbs 
-    INNER JOIN sys.dm_hadr_database_replica_states drs on dbs.database_id = drs.database_id
-	INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id
-	 INNER JOIN sys.dm_hadr_availability_replica_states ars ON     ars.replica_id = drs.replica_id
-     INNER JOIN sys.availability_replicas ar ON ar.replica_id =  ars.replica_id
+ INNER JOIN sys.dm_hadr_database_replica_states drs ON dbs.database_id = drs.database_id
+ INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id
+ INNER JOIN sys.dm_hadr_availability_replica_states ars ON     ars.replica_id = drs.replica_id
+ INNER JOIN sys.availability_replicas ar ON ar.replica_id =  ars.replica_id
  --WHERE ag.is_distributed = 1
  ```
 
@@ -321,46 +330,24 @@ The below query displays a wealth of information about the health of both the av
 ### DMVs to view metadata of distributed AG
 The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. 
 
- ```sql
- -- View endpoint_url and sync status of replicas in distributed AG
- SELECT ar.replica_server_name, 
-     ars.is_local, 
-     ars.synchronization_health_desc, 
-     ars.connected_state_desc, 
-     ar.endpoint_url,
-     ars.connected_state_desc, 
-     ars.role_desc, 
-     ars.operational_state_desc, 
-     ars.recovery_health_desc,
-     ar.availability_mode_desc, 
-     ar.failover_mode_desc
- FROM sys.dm_hadr_availability_replica_states ars 
-     INNER JOIN sys.availability_replicas ar
-          ON ars.replica_id=ar.replica_id
- ORDER BY ar.replica_server_name    
-   
- ```
-
-
-![distributed AG metadata](media/distributed-availability-group/dmv-metadata-dag1.png)
 
 
  ```sql
  -- shows endpoint url and sync state for ag, and dag
-   select
-     ag.name as group_name,
-     ag.is_distributed,
-     ar.replica_server_name as replica_name,
-     ar.endpoint_url,
-     ar.availability_mode_desc,
-     ar.failover_mode_desc,
-     ar.primary_role_allow_connections_desc as allow_connections_primary,
-     ar.secondary_role_allow_connections_desc as allow_connections_secondary,
-     ar.seeding_mode_desc as seeding_mode
-   from sys.availability_replicas as ar
-   join sys.availability_groups as ag
-   on ar.group_id = ag.group_id;
-   go
+ SELECT
+   ag.name AS group_name,
+   ag.is_distributed,
+   ar.replica_server_name AS replica_name,
+   ar.endpoint_url,
+   ar.availability_mode_desc,
+   ar.failover_mode_desc,
+   ar.primary_role_allow_connections_desc AS allow_connections_primary,
+   ar.secondary_role_allow_connections_desc AS allow_connections_secondary,
+   ar.seeding_mode_desc AS seeding_mode
+ FROM sys.availability_replicas AS ar
+ JOIN sys.availability_groups AS ag
+ ON ar.group_id = ag.group_id;
+ GO
  ```
 
 
@@ -373,24 +360,25 @@ The below query displays information about the current state of seeding. This is
 
  ```sql
  -- shows current_state of seeding 
- select
-     ag.name as aag_name,
+ SELECT
+     ag.name AS aag_name,
      ar.replica_server_name,
-     d.name as database_name,
+     d.name AS database_name,
      has.current_state,
-     has.failure_state_desc as failure_state,
+     has.failure_state_desc AS failure_state,
      has.error_code,
      has.performed_seeding,
      has.start_time,
      has.completion_time,
      has.number_of_attempts
- from sys.dm_hadr_automatic_seeding as has
- join sys.availability_groups as ag
-     on ag.group_id = has.ag_id
- join sys.availability_replicas as ar
-     on ar.replica_id = has.ag_remote_replica_id
- join sys.databases as d
-     on d.group_database_id = has.ag_db_id
+ FROM sys.dm_hadr_automatic_seeding AS has
+ JOIN sys.availability_groups AS ag
+     ON ag.group_id = has.ag_id
+ JOIN sys.availability_replicas AS ar
+     ON ar.replica_id = has.ag_remote_replica_id
+ JOIN sys.databases AS d
+     ON d.group_database_id = has.ag_db_id
+ GO
  ```
 
 

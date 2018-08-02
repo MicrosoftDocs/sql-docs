@@ -216,12 +216,11 @@ The same concepts hold true when you use the dynamic management views. By using 
 
 ```sql
 -- shows replicas associated with availability groups
-SELECT ag.[name] as 'AG Name', 
-    ag.Is_Distributed, 
-    ar.replica_server_name as 'Replica Name'
-FROM 	sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar       
-    ON	ag.group_id = ar.group_id
+SELECT ag.[name] AS [AG Name], ag.Is_Distributed, 
+  ar.replica_server_name AS [Replica Name]
+FROM sys.availability_groups AS ag 
+INNER JOIN sys.availability_replicas AS ar       
+ON ag.group_id = ar.group_id;
 ```
 
 An example of output from the second WSFC cluster that's participating in a distributed availability group is shown in the following figure. SPAG1 is composed of two replicas: DENNIS and JY. However, the distributed availability group named SPDistAG has the names of the two participating availability groups (SPAG1 and SPAG2) rather than the names of the instances, as with a traditional availability group. 
@@ -234,13 +233,14 @@ In SQL Server Management Studio, any status shown on the Dashboard and other are
 
 ```sql
 -- shows sync status of distributed AG
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM 	sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar
-    ON ag.group_id = ar.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars       
-    ON ar.replica_id = ars.replica_id
-WHERE ag.is_distributed = 1
+SELECT ag.[name] AS [AG Name], ag.is_distributed, ar.replica_server_name AS [Underlying AG], 
+       ars.role_desc AS [Role], ars.synchronization_health_desc AS [Sync Status]
+FROM    sys.availability_groups AS ag
+INNER JOIN sys.availability_replicas AS ar 
+ON    ag.group_id = ar.group_id        
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars       
+ON   ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1;
 ```
        
        
@@ -252,17 +252,19 @@ To further extend the previous query, you can also see the underlying performanc
 
 ```sql
 -- shows underlying performance of distributed AG
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM 	sys.databases dbs
-  INNER JOIN sys.dm_hadr_database_replica_states drs
-    ON dbs.database_id = drs.database_id
-  INNER JOIN sys.availability_groups ag
-    ON drs.group_id = ag.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars
-    ON ars.replica_id = drs.replica_id
-  INNER JOIN sys.availability_replicas ar
-    ON ar.replica_id = ars.replica_id
-WHERE ag.is_distributed = 1
+SELECT ag.[name] AS [Distributed AG Name], ar.replica_server_name AS [Underlying AG], dbs.[name] AS [Database], 
+       ars.role_desc AS [Role], drs.synchronization_health_desc AS [Sync Status], drs.log_send_queue_size, 
+    drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
+FROM sys.databases AS dbs
+INNER JOIN sys.dm_hadr_database_replica_states AS drs
+ON dbs.database_id = drs.database_id
+INNER JOIN sys.availability_groups AS ag
+ON drs.group_id = ag.group_id
+INNER JOIN    sys.dm_hadr_availability_replica_states AS ars
+ON ars.replica_id = drs.replica_id
+INNER JOIN    sys.availability_replicas AS ar
+ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1;
 ```
 
 ![Performance information for a distributed availability group][13]
@@ -282,8 +284,6 @@ select * from sys.dm_os_performance_counters where instance_name like '%distribu
 
 ### DMV to display health of both AG and Distributed AG
 The below query displays a wealth of information about the health of both the availability group, and the distributed availability group.
-
-Credit to Tracy Boggiano's blog entry.
 
 ```sql
 -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
@@ -311,7 +311,7 @@ FROM sys.databases dbs
 --WHERE ag.is_distributed = 1
 ```
 
-![DMV displaying AG health information](media/distributed availability group/dmv-sync-status-send-rate.png)
+![Health of AG and distributed AG](media/distributed availability group/dmv-sync-status-send-rate.png)
 
 [Credit to Tracy Boggiano's blog entry.](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
 
@@ -328,7 +328,8 @@ INNER JOIN sys.availability_replicas r
 ON rs.replica_id=r.replica_id
 ORDER BY r.replica_server_name    
 ```
-![DMV displaying metadata information about DAG](media/distributed availability group/dmv-metadata-dag1.png)
+
+![distributed AG metadata](media/distributed availability group/dmv-metadata-dag1.png)
 
 [Credit to MSSQLTips.](https://www.mssqltips.com/sqlservertip/5053/setup-and-implement-sql-server-2016-always-on-distributed-availability-groups)
 
@@ -351,7 +352,7 @@ join sys.availability_groups as ag
 go
 ```
 
-![DMV displaying metadata information about DAG](media/distributed availability group/dmv-metadata-dag2.png)
+![metadata DMV for distributed AG](media/distributed availability group/dmv-metadata-dag2.png)
 
 [Credit to David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
@@ -380,7 +381,7 @@ join sys.databases as d
     on d.group_database_id = has.ag_db_id
 ```
 
-![DMV displaying seeding information for AG](media/distributed availability group/dmv-seeding.png)
+![Current state of seeding](media/distributed availability group/dmv-seeding.png)
 
 [Credit to David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 

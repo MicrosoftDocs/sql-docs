@@ -386,11 +386,11 @@ The below query displays information about the current state of seeding. This is
      has.number_of_attempts
  FROM sys.dm_hadr_automatic_seeding AS has
  JOIN sys.availability_groups AS ag
-     ON ag.group_id = has.ag_id
+ ON ag.group_id = has.ag_id
  JOIN sys.availability_replicas AS ar
-     ON ar.replica_id = has.ag_remote_replica_id
+ ON ar.replica_id = has.ag_remote_replica_id
  JOIN sys.databases AS d
-     ON d.group_database_id = has.ag_db_id
+ ON d.group_database_id = has.ag_db_id
  GO
  ```
 

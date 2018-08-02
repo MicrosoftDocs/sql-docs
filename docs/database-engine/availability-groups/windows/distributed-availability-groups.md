@@ -267,17 +267,20 @@ ON ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1;
 ```
 
+
 ![Performance information for a distributed availability group][13]
 
 ### DMV to view performance counters for distributed AG
 The below query displays performance counters specifically associated with the distributed availability group. 
 
 
-```sql
--- displays OS performance counters related to the distributedag named 'distributedag'
-select * from sys.dm_os_performance_counters where instance_name like '%distributed%'
-```
-  ![DMV displaying OS performance counters for DAG](media/distributed availability group/dmv-os-performance-counters.png)
+ ```sql
+ -- displays OS performance counters related to the distributedag named 'distributedag'
+ select * from sys.dm_os_performance_counters where instance_name like '%distributed%'
+ ```
+
+![DMV displaying OS performance counters for DAG](media/distributed availability group/dmv-os-performance-counters.png)
+
 
  >[!NOTE]
  >The like filter should have the name of the distributed availability group. In this example, the name of the distributed availability group is 'distributedag'. Change the like modifier to reflect the name of your distributed availability group.  
@@ -285,12 +288,12 @@ select * from sys.dm_os_performance_counters where instance_name like '%distribu
 ### DMV to display health of both AG and Distributed AG
 The below query displays a wealth of information about the health of both the availability group, and the distributed availability group.
 
-```sql
--- displays sync status, send rate, and redo rate of availability groups, including distributed AG
-SELECT ag.name as 'Distributed AG', 
-	ar.replica_server_name as 'AG', 
-	dbs.name as 'Database', 
-	ars.role_desc, 
+ ```sql
+ -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
+ SELECT ag.name as 'Distributed AG', 
+ 	ar.replica_server_name as 'AG', 
+ 	dbs.name as 'Database', 
+ 	ars.role_desc, 
 	drs.synchronization_health_desc, 
 	drs.log_send_queue_size, 
 	drs.log_send_rate, 
@@ -303,54 +306,53 @@ SELECT ag.name as 'Distributed AG',
 	drs.last_redone_time,
 	drs.last_commit_time,
 	drs.secondary_lag_seconds
-FROM sys.databases dbs 
+ FROM sys.databases dbs 
     INNER JOIN sys.dm_hadr_database_replica_states drs on dbs.database_id = drs.database_id
 	INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id
-	INNER JOIN sys.dm_hadr_availability_replica_states ars ON ars.replica_id = drs.replica_id
-    INNER JOIN sys.availability_replicas ar ON ar.replica_id = ars.replica_id
---WHERE ag.is_distributed = 1
-```
+	 INNER JOIN sys.dm_hadr_availability_replica_states ars ON     ars.replica_id = drs.replica_id
+     INNER JOIN sys.availability_replicas ar ON ar.replica_id =  ars.replica_id
+ --WHERE ag.is_distributed = 1
+ ```
 
 ![Health of AG and distributed AG](media/distributed availability group/dmv-sync-status-send-rate.png)
 
-[Credit to Tracy Boggiano's blog entry.](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
+[Credit to Tracy Boggiano's blog entry](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
 
 ### DMVs to view metadata of distributed AG
 The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. 
 
-```sql
-SELECT r.replica_server_name, r.endpoint_url,
-rs.connected_state_desc, rs.role_desc, rs.operational_state_desc,
-rs.recovery_health_desc,rs.synchronization_health_desc,
-r.availability_mode_desc, r.failover_mode_desc
-FROM sys.dm_hadr_availability_replica_states rs 
-INNER JOIN sys.availability_replicas r
-ON rs.replica_id=r.replica_id
-ORDER BY r.replica_server_name    
-```
+ ```sql
+ -- View endpoint_url and sync status of replicas in distributed AG
+ SELECT ar.replica_server_name, ars.is_local, ars.synchronization_health_desc, ars.connected_state_desc, ar.endpoint_url,
+ ars.connected_state_desc, ars.role_desc, ars.operational_state_desc, ars.recovery_health_desc,
+ ar.availability_mode_desc, ar.failover_mode_desc
+ FROM sys.dm_hadr_availability_replica_states ars 
+ INNER JOIN sys.availability_replicas ar ON ars.replica_id=ar.replica_id
+ ORDER BY ar.replica_server_name    
+ ```
+
 
 ![distributed AG metadata](media/distributed availability group/dmv-metadata-dag1.png)
 
-[Credit to MSSQLTips.](https://www.mssqltips.com/sqlservertip/5053/setup-and-implement-sql-server-2016-always-on-distributed-availability-groups)
 
-
-```sql
--- shows endpoint url and sync state for ag, and dag
+ ```sql
+ -- shows endpoint url and sync state for ag, and dag
    select
-    ag.name as group_name,
-    ag.is_distributed,
-    ar.replica_server_name as replica_name,
-    ar.endpoint_url,
-    ar.availability_mode_desc,
-    ar.failover_mode_desc,
-    ar.primary_role_allow_connections_desc as allow_connections_primary,
-    ar.secondary_role_allow_connections_desc as allow_connections_secondary,
-    ar.seeding_mode_desc as seeding_mode
-from sys.availability_replicas as ar
-join sys.availability_groups as ag
-    on ar.group_id = ag.group_id;
-go
-```
+     ag.name as group_name,
+     ag.is_distributed,
+     ar.replica_server_name as replica_name,
+     ar.endpoint_url,
+     ar.availability_mode_desc,
+     ar.failover_mode_desc,
+     ar.primary_role_allow_connections_desc as allow_connections_primary,
+     ar.secondary_role_allow_connections_desc as allow_connections_secondary,
+     ar.seeding_mode_desc as seeding_mode
+   from sys.availability_replicas as ar
+   join sys.availability_groups as ag
+   on ar.group_id = ag.group_id;
+   go
+ ```
+
 
 ![metadata DMV for distributed AG](media/distributed availability group/dmv-metadata-dag2.png)
 
@@ -381,7 +383,9 @@ join sys.databases as d
     on d.group_database_id = has.ag_db_id
 ```
 
+
 ![Current state of seeding](media/distributed availability group/dmv-seeding.png)
+
 
 [Credit to David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 

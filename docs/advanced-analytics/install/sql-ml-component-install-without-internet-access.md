@@ -19,11 +19,14 @@ In-database analytics consist of the database engine instance, plus additional c
 
 ## SQL Server 2017 offline install
 
-SQL Server 2017 does not have service packs. It's the first release of SQL Server to use the initial release as the only base line, with servicing through cumulative updates only. Start with the initial release and .cab files below, and then apply the latest cumulative update later.
+To install SQL Server 2017 Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding .cab files for R and Python support. An initial release is required before you can install any service updates.
+
+> [!Note]
+> SQL Server 2017 does not have service packs. It's the first release of SQL Server to use the initial release as the only base line, with servicing through cumulative updates only. 
 
 ### 1 - Download 2017 .cabs
 
-On a computer having an internet connection, download the .cab files used to install in-database analytics. 
+On a computer having an internet connection, download the .cab files providing R and Python support for in-database analytics. 
 
 Release  |Download link  |
 ---------|---------------|
@@ -58,8 +61,9 @@ Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?
 **SQL Server 2016 SP 1**     |
 Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
 Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
-**SQL Server 2016 SP 2**     |
-
+**SQL Server 2016 SP 2**  |
+Microsoft R Open     |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039)|
+Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 
 ### 2 - Get SQL Server 2016 installation media
 
@@ -69,11 +73,9 @@ One way to get an .iso file containing the installation media is through [Visual
 
 ## Transfer files
 
-Copy the SQL Server installation media (.iso or .cab) and in-database analytics .cab files to the target computer.
+Copy the SQL Server installation media (.iso or .cab) and in-database analytics .cab files to the target computer. Place the CAB files in a convenient folder such as **Downloads** or the setup user's temp folder: `C:\Users\<user-name>\AppData\Local\Temp`.
 
-Put the CAB files in a convenient folder such as **Downloads** or the setup user's temp folder: `C:\Users\<user-name>\AppData\Local\Temp`.
-
-Put the media file in the same folder on the target machine. 
+Place the installation media file in the same folder on the target machine. 
 
 ![List of files to be transferred](media/offline-file-list.png "File list")
 

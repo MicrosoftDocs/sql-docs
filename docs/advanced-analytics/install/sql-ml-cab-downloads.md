@@ -13,16 +13,16 @@ manager: cgronlun
 
 # CAB downloads for cumulative updates on SQL Server in-database analytics instances
 
-Database engine instances configured for in-database analytics have extra R and Python components in .cab file delivery, installed and serviced by SQL Server Setup. 
+Database engine instances configured for in-database analytics have extra R and Python components in CAB file delivery, installed and serviced by SQL Server Setup. 
 
-On servers connected to the internet, updates are typically applied through Windows update. Disconnected servers are updated manually. This article provides donwload links to .cab files for each cumulative update of SQL Server 2017 Machine Learning Services (R and Python) or SQL Server 2016 R Services so that you can update servers disconnected from the internet. 
+On servers connected to the internet, updates are typically applied through Windows update. Disconnected servers are updated manually. This article provides download links to CAB files for each cumulative update of SQL Server 2017 Machine Learning Services (R and Python) or SQL Server 2016 R Services so that you can update servers disconnected from the internet. 
 
 For SQL Server 2017 Machine Learning Services, the initial release is the baseline installation, over which you can install any cumulative update. 
-For SQL Server 2016 R Services, you can start with the initial release, SP 1, or SP 2. For more information about .cab file installation, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md).
+For SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. For more information about CAB file installation, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md).
 
 CAB files are listed in reverse chronological order. Put the CAB files in a convenient folder such as **Downloads** or the setup user's %temp% folder.
 
-## SQL Server 2017 .cabs
+## SQL Server 2017 CABs
 
 Release  |Download link  |
 ---------|---------|
@@ -65,13 +65,9 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 <a name="bkmk_2016Installers"></a>
 
-## SQL Server 2016 .cabs
+## SQL Server 2016 CABs
 
-For SQL Server 2016 R Services, baseline releases are either the RTM version or a service pack version. Cumulative updates 1-7 are installed over the RTM release. 
-
-> [!IMPORTANT]
-> 
-> When installing SQL Server 2016 SP1 CU4 or SP1 CU5 offline, download SRO_3.2.2.16000_1033.cab. If you downloaded SRO_3.2.2.13000_1033.cab from FWLINK 831785 as indicated in the setup dialog box, rename the file as SRO_3.2.2.16000_1033.cab before installing the Cumulative Update.
+For SQL Server 2016 R Services, baseline releases are either the RTM version or a service pack version.
 
 Release  |Download link  |
 ---------|---------------|
@@ -79,7 +75,7 @@ Release  |Download link  |
 Microsoft R Open     |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039)|
 Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 **SQL Server 2016 SP1 CU4-CU10**     |
-Microsoft R Open     |no change; use previous|
+Microsoft R Open     |no change; use previous [SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)
 **SQL Server 2016 SP1 CU1-CU3**     |
 Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
@@ -99,6 +95,10 @@ Microsoft R Server     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwli
 **SQL Server 2016 RTM**     |
 Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)
 Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)
+
+> [!NOTE]
+> 
+> When installing SQL Server 2016 SP1 CU4 or SP1 CU5 offline, download SRO_3.2.2.16000_1033.cab. If you downloaded SRO_3.2.2.13000_1033.cab from FWLINK 831785 as indicated in the setup dialog box, rename the file as SRO_3.2.2.16000_1033.cab before installing the Cumulative Update.
 
 If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 

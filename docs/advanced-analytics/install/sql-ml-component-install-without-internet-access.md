@@ -15,18 +15,18 @@ manager: cgronlun
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.
 
-In-database analytics consist of the database engine instance, plus additional components for R and Python integration. Language-specific features are added through .cab files. 
+In-database analytics consist of the database engine instance, plus additional components for R and Python integration. Language-specific features are added through CAB files. 
 
 ## SQL Server 2017 offline install
 
-To install SQL Server 2017 Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding .cab files for R and Python support. An initial release is required before you can install any service updates.
+To install SQL Server 2017 Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding CAB files for R and Python support. An initial release is required before you can install any service updates.
 
 > [!Note]
 > SQL Server 2017 does not have service packs. It's the first release of SQL Server to use the initial release as the only base line, with servicing through cumulative updates only. 
 
-### 1 - Download 2017 .cabs
+On a computer having an internet connection, download the CAB files providing R and Python support and the installation media for SQL Server 2017. 
 
-On a computer having an internet connection, download the .cab files providing R and Python support for in-database analytics. 
+### 1 - Download 2017 CABs
 
 Release  |Download link  |
 ---------|---------------|
@@ -37,8 +37,6 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ###  2 - Get SQL Server 2017 installation media
 
-Offline installation requires SQL Server installation media that you download to your computer. 
-
 1. On a computer having an internet connection, download the [SQL Server 2017 setup program](https://www.microsoft.com/sql-server/sql-server-downloads). 
 
 2. Double-click setup and choose the **Download Media** installation type. With this option, setup creates a local .iso (or .cab) file containing the installation media.
@@ -47,23 +45,17 @@ Offline installation requires SQL Server installation media that you download to
 
 ## SQL Server 2016 offline install
 
-SQL Server 2016 in-database analytics is R-only, with just two .cab files for product packages and Microsoft's distribution of open-source R, respectively. Start by installing any one of these releases: RTM, SP 1, SP 2. Once a base installation is in place, cumulative updates can be applied as a next step.
+SQL Server 2016 in-database analytics is R-only, with just two CAB files for product packages and Microsoft's distribution of open-source R, respectively. Start by installing any one of these releases: RTM, SP 1, SP 2. Once a base installation is in place, cumulative updates can be applied as a next step.
 
-### 1 - Download 2016 .cabs
+On a computer having an internet connection, download the CAB files used by setup to install in-database analytics on SQL Server 2016. 
 
-On a computer having an internet connection, download the .cab files used by setup to install in-database analytics. 
+### 1 - Download 2016 CABs
 
-Release  |Download link  |
----------|---------|
-**SQL Server 2016 RTM**     |
-Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)
-Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)
-**SQL Server 2016 SP 1**     |
-Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
-Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
-**SQL Server 2016 SP 2**  |
-Microsoft R Open     |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039)|
-Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
+Release  | Microsoft R Open | Microsoft R Server |
+---------|-----------------|---------------------|
+**SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
+**SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
+**SQL Server 2016 SP 2**  |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038) |
 
 ### 2 - Get SQL Server 2016 installation media
 
@@ -73,15 +65,13 @@ One way to get an .iso file containing the installation media is through [Visual
 
 ## Transfer files
 
-Copy the SQL Server installation media (.iso or .cab) and in-database analytics .cab files to the target computer. Place the CAB files in a convenient folder such as **Downloads** or the setup user's temp folder: `C:\Users\<user-name>\AppData\Local\Temp`.
-
-Place the installation media file in the same folder on the target machine. 
+Copy the SQL Server installation media (.iso or .cab) and in-database analytics CAB files to the target computer. Place the CAB files and installation media file in the same folder on the target machine, such as **Downloads** or the setup user's %temp* folder.
 
 ![List of files to be transferred](media/offline-file-list.png "File list")
 
 ## Run Setup
 
-When you run SQL Server setup on a computer disconnected from the internet, Setup adds an **Offline installation** page to the wizard so that you can specify the location of the .cab files you copied in the previous step.
+When you run SQL Server Setup on a computer disconnected from the internet, Setup adds an **Offline installation** page to the wizard so that you can specify the location of the CAB files you copied in the previous step.
 
 1. To begin installation, double-click the .iso or .cab file to access the installation media. You should see the **setup.exe** file.
 
@@ -89,7 +79,7 @@ When you run SQL Server setup on a computer disconnected from the internet, Setu
 
 3. When the setup wizard displays the licensing page for open source R or Python components, click  **Accept**. Acceptance of licensing terms allows you to proceed to the next step.
 
-4. In the **Offline installation** page, in **Install Path**, specify the folder containing the .cab files you copied earlier.
+4. When you get to the **Offline installation** page, in **Install Path**, specify the folder containing the CAB files you copied earlier.
 
    ![Wizard page for cab folder selection](media/screenshot-sql-offline-cab-page.png "CAB folder")
 
@@ -111,7 +101,7 @@ An initial offline installation of either SQL Server 2017 Machine Learning Servi
 
 Slipstream setup refers to the ability to apply a patch or update to a failed instance installation, to repair existing problems. The advantage of this method is that the SQL Server is updated at the same time that you perform setup, avoiding a separate restart later.
 
-When a server does not have Internet access, service updates are applied by downloading an updated SQL Server installer and corresponding versions of language-specific .cab files. 
+When a server does not have Internet access, service updates are applied by downloading an updated SQL Server installer and corresponding versions of language-specific CAB files. 
 
 1. Start with a baseline instance. Slipstream upgrades are supported on these releases of SQL Server:
 
@@ -125,9 +115,9 @@ When a server does not have Internet access, service updates are applied by down
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
 
-3. Get corresponding .cab files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
+3. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
 
-4. Place all files in the same folder, run Setup, selecting the folder location for the updated .cab files.
+4. Place all files in the same folder, run Setup, selecting the folder location for the updated CAB files.
 
 ## Next steps
 

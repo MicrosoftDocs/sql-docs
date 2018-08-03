@@ -1,7 +1,7 @@
 ﻿---
 title: "ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "08/02/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,7 +28,7 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016|| =azuresqldb-current|| =azure-sqldw-latest|| >=sql-server-2016|| =sqlallproducts-allversions|| >=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL)
 
@@ -38,8 +38,25 @@ Click one of the following tabs for the syntax, arguments, remarks, permissions,
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-# [SQL Server](#tab/sqlserver)
-  
+::: moniker range=">=sql-server-2016|| >=sql-server-linux-2017|| =sqlallproducts-allversions"
+
+> [!div class="nextstepaction"]
+> *SQL Server*
+
+> [!div class="nextstepaction"]
+> [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
+
+> [!div class="nextstepaction"]
+> [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+
+> [!div class="nextstepaction"]
+> [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
+
+> [!div class="nextstepaction"]
+> [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
+
+# SQL Server
+
 ## Overview
 
 In SQL Server, this statement modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
@@ -253,8 +270,24 @@ GO
 - [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [System Databases](../../relational-databases/databases/system-databases.md)  
-  
-# [SQL DB logical server](#tab/sqldbls)
+
+::: moniker-end
+::: moniker range="=azuresqldb-current|| =sqlallproducts-allversions"
+
+> [!div class="nextstepaction"]
+> [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
+
+> [!div class="nextstepaction"]
+> *SQL DB Logical Server*
+
+> [!div class="nextstepaction"]
+> [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+
+> [!div class="nextstepaction"]
+> [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
+
+> [!div class="nextstepaction"]
+> [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
 
 ## Overview
 
@@ -595,7 +628,23 @@ ALTER DATABASE db1 FAILOVER
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [System Databases](../../relational-databases/databases/system-databases.md)  
 
-# [SQL DB Managed Instance](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current|| =sqlallproducts-allversions"
+
+> [!div class="nextstepaction"]
+> [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
+
+> [!div class="nextstepaction"]
+> [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
+
+> [!div class="nextstepaction"]
+> *SQL DB Managed Instance*
+
+> [!div class="nextstepaction"]
+> [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
+
+> [!div class="nextstepaction"]
+> [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
 
 ## Overview
 
@@ -706,7 +755,25 @@ Only the server-level principal login (created by the provisioning process) or m
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [System Databases](../../relational-databases/databases/system-databases.md)  
 
-# [SQL Data Warehouse](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest|| =sqlallproducts-allversions"
+
+> [!div class="nextstepaction"]
+> [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
+
+> [!div class="nextstepaction"]
+> [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
+
+> [!div class="nextstepaction"]
+> [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+
+> [!div class="nextstepaction"]
+> *SQL Data Warehouse*
+
+> [!div class="nextstepaction"]
+> [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
+
+# SQL Data Warehouse
 
 ## Overview
 
@@ -812,8 +879,25 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
 [SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
   
+::: moniker-end
+::: moniker range="=aps-pdw-2016|| =sqlallproducts-allversions"
 
-# [SQL Parallel Data Warehouse](#tab/sqlpdw)
+> [!div class="nextstepaction"]
+> [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
+
+> [!div class="nextstepaction"]
+> [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
+
+> [!div class="nextstepaction"]
+> [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+
+> [!div class="nextstepaction"]
+> [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
+
+> [!div class="nextstepaction"]
+> *SQL Parallel Data Warehouse*
+
+# SQL Parallel Data Warehouse
 
 ## Overview
 
@@ -1012,5 +1096,6 @@ ALTER DATABASE CustomerSales
 ## See Also  
  [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
-  
- 
+
+::: moniker-end
+

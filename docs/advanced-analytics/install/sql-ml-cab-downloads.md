@@ -13,14 +13,14 @@ manager: cgronlun
 
 # CAB downloads for cumulative updates of SQL Server in-database analytics instances
 
-Database engine instances configured for in-database analytics have extra R and Python components in CAB files, installed and serviced by SQL Server Setup. 
+SQL Server instances configured for in-database analytics include R and Python features that ship in CAB files, installed and serviced through SQL Server Setup. 
 
-On servers connected to the internet, updates are typically applied through Windows update. Disconnected servers are updated manually. This article provides download links to CAB files for each cumulative update of SQL Server 2017 Machine Learning Services (R and Python) or SQL Server 2016 R Services so that you can mnaully update servers disconnected from the internet. 
+On servers connected to the internet, CAB updates are typically applied through Windows Update. Disconnected servers must be updated manually. This article provides download links to CAB files for each cumulative update of SQL Server 2017 Machine Learning Services (R and Python) or SQL Server 2016 R Services so that you can manually update servers disconnected from the internet. 
 
-For SQL Server 2017 Machine Learning Services, the initial release is the baseline installation, over which you can install any cumulative update. 
-For SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. For more information about CAB file installation, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md).
+Its important to know that you must start with a baseline installation. For SQL Server 2017 Machine Learning Services, the initial release is the baseline installation, over which you can install any cumulative update. 
+For SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. For more information about steps for CAB file installation, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#slipstream-upgrades).
 
-CAB files are listed in reverse chronological order. Put the CAB files in a convenient folder such as **Downloads** or the setup user's %temp% folder.
+CAB files are listed in reverse chronological order. When you download the CAB files and transfer them to the target computer, place them in a convenient folder such as **Downloads** or the setup user's %temp% folder.
 
 ## SQL Server 2017 CABs
 

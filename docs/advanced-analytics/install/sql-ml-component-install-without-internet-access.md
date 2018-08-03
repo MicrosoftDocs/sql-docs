@@ -10,12 +10,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Install SQL Server machine learning components without internet access
+# Install SQL Server machine learning R and Python features on computers with no internet access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.
 
-In-database analytics consist of the database engine instance, plus additional components for R and Python integration. Language-specific features are added through CAB files. 
+In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. SQL Server 2017 includes Python. SQL Server 2016 is R-only. R and Python language-specific features are added through CAB files. 
 
 ## SQL Server 2017 offline install
 
@@ -24,9 +24,9 @@ To install SQL Server 2017 Machine Learning Services (R and Python) on an isolat
 > [!Note]
 > SQL Server 2017 does not have service packs. It's the first release of SQL Server to use the initial release as the only base line, with servicing through cumulative updates only. 
 
-On a computer having an internet connection, download the CAB files providing R and Python support and the installation media for SQL Server 2017. 
-
 ### 1 - Download 2017 CABs
+
+On a computer having an internet connection, download the CAB files providing R and Python features for the initial release and the installation media for SQL Server 2017. 
 
 Release  |Download link  |
 ---------|---------------|
@@ -97,6 +97,8 @@ An initial offline installation of either SQL Server 2017 Machine Learning Servi
 + [Verify installation](sql-machine-learning-services-windows-install.md#verify-installation)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#verify-installation)).
 + [Additional configuration as needed](sql-machine-learning-services-windows-install.md#additional-configuration)  (for SQL Server 2016, click [here](sql-r-services-windows-install.md#bkmk_FollowUp)).
 
+<a name="slipstream-upgrades"></a>
+
 ## Slipstream upgrades
 
 Slipstream setup refers to the ability to apply a patch or update to a failed instance installation, to repair existing problems. The advantage of this method is that the SQL Server is updated at the same time that you perform setup, avoiding a separate restart later.
@@ -110,14 +112,14 @@ When a server does not have Internet access, service updates are applied by down
   + SQL Server 2016 SP 1
   + SQL Server 2016 SP 2
 
-2. Get an updated version of the SQL Server installer:
+2. Get an updated version of the SQL Server installer for a given cumulative update. Any update to the machine learning (R and Python) features is in tandem with CU applications to the underlying database engine instance.
 
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
 
 3. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
 
-4. Place all files in the same folder, run Setup, selecting the folder location for the updated CAB files.
+4. Place all files in the same folder, run Setup. During installation, you are prompted to choose the folder location for the updated CAB files.
 
 ## Next steps
 

@@ -38,12 +38,27 @@ Click one of the following tabs for the syntax, arguments, remarks, permissions,
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
+## TESTING HTML TABLE for Horizontal Buttons
+
+Click on whichever product you are interested in:
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB Logical Server</a></th>
+>   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB Managed Instance</a></th>
+>   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data Warehouse</a></th>
+>   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel Data Warehouse</a></th>
+> </tr>
+> </table>
+
 ::: moniker range=">=sql-server-2016|| >=sql-server-linux-2017|| =sqlallproducts-allversions"
 
 # SQL Server
 
 > [!div class="nextstepaction"]
-> [* ***SQL Server***](alter-database-transact-sql.md?view=azuresqldb-current)
+> [* ***SQL SERVER*** *](alter-database-transact-sql.md?view=azuresqldb-current)
 
 > [!div class="nextstepaction"]
 > [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
@@ -280,7 +295,7 @@ GO
 > [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
 
 > [!div class="nextstepaction"]
-> [* ***SQL DB Logical Server***](alter-database-transact-sql.md?view=azuresqldb-current)
+> [* ***SQL DB LOGICAL SERVER*** *](alter-database-transact-sql.md?view=azuresqldb-current)
 
 > [!div class="nextstepaction"]
 > [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -642,7 +657,7 @@ ALTER DATABASE db1 FAILOVER
 > [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
 
 > [!div class="nextstepaction"]
-> [* ***SQL DB Managed Instance***](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+> [* ***SQL DB MANAGED INSTANCE*** *](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 > [!div class="nextstepaction"]
 > [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -774,7 +789,7 @@ Only the server-level principal login (created by the provisioning process) or m
 > [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 > [!div class="nextstepaction"]
-> [* ***SQL Data Warehouse***](alter-database-transact-sql.md?view=azure-sqldw-latest)
+> [* ***SQL DATA WAREHOUSE*** *](alter-database-transact-sql.md?view=azure-sqldw-latest)
 
 > [!div class="nextstepaction"]
 > [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
@@ -881,8 +896,8 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## See Also  
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
-  
+[SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+ 
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016|| =sqlallproducts-allversions"
 
@@ -901,7 +916,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
 
 > [!div class="nextstepaction"]
-> [* ***SQL Parallel Data Warehouse***](alter-database-transact-sql.md?view=aps-pdw-2016)
+> [* ***SQL PARALLEL DATA WAREHOUSE*** *](alter-database-transact-sql.md?view=aps-pdw-2016)
 
 ## Overview
 

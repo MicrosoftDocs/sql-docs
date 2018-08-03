@@ -63,7 +63,7 @@ If Data Classification information is not available, an *Invalid Descriptor Fiel
 
 Upon successful call to SQLGetDescField the *ValuePtr* will contain the following data:
 
- `nn nn [n *sensitivitylabels*] tt tt [t *informationtype*s] cc cc [c *columnsensitivitys*]`
+ `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 *sensitivitylabel* and *informationtype*  are both of the form
 
@@ -71,7 +71,7 @@ Upon successful call to SQLGetDescField the *ValuePtr* will contain the followin
 
 *columnsensitivity* is of the form
 
- `nn nn [n *sensitivityprops*]`
+ `nn nn [n sensitivityprops]`
 
 For each column (c), n 4-byte 7 *sensitivityprops* are present:
 
@@ -85,9 +85,9 @@ Data can expressed using the following structs:
 ```
 struct IDnamePair {
  BYTE nameLen;
- BYTE name[nameLen];
+ USHORT name[nameLen];
  BYTE idLen;
- BYTE id[idLen];
+ USHORT id[idLen];
 };
 
 struct SensitivityProp {

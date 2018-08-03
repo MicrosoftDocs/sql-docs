@@ -40,8 +40,10 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ::: moniker range=">=sql-server-2016|| >=sql-server-linux-2017|| =sqlallproducts-allversions"
 
+# SQL Server
+
 > [!div class="nextstepaction"]
-> *SQL Server*
+> [* ***SQL Server***](alter-database-transact-sql.md?view=azuresqldb-current)
 
 > [!div class="nextstepaction"]
 > [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
@@ -54,8 +56,6 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 > [!div class="nextstepaction"]
 > [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
-
-# SQL Server
 
 ## Overview
 
@@ -274,11 +274,13 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current|| =sqlallproducts-allversions"
 
+# Azure SQL Database Logical Server
+
 > [!div class="nextstepaction"]
 > [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
 
 > [!div class="nextstepaction"]
-> *SQL DB Logical Server*
+> [* ***SQL DB Logical Server***](alter-database-transact-sql.md?view=azuresqldb-current)
 
 > [!div class="nextstepaction"]
 > [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -631,6 +633,8 @@ ALTER DATABASE db1 FAILOVER
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current|| =sqlallproducts-allversions"
 
+# Azure SQL Database Managed Instance
+
 > [!div class="nextstepaction"]
 > [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
 
@@ -638,7 +642,7 @@ ALTER DATABASE db1 FAILOVER
 > [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
 
 > [!div class="nextstepaction"]
-> *SQL DB Managed Instance*
+> [* ***SQL DB Managed Instance***](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 > [!div class="nextstepaction"]
 > [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -758,6 +762,8 @@ Only the server-level principal login (created by the provisioning process) or m
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest|| =sqlallproducts-allversions"
 
+# Azure SQL Data Warehouse
+
 > [!div class="nextstepaction"]
 > [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
 
@@ -768,12 +774,10 @@ Only the server-level principal login (created by the provisioning process) or m
 > [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 > [!div class="nextstepaction"]
-> *SQL Data Warehouse*
+> [* ***SQL Data Warehouse***](alter-database-transact-sql.md?view=azure-sqldw-latest)
 
 > [!div class="nextstepaction"]
 > [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
-
-# SQL Data Warehouse
 
 ## Overview
 
@@ -882,6 +886,8 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016|| =sqlallproducts-allversions"
 
+# SQL Parallel Data Warehouse
+
 > [!div class="nextstepaction"]
 > [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
 
@@ -895,9 +901,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
 
 > [!div class="nextstepaction"]
-> *SQL Parallel Data Warehouse*
-
-# SQL Parallel Data Warehouse
+> [* ***SQL Parallel Data Warehouse***](alter-database-transact-sql.md?view=aps-pdw-2016)
 
 ## Overview
 

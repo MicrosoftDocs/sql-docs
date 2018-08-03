@@ -43,10 +43,10 @@ SQLRETURN SQLGetDescField(
  [Input] IRD(Implementation Row Descriptor) handle. Can be retrieved by a call to SQLGetStmtAttr with SQL_ATTR_IMP_ROW_DESC statment attribute
   
  *RecNumber*  
- [Input] Should be set to 0
+ [Input] 0
   
  *FieldIdentifier*  
- [Input] Should be set to SQL_CA_SS_DATA_CLASSIFICATION
+ [Input] SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
  [Output] Output buffer
@@ -55,15 +55,17 @@ SQLRETURN SQLGetDescField(
  [Input] Length of output buffer in bytes
 
  *StringLengthPtr*
- [Output] Pointer to the buffer in which to return the total number of bytes (excluding the number of bytes required for the null-termination character) available to return in *ValuePtr.
+ [Output] Pointer to the buffer in which to return the total number of bytes available to return in *ValuePtr.
  
-Note: If the size of the buffer is unknown it can be determined by calling SQLGetDescField with *ValuePtr* as NULL and examining the value of *StringLengthPtr*.
+Note: If the size of the buffer is unknown, it can be determined by calling SQLGetDescField with *ValuePtr* as NULL and examining the value of *StringLengthPtr*.
  
 If Data Classification information is not available, an *Invalid Descriptor Field* error will be returned.
 
-Upon successful call to SQLGetDescField the *ValuePtr* will contain the following data:
+Upon a successful call to SQLGetDescField, the buffer pointed to by *ValuePtr* will contain the following data:
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
+
+Note: `nn nn`, `tt tt`, and `cc cc` are multibyte integers which are stored with the least significant byte at the lowest address.
 
 *sensitivitylabel* and *informationtype*  are both of the form
 
@@ -73,14 +75,17 @@ Upon successful call to SQLGetDescField the *ValuePtr* will contain the followin
 
  `nn nn [n sensitivityprops]`
 
-For each column (c), n 4-byte 7 *sensitivityprops* are present:
+For each column *(c)*, *n* 4-byte *sensitivityprops* are present:
 
  `ss ss tt tt`
 
 s - index into the *sensitivitylabels* array, FF FF if not labeled
+
 t - index into the *informationtypes* array, FF FF if not labeled
 
-Data can expressed using the following structs:
+
+<br><br>
+The format of the data can be expressed as the following pseudo-structures:
 
 ```
 struct IDnamePair {

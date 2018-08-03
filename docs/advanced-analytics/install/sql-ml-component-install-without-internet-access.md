@@ -67,6 +67,8 @@ One way to get an .iso file containing the installation media is through [Visual
 
 Copy the SQL Server installation media (.iso or .cab) and in-database analytics CAB files to the target computer. Place the CAB files and installation media file in the same folder on the target machine, such as **Downloads** or the setup user's %temp* folder.
 
+The following screenshot shows SQL Server 2017 CAB and ISO files. SQL Server 2016 does not include Python and has different filenames.
+
 ![List of files to be transferred](media/offline-file-list.png "File list")
 
 ## Run Setup
@@ -112,7 +114,7 @@ When a server does not have Internet access, service updates are applied by down
   + SQL Server 2016 SP 1
   + SQL Server 2016 SP 2
 
-2. Get an updated version of the SQL Server installer for a given cumulative update. Any update to the machine learning (R and Python) features is in tandem with CU applications to the underlying database engine instance.
+2. Get an updated version of the SQL Server installer for a given cumulative update. Any update to the machine learning (R and Python) features is in tandem with a cumulative update of the underlying database engine instance.
 
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)

@@ -43,13 +43,17 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
 > <tr>
->   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
->   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
->   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016&branch=pr-en-us-6724">SQL Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&branch=pr-en-us-6724">SQL DB<br />Logical Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current&branch=pr-en-us-6724">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&branch=pr-en-us-6724">SQL Data<br />Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016&branch=pr-en-us-6724">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
+
+&nbsp;
+
+&nbsp;
 
 ::: moniker range=">=sql-server-2016|| >=sql-server-linux-2017|| =sqlallproducts-allversions"
 
@@ -57,10 +61,10 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 > <table>
 > <tr>
 >   <th><strong><em>* SQL Server* </em></strong></a></th>
->   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
->   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
->   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&branch=pr-en-us-6724">SQL DB<br />Logical Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current&branch=pr-en-us-6724">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&branch=pr-en-us-6724">SQL Data<br />Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016&branch=pr-en-us-6724">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -283,6 +287,19 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current|| =sqlallproducts-allversions"
 
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016&branch=pr-en-us-6724">SQL Server</a></th>
+>   <th><strong><em>* SQL DB<br />Logical Server *</em></strong></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current&branch=pr-en-us-6724">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&branch=pr-en-us-6724">SQL Data<br />Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016&branch=pr-en-us-6724">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
 # Azure SQL Database Logical Server
 
 > [!div class="nextstepaction"]
@@ -442,7 +459,7 @@ Specifies the maximum size of the database. The maximum size must comply with th
 |1024 GB|N/A|√|√|√|√ (D)|  
 |From 1024 GB up to 4096 GB in increments of 256 GB*|N/A|N/A|N/A|N/A|√|√|  
   
-\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size.  P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU-based model, see [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).  
+\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size.  P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU-based model, see [DTU-based resource limits](https://review.docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).  
 
 The MAXSIZE value for the DTU-based model, if specified, has to be a valid value shown in the table above for the service tier specified.
  
@@ -469,7 +486,7 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Max data size (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
 
-If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitsations for  vCore-based model, see [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitsations for  vCore-based model, see [vCore-based resource limits](https://review.docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
   
 The following rules apply to MAXSIZE and EDITION arguments:  
   
@@ -488,7 +505,7 @@ ALTER DATABASE current
 
 Specifies the performance level. Available values for service objective are:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,	`GP_Gen5_4`,	`GP_Gen5_8`,	`GP_Gen5_16`,	`GP_Gen5_24`,	`GP_Gen5_32`,	`GP_Gen5_48`,	`GP_Gen5_80`, `BC_Gen5_2`,	`BC_Gen5_4`,	`BC_Gen5_8`,	`BC_Gen5_16`,	`BC_Gen5_24`,	`BC_Gen5_32`,	`BC_Gen5_48`,	`BC_Gen5_80`.  
 
-For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com. 
+For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits](https://review.docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore-based resource limits](https://review.docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com. 
   
 MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
 

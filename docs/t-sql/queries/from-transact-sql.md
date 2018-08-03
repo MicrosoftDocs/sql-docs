@@ -482,7 +482,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ### C. Using the SQL-92 CROSS JOIN syntax  
  The following example returns the cross product of the two tables `Employee` and `Department` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. A list of all possible combinations of `BusinessEntityID` rows and all `Department` name rows are returned.  
   
-```wql    
+```sql    
 SELECT e.BusinessEntityID, d.Name AS Department  
 FROM HumanResources.Employee AS e  
 CROSS JOIN HumanResources.Department AS d  

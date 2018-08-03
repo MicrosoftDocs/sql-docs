@@ -13,7 +13,7 @@ caps.latest.revision: 3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Cluster DTC for SQL Server 2016 Availability Groups
 

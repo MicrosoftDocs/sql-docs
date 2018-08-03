@@ -17,7 +17,7 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure Flexible Automatic Failover Policy
 

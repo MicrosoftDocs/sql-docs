@@ -16,7 +16,7 @@ caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure Replication for Always On Availability Groups (SQL Server)
 

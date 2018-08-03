@@ -13,7 +13,7 @@ caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: "erikre"
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Analysis Services with Always On Availability Groups
 

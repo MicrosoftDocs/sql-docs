@@ -1,4 +1,4 @@
----
+﻿---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2018"
@@ -62,7 +62,7 @@ caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -1373,12 +1373,12 @@ CREATE TABLE Person.ContactBackup
 GO  
   
 ALTER TABLE Person.ContactBackup  
-ADD CONSTRAINT FK_ContactBacup_Contact FOREIGN KEY (ContactID)  
+ADD CONSTRAINT FK_ContactBackup_Contact FOREIGN KEY (ContactID)  
     REFERENCES Person.Person (BusinessEntityID) ;  
 GO  
   
 ALTER TABLE Person.ContactBackup  
-DROP CONSTRAINT FK_ContactBacup_Contact ;  
+DROP CONSTRAINT FK_ContactBackup_Contact ;  
 GO  
   
 DROP TABLE Person.ContactBackup ;  

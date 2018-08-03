@@ -1,7 +1,7 @@
 ---
 title: "Using Basic Data Types | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2018"
+ms.date: "07/19/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -59,6 +59,8 @@ manager: craigg
 |varchar(max)|VARCHAR|String|  
 |xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String<br /><br /> SQLXML|  
 |sqlvariant|SQLVARIANT|Object|  
+|geometry|VARBINARY|byte[]|  
+|geography|VARBINARY|byte[]|  
   
  (1) To use java.sql.Time with the time [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type, you must set the **sendTimeAsDatetime** connection property to false.  
   

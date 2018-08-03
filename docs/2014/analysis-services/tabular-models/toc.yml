@@ -1,0 +1,240 @@
+- name: Tabular Modeling
+  href: tabular-models-ssas.md
+- name: Tabular Model Solutions
+  href: ../tabular-model-solutions-ssas-tabular.md
+- name: Tabular Model Designer
+  href: ../tabular-model-designer-ssas-tabular.md
+- name: Workspace Database
+  href: workspace-database-ssas-tabular.md
+- name: Compatibility Level
+  href: compatibility-level-for-tabular-models-in-analysis-services.md
+- name: Tabular Model Projects
+  href: tabular-model-projects-ssas-tabular.md
+  items:
+  - name: Create a NewTabular Model Project
+    href: create-a-new-tabular-model-project-analysis-services.md
+  - name: Import from Analysis Services
+    href: import-from-analysis-services-ssas-tabular.md
+  - name: Import from PowerPivot
+    href: import-from-power-pivot-ssas-tabular.md
+- name: Properties
+  href: properties-ssas-tabular.md
+  items:
+  - name: Power View Reporting Properties
+    href: power-view-reporting-properties-ssas-tabular.md
+    items:
+    - name: Configure Default Field Set for Power View Reports
+      href: power-view-configure-default-field-set-for-reports.md
+    - name: Configure Table Behavior Properties for Power View Reports
+      href: power-view-configure-table-behavior-properties-for-reports.md
+  - name: Project Properties
+    href: project-properties-ssas-tabular.md
+  - name: Model Properties
+    href: model-properties-ssas-tabular.md
+  - name: Table Properties
+    href: table-properties-ssas-tabular.md
+  - name: Column Properties
+    href: column-properties-ssas-tabular.md
+  - name: Configure Default Data Modeling and Deployment Properties
+    href: configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
+- name: Data Sources
+  href: ../data-sources-ssas-tabular.md
+  items:
+  - name: Data Sources Supported
+    href: data-sources-supported-ssas-tabular.md
+  - name: Data Types Supported
+    href: data-types-supported-ssas-tabular.md
+  - name: Impersonation
+    href: impersonation-ssas-tabular.md
+  - name: Import Data
+    href: ../import-data-ssas-tabular.md
+    items:
+    - name: Import from a Relational Data Source
+      href: ../import-from-a-relational-data-source-ssas-tabular.md
+    - name: Import from a Multidimensional Data Source
+      href: ../import-from-a-multidimensional-data-source-ssas-tabular.md
+    - name: Import from a Data Feed
+      href: ../import-from-a-data-feed-ssas-tabular.md
+    - name: Import from a Text File
+      href: ../import-from-a-text-file-ssas-tabular.md
+    - name: Copy and Paste Data
+      href: ../copy-and-paste-data-ssas-tabular.md
+  - name: Process Data
+    href: ../process-data-ssas-tabular.md
+    items:
+    - name: Manually Process Data
+      href: ../manually-process-data-ssas-tabular.md
+    - name: Troubleshoot Process Data
+      href: ../troubleshoot-process-data-ssas-tabular.md
+  - name: Edit an Existing Data Source Connection
+    href: ../edit-an-existing-data-source-connection-ssas-tabular.md
+- name: DirectQuery Mode
+  href: directquery-mode-ssas-tabular.md
+  items:
+  - name: Partitions and DirectQuery Mode
+    href: define-partitions-in-directquery-models-ssas-tabular.md
+  - name: Enable DirectQuery Design Mode
+    href: enable-directquery-mode-in-ssdt.md
+  - name: Change the DirectQuery Partition
+    href: ../change-the-directquery-partition-ssas-tabular.md
+  - name: Set or Change the Preferred Connection Method for DirectQuery
+    href: ../set-or-change-the-preferred-connection-method-for-directquery.md
+  - name: DirectQuery Deployment Scenario
+    href: ../directquery-deployment-scenarios-ssas-tabular.md
+  - name: DAX Formula Compatibility in DirectQuery Mode (SSAS 2014)
+    href: ../dax-formula-compatibility-in-directquery-mode-ssas-2014.md
+- name: Tables and Columns
+  href: tables-and-columns-ssas-tabular.md
+  items:
+  - name: Add Columns to a Table
+    href: add-columns-to-a-table-ssas-tabular.md
+  - name: Delete a Column
+    href: delete-a-column-ssas-tabular.md
+  - name: Change table, column, or row filter mappings
+    href: change-table-column-or-row-filter-mappings-ssas-tabular.md
+  - name: Specify Mark as Date Table for use with Time Intelligence (SSAS Tabular)
+    href: specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
+  - name: Add a Table
+    href: add-a-table-ssas-tabular.md
+  - name: Delete a Table
+    href: delete-a-table-ssas-tabular.md
+  - name: Rename a Table or Column
+    href: rename-a-table-or-column-ssas-tabular.md
+  - name: Set the Data Type of a Column
+    href: set-the-data-type-of-a-column-ssas-tabular.md
+  - name: Hide or Freeze Columns
+    href: hide-or-freeze-columns-ssas-tabular.md
+  - name: Calculated Columns
+    href: ssas-calculated-columns.md
+    items:
+    - name: Create a Calculated Column
+      href: ssas-calculated-columns-create-a-calculated-column.md
+  - name: Filter and Sort Data
+    href: ../filter-and-sort-data-ssas-tabular.md
+    items:
+    - name: Sort Data in a Table
+      href: sort-data-in-a-table-ssas-tabular.md
+    - name: Filter Data in a Table
+      href: filter-data-in-a-table-ssas-tabular.md
+- name: Relationships
+  href: relationships-ssas-tabular.md
+  items:
+  - name: Create a Relationship Between Two Tables
+    href: create-a-relationship-between-two-tables-ssas-tabular.md
+  - name: Delete Relationships
+    href: delete-relationships-ssas-tabular.md
+- name: Calculations
+  href: calculations-ssas-tabular.md
+  items:
+  - name: Understanding DAX in Tabular Models
+    href: understanding-dax-in-tabular-models-ssas-tabular.md
+- name: Measures
+  href: measures-ssas-tabular.md
+  items:
+  - name: Create and Manage Measures
+    href: create-and-manage-measures-ssas-tabular.md
+- name: KPIs
+  href: kpis-ssas-tabular.md
+  items:
+  - name: Create and Manage KPIs
+    href: create-and-manage-kpis-ssas-tabular.md
+- name: Hierarchies
+  href: hierarchies-ssas-tabular.md
+  items:
+  - name: Create and Manage Hierarchies
+    href: create-and-manage-hierarchies-ssas-tabular.md
+- name: Partitions
+  href: partitions-ssas-tabular.md
+  items:
+  - name: Create and Manage Partitions in the Workspace Database
+    href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
+  - name: Process Partitions in the Workspace Database
+    href: process-partitions-in-the-workspace-databse-ssas-tabular.md
+- name: Perspectives
+  href: perspectives-ssas-tabular.md
+  items:
+  - name: Create and Manage Perspectives
+    href: create-and-manage-perspectives-ssas-tabular.md
+- name: Roles
+  href: roles-ssas-tabular.md
+  items:
+  - name: Create and Manage Roles
+    href: create-and-manage-roles-ssas-tabular.md
+- name: Analyze in Excel
+  href: analyze-in-excel-ssas-tabular.md
+  items:
+  - name: Analyze a Tabular Model in Excel
+    href: analyze-a-tabular-model-in-excel-ssas-tabular.md
+- name: Tabular Model Solution Deployment
+  href: tabular-model-solution-deployment-ssas-tabular.md
+  items:
+  - name: Deploy From SQL Server Data Tools
+    href: deploy-from-sql-server-data-tools-ssas-tabular.md
+  - name: Deploy Model Solutions Using the Deployment Wizard
+    href: ../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md
+    items:
+    - name: Running the Analysis Services Deployment Wizard
+      href: ../multidimensional-models/running-the-analysis-services-deployment-wizard.md
+    - name: Understanding the Input Files Used to Create the Deployment Script
+      href: ../multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md
+  - name: Specifying the Installation Target
+    href: ../multidimensional-models/deployment-script-files-specifying-the-installation-target.md
+  - name: Specifying Partition and Role Deployment Options
+    href: ../multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md
+  - name: Specifying Configuration Settings for Solution Deployment
+    href: ../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md
+  - name: Specifying Processing Options
+    href: ../multidimensional-models/deployment-script-files-specifying-processing-options.md
+    items:
+    - name: Understanding the Analysis Services Deployment Script
+      href: ../multidimensional-models/understanding-the-analysis-services-deployment-script.md
+  - name: Deploy Model Solutions with the Deployment Utility
+    href: ../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md
+  - name: Deploy Model Solutions Using XMLA
+    href: ../multidimensional-models/deploy-model-solutions-using-xmla.md
+- name: String Storage and Collation in Tabular Models
+  href: string-storage-and-collation-in-tabular-models.md
+- name: Process Database, Table, or Partition
+  href: process-database-table-or-partition-analysis-services.md
+- name: Tabular Model Roles
+  href: tabular-model-roles-ssas-tabular.md
+  items:
+  - name: Manage Roles by using SSMS
+    href: manage-roles-by-using-ssms-ssas-tabular.md
+- name: Tabular Model Partitions
+  href: tabular-model-partitions-ssas-tabular.md
+  items:
+  - name: Create and Manage Tabular Model Partitions
+    href: create-and-manage-tabular-model-partitions-ssas-tabular.md
+  - name: Process Tabular Model Partitions
+    href: process-tabular-model-partitions-ssas-tabular.md
+- name: Tabular Model Databases
+  href: tabular-model-databases-ssas-tabular.md
+  items:
+  - name: Configure In-Memory or DirectQuery Access for a Tabular Model Database
+    href: enable-directquery-mode-in-ssms.md
+  - name: Connect to a Tabular Model Database
+    href: connect-to-a-tabular-model-database-ssas.md
+  - name: Restore from PowerPivot
+    href: restore-from-power-pivot.md
+  - name: Move an Analysis Services Database
+    href: ../multidimensional-models/move-an-analysis-services-database.md
+  - name: Synchronize Analysis Services Databases
+    href: ../multidimensional-models/synchronize-analysis-services-databases.md
+  - name: Switch ReadOnly and ReadWrite modes
+    href: ../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
+  - name: Modify or Delete an Analysis Services Database
+    href: ../multidimensional-models/modify-or-delete-an-analysis-services-database.md
+  - name: Document and Script an Analysis Services Database
+    href: ../multidimensional-models/document-and-script-an-analysis-services-database.md
+  - name: Backup and Restore of Analysis Services Databases
+    href: ../multidimensional-models/backup-and-restore-of-analysis-services-databases.md
+    items:
+    - name: Backup Options
+      href: ../multidimensional-models/backup-options.md
+    - name: Restore Options
+      href: ../multidimensional-models/restore-options.md
+  - name: Attach and Detach Analysis Services Databases
+    href: ../multidimensional-models/attach-and-detach-analysis-services-databases.md
+- name: Tabular Model Data Access
+  href: tabular-model-data-access.md

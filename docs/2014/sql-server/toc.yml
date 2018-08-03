@@ -1,0 +1,10 @@
+- name: What's New in SQL Server 2014
+  href: what-s-new-in-sql-server-2016.md
+- name: High Availability Solutions +
+  href: failover-clusters/high-availability-solutions-sql-server.md
+- name: Compute Capacity Limits by Edition of SQL Server 2014
+  href: compute-capacity-limits-by-edition-of-sql-server.md
+- name: Editions and Components
+  href: editions-and-components-of-sql-server-2016.md
+- name: Maximum Capacity Specifications
+  href: maximum-capacity-specifications-for-sql-server.md

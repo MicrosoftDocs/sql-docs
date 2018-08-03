@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/26/2018"
+ms.date: "07/20/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -39,9 +39,9 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 17.x is the latest generation of *SQL Server Management Studio* and provides support for SQL Server 2017.
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802) (no previous version of SSMS 17.x is required on the computer)**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1 Upgrade Package (upgrades 17.x to 17.8.1)](https://go.microsoft.com/fwlink/?linkid=875804)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.8.1 Upgrade Package](https://go.microsoft.com/fwlink/?linkid=875804) (upgrades 17.x to 17.8.1; a previous version of SSMS 17.x is required on the computer)**
 
 
 **Version Information**
@@ -136,11 +136,16 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 ## Release Notes
 
-The following are issues and limitations with this 17.8 release:
+The following are issues and limitations with this 17.8.1 release:
 
 - Clicking the *Script* button after modifying any filegroup property in the *Properties* window, generates two scripts – one script with a *USE <database>* statement, and a second script with a *USE master* statement.  The script with *USE master* is generated in error and should be discarded. Run the script that contains the *USE <database>* statement.
 - Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
-- Some latency in XEvents viewer may be observed. This is a [known issue in the .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Please, consider upgrading to NetFx 4.7.2.
+- Some latency in XEvents viewer may be observed. This is a [known issue in the .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Please, consider upgrading to NetFx 4.7.2.
+- Replication Monitor crashes with a *Could not load file or assembly...* error. To workaround this issue:
+  1. Close *SqlMonitor.exe* (i.e. Repl Monitor) and SSMS.
+  2. Download the updated *sqlmonitor.exe.config* from [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw).
+  3. Replace *sqlmonitor.exe.config* (it is usually under "C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn") with the one you downloaded.
+  4. Restart SSMS and/or Replication Monitor.
 
 
 ## Uninstall and reinstall SSMS

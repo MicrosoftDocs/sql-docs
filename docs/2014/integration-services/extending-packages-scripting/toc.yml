@@ -1,0 +1,224 @@
+- name: Extending Packages with Scripting
+  href: extending-packages-with-scripting.md
+- name: Comparing the Script Task and the Script Component
+  href: comparing-the-script-task-and-the-script-component.md
+- name: Comparing Scripting Solutions and Custom Objects
+  href: comparing-scripting-solutions-and-custom-objects.md
+- name: Referencing Other Assemblies in Scripting Solutions
+  href: referencing-other-assemblies-in-scripting-solutions.md
+- name: Debug a Script by Setting Breakpoints in a Script Task and Script Component
+  href: debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md
+- name: Extending the Package with the Script Task
+  href: task/extending-the-package-with-the-script-task.md
+  items:
+  - name: Configuring the Script Task in the Script Task Editor
+    href: task/configuring-the-script-task-in-the-script-task-editor.md
+  - name: Coding and Debugging the Script Task
+    href: task/coding-and-debugging-the-script-task.md
+  - name: Using Variables in the Script Task
+    href: task/using-variables-in-the-script-task.md
+  - name: Connecting to Data Sources in the Script Task
+    href: task/connecting-to-data-sources-in-the-script-task.md
+  - name: Raising Events in the Script Task
+    href: task/raising-events-in-the-script-task.md
+  - name: Logging in the Script Task
+    href: task/logging-in-the-script-task.md
+  - name: Returning Results from the Script Task
+    href: task/returning-results-from-the-script-task.md
+- name: Script Task Examples
+  href: ../extending-packages-scripting-task-examples/script-task-examples.md
+  items:
+  - name: Detecting an Empty Flat File with the Script Task
+    href: ../extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task.md
+  - name: Gathering a List for the ForEach Loop with the Script Task
+    href: ../extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md
+  - name: Querying the Active Directory with the Script Task
+    href: ../extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md
+  - name: Monitoring Performance Counters with the Script Task
+    href: ../extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md
+  - name: Working with Images with the Script Task
+    href: ../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md
+  - name: Finding Installed Printers with the Script Task
+    href: ../extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md
+  - name: Sending an HTML Mail Message with the Script Task
+    href: ../extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md
+  - name: Working with Excel Files with the Script Task
+    href: ../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md
+  - name: Sending to a Remote Private Message Queue with the Script Task
+    href: ../extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md
+- name: Extending the Data Flow with the Script Component
+  href: data-flow-script-component/extending-the-data-flow-with-the-script-component.md
+  items:
+  - name: Configuring the Script Component in the Script Component Editor
+    href: data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md
+  - name: Coding and Debugging the Script Component
+    href: data-flow-script-component/coding-and-debugging-the-script-component.md
+  - name: Understanding the Script Component Object Model
+    href: data-flow-script-component/understanding-the-script-component-object-model.md
+  - name: Using Variables in the Script Component
+    href: data-flow-script-component/using-variables-in-the-script-component.md
+  - name: Connecting to Data Sources in the Script Component
+    href: data-flow-script-component/connecting-to-data-sources-in-the-script-component.md
+  - name: Raising Events in the Script Component
+    href: data-flow-script-component/raising-events-in-the-script-component.md
+  - name: Logging in the Script Component
+    href: data-flow-script-component/logging-in-the-script-component.md
+- name: Developing Specific Types of Script Components
+  href: ../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md
+  items:
+  - name: Creating a Source with the Script Component
+    href: ../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md
+  - name: Creating a Synchronous Transformation with the Script Component
+    href: ../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md
+  - name: Creating an Asynchronous Transformation with the Script Component
+    href: ../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md
+  - name: Creating a Destination with the Script Component
+    href: ../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md
+- name: Additional Script Component Examples
+  href: ../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md
+  items:
+  - name: Simulating an Error Output for the Script Component
+    href: ../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md
+  - name: Enhancing an Error Output with the Script Component
+    href: ../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md
+  - name: Creating an ODBC Destination with the Script Component
+    href: ../extending-packages-scripting-data-flow-script-component-examples/creating-an-odbc-destination-with-the-script-component.md
+  - name: Parsing Non-Standard Text File Formats with the Script Component
+    href: ../extending-packages-scripting-data-flow-script-component-examples/parsing-non-standard-text-file-formats-with-the-script-component.md
+- name: Extending Packages with Custom Objects
+  href: ../extending-packages-custom-objects/extending-packages-with-custom-objects.md
+  items:
+  - name: Developing Custom Objects for Integration Services
+    href: ../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md
+  - name: Persisting Custom Objects
+    href: ../extending-packages-custom-objects/persisting-custom-objects.md
+  - name: Building, Deploying, and Debugging Custom Objects
+    href: ../extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md
+  - name: Developing a Custom Task
+    href: ../extending-packages-custom-objects/task/developing-a-custom-task.md
+  - name: Creating a Custom Task
+    href: ../extending-packages-custom-objects/task/creating-a-custom-task.md
+  - name: Coding a Custom Task
+    href: ../extending-packages-custom-objects/task/coding-a-custom-task.md
+  - name: Connecting to Data Sources in a Custom Task
+    href: ../extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md
+  - name: Raising and Defining Events in a Custom Task
+    href: ../extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md
+  - name: Adding Support for Debugging in a Custom Task
+    href: ../extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md
+  - name: Developing a User Interface for a Custom Task
+    href: ../extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md
+  - name: Developing a Custom Connection Manager
+    href: ../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md
+  - name: Creating a Custom Connection Manager
+    href: ../extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md
+  - name: Coding a Custom Connection Manager
+    href: ../extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md
+  - name: Developing a User Interface for a Custom Connection Manager
+    href: ../extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md
+- name: Developing a Custom Log Provider
+  href: ../extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md
+  items:
+  - name: Creating a Custom Log Provider
+    href: ../extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md
+  - name: Coding a Custom Log Provider
+    href: ../extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md
+  - name: Developing a User Interface for a Custom Log Provider
+    href: ../extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md
+- name: Developing a Custom ForEach Enumerator
+  href: ../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md
+  items:
+  - name: Creating a Custom Foreach Enumerator
+    href: ../extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md
+  - name: Coding a Custom Foreach Enumerator
+    href: ../extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md
+  - name: Developing a User Interface for a Custom ForEach Enumerator
+    href: ../extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md
+- name: Developing a Custom Data Flow Component
+  href: ../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md
+  items:
+  - name: Creating a Custom Data Flow Component
+    href: ../extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md
+  - name: Design-time Methods of a Data Flow Component
+    href: ../extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md
+  - name: Run-time Methods of a Data Flow Component
+    href: ../extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md
+  - name: Execution Plan and Buffer Allocation
+    href: ../extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md
+  - name: Working with Data Types in the Data Flow
+    href: ../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md
+  - name: Validating a Data Flow Component
+    href: ../extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md
+  - name: Implementing External Metadata
+    href: ../extending-packages-custom-objects/data-flow/implementing-external-metadata.md
+  - name: Raising and Defining Events in a Data Flow Component
+    href: ../extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md
+  - name: Logging and Defining Log Entries in a Data Flow Component
+    href: ../extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md
+  - name: Using Error Outputs in a Data Flow Component
+    href: ../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md
+  - name: Upgrading the Version of a Data Flow Component
+    href: ../extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md
+  - name: Developing a User Interface for a Data Flow Component
+    href: ../extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md
+- name: Developing Specific Types of Data Flow Components
+  href: ../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md
+  items:
+  - name: Developing a Custom Source Component
+    href: ../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md
+  - name: Developing a Custom Transformation Component with Synchronous Outputs
+    href: ../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md
+  - name: Developing a Custom Transformation Component with Asynchronous Outputs
+    href: ../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md
+  - name: Developing a Custom Destination Component
+    href: ../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md
+  - name: Developing Data Flow Components with Multiple Inputs
+    href: ../extending-packages-custom-objects-data-flow-types/developing-data-flow-components-with-multiple-inputs.md
+- name: Building Packages Programmatically
+  href: ../building-packages-programmatically/building-packages-programmatically.md
+  items:
+  - name: Creating a Package Programmatically
+    href: ../building-packages-programmatically/creating-a-package-programmatically.md
+  - name: Adding Tasks Programmatically
+    href: ../building-packages-programmatically/adding-tasks-programmatically.md
+  - name: Connecting Tasks Programmatically
+    href: ../building-packages-programmatically/connecting-tasks-programmatically.md
+  - name: Adding Connections Programmatically
+    href: ../building-packages-programmatically/adding-connections-programmatically.md
+  - name: Working with Variables Programmatically
+    href: ../building-packages-programmatically/working-with-variables-programmatically.md
+  - name: Handling Events Programmatically
+    href: ../building-packages-programmatically/handling-events-programmatically.md
+  - name: Enabling Logging Programmatically
+    href: ../building-packages-programmatically/enabling-logging-programmatically.md
+  - name: Adding the Data Flow Task Programmatically
+    href: ../building-packages-programmatically/adding-the-data-flow-task-programmatically.md
+  - name: Discovering Data Flow Components Programmatically
+    href: ../building-packages-programmatically/discovering-data-flow-components-programmatically.md
+  - name: Adding Data Flow Components Programmatically
+    href: ../building-packages-programmatically/adding-data-flow-components-programmatically.md
+  - name: Connecting Data Flow Components Programmatically
+    href: ../building-packages-programmatically/connecting-data-flow-components-programmatically.md
+  - name: Selecting Input Columns Programmatically
+    href: ../building-packages-programmatically/selecting-input-columns-programmatically.md
+  - name: Saving a Package Programmatically
+    href: ../building-packages-programmatically/saving-a-package-programmatically.md
+- name: Running and Managing Packages Programmatically
+  href: ../run-manage-packages-programmatically/running-and-managing-packages-programmatically.md
+  items:
+  - name: Understanding the Differences between Local and Remote Execution
+    href: ../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md
+  - name: Loading and Running a Local Package Programmatically
+    href: ../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md
+  - name: Loading and Running a Remote Package Programmatically
+    href: ../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md
+  - name: Loading the Output of a Local Package
+    href: ../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md
+  - name: Enumerating Available Packages Programmatically
+    href: ../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md
+  - name: Managing Packages and Folders Programmatically
+    href: ../run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md
+  - name: Managing Running Packages Programmatically
+    href: ../run-manage-packages-programmatically/managing-running-packages-programmatically.md
+  - name: Managing Package Roles Programmatically (SSIS Service)
+    href: ../run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Configure Replication for Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/09/2018"
@@ -16,7 +16,7 @@ caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Configure Replication for Always On Availability Groups (SQL Server)
 

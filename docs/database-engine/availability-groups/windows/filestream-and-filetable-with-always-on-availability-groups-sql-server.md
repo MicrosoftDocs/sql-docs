@@ -1,4 +1,4 @@
----
+﻿---
 title: "FILESTREAM and FileTable with Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
@@ -17,7 +17,7 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # FILESTREAM and FileTable with Always On Availability Groups (SQL Server)
 

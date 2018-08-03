@@ -1,4 +1,4 @@
----
+﻿---
 title: "Change the HADR Cluster Context of Server Instance (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
@@ -16,7 +16,7 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Change the HADR Cluster Context of Server Instance (SQL Server)
 

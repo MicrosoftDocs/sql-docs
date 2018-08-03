@@ -1,4 +1,4 @@
----
+﻿---
 title: "The Database Mirroring Endpoint (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +20,7 @@ caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # The Database Mirroring Endpoint (SQL Server)
 

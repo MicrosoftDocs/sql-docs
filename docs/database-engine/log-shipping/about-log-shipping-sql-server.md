@@ -1,4 +1,4 @@
----
+﻿---
 title: "About Log Shipping (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
@@ -28,7 +28,7 @@ caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # About Log Shipping (SQL Server)
 

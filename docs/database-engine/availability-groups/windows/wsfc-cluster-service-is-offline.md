@@ -1,4 +1,4 @@
----
+﻿---
 title: "WSFC cluster service is offline | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
@@ -17,7 +17,7 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # WSFC cluster service is offline
 

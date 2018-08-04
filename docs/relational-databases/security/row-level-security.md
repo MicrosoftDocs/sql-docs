@@ -1,4 +1,4 @@
----
+﻿---
 title: "Row-Level Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"
@@ -20,7 +20,7 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Row-Level Security
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

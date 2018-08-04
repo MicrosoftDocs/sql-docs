@@ -1,4 +1,4 @@
----
+﻿---
 title: "Targets for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2018"
@@ -14,7 +14,7 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Targets for Extended Events in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

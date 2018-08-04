@@ -27,7 +27,7 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.column_encryption_keys  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]

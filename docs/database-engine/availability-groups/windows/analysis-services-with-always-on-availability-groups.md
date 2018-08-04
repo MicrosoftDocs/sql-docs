@@ -1,4 +1,4 @@
----
+﻿---
 title: "Analysis Services with Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
@@ -13,7 +13,7 @@ caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: "erikre"
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Analysis Services with Always On Availability Groups
 

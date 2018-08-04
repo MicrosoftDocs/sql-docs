@@ -1,4 +1,4 @@
----
+﻿---
 title: "Failover Clustering and Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/02/2017"
@@ -20,7 +20,7 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Failover Clustering and Always On Availability Groups (SQL Server)
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2018"
@@ -22,7 +22,7 @@ caps.latest.revision: 10
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]

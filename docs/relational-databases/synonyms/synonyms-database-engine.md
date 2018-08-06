@@ -1,4 +1,4 @@
----
+﻿---
 title: "Synonyms (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -18,7 +18,7 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Synonyms (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

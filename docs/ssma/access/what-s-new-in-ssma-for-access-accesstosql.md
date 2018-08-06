@@ -2,7 +2,7 @@
 title: "What's New in SSMA for Access(AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "03/01/2018"
+ms.date: "08/05/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma

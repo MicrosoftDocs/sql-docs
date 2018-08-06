@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server Audit (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/21/2016"
@@ -19,7 +19,7 @@ caps.latest.revision: 58
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

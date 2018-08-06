@@ -1,4 +1,4 @@
----
+﻿---
 title: "Graph processing with SQL Server and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
@@ -19,7 +19,7 @@ caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Graph processing with SQL Server and Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

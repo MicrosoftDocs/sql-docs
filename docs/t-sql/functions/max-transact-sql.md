@@ -59,6 +59,8 @@ MAX ( [ ALL | DISTINCT ] expression )
   
 ## Remarks  
  MAX ignores any null values.  
+ 
+ MAX returns NULL when there is no row to select.  
   
  For character columns, MAX finds the highest value in the collating sequence.  
   

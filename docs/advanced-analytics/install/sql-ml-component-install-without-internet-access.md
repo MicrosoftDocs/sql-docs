@@ -15,11 +15,16 @@ manager: cgronlun
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.
 
-In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. SQL Server 2017 includes Python. SQL Server 2016 is R-only. R and Python language-specific features are added through CAB files. 
+In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. 
+
++ SQL Server 2017 includes R and Python. 
++ SQL Server 2016 is R-only. 
+
+On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
 
 ## SQL Server 2017 offline install
 
-To install SQL Server 2017 Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding CAB files for R and Python support. An initial release is required before you can install any service updates.
+To install SQL Server 2017 Machine Learning Services (R and Python) on an isolated server, start by downloading the initial release of SQL Server and the corresponding CAB files for R and Python support. Even if you plan to immediately update your server to use the latest cumulative update, an initial release must be installed first.
 
 > [!Note]
 > SQL Server 2017 does not have service packs. It's the first release of SQL Server to use the initial release as the only base line, with servicing through cumulative updates only. 
@@ -67,7 +72,7 @@ One way to get an .iso file containing the installation media is through [Visual
 
 Copy the SQL Server installation media (.iso or .cab) and in-database analytics CAB files to the target computer. Place the CAB files and installation media file in the same folder on the target machine, such as **Downloads** or the setup user's %temp* folder.
 
-The following screenshot shows SQL Server 2017 CAB and ISO files. SQL Server 2016 does not include Python and has different filenames.
+The following screenshot shows SQL Server 2017 CAB and ISO files. SQL Server 2016 downloads look different: fewer files (no Python), and the installation media file name is for 2016.
 
 ![List of files to be transferred](media/offline-file-list.png "File list")
 

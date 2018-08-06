@@ -55,7 +55,7 @@ SET XACT_ABORT { ON | OFF }
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-SET XACT_ABORT ON   
+SET XACT_ABORT { ON | OFF }  
 ```  
   
 ## Remarks  

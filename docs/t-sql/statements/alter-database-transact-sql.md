@@ -38,20 +38,42 @@ Click one of the following tabs for the syntax, arguments, remarks, permissions,
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-## Click on whichever product you are interested in:
+## Click a product
 
-&nbsp;
+In the following row, click whichever product you are interested in:
+
 
 ::: moniker range=">=sql-server-2016|| >=sql-server-linux-2017|| =sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
 > <tr>
->   <th><strong><em>* SQL Server* </em></strong></a></th>
+>   <th>__________________</th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th>|                |</th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>| * SQL Server * |</em></strong></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> <tr>
+>   <th>|________________|</th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
 > </tr>
 > </table>
 

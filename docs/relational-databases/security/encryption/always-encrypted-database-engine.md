@@ -60,7 +60,7 @@ For details of how to develop applications using Always Encrypted with particula
 
 ## Remarks
 
-Decryption occurs via the client. This means that some actions that that occur only server-side will not work when using Always Encrypted. 
+Decryption occurs via the client. This means that some actions that occur only server-side will not work when using Always Encrypted. 
 
 Here's an example of an update that attempts to move data from an encrypted column to an unencrypted column without returning a result set to the client: 
 

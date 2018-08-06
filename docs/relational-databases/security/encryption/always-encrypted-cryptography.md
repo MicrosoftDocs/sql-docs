@@ -1,4 +1,4 @@
----
+﻿---
 title: "Always Encrypted Cryptography | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/29/2016"
@@ -14,7 +14,7 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Always Encrypted Cryptography
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

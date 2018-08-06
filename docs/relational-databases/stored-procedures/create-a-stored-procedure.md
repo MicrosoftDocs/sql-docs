@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -16,7 +16,7 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Create a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

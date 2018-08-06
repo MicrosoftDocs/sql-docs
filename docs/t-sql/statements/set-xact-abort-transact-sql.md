@@ -46,17 +46,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
+```    
 SET XACT_ABORT { ON | OFF }  
 ```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET XACT_ABORT ON   
-```  
+
   
 ## Remarks  
  When SET XACT_ABORT is ON, if a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement raises a run-time error, the entire transaction is terminated and rolled back.  

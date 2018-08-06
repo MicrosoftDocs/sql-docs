@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
 ms.custom: ""
@@ -25,7 +25,7 @@ caps.latest.revision: 37
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

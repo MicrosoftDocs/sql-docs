@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted API Reference for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/06/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -90,8 +90,8 @@ manager: craigg
   
 |Name|Description|  
 |----------|-----------------|  
-|public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|Decrypts the specified encrypted value of a column encryption key. The encrypted value is expected to be encrypted using the specified column key IDmaster key and using the specified algorithm. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)|Encrypts a column encryption key using the specified column master key and using the specified algorithm. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+| public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey) | Decryptes an encrypted column encryption key (CEK). This decryption is accomplished with an RSA encryption algorithm that uses the asymmetric key specified by the master key path.<br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).) |  
+| public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey) | Encrypts a column encryption key, by giving the specified column master key to the specified algorithm.<br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).) |  
 |public void setName (String name)|Sets the name of this key store provider.|
 |public String getName ()|Gets the name of this key store provider.|  
   

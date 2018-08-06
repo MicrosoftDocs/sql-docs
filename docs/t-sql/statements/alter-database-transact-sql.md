@@ -1,7 +1,7 @@
 ﻿---
 title: "ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/02/2018"
+ms.date: "08/06/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,7 +28,7 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">=aps-pdw-2016|| =azuresqldb-current|| =azure-sqldw-latest|| >=sql-server-2016|| =sqlallproducts-allversions|| >=sql-server-linux-2017"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Transact-SQL)
 
@@ -40,19 +40,6 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ## Click on whichever product you are interested in
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016&branch=pr-en-us-6724">SQL Server</a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&branch=pr-en-us-6724">SQL DB<br />Logical Server</a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current&branch=pr-en-us-6724">SQL DB<br />Managed Instance</a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&branch=pr-en-us-6724">SQL Data<br />Warehouse</a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016&branch=pr-en-us-6724">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
-
-&nbsp;
-
 &nbsp;
 
 ::: moniker range=">=sql-server-2016|| >=sql-server-linux-2017|| =sqlallproducts-allversions"
@@ -61,12 +48,14 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 > <table>
 > <tr>
 >   <th><strong><em>* SQL Server* </em></strong></a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&branch=pr-en-us-6724">SQL DB<br />Logical Server</a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current&branch=pr-en-us-6724">SQL DB<br />Managed Instance</a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&branch=pr-en-us-6724">SQL Data<br />Warehouse</a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016&branch=pr-en-us-6724">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
+
+&nbsp;
 
 # SQL Server
 
@@ -290,32 +279,17 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
 > <tr>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016&branch=pr-en-us-6724">SQL Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* SQL DB<br />Logical Server *</em></strong></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current&branch=pr-en-us-6724">SQL DB<br />Managed Instance</a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&branch=pr-en-us-6724">SQL Data<br />Warehouse</a></th>
->   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016&branch=pr-en-us-6724">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
 &nbsp;
 
 # Azure SQL Database Logical Server
-
-> [!div class="nextstepaction"]
-> [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
-
-> [!div class="nextstepaction"]
-> [* ***SQL DB LOGICAL SERVER*** *](alter-database-transact-sql.md?view=azuresqldb-current)
-
-> [!div class="nextstepaction"]
-> [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
-
-> [!div class="nextstepaction"]
-> [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
-
-> [!div class="nextstepaction"]
-> [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
 
 ## Overview
 
@@ -659,22 +633,20 @@ ALTER DATABASE db1 FAILOVER
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current|| =sqlallproducts-allversions"
 
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
+>   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
 # Azure SQL Database Managed Instance
-
-> [!div class="nextstepaction"]
-> [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
-
-> [!div class="nextstepaction"]
-> [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
-
-> [!div class="nextstepaction"]
-> [* ***SQL DB MANAGED INSTANCE*** *](alter-database-transact-sql.md?view=azuresqldb-mi-current)
-
-> [!div class="nextstepaction"]
-> [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
-
-> [!div class="nextstepaction"]
-> [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
 
 ## Overview
 
@@ -788,22 +760,20 @@ Only the server-level principal login (created by the provisioning process) or m
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest|| =sqlallproducts-allversions"
 
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
 # Azure SQL Data Warehouse
-
-> [!div class="nextstepaction"]
-> [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
-
-> [!div class="nextstepaction"]
-> [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
-
-> [!div class="nextstepaction"]
-> [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
-
-> [!div class="nextstepaction"]
-> [* ***SQL DATA WAREHOUSE*** *](alter-database-transact-sql.md?view=azure-sqldw-latest)
-
-> [!div class="nextstepaction"]
-> [SQL Parallel Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)
 
 ## Overview
 
@@ -912,22 +882,20 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016|| =sqlallproducts-allversions"
 
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
 # SQL Parallel Data Warehouse
-
-> [!div class="nextstepaction"]
-> [SQL Server](alter-database-transact-sql.md?view=sql-server-2016)
-
-> [!div class="nextstepaction"]
-> [SQL DB Logical Server](alter-database-transact-sql.md?view=azuresqldb-current)
-
-> [!div class="nextstepaction"]
-> [SQL DB Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
-
-> [!div class="nextstepaction"]
-> [SQL Data Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)
-
-> [!div class="nextstepaction"]
-> [* ***SQL PARALLEL DATA WAREHOUSE*** *](alter-database-transact-sql.md?view=aps-pdw-2016)
 
 ## Overview
 

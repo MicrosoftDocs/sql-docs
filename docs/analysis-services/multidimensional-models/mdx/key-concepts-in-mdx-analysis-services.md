@@ -1,30 +1,17 @@
 ---
 title: "Key Concepts in MDX (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Multidimensional Expressions [Analysis Services], about MDX"
-  - "dimensional modeling [MDX]"
-  - "MDX [Analysis Services], about MDX"
-  - "Multidimensional Expressions [Analysis Services], dimensional modeling"
-  - "MDX [Analysis Services], dimensional modeling"
-ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: 52
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Key Concepts in MDX (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Before you can use Multidimensional Expressions (MDX) to query multidimensional data or create MDX expressions within a cube, it helps to understand multidimensional concepts and terms.  
   
  The best place to start is with a data summarization example you already know, and then see how MDX relates to it. Here’s a PivotTable created in Excel, populated with data from an Analysis Services sample cube.  

@@ -2,22 +2,22 @@
 title: "Reporting Services Configuration Manager (Native Mode) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
   - "components [Reporting Services], Reporting Services Configuration tool"
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "Active"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 
 # Reporting Services Configuration Manager (Native Mode)

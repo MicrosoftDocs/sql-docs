@@ -1,37 +1,21 @@
 ---
 title: "CheckList: Use PowerShell to Verify Power Pivot for SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # CheckList: Use PowerShell to Verify Power Pivot for SharePoint
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   No [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installation or recovery operation is complete without a solid verification test pass that confirms your services and data are operational. In this article, we show you how to perform these steps using Windows PowerShell. We put each step into its own section so that you can go straight to specific tasks. For example, run the script in the [Databases](#bkmk_databases) section of this topic to verify the name of the service application and content databases if you want to schedule them for maintenance or backup.  
   
-|||  
-|-|-|  
-|![PowerShell related content](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")|A full PowerShell script is included at the bottom of the topic. Use the full script as a starting point to build a custom script for auditing your full [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] deployment.|  
+![PowerShell related content](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") A full PowerShell script is included at the bottom of the topic. Use the full script as a starting point to build a custom script for auditing your full [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] deployment.
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
-  
- **In this topic**: The lettered items in the following the TOC correspond to areas of the diagram. The diagram illustrates the  
-  
-|||  
-|-|-|  
-|[Prepare your PowerShell environment](#bkmk_prerequisites)<br /><br /> [Symptoms and Recommended Actions](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows Service](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService and PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Power Pivot Service Application(s) and proxies](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Databases](#bkmk_databases)<br /><br /> [SharePoint Features](#bkmk_features)<br /><br /> [Timer Jobs](#bkmk_timer_jobs)<br /><br /> [Health Rules](#bkmk_health_rules)<br /><br /> **(E)** [Windows and ULS Logs](#bkmk_logs)<br /><br /> [MSOLAP Provider](#bkmk_msolap)<br /><br /> [ADOMD.Net client Library](#bkmk_adomd)<br /><br /> [Health Data Collection Rules](#bkmk_health_collection)<br /><br /> [Solutions](#bkmk_solutions)<br /><br /> [Manual Verification Steps](#bkmk_manual)<br /><br /> [More Resources](#bkmk_more_resources)<br /><br /> [Full PowerShell Script](#bkmk_full_script)|![powershell verification of powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powershell verification of powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Prepare your PowerShell environment  
  The steps in this section prepare your PowerShell environment. The steps may not be required, depending on how your scripting environment is currently configured.  
@@ -67,7 +51,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |Data refresh is not running|See the section [Timer Jobs](#bkmk_timer_jobs) and verify the **Online [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Data Refresh Timer Job** is online.|  
 |Management dashboard data is old|See the section [Timer Jobs](#bkmk_timer_jobs) and verify the **Management Dashboard Processing Timer Job** is online.|  
-|Some portions of the Management Dashboard|If you install [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint into a farm that has the topology of Central Administration, without Excel Services or [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint, you must download and install the Microsoft ADOMD.NET client library if you want full access to the built-in reports in the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] management dashboard. Some reports in the dashboard use ADOMD.NET to access internal data that provides reporting data on [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] query processing and server health in the farm. See the section [ADOMD.Net client Library](#bkmk_adomd) and the topic [Install ADOMD.NET on Web Front-End Servers Running Central Administration](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
+|Some portions of the Management Dashboard|If you install [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint into a farm that has the topology of Central Administration, without Excel Services or [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint, you must download and install the Microsoft ADOMD.NET client library if you want full access to the built-in reports in the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] management dashboard. Some reports in the dashboard use ADOMD.NET to access internal data that provides reporting data on [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] query processing and server health in the farm. See the section [ADOMD.Net client Library](#bkmk_adomd) and the topic [Install ADOMD.NET on Web Front-End Servers Running Central Administration](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
 ##  <a name="bkmk_windows_service"></a> Analysis Services Windows Service  
  The script in this section verifies the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in SharePoint mode. Verify the service is **running**.  
@@ -360,7 +344,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) and [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+ For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) and [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 ##  <a name="bkmk_adomd"></a> ADOMD.Net client Library  
   
@@ -377,7 +361,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- For more information, see [Install ADOMD.NET on Web Front-End Servers Running Central Administration](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).  
+ For more information, see [Install ADOMD.NET on Web Front-End Servers Running Central Administration](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).  
   
 ##  <a name="bkmk_health_collection"></a> Health Data Collection Rules  
  Verify the **Status** is Online and **Enabled** is True.  

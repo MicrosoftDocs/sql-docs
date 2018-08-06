@@ -2,21 +2,22 @@
 title: "Publisher Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
+ms.suite: "sql"
+ms.technology: replication
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Publisher Properties
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This section contains information on Publisher properties available at the Distributor and the Publisher:  
   
 -   [Publisher Properties - Distributor](../../relational-databases/replication/publisher-properties-distributor.md)  

@@ -2,13 +2,13 @@
 title: "SQLForeignKeys Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLForeignKeys"
 apilocation: 
@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "SQLForeignKeys function [ODBC]"
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLForeignKeys Function
 **Conformance**  

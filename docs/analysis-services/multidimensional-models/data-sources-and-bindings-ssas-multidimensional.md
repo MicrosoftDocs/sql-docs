@@ -1,47 +1,17 @@
 ---
 title: "Data Sources and Bindings (SSAS Multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data source views [Analysis Services], bindings"
-  - "DSO, bindings"
-  - "Analysis Services Scripting Language, data sources"
-  - "cubes [Analysis Services], bindings"
-  - "OLAP mining models [Analysis Services Scripting Language]"
-  - "bindings [Analysis Services Scripting Language]"
-  - "rebindings [Analysis Services Scripting Language]"
-  - "ASSL, bindings"
-  - "relational mining models [ASSL]"
-  - "data sources [Analysis Services Scripting Language]"
-  - "ASSL, data sources"
-  - "dimensions [Analysis Services], bindings"
-  - "measures [Analysis Services], bindings"
-  - "relational data sources [Analysis Services Scripting Language]"
-  - "Analysis Services Scripting Language, bindings"
-  - "chaptered rowsets"
-  - "granularity"
-  - "mining models [Analysis Services], data sources"
-  - "inline bindings [ASSL]"
-  - "out-of-line bindings"
-  - "measure groups [Analysis Services], bindings"
-  - "partitions [Analysis Services], bindings"
-ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Sources and Bindings (SSAS Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Cubes, dimensions, and other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects can be bound to a data source. A data source can be one of the following objects:  
   
 -   A relational data source.  

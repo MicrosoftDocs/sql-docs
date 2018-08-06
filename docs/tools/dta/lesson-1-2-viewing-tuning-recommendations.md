@@ -2,25 +2,26 @@
 title: "Viewing Tuning Recommendations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "dta"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-query-tuning"
+ms.suite: "sql"
+ms.technology: performance
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 helpviewer_keywords: 
   - "Database Engine [SQL Server], tutorials"
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Lesson 1-2 - Viewing Tuning Recommendations
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This task uses the tuning session that you created in [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md). After you have tuned the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using the MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] script, [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor displays its results on the **Recommendations** tab. The following task introduces the **Recommendations** tab of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor graphical user interface (GUI) and guides you to explore the information it provides about the tuning session results.  
   
 ### View tuning recommendations  

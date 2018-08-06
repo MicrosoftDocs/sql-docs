@@ -1,12 +1,12 @@
----
+﻿---
 title: "INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -32,13 +32,13 @@ helpviewer_keywords:
   - "inserting data"
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 caps.latest.revision: 136
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
   
@@ -390,7 +390,9 @@ These optimizations are similar to those available with the BULK INSERT command.
   
  When TOP is used with INSERT the referenced rows are not arranged in any order and the ORDER BY clause can not be directly specified in this statements. If you need to use TOP to insert rows in a meaningful chronological order, you must use TOP together with an ORDER BY clause that is specified in a subselect statement. See the Examples section that follows in this topic.
  
-INSERT queries that use SELECT with ORDER BY to populate rows guarantees how identity values are computed but not the order in which the rows are inserted.    
+INSERT queries that use SELECT with ORDER BY to populate rows guarantees how identity values are computed but not the order in which the rows are inserted.
+
+In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABLE AS SELECT, INSERT SELECT, inline functions, derived tables, subqueries and common table expressions, unless TOP is also specified.
   
 ## Logging Behavior  
  The INSERT statement is always fully logged except when using the OPENROWSET function with the BULK keyword or when using `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`. These operations can be minimally logged. For more information, see the section "Best Practices for Bulk Loading Data" earlier in this topic.  

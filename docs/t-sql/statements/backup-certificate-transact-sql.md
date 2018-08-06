@@ -1,12 +1,12 @@
----
+﻿---
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -28,13 +28,13 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Exports a certificate to a file.  
   
@@ -77,14 +77,16 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  Is the password that is used to encrypt the private key before writing the key to the backup file. The password is subject to complexity checks.  
   
  *decryption_password*  
- Is the password that is used to decrypt the private key before backing up the key.  
+ Is the password that is used to decrypt the private key before backing up the key. This is not necessary if the certificate is encrypted by the master key. 
   
 ## Remarks  
  If the private key is encrypted with a password in the database, the decryption password must be specified.  
   
  When you back up the private key to a file, encryption is required. The password used to protect the backed up certificate is not the same password that is used to encrypt the private key of the certificate.  
   
- To restore a backed up certificate, use the [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)statement.  
+ To restore a backed up certificate, use the [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)statement.
+ 
+ When performing a backup the files will be ACLd to the service account of the SQL Server instance. If you need to restore the certificate to a server running under a different account you will need to adjust the permissions on the files so that they are able to be read by the new account. 
   
 ## Permissions  
  Requires CONTROL permission on the certificate and knowledge of the password that is used to encrypt the private key. If only the public part of the certificate is backed up, requires some permission on the certificate and that the caller has not been denied VIEW permission on the certificate.  

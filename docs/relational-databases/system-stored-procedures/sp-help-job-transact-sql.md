@@ -2,11 +2,12 @@
 title: "sp_help_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -18,13 +19,12 @@ helpviewer_keywords:
   - "sp_help_job"
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns information about jobs that are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to perform automated activities in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -58,7 +58,7 @@ sp_help_job { [ @job_id = ] job_id
  The name of the job. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
->  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
+>  To view a specific job, either *job_id* or *job_name* must be specified.  Omit both *job_id* and *job_name* to return information about all jobs.
   
  [ **@job_aspect =**] **'***job_aspect***'**  
  The job attribute to display. *job_aspect* is **varchar(9)**, with a default of NULL, and can be one of these values.  

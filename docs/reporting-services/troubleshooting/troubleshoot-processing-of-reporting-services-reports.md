@@ -2,20 +2,21 @@
 title: "Troubleshoot Processing of Reporting Services Reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 caps.latest.revision: 4
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "Inactive"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Troubleshoot Processing of Reporting Services Reports
 After the report data is retrieved, the report processor combines the data and layout information. Each report item property that has an expression is evaluated in the context of the combined data and layout. Use this topic to help troubleshoot these issues.   
@@ -50,6 +51,6 @@ In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull.md)
   
   
 ## See Also  
-[Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+[Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
 

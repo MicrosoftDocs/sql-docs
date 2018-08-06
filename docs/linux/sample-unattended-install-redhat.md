@@ -1,27 +1,29 @@
 ---
 title: Unattended install for SQL Server on Red Hat Enterprise Linux | Microsoft Docs
 description: SQL Server Script Sample - Unattended Install on Red Hat Enterprise Linux
-author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.topic: conceptual
+ms.prod: sql
+ms.component: ""
+ms.suite: "sql"
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for Red Hat Enterprise Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This sample Bash script installs SQL Server 2017  on Red Hat Enterprise Linux (RHEL) without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
-> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for Red Hat](quickstart-install-connect-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for Red Hat](quickstart-install-connect-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
-- You need at least 3.25 GB of memory to run SQL Server on Linux.
+- You need at least 2 GB of memory to run SQL Server on Linux.
 - The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -30,7 +32,7 @@ Save the sample script to a file and then to customize it,
 replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

@@ -1,14 +1,13 @@
 ---
 title: "Exporting an Access Inventory (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -25,8 +24,7 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Exporting an Access Inventory (AccessToSQL)
 If you have multiple Access databases and you are not sure which ones to migrate into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can export an inventory of all Access databases in a project. You can then review and query the inventory metadata to determine which databases and objects within those databases to migrate. This inventory lets you quickly find answers to questions, such as the following:  
@@ -44,7 +42,7 @@ If you have multiple Access databases and you are not sure which ones to migrate
 Query examples that are used to answer these questions are provided at the end of this topic.  
   
 ## Exported Metadata  
-SSMA exports metadata about Access databases, tables, columns, indexes, foreign keys, queries, reports, forms, macros, and modules. Metadata about each of these categories of items is exported to a separate table. For schemas of these tables, see [Access Inventory Schemas](http://msdn.microsoft.com/en-us/fdd3cff2-4d62-4395-8acf-71ea8f17f524).  
+SSMA exports metadata about Access databases, tables, columns, indexes, foreign keys, queries, reports, forms, macros, and modules. Metadata about each of these categories of items is exported to a separate table. For schemas of these tables, see [Access Inventory Schemas](http://msdn.microsoft.com/fdd3cff2-4d62-4395-8acf-71ea8f17f524).  
   
 ## Exporting Inventory Data  
 To export an Access inventory, you must first open or create an SSMA project, and then add the Access database that you want to analyze. After you add databases to an SSMA project, you export metadata about those databases to a specified [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database and schema. If necessary, SSMA creates tables to store the metadata. SSMA then adds the metadata about the Access databases to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
@@ -68,7 +66,7 @@ The following instructions describe how to create a project, add databases to th
   
 5.  In the **Migrate To** combo box, select the target version to which you want to migrate, and then click **OK**.  
   
-For more information about creating projects, see [Creating and Managing Projects](http://msdn.microsoft.com/en-us/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7).  
+For more information about creating projects, see [Creating and Managing Projects](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7).  
   
 **To find and add databases**  
   
@@ -97,7 +95,7 @@ For more information about creating projects, see [Creating and Managing Project
   
 8.  On the Verify page, click **Finish**.  
   
-For more information about adding databases to projects, see [Adding and Removing Access Database Files](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
+For more information about adding databases to projects, see [Adding and Removing Access Database Files](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
   
 **To connect to SQL Server**  
   
@@ -230,5 +228,5 @@ WHERE ColumnName LIKE '%salary%';
 If you do not know the column name, you can write a query to return all columns. To do this, remove the WHERE clause from the previous query.  
   
 ## See Also  
-[Preparing Access Databases for Migration](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+[Preparing Access Databases for Migration](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   

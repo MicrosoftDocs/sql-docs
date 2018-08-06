@@ -2,14 +2,16 @@
 title: "Report Authoring Concepts (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "concepts"
   - "terminology"
@@ -17,8 +19,7 @@ ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
-ms.workload: "Inactive"
+manager: "kfile"
 ---
 # Report Authoring Concepts (Report Builder and SSRS)
   This section briefly defines some key concepts used to describe paginated reports  in the Report Builder and Report Designer documentation. For definitions of specific words or terms, see the [Glossary &#40;Report Builder&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  

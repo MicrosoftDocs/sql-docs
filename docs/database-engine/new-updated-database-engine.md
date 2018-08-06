@@ -1,21 +1,15 @@
 ---
 title: Updated - Database Engine docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Database Engine.
-services: na
-documentationcenter: ''
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: barbkess
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: database-engine
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 09/27/2017
 ms.author: genemi
+ms.topic: conceptual
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.date: 04/28/2018
 ---
 # New and Recently Updated: Database Engine docs
 
@@ -29,7 +23,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-09-11** &nbsp; -to- &nbsp; **2017-09-27**
+- *Date range of updates:* &nbsp; **2018-02-03** &nbsp; -to- &nbsp; **2018-04-28**
 - *Subject area:* &nbsp; **Database Engine**.
 
 
@@ -42,10 +36,20 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Add Features to an Instance of SQL Server (Setup)](install-windows/add-features-to-an-instance-of-sql-server-setup.md)
-2. [Install SQL Server from the Command Prompt](install-windows/install-sql-server-from-the-command-prompt.md)
-3. [Install SQL Server using a configuration file](install-windows/install-sql-server-using-a-configuration-file.md)
-4. [Business continuity and database recovery - SQL Server](sql-server-business-continuity-dr.md)
+1. [Always On Availability Groups troubleshooting and monitoring guide](availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md)
+2. [Always On Availability Groups extended events](availability-groups/windows/always-on-extended-events.md)
+3. [Always On Availability Groups health diagnostics log](availability-groups/windows/always-on-health-diagnostics-log.md)
+4. [Always On Availability Groups policies](availability-groups/windows/always-on-policies.md)
+5. [Always On Availability Groups ring buffers](availability-groups/windows/always-on-ring-buffers.md)
+6. [Always On Availability Groups wait types](availability-groups/windows/always-on-wait-types.md)
+7. [CLUSTER.LOG (Always On Availability Groups)](availability-groups/windows/cluster-log-always-on-availability-groups.md)
+8. [Dynamic management views and system catalog views (Always On Availability Groups)](availability-groups/windows/dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)
+9. [Monitor performance for Always On Availability Groups](availability-groups/windows/monitor-performance-for-always-on-availability-groups.md)
+10. [SQL Server error log (Always On Availability Groups)](availability-groups/windows/sql-server-error-log-always-on-availability-groups.md)
+11. [Troubleshoot: Availability group exceeded RPO](availability-groups/windows/troubleshoot-availability-group-exceeded-rpo.md)
+12. [Troubleshoot: Availability group exceeded RTO](availability-groups/windows/troubleshoot-availability-group-exceeded-rto.md)
+13. [Troubleshoot: Changes on the primary replica are not reflected on the secondary replica](availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md)
+14. [Useful tools for troubleshooting](availability-groups/windows/useful-tools-for-troubleshooting.md)
 
 
 
@@ -71,90 +75,54 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Installing Updates from the Command Prompt](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [Installing Updates from the Command Prompt](install-windows/installing-updates-from-the-command-prompt.md)
-
-*Updated: 2017-09-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 48.  ms.author= "mikeray".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 04abb23d0682c23654a55e7926d2140f0b6ae408 a4bb1e27ae99460a66da72848ace1417b148f85c  (PR=3122  ,  Filename=installing-updates-from-the-command-prompt.md  ,  Dirpath=docs\database-engine\install-windows\  ,  MergeCommitSha40=1df54edd5857ac2816fa4b164d268835d9713638) -->
-
-
-
-- Update all instances of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] on the computer and all shared components, like ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] and Management Tools:
-
-```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances.
-```
-
-- Remove an update from a single instance of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] and all shared components, like ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] and Management Tools:
-
-```
-    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance.
-```
-
-- Remove an update from ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] shared components only, like ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] and Management Tools:
-
-```
-    <package_name>.exe /qs /Action=RemovePatch
-```
+***No articles in this area were updated recently, this time.***
 
 
 
 
 
 
-
-## Similar Articles
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
--->
+## Similar articles about new or updated articles
 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### Subject areas which do have new or recently updated articles
 
-- [New + Updated (0+1): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (0+1): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (4+1): **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (17+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (3+0): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+1): **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+1): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
-#### Subject areas which have no new or recently updated articles
+#### Subject areas that *do* have new or recently updated articles
 
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (11+6): &nbsp; &nbsp;**Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (18+0): &nbsp; &nbsp;**Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (218+14): **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (14+0): &nbsp; &nbsp;**Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (3+2): &nbsp; &nbsp; **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+3): &nbsp; &nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (7+10): &nbsp; &nbsp;**Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (2+3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (5+2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2): &nbsp; &nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+1): &nbsp; &nbsp; **Tools for SQL** docs](../tools/new-updated-tools.md)
+
+
+
+#### Subject areas that do *not* have any new or recently updated articles
+
+- [New + Updated (0+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
-
 

@@ -2,13 +2,13 @@
 title: "What the Driver Manager Does | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "driver manager [ODBC], backward compatibility"
   - "compatibility [ODBC], driver manager"
@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "backward compatibility [ODBC], driver manager"
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
 caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # What the Driver Manager Does
 The following table summarizes how the ODBC 3*.x* Driver Manager maps calls to ODBC 2.*x* and ODBC 3*.x* drivers.  

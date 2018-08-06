@@ -1,13 +1,12 @@
----
+﻿---
 title: How Online Index Operations Work | Microsoft Docs
 ms.custom: ""
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: dbe-indexes
+ms.technology:  table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords: 
   - "online index operations"
   - "source indexes [SQL Server]"
@@ -17,16 +16,16 @@ helpviewer_keywords:
   - "index temporary mappings [SQL Server]"
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.suite: SQL
-ms.prod_service: database-engine, sql-database, sql-data-warehouse
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
 ms.component: indexes
-ms.workload: "Inactive"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # How Online Index Operations Work
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic defines the structures that exist during an online index operation and shows the activities associated with these structures.  
   

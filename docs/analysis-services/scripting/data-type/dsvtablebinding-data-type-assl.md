@@ -1,34 +1,17 @@
 ---
 title: "DSVTableBinding Data Type (ASSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "DSVTableBinding Data Type"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "DSVTableBinding"
-helpviewer_keywords: 
-  - "DSVTableBinding data type"
-ms.assetid: 149e753f-6218-4805-9223-7155b6827e64
-caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DSVTableBinding Data Type (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a derived data type that represents the binding between a table and a [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) element.  
   
 ## Syntax  

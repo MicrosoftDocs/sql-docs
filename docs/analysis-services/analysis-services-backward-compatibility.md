@@ -1,29 +1,14 @@
 ---
 title: "SQL Server 2016 Analysis Services backward compatibility | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/11/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "installing Analysis Services, backward compatibility"
-  - "backward compatibility [Analysis Services]"
-  - "compatibility [Analysis Services]"
-  - "Analysis Services, backward compatibility"
-  - "upgrading Analysis Services"
-  - "SSAS, backward compatibility"
-  - "SQL Server Analysis Services, backward compatibility"
-ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Analysis Services backward compatibility (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]

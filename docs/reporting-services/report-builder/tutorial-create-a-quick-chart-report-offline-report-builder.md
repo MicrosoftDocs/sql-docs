@@ -2,14 +2,16 @@
 title: "Tutorial: Create a Quick Chart Report Offline (Report Builder) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.component: "report-builder"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reports, creating"
   - "tutorials, getting started"
@@ -18,8 +20,7 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 31
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
-ms.workload: "On Demand"
+manager: "kfile"
 ---
 
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)

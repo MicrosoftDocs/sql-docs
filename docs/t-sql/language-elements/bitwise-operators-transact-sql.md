@@ -1,12 +1,12 @@
----
+﻿---
 title: "Bitwise Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -17,13 +17,13 @@ helpviewer_keywords:
   - "bit manipulations"
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Bitwise Operators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Bitwise operators perform bit manipulations between two expressions of any of the data types of the integer data type category.  
   Bitwise operators convert two integer values to binary bits, perform the AND, OR, or NOT operation on each bit, producing a result. Then converts the result to an integer.  
@@ -38,13 +38,13 @@ ms.workload: "Active"
 |NOT  <br> Reverses the bit value at every bit location. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 See the following topics:   
-* [& (Bitwise AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
-* [&= (Bitwise AND EQUALS)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
-* [&#124; (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
-* [&#124;= (Bitwise OR EQUALS)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
-* [^ (Bitwise Exclusive OR)](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
-* [^= (Bitwise Exclusive OR EQUALS)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
-* [~ (Bitwise NOT)](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
+* [& &#40;Bitwise AND&#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
+* [&= &#40;Bitwise AND Assignment&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+* [&#124; &#40;Bitwise OR&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
+* [&#124;= &#40;Bitwise OR Assignment&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+* [^ &#40;Bitwise Exclusive OR&#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
+* [^= &#40;Bitwise Exclusive OR Assignment&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
+* [~ &#40;Bitwise NOT&#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
  The operands for bitwise operators can be any one of the data types of the integer or binary string data type categories (except for the **image** data type), except that both operands cannot be any one of the data types of the binary string data type category. The following table shows the supported operand data types.  
   
@@ -59,6 +59,6 @@ See the following topics:
   
 ## See Also  
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-  
+ [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+ [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   

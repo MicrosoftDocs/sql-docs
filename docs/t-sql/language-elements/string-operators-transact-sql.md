@@ -2,11 +2,11 @@
 title: "String Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,20 +18,19 @@ helpviewer_keywords:
   - "+ (string concatenation)"
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # String Operators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following string operators. String concatenation operators can combine two or more character or binary strings, columns, or a combination of strings and column names into one expression. Wildcard string operators can matches one or more characters in a string comparison operation such as LIKE or PATINDEX.  
   
 ## Section Heading  
  [+ (String Concatenation)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
- [+= (String Concatenation)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+ [+= (String Concatenation Assignment)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
  [% (Wildcard - Character(s) to Match)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   

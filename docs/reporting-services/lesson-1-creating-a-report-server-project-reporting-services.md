@@ -2,23 +2,24 @@
 title: "Lesson 1: Creating a Report Server Project (Reporting Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 57
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
-ms.workload: "Active"
+manager: "kfile"
 ---
 # Lesson 1: Creating a Report Server Project (Reporting Services)
 
- > For content related to previous versions of SQL Server, see [Lesson 1: Creating a Report Server Project (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Lesson 1: Creating a Report Server Project (Reporting Services)](https://msdn.microsoft.com/library/ms167559(SQL.120).aspx).
 
 In this lesson, you'll create a *report server project* and a *report definition (.rdl)* file in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] within Visual Studio. 
 

@@ -2,13 +2,13 @@
 title: "SQLGetCursorName Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLGetCursorName"
 apilocation: 
@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "SQLGetCursorName function [ODBC]"
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetCursorName Function
 **Conformance**  

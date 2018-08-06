@@ -2,13 +2,14 @@
 title: "Specify Multiple Search Conditions for Multiple Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.suite: "sql"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], multiple conditions"
   - "multiple search conditions"
@@ -19,10 +20,11 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can expand or narrow the scope of your query by including several data columns as part of your search condition. For example, you might want to:  
   
 -   Search for employees who either have worked more than five years at the company or who hold certain jobs.  

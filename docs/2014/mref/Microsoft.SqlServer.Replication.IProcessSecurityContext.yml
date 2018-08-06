@@ -1,0 +1,25 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.Replication.IProcessSecurityContext.Password*
+  commentId: P:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password
+  href: https://msdn.microsoft.com/library/ms153253(v=sql.120).aspx
+  name: Password
+  name.vb: Password
+  fullName: IProcessSecurityContext.Password
+  fullName.vb: IProcessSecurityContext.Password
+- uid: Microsoft.SqlServer.Replication.IProcessSecurityContext.Login*
+  commentId: P:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login
+  href: https://msdn.microsoft.com/library/ms153228(v=sql.120).aspx
+  name: Login
+  name.vb: Login
+  fullName: IProcessSecurityContext.Login
+  fullName.vb: IProcessSecurityContext.Login
+- uid: Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword*
+  commentId: P:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword
+  href: https://msdn.microsoft.com/library/ms153205(v=sql.120).aspx
+  name: SecurePassword*
+  name.vb: SecurePassword*
+  fullName: IProcessSecurityContext.SecurePassword*
+  fullName.vb: IProcessSecurityContext.SecurePassword*

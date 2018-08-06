@@ -2,21 +2,20 @@
 title: "Azure Data Lake Store File System Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSTASK.F1"
   - "SQL14.DTS.DESIGNER.AFPADLSTASK.F1"
 author: "Lingxi-Li"
 ms.author: "lingxl"
 ms.reviewer: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Azure Data Lake Store File System Task
 

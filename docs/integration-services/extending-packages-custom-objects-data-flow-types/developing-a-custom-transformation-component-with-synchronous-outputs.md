@@ -2,11 +2,11 @@
 title: "Developing a Custom Transformation Component with Synchronous Outputs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -26,8 +26,7 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 caps.latest.revision: 56
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Developing a Custom Transformation Component with Synchronous Outputs
   Transformation components with synchronous outputs receive rows from upstream components, and read or modify the values in the columns of these rows as they pass the rows to downstream components. They may also define additional output columns that are derived from the columns provided by upstream components, but they do not add rows to the data flow. For more information about the difference between synchronous and asynchronous components, see [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

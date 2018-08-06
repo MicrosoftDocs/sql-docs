@@ -2,23 +2,24 @@
 title: "Secure a Replication Topology | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
+ms.suite: "sql"
+ms.technology: replication
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], security"
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Secure a Replication Topology
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Security accounts, logins, and passwords required by replication are supplied when replication is configured and when publications and subscriptions are created. These security settings can be changed later using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], replication stored procedures, and Replication Management Objects (RMO). The following topics describe how to modify replication security settings.  
   
 ## In This Section  

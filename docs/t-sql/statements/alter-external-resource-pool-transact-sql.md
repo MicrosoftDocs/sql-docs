@@ -2,13 +2,10 @@
 title: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/13/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -18,14 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER EXTERNAL RESOURCE POOL statement"
 ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
-caps.latest.revision: 10
-author: "jeannt"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] and [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 

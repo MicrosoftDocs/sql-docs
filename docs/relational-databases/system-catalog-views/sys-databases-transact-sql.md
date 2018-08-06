@@ -1,12 +1,13 @@
----
+﻿---
 title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,13 +21,13 @@ helpviewer_keywords:
   - "sys.databases catalog view"
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 caps.latest.revision: 152
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contains one row per database in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -48,7 +49,7 @@ ms.workload: "Active"
 |**is_read_only**|**bit**|1 = Database is READ_ONLY<br /> 0 = Database is READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE is ON<br /> 0 = AUTO_CLOSE is OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK is ON<br /> 0 = AUTO_SHRINK is OFF|  
-|**state**|**tinyint**|**Value &#124; Applies to**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = RECOVERING : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = EMERGENCY : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = OFFLINE : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Note:** A database that has just come online is not necessarily ready to accept connections. To identify when a database can accept connections, query the collation_name column of sys.databases or the Collation property of **DATABASEPROPERTYEX**. The database can accept connections when the database collation returns a non-null value. For Always On databases, query the `database_state` or `database_state_desc` columns of [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
+|**state**|**tinyint**|**Value &#124; Applies to**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = RECOVERING : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = EMERGENCY : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = OFFLINE : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Note:** For Always On databases, query the `database_state` or `database_state_desc` columns of [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
 |**state_desc**|**nvarchar(60)**|Description of the database state. See state.|  
 |**is_in_standby**|**bit**|Database is read-only for restore log.|  
 |**is_cleanly_shutdown**|**bit**|1 = Database shut down cleanly; no recovery required on startup<br /> 0 = Database did not shut down cleanly; recovery is required on startup|  

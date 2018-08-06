@@ -2,25 +2,25 @@
 title: "Upgrading Mirrored Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.suite: "sql"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading SQL Server, rolling upgrade of mirrored databases"
   - "database mirroring [SQL Server], upgrading system"
   - "rolling upgrades [SQL Server]"
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Upgrading Mirrored Instances
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When upgrading a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mirrored  instance to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]service pack or cumulative update, or to a new Windows service pack or cumulative update, you can reduce downtime for each mirrored database to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). A rolling upgrade is a multi-stage process that in its simplest form involves upgrading the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance that is currently acting as the mirror server in a mirroring session, then manually failing over the mirrored database, upgrading the former principal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance, and resuming mirroring. In practice, the exact process will depend on the operating mode and the number and layout of mirroring session running on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instances that you are upgrading.  
   
 > [!NOTE]  

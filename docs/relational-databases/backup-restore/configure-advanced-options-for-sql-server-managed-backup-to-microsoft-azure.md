@@ -2,21 +2,21 @@
 title: "Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
+ms.suite: "sql"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The following tutorial describes how to set advanced options for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. These procedures are only necessary if you require the features they offer. Otherwise, you can enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] and depend on the default behavior.  
   
  In each scenario, the backup is specified using the `database_name` parameter. When `database_name` is NULL or *, then the changes affect the default settings at an Instance level. Instance level settings also affect new databases created after the change.  
@@ -54,7 +54,7 @@ ms.workload: "Inactive"
   
 3.  **Create a Backup Certificate or Asymmetric Key:** You can use either a certificate or an asymmetric key for use with the encryption. The following example creates a backup certificate to use for the encryption.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  

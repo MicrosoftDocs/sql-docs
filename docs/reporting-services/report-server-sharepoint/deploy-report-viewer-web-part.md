@@ -2,18 +2,19 @@
 title: "Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.component: "report-server-sharepoint"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.topic: conceptual
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 
 # Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site
@@ -28,7 +29,11 @@ Use the following instructions to manually deploy the solution package that add 
 
 ## Requirements
 
-**Support SharePoint Server versions:**  
+> [!IMPORTANT]
+> You currently cannot install this web part if you already have Reporting Services SharePoint integrated mode configured.
+>
+
+**Support SharePoint Server versions:**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -72,7 +77,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 ## Activate feature
 
-1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings*.
+1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
 
     ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
 
@@ -112,7 +117,7 @@ Although SharePoint Central Administration provides solution retraction, you do 
 
 Retracting the solution does not remove the Report Viewer web part from the list of web parts within your SharePoint site. To remove the Report Viewer web part, do the following.
 
-1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings*.
+1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
 
     ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
 
@@ -143,6 +148,26 @@ The following languages are supported with the web part:
 * Russian (ru)
 * Chinese (Simplified - zh-HANS and zh-CHS)
 * Chinese (Traditional - zh-HANT and zh-CHT)
+
+## Troubleshoot
+
+* Error when uninstalling SSRS if you have SharePoint integrated mode configured:
+
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
+    
+    Solution:
+    1. Remove the Report Viewer web part
+    2. Uninstall SSRS
+    3. Reinstall the Report Viewer web part
+
+* Error when trying to upgrade SharePoint if you have SharePoint integrated mode configured:
+
+    Could not load file or assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified. 00000000-0000-0000-0000-000000000000
+    
+    Solution:
+    1. Remove the Report Viewer web part
+    2. Uninstall SSRS
+    3. Reinstall the Report Viewer web part
 
 ## Next steps
 

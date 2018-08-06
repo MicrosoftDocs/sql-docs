@@ -1,34 +1,26 @@
 ---
-title: "Load Data into Memory using rxImport| Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
-caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Load data into memory using rxImport (SQL and R deep dive)| Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Load Data into Memory using rxImport
+# Load data into memory using rxImport (SQL and R deep dive)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The **rxImport** function can be used to move data from a data source into a data frame in R session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
+This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this step, you'll learn how to get data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then use the rxImport function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.
+The [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) function can be used to move data from a data source into a data frame in session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
 
-## Extract a Subset of Data from SQL Server to Local Memory
+In this step, you learn how to get data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then use the **rxImport** function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.
 
-You've decided that  you want to examine only the high risk individuals in more detail. The source table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is big, so you will get the information about just the high-risk customers, and load it into a data frame in the memory of the local workstation.
+## Extract a subset of data from SQL Server to local memory
+
+You've decided that you want to examine only the high risk individuals in more detail. The source table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is big, so you want to get the information about just the high-risk customers. You then load that data into a data frame in the memory of the local workstation.
 
 1. Reset the compute context to your local workstation.
 
@@ -45,16 +37,15 @@ You've decided that  you want to examine only the high risk individuals in more 
         connectionString = sqlConnString)
     ```
 
-3. You use the function **rxImport** to actually load the data into a data frame in the local R session.
+3. Call the function [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) to read the data into a data frame in the local R session.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    If the operation was successful, you should see a status message:
-   Rows Read: 35, Total Rows Processed: 35, Total Chunk Time: 0.036 seconds
+    If the operation was successful, you should see a status message like this one: "Rows Read: 35, Total Rows Processed: 35, Total Chunk Time: 0.036 seconds"
 
-4. Now that you have the high-risk observations in a data frame in memory, you can use various R functions to manipulate the data frame. For example, you can order customers by their risk score, and print the customers who pose the highest risk.
+4. Now that the high-risk observations are in an in-memory data frame, you can use various R functions to manipulate the data frame. For example, you can order customers by their risk score, and print a list of the customers who pose the highest risk.
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -80,21 +71,17 @@ You've decided that  you want to examine only the high risk individuals in more 
 
 ## More about rxImport
 
-You can use rxImport not just to move data, but to transform data in the process of reading it. For example, you can specify the number of characters for fixed-width columns, provide a description of the variables, set levels for factor columns, and even create new levels to use after importing.
+You can use **rxImport** not just to move data, but to transform data in the process of reading it. For example, you can specify the number of characters for fixed-width columns, provide a description of the variables, set levels for factor columns, and even create new levels to use after importing.
 
-The rxImport function assigns variable names to the columns during the import process, but you can indicate new variable names by using the *colInfo* parameter, and you can change data types using the *colClasses* parameter.
+The **rxImport** function assigns variable names to the columns during the import process, but you can indicate new variable names by using the *colInfo* parameter, or change data types using the *colClasses* parameter.
 
 By specifying additional operations in the *transforms* parameter, you can do elementary processing on each chunk of data that is read.
 
-## Next Step
+## Next step
 
-[Create New SQL Server Table using rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+[Create new SQL Server table using rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
 
-## Previous Step
+## Previous step
 
-[Transform Data Using R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
-## See Also
-
-[Machine Learning Tutorials](../../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
+[Transform data using R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
 

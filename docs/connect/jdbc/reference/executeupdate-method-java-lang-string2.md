@@ -2,13 +2,13 @@
 title: "executeUpdate Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLServerPreparedStatement.executeUpdate (java.lang.String)"
 apilocation: 
@@ -16,10 +16,9 @@ apilocation:
 apitype: "Assembly"
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # executeUpdate Method (java.lang.String)
 

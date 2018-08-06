@@ -1,33 +1,17 @@
 ---
 title: "Time Series Model Query Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "time series algorithms [Analysis Services]"
-  - "MISSING_VALUE_SUBSTITUTION"
-  - "time series [Analysis Services]"
-  - "predictions [Analysis Services], time series"
-  - "EXTEND_MODEL_CASES parameter"
-  - "REPLACE_MODEL_CASES parameter"
-  - "prediction queries [DMX]"
-  - "PREDICTION_SMOOTHING"
-  - "content queries [DMX]"
-ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Time Series Model Query Examples
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   When you create a query against a data mining model, you can create either a content query, which provides details about the patterns discovered in analysis, or you can create a prediction query, which uses the patterns in the model to make predictions for new data. For example, a content query for a time series model might provide additional details about the periodic structures that were detected, while a prediction query might give you predictions for the next 5-10 time slices. You can also retrieve metadata about the model by using a query.  
   
  This section explains how to create both kinds of queries for models that are based on the Microsoft Time Series algorithm.  

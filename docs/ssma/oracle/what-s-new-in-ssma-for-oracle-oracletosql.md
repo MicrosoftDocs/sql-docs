@@ -1,23 +1,31 @@
 ---
 title: "What's New in SSMA  for Oracle (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
-ms.date: "09/22/2017"
+ms.date: "03/01/2018"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # What's New in SSMA for Oracle (OracleToSQL)
 This topic lists SSMA for Oracle changes in each release.  
+
+## SSMA v7.7
+The v7.7 release of SSMA for Oracle contains the following changes:
+- SSMA for Oracle has been enhanced with targeted fixes that improve quality and conversion metrics.
+- Based on the popular demand, the 32-bit version of SSMA for Oracle is back. Compared to the previous implementation (prior to v7.4), there are two installer packages, but they cannot be installed side by side. As a result, you must choose the most appropriate version based on the connectivity components you have. It is always preferable to use the 64-bit version, if possible.
+- SQL Server 2017 support is now official with the Oracle Extension Pack supported on Linux as well (new remote installation option). Note that Extension Pack functionality is limited when installed on Linux, as the tester and server-side data migration features are not supported 
+- SSMA for Oracle allows you to migrate Materialized Views as regular tables (configurable through the settings at **Project Settings** -> **Synchronization** -> **Discover backing tables for Materialized Views**).
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v7.6
 The v7.6 release of SSMA for Oracle has been enhanced with targeted fixes that improve quality and conversion metrics and with support for SQL Server 2017 (public preview). Support for SQL Server 2017 on Windows and Linux is in public preview and should not be used for production migrations.
@@ -65,7 +73,7 @@ The v7.3 release of SSMA for Oracle contains the following changes:
   - Libraries that can be consumed by SSMA for performing custom conversions.
     - You can now construct code that can handle custom syntax conversions and conversions that weren't previously handled by SSMA.
       - Instructions on how to construct a custom converter are available in this blog post, [Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Sample project for conversion can be download this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Download a sample project for conversion from this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 
 ## SSMA v7.2
@@ -88,18 +96,28 @@ The v7.1 release of SSMA for Oracle contains the following changes:
 ## May 2016  
 The May 2016 release of SSMA for Oracle contains the following changes:  
 
--   Added support for SQL Server 2016.
--   Added conversion of Oracle flashback archive tables to SQL Server temporal tables.
--   Added conversion of Oracle VPD Policy converting to SQL Server Policy objects (Row Level Security for Oracle).
--   Decreased time of initial loading for Oracle.
--   Improved parser and resolver.
--   Removed installer check for .Net 2.0.
--   Updated Extension Pack dependency from .Net 3.5 to .Net 4.0.
--   Fixed "save project" and "open project" commands for SSMA Console.
--   Fixed "securepassword" command for SSMA Console.
--   Fixed counting of objects for initial loading.
--   Fixed converting of character data types for Oracle.
--   Fixed bug in global settings.
+- Added support for SQL Server 2016.
+- Added conversion of Oracle flashback archive tables to SQL Server temporal tables.
+
+    **Note** - SSMA does not copy history data from Oracle Flashback Data Archive tables. As a result, the history data must be copied manually during the migration process. In addition, while SSMA does not display the history table in the SQL Server metadata explorer because it’s treated as a system table, you can view the history table in SQL Server Management Studio.
+    SQL Server 2016 does not support several Oracle Flashback features, including:
+    - Oracle Flashback Transaction Query
+    - DBMS_FLASHBACK Package
+    - Flashback Transaction
+    - Flashback Data Archive
+    - Flashback Table
+    - Flashback Drop
+    - Flashback Database
+- Added conversion of Oracle VPD Policy to SQL Server Policy objects (Row Level Security for Oracle).
+- Decreased time of initial loading for Oracle.
+- Improved parser and resolver.
+- Removed installer check for .Net 2.0.
+- Updated Extension Pack dependency from .Net 3.5 to .Net 4.0.
+- Fixed "save project" and "open project" commands for SSMA Console.
+- Fixed "securepassword" command for SSMA Console.
+- Fixed counting of objects for initial loading.
+- Fixed converting of character data types for Oracle.
+- Fixed bug in global settings.
   
 ## March 2016  
 The March 2016 preview release of SSMA for Oracle contains the following changes:  

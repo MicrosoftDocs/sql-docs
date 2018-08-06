@@ -3,16 +3,18 @@ title: Restore a SQL Server database in Docker | Microsoft Docs
 description: This tutorial shows how restore a SQL Server database backup in a new Linux Docker container.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.topic: conceptual
+ms.prod: sql
+ms.component: ""
+ms.suite: "sql"
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 # Restore a SQL Server database in a Linux Docker container
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2017 Linux container image running on Docker.
 
@@ -26,12 +28,9 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 ## Prerequisites
 
 * Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
-* Minimum of 4 GB of disk space
-* Minimum of 4 GB of RAM
+* Minimum of 2 GB of disk space
+* Minimum of 2 GB of RAM
 * [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you must change it to 4 GB. If you are running on Mac or Windows, increase your memory settings using the [instructions in the Docker quickstart](quickstart-install-connect-docker.md).
 
 ## Pull and run the container image
 
@@ -98,7 +97,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 This tutorial uses the [Wide World Importers sample database](../sample/world-wide-importers/wide-world-importers-documentation.md). Use the following steps to download and copy the Wide World Importers database backup file into your SQL Server container.
 
-1. First, use **docker exec** to create a backup folder. The following command creates a **/var/opt/mssql/** directory inside the SQL Server container.
+1. First, use **docker exec** to create a backup folder. The following command creates a **/var/opt/mssql/backup** directory inside the SQL Server container.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -134,7 +133,7 @@ This tutorial uses the [Wide World Importers sample database](../sample/world-wi
 The backup file is now located inside the container. Before restoring the backup, it is important to know the logical file names and file types inside the backup. The following Transact-SQL commands inspect the backup and perform the restore using **sqlcmd** in the container.
 
 > [!TIP]
-> This tutorial uses **sqlcmd** inside the container, because the container comes with this tool pre-installed. However, you can also run Transact-SQL statements with other client tools outside of the container, such as [Visual Studio Code](sql-server-linux-develop-use-vscode.md) or [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). To connect, use the host port that was mapped to port 1433 in the container. In this example, that is **localhost,1401** on the host machine and **Host_IP_Address,1401** remotely.
+> This tutorial uses **sqlcmd** inside the container, because the container comes with this tool pre-installed. However, you can also run Transact-SQL statements with other client tools outside of the container, such as [Visual Studio Code](sql-server-linux-develop-use-vscode.md) or [SQL Server Management Studio](sql-server-linux-manage-ssms.md). To connect, use the host port that was mapped to port 1433 in the container. In this example, that is **localhost,1401** on the host machine and **Host_IP_Address,1401** remotely.
 
 1. Run **sqlcmd** inside the container to list out logical file names and paths inside the backup. This is done with the **RESTORE FILELISTONLY** Transact-SQL statement.
 

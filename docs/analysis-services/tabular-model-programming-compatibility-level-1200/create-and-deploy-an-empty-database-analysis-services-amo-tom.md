@@ -1,26 +1,17 @@
 ---
 title: "Create and deploy an empty database (Analysis Services AMO-TOM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: dcb916e9-97c5-47e0-922a-404891423b2a
-caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create and deploy an empty database (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 A common programming scenario for AMO-TOM is to generate databases and models on the fly. This article walks you through the steps of creating a database. 
 
 For Tabular solutions, there is a one-to-one correspondence between a database and model, with one model per database. You can typically specify one or the other, and the engine will infer the missing object. 

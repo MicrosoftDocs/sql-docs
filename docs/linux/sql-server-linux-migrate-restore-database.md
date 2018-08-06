@@ -3,17 +3,19 @@ title: Migrate a SQL Server database from Windows to Linux | Microsoft Docs
 description: This tutorial shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server 2017.
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
+ms.topic: conceptual
+ms.prod: sql
+ms.component: ""
+ms.suite: "sql"
+ms.custom: "sql-linux"
+ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.workload: "On Demand"
 ---
 # Migrate a SQL Server database from Windows to Linux using backup and restore
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server 2017 on Linux. In this tutorial, you will walk through the steps required to move a database to Linux with backup and restore techniques.
 
@@ -23,6 +25,8 @@ SQL Server's backup and restore feature is the recommended way to migrate a data
 > * Move the backup file to Linux from the Bash shell
 > * Restore the backup file on Linux with Transact-SQL
 > * Run a query to verify the migration
+
+You can also create a SQL Server Always On Availability Group to migrate a SQL Server database from Windows to Linux. See [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
 
 ## Prerequisites
 
@@ -185,6 +189,7 @@ In this tutorial, you learned how to back up a database on Windows and move it t
 > * Relocate the backup file to prepare for restore
 > * Use **sqlcmd** to run Transact-SQL commands
 > * Restore the database backup with the **RESTORE DATABASE** command 
+> * Run the query to verify the migration
 
 Next, explore other migration scenarios for SQL Server on Linux. 
 

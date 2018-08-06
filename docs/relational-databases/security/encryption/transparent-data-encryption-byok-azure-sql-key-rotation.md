@@ -1,4 +1,4 @@
----
+﻿---
 title: 'PowerShell - Rotate TDE protector - Azure SQL | Microsoft Docs'
 description: Learn how to rotate the Transparent Data Encryption (TDE) protector for an Azure SQL server.
 keywords: 
@@ -7,23 +7,22 @@ documentationcenter: ''
 author: becczhang
 manager: jhubbard
 editor: ''
-
-ms.assetid: 
-ms.service: sql-database
-ms.custom: quick start create, mvc
-ms.workload: data-management
-ms.tgt_pltfrm: portal
+ms.prod: 
+ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
+ms.service: "sql-database"
+ms.custom: 
+ms.tgt_pltfrm:
 ms.devlang: na
-ms.topic: hero-article
+ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
 
-ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 --- 
-
 # Rotate the Transparent Data Encryption (TDE) protector using PowerShell 
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 This how-to guide describes key rotation for an Azure SQL server using a TDE protector from Azure Key Vault. Rotating an Azure SQL server’s TDE protector means switching to a new asymmetric key that protects the databases on the server. Key rotation is an online operation and should only take a few seconds to complete, because this only decrypts and re-encrypts the database’s data encryption key, not the entire database.
 
@@ -41,7 +40,7 @@ This guide discusses two options to rotate the TDE protector on the server.
 
 - This how-to guide assumes that you are already using a key from Azure Key Vault as the TDE protector for an Azure SQL Database or Data Warehouse. See [Transparent Data Encryption with BYOK Support](transparent-data-encryption-byok-azure-sql.md).
 - You must have Azure PowerShell version 3.7.0 or newer installed and running. 
-- [Recommended but optional] Create the key material for the TDE protector in a hardware security module (HSM) or local key store first, and import the key material to Azure Key Vault. Follow the [instructions for using a hardware security module (HSM) and Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started) to learn more.
+- [Recommended but optional] Create the key material for the TDE protector in a hardware security module (HSM) or local key store first, and import the key material to Azure Key Vault. Follow the [instructions for using a hardware security module (HSM) and Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started) to learn more.
 
 ## Option 1: Auto rotation
 

@@ -1,26 +1,28 @@
----
+﻿---
 title: "Automatic tuning | Microsoft Docs"
 description: Learn about automatic tuning in SQL Server and Azure SQL Database
 ms.custom: ""
 ms.date: "08/16/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.component: "automatic-tuning"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "performance tuning [SQL Server]"
 ms.assetid: 
 caps.latest.revision: 
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Automatic tuning
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems.
 
@@ -30,8 +32,8 @@ Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enabl
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] monitors the queries that are executed on the database and automatically improves performance of the workload. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] has a built-in intelligence mechanism that can automatically tune and improve performance of your queries by dynamically adapting the database to your workload. There are two automatic tuning features that are available:
 
- -	**Automatic plan correction** (available in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) that identifies problematic plans and fixes SQL plan performance problems.
- -	**Automatic index management** (available in  [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]) that identifies indexes that should be added in your database, and indexes that should be removed.
+ -	**Automatic plan correction** (available in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]) that identifies problematic query execution plans and fixes SQL plan performance problems.
+ -	**Automatic index management** (available only in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]) that identifies indexes that should be added in your database, and indexes that should be removed.
 
 ## Why automatic tuning?
 
@@ -73,12 +75,14 @@ When the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applies the last known g
 than the regressed plan, the new plan will be unforced and the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will compile a new plan. If [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verifies
 that the forced plan is better than regressed one, the forced plan will be retained until a recompile (for example, on next statistics or schema change) if it is better than the regressed plan.
 
+Note: Any plans auto forced do not persit on a restart of the SQL Server instance.
+
 ### Enabling automatic plan choice correction
 
 You can enable automatic tuning per database and specify that last good plan should be forced whenever some plan change regression is detected. Automatic tuning is enabled using
 the following command:
 
-```   
+```sql   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
@@ -115,7 +119,7 @@ Some columns from this view are described in the following list:
 
 Use the following query to obtain a script that fixes the issue and additional information about the estimated gain:
 
-```   
+```sql   
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
@@ -150,6 +154,8 @@ FROM sys.dm_db_tuning_recommendations
 Although [!INCLUDE[ssde_md](../../includes/ssde_md.md)] provides all information required to identify plan choice regressions; continuous
 monitoring and fixing performance issues might be a tedious process. Automatic tuning makes this process much easier.
 
+Note: Data in this DMV does not persist after a restart of the SQL Server instance.
+
 ## Automatic index management
 
 In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], index management is easy because [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] learns about your workload and ensures that your data is always optimally indexed. Proper index design is crucial for optimal performance of your workload, and automatic index management can help you optimize your indexes. Automatic index management can either fix performance issues in incorrectly indexed databases, or maintain and improve indexes on the existing database schema. Automatic tuning in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] performs the following actions:
@@ -169,7 +175,7 @@ Finding the optimal set of indexes that improve performance of the queries that 
 
 In addition to detection, [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] can automatically apply identified recommendations. If you find that the built-in rules improve the performance of your database, you might let [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] automatically manage your indexes.
 
-To enable automatic tuning in Azure SQL Database and let automatic tuning feature fully manage your workload, see [Enable automatic tuning in Azure SQL Database using Azure portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable).
+To enable automatic tuning in Azure SQL Database and let automatic tuning feature fully manage your workload, see [Enable automatic tuning in Azure SQL Database using Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning-enable).
 
 When the [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] applies a CREATE INDEX or DROP INDEX recommendation, it automatically monitors the performance of the queries that are affected by the index. New index will be retained only if performances of the affected queries are improved. Dropped index will be automatically re-created if there are some queries that run slower due to the absence of the index.
 
@@ -181,7 +187,7 @@ Actions required to create necessary indexes in [!INCLUDE[ssazure_md](../../incl
 
 Without automatic index management, user would need to manually query [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) view to find indexes that might improve performance, create indexes using the details provided in this view, and manually monitor performance of the query. In order to find the indexes that should be dropped, users should monitor operational usage statistics of the indexes to find rarely used indexes.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifies this process. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyzes your workload, identifies the queries that could be executed faster with a new index, and identifies unused or duplicated indexes. Find more information about identification of indexes that should be changed at [Find index recommendations in Azure portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifies this process. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyzes your workload, identifies the queries that could be executed faster with a new index, and identifies unused or duplicated indexes. Find more information about identification of indexes that should be changed at [Find index recommendations in Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
 
 ## See Also  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

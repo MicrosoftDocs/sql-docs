@@ -1,34 +1,17 @@
 ---
 title: "CubeBinding Data Type (out-of-line) (ASSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "CubeBinding Data Type (out-of-line)"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "CubeBinding"
-helpviewer_keywords: 
-  - "CubeBinding data type"
-ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
-caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # CubeBinding Data Type (out-of-line) (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a primitive data type that represents the relationship between a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element and a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element.  
   
 ## Syntax  

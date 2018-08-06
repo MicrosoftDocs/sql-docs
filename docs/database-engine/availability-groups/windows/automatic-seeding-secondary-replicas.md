@@ -4,26 +4,22 @@ description: "Use automatic seeding to initialize secondary replicas."
 services: data-lake-analytics
 ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-- "dbe-high-availability"
+ms.suite: "sql"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
 - "Automatic seeding [SQL Server], secondary replica"
 ms.assetid: 
 caps.latest.revision: 
-author: "allanhirt"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: mathoma
+manager: craigg
 ---
 # Automatic seeding for secondary replicas
-
-[!INCLUDE [tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a SQL Server Always On availability group is to use backup, copy, and restore. SQL Server 2016 introduces a new feature to initialize a secondary replica – *automatic seeding*. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This new feature can be used either during the initial creation of an availability group or when a database is added to one. Automatic seeding is in all editions of SQL Server that support Always On availability groups, and can be used with both traditional availability groups and [distributed availability groups](distributed-availability-groups.md).
 
@@ -32,7 +28,7 @@ In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a
 Considerations for using automatic seeding include:
 
 * [Performance and transaction log impact on the primary replica](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Disk layout](#disk-layout)
+* [Disk layout](#disklayout)
 * [Security](#security)
 
 
@@ -152,9 +148,6 @@ If successful, the database(s) are automatically created on the secondary replic
 In addition to the [Dynamic Management Views](#dynamic-management-views) described below, the start and completion of automatic seeding can be seen in the SQL Server Log:
 
 ![SQL server log][2]
-
-
-
 
 ## Combine backup and restore with automatic seeding
 

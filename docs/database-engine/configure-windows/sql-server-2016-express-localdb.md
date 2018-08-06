@@ -2,13 +2,13 @@
 title: "SQL Server 2016 Express LocalDB | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user instances"
   - "LocalDB, described"
@@ -17,14 +17,13 @@ helpviewer_keywords:
   - "LocalDB"
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # SQL Server 2016 Express LocalDB
-
- > For content related to previous versions of SQL Server, see [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ > For content related to previous versions of SQL Server, see [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
 Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.  
 
@@ -35,12 +34,12 @@ Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Expres
   
 -   To download and install SQL Server 2016 Express, go to **[SQL Server downloads](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package. 
   
--   Have an Azure account?  Then go **[here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.  
+-   Have an Azure account?  Then go **[here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.  
   
 ## Install LocalDB  
  Install **LocalDB** through the installation wizard or by using the SqlLocalDB.msi program. **LocalDB** is an option when installing [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
  
-Select **LocalDB** on the **Feature Selection/Shared Features** page during installation. There can be only one installation of the **LocalDB** binary files for each major [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] version. Multiple [!INCLUDE[ssDE](../../includes/ssde-md.md)] processes can be started and will all use the same binaries. An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] started as the **LocalDB** has the same limitations as [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+Select **LocalDB** on the **Feature Selection/Shared Features** page during installation. There can be only one installation of the **LocalDB** binary files for each major [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] version. Multiple [!INCLUDE[ssDE](../../includes/ssde-md.md)] processes can be started and will all use the same binaries. An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] started as the **LocalDB** has the same limitations as [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
 
  An instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** is managed by using the **SqlLocalDB.exe** utility. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** should be used in place of the [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] user instance feature which is deprecated. 
   

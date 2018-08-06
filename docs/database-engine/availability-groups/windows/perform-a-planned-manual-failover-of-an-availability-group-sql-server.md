@@ -1,16 +1,13 @@
 ---
-title: "Perform a Planned Manual Failover of an Availability Group (SQL Server) | Microsoft Docs"
+title: "Perform a planned manual failover of an availability group (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.suite: "sql"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.manualfailover.f1"
 helpviewer_keywords: 
@@ -18,129 +15,109 @@ helpviewer_keywords:
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Perform a Planned Manual Failover of an Availability Group (SQL Server)
-  This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] failover, transitions a secondary replica to primary role and, concurrently, transitions the former primary replica to the secondary role.  
+
+# Perform a planned manual failover of an availability group (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any AlwaysOn availability group failover, transitions a secondary replica to primary role. Concurrently, the failover transitions the former primary replica to the secondary role.  
   
- A planned manual failover, which is supported only when the primary replica and the target secondary replica are running in synchronous-commit mode and are currently synchronized, preserves all the data in the secondary databases that are joined to the availability group on the target secondary replica. Once the former primary replica transitions to the secondary role, its databases become secondary databases and begin synchronizing with the new primary databases. After they all transition into the SYNCHRONIZED state, the new secondary replica becomes eligible to serve as the target of a future planned manual failover.  
+A planned manual failover is supported only when the primary replica and the target secondary replica are running in synchronous-commit mode and are currently synchronized. A planned manual failover preserves all the data in the secondary databases that are joined to the availability group on the target secondary replica. After the former primary replica transitions to the secondary role, its databases become secondary databases. Then they begin to synchronize with the new primary databases. After they all transition into the SYNCHRONIZED state, the new secondary replica becomes eligible to serve as the target of a future planned manual failover.  
   
 > [!NOTE]  
->  If the secondary and primary replicas are both configured for automatic failover mode, once the secondary replica is synchronized, it can also serve as the target for an automatic failover. For more information, see [Availability Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites and Restrictions](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To manually fail over an availability group, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:**  [After Manually Failing Over an Availability Group](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
+>  If the secondary and primary replicas are both configured for automatic failover mode, after the secondary replica is synchronized, it also can serve as the target for an automatic failover. For more information, see [Availability modes &#40;AlwaysOn availability groups&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+   
+##  <a name="BeforeYouBegin"></a> Before you begin 
 
 >[!IMPORTANT]
->There are specific procedures to failover a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over primary replica on read-scale availability group](#ReadScaleOutOnly).
+>There are specific procedures to fail over a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over the primary replica on a read-scale availability group](#fail-over-the-primary-replica-on-a-read-scale-availability-group).
 
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+###  <a name="Restrictions"></a> Limitations and restrictions 
   
--   A failover command returns as soon as the target secondary replica has accepted the command. However, database recovery occurs asynchronously after the availability group has finished failing over.  
+- A failover command returns as soon as the target secondary replica has accepted the command. However, database recovery occurs asynchronously after the availability group has finished failing over. 
+- Cross-database consistency across databases within the availability group might not be maintained on failover. 
   
--   Cross-database consistency across databases within the availability group might not be maintained on failover.  
+    > [!NOTE] 
+    >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-database transactions and distributed transactions for AlwaysOn availability groups and database mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
   
-    > [!NOTE]  
-    >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
+###  <a name="Prerequisites"></a> Prerequisites and restrictions 
   
-###  <a name="Prerequisites"></a> Prerequisites and Restrictions  
+-   Both the target secondary replica and the primary replica must be running in synchronous-commit availability mode. 
+-   Currently, the target secondary replica must be synchronized with the primary replica. All the secondary databases on this secondary replica must be joined to the availability group. They also must be synchronized with their corresponding primary databases (that is, the local secondary databases must be SYNCHRONIZED). 
   
--   The target secondary replica and the primary replica must both be running in synchronous-commit availability mode.  
+    > [!TIP] 
+    >  To determine the failover readiness of a secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) dynamic management view. Or you can look at the **Failover Readiness** column of the [AlwaysOn group dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
+-   This task is supported only on the target secondary replica. You must be connected to the server instance that hosts the target secondary replica. 
   
--   The target secondary replica must currently be synchronized with the primary replica. This requires that all the secondary databases on this secondary replica must have been joined to the availability group and be synchronized with their corresponding primary databases (that is, the local secondary databases must be SYNCHRONIZED).  
+###  <a name="Security"></a> Security 
   
-    > [!TIP]  
-    >  To determine the failover readiness of an secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) dynamic management view, or look at the **Failover Readiness** column of the [Always On Group Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md).  
+####  <a name="Permissions"></a> Permissions 
+ The ALTER AVAILABILITY GROUP permission is required on the availability group. The CONTROL AVAILABILITY GROUP permission, the ALTER ANY AVAILABILITY GROUP permission, or the CONTROL SERVER permission also is required. 
   
--   This task is supported only on the target secondary replica. You must be connected to the server instance that hosts the target secondary replica.  
+##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio 
+ To manually fail over an availability group: 
   
-###  <a name="Security"></a> Security  
+1. In Object Explorer, connect to a server instance that hosts a secondary replica of the availability group that needs to be failed over. Expand the server tree. 
   
-####  <a name="Permissions"></a> Permissions  
- Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
+2. Expand the **AlwaysOn High Availability** node and the **Availability Groups** node. 
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- **To manually fail over an availability group**  
+3. Right-click the availability group to be failed over, and select **Failover**. 
   
-1.  In Object Explorer, connect to a server instance that hosts a secondary replica of the availability group that needs to be failed over, and expand the server tree.  
+4. The Failover Availability Group wizard starts. For more information, see [Use the Failover Availability Group wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). 
   
-2.  Expand the **Always On High Availability** node and the **Availability Groups** node.  
+##  <a name="TsqlProcedure"></a> Use Transact-SQL 
+ To manually fail over an availability group: 
   
-3.  Right-click the availability group to be failed over, and select the **Failover** command.  
+1. Connect to the server instance that hosts the target secondary replica. 
   
-4.  This launches the Failover Availability Group Wizard. For more information, see [Use the Fail Over Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+2. Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows: 
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- **To manually fail over an availability group**  
+     ALTER AVAILABILITY GROUP *group_name* FAILOVER 
   
-1.  Connect to the server instance that hosts the target secondary replica.  
+     In the statement, *group_name* is the name of the availability group. 
   
-2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:  
-  
-     ALTER AVAILABILITY GROUP *group_name* FAILOVER  
-  
-     where *group_name* is the name of the availability group.  
-  
-     The following example manually fails over the *MyAg* availability group to the connected secondary replica.  
+     The following example manually fails over the *MyAg* availability group to the connected secondary replica: 
   
     ```  
     ALTER AVAILABILITY GROUP MyAg FAILOVER;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Using PowerShell  
- **To manually fail over an availability group**  
+##  <a name="PowerShellProcedure"></a> Use PowerShell 
+ To manually fail over an availability group: 
   
-1.  Change directory (**cd**) to the server instance that hosts the target secondary replica.  
+1. Change the directory (**cd**) to the server instance that hosts the target secondary replica. 
   
-2.  Use the **Switch-SqlAvailabilityGroup** cmdlet.  
+2. Use the **Switch-SqlAvailabilityGroup** cmdlet. 
   
-    > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    > [!NOTE] 
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md). 
   
-     The following example manually fails over the *MyAg* availability group to the secondary replica with the specified path.  
+     The following example manually fails over the *MyAg* availability group to the secondary replica with the specified path: 
   
     ```  
     Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg  
     ```  
   
- **To set up and use the SQL Server PowerShell provider**  
+    To set up and use the SQL Server PowerShell provider: 
   
--   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
-  
--   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+    -   [SQL Server PowerShell provider](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
+    -   [Get help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> Follow Up: After Manually Failing Over an Availability Group  
- If you failed over outside of the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the WSFC nodes to reflect your new availability group configuration. For more information, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
-  
+##  <a name="FollowUp"></a> Follow up: After you manually fail over an availability group 
+ If you failed over outside the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the Windows Server failover clustering nodes to reflect your new availability group configuration. For more information, see [Windows Server failover clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
+
 <a name = "ReadScaleOutOnly"><a/>
 
-##Fail over primary replica on read-scale  availability group
+## Fail over the primary replica on a read-scale availability group
 
-[!INCLUDE[Force Failover](../../../includes/ss-force-failover-read-scale-out.md)]
+[!INCLUDE[Force failover](../../../includes/ss-force-failover-read-scale-out.md)]
 
-## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Failover and Failover Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
- [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+## See also 
+
+ * [Overview of AlwaysOn availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
+ * [Failover and failover modes &#40;AlwaysOn availability groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
+ * [Perform a forced manual failover of an availability group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
   
   

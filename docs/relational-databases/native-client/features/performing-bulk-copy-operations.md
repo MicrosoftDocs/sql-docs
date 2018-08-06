@@ -1,12 +1,11 @@
----
+﻿---
 title: "Performing Bulk Copy Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
+ms.suite: "sql"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -15,13 +14,13 @@ helpviewer_keywords:
   - "SQL Server Native Client, bulk copy operations"
   - "SQLNCLI, bulk copy operations"
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Performing Bulk Copy Operations
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk copy feature supports the transfer of large amounts of data into or out of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table or view. Data can also be transferred out by specifying a SELECT statement. The data can be moved between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and an operating-system data file, such as an ASCII file. The data file can have different formats; the format is defined to bulk copy in a format file. Optionally, data can be loaded into program variables and transferred to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using bulk copy functions and methods.  

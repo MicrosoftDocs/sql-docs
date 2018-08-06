@@ -1,12 +1,13 @@
----
+﻿---
 title: "SQLXML 4.0 Security Considerations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
+ms.suite: "sql"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,10 +17,11 @@ ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SQLXML 4.0 Security Considerations
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This section provides information about security-related considerations for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML.  
   
 ## In This Section  

@@ -2,14 +2,16 @@
 title: "Configure and Administer a Report Server (SSRS Native Mode) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/18/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.component: "report-server"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, components"
   - "deploying [Reporting Services], component options"
@@ -20,10 +22,9 @@ helpviewer_keywords:
   - "configuring servers [Reporting Services]"
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 caps.latest.revision: 51
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "On Demand"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Configure and Administer a Report Server (SSRS Native Mode)
   This topic summarizes the approaches that you can use to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. It also includes a list of topics that explain how to configure specific components, features, or server capabilities. To configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can:  
@@ -56,7 +57,6 @@ ms.workload: "On Demand"
  Describes how to configure a user account to process reports in unattended mode.  
   
 ## See Also  
- [Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services Security and Protection](../../reporting-services/security/reporting-services-security-and-protection.md)   

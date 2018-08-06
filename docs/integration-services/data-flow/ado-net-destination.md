@@ -2,13 +2,13 @@
 title: "ADO NET Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.adonetdest.f1"
   - "sql13.dts.designer.adonetdest.connection.f1"
@@ -21,8 +21,7 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # ADO NET Destination
   The ADO NET destination loads data into a variety of [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-compliant databases that use a database table or view. You have the option of loading this data into an existing table or view, or you can create a new table and load the data into the new table.  
@@ -97,10 +96,10 @@ ms.workload: "Inactive"
 > [!NOTE]  
 >  If a SQL Server or Sybase source table includes an identity column, you must use Execute SQL tasks to enable IDENTITY_INSERT before the ADO NET destination and to disable it again afterward. (The identity column property specifies an incremental value for the column. The SET IDENTITY_INSERT statement lets explicit values from the source table be inserted into the identity column in the destination table.)  
 >   
->   To run the SET IDENTITY_INSERT statements and the data loading successfully, you have to do the following things. 
->       1. Use the same ADO.NET connection manager for the Execute SQL tasks and for the ADO.NET destination. 
->       2. On the connection manager, set the **RetainSameConnection** property and the **MultipleActiveResultSets** property to True. 
->       3. On the ADO.NET destination, set the **UseBulkInsertWhenPossible** property to False. 
+>   To run the SET IDENTITY_INSERT statements and the data loading successfully, you have to do the following things.  
+>       1. Use the same ADO.NET connection manager for the Execute SQL tasks and for the ADO.NET destination.  
+>       2. On the connection manager, set the **RetainSameConnection** property and the **MultipleActiveResultSets** property to True.  
+>       3. On the ADO.NET destination, set the **UseBulkInsertWhenPossible** property to False.   
 >
 >  For more information, see [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) and [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   

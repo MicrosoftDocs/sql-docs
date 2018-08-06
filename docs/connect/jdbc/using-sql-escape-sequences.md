@@ -1,20 +1,19 @@
 ---
 title: "Using SQL Escape Sequences | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/11/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 caps.latest.revision: 25
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using SQL Escape Sequences
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ ms.workload: "On Demand"
 ## LIKE Wildcard Literals  
  The JDBC driver supports the `{escape 'escape character'}` syntax for using LIKE clause wildcards as literals. For example, the following code will return values for col3, where the value of col2 literally begins with an underscore (and not its wildcard usage).  
   
-```  
+```java
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
 LIKE '\\_%' {escape '\\'}");  
 ```  
@@ -58,13 +57,13 @@ LIKE '\\_%' {escape '\\'}");
 ## Function Handling  
  The JDBC driver supports function escape sequences in SQL statements with the following syntax:  
   
-```  
+```java
 {fn functionName}  
 ```  
   
  where `functionName` is a function supported by the JDBC driver. For example:  
   
-```  
+```sql
 SELECT {fn UCASE(Name)} FROM Employee  
 ```  
   
@@ -80,7 +79,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 ## Date and Time Literals  
  The escape syntax for date, time, and timestamp literals is the following:  
   
-```  
+```
 {literal-type 'value'}  
 ```  
   
@@ -94,7 +93,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  For example:  
   
-```  
+```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
 WHERE OrderID=1025  
 ```  
@@ -104,7 +103,7 @@ WHERE OrderID=1025
   
  A procedure is an executable object stored in the database. Generally, it is one or more SQL statements that have been precompiled. The escape sequence syntax for calling a stored procedure is the following:  
   
-```  
+```sql
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
@@ -115,13 +114,13 @@ WHERE OrderID=1025
 ## Outer Joins  
  The JDBC driver supports the SQL92 left, right, and full outer join syntax. The escape sequence for outer joins is the following:  
   
-```  
+```sql
 {oj outer-join}  
 ```  
   
  where outer-join is:  
   
-```  
+```sql
 table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
 {table-reference | outer-join} ON search-condition  
 ```  
@@ -130,7 +129,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  For example:  
   
-```  
+```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
    FROM {oj Customers LEFT OUTER JOIN   
       Orders ON Customers.CustID=Orders.CustID}   
@@ -154,7 +153,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
  The escape syntax for LIMIT is as follows:  
   
-```  
+```sql
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   

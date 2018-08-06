@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties*
+  commentId: M:ReportService2005.ReportingService2005.GetProperties
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.reportingservices2005.reportingservice2005.getproperties(v=sql.120).aspx
+  name: GetProperties
+  name.vb: GetProperties
+  fullName: ReportingService2005.GetProperties
+  fullName.vb: ReportingService2005.GetProperties

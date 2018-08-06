@@ -2,11 +2,11 @@
 title: "SQL Server Profiler dialog boxes | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/07/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: profiler
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
@@ -42,12 +42,12 @@ helpviewer_keywords:
   - "Find dialog box"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # SQL Server Profiler dialog boxes
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is a tool that captures [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events from a server. The events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem. The following are the commands and settings available in the dialog boxes of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## Trace properties
 ### General tab

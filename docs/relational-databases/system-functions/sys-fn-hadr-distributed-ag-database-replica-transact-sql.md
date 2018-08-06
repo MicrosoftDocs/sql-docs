@@ -2,11 +2,12 @@
 title: "sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,13 +21,12 @@ helpviewer_keywords:
   - "sys.fn_hadr_distributed_ag_database_replica"
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Used to  map a database in a distributed availability group to the database in the local availability group.  
    

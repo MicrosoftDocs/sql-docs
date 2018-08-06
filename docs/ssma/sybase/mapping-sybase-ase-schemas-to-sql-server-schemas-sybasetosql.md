@@ -2,13 +2,12 @@
 title: "Mapping Sybase ASE Schemas to SQL Server Schemas (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -18,8 +17,7 @@ ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Mapping Sybase ASE Schemas to SQL Server Schemas (SybaseToSQL)
 In Sybase Adaptive Server Enterprise (ASE), each database has one or more schemas. By default, SSMA migrates all objects within a database and schema to the same database and schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. However, you can customize the mapping between ASE and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure databases and schemas.  
@@ -64,7 +62,7 @@ If you customize the mapping between an ASE schema and a [!INCLUDE[ssNoVersion](
 1.  Under the schema mapping tab, select any row and click **Reset to Default** to revert to the default database and schema.  
   
 ## Next Steps  
-If you want to analyze the conversion of Sybase ASE objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, you can [Create a conversion report](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c). Otherwise you can [Convert the ASE database object definitions](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3) into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure object definitions.  
+If you want to analyze the conversion of Sybase ASE objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, you can [Create a conversion report](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c). Otherwise you can [Convert the ASE database object definitions](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3) into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure object definitions.  
   
 ## See Also  
 [Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

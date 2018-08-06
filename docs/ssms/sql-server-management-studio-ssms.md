@@ -1,22 +1,27 @@
 ---
 title: "SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.date: "02/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.suite: "sql"
+ms.custom: ""
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
+f1_keywords: 
+  - "sql13.ssms.viewhelp.f1"
+helpviewer_keywords: 
+  - "SQL Server Management Studio"
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # SQL Server Management Studio (SSMS)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] (SSMS) is an integrated environment for managing any SQL infrastructure. Use SSMS to access, configure, manage, administer, and develop all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)], Azure SQL Database, and SQL Data Warehouse. SSMS provides a single comprehensive utility that combines a broad group of graphical tools with a number of rich script editors to provide access to [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] for developers and database administrators of all skill levels.
 
 
@@ -24,7 +29,7 @@ ms.workload: "Active"
  
  - [**Download SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md) 
  - [**Download SQL Server 2016 Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
- - [**Download Visual Studio**](https://www.visualstudio.com/post-download-vs/?sku=community&clcid=0x409&downloadrename=true)
+ - [**Download Visual Studio**](https://www.visualstudio.com/downloads/)
 
   
 ## SQL Server Management Studio components  

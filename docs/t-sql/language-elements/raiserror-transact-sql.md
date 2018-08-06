@@ -1,12 +1,12 @@
----
+﻿---
 title: "RAISERROR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -29,12 +29,13 @@ helpviewer_keywords:
   - "messages [SQL Server], RAISERROR statement"
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
-# RAISERROR-Transact-SQL
+
+# RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Generates an error message and initiates error processing for the session. RAISERROR can either reference a user-defined message stored in the sys.messages catalog view or build a message dynamically. The message is returned as a server error message to the calling application or to an associated CATCH block of a TRY…CATCH construct. New applications should use [THROW](../../t-sql/language-elements/throw-transact-sql.md) instead.  
@@ -118,10 +119,10 @@ RAISERROR ( { msg_str | @local_variable }
 >  These type specifications are based on the ones originally defined for the **printf** function in the C standard library. The type specifications used in RAISERROR message strings map to [!INCLUDE[tsql](../../includes/tsql-md.md)] data types, while the specifications used in **printf** map to C language data types. Type specifications used in **printf** are not supported by RAISERROR when [!INCLUDE[tsql](../../includes/tsql-md.md)] does not have a data type similar to the associated C data type. For example, the *%p* specification for pointers is not supported in RAISERROR because [!INCLUDE[tsql](../../includes/tsql-md.md)] does not have a pointer data type.  
   
 > [!NOTE]  
->  To convert a value to the [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint** data type, specify **%I64d**.  
+>  To convert a value to the [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** data type, specify **%I64d**.  
   
- **@** *local_variable*  
- Is a variable of any valid character data type that contains a string formatted in the same manner as *msg_str*. **@***local_variable* must be **char** or **varchar**, or be able to be implicitly converted to these data types.  
+ *@local_variable*  
+ Is a variable of any valid character data type that contains a string formatted in the same manner as *msg_str*. *@local_variable* must be **char** or **varchar**, or be able to be implicitly converted to these data types.  
   
  *severity*  
  Is the user-defined severity level associated with this message. When using *msg_id* to raise a user-defined message created using sp_addmessage, the severity specified on RAISERROR overrides the severity specified in sp_addmessage.  
@@ -280,8 +281,8 @@ GO
 ```  
   
 ## See Also  
- [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
  [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
+ [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   

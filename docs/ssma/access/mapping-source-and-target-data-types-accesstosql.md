@@ -1,14 +1,13 @@
 ---
 title: "Mapping Source and Target Data Types (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -22,14 +21,13 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Mapping Source and Target Data Types (AccessToSQL)
 Access database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database types. When you convert Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects, you must specify how to map data types from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following procedures.  
   
 ## Default Mappings  
-SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings (Type Mapping)](http://msdn.microsoft.com/en-us/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings (Type Mapping)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
   
 ## Customizing Data Type Mappings  
 By using the **Project Settings** dialog box, you can customize how types are mapped for all databases and database objects in a project. The type mappings for a project apply to all databases and database objects that do not have custom type mappings.  
@@ -91,8 +89,8 @@ The following procedure shows how to map data types at the project, database, or
     2.  Click **Remove**.  
   
 ## Next Steps  
-The next step in the migration process is [convert access database objects to SQL Server objects](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+The next step in the migration process is [convert access database objects to SQL Server objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

@@ -1,21 +1,17 @@
 ---
-title: "Reserved Database Names (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
-ms.technology: "mpp-data-warehouse"
-ms.custom: na
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 92b0ffb2-0dcb-413f-bc0e-85e9e3e50f92
-caps.latest.revision: 5
-
+title: Reserved database names - Parallel Data Warehouse | Microsoft Docs
+description: Reserved database names in Analytics Platform System Parallel Data Warehouse.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Reserved Database Names
+
+# Reserved database names in Parallel Data Warehouse
 A reserved database name is a name that cannot be assigned to a user database in SQL Server PDW.  
   
 List of reserved database names:  

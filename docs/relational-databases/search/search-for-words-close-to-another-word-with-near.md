@@ -1,14 +1,15 @@
----
+﻿---
 title: "Search for Words Close to Another Word with NEAR | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
+ms.suite: "sql"
+ms.technology: search
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -21,12 +22,13 @@ helpviewer_keywords:
   - "queries [full-text search], proximity"
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Search for Words Close to Another Word with NEAR
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can use the *proximity term* **NEAR** in a [CONTAINS](../../t-sql/queries/contains-transact-sql.md) predicate or [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) function to search for words or phrases near one another. 
   
 ##  <a name="Custom_NEAR"></a> Overview of NEAR  
@@ -73,7 +75,7 @@ For more info about the syntax, see [CONTAINS &#40;Transact-SQL&#41;](../../t-sq
 ### Example 1
  For example, you could search for 'John' within two terms of 'Smith', as follows:  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -86,7 +88,7 @@ For more info about the syntax, see [CONTAINS &#40;Transact-SQL&#41;](../../t-sq
 ### Example 2
  The following example searches the `Production.Document` table of the `AdventureWorks` sample database for all document summaries that contain the word "reflector" in the same document as the word "bracket".  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -109,15 +111,15 @@ GO
 ## Combine NEAR with other terms  
  You can combine NEAR with some other terms. You can use AND (&), OR (|), or AND NOT (&!) to combine a custom proximity term with another custom proximity term, a simple term, or a prefix term. For example:  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) OR *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NOT *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND NOT *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NEAR((*term3*,*term4*),2)')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND NEAR((*term3*, *term4*),2)')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR NEAR((*term3*,*term4*),2, TRUE)')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) OR NEAR((*term3*, *term4*),2, TRUE)')  
   
  For example,  
   

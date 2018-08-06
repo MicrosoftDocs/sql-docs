@@ -1,25 +1,215 @@
----
+﻿---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/02/2018"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "ssdt"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssdt"
+ms.suite: "sql"
+ms.technology: ssdt
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## SSDT for Visual Studio 2017 (15.7.1)
+Build number: 14.0.16167.0  
+Release date: July 02, 2018  
+  
+### What's New?
+
+**SSIS:**
+
+- Add support for new Azure Government AAD authority (login.microsoftonline.us) for use with AS Tasks.
+- Fix an issue that AS processing task UI will show “Method not found” when target server version is SQLServer2016.
+- Fix an issue that some pipeline components cannot be executed when target server version is SQLServer2012.
+
+**Installer:**
+
+- Filter the VS instance list to exclude the instances that cannot install SSDT.
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- When installing SSDT on Windows 10 and choosing “Install new SQL Server Data Tools for Visual Studio 2017 instance”, the installation will fail on “The requested metafile operation is not supported”. Please reboot the machine and launch SSDT installer again to continue the installation.
+
+
+
+## SSDT for Visual Studio 2017 (15.7.0)
+Build number: 14.0.16165.0  
+Release date: June 4, 2018  
+  
+### What's New?
+
+**SSIS:**
+
+- Fix an issue that *Integration Services Designers* page in Options dialog cannot be shown properly.  
+- Fix an issue that luminosity ratio issue for text appearing in *Sort Transformation Editor* editor.  
+- Fix an issue that *Resolve References* dialog disappears when attempting to edit a combobox.  
+- Fix an issue that F1 help link of *Hadoop Connection Manager* doesn’t work.  
+- Fix an issue that script task code will be lost if it’s in a container when targeting SQL Server 2016.  
+
+
+**Installer:**
+
+- Fix an issue that SSAS cannot be installed before SSRS and SSIS are installed in VS 15.7.2.
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+## SSDT for Visual Studio 2017 (15.6.0)
+Build number: 14.0.16162.0  
+Release date: April 10, 2018
+  
+### What's New?
+
+**SSIS:**
+
+- Fix an issue that AS processing task doesn’t log any processing steps when targeting to SQLServer2016 and SQLServer2017
+- Fix an issue that access violation will happen when opening dtsx with very long non-English task names in SSDT
+- Fix an issue that sometimes variable list of ScriptTask will disappear in task UI
+- Fix an issue that adding copy of existing package will fail when the package location is SQL Server
+- Fix an issue that focus gets stuck while accessing the combo box in some editor dialog box.
+- Fix an issue that background will not change while switching VS theme.
+- Fix an issue that annotation and loading label is invisible in dark theme.
+- Fix an issue that the state property is not defined correctly for SSIS toolbox disabled items.
+- Fix an issue that it always fails to execute WebServiceTask.
+- Fix an issue that package deployment will fail if connection string is set to variable having expression dependent on project parameters.
+
+**Installer:**
+
+- Add the link of “Customer Experience Improvement Program for SQL Server Data Tools” in privacy disclaimer.
+- Fix an issue that VS installer window will popup when selecting “Install new SQL Server Data Tools for Visual Studio 2017 instance”
+
+### Known issues:
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+
+## SSDT for Visual Studio 2017 (15.5.2)
+Build number: 14.0.16156.0
+  
+### What's New?
+
+**SSIS**
+- Fix an issue that migrating SSIS 2008 projects will fail when both SSAS and SSIS are installed to the same VS 2017 instance.
+- Fix an issue that Rdlc projects cannot be built when both Rdlc report designer and SSIS are installed to same VS 2017 instance.
+- Fix an issue that the annotation color can't update.
+- Fix an issue that some strings in Hadoop connection manager editor are truncated in other languages.
+- Fix an issue that some strings are truncated in OData connection manager editor.
+- Fix an issue that some strings are truncated in Integration Services import project wizard window.
+- Fix an issue with the title in the SSIS tool box information window.
+- Fix an issue that some strings are truncated in Integration Services Deployment Wizard window. 
+
+**Installer**
+- Fix an issue that sometimes downloading payload will fail with error "The system cannot find the file specified (0x80070002)".  
+
+### Known issues
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+
+
+## SSDT for Visual Studio 2017 (15.5.1)
+Build number: 14.0.16148.0
+  
+### What's New?
+
+Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for the following bug fixes to the installer:
+
+1.	Fix an issue where the installer hangs on SQL Server Integration Services post install.
+2.	Fix an issue where setup fails with the following error message: "The requested metafile operation is not support (0x800707D3)".
+
+In addition to these two bug fixes, the following details for 15.5.0 still apply to 15.5.1
+
+## SSDT for Visual Studio 2017 (15.5.0)
+Build number: 14.0.16146.0
+  
+### What's New?
+
+SSDT for Visual Studio 2017 (15.5.0) moves from preview to general availability (GA).
+
+**Installer**
+1. Setup UI is localized.
+1. Replace the icon with a higher quality version.
+
+**Integration Services (IS)**
+1. Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. SSIS extension is localized.
+
+### Bug fixes
+
+**Integration Services (IS)**
+1. Fixed an issue where the layout of OLEDB and ADO.NET connection manager is corrupt.
+2. Fixed an issue where an assembly not found error is raised when attempting to edit a Dimension Processing Task.
+
+### Known issues
+
+**Integration Services (IS)**
+SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+
+## SSDT 17.4 for Visual Studio 2015
+Build number: 14.0.61712.050
+
+### What's New?
+
+**Analysis Services (AS) projects**
+- Added three new options to tabular projects (under Options > Analysis Services Tabular > Data Import):
+  - Enable Legacy data sources - allows the user to create older "1200 compatibility mode" data sources in newer compatibility modes.
+  - Automatic type detection - when enabled the Query Editor for modern data sources will attempt to detect data types for unstructured queries when they are loaded. If the detection is successful, a new step may be added to the query.
+  - Run background analysis - when enabled the Query Editor for modern data sources will run queries against the data source as the queries are loaded in order to analyze the query's output schema.
+
+**Integration Services (IS)**
+- Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+
+
+### Bug fixes
+
+**Analysis Services (AS) projects:**
+- Fixed an issue that could cause an unhandled exception when checking in model changes to TFS.
+- Fixed an issue that could cause an exception when adding table with complex M expression to a 1400 model.
+- Fixed an issue that could cause a crash in Visual Studio when searching metadata in the model diagram view.
+- Fixed an issue with 1400 models that could cause calculated columns to get removed from the table definition when saving changes to partition M queries.
+- Fixed an issue when using Rename Query on 1400 models in the Get Data\Table Editor UI that could freeze while validating compatibility with current data model.
+- Fixed an issue that caused a missing Newtonsoft assembly reference when deploying 1400 model to Azure Analysis Service.
+- Fixed an issue that caused an error importing data through PQ into a 1400 model in certain cases.
+- Fixed a scaling issue in the PowerQuery user interface dialogs that would appear when Windows scaling set.
+- Fixed an issue with renaming roles.
+- Fixed issues with the Project Configurations that may have caused changes to not save\sync properly in some cases.
+- Fixed an issue in the PowerQuery editor that was adding "Change Type" steps automatically.
+- Fixed an issue that caused an error opening the BIM file after switching to\from Integrated Workspace mode.
+- MaxConnections property is now visible for data sources in tabular models.
+- Increased the initial size of the PowerQuery editor window.
+- M Query keywords such as "Source" in the PowerQuery editor will now show as localized.
+- Cache credentials when working with 1400 models and structured data sources to prevent having to enter the same credentials for each table edited.
+
+**RS Projects:**
+- Fixed an issue that prevented deploying a single report in a multi report project
+- Fixed an issue with Shared Data Sources that may have caused an issue on deployment
+- Fixed an issue that could crash in the Undo manager when switching between code view, design view, and query editor window
+- Fixed an issue that may have caused the parameter pane to disappear after runtime error
+- Fixed an issue with Report Projects that may have caused them to lose source control mappings
+
+**Integration Services:**
+- Fixed an issue that may have occurred when switching a connection on an Analysis Services Process Task
+- Fixed an issue where some tasks/components are not localized well.
+- Fixed an issue where CDC components break after applying a SQL fix for CDC that adds \__$command\_id column.
 
 
 ## SSDT for Visual Studio 2017 (15.4.0 preview)
@@ -158,7 +348,6 @@ This preview is the first version of SSDT for Visual Studio 2017. This release i
 - SSIS is not localized.
 - SSIS Execute Package Task doesn't support debugging when *ExecuteOutofProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 - For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
-- Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
 - SSIS Packages containing 3rd party extensions cannot be switched to target other server versions.
 
 

@@ -1,24 +1,16 @@
 ---
-title: "Resource governance for machine learning in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/13/2017"
-ms.prod:
- -  "sql-server-2016"
- -  "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Resource governance for machine learning in SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Resource governance for machine learning in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides an overview of resource governance features in SQL Server that help allocate and balance resources used by R and Python scripts.
 
@@ -29,23 +21,23 @@ This article provides an overview of resource governance features in SQL Server 
 
 One known pain point with machine learning languages such as R and Python is that data is often moved outside the database to computers not controlled by IT. Another is that R is single-threaded, meaning that you can only work with the data available in memory. 
 
-SQL Server Machine Learning Services alleviates both these problems, and helps meet enterprise-level compliance requirements. It keeps advanced analytics inside the database, and supports increased performance over large datasets through features such as streaming and chunking operations. However, moving R and Python computations inside the databases can affect the performance of other services that use the database, including regular user quesries, external applications, and scheduled database jobs.
+SQL Server Machine Learning Services alleviates both these problems, and helps meet enterprise compliance requirements. It keeps advanced analytics inside the database, and supports increased performance over large datasets through features such as streaming and chunking operations. However, moving R and Python computations inside the databases can affect the performance of other services that use the database, including regular user queries, external applications, and scheduled database jobs.
 
-This section provides information about how you can manage resources used by external runtimes, such as R and Python, to mitigate impact on other core database services. A database server environment typically is the hub for multiple dependent applications and services. 
+This section provides information about how you can manage resources used by external runtimes, such as R and Python, to mitigate impact on other core database services. A database server environment typically is the hub for multiple dependent applications and services.
 
 You can use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to manage the resources used by the external runtimes for R and Python.  For machine learning, resource governance involves these tasks:
 
-+ Identifying scripts that use excessive server resources.  
++ Identifying scripts that use excessive server resources.
   
-     The administrator needs to be able to terminate or throttle jobs that are consuming too many resources.  
+     The administrator needs to be able to terminate or throttle jobs that are consuming too many resources.
   
-+ Mitigating unpredictable workloads.  
++ Mitigating unpredictable workloads.
   
      For example, if multiple machine learning jobs are running concurrently on the server, the resulting resource contention could lead to unpredictable performance or threaten completion of the workload. However, if resource pools are used, the jobs can be isolated from each other.
   
--   Prioritizing workloads.  
+-   Prioritizing workloads.
   
-     The administrator or architect needs to be able to specify workloads that must take precedence, or guarantee certain workloads to complete if there is resource contention.
+     The administrator or architect needs to be able to specify workloads that must take precedence, or guarantee certain workloads to complete when there is resource contention.
 
 ## How to use Resource Governor to manage machine learning
  
@@ -61,15 +53,15 @@ SQL Server supports three types of default resource pools:
   
  In addition, you can create *user-defined resource pools* to allocate resources to the database engine or other applications, and create *user-defined external resource pools* to manage R and other external processes.
   
- For a good introduction to terminology and general concepts, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
+ For a good introduction to terminology and general concepts, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).
 
   
-## Resource management using Resource Governor 
+## Resource management walkthrough with Resource Governor
 
-If you are new to Resource Governor, see this topic for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [How To: Create a Resource Pool for R](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)   
+If you are new to Resource Governor, see this topic for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [Create a resource pool for external scripts](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
   
- You can use the *external resource pool* mechanism to manage the resources used by the following executables that are used in machine learning:  
-  
+ You can use the *external resource pool* mechanism to manage the resources used by the following executables that are used in machine learning:
+
 + Rterm.exe and satellite processes
 + Python.exe and satellite processes
 + BxlServer.exe and satellite processes
@@ -93,4 +85,4 @@ Therefore, if there is a resource issue that needs to be mitigated immediately, 
 
 [Create a resource pool for machine learning](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
 
-[Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
+[Resource Governor resource pools](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

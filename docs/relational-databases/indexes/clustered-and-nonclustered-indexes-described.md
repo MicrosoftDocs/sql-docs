@@ -1,29 +1,28 @@
----
+﻿---
 title: "Clustered and Nonclustered Indexes Described | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/28/2017"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
+ms.suite: "sql"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "query optimizer [SQL Server], index usage"
   - "index concepts [SQL Server]"
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Clustered and Nonclustered Indexes Described
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
- > For content related to previous versions of SQL Server, see [Clustered and Nonclustered Indexes Described](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
-
+ > For content related to previous versions of SQL Server, see [Clustered and Nonclustered Indexes Described](https://msdn.microsoft.com/library/ms190457(SQL.120).aspx).
 
   An index is an on-disk structure associated with a table or view that speeds retrieval of rows from the table or view. An index contains keys built from one or more columns in the table or view. These keys are stored in a structure (B-tree) that enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to find the row or rows associated with the key values quickly and efficiently.  
   
@@ -31,7 +30,7 @@ ms.workload: "Active"
   
 -   Clustered  
   
-    -   Clustered indexes sort and store the data rows in the table or view based on their key values. These are the columns included in the index definition. There can be only one clustered index per table, because the data rows themselves can be sorted in only one order.  
+    -   Clustered indexes sort and store the data rows in the table or view based on their key values. These are the columns included in the index definition. There can be only one clustered index per table, because the data rows themselves can be stored in only one order.  
   
     -   The only time the data rows in a table are stored in sorted order is when the table contains a clustered index. When a table has a clustered index, the table is called a clustered table. If a table has no clustered index, its data rows are stored in an unordered structure called a heap.  
   
@@ -52,7 +51,7 @@ ms.workload: "Active"
 ## Indexes and Constraints  
  Indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns. For example, when you create a table and identify a particular column to be the primary key, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a PRIMARY KEY constraint and index on that column. For more information, see [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) and [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
   
-## How Indexes Are Used by the Query Optimizer  
+## How Indexes are used by the Query Optimizer  
  Well-designed indexes can reduce disk I/O operations and consume fewer system resources therefore improving query performance. Indexes can be helpful for a variety of queries that contain SELECT, UPDATE, DELETE, or MERGE statements. Consider the query `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. When this query is executed, the query optimizer evaluates each available method for retrieving the data and selects the most efficient method. The method may be a table scan, or may be scanning one or more indexes if they exist.  
   
  When performing a table scan, the query optimizer reads all the rows in the table, and extracts the rows that meet the criteria of the query. A table scan generates many disk I/O operations and can be resource intensive. However, a table scan could be the most efficient method if, for example, the result set of the query is a high percentage of rows from the table.  
@@ -61,9 +60,12 @@ ms.workload: "Active"
   
  The query optimizer typically selects the most efficient method when executing queries. However, if no indexes are available, the query optimizer must use a table scan. Your task is to design and create indexes that are best suited to your environment so that the query optimizer has a selection of efficient indexes from which to select. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) to help with the analysis of your database environment and in the selection of appropriate indexes.  
   
-## Related Tasks  
+> [!IMPORTANT] 
+> For more information about index design guidelines and internals, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
+
+## Related content  
+ [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)     
  [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   

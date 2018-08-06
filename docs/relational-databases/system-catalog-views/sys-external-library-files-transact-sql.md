@@ -1,12 +1,14 @@
----
+﻿---
 title: "sys.external_library_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,10 +22,11 @@ helpviewer_keywords:
   - "sys.external_library_files catalog view"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: craigg
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.external_library_files (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Lists a row for each file that makes up an external library.
 

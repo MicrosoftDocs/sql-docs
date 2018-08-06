@@ -1,14 +1,13 @@
----
+﻿---
 title: "OLE Automation Result Sets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [SQL Server], OLE Automation"
   - "two-dimensional arrays"
@@ -17,13 +16,13 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server], result sets"
   - "arrays [SQL Server]"
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # OLE Automation Result Sets
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   If an OLE Automation property or method returns data in an array with one or two dimensions, the array is returned to the client as a result set:  
   
 -   A one-dimensional array is returned to the client as a single-row result set with as many columns as there are elements in the array. For example, an array(10) is returned as a single row of 10 columns.  

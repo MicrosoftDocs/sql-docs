@@ -1,20 +1,19 @@
 ---
 title: "Using a Stored Procedure with Input Parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/11/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using a Stored Procedure with Input Parameters
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,28 +33,22 @@ ms.workload: "On Demand"
   
  As an example of how to call a stored procedure that contains an IN parameter, use the uspGetEmployeeManagers stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. This stored procedure accepts a single input parameter named EmployeeID, which is an integer value, and it returns a recursive list of employees and their managers based on the specified EmployeeID. The Java code for calling this stored procedure is as follows:  
   
-```  
-public static void executeSprocInParams(Connection con) {  
-   try {  
-      PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}");  
-      pstmt.setInt(1, 50);  
-      ResultSet rs = pstmt.executeQuery();  
-  
-      while (rs.next()) {  
-         System.out.println("EMPLOYEE:");  
-         System.out.println(rs.getString("LastName") + ", " + rs.getString("FirstName"));  
-         System.out.println("MANAGER:");  
-         System.out.println(rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));  
-         System.out.println();  
-      }  
-      rs.close();  
-      pstmt.close();  
-   }  
-  
-   catch (Exception e) {  
-      e.printStackTrace();  
-    }  
-}  
+```java
+public static void executeSprocInParams(Connection con) throws SQLException {  
+    try(PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}"); ) {  
+
+        pstmt.setInt(1, 50);  
+        ResultSet rs = pstmt.executeQuery();  
+
+        while (rs.next()) {  
+            System.out.println("EMPLOYEE:");  
+            System.out.println(rs.getString("LastName") + ", " + rs.getString("FirstName"));  
+            System.out.println("MANAGER:");  
+            System.out.println(rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));  
+            System.out.println();  
+        }  
+    }
+}
 ```  
   
 ## See Also  

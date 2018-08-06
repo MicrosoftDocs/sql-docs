@@ -1,12 +1,12 @@
----
+﻿---
 title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/11/2017"
-ms.prod: "sql-non-specified"
+ms.date: "12/13/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -39,13 +39,13 @@ helpviewer_keywords:
   - "FETCH clause"
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: 68
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this clause to:  
   
@@ -55,9 +55,12 @@ ms.workload: "Active"
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
 ## Syntax  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -125,7 +128,7 @@ ORDER BY order_by_expression
  In query execution plans, the offset row count value is displayed in the **Rows** or **Top** attribute of the TOP query operator.  
   
 ## Best Practices  
- Avoid specifying integers in the ORDER BY clause as positional representations of the columns in the select list. For example, although a statement such as `SELECT ProductID, Name FROM Production.Production ORDER BY 2` is valid, the statement is not as easily understood by others compared with specifying the actual column name. In addition, changes to the select list, such as changing the column order or adding new columns, will require modifying the ORDER BY clause in order to avoid unexpected results.  
+ Avoid specifying integers in the ORDER BY clause as positional representations of the columns in the select list. For example, although a statement such as `SELECT ProductID, Name FROM Production.Production ORDER BY 2` is valid, the statement is not as easily understood by others compared with specifying the actual column name. In addition, changes to the select list, such as changing the column order or adding new columns, requires modifying the ORDER BY clause in order to avoid unexpected results.  
   
  In a SELECT TOP (*N*) statement, always use an ORDER BY clause. This is the only way to predictably indicate which rows are affected by TOP. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
@@ -153,9 +156,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- Additionally, when the statement includes a UNION, EXCEPT, or INTERSECT operator, the column names or column aliases must be specified in the select list of the first (left-side) query.  
+ Additionally, when the statement includes a UNION, EXCEPT, or INTERSECT operator, the column names, or column aliases must be specified in the select list of the first (left-side) query.  
   
- In a query that uses UNION, EXCEPT, or INTERSECT operators, ORDER BY is allowed only at the end of the statement. This restriction applies only to when you specify UNION, EXCEPT and INTERSECT in a top-level query and not in a subquery. See the Examples section that follows.  
+ In a query that uses UNION, EXCEPT, or INTERSECT operators, ORDER BY is allowed only at the end of the statement. This restriction applies only to when you specify UNION, EXCEPT, and INTERSECT in a top-level query and not in a subquery. See the Examples section that follows.  
   
  The ORDER BY clause is not valid in views, inline functions, derived tables, and subqueries, unless either the TOP or OFFSET and FETCH clauses are also specified. When ORDER BY is used in these objects, the clause is used only to determine the rows returned by the TOP clause or OFFSET and FETCH clauses. The ORDER BY clause does not guarantee ordered results when these constructs are queried, unless ORDER BY is also specified in the query itself.  
   
@@ -261,8 +264,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### B. Specifying a ascending order  
- The following example orders the result set by the `Name` column in ascending order. Note that the characters are sorted alphabetically, not numerically. That is, 10 sorts before 2.  
+#### B. Specifying an ascending order  
+ The following example orders the result set by the `Name` column in ascending order. The characters are sorted alphabetically, not numerically. That is, 10 sorts before 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -307,7 +310,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a> Specifying a conditional order  
- The following examples uses the CASE expression in an ORDER BY clause to conditionally determine the sort order of the rows based on a given column value. In the first example, the value in the `SalariedFlag` column of the `HumanResources.Employee` table is evaluated. Employees that have the `SalariedFlag` set to 1 are returned in order by the `BusinessEntityID` in descending order. Employees that have the `SalariedFlag` set to 0 are returned in order by the `BusinessEntityID` in ascending order. In the second example, the result set is ordered by the column `TerritoryName` when the column `CountryRegionName` is equal to 'United States' and by `CountryRegionName` for all other rows.  
+ The following examples use the CASE expression in an ORDER BY clause to conditionally determine the sort order of the rows based on a given column value. In the first example, the value in the `SalariedFlag` column of the `HumanResources.Employee` table is evaluated. Employees that have the `SalariedFlag` set to 1 are returned in order by the `BusinessEntityID` in descending order. Employees that have the `SalariedFlag` set to 0 are returned in order by the `BusinessEntityID` in ascending order. In the second example, the result set is ordered by the column `TerritoryName` when the column `CountryRegionName` is equal to 'United States' and by `CountryRegionName` for all other rows.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  

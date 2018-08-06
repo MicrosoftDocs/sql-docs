@@ -2,25 +2,26 @@
 title: "Article Properties - &lt;Article&gt; | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
+ms.suite: "sql"
+ms.technology: replication
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.articleproperties.f1"
 helpviewer_keywords: 
   - "Article Properties dialog box"
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Article Properties - &lt;Article&gt;
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Article Properties** dialog box is available from the New Publication Wizard and the **Publication Properties** dialog box. It allows you to view and set properties for all types of articles. Some properties can be set only when the publication is created, and others can be set only if the publication has no active subscriptions. Properties that cannot be set are displayed as read-only.  
   
 > [!NOTE]  

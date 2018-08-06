@@ -2,13 +2,13 @@
 title: "SQLFreeStmt Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apiname: 
   - "SQLFreeStmt"
 apilocation: 
@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "SQLFreeStmt function [ODBC]"
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLFreeStmt Function
 **Conformance**  

@@ -2,13 +2,15 @@
 title: "Deploy a Database By Using a DAC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.component: "data-tier-applications"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dbdeployment.settings.f1"
   - "sql13.swb.dbdeployment.progress.f1"
@@ -20,12 +22,12 @@ helpviewer_keywords:
   - "database deploy [SQL Server]"
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Deploy a Database By Using a DAC
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **Deploy a Database to SQL Azure** Wizard to deploy a database between an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and a [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] server, or between two [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]servers.  
   
 ##  <a name="BeforeBegin"></a> Before You Begin  

@@ -1,0 +1,22 @@
+- name: Calling Methods
+  href: calling-methods.md
+- name: Connecting to an Instance of SQL Server
+  href: connecting-to-an-instance-of-sql-server.md
+- name: Creating SMO Programs
+  href: creating-smo-programs.md
+- name: Disconnecting from an Instance of SQL Server
+  href: disconnecting-from-an-instance-of-sql-server.md
+- name: Handling SMO Events
+  href: handling-smo-events.md
+- name: Handling SMO Exceptions
+  href: handling-smo-exceptions.md
+- name: Setting Properties - SMO
+  href: setting-properties-smo.md
+- name: Using Capture Mode
+  href: using-capture-mode.md
+- name: Using Collections
+  href: using-collections.md
+- name: Using Transactions
+  href: using-transactions.md
+- name: Working with Data Types
+  href: working-with-data-types.md

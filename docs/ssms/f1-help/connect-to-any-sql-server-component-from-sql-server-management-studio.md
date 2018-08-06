@@ -2,13 +2,14 @@
 title: "Connect to Any SQL Server Component from SSMS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "ssms-f1"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.suite: "sql"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], SQL Server Management Studio"
   - "saving connections"
@@ -18,10 +19,10 @@ ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Connect to Any SQL Server Component from SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] to connect to:  
   
 -   An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)].  
@@ -35,7 +36,7 @@ ms.workload: "Inactive"
 Although [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] allows you to work with queries without first establishing a connection to a data source, most other tasks require a connection. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] provides the **Connect to Server** dialog box to configure connection properties to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] components. When [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] starts, it opens the **Connect to Server** dialog box and prompts you to connect to a server. The **Connect to Server** dialog box retains the connection settings from the last time it was used.  
   
 > [!NOTE]  
-> This feature can be turned off so no connection is automatically initiated. For more information, see [Database Engine Service Startup Options](http://msdn.microsoft.com/en-us/d373298b-f6cf-458a-849d-7083ecb54ef5).  
+> This feature can be turned off so no connection is automatically initiated. For more information, see [Database Engine Service Startup Options](http://msdn.microsoft.com/d373298b-f6cf-458a-849d-7083ecb54ef5).  
   
 ## Saving Connections  
 You can save connections to specific servers in Registered Servers, or you can save connections in projects with Solution Explorer.  

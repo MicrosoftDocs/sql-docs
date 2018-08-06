@@ -1,14 +1,15 @@
 ---
 title: "Ssms Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "12/08/2017"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], opening"
   - "command prompt utilities [SQL Server], sqlwb"
@@ -19,11 +20,11 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 caps.latest.revision: 50
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Ssms Utility
-  The **Ssms**utility opens [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. If specified, **Ssms** also establishes a connection to a server, and opens queries, scripts, files, projects, and solutions.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  The **Ssms** utility opens [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. If specified, **Ssms** also establishes a connection to a server, and opens queries, scripts, files, projects, and solutions.  
   
  You can specify files that contain queries, projects, or solutions. Files that contain queries are automatically connected to a server if connection information is provided and the file type is associated with that type of server. For instance, .sql files will open a SQL Query Editor window in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and .mdx files will open an MDX Query Editor window in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. **SQL Server Solutions and Projects** will open in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -36,7 +37,7 @@ ms.workload: "On Demand"
   
 Ssms  
     [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-U username] [-P password]   
+    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
     [-E] [-nosplash] [-log [filename]?] [-?]  
 ```  
   
@@ -51,27 +52,35 @@ Ssms
  Specifies a solution to open. The parameter must contain the full path to the solution file.  
   
  [**-S** *servername*]  
- Server name  
+  Server name  
   
  [**-d** *databasename*]  
- Database name  
+  Database name  
+
+ [**-G**]
+  Connect using Active Directory Authentication. The type of connection is determined whether **-P** and/or **-U** is included.
+ - If **-U** and **-P** are *not* included, then **Active Directory - Integrated** is used and no dialog will appear.
+ - If both **-U** and **-P** are included, then **Active Directory - Password** is used. Using this option is **not recommended** because you have to specify a clear text password on the command line, which is discouraged.
+ - If **-U** is included, but **-P** is missing, then auth dialog will pop up, but all attempts to login will fail. 
+
+  Note that **Active Directory - Universal with MFA support** is not currently supported. 
   
- [**-U** *username*]  
- User name when connecting with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication  
+[**-U** *username*]  
+ User name when connecting with 'SQL Authentication' or 'Active Directory - Password'  
   
- [**-P** *password*]  
- Password when connecting with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication  
+[**-P** *password*]  
+ Password when connecting with 'SQL Authentication' or 'Active Directory - Password'
   
- [**-E**]  
+[**-E**]  
  Connect using Windows Authentication  
   
- [**-nosplash**]  
+[**-nosplash**]  
  Prevents [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] from displaying the splash screen graphic while opening. Use this option when connecting to the computer running [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by means of Terminal Services over a connection with a limited bandwidth. This argument is not case-sensitive and may appear before or after other arguments  
   
- [**-log***[filename]?*]  
+[**-log***[filename]?*]  
  Logs [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] activity to the specified file for troubleshooting  
   
- [**-?**]  
+[**-?**]  
  Displays command line help  
   
 ## Remarks  
@@ -96,13 +105,21 @@ Ssms
   
 ```  
   
+ The following opens [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] from a command prompt using *Active Directory - Integrated*:  
+  
+```  
+Ssms.exe -S servername.database.windows.net -G
+  
+``` 
+
+
  The following script opens [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] from a command prompt, with Windows Authentication, with the Code Editor set to the server `ACCTG and the database AdventureWorks2012,` without showing the splash screen:  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
   
 ```  
-  
+
  The following script opens [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] from a command prompt, and opens the MonthEndQuery script.  
   
 ```  
@@ -123,7 +140,10 @@ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
   
 ```  
-  
+ 
+
+
+
 ## See Also  
  [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   

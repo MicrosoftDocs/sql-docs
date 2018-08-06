@@ -1,17 +1,15 @@
----
+﻿---
 title: "sys.dm_geo_replication_link_status (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "10/13/2016"
-ms.prod: 
+ms.prod: ""
+ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "dm_geo_replication_link_status"
   - "dm_geo_replication_link_status_TSQL"
@@ -25,11 +23,11 @@ ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 caps.latest.revision: 15
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This includes both primary and secondary databases. If more than one continuous replication link exists for a given primary database, this table contains a row for each of the relationships. The view is created in all databases, including the logical master. However, querying this view in the logical master returns an empty set.  
   
@@ -46,7 +44,7 @@ ms.workload: "Inactive"
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No direct connections are allowed to the secondary database and the database is not available for read access.<br /><br /> 2 = All connections are allowed to the database in the secondary repl;ication for read-only access.|  
 |secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
-|last_commit|**datetimeoffset**|The time of last transaction committed to the database. If retrieved on the secondary database when the primary of the replication link is down, it indicates until what point the secondary has caught up.|
+|last_commit|**datetimeoffset**|The time of last transaction committed to the database. If retrieved on the primary database, it indicates the last commit time on the primary database. If retrieved on the secondary database, it indicates the last commit time on the secondary database. If retrieved on the secondary database when the primary of the replication link is down, it indicates until what point the secondary has caught up.|
   
 > [!NOTE]  
 >  If the replication relationship is terminated by removing the secondary database (section 4.2), the row for that database in the **sys.dm_geo_replication_link_status** view disappears.  

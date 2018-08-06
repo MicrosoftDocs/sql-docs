@@ -1,17 +1,14 @@
 ---
 title: "NextRecordset Method (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "reference"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/20/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "NextRecordset"
@@ -21,10 +18,9 @@ helpviewer_keywords:
   - "NextRecordset method [ADO]"
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # NextRecordset Method (ADO)
 Clears the current [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object and returns the next **Recordset** by advancing through a series of commands.  
@@ -49,7 +45,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## Remarks  
  Use the **NextRecordset** method to return the results of the next command in a compound command statement or of a stored procedure that returns multiple results. If you open a **Recordset** object based on a compound command statement (for example, "SELECT \* FROM table1;SELECT \* FROM table2") using the [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) method on a [Command](../../../ado/reference/ado-api/command-object-ado.md) or the [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method on a **Recordset**, ADO executes only the first command and returns the results to *recordset*. To access the results of subsequent commands in the statement, call the **NextRecordset** method.  
   
- As long as there are additional results and the **Recordset** containing the compound statements is not disconnected or marshaled across process boundaries, the **NextRecordset** method will continue to return **Recordset** objects. If a row-returning command executes successfully but returns no records, the returned **Recordset** object will be open but empty. Test for this case by verifying that the [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) and [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) properties are both **True**. If a non???row-returning command executes successfully, the returned **Recordset** object will be closed, which you can verify by testing the [State](../../../ado/reference/ado-api/state-property-ado.md) property on the **Recordset**. When there are no more results, *recordset* will be set to *Nothing*.  
+ As long as there are additional results and the **Recordset** containing the compound statements is not disconnected or marshaled across process boundaries, the **NextRecordset** method will continue to return **Recordset** objects. If a row-returning command executes successfully but returns no records, the returned **Recordset** object will be open but empty. Test for this case by verifying that the [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) and [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) properties are both **True**. If a non-row-returning command executes successfully, the returned **Recordset** object will be closed, which you can verify by testing the [State](../../../ado/reference/ado-api/state-property-ado.md) property on the **Recordset**. When there are no more results, *recordset* will be set to *Nothing*.  
   
  The **NextRecordset** method is not available on a disconnected **Recordset** object, where [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) has been set to **Nothing** (in Microsoft Visual Basic) or NULL (in other languages).  
   

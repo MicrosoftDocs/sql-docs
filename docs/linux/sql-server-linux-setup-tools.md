@@ -1,19 +1,21 @@
 ---
 title: Install SQL Server command-line tools on Linux | Microsoft Docs
-description: This topic describes how to install the SQL Server Tools on Linux.
+description: This article describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
+ms.topic: conceptual
+ms.prod: sql
+ms.component: ""
+ms.suite: "sql"
+ms.custom: "sql-linux"
+ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.workload: "Active"
 ---
 # Install sqlcmd and bcp the SQL Server command-line tools on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The **mssql-tools** package contains:
 
@@ -28,7 +30,7 @@ Install the tools for your platform:
 - [macOS](#macos)
 - [Docker](#docker)
 
-This topic describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
+This article describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
 
 ## <a id="RHEL"><a/>Install tools on RHEL 7
 
@@ -174,11 +176,14 @@ Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise 
 
 A preview of **sqlcmd** and **bcp** is now available on macOS. For more information, see the [announcement](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
+*Install [Homebrew](https://brew.sh) if you don't have it already:*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 To install the tools for Mac El Capitan and Sierra, use the following commands:
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools
@@ -251,7 +256,7 @@ To manually install these packages, use the following steps:
 
 ## Next steps
 
-For an example of how to use **sqlcmd** to connect to SQL Server and create a database, see one of the following quick start tutorials:
+For an example of how to use **sqlcmd** to connect to SQL Server and create a database, see one of the following quickstarts:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

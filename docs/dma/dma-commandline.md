@@ -1,27 +1,27 @@
 ---
-title: "Run from command line (SQL Server Data Migration Assistant) | Microsoft Docs"
-ms.custom: 
+title: "Run Data Migration Assistant from the command line (SQL Server) | Microsoft Docs"
+description: Learn how to run Data Migration Assistant from the command line to assess SQL Server databases for migration
+ms.custom: ""
 ms.date: "09/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "dma"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-dma"
+ms.suite: "sql"
+ms.technology: dma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Command Line"
 ms.assetid: ""
 caps.latest.revision: ""
-author: "HJToland3"
-ms.author: "jtoland"
-manager: "craigg"
-ms.workload: "Inactive"
+author: HJToland3
+ms.author: jtoland
+manager: craigg
 ---
 
 # Run Data Migration Assistant from the command line
-With version 2.1 and above, when you install Data Migration Assistant, it will also install dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Use dmacmd.exe to assess your databases in an unattended mode, and output the result to JSON or CSV file. This is especially useful when assessing several databases or huge databases. 
+With version 2.1 and above, when you install Data Migration Assistant, it will also install dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Use dmacmd.exe to assess your databases in an unattended mode, and output the result to JSON or CSV file. This method is especially useful when assessing several databases or huge databases. 
 
 > [!NOTE]
 > Dmacmd.exe supports running assessments only. Migrations are not supported at this time.
@@ -43,8 +43,8 @@ DmaCmd.exe /AssessmentName="string"
 |---------|---------|---------------|
 | `/help or /?`     | How to use dmacmd.exe help text        | N
 |`/AssessmentName`     |   Name of the assessment project   | Y
-|`/AssessmentDatabases`     | Space delimited list of connection strings. Database name (Initial Catalog) is case sensitive. | Y
-|`/AssessmentTargetPlatform`     | Target platform for the assessment, supported values: SqlServer2012, SqlServer2014, SqlServer2016 and AzureSqlDatabaseV12. Default is SqlServer2016   | N
+|`/AssessmentDatabases`     | Space-delimited list of connection strings. Database name (Initial Catalog) is case-sensitive. | Y
+|`/AssessmentTargetPlatform`     | Target platform for the assessment, supported values: SqlServer2012, SqlServer2014, SqlServer2016, and AzureSqlDatabaseV12. Default is SqlServer2016   | N
 |`/AssessmentEvaluateFeatureParity`  | Run feature parity rules  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required.)
 |`/AssessmentEvaluateRecommendations`     | Run feature recommendations        | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendationsis required)
@@ -84,7 +84,7 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ```
 
 
-**Single-database assessment for target platform SQL Server 2012 and save results to .json and .csv file**
+**Single-database assessment for target platform SQL Server 2012, save results to .json and .csv file**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -97,7 +97,7 @@ Catalog=DatabaseName;Integrated Security=true"
 ```
 
 
-**Single-database assessment for target platform SQL Azure Database save results to .json and .csv file**
+**Single-database assessment for target platform SQL Azure Database, save results to .json and .csv file**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 

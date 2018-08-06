@@ -1,30 +1,25 @@
 ---
 title: "PolyBase troubleshooting | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "8/29/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.technology: polybase
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "PolyBase, monitoring"
   - "PolyBase, performance monitoring"
 helpviewer_keywords: 
   - "PolyBase, troubleshooting"
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # PolyBase troubleshooting
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To troubleshoot PolyBase, use the techniques found in this topic.  
   
 ## Catalog views  
@@ -65,7 +60,7 @@ ms.workload: "Inactive"
   
      Record the execution ID of the longest running query.  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -84,7 +79,7 @@ ms.workload: "Inactive"
   
     -   DMS: implies a PolyBase Data Movement Service operation. Proceed with Step 3b.  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -100,7 +95,7 @@ ms.workload: "Inactive"
   
          Use the execution ID and step index recorded in the previous steps. Use the execution ID and step index recorded in the previous steps.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -113,7 +108,7 @@ ms.workload: "Inactive"
   
          Use the execution ID and step index recorded in the previous steps.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -127,7 +122,7 @@ ms.workload: "Inactive"
   
      Use the execution ID and step index recorded in the previous steps.  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   

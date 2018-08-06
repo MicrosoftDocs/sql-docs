@@ -2,11 +2,11 @@
 title: "GRANT Availability Group Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "permissions [SQL Server], availability group"
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # GRANT Availability Group Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Grants permissions on an Always On availability group.  
   
@@ -89,7 +88,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
- For a chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions, see [Database Engine Permission Poster](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For a chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions, see [Database Engine Permission Poster](https://aka.ms/sql-permissions-poster).  
   
 ## Permissions  
  Requires CONTROL permission on the availability group or ALTER ANY AVAILABILTIY GROUP permission on the server.  

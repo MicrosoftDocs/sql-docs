@@ -2,11 +2,11 @@
 title: "@@SERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -19,17 +19,18 @@ helpviewer_keywords:
   - "local servers [SQL Server]"
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # &#x40;&#x40;SERVERNAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the name of the local server that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
+ ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -44,14 +45,14 @@ ms.workload: "Active"
 ## Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup sets the server name to the computer name during installation. To change the name of the server, use **sp_addserver**, and then restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- With multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed, @@SERVERNAME returns the following local server name information if the local server name has not been changed since setup.  
+ With multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed, @@SERVERNAME returns the following local server name information if the local server name has not been changed since set up.  
   
 |Instance|Server information|  
 |--------------|------------------------|  
 |Default instance|'*servername*'|  
 |Named instance|'*servername*\\*instancename*'|  
-|failover clustered instance - default instance|'*virtualservername*'|  
-|failover clustered instance - named instance|'*virtualservername*\\*instancename*'|  
+|fail over clustered instance - default instance|'*virtualservername*'|  
+|fail over clustered instance - named instance|'*virtualservername*\\*instancename*'|  
   
  Although the @@SERVERNAME function and the SERVERNAME property of SERVERPROPERTY function may return strings with similar formats, the information can be different. The SERVERNAME property automatically reports changes in the network name of the computer.  
   

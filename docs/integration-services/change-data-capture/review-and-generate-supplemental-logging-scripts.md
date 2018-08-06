@@ -2,21 +2,20 @@
 title: "Review and Generate Supplemental Logging Scripts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "scripts"
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Review and Generate Supplemental Logging Scripts
   Use the **Scripts** tab to run or re-run a script on the Oracle source database that sets up supplemental logging.  
@@ -40,7 +39,7 @@ ms.workload: "Inactive"
   
 2.  When you run the supplemental logging scripts, the Oracle Credentials for Running Script dialog box opens where you provide a valid Oracle user name and password. For information on how to provide the proper Oracle credentials, see [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- You can also run the scripts manually using SQL * Plus, if necessary.  
+ You can also run the scripts manually using SQL\*Plus, if necessary.  
   
 ### To run the scripts manually  
   

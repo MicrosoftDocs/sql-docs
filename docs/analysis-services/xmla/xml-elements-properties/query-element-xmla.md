@@ -1,36 +1,17 @@
 ---
 title: "Query Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Query Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:xml-analysis#Query"
-  - "microsoft.xml.analysis.query"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#Query"
-helpviewer_keywords: 
-  - "Query element"
-ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Query Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Contains a query within the [Queries](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) collection used by the [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) command during usage-based optimization.  
   
 ## Syntax  
@@ -44,7 +25,7 @@ ms.workload: "Inactive"
 </Queries>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -52,7 +33,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -60,7 +41,7 @@ ms.workload: "Inactive"
 |Child elements|None|  
   
 ## Remarks  
- The **DesignAggregations** command supports usage-based optimization by including one or more **Query** elements in the **Queries** collection of the command. Each **Query** element represents a goal query that the design process uses to define aggregations that target the most frequently used queries. You can either specify your own goal queries, or you can use the information stored by an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in the query log to retrieve information about the most frequently used queries.  
+ The **DesignAggregations** command supports usage-based optimization by including one or more **Query** elements in the **Queries** collection of the command. Each **Query** element represents a goal query that the design process uses to define aggregations that target the most frequently used queries. You can either specify your own goal queries, or you can use the information stored by an instance of Analysis Services in the query log to retrieve information about the most frequently used queries.  
   
  If you are iteratively designing aggregations, you only have to pass goal queries in the first **DesignAggregations** command because the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance stores these goal queries and uses these queries during subsequent **DesignAggregations** commands. After you pass goal queries in the first **DesignAggregations** command of an iterative process, any subsequent **DesignAggregations** command that contains goal queries in the **Queries** property generates an error.  
   
@@ -81,7 +62,7 @@ ms.workload: "Inactive"
   
  Each dimension in the measure group that contains the aggregation design is represented by a *Dataset* value in the **Query** element. The order of *Dataset* values must match the order of dimensions included in the measure group.  
   
-## See Also  
+## See also
  [Designing Aggregations &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

@@ -1,14 +1,13 @@
 ---
 title: "Mapping MySQL Databases to SQL Server Schemas (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,8 +18,7 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Mapping MySQL Databases to SQL Server Schemas (MySQLToSQL)
 By default, SSMA for MySQL migrates all objects in a MySQL schema to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database named for the schema. However, you can customize the mapping between MySQL schemas and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure databases.  
@@ -69,7 +67,7 @@ If you customize the mapping between a MySQL schema and a SQL Server schema, you
 1.  Under the schema mapping tab, select any row and click **Reset to Default** to revert to the default database and schema.  
   
 ## Next Steps  
-If you want to analyze the conversion of MySQL objects into SQL Server or SQL Azure objects, you can [create a conversion report](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) otherwise you can [Convert the MySQL database object definitions](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7) into SQL Server or SQL Azure schemas  
+If you want to analyze the conversion of MySQL objects into SQL Server or SQL Azure objects, you can [create a conversion report](http://msdn.microsoft.com/2a56a003-3b0f-453a-963c-00c9e40933ec) otherwise you can [Convert the MySQL database object definitions](http://msdn.microsoft.com/ac21850b-fb32-4704-9985-5759b7c688c7) into SQL Server or SQL Azure schemas  
   
 ## See Also  
 [Project Settings &#40;Conversion&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  

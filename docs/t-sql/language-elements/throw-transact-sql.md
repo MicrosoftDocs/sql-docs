@@ -1,12 +1,12 @@
----
+﻿---
 title: "THROW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -18,13 +18,13 @@ helpviewer_keywords:
   - "THROW statement"
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # THROW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Raises an exception and transfers execution to a CATCH block of a TRY…CATCH construct in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -52,9 +52,9 @@ THROW [ { error_number | @local_variable },
 ## Remarks  
  The statement before the THROW statement must be followed by the semicolon (;) statement terminator.  
   
- If a TRY…CATCH construct is not available, the session is ended. The line number and procedure where the exception is raised are set. The severity is set to 16.  
+ If a TRY…CATCH construct is not available, the statement batch is terminated. The line number and procedure where the exception is raised are set. The severity is set to 16.  
   
- If the THROW statement is specified without parameters, it must appear inside a CATCH block. This causes the caught exception to be raised. Any error that occurs in a THROW statement causes the statement batch to be ended.  
+ If the THROW statement is specified without parameters, it must appear inside a CATCH block. This causes the caught exception to be raised. Any error that occurs in a THROW statement causes the statement batch to be terminated.  
   
  % is a reserved character in the message text of a THROW statement and must be escaped. Double the % character to return % as part of the message text, for example 'The increase exceeded 15%% of the original value.'  
   
@@ -72,7 +72,7 @@ THROW [ { error_number | @local_variable },
 ### A. Using THROW to raise an exception  
  The following example shows how to use the `THROW` statement to raise an exception.  
   
-```tsql  
+```sql  
 THROW 51000, 'The record does not exist.', 1;  
 ```  
   
@@ -87,7 +87,7 @@ THROW 51000, 'The record does not exist.', 1;
 ### B. Using THROW to raise an exception again  
  The following example shows how use the `THROW` statement to raise the last thrown exception again.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE dbo.TestRethrow  
@@ -118,7 +118,7 @@ END CATCH;
 ### C. Using FORMATMESSAGE with THROW  
  The following example shows how to use the `FORMATMESSAGE` function with `THROW` to throw a customized error message. The example first creates a user-defined error message by using `sp_addmessage`. Because the THROW statement does not allow for substitution parameters in the *message* parameter in the way that RAISERROR does, the FORMATMESSAGE function is used to pass the three parameter values expected by error message 60000.  
   
-```tsql  
+```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
 ,@severity = 16  

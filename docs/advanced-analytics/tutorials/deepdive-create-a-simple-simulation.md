@@ -1,36 +1,28 @@
 ---
-title: "Lesson 5: Create a Simple Simulation (Data Science Deep Dive) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: 16
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Create a simple simulation (SQL and R deep dive) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Create a Simple Simulation
+# Create a simple simulation (SQL and R deep dive)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This article is the final step in the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 Until now you've been using R functions that are designed specifically for moving data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a local compute context. However, suppose you write a custom R function of your own, and want to run it in the server context?
 
-You can call an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, by using the **rxExec** function. You can also use rxExec to explicitly distribute work across cores in a single server node.
+You can call an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, by using the [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) function. You can also use **rxExec** to explicitly distribute work across cores in a single server.
 
-In this lesson, you'll use the remote server to create a simple simulation. The simulation doesn't require any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data; the example only demonstrates how to design a custom function and then call it using the rxExec function.
+In this lesson, you use the remote server to create a simple simulation. The simulation doesn't require any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data; the example only demonstrates how to design a custom function and then call it using the **rxExec** function.
 
-For a more complex example of using rxExec, see this article: [Coarse grain parallelism with foreach and rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+For a more complex example of using **rxExec**, see this article: [Coarse grain parallelism with foreach and rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
-## Create the Function
+## Create the custom function
 
 A common casino game consists of rolling a pair of dice, with these rules:
 
@@ -68,7 +60,7 @@ The game is easily simulated in R, by creating a custom function, and then runni
     }
     ```
   
-2.  To simulate a single game of dice,  run the function.
+2.  To simulate a single game of dice, run the function.
   
     ```R
     rollDice()
@@ -76,13 +68,13 @@ The game is easily simulated in R, by creating a custom function, and then runni
   
     Did you win or lose?
   
-Now let's see how you can  run the function multiple times, to create a simulation that helps determine the probability of a win.
+Now let's see how you can use **rxExec** to run the function multiple times, to create a simulation that helps determine the probability of a win.
 
-## Create the Simulation
+## Create the simulation
 
-To run an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, you call the rxExec function. Although rxExec also supports distributed execution of a function in parallel across nodes or cores in a server context, here you'll use it only to run your custom function on the server.
+To run an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, you call the **rxExec** function. Although **rxExec** also supports distributed execution of a function in parallel across nodes or cores in a server context, here it runs your custom function on the SQL Server computer.
 
-1. Call the custom function as an argument to rxExec, along with some other parameters that modify the simulation.
+1. Call the custom function as an argument to **rxExec**, together with other parameters that modify the simulation.
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -93,7 +85,7 @@ To run an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../
   
     - The arguments *RNGseed* and *RNGkind* can be used to control random number generation. When *RNGseed* is set to **auto**, a parallel random number stream is initialized on each worker.
   
-2. The rxExec function creates a list with one element for each run; however, you won't see much happening until the list is complete. When all the iterations are complete, the line starting with `length` will return a value.
+2. The **rxExec** function creates a list with one element for each run; however, you won't see much happening until the list is complete. When all the iterations are complete, the line starting with `length` will return a value.
   
     You can then go to the next step to get a summary of your win-loss record.
   
@@ -118,17 +110,20 @@ In this tutorial, you have become proficient with these tasks:
   
 -   Passing models, data, and plots between your workstation and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server
   
->  [!TIP]
-> 
-> If you would like to experiment with these techniques using a larger dataset of 10 million observations, the data files are available from the Revolution analytics web site: [Index of datasets](http://packages.revolutionanalytics.com/datasets)
->   
-> To re-use this walkthrough with the larger data files, download the data, and then modify each of the data sources as follows:
->  - Set the variables *ccFraudCsv* and *ccScoreCsv* to point to the new data files
->  - Change the name of the table referenced in *sqlFraudTable* to *ccFraud10*
->  - Change the name of the table referenced in *sqlScoreTable* to *ccFraudScore10*
 
-## Previous Step
+If you would like to experiment with these techniques using a larger dataset of 10 million observations, the data files are available from the Revolution analytics web site: [Index of datasets](http://packages.revolutionanalytics.com/datasets)
 
-[Move Data between SQL Server and XDF File](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
+To re-use this walkthrough with the larger data files, download the data, and then modify each of the data sources as follows:
 
+1. Modify the variables `ccFraudCsv` and `ccScoreCsv` to point to the new data files
+2. Change the name of the table referenced in *sqlFraudTable* to `ccFraud10`
+3. Change the name of the table referenced in *sqlScoreTable* to `ccFraudScore10`
 
+## Additional samples
+
+Now that you've mastered the use of compute contexts and RevoScaler functions to pass and transform data, check out these tutorials:
+
+[R tutorials for Machine Learning Services](machine-learning-services-tutorials.md)
+## Previous step
+
+[Move data between SQL Server and XDF file](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

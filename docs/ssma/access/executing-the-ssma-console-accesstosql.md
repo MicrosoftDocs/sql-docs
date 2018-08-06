@@ -1,14 +1,13 @@
 ---
 title: "Executing the SSMA Console (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -16,8 +15,7 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 caps.latest.revision: 25
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Executing the SSMA Console (AccessToSQL)
 Microsoft provides you with a robust set of script file commands and command line options to execute and control SSMA activities. The ensuing sections detail the same.  

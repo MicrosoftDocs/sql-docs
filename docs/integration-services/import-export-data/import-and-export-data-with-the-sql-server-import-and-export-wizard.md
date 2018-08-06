@@ -2,13 +2,13 @@
 title: "Import and Export Data with the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
+ms.suite: "sql"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "exporting data"
   - "mapping files [Integration Services]"
@@ -26,12 +26,11 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 caps.latest.revision: 160
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Active"
+manager: craigg
 ---
 # Import and Export Data with the SQL Server Import and Export Wizard
 
- > For content related to previous versions of SQL Server, see [Run the SQL Server Import and Export Wizard](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Run the SQL Server Import and Export Wizard](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard is a simple way to copy data from a source to a destination. This overview describes the data sources that the wizard can use as sources and destinations, as well as the permissions you need to run the wizard.
 

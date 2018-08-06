@@ -1,35 +1,17 @@
 ---
 title: "Analysis Services Schema Rowsets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "SSAS, data access interfaces"
-  - "Analysis Services data access interfaces, schema rowsets"
-  - "data access interfaces [Analysis Services]"
-  - "XML for Analysis, schema rowsets"
-  - "rowsets [Analysis Services], retrieving schema rowsets"
-  - "retrieving schema rowsets"
-  - "XMLA, schema rowsets"
-  - "rowsets [Analysis Services]"
-  - "schema rowsets [Analysis Services], retrieving"
-ms.assetid: 820d4b59-d428-4616-b792-c848e5da407e
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Analysis Services Schema Rowsets
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Schema rowsets are predefined tables that contain information about Analysis Services objects and server state, including database schema, active sessions, connections, commands, and jobs that are executing on the server. You can query schema rowset tables in an XML/A script window in SQL Server Management Studio, run a DMV query against a schema rowset, or create a custom application that incorporates schema rowset information (for example, a reporting application that retrieves the list of available dimensions that can be used to create a report).  
   
 > [!NOTE]  

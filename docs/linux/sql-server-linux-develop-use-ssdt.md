@@ -1,22 +1,24 @@
 ---
 title: Develop and Deploy SQL Server databases for Linux  | Microsoft Docs
 description: 
-author: erickangMSFT 
-ms.author: erickang 
-manager: jroth
+author: rothja 
+ms.author: jroth 
+manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
+ms.topic: conceptual
+ms.prod: sql
+
+ms.component: ""
+ms.suite: "sql"
+ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: H1Hack27Feb2017
-ms.workload: "On Demand"
+ms.custom: "sql-linux"
 ---
 # Use Visual Studio to create databases for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test and publish your database from a source controlled project, just like you develop your application code.
+SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test, and publish your database from a source-controlled project, just like you develop your application code.
 
 ## Install Visual Studio and SQL Server Data Tools
 
@@ -94,11 +96,11 @@ SQL Server 2017 on Linux is supported by SSDT version 17.0 RC or later.
 
 5. Check the publish status in the **Data Tools Operations** window.
 
-6. Click **View Reulst** or **View Script** to see details of the databsae publish result on your SQL Server on Linux.
+6. Click **View Reulst** or **View Script** to see details of the database publish result on your SQL Server on Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-You have successfully created a new database on SQL Server instance on Linux and learned the basics of developing a database with a source controlled database project.
+You have successfully created a new database on SQL Server instance on Linux and learned the basics of developing a database with a source-controlled database project.
 
 ## Next steps
 
@@ -108,6 +110,6 @@ For more information about developing a database with SQL Data Tools, see [SSDT 
 
 [Download and Install Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
-[SSDT MSDN documents]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
+[SSDT MSDN documents]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

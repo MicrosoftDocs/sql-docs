@@ -1,28 +1,18 @@
 ---
 title: "Impersonation in Analysis Services tabular models | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Impersonation 
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  This topic provides tabular model authors an understanding of how logon credentials are used by Analysis Services when connecting to a datasource to import and process (refresh) data.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  This article provides tabular model authors an understanding of how logon credentials are used by Analysis Services when connecting to a datasource to import and process (refresh) data.  
 
 ##  <a name="bkmk_conf_imp_info"></a> Configuring impersonation  
  Where, and in what context a model exists determines how impersonation information is configured. When creating a new model project, impersonation is configured in SQL Server Data Tools (SSDT) when you connect to a data source to import data. Once a model is deployed, impersonation can be configured in model database connection string property by using SQL Server Management Studio (SSMS). For tabular models in Azure Analysis Services, you can use SSMS or the **View as: Script** mode in the browser-based designer to edit the Model.bim file in JSON.

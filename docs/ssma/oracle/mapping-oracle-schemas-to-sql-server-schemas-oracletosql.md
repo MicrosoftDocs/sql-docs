@@ -1,20 +1,18 @@
 ---
 title: "Mapping Oracle Schemas to SQL Server Schemas (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "On Demand"
 ---
 # Mapping Oracle Schemas to SQL Server Schemas (OracleToSQL)
 In Oracle, each database has one or more schemas. By default, SSMA migrates all objects in an Oracle schema to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database named for the schema. However, you can customize the mapping between Oracle schemas and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases.  
@@ -59,7 +57,7 @@ If you customize the mapping between an Oracle schema and a [!INCLUDE[ssNoVersio
 1.  Under the schema mapping tab, select any row and click **Reset to Default** to revert to the default database and schema.  
   
 ## Next Steps  
-If you want to analyze the conversion of Oracle objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects, you can [Create a conversion report](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357). Otherwise you can [Convert the Oracle database object definitions](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272) into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] object definitions.  
+If you want to analyze the conversion of Oracle objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects, you can [Create a conversion report](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357). Otherwise you can [Convert the Oracle database object definitions](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272) into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] object definitions.  
   
 ## See Also  
 [Connecting to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  

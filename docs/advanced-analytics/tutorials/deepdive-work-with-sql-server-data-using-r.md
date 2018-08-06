@@ -1,29 +1,20 @@
 ---
-title: "Work with SQL Server Data using R | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: 0a3d7ba0-4113-4cde-9645-debba45cae8f
-caps.latest.revision: 20
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "On Demand"
----
-# Work with SQL Server Data using R
+title: Work with SQL Server data using R  (SQL and R deep dive)| Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
 
-In this lesson, you'll set up the environment and add the data you need for training your models and run some quick summaries of the data. As part of the process, you'll complete these tasks:
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+---
+# Lesson 1: Create a database and permissions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This article is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+
+In this lesson, you set up the environment and add the data you need for training your models and run some quick summaries of the data. As part of the process, you must complete these tasks:
   
 - Create a new database to store the data for training and scoring two R models.
   
@@ -37,16 +28,16 @@ In this lesson, you'll set up the environment and add the data you need for trai
   
 - Create a compute context to enable remote execution of R code.
   
-- Learn how to enable tracing on the remote compute context.
+- (Optional) Enable tracing on the remote compute context.
   
-## Create the Database and User
+## Create the database and user
 
-For this walkthrough, you'll create a new database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and add a SQL login with permissions to write and read data, as well as to run R scripts.
+For this walkthrough, create a new database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and add a SQL login with permissions to write and read data, and to run R scripts.
 
 > [!NOTE]
-> If you are only reading data, the account that runs the R scripts requires only SELECT permissions (**db_datareader** role) on the specified database. However, in this tutorial,  you will need DDL admin privileges to prepare the database and to create tables for saving the scoring results.
+> If you are only reading data, the account that runs the R scripts requires SELECT permissions (**db_datareader** role) on the specified database. However, in this tutorial, you must have DDL admin privileges to prepare the database, and to create tables for saving the scoring results.
 > 
-> Additionally, if you are not the database owner, you will need the permission, EXECUTE ANY EXTERNAL SCRIPT,to be able to execute R scripts.
+> Additionally, if you are not the database owner, you need the permission, EXECUTE ANY EXTERNAL SCRIPT, in order to execute R scripts.
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select the instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is enabled, right-click **Databases**, and select **New database**.
   
@@ -99,29 +90,29 @@ This section lists some common issues that you might run across in the course of
   
     If you don't want to install additional database management tools, you can create a test connection to the SQL Server instance by using the [ODBC Data Source Administrator](https://msdn.microsoft.com/library/ms714024.aspx) in Control Panel. If the database is configured correctly and you enter the correct user name and password, you should be able to see the database you just created and select it as your default database.
   
-    If you cannot connect to the database,  verify that remote connections are enabled for the server, and that the Named Pipes protocol has been enabled. Additional troubleshooting tips are are provided in [this article](http://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx).
+    If you cannot connect to the database,  verify that remote connections are enabled for the server, and that the Named Pipes protocol has been enabled. Additional troubleshooting tips are provided in this article: [Troubleshoot Connecting to the SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **My table name has datareader prefixed to it - why?**
   
-    When you specify the default schema for this user as **db_datareader**, all tables and other new objects created by this user will be prefixed with this *schema*. A schema is like a folder that you can add to a database to organize objects. The schema also defines a user's privileges within the database.
+    When you specify the default schema for this user as **db_datareader**, all tables and other new objects created by this user are prefixed with the *schema* name. A schema is like a folder that you can add to a database to organize objects. The schema also defines a user's privileges within the database.
   
-    When the schema is associated with one particular username, the user is called the schema owner. When you create an object, you always create it in your own schema, unless you specifically ask it to be created in another schema.
+    When the schema is associated with one particular user name, the user is the _schema owner_. When you create an object, you always create it in your own schema, unless you specifically ask it to be created in another schema.
   
-    For example, if you create a table with the name *TestData*, and your default schema is **db_datareader**, the table will be created with the name *<database_name>.db_datareader.TestData*.
+    For example, if you create a table with the name `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `<database_name>.db_datareader.TestData`.
   
     For this reason, a database can contain multiple tables with the same names, as long as the tables belong to different schemas.
    
-    If you are looking for a table and do  not specify a schema, the database server looks for a schema that you own. Therefore, there is no need to specify the schema name when accessing tables in a schema associated with your login.
+    If you are looking for a table and do not specify a schema, the database server looks for a schema that you own. Therefore, there is no need to specify the schema name when accessing tables in a schema associated with your login.
   
 - **I don't have DDL privileges. Can I still run the tutorial?**?
   
-    Yes; however, you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and skip past the sections that call for creating new tables. The functions that require DDL privileges are generally called out in the tutorial.
+    Yes; however, you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and skip past the sections that call for creating new tables. The functions that require DDL privileges are called out in the tutorial wherever possible.
 
     Also, ask your administrator to grant you the permission, EXECUTE ANY EXTERNAL SCRIPT. It is needed for R script execution, whether remote or by using `sp_execute_external_script`.
 
-## Next Step
+## Next step
 
-[Create SQL Server Data Objects using RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
+[Create SQL Server data objects using RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
 
 ## Overview
 

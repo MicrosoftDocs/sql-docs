@@ -1,29 +1,23 @@
 ---
 title: "External Scripts Enabled server configuration option | Microsoft Docs"
 ms.date: "11/13/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: sql
+ms.technology: configuration
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.suite: "sql"
+ms.topic: language-reference
 f1_keywords: 
   - "external scripts enabled"
   - "external_scripts_enabled_TSQL"
 helpviewer_keywords: 
   - "external scripts enabled option"
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-caps.latest.revision: 9
-author: "jeannt"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # External Scripts Enabled server configuration option
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] and [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Use the **external scripts enabled** option to enable the execution of scripts with certain remote language extensions. This property is OFF by default. When **Advanced Analytics Services** is installed, setup can optionally set this property to true.
@@ -55,7 +49,7 @@ RECONFIGURE WITH OVERRIDE;
 
 You must restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make this change effective.
 
-For more information, see [Set up SQL Server Machine Learning](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+For more information, see [Set up SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
 
 ## See also
 

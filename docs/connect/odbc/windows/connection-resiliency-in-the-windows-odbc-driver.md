@@ -2,19 +2,18 @@
 title: "Connection Resiliency in the Windows ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Connection Resiliency in the Windows ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -54,9 +53,9 @@ ms.workload: "Inactive"
   
  If an application establishes a connection with SQL_DRIVER_COMPLETE_REQUIRED and later tries to execute a statement over a broken connection, the ODBC driver will not display the dialog box again. Also, during recovery in progress,  
   
--   During recovery, any call to **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, must return **SQL_CD_TRUE**.  
+-   During recovery, any call to **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, must return **SQL_CD_FALSE**.  
   
--   If recovery fails, any call to **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, must return **SQL_CD_FALSE**.  
+-   If recovery fails, any call to **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, must return **SQL_CD_TRUE**.  
   
  The following state codes are returned by any function that executes a command on the server:  
   

@@ -2,33 +2,33 @@
 title: "Configure SQL Server on a Server Core Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod:
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
+ms.suite: "sql"
+ms.technology: install
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IsHadrEnabled server property"
   - "Server Core Installation [SQL Server]"
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Configure SQL Server on a Server Core Installation
-This topic covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This article covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Configure and Manage Server Core on Windows Server  
-The section provides references to the topics that help configure and manage a Server Core installation.  
+The section provides references to the articles that help configure and manage a Server Core installation.  
   
 Not all features of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] are supported in Server Core mode.  Some of these features can be installed on a client computer or a different server that is not running Server Core, and connected to the Database Engine services installed on Server Core.  
   
-For more information about configuring and managing a Server Core installation remotely, see the following topics:  
+For more information about configuring and managing a Server Core installation remotely, see the following articles:  
   
 - [Install Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -110,7 +110,7 @@ These steps are meant to be performed on a PC running the client edition of Wind
   
 7. Select the **AlwaysOn High Availability** tab.  
   
-8. Verify that Windows failover cluster name field contains the name of the local failover cluster node. If this field is blank, this server instance currently does not support AlwaysOn Availability Groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] that does not support AlwaysOn Availability Groups.  
+8. Verify that Windows failover cluster name field contains the name of the local failover cluster node. If this field is blank, this server instance currently does not support AlwaysOn Availability Groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] does not support AlwaysOn Availability Groups.  
   
 9. Select the Enable AlwaysOn Availability Groups check box, and click OK.  
   
@@ -222,10 +222,10 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Use troubleshooting tools  
  You can use [SQLdiag Utility](../../tools/sqldiag-utility.md) to collect logs and data files from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and other types of servers, and use it to monitor your servers over time or troubleshoot specific problems with your servers. SQLdiag is intended to expedite and simplify diagnostic information gathering for Microsoft Customer Support Services.  
   
- You can launch the utility on the administrator command prompt on the Server Core, using the syntax specified in the topic: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ You can launch the utility on the administrator command prompt on the Server Core, using the syntax specified in the article: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
   
 ## See Also  
  [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [Installation How-to Topics](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [Installation How-to articles](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

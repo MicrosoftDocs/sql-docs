@@ -1,31 +1,18 @@
 ---
-# required metadata
-
 title: Configure SQL Server to send feedback to Microsoft | Microsoft Docs
 description: 
 author: annashres 
 ms.author: anshrest 
-manager: jhubbard
+manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
-ms.prod: sql-server-2016
-ms.technology: database-engine
-ms.assetid:
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
-ms.workload: "Inactive"
+ms.topic: conceptual
+ms.prod: sql
+ms.suite: "sql"
+ms.custom: ""
+ms.technology: configuration
 ---
-
 # Configure SQL Server to send feedback to Microsoft
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## Summary
 By default, Microsoft SQL Server collects information about how its customers are using the application. Specifically, SQL Server collects information about the installation experience, usage, and performance. This information helps Microsoft improve the product to better meet customer needs. For example, Microsoft collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use SQL Server, and determine whether features should be added to the product to better serve customers.
@@ -58,7 +45,7 @@ SQL Server 2017 always collects and sends information about the installation exp
 - By using the Error and Usage Reporting application
 - By setting registry subkeys on the server
 
-For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md)
+For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)
 
 > [!NOTE]
 > You can disable the sending of information to Microsoft only in paid versions of SQL Server.
@@ -68,7 +55,7 @@ For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](htt
 After setup, the usage data collection setting for SQL Server components and instances can be changed through the Error and Usage Reporting application. This application is available as part of SQL Server installation. This tool lets each SQL Server instance configure its own Usage Data setting.
 
 > [!NOTE]
-> The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage Feedback collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage Feedback collection, therefore can be turned on or off independently from Usage Feedback collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the Privacy Statement.
+> The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage Feedback collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage Feedback collection, therefore can be turned on or off independently from Usage Feedback collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the [Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 To start SQL Server Error and Usage Reporting, click or tap **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage feedback and serious errors that are collected for instances and components that are installed on that computer.
 
@@ -113,15 +100,15 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 
     Entry type DWORD: 0 is opt out; 1 is opt in
 
-Additionally, to turn off usage and error reporting at the Visual Studio level, set the following registry subkey and settings:
+    Additionally, SSMS 17.x is based on the Visual Studio 2015 shell, and the Visual Studio installation enables customer feedback by default.  
 
--    Subkey = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    To configure Visual Studio to disable customer feedback on individual computers, change the value of the following registry subkey to string "0":  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    RegEntry name = TurnOffSwitch
+    For example, change the subkey to the following:  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    Entry type DWORD: 0 is opt out; 1 is opt in
- 
-Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage data collection.
+    Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage data collection.
 
 ## Set registry subkeys for crash dump collection
 

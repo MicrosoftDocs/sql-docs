@@ -1,35 +1,17 @@
 ---
 title: "Parallel Element (XMLA) | Microsoft Docs"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Parallel Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "urn:schemas-microsoft-com:xml-analysis#Parallel"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#Parallel"
-  - "microsoft.xml.analysis.parallel"
-helpviewer_keywords: 
-  - "Parallel element"
-ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Parallel Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Specifies how many processing jobs can run in parallel using the parent [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) command.  
   
 ## Syntax  
@@ -45,7 +27,7 @@ ms.workload: "Inactive"
 </Batch>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -53,7 +35,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -64,11 +46,11 @@ ms.workload: "Inactive"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|maxParallel|Optional **Integer** attribute. Indicates the maximum number of threads on which to run commands in parallel. If not specified or set to 0, the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] determines an optimal number of threads based on the number of processors available on the computer.|  
+|maxParallel|Optional **Integer** attribute. Indicates the maximum number of threads on which to run commands in parallel. If not specified or set to 0, the instance of Analysis Services determines an optimal number of threads based on the number of processors available on the computer.|  
   
 ## Remarks  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

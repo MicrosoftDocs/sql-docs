@@ -1,34 +1,46 @@
-Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is the primary, you can fail over. In an availability group for high availability, the cluster manager automates the failover process. In a read-scale availability group, the failover process is manual. There are two ways to fail over the primary replica in a read scale availability group.
+---
+title: "SQL Server force failover for availability groups"
+description: "Force failover for availability groups with cluster type of NONE"
+services: ""
+author: MikeRayMSFT
+ms.topic: "include"
+ms.date: 02/05/2018
+ms.author: mikeray
+ms.custom: "include file"
+---
+Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In an availability group for high availability, the cluster manager automates the failover process. In an availability group with cluster type NONE, the failover process is manual. 
 
-- Forced manual fail over with data loss
+There are two ways to fail over the primary replica in an availability group with cluster type NONE:
 
-- Manual fail over without data loss
+- Forced manual failover with data loss
+- Manual failover without data loss
 
-### Forced fail over with data loss
+### Forced manual failover with data loss
 
-Use this method when the primary replica is not available and can not be recovered. 
+Use this method when the primary replica isn't available and can't be recovered. 
 
-To force fail over with data loss, connect to the SQL instance hosting the target secondary replica and run:
+To force failover with data loss, connect to the SQL Server instance that hosts the target secondary replica and then run the following command:
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 ```
 
-### Manual fail over without data loss
+### Manual failover without data loss
 
-Use this method when the primary replica is available, but you need to temporarily or permanently change the configuration and change the SQL Server instance that hosts the primary replica. Before issuing manual failing over, ensure that the target secondary replica is up to date, so that there is no potential data loss. 
+Use this method when the primary replica is available, but you need to temporarily or permanently change the configuration and change the SQL Server instance that hosts the primary replica. 
+To avoid potential data loss, before you issue the manual failover, ensure that the target secondary replica is up to date. 
 
-The following steps describe how to manually fail over without data loss:
+To manually fail over without data loss:
 
-1. Make the target secondary replica synchronous commit.
+1. Make the target secondary replica `SYNCHRONOUS_COMMIT`.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        MODIFY REPLICA ON N'**<node2>*' 
+        MODIFY REPLICA ON N'<node2>' 
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-1. Run the following query to identify that active transactions are committed to the primary replica and at least one synchronous secondary replica. 
+2. To identify that active transactions are committed to the primary replica and at least one synchronous secondary replica, run the following query: 
 
    ```SQL
    SELECT ag.name, 
@@ -43,29 +55,29 @@ The following steps describe how to manually fail over without data loss:
 
    The secondary replica is synchronized when `synchronization_state_desc` is `SYNCHRONIZED`.
 
-1. Update `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`to 1.
+3. Update `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1.
 
-   The following script sets  `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1 on an availability group named `ag1`. Before you run replace `ag1` with the name of your availability group.
+   The following script sets `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1 on an availability group named `ag1`. Before you run the following script, replace `ag1` with the name of your availability group:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
         SET REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1;
    ```
 
-   This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary. 
+   This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary replica. 
 
-1. Demote the primary replica to secondary replica. After the primary replica is demoted, it is read-only. Run this command on the SQL instance hosting the primary replica to update the role to SECONDARY:
+4. Demote the primary replica to a secondary replica. After the primary replica is demoted, it's read-only. To update the role to `SECONDARY`, run the following command on the SQL Server instance that hosts the primary replica:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
         SET (ROLE = SECONDARY); 
    ```
 
-1. Promote the target secondary replica to primary. 
+5. Promote the target secondary replica to primary. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ```  
 
    > [!NOTE] 
-   > To delete an availability group use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group created with CLUSTER_TYPE NONE or EXTERNAL, the command has to be executed on all replicas part of the availability group.
+   > To delete an availability group, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group that's created with cluster type NONE or EXTERNAL, execute the command on all replicas that are part of the availability group.

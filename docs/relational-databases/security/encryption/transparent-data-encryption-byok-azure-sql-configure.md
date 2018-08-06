@@ -1,32 +1,31 @@
 ---
-title: "PowerShell: Enable TDE using your own Azure Key Vault key | Microsoft Docs"
-description: "Learn how to configure an Azure SQL Database and Data Warehouse to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell."
+title: "PowerShell and CLI: Enable SQL TDE using your own Azure Key Vault key | Microsoft Docs"
+description: "Learn how to configure an Azure SQL Database and Data Warehouse to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell or CLI."
 keywords:
-services: "sql-database"
 documentationcenter:
-author: "becczhang"
-manager: "cguyer"
+author: "aliceku"
+manager: craigg
 editor:
-ms.assetid:
+ms.prod: 
+ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
-ms.custom: "security"
-ms.workload:
 ms.tgt_pltfrm:
-ms.devlang: "na"
-ms.topic: "article"
-ms.date: "08/07/2017"
-ms.author: "rebeccaz"
-ms.workload: "Inactive"
+ms.devlang: "azurecli, powershell"
+ms.topic: conceptual
+ms.date: "06/28/2018"
+ms.author: "aliceku"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 
+# PowerShell and CLI: Enable Transparent Data Encryption using your own key from Azure Key Vault
 
-# PowerShell: Enable Transparent Data Encryption using your own key from Azure Key Vault
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 This how-to guide walks through how to use a key from Azure Key Vault for Transparent Data Encryption (TDE) on a SQL Database or Data Warehouse. To learn more about the TDE with Bring Your Own Key (BYOK) Support, visit [TDE Bring Your Own Key to Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
-## Prerequisites
+## Prerequisites for PowerShell
 
 - You must have an Azure subscription and be an administrator on that subscription.
 - [Recommended but Optional] Have a hardware security module (HSM) or local key store for creating a local copy of the TDE Protector key material.
@@ -34,14 +33,17 @@ This how-to guide walks through how to use a key from Azure Key Vault for Transp
 - Create an Azure Key Vault and Key to use for TDE.
    - [PowerShell instructions from Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [Instructions for using a hardware security module (HSM) and Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - The key vault must have the following property to be used for TDE:
+   - [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [How to use Key Vault soft-delete with PowerShell](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) 
 - The key must have the following attributes to be used for TDE:
    - No expiration date
    - Not disabled
    - Able to perform *get*, *wrap key*, *unwrap key* operations
 
-## Step 1. Assign an AAD identity to your server 
+## Step 1. Assign an Azure AD identity to your server 
 
-If you have an existing server, use the following to add an AAD identity to your server:
+If you have an existing server, use the following to add an Azure AD identity to your server:
 
    ```powershell
    $server = Set-AzureRmSqlServer `
@@ -50,7 +52,7 @@ If you have an existing server, use the following to add an AAD identity to your
    -AssignIdentity
    ```
 
-If you are creating a server, use the [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) cmdlet with the tag -Identity to add an AAD identity during server creation:
+If you are creating a server, use the [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) cmdlet with the tag -Identity to add an Azure AD identity during server creation:
 
    ```powershell
    $server = New-AzureRmSqlServer `
@@ -64,7 +66,7 @@ If you are creating a server, use the [New-AzureRmSqlServer](/powershell/module/
 
 ## Step 2. Grant Key Vault permissions to your server
 
-Use the [Set-AzureRmKeyValutAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet to grant your server access to the key vault before using a key from it for TDE.
+Use the [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet to grant your server access to the key vault before using a key from it for TDE.
 
    ```powershell
    Set-AzureRmKeyVaultAccessPolicy  `
@@ -121,7 +123,7 @@ Use the [Set-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azu
 
 Now the database or data warehouse has TDE enabled with an encryption key in Key Vault.
 
-## Step 5. Check the encryption state and encryption activity of the database or data warehouse
+## Step 5. Check the encryption state and encryption activity
 
 Use the [Get-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) to get the encryption state and the [Get-AzureRMSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) to check the encryption progress for a database or data warehouse.
 
@@ -189,4 +191,79 @@ Check the following if an issue occurs:
 - Learn how to rotate the TDE Protector of a server to comply with security requirements: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md).
 - In case of a security risk, learn how to remove a potentially compromised TDE Protector: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). 
 
+## Prerequisites for CLI
+
+- You must have an Azure subscription and be an administrator on that subscription.
+- [Recommended but Optional] Have a hardware security module (HSM) or local key store for creating a local copy of the TDE Protector key material.
+- Command-Line Interface version 2.0 or later. To install the latest version and connect to your Azure subscription, see [Install and Configure the Azure Cross-Platform Command-Line Interface 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). 
+- Create an Azure Key Vault and Key to use for TDE.
+   - [Manage Key Vault using CLI 2.0](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
+   - [Instructions for using a hardware security module (HSM) and Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - The key vault must have the following property to be used for TDE:
+   - [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [How to use Key Vault soft-delete with CLI](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli) 
+- The key must have the following attributes to be used for TDE:
+   - No expiration date
+   - Not disabled
+   - Able to perform *get*, *wrap key*, *unwrap key* operations
+   
+## Step 1. Create a server and assign an Azure AD identity to your server
+      cli
+      # create server (with identity) and database
+      az sql server create -n "ServerName" -g "ResourceGroupName" -l "westus" -u "cloudsa" -p "YourFavoritePassWord99@34" -I 
+      az sql db create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+      
+
+ 
+## Step 2. Grant Key Vault permissions to your server
+      cli
+      # create key vault, key and grant permission
+      az keyvault create -n "VaultName" -g "ResourceGroupName" 
+      az keyvault key create -n myKey -p software --vault-name "VaultName" 
+      az keyvault set-policy -n "VaultName" --object-id "ServerIdentityObjectId" -g "ResourceGroupName" --key-permissions wrapKey unwrapKey get list 
+      
+
+ 
+## Step 3. Add the Key Vault key to the server and set the TDE Protector
+  
+     cli
+     # add server key and update encryption protector
+      az sql server key create -g "ResourceGroupName" -s "ServerName" -t "AzureKeyVault" -u "FullVersionedKeyUri 
+      az sql server tde-key update -g "ResourceGroupName" -s "ServerName" -t AzureKeyVault -u "FullVersionedKeyUri" 
+      
+  
+  > [!Note]
+> The combined length for the key vault name and key name cannot exceed 94 characters.
+> 
+
+>[!Tip]
+>An example KeyId from Key Vault: https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
+>
+  
+## Step 4. Turn on TDE 
+      cli
+      # enable encryption
+      az sql db tde create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" --status Enabled 
+      
+
+Now the database or data warehouse has TDE enabled with an encryption key in Key Vault.
+
+## Step 5. Check the encryption state and encryption activity
+
+     cli
+      # get encryption scan progress
+      az sql db tde show-activity -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+      # get whether encryption is on or off
+      az sql db tde show-configuration -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+## SQL CLI References
+
+https://docs.microsoft.com/cli/azure/sql?view=azure-cli-latest 
+
+https://docs.microsoft.com/cli/azure/sql/server/key?view=azure-cli-latest 
+
+https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+
+https://docs.microsoft.com/cli/azure/sql/db/tde?view=azure-cli-latest 
 

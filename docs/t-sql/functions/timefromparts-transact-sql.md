@@ -1,12 +1,12 @@
----
+﻿---
 title: "TIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -18,13 +18,13 @@ helpviewer_keywords:
   - "TIMEFROMPARTS function"
 ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # TIMEFROMPARTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Returns a **time** value for the specified time and with the specified precision.  
   
@@ -89,7 +89,7 @@ Result
   
 3.  When *fractions* has a value of 500 and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
   
-```tsql  
+```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 50, 2 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 500, 3 );  

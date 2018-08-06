@@ -1,22 +1,16 @@
 ---
-title: "R Interoperability in SQL Server R Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/11/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: 9
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: R Interoperability in SQL Server R Services | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # R interoperability in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic focuses on the mechanism for running for R within SQL Server, and describes the differences between Microsoft R and open source R.
 
@@ -41,7 +35,7 @@ Similarly, the R tools associated with the default instance would be located in 
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
 
-For more information about how Microsoft R is different from a base distribution of R that you might get from CRAN, see [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/en-us/r-server/what-is-r-server-interoperability)
+For more information about how Microsoft R is different from a base distribution of R that you might get from CRAN, see [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)
 
 ### Additional R packages from Microsoft R
 

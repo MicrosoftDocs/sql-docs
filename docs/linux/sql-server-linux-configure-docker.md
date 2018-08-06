@@ -3,37 +3,38 @@ title: Configuration options for SQL Server 2017 on Docker | Microsoft Docs
 description: Explore different ways of using and interacting with SQL Server 2017 container images in Docker. This includes persisting data, copying files, and troubleshooting.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
-ms.date: 10/02/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
+manager: craigg
+ms.date: 07/02/2018
+ms.topic: conceptual
+ms.prod: sql
+ms.component: ""
+ms.suite: "sql"
+ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: H1Hack27Feb2017
-ms.workload: "On Demand"
+ms.custom: "sql-linux"
 ---
-# Configure SQL Server 2017 container images on Docker
+# Configure SQL Server container images on Docker
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This topic explains how to configure and use the [mssql-server-linux container image](https://hub.docker.com/r/microsoft/mssql-server-linux/) with Docker. This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
+This article explains how to configure and use the [mssql-server-linux container image](https://hub.docker.com/r/microsoft/mssql-server-linux/) with Docker. This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
 
 > [!NOTE]
-> This topic specifically focuses on using the mssql-server-linux image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows/).
+> This article specifically focuses on using the mssql-server-linux image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## Pull and run the container image
 
-To pull and run the Docker container image for SQL Server 2017, follow the prerequisites and steps in the following quick start tutorial:
+To pull and run the Docker container image for SQL Server 2017, follow the prerequisites and steps in the following quickstart:
 
 - [Run the SQL Server 2017 container image with Docker](quickstart-install-connect-docker.md)
 
-This configuration topic provides additional usage scenarios in the sections below.
+This configuration article provides additional usage scenarios in the following sections.
 
 ## <a id="production"></a> Run production container images
 
-The quick start tutorial in the previous section runs the free Developer edition of SQL Server from Docker Hub. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
+The quickstart in the previous section runs the free Developer edition of SQL Server from Docker Hub. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
 
-- You can only use SQL Server in a production environment if you have a valid license. You can obtain a free SQL Server Express production license [here](https://go.microsoft.com/fwlink/?linkid=857693). SQL Server Standard and Enterprise Edition licenses are available through [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
+- You can only use SQL Server in a production environment if you have a valid license. You can obtain a free SQL Server Express production license [here](https://go.microsoft.com/fwlink/?linkid=857693). SQL Server Standard and Enterprise Edition licenses are available through [Microsoft Volume Licensing](https://www.microsoft.com/en-us/licensing/default.aspx).
 
 - Production SQL Server container images must be pulled from [Docker Store](https://store.docker.com). If you don't already have one, create an account on Docker Store.
 
@@ -47,18 +48,18 @@ The quick start tutorial in the previous section runs the free Developer edition
 
    1. Next, you need to obtain the free Developer container image on Docker Store. Go to [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), click **Proceed to Checkout**, and follow the instructions.
 
-   1. Review the requirements and run procedures in the [quick start tutorial](quickstart-install-connect-docker.md). But there are two differences. You must pull the image **store/microsoft/mssql-server-linux:\<tag-name\>** from Docker Store. And you must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
+   1. Review the requirements and run procedures in the [quickstart](quickstart-install-connect-docker.md). But there are two differences. You must pull the image **store/microsoft/mssql-server-linux:\<tag-name\>** from Docker Store. And you must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
 
       ```bash
       docker run --name sqlenterprise \
-         -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+         -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
          -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
          -d store/microsoft/mssql-server-linux:2017-latest
       ```
 
       ```PowerShell
       docker run --name sqlenterprise `
-         -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+         -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
          -e "MSSQL_PID=Enterprise" -p 1433:1433 `
          -d "store/microsoft/mssql-server-linux:2017-latest"
       ```
@@ -79,7 +80,7 @@ You can connect to the SQL Server instance on your Docker machine from any exter
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
 
 The following example uses **sqlcmd** to connect to SQL Server running in a Docker container. The IP address in the connection string is the IP address of the host machine that is running the container.
 
@@ -151,6 +152,15 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P '<YourPassword>'
 sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
+## <a id="customcontainer"></a> Create a customized container
+
+It is possible to create your own [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) to create a customized SQL Server container. For more information, see [a demo that combines SQL Server and a Node application](https://github.com/twright-msft/mssql-node-docker-demo-app). If you do create your own Dockerfile, be aware of the foreground process, because this process controls the life of the container. If it exits, the container will shutdown. For example, if you want to run a script and start SQL Server, make sure that the SQL Server process is the right-most command. All other commands are run in the background. This is illustrated in the following command inside a Dockerfile:
+
+```bash
+/usr/src/app/do-my-sql-commands.sh & /opt/mssql/bin/sqlservr
+```
+
+If you reversed the commands in the previous example, the container would shutdown when the do-my-sql-commands.sh script completes.
 
 ## <a id="persist"></a> Persist your data
 
@@ -292,6 +302,62 @@ These steps can also be used to downgrade an existing container. For example, yo
 > [!IMPORTANT]
 > Upgrade and downgrade are only supported between RC1 and RC2 at this time.
 
+## <a id="version"></a> Check the container version
+
+If you want to know the version of SQL Server in a running docker container, run the following command to display it. Replace `<Container ID or name>` with the target container ID or name. Replace `<YourStrong!Passw0rd>` with the SQL Server password for the SA login.
+
+```bash
+sudo docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd \
+   -S localhost -U SA -P '<YourStrong!Passw0rd>' \
+   -Q 'SELECT @@VERSION'
+```
+
+```PowerShell
+docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd `
+   -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+   -Q 'SELECT @@VERSION'
+```
+
+You can also identify the SQL Server version and build number for a target docker container image. The following command displays the SQL Server version and build information for the **microsoft/mssql-server-linux: 2017-latest** image. It does this by running a new container with an environment variable **PAL_PROGRAM_INFO=1**. The resulting container instantly exits, and the `docker rm` command removes it.
+
+```bash
+sudo docker run -e PAL_PROGRAM_INFO=1 --name sqlver \
+   -ti microsoft/mssql-server-linux:2017-latest && \
+   sudo docker rm sqlver
+```
+
+```PowerShell
+docker run -e PAL_PROGRAM_INFO=1 --name sqlver `
+   -ti microsoft/mssql-server-linux:2017-latest; `
+   docker rm sqlver
+```
+
+The previous commands display version information similar to the following output:
+
+```Text
+sqlservr
+  Version 14.0.3029.16
+  Build ID ee3d3882f1c48a7a7e590a620153012eaedc2f37143d485df945a079b9d4eeea
+  Build Type release
+  Git Version 65d42c4
+  Built at Sat Jun 16 01:20:11 GMT 2018
+
+PAL
+  Build ID 60cfcb134bbae96d311f6a4f56aeb5a685b3809de80bcb61ec587a8f58b555eb
+  Build Type release
+  Git Version 21a4c11
+  Built at Sat Jun 16 01:18:53 GMT 2018
+
+Packages
+  system.sfp                    6.2.9200.1,21a4c1178,
+  system.common.sfp             10.0.15063.540
+  system.certificates.sfp       6.2.9200.1,21a4c1178,
+  system.netfx.sfp              4.6.1590.0
+  secforwarderxplat.sfp         14.0.3029.16
+  sqlservr.sfp                  14.0.3029.16
+  sqlagent.sfp                  14.0.3029.16
+```
+
 ## <a id="upgrade"></a> Upgrade SQL Server in containers
 
 To upgrade the container image with Docker, first identify the tag for the release for your upgrade. Pull this version from the registry with the `docker pull` command:
@@ -306,7 +372,7 @@ This updates the SQL Server image for any new containers you create, but it does
 
 1. Stop the SQL Server container with the `docker stop` command.
 
-1. Create a new SQL Server container with `docker run` and specify either a mapped host directory or a data volume container. Make sure to use the specific tag for the your SQL Server upgrade. The new container now uses a new version of SQL Server with your existing SQL Server data.
+1. Create a new SQL Server container with `docker run` and specify either a mapped host directory or a data volume container. Make sure to use the specific tag for your SQL Server upgrade. The new container now uses a new version of SQL Server with your existing SQL Server data.
 
    > [!IMPORTANT]
    > Upgrade is only supported between RC1, RC2, and GA at this time.
@@ -358,7 +424,7 @@ If the SQL Server container fails to run, try the following tests:
     docker logs e69e056c702d
     ```
 
-- Make sure that you meet the minimum memory and disk requirements specified in the [Requirements](#requirements) section of this topic.
+- Make sure that you meet the minimum memory and disk requirements specified in the [Requirements](#requirements) section of this article.
 
 - If you are using any container management software, make sure it supports container processes running as root. The sqlservr process in the container runs as root.
 
@@ -422,6 +488,6 @@ cat errorlog
 
 ## Next steps
 
-Get started with SQL Server 2017 container images on Docker by going through the [quick start tutorial](quickstart-install-connect-docker.md).
+Get started with SQL Server 2017 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md).
 
 Also, see the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues.

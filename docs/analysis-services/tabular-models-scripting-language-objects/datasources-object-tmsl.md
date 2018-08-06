@@ -1,26 +1,17 @@
 ---
 title: "DataSources object (TMSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tmsl
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DataSources object (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Defines a connection to a data source used by the model either during import to add data to the model, or in pass through queries via DirectQuery mode.  Models in DirectQuery mode can only have one **DataSource** object.  
   
  Unless you are creating, replacing, or altering the  data source object itself, any data source referenced in your script (such as in partition script) must be an existing **DataSource** object in your model.  
@@ -32,7 +23,7 @@ ms.workload: "Inactive"
  The type of DataSource. At present, the only valid value is Provider (1) - Normal connection string.  
   
  connectionString  
- The connection string that minimally specifies the server and database, but can also include other properties supported by the external RDBMS, such as a data provider or user account. This value is required. See [SqlConnectionStringBuilder Class](https://msdn.microsoft.com/en-us/library/ms254500\(v=vs.110\).aspx) for details about SQL Server database connection string properties.  
+ The connection string that minimally specifies the server and database, but can also include other properties supported by the external RDBMS, such as a data provider or user account. This value is required. See [SqlConnectionStringBuilder Class](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) for details about SQL Server database connection string properties.  
   
  impersonationMode  
  Specifies whether Analysis Services should impersonate the identity of the user requesting the query. This property is a numeric value that specifies the credentials to use for impersonation. The enumeration values are as follows:  
@@ -184,7 +175,7 @@ ms.workload: "Inactive"
   
 ## See Also  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [DirectQuery Mode &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

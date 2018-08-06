@@ -1,14 +1,13 @@
 ---
 title: "What's New in SSMA for Access(AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
-ms.date: "09/22/2017"
+ms.date: "08/05/2018"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -16,11 +15,18 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 caps.latest.revision: 37
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # What's New in SSMA for Access (AccessToSQL)
 This topic lists SSMA for Access changes in each release.  
+
+## SSMA v7.7
+The v7.7 release of SSMA for Access contains the following changes:
+- SSMA for Access has been enhanced with targeted fixes that improve quality and conversion metrics.
+- Based on the popular demand, the 32-bit version of SSMA for Access is back. Compared to the previous implementation (prior to v7.4), there are two installer packages, but they cannot be installed side by side. As a result, you must choose the most appropriate version based on the connectivity components you have. It is always preferable to use the 64-bit version, if possible.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v7.6
 The v7.6 release of SSMA for Access has been enhanced with targeted fixes that improve quality and conversion metrics and with support for SQL Server 2017 (public preview). Support for SQL Server 2017 on Windows and Linux is in public preview and should not be used for production migrations.
@@ -163,7 +169,7 @@ The November 2006 release of SSMA for Access contains the following changes:
   
 -   Added a  new Database Migration Wizard that guides you through the migration of a single database from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
 -   Added a new Convert, Load, and Migrate command that converts Access databases, loads the converted objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and migrates data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] all in one step.  
--   Improved query migration. Query migration now converts more SELECT queries to views. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
+-   Improved query migration. Query migration now converts more SELECT queries to views. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
 -   Added the ability to edit table and index properties on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Table** tab.  
 -   Added new global settings:  
     -   You can opt to show line numbers in editor windows.  

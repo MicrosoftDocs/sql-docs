@@ -2,11 +2,11 @@
 title: "_ (Wildcard - Match One Character) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 applies_to: 
@@ -25,13 +25,12 @@ helpviewer_keywords:
   - "_ (wildcard - match one character)"
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # _ (Wildcard - Match One Character) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Use the underscore character _ to match any single character in a string comparison operation that involves pattern matching, such as `LIKE` and `PATINDEX`.  
   
@@ -41,7 +40,7 @@ Use the underscore character _ to match any single character in a string compari
 
 The following example returns all database names that begin with the letter `m` and have the letter `d` as the third letter. The underscore character specifies that the second character of the name can be any letter. The `model` and `msdb` databases meet this criteria. The `master` database does not.
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -59,7 +58,7 @@ You can use multiple underscores to represent multiple characters. Changing the 
 ### B: More complex example
  The following example uses the _ operator to find all the people in the `Person` table, who have a three-letter first name that ends in `an`.  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -70,14 +69,14 @@ ORDER BY FirstName;
 ## C: Escaping the underscore character   
 The following example returns the names of the fixed database roles like `db_owner` and `db_ddladmin`, but it also returns the `dbo` user. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 The underscore in the third character position is taken as a wildcard, and is not filtering for only principals starting with the letters `db_`. To escape the underscore enclose it in brackets `[_]`. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   

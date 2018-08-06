@@ -1,24 +1,16 @@
 ---
-title: "Using the MicrosoftML Package with SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/23/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 132
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Using the MicrosoftML Package with SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Using the MicrosoftML package with SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server 2017 includes multiple machine learning algorithms. These APIs were developed by Microsoft for internal machine learning applications, and have been refined over the years to support high performance on big data, using multicore processing and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
 
@@ -26,7 +18,7 @@ In SQL Server 2017 CTP 2.0, support was added for the Python language. The **mic
 
 + **MicrosoftML for R**
 
-    Introduction and package reference: [MicrosoftML: machine learning R algorithms](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
+    Introduction and package reference: [MicrosoftML: machine learning R algorithms](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)
 
     Because R is case-sensitive, make sure that you reference the name correctly when loading the package.
 
@@ -118,4 +110,4 @@ For more information about revoscalepy, see:
 
 + [What is revoscalepy](python/what-is-revoscalepy.md)
 
-+ [revoscalepy function library](https://docs.microsoft.com/en-us/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [revoscalepy function library](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 

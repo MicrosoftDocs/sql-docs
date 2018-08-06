@@ -2,22 +2,20 @@
 title: "Tune compression for availability group | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.suite: "sql"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: "MikeRayMSFT"
+author: MashaMSFT
 ms.author: "v-saume"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Tune compression for availability group
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 By default, SQL Server compresses data streams where appropriate for availability groups. Compression reduces network traffic, increases CPU load, and may induce latency. You must be a member of the sysadmin fixed server role to enable compression. The following table shows when SQL Server uses compression for availability group log streams:
 
 | Scenario | Compression Setting

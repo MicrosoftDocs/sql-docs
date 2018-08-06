@@ -1,28 +1,30 @@
 ---
 title: Get started with SQL Server 2017 on Red Hat Enterprise Linux | Microsoft Docs
-description:  This quick start tutorial shows how to install SQL Server 2017 on Red Hat Enterprise Linux and then create and query a database with sqlcmd.
+description:  This quickstart shows how to install SQL Server 2017 on Red Hat Enterprise Linux and then create and query a database with sqlcmd.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
-ms.date: 10/02/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
+manager: craigg
+ms.date: 07/16/2018
+ms.topic: conceptual
+ms.prod: sql
+ms.technology: linux
+ms.component: ""
+ms.suite: "sql"
+ms.custom: "sql-linux"
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.workload: "Active"
 ---
-# Install SQL Server and create a database on Red Hat
+# Quickstart: Install SQL Server and create a database on Red Hat
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In this quick start tutorial, you first install SQL Server 2017 on Red Hat Enterprise Linux (RHEL) 7.3+. Then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you first install SQL Server 2017 on Red Hat Enterprise Linux (RHEL) 7.3+. Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
-You must have a RHEL 7.3 or 7.4 machine with **at least 3.25 GB** of memory.
+You must have a RHEL 7.3 or 7.4 machine with **at least 2 GB** of memory.
 
 To install Red Hat Enterprise Linux on your own machine, go to [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
@@ -42,7 +44,7 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    ```
 
    > [!NOTE]
-   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Change source repositories](sql-server-linux-setup.md#repositories).
+   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
 1. Run the following commands to install SQL Server:
 
@@ -105,8 +107,5 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-> [!TIP]
-> **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. Other tools include [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) and [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

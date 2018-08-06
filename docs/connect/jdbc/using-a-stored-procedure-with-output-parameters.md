@@ -1,20 +1,19 @@
 ---
 title: "Using a Stored Procedure with Output Parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/11/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 caps.latest.revision: 29
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using a Stored Procedure with Output Parameters
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ ms.workload: "Active"
   
  As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:  
   
-```  
+```sql
 CREATE PROCEDURE GetImmediateManager  
    @employeeID INT,  
    @managerID INT OUTPUT  
@@ -48,51 +47,41 @@ BEGIN
    SELECT @managerID = ManagerID   
    FROM HumanResources.Employee   
    WHERE EmployeeID = @employeeID  
-END  
+END
 ```  
   
  This stored procedure returns a single OUT parameter (managerID), which is an integer, based on the specified IN parameter (employeeID), which is also an integer. The value that is returned in the OUT parameter is the ManagerID based on the EmployeeID that is contained in the HumanResources.Employee table.  
   
  In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) method is used to call the GetImmediateManager stored procedure:  
   
-```  
-public static void executeStoredProcedure(Connection con) {  
-   try {  
-      CallableStatement cstmt = con.prepareCall("{call dbo.GetImmediateManager(?, ?)}");  
-      cstmt.setInt(1, 5);  
-      cstmt.registerOutParameter(2, java.sql.Types.INTEGER);  
-      cstmt.execute();  
-      System.out.println("MANAGER ID: " + cstmt.getInt(2));  
-   }  
-   catch (Exception e) {  
-      e.printStackTrace();  
-   }  
-}  
+```java
+public static void executeStoredProcedure(Connection con) throws SQLException {  
+    try(CallableStatement cstmt = con.prepareCall("{call dbo.GetImmediateManager(?, ?)}");) {  
+        cstmt.setInt(1, 5);  
+        cstmt.registerOutParameter(2, java.sql.Types.INTEGER);  
+        cstmt.execute();  
+        System.out.println("MANAGER ID: " + cstmt.getInt(2));  
+    }  
+} 
 ```  
   
  This example uses the ordinal positions to identify the parameters. Alternatively, you can identify a parameter by using its name instead of its ordinal position. The following code example modifies the previous example to demonstrate how to use named parameters in a Java application. Note that parameter names correspond to the parameter names in the stored procedure's definition:  
   
+```java
+public static void executeStoredProcedure(Connection con) throws SQLException {  
+    try(CallableStatement cstmt = con.prepareCall("{call dbo.GetImmediateManager(?, ?)}"); ) {  
+        cstmt.setInt("employeeID", 5);  
+        cstmt.registerOutParameter("managerID", java.sql.Types.INTEGER);  
+        cstmt.execute();  
+        System.out.println("MANAGER ID: " + cstmt.getInt("managerID"));  
+    }  
+}
 ```  
-public static void executeStoredProcedure(Connection con) {  
-   try {  
-      CallableStatement cstmt = con.prepareCall("{call dbo.GetImmediateManager(?, ?)}");  
-      cstmt.setInt("employeeID", 5);  
-      cstmt.registerOutParameter("managerID", java.sql.Types.INTEGER);  
-      cstmt.execute();  
-      System.out.println("MANAGER ID: " + cstmt.getInt("managerID"));  
-      cstmt.close();  
-   }  
-   catch (Exception e) {  
-      e.printStackTrace();  
-   }  
-```  
-  
- }  
   
 > [!NOTE]  
 >  These examples use the execute method of the SQLServerCallableStatement class to run the stored procedure. This is used because the stored procedure did not also return a result set. If it did, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method would be used.  
   
- Stored procedures can return update counts and multiple result sets. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] follows the JDBC 3.0 specification, which states that multiple result sets and update counts should be retrieved before the OUT parameters are retrieved. That is, the application should retrieve all of the ResultSet objects and update counts before retrieving the OUT parameters by using the CallableStatement.getter methods. Otherwise, the ResultSet objects and update counts that have not already been retrieved will be lost when the OUT parameters are retrieved. For more information about update counts and multiple result sets, see [Using a Stored Procedure with an Update Count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) and [Using Multiple Result Sets](../../connect/jdbc/using-multiple-result-sets.md).  
+ Stored procedures can return update counts and multiple result sets. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] follows the JDBC 3.0 specification, which states that multiple result sets and update counts should be retrieved before the OUT parameters are retrieved. That is, the application should retrieve all of the ResultSet objects and update counts before retrieving the OUT parameters by using the CallableStatement.getter methods. Otherwise, the ResultSet objects and update counts that haven't already been retrieved will be lost when the OUT parameters are retrieved. For more information about update counts and multiple result sets, see [Using a Stored Procedure with an Update Count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) and [Using Multiple Result Sets](../../connect/jdbc/using-multiple-result-sets.md).  
   
 ## See Also  
  [Using Statements with Stored Procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)  

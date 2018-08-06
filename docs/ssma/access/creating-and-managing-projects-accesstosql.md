@@ -1,14 +1,13 @@
 ---
 title: "Creating and Managing Projects (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
+ms.suite: "sql"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -24,8 +23,7 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Creating and Managing Projects (AccessToSQL)
 To migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you must first create an SSMA project. The project is a file that contains metadata about the Access databases that you want to migrate to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, metadata about the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure that will receive the migrated objects and data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connection information, and project settings.  
@@ -41,19 +39,19 @@ SSMA contains several options for converting and synchronizing database objects 
   
 3.  In the left pane, click **Conversion**.  
   
-4.  In the right pane, review the options. For more information about these options, see [Project Settings (Conversion)](http://msdn.microsoft.com/en-us/bcebc635-c638-4ddb-924c-b9ccfef86388).  
+4.  In the right pane, review the options. For more information about these options, see [Project Settings (Conversion)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388).  
   
 5.  Change options as necessary.  
   
 6.  Repeat the previous steps for the **Migration**, **GUI**, and **Type Mapping** pages.  
   
-    -   For information about migration options, see [Project Settings (Migration)](http://msdn.microsoft.com/en-us/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+    -   For information about migration options, see [Project Settings (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
   
-    -   For information about user interface options, see [Project Settings (GUI)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+    -   For information about user interface options, see [Project Settings (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
-    -   For more information about data type mapping settings, see [Project Settings (Type Mapping)](http://msdn.microsoft.com/en-us/b87b9683-abed-4677-8c50-18bdba704655).  
+    -   For more information about data type mapping settings, see [Project Settings (Type Mapping)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
   
-    -   For information about SQL Azure settings, see [Project Settings (SQL Azure)](http://msdn.microsoft.com/en-us/bbb8a204-d0e4-4f0b-9709-271feb1f136e).  
+    -   For information about SQL Azure settings, see [Project Settings (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e).  
   
 **Note** SQL Azure settings will be available only when you select Migration to SQL Azure while creating a project.  
   
@@ -72,12 +70,12 @@ SSMA starts without loading a default project. To migrate data from Access datab
   
 4.  In the Migration To drop down, select one of SQL Server 2005/ SQL Server 2008/ SQL Server 2012/ SQL Server 2014/ SQL Server 2016/ Azure SQL DB, and then click **OK**.  
   
-SSMA creates the project file. You can now perform the next step of [adding one or more Access databases](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
+SSMA creates the project file. You can now perform the next step of [adding one or more Access databases](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
   
 ## Customizing Project Settings  
-In addition to defining default project settings, which apply to all new SSMA projects, you can also customize the settings for each project. For more information, see [Setting Conversion and Migration Options](http://msdn.microsoft.com/en-us/0a7304df-2f35-4453-96ef-7ac83dea1167).  
+In addition to defining default project settings, which apply to all new SSMA projects, you can also customize the settings for each project. For more information, see [Setting Conversion and Migration Options](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167).  
   
-When you customize data type mappings between source and target databases, you can define mappings at the project, database, or object level. For more information about type mapping, see [Mapping Source and Target Data Types](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+When you customize data type mappings between source and target databases, you can define mappings at the project, database, or object level. For more information about type mapping, see [Mapping Source and Target Data Types](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
   
 ## Saving Projects  
 When you save a project, SSMA persists the project settings, and optionally the database metadata, to the project file.  
@@ -112,9 +110,9 @@ When you open a project, it is disconnected from [!INCLUDE[ssNoVersion](../../in
 3.  To reconnect to SQL Azure, on the **File** menu, select **Reconnect to SQL Azure.**  
   
 ## Next Step  
-The next step in the migration process is to [add one or more Access databases](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
+The next step in the migration process is to [add one or more Access databases](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Adding and Removing Access Database Files](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Adding and Removing Access Database Files](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   

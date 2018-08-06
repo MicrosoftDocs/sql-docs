@@ -1,26 +1,16 @@
 ---
-title: "Build an R model and save to SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: 21
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Build an R model and save to SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Build an R model and save to SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this step, you'll learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -45,7 +35,7 @@ The model you build is a binary classifier that predicts whether the taxi driver
      *Results*
 
      *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
+     direct_distance* 
      <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
      <br/>*Dependent variable(s): tipped*
      <br/>*Total independent variables: 5*

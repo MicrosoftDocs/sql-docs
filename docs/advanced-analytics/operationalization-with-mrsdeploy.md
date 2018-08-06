@@ -1,21 +1,17 @@
 ---
-title: "Deploy and consume analytics using mrsdeploy | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Deploy and consume analytics using mrsdeploy | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 
 # Deploy and consume analytics using mrsdeploy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft R Server includes an operationalization feature, **mrsdeploy**, that supports these tasks:
 
@@ -48,10 +44,6 @@ This deployment feature of R Server provides these benefits:
 + Faster scoring
   
   You can use realtime scoring with a supported R model object to improve the speed of scoring operations.
-
-+ Publish Python code as a web service
-
-  For examples, see [Publish and consume Python code](./python/publish-consume-python-code.md).
 
 + Asynchronous batch consumption
 

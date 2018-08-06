@@ -1,12 +1,12 @@
----
+﻿---
 title: "sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,13 +20,13 @@ helpviewer_keywords:
   - "sys.dm_exec_input_buffer dynamic management function"
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.dm_exec_input_buffer (Transact-SQL)
-[!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
   Returns information about statements submitted to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -58,7 +58,7 @@ The request_id from [sys.dm_exec_requests](../../relational-databases/system-dyn
 |**event_info**|**nvarchar(max)**|The text of the statement in the input buffer for the given spid.|  
   
 ## Permissions  
- On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the user has VIEW SERVER STATE permission , the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session.  
+ On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the user has VIEW SERVER STATE permission, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session.  
   
  On [!INCLUDE[ssSDS](../../includes/sssds-md.md)], if the user is the database owner, the user will see all executing sessions on the [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; otherwise, the user will see only the current session.  
   
@@ -70,7 +70,7 @@ The request_id from [sys.dm_exec_requests](../../relational-databases/system-dyn
 ### A. Simple example  
  The following example demonstrates passing a session id (SPID) and a request id to the function.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
@@ -78,7 +78,7 @@ GO
 ### B. Using cross apply to additional information  
  The following example lists the input buffer for sessions with session id greater than 50.  
   
-```tsql  
+```sql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  

@@ -2,13 +2,14 @@
 title: "Manage Job Steps | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
+ms.suite: "sql"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [SQL Server replication]"
   - "job steps [SQL Server Agent]"
@@ -27,10 +28,15 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Manage Job Steps
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 A job step is an action that the job takes on a database or a server. Every job must have at least one job step. Job steps can be:  
   
 -   Executable programs and operating system commands.  
@@ -49,7 +55,7 @@ A job step is an action that the job takes on a database or a server. Every job 
   
 Every job step runs in a specific security context. If the job step specifies a proxy, the job step runs in the security context of the credential for the proxy. If a job step does not specify a proxy, the job step runs in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account. Only members of the sysadmin fixed server role can create jobs that do not explicitly specify a proxy.  
   
-Because job steps run in the context of a specific [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows user, that user must have the permissions and configuration necessary for the job step to execute. For example, if you create a job that requires a drive letter or a Universal Naming Convention (UNC) path, the job steps may run under your Windows user account while testing the tasks. However, the Windows user for the job step must also have the necessary permissions, drive letter configurations, or access to the required drive. Otherwise, the job step fails. To prevent this problem, ensure that the proxy for each job step has the necessary permissions for the task that the job step performs. For more information, see [Security and Protection (Database Engine)](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7).  
+Because job steps run in the context of a specific [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows user, that user must have the permissions and configuration necessary for the job step to execute. For example, if you create a job that requires a drive letter or a Universal Naming Convention (UNC) path, the job steps may run under your Windows user account while testing the tasks. However, the Windows user for the job step must also have the necessary permissions, drive letter configurations, or access to the required drive. Otherwise, the job step fails. To prevent this problem, ensure that the proxy for each job step has the necessary permissions for the task that the job step performs. For more information, see [Security and Protection (Database Engine)](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
   
 ## Job Step Logs  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent can write output from some job steps either to an operating system file or to the sysjobstepslogs table in the msdb database. The following job step types can write output to both destinations:  
@@ -88,7 +94,7 @@ When you create a [!INCLUDE[tsql](../../includes/tsql_md.md)] job step, you must
   
 Optionally, you can open an existing [!INCLUDE[tsql](../../includes/tsql_md.md)] file as the command for the job step.  
   
-[!INCLUDE[tsql](../../includes/tsql_md.md)] job steps do not use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxies. Instead, the job step runs as the owner of the job step, or as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account if the owner of the job step is a member of the sysadmin fixed server role. Members of the sysadmin fixed server role can also specify that [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps run under the context of another user by using the *database_user_name* parameter of the sp_add_jobstep stored procedure. For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755).  
+[!INCLUDE[tsql](../../includes/tsql_md.md)] job steps do not use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxies. Instead, the job step runs as the owner of the job step, or as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account if the owner of the job step is a member of the sysadmin fixed server role. Members of the sysadmin fixed server role can also specify that [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps run under the context of another user by using the *database_user_name* parameter of the sp_add_jobstep stored procedure. For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 > [!NOTE]  
 > A single [!INCLUDE[tsql](../../includes/tsql_md.md)] job step can contain multiple batches. [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps can contain embedded GO commands.  
@@ -100,7 +106,7 @@ When you create a PowerShell script job step, you must specify one of two things
   
 -   An existing PowerShell script file to be opened.  
   
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent PowerShell subsystem opens a PowerShell session and loads the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell snap-ins. The PowerShell script used as the job step command can reference the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell provider and cmdlets. For more information about writing PowerShell scripts using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell snap-ins, see the [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent PowerShell subsystem opens a PowerShell session and loads the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell snap-ins. The PowerShell script used as the job step command can reference the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell provider and cmdlets. For more information about writing PowerShell scripts using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell snap-ins, see the [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## ActiveX Scripting Job Steps  
   
@@ -145,7 +151,7 @@ Replication job steps activate one of these replication agents:
   
 -   Queue Reader Agent (QueueReader job)  
   
-When replication is set up, you can specify to run the replication agents in one of three ways: continuously after [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent is started, on demand, or according to a schedule. For more information about replication agents, see [Replication Agents Overview](http://msdn.microsoft.com/en-us/a35ecd7d-f130-483c-87e3-ddc8927bb91b).  
+When replication is set up, you can specify to run the replication agents in one of three ways: continuously after [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent is started, on demand, or according to a schedule. For more information about replication agents, see [Replication Agents Overview](http://msdn.microsoft.com/a35ecd7d-f130-483c-87e3-ddc8927bb91b).  
   
 ## Analysis Services Job Steps  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent supports two distinct types of Analysis Services job steps, command job steps, and query job steps.  
@@ -164,7 +170,7 @@ When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]
   
 -   Type the statement to execute. The statement must be a multidimensional expressions (MDX) query.  
   
-For more information on MDX, see [MDX Statement Fundamentals (MDX)](http://msdn.microsoft.com/en-us/a560383b-bb58-472e-95f5-65d03d8ea08b).  
+For more information on MDX, see [MDX Statement Fundamentals (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ## Integration Services Packages  
 When you create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] package job step, you must do the following:  
@@ -191,7 +197,7 @@ When you create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]
   
 Note that if you deployed the package to the SSIS Catalog and you specify **SSIS Catalog** as the package source, much of this configuration information is obtained automatically from the package. Under the **Configuration** tab you can specify the environment, parameter values, connection manager values, property overrides, and whether the package runs in a 32-bit runtime environment.  
   
-For more information about creating job steps that run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] packages, see [SQL Server Agent Jobs for Packages](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
+For more information about creating job steps that run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] packages, see [SQL Server Agent Jobs for Packages](http://msdn.microsoft.com/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
   
 ## Related Tasks  
   
@@ -209,7 +215,7 @@ For more information about creating job steps that run [!INCLUDE[ssISnoversion](
 |Describes how to delete a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job step log.|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## See Also  
-[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/en-us/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [Create Jobs](../../ssms/agent/create-jobs.md)  
-[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   

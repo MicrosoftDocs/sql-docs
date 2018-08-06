@@ -1,15 +1,13 @@
----
+﻿---
 title: "dbo.server_quotas (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
 ms.date: "08/02/2016"
 ms.prod: 
 ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "server_quotas"
 ms.assetid: 34423903-1aaa-4a55-88a6-8228315d84e7
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

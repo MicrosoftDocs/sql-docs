@@ -1,21 +1,18 @@
 ---
-title: "Workload Management (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
-ms.technology: "mpp-data-warehouse"
-ms.custom: na
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-
+title: Workload management in Analytics Platform System | Microsoft Docs
+description: Workload management in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Workload Management
+
+# Workload management in Analytics Platform System
+
 SQL Server PDW’s workload management capabilities allow users and administrators to assign requests to pre-set configurations of memory, and concurrency. Use workload management to improve performance of your workload, either consistent or mixed, by allowing requests to have the appropriate resources without starving any requests forever.  
   
 For example, with the workload management techniques in SQL Server PDW, you could:  
@@ -35,7 +32,7 @@ Workload Management
 Resource Class  
 In SQL Server PDW, a *resource class* is a built-in server role that has pre-assigned limits for memory and concurrency. SQL Server PDW allocates resources to requests according to the resource class server role membership of the login that submits the requests.  
   
-On the Compute nodes, the implementation of resource classes uses the Resource Governor feature in SQL Server. For more information about Resource Governor, see [Resource Governor](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx) on MSDN.  
+On the Compute nodes, the implementation of resource classes uses the Resource Governor feature in SQL Server. For more information about Resource Governor, see [Resource Governor](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) on MSDN.  
   
 ### Understand Current Resource Utilization  
 To understand system resource utilization for the currently running requests, use the SQL Server PDW dynamic management views. For example, you can use DMVs to understand if a slow-running large hash join could benefit by having more memory.  

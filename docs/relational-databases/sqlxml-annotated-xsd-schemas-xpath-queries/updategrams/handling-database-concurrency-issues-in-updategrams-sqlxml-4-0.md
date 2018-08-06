@@ -1,12 +1,13 @@
----
+﻿---
 title: "Handling Database Concurrency Issues in Updategrams (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
+ms.suite: "sql"
+ms.technology: xml
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -23,10 +24,11 @@ ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Handling Database Concurrency Issues in Updategrams (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Like other database update mechanisms, updategrams must deal with concurrent updates to data in a multiuser environment. Updategrams use the Optimistic Concurrency Control, which uses comparison of select field data as snapshots to ensure that the data to be updated has not been altered by another user application since it was read from the database. Updategrams include these snapshot values in the **\<before>** block of the updategrams. Before updating the database, the updategram checks the values that are specified in the **\<before>** block against the values currently in the database to ensure that the update is valid.  
   
  The Optimistic Concurrency Control offers three levels of protection in an updategram: low (none), intermediate, and high. You can decide what level of protection you need by specifying the updategram accordingly.  

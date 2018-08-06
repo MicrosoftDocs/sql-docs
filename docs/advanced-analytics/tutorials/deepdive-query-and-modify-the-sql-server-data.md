@@ -1,36 +1,30 @@
 ---
-title: "Query and Modify the SQL Server Data| Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
-caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Query and modify the SQL Server data (SQL and R deep dive)| Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Query and Modify the SQL Server Data
+# Query and modify the SQL Server data (SQL and R deep dive)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 Now that you've loaded the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use the data sources you created  as arguments to R functions in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], to get basic information about the variables, and generate summaries and histograms.
 
-In this step, you'll re-use the data sources to do some quick analysis and then enhance the data.
+In this step, you re-use the data sources to do some quick analysis and then enhance the data.
 
-## Query the Data
+## Query the data
 
 First, get a list of the columns and their data types.
 
-1.  Use the function **rxGetVarInfo** and specify the data source you want to analyze.
+1.  Use the function [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) and specify the data source you want to analyze.
+
+    Depending on your version of RevoScaleR, you can also use [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -57,11 +51,13 @@ First, get a list of the columns and their data types.
     *Var 9: fraudRisk, Type: integer*
 
 
-## Modify Metadata
+## Modify metadata
 
 All the variables are stored as integers, but some variables represent categorical data,called *factor variables* in R. For example, the column *state* contains numbers used as identifiers for the 50 states plus the District of Columbia.  To make it easier to understand the data, you replace the numbers with a list of state abbreviations.
 
-In this step, you will provide a string vector containing the abbreviations, and then map these categorical values to the original integer identifiers. After this varaible is ready, you'll use it in the *colInfo* argument, to specify that this column be handled as a factor. Thereafter, the abbreviations will be used and the column handled as a factor whenever this data is analyzed or imported.
+In this step, you create a string vector containing the abbreviations, and then map these categorical values to the original integer identifiers. Then you use the new variable in the *colInfo* argument, to specify that this column be handled as a factor. Whenever you analyze the data or move it, the abbreviations are used and the column is handled as a factor.
+
+Mapping the column to abbreviations before using it as a factor actually improves performance as well. For more information, see [R and data optimization](..\r\r-and-data-optimization-r-services.md).
 
 1. Begin by creating an R variable, *stateAbb*, and defining the vector of strings to add to it, as follows:
   
@@ -98,7 +94,7 @@ In this step, you will provide a string vector containing the abbreviations, and
     )
     ```
   
-3. To create the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source that uses the updated data, call the *RxSqlServerData* function as before but add the *colInfo* argument.
+3. To create the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source that uses the updated data, call the **RxSqlServerData** function as before but add the *colInfo* argument.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -108,9 +104,8 @@ In this step, you will provide a string vector containing the abbreviations, and
   
     - For the *table* parameter, pass in the variable *sqlFraudTable*, which contains the data source you created earlier.
     - For the *colInfo* parameter, pass in the *ccColInfo* variable, which contains the column data types and factor levels.
-    - Mapping the column to abbreviations before using it as a factor actually improves performance as well. For more information, see [R and Data Optimization](https://msdn.microsoft.com/library/mt723575.aspx)
-  
-4.  You can now use the function rxGetVarInfo to view the variables in the new data source.
+
+4.  You can now use the function **rxGetVarInfo** to view the variables in the new data source.
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -138,13 +133,10 @@ In this step, you will provide a string vector containing the abbreviations, and
 
 Now the three variables you specified (_gender_, _state_, and _cardholder_) are  treated as factors.
 
-## Next Step
+## Next step
 
-[Define and Use Compute Contexts](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
+[Define and use compute contexts](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
 
-## Previous Step
+## Previous step
 
-[Create SQL Server Data Objects using RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-
-
+[Create SQL Server data objects using RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

@@ -1,13 +1,11 @@
 ---
 title: "Get started with PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "08/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
+ms.suite: "sql"
+ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 helpviewer_keywords: 
@@ -19,14 +17,12 @@ helpviewer_keywords:
   - "Azure blob storage export"
   - "Hadoop import, PolyBase getting started"
   - "Hadoop export, Polybase getting started"
-caps.latest.revision: 78
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard" 
-ms.workload: "On Demand"
+author: rothja
+ms.author: jroth
+manager: craigg 
 ---
 # Get started with PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic contains the basics about running PolyBase on a SQL Server instance.
   
@@ -38,38 +34,15 @@ ms.workload: "On Demand"
   
 -   An understanding of how to manage PolyBase objects in SQL Server Management Studio (SSMS)  
   
--   Examples of queries using PolyBase objects  
-  
-## Prerequisites  
- An instance of  [SQL Server (64-bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) with the following:  
-  
--   Microsoft .NET Framework 4.5.  
-  
--   Oracle Java SE RunTime Environment (JRE) version 7.51 or higher (64-bit). (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present.   
-  
--   Minimum memory: 4 GB  
-  
--   Minimum hard disk space: 2 GB    
-
--   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) SQL Server Developer and Express editions have TCP/IP disabled by default. PolyBase can be installed but will not fully start until TCP/IP is enabled. You must manually enable TCP/IP to have PolyBase functionality. 
-  
- 
- An external data source, one of the following:  
-  
--   Hadoop cluster. For supported versions see [Configure PolyBase](#supported).  
-
--   Azure Blob storage
-
-> [!NOTE]
->   If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail. 
+-   Examples of queries using PolyBase objects    
 
 ## Install PolyBase  
- If you haven't installed PolyBase, see  [PolyBase installation](../../relational-databases/polybase/polybase-installation.md).  
+If you haven't installed PolyBase, see [PolyBase installation](../../relational-databases/polybase/polybase-installation.md). The installation article explains the prerequisites.
   
 ### How to confirm installation  
  After installation, run the following command to confirm that PolyBase has been successfully installed. If PolyBase is installed, returns 1; otherwise, 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -84,7 +57,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 on Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9 - 5.12 on Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux  
   
 -   Azure Blob Storage  
  
@@ -97,7 +70,7 @@ Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versi
 ### External data source configuration  
   
 1.  Run [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ and set an appropriate value. By Default, the hadoop connectivity is set to 7. To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-      ```tsql  
+      ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -283,7 +256,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Ad-hoc queries  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
     -- Select customers who drive faster than 35 mph: joining structured customer data stored   
     -- in SQL Server with car sensor data stored in Hadoop.  
@@ -297,7 +270,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Importing data  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 2: Import external data into SQL Server.  
     -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
     -- leverage Columnstore technology.  

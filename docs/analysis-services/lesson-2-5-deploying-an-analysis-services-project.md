@@ -1,24 +1,18 @@
 ---
 title: "Deploying an Analysis Services Project | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 2-5 - Deploying an Analysis Services Project
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 To view the cube and dimension data for the objects in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project, you must deploy the project to a specified instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and then process the cube and its dimensions. *Deploying* an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project creates the defined objects in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. *Processing* the objects in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copies the data from the underlying data sources into the cube objects. For more information, see [Deploy Analysis Services Projects &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) and [Configure Analysis Services Project Properties &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 At this point in the development process, you generally deploy the cube to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on a development server. Once you have finished developing your business intelligence project, you will generally use the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard to deploy your project from the development server to a production server. For more information, see [Multidimensional Model Solution Deployment](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) and [Deploy Model Solutions Using the Deployment Wizard](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  

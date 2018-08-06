@@ -2,19 +2,18 @@
 title: "Features of the Microsoft ODBC Driver for SQL Server on Windows | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
+ms.suite: "sql"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Features of the Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +25,7 @@ The ODBC Driver 13.1 for SQL Server contains all the functionality of the previo
   
 Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to SQL Server. An Always Encrypted enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the SQL Server client application. The driver encrypts the data in sensitive columns before passing the data to SQL Server, and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data stored in encrypted database columns that are contained in query results. For more information, see [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
  
-Azure Active Directory allows users, DBA's, and application programmers to use Azure Active Directory authentication as a mechanism of connecting to Microsoft Azure SQL Database and Microsoft SQL Server 2016 by using identities in Azure Active Directory (Azure AD). For more information, see [Using Azure Active Directory with the ODBC Driver](../../../connect/odbc/using-azure-active-directory.md), and [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/en-us/documentation/articles/sql-database-aad-authentication/).   
+Azure Active Directory allows users, DBA's, and application programmers to use Azure Active Directory authentication as a mechanism of connecting to Microsoft Azure SQL Database and Microsoft SQL Server 2016 by using identities in Azure Active Directory (Azure AD). For more information, see [Using Azure Active Directory with the ODBC Driver](../../../connect/odbc/using-azure-active-directory.md), and [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
 ## Microsoft ODBC Driver 11 for SQL Server on Windows  
 

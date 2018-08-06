@@ -1,0 +1,64 @@
+- name: Overview
+  href: integration-services-ssis-connections.md
+- name: Data Sources
+  href: data-sources.md
+- name: ADO Connection Manager
+  href: ado-connection-manager.md
+- name: ADO.NET Connection Manager
+  href: ado-net-connection-manager.md
+- name: Analysis Services Connection Manager
+  href: analysis-services-connection-manager.md
+  items:
+  - name: Add Analysis Services Connection Manager Dialog Box UI Reference
+    href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: Azure Data Lake Analytics Connection Manager
+  href: azure-data-lake-analytics-connection-manager.md
+- name: Azure Data Lake Store Connection Manager
+  href: azure-data-lake-store-connection-manager.md
+- name: Azure HDInsight Connection Manager
+  href: azure-hdinsight-connection-manager.md
+- name: Azure Resource Manager Connection Manager
+  href: azure-resource-manager-connection-manager.md
+- name: Azure Storage Connection Manager
+  href: azure-storage-connection-manager.md
+- name: Azure Subscription Connection Manager
+  href: azure-subscription-connection-manager.md
+- name: Excel Connection Manager
+  href: excel-connection-manager.md
+- name: File Connection Manager
+  href: file-connection-manager.md
+  items:
+  - name: Add File Connection Manager Dialog Box UI Reference
+    href: add-file-connection-manager-dialog-box-ui-reference.md
+  - name: Suggest Column Types Dialog Box UI Reference
+    href: suggest-column-types-dialog-box-ui-reference.md
+- name: Flat File Connection Manager
+  href: flat-file-connection-manager.md
+- name: FTP Connection Manager
+  href: ftp-connection-manager.md
+- name: Hadoop Connection Manager
+  href: hadoop-connection-manager.md
+- name: HTTP Connection Manager
+  href: http-connection-manager.md
+- name: MSMQ Connection Manager
+  href: msmq-connection-manager.md
+- name: Multiple Files Connection Manager
+  href: multiple-files-connection-manager.md
+- name: Multiple Flat Files Connection Manager
+  href: multiple-flat-files-connection-manager.md
+- name: OData Connection Manager
+  href: odata-connection-manager.md
+- name: ODBC Connection Manager
+  href: odbc-connection-manager.md
+- name: OLE DB Connection Manager
+  href: ole-db-connection-manager.md
+- name: SAP BW Connection Manager
+  href: sap-bw-connection-manager.md
+- name: SMTP Connection Manager
+  href: smtp-connection-manager.md
+- name: SMO Connection Manager
+  href: smo-connection-manager.md
+- name: SQL Server Compact Edition Connection Manager
+  href: sql-server-compact-edition-connection-manager.md
+- name: WMI Connection Manager
+  href: wmi-connection-manager.md

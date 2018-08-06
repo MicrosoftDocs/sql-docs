@@ -1,12 +1,12 @@
 ---
 title: "DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2017"
-ms.prod: "sql-non-specified"
+ms.date: "11/14/2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -27,13 +27,12 @@ helpviewer_keywords:
   - "space allocation [SQL Server], checking"
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC CHECKALLOC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Checks the consistency of disk space allocation structures for a specified database.
   
@@ -41,7 +40,7 @@ Checks the consistency of disk space allocation structures for a specified datab
   
 ## Syntax  
   
-```sql
+```
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -101,7 +100,7 @@ DBCC CHECKALLOC checks the allocation of all pages in the database, regardless o
 If NO_INFOMSGS is not specified, DBCC CHECKALLOC collects space usage information for all objects in the database. This information is printed together with any errors that are found.
   
 > [!NOTE]  
->The DBCC CHECKALLOC functionality is included in [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). This means that you do not have to run DBCC CHECKALLOC separately from these statements.   DBCC CHECKALLOC does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
+> The DBCC CHECKALLOC functionality is included in [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). This means that you do not have to run DBCC CHECKALLOC separately from these statements.   DBCC CHECKALLOC does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
   
 ## Internal Database Snapshot  
 DBCC CHECKALLOC uses an internal database snapshot to provide the transactional consistency that it needs to perform these checks. If a snapshot cannot be created, or TABLOCK is specified, DBCC CHECKALLOC tries to acquire an exclusive (X) lock on the database to obtain the required consistency.
@@ -154,7 +153,7 @@ DBCC CHECKALLOC also reports an allocation summary for each index and partition 
   
 DBCC CHECKALLOC returns the following result set (values may vary), except when ESTIMATEONLY or NO_INFOMSGS is specified.
   
-```sql
+```
 DBCC results for 'master'.  
 ***************************************************************  
 Table sysobjects                Object ID 1.  
@@ -216,7 +215,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 When ESTIMATEONLY is specified, DBCC CHECKALLOC returns the following result set.
   
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)   
 -------------------------------------------------   
 34  

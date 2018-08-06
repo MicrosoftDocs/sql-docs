@@ -38,7 +38,7 @@ Click one of the following tabs for the syntax, arguments, remarks, permissions,
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-## Click on whichever product you are interested in
+## Click on whichever product you are interested in:
 
 &nbsp;
 
@@ -280,7 +280,7 @@ GO
 > <table>
 > <tr>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL DB<br />Logical Server *</em></strong></th>
+>   <th style="border: 1"><strong><em>* SQL DB<br />Logical Server *</em></strong></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>

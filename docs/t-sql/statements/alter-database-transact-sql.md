@@ -42,38 +42,23 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 In the following row, click whichever product you are interested in:
 
-
-::: moniker range=">=sql-server-2016|| >=sql-server-linux-2017|| =sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
 > <tr>
->   <th>__________________</th>
 >   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th>|                |</th>
 >   <th> &nbsp; </th>
 >   <th> &nbsp; </th>
 >   <th> &nbsp; </th>
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><strong><em>| * SQL Server * |</em></strong></th>
+>   <th><strong><em>* SQL Server *</em></strong></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> <tr>
->   <th>|________________|</th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
 > </tr>
 > </table>
 
@@ -296,10 +281,17 @@ GO
 - [System Databases](../../relational-databases/databases/system-databases.md)  
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current|| =sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
 > <tr>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
 >   <th style="border: 1"><strong><em>* SQL DB<br />Logical Server *</em></strong></th>
@@ -653,10 +645,17 @@ ALTER DATABASE db1 FAILOVER
  [System Databases](../../relational-databases/databases/system-databases.md)  
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current|| =sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
 > <tr>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
@@ -780,10 +779,17 @@ Only the server-level principal login (created by the provisioning process) or m
 [System Databases](../../relational-databases/databases/system-databases.md)  
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest|| =sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
 > <tr>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>
@@ -902,10 +908,17 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 [SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
-::: moniker range="=aps-pdw-2016|| =sqlallproducts-allversions"
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
 > <tr>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="https://review.docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />Logical Server</a></th>

@@ -58,6 +58,30 @@ The server computes the result set, and for any encrypted columns included in th
 
 For details of how to develop applications using Always Encrypted with particular client drivers, see [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
+## Remarks
+
+Decryption occurs via the client. This means that some actions that occur only server-side will not work when using Always Encrypted. 
+
+Here's an example of an update that attempts to move data from an encrypted column to an unencrypted column without returning a result set to the client: 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+If SSN is a column encrypted using Always Encryption, the above update statement will fail with an error similar to:
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+To successfully update the column, do the following:
+
+1.  SELECT the data out of the SSN column, and store it as a result set in the application. This will allow for the application (client) to decrypt the column.
+2. INSERT/UPDATE the data from the result set in the application and send to SQL Server. Paramterization will pass the data into SQL Server via parameters so the values can be encrypted. 
+
+ >[!IMPORTANT]
+ > In this example, the data will be unencrypted when sent back to the server because the destination column is a regular varchar that does not accept encrypted data. 
   
 ## Selecting  Deterministic or Randomized Encryption  
  The Database Engine never operates on plaintext data stored in encrypted columns, but it still supports some queries on encrypted data, depending on the encryption type for the column. Always Encrypted supports two types of encryption: randomized encryption and deterministic encryption.  

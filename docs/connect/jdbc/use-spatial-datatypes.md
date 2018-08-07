@@ -63,7 +63,7 @@ Geometry geomWKT = Geometry.STGeomFromText(geoWKT, 0);
 SQLServerPreparedStatement pstmt = (SQLServerPreparedStatement) connection.prepareStatement("insert into sampleTable values (?)");
 pstmt.setGeometry(1, geomWKT);  
 pstmt.execute();
-``` 
+```
 
 The same can be done for the Geography counterpart, using a Geography column and **setGeography()** method.
 

@@ -24,7 +24,7 @@ manager: "erikre"
   This topic describes how to create or configure a single *availability group listener* for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  To create the first availability group listener of an availability group, we strongly recommend that you [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Avoid creating a listener directly in the WSFC cluster except when necessary, for example, to create an additional listener.  
+>  To create the first availability group listener of an availability group, we strongly recommend that you close [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Avoid creating a listener directly in the WSFC cluster except when necessary, for example, to create an additional listener.  
   
 -   **Before you begin:**  
   

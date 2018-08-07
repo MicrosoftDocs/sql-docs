@@ -36,7 +36,7 @@ Using the XML input functionality of Database Engine Tuning Advisor is beyond th
   
 This task guides you through starting the **dta** utility, viewing its Help, and then using it to tune a workload from the command prompt. It uses the workload, MyScript.sql, which you created for the Database Engine Tuning Advisor graphical user interface (GUI) practice [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
-The tutorial uses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For security reasons, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](http://sqlserversamples.codeplex.com).  
+The tutorial uses the AdventureWorks2017 sample database. For security reasons, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
 The following tasks guide you through opening a command prompt, starting the **dta** command prompt utility, viewing its syntax Help, and tuning a simple workload, MyScript.sql, which you created in [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
 
@@ -44,9 +44,8 @@ The following tasks guide you through opening a command prompt, starting the **d
 
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-- Install [SQL Server Management Studio.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 - Install [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Download [AdventureWorks2017 sample database.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
+- Download [AdventureWorks2017 sample database.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)
 
 
 Instructions for restoring databases in SSMS are here: [Restore a database.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)

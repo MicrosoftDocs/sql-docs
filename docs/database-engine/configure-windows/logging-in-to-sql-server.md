@@ -90,6 +90,6 @@ WHERE session_id = @@SPID;
   
  [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [Creating a Login](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [Creating a Login](../../t-sql/t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
   
   

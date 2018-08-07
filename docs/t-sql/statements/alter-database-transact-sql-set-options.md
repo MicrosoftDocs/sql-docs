@@ -1480,11 +1480,12 @@ The status of this option can be determined by examining the is_auto_update_stat
   
 For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
 
-**\<automatic_tuning_option> ::=**
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
 **Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-
-Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.  
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+  
+Controls automatic options for [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
+  
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }   
 AUTO
 Setting the automatic tuning value to AUTO will apply Azure configuration defaults for automatic tuning.
   
@@ -1494,7 +1495,7 @@ Using the value INHERIT will inherit the default configuration from the parent s
 CUSTOM
 Using the value CUSTOM, you will need to manually custom configure each of the automatic tuning options available on databases.
   
-CREATE_INDEX = { DEFAULT | ON | OFF }
+CREATE_INDEX = { DEFAULT | ON | OFF }  
 DEFALT
 Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.
 
@@ -1504,7 +1505,7 @@ When turned ON, automatically generates missing indexes on the database. Followi
 OFF
 Does not automatically generate missing indexes on the database.
 
-DROP_INDEX = { DEFAULT | ON | OFF }
+DROP_INDEX = { DEFAULT | ON | OFF }  
 DEFALT
 Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.
   

@@ -1,8 +1,8 @@
 ---
 title: Usage statistics and performance of the views in a SQL Server database
 description: Usage statistics and performance of the views in a SQL Server database
-manager:craigg
-author:craigg-msft
+manager: craigg
+author: craigg-msft
 ms.author: craig
 ms.date: 22/07/2018
 ---

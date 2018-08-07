@@ -45,7 +45,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Is a string of Unicode character data. *character_string* is **sysname** and is limited to 128 characters. Inputs greater than 128 characters return NULL.  
   
  '*quote_character*'  
- Is a one-character string to use as the delimiter. Can be a single quotation mark ( **'** ), a left or right bracket ( **[]** ), a double quotation mark ( **"** ), a left or right parenthesis ( **()** ), a greater than or less than sign ( **><** ), a left or right brace ( **{}** ) or a backtick ( **\`**). NULL returns if an unacceptable character is supplied. If *quote_character* is not specified, brackets are used.  
+ Is a one-character string to use as the delimiter. Can be a single quotation mark ( **'** ), a left or right bracket ( **[]** ), a double quotation mark ( **"** ), a left or right parenthesis ( **()** ), a greater than or less than sign ( **><** ), a left or right brace ( **{}** ) or a backtick ( **\`** ). NULL returns if an unacceptable character is supplied. If *quote_character* is not specified, brackets are used.  
   
 ## Return Types  
  **nvarchar(258)**  

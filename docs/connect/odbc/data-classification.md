@@ -25,7 +25,7 @@ For the purpose of managing sensitive data, SQL Server and Azure SQL Server intr
 
 See [SQL Data Discovery and Classification](https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) for more information on how to assign classification to columns.
 
-Microsoft ODBC Driver 17.2 allows the retrieval of this metadata via SQLGetDescField using SQL_CA_SS_DATA_CLASSIFICATION field identifier.
+Microsoft ODBC Driver 17.2 allows the retrieval of this metadata via SQLGetDescField using the SQL_CA_SS_DATA_CLASSIFICATION field identifier.
 
 ## Format
 SQLGetDescField has the following syntax:
@@ -40,7 +40,7 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- [Input] IRD(Implementation Row Descriptor) handle. Can be retrieved by a call to SQLGetStmtAttr with SQL_ATTR_IMP_ROW_DESC statment attribute
+ [Input] IRD(Implementation Row Descriptor) handle. Can be retrieved by a call to SQLGetStmtAttr with SQL_ATTR_IMP_ROW_DESC statement attribute
   
  *RecNumber*  
  [Input] 0
@@ -108,7 +108,6 @@ USHORT nColumns;
 struct {
  USHORT nProps;
  struct SensitivityProp[nProps];
-
 } columnClassification[nColumns];
 ```
 

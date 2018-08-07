@@ -12,9 +12,9 @@ ms.date: 22/07/2018
 <a name="introduzione"></a>Introduction
 ============
 
-The performance of a database solution are often the subject of dispute between those who provide the solution and those who personalize. Write T-SQL code optimized, can scale to more data and users, is not easy and when the complexity increases, code maintenance tasks become difficult to implement for the author himself.
+The performance of a database solution is often the subject of dispute between those who provide the solution and those who personalize. Write T-SQL code optimized, can scale to more data and users, isn't easy and when the complexity increases, code maintenance tasks become difficult to implement by the author.
 
-In this article, I share the methodology of tuning and some scripts that I use to get information about the **performance of queries that use the views** in the database object of the analysis. The presence of nested views containing non-optimized queries can become the subject of specific analysis, the scripts in this article are intended to provide some indicators on the use and performance of the views of a DB.
+In this article, I share the methodology of tuning and some scripts that I use to get information about the **performance of queries that use the views** in the database object of the analysis. The presence of nested views that contains non-optimized queries can become the subject of specific analysis. Scripts in this article intent to provide some indicators on the use and performance of the views of a DB.
 
 <a name="alcuni-indicatori-sulle-performance-delle-viste-in-sql-server"></a>Some indicators on the performance of views in SQL Server
 =============================================================
@@ -101,9 +101,9 @@ PIVOT (MAX([%]) FOR [counter]
 GO
 ```
 
-The study can be performed by connecting the system view [sys. views](https://docs.microsoft.com/it-it/sql/relational-databases/system-catalog-views/sys-views-transact-sql) with the DMV that expose the query statistics, query text and its execution plan in cache.
+The study can be performed by connecting the system view [sys. views](https://docs.microsoft.com/it-it/sql/relational-databases/system-catalog-views/sys-views-transact-sql) with the DMV that expose the query statistics, query text, and its execution plan in cache.
 
-The following CTE provides detailed statistical information about queries in the cache using the views in the current database. The values for the number of executions, total running time, memory pages read and other information dependent on the version of SQL Server, provide a clear indication about queries to check/optimize; analysis supported by display of the execution plan in cache.
+The following CTE provides detailed statistical information about queries in the cache using the views in the current database. The values for number of executions, total running time, memory pages read and other information dependent on the version of SQL Server. Provide a clear indication about queries to check or optimize; analysis supported by display of the execution plan in cache.
 
 ```SQL
 WITH CTE_VW_STATS AS
@@ -159,7 +159,7 @@ CROSS APPLY
 GO
 ```
 
-The last query provides information about unused views, pay close attention to data mining, is based on the DMV [sys.dm _ _exec_cached_plans](https://docs.microsoft.com/it-it/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql) that is prone to fluctuate within the plan cache execution plans. If a view is not in cache when executed the query, it is said that that view is to delete. If you are concerned that your cache is fairly representative of your workload, keep simply account. If the subsequent controls, the view will always be present, you can evaluate to other investigations.
+The last query provides information about unused views, pay close attention to data mining, is based on the DMV [sys.dm _ _exec_cached_plans](https://docs.microsoft.com/it-it/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql) that is prone to fluctuate within the plan cache execution plans. If a view isn't in cache when executed the query, it's said that that view is to delete. If you're concerned that your cache is fairly representative of your workload, keep simply account. In the next controls, the view will always be present, you can evaluate to other investigations.
 
 ```SQL
 SELECT

@@ -55,10 +55,10 @@ In the following row, click whichever product name you are interested in. The cl
 > </tr>
 > <tr>
 >   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><a href="alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
->   <th><a href="alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -293,11 +293,11 @@ GO
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th style="border: 1"><strong><em>* SQL DB<br />logical server *</em></strong></th>
->   <th><a href="alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
->   <th><a href="alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -657,11 +657,11 @@ ALTER DATABASE db1 FAILOVER
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
 >   <th><strong><em>* SQL DB<br />Managed Instance</th>
->   <th><a href="alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -791,11 +791,11 @@ Only the server-level principal login (created by the provisioning process) or m
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><a href="alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
 >   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
->   <th><a href="alter-database-transact-sql?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -920,10 +920,10 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><a href="alter-database-transact-sql?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
->   <th><a href="alter-database-transact-sql?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
@@ -983,14 +983,14 @@ When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the 
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
-For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics)
+For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md)
 
 SET AUTO_UPDATE_STATISTICS { ON | OFF } 
 When the automatic update statistics option, AUTO_UPDATE_STATISTICS, is ON, the query optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. Statistics become out-of-date after operations insert, update, delete, or merge change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
-For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
+For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
 
 
 SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }

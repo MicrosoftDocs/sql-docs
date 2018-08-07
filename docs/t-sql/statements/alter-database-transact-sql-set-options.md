@@ -1485,7 +1485,7 @@ For more information that describes when to use synchronous or asynchronous stat
   
 Controls automatic options for [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
   
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }   
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
 AUTO
 Setting the automatic tuning value to AUTO will apply Azure configuration defaults for automatic tuning.
   
@@ -1495,15 +1495,19 @@ Using the value INHERIT will inherit the default configuration from the parent s
 CUSTOM
 Using the value CUSTOM, you will need to manually custom configure each of the automatic tuning options available on databases.
   
+Enables or disables automatic index management `CREATE_INDEX` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
+
 CREATE_INDEX = { DEFAULT | ON | OFF }  
 DEFALT
 Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.
 
 ON
-When turned ON, automatically generates missing indexes on the database. Following the index creation, gains to the performance of the workload are verified. When such created index no longer provides benefits to the workload performance, it is automatically reverted. Indexes automatically created are flagged as a system generated indexed.
+When enabled, missing indexes are automatically generated on a database. Following the index creation, gains to the performance of the workload are verified. When such created index no longer provides benefits to the workload performance, it is automatically reverted. Indexes automatically created are flagged as a system generated indexed.  
 
 OFF
 Does not automatically generate missing indexes on the database.
+
+Enables or disables automatic index management `DROP_INDEX` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
 DROP_INDEX = { DEFAULT | ON | OFF }  
 DEFALT
@@ -1514,6 +1518,8 @@ Automatically drops duplicate or no longer useful indexes to the performance wor
   
 OFF
 Does not automatically drop missing inexes on the database.
+
+Enables or disables automatic plan correction `FORCE_LAST_GOOD_PLAN` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
 FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
 DEFAULT

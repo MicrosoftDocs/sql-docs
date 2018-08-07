@@ -63,7 +63,7 @@ The Database Engine Tuning Advisor can be used to find the best physical databas
 
   ![Save SQL Query](media/dta-tutorials/dta-save-query.png)
   
-2.  Start Database Engine Tuning Advisor. Select **Database Tuning Advisor** from the **Tools** menu in SQL Server Management Studio (SSMS).  For more information, see [Launching Database Engine Tuning Advisor](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md). Connect to your SQL Server in the **Connect to Server** dialog box.  
+2.  Start Database Engine Tuning Advisor. Select **Database Tuning Advisor** from the **Tools** menu in SQL Server Management Studio (SSMS).  For more information, see [Launch Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor). Connect to your SQL Server in the **Connect to Server** dialog box.  
   
 3.  In the **General** tab of the right pane of the Database Engine Tuning Advisor GUI, type **MySession** in **Session name**. 
   
@@ -120,7 +120,7 @@ Evaluating a subset of tuning recommendations may be necessary if you find you m
 More tuning result information can be viewed in the **Reports** tab, which is described in the next task of this lesson.  
 
 ## View tuning reports
-Although it is useful to view the scripts that can be used to implement the tuning results, Database Engine Tuning Advisor also provides many useful reports that you can view. These reports provide information about the existing physical design structures in the database you are tuning, and about the recommended structures. The tuning reports can be viewed by clicking the **Reports** tab as described in the following practice. This practice uses the MySession and the EvaluateMySession tuning sessions that you created in [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md) and in [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md).  
+Although it is useful to view the scripts that can be used to implement the tuning results, Database Engine Tuning Advisor also provides many useful reports that you can view. These reports provide information about the existing physical design structures in the database you are tuning, and about the recommended structures. The tuning reports can be viewed by clicking the **Reports** tab as described in the following practice.
 
 
 1. Select the **Reports** tab in Database Tuning Advisor. 

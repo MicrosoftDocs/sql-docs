@@ -34,7 +34,7 @@ In addition, using the Database Engine Tuning Advisor XML schema and the **dta**
   
 Using the XML input functionality of Database Engine Tuning Advisor is beyond the scope of this lesson.  
   
-This task guides you through starting the **dta** utility, viewing its Help, and then using it to tune a workload from the command prompt. It uses the workload, MyScript.sql, which you created for the Database Engine Tuning Advisor graphical user interface (GUI) practice [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+This task guides you through starting the **dta** utility, viewing its Help, and then using it to tune a workload from the command prompt. It uses the workload, MyScript.sql, which you created for the Database Engine Tuning Advisor graphical user interface (GUI) practice [Tuning a Workload](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)  
   
 The tutorial uses the AdventureWorks2017 sample database. For security reasons, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   

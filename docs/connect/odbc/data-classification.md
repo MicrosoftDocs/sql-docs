@@ -67,21 +67,21 @@ Upon a successful call to SQLGetDescField, the buffer pointed to by *ValuePtr* w
 
 Note: `nn nn`, `tt tt`, and `cc cc` are multibyte integers which are stored with the least significant byte at the lowest address.
 
-*sensitivitylabel* and *informationtype*  are both of the form
+*`sensitivitylabel`* and *`informationtype`*  are both of the form
 
  `nn [n bytes name] ii [i bytes id]`
 
-*columnsensitivity* is of the form
+*`columnsensitivity`* is of the form
 
  `nn nn [n sensitivityprops]`
 
-For each column *(c)*, *n* 4-byte *sensitivityprops* are present:
+For each column *(c)*, *n* 4-byte *`sensitivityprops`* are present:
 
  `ss ss tt tt`
 
-s - index into the *sensitivitylabels* array, FF FF if not labeled
+s - index into the *`sensitivitylabels`* array, `FF FF` if not labeled
 
-t - index into the *informationtypes* array, FF FF if not labeled
+t - index into the *`informationtypes`* array, `FF FF` if not labeled
 
 
 <br><br>

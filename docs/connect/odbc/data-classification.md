@@ -23,7 +23,7 @@ manager: "kenvh"
 ## Overview
 For the purpose of managing sensitive data, SQL Server and Azure SQL Server introduced the ability to provide database columns with sensitivity metadata that allows the client application to handle different types of sensitive data (such as health, financial, etc.) in accordance with data protection policies.
 
-See [SQL Data Discovery and Classification](https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) for more information on how to assign classification to columns.
+For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
 
 Microsoft ODBC Driver 17.2 allows the retrieval of this metadata via SQLGetDescField using the SQL_CA_SS_DATA_CLASSIFICATION field identifier.
 
@@ -65,7 +65,7 @@ Upon a successful call to SQLGetDescField, the buffer pointed to by *ValuePtr* w
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
-Note: `nn nn`, `tt tt`, and `cc cc` are multibyte integers which are stored with the least significant byte at the lowest address.
+Note: `nn nn`, `tt tt`, and `cc cc` are multibyte integers, which are stored with the least significant byte at the lowest address.
 
 *`sensitivitylabel`* and *`informationtype`*  are both of the form
 
@@ -113,7 +113,7 @@ struct {
 
 
 ## Code Sample
-The following is a test application that demonstrates how to read Data Classification metadata. On Windows it can be compiled using `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` and run with a connection string, and a SQL query (that returns classified columns) as parameters.
+Test application that demonstrates how to read Data Classification metadata. On Windows it can be compiled using `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` and run with a connection string, and a SQL query (that returns classified columns) as parameters:
 
 ```
 #ifdef _WIN32

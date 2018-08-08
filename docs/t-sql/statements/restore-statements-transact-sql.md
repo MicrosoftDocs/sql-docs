@@ -801,6 +801,10 @@ URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorl
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak',
 
+--The following error is shown if the database already exists:
+Msg 1801, Level 16, State 1, Line 9
+Database 'WideWorldImportersStandard' already exists. Choose a different database name.
+
 -- An example with variables:
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
 DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';

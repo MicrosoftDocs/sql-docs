@@ -756,6 +756,16 @@ Only the server-level principal login (created by the provisioning process) or m
 > [!IMPORTANT]  
 >  The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.  
   
+## Examples
+The following examples show you how to set automatic tuning and how to add a file in a managed instance.
+
+```sql
+ALTER DATABASE WideWorldImporters
+	SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON)
+
+ALTER DATABASE WideWorldImporters
+	ADD FILE (NAME = 'data_17')
+```
 
 ## See also
   

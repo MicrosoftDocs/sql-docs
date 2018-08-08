@@ -722,11 +722,6 @@ ALTER DATABASE { database_name | CURRENT }
   | <temporal_history_retention>  
 }  
 
-<automatic_tuning_option> ::=  
-{  
-  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
-}  
-
 ```
   
 ## Arguments  

@@ -75,7 +75,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### Updated ADAL4J version to 1.6.0
 
-The Microsoft JDBC Driver 7.0 for SQL Server has updated its maven dependency upon azure-activedirectory-library-for-java (ADAL4J) to version 1.6.0. For more information about dependencies, see [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+The Microsoft JDBC Driver 7.0 for SQL Server has updated its maven dependency upon azure-activedirectory-library-for-java (ADAL4J) to version 1.6.0. For more information about dependencies, see [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## Updates in Microsoft JDBC Driver 6.4 for SQL Server
 

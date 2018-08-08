@@ -34,6 +34,8 @@
   href: new-updated-sql-server.md
 - name: Release Notes
   items:
+  - name: SQL Server vNext Notes
+    href: sql-server-vnext-release-notes.md
   - name: SQL Server 2017 Notes
     href: sql-server-2017-release-notes.md
   - name: SQL Server 2016 Notes

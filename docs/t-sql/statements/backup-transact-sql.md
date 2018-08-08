@@ -1,7 +1,7 @@
 ﻿---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2018"
+ms.date: "08/08/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -92,7 +92,7 @@ Backs up a complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da
 BACKUP DATABASE { database_name | @database_name_var }   
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
-  [ WITH { DIFFERENTIAL -- Not supporterd in SQL Database Managed Instance
+  [ WITH { DIFFERENTIAL 
            | <general_WITH_options> [ ,...n ] } ]  
 [;]  
   
@@ -113,7 +113,7 @@ BACKUP DATABASE { database_name | @database_name_var }
 [;]  
   
 --Backing Up the Transaction Log (full and bulk-logged recovery models)  
-BACKUP LOG -- Not supported in SQL Database Managed Instance
+BACKUP LOG 
   { database_name | @database_name_var }  
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
@@ -123,8 +123,8 @@ BACKUP LOG -- Not supported in SQL Database Managed Instance
 <backup_device>::=   
  {  
    { logical_device_name | @logical_device_name_var }   
- | {   DISK -- Not supported in SQL Database Managed Instance
-     | TAPE -- Not supported in SQL Database Managed Instance
+ | {   DISK 
+     | TAPE 
      | URL } =   
      { 'physical_device_name' | @physical_device_name_var | 'NUL' }  
  }   
@@ -143,13 +143,13 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
 <general_WITH_options> [ ,...n ]::=   
 --Backup Set Options  
-   COPY_ONLY -- Only backup set option supported by SQL Database Managed Instance  
+   COPY_ONLY   
  | { COMPRESSION | NO_COMPRESSION }   
  | DESCRIPTION = { 'text' | @text_variable }   
  | NAME = { backup_set_name | @backup_set_name_var }   
  | CREDENTIAL  
  | ENCRYPTION  
- | FILE_SNAPSHOT  --Not supported in SQL Database Managed Instance
+ | FILE_SNAPSHOT  
  | { EXPIREDATE = { 'date' | @date_var }   
         | RETAINDAYS = { days | @days_var } }   
   
@@ -175,11 +175,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 --Monitoring Options  
    STATS [ = percentage ]   
   
---Tape Options. These are not supported in SQL Database Managed Instance
+--Tape Options. 
    { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
---Log-specific Options. These are not supported in SQL Database Managed Instance 
+--Log-specific Options. 
    { NORECOVERY | STANDBY = undo_file_name }  
  | NO_TRUNCATE  
   
@@ -259,7 +259,7 @@ Specifies a logical or physical backup device to use for the backup operation.
 Is the logical name of the backup device to which the database is backed up. The logical name must follow the rules for identifiers. If supplied as a variable (@*logical_device_name_var*), the backup device name can be specified either as a string constant (@*logical_device_name_var***=** logical backup device name) or as a variable of any character string data type except for the **ntext** or **text** data types.  
   
 { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' }
-**Applies to:** DISK, TAPE, and URL apply to SQL Server. Only URL applies to SQL Database Managed Instance
+**Applies to:** DISK, TAPE, and URL apply to SQL Server. 
 Specifies a disk file or tape device, or a Microsoft Azure Blob storage service. The URL format is used for creating backups to the Microsoft Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Microsoft Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
 > [!NOTE] 
@@ -268,7 +268,7 @@ Specifies a disk file or tape device, or a Microsoft Azure Blob storage service.
 > [!IMPORTANT]  
 > Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
-**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and SQL Database Managed Instance.  
+**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 A disk device does not have to exist before it is specified in a BACKUP statement. If the physical device exists and the INIT option is not specified in the BACKUP statement, the backup is appended to the device.  
  
@@ -306,7 +306,7 @@ Is a placeholder that indicates that a single BACKUP statement can contain up to
 Specifies options to be used with a backup operation.  
   
 CREDENTIAL  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and SQL Database Managed Instance.  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
 Used only when creating a backup to the Microsoft Azure Blob storage service.  
   
 FILE_SNAPSHOT
@@ -348,7 +348,6 @@ These options operate on the backup set that is created by this backup operation
 > To specify a backup set for a restore operation, use the `FILE = <backup_set_file_number>` option. For more information about how to specify a backup set, see "Specifying a Backup Set" in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
 COPY_ONLY
-**Applies to:** SQL Server and SQL Database Managed Instance
 Specifies that the backup is a *copy-only backup*, which does not affect the normal sequence of backups. A copy-only backup is created independently of your regularly scheduled, conventional backups. A copy-only backup does not affect your overall backup and restore procedures for the database.  
   
 Copy-only backups should be used in situations in which a backup is taken for a special purpose, such as backing up the log before an online file restore. Typically, a copy-only log backup is used once and then deleted.  
@@ -977,17 +976,15 @@ Backs up a SQL database placed/hosted in an Azure SQL Databae managed instance. 
 ```sql 
 BACKUP DATABASE { database_name | @database_name_var }   
   TO URL = { 'physical_device_name' | @physical_device_name_var }   [ ,...n ] 
-  [ WITH { <general_WITH_options> } ]  
+  WITH COPY_ONLY [, { <general_WITH_options> } ]  
 [;]  
-  
-<general_WITH_options> [ ,...n ]::=   
---Backup Set Options  
-   COPY_ONLY 
-  
+
+<general_WITH_options> [ ,...n ]::=  
+ 
 --Media Set Options  
    MEDIADESCRIPTION = { 'text' | @text_variable }   
  | MEDIANAME = { media_name | @media_name_variable }   
- | BLOCKSIZE = { blocksize | @blocksize_variable }   
+ | BLOCKSIZE = { blocksize | @blocksize_variable }
   
 --Data Transfer Options  
    BUFFERCOUNT = { buffercount | @buffercount_variable }   
@@ -1012,6 +1009,9 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 DATABASE  
 Specifies a complete database backup. During a database backup, the managed instance backs up enough of the transaction log to produce a consistent database when the backup is restored.  
+
+> [!IMPORTANT]
+> A database backup created on a managed instance can only be restored on another Managed Instance. It cannot be restored to a SQL Server on-premises instance (similar to the way that a backup of a SQL Server 2016 database cannot be restored to a SQL Server 2012 instance).
   
 When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database Managed Instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   

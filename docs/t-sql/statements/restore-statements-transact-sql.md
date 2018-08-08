@@ -1,7 +1,7 @@
 ﻿---
 title: "RESTORE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/03/2018"
+ms.date: "08/08/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -744,13 +744,26 @@ For other supported RESTORE commands, see:
 ```sql  
 --To Restore an Entire Database from a Full database backup (a Complete Restore):  
 RESTORE DATABASE { database_name | @database_name_var }   
- [ FROM URL = {literal | var} [ ,...n ] ]  
+ FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]   
 [;]  
   
 ```  
-  
+   
 ## Arguments  
-For descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+
+DATABASE  
+  
+Specifies the target database.  
+  
+FROM URL
+
+Specifies the URL to use for the restore operation. The URL format is used for restoring backups from the Microsoft Azure storage service. 
+
+> [!IMPORTANT]  
+> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+  
+*n*  
+Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.  
  
 ## General Remarks
 
@@ -799,7 +812,7 @@ RESTORE DATABASE WideWorldImportersStandard
 FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak',
+URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
 
 --The following error is shown if the database already exists:
 Msg 1801, Level 16, State 1, Line 9

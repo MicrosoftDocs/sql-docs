@@ -726,7 +726,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-# SQL DB Managed Instance
+# Azure SQL Database Managed Instance
 
 This command enables you to restore an entire database from a full database backup (a complete restore).
 
@@ -792,14 +792,15 @@ RESTORE DATABASE AdventureWorks2012
    FROM AdventureWorks2012Backups;  
 ```  
 
-:: moniker-end
+::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
 > <tr>
 >   <th> &nbsp; </th>
->   <th> &nbsp; </th>>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
 > </tr>
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
@@ -809,8 +810,9 @@ RESTORE DATABASE AdventureWorks2012
 > </table>
 
 &nbsp;
-  
+
 # SQL Parallel Data Warehouse
+
 
 Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
   

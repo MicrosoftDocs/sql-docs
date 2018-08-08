@@ -977,8 +977,8 @@ WITH STATS = 5;
 > </table>
 
 &nbsp;
-  
-# SQL DB Managed Instance
+
+# Azure SQL Database Managed Instance
 
 Backs up a complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to create a database backup. [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) has automatic backups, and enables users to create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.  
 
@@ -1195,14 +1195,15 @@ WITH STATS = 5;
   
 [Restore database](restore-statements-transact-sql.md)
 
-:: moniker-end
+::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
 > <tr>
 >   <th> &nbsp; </th>
->   <th> &nbsp; </th>>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
 > </tr>
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
@@ -1212,7 +1213,7 @@ WITH STATS = 5;
 > </table>
 
 &nbsp;
-  
+
 # SQL Parallel Data Warehouse
 
 Creates a backup of a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database and stores the backup off the appliance in a user-specified network location. Use this statement with [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-statements-transact-sql.md) for disaster recovery, or to copy a database from one appliance to another.  

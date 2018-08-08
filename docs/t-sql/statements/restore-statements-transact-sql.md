@@ -39,7 +39,7 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], RESTORE statement"
   - "RESTORE LOG, see RESTORE statement"
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 248
+caps.latest.revision: 248 
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -791,6 +791,7 @@ The following example restores a full database backup from the `AdventureWorksBa
 RESTORE DATABASE AdventureWorks2012   
    FROM AdventureWorks2012Backups;  
 ```  
+
 :: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 

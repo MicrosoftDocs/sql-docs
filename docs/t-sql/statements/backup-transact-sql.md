@@ -49,7 +49,7 @@ caps.latest.revision: 275
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
 # BACKUP (Transact-SQL)
 
@@ -59,7 +59,29 @@ Click one of the following tabs for the syntax, arguments, remarks, permissions,
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-# [SQL Server](#tab/sqlserver)
+## Click a product!
+
+In the following row, click whichever product name you are interested in. The click displays different content here, appropriate for whichever product you click:
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# SQL Server
 
 Backs up a complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to create a database backup, or one or more files or filegroups of the database to create a file backup (BACKUP DATABASE). Also, under the full recovery model or bulk-logged recovery model, backs up the transaction log of the database to create a log backup (BACKUP LOG). 
   
@@ -937,8 +959,26 @@ WITH STATS = 5;
 [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
 [Piecemeal Restore of Databases With Memory-Optimized Tables](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)  
   
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
   
-# [SQL DB Managed Instance](#tab/sqldbmi)
+# SQL DB Managed Instance
 
 Backs up a complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to create a database backup. [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) has automatic backups, and enables users to create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.  
 
@@ -1155,7 +1195,25 @@ WITH STATS = 5;
   
 [Restore database](restore-statements-transact-sql.md)
 
-# [SQL Parallel Data Warehouse](#tab/sqlpdw)
+:: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+  
+# SQL Parallel Data Warehouse
 
 Creates a backup of a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database and stores the backup off the appliance in a user-specified network location. Use this statement with [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-statements-transact-sql.md) for disaster recovery, or to copy a database from one appliance to another.  
   

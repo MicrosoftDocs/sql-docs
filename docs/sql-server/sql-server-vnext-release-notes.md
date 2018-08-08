@@ -27,7 +27,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server vNext on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.0 (July 2018)
+## CTP 2.0 (September 2018)
 
 [!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)].
 

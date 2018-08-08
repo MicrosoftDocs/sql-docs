@@ -1,5 +1,0 @@
-# [Authentication in Reporting Services](authentication-in-reporting-services.md)
-# [Authorization in Reporting Services](authorization-in-reporting-services.md)
-# [How to install custom security extensions](how-to-install-custom-security-extensions.md)
-# [Implementing a Security Extension](implementing-a-security-extension.md)
-# [Security Extensions Overview](security-extensions-overview.md)

@@ -1,0 +1,132 @@
+- name: Overview
+  href: integration-services-transformations.md
+- name: Aggregate Transformation
+  href: aggregate-transformation.md
+  items:
+  - name: Aggregate Values in a Dataset by Using the Aggregate Transformation
+    href: aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+- name: Audit Transformation
+  href: audit-transformation.md
+- name: Balanced Data Distributor Transformation
+  href: balanced-data-distributor-transformation.md
+- name: Character Map Transformation
+  href: character-map-transformation.md
+- name: Conditional Split Transformation
+  href: conditional-split-transformation.md
+  items:
+  - name: Split a Dataset by Using the Conditional Split Transformation
+    href: split-a-dataset-by-using-the-conditional-split-transformation.md
+- name: Copy Column Transformation
+  href: copy-column-transformation.md
+- name: Data Conversion Transformation
+  href: data-conversion-transformation.md
+  items:
+  - name: Convert Data to a Different Data Type by Using the Data Conversion Transformation
+    href: convert-data-type-by-using-data-conversion-transformation.md
+- name: Data Mining Query Transformation
+  href: data-mining-query-transformation.md
+- name: DQS Cleansing Transformation
+  href: dqs-cleansing-transformation.md
+  items:
+  - name: DQS Cleansing Connection Manager
+    href: dqs-cleansing-connection-manager.md
+  - name: Apply Data Quality Rules to Data Source
+    href: apply-data-quality-rules-to-data-source.md
+  - name: Map Columns to Composite Domains
+    href: map-columns-to-composite-domains.md
+- name: Derived Column Transformation
+  href: derived-column-transformation.md
+  items:
+  - name: Derive Column Values by Using the Derived Column Transformation
+    href: derive-column-values-by-using-the-derived-column-transformation.md
+- name: Export Column Transformation
+  href: export-column-transformation.md
+- name: Fuzzy Grouping Transformation
+  href: fuzzy-grouping-transformation.md
+  items:
+  - name: Identify Similar Data Rows by Using the Fuzzy Grouping Transformation
+    href: identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+- name: Fuzzy Lookup Transformation
+  href: fuzzy-lookup-transformation.md
+- name: Import Column Transformation
+  href: import-column-transformation.md
+- name: Lookup Transformation
+  href: lookup-transformation.md
+  items:
+  - name: Implement a Lookup in No Cache or Partial Cache Mode
+    href: implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+  - name: Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager
+    href: lookup-transformation-full-cache-mode-cache-connection-manager.md
+  - name: Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager
+    href: lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+  - name: Create and Deploy a Cache for the Lookup Transformation
+    href: create-and-deploy-a-cache-for-the-lookup-transformation.md
+  - name: Create Relationships
+    href: create-relationships.md
+  - name: Cache Transform
+    href: cache-transform.md
+    items:
+    - name: Cache Connection Manager
+      href: cache-connection-manager.md
+- name: Merge Transformation
+  href: merge-transformation.md
+- name: Merge Join Transformation
+  href: merge-join-transformation.md
+  items:
+  - name: Extend a Dataset by Using the Merge Join Transformation
+    href: extend-a-dataset-by-using-the-merge-join-transformation.md
+  - name: Sort Data for the Merge and Merge Join Transformations
+    href: sort-data-for-the-merge-and-merge-join-transformations.md
+- name: Multicast Transformation
+  href: multicast-transformation.md
+- name: OLE DB Command Transformation
+  href: ole-db-command-transformation.md
+- name: Percentage Sampling Transformation
+  href: percentage-sampling-transformation.md
+- name: Pivot Transformation
+  href: pivot-transformation.md
+- name: Row Count Transformation
+  href: row-count-transformation.md
+- name: Row Sampling Transformation
+  href: row-sampling-transformation.md
+- name: Script Component
+  href: script-component.md
+- name: Slowly Changing Dimension Transformation
+  href: slowly-changing-dimension-transformation.md
+  items:
+  - name: Configure Outputs Using the Slowly Changing Dimension Wizard
+    href: configure-outputs-using-the-slowly-changing-dimension-wizard.md
+  - name: Slowly Changing Dimension Wizard F1 Help
+    href: slowly-changing-dimension-wizard-f1-help.md
+    items:
+    - name: Welcome to the Slowly Changing Dimension Wizard
+      href: welcome-to-the-slowly-changing-dimension-wizard.md
+    - name: Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)
+      href: select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+    - name: Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)
+      href: slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+    - name: Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
+      href: fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+    - name: Historical Attribute Options (Slowly Changing Dimension Wizard)
+      href: historical-attribute-options-slowly-changing-dimension-wizard.md
+    - name: Inferred Dimension Members (Slowly Changing Dimension Wizard)
+      href: inferred-dimension-members-slowly-changing-dimension-wizard.md
+    - name: Finish the Slowly Changing Dimension Wizard
+      href: finish-the-slowly-changing-dimension-wizard.md
+- name: Sort Transformation
+  href: sort-transformation.md
+- name: Term Extraction Transformation
+  href: term-extraction-transformation.md
+- name: Term Lookup Transformation
+  href: term-lookup-transformation.md
+- name: Union All Transformation
+  href: union-all-transformation.md
+  items:
+  - name: Merge Data by Using the Union All Transformation
+    href: merge-data-by-using-the-union-all-transformation.md
+- name: Unpivot Transformation
+  href: unpivot-transformation.md
+- name: Transform Data with Transformations
+  href: transform-data-with-transformations.md
+- name: Transformation Custom Properties
+  href: transformation-custom-properties.md

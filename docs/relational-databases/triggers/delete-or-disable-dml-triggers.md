@@ -20,7 +20,7 @@ ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Delete or Disable DML Triggers
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

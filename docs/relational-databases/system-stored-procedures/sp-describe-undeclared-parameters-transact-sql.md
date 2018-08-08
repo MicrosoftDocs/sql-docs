@@ -1,7 +1,7 @@
 ﻿---
 title: "sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/28/2017"
+ms.date: "07/27/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "system-stored-procedures"
@@ -22,10 +22,10 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Returns a result set that contains metadata about undeclared parameters in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considers each parameter that is used in the **\@tsql** batch, but not declared in **\@params**. A result set is returned that contains one row for each such parameter, with the deduced type information for that parameter. The procedure returns an empty result set if the **\@tsql** input batch has no parameters except those declared in **\@params**.  
   

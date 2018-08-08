@@ -1,4 +1,4 @@
----
+﻿---
 title: "Overview and Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
@@ -16,7 +16,7 @@ caps.latest.revision: 5
 author: "jodebrui"
 ms.author: "jodebrui"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Overview and Usage Scenarios
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

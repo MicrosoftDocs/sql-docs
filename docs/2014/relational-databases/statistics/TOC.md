@@ -1,7 +1,0 @@
-# [Statistics](statistics.md)
-## [Create Statistics](create-statistics.md)
-## [Modify Statistics](modify-statistics.md)
-## [Delete Statistics](delete-statistics.md)
-## [View Statistics Properties](view-statistics-properties.md)
-## [Rename Statistics](rename-statistics.md)
-## [Update Statistics](update-statistics.md)

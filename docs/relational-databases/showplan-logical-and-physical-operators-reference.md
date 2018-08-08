@@ -1,4 +1,4 @@
----
+﻿---
 title: "Showplan Logical and Physical Operators Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2017"
@@ -141,7 +141,7 @@ caps.latest.revision: 51
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Showplan Logical and Physical Operators Reference
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

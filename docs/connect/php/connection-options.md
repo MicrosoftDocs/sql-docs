@@ -1,7 +1,7 @@
 ---
 title: "Connection Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -50,7 +50,7 @@ This topic lists the options that are permitted in the associative array (when u
 |TraceFile|String|Specifies the path for the file used for trace data.|No value set.|  
 |TraceOn|1 or **true** to enable tracing.<br /><br />0 or **false** to disable tracing.|Specifies whether ODBC tracing is enabled (1 or **true**) or disabled (0 or **false**) for the connection being established.|**false** (0)|  
 |TransactionIsolation|The SQLSRV driver uses the following values:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />The PDO_SQLSRV driver uses the following values:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Specifies the transaction isolation level.<br /><br />For more information about transaction isolation, see [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) in the SQL Server documentation.|SQLSRV_TXN_READ_COMMITTED<br /><br />or<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|TransparentNetworkIPResolution|**Enabled** or **Disabled**|Affects the connection sequence when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname.<br /><br />It interacts with MultiSubnetFailover to provide different connection sequences. For more information, see [Using Transparent Network IP Resolution](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Enabled|
+|TransparentNetworkIPResolution|**Enabled** or **Disabled**|Affects the connection sequence when the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname.<br /><br />It interacts with MultiSubnetFailover to provide different connection sequences. For more information, see [Transparent Network IP Resolution](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) or [Using Transparent Network IP Resolution](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Enabled|
 |TrustServerCertificate|1 or **true** to trust certificate.<br /><br />0 or **false** to not trust certificate.|Specifies whether the client should trust (1 or **true**) or reject (0 or **false**) a self-signed server certificate.|**false** (0)|  
 |UID<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the User ID to be used when connecting with SQL Server Authentication<sup>4</sup>.|No value set.|  
 |WSID|String|Specifies the name of the computer for tracing.|No value set.|  
@@ -63,7 +63,7 @@ This topic lists the options that are permitted in the associative array (when u
 
 4. The *UID* and *PWD* attributes must both be set when connecting with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication.  
 
-Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
 ## See Also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)  

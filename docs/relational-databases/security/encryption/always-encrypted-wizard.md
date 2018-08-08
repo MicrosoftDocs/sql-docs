@@ -18,7 +18,7 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Always Encrypted Wizard
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

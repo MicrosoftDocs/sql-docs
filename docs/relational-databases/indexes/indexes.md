@@ -1,4 +1,4 @@
----
+﻿---
 title: "Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2016"
@@ -16,7 +16,7 @@ caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

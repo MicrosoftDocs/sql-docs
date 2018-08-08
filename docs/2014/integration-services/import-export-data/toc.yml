@@ -1,0 +1,41 @@
+- name: SQL Server Import and Export Wizard
+  href: import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+  items:
+  - name: Run the SQL Server Import and Export Wizard
+    href: start-the-sql-server-import-and-export-wizard.md
+  - name: Welcome to SQL Server Import and Export Wizard
+    href: welcome-to-sql-server-import-and-export-wizard.md
+  - name: Choose a Data Source (SQL Server Import and Export Wizard)
+    href: choose-a-data-source-sql-server-import-and-export-wizard.md
+  - name: Choose a Destination (SQL Server Import and Export Wizard)
+    href: choose-a-destination-sql-server-import-and-export-wizard.md
+  - name: Create Database (SQL Server Import and Export Wizard)
+    href: create-database-sql-server-import-and-export-wizard.md
+  - name: Specify Table Copy or Query (SQL Server Import and Export Wizard)
+    href: specify-table-copy-or-query-sql-server-import-and-export-wizard.md
+  - name: Select Source Tables and Views (SQL Server Import and Export Wizard)
+    href: select-source-tables-and-views-sql-server-import-and-export-wizard.md
+  - name: Preview Data Dialog Box (SQL Server Import and Export Wizard)
+    href: preview-data-dialog-box-sql-server-import-and-export-wizard.md
+  - name: Provide a Source Query (SQL Server Import and Export Wizard)
+    href: provide-a-source-query-sql-server-import-and-export-wizard.md
+  - name: Configure Flat File Destination (SQL Server Import and Export Wizard)
+    href: configure-flat-file-destination-sql-server-import-and-export-wizard.md
+  - name: Column Mappings (SQL Server Import and Export Wizard)
+    href: column-mappings-sql-server-import-and-export-wizard.md
+  - name: Create Table SQL Statement (SQL Server Import and Export Wizard)
+    href: create-table-sql-statement-sql-server-import-and-export-wizard.md
+  - name: Review Data Type Mapping (SQL Server Import and Export Wizard)
+    href: review-data-type-mapping-sql-server-import-and-export-wizard.md
+  - name: Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
+    href: column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md
+  - name: Convert Types without Conversion Checking (SQL Server Import and Export Wizard)
+    href: convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md
+  - name: Save and Execute Package (SQL Server Import and Export Wizard)
+    href: save-and-run-package-sql-server-import-and-export-wizard.md
+  - name: Save SSIS Package (SQL Server Import and Export Wizard)
+    href: save-ssis-package-sql-server-import-and-export-wizard.md
+  - name: Complete the Wizard (SQL Server Import and Export Wizard)
+    href: complete-the-wizard-sql-server-import-and-export-wizard.md
+  - name: Performing Operation (SQL Server Import and Export Wizard)
+    href: performing-operation-sql-server-import-and-export-wizard.md

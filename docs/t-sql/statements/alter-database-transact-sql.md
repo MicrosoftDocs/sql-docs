@@ -1,7 +1,7 @@
----
+﻿---
 title: "ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "08/07/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,18 +28,44 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Transact-SQL)
 
-Modifies a database. 
+Modifies certain configuration options of a database. 
 
-Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
+This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-# [SQL Server](#tab/sqlserver)
-  
+## Click a product!
+
+In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# SQL Server
+
 ## Overview
 
 In SQL Server, this statement modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
@@ -253,8 +279,31 @@ GO
 - [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [System Databases](../../relational-databases/databases/system-databases.md)  
-  
-# [SQL DB logical server](#tab/sqldbls)
+
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th style="border: 1"><strong><em>* SQL DB<br />logical server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# Azure SQL Database logical server
 
 ## Overview
 
@@ -595,7 +644,30 @@ ALTER DATABASE db1 FAILOVER
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [System Databases](../../relational-databases/databases/system-databases.md)  
 
-# [SQL DB Managed Instance](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# Azure SQL Database Managed Instance
 
 ## Overview
 
@@ -706,7 +778,30 @@ Only the server-level principal login (created by the provisioning process) or m
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [System Databases](../../relational-databases/databases/system-databases.md)  
 
-# [SQL Data Warehouse](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# Azure SQL Data Warehouse
 
 ## Overview
 
@@ -810,10 +905,32 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## See Also  
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
-  
+[SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+ 
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 
-# [SQL Parallel Data Warehouse](#tab/sqlpdw)
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# SQL Parallel Data Warehouse
 
 ## Overview
 
@@ -866,14 +983,14 @@ When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the 
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
-For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics)
+For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md)
 
 SET AUTO_UPDATE_STATISTICS { ON | OFF } 
 When the automatic update statistics option, AUTO_UPDATE_STATISTICS, is ON, the query optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. Statistics become out-of-date after operations insert, update, delete, or merge change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
-For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
+For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
 
 
 SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
@@ -1012,5 +1129,6 @@ ALTER DATABASE CustomerSales
 ## See Also  
  [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
-  
- 
+
+::: moniker-end
+

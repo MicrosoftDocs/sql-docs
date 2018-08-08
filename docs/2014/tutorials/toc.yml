@@ -1,0 +1,399 @@
+- name: Tutorials for SQL Server 2014
+  href: tutorials-for-sql-server-2014.md
+- name: "Tutorial: Writing Transact-SQL Statements +"
+  href: ../t-sql/tutorial-writing-transact-sql-statements.md
+- name: Data Mining Tutorials
+  href: ../analysis-services/data-mining-tutorials-analysis-services.md
+  items:
+  - name: Basic Data Mining Tutorial
+    href: basic-data-mining-tutorial.md
+    items:
+    - name: "Lesson 1: Preparing the Analysis Services Database"
+      href: lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md
+      items:
+      - name: Creating an Analysis Services Project
+        href: creating-an-analysis-services-project-basic-data-mining-tutorial.md
+      - name: Creating a Data Source
+        href: creating-a-data-source-basic-data-mining-tutorial.md
+      - name: Creating a Data Source View
+        href: creating-a-data-source-view-basic-data-mining-tutorial.md
+    - name: "Lesson 2: Building a Targeted Mailing Structure"
+      href: lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md
+      items:
+      - name: Creating a Targeted Mailing Mining Model Structure
+        href: creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md
+      - name: Specifying the Data Type and Content Type
+        href: specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md
+      - name: Specifying a Testing Data Set for the Structure
+        href: specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md
+    - name: "Lesson 3: Adding and Processing Models"
+      href: lesson-3-adding-and-processing-models.md
+      items:
+      - name: Adding New Models to the Targeted Mailing Structure
+        href: adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md
+      - name: Processing Models in the Targeted Mailing Structure
+        href: processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md
+    - name: "Lesson 4: Exploring the Targeted Mailing Models"
+      href: lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md
+      items:
+      - name: Exploring the Decision Tree Model
+        href: exploring-the-decision-tree-model-basic-data-mining-tutorial.md
+      - name: Exploring the Clustering Model
+        href: exploring-the-clustering-model-basic-data-mining-tutorial.md
+      - name: Exploring the Naive Bayes Model
+        href: exploring-the-naive-bayes-model-basic-data-mining-tutorial.md
+    - name: "Lesson 5: Testing Models"
+      href: lesson-5-testing-models-basic-data-mining-tutorial.md
+      items:
+      - name: Testing Accuracy with Lift Charts
+        href: testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md
+      - name: Testing a Filtered Model
+        href: testing-a-filtered-model-basic-data-mining-tutorial.md
+    - name: "Lesson 6: Creating and Working with Predictions"
+      href: lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md
+      items:
+      - name: Creating Predictions
+        href: creating-predictions-basic-data-mining-tutorial.md
+      - name: Using Drillthrough on Structure Data
+        href: using-drillthrough-on-structure-data-basic-data-mining-tutorial.md
+  - name: Intermediate Data Mining Tutorial
+    href: intermediate-data-mining-tutorial-analysis-services-data-mining.md
+    items:
+    - name: "Lesson 1: Creating the Intermediate Data Mining Solution"
+      href: lesson-1-create-solution-intermediate-data-mining-tutorial.md
+      items:
+      - name: Creating a Solution and Data Source
+        href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
+    - name: "Lesson 2: Building a Forecasting Scenario"
+      href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
+      items:
+      - name: Adding a Data Source View for Forecasting
+        href: adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md
+      - name: Understanding the Requirements for a Time Series Model
+        href: time-series-model-requirements-intermediate-data-mining-tutorial.md
+      - name: Creating a Forecasting Structure and Model
+        href: creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md
+      - name: Modifying the Forecasting Structure
+        href: modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md
+      - name: Customizing and Processing the Forecasting Model
+        href: customize-process-forecasting-model-intermediate-data-mining-tutorial.md
+      - name: Exploring the Forecasting Model
+        href: exploring-the-forecasting-model-intermediate-data-mining-tutorial.md
+      - name: Creating Time Series Predictions
+        href: creating-time-series-predictions-intermediate-data-mining-tutorial.md
+      - name: Advanced Time Series Predictions
+        href: advanced-time-series-predictions-intermediate-data-mining-tutorial.md
+        items:
+        - name: Time Series Predictions using Updated Data
+          href: time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md
+        - name: Time Series Predictions using Replacement Data
+          href: time-series-predictions-replacement-data-intermediate-data-mining.md
+      - name: Comparing Predictions for Forecasting Models
+        href: comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md
+    - name: "Lesson 3: Building a Market Basket Scenario"
+      href: lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md
+      items:
+      - name: Adding a Data Source View with Nested Tables
+        href: adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md
+      - name: Creating a Market Basket Structure and Model
+        href: creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md
+      - name: Modifying and Processing the Market Basket Model
+        href: modify-process-market-basket-model-intermediate-data-mining-tutorial.md
+      - name: Exploring the Market Basket Models
+        href: exploring-the-market-basket-models-intermediate-data-mining-tutorial.md
+      - name: Filtering a Nested Table in a Mining Model
+        href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
+      - name: Predicting Associations
+        href: predicting-associations-intermediate-data-mining-tutorial.md
+    - name: "Lesson 4: Building a Sequence Clustering Scenario"
+      href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
+      items:
+      - name: Creating a Sequence Clustering Mining Model Structure
+        href: create-sequence-clustering-mining-model-intermediate-data-mining.md
+      - name: Processing the Sequence Clustering Model
+        href: processing-the-sequence-clustering-model.md
+      - name: Exploring the Sequence Clustering Model
+        href: exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md
+      - name: Creating a Related Sequence Clustering Model
+        href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
+      - name: Creating Predictions on a Sequence Clustering Model
+        href: create-predictions-on-model-intermediate-data-mining-tutorial.md
+    - name: "Lesson 5: Building Neural Network and Logistic Regression Models"
+      href: lesson-5-build-models-intermediate-data-mining-tutorial.md
+      items:
+      - name: Adding a Data Source View for Call Center Data
+        href: add-data-source-view-call-center-data-intermediate-data-mining.md
+      - name: Creating a Neural Network Structure and Model
+        href: creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md
+      - name: Exploring the Call Center Model
+        href: exploring-the-call-center-model-intermediate-data-mining-tutorial.md
+      - name: Adding a Logistic Regression Model to the Call Center Structure
+        href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
+      - name: Creating Predictions for the Call Center Models (Intermediate Data Mining Tutorial)
+        href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
+  - name: "Creating and Querying Data Mining Models with DMX: Tutorials"
+    href: create-query-data-mining-models-dmx-tutorials.md
+    items:
+    - name: Bike Buyer DMX Tutorial
+      href: bike-buyer-dmx-tutorial.md
+      items:
+      - name: "Lesson 1: Creating the Bike Buyer Mining Structure"
+        href: lesson-1-creating-the-bike-buyer-mining-structure.md
+      - name: "Lesson 2: Adding Mining Models to the Bike Buyer Mining Structure"
+        href: lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md
+      - name: "Lesson 3: Processing the Bike Buyer Mining Structure"
+        href: lesson-3-processing-the-bike-buyer-mining-structure.md
+      - name: "Lesson 4: Browsing the Bike Buyer Mining Models"
+        href: lesson-4-browsing-the-bike-buyer-mining-models.md
+      - name: "Lesson 5: Executing Prediction Queries"
+        href: lesson-5-executing-prediction-queries.md
+    - name: Market Basket DMX Tutorial
+      href: market-basket-dmx-tutorial.md
+      items:
+      - name: "Lesson 1: Creating the Market Basket Mining Structure"
+        href: lesson-1-creating-the-market-basket-mining-structure.md
+      - name: "Lesson 2: Adding Mining Models to the Market Basket Mining Structure"
+        href: lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md
+      - name: "Lesson 3: Processing the Market Basket Mining Structure"
+        href: lesson-3-processing-the-market-basket-mining-structure.md
+      - name: "Lesson 4: Executing Market Basket Predictions"
+        href: lesson-4-executing-market-basket-predictions.md
+    - name: Time Series Prediction DMX Tutorial
+      href: time-series-prediction-dmx-tutorial.md
+      items:
+      - name: "Lesson 1: Creating a Time Series Mining Model and Mining Structure"
+        href: lesson-1-creating-a-time-series-mining-model-and-mining-structure.md
+      - name: "Lesson 2: Adding Mining Models to the Time Series Mining Structure"
+        href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
+      - name: "Lesson 3: Processing the Time Series Structure and Models"
+        href: lesson-3-processing-the-time-series-structure-and-models.md
+      - name: "Lesson 4: Creating Time Series Predictions Using DMX"
+        href: lesson-4-creating-time-series-predictions-using-dmx.md
+      - name: "Lesson 5: Extending the Time Series Model"
+        href: lesson-5-extending-the-time-series-model.md
+- name: Reporting Services Tutorials
+  href: ../reporting-services/reporting-services-tutorials-ssrs.md
+  items:
+  - name: Create a Basic Table Report (SSRS Tutorial)
+    href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
+    items:
+    - name: "Lesson 1: Creating a Report Server Project"
+      href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
+    - name: "Lesson 2: Specifying Connection Information"
+      href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
+    - name: "Lesson 3: Defining a Dataset for the Table Report"
+      href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
+    - name: "Lesson 4: Adding a Table to the Report"
+      href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
+    - name: "Lesson 5: Formatting a Report"
+      href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
+    - name: "Lesson 6: Adding Grouping and Totals"
+      href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
+  - name: Create a Data-Driven Subscription (SSRS Tutorial)
+    href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
+    items:
+    - name: "Lesson 1: Creating a Sample Subscriber Database"
+      href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
+    - name: "Lesson 2: Modifying the Report Data Source Properties"
+      href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
+    - name: "Lesson 3: Defining a Data-Driven Subscription"
+      href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
+  - name: Create a Drillthrough (RDLC) Report with Parameters using ReportViewer (SSRS Tutorial)
+    href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
+    items:
+    - name: "Lesson 1: Create a New Web Site"
+      href: ../reporting-services/lesson-1-create-a-new-web-site.md
+    - name: "Lesson 2: Define a Data Connection and Data Table for Parent Report"
+      href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
+    - name: "Lesson 3: Design the Parent Report using the Report Wizard"
+      href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
+    - name: "Lesson 4: Define a Data Connection and Data Table for Child Report"
+      href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
+    - name: "Lesson 5: Design the Child Report using the Report Wizard"
+      href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
+    - name: "Lesson 6: Add a ReportViewer Control to the Application"
+      href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
+    - name: "Lesson 7: Add Drillthrough Action on Parent Report"
+      href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
+    - name: "Lesson 8: Create a Data Filter"
+      href: ../reporting-services/lesson-8-create-a-data-filter.md
+    - name: "Lesson 9: Build and Run the Application"
+      href: ../reporting-services/lesson-9-build-and-run-the-application.md
+  - name: Accessing the Report Server Web Service Using Visual Basic or Visual C# (SSRS Tutorial)
+    href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
+    items:
+    - name: "Lesson 1: Creating the Web Service Client Project"
+      href: lesson-1-creating-the-web-service-client-project.md
+    - name: "Lesson 2: Adding a Web Reference"
+      href: lesson-2-adding-a-web-reference.md
+    - name: "Lesson 3: Accessing the Web Service"
+      href: lesson-3-accessing-the-web-service.md
+    - name: "Lesson 4: Running the Application (VB/VC#)"
+      href: lesson-4-running-the-application-vb-vcsharp.md
+  - name: Updating Reports Using Classes Generated from the RDL Schema (SSRS Tutorial)
+    href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
+    items:
+    - name: "Lesson 1: Create the RDL Schema Visual Studio Project"
+      href: lesson-1-create-the-rdl-schema-visual-studio-project.md
+    - name: "Lesson 2: Generate Classes from the RDL Schema using the xsd Tool"
+      href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
+    - name: "Lesson 3: Load a Report Definition from the Report Server"
+      href: lesson-3-load-a-report-definition-from-the-report-server.md
+    - name: "Lesson 4: Update the Report Definition Programmatically"
+      href: lesson-4-update-the-report-definition-programmatically.md
+    - name: "Lesson 5: Publish the Report Definition to the Report Server"
+      href: lesson-5-publish-the-report-definition-to-the-report-server.md
+    - name: "Lesson 6: Run the RDL Schema Application (VB/C#)"
+      href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
+  - name: Tutorials (Report Builder)
+    href: ../reporting-services/report-builder-tutorials.md
+    items:
+    - name: Prerequisites for Tutorials
+      href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
+    - name: Alternative Ways to Get a Data Connection (Report Builder)
+      href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
+    - name: "Tutorial: Creating a Basic Table Report"
+      href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
+    - name: "Tutorial: Creating a Matrix Report"
+      href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
+    - name: "Tutorial: Creating a Free Form Report"
+      href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
+    - name: "Tutorial: Format Text (Report Builder)"
+      href: ../reporting-services/tutorial-format-text-report-builder.md
+    - name: "Tutorial: Add a Column Chart to Your Report (Report Builder)"
+      href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
+    - name: "Tutorial: Add a Pie Chart to Your Report (Report Builder)"
+      href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
+    - name: "Tutorial: Add a Bar Chart to Your Report (Report Builder)"
+      href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
+    - name: "Tutorial: Add a Sparkline to Your Report (Report Builder)"
+      href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
+    - name: "Tutorial: Adding a KPI to Your Report"
+      href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
+    - name: "Tutorial: Map Report"
+      href: ../reporting-services/tutorial-map-report-report-builder.md
+    - name: "Tutorial: Add a Parameter to Your Report (Report Builder)"
+      href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
+    - name: "Tutorial: Creating Drillthrough and Main Reports"
+      href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
+    - name: "Tutorial: Introducing Expressions"
+      href: ../reporting-services/tutorial-introducing-expressions.md
+- name: Enterprise Information Management Tutorials
+  href: enterprise-information-management-tutorials.md
+  items:
+  - name: Enterprise Information Management using SSIS, MDS, and DQS Together [Tutorial]
+    href: enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md
+    items:
+    - name: "Lesson 1: Creating the Suppliers DQS Knowledge Base"
+      href: lesson-1-creating-the-suppliers-dqs-knowledge-base.md
+      items:
+      - name: "Task 1: Creating a Knowledge Base and Domains"
+        href: task-1-creating-a-knowledge-base-and-domains.md
+      - name: "Task 2: Adding Domain Values Manually"
+        href: task-2-adding-domain-values-manually.md
+      - name: "Task 3: Importing Domain Values from an Excel File"
+        href: task-3-importing-domain-values-from-an-excel-file.md
+      - name: "Task 4: Setting Domain Rules"
+        href: task-4-setting-domain-rules.md
+      - name: "Task 5: Setting Term Based Relationships"
+        href: task-5-setting-term-based-relationships.md
+      - name: "Task 6: Setting Synonyms"
+        href: task-6-setting-synonyms.md
+      - name: "Task 7: Creating a Composite Domain"
+        href: task-7-creating-a-composite-domain.md
+      - name: "Task 8: Creating a Composite Domain Rule"
+        href: task-8-creating-a-composite-domain-rule.md
+      - name: "Task 9: Configuring a Reference Data Service"
+        href: task-9-configuring-a-reference-data-service.md
+      - name: "Task 10: Configuring Composite Domain to Use Reference Data Service"
+        href: task-10-configuring-composite-domain-to-use-reference-data-service.md
+      - name: "Task 11: Publishing the Knowledge Base"
+        href: task-11-publishing-the-knowledge-base.md
+      - name: "Task 12: Discovering Knowledge (Knowledge Discovery)"
+        href: task-12-discovering-knowledge-knowledge-discovery.md
+    - name: "Lesson 2: Cleansing Supplier Data using the Suppliers Knowledge Base"
+      href: lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md
+      items:
+      - name: "Task 1: Creating a Data Quality Project"
+        href: task-1-creating-a-data-quality-project.md
+      - name: "Task 2: Mapping Excel Columns to DQS Domains"
+        href: task-2-mapping-excel-columns-to-dqs-domains.md
+      - name: "Task 3: Cleansing Data against the Suppliers Knowledge Base"
+        href: task-3-cleansing-data-against-the-suppliers-knowledge-base.md
+      - name: "Task 4: Managing and Viewing Results"
+        href: task-4-manaing-and-viewing-results.md
+      - name: "Task 5: Exporting Cleansing Results to an Excel File"
+        href: task-5-exporting-cleansing-results-to-an-excel-file.md
+      - name: "Task 6: Importing Values from the Cleanse Supplier List Project"
+        href: task-6-importing-values-from-the-cleanse-supplier-list-project.md
+    - name: "Lesson 3: Matching Data to Remove Duplicates from Supplier List"
+      href: lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md
+      items:
+      - name: "Task 1: Defining a Matching Policy"
+        href: task-1-defining-a-matching-policy.md
+      - name: "Task 2: Testing and Publishing the Matching Policy"
+        href: task-2-testing-and-publishing-the-matching-policy.md
+      - name: "Task 3: Creating and Running a Data Quality Project for Matching"
+        href: task-3-creating-and-running-a-data-quality-project-for-matching.md
+      - name: "Task 4: Exporting the Results from Matching Activity to an Excel File"
+        href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
+    - name: "Lesson 4: Storing Supplier Data in MDS"
+      href: lesson-4-storing-supplier-data-in-mds.md
+      items:
+      - name: "Task 1: Creating Suppliers Model using Master Data Manager"
+        href: task-1-creating-suppliers-model-using-master-data-manager.md
+      - name: "Task 2: Uploading Supplier Data to MDS using MDS Add-in for Excel"
+        href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
+      - name: "Task 3: Verifying the Data in Master Data Manager"
+        href: task-3-verifying-the-data-in-master-data-manager.md
+      - name: "Task 4 (Optional): Combining, Matching, and Publishing New Set of Data"
+        href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
+      - name: "Task 5: Creating a Domain-Based Attribute from Excel"
+        href: task-5-creating-a-domain-based-attribute-from-excel.md
+      - name: "Task 6: Verify that the Domain-Based Attribute is Created using Master Data Manager"
+        href: task-6-verify-domain-based-attribute-master-data-manager.md
+      - name: "Task 7: Viewing Updates Made using Master Data Manager in Excel"
+        href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
+      - name: "Task 8: Adding a New Value for State Entity in Excel"
+        href: task-8-adding-a-new-value-for-state-entity-in-excel.md
+      - name: "Task 9: Creating a Derived Hierarchy using Master Data Manager"
+        href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
+    - name: "Lesson 5: Automating the Cleansing and Matching using SSIS"
+      href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
+      items:
+      - name: "Task 1 (Prerequisite): Removing Supplier Data in MDS"
+        href: task-1-prerequisite-removing-supplier-data-in-mds.md
+      - name: "Task 2 (Optional): Creating a MDS Subscription View using Master Data Manager"
+        href: task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md
+      - name: "Task 3 (Optional): Reviewing the Subscription Views"
+        href: task-3-optional-reviewing-the-subscription-views.md
+      - name: "Task 4: Creating an SSIS Project using SQL Server Data Tools"
+        href: task-4-creating-an-ssis-project-using-sql-server-data-tools.md
+      - name: "Task 5: Adding Data Flow Task"
+        href: task-5-adding-data-flow-task.md
+      - name: "Task 6: Adding Excel Source to the Data Flow"
+        href: task-6-adding-excel-source-to-the-data-flow.md
+      - name: "Task 7: Adding DQS Cleansing Transform to the Data Flow"
+        href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
+      - name: "Task 8: Adding Conditional Split Transform to Split Cleansing Output"
+        href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
+      - name: "Task 9: Adding Union All Transform to Combine Correct and Corrected Records"
+        href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
+      - name: "Task 10: Adding Fuzzy Group Transform to Identify Duplicates"
+        href: task-10-adding-fuzzy-group-transform-to-identify-duplicates.md
+      - name: "Task 11: Adding Conditional Split Transform to Filter Duplicates"
+        href: task-11-adding-conditional-split-transform-to-filter-duplicates.md
+      - name: "Task 12: Adding Derived Column Transform to Add Columns Required by MDS"
+        href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
+      - name: "Task 13: Adding OLE DB Destination to Write Data to MDS Staging Table"
+        href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
+      - name: "Task 14: Adding Execute SQL Task to Control Flow to Run the Stored Procedure for MDS"
+        href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
+      - name: "Task 15: Building and Running the SSIS Project"
+        href: task-15-building-and-running-the-ssis-project.md
+      - name: "Task 16: Verifying with Master Data Manager"
+        href: task-16-verifying-with-master-data-manager.md
+      - name: "Task 17: Reviewing DQS Cleansing Project Created by the SSIS package"
+        href: task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md
+    - name: Conclusion
+      href: conclusion.md

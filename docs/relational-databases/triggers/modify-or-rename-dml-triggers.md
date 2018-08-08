@@ -16,7 +16,7 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Modify or Rename DML Triggers
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

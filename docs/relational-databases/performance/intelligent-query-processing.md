@@ -1,8 +1,8 @@
----
+﻿---
 title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: ""
-ms.date: "07/23/2018"
+ms.date: "07/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -15,7 +15,7 @@ ms.assetid:
 author: "joesackmsft"
 ms.author: "josack"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Intelligent query processing in SQL databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -42,6 +42,8 @@ For more information, see [Adaptive query processing in SQL databases](../../rel
 Table variable deferred compilation improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations.
 
 With table variable deferred compilation, compilation of a statement that references a table variable is deferred until the first actual execution of the statement. This deferred compilation behavior is identical to the behavior of temporary tables, and this change results in the use of actual cardinality instead of the original one-row guess. To enable the public preview of table variable deferred compilation in Azure SQL Database, enable database compatibility level 150 for the database you are connected to when executing the query.
+
+For more information, see [Table variable deferred compilation](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
 
 ## Approximate query processing
 Approximate query processing is a new family of features that are designed to provide aggregations across large data sets where responsiveness is more critical than absolute precision.  An example might be calculating a COUNT(DISTINCT()) across 10 billion rows, for display on a dashboard.  In this case, absolute precision is not important, but responsiveness is critical. The new APPROX_COUNT_DISTINCT aggregate function returns the approximate number of unique non-null values in a group.

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Modifying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Modifying Data in a System-Versioned Temporal Table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

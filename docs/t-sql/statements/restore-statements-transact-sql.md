@@ -144,7 +144,7 @@ RESTORE DATABASE { database_name | @database_name_var }
 [;]  
   
 --To Restore a Transaction Log:  
-RESTORE LOG { database_name | @database_name_var }  -- Does not apply to SQL Database Managed Instance 
+RESTORE LOG { database_name | @database_name_var }   
  [ <file_or_filegroup_or_pages> [ ,...n ] ]  
  [ FROM <backup_device> [ ,...n ] ]   
  [ WITH   
@@ -351,31 +351,6 @@ Restoring a damaged **master** database is performed using a special procedure. 
 Restoring a database clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.  
   
 To restore an availability database, first restore the database to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then add the database to the availability group.  
-
-## General Remarks - SQL Database Managed Instance
-
-For an asynchronous restore, the restore continues even if client connection breaks. If your connection is dropped, you can check [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) view for the status of a restore operation (as well as for CREATE and DROP database). 
-
-The following database options are set/overridden and cannot be changed later:
-
-- NEW_BROKER (if broker is not enabled in .bak file)
-- ENABLE_BROKER (if broker is not enabled in .bak file)
-- AUTO_CLOSE=OFF (if a database in .bak file has AUTO_CLOSE=ON)
-- RECOVERY FULL (if a database in .bak file has SIMPLE or BULK_LOGGED recovery mode)
-- Memory optimized filegroup is added and called XTP if it was not in the source .bak file. Any existing memory optimized filegroup is renamed to XTP
-- SINGLE_USER and RESTRICTED_USER options are converted to MULTI_USER
-
-## Limitations - SQL Database Managed Instance
-These limitations apply:
-
-- .BAK files containing multiple backup sets cannot be restored.
-- .BAK files containing multiple log files cannot be restored.
-- Restore will fail if .bak contains FILESTREAM data.
-- Backups containing databases that have active In-memory objects cannot currently be restored.
-- Backups containing databases where at some point In-Memory objects existed cannot currently be restored.
-- Backups containing databases in read-only mode cannot currently be restored. This limitation will be removed soon.
-
-For more information, see [Managed Instance](/azure/sql-database/sql-database-managed-instance)
 
 ## Interoperability  
   

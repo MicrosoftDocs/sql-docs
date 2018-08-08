@@ -177,7 +177,7 @@ Managed service accounts, group managed service accounts, and virtual accounts a
   
 -  <a name="GMSA"></a> **Group Managed Service Accounts**  
   
-     A Group Managed Service Account is an MSA for multiple servers. Windows manages a service account for services running on a group of servers. Active Directory automatically updates the group managed service account password without restarting services. You can configure SQL Server services to use a group managed service account principal. Beginning with SQL Server 2014, SQL Server supports group managed service accounts on Windows Server 2012 R2 and later for standalone instances, failover cluster instances, and availability groups.  
+     A Group Managed Service Account is an MSA for multiple servers. Windows manages a service account for services running on a group of servers. Active Directory automatically updates the group managed service account password without restarting services. You can configure SQL Server services to use a group managed service account principal. Beginning with SQL Server 2014, SQL Server supports group managed service accounts for standalone instances, and SQL Server 2016 and later for failover cluster instances, and availability groups.  
   
     To use a group managed service account for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](http://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.  
   

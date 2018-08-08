@@ -67,8 +67,8 @@ In the following row, click whichever product name you are interested in. The cl
 > </tr>
 > <tr>
 >   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -699,7 +699,7 @@ RESTORE DATABASE Sales
 - [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 - [Back Up and Restore Full-Text Catalogs and Indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
 - [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
+- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
 - [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
 - [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
 - [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
@@ -718,9 +718,9 @@ RESTORE DATABASE Sales
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* SQL DB<br />Managed Instance</th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -802,8 +802,8 @@ RESTORE DATABASE AdventureWorks2012
 >   <th> &nbsp; </th>>   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
 >   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>

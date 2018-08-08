@@ -260,7 +260,7 @@ Is the logical name of the backup device to which the database is backed up. The
   
 { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' }
 **Applies to:** DISK, TAPE, and URL apply to SQL Server. Only URL applies to SQL Database Managed Instance
-Specifies a disk file or tape device, or a Windows Azure Blob storage service. The URL format is used for creating backups to the Windows Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+Specifies a disk file or tape device, or a Microsoft Azure Blob storage service. The URL format is used for creating backups to the Microsoft Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Microsoft Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
 > [!NOTE] 
 > The NUL disk device will discard all information sent to it and should only be used for testing. This is not for production use.
@@ -307,7 +307,7 @@ Specifies options to be used with a backup operation.
   
 CREDENTIAL  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and SQL Database Managed Instance.  
-Used only when creating a backup to the Windows Azure Blob storage service.  
+Used only when creating a backup to the Microsoft Azure Blob storage service.  
   
 FILE_SNAPSHOT
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
@@ -762,15 +762,6 @@ Operations that cannot run during a database or transaction log backup include:
 - Shrink database or shrink file operations. This includes auto-shrink operations.  
   
 If a backup operation overlaps with a file-management or shrink operation, a conflict arises. Regardless of which of the conflicting operation began first, the second operation waits for the lock set by the first operation to time out (the time-out period is controlled by a session timeout setting). If the lock is released during the time-out period, the second operation continues. If the lock times out, the second operation fails.  
-
-## Limitations for SQL Database Managed Instance
-SQL Database Managed Instance can back up a database to a backup with up to 32 stripes, which is enough for the databases up to 4 TB if backup compression is used.
-
-Max backup stripe size is 195 GB (maximum blob size). Increase the number of stripes in the backup command to reduce individual stripe size and stay within this limit.
-
-> [!NOTE]
-> To work around this limitation on-premises, backup to `DISK` instead of backup to `URL`, upload backup file to blob, then restore. Restore supports bigger files because a different blob type is used.
-
  
 ## Metadata  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following backup history tables that track backup activity:  
@@ -932,14 +923,13 @@ WITH
 ```  
 
 ###  <a name="url"></a> I. Backing up to the Microsoft Azure Blob storage service 
-The example performs a full database backup of `Sales` to the Microsoft Azure Blob storage service.  The storage Account name is `mystorageaccount`.  The container is called `myfirstcontainer`.  A stored access policy has been created with read, write, delete, and list rights.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy.  For information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to the Windows Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+The example performs a full database backup of `Sales` to the Microsoft Azure Blob storage service.  The storage Account name is `mystorageaccount`.  The container is called `myfirstcontainer`.  A stored access policy has been created with read, write, delete, and list rights.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy.  For information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to the Microsoft Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql  
 BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
 WITH STATS = 5;
 ```
-
   
 ## See Also  
 [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
@@ -980,13 +970,13 @@ WITH STATS = 5;
 
 # Azure SQL Database Managed Instance
 
-Backs up a complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to create a database backup. [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) has automatic backups, and enables users to create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.  
+Backs up a SQL database placed/hosted in an Azure SQL Databae managed instance. SQL Database [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) has automatic backups, and enables users to create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.  
 
 ## Syntax  
   
 ```sql 
 BACKUP DATABASE { database_name | @database_name_var }   
-  TO URL = { 'physical_device_name' | @physical_device_name_var | 'NUL'}   [ ,...n ] 
+  TO URL = { 'physical_device_name' | @physical_device_name_var }   [ ,...n ] 
   [ WITH { <general_WITH_options> } ]  
 [;]  
   
@@ -1021,7 +1011,7 @@ BACKUP DATABASE { database_name | @database_name_var }
 ## Arguments  
 
 DATABASE  
-Specifies a complete database backup. During a database backup, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backs up enough of the transaction log to produce a consistent database when the backup is restored.  
+Specifies a complete database backup. During a database backup, the managed instance backs up enough of the transaction log to produce a consistent database when the backup is restored.  
   
 When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database Managed Instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   
@@ -1033,18 +1023,10 @@ For more information, see [Full File Backups &#40;SQL Server&#41;](../../relatio
   
 TO URL
 
-Specifies the URL to use for the backup operation. The URL format is used for creating backups to the Windows Azure storage service. 
+Specifies the URL to use for the backup operation. The URL format is used for creating backups to the Microsoft Azure storage service. 
 
-> [!NOTE] 
-> The NUL disk device will discard all information sent to it and should only be used for testing. This is not for production use.
-  
 > [!IMPORTANT]  
 > In order to backup to multiple devices when backing up to URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
-  
-> [!NOTE] 
-> The NUL device will discard all input sent to this file, however the backup will still mark all pages as backed up.
-  
-For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
 *n*  
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.  
@@ -1053,7 +1035,7 @@ Is a placeholder that indicates that up to 64 backup devices may be specified in
 Specifies options to be used with a backup operation.  
   
 CREDENTIAL  
-Used only when creating a backup to the Windows Azure Blob storage service.  
+Used only when creating a backup to the Microsoft Azure Blob storage service.  
   
 ENCRYPTION  
 Used to specify encryption for a backup. You can specify an encryption algorithm to encrypt the backup with or specify `NO_ENCRYPTION` to not have the backup encrypted. Encryption is recommended practice to help secure backup files. The list of algorithms you can specify are:  
@@ -1068,9 +1050,6 @@ If you choose to encrypt you will also have to specify the encryptor using the e
   
 - SERVER CERTIFICATE = Encryptor_Name  
 - SERVER ASYMMETRIC KEY = Encryptor_Name  
-  
-> [!WARNING]  
-> When encryption is used in conjunction with the `FILE_SNAPSHOT` argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) was completed for the database. No additional encryption happens for the data itself. The backup fails if the database was not encrypted or if the encryption was not completed before the backup statement was issued.  
   
 **Backup Set Options**  
   
@@ -1104,11 +1083,6 @@ Specifies the media name for the entire backup media set. The media name must be
   
 BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.  
-  
-If you are taking a backup that you plan to copy onto and restore from a CD-ROM, specify BLOCKSIZE=2048.  
-  
-> [!NOTE]  
-> This option typically affects performance only when writing to tape devices.  
   
 **Data Transfer Options**  
   
@@ -1160,7 +1134,7 @@ For more information, see [Possible Media Errors During Backup and Restore &#40;
 **Compatibility Options**  
   
 RESTART  
-Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], has no effect. This option is accepted by the version for compatibility with previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Has no effect. This option is accepted by the version for compatibility with previous versions of SQL Server. 
   
 **Monitoring Options**  
   
@@ -1170,8 +1144,6 @@ Displays a message each time another *percentage* completes, and is used to gaug
 The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, if the amount completed is 40 percent, the option might display 43 percent. For large backup sets, this is not a problem, because the percentage complete moves very slowly between completed I/O calls.  
   
 ## Limitations for SQL Database Managed Instance
-SQL Database Managed Instance can back up a database to a backup with up to 32 stripes, which is enough for the databases up to 4 TB if backup compression is used.
-
 Max backup stripe size is 195 GB (maximum blob size). Increase the number of stripes in the backup command to reduce individual stripe size and stay within this limit.
 
 ## Security  
@@ -1182,7 +1154,7 @@ BACKUP DATABASE permissions default to members of the **sysadmin** fixed server 
 Ownership and permission problems on the URL can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions.   
   
 ##  <a name="examples"></a> Examples  
-The example performs a COPY_ONLY backup of `Sales` to the Microsoft Azure Blob storage service.  The storage Account name is `mystorageaccount`.  The container is called `myfirstcontainer`.  A stored access policy has been created with read, write, delete, and list rights.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy.  For information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to the Windows Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+The example performs a COPY_ONLY backup of `Sales` to the Microsoft Azure Blob storage service.  The storage Account name is `mystorageaccount`.  The container is called `myfirstcontainer`.  A stored access policy has been created with read, write, delete, and list rights.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, was created using a Shared Access Signature that is associated with the Stored Access Policy.  For information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to the Microsoft Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql  
 BACKUP DATABASE Sales WITH COPY_ONLY
@@ -1418,3 +1390,5 @@ WITH (
   
 ## See Also  
 [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+
+::: moniker-end

@@ -721,6 +721,12 @@ ALTER DATABASE { database_name | CURRENT }
   | <target_recovery_time_option> 
   | <temporal_history_retention>  
 }  
+
+<automatic_tuning_option> ::=  
+{  
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+}  
+
 ```
   
 ## Arguments  
@@ -755,13 +761,7 @@ Only the server-level principal login (created by the provisioning process) or m
 > [!IMPORTANT]  
 >  The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.  
   
-## Examples  
-  
-### A. what examples here??
 
-```sql
-```
-  
 ## See also
   
 [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
@@ -1131,4 +1131,3 @@ ALTER DATABASE CustomerSales
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
 
 ::: moniker-end
-

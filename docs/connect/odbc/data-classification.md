@@ -55,7 +55,7 @@ SQLRETURN SQLGetDescField(
  [Input] Length of output buffer in bytes
 
  *StringLengthPtr*
- [Output] Pointer to the buffer in which to return the total number of bytes available to return in *ValuePtr.
+ [Output] Pointer to the buffer in which to return the total number of bytes available to return in *ValuePtr*.
  
 > [!NOTE]
 > If the size of the buffer is unknown, it can be determined by calling SQLGetDescField with *ValuePtr* as NULL and examining the value of *StringLengthPtr*.

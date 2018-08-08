@@ -1,0 +1,24 @@
+- name: Report Server Web Service Methods
+  href: report-server-web-service-methods.md
+- name: Authorization Methods
+  href: authorization-methods.md
+- name: Data Sources and Connection Methods
+  href: data-sources-and-connection-methods.md
+- name: Linked Reports Methods
+  href: linked-reports-methods.md
+- name: Model Methods - Report Server Web Service
+  href: model-methods-report-server-web-service.md
+- name: Rendering and Execution Methods
+  href: rendering-and-execution-methods.md
+- name: Report History Methods
+  href: report-history-methods.md
+- name: Report Parameters Methods
+  href: report-parameters-methods.md
+- name: Report Server Namespace Management Methods
+  href: report-server-namespace-management-methods.md
+- name: Report Server Web Service Endpoints
+  href: report-server-web-service-endpoints.md
+- name: Scheduling Methods
+  href: scheduling-methods.md
+- name: Subscription and Delivery Methods
+  href: subscription-and-delivery-methods.md

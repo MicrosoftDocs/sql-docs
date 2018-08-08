@@ -1,0 +1,48 @@
+- name: WMI Provider for Configuration Management Classes
+  href: wmi-provider-for-configuration-management-classes.md
+- name: Specific Areas
+  items:
+  - name: ClientNetLibInfo class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md
+  - name: ClientNetworkProtocol class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md
+  - name: ClientNetworkProtocolProperty class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md
+  - name: ClientSettingsGeneralFlag class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md
+  - name: SecurityCertificate class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/context-property-securitycertificate-class.md
+  - name: ServerNetworkProtocol class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/enabled-property-servernetworkprotocol-class.md
+  - name: ServerNetworkProtocolIPAddress class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/enabled-property-servernetworkprotocolipaddress-class.md
+  - name: ServerNetworkProtocolProperty class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/instancename-property-servernetworkprotocolproperty-class.md
+  - name: ServerSettings class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/serversettings-class/generalflags-property-serversettings-class.md
+  - name: ServerSettingsGeneralFlag class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagname-property-serversettingsgeneralflag-class.md
+  - name: SInstance class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md
+  - name: SqlServerAlias class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/aliasname-property-sqlserveralias-class.md
+  - name: SqlService class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md
+  - name: SqlServiceAdvancedProperty class +
+    href: ../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md
+- name: CInstance Class - InstanceName Property
+  href: cinstance-class-instancename-property.md
+- name: CInstance Class - SetDefaults Method
+  href: cinstance-class-setdefaults-method.md
+- name: CInstance Class
+  href: cinstance-class.md
+- name: ClientSettings Class - InstanceName Property
+  href: clientsettings-class-instancename-property.md
+- name: ClientSettings Class - SetDefaults Method
+  href: clientsettings-class-setdefaults-method.md
+- name: ClientSettings Class
+  href: clientsettings-class.md
+- name: SqlErrorLogEvent Class
+  href: sqlerrorlogevent-class.md
+- name: SqlErrorLogFile Class
+  href: sqlerrorlogfile-class.md

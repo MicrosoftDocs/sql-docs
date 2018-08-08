@@ -64,10 +64,10 @@ for this software, unless other terms accompany those items. If so, those terms 
 
 **3. SCOPE OF LICENSE.** The software is licensed, not sold. Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted under this agreement, whether by implication, estoppel or otherwise. You may use the software only as expressly permitted in this agreement. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not do any of the following:
 
-    - Work around any technical limitations in the software.
-    - Reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits despite this limitation.
-    - Make more copies of the software than are specified in this agreement, or allowed by applicable law despite this limitation.
-    - Share, publish, rent or lease the software, or provide the software as a stand-alone hosted solution for others to use.
+- Work around any technical limitations in the software.
+- Reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits despite this limitation.
+- Make more copies of the software than are specified in this agreement, or allowed by applicable law despite this limitation.
+- Share, publish, rent or lease the software, or provide the software as a stand-alone hosted solution for others to use.
 
 **4.	THIRD PARTY NOTICES.** The software may include third party components with separate legal notices or governed by other agreements, as may be described in the ThirdPartyNotices file accompanying the software.  Even if such components are governed by other agreements, the disclaimers and the limitations on and exclusions of damages below also apply.
 

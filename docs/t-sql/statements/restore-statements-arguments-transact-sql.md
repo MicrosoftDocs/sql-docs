@@ -1,7 +1,7 @@
 ---
 title: "RESTORE Arguments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2017"
+ms.date: "08/08/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

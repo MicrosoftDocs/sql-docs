@@ -1267,12 +1267,12 @@
         },
         {
             "source_path": "docs/t-sql/statements/restore-database-parallel-data-warehouse.md",
-            "redirect_url": "/sql/t-sql/statements/statements/restore-statements-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/restore-statements-transact-sql",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/t-sql/statements/backup-database-parallel-data-warehouse.md",
-            "redirect_url": "/sql/t-sql/statements/statements/backup-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/backup-transact-sql",
             "redirect_document_id": false
         },
         {

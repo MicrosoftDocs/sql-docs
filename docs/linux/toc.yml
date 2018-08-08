@@ -201,6 +201,13 @@
       href: sql-server-linux-performance-best-practices.md
     - name: Get started with performance features
       href: sql-server-linux-performance-get-started.md
+  - name: Replication
+    href: sql-server-linux-replication.md
+    items:
+    - name: Configure
+      href: sql-server-linux-replication-configure.md
+    - name: Examples
+      href: sql-server-linux-replication-examples.md
 - name: Samples
   items:
   - name: Unattended install

@@ -24,7 +24,7 @@ manager: kenvh
 
 **Features Added**:
 
-Data Classification for Azure SQL Database and SQL Server
+Data Classification for Azure SQL Database and SQL Server, for more information see [Data Classification](../data-classification.md)
 
 [Bug fixes](../bug-fixes.md)
 

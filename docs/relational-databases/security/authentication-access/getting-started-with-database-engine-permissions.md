@@ -226,7 +226,7 @@ JOIN sys.database_principals AS dRole
 ## Next Steps  
  For more topics to get you started, see:  
   
--   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
+-   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

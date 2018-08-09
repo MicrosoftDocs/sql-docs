@@ -321,12 +321,13 @@ The **Availability replica** pane displays the following columns:
  **Last Redone Time**  
  Indicates the time when the last log record was redone on the secondary database. This value is hidden by default.  
  
- ## Always On Availability Group latency reports
+
+## Always On Availability Group latency reports
 The availability group latency report is a reporting tool built into the availability group dashboard and available in the [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) release. This feature provides an easy-to-understand report detailing time spent during various phases of the log transport process. This provides a way to narrow down the potential cause of latency during the synchronization process. 
 
-SQL Agent runs the data collection and must be enabled on both the primary replica, and at least one of the secondary replicas. View the report by right-clicking the availability group > Reports > Standard Reports. 
+SQL Agent runs the data collection and must be enabled on both the primary replica, and at least one of the secondary replicas. View the report by right-clicking the availability group > Reports > Standard Reports in **Object Explorer** of SQL Server Management Studio.  
 
-For more information, see [Always On Availability Group latency reports](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/)
+For more information, please see [Always On Availability Group latency reports](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
 
 ## Related Tasks  
   

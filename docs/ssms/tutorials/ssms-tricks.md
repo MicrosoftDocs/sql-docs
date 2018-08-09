@@ -205,7 +205,7 @@ The path for your SQL Server errog log can vary depending on your configuration 
 You have a few options for finding the name of your SQL server before and after you connect to SQL Server.  
 
 ### Before you connect to SQL Server
-1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). 
+1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). Your path may vary from the path in the image below.
 2. Open the errorlog.log file in Notepad.  
 3. Search for the text *Server name is*.
     

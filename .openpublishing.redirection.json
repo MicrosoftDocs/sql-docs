@@ -4,17 +4,7 @@
             "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
             "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
             "redirect_document_id": false
-        },       
-        {
-            "source_path": "docs/advanced-analytics/predict-t-sql.md",
-            "redirect_url": "https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql",
-            "redirect_document_id": false
-        }, 
-        {
-            "source_path": "docs/advanced-analytics/getting-started-with-machine-learning-services.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning",
-            "redirect_document_id": false
-        }, 
+        },
         {
             "source_path": "docs/advanced-analytics/r/install-pretrained-models-sql-server.md",
             "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/install/sql-pretrained-models-install",
@@ -1273,6 +1263,16 @@
         {
             "source_path": "docs/t-sql/statements/alter-statements-transact-sql.md",
             "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/restore-database-parallel-data-warehouse.md",
+            "redirect_url": "/sql/t-sql/statements/restore-statements-transact-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/backup-database-parallel-data-warehouse.md",
+            "redirect_url": "/sql/t-sql/statements/backup-transact-sql",
             "redirect_document_id": false
         },
         {

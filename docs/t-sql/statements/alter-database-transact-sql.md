@@ -70,10 +70,10 @@ In the following row, click whichever product name you are interested in. The cl
 
 In SQL Server, this statement modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
    
-Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.  
 
 ALTER DATABASE  
-The current topic provides the syntax and related information for changing the name and the collation of a database.  
+The current article provides the syntax and related information for changing the name and the collation of a database.  
   
 [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
@@ -309,10 +309,10 @@ GO
 
 In Azure SQL Database, use this statement to modify a database on a logical server. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
 
-Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.  
 
 ALTER DATABASE  
-The current topic provides the syntax and related information for changing the name and the collation of a database.  
+The current article provides the syntax and related information for changing the name and the collation of a database.  
   
 [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbls)  
 Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
@@ -406,7 +406,7 @@ ALTER DATABASE db1
 
 MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
 
-Changes the service tier of the database. Support for 'premiumrs' has been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
+Changes the service tier of the database. 
 
 The following example changes edition to `premium`:
   
@@ -474,7 +474,7 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Max data size (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
 
-If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitsations for  vCore-based model, see [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for  vCore-based model, see [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
   
 The following rules apply to MAXSIZE and EDITION arguments:  
   
@@ -673,10 +673,10 @@ ALTER DATABASE db1 FAILOVER
 
 In Azure SQL Database Managed Instance, use this statement to set database options.
 
-Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.  
 
 ALTER DATABASE  
-The current topic provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatability level.  
+The current article provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatibility level.  
   
 [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) 
 Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
@@ -910,7 +910,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## See Also  
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+[SQL Data Warehouse list of reference articles](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
@@ -939,7 +939,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## Overview
 
-Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in Parallel Data Warehouse. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The topic also describes syntax related to setting database options in Parallel Data Warehouse.
+Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in Parallel Data Warehouse. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The article also describes syntax related to setting database options in Parallel Data Warehouse.
 
 ## Syntax  
   
@@ -1025,7 +1025,7 @@ The statistics settings only work if the administrator has enable auto-stats.  I
 Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) statement on the database.  
   
 ## Performance  
-Shrinking a database can take a large amount of time and system resources, depending on the size of the actual data within the database, and the amount of fragmentation on disk. For example, shrinking a database could take serveral hours or more.  
+Shrinking a database can take a large amount of time and system resources, depending on the size of the actual data within the database, and the amount of fragmentation on disk. For example, shrinking a database could take several hours or more.  
   
 ## Determining Encryption Progress  
 Use the following query to determine progress of database transparent data encryption as a percent:  

@@ -1327,17 +1327,17 @@
         },
         {
             "source_path": "docs/t-sql/statements/alter-database-azure-sql-database.md",
-            "redirect_url": "/sql/t-sql/alter-database-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/alter-database-transact-sql",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/t-sql/statements/alter-database-azure-sql-data-warehouse.md",
-            "redirect_url": "/sql/t-sql/alter-database-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/alter-database-transact-sql",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/t-sql/statements/alter-database-parallel-data-warehouse.md",
-            "redirect_url": "/sql/t-sql/alter-database-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/alter-database-transact-sql",
             "redirect_document_id": false
         },
         {

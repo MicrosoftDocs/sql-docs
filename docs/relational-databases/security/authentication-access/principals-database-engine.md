@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Principals (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2017"
@@ -41,18 +41,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## SQL Server-level principals  
   
--  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication Login   
--  Windows authentication login for a Windows user  
--  Windows authentication login for a Windows group   
--  Azure Active Directory authentication login for a AD user
--  Azure Active Directory authentication login for a AD group
--  Server Role  
+- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication Login   
+- Windows authentication login for a Windows user  
+- Windows authentication login for a Windows group   
+- Azure Active Directory authentication login for a AD user
+- Azure Active Directory authentication login for a AD group
+- Server Role  
   
- ## Database-level principals  
+## Database-level principals
   
--   Database User (There are 11 types of users. For more information, see [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).) 
--   Database Role  
--   Application Role  
+- Database User (There are 11 types of users. For more information, see [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).)
+- Database Role
+- Application Role
   
 ## sa Login  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` log in is a server-level principal. By default, it is created when an instance is installed. Beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the default database of sa is master. This is a change of behavior from earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The `sa` login is a member of the `sysadmin` fixed database role. The `sa` login has all permissions on the server and cannot be limited. The `sa` login cannot be dropped, but it can be disabled so that no one can use it.

@@ -92,7 +92,7 @@ For more control, you can manually create a package that emulates the work done 
 
 1. Use the Azure Blob Upload Task to stage the data in Azure Blob Storage.
 
-2. Then use the SSIS Execute SQL task to launch a Polybase script that loads the data into SQL Data Warehouse.  To learn more about Polybase, see [PolyBase Guide][PolyBase Guide].
+2. Then use the SSIS Execute SQL task to launch a Polybase script that loads the data into SQL Data Warehouse. For an example that loads data from Azure Blob Storage into SQL Data Warehouse (but not with SSIS), see [Tutorial: Load data to Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
 ## Option 2 - Use a source and destination
 

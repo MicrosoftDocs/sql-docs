@@ -27,9 +27,9 @@ This article shows you how to do the following things.
 
 ## Basic concepts
 
-The package is the basic unit of work in SSIS. Related packages are grouped in projects. You create projects and design packages in Visual Studio with SQL Server Data Tools. The design process is a visual process in which you drag and drop components from the Toolbox to the design surface, connect them, and set their properties. After you finish your package, you can optionally deploy it to SQL Server for comprehensive management, monitoring, and security.
+The package is the basic unit of work in SSIS. Related packages are grouped in projects. You create projects and design packages in Visual Studio with SQL Server Data Tools. The design process is a visual process in which you drag and drop components from the Toolbox to the design surface, connect them, and set their properties. After you finish your package, you can run it, and you can optionally deploy it to SQL Server for comprehensive management, monitoring, and security.
 
-A detailed introduction to SSIS is beyond the scope of this article. To learn more, see:
+A detailed introduction to SSIS is beyond the scope of this article. To learn more, see the following articles:
 
 - [SQL Server Integration Services](sql-server-integration-services.md)
 
@@ -45,10 +45,10 @@ SQL Server Integration Services (SSIS) is a flexible set of tools that provides 
 ## Prerequisites
 To step through this tutorial, you need the following things:
 
-1. **SQL Server Integration Services (SSIS)**. SSIS is a component of SQL Server and requires a licensed version, or the developer or evaluation version, of SQL Server. To get an evaluation version of SQL Server, see [Evaluate SQL Server][https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm].
-2. **Visual Studio** (optional). To get the free Visual Studio Community Edition, see [Visual Studio Community][Visual Studio Community]. If you don't want to install Visual Studio, you can install SQL Server Data Tools (SSDT). SSDT installs a version of Visual Studio with limited functionality.
+1. **SQL Server Integration Services (SSIS)**. SSIS is a component of SQL Server and requires a licensed version, or the developer or evaluation version, of SQL Server. To get an evaluation version of SQL Server, see [Evaluate SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+2. **Visual Studio** (optional). To get the free Visual Studio Community Edition, see [Visual Studio Community][Visual Studio Community]. If you don't want to install Visual Studio, you can install SQL Server Data Tools (SSDT) only. SSDT installs a version of Visual Studio with limited functionality.
 3. **SQL Server Data Tools for Visual Studio (SSDT)**. To get SQL Server Data Tools for Visual Studio, see [Download SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **An Azure SQL Data Warehouse database and permissions**. This tutorial connects to a SQL Data Warehouse instance and loads data into it. You have to have permissions to connect, to create a table, and to load data.
+4. **An Azure SQL Data Warehouse database and permissions**. This tutorial connects to a SQL Data Warehouse instance and loads data into it. You have to have permission to connect, to create a table, and to load data.
 
 ## Create a new Integration Services project
 1. Launch Visual Studio.
@@ -88,9 +88,9 @@ To continue the tutorial with this option, you need the following things:
 
 ### Create a similar solution manually
 
-For more control, you can manually create a package that emulates the work done by the SQL DW Upload task. To get the Azure Blob Upload task, download the [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. 
+For more control, you can manually create a package that emulates the work done by the SQL DW Upload task. 
 
-1. Use the Azure Blob Upload Task to stage the data in Azure Blob Storage.
+1. Use the Azure Blob Upload Task to stage the data in Azure Blob Storage. To get the Azure Blob Upload task, download the [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
 2. Then use the SSIS Execute SQL task to launch a Polybase script that loads the data into SQL Data Warehouse. For an example that loads data from Azure Blob Storage into SQL Data Warehouse (but not with SSIS), see [Tutorial: Load data to Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
@@ -102,7 +102,7 @@ This tutorial uses SQL Server as the data source. SQL Server runs on premises or
 
 To connect to SQL Server and to SQL Data Warehouse, you can use an ADO.NET connection manager and source and destination, or an OLE DB connection manager and source and destination. This tutorial uses  ADO.NET because it has the fewest configuration options. OLE DB may provide slightly better performance than ADO.NET.
 
-As a shortcut, you can use the SQL Server Import and Export Wizard to create the basic package. Then, save the package, and open it in Visual Studio or SSDT to view and customize it.
+As a shortcut, you can use the SQL Server Import and Export Wizard to create the basic package. Then, save the package, and open it in Visual Studio or SSDT to view and customize it. For more info, see [Import and Export Data with the SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 ### Prerequisites for Option 2
 

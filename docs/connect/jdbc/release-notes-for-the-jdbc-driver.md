@@ -22,7 +22,7 @@ manager: craigg
 
 ## Updates in Microsoft JDBC Driver 7.0 for SQL Server
 
-The Microsoft JDBC Driver 7.0 for SQL Server is fully compliant with JDBC API Specification 4.2. The jars in the 7.0 package are named according to Java version compatibility. For example, the mssql-jdbc-7.0.0.jre8.jar file from the 7.0 package should be used with Java 8.
+The Microsoft JDBC Driver 7.0 for SQL Server is fully compliant with JDBC API Specification 4.2. The jars in the 7.0 package are named according to Java version compatibility. For example, the mssql-jdbc-7.0.0.jre10.jar file from the 7.0 package should be used with Java 10.
 
 ### Support for JDK 10
 
@@ -54,7 +54,7 @@ The Microsoft JDBC Driver 7.0 for SQL Server introduces new connection property,
 
 ### Added Azure Key Vault Provider Constructors
 
-The Microsoft JDBC Driver 7.0 for SQL Server re-introduces a previously removed constructor, for `SQLServerColumnEncryptionAzureKeyVaultProvider`, which allowed authentication using a custom method implemented over `SQLServerKeyVaultAuthenticationCallback` to fetch an access token.
+The Microsoft JDBC Driver 7.0 for SQL Server reintroduces a previously removed constructor, for `SQLServerColumnEncryptionAzureKeyVaultProvider`, which allowed authentication using a custom method implemented over `SQLServerKeyVaultAuthenticationCallback` to fetch an access token.
 
 The new constructors have the below definition:
 
@@ -75,11 +75,11 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### Updated ADAL4J version to 1.6.0
 
-The Microsoft JDBC Driver 7.0 for SQL Server has updated its maven dependency upon azure-activedirectory-library-for-java (ADAL4J) to version 1.6.0. For more information about dependencies, see [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+The Microsoft JDBC Driver 7.0 for SQL Server has updated its maven dependency upon azure-activedirectory-library-for-java (ADAL4J) to version 1.6.0. For more information about dependencies, see [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## Updates in Microsoft JDBC Driver 6.4 for SQL Server
 
-The Microsoft JDBC Driver 6.4 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.4 package are named according to Java version compatibility. For example, the mssql-jdbc-6.4.0.jre8.jar file from the 6.4 package is recommended to be used with Java 8.
+The Microsoft JDBC Driver 6.4 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.4 package are named according to Java version compatibility. For example, the mssql-jdbc-6.4.0.jre8.jar file from the 6.4 package must be used with Java 8.
 
 ### Support for JDK 9
 
@@ -132,10 +132,14 @@ The JDBC Driver has updated its maven dependency upon azure-activedirectory-libr
 
 ## Updates in Microsoft JDBC Driver 6.2 for SQL Server
 
-The Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.0 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.1.jre8.jar file from the 6.2 package is recommended to be used with Java 8.
+The Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.2 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.2.jre8.jar file from the 6.2 package is recommended to be used with Java 8.
 
 > [!NOTE]  
-> An issue with the metadata caching improvement was found in the JDBC 6.2 RTW released on June 29, 2017. The improvement was rolled back and new jars (version 6.2.1) were released on July 17, 2017 on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), and [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Please update your projects to use the 6.2.1 release jars. Please view [release notes](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) for more details.
+> An issue with the metadata caching improvement was found in the JDBC 6.2 RTW released on June 29, 2017. The improvement was rolled back and new jars (version 6.2.1) were released on July 17, 2017. 
+>
+> Another improvement to upgrade Azure Key Vault dependent library version to 1.0.0 was made, and new jars (version 6.2.2) were released on October 19, 2017.
+>
+> Download the latest updates in JDBC Driver 6.2 on [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), and [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Please update your projects to use the 6.2.2 release jars. Please view release notes for [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) and [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) for more details.
 
 ### Azure Active Directory (AAD) support for Linux
 

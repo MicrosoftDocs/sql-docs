@@ -4,11 +4,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 06/26/2018
+ms.date: 08/09/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 #customer intent: As an R developer, I want to model/train/score partitioned data to avoid manually subsetting data.
 ---
 # Tutorial: Create partition-based models in R on SQL Server

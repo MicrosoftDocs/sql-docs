@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions" 
 ---
 # RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

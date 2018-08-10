@@ -4,15 +4,15 @@ description: This article explains the parameters for the SQL Server Kubernetes 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 7/16/2018
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-
 # Create listener services for secondary replicas
 
 In a Kubernetes cluster, use a service to host an IP address for an availability group listener. [Configure a SQL Server Always On availability group on Docker containers in Kubernetes for high availability](tutorial-sql-server-ag-kubernetes.md) tutorial creates a listener for the primary replica. This article shows how to create a listener for secondary replicas.

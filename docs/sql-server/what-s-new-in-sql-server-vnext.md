@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server vNext | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/15/2018"
+ms.date: "08/09/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,7 +12,7 @@ ms.topic: "article"
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server vNext
 

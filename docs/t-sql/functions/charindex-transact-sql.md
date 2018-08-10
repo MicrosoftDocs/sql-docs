@@ -184,7 +184,7 @@ GO
   
 ```
 -----------
-13
+11
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

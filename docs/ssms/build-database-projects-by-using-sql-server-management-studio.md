@@ -30,7 +30,7 @@ A database script project is an organized set of scripts, connection information
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] includes the following tools:  
   
--   Code Editor is a rich script editor for writing and editing scripts. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides four versions of the Code Editor; the [!INCLUDE[ssDE](../includes/ssde_md.md)] Query Editor for [!INCLUDE[tsql](../includes/tsql_md.md)] scripts, the DMX Query Editor, the MDX Query Editor, and the XML/A Query Editor.  
+-   Code Editor is a rich script editor for writing and editing scripts. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides four versions of the Code Editor; the [!INCLUDE[ssDE](../includes/ssde_md.md)] Query Editor for [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, the DMX Query Editor, the MDX Query Editor, and the XML/A Query Editor.  
   
 -   Object Explorer for locating, modifying, scripting or running objects belonging to instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
   
@@ -59,7 +59,7 @@ Solution Explorer is a utility to store and reopen database solutions. Solutions
   
 -   Save connection information with scripts.  
   
-Solution Explorer is a tool for developers who are creating and reusing scripts that are related to the same project. If a similar task is required later, you can use group of scripts that were stored in a project. If you have created applications by using [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs_md.md)], you will find Solution Explorer very familiar.  
+Solution Explorer is a tool for developers who are creating and reusing scripts that are related to the same project. If a similar task is required later, you can use group of scripts that were stored in a project. If you have created applications by using [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], you will find Solution Explorer very familiar.  
   
 A solution consists of one or more script projects. A project consists of one or more scripts or connections. A project may also include nonscript files.  
   

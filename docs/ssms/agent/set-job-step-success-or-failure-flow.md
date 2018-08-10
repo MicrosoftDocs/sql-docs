@@ -65,7 +65,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 7.  In the **On failure action** list, click the action to perform if the job step fails.  
   
-8.  If the job is a [!INCLUDE[tsql](../../includes/tsql_md.md)] script, you can choose from the following options:  
+8.  If the job is a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, you can choose from the following options:  
   
     -   In the **Output file** box, enter the name of an output file to which the script output will be written. By default the file is overwritten each time the job step executes. If you do not want the output file overwritten, check **Append output to existing file**.  
   

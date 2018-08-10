@@ -41,7 +41,7 @@ manager: craigg
 After you have added Access databases and connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, SSMA displays metadata for Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects. You can now select Access database objects, and then convert the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure schemas.  
   
 ## The Conversion Process  
-Converting database objects takes the object definitions from the Access metadata, converts them into equivalent [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, and then loads this information into the project. You can then view the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects and their properties by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer.  
+Converting database objects takes the object definitions from the Access metadata, converts them into equivalent [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and then loads this information into the project. You can then view the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects and their properties by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer.  
   
 > [!IMPORTANT]  
 > Converting objects does not create the objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. It only converts the object definitions and stores the information in the SSMA project.  

@@ -46,7 +46,7 @@ The JDBC driver implements all the methods of the java.sql.Blob, java.sql.Clob, 
 
 ## Large Value Data Types
 
-In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], working with large-value data types required special handling. Large-value data types are those that exceed the maximum row size of 8 KB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] introduces a max specifier for **varchar**, **nvarchar**, and **varbinary** data types to allow storage of values as large as 2^31 bytes. Table columns and [!INCLUDE[tsql](../../includes/tsql_md.md)] variables can specify **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types.  
+In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], working with large-value data types required special handling. Large-value data types are those that exceed the maximum row size of 8 KB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] introduces a max specifier for **varchar**, **nvarchar**, and **varbinary** data types to allow storage of values as large as 2^31 bytes. Table columns and [!INCLUDE[tsql](../../includes/tsql-md.md)] variables can specify **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types.  
 
 The primary scenarios for working with large-value types involve retrieving them from a database, or adding them to a database. The following sections describe different approaches to accomplish these tasks.  
 
@@ -117,7 +117,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### Modifying Large-Value Types in a Database
 
-In most cases, the recommended method for updating or modifying large values on the database is to pass parameters through the [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) and [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classes by using [!INCLUDE[tsql](../../includes/tsql_md.md)] commands like `UPDATE`, `WRITE`, and `SUBSTRING`.  
+In most cases, the recommended method for updating or modifying large values on the database is to pass parameters through the [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) and [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classes by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands like `UPDATE`, `WRITE`, and `SUBSTRING`.  
 
 If you have to replace the instance of a word in a large text file, such as an archived HTML file, you can use a Clob object, as in the following:  
 
@@ -141,7 +141,7 @@ For more information about large-value types, see "Using Large-Value Types" in S
 
 ## XML Data Type
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] provides an **xml** data type that lets you store XML documents and fragments in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. The **xml** data type is a built-in data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and is in some ways similar to other built-in types, such as **int** and **varchar**. As with other built-in types, you can use the **xml** data type as a column type when you create a table; as a variable type, a parameter type, or a function-return type; or in [!INCLUDE[tsql](../../includes/tsql_md.md)] CAST and CONVERT functions.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] provides an **xml** data type that lets you store XML documents and fragments in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. The **xml** data type is a built-in data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and is in some ways similar to other built-in types, such as **int** and **varchar**. As with other built-in types, you can use the **xml** data type as a column type when you create a table; as a variable type, a parameter type, or a function-return type; or in [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST and CONVERT functions.  
   
 In the JDBC driver, the **xml** data type can be mapped as a String, byte array, stream, CLOB, BLOB, or SQLXML object. String is the default. Starting with the JDBC Driver version 2.0, the JDBC driver provides support for the JDBC 4.0 API, which introduces the SQLXML interface. The SQLXML interface defines methods to interact and manipulate XML data. The **SQLXML** data type maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**xml** data type. For more information about how to read and write XML data from and to the relational database with the **SQLXML** Java data type, see [Supporting XML Data](../../connect/jdbc/supporting-xml-data.md).  
   
@@ -161,7 +161,7 @@ For more information about the **xml** data type, see "xml Data Type" in [!INCLU
 
 The introduction of user-defined types (UDTs) in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] extends the SQL type system by letting you store objects and custom data structures in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. UDTs can contain multiple data types and can have behaviors, differentiating them from the traditional alias data types that consist of a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] system data type. UDTs are defined by using any of the languages supported by the Microsoft .NET common language runtime (CLR) that produce verifiable code. This includes Microsoft Visual C# and Visual Basic .NET. The data is exposed as fields and properties of a .NET Framework-based class or structure, and behaviors are defined by methods of the class or structure.  
   
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], a UDT can be used as the column definition of a table, as a variable in a [!INCLUDE[tsql](../../includes/tsql_md.md)] batch, or as an argument of a [!INCLUDE[tsql](../../includes/tsql_md.md)] function or stored procedure.  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], a UDT can be used as the column definition of a table, as a variable in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, or as an argument of a [!INCLUDE[tsql](../../includes/tsql-md.md)] function or stored procedure.  
   
 For more information about user-defined data types, see "Using and Modifying Instances of User-defined Types" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   

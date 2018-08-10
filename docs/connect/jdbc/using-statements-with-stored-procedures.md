@@ -19,7 +19,7 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-A stored procedure is a database procedure, similar to a procedure in other programming languages, which is contained within the database itself. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stored procedures can be created by using [!INCLUDE[tsql](../../includes/tsql_md.md)], or by using the common language runtime (CLR) and one of the Visual Studio programming languages such as Visual Basic or C#. Generally, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stored procedures can do the following:  
+A stored procedure is a database procedure, similar to a procedure in other programming languages, which is contained within the database itself. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stored procedures can be created by using [!INCLUDE[tsql](../../includes/tsql-md.md)], or by using the common language runtime (CLR) and one of the Visual Studio programming languages such as Visual Basic or C#. Generally, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stored procedures can do the following:  
   
 - Accept input parameters and return multiple values in the form of output parameters to the calling procedure or batch.  
   

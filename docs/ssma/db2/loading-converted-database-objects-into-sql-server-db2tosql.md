@@ -21,9 +21,9 @@ manager: craigg
 After you have converted DB2 schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
   
 ## Choosing Between Synchronization and Scripts  
-If you want to load the converted database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] without modification, you can have SSMA directly create or recreate the database objects. That method is quick and easy, but does not allow for customization of the [!INCLUDE[tsql](../../includes/tsql_md.md)] code that defines the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects, other than stored procedures.  
+If you want to load the converted database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] without modification, you can have SSMA directly create or recreate the database objects. That method is quick and easy, but does not allow for customization of the [!INCLUDE[tsql](../../includes/tsql-md.md)] code that defines the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects, other than stored procedures.  
   
-If you want to modify the [!INCLUDE[tsql](../../includes/tsql_md.md)] that is used to create objects, or if you want more control over objects creation, use SSMA to create scripts. You can then modify those scripts, create each object individually, and even use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent to schedule creating those objects.  
+If you want to modify the [!INCLUDE[tsql](../../includes/tsql-md.md)] that is used to create objects, or if you want more control over objects creation, use SSMA to create scripts. You can then modify those scripts, create each object individually, and even use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent to schedule creating those objects.  
   
 ## Using SSMA to Synchronize Objects with SQL Server  
 To use SSMA to create [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects, you select the objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, and then synchronize the objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], as shown in the following procedure. By default, if the objects already exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and if the SSMA metadata is newer than the object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA will alter the object definitions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can change the default behavior by editing **Project Settings**.  
@@ -58,7 +58,7 @@ To use SSMA to create [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
 Click on the action sign to change the state. Actual synchronization will be performed when you click **OK** button of the **Synchronize with Database** dialog.  
   
 ## Scripting Objects  
-To save [!INCLUDE[tsql](../../includes/tsql_md.md)] definitions of the converted database objects, or to alter the object definitions and run scripts yourself, you can save the converted database object definitions to [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts.  
+To save [!INCLUDE[tsql](../../includes/tsql-md.md)] definitions of the converted database objects, or to alter the object definitions and run scripts yourself, you can save the converted database object definitions to [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
   
 **To save objects as scripts**  
   
@@ -96,7 +96,7 @@ You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](..
   
 4.  To run a set of statements, select the statements in the query editor window, and then press the **F5** key.  
   
-For more information about how to use the query editor to run scripts, see "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] Query" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+For more information about how to use the query editor to run scripts, see "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Query" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   
 You can also run scripts from the command line by using the **sqlcmd** utility, and from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. For more information about **sqlcmd**, see "sqlcmd Utility" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, see "Automating Administrative Tasks ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   

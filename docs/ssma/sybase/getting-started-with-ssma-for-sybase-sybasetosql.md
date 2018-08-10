@@ -70,7 +70,7 @@ Most metadata settings are read-only. However, you can alter the following metad
   
 -   In Sybase Metadata Explorer, you can alter procedures and type mappings. Make these changes before you convert schemas.  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer, you can alter the [!INCLUDE[tsql](../../includes/tsql_md.md)] for stored procedures. Make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer, you can alter the [!INCLUDE[tsql](../../includes/tsql-md.md)] for stored procedures. Make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 Changes made in a metadata explorer are reflected in the project metadata, not in the source or target databases.  
   
@@ -96,7 +96,7 @@ SSMA contains the following menus:
 |Menu|Description|  
 |--------|---------------|  
 |**File**|Contains commands for working with projects, connecting to SAP ASE, and connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database.|  
-|**Edit**|Contains commands for finding and working with text in the details pages, such as copying [!INCLUDE[tsql](../../includes/tsql_md.md)] from the SQL details pane. Also contains the **Manage Bookmarks** option, where you can see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.|  
+|**Edit**|Contains commands for finding and working with text in the details pages, such as copying [!INCLUDE[tsql](../../includes/tsql-md.md)] from the SQL details pane. Also contains the **Manage Bookmarks** option, where you can see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.|  
 |**View**|Contains the **Synchronize Metadata Explorers** command. This synchronizes the objects between Sybase Metadata Explorer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer. Also contains commands to display and hide the **Output** and **Error List** panes and an option **Layouts** to manage the Layouts.|  
 |**Tools**|Contains commands to create reports, export data, and migrate objects and data. Also provides access to the **Global Settings** and **Project Settings** dialog boxes.|  
 |**Tester**|Contains commands to create test cases, view test results, and commands for database backup management.|  

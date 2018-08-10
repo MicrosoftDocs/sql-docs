@@ -27,9 +27,9 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to create a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job step that executes [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)], or SQL Server Management Objects.  
+This topic describes how to create a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job step that executes [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
   
-These job step scripts may call stored procedures and extended stored procedures. A single [!INCLUDE[tsql](../../includes/tsql_md.md)] job step can contain multiple batches and embedded GO commands. For more information on creating a job, see [Creating Jobs](../../ssms/agent/create-jobs.md).  
+These job step scripts may call stored procedures and extended stored procedures. A single [!INCLUDE[tsql](../../includes/tsql-md.md)] job step can contain multiple batches and embedded GO commands. For more information on creating a job, see [Creating Jobs](../../ssms/agent/create-jobs.md).  
   
 **In This Topic**  
   
@@ -64,7 +64,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 5.  In the **Type** list, click **Transact-SQL Script (TSQL)**.  
   
-6.  In the **Command** box, type the [!INCLUDE[tsql](../../includes/tsql_md.md)] command batches, or click **Open** to select a [!INCLUDE[tsql](../../includes/tsql_md.md)] file to use as the command.  
+6.  In the **Command** box, type the [!INCLUDE[tsql](../../includes/tsql-md.md)] command batches, or click **Open** to select a [!INCLUDE[tsql](../../includes/tsql-md.md)] file to use as the command.  
   
 7.  Click **Parse** to check your syntax.  
   

@@ -41,7 +41,7 @@ A job step is an action that the job takes on a database or a server. Every job 
   
 -   Executable programs and operating system commands.  
   
--   [!INCLUDE[tsql](../../includes/tsql_md.md)] statements, including stored procedures and extended stored procedures.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, including stored procedures and extended stored procedures.  
   
 -   PowerShell scripts.  
   
@@ -62,7 +62,7 @@ Because job steps run in the context of a specific [!INCLUDE[msCoName](../../inc
   
 -   Executable programs and operating system commands.  
   
--   [!INCLUDE[tsql](../../includes/tsql_md.md)] statements.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tasks.  
   
@@ -86,18 +86,18 @@ When you use an executable program or an operating-system command as a job step,
     > You must provide the full path to the executable if the executable is not located in a directory specified in the system path or the path for the user that the job step runs as.  
   
 ## Transact-SQL Job Steps  
-When you create a [!INCLUDE[tsql](../../includes/tsql_md.md)] job step, you must:  
+When you create a [!INCLUDE[tsql](../../includes/tsql-md.md)] job step, you must:  
   
 -   Identify the database in which to run the job.  
   
--   Type the [!INCLUDE[tsql](../../includes/tsql_md.md)] statement to execute. The statement may call a stored procedure or an extended stored procedure.  
+-   Type the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to execute. The statement may call a stored procedure or an extended stored procedure.  
   
-Optionally, you can open an existing [!INCLUDE[tsql](../../includes/tsql_md.md)] file as the command for the job step.  
+Optionally, you can open an existing [!INCLUDE[tsql](../../includes/tsql-md.md)] file as the command for the job step.  
   
-[!INCLUDE[tsql](../../includes/tsql_md.md)] job steps do not use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxies. Instead, the job step runs as the owner of the job step, or as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account if the owner of the job step is a member of the sysadmin fixed server role. Members of the sysadmin fixed server role can also specify that [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps run under the context of another user by using the *database_user_name* parameter of the sp_add_jobstep stored procedure. For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] job steps do not use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxies. Instead, the job step runs as the owner of the job step, or as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account if the owner of the job step is a member of the sysadmin fixed server role. Members of the sysadmin fixed server role can also specify that [!INCLUDE[tsql](../../includes/tsql-md.md)] job steps run under the context of another user by using the *database_user_name* parameter of the sp_add_jobstep stored procedure. For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 > [!NOTE]  
-> A single [!INCLUDE[tsql](../../includes/tsql_md.md)] job step can contain multiple batches. [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps can contain embedded GO commands.  
+> A single [!INCLUDE[tsql](../../includes/tsql-md.md)] job step can contain multiple batches. [!INCLUDE[tsql](../../includes/tsql-md.md)] job steps can contain embedded GO commands.  
   
 ## PowerShell Scripting Job Steps  
 When you create a PowerShell script job step, you must specify one of two things as the command for the step:  
@@ -206,7 +206,7 @@ For more information about creating job steps that run [!INCLUDE[ssISnoversion](
 |**Description**|**Topic**|  
 |Describes how to create a job step with an executable program.|[Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Describes how to reset [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent permissions.|[Configure a User to Create and Manage SQL Server Agent Jobs](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|Describes how to create a [!INCLUDE[tsql](../../includes/tsql_md.md)] job step.|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
+|Describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] job step.|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
 |Describes how to define options for Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent Transact-SQL job steps.|[Define Transact-SQL Job Step Options](../../ssms/agent/define-transact-sql-job-step-options.md)|  
 |Describes how to create an ActiveX script job step.|[Create an ActiveX Script Job Step](../../ssms/agent/create-an-activex-script-job-step.md)|  
 |Describes how to create and define [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job steps that execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Analysis Services commands and queries.|[Create an Analysis Services Job Step](../../ssms/agent/create-an-analysis-services-job-step.md)|  

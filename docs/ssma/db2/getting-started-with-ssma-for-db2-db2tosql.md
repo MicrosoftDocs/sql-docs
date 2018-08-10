@@ -66,7 +66,7 @@ Most metadata settings are read-only. However, you can alter the following metad
   
 -   In DB2 Metadata Explorer, you can alter procedures and type mappings. To convert the altered procedures and type mappings, make changes before you convert schemas.  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you can alter the [!INCLUDE[tsql](../../includes/tsql_md.md)] for stored procedures. To see these changes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you can alter the [!INCLUDE[tsql](../../includes/tsql-md.md)] for stored procedures. To see these changes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 Changes made in a metadata explorer are reflected in the project metadata, not in the source or target databases.  
   
@@ -92,7 +92,7 @@ The following table shows the SSMA menus.
 |Menu|Description|  
 |----|-----------|  
 |**File**|Contains commands for working with projects, connecting to DB2, and connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**Edit**|Contains commands for finding and working with text in the details pages, such as copying [!INCLUDE[tsql](../../includes/tsql_md.md)] from the SQL details pane. Also contains the **Manage Bookmarks** option, where you will be able to see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.|  
+|**Edit**|Contains commands for finding and working with text in the details pages, such as copying [!INCLUDE[tsql](../../includes/tsql-md.md)] from the SQL details pane. Also contains the **Manage Bookmarks** option, where you will be able to see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.|  
 |**View**|Contains the **Synchronize Metadata Explorers** command. That synchronizes the objects between DB2 Metadata Explorer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer. Also contains commands to show and hide the **Output** and **Error List** panes and an option **Layouts** to manage the Layouts.|  
 |**Tools**|Contains commands to create reports, and migrate objects and data. Also provides access to the **Global Settings** and **Project Settings** dialog boxes.|  
 |**Help**|Provides access to SSMA Help and to the **About** dialog box.|  

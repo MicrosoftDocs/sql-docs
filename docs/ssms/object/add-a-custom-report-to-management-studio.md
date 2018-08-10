@@ -45,7 +45,7 @@ This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../inclu
   
 10. On the **Select the Data Source** page, click **Next**.  
   
-11. On the **Design the Query** page, in the **Query string** box, type the following [!INCLUDE[tsql](../../includes/tsql_md.md)] statement that lists the current connections to your [!INCLUDE[ssDE](../../includes/ssde_md.md)], and then click **Next**. The Report Wizard Query string box will not accept report parameters. More complex custom reports must be created manually.  
+11. On the **Design the Query** page, in the **Query string** box, type the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that lists the current connections to your [!INCLUDE[ssDE](../../includes/ssde_md.md)], and then click **Next**. The Report Wizard Query string box will not accept report parameters. More complex custom reports must be created manually.  
   
     **SELECT session_id, net_transport FROM sys.dm_exec_connections;**  
   

@@ -147,7 +147,7 @@ After you export metadata about Access databases, you can query the metadata. Th
 5.  Press the F5 key to run the query.  
   
 ## Query Examples  
-Before you run any of the following queries, you should run a USE *database_name* query to make sure the queries are run against the database that contains the exported metadata. For example, if you exported metadata to a database named MyAccessMetadata, you would add the following at the beginning of the [!INCLUDE[tsql](../../includes/tsql_md.md)] code:  
+Before you run any of the following queries, you should run a USE *database_name* query to make sure the queries are run against the database that contains the exported metadata. For example, if you exported metadata to a database named MyAccessMetadata, you would add the following at the beginning of the [!INCLUDE[tsql](../../includes/tsql-md.md)] code:  
   
 ```  
 USE MyAccessMetadata;  

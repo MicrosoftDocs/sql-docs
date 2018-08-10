@@ -378,7 +378,7 @@ Setting this option to ON has no effect unless AUTO_UPDATE_STATISTICS is set to 
 By default, the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF, and the query optimizer updates statistics synchronously.  
   
 OFF  
-Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistcs updates to complete before it compiles queries.  
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistics updates to complete before it compiles queries.  
   
 Setting this option to OFF has no effect unless AUTO_UPDATE_STATISTICS is set to ON.  
   
@@ -393,15 +393,15 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-d
   
 FORCE_LAST_GOOD_PLAN = { ON | OFF }  
 ON  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
 OFF  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.
 
 **\<change_tracking_option> ::=**  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this topic.  
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.  
   
 ON  
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.  
@@ -1106,7 +1106,7 @@ For more information about indirect checkpoints, see [Database Checkpoints](../.
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there is any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.  
   
 > [!NOTE]  
->  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this topic.  
+>  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this article.  
   
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
 Specifies whether to roll back after the specified number of seconds or immediately.  
@@ -1513,7 +1513,7 @@ Setting this option to ON has no effect unless AUTO_UPDATE_STATISTICS is set to 
 By default, the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF, and the query optimizer updates statistics synchronously.  
   
 OFF  
-Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistcs updates to complete before it compiles queries.  
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistics updates to complete before it compiles queries.  
   
 Setting this option to OFF has no effect unless AUTO_UPDATE_STATISTICS is set to ON.  
   
@@ -1558,7 +1558,7 @@ ON
 Automatically drops duplicate or no longer useful indexes to the performance workload.   
   
 OFF  
-Does not automatically drop missing inexes on the database.  
+Does not automatically drop missing indexes on the database.  
   
 Enables or disables automatic plan correction `FORCE_LAST_GOOD_PLAN` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).  
   
@@ -1567,10 +1567,10 @@ DEFAULT
 Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.  
   
 ON  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
   
 OFF  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.  
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.  
   
 **\<change_tracking_option> ::=**  
   
@@ -2294,7 +2294,7 @@ Setting this option to ON has no effect unless AUTO_UPDATE_STATISTICS is set to 
 By default, the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF, and the query optimizer updates statistics synchronously.  
   
 OFF  
-Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistcs updates to complete before it compiles queries.  
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistics updates to complete before it compiles queries.  
   
 Setting this option to OFF has no effect unless AUTO_UPDATE_STATISTICS is set to ON.  
   
@@ -2309,9 +2309,9 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-d
   
 FORCE_LAST_GOOD_PLAN = { ON | OFF }  
 ON  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
 OFF  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.
 
 **\<change_tracking_option> ::=**  
   

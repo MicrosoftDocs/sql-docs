@@ -681,7 +681,7 @@ GO
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql-file-and-filegroup-options.mdd?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* SQL DB<br />Managed Instance</th>
 > </tr>
 > </table>

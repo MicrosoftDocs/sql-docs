@@ -16,7 +16,7 @@ ms.author: maghan
 manager: craigg
 ---
 # Create a Drillthrough (RDLC) Report with Parameters using ReportViewer (SSRS Tutorial)
-  A [drillthrough](http://technet.microsoft.com/library/ff519554.aspx) report is a report that a user opens by clicking a link within another report. Drillthrough reports commonly contain details about an item that is contained in an original summary report. This tutorial will walk you through the following lessons of creating a drillthrough report with parameters and a query, in [local mode reporting](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+  A [drillthrough](http://technet.microsoft.com/library/ff519554.aspx) report is a report that a user opens by clicking a link within another report. Drillthrough reports commonly contain details about an item that is contained in an original summary report. This tutorial will walk you through the following lessons of creating a drillthrough report with parameters and a query, in [local mode reporting](report-server-sharepoint/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
   
 ## Requirements  
  To use this walkthrough, you must have access to the **AdventureWorks2008** sample database. The query used in this walkthrough will also work with **AdventureWorks2012** database. For more information about how to get the **AdventureWorks2008** sample database, see [Walkthrough: Installing the AdventureWorks Database](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) for Microsoft Visual Studio 2010.  

@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
+monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions" 
 ---
 # BACKUP DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

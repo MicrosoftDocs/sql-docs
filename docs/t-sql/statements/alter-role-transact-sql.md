@@ -118,7 +118,7 @@ Additionally, to change the membership in a fixed database role you need:
 ### A. Change the name of a database role  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- The following example changes the name of role `buyers` to `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ The following example changes the name of role `buyers` to `purchasing`.   This example can be executed in the [AdventureWorks](http://msftdbprodsamples.codeplex.com/) sample database.
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -127,7 +127,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### B. Add or remove role members  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry.   This example can be executed in the [AdventureWorks](http://msftdbprodsamples.codeplex.com/) sample database.
   
 ```sql  
 CREATE ROLE Sales;  

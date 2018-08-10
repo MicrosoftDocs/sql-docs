@@ -132,7 +132,7 @@ For more information about connecting to [!INCLUDE[ssNoVersion](../../includes/s
 Each time you export metadata, SSMA appends the data to the inventory. Existing data in the inventory is not updated or deleted.  
   
 ## Querying the Exported Metadata  
-After you export metadata about Access databases, you can query the metadata. The following instructions describe to use the Query Editor window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] to run queries.  
+After you export metadata about Access databases, you can query the metadata. The following instructions describe to use the Query Editor window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to run queries.  
   
 **To query metadata**  
   

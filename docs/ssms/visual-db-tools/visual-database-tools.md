@@ -18,7 +18,7 @@ manager: craigg
 ---
 # Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] includes visual designers for building [!INCLUDE[tsql](../../includes/tsql_md.md)] queries, tables, and diagramming databases.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] includes visual designers for building [!INCLUDE[tsql](../../includes/tsql_md.md)] queries, tables, and diagramming databases.  
   
 ## Related Tasks  
 Use the following tasks to get started with Visual Database Tools:  

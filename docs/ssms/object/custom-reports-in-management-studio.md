@@ -22,7 +22,7 @@ manager: craigg
 ---
 # Custom Reports in Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], many Object Explorer nodes display a set of standard reports that are created by [!INCLUDE[msCoName](../../includes/msconame_md.md)]. These reports summarize typically requested server information. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, administrators can run custom reports that were created in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] from [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], many Object Explorer nodes display a set of standard reports that are created by [!INCLUDE[msCoName](../../includes/msconame_md.md)]. These reports summarize typically requested server information. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, administrators can run custom reports that were created in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## Implementation  
 Custom reports are stored as report definition (.rdl) files and are created by using Report Definition Language (RDL). RDL contains data retrieval and layout information for a report in an XML format. RDL is an open schema. Developers can extend RDL with additional attributes and elements. Reports can execute any valid [!INCLUDE[tsql](../../includes/tsql_md.md)] statement within the report.  
@@ -30,7 +30,7 @@ Custom reports are stored as report definition (.rdl) files and are created by u
 If Object Explorer is connected to a server, custom reports can execute in the context of the current Object Explorer selection if the reports reference report parameters of that node. This enables a report to use the current context, such as the current database; or a consistent context, such as specifying a designated database as part of the [!INCLUDE[tsql](../../includes/tsql_md.md)] statement that is contained in the custom report.  
   
 ## Running a Custom Report  
-You can run a custom report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] in the following ways:  
+You can run a custom report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in the following ways:  
   
 -   Right-click a node in Object Explorer, point to **Reports** and left-click **Custom Reports**. In the **Open File** dialog box, locate a folder that contains .rdl files, and then open the appropriate report file.  
   
@@ -39,7 +39,7 @@ You can run a custom report in [!INCLUDE[ssManStudio](../../includes/ssmanstudio
 ## Limitations  
 When you work with custom reports, consider the following limitations:  
   
--   To prevent the unintended execution of malicious code, [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] cannot be configured to automatically run a report, even if the file system is configured to associate .rdl files with [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]. Reports cannot be programmatically executed in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] and cannot run from the command line through [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+-   To prevent the unintended execution of malicious code, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] cannot be configured to automatically run a report, even if the file system is configured to associate .rdl files with [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Reports cannot be programmatically executed in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and cannot run from the command line through [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 -   You can run custom reports in a context that does not produce the expected values. For example, you can run a report about replication in the context of a database that is not involved in replication, or run a report as a user who does not have permission to access information that is required to generate an accurate report. The creator of the custom report is responsible for the validity of the report structure and its context.  
   

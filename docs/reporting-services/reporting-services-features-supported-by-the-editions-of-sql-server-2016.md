@@ -94,12 +94,12 @@ To navigate the table for a SQL Server technology, click on its link:
 |Tool Name|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl and .rds)|Yes|Yes|||||Yes|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|Yes||||||Yes|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|Yes||||||Yes|  
 |Power BI apps for mobile devices (iOS, Windows 10, Android) (.rsmobile)|Yes||||||Yes|  
   
 > [!NOTE]  
 > 1.  The above table identifies the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions that are required to enable these client tools; however these tools can access data hosted on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] is the single point for creation of mobile reports. Connect to  a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server to access data sources and create reports. Then publish them to the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server for others in the organization to access, either on the server or on mobile devices. You can also use [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] stand alone with local data sources  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] is the single point for creation of mobile reports. Connect to  a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server to access data sources and create reports. Then publish them to the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server for others in the organization to access, either on the server or on mobile devices. You can also use [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] stand alone with local data sources  
 > 3.  Whether you are using  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] on-premises, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] in the cloud, or both as your report delivery solution you only need one mobile app to access dashboards and mobile reports on mobile devices. The [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] apps are available for download from the Windows, iOS, or Android app stores.  
 
 ## Next steps

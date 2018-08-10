@@ -103,11 +103,11 @@ If you want to save [!INCLUDE[tsql](../../includes/tsql_md.md)] definitions of t
     SSMA will append the .sql file name extension.  
   
 ### Modifying Scripts  
-After you have saved the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure object definitions as a script, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] to modify the script.  
+After you have saved the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure object definitions as a script, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to modify the script.  
   
 **To modify a script**  
   
-1.  On the [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] **File** menu, point to **Open**, and then click **File**.  
+1.  On the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **File** menu, point to **Open**, and then click **File**.  
   
 2.  In the **Open** dialog box, locate and select your script file, and then click **OK**.  
   
@@ -118,11 +118,11 @@ After you have saved the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md
 4.  To save the script, on the File menu, select **Save**.  
   
 ### Running Scripts  
-You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **To run a script**  
   
-1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **File** menu, point to **Open** and then click **File**.  
+1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **File** menu, point to **Open** and then click **File**.  
   
 2.  In the **Open** dialog box, locate and select your script file, and then click **OK**.  
   
@@ -130,7 +130,7 @@ You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](..
   
 4.  To run a set of statements, select the statements in the query editor window, and then press the **F5** key.  
   
-For more information about how to use the query editor to run scripts, see "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] Query" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+For more information about how to use the query editor to run scripts, see "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] Query" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   
 You can also run scripts from the command line by using the **sqlcmd** utility, and from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. For more information about **sqlcmd**, see "sqlcmd Utility" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, see "Automating Administrative Tasks ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   

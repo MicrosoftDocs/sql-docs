@@ -69,11 +69,11 @@ To save [!INCLUDE[tsql](../../includes/tsql_md.md)] definitions of the converted
 2.  In the **Save As** dialog box, locate the folder where you want to save the script, enter a file name in the **File name** box, and then click OK SSMA will append the .sql file name extension.  
   
 ### Modifying Scripts  
-After you have saved the SQL Server object definitions as one or more scripts, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] to view and modify the scripts.  
+After you have saved the SQL Server object definitions as one or more scripts, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view and modify the scripts.  
   
 **To modify a script**  
   
-1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **File** menu, point to **Open**, and then click **File**.  
+1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **File** menu, point to **Open**, and then click **File**.  
   
 2.  In the **Open** dialog box, select your script file, then click OK.
   
@@ -84,11 +84,11 @@ After you have saved the SQL Server object definitions as one or more scripts, y
 4.  To save the script, on the File menu click **Save**.  
   
 ### Running Scripts  
-You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **To run a script**  
   
-1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **File** menu, point to **Open**, and then click **File**.  
+1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **File** menu, point to **Open**, and then click **File**.  
   
 2.  In the **Open** dialog box, select your script file, and then click OK  
   
@@ -96,7 +96,7 @@ You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](..
   
 4.  To run a set of statements, select the statements in the query editor window, and then press the **F5** key.  
   
-For more information about how to use the query editor to run scripts, see "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] Query" in SQL Server Books Online.  
+For more information about how to use the query editor to run scripts, see "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] Query" in SQL Server Books Online.  
   
 You can also run scripts from the command line by using the **sqlcmd** utility, and from the SQL Server Agent. For more information about **sqlcmd**, see "sqlcmd Utility" in SQL Server Books Online. For more information about SQL Server Agent, see "Automating Administrative Tasks (SQL Server Agent)" in SQL Server Books Online.  
   

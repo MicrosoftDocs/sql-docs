@@ -26,7 +26,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 **In This Topic**  
   
@@ -42,7 +42,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent can run a job on a schedule, in response to a specific event, or on demand. For example, if you want to back up all the company servers every weekday after hours, you can automate this task. Schedule the backup to run after 22:00 Monday through Friday; if the backup encounters a problem, SQL Server Agent can record the event and notify you.  
   
 > [!NOTE]  
-> By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service is disabled when [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] is installed unless the user explicitly chooses to autostart the service.  
+> By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service is disabled when [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is installed unless the user explicitly chooses to autostart the service.  
   
 ## <a name="Components"></a>SQL Server Agent Components  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent uses the following components to define the tasks to be performed, when to perform the tasks, and how to report the success or failure of the tasks.  
@@ -158,7 +158,7 @@ Use the following steps to configure [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 1.  Establish which administrative tasks or server events occur regularly and whether these tasks or events can be administered programmatically. A task is a good candidate for automation if it involves a predictable sequence of steps and occurs at a specific time or in response to a specific event.  
   
-2.  Define a set of jobs, schedules, alerts, and operators by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects (SMO). For more information, see [Create Jobs](../../ssms/agent/create-jobs.md).  
+2.  Define a set of jobs, schedules, alerts, and operators by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects (SMO). For more information, see [Create Jobs](../../ssms/agent/create-jobs.md).  
   
 3.  Run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs you have defined.  
   

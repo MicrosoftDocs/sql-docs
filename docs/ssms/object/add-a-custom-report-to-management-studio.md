@@ -20,7 +20,7 @@ manager: craigg
 ---
 # Add a Custom Report to Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] report that is saved as an .rdl file, and then add that rdl file to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] as a custom report. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] can create a wide variety of sophisticated reports. To create a report by using this topic, you must have [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] installed on the computer. You do not have to install [!INCLUDE[ssRS](../../includes/ssrs_md.md)] on [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to run a custom report using [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] report that is saved as an .rdl file, and then add that rdl file to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as a custom report. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] can create a wide variety of sophisticated reports. To create a report by using this topic, you must have [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] installed on the computer. You do not have to install [!INCLUDE[ssRS](../../includes/ssrs_md.md)] on [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to run a custom report using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  
 ### To create a simple report saved as an .rdl file  
@@ -53,13 +53,13 @@ This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../inclu
   
 13. On the **Completing the Wizard** page, in the **Report name** box, type **ConnectionsReport**, and then click **Finish** to create and save the report.  
   
-14. Close [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio_md.md)].  
+14. Close [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 15. Copy **ConnectionsReport.rdl** to a folder that you created on the database server for custom reports.  
   
 ### To add a report to Management Studio  
   
--   In [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], right-click a node in Object Explorer, point to **Reports**, click **Custom Reports**. In the **Open File** dialog box, locate the custom reports folder and select the **ConnectionsReport.rdl** file, and then click **Open**.  
+-   In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], right-click a node in Object Explorer, point to **Reports**, click **Custom Reports**. In the **Open File** dialog box, locate the custom reports folder and select the **ConnectionsReport.rdl** file, and then click **Open**.  
   
     When a new custom report is first opened from an Object Explorer node, the custom report is added to the most recently used list under **Custom Reports** on the shortcut menu of that node. When a standard report is opened for the first time, it will also appear on the most recently used list under **Custom Reports**. If a custom report file is deleted, the next time that the item is selected, a prompt will appear to delete the item from the most recently used list.  
   

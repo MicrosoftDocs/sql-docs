@@ -51,7 +51,7 @@ A job step is an action that the job takes on a database or a server. Every job 
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tasks.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] packages.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
   
 Every job step runs in a specific security context. If the job step specifies a proxy, the job step runs in the security context of the credential for the proxy. If a job step does not specify a proxy, the job step runs in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account. Only members of the sysadmin fixed server role can create jobs that do not explicitly specify a proxy.  
   
@@ -71,7 +71,7 @@ Only job steps that are executed by users who are members of the sysadmin fixed 
 Job step logs are automatically deleted when jobs or job steps are deleted.  
   
 > [!NOTE]  
-> Replication task and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] package job step logging is handled by their respective subsystem. You cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent to configure jog step logging for these types of job steps.  
+> Replication task and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package job step logging is handled by their respective subsystem. You cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent to configure jog step logging for these types of job steps.  
   
 ## Executable Programs and Operating-System Commands As Job Steps  
 Executable programs and operating-system commands can be used as job steps. These files may have .bat, .cmd, .com, or .exe file extensions.  
@@ -161,7 +161,7 @@ When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]
   
 -   Identify the database OLAP server in which to run the job step.  
   
--   Type the statement to execute. The statement must be an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** method. The statement may not contain a complete SOAP envelope or an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** method. Notice that, while [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job steps do not.  
+-   Type the statement to execute. The statement must be an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** method. The statement may not contain a complete SOAP envelope or an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** method. Notice that, while [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job steps do not.  
   
 ### Analysis Services Query Job Steps  
 When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] query job step, you must:  
@@ -173,7 +173,7 @@ When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]
 For more information on MDX, see [MDX Statement Fundamentals (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ## Integration Services Packages  
-When you create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] package job step, you must do the following:  
+When you create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package job step, you must do the following:  
   
 -   Identify the source of the package.  
   
@@ -197,7 +197,7 @@ When you create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]
   
 Note that if you deployed the package to the SSIS Catalog and you specify **SSIS Catalog** as the package source, much of this configuration information is obtained automatically from the package. Under the **Configuration** tab you can specify the environment, parameter values, connection manager values, property overrides, and whether the package runs in a 32-bit runtime environment.  
   
-For more information about creating job steps that run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] packages, see [SQL Server Agent Jobs for Packages](http://msdn.microsoft.com/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
+For more information about creating job steps that run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, see [SQL Server Agent Jobs for Packages](http://msdn.microsoft.com/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
   
 ## Related Tasks  
   

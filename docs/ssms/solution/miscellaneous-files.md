@@ -29,7 +29,7 @@ There are a number of reasons why it is useful to be able to add miscellaneous f
   
 Miscellaneous files provide flexibility. For example, suppose you have a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Scripts Project that has several scripts for creation of tables and stored procedures in your database. You also have several data files for the tables with file extensions .BCP and execution instructions in a README.TXT file. You can attach the data and the README files as miscellaneous files to the project to take advantage of source control and other features of the project system.  
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] menus and toolbars change according to the format of the file you open. When you open a text file, for example, the Text Editor toolbar appears. If you open an XML Schema file, the XML Schema toolbar appears. While editing your XML Schema, the Text Editor toolbar is unavailable. When you switch between a project file and a miscellaneous file, all project-related commands and toolbars are replaced by those relevant to the miscellaneous file.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] menus and toolbars change according to the format of the file you open. When you open a text file, for example, the Text Editor toolbar appears. If you open an XML Schema file, the XML Schema toolbar appears. While editing your XML Schema, the Text Editor toolbar is unavailable. When you switch between a project file and a miscellaneous file, all project-related commands and toolbars are replaced by those relevant to the miscellaneous file.  
   
 ## See Also  
 [Files That Manage Solutions and Projects](../../ssms/solution/files-that-manage-solutions-and-projects.md)  

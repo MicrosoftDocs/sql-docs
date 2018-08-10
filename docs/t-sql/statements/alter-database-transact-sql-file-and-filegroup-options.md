@@ -671,7 +671,7 @@ GO
 [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
 [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)    
   
-:: moniker-end
+::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]

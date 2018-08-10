@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|xml"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -40,7 +39,7 @@ manager: craigg
   
  You cannot use these functions to reference data in columns or variables of the **xml**, CLR user-defined types, datetime, smalldatetime, **text**, **ntext**, **sql_variant**, and **image** types.  
   
- Also, this binding is for read-only purposes. That is, you cannot write data in columns that use these functions. For example, sql:variable("@x")="*some expression"* is not allowed.  
+ Also, this binding is for read-only purposes. That is, you cannot write data in columns that use these functions. For example, sql:variable("\@x")="*some expression"* is not allowed.  
   
 ## Example: Cross-domain Query Using sql:variable()  
  This example shows how **sql:variable()** can enable an application to parameterize a query. The ISBN is passed in by using a SQL variable @isbn. By replacing the constant with **sql:variable()**, the query can be used to search for any ISBN and not just the one whose ISBN is 0-7356-1588-2.  

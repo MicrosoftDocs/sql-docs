@@ -15,6 +15,7 @@ ms.topic: "reference"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Choosing between URL access and SOAP in Reporting Services
 

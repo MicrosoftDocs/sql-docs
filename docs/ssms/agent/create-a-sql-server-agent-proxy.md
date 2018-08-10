@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create a SQL Server Agent Proxy | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2017"
@@ -122,9 +122,9 @@ A [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxy account 
   
 For more information, see:  
   
--   [CREATE CREDENTIAL (Transact-SQL)](http://msdn.microsoft.com/en-us/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)  
+-   [CREATE CREDENTIAL (Transact-SQL)](http://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)  
   
--   [sp_add_proxy (Transact-SQL)](http://msdn.microsoft.com/en-us/cb59df37-f103-439b-bec1-2871fb669a8b)  
+-   [sp_add_proxy (Transact-SQL)](http://msdn.microsoft.com/cb59df37-f103-439b-bec1-2871fb669a8b)  
   
--   [sp_grant_proxy_to_subsystem (Transact-SQL)](http://msdn.microsoft.com/en-us/866aaa27-a1e0-453a-9b1b-af39431ad9c2)  
+-   [sp_grant_proxy_to_subsystem (Transact-SQL)](http://msdn.microsoft.com/866aaa27-a1e0-453a-9b1b-af39431ad9c2)  
   

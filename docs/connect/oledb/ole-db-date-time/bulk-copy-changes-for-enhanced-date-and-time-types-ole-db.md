@@ -2,9 +2,10 @@
 title: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB) | Microsoft Docs"
 description: "Bulk copy changes for enhanced date and time types (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.component: "oledb|ole-db-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -18,6 +19,8 @@ manager: craigg
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   This article describes the date/time enhancements to support bulk copy functionality in OLE DB Driver for SQL Server.  
   

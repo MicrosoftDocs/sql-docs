@@ -1,0 +1,92 @@
+- name: Overview
+  href: dta-utility.md
+- name: XML Input File Reference (Database Engine Tuning Advisor)
+  href: xml-input-file-reference-database-engine-tuning-advisor.md
+  items:
+  - name: XML Input File Samples (DTA)
+    href: xml-input-file-samples-dta.md
+    items:
+    - name: Simple XML Input File Sample (DTA)
+      href: simple-xml-input-file-sample-dta.md
+    - name: XML Input File Sample with Inline Workload (DTA)
+      href: xml-input-file-sample-with-inline-workload-dta.md
+    - name: XML Input File Sample with User-specified Configuration (DTA)
+      href: xml-input-file-sample-with-user-specified-configuration-dta.md
+  - name: Column Element for Index (DTA)
+    href: column-element-for-index-dta.md
+  - name: Configuration Element (DTA)
+    href: configuration-element-dta.md
+  - name: Create Element (DTA)
+    href: create-element-dta.md
+  - name: Database Element for Configuration (DTA)
+    href: database-element-for-configuration-dta.md
+  - name: Database Element for Server (DTA)
+    href: database-element-for-server-dta.md
+  - name: Database Element for Workload (DTA)
+    href: database-element-for-workload-dta.md
+  - name: DatabaseToConnect Element (DTA)
+    href: databasetoconnect-element-dta.md
+  - name: DropOnlyMode Element (DTA)
+    href: droponlymode-element-dta.md
+  - name: DTAInput Element (DTA)
+    href: dtainput-element-dta.md
+  - name: DTAXML Element (DTA)
+    href: dtaxml-element-dta.md
+  - name: EventString Element (DTA)
+    href: eventstring-element-dta.md
+  - name: FeatureSet Element (DTA)
+    href: featureset-element-dta.md
+  - name: File Element (DTA)
+    href: file-element-dta.md
+  - name: Filegroup Element for Index (DTA)
+    href: filegroup-element-for-index-dta.md
+  - name: Index Element (DTA)
+    href: index-element-dta.md
+  - name: KeepExisting Element (DTA)
+    href: keepexisting-element-dta.md
+  - name: Name Element for Column (DTA)
+    href: name-element-for-column-dta.md
+  - name: Name Element for Database (DTA)
+    href: name-element-for-database-dta.md
+  - name: Name Element for Index (DTA)
+    href: name-element-for-index-dta.md
+  - name: Name Element for Schema (DTA)
+    href: name-element-for-schema-dta.md
+  - name: Name Element for Server (DTA)
+    href: name-element-for-server-dta.md
+  - name: Name Element for Table (DTA)
+    href: name-element-for-table-dta.md
+  - name: OnlineIndexOperation Element (DTA)
+    href: onlineindexoperation-element-dta.md
+  - name: Partitioning Element (DTA)
+    href: partitioning-element-dta.md
+  - name: Recommendation Element (DTA)
+    href: recommendation-element-dta.md
+  - name: Schema Element for Database (DTA)
+    href: schema-element-for-database-dta.md
+  - name: Server Element (DTA)
+    href: server-element-dta.md
+  - name: Server Element for Configuration (DTA)
+    href: server-element-for-configuration-dta.md
+  - name: StorageBoundInMB Element (DTA)
+    href: storageboundinmb-element-dta.md
+  - name: Table Element for Schema (DTA)
+    href: table-element-for-schema-dta.md
+  - name: TestServer Element (DTA)
+    href: testserver-element-dta.md
+  - name: TuningOptions Element (DTA)
+    href: tuningoptions-element-dta.md
+  - name: TuningTimeInMin Element (DTA)
+    href: tuningtimeinmin-element-dta.md
+  - name: Workload Element (DTA)
+    href: workload-element-dta.md
+- name: "Tutorial: Database Engine Tuning Advisor"
+  href: tutorial-database-engine-tuning-advisor.md
+  items:
+  - name: "Lesson 1: Basic Navigation in Database Engine Tuning Advisor"
+    href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
+  - name: "Lesson 2: Using Database Engine Tuning Advisor"
+    href: lesson-2-using-database-engine-tuning-advisor.md
+  - name: "Lesson 3: Using the dta Command Prompt Utility"
+    href: lesson-3-using-the-dta-command-prompt-utility.md
+

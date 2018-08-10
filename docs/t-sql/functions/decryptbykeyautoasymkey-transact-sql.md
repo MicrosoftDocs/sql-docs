@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/09/2015"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "DECRYPTBYKEYAUTOASYMSKEY function"
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)

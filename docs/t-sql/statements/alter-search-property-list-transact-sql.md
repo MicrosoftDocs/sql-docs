@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "ALTER SEARCH PROPERTY LIST statement"
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)

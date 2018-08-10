@@ -76,4 +76,4 @@ while row:
   `      
   ## Next steps  
   
-For more information, see the [Python Developer Center](https://azure.microsoft.com/en-us/develop/python/).
+For more information, see the [Python Developer Center](https://azure.microsoft.com/develop/python/).

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "local servers [SQL Server]"
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;SERVERNAME (Transact-SQL)
@@ -52,8 +51,8 @@ manager: craigg
 |--------------|------------------------|  
 |Default instance|'*servername*'|  
 |Named instance|'*servername*\\*instancename*'|  
-|fail over clustered instance - default instance|'*virtualservername*'|  
-|fail over clustered instance - named instance|'*virtualservername*\\*instancename*'|  
+|failover cluster instance - default instance|'*network_name_for_fci_in_wsfc*'|  
+|failover cluster instance - named instance|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
   
  Although the @@SERVERNAME function and the SERVERNAME property of SERVERPROPERTY function may return strings with similar formats, the information can be different. The SERVERNAME property automatically reports changes in the network name of the computer.  
   

@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.Management.Smo.DataType
+  commentId: T:Microsoft.SqlServer.Management.Smo.DataType
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.datatype(v=sql.120).aspx
+  name: DataType
+  name.vb: DataType
+  fullName: Microsoft.SqlServer.Management.Smo.DataType
+  fullName.vb: Microsoft.SqlServer.Management.Smo.DataType

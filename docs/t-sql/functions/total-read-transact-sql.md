@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "read activity since last started"
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;TOTAL_READ (Transact-SQL)

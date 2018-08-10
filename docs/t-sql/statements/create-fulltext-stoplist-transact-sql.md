@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -27,8 +26,8 @@ helpviewer_keywords:
   - "stopwords [full-text search]"
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE FULLTEXT STOPLIST (Transact-SQL)

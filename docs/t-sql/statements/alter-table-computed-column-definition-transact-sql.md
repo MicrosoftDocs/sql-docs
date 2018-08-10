@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "ALTER TABLE statement"
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 caps.latest.revision: 62
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER TABLE computed_column_definition (Transact-SQL)

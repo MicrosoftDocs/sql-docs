@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Modify the Target Servers for a Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -86,7 +86,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-For more information, see [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/en-us/485252cc-0081-490a-9bd1-cbbd68eea286).  
+For more information, see [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286).  
   
 ## See Also  
 [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  

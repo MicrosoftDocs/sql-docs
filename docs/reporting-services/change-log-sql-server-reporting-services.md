@@ -1,7 +1,7 @@
 ---
 title: "Change log for SQL Server Reporting Services (2017 and later) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/25/2018"
+ms.date: "04/26/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.component: "reporting-services"
@@ -14,8 +14,8 @@ ms.topic: "article"
 author: "casualoak"
 ms.author: "edugonz"
 manager: "kfile"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
-
 # Change log for SQL Server Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../includes/ssrs-appliesto-2017-and-later.md)] 

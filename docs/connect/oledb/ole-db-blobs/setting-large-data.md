@@ -2,9 +2,10 @@
 title: "Setting Large Data | Microsoft Docs"
 description: "Setting large data using OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.component: "oledb|ole-db-blobs"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -22,6 +23,8 @@ manager: craigg
 ---
 # Setting Large Data
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   With the OLE DB Driver for SQL Server, you can set BLOB data by passing a pointer to a consumer storage object.  
   

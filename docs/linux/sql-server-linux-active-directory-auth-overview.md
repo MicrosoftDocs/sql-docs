@@ -5,7 +5,7 @@ author: rothja
 ms.date: 02/23/2018
 ms.author: jroth 
 manager: craigg
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 
 ms.component: ""

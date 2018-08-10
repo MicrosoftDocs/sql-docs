@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "7/23/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "precedence [SQL Server], data types"
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Data type precedence (Transact-SQL)

@@ -49,7 +49,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
  [ **@server_name =** ] **'***server***'**  
- The name of the server at which to target the job. *server* is **nvarchar(30)**, with a default of N'(LOCAL)'. *server*can be either **(LOCAL)** for a local server, or the name of an existing target server.  
+ The name of the server at which to target the job. *server* is **nvarchar(30)**, with a default of N'(LOCAL)'. *server* can be either **(LOCAL)** for a local server, or the name of an existing target server.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

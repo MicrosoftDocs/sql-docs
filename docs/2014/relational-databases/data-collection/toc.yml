@@ -1,0 +1,33 @@
+- name: Data Collection
+  href: data-collection.md
+- name: Manage Data Collection
+  href: manage-data-collection.md
+  items:
+  - name: Configure the Management Data Warehouse (SQL Server Management Studio)
+    href: configure-the-management-data-warehouse-sql-server-management-studio.md
+  - name: Configure Properties of a Data Collector
+    href: configure-properties-of-a-data-collector.md
+  - name: Enable or Disable Data Collection
+    href: enable-or-disable-data-collection.md
+  - name: Start or Stop a Collection Set
+    href: start-or-stop-a-collection-set.md
+  - name: Use SQL Server Profiler to Create a SQL Trace Collection Set (SQL Server Management Studio)
+    href: use-sql-server-profiler-to-create-a-sql-trace-collection-set.md
+  - name: View Collection Set Logs (SQL Server Management Studio)
+    href: view-collection-set-logs-sql-server-management-studio.md
+  - name: View or Change Collection Set Schedules (SQL Server Management Studio)
+    href: view-or-change-collection-set-schedules-sql-server-management-studio.md
+  - name: View a Collection Set Report (SQL Server Management Studio)
+    href: view-a-collection-set-report-sql-server-management-studio.md
+  - name: Configure Data Collection Parameters (Transact-SQL)
+    href: configure-data-collection-parameters-transact-sql.md
+  - name: Create a Custom Collection Set That Uses the Generic T-SQL Query Collector Type (Transact-SQL)
+    href: create-custom-collection-set-generic-t-sql-query-collector-type.md
+  - name: Add a Collection Item to a Collection Set (Transact-SQL)
+    href: add-a-collection-item-to-a-collection-set-transact-sql.md
+- name: System Data Collection Set Reports
+  href: system-data-collection-set-reports.md
+- name: Management Data Warehouse
+  href: management-data-warehouse.md
+- name: Data Collector Security
+  href: data-collector-security.md

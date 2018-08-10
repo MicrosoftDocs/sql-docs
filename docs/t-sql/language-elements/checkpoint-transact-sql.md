@@ -3,8 +3,6 @@ title: "CHECKPOINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -28,9 +26,8 @@ helpviewer_keywords:
   - "manual checkpoints [SQL Server]"
   - "pages [SQL Server], checkpoints"
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-caps.latest.revision: 59
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # CHECKPOINT (Transact-SQL)

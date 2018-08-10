@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -39,8 +38,8 @@ helpviewer_keywords:
   - "remote service bindings [Service Broker], creating"
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)

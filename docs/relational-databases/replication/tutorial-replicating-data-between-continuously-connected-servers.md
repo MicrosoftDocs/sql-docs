@@ -7,8 +7,7 @@ ms.prod_service: "database-engine"
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
@@ -136,7 +135,8 @@ If your SQL Server Agent was not running when you created the publication, you'l
 
 !["Start" button and change in status message to show that the Snapshot Agent has run](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-If you see an error here, see [Troubleshooting Snapshot Agent errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent). 
+If you see an error here, see [Troubleshooting Snapshot Agent error](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent).
+
 
   
 ### Add the Distribution Agent login to the PAL  
@@ -233,7 +233,7 @@ In this section, you use tracer tokens to verify that changes are being replicat
 
 For more information, see: 
 - [Measure latency and validate connections for transactional replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [Troubleshooting transactional replication sync errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [Finding errors with the transactional replication agents](troubleshoot-tran-repl-errors.md)
 
 
 ## Next steps
@@ -243,5 +243,3 @@ The next article will teach you how to configure merge replication:
 
 > [!div class="nextstepaction"]
 > [Tutorial: Configure replication between a server and mobile clients (merge)](tutorial-replicating-data-with-mobile-clients.md)
-
-  

@@ -16,6 +16,7 @@ ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Develop with the REST APIs for Reporting Services
 

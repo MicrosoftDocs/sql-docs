@@ -2,9 +2,10 @@
 title: "Establishing a Connection to a Data Source | Microsoft Docs"
 description: "Establishing a connection to a data source using OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "06/11/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.component: "oledb|oledb-driver-for-sql-server"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -22,6 +23,8 @@ manager: craigg
 ---
 # Establishing a Connection to a Data Source
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   To access the OLE DB Driver for SQL Server, the consumer must first create an instance of a data source object by calling the **CoCreateInstance** method. A unique class identifier (CLSID) identifies each OLE DB provider. For the OLE DB Driver for SQL Server, the class identifier is CLSID_MSOLEDBSQL. You can also use the symbol MSOLEDBSQL_CLSID that will resolve to the OLE DB Driver for SQL Server that is used in the msoledbsql.h that you reference.  
   

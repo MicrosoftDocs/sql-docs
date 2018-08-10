@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "10/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -564,7 +563,7 @@ CREATE AVAILABILITY GROUP MyAg
          SESSION_TIMEOUT = 10  
          );
 GO  
-ALTER AVAILABIIITY GROUP [MyAg]
+ALTER AVAILABILITY GROUP [MyAg]
   ADD LISTENER ‘MyAgListenerIvP6’ ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
 GO  
 ```  

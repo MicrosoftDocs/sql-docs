@@ -29,7 +29,9 @@ manager: craigg
   
 -   [Transactional replication](#TransReplication)  
   
--   [Restoring or Attaching a Database Enabled for Change Data Capture](#RestoreOrAttach)  
+-   [Restoring or Attaching a Database Enabled for Change Data Capture](#RestoreOrAttach)
+
+-   [Contained Databases](#Contained)
   
 ##  <a name="ChangeTracking"></a> Change Tracking  
  Change data capture and [change tracking](../../relational-databases/track-changes/about-change-tracking-sql-server.md) can be enabled on the same database. No special considerations are required. For more information, see [Work with Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
@@ -73,6 +75,9 @@ manager: craigg
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   
  You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) to remove change data capture from a restored or attached database.  
+  
+##  <a name="Contained"></a> Contained Databases  
+ Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
   
 ## Change Data Capture and Always On  
  When you use Always On, change enumeration should be done on the Secondary replication to reduce the disk load on the primary.  

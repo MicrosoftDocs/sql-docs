@@ -2,9 +2,10 @@
 title: "OLE DB Table-Valued Parameter Type Support (Methods) | Microsoft Docs"
 description: "OLE DB Table-Valued Parameter type support (Methods)"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.component: "oledb|ole-db-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -18,6 +19,8 @@ manager: craigg
 ---
 # OLE DB Table-Valued Parameter Type Support (Methods)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The following standard OLE DB methods support table-valued parameters:  
   

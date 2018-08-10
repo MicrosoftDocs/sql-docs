@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/20/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -55,7 +54,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|Defaults to **attribute-centric** mapping.|  
 |**1**|Use the **attribute-centric** mapping. Can be combined with XML_ELEMENTS. In this case, **attribute-centric** mapping is applied first, and then **element-centric** mapping is applied for all columns that are not yet dealt with.|  
 |**2**|Use the **element-centric** mapping. Can be combined with XML_ATTRIBUTES. In this case, **attribute-centric** mapping is applied first, and then **element-centric** mapping is applied for all columns not yet dealt with.|  
-|**8**|Can be combined (logical OR) with XML_ATTRIBUTES or XML_ELEMENTS. In the context of retrieval, this flag indicates that the consumed data should not be copied to the overflow property **@mp:xmltext**.|  
+|**8**|Can be combined (logical OR) with XML_ATTRIBUTES or XML_ELEMENTS. In the context of retrieval, this flag indicates that the consumed data should not be copied to the overflow property **\@mp:xmltext**.|  
   
  *SchemaDeclaration*  
  Is the schema definition of the form: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [*ColPattern* | *MetaProperty*]...]  

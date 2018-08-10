@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "7/23/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "synonyms [SQL Server], data types"
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Data type synonyms (Transact-SQL)

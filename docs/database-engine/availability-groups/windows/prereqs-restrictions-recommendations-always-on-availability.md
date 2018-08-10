@@ -1,7 +1,7 @@
 ---
 title: "Prereqs, Restrictions, Recommendations - Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/02/2017"
+ms.date: "06/05/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -59,7 +59,8 @@ manager: craigg
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the system is not a domain controller.|Availability groups are not supported on domain controllers.|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that each computer is running Windows Server 2012 or later versions.|[Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that each computer is a node in a WSFC.|[Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the WSFC contains sufficient nodes to support your availability group configurations.|A cluster node can host only one availability replica for a given availability group. On a given cluster node, one or more instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can host availability replicas for many availability groups.<br /><br /> Ask your database administrators how many cluster nodes are required for to support the availability replicas of the planned availability groups.<br /><br /> [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the WSFC contains sufficient nodes to support your availability group configurations.|A cluster node can host one replica for an availability group. The same node cannot host two replicas from the same availability group. The cluster node can participate in multiple availability groups, with one replica from each group. <br /><br /> Ask your database administrators how many cluster nodes are required for to support the availability replicas of the planned availability groups.<br /><br /> [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+
   
 > [!IMPORTANT]  
 >  Also ensure that your environment is correctly configured for connecting to an availability group. For more information, see [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
@@ -164,8 +165,10 @@ manager: craigg
   
     -   If a given thread is idle for a while, it is released back into the general [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] thread pool. Normally, an inactive thread is released after ~15 seconds of inactivity. However, depending on the last activity, an idle thread might be retained longer.  
 
-    - A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. Redo threads are released after ~15 seconds of inactivity. 
-
+    -   A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. Serial Redo threads are released after ~15 seconds of inactivity. 
+    
+    > [!NOTE]
+    > Databases are chosen to go single-threaded based on their ascending database ID. As such, the database creation order should be considered for SQL Server instances that host more availability group databases than available worker threads. For example, on a system with 32 or more CPU cores, all databases starting with the 7th database that joined the availability group will be in serial redo mode irrespective of the actual redo workload for each database. Databases that require parallel redo should be added to the availability group first.    
   
 -   In addition, availability groups use unshared threads, as follows:  
   

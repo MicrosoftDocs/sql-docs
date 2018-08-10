@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: System.Windows.Forms.MessageBox
+  commentId: T:System.Windows.Forms.MessageBox
+  href: https://msdn.microsoft.com/library/system.windows.forms.messagebox.aspx
+  name: MessageBox
+  name.vb: MessageBox
+  fullName: System.Windows.Forms.MessageBox
+  fullName.vb: System.Windows.Forms.MessageBox

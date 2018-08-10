@@ -40,7 +40,7 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-=azuresqldb-current||sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
 # CREATE DATABASE
 

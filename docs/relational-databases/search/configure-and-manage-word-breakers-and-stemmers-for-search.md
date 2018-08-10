@@ -25,7 +25,7 @@ caps.latest.revision: 89
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Configure and Manage Word Breakers and Stemmers for Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 For additional options and more info, see [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
 
 ##  <a name="tshoot"></a> Troubleshoot word-breaking time-out errors  
- A word-breaking time-out error may occur in a variety of situations. or information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](https://msdn.microsoft.com/en-us/library/cc879279.aspx).
+ A word-breaking time-out error may occur in a variety of situations. or information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](https://msdn.microsoft.com/library/cc879279.aspx).
 
 ### Info about the MSSQLSERVER_30053 error
   

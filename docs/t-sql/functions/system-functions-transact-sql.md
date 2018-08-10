@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "functions [SQL Server], system"
 ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # System Functions (Transact-SQL)

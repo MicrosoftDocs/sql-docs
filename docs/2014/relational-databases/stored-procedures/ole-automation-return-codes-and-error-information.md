@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server], return codes"
   - "OLE Automation [SQL Server], errors"
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

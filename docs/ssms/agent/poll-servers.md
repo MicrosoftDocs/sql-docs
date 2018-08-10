@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Poll Servers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -60,7 +60,7 @@ If you use the following items, you do not have to post operations explicitly:
   
 -   [SQL Server Management Studio](../../ssms/agent/force-a-target-server-to-poll-the-master-server.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/085deef8-2709-4da9-bb97-9ab32effdacf)  
+-   [Transact-SQL](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf)  
   
 ## See Also  
 [Manage Events](../../ssms/agent/manage-events.md)  

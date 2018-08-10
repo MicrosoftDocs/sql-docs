@@ -1,7 +1,7 @@
 ﻿---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2018"
+ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -30,7 +30,7 @@ caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE LOGIN (Transact-SQL)
 
@@ -42,7 +42,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
   
 ## Syntax 
   
-```sql  
+```  
 -- Syntax for SQL Server  
 CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }  
   
@@ -247,7 +247,7 @@ GO
   
 ## Syntax 
   
-```sql  
+```
 -- Syntax for Azure SQL Database  
 CREATE LOGIN login_name  
  { WITH <option_list> }  
@@ -356,7 +356,7 @@ GO
   
 ## Syntax 
   
-```sql
+```
 -- Syntax for Azure SQL Data Warehouse  
 CREATE LOGIN login_name  
  { WITH <option_list> }  
@@ -458,7 +458,7 @@ GO
   
 ## Syntax 
   
-```sql
+```
 -- Syntax for Parallel Data Warehouse  
 CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }  
   

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Dynamic Data Masking | Microsoft Docs"
 ms.date: "04/23/2018"
 ms.prod: sql
@@ -10,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Dynamic Data Masking
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

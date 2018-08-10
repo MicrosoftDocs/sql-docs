@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create an Operator | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -154,5 +154,5 @@ Only members of the **sysadmin** fixed server role can create operators.
     GO  
     ```  
   
-For more information, see [sp_add_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/817cd98a-4dff-4ed8-a546-f336c144d1e0).  
+For more information, see [sp_add_operator (Transact-SQL)](http://msdn.microsoft.com/817cd98a-4dff-4ed8-a546-f336c144d1e0).  
   

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "members [SQL Server], verifying"
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 caps.latest.revision: 65
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # IS_SRVROLEMEMBER (Transact-SQL)

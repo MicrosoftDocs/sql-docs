@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "number of microseconds per tick"
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;TIMETICKS (Transact-SQL)

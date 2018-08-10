@@ -1,0 +1,207 @@
+- name: Change Data Capture
+  href: change-data-capture-ssis.md
+  items:
+  - name: Specify an Interval of Change Data
+    href: specify-an-interval-of-change-data.md
+  - name: Determine Whether the Change Data Is Ready
+    href: determine-whether-the-change-data-is-ready.md
+  - name: Prepare to Query for the Change Data
+    href: prepare-to-query-for-the-change-data.md
+  - name: Create the Function to Retrieve the Change Data
+    href: create-the-function-to-retrieve-the-change-data.md
+  - name: Retrieve and Understand the Change Data
+    href: retrieve-and-understand-the-change-data.md
+  - name: Process Inserts, Updates, and Deletes
+    href: process-inserts-updates-and-deletes.md
+  - name: Apply the Changes to the Destination
+    href: apply-the-changes-to-the-destination.md
+  - name: Perform an Incremental Load of Multiple Tables
+    href: perform-an-incremental-load-of-multiple-tables.md
+- name: Technical Reference
+  href: ../technical-reference-integration-services.md
+  items:
+  - name: Change Data Capture Designer for Oracle by Attunity
+    href: change-data-capture-designer-for-oracle-by-attunity.md
+  - name: The CDC Designer Console Introduction
+    href: the-cdc-designer-console-introduction.md
+  - name: Oracle CDC Instance Data Types
+    href: oracle-cdc-instance-data-types.md
+  - name: Error Handling
+    href: error-handling.md
+  - name: The Oracle CDC Instance
+    href: the-oracle-cdc-instance.md
+  - name: The Oracle CDC Databases
+    href: the-oracle-cdc-databases.md
+  - name: Change Data Capture Designer for Oracle by Attunity F1 Help Reference
+    href: change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
+    items:
+    - name: Access the CDC Designer Console
+      href: access-the-cdc-designer-console.md
+    - name: Manage a CDC Service
+      href: manage-a-cdc-service.md
+    - name: Manage a CDC Instance
+      href: manage-a-cdc-instance.md
+    - name: Use the New Instance Wizard
+      href: use-the-new-instance-wizard.md
+    - name: Create the SQL Server Change Database
+      href: create-the-sql-server-change-database.md
+    - name: Connect to an Oracle Source Database
+      href: connect-to-an-oracle-source-database.md
+    - name: Connect to Oracle
+      href: connect-to-oracle.md
+    - name: Select Oracle Tables and Columns
+      href: select-oracle-tables-and-columns.md
+    - name: Select Oracle Tables for Capturing Changes
+      href: select-oracle-tables-for-capturing-changes.md
+    - name: Make Changes to the Tables Selected for Capturing Changes
+      href: make-changes-to-the-tables-selected-for-capturing-changes.md
+    - name: Generate and Run the Supplemental Logging Script
+      href: generate-and-run-the-supplemental-logging-script.md
+    - name: Generate Mirror Tables and CDC Capture Instances
+      href: generate-mirror-tables-and-cdc-capture-instances.md
+    - name: Finish
+      href: finish.md
+    - name: Edit Instance Properties
+      href: edit-instance-properties.md
+    - name: Edit the Oracle Database Properties
+      href: edit-the-oracle-database-properties.md
+    - name: Edit Tables
+      href: edit-tables.md
+    - name: Add Tables to a CDC Instance
+      href: add-tables-to-a-cdc-instance.md
+    - name: Edit the Table Properties
+      href: edit-the-table-properties.md
+    - name: Review and Generate Supplemental Logging Scripts
+      href: review-and-generate-supplemental-logging-scripts.md
+    - name: Edit the Advanced Properties
+      href: edit-the-advanced-properties.md
+  - name: Change Data Capture Designer for Oracle by Attunity How to Guide
+    href: change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md
+    items:
+    - name: How to Manage a CDC Service from the CDC Designer Console
+      href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
+    - name: How to Create the SQL Server Change Database Instance
+      href: how-to-create-the-sql-server-change-database-instance.md
+    - name: How to Manage a CDC Instance
+      href: how-to-manage-a-cdc-instance.md
+    - name: How to Edit the CDC Instance Properties
+      href: how-to-edit-the-cdc-instance-properties.md
+    - name: How to View the CDC Instance Properties
+      href: how-to-view-the-cdc-instance-properties.md
+  - name: SQL Server Connection for Instance Creation
+    href: sql-server-connection-for-instance-creation.md
+  - name: Advanced Connection Properties
+    href: advanced-connection-properties.md
+  - name: Oracle Credentials for Running Script
+    href: oracle-credentials-for-running-script.md
+  - name: Oracle Supplemental Logging Script
+    href: oracle-supplemental-logging-script.md
+  - name: CDC Instance Deployment Script
+    href: cdc-instance-deployment-script.md
+  - name: SQL Server Connection Required Permissions for the CDC Designer
+    href: sql-server-connection-required-permissions-for-the-cdc-designer.md
+  - name: Change Data Capture Service for Oracle by Attunity
+    href: change-data-capture-service-for-oracle-by-attunity.md
+  - name: Change Data Capture Service for Oracle by Attunity System Architecture
+    href: change-data-capture-service-for-oracle-by-attunity-system-architecture.md
+  - name: The Oracle CDC Service
+    href: the-oracle-cdc-service.md
+    items:
+    - name: High Availability Support
+      href: high-availability-support.md
+    - name: SQL Server Connection Required Permissions for the CDC Service
+      href: sql-server-connection-required-permissions-for-the-cdc-service.md
+    - name: User Roles for Change Data Capture Service for Oracle by Attunity
+      href: user-roles.md
+    - name: Working with the Oracle CDC Service
+      href: working-with-the-oracle-cdc-service.md
+  - name: Change Data Capture Service for Oracle by Attunity F1 Help
+    href: change-data-capture-service-for-oracle-by-attunity-f1-help.md
+    items:
+    - name: Connection to SQL Server
+      href: connection-to-sql-server.md
+    - name: Connection to SQL Server for Delete
+      href: connection-to-sql-server-for-delete.md
+    - name: Create and Edit an Oracle CDC Service
+      href: create-and-edit-an-oracle-cdc-service.md
+    - name: Manage an Oracle CDC Service
+      href: manage-an-oracle-cdc-service.md
+    - name: Prepare SQL Server for CDC
+      href: prepare-sql-server-for-cdc.md
+    - name: Prepare SQL Server for Oracle CDC-View Script
+      href: prepare-sql-server-for-oracle-cdc-view-script.md
+    - name: Work with CDC Services
+      href: work-with-cdc-services.md
+  - name: Change Data Capture Service for Oracle by Attunity How to Guide
+    href: change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
+    items:
+    - name: How to Create and Edit a CDC Service
+      href: how-to-create-and-edit-a-cdc-service.md
+    - name: How to Manage a Local CDC Service
+      href: how-to-manage-a-local-cdc-service.md
+    - name: How to Prepare SQL Server for CDC
+      href: how-to-prepare-sql-server-for-cdc.md
+    - name: How to Use the CDC Service Command-Line Interface
+      href: how-to-use-the-cdc-service-command-line-interface.md
+    - name: How to Work with CDC Services
+      href: how-to-work-with-cdc-services.md
+  - name: Microsoft Connector 1.1 for SAP BW
+    href: ../microsoft-connector-for-sap-bw.md
+  - name: Installing the Microsoft Connector for 1.1 SAP BW
+    href: ../installing-the-microsoft-connector-for-sap-bw.md
+  - name: Microsoft Connector 1.1 for SAP BW Components
+    href: ../microsoft-connector-for-sap-bw-components.md
+    items:
+    - name: SAP BW Connection Manager
+      href: ../connection-manager/sap-bw-connection-manager.md
+    - name: SAP BW Source
+      href: ../data-flow/sap-bw-source.md
+    - name: SAP BW Destination
+      href: ../data-flow/sap-bw-destination.md
+  - name: Microsoft Connector 1.1 for SAP BW F1 Help
+    href: ../microsoft-connector-for-sap-bw-f1-help.md
+    items:
+    - name: SAP BW Connection Manager Editor
+      href: ../sap-bw-connection-manager-editor.md
+    - name: SAP BW Source Editor (Connection Manager Page)
+      href: ../data-flow/sap-bw-source-editor-connection-manager-page.md
+    - name: SAP BW Source Editor (Columns Page)
+      href: ../data-flow/sap-bw-source-editor-columns-page.md
+    - name: SAP BW Source Editor (Error Output Page)
+      href: ../data-flow/sap-bw-source-editor-error-output-page.md
+    - name: SAP BW Source Editor (Advanced Page)
+      href: ../data-flow/sap-bw-source-editor-advanced-page.md
+    - name: Look Up RFC Destination
+      href: ../data-flow/look-up-rfc-destination.md
+    - name: Look Up Process Chain
+      href: ../data-flow/look-up-process-chain.md
+    - name: Request Log
+      href: ../data-flow/request-log.md
+    - name: Preview
+      href: ../data-flow/preview.md
+    - name: SAP BW Destination Editor (Connection Manager Page)
+      href: ../data-flow/sap-bw-destination-editor-connection-manager-page.md
+    - name: SAP BW Destination Editor (Mappings Page)
+      href: ../data-flow/sap-bw-destination-editor-mappings-page.md
+    - name: SAP BW Destination Editor (Error Output Page)
+      href: ../data-flow/sap-bw-destination-editor-error-output-page.md
+    - name: SAP BW Destination Editor (Advanced Page)
+      href: ../data-flow/sap-bw-destination-editor-advanced-page.md
+    - name: Look Up InfoPackage
+      href: ../data-flow/look-up-infopackage.md
+    - name: Create New InfoObject
+      href: ../data-flow/create-new-infoobject.md
+    - name: Create InfoCube for Transaction Data
+      href: ../data-flow/create-infocube-for-transaction-data.md
+    - name: Look Up InfoObject
+      href: ../data-flow/look-up-infoobject.md
+    - name: Create InfoSource
+      href: ../data-flow/create-infosource.md
+    - name: Create InfoSource for Transaction Data
+      href: ../data-flow/create-infosource-for-transaction-data.md
+    - name: Create InfoSource for Master Data
+      href: ../data-flow/create-infosource-for-master-data.md
+    - name: Create InfoPackage
+      href: ../data-flow/create-infopackage.md
+  - name: Certification by SAP
+    href: ../certification-by-sap.md

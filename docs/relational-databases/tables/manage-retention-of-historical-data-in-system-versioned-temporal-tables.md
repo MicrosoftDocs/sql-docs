@@ -1,4 +1,4 @@
----
+﻿---
 title: "Manage Retention of Historical Data in System-Versioned Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2017"
@@ -14,7 +14,7 @@ caps.latest.revision: 23
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Manage Retention of Historical Data in System-Versioned Temporal Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -498,7 +498,7 @@ The cleanup task for the clustered columnstore removes entire row groups at once
 
 Excellent data compression and efficient retention cleanup makes clustered columnstore index a perfect choice for scenarios when your workload rapidly generates high amount of historical data. That pattern is typical for intensive transactional processing workloads that use temporal tables for change tracking and auditing, trend analysis, or IoT data ingestion.
 
-Please check [Manage historical data in Temporal Tables with retention policy](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy) for more details.
+Please check [Manage historical data in Temporal Tables with retention policy](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy) for more details.
 
 ## See Also  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   

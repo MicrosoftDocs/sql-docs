@@ -1,6 +1,0 @@
-# [Developing a Custom Destination Component](developing-a-custom-destination-component.md)
-# [Developing a Custom Source Component](developing-a-custom-source-component.md)
-# [Developing a Custom Transformation Component with Asynchronous Outputs](developing-a-custom-transformation-component-with-asynchronous-outputs.md)
-# [Developing a Custom Transformation Component with Synchronous Outputs](developing-a-custom-transformation-component-with-synchronous-outputs.md)
-# [Developing Data Flow Components with Multiple Inputs](developing-data-flow-components-with-multiple-inputs.md)
-# [Developing Specific Types of Data Flow Components](developing-specific-types-of-data-flow-components.md)

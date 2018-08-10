@@ -31,11 +31,10 @@ helpviewer_keywords:
   - "groups [SQL Server], tables divided into groups"
   - "summary values [SQL Server]"
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 80
-author: edmacauley
-ms.author: edmaca
+author: shkale-msft
+ms.author: shkale
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -444,7 +443,8 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
-FROM FactInternetSalesGROUP BY OrderDateKey, DueDateKey   
+FROM FactInternetSales
+GROUP BY OrderDateKey, DueDateKey   
 ORDER BY OrderDateKey;  
 ```  
   

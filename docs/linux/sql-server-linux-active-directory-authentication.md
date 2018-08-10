@@ -5,7 +5,7 @@ author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb 
 manager: craigg
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
@@ -164,7 +164,7 @@ For more information, see the Red Hat documentation for [Discovering and Joining
 ## <a id="createuser"></a> Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 
   > [!NOTE]
-  > The next steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
+  > The next steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
 
 1. On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. This example names the account "mssql," but the account name can be anything you like. You will be prompted to enter a new password for the account:
 
@@ -200,6 +200,9 @@ For more information, see the Red Hat documentation for [Discovering and Joining
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
+   > [!NOTE]
+   > SPNs can take several minutes to propagate through your domain, especially if the domain is large. If you receive the error, "kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/\*\*\<fully qualified domain name of host machine\>\*\*:\*\*\<tcp port\>\*\*\@CONTOSO.COM", please wait a few minutes and try again.
+
 2. Create a keytab file with **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** for the AD user you created in the previous step. When prompted, enter the password for that AD account.
 
    ```bash
@@ -217,18 +220,54 @@ For more information, see the Red Hat documentation for [Discovering and Joining
    > [!NOTE]
    > The ktutil tool does not validate the password, so make sure you enter it correctly.
 
-3. Anyone with access to this `keytab` file can impersonate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the domain, so make sure you restrict access to the file such that only the `mssql` account has read access:
+3. Add the machine account to your keytab with **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. The machine account (also called a UPN) is present in `/etc/krb5.keytab` in the form "\<hostname\>$\@\<realm.com\>" (e.g. sqlhost$\@CONTOSO.COM). We will copy these entries from `/etc/krb5.keytab` to `mssql.keytab`.
+
+   ```bash
+   sudo ktutil
+
+   # Read all entries from /etc/krb5.keytab
+   ktutil: rkt /etc/krb5.keytab
+
+   # List all entries
+   ktutil: list
+
+   # Delete all entries by their slot number which are not the UPN one at a
+   # time.
+   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
+   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
+   # 1's entry is deleted)
+   ktutil: delent <slot num>
+   ktutil: delent <slot num>
+   ...
+
+   # List all entries to ensure only UPN entries are left
+   ktutil: list
+
+   # When only UPN entries are left, append these values to mssql.keytab
+   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+
+   quit
+   ```
+
+4. Anyone with access to this `keytab` file can impersonate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the domain, so make sure you restrict access to the file such that only the `mssql` account has read access:
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use this `keytab` file for Kerberos authentication:
+5. Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use this `keytab` file for Kerberos authentication:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
    sudo systemctl restart mssql-server
+   ```
+
+6. Optional: Disable UDP connections to the domain controller to improve performance. In many cases, UDP connections will always fail when connecting to a domain controller, so you can set config options in `/etc/krb5.conf`  to skip UDP calls. Edit `/etc/krb5.conf` and set the following options:
+
+   ```/etc/krb5.conf
+   [libdefaults]
+   udp_preference_limit=0
    ```
 
 ## <a id="createsqllogins"></a> Create AD-based logins in Transact-SQL
@@ -274,7 +313,7 @@ The specific connection string parameter for clients to use AD Authentication de
   * JDBC: [Using Kerberos Integrated Authentication to Connect SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [Using Integrated Authentication](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [Connection String Syntax](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-  
+ 
 ## Next steps
 
 In this tutorial, we walked through how to set up Active Directory authentication with SQL Server on Linux. You learned how to:

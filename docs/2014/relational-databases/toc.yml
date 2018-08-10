@@ -1,0 +1,264 @@
+- name: Database Features
+  href: database-features.md
+  items:
+  - name: Databases (Database Engine) +
+    href: databases/databases.md
+  - name: Tables +
+    href: tables/tables.md
+  - name: In-Memory OLTP (In-Memory Optimization) +
+    href: in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+  - name: Indexes (Database Engine) +
+    href: indexes/indexes.md
+  - name: Partitioned Tables and Indexes +
+    href: partitions/partitioned-tables-and-indexes.md
+  - name: Replication +
+    href: replication/sql-server-replication.md
+  - name: Views +
+    href: views/views.md
+  - name: Stored Procedures +
+    href: stored-procedures/stored-procedures-database-engine.md
+  - name: Search
+    href: ../database-engine/search-sql-server.md
+    items:
+    - name: Full-Text Search +
+      href: search/full-text-search.md
+    - name: Deprecated Full-Text Search Features in SQL Server 2014
+      href: search/deprecated-full-text-search-features-in-sql-server-2016.md
+    - name: Full-Text Stoplist Properties
+      href: ../database-engine/full-text-stoplist-properties.md
+      items:
+      - name: New Search Property List
+        href: ../database-engine/new-search-property-list.md
+      - name: Search Property List Editor
+        href: ../database-engine/search-property-list-editor.md
+    - name: Manage Full-Text Indexes
+      href: ../database-engine/manage-full-text-indexes.md
+    - name: Full-Text Search F1 Help
+      href: ../database-engine/full-text-search-f1-help.md
+      items:
+      - name: New Full-Text Catalog (General Page)
+        href: ../database-engine/new-full-text-catalog-general-page.md
+      - name: Full-Text Catalog Properties (General Page)
+        href: ../database-engine/full-text-catalog-properties-general-page.md
+      - name: Full-Text Catalog Properties (Population Schedule Page)
+        href: ../database-engine/full-text-catalog-properties-population-schedule-page.md
+      - name: Full-Text Catalog Properties (Tables and Views Page)
+        href: ../database-engine/full-text-catalog-properties-tables-and-views-page.md
+      - name: Full-Text Index Properties (General Page)
+        href: ../database-engine/full-text-index-properties-general-page.md
+      - name: Full-Text Index Properties (Columns Page)
+        href: ../database-engine/full-text-index-properties-columns-page.md
+      - name: Full-Text Index Properties (Schedules Page)
+        href: ../database-engine/full-text-index-properties-schedules-page.md
+      - name: New Full-Text Stoplist (General Page)
+        href: ../database-engine/new-full-text-stoplist-general-page.md
+    - name: Semantic Search +
+      href: search/semantic-search-sql-server.md
+  - name: User-Defined Functions +
+    href: user-defined-functions/user-defined-functions.md
+  - name: Statistics +
+    href: statistics/statistics.md
+  - name: Plan Guides +
+    href: performance/plan-guides.md
+  - name: Cursors
+    href: cursors.md
+  - name: Sequence Numbers
+    href: sequence-numbers/sequence-numbers.md
+    items:
+    - name: Sequence Properties (General Page)
+      href: sequence-numbers/sequence-properties-general-page.md
+  - name: DDL Triggers +
+    href: triggers/ddl-triggers.md
+  - name: DML Triggers +
+    href: triggers/dml-triggers.md
+  - name: Synonyms (Database Engine)
+    href: synonyms/synonyms-database-engine.md
+    items:
+    - name: Create Synonyms
+      href: synonyms/create-synonyms.md
+  - name: XML Data +
+    href: xml/xml-data-sql-server.md
+  - name: Spatial Data +
+    href: spatial/spatial-data-sql-server.md
+  - name: Binary Large Object (Blob) Data +
+    href: blob/binary-large-object-blob-data-sql-server.md
+  - name: Hierarchical Data
+    href: hierarchical-data-sql-server.md
+  - name: Data-tier Applications +
+    href: data-tier-applications/data-tier-applications.md
+  - name: The Transaction Log (SQL Server) +
+    href: logs/the-transaction-log-sql-server.md
+  - name: Database Checkpoints
+    href: logs/database-checkpoints-sql-server.md
+    items:
+    - name: Change the Target Recovery Time of a Database
+      href: logs/change-the-target-recovery-time-of-a-database-sql-server.md
+  - name: Back Up and Restore of SQL Server Databases +
+    href: backup-restore/back-up-and-restore-of-sql-server-databases.md
+  - name: Bulk Import and Export of Data +
+    href: import-export/bulk-import-and-export-of-data-sql-server.md
+  - name: Data Compression +
+    href: data-compression/data-compression.md
+  - name: OLE Automation Objects in Transact-SQL +
+    href: stored-procedures/ole-automation-objects-in-transact-sql.md
+  - name: Event Notifications +
+    href: service-broker/event-notifications.md
+  - name: Monitor and Tune for Performance +
+    href: performance/monitor-and-tune-for-performance.md
+- name: Developer's Guide (Database Engine)
+  href: database-engine-developer-documentation.md
+  items:
+  - name: Common Language Runtime (CLR) Integration Programming Concepts +
+    href: clr-integration/common-language-runtime-clr-integration-programming-concepts.md
+  - name: SQL Server Native Client Programming +
+    href: native-client/sql-server-native-client-programming.md
+  - name: SQLXML 4.0 Programming Concepts +
+    href: sqlxml/sqlxml-4-0-programming-concepts.md
+  - name: Database Engine Extended Stored Procedures Programming +
+    href: extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
+  - name: Data Collector Programming
+    href: ../database-engine/dev-guide/data-collector-programming.md
+  - name: Exception Message Box Programming
+    href: ../database-engine/dev-guide/exception-message-box-programming.md
+    items:
+    - name: Program Exception Message Box
+      href: ../database-engine/dev-guide/program-exception-message-box.md
+    - name: Deploying an Exception Message Box Application
+      href: ../database-engine/dev-guide/deploying-an-exception-message-box-application.md
+    - name: Exception Message Box Reference
+      href: ../database-engine/dev-guide/exception-message-box-reference.md
+  - name: SQL Server Express Local DB Reference
+    href: sql-server-express-localdb-reference.md
+  - name: SQL Server Express Local DB Error Message Reference +
+    href: express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
+  - name: SQL Server Express LocalDB Instance API Reference +
+    href: express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
+  - name: SQL Server Management Objects
+    href: ../database-engine/dev-guide/sql-server-management-objects.md
+    items:
+    - name: Preparing to Use SMO
+      href: ../database-engine/dev-guide/preparing-to-use-smo.md
+    - name: System Requirements
+      href: ../database-engine/dev-guide/system-requirements.md
+    - name: SQL-DMO Mapping to SMO
+      href: ../database-engine/dev-guide/sql-dmo-mapping-to-smo.md
+  - name: SQL Server Management Objects (SMO) Programming Guide +
+    href: server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
+  - name: Windows Management Instrumentation
+    href: ../database-engine/dev-guide/windows-management-instrumentation.md
+  - name: WMI Provider for Configuration Management Concepts +
+    href: wmi-provider-configuration/wmi-provider-for-configuration-management.md
+  - name: SqlToolsVSNativeHelpers
+    href: sqltoolsvsnativehelpers.md
+    items:
+    - name: FrameWindowVisible
+      href: sqltoolsvsnativehelpers-framewindowvisible.md
+- name: Database Engine Tutorials
+  href: database-engine-tutorials.md
+  items:
+  - name: "Tutorial: Getting Started with the Database Engine"
+    href: tutorial-getting-started-with-the-database-engine.md
+    items:
+    - name: "Lesson 1: Connecting to the Database Engine"
+      href: lesson-1-connecting-to-the-database-engine.md
+    - name: "Lesson 2: Connecting from Another Computer"
+      href: lesson-2-connecting-from-another-computer.md
+  - name: "Tutorial: Using the hierarchyid Data Type"
+    href: tables/tutorial-using-the-hierarchyid-data-type.md
+    items:
+    - name: "Lesson 1: Converting a Table to a Hierarchical Structure"
+      href: tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
+      items:
+      - name: Examining the Current Structure of the Employee Table
+        href: tables/lesson-1-1-examining-the-current-structure-of-the-employee-table.md
+      - name: Populating a Table with Existing Hierarchical Data
+        href: tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md
+      - name: Optimizing the NewOrg Table
+        href: tables/lesson-1-3-optimizing-the-neworg-table.md
+      - name: "Summary: Converting a Table to a Hierarchical Structure"
+        href: tables/lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md
+    - name: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
+      href: tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
+      items:
+      - name: Creating a Table Using the hierarchyid Data Type
+        href: tables/lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md
+      - name: Populating a Hierarchical Table Using Hierarchical Methods
+        href: tables/lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md
+      - name: Querying a Hierarchical Table Using Hierarchy Methods
+        href: tables/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md
+      - name: Reordering Data in a Hierarchical Table Using Hierarchical Methods
+        href: tables/lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md
+      - name: "Summary: Managing Data in a Hierarchical Table"
+        href: tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
+  - name: "Tutorial: Signing Stored Procedures with a Certificate"
+    href: tutorial-signing-stored-procedures-with-a-certificate.md
+  - name: "Tutorial: Ownership Chains and Context Switching"
+    href: tutorial-ownership-chains-and-context-switching.md
+  - name: "Tutorial: Administering Servers by Using Policy-Based Management"
+    href: policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
+    items:
+    - name: "Lesson 1: Create and Apply an Off By Default Policy"
+      href: policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
+      items:
+      - name: Create the Off By Default Policy
+        href: policy-based-management/lesson-1-1-create-the-off-by-default-policy.md
+      - name: Configure a Server to Run the Off By Default Policy
+        href: policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md
+    - name: "Lesson 2: Create and Apply a Naming Standards Policy"
+      href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
+      items:
+      - name: Create the Finance Name Policy
+        href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
+      - name: Subscribe to and Check the Finance Name Policy
+        href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
+  - name: "Tutorial: Evaluating Best Practices by Using Policy-Based Management"
+    href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
+    items:
+    - name: "Lesson 1: Evaluate Best Practices on an On-Demand Basis"
+      href: ../tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md
+      items:
+      - name: Perform an On-Demand Evaluation by Using Object Explorer
+        href: ../tutorials/perform-an-on-demand-evaluation-by-using-object-explorer.md
+      - name: Perform an On-Demand Evaluation by Using Registered Servers
+        href: ../tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md
+    - name: "Lesson 2: Evaluate Best Practices Policies on a Scheduled Basis"
+      href: ../tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md
+      items:
+      - name: Import the Policies to a Single Instance
+        href: ../tutorials/import-the-policies-to-a-single-instance.md
+      - name: Schedule the Policies
+        href: ../tutorials/schedule-the-policies.md
+      - name: Deploy Scheduled Policies to Multiple Instances
+        href: ../tutorials/deploy-scheduled-policies-to-multiple-instances.md
+  - name: "Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service"
+    href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
+    items:
+    - name: "Lesson 1: Create Windows Azure Storage Objects"
+      href: ../tutorials/lesson-1-create-windows-azure-storage-objects.md
+    - name: "Lesson 2: Create a SQL Server Credential"
+      href: ../tutorials/lesson-2-create-a-sql-server-credential.md
+    - name: "Lesson 3: Write a Full Database Backup to the Windows Azure Blob Storage Service"
+      href: ../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md
+    - name: "Lesson 4: Perform a Restore From a Full Database Backup"
+      href: ../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md
+  - name: "Tutorial: SQL Server Data Files in Windows Azure Storage service"
+    href: tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
+    items:
+    - name: "Lesson 1: Create Windows Azure Storage Account and Container"
+      href: ../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md
+    - name: Lesson 2. Create a policy on container and generate a Shared Access Signature (SAS) key
+      href: lesson-1-create-stored-access-policy-and-shared-access-signature.md
+    - name: "Lesson 3: Create a SQL Server Credential"
+      href: lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md
+    - name: "Lesson 4: Create a database in Windows Azure Storage"
+      href: lesson-3-database-backup-to-url.md
+    - name: Lesson 5. (Optional) Encrypt your database using TDE
+      href: lesson-4-restore-database-to-virtual-machine-from-url.md
+    - name: "Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Windows Azure"
+      href: lesson-5-backup-database-using-file-snapshot-backup.md
+    - name: "Lesson 7: Move your data files to Windows Azure Storage"
+      href: lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md
+    - name: Lesson 8. Restore a database to Windows Azure Storage
+      href: lesson-7-restore-a-database-to-a-point-in-time.md
+    - name: Lesson 9. Restore a database from Windows Azure Storage
+      href: lesson-8-restore-as-new-database-from-log-backup.md

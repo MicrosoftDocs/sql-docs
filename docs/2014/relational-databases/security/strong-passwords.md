@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-security"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -48,9 +47,9 @@ manager: craigg
   
 -   Contains or starts with a space character.  
   
--   Starts with the $ or @ character.  
+-   Starts with the $ or \@ character.  
   
- If used in an OLE DB or ODBC connection string, a login or password must not contain the following characters: [] {}() , ; ? * ! @. These characters are used to either initialize a connection or separate connection values.  
+ If used in an OLE DB or ODBC connection string, a login or password must not contain the following characters: [] {}() , ; ? * ! \@. These characters are used to either initialize a connection or separate connection values.  
   
 ## Related Content  
  [Password Policy](password-policy.md)  

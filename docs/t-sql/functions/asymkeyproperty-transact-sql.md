@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ASYMKEYPROPERTY"
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ASYMKEYPROPERTY (Transact-SQL)

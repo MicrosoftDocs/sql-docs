@@ -1,0 +1,14 @@
+- name: Overview
+  href: collation-and-unicode-support.md
+- name: Set or Change the Server Collation
+  href: set-or-change-the-server-collation.md
+- name: Set or Change the Database Collation
+  href: set-or-change-the-database-collation.md
+- name: Set or Change the Column Collation
+  href: set-or-change-the-column-collation.md
+- name: View Collation Information
+  href: view-collation-information.md
+- name: Write International Transact-SQL Statements
+  href: write-international-transact-sql-statements.md
+- name: Set a Session Language
+  href: set-a-session-language.md

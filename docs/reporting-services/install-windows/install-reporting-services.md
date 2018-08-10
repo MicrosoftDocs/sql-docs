@@ -13,6 +13,7 @@ ms.topic: "get-started-article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Install SQL Server Reporting Services (2017 and later)
 

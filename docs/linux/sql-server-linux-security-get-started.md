@@ -5,7 +5,7 @@ author: "rothja"
 ms.author: "jroth"
 manager: craigg  
 ms.date: 10/02/2017
-ms.topic: article  
+ms.topic: conceptual  
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"

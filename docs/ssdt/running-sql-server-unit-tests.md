@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.testconfig"
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3

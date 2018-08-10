@@ -1,4 +1,4 @@
----
+﻿---
 title: "CHECKSUM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -20,10 +20,10 @@ helpviewer_keywords:
   - "checksum values"
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 
 ---
 # CHECKSUM (Transact-SQL)

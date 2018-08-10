@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "image data type, about image data type"
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # ntext, text, and image (Transact-SQL)

@@ -6,7 +6,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords: 
   - "clustered indexes, online operations"
   - "online index operations"
@@ -21,7 +21,7 @@ ms.author: mikeray
 manager: craigg
 ms.suite: "sql"
 ms.prod_service: "table-view-index, sql-database"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Guidelines for online index operations
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

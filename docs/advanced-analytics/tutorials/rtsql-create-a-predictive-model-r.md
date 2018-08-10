@@ -1,18 +1,23 @@
 ---
-title: Create a predictive model (R in SQL quickstart) | Microsoft Docs
+title: Quickstart to create a predictive model using R in SQL Server Machine Learning| Microsoft Docs
+description: In this quickstart, learn how to build a model in R using SQL Server data to plot predictions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
-ms.topic: tutorial
+ms.date: 07/15/2018  
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Create a predictive model (R in SQL quickstart)
+# Quickstart: Create a predictive model using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this step, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the `cars` dataset included with R, because it is small and easy to understand.
+In this quickstart, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the `cars` dataset included with R, because it is small and easy to understand.
+
+## Prerequisites
+
+A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Create the source data
 
@@ -136,14 +141,13 @@ VALUES ('latest model', @model)
 
 Remember these rules for working with SQL parameters and R variables in `sp_execute_external_script`:
 
-+ All SQL parameters mapped to R script must be listed by name in the _@params_ argument.
-+ To output one of these parameters, add the OUTPUT keyword in the _@params_ list.
-+ After listing the mapped parameters, provide the mapping, line by line, of SQL parameters to R variables, immediately after the _@params_ list.
++ All SQL parameters mapped to R script must be listed by name in the _\@params_ argument.
++ To output one of these parameters, add the OUTPUT keyword in the _\@params_ list.
++ After listing the mapped parameters, provide the mapping, line by line, of SQL parameters to R variables, immediately after the _\@params_ list.
 
-## Next lesson
+## Next steps
 
-Now that you have a model, in the final step, you'll learn how to generate predictions from it and plot the results.
+Now that you have a model, in the final quickstart, you'll learn how to generate predictions from it and plot the results.
 
-[Predict and plot from model](../tutorials/rtsql-predict-and-plot-from-model.md)
-
-
+> [!div class="nextstepaction"]
+> [Quickstart: Predict and plot from model](../tutorials/rtsql-predict-and-plot-from-model.md)

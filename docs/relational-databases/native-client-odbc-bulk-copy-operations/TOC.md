@@ -1,6 +1,0 @@
-# [Performing Bulk Copy Operations (ODBC)](performing-bulk-copy-operations-odbc.md)
-# [Bulk Copying from Program Variables](bulk-copying-from-program-variables.md)
-# [Bulk Copying Text and Image Data](bulk-copying-text-and-image-data.md)
-# [Converting from DB-Library to ODBC Bulk Copy](converting-from-db-library-to-odbc-bulk-copy.md)
-# [Managing Bulk Copy Batch Sizes](managing-bulk-copy-batch-sizes.md)
-# [Using Data Files and Format Files](using-data-files-and-format-files.md)

@@ -1,0 +1,30 @@
+- name: Table-Valued Parameters (ODBC)
+  href: table-valued-parameters-odbc.md
+- name: Additional Table-Valued Parameter Metadata
+  href: additional-table-valued-parameter-metadata.md
+- name: Binding and Data Transfer of Table-Valued Parameters and Column Values
+  href: binding-and-data-transfer-of-table-valued-parameters-and-column-values.md
+- name: Cross-Version Compatibility
+  href: cross-version-compatibility.md
+- name: Descriptor Fields for Table-Valued Parameter Constituent Columns
+  href: descriptor-fields-for-table-valued-parameter-constituent-columns.md
+- name: ODBC SQL Type for Table-Valued Parameters
+  href: odbc-sql-type-for-table-valued-parameters.md
+- name: ODBC Table-Valued Parameter API Summary
+  href: odbc-table-valued-parameter-api-summary.md
+- name: Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)
+  href: sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md
+- name: Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC)
+  href: sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md
+- name: Statement Attributes that Affect Table-Valued Parameters
+  href: statement-attributes-that-affect-table-valued-parameters.md
+- name: Table-Valued Parameter Data Conversion and Other Errors and Warnings
+  href: table-valued-parameter-data-conversion-and-other-errors-and-warnings.md
+- name: Table-Valued Parameter Descriptor Fields
+  href: table-valued-parameter-descriptor-fields.md
+- name: Table-Valued Parameter Diagnostic Record Fields
+  href: table-valued-parameter-diagnostic-record-fields.md
+- name: Table-Valued Parameter Metadata for Prepared Statements
+  href: table-valued-parameter-metadata-for-prepared-statements.md
+- name: Uses of ODBC Table-Valued Parameters
+  href: uses-of-odbc-table-valued-parameters.md

@@ -181,5 +181,11 @@ You can change the server that your current query window is connected to by doin
     > [!NOTE]
     > This action changes only the server that the query window is connected to, not the server that Object Explorer is connected to. 
 
+## Next steps
+The next article teaches you how to script various objects within SQL Server Managment Studio. 
+
+Go to the next article to learn more:
+> [!div class="nextstepaction"]
+> [Next steps](scripting-ssms.md)
 
 

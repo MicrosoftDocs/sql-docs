@@ -15,7 +15,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Altering Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,44 +26,11 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  
 The ALTER TABLE syntax is used for making changes to the table schema, as well as for adding, deleting, and rebuilding indexes. Indexes are considered part of the table definition:  
   
--   The syntax ALTER TABLE … ADD/DROP/ALTER INDEX is supported only for memory-optimized tables.  
+-   The syntax ALTER TABLE ... ADD/DROP/ALTER INDEX is supported only for memory-optimized tables.  
   
 -   Without using an ALTER TABLE statement, the statements CREATE INDEX and DROP INDEX and ALTER INDEX are *not* supported for indexes on memory-optimized tables.  
   
- The following is the syntax for the ADD and DROP and ALTER INDEX clauses on the ALTER TABLE statement.  
-  
-```
-| ADD   
-     {   
-        <column_definition>  
-      | <table_constraint>  
-      | <table_index>    
-     } [ ,...n ]  
-  
-| DROP   
-     {  
-         [ CONSTRAINT ]   
-         {   
-              constraint_name   
-         } [ ,...n ]  
-         | COLUMN   
-         {  
-              column_name   
-         } [ ,...n ]  
-         | INDEX   
-         {  
-              index_name   
-         } [ ,...n ]  
-     } [ ,...n ]  
-  
-| ALTER INDEX index_name  
-     {   
-         REBUILD WITH ( <rebuild_index_option> )     
-     }  
-}  
-```  
-  
- The following types of alterations are supported.  
+The following types of alterations are supported:  
   
 -   Changing the bucket count  
   

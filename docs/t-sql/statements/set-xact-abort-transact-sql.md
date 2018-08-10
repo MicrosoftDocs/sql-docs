@@ -28,10 +28,10 @@ helpviewer_keywords:
   - "SET XACT_ABORT statement"
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SET XACT_ABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,17 +46,10 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
+```    
 SET XACT_ABORT { ON | OFF }  
 ```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET XACT_ABORT ON   
-```  
+
   
 ## Remarks  
  When SET XACT_ABORT is ON, if a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement raises a run-time error, the entire transaction is terminated and rolled back.  

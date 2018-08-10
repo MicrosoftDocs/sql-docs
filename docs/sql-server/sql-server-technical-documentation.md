@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Documentation | Microsoft Docs"
-ms.date: "08/08/2018"
+ms.date: "08/10/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -32,25 +32,32 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 ::: moniker-end
 
 ::: moniker range="= sql-server-2016"
-SQL Server 2016 is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on Windows. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
+SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on Windows. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
+
+<!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
+ at any one time, regardless of user's moniker choice.
+-->
 
 ::: moniker range="= sqlallproducts-allversions"
-![info_tip](../sql-server/media/info-tip.png) The SQL Server **2014** documentation is available [here](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014).
-::: moniker-end
-
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || = sqlallproducts-allversions"
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
-| &nbsp; | &nbsp; |
+|[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
+
+![info_tip](../sql-server/media/info-tip.png) The SQL Server **2014** documentation is available [here](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014).
 ::: moniker-end
 
-::: moniker range="=sql-server-2016 || = sqlallproducts-allversions"
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+|What's new  | Release notes  |
+|---------|---------|
+|[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
+::: moniker-end
+
+::: moniker range="=sql-server-2016"
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
-| &nbsp; | &nbsp; |
 ::: moniker-end
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"

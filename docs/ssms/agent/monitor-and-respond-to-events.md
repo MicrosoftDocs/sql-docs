@@ -73,5 +73,5 @@ When [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] logs a message, t
 Regardless of the source of the event, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service responds to the event by performing the tasks specified in the alert for the event.  
   
 ## See Also  
-[sp_altermessage](http://msdn.microsoft.com/en-us/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
+[sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
   

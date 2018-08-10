@@ -127,5 +127,5 @@ You must set up one or more of the following in order to notify an operator:
 |Tasks related to assigning alerts|[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## See Also  
-[Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

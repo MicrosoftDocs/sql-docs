@@ -28,6 +28,6 @@ This documentation introduces you to SSMA for Oracle and provides step-by-step i
 |[Getting Started with SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)|Introduces the user interface, projects, and configuration options.|  
 |[Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|Provides an overview of the conversion process and detailed information about each step in the process.|  
 |[User Interface Reference &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|Contains documentation for SSMA for Oracle dialog boxes.|  
-|[Working with SSMA for Oracle Console](http://msdn.microsoft.com/4e47bb04-cf9b-41a0-923e-bdab9ba0c51d)|Contains documentation on the SSMA Console application|  
+|[Working with SSMA for Oracle Console](working-with-ssma-for-oracle-console-oracletosql.md)|Contains documentation on the SSMA Console application|  
 |[Getting SSMA for Oracle Assistance](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Provides information about getting additional assistance.|  
   

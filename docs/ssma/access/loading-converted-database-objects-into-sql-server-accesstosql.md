@@ -138,8 +138,8 @@ You can also run scripts from the command line by using the **sqlcmd** utility, 
 After you have loaded the converted database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can grant and deny permissions on those objects. It is a good idea to do this before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For information about how to help secure objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], see "Security Considerations for Databases and Database Applications" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   
 ## Next Step  
-The next step in the migration process is [migrate data into SQL Server](http://msdn.microsoft.com/f3b18af7-1af0-499d-a00d-a0af94895625).  
+The next step in the migration process is [migrate data into SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

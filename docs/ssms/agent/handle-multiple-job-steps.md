@@ -48,10 +48,10 @@ Job steps must be self-contained. That is, a job cannot pass Boolean values, dat
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent records job and job step information in the job history.  
   
 ## See Also  
-[sp_add_job](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
-[sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
+[sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
 [sysjobs (Transact-SQL)](http://msdn.microsoft.com/en-us/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
-[sysjobsteps](http://msdn.microsoft.com/en-us/978b8205-535b-461c-91f3-af9b08eca467)  
+[sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [Implement Jobs](../../ssms/agent/implement-jobs.md)  
 [Manage Job Steps](../../ssms/agent/manage-job-steps.md)  
   

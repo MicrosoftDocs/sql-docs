@@ -45,7 +45,7 @@ Before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md
   
 **Server Side Data Migration:**  
   
--   During the Server side data migration, the engine resides on the target database. It is installed through the extension pack. For more information on how to install the extension pack, see [Installing Server Components on SQL Server](http://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
+-   During the Server side data migration, the engine resides on the target database. It is installed through the extension pack. For more information on how to install the extension pack, see [Installing Server Components on SQL Server](installing-ssma-components-on-sql-server-oracletosql.md)  
   
 -   To initiate migration on the server side, select the **Server Side Data Migration Engine** option in the **Project Settings** dialog box.  
   

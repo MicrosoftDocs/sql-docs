@@ -43,7 +43,7 @@ To notify target servers that a multiserver job has been modified, you must invo
   
 -   [sp_delete_jobstep (Transact-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3)  
   
--   [Managing Events](http://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
+-   [Managing Events](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
 -   [sp_detach_schedule (Transact-SQL)](http://msdn.microsoft.com/9a1fc335-1bef-4638-a33a-771c54a5dd19)  
   

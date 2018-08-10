@@ -117,7 +117,7 @@ When you open a project, it is disconnected from ASE and from [!INCLUDE[ssNoVers
 3.  To reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, on the **File** menu, select **Reconnect to SQL Server** / **Reconnect to SQL Azure**.  
   
 ## Next Step  
-The next step in the migration process is to [Connect to Sybase ASE](http://msdn.microsoft.com/a45a2330-9175-4c9e-af38-ef920e350614).  
+The next step in the migration process is to [Connect to Sybase ASE](connecting-to-sybase-ase-sybasetosql.md).  
   
 ## See Also  
 [Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

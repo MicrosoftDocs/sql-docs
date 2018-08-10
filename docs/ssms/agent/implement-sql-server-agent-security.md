@@ -79,7 +79,7 @@ Follow these guidelines to improve the security of your [!INCLUDE[ssNoVersion](.
     -   **Extension** – Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## See Also  
-[Using Predefined Roles](http://msdn.microsoft.com/en-us/6b46db51-7c30-467d-a251-50f50647fe21)  
+[Using Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
 [sp_addrolemember (Transact-SQL)](http://msdn.microsoft.com/en-us/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
 [sp_droprolemember (Transact-SQL)](http://msdn.microsoft.com/en-us/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  
 [Security and Protection (Database Engine)](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7)  

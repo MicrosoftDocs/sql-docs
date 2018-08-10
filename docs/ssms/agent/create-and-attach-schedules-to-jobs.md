@@ -84,7 +84,7 @@ To maximize CPU resources, you can define a CPU idle condition for [!INCLUDE[ssN
   
 Before you define jobs to run during CPU idle time, determine the load on the CPU during normal processing. To do this, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] or Performance Monitor to monitor server traffic and collect statistics. You can then use the information you gather to set the CPU idle time percentage and duration.  
   
-Define the CPU idle condition as a percentage below which CPU usage must remain for a specified time. Next, set the amount of time. When the CPU usage is below the specified percentage for the specified amount of time, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent starts all jobs that have a CPU idle time schedule. For more information on using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] or Performance Monitor to monitor CPU usage, see [Monitoring CPU Usage](http://msdn.microsoft.com/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
+Define the CPU idle condition as a percentage below which CPU usage must remain for a specified time. Next, set the amount of time. When the CPU usage is below the specified percentage for the specified amount of time, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent starts all jobs that have a CPU idle time schedule. For more information on using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] or Performance Monitor to monitor CPU usage, see [Monitoring CPU Usage](../../relational-databases/performance-monitor/monitor-cpu-usage.md).  
   
 ## Related Tasks  
   
@@ -96,6 +96,6 @@ Define the CPU idle condition as a percentage below which CPU usage must remain 
 |Explains how to define the CPU idle condition for your server.|[Set CPU Idle Time and Duration &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## See Also  
-[sp_help_jobschedule](http://msdn.microsoft.com/2cded902-9272-4667-ac4b-a4f95a9f008e)  
-[sysjobschedules](http://msdn.microsoft.com/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
+[sp_help_jobschedule](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)  
+[sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   

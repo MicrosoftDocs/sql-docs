@@ -62,7 +62,7 @@ If you customize the mapping between an ASE schema and a [!INCLUDE[ssNoVersion](
 1.  Under the schema mapping tab, select any row and click **Reset to Default** to revert to the default database and schema.  
   
 ## Next Steps  
-If you want to analyze the conversion of Sybase ASE objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, you can [Create a conversion report](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c). Otherwise you can [Convert the ASE database object definitions](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3) into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure object definitions.  
+If you want to analyze the conversion of Sybase ASE objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, you can [Create a conversion report](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md). Otherwise you can [Convert the ASE database object definitions](converting-sybase-ase-database-objects-sybasetosql.md) into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure object definitions.  
   
 ## See Also  
 [Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

@@ -25,7 +25,7 @@ manager: craigg
 Use this dialog box to create or modify indexes, primary keys, and unique keys. To access this dialog box, open the table definition for the table with the index or key, right-click the table definition grid, and then click **Indexes/Keys**.  
   
 > [!NOTE]  
-> If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
+> If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
 ## Options  
 **Selected Primary/Unique Key or Index**  
@@ -62,7 +62,7 @@ Provides a place to describe the key or index. To write a more detailed descript
 When expanded, shows information for **Create as Clustered**.  
   
 **Create as Clustered**  
-Make the key or index clustered. Only one clustered index is allowed on a table. Data in the table is stored in the order of the clustered index. For more information, see [Create Clustered Indexes](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) and [Create Nonclustered Indexes](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943).  
+Make the key or index clustered. Only one clustered index is allowed on a table. Data in the table is stored in the order of the clustered index. For more information, see [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md) and [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Data Space Specification**  
 When expanded, shows information for **(Data Space Type)**, **Filegroup or Partition Scheme Name**, and **Partition Column List**.  

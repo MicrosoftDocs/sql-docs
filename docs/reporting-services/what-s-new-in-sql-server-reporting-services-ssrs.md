@@ -189,7 +189,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 [What's New in Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)   
-[Backward Compatibility](http://msdn.microsoft.com/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
+[Backward Compatibility](reporting-services-backward-compatibility.md)   
 [Reporting Services Features Supported by the Editions of SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Upgrade and Migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

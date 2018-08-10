@@ -31,7 +31,7 @@ Before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md
   
 -   By using this dialog box you can set options such as migration batch size, table locking, constraint checking, null value handling and identity value-handling. For more information about the Project Migration Settings, see [Project Settings (Migration)](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9).  
   
-    For more information on **Extended Data Migration Settings**, see [Data Migration Settings](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)  
+    For more information on **Extended Data Migration Settings**, see [Data Migration Settings](data-migration-settings-mysqltosql.md)  
   
 -   The **Migration Engine** in the **Project Settings** dialog box, allows the user to perform the migration process using two types of data migration engines:  
   

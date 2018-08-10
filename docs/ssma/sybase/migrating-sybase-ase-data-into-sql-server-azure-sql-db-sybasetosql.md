@@ -31,7 +31,7 @@ Before migrating data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.
   
 -   By using this dialog box you can set options such as migration batch size, table locking, constraint checking, null value handling and identity value handling. For more information about the Project Migration Settings, see [Project Settings (Migration) (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
   
-    For more information on **Extended Data Migration Settings**, see [Data Migration Settings](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)  
+    For more information on **Extended Data Migration Settings**, see [Data Migration Settings](data-migration-settings-sybasetosql.md)  
   
 -   The **Migration Engine** in the **Project Settings** dialog box, allows the user to perform the migration process using two types of data migration engines, viz.:  
   

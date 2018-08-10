@@ -58,8 +58,8 @@ The Assessment Report window contains three panes: an explorer, a details pane, 
 You should correct errors before you run the assessment report again or convert schemas. To find errors, click the **Errors** button in the messages pane, and then expand each error to view a list of objects where the error occurred. If you click an object in the messages pane, all errors and warnings for that object will appear in the details pane.  
   
 ## Next Step  
-[Converting Access Database Objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[Converting Access Database Objects](converting-access-database-objects-accesstosql.md)  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

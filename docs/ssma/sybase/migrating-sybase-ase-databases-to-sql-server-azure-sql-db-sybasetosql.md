@@ -23,17 +23,17 @@ SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (ASE) i
 ## Recommended migration process  
 To successfully migrate objects and data from SAP ASE databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database, use the following process:  
   
-1.  [Create a new SSMA project](http://msdn.microsoft.com/11091d95-c488-48c3-891a-743cac94ac93).  
+1.  [Create a new SSMA project](working-with-ssma-projects-sybasetosql.md).  
   
     After you create the project, you can set project conversion, migration, and type mapping options. For information about project settings, see [Setting Project Options &#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md). For information about customizing data type mappings, see [Mapping Sybase ASE and SQL Server Data Types &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
   
-2.  [Connect to the SAP ASE database server](http://msdn.microsoft.com/a45a2330-9175-4c9e-af38-ef920e350614).  
+2.  [Connect to the SAP ASE database server](connecting-to-sybase-ase-sybasetosql.md).  
   
-3.  [Connect to an instance SQL Server](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) or [Connect to an instance of Azure SQL Database](http://msdn.microsoft.com/9e77e4b0-40c0-455c-8431-ca5d43849aa7).  
+3.  [Connect to an instance SQL Server](connecting-to-sql-server-sybasetosql.md) or [Connect to an instance of Azure SQL Database](connecting-to-azure-sql-db-sybasetosql.md).  
   
 4.  [Map SAP ASE database schemas to SQL Server / Azure SQL Database database schemas](http://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268).  
   
-5.  Optionally, [create assessment reports](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) to assess database objects for conversion and estimate the conversion time.  
+5.  Optionally, [create assessment reports](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) to assess database objects for conversion and estimate the conversion time.  
   
 6.  [Convert SAP ASE database schemas into SQL Server / Azure SQL Database schemas](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3).  
   

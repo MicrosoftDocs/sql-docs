@@ -66,7 +66,7 @@ manager: craigg
   
  **To drop an assembly by using SQL Server Management Studio**  
   
--   [Delete Objects](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
+-   [Delete Objects](../../ssms/object/delete-objects.md)  
   
  By default, all assemblies that are created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are disabled from executing. You can use the **clr enabled** option of the **sp_configure** system stored procedure to disable or enable the execution of all assemblies that are uploaded in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Disabling assembly execution prevents common language runtime (CLR) functions, stored procedures, triggers, aggregates, and user-defined types from executing, and stops those that are currently executing. Disabling assembly execution does not disable the ability to create, alter, or drop assemblies. For more information, see [clr enabled Server Configuration Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   

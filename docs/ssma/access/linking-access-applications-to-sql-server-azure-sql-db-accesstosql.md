@@ -154,5 +154,5 @@ Recordset.LastModified
 **Resolution:** You can define an Access query that returns only those rows with supported data types.  
   
 ## See also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -89,7 +89,7 @@ If you want to upgrade to a later version of SSMA for Access, you must first uni
 If you open a project created in an earlier version of SSMA for Access, SSMA asks if you want to convert the project to the newer version. Click **Yes** to work with the project in the newer version of SSMA.  
   
 ## See also  
-[Preparing Access Databases for Migration](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Linking Access Applications to SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
+[Preparing Access Databases for Migration](preparing-access-databases-for-migration-accesstosql.md)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Linking Access Applications to SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   

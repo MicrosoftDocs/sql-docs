@@ -89,8 +89,8 @@ The following procedure shows how to map data types at the project, database, or
     2.  Click **Remove**.  
   
 ## Next Steps  
-The next step in the migration process is [convert access database objects to SQL Server objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+The next step in the migration process is [convert access database objects to SQL Server objects](converting-access-database-objects-accesstosql.md)  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

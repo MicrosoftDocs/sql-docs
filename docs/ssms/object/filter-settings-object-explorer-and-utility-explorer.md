@@ -74,5 +74,5 @@ Removes all current filter settings.
   
 ## See Also  
 [Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
-[Overview of SQL Server Utility](http://msdn.microsoft.com/en-us/6e6cbd25-6b1c-4e21-9ade-4584e243fd8f)  
+[Overview of SQL Server Utility](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

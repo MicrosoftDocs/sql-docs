@@ -71,5 +71,5 @@ This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../inclu
 [Custom Reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Use Custom Reports with Object Explorer Node Properties](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [Unsuppress Run Custom Report Warnings](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[SQL Server Reporting Services](http://msdn.microsoft.com/en-us/b8d18d3d-9db0-43e7-8286-7b46cc3a37ed)  
+[SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

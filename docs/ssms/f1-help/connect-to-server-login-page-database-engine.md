@@ -28,7 +28,7 @@ Many factors can affect your ability to connect to [!INCLUDE[ssNoVersion](../../
 - [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)    
   
 > [!NOTE]  
-> To connect with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] must be configured in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and Windows Authentication mode. For more information about how to determine the authentication mode and to change the authentication mode, see [How to: Change Server Authentication Mode](http://msdn.microsoft.com/en-us/79babcf8-19fd-4495-b8eb-453dc575cac0).  
+> To connect with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] must be configured in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and Windows Authentication mode. For more information about how to determine the authentication mode and to change the authentication mode, see [How to: Change Server Authentication Mode](../../database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## Options  
 **Server type**  

@@ -71,11 +71,11 @@ manager: craigg
 ##  <a name="Follow_Up"></a> Follow-up Tasks  
  The following tasks are necessary to complete the configuration of Agent to send alerts and notifications.  
   
--   [Alerts](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)  
+-   [Alerts](../../ssms/agent/alerts.md)  
   
      Alerts can be configured to notify an operator of a particular database event or operating system condition.  
   
--   [Operators](http://msdn.microsoft.com/library/38e8488f-2669-4cea-b9c3-5f394a663678)  
+-   [Operators](../../ssms/agent/operators.md)  
   
      Operators are aliases for people or groups that can receive electronic notification  
   

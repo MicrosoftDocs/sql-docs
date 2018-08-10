@@ -56,11 +56,11 @@ After you load converted schemas into [!INCLUDE[ssNoVersion](../../includes/ssno
   
 For more information about these tasks and how to perform them, see the following topics:  
   
--   [Preparing Access Databases for Migration](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+-   [Preparing Access Databases for Migration](preparing-access-databases-for-migration-accesstosql.md)  
   
--   [Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+-   [Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
--   [Linking Access Applications to SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
+-   [Linking Access Applications to SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   
 The following sections describe the features of the SSMA user interface.  
   
@@ -74,9 +74,9 @@ You can use Access Metadata Explorer to perform the following tasks:
   
 -   Browse the tables in each Access database.  
   
--   Select objects for conversion and convert the objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
+-   Select objects for conversion and convert the objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax. For more information, see [Converting Access Database Objects](converting-access-database-objects-accesstosql.md).  
   
--   Select objects for data migration and migrate the data from those objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Migrating Access Data into SQL Server](http://msdn.microsoft.com/f3b18af7-1af0-499d-a00d-a0af94895625).  
+-   Select objects for data migration and migrate the data from those objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Migrating Access Data into SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   
 -   Link and unlink Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tables.  
   
@@ -85,7 +85,7 @@ You can use Access Metadata Explorer to perform the following tasks:
   
 You can use the SQL Server or Azure SQL DB Metadata Explorer to select converted Access database objects and load (synchronize) those objects into the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.  
   
-For more information, see [Loading Converted Database Objects into SQL Server](http://msdn.microsoft.com/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba).  
+For more information, see [Loading Converted Database Objects into SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
 ### Metadata  
 To the right of each metadata explorer are tabs that describe the selected object. For example, if you select a table in Access Metadata Explorer, four tabs appear: **Table**, **Type Mapping**, **Properties**, and **Data**. If you select a table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, three tabs appear: **Table**, **SQL**, and **Data**.  
@@ -94,7 +94,7 @@ Most metadata settings are read-only. However, you can alter the following metad
   
 -   In Access Metadata Explorer, you can alter type mappings. Be sure to make these changes before you create reports or convert schemas.  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you can alter table and index properties on the **Table** tab. Make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you can alter table and index properties on the **Table** tab. Make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Converting Access Database Objects](converting-access-database-objects-accesstosql.md).  
   
 ### Toolbars  
 SSMA has two toolbars: a project toolbar and a migration toolbar.  
@@ -132,5 +132,5 @@ The **View** menu provides commands to toggle the visibility of the Output pane 
 -   The Error List pane shows error, warning, and informational messages in a list that you can sort.  
   
 ## See also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

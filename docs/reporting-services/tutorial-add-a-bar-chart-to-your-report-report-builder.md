@@ -20,7 +20,7 @@ ms.author: "maggies"
 manager: "kfile"
 ---
 # Tutorial: Add a Bar Chart to Your Report (Report Builder)
-In this tutorial, you use a wizard in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] to create a bar chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. Then you add a filter and enhance the chart. 
+In this tutorial, you use a wizard in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] to create a bar chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. Then you add a filter and enhance the chart. 
 
 A bar chart displays category data horizontally. This can help to:  
   

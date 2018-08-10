@@ -55,7 +55,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## Arguments  
  *IF EXISTS*    
- Conditionally drops the function only if it already exists. Available beginning with [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 and in [!INCLUDE[sssds_md](../../includes/sssds_md.md)].
+ Conditionally drops the function only if it already exists. Available beginning with [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 and in [!INCLUDE[sssds_md](../../includes/sssds-md.md)].
   
  *schema_name*  
  Is the name of the schema to which the user-defined function belongs.  

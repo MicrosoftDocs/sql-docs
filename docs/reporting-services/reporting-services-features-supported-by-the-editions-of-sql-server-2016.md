@@ -93,7 +93,7 @@ To navigate the table for a SQL Server technology, click on its link:
   
 |Tool Name|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl and .rds)|Yes|Yes|||||Yes|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl and .rds)|Yes|Yes|||||Yes|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|Yes||||||Yes|  
 |Power BI apps for mobile devices (iOS, Windows 10, Android) (.rsmobile)|Yes||||||Yes|  
   

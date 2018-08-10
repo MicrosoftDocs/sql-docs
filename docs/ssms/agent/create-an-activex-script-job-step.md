@@ -45,7 +45,7 @@ This topic describes how to create and define a [!INCLUDE[msCoName](../../includ
 ## Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
-[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid_md.md)]  
+[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ### <a name="Security"></a>Security  
 For detailed information, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  

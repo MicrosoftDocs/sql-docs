@@ -46,7 +46,7 @@ This topic describes how to set the connection between [!INCLUDE[ssNoVersion](..
   
 -   Object Explorer only displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent node if you have permission to use it.  
   
--   Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent does not support [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication. This option is available only when you administer an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent does not support [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication. This option is available only when you administer an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ### <a name="Security"></a>Security  
   
@@ -73,5 +73,5 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 3.  In the **SQL Server Agent Properties***sever_name* dialog box, under **Select a page**, click **Connection**.  
   
-4.  Under **SQL Server connection**, select **Use Windows Authentication** to enable [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent to connect to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] with [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Authentication. Connections to [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] and later databases require Windows Authentication.  
+4.  Under **SQL Server connection**, select **Use Windows Authentication** to enable [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent to connect to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] with [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Authentication. Connections to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later databases require Windows Authentication.  
   

@@ -42,7 +42,7 @@ The following sections provide examples of how you can use the JDBC driver and t
 The JDBC driver implements all the methods of the java.sql.Blob, java.sql.Clob, and java.sql.NClob interfaces.  
   
 > [!NOTE]  
-> CLOB values can be used with [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (or later) large-value data types. Specifically, CLOB types can be used with the **varchar(max)** and **nvarchar(max)** data types, BLOB types can be used with **varbinary(max)** and **image** data types, and NCLOB types can be used with **ntext** and **nvarchar(max)**.  
+> CLOB values can be used with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (or later) large-value data types. Specifically, CLOB types can be used with the **varchar(max)** and **nvarchar(max)** data types, BLOB types can be used with **varbinary(max)** and **image** data types, and NCLOB types can be used with **ntext** and **nvarchar(max)**.  
 
 ## Large Value Data Types
 
@@ -159,7 +159,7 @@ For more information about the **xml** data type, see "xml Data Type" in [!INCLU
   
 ## User-Defined Data Type  
 
-The introduction of user-defined types (UDTs) in [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] extends the SQL type system by letting you store objects and custom data structures in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. UDTs can contain multiple data types and can have behaviors, differentiating them from the traditional alias data types that consist of a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] system data type. UDTs are defined by using any of the languages supported by the Microsoft .NET common language runtime (CLR) that produce verifiable code. This includes Microsoft Visual C# and Visual Basic .NET. The data is exposed as fields and properties of a .NET Framework-based class or structure, and behaviors are defined by methods of the class or structure.  
+The introduction of user-defined types (UDTs) in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] extends the SQL type system by letting you store objects and custom data structures in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. UDTs can contain multiple data types and can have behaviors, differentiating them from the traditional alias data types that consist of a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] system data type. UDTs are defined by using any of the languages supported by the Microsoft .NET common language runtime (CLR) that produce verifiable code. This includes Microsoft Visual C# and Visual Basic .NET. The data is exposed as fields and properties of a .NET Framework-based class or structure, and behaviors are defined by methods of the class or structure.  
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], a UDT can be used as the column definition of a table, as a variable in a [!INCLUDE[tsql](../../includes/tsql_md.md)] batch, or as an argument of a [!INCLUDE[tsql](../../includes/tsql_md.md)] function or stored procedure.  
   

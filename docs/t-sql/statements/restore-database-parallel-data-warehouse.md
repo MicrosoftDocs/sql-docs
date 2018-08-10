@@ -1,7 +1,7 @@
 ﻿---
 title: "RESTORE DATABASE (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "08/09/2018"
 ms.prod: sql
 ms.prod_service: "pdw"
 ms.reviewer: ""
@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 ---
 # RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

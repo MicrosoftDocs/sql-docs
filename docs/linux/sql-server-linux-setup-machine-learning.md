@@ -4,13 +4,14 @@ description: This article describes how to install SQL Server Machine Learning S
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 07/12/2018
+ms.date: 08/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: machine-learning
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server vNext Machine Learning Services R and Python support on Linux
 

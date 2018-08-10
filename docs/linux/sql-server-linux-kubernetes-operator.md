@@ -4,15 +4,15 @@ description: This article explains the parameters for the SQL Server Kubernetes 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 7/16/2018
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-
 # SQL Server Always On availability group Kubernetes operator parameters
 
 An Always On availability group on Kubernetes requires an operator. The operator is described in a .yaml file.  See an example of the specification in [this tutorial](tutorial-sql-server-ag-kubernetes.md).

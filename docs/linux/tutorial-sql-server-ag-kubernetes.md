@@ -4,13 +4,14 @@ description: This tutorial shows how to deploy a SQL Server always on availabili
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 07/16/2018
+ms.date: 08/09/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux,mvc"
 ms.technology: linux
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Configure a SQL Server Always On availability group on Docker containers in Kubernetes with Azure Kubernetes Service (AKS)
 

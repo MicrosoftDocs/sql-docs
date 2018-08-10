@@ -152,7 +152,7 @@ The procedure to turn this feature on or off is dependent on the OS version. To 
     [Configure Windows telemetry in your organization](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 and Windows 7
 
-    [WER Settings](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx)
+    [WER Settings](/windows/desktop/wer/wer-settings).aspx)
  
 ## Feedback for Analysis Services
 

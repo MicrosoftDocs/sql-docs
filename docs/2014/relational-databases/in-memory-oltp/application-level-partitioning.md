@@ -18,7 +18,7 @@ manager: craigg
 # Application-Level Partitioning
   This sample demonstrates application-level partitioning where data is stored in either a memory-optimized table or a disk-based table depending on whether the order falls before or after a specific date. All orders newer or equal to the *hotDate* are in the memory-optimized table and all orders before the *hotDate* are in the disk-based table. Assume an extreme OLTP workload with a lot of concurrent transactions. This business rule (recent orders in a memory-optimized table) must be enforced even if several concurrent transactions are attempting to change the *hotDate*.  
   
- This sample does not use [Partitioned Tables](https://msdn.microsoft.com/library/ms190787.aspx) for the disk-based table but does track an explicit split point between the two tables using a third table. The split point can be used to ensure that newly inserted data is always inserted into the appropriate table based on the date. It could also be used to determine where to look for data. Late arriving data still goes into the appropriate table.  
+ This sample does not use [Partitioned Tables](../partitions/partitioned-tables-and-indexes.md) for the disk-based table but does track an explicit split point between the two tables using a third table. The split point can be used to ensure that newly inserted data is always inserted into the appropriate table based on the date. It could also be used to determine where to look for data. Late arriving data still goes into the appropriate table.  
   
  For a related sample that uses partitioned tables, see [Application Pattern for Partitioning Memory-Optimized Tables](memory-optimized-tables.md).  
   

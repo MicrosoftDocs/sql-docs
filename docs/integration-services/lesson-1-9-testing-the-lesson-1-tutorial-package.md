@@ -50,7 +50,7 @@ Before you test the package you should verify that the control and data flows in
 [Lesson 2: Adding Looping with SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## See Also  
-[Execution of Projects and Packages](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx) 
+[Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md).aspx) 
   
   
   

@@ -32,7 +32,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 
 Returns a single row describing the configuration of the job object that manages the SQL Server process, as well as certain resource consumption statistics at the job object level. Returns an empty set if SQL Server is not running in a job object. 
 
-A job object is a Windows construct that implements CPU, memory, and IO resource governance at the operating system level. For more information about job objects, see [Job Objects](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
+A job object is a Windows construct that implements CPU, memory, and IO resource governance at the operating system level. For more information about job objects, see [Job Objects](/windows/desktop/ProcThread/job-objects). 
   
 |Columns|Data Type|Description|  
 |-------------|---------------|-----------------|  

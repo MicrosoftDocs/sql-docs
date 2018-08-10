@@ -22,7 +22,7 @@ manager: craigg
 ---
 # Start the SQL Server Import and Export Wizard
 
- > For content related to previous versions of SQL Server, see [Run the SQL Server Import and Export Wizard](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Run the SQL Server Import and Export Wizard](start-the-sql-server-import-and-export-wizard.md).aspx).
 
 Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the ways described in this topic to import data from and export data to any supported data source.
 

@@ -22,7 +22,7 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- > For content related to previous versions of SQL Server, see [Install SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Install SQL Server 2014](install-sql-server.md).aspx).
 
  Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
 

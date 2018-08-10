@@ -46,7 +46,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) The SQL Server 2014 content will soon be merged into the .docs site.  For now, see:
-- [Books Online for SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [Books Online for SQL Server 2014](sql-server-technical-documentation.md).aspx)
 - [What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
 - [Previous Versions](https://docs.microsoft.com/previous-versions/sql/)

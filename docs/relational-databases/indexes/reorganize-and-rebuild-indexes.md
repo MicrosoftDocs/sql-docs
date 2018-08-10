@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!NOTE]
-> For content related to previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Reorganize and Rebuild Indexes](https://msdn.microsoft.com/library/ms189858(SQL.120).aspx).
+> For content related to previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Reorganize and Rebuild Indexes](reorganize-and-rebuild-indexes.md).aspx).
 
 This topic describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] automatically modifies indexes whenever insert, update, or delete operations are made to the underlying data. Over time these modifications can cause the information in the index to become scattered in the database (fragmented). Fragmentation exists when indexes have pages in which the logical ordering, based on the key value, does not match the physical ordering inside the data file. Heavily fragmented indexes can degrade query performance and cause your application to respond slowly, especially scan operations.  
   

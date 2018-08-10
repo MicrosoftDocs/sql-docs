@@ -12,16 +12,16 @@
   - name: Enable TDE on SQL Server Using EKM
     href: enable-tde-on-sql-server-using-ekm.md
 - name: TDE with Azure SQL
-  href: transparent-data-encryption-azure-sql.md
+  href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json 
   items:
   - name: TDE with Bring Your Own Key
-    href: transparent-data-encryption-byok-azure-sql.md
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
   - name: Configure TDE with BYOK
-    href: transparent-data-encryption-byok-azure-sql-configure.md
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
   - name: Rotate TDE BYOK keys
-    href: transparent-data-encryption-byok-azure-sql-key-rotation.md
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
   - name: Remove TDE protector
-    href: transparent-data-encryption-byok-azure-sql-remove-tde-protector.md
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
 - name: SQL Server and Database Encryption Keys
   href: sql-server-and-database-encryption-keys-database-engine.md
   items:

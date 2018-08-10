@@ -184,7 +184,7 @@ The error log is a file that contains details about things that occur in your SQ
     ![Find the error log by query](media/ssms-tricks/finderrorlogquery.png)
 
 ### Find the error log location if you can't connect to SQL Server
-The path for your SQL Server errog log can vary depending on your configuration settings. The path for the error log location can be found in the startup parameters within the SQL Server Configuration Manager. Follow the steps below to locate the relevant startup parameter identifying the location of your SQL server error log. *Your path may vary from the path indicated below*. 
+The path for your SQL Server errog log can vary depending on your configuration settings. The path for the error log location can be found in the startup parameters within the SQL Server Configuration Manager. Follow the steps below to locate the relevant startup parameter identifying the location of your SQL Server error log. *Your path may vary from the path indicated below*. 
 
 1. Open SQL Server Configuration Manager. 
 2. Expand **Services**.
@@ -205,7 +205,7 @@ The path for your SQL Server errog log can vary depending on your configuration 
 You have a few options for finding the name of your SQL server before and after you connect to SQL Server.  
 
 ### Before you connect to SQL Server
-1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). 
+1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). Your path may vary from the path in the image below.
 2. Open the errorlog.log file in Notepad.  
 3. Search for the text *Server name is*.
     

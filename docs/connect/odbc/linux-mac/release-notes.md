@@ -23,7 +23,7 @@ Ubuntu 18.04
 
 **Features Added**:
 
-Data Classification for Azure SQL Database and SQL Server
+Data Classification for Azure SQL Database and SQL Server, for more information see [Data Classification](../data-classification.md)
 
 SQLBrowseConnect
 

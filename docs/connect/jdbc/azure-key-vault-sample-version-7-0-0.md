@@ -47,13 +47,13 @@ import com.microsoft.sqlserver.jdbc.SQLServerKeyVaultAuthenticationCallback;
 
 public class AKV_7_0_0 {
 
-    private static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
-    static String applicationClientID = "ba2814e5-8dc6-4b68-bb68-2f8d6c37a0a5";
-    static String applicationKey = "/V1e1IvJ8o2+CYSMvOC13kpOhdb6qkd1T6F9UTqNods=";
-    static String keyID = "https://cheenaakv.vault.azure.net/keys/AKVTest/884a78a7fb7749fcb973be64e2efe5f0";
-    static String cmkName = "AKV_CMK_JDBC";
-    static String cekName = "AKV_CEK_JDBC";
-    static String akvTable = "akvTable";
+    static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
+    static String applicationClientID = "Your Client ID";
+    static String applicationKey = "Your Application Key";
+    static String keyID = "Your Key ID";
+	static String cmkName = "AKV_CMK_JDBC";
+	static String cekName = "AKV_CEK_JDBC";
+	static String akvTable = "akvTable";
 
     static String createTableSQL = "create table " + akvTable + " ("
             + "PlainNvarcharMax nvarchar(max) null,"
@@ -96,8 +96,6 @@ public class AKV_7_0_0 {
             System.exit(0);
         }
     }
-
-
 
     private static SQLServerKeyVaultAuthenticationCallback tryAuthenticationCallback()
             throws URISyntaxException, SQLServerException {
@@ -152,13 +150,6 @@ public class AKV_7_0_0 {
         testChar(statement);
     }
 
-    /**
-     * Sets up keystore
-     *
-     * @param CUSTOM_AKV_PROVIDER_NAME
-     * @param akvProvider
-     * @throws SQLServerException
-     */
     private static void setupKeyStoreProviders(String CUSTOM_AKV_PROVIDER_NAME,
             SQLServerColumnEncryptionKeyStoreProvider akvProvider)
             throws SQLServerException {
@@ -167,21 +158,11 @@ public class AKV_7_0_0 {
         SQLServerConnection.registerColumnEncryptionKeyStoreProviders(map1);
     }
 
-    /**
-     * Cleans and drops tables
-     *
-     * @throws SQLException
-     */
     private static void dropTable(Statement statement) throws SQLException {
         statement.executeUpdate("if object_id('" + akvTable
                 + "','U') is not null" + " drop table " + akvTable);
     }
 
-    /**
-     * Drops CMKs and CEKs
-     *
-     * @throws SQLException
-     */
     private static void dropKeys(Statement statement) throws SQLException {
         statement.executeUpdate(
                 "if exists (SELECT name from sys.column_encryption_keys where name='"
@@ -193,12 +174,6 @@ public class AKV_7_0_0 {
                         + cmkName + " end");
     }
 
-    /**
-     * Creates CMK using the keystore
-     *
-     * @param CUSTOM_AKV_PROVIDER_NAME
-     * @throws SQLException
-     */
     private static void createCMK(String CUSTOM_AKV_PROVIDER_NAME,
             Statement statement) throws SQLException {
         String _createColumnMasterKeyTemplate = String.format(
@@ -207,13 +182,6 @@ public class AKV_7_0_0 {
         statement.execute(_createColumnMasterKeyTemplate);
     }
 
-    /**
-     * Creates CEK
-     *
-     * @param storeProvider
-     * @throws SQLServerException
-     * @throws SQLException
-     */
     private static void createCEK(
             SQLServerColumnEncryptionKeyStoreProvider storeProvider,
             Statement statement) throws SQLServerException, SQLException {
@@ -228,14 +196,6 @@ public class AKV_7_0_0 {
         statement.execute(cekSql);
     }
 
-    /**
-     *
-     * @param b
-     *            byte value
-     * @param length
-     *            length of the array
-     * @return
-     */
     final static char[] hexChars = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
             '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
@@ -249,11 +209,6 @@ public class AKV_7_0_0 {
         return sb.toString();
     }
 
-    /**
-     * Populates the table
-     *
-     * @throws SQLException
-     */
     private static void populateCharNormalCase(Connection connection)
             throws SQLException {
         String sql = "insert into " + akvTable + " values(?,?,?)";

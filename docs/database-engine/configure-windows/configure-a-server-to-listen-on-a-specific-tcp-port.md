@@ -47,13 +47,17 @@ Because port 1433 is the known standard for [!INCLUDE[ssNoVersion](../../include
     > [!NOTE]  
     >  If you are having trouble opening [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
-2.  In the **TCP/IP Properties** dialog box, on the **IP Addresses** tab, several IP addresses appear in the format **IP1**, **IP2**, up to **IPAll**. One of these is for the IP address of the loopback adapter, 127.0.0.1. Additional IP addresses appear for each IP Address on the computer. (You will probably see both IP version 4  and IP version 6 addresses.) Right-click each address, and then click **Properties** to identify the IP address that you want to configure.  
+2.  In the **TCP/IP Properties** dialog box, on the **IP Addresses** tab, several IP addresses appear in the format **IP1**, **IP2**, up to **IPAll**. One of these is for the IP address of the loopback adapter, 127.0.0.1. Additional IP addresses appear for each IP Address on the computer. (You will probably see both IP version 4 and IP version 6 addresses.) Right-click each address, and then click **Properties** to identify the IP address that you want to configure.  
   
 3.  If the **TCP Dynamic Ports** dialog box contains **0**, indicating the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is listening on dynamic ports, delete the 0.  
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  In the **IP***n* **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**.  
+4.  In the **IP***n* **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**. Multiple ports may be specified by separating them with a comma.
+
+    > [!NOTE] 
+    > If the **Listen All** setting on the **Protocol** tab is set to "Yes", then only **TCP Port** and **TCP Dynamic Port** values under the **IPAll** section will be used and individual **IP***n* sections will be ignored in their entirety. If the **Listen All** setting is set to "No", then the **TCP Port** and **TCP Dynamic Port** settings under the **IPAll** section will be ignored and the **TCP Port**, **TCP Dynamic Port**, and **Enabled** settings on the individual **IP***n* sections will be used instead.
+    > Each **IP***n* section has an **Enabled** setting with a default value of "No" which causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to ignore this IP address even if it has a port defined.  
   
 5.  In the console pane, click **SQL Server Services**.  
   

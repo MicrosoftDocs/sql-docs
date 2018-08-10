@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "08/08/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -83,7 +83,7 @@ SET
   | <service_broker_option>  
   | <snapshot_option>  
   | <sql_option>   
-  | <target_recovery_time_option>   
+  | <target_recovery_time_option> 
   | <termination>  
 }  
 ;
@@ -112,7 +112,7 @@ SET
    }  
 }  
   
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF }   
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -1306,14 +1306,11 @@ SET
 }
 
 <automatic_tuning_option> ::=  
-{  AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+{   AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
   | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
-}  
-
-ALTER DATABASE current SET AUTOMATIC_TUNING = AUTO | INHERIT | CUSTOM
-ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_INDEX = DEFAULT, DROP_INDEX = OFF)
+}
 
 <change_tracking_option> ::=  
 {  
@@ -1325,7 +1322,7 @@ ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_I
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -1446,7 +1443,7 @@ The status of this option can be determined by examining the is_auto_shrink_on c
   
 > [!NOTE]  
 > The AUTO_SHRINK option is not available in a Contained Database.  
-  
+
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }  
 ON  
 Specifies that the query optimizer updates statistics when they are used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.  
@@ -1483,49 +1480,57 @@ The status of this option can be determined by examining the is_auto_update_stat
   
 For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
 
-**\<automatic_tuning_option> ::=**  
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
 **Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-
-Enables or disables [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) of databases.
-
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
-AUTO
-Setting the automatic tuning value to AUTO will apply Azure configuration defaults for automatic tuning.
-INHERIT
-Using the value INHERIT will inherit the default configuration from the parent server. This is especially useful if you would like to customize automatic tuning configuration on a parent server, and have all the databases on such server INHERIT these custom settings. Please note that in order for the inheritance to work, the three individual tuning options FORCE_LAST_GOOD_PLAN, CREATE_INDEX and DROP_INDEX need to be set to DEFAULT on databases.
-CUSTOM
-Using the value CUSTOM, you will need to manually custom configure each of the automatic tuning options available on databases.
-
-Enables or disables automatic index management `CREATE_INDEX` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
-
-CREATE_INDEX = { DEFAULT | ON | OFF }
-DEFALT
-Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.
-ON
-When enabled, missing indexes are automatically generated on a database. Following the index creation, gains to the performance of the workload are verified. When such created index no longer provides benefits to the workload performance, it is automatically reverted. Indexes automatically created are flagged as a system generated indexed.
-OFF
-Does not automatically generate missing indexes on the database.
-
-Enables or disables automatic index management `DROP_INDEX` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
-
-DROP_INDEX = { DEFAULT | ON | OFF }
-DEFALT
-Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.
-ON
-Automatically drops duplicate or no longer useful indexes to the performance workload. 
-OFF
-Does not automatically drop missing inexes on the database.
-
-Enables or disables automatic plan correction `FORCE_LAST_GOOD_PLAN` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
-
+  
+Controls automatic options for [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }  
+AUTO  
+Setting the automatic tuning value to AUTO will apply Azure configuration defaults for automatic tuning.  
+    
+INHERIT  
+Using the value INHERIT will inherit the default configuration from the parent server. This is especially useful if you would like to customize automatic tuning configuration on a parent server, and have all the databases on such server INHERIT these custom settings. Please note that in order for the inheritance to work, the three individual tuning options FORCE_LAST_GOOD_PLAN, CREATE_INDEX and DROP_INDEX need to be set to DEFAULT on databases.  
+  
+CUSTOM  
+Using the value CUSTOM, you will need to manually custom configure each of the automatic tuning options available on databases.  
+  
+Enables or disables automatic index management `CREATE_INDEX` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+CREATE_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.  
+  
+ON  
+When enabled, missing indexes are automatically generated on a database. Following the index creation, gains to the performance of the workload are verified. When such created index no longer provides benefits to the workload performance, it is automatically reverted. Indexes automatically created are flagged as a system generated indexed.  
+  
+OFF  
+Does not automatically generate missing indexes on the database.  
+  
+Enables or disables automatic index management `DROP_INDEX` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+DROP_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.  
+  
+ON  
+Automatically drops duplicate or no longer useful indexes to the performance workload.   
+  
+OFF  
+Does not automatically drop missing inexes on the database.  
+  
+Enables or disables automatic plan correction `FORCE_LAST_GOOD_PLAN` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
 FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
-DEFAULT
-Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.
+DEFAULT  
+Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.  
+  
 ON  
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
+  
 OFF  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.
-
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.  
+  
 **\<change_tracking_option> ::=**  
   
 Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.  
@@ -2077,6 +2082,11 @@ SET
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
 
+<automatic_tuning_option> ::=  
+{  
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+}  
+
 <change_tracking_option> ::=  
 {  
   CHANGE_TRACKING 
@@ -2087,7 +2097,7 @@ SET
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -2232,6 +2242,17 @@ The status of this option can be determined by examining the is_auto_update_stat
   
 For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
   
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
+**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+
+Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.  
+  
+FORCE_LAST_GOOD_PLAN = { ON | OFF }  
+ON  
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
+OFF  
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.
+
 **\<change_tracking_option> ::=**  
   
 Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.  

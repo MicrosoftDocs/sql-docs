@@ -53,8 +53,8 @@ The Microsoft JDBC Driver 6.2 supports the JDBC 4.0, 4.1, and 4.2 specifications
 
 | JAR                       | JDBC Specification     | JDK Version |
 | ------------------------- | ---------------------- | ----------- |
-| mssql-jdbc-6.2.1.jre8.jar | JDBC 4.2, 4.1, and 4.0 | JDK 8.0     |
-| mssql-jdbc-6.2.1.jre7.jar | JDBC 4.1 and 4.0       | JDK 7.0     |
+| mssql-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1, and 4.0 | JDK 8.0     |
+| mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1 and 4.0       | JDK 7.0     |
 
 The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server supports JDBC 4.0, 4.1, and 4.2 specifications and include two JAR class libraries in the installation package as follows:
 

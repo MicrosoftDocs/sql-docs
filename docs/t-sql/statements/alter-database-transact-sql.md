@@ -1,7 +1,7 @@
 ﻿---
 title: "ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "08/07/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,26 +28,52 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Transact-SQL)
 
-Modifies a database. 
+Modifies certain configuration options of a database. 
 
-Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
+This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-# [SQL Server](#tab/sqlserver)
-  
+## Click a product!
+
+In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# SQL Server
+
 ## Overview
 
 In SQL Server, this statement modifies a database, or the files and filegroups associated with the database. Adds or removes files and filegroups from a database, changes the attributes of a database or its files and filegroups, changes the database collation, and sets database options. Database snapshots cannot be modified. To modify database options associated with replication, use [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
    
-Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.  
 
 ALTER DATABASE  
-The current topic provides the syntax and related information for changing the name and the collation of a database.  
+The current article provides the syntax and related information for changing the name and the collation of a database.  
   
 [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
@@ -253,17 +279,40 @@ GO
 - [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [System Databases](../../relational-databases/databases/system-databases.md)  
-  
-# [SQL DB logical server](#tab/sqldbls)
+
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th style="border: 1"><strong><em>* SQL DB<br />logical server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# Azure SQL Database logical server
 
 ## Overview
 
 In Azure SQL Database, use this statement to modify a database on a logical server. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
 
-Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.  
 
 ALTER DATABASE  
-The current topic provides the syntax and related information for changing the name and the collation of a database.  
+The current article provides the syntax and related information for changing the name and the collation of a database.  
   
 [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbls)  
 Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.  
@@ -357,7 +406,7 @@ ALTER DATABASE db1
 
 MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
 
-Changes the service tier of the database. Support for 'premiumrs' has been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
+Changes the service tier of the database. 
 
 The following example changes edition to `premium`:
   
@@ -425,7 +474,7 @@ The MAXSIZE value for the DTU-based model, if specified, has to be a valid value
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Max data size (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
 
-If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitsations for  vCore-based model, see [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for  vCore-based model, see [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
   
 The following rules apply to MAXSIZE and EDITION arguments:  
   
@@ -595,16 +644,39 @@ ALTER DATABASE db1 FAILOVER
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [System Databases](../../relational-databases/databases/system-databases.md)  
 
-# [SQL DB Managed Instance](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# Azure SQL Database Managed Instance
 
 ## Overview
 
 In Azure SQL Database Managed Instance, use this statement to set database options.
 
-Because of its length, the ALTER DATABASE syntax is separated into the multiple topics.  
+Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.  
 
 ALTER DATABASE  
-The current topic provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatability level.  
+The current article provides the syntax and related information for setting file and filegroup options, for setting database options, and for setting the database compatibility level.  
   
 [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) 
 Provides the syntax and related information for adding and removing files and filegroups from a database, and for changing the attributes of the files and filegroups.  
@@ -649,6 +721,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <target_recovery_time_option> 
   | <temporal_history_retention>  
 }  
+
 ```
   
 ## Arguments  
@@ -683,13 +756,17 @@ Only the server-level principal login (created by the provisioning process) or m
 > [!IMPORTANT]  
 >  The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.  
   
-## Examples  
-  
-### A. what examples here??
+## Examples
+The following examples show you how to set automatic tuning and how to add a file in a managed instance.
 
 ```sql
+ALTER DATABASE WideWorldImporters
+	SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON)
+
+ALTER DATABASE WideWorldImporters
+	ADD FILE (NAME = 'data_17')
 ```
-  
+
 ## See also
   
 [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
@@ -706,7 +783,30 @@ Only the server-level principal login (created by the provisioning process) or m
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [System Databases](../../relational-databases/databases/system-databases.md)  
 
-# [SQL Data Warehouse](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# Azure SQL Data Warehouse
 
 ## Overview
 
@@ -810,14 +910,36 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## See Also  
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
-  
+[SQL Data Warehouse list of reference articles](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+ 
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 
-# [SQL Parallel Data Warehouse](#tab/sqlpdw)
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
+>   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# SQL Parallel Data Warehouse
 
 ## Overview
 
-Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in Parallel Data Warehouse. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The topic also describes syntax related to setting database options in Parallel Data Warehouse.
+Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in Parallel Data Warehouse. Use this statement to manage disk space allocations for a database as it grows or shrinks in size. The article also describes syntax related to setting database options in Parallel Data Warehouse.
 
 ## Syntax  
   
@@ -866,14 +988,14 @@ When the automatic create statistics option, AUTO_CREATE_STATISTICS, is ON, the 
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
-For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics)
+For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md)
 
 SET AUTO_UPDATE_STATISTICS { ON | OFF } 
 When the automatic update statistics option, AUTO_UPDATE_STATISTICS, is ON, the query optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. Statistics become out-of-date after operations insert, update, delete, or merge change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade. 
 
-For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
+For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
 
 
 SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
@@ -903,7 +1025,7 @@ The statistics settings only work if the administrator has enable auto-stats.  I
 Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) statement on the database.  
   
 ## Performance  
-Shrinking a database can take a large amount of time and system resources, depending on the size of the actual data within the database, and the amount of fragmentation on disk. For example, shrinking a database could take serveral hours or more.  
+Shrinking a database can take a large amount of time and system resources, depending on the size of the actual data within the database, and the amount of fragmentation on disk. For example, shrinking a database could take several hours or more.  
   
 ## Determining Encryption Progress  
 Use the following query to determine progress of database transparent data encryption as a percent:  
@@ -1012,5 +1134,5 @@ ALTER DATABASE CustomerSales
 ## See Also  
  [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
-  
- 
+
+::: moniker-end

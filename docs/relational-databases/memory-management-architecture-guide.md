@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/08/2018"
@@ -31,7 +31,7 @@ For more information on the amount of physical memory supported by different ope
   
 Virtual memory systems allow the over-commitment of physical memory, so that the ratio of virtual-to-physical memory can exceed 1:1. As a result, larger programs can run on computers with a variety of physical memory configurations. However, using significantly more virtual memory than the combined average working sets of all the processes can cause poor performance. 
 
-## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Architecture
+## SQL Server Memory Architecture
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dynamically acquires and frees memory as required. Typically, an administrator does not have to specify how much memory should be allocated to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], although the option still exists and is required in some environments.
 

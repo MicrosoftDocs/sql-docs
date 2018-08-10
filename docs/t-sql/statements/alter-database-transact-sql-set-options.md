@@ -56,9 +56,9 @@ In the following row, click whichever product name you are interested in. The cl
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Server *<br /></em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 > </tr>
 > </table>
 
@@ -1295,9 +1295,9 @@ SET QUERY_STORE = ON
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Server *<br /></em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 > </tr>
 > </table>
 
@@ -2094,8 +2094,8 @@ SET QUERY_STORE = ON
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
+>   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
 > </tr>
 > </table>
 

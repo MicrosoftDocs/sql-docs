@@ -66,9 +66,9 @@ In the following row, click whichever product name you are interested in. The cl
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Server *<br /></em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
@@ -895,8 +895,8 @@ GO
 > </tr>
 > <tr>
 >   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th style="border: 1"><strong><em>* SQL DB<br />logical server *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Database<br />logical server *</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
@@ -1229,8 +1229,8 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > </tr>
 > <tr>
 >   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><strong><em>* SQL DB<br />Managed Instance</th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
+>   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
@@ -1313,8 +1313,8 @@ See [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 > </tr>
 > <tr>
 >   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
 >   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
@@ -1437,8 +1437,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > </tr>
 > <tr>
 >   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />Managed Instance</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>

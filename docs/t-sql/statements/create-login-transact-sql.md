@@ -53,8 +53,8 @@ In the following row, click whichever product name you are interested in. The cl
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><strong><em>* SQL Server *<br /></em></strong></th>
+>   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
@@ -280,7 +280,7 @@ GO
 > </tr>
 > <tr>
 >   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th style="border: 1"><strong><em>* SQL DB<br />logical server *</em></strong></th>
+>   <th><strong><em>* SQL Database<br />logical server *</em></strong></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
@@ -410,7 +410,7 @@ GO
 > </tr>
 > <tr>
 >   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>>   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
+>   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>>   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
 >   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
@@ -532,7 +532,7 @@ GO
 > </tr>
 > <tr>
 >   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL DB<br />logical server</a></th>
+>   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>

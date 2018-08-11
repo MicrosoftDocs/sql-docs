@@ -4,17 +4,7 @@
             "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
             "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
             "redirect_document_id": false
-        },       
-        {
-            "source_path": "docs/advanced-analytics/predict-t-sql.md",
-            "redirect_url": "https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql",
-            "redirect_document_id": false
-        }, 
-        {
-            "source_path": "docs/advanced-analytics/getting-started-with-machine-learning-services.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning",
-            "redirect_document_id": false
-        }, 
+        },
         {
             "source_path": "docs/advanced-analytics/r/install-pretrained-models-sql-server.md",
             "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/install/sql-pretrained-models-install",
@@ -1276,6 +1266,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/t-sql/statements/restore-database-parallel-data-warehouse.md",
+            "redirect_url": "/sql/t-sql/statements/restore-statements-transact-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/backup-database-parallel-data-warehouse.md",
+            "redirect_url": "/sql/t-sql/statements/backup-transact-sql",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/t-sql/statements/backup-and-restore-statements-transact-sql.md",
             "redirect_url": "/sql/t-sql/statements/statements",
             "redirect_document_id": false
@@ -1327,17 +1327,17 @@
         },
         {
             "source_path": "docs/t-sql/statements/alter-database-azure-sql-database.md",
-            "redirect_url": "/sql/t-sql/alter-database-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/alter-database-transact-sql",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/t-sql/statements/alter-database-azure-sql-data-warehouse.md",
-            "redirect_url": "/sql/t-sql/alter-database-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/alter-database-transact-sql",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/t-sql/statements/alter-database-parallel-data-warehouse.md",
-            "redirect_url": "/sql/t-sql/alter-database-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/alter-database-transact-sql",
             "redirect_document_id": false
         },
         {
@@ -2244,6 +2244,31 @@
             "source_path":"docs/sql-server/sql-server-documentation-offline-access.md",
             "redirect_url":"/sql/release-notes/sql-server-help-installation",
             "redirect_document_id":false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-azure-sql.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-azure-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-configure.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql.md",
+            "redirect_url": "/azure/sql-database//transparent-data-encryption-byok-azure-sql",
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md",

@@ -34,8 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## Syntax  
   
-```  
-  
+```sql
 CHANGETABLE (  
     { CHANGES table , last_sync_version  
     | VERSION table , <primary_key_values> } )  

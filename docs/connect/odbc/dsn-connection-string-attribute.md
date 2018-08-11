@@ -23,8 +23,7 @@ This page lists the keywords for connection strings and DSNs, and connection att
 
 ## Supported DSN/Connection String Keywords and Connection Attributes
 
-The following table lists the available keywords and the attributes for each platform (L: Linux ; M: Mac ; W: Windows).
-Click the keyword or attribute for more details.
+The following table lists the available keywords and the attributes for each platform (L: Linux ; M: Mac ; W: Windows). Click the keyword or attribute for more details.
 
 | DSN / Connection String Keyword | Connection Attribute | Platform | 
 |-|-|-|

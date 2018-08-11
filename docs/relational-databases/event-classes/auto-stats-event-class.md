@@ -1,4 +1,5 @@
-﻿title: "Auto Stats Event Class | Microsoft Docs"
+---
+title: "Auto Stats Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

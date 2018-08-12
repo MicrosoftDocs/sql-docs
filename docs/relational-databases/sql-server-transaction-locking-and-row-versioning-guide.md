@@ -229,7 +229,7 @@ GO
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
-       SET name = 'New' WHERE ID = 5;  
+      (Id, Name) VALUES('New',6);  
     COMMIT;   
     ```  
   

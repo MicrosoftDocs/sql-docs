@@ -71,6 +71,8 @@
       href: sql-server-linux-setup-full-text-search.md
     - name: Install SQL Server Integration Services
       href: sql-server-linux-setup-ssis.md
+    - name: Install SQL Server Machine Learning Services
+      href: sql-server-linux-setup-machine-learning.md
     - name: Configure repositories
       href: sql-server-linux-change-repo.md
   - name: Configure

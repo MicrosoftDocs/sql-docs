@@ -106,7 +106,7 @@ You can ignore this informational message. The enlistment operation should compl
 To resolve this, reboot the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is running. This only needs to be done once.  
   
 ### Limitation 4: Using the Network Service Account When SQL Server Reporting Services Is Running on the Same Computer  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent may fail to start if you run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service under the Network Service account and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] is also running on the same computer.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent may fail to start if you run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service under the Network Service account and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is also running on the same computer.  
   
 To resolve this, reboot the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is running, and then restart both the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent services. This only needs to be done once.  
   

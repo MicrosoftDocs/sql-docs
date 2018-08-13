@@ -55,7 +55,7 @@ You can remove the extension pack by using **Add or Remove Programs**.
   
 7.  On the Finish page, click **Exit**.  
   
-After the uninstallation process is completed, you can confirm that objects in the **sysdb.ssma_MySQL** schema, and possibly the whole **sysdb** database, has been removed by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. However, if you use other SSMA products, they also use the **sysdb** database. If the database exists and you are sure that no other databases reference to the objects in this database, you can detach the database.  
+After the uninstallation process is completed, you can confirm that objects in the **sysdb.ssma_MySQL** schema, and possibly the whole **sysdb** database, has been removed by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. However, if you use other SSMA products, they also use the **sysdb** database. If the database exists and you are sure that no other databases reference to the objects in this database, you can detach the database.  
   
 ## See Also  
 [Installing SSMA for MySQL Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

@@ -58,7 +58,7 @@ To use SSMA to create SQL Server or SQL Azure database objects, you select the o
     -   Click on the action sign to change the state. Actual synchronization will be performed when you click **OK** button of the **Synchronize with Database** dialog.  
   
 ## Scripting Objects  
-To save [!INCLUDE[tsql](../../includes/tsql_md.md)] definitions of the converted database objects, or to alter the object definitions and run scripts yourself, you can save the converted database object definitions to [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts.  
+To save [!INCLUDE[tsql](../../includes/tsql-md.md)] definitions of the converted database objects, or to alter the object definitions and run scripts yourself, you can save the converted database object definitions to [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
   
 **To save objects as scripts**  
   
@@ -66,7 +66,7 @@ To save [!INCLUDE[tsql](../../includes/tsql_md.md)] definitions of the converted
   
     You can also script individual objects or categories of objects by right-clicking the object or its parent folder, and then clicking **Save as Script**.  
   
-2.  In the **Save As** dialog box, locate the folder where you want to save the script, enter a file name in the **File name** box, and then [!INCLUDE[clickOK](../../includes/clickok_md.md)] SSMA will append the .sql file name extension.  
+2.  In the **Save As** dialog box, locate the folder where you want to save the script, enter a file name in the **File name** box, and then [!INCLUDE[clickOK](../../includes/clickok-md.md)] SSMA will append the .sql file name extension.  
   
 ### Modifying Scripts  
 After you have saved the SQL Server or SQL Azure object definitions as a script, you can use SQL Server Management Studio to modify the script.  

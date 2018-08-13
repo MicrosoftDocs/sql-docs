@@ -26,7 +26,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 **In This Topic**  
   
@@ -42,7 +42,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent can run a job on a schedule, in response to a specific event, or on demand. For example, if you want to back up all the company servers every weekday after hours, you can automate this task. Schedule the backup to run after 22:00 Monday through Friday; if the backup encounters a problem, SQL Server Agent can record the event and notify you.  
   
 > [!NOTE]  
-> By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service is disabled when [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] is installed unless the user explicitly chooses to autostart the service.  
+> By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service is disabled when [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is installed unless the user explicitly chooses to autostart the service.  
   
 ## <a name="Components"></a>SQL Server Agent Components  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent uses the following components to define the tasks to be performed, when to perform the tasks, and how to report the success or failure of the tasks.  
@@ -61,9 +61,9 @@ You can run jobs in several ways:
   
 -   By executing the sp_start_job stored procedure.  
   
-Each action in a job is a *job step*. For example, a job step might consist of running a [!INCLUDE[tsql](../../includes/tsql_md.md)] statement, executing an [!INCLUDE[ssIS](../../includes/ssis_md.md)] package, or issuing a command to an Analysis Services server. Job steps are managed as part of a job.  
+Each action in a job is a *job step*. For example, a job step might consist of running a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, executing an [!INCLUDE[ssIS](../../includes/ssis_md.md)] package, or issuing a command to an Analysis Services server. Job steps are managed as part of a job.  
   
-Each job step runs in a specific security context. For job steps that use [!INCLUDE[tsql](../../includes/tsql_md.md)], use the EXECUTE AS statement to set the security context for the job step. For other types of job steps, use a proxy account to set the security context for the job step.  
+Each job step runs in a specific security context. For job steps that use [!INCLUDE[tsql](../../includes/tsql-md.md)], use the EXECUTE AS statement to set the security context for the job step. For other types of job steps, use a proxy account to set the security context for the job step.  
   
 ### Schedules  
 A *schedule* specifies when a job runs. More than one job can run on the same schedule, and more than one schedule can apply to the same job. A schedule can define the following conditions for the time when a job runs:  
@@ -125,7 +125,7 @@ You can define an operator as the alias for a group of individuals. In this way,
 Members of the **SQLAgentUserRole**, **SQLAgentReaderRole**, and **SQLAgentOperatorRole** fixed database roles in **msdb**, and members of the **sysadmin** fixed server role have access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. A user that does not belong to any of these roles cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. For more information on the roles used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### Subsystems  
-A subsystem is a predefined object that represents functionality that is available to a job step. Each proxy has access to one or more subsystems. Subsystems provide security because they delimit access to the functionality that is available to a proxy. Each job step runs in the context of a proxy, except for [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps. [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps use the EXECUTE AS command to set the security context to the owner of the Job.  
+A subsystem is a predefined object that represents functionality that is available to a job step. Each proxy has access to one or more subsystems. Subsystems provide security because they delimit access to the functionality that is available to a proxy. Each job step runs in the context of a proxy, except for [!INCLUDE[tsql](../../includes/tsql-md.md)] job steps. [!INCLUDE[tsql](../../includes/tsql-md.md)] job steps use the EXECUTE AS command to set the security context to the owner of the Job.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] defines the subsystems listed in the following table:  
   
@@ -144,7 +144,7 @@ A subsystem is a predefined object that represents functionality that is availab
 |[!INCLUDE[ssIS](../../includes/ssis_md.md)] package execution|Run an [!INCLUDE[ssIS](../../includes/ssis_md.md)] package.|  
   
 > [!NOTE]  
-> Because [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps do not use proxies, there is no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent subsystem for [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps.  
+> Because [!INCLUDE[tsql](../../includes/tsql-md.md)] job steps do not use proxies, there is no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent subsystem for [!INCLUDE[tsql](../../includes/tsql-md.md)] job steps.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent enforces subsystem restrictions even when the security principal for the proxy would normally have permission to run the task in the job step. For example, a proxy for a user that is a member of the sysadmin fixed server role cannot run an [!INCLUDE[ssIS](../../includes/ssis_md.md)] job step unless the proxy has access to the [!INCLUDE[ssIS](../../includes/ssis_md.md)] subsystem, even though the user can run [!INCLUDE[ssIS](../../includes/ssis_md.md)] packages.  
   
@@ -158,7 +158,7 @@ Use the following steps to configure [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 1.  Establish which administrative tasks or server events occur regularly and whether these tasks or events can be administered programmatically. A task is a good candidate for automation if it involves a predictable sequence of steps and occurs at a specific time or in response to a specific event.  
   
-2.  Define a set of jobs, schedules, alerts, and operators by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects (SMO). For more information, see [Create Jobs](../../ssms/agent/create-jobs.md).  
+2.  Define a set of jobs, schedules, alerts, and operators by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects (SMO). For more information, see [Create Jobs](../../ssms/agent/create-jobs.md).  
   
 3.  Run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs you have defined.  
   

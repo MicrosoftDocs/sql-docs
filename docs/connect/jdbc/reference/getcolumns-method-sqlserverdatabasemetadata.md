@@ -95,7 +95,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|The name of an XML schema collection. If the name cannot be found, this is an empty string. <sup>1</sup>|  
 |SS_DATA_TYPE|**tinyint**|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data type that is used by extended stored procedures.<br /><br /> **Note** For more information about the data types returned by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], see "Data Types (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.|  
   
- (1) This column will not be present if you are connecting to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)].  
+ (1) This column will not be present if you are connecting to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 > [!NOTE]  
 >  For more information about the data returned by the getColumns method, see "sp_columns (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
@@ -104,7 +104,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  The DATA_TYPE column has the following changes:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Data Type|Return Type in JDBC Driver 2.0 (or, if connected to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) and Associated Numeric Constant|Return Type in JDBC Driver 3.0 when connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] or later|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Data Type|Return Type in JDBC Driver 2.0 (or, if connected to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]) and Associated Numeric Constant|Return Type in JDBC Driver 3.0 when connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] or later|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |user-defined type larger than 8 kB|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geography|LONGVARBINARY (-4)|VARBINARY (-3)|  

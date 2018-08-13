@@ -119,7 +119,7 @@ SSMA contains the following menus:
 |Menu|Description|  
 |--------|---------------|  
 |**File**|Contains commands for the Migration Wizard, working with projects, adding and removing Access database files, and connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.|  
-|**Edit**|Contains commands for finding and working with text in the details pages, such as copying [!INCLUDE[tsql](../../includes/tsql_md.md)] from the SQL details pane. To open the **Manage Bookmarks** dialog, on the Edit menu, click Manage Bookmarks. In the dialog, you will see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.|  
+|**Edit**|Contains commands for finding and working with text in the details pages, such as copying [!INCLUDE[tsql](../../includes/tsql-md.md)] from the SQL details pane. To open the **Manage Bookmarks** dialog, on the Edit menu, click Manage Bookmarks. In the dialog, you will see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.|  
 |**View**|Contains the **Synchronize Metadata Explorers** command. This synchronizes the objects between Access Metadata Explorer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB Metadata Explorer. Also contains commands to display and hide the **Output** and **Error List** panes and an option **Layouts** to manage with the Layouts.|  
 |**Tools**|Contains commands to create reports, export data, migrate objects and data, link tables, and provides access to global and project settings dialog boxes.|  
 |**Help**|Provides access to SSMA Help and to the **About** dialog box.|  

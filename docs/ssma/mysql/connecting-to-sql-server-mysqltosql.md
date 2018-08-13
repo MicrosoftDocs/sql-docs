@@ -30,7 +30,7 @@ Metadata about the instance of SQL Server is not automatically synchronized. Ins
 ## Required SQL Server Permissions  
 The account that is used to connect to SQL Server requires different permissions depending on the actions that the account performs:  
   
--   To convert MySQL objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, to update metadata from SQL Server, or to save converted syntax to scripts, the account must have permission to log on to the instance of SQL Server.  
+-   To convert MySQL objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, to update metadata from SQL Server, or to save converted syntax to scripts, the account must have permission to log on to the instance of SQL Server.  
   
 -   To load database objects into SQL Server, the minimum permission requirement is membership in the **db_owner** database role in the target database.  
   

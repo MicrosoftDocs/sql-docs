@@ -106,9 +106,9 @@ Monitor script execution using [sys.dm_external_script_requests](../../relationa
 
 ### Parameters for partition modeling
 
- In SQL Server vNext, currently in public preview, you can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide. You can then order the result set based on another parameter available for that purpose. The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**.
-
- The parameters are passed as inputs to `sp_execute_external_script` to process partitions with the external script executing once for every partition. 
+ In SQL Server vNext, currently in public preview, you can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
+ 
+ The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**, where the second parameter is used to order the result set. The parameters are passed as inputs to `sp_execute_external_script` with the external script executing once for every partition. For more information and examples, see [Tutorial: Create partition-based models](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
 
  You can execute script in parallel by specifying `@parallel=1`. If the input query can be parallelized, you should set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows, but if you want to handle this explicitly, this script includes the parameter as a demonstration.
 

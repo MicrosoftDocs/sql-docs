@@ -34,7 +34,7 @@ The Object Explorer Details pane is visible in the [!INCLUDE[ssManStudio](../../
 > [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] presents dates formatted with the Microsoft Windows Regional and Language Options in effect when [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] was started. Restart [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to reflect newer settings.  
   
 ## Object Explorer Details  
-Object Explorer Details can be used to navigate through folders and objects on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance. On 32-bit operating systems, Object Explorer can only display 64,000 objects. An icon must be selected to access additional objects.  
+Object Explorer Details can be used to navigate through folders and objects on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On 32-bit operating systems, Object Explorer can only display 64,000 objects. An icon must be selected to access additional objects.  
   
 Object Explorer Details includes a toolbar which contains the icons described in the following table. Icons are only available when appropriate.  
   

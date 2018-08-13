@@ -20,14 +20,14 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The following sections provide examples of the different ways to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database by using the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+The following sections provide examples of the different ways to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 > [!NOTE]  
-> If you have problems connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] using the JDBC driver, see [Troubleshooting Connectivity](../../connect/jdbc/troubleshooting-connectivity.md) for suggestions on how to correct it.
+> If you have problems connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the JDBC driver, see [Troubleshooting Connectivity](../../connect/jdbc/troubleshooting-connectivity.md) for suggestions on how to correct it.
 
 ## Creating a Connection by Using the DriverManager Class
 
-The simplest approach to creating a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database is to load the JDBC driver and call the getConnection method of the DriverManager class, as in the following:
+The simplest approach to creating a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is to load the JDBC driver and call the getConnection method of the DriverManager class, as in the following:
 
 ```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  

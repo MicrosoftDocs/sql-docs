@@ -46,7 +46,7 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
 ## Remarks  
  This getCharacterStream method is specified by the getCharacterStream method in the java.sql.ResultSet interface.  
   
- This method will read only [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Unicode character data types such as nchar, nvarchar, nvarchar(max), and ntext. All other data types, including the ASCII character types, will cause an exception to be thrown. To read the ASCII data types, use the [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) method.  
+ This method will read only [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Unicode character data types such as nchar, nvarchar, nvarchar(max), and ntext. All other data types, including the ASCII character types, will cause an exception to be thrown. To read the ASCII data types, use the [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) method.  
   
 ## See Also  
  [getCharacterStream Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   

@@ -537,7 +537,7 @@ Specifies to create an index on the table. This can be a clustered index, or a n
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Specifies the placement of FILESTREAM data for the table when a clustered index is created. The FILESTREAM_ON clause allows FILESTREAM data to be moved to a different FILESTREAM filegroup or partition scheme.  
   
@@ -600,7 +600,7 @@ Specifies to create an index on the table. This can be a clustered index, or a n
   
  FILESTREAM  
    
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Valid only for **varbinary(max)** columns. Specifies FILESTREAM storage for the **varbinary(max)** BLOB data.  
   

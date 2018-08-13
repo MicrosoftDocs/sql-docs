@@ -23,7 +23,7 @@ manager: craigg
 # TYPE_SS_SCROLL_KEYSET Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] keyset cursor type.  
+  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] keyset cursor type.  
   
 ## Syntax  
   

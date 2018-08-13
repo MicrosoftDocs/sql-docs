@@ -42,6 +42,7 @@ To use secure enclaves with Always Encrypted, your environment requires Windows 
 
 - Windows Server 2019 Preview. The computer must be configured as a guarded host, attested by HGS. See Configuring HGS Attestation.pdf for details.
 - SQL Server vNext CTP 2.0 or later
+
     > [!NOTE]
     > During the preview (for testing/prototyping), it is fine to use Always Encrypted with secure enclaves in a SQL Server instance inside a virtual machine. However, for production, the recommended TPM attestation mode requires SQL Server runs on a physical computer.
 
@@ -105,9 +106,9 @@ Install the following tools on the client/development computer:
 
 On the client/development computer:
 
-1. Open SSMS and connect to your SQL Server instance ad administrator.
+1. Open SSMS and connect to your SQL Server instance as an Active Directory (AD) administrator.
 2. Turn on the following trace flag: TODO
-3. Verify Always Encrypted with secure enclaves is supported in your instance and it is not enabled yet. Run the following query:
+3. To verify Always Encrypted with secure enclaves is supported in your instance, run the following query:
 
    ```sql
    SELECT * FROM sys.configurations
@@ -144,8 +145,6 @@ On the client/development computer:
 
 ## Provision enclave-enabled keys
 
-Prerequisites:
-
 Before provisioning keys, you need to create your database (for example, by restoring it from a backup file) on the SQL Server instance with the secure enclave loaded.
 
 The introduction of enclave-enabled keys does not fundamentally change the [key provisioning and key management workflows for Always Encrypted](overview-of-key-management-for-always-encrypted.md). The only change is in the column master key provisioning workflow, where you can now mark the key as enclave-enabled (by default, column master keys, are not enclave-enabled). When you specify the new column master key is to be enclave-enabled, a couple things happen:
@@ -153,7 +152,7 @@ The introduction of enclave-enabled keys does not fundamentally change the [key 
 - Sets the **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database.
 - Digitally signs column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**). The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
 
-The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a column master key rotation, which is discussed in a later section.
+The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key).
 
 To provision an enclave-enabled column encryption key, you just need to make sure that the column master key, encrypting the column encryption key, is enclave-enabled.
 

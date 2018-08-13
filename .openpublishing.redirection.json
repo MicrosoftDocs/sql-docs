@@ -2256,6 +2256,31 @@
             "redirect_document_id":false
         },
         {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-azure-sql.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-azure-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-configure.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql.md",
+            "redirect_url": "/azure/sql-database//transparent-data-encryption-byok-azure-sql",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md",
             "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql",
             "redirect_document_id": false

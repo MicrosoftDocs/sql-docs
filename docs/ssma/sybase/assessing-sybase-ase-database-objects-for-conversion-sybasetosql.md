@@ -18,7 +18,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Assessing SAP ASE database objects for conversion (SybaseToSQL)
-Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL, you should determine how complexity of the migration and how much time it should take. SSMA can create an assessment report that shows the percentage of objects and procedures that will successfully be converted to [!INCLUDE[tsql](../../includes/tsql_md.md)]. SSMA also lets you view the specific issues that can cause conversion failures.  
+Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL, you should determine how complexity of the migration and how much time it should take. SSMA can create an assessment report that shows the percentage of objects and procedures that will successfully be converted to [!INCLUDE[tsql](../../includes/tsql-md.md)]. SSMA also lets you view the specific issues that can cause conversion failures.  
   
 ## Create assessment reports  
 When creating this assessment report, SSMA converts the selected SAP Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL syntax, and then shows the results.  

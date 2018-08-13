@@ -110,7 +110,7 @@ In a sunburst chart, the hierarchy is represented by a series of  circles. The h
   
   
 ##  <a name="bkmk_sample_data"></a> Sample AdventureWorks data  
- This section includes a sample query and the basic steps for creating a data source and dataset in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. If your report already contains a data source and dataset, you can skip this section.  
+ This section includes a sample query and the basic steps for creating a data source and dataset in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. If your report already contains a data source and dataset, you can skip this section.  
   
  The query returns AdventureWorks sales order detail data with sales territory, product category,  product subcategory, and sales reason data.  
   

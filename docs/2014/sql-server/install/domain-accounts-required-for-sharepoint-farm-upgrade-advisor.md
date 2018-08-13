@@ -23,7 +23,7 @@ manager: craigg
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
   
 ## Component  
- [!INCLUDE[ssRS](../../includes/ssrs-md.md)]  
+ [!INCLUDE[ssRS](../../includes/ssrs.md)]  
   
 ### Description  
  SharePoint products that are configured for a farm environment require that you use domain accounts for services and database connections. This includes the account you have specified for the Reporting Services service account.  

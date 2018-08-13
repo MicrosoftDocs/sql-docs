@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >=sql-server-2017-linux || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
 # How to contribute to SQL Server Documentation

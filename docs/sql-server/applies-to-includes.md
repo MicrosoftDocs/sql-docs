@@ -12,7 +12,7 @@ caps.latest.revision: 155
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >=sql-server-2017-linux || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
 # SQL 'Applies to' and 'Includes'

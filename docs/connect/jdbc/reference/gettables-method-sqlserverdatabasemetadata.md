@@ -69,7 +69,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**String**|The table schema name.|  
 |TABLE_NAME|**String**|The table name.|  
 |TABLE_TYPE|**String**|The table type.|  
-|REMARKS|**String**|The description of the table.<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] does not return a value for this column.|  
+|REMARKS|**String**|The description of the table.<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not return a value for this column.|  
 |TYPE_CAT|**String**|Not supported by the JDBC driver.|  
 |TYPE_SCHEM|**String**|Not supported by the JDBC driver.|  
 |TYPE_NAME|**String**|Not supported by the JDBC driver.|  
@@ -77,7 +77,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |REF_GENERATION|**String**|Not supported by the JDBC driver.|  
   
 > [!NOTE]  
->  For more information about the data returned by the getTables method, see "sp_tables (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  For more information about the data returned by the getTables method, see "sp_tables (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
  The following example demonstrates how to use the getTables method to return the table description information for the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  

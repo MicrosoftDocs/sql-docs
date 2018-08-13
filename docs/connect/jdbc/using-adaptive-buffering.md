@@ -20,15 +20,15 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Adaptive buffering is designed to retrieve any kind of large-value data without the overhead of server cursors. Applications can use the adaptive buffering feature with all versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] that are supported by the driver.
+Adaptive buffering is designed to retrieve any kind of large-value data without the overhead of server cursors. Applications can use the adaptive buffering feature with all versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are supported by the driver.
 
-Normally, when the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] executes a query, the driver retrieves all of the results from the server into application memory. Although this approach minimizes resource consumption on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], it can throw an OutOfMemoryError in the JDBC application for the queries that produce very large results.
+Normally, when the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] executes a query, the driver retrieves all of the results from the server into application memory. Although this approach minimizes resource consumption on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it can throw an OutOfMemoryError in the JDBC application for the queries that produce very large results.
 
-In order to allow applications to handle very large results, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides adaptive buffering. With adaptive buffering, the driver retrieves statement execution results from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] as the application needs them, rather than all at once. The driver also discards the results as soon as the application can no longer access them. The following are some examples where the adaptive buffering can be useful:
+In order to allow applications to handle very large results, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides adaptive buffering. With adaptive buffering, the driver retrieves statement execution results from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the application needs them, rather than all at once. The driver also discards the results as soon as the application can no longer access them. The following are some examples where the adaptive buffering can be useful:
 
 - **The query produces a very large result set:** The application can execute a SELECT statement that produces more rows than the application can store in memory. In previous releases, the application had to use a server cursor to avoid an OutOfMemoryError. Adaptive buffering provides the ability to do a forward-only read-only pass of an arbitrarily large result set without requiring a server cursor.
 
-- **The query produces very large** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **columns or** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT parameter values:** The application can retrieve a single value (column or OUT parameter) that is too large to fit entirely in application memory. Adaptive buffering allows the client application to retrieve such a value as a stream, by using the getAsciiStream, the getBinaryStream, or the getCharacterStream methods. The application retrieves the value from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] as it reads from the stream.
+- **The query produces very large** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **columns or** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT parameter values:** The application can retrieve a single value (column or OUT parameter) that is too large to fit entirely in application memory. Adaptive buffering allows the client application to retrieve such a value as a stream, by using the getAsciiStream, the getBinaryStream, or the getCharacterStream methods. The application retrieves the value from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as it reads from the stream.
 
 > [!NOTE]  
 > With adaptive buffering, the JDBC driver buffers only the amount of data that it has to. The driver does not provide any public method to control or limit the size of the buffer.
@@ -51,7 +51,7 @@ However, with the JDBC driver version 2.0, applications can use the [isWrapperFo
 
 ## Retrieving Large Data with Adaptive Buffering
 
-When large values are read once by using the get\<Type>Stream methods, and the ResultSet columns and the CallableStatement OUT parameters are accessed in the order returned by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], adaptive buffering minimizes the application memory usage when processing the results. When using adaptive buffering:
+When large values are read once by using the get\<Type>Stream methods, and the ResultSet columns and the CallableStatement OUT parameters are accessed in the order returned by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adaptive buffering minimizes the application memory usage when processing the results. When using adaptive buffering:
 
 - The get\<Type>Stream methods defined in the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) and [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classes return read-once streams by default, although the streams can be reset if marked by the application. If the application wants to `reset` the stream, it has to call the `mark` method on that stream first.
 
@@ -78,7 +78,7 @@ Developers should follow these important guidelines to minimize memory usage by 
 
 - There are some cases where using **selectMethod=cursor** instead of **responseBuffering=adaptive** would be more beneficial, such as:
 
-  - If your application processes a forward-only, read-only result set slowly, such as reading each row after some user input, using **selectMethod=cursor** instead of **responseBuffering=adaptive** might help reduce resource usage by [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].
+  - If your application processes a forward-only, read-only result set slowly, such as reading each row after some user input, using **selectMethod=cursor** instead of **responseBuffering=adaptive** might help reduce resource usage by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
   - If your application processes two or more forward-only, read-only result sets at the same time on the same connection, using **selectMethod=cursor** instead of **responseBuffering=adaptive** might help reduce the memory required by the driver while processing these result sets.
 

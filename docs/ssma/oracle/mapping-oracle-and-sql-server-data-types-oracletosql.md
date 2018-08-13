@@ -17,7 +17,7 @@ ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Mapping Oracle and SQL Server Data Types (OracleToSQL)
-Oracle database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database types. When you convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects, you must specify how to map data types from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
+Oracle database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types. When you convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you must specify how to map data types from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
   
 ## Default Mappings  
 SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings &#40;Type Mapping&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -56,7 +56,7 @@ The following procedure shows how to map data types at the project, database, or
   
         This lets you customize the data mapping for smaller and larger values of the same data type.  
   
-    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type.  
+    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type.  
   
         Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box.  
   
@@ -72,7 +72,7 @@ The following procedure shows how to map data types at the project, database, or
   
         This lets you customize the data mapping for smaller and larger values of the same data type.  
   
-    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type.  
+    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type.  
   
         Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box, and then [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

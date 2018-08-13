@@ -21,7 +21,7 @@ manager: craigg
   Sets the designated parameter to the specified java.io.Reader object.  
   
 > [!NOTE]  
->  This feature is introduced starting with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver version 2.0.  
+>  This feature is introduced starting with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver version 2.0.  
   
 ## Syntax  
   

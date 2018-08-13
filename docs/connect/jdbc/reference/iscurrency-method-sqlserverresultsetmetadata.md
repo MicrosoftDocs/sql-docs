@@ -46,7 +46,7 @@ public boolean isCurrency(int column)
 ## Remarks  
  This isCurrency method is specified by the isCurrency method in the java.sql.ResultSetMetaData interface.  
   
- This method will return **true** only with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] money and smallmoney data types.  
+ This method will return **true** only with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] money and smallmoney data types.  
   
 ## See Also  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

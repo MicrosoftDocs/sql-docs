@@ -23,7 +23,7 @@ manager: craigg
 # getPacketSize Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Returns the current network packet size used to communicate with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], specified in bytes.  
+  Returns the current network packet size used to communicate with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], specified in bytes.  
   
 ## Syntax  
   

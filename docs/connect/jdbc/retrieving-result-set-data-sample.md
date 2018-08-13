@@ -20,7 +20,7 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve a set of data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database, and then display that data.
+This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve a set of data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, and then display that data.
 
 The code file for this sample is named RetrieveResultSet.java, and it can be found in the following location:
 

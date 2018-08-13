@@ -44,7 +44,7 @@ public boolean rowUpdated()
  The value that is returned depends on whether or not the result set can detect updates.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] does not detect updated rows for any cursor type.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not detect updated rows for any cursor type.  
   
 ## See Also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

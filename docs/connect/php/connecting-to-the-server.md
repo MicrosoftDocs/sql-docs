@@ -18,9 +18,9 @@ manager: craigg
 # Connecting to the Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-The topics in this section describe the options and procedures for connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] with the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+The topics in this section describe the options and procedures for connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] by using Windows Authentication or by using SQL Server Authentication. By default, the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] try to connect to the server by using Windows Authentication.  
+The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using Windows Authentication or by using SQL Server Authentication. By default, the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] try to connect to the server by using Windows Authentication.  
 
 ## In This Section  
 

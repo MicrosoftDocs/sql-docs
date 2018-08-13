@@ -21,7 +21,7 @@ manager: craigg
 # Data Access Tracing with the ODBC Driver on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The unixODBC Driver Manager on macOS and Linux supports tracing of ODBC API call entry and exit of the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+The unixODBC Driver Manager on macOS and Linux supports tracing of ODBC API call entry and exit of the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 To trace your application's ODBC behavior, edit the `odbcinst.ini` file's `[ODBC]` section to set the values `Trace=Yes` and `TraceFile`
 to the path of the file which is to contain the trace output; for example:

@@ -25,7 +25,7 @@ Use the following steps to start the SSMA console application:
   
 1.  Go to **Start** and point to **All Programs**.  
   
-2.  Click the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Oracle Command Prompt** shortcut.  
+2.  Click the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle Command Prompt** shortcut.  
   
     It displays the SSMA Console usage menu and `(/? Help)`, to help you get started with the console application.  
   

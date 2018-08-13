@@ -18,7 +18,7 @@ manager: craigg
 # PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Creates a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
+Creates a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ## Syntax  
   
@@ -30,9 +30,9 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 #### Parameters  
 *$dsn*: A string that contains the prefix name (always `sqlsrv`), a colon, and the Server keyword. For example, `"sqlsrv:server=(local)"`. You can optionally specify other connection keywords. See [Connection Options](../../connect/php/connection-options.md) for a description of the Server keyword and the other connection keywords. The entire *$dsn* is in quotation marks, so each connection keyword should not be individually quoted.  
   
-*$username*: Optional. A string that contains the user's name. To connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, specify the login ID. To connect using Windows Authentication, specify `""`.  
+*$username*: Optional. A string that contains the user's name. To connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, specify the login ID. To connect using Windows Authentication, specify `""`.  
   
-*$password*: Optional. A string that contains the user's password. To connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, specify the password. To connect using Windows Authentication, specify `""`.  
+*$password*: Optional. A string that contains the user's password. To connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, specify the password. To connect using Windows Authentication, specify `""`.  
   
 *$driver_options*: Optional. You can specify PDO Driver Manager attributes, and [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] specific driver attributes -- PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. An invalid attribute does not generate an exception. Invalid attributes generate exceptions when specified with [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   

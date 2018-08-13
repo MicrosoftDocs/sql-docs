@@ -21,7 +21,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Removing the SSMA for MySQL Components (MySQLToSql)
-When you have finished migrating databases from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time. However, if you uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , then, SSMA will no longer support migration of data from MySQL to the target database (SQL Server/SQL Azure) using the Server-Side Data Migration Engine.  
+When you have finished migrating databases from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time. However, if you uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , then, SSMA will no longer support migration of data from MySQL to the target database (SQL Server/SQL Azure) using the Server-Side Data Migration Engine.  
   
 ## Uninstalling the SSMA for MySQL Client  
 You can uninstall SSMA by using **Add or Remove Programs**.  
@@ -49,7 +49,7 @@ You can remove the extension pack by using **Add or Remove Programs**.
   
 5.  On the Connection Parameters page, select the authentication method, and then click **Next**.  
   
-    Windows Authentication will use your Windows credentials to try to log on to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. If you select [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, you must enter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] login name and password.  
+    Windows Authentication will use your Windows credentials to try to log on to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you must enter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name and password.  
   
 6.  On the Operation Completed page, click **OK**.  
   

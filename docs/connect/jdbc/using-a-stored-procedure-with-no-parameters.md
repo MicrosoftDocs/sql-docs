@@ -20,7 +20,7 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The simplest kind of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stored procedure that you can call is one that contains no parameters and returns a single result set. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class, which you can use to call this kind of stored procedure and process the data that it returns.
+The simplest kind of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure that you can call is one that contains no parameters and returns a single result set. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class, which you can use to call this kind of stored procedure and process the data that it returns.
 
 When you use the JDBC driver to call a stored procedure without parameters, you must use the `call` SQL escape sequence. The syntax for the `call` escape sequence with no parameters is as follows:
 

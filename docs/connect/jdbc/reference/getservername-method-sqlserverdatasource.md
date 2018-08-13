@@ -23,7 +23,7 @@ manager: craigg
 # getServerName Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Returns the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instance.  
+  Returns the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   
 ## Syntax  
   
@@ -36,7 +36,7 @@ public java.lang.String getServerName()
  A **String** that contains the server name or null if no value is set.  
   
 ## Remarks  
- The server name is the host name of the target computer that is running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. If the getServerName property is not set, getServerName returns the default value of null.  
+ The server name is the host name of the target computer that is running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If the getServerName property is not set, getServerName returns the default value of null.  
   
 ## See Also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

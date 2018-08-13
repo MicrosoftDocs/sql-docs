@@ -46,7 +46,7 @@ public java.lang.String getString(int columnIndex)
 ## Remarks  
  This getString method is specified by the getString method in the java.sql.ResultSet interface.  
   
- All columns in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] can be returned as a String. This means that a **String** representation of all number-based and character-based types, and a hex-string representation of binary columns such as binary, varbinary, varbinary(max), image, timestamp, and uniqueidentifier, can be returned.  
+ All columns in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can be returned as a String. This means that a **String** representation of all number-based and character-based types, and a hex-string representation of binary columns such as binary, varbinary, varbinary(max), image, timestamp, and uniqueidentifier, can be returned.  
   
  Location-sensitive types such as money, smallmoney, datetime, smalldatetime, float, real, decimal, and numeric will return the canonical toString() format for the underlying value of the type.  
   

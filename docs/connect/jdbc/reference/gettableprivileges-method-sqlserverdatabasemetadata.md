@@ -69,7 +69,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 |IS_GRANTABLE|**String**|Indicates if the grantee is allowed to grant access to other users.|  
   
 > [!NOTE]  
->  For more information about the data returned by the getTablePrivileges method, see "sp_table_privileges (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  For more information about the data returned by the getTablePrivileges method, see "sp_table_privileges (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
  The following example demonstrates how to use the getTablePrivileges method to return the access rights for the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  

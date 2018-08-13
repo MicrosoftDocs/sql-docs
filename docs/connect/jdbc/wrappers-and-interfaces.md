@@ -56,7 +56,7 @@ The java.sql.Wrapper interface defines two methods: **isWrapperFor** and **unwra
 
 ## Interfaces
 
-Beginning in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0, interfaces are available for an application server to access a driver specific method from the associated class. The application server can wrap the class by creating a proxy, exposing the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-specific functionality from an interface. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports interfaces that have the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] specific methods and constants so an application server can create a proxy of the class.
+Beginning in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0, interfaces are available for an application server to access a driver specific method from the associated class. The application server can wrap the class by creating a proxy, exposing the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-specific functionality from an interface. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports interfaces that have the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] specific methods and constants so an application server can create a proxy of the class.
 
 The interfaces derive from standard Java interfaces so you can use the same object once it is unwrapped to access driver specific functionality or generic [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] functionality.
 

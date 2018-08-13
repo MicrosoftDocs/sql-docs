@@ -26,7 +26,7 @@ The **Options** dialog box lets you customize the keyboard scheme for [!INCLUDE[
 The **Keyboard scheme** drop-down list provides the available collections of shortcut keys. To load a specific scheme, select it from the list. When you are ready to leave the **Options** dialog box, click **OK**. Your selected scheme will be loaded into [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **Standard**  
-The Standard scheme is the default in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and closely resembles the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio shortcut keys.  
+The Standard scheme is the default in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and closely resembles the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio shortcut keys.  
   
 Use the **Query shortcuts** grid to associate a stored procedure with a keyboard shortcut.  
   

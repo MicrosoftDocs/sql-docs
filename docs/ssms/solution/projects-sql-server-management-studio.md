@@ -18,10 +18,10 @@ manager: craigg
 ---
 # Projects (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-A [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] project is a collection of logically related scripts and files that can be saved together for database administration and development.  
+A [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] project is a collection of logically related scripts and files that can be saved together for database administration and development.  
   
 ## Script Project Overview  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] script projects are displayed in the Solution Explorer component of [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]. A script project can contain zero or more project files. You can add a project to a solution or combine more than one project within a solution.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] script projects are displayed in the Solution Explorer component of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A script project can contain zero or more project files. You can add a project to a solution or combine more than one project within a solution.  
   
 Projects can include the following:  
   
@@ -40,7 +40,7 @@ A script project may contain connections to an instance of [!INCLUDE[ssNoVersion
   
 The connection will be closed after the corresponding window is closed.  
   
-To modify information about a connection, use the properties window in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+To modify information about a connection, use the properties window in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## Project Tasks  
   

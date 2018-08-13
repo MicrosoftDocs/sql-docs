@@ -34,7 +34,7 @@ manager: "kfile"
 |Data processing extension for Oracle|Uses the .NET Framework Data Provider for Oracle. With this extension, the report server can access Oracle data sources through Oracle client connectivity software.|  
 |Data processing extension for ODBC|Uses the .NET Framework Data Provider for ODBC. With this extension, the report server can access data in any database for which there is an ODBC driver.|  
   
- You can use the [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] data processing API to add custom data processing to your report server.  
+ You can use the [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing API to add custom data processing to your report server.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] has built-in support for data providers in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. If you have already implemented a full data provider, you do not need to implement a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension. However, you should consider extending your data provider to include functionality specific to [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, which includes secure connection credentials and server-side aggregates.  

@@ -147,7 +147,7 @@ When you install a new version of the JDBC driver, you should also use sqljdbc_x
 > [!IMPORTANT]  
 > You should upgrade sqljdbc_xa.dll during a maintenance window or when there are no MS DTC transactions in process.  
   
-1. Unload sqljdbc_xa.dll using the [!INCLUDE[tsql](../../includes/tsql_md.md)] command **DBCC sqljdbc_xa (FREE)**.  
+1. Unload sqljdbc_xa.dll using the [!INCLUDE[tsql](../../includes/tsql-md.md)] command **DBCC sqljdbc_xa (FREE)**.  
   
 2. Copy the new sqljdbc_xa.dll from the JDBC driver installation directory to the Binn directory of every [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] computer that will participate in distributed transactions.  
   
@@ -155,7 +155,7 @@ When you install a new version of the JDBC driver, you should also use sqljdbc_x
   
 ### Configuring the User-Defined Roles
 
-To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role. For example, use the following [!INCLUDE[tsql](../../includes/tsql_md.md)] code to add a user named 'shelby' (SQL standard login user named 'shelby') to the SqlJDBCXAUser role:  
+To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role. For example, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code to add a user named 'shelby' (SQL standard login user named 'shelby') to the SqlJDBCXAUser role:  
 
 ```sql
 USE master  

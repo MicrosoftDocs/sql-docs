@@ -18,7 +18,7 @@ manager: craigg
 # Support for High Availability, Disaster Recovery
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-This topic discusses [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support (added in version 3.0) for high-availability, disaster recovery -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] support was added in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. For more information about [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+This topic discusses [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support (added in version 3.0) for high-availability, disaster recovery -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] support was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For more information about [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   
 In version 3.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can specify the availability group listener of a (high-availability, disaster-recovery) availability group (AG) in the connection property. If a [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] application is connected to an AlwaysOn database that fails over, the original connection is broken and the application must open a new connection to continue work after the failover.  
   

@@ -29,7 +29,7 @@ Metadata about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 ## Required SQL Server Permissions  
 The account that is used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] requires different permissions depending on the actions that are performed by that account.  
   
--   To convert ASE objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, to update metadata from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], or to save converted syntax to scripts, the account must have permission to log in to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   To convert ASE objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, to update metadata from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], or to save converted syntax to scripts, the account must have permission to log in to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 -   To load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], the minimum permission requirement is membership in the **db_owner** database role in the target database.  
   

@@ -28,14 +28,14 @@ There are two main workflows you can use to contribute:
 
 ## <a id="githubui"></a> Edit in your browser
 
-The following video demonstrates the web workflow for making content contributions directly in your browser:
+You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. The complete process is documented in the article, [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). The following video demonstrates the end-to-end process for submitting changes in your browser:
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
 
 > [!TIP]
-> Note that the location of edit button is slightly different now, but the steps should be the same.
-
-The following steps provide an overview of making simple edits to SQL Server content in your browser. The complete process is documented in the article, [GitHub contribution workflow for minor or infrequent changes](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents).
+> Note that the location of **Edit** button is slightly different than what is shown in the video, but the process is the same.
+>
+> ![Edit button](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
 ## <a id="tools"></a> Edit locally with tools
 

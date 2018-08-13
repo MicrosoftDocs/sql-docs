@@ -34,7 +34,7 @@ manager: craigg
   
 -   [Useful extended events](#BKMK_XEVENTS)  
   
-##  <a name="BKMK_DATA_SYNC_PROCESS"></a> Data synchronization process  
+##  Data synchronization process  
  To estimate the time to full synchronization and to identify the bottleneck, you need to understand the synchronization process. Performance bottleneck can be anywhere in the process, and locating the bottleneck can help you dig deeper into the underlying issues. The following figure and table illustrate the data synchronization process:  
   
  ![Availability group data synchronization](media/always-onag-datasynchronization.gif "Availability group data synchronization")  
@@ -49,7 +49,7 @@ manager: craigg
 |5|Harden|Log is flushed on the secondary replica for hardening. After the log flush, an acknowledgement is sent back to the primary replica.<br /><br /> Once the log is hardened, data loss is avoided.|Performance counter [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Wait type [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Redo|Redo the flushed pages on the secondary replica. Pages are kept in the redo queue as they wait to be redone.|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) and [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Wait type [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
-##  <a name="BKMK_FLOW_CONTROL_GATES"></a> Flow control gates  
+##  Flow control gates  
  Availability groups are designed with flow control gates on the primary replica to avoid excessive resource consumption, such as network and memory resources, on all availability replicas. These flow control gates do not affect the synchronization health state of the availability replicas, but they can affect the overall performance of your availability databases, including RPO.  
   
  After the logs have been captured on the primary replica, they are subject to two levels of flow controls, as shown in the following table.  
@@ -66,7 +66,7 @@ manager: craigg
   
  Two useful performance counters, [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), show you, within the last second, how many times flow control was activated and how much time was spent waiting on flow control. Higher wait time on the flow control translate to higher RPO. For more information on the types of issues that can cause a high wait time on the flow control, see [Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md).  
   
-##  <a name="BKMK_RTO"></a> Estimating failover time (RTO)  
+##  Estimating failover time (RTO)  
  The RTO in your SLA depends on the failover time of your Always On implementation at any given time, which can be expressed in the following formula:  
   
  ![Availability groups RTO calculation](media/always-on-rto.gif "Availability groups RTO calculation")  
@@ -84,7 +84,7 @@ manager: craigg
   
  The failover overhead time, Toverhead, includes the time it takes to fail over the WSFC cluster and to bring the databases online. This time is usually short and constant.  
   
-##  <a name="BKMK_RPO"></a> Estimating potential data loss (RPO)  
+## Estimating potential data loss (RPO)  
  The RPO in your SLA depends on the possible data loss of your Always On implementation at any given time. This possible data loss can be expressed in the following formula:  
   
  ![Availability groups RPO calculation](media/always-on-rpo.gif "Availability groups RPO calculation")  
@@ -97,8 +97,39 @@ manager: craigg
  The log send queue represents all the data that can be lost from a catastrophic failure. At first glance, it is curious that the log generation rate is used instead of the log send rate (see [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)). However, remember that using the log send rate only gives you the time to synchronize, while RPO measures data loss based on how fast it is generated, not on how fast it is synchronized.  
   
  A simpler way to estimate Tdata_loss is to use [last_commit_time](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md). The DMV on the primary replica reports this value for all replicas. You can calculate the difference between the value for the primary replica and the value for the secondary replica to estimate how fast the log on the secondary replica is catching up to the primary replica. As stated previously, this calculation does not tell you the potential data loss based on how fast the log is generated, but it should be a close approximation.  
+
+## Estimating RTO & RPO with the SSMS dashboard
+In Always On Availability Groups, the RTO and RPO is calculated and displayed for the databases hosted on the secondary replicas. On the dashboard of the primary replica, the RTO and RPO is grouped by the secondary replica. 
+
+To view the RTO and RPO within the dashboard, do the following:
+1. In SQL Server Managment Studio, expand the **Always On High Availability** node, right-click the name of your availability group, and select **Show Dashboard**. 
+1. Select **Add/Remove Columns** under the **Group by** tab. Check both **Estimated Recovery Time(seconds)(RTO)** and **Estimated Data Loss (time) (RPO)**. 
+
+   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+
+### Calculation of secondary database RTO 
+The recovery time calculation determines how much time is needed to recover the *secondary database* after a failover happens.  The failover time is usually short and constant. The detection time depends on cluster-level settings and not on the individual availability replicas. 
+
+**Redo time** is calculated 
+
+
+For a secondary database (DB_sec), calculation and display of its RTO is based on its redo_queue_size and redo_rate: 
+
+Except corner cases, the formula to calculate a secondary database's RTO is:
+
+![Formula to calculate RTO](media/distributed-availability-group/formula-calc-second-dba-rto.png)
+
+
+
+### Calculation of secondary database RPO
+
+For a secondary database (DB_sec), calculation and display of its RPO is based on its is_failover_ready, last_commit_time and its correlated primary database (DB_pri)'s last_commit_time. 
+ 
+
+
+
   
-##  <a name="BKMK_Monitoring_for_RTO_and_RPO"></a> Monitoring for RTO and RPO  
+##  Monitoring for RTO and RPO  
  This section demonstrates how to monitor your availability groups for RTO and RPO metrics. This demonstration is similar to the GUI tutorial given in [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
  Elements of the failover time and potential data loss calculations in [Estimating failover time (RTO)](#BKMK_RTO) and [Estimating potential data loss (RPO)](#BKMK_RPO) are conveniently provided as performance metrics in the policy management facet **Database Replica State** (see [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). You can monitor these two metrics on a schedule and be alerted when the metrics exceed your RTO and RPO, respectively.  

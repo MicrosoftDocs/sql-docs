@@ -20,7 +20,7 @@ ms.author: "maggies"
 manager: "kfile"
 ---
 # Tutorial: Adding a KPI to Your Report (Report Builder)
-In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] tutorial, you add a key performance indicator (KPI) to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.  
+In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you add a key performance indicator (KPI) to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.  
 
 KPIs are measurable values with business significance. In this scenario, the sales summary by product subcategories is the KPI. The current state of the KPI is shown with colors, gauges, and indicators.
   

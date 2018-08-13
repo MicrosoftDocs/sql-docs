@@ -37,7 +37,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  For more information, see [Tracing Driver Operation](../../connect/jdbc/tracing-driver-operation.md). This trace flag is used with corresponding JDBC object loggers to decide whether to trace and send the ActivityId in the JDBC driver. In addition to updating the Logging.Properties file, the logger com.microsoft.sqlserver.jdbc needs to be enabled at FINER or higher. If you want to send ActivityId to the server for requests that are made by a particular class, the corresponding class logger needs to be enabled at FINER or FINEST. For example, if the class is, SQLServerStatement, enable the logger com.microsoft.sqlserver.jdbc.SQLServerStatement.  
   
- The following sample uses [!INCLUDE[tsql](../../includes/tsql_md.md)] to start an extended events session that will be stored in a ring buffer and will record the activity ID sent from a client on RPC and batch operations:  
+ The following sample uses [!INCLUDE[tsql](../../includes/tsql-md.md)] to start an extended events session that will be stored in a ring buffer and will record the activity ID sent from a client on RPC and batch operations:  
   
 ```sql
 create event session MySession on server  

@@ -628,13 +628,13 @@ Specifies that one or more column definitions, computed column definitions, or t
 > Without using an ALTER TABLE statement, the statements CREATE INDEX and DROP INDEX and ALTER INDEX are not supported for indexes on memory-optimized tables. 
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-**Applies to**:  [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**:  [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies the names of the columns that the system will use to record the period for which a record is valid. You can specify existing columns or create new columns as part of the ADD PERIOD FOR SYSTEM_TIME argument. The columns must have the datatype of datetime2 and must be defined as NOT NULL. If a period column is defined as NULL, an error will be thrown. You can define a [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) and/or  [Specify Default Values for Columns](../../relational-databases/tables/specify-default-values-for-columns.md) for the system_start_time and system_end_time columns. See Example A in the [System Versioning](#system_versioning) examples below demonstrating the use of a default value for the system_end_time column.  
   
  Use this argument in conjunction with the SET SYSTEM_VERSIONING argument to enable system versioning on an existing table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md) and [Getting Started with Temporal Tables in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- As of [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)], users will be able to mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM***\<table>* does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.  
+ As of [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)], users will be able to mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM***\<table>* does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.  
   
 DROP  
 Specifies that one or more column definitions, computed column definitions, or table constraints are dropped, or to drop the specification for the columns that the system will use for system versioning.  

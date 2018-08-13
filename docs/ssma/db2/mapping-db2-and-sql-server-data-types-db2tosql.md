@@ -61,7 +61,7 @@ The following procedure shows how to map data types at the project, database, or
   
         Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  To modify a data type mapping, do the following:  
   
@@ -75,7 +75,7 @@ The following procedure shows how to map data types at the project, database, or
   
     4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type.  
   
-        Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box, and then [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box, and then [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  To remove a custom data type mapping, do the following:  
   

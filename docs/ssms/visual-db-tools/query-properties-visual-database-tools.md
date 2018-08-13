@@ -32,7 +32,7 @@ These properties appear in the Properties window when you have a query open in Q
 Expand to show the **Name** property.  
   
 **Name**  
-Shows the name of the current query. Cannot be changed in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Shows the name of the current query. Cannot be changed in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Database Name**  
 Shows the name of the data source for the selected table.  

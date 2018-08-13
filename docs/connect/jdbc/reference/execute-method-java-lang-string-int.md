@@ -22,7 +22,7 @@ manager: craigg
 ---
 # execute Method (java.lang.String, int[])
 
-  Runs the given SQL statement, which can return multiple results, and signals [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion-md.md)] that the auto-generated keys that are indicated in the given array should be made available for retrieval.
+  Runs the given SQL statement, which can return multiple results, and signals [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] that the auto-generated keys that are indicated in the given array should be made available for retrieval.
 
 ## Syntax
 

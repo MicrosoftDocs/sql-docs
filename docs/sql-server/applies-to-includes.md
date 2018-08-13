@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Applies | Microsoft Docs"
+title: "SQL Server documentation include files | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/13/2018"
 ms.prod: sql
@@ -15,11 +15,11 @@ manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
-# SQL 'Applies to' and 'Includes'
+# SQL Server version and applies-to include files
 
-References in the documentation can be easily modified without changing the actual text of individual articles by using 'Includes' in Markdown. There are three types of includes in the SQL content world - SQL Versions, Applies-to, and referential text. SQL Versions are used to indicate the version of SQL being discussed (such as SQL 2016 vs 2017), and the applies-to indicate what version of SQL Server the document applies to (SQL Server on Linux vs Azure SQL Database). Referential text are includes that don't fall in the other two categories, such as the Get Help include - a list of links that customers can use to get help with SQL.
+References in the documentation can be easily modified without changing the actual text of individual articles by using include files in Markdown. There are three types of include files in the SQL content world: SQL version, applies-to, and referential text. SQL version includes are used to indicate the version of SQL being discussed, such as SQL Server 2016 or 2017, and the applies-to indicate what version of SQL Server the document applies to, such as SQL Server on Linux or Azure SQL Database. Referential text are includes that don't fall in the other two categories, such as the Get Help include, a list of links that customers can use to get help with SQL.
 
-This article is meant to be used as a reference point for just the first two types of includes.
+This article is meant to be used as a reference point for just the first two types of includes. You can browse the complete list of include files in the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
 ## SQL Server Version includes
 

@@ -51,7 +51,7 @@ If you are sure your migrated databases do not use objects in the **sysdb.ssma_o
   
 7.  On the Finish page, click **Exit**.  
   
-After the uninstall, you can confirm that objects in the **sysdb.ssma_oracle** schema, and possibly the whole **sysdb** database, has been removed by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. However, if you use other SSMA products, they also use the **sysdb** database. If the database exists and you are sure that no other databases reference objects in this database, you can detach the database.  
+After the uninstall, you can confirm that objects in the **sysdb.ssma_oracle** schema, and possibly the whole **sysdb** database, has been removed by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. However, if you use other SSMA products, they also use the **sysdb** database. If the database exists and you are sure that no other databases reference objects in this database, you can detach the database.  
   
 ## See Also  
 [Installing SSMA for Oracle Client &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  

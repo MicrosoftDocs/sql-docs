@@ -27,7 +27,7 @@ The following table lists the SSMA dialog boxes:
 |-|-|  
 |Topic|Description|  
 |[Advanced Object Selection &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Use the **Advanced Object Select** dialog box to find database objects by using filter criteria, and then select or clear those objects.|  
-|[Assessment Report &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Use the Assessment Report to view the results of the conversion of DB2 objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, and to estimate the time and complexity of a migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Assessment Report &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Use the Assessment Report to view the results of the conversion of DB2 objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and to estimate the time and complexity of a migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Connecting to DB2 Database &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Use the **Connect to DB2** dialog box to connect to the DB2 database that you want to migrate.|  
 |[Connect to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to which you want to migrate.|  
 |[Data Migration Report &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Displays the results of migrating data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  

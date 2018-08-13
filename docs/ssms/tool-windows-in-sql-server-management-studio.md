@@ -21,7 +21,7 @@ manager: craigg
 ---
 # Tool Windows in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] provides many powerful tool windows for all phases of development and administration. Some tools can be used on any [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] component, and others are for certain components only. The following table identifies the tools that can be used for all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides many powerful tool windows for all phases of development and administration. Some tools can be used on any [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] component, and others are for certain components only. The following table identifies the tools that can be used for all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
   
 |||  
 |-|-|  
@@ -31,7 +31,7 @@ manager: craigg
 |[Template Explorer](../ssms/template/template-explorer.md)|Create queries based on existing templates. You can also create your custom queries or alter the existing templates to fit your scenarios. This tool is accessed from the **View** menu.|  
 |[Dynamic Help](../ssms/user-assistance-in-sql-server-management-studio.md)|Show a list of related Help topics as you click on a component or type code.|  
   
-The tools in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] work together. For example, you can:  
+The tools in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] work together. For example, you can:  
   
 -   Register a server with Object Explorer.  
   

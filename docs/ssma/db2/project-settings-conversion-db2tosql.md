@@ -46,7 +46,7 @@ When SSMA converts ROWNUM expressions, it converts the expression into a TOP cla
   
 `WHERE ROWNUM < expression and Field1 >= 2`  
   
-The following example shows the resulting [!INCLUDE[tsql](../../includes/tsql_md.md)]:  
+The following example shows the resulting [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 `DELETE TOP (expression-1)`  
   

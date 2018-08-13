@@ -186,5 +186,5 @@ Indicates whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] uses
 Shows the size in bytes allowed by column's data type. For example, a **nchar** data type may have a length of 10 (the number of characters) but it would have a size of 20 to account for Unicode character sets.  
   
 > [!NOTE]  
-> The length of a **varchar(max)** data type varies for each row. sp_help returns (-1) as the length of **varchar(max)** column. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] displays -1 as the column size.  
+> The length of a **varchar(max)** data type varies for each row. sp_help returns (-1) as the length of **varchar(max)** column. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] displays -1 as the column size.  
   

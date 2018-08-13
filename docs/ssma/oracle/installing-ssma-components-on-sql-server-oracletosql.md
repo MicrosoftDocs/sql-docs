@@ -83,7 +83,7 @@ You can install the extension pack any time before you migrate data to [!INCLUDE
   
 12. To install the utilities to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], select **Yes**, and then click **Next**. Or, to exit the wizard, click **No**.  
   
-13. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or by using the sqlcmd utility, run the following script to enable CLR:  
+13. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or by using the sqlcmd utility, run the following script to enable CLR:  
   
     ```  
     sp_configure 'clr enabled', 1  
@@ -98,7 +98,7 @@ You can install the extension pack any time before you migrate data to [!INCLUDE
 ### SQL Server Database Objects  
 After you install the extension pack, you will a see an **ssma_oracle.bcp_migration_packages** table, an **ssma_oracle.db_storage** table, and an **ssma_oracle.db_error_list** table in the **sysdb** database. You will also see many stored procedures and user-defined functions in the **ssma_oracle** schema.  
   
-Every time that you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job. These jobs are named **ssma_oracle data migration package {GUID}**, and are visible in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent node of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] in the Jobs folder.  
+Every time that you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job. These jobs are named **ssma_oracle data migration package {GUID}**, and are visible in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent node of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in the Jobs folder.  
   
 ## See Also  
 [Installing SSMA for Oracle Client &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  

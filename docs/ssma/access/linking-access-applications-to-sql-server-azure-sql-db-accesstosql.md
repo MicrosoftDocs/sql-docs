@@ -141,7 +141,7 @@ Recordset.LastModified
 ### You cannot modify a linked table schema with Access  
 **Cause:** After migrating data and linking tables, the user cannot modify the schema of a table in Access.  
   
-**Resolution:** Modify the table schema by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], and then update the link in Access.  
+**Resolution:** Modify the table schema by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then update the link in Access.  
   
 ### Hyperlink functionality is lost after migrating data  
 **Cause:** After migrating data, hyperlinks in columns lose their functionality and become simple **nvarchar(max)** columns.  

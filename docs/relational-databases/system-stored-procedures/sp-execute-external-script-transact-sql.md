@@ -34,7 +34,7 @@ Executes the script provided as argument at an external location. The script mus
 
 **This topic applies to**:  
 - [SQL Server 2017 Machine Learning Services (In-Database)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)
-- [SQL Server 2016 R Services](https://docs.microsoft.com/en-us/sql/advanced-analytics/install/sql-r-services-windows-install)
+- [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install)
 
 ## Syntax
 

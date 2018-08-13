@@ -31,7 +31,7 @@ Provides scoring on machine learning models in near real-time. `sp_rxPredict` is
 
 **This topic applies to**:  
 - [SQL Server 2017 Machine Learning Services (In-Database) with R](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)
-- [SQL Server 2016 R Services](https://docs.microsoft.com/en-us/sql/advanced-analytics/install/sql-r-services-windows-install), with [upgraded R components](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server) providing the MicrosoftML library
+- [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install), with [upgraded R components](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server) providing the MicrosoftML library
 
 ## Syntax
 

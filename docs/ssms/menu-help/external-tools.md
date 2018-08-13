@@ -22,7 +22,7 @@ manager: craigg
 ---
 # External Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use this dialog box to add external tools, such as SQL Server Configuration Manager or Notepad, to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. You can specify arguments and a working directory when launching the tool. In addition, the outputs from some tools can be displayed in the Output window. The **External Tools** dialog box is available on the **Tools** menu.  
+Use this dialog box to add external tools, such as SQL Server Configuration Manager or Notepad, to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can specify arguments and a working directory when launching the tool. In addition, the outputs from some tools can be displayed in the Output window. The **External Tools** dialog box is available on the **Tools** menu.  
   
 ## Options  
 **Menu Contents**  
@@ -77,5 +77,5 @@ Close the window opened by the tool when the tool is closed.
 4.  In the **Arguments** box, type the path to the .msc file, such as **"C:\WINNT\system32\SQLServerManager.msc"**  
   
 > [!NOTE]  
-> View the properties of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] shortcut on the **Start** menu to confirm the location of the files on your computer.  
+> View the properties of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] shortcut on the **Start** menu to confirm the location of the files on your computer.  
   

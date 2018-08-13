@@ -158,7 +158,7 @@ Keyboard accelerators for stored procedures using the Ctrl key can be created fr
 6.  In the **Customize** dialog box, click **Close**.  
   
 > [!NOTE]  
-> Some commands are available only when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] is displaying relevant content. If no commands on the menu are available, the menu item will not be available.  
+> Some commands are available only when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is displaying relevant content. If no commands on the menu are available, the menu item will not be available.  
   
 ## See Also  
 [Features in SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  

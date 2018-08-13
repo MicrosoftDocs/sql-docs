@@ -50,7 +50,7 @@ manager: craigg
  For date, time, and currencies, all formatting with localized data is performed at the Java language level using the Locale object; and the various formatting methods for **Date**, **Calendar**, and **Number** data types. In the rare case where the JDBC driver must pass along locale sensitive data in a localized format, the proper formatter is used with the default JVM locale.  
   
 ## Collation Support  
- The JDBC Driver 3.0 supports all the collations supported by [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)], and the new collations or new versions of Windows collation names introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
+ The JDBC Driver 3.0 supports all the collations supported by [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and the new collations or new versions of Windows collation names introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
  For more information on the collations, see [Collation and Unicode Support](http://go.microsoft.com/fwlink/?LinkId=131366) and [Windows Collation Name (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   

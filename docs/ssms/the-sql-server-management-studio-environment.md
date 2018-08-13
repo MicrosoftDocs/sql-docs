@@ -20,7 +20,7 @@ manager: craigg
 ---
 # The SQL Server Management Studio Environment
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] provides a rich environment for managing and developing queries in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides a rich environment for managing and developing queries in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
   
 ## In This Section  
 [General User Interface Elements](../ssms/general-user-interface-elements.md)  
@@ -30,5 +30,5 @@ Outline general features of the user interface, such as Solution Explorer, Objec
 Introduces Solution Explorer, which provides you with an organized view of your projects and their files as well as ready access to commands for managing them.  
   
 [Solution Explorer Source Control](https://msdn.microsoft.com/library/ms173879.aspx)  
-Describes how [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] integrates with source control products.  
+Describes how [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] integrates with source control products.  
   

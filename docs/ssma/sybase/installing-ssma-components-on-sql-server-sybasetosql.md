@@ -88,7 +88,7 @@ After you install the extension pack, you will a see a **ssma_syb.bcp_migration_
   
 -   **stop_agent_process**  
   
-Every time that you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job. These jobs are named **ssma_syb data migration package {GUID}**, and are visible in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent node of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] in the Jobs folder.  
+Every time that you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job. These jobs are named **ssma_syb data migration package {GUID}**, and are visible in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent node of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in the Jobs folder.  
   
 ## Sybase Providers  
 When you migrate data from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/SQL Azure, the data migrates directly between ASE and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/SQL Azure. It does not go through SSMA because this would slow down the data migration.  

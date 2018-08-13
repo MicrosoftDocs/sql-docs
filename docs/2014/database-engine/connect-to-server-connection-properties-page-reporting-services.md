@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Connect to Server (Connection Properties Page) Reporting Services
-  Use this tab to view or specify options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] or registering [!INCLUDE[ssRS](../includes/ssrs-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssRS](../includes/ssrs-md.md)].  
+  Use this tab to view or specify options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] or registering [!INCLUDE[ssRS](../includes/ssrs.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssRS](../includes/ssrs.md)].  
   
 ## Options  
  **Connection Timeout (in ms)**  
@@ -34,7 +34,7 @@ manager: craigg
  Click to change the dialog and hide the additional server connection options, such as remembering the password.  
   
  **Test**  
- When registering [!INCLUDE[ssRS](../includes/ssrs-md.md)] in **Registered Servers**, click to test the connection.  
+ When registering [!INCLUDE[ssRS](../includes/ssrs.md)] in **Registered Servers**, click to test the connection.  
   
  **Save**  
  Saves the settings in **Registered Servers**.  

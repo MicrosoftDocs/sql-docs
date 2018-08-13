@@ -24,7 +24,7 @@ The following table lists the SSMA dialog boxes:
 |-|-|  
 |Topic|Description|  
 |[Advanced Object Selection  &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|Use the **Advanced Object Select** dialog box to find database objects by using filter criteria, and then select or clear those objects.|  
-|[Assessment Report &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Use the Assessment Report to view the results of the conversion of Oracle objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, and to estimate the time and complexity of a migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Assessment Report &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Use the Assessment Report to view the results of the conversion of Oracle objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and to estimate the time and complexity of a migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Connect To Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|Use the **Connect to Oracle** dialog box to connect to the Oracle database that you want to migrate.|  
 |[Connect to SQL Server  &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-sql-server-oracletosql.md)|Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to which you want to migrate.|  
 |[Data Migration Report  &#40;OracleToSQL&#41;](../../ssma/oracle/data-migration-report-oracletosql.md)|Displays the results of migrating data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  

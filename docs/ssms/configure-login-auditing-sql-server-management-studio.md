@@ -22,7 +22,7 @@ manager: craigg
 ---
 # Configure Login Auditing (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-This topic describes how to configure login auditing in [!INCLUDE[ssCurrent](../includes/sscurrent_md.md)] to monitor [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] login activity. Login auditing can be configured to write to the error log on the following events.  
+This topic describes how to configure login auditing in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] to monitor [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] login activity. Login auditing can be configured to write to the error log on the following events.  
   
 -   Failed logins  
   
@@ -36,7 +36,7 @@ You must restart [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] before t
   
 #### To configure login auditing  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] with Object Explorer.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] with Object Explorer.  
   
 2.  In Object Explorer, right-click the server name, and then click **Properties**.  
   

@@ -20,7 +20,7 @@ ms.author: maghan
 manager: craigg
 ---
 # Preparing to Implement a Data Processing Extension
-  Before you implement your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension, you should define the interfaces to implement. You may want to provide extension-specific implementations of the entire set of interfaces, or you may simply want to focus your implementation on a subset, such as the <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> and <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> interfaces in which clients would interact primarily with a result set as a **DataReader** object and would use your [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] data processing extension as a bridge between the result set and your data source.  
+  Before you implement your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension, you should define the interfaces to implement. You may want to provide extension-specific implementations of the entire set of interfaces, or you may simply want to focus your implementation on a subset, such as the <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> and <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> interfaces in which clients would interact primarily with a result set as a **DataReader** object and would use your [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing extension as a bridge between the result set and your data source.  
   
  You can implement data processing extensions in one of two ways:  
   
@@ -66,9 +66,9 @@ manager: craigg
 |Interface|Description|Implementation|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Represents a unique session with a data source. In the case of a client/server database system, the session may be equivalent to a network connection to the server.|Required|  
-|IDbConnectionExtension|Represents additional connection properties that can be implemented by [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] data processing extensions regarding security and authentication.|Optional|  
+|IDbConnectionExtension|Represents additional connection properties that can be implemented by [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing extensions regarding security and authentication.|Optional|  
 |IDbTransaction|Represents a local transaction.|Required|  
-|IDbTransactionExtension|Represents additional transaction properties that can be implemented by [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] data processing extensions.|Optional|  
+|IDbTransactionExtension|Represents additional transaction properties that can be implemented by [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing extensions.|Optional|  
 |IDbCommand|Represents a query or command that is used when connected to a data source.|Required|  
 |IDbCommandAnalysis|Represents additional command information for analyzing a query and returning a list of parameter names used in the query.|Optional|  
 |IDataParameter|Represents a parameter or name/value pair that is passed to a command or query.|Required|  

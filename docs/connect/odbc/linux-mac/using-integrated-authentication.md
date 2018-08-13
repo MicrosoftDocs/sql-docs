@@ -62,7 +62,7 @@ A database administrator can create an audit trail of access to a database when 
   
 Logging in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] uses the system account and there is no functionality on Linux to impersonate security context. Therefore, more is required to determine the user.
   
-To audit activities in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on behalf of users other than the system account, the application must use [!INCLUDE[tsql](../../../includes/tsql_md.md)] **EXECUTE AS**.  
+To audit activities in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on behalf of users other than the system account, the application must use [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
 To improve application performance, an application can use connection pooling with Integrated Authentication and auditing. However, combining connection pooling, Integrated Authentication, and auditing creates a security risk because the unixODBC driver manager permits different users to reuse pooled connections. For more information, see [ODBC Connection Pooling](http://www.unixodbc.org/doc/conn_pool.html).  
 

@@ -26,7 +26,7 @@ Metadata about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 ## Required SQL Server Permissions  
 The account that is used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] requires different permissions depending on the actions that the account performs:  
   
--   To convert Oracle objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, to update metadata from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], or to save converted syntax to scripts, the account must have permission to log on to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   To convert Oracle objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, to update metadata from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], or to save converted syntax to scripts, the account must have permission to log on to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 -   To load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], the account must be a member of the   **sysadmin** server role. This is required to install CLR assemblies.  
   

@@ -116,7 +116,7 @@ Metadata about the Oracle database is not automatically refreshed. The metadata 
   
     To view the definitions of the color coding, click the **Legend** button.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## Next Step  
   

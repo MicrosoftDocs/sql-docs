@@ -26,18 +26,18 @@ manager: craigg
 ---
 # Files That Manage Solutions and Projects
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- This topic describes the file types that are specific to [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. By default, all solutions and their projects are created in \My Documents\SQL Server Management Studio Projects.  
+ This topic describes the file types that are specific to [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. By default, all solutions and their projects are created in \My Documents\SQL Server Management Studio Projects.  
 
 
 ## Management Studio Solution Files  
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] uses different file types than [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] or [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio. This means you cannot open a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] solution in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] or in Visual Studio. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] solution files allow Solution Explorer to display a graphical interface for managing your files.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] uses different file types than [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] or [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio. This means you cannot open a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] or in Visual Studio. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution files allow Solution Explorer to display a graphical interface for managing your files.  
    
 |Extension|File type|Description|Created by|  
 |-------------|-------------|---------------|--------------|  
-|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Solution Object|Provides the environment with references to the location on disk of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] projects, project items, and solution|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]|  
+|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Solution Object|Provides the environment with references to the location on disk of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] projects, project items, and solution|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
   
 ## Management Studio Project Files  
-In the same way that solutions contain solution files that manage objects in a solution, projects contain project files. The type of project file that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] creates for a project depends on the template used to create the project. The following table describes the type of file created for each project.  
+In the same way that solutions contain solution files that manage objects in a solution, projects contain project files. The type of project file that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] creates for a project depends on the template used to create the project. The following table describes the type of file created for each project.  
    
 |Extension|Project template|  
 |-------------|--------------------|  

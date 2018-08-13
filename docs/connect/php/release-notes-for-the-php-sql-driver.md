@@ -79,7 +79,7 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
 
 - Support for PHP 5.4.  PHP 5.2 is not supported in version 3 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
-- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. For more information, see [Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
+- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For more information, see [Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
 - AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
 - Support for the high-availability, disaster recovery features. For more information, see [Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
 - Support for client-side cursors (caching a result set in-memory). For more information, see [Cursor Types &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) and [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).

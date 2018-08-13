@@ -70,7 +70,7 @@ public java.sql.ResultSet getTypeInfo()
 >  For more information about the data returned by the getTypeInfo method, see "sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getTypeInfo method to return information about the data types used in a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] (or later) database.  
+ The following example demonstrates how to use the getTypeInfo method to return information about the data types used in a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (or later) database.  
   
 ```  
 public static void executeGetTypeInfo(Connection con) {  

@@ -76,7 +76,7 @@ manager: craigg
 ## Cursor Conversion  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] can sometimes choose to implement a cursor type other than the one requested, which is referred to as an implicit cursor conversion (or cursor degradation). For more information about implicit cursor conversion, see the "Using Implicit Cursor Conversions" topic in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   
- With [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], when you update the data through the ResultSet.TYPE_SCROLL_SENSITIVE and ResultSet.CONCUR_UPDATABLE result set, an exception is thrown with a message "The cursor is READ ONLY". This exception occurs because the [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] has done an implicit cursor conversion for that result set and did not return the updatable cursor that has been requested.  
+ With [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], when you update the data through the ResultSet.TYPE_SCROLL_SENSITIVE and ResultSet.CONCUR_UPDATABLE result set, an exception is thrown with a message "The cursor is READ ONLY". This exception occurs because the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] has done an implicit cursor conversion for that result set and did not return the updatable cursor that has been requested.  
   
  To work around this problem, you can do one of the following two solutions:  
   

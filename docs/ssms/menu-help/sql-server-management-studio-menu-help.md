@@ -21,7 +21,7 @@ manager: craigg
 ---
 # SQL Server Management Studio Menu Help
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 [About SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

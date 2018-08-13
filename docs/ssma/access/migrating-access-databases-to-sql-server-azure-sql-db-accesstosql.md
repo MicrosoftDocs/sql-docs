@@ -47,7 +47,7 @@ To successfully migrate objects and data from Access to [!INCLUDE[ssNoVersion](.
   
 7.  [Load the converted database objects into SQL Server](http://msdn.microsoft.com/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba).  
   
-    You can load either the database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure by using SSMA, or you can save [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts.  
+    You can load either the database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure by using SSMA, or you can save [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
   
 8.  [Migrate Access data into SQL Server](http://msdn.microsoft.com/f3b18af7-1af0-499d-a00d-a0af94895625).  
   

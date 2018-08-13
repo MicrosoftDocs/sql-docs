@@ -28,7 +28,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to specify some configuration options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent during installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. The full set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent configuration options is only available within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects (SMO), or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent stored procedures.  
+This topic describes how to specify some configuration options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent during installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. The full set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent configuration options is only available within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects (SMO), or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent stored procedures.  
   
 **In This Topic**  
   
@@ -44,7 +44,7 @@ This topic describes how to specify some configuration options for [!INCLUDE[ssN
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
   
--   Click **SQL Server Agent** in Object Explorer of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] to administer jobs, operators, alerts, and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service. However, Object Explorer only displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent node if you have permission to use it.  
+-   Click **SQL Server Agent** in Object Explorer of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to administer jobs, operators, alerts, and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service. However, Object Explorer only displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent node if you have permission to use it.  
   
 -   Auto-restart should not be enabled for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] service or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service on failover cluster instances.  
   

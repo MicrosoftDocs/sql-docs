@@ -27,7 +27,7 @@ Use the **Open File** dialog box to open an existing file from disk. You can als
 To access this dialog box, select **Open** from the **File** menu and then choose **File**. This dialog box also appears when you are opening files from other elements, such as the **External Tools** dialog box. From the **File** menu, select **Open**, and then choose **Project/Solution** to open the similar **Open Project** dialog box.  
   
 > [!NOTE]  
-> Before opening a project or component in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], determine the trustworthiness of its code. The act of opening the project or component in a [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] may execute its code in a trusted process on your local machine.  
+> Before opening a project or component in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], determine the trustworthiness of its code. The act of opening the project or component in a [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] may execute its code in a trusted process on your local machine.  
   
 ## Option  
 **Look in**  

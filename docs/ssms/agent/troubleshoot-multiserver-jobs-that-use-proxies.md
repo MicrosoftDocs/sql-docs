@@ -37,7 +37,7 @@ Distributed jobs whose steps are associated with a proxy run under the context o
     To resolve this error, make sure a proxy account exists on the target server with the same name as the master server proxy account under which the job step runs.  
   
 > [!CAUTION]  
-> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry_md.md)]  
+> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## See Also  
 [Create a Multiserver Environment](../../ssms/agent/create-a-multiserver-environment.md)  

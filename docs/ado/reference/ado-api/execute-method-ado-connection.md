@@ -37,7 +37,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### Parameters  
  *CommandText*  
- A **String** value that contains the SQL statement, stored procedure, a URL, or provider-specific text to execute. **Optionally**, table names can be used but only if the provider is SQL aware. For example if a table name of "Customers" is used, ADO will automatically prepend the standard SQL Select syntax to form and pass "SELECT * FROM Customers" as a [!INCLUDE[tsql](../../../includes/tsql_md.md)] statement to the provider.  
+ A **String** value that contains the SQL statement, stored procedure, a URL, or provider-specific text to execute. **Optionally**, table names can be used but only if the provider is SQL aware. For example if a table name of "Customers" is used, ADO will automatically prepend the standard SQL Select syntax to form and pass "SELECT * FROM Customers" as a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement to the provider.  
   
  *RecordsAffected*  
  Optional. A **Long** variable to which the provider returns the number of records that the operation affected.  

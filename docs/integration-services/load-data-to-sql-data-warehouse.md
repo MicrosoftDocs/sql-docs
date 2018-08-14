@@ -27,7 +27,7 @@ This article shows you how to do the following things:
 
 ## Basic concepts
 
-The package is the basic unit of work in SSIS. Related packages are grouped in projects. You create projects and design packages in Visual Studio with SQL Server Data Tools. The design process is a visual process in which you drag and drop components from the Toolbox to the design surface, connect them, and set their properties. After you finish your package, you can run it, and you can optionally deploy it to SQL Server for comprehensive management, monitoring, and security.
+The package is the basic unit of work in SSIS. Related packages are grouped in projects. You create projects and design packages in Visual Studio with SQL Server Data Tools. The design process is a visual process in which you drag and drop components from the Toolbox to the design surface, connect them, and set their properties. After you finish your package, you can run it, and you can optionally deploy it to SQL Server or SQL Database for comprehensive management, monitoring, and security.
 
 A detailed introduction to SSIS is beyond the scope of this article. To learn more, see the following articles:
 
@@ -190,7 +190,7 @@ To continue the tutorial with this option, you need the following things:
 8. In the **ADO.NET Destination Editor**, select the **Mappings** tab to see how columns in the source are mapped to columns in the destination.
    
     ![][13]
-9. Click **OK** to finish configuring the data source.
+9. Click **OK** to finish configuring the destination.
 
 ## Run the package to load the data
 Run the package by clicking the **Start** button on the toolbar or by selecting one of the **Run** options on the **Debug** menu.

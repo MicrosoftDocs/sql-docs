@@ -27,7 +27,7 @@ This article shows you how to do the following things:
 
 ## Basic concepts
 
-The package is the basic unit of work in SSIS. Related packages are grouped in projects. You create projects and design packages in Visual Studio with SQL Server Data Tools. The design process is a visual process in which you drag and drop components from the Toolbox to the design surface, connect them, and set their properties. After you finish your package, you can run it, and you can optionally deploy it to SQL Server for comprehensive management, monitoring, and security.
+The package is the basic unit of work in SSIS. Related packages are grouped in projects. You create projects and design packages in Visual Studio with SQL Server Data Tools. The design process is a visual process in which you drag and drop components from the Toolbox to the design surface, connect them, and set their properties. After you finish your package, you can run it, and you can optionally deploy it to SQL Server or SQL Database for comprehensive management, monitoring, and security.
 
 A detailed introduction to SSIS is beyond the scope of this article. To learn more, see the following articles:
 
@@ -75,7 +75,7 @@ Visual Studio opens and creates a new Integration Services (SSIS) project. Then 
     ![][02]
 2. Double-click the Data Flow Task to switch to the Data Flow tab.
 3. From the Other Sources list in the Toolbox, drag an ADO.NET Source to the design surface. With the source adapter still selected, change its name to **SQL Server source** in the **Properties** pane.
-4. From the Other Destinations list in the Toolbox, drag an ADO.NET Destination to the design surface under the ADO.NET Source. With the destination adapter still selected, change its name to **SQL DW destination** in the **Properties** pane.
+4. From the Other Destinations list in the Toolbox, drag an ADO.NET Destination to the design surface under the ADO.NET Source. With the destination adapter still selected, change its name to **SQL DB destination** in the **Properties** pane.
    
     ![][09]
 
@@ -139,15 +139,14 @@ Visual Studio opens and creates a new Integration Services (SSIS) project. Then 
 7. In the **Create Table** dialog box, do the following things.
    
    1. Change the name of the destination table to **SalesOrderDetail**.
-   2. Remove the **rowguid** column. The **uniqueidentifier** data type is not supported in SQL Database.
-   3. Change the data type of the **LineTotal** column to **money**. The **decimal** data type is not supported in SQL Database. For info about supported data types, see [CREATE TABLE (Azure SQL Database, Parallel Data Warehouse)][CREATE TABLE (Azure SQL Database, Parallel Data Warehouse)].
       
        ![][12b]
-   4. Click **OK** to create the table and return to the **ADO.NET Destination Editor**.
+
+   2. Click **OK** to create the table and return to the **ADO.NET Destination Editor**.
 8. In the **ADO.NET Destination Editor**, select the **Mappings** tab to see how columns in the source are mapped to columns in the destination.
    
     ![][13]
-9. Click **OK** to finish configuring the data source.
+9. Click **OK** to finish configuring the destination.
 
 ## Run the package to load the data
 Run the package by clicking the **Start** button on the toolbar or by selecting one of the **Run** options on the **Debug** menu.
@@ -171,22 +170,22 @@ Congratulations! You’ve successfully used SQL Server Integration Services to l
 - Learn how to deploy your SSIS projects and packages to Integration Services Server or to another storage location. Start here: [Deployment of Projects and Packages][Deployment of Projects and Packages].
 
 <!-- Image references -->
-[01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png
-[02]:  ./media/load-data-to-sql-data-warehouse/ssis-data-flow-task-02.png
-[03]:  ./media/load-data-to-sql-data-warehouse/ado-net-source-03.png
-[04]:  ./media/load-data-to-sql-data-warehouse/ado-net-connection-manager-04.png
-[05]:  ./media/load-data-to-sql-data-warehouse/ado-net-connection-05.png
-[06]:  ./media/load-data-to-sql-data-warehouse/test-connection-06.png
-[07]:  ./media/load-data-to-sql-data-warehouse/ado-net-source-07.png
-[08]:  ./media/load-data-to-sql-data-warehouse/preview-data-08.png
-[09]:  ./media/load-data-to-sql-data-warehouse/source-destination-09.png
-[10]:  ./media/load-data-to-sql-data-warehouse/connect-source-destination-10.png
-[11]:  ./media/load-data-to-sql-data-warehouse/ado-net-destination-11.png
-[12a]: ./media/load-data-to-sql-data-warehouse/destination-query-before-12a.png
-[12b]: ./media/load-data-to-sql-data-warehouse/destination-query-after-12b.png
-[13]:  ./media/load-data-to-sql-data-warehouse/column-mapping-13.png
-[14]:  ./media/load-data-to-sql-data-warehouse/package-running-14.png
-[15]:  ./media/load-data-to-sql-data-warehouse/package-success-15.png
+[01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png
+[02]:  ./media/load-data-to-sql-database-with-ssis/ssis-data-flow-task-02.png
+[03]:  ./media/load-data-to-sql-database-with-ssis/ado-net-source-03.png
+[04]:  ./media/load-data-to-sql-database-with-ssis/ado-net-connection-manager-04.png
+[05]:  ./media/load-data-to-sql-database-with-ssis/ado-net-connection-05.png
+[06]:  ./media/load-data-to-sql-database-with-ssis/test-connection-06.png
+[07]:  ./media/load-data-to-sql-database-with-ssis/ado-net-source-07.png
+[08]:  ./media/load-data-to-sql-database-with-ssis/preview-data-08.png
+[09]:  ./media/load-data-to-sql-database-with-ssis/source-destination-09.png
+[10]:  ./media/load-data-to-sql-database-with-ssis/connect-source-destination-10.png
+[11]:  ./media/load-data-to-sql-database-with-ssis/ado-net-destination-11.png
+[12a]: ./media/load-data-to-sql-database-with-ssis/destination-query-before-12a.png
+[12b]: ./media/load-data-to-sql-database-with-ssis/destination-query-after-12b.png
+[13]:  ./media/load-data-to-sql-database-with-ssis/column-mapping-13.png
+[14]:  ./media/load-data-to-sql-database-with-ssis/package-running-14.png
+[15]:  ./media/load-data-to-sql-database-with-ssis/package-success-15.png
 
 <!-- Article references -->
 

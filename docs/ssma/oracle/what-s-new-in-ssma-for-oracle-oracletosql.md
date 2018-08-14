@@ -166,7 +166,7 @@ The January 2012 release of SSMA for Oracle contains the following changes:
 ## July 2011  
 The July 2011 release of SSMA for Oracle contains the following changes:  
   
--   Added support for conversion of Oracle sequence to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” sequence generator.  
+-   Added support for conversion of Oracle sequence to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” sequence generator.  
 -   Improved error reporting during data migration.  
 -   Improved conversion of statement using reserved words.  
 -   Improved implicit conversion of date value in a function.  
@@ -174,8 +174,8 @@ The July 2011 release of SSMA for Oracle contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for Oracle contains the following changes:  
   
--   Consolidated “SSMA for Oracle” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali.”  
--   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali.”  
+-   Consolidated “SSMA for Oracle” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
+-   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
 -   Enhanced client-side data migration engine, supporting parallel migration of data.  
 -   Improved data migration performance with Simple and Bulk logged recovery models.  
 -   Added support for backward compatibility of projects created by earlier versions of SSMA (v4.0 and v4.2).  

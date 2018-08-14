@@ -24,7 +24,7 @@ Data sources are the preferred mechanism by which to create JDBC connections in 
 
 Java EE products, such as application servers and servlet/JSP engines, typically let you configure data sources for database access. Any property listed in the [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) topic can be specified wherever the configuration lets you enter a property as a property=value pair.
 
-For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data sources, see the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) class. For an example of how to use the SQLServerDataSource class to make a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database, see [Data Source Sample](../../connect/jdbc/data-source-sample.md).
+For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data sources, see the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) class. For an example of how to use the SQLServerDataSource class to make a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, see [Data Source Sample](../../connect/jdbc/data-source-sample.md).
 
 ## See Also
 

@@ -23,7 +23,7 @@ manager: craigg
 # setPortNumber Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Sets the port number to be used to communicate with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Sets the port number to be used to communicate with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -38,7 +38,7 @@ public void setPortNumber(int portNumber)
  An **int** value that contains the port number.  
   
 ## Remarks  
- The port number is the TCP/IP port number that is used when opening a socket connection to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. If the portNumber property is not set, the [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) method returns the default value of 1433.  
+ The port number is the TCP/IP port number that is used when opening a socket connection to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If the portNumber property is not set, the [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) method returns the default value of 1433.  
   
 > [!NOTE]  
 >  The setPortNumber method does not do any range checking on the port value passed in. You can pass a port number that is not valid, like 99999, without triggering an error.  

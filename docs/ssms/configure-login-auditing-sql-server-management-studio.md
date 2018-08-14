@@ -30,7 +30,7 @@ This topic describes how to configure login auditing in [!INCLUDE[ssCurrent](../
   
 -   Both failed and successful logins  
   
-You must restart [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] before this option will take effect.  
+You must restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] before this option will take effect.  
   
 ## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  
   

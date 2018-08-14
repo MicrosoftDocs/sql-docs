@@ -46,7 +46,7 @@ public short getShort(java.lang.String columnName)
 ## Remarks  
  This getShort method is specified by the getShort method in the java.sql.ResultSet interface.  
   
- This method is supported only on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data types that can safely return an integer value such as smallint, tinyint, and bit. Using this method on any other data types will cause an exception to be thrown.  
+ This method is supported only on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types that can safely return an integer value such as smallint, tinyint, and bit. Using this method on any other data types will cause an exception to be thrown.  
   
 ## See Also  
  [getShort Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)   

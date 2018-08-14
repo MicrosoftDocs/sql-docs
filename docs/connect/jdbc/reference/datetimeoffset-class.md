@@ -18,7 +18,7 @@ manager: craigg
 # DateTimeOffset Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  This type represents an object of type microsoft.sql.DateTimeOffset and is the Java type that corresponds to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetimeoffset** data type.  
+  This type represents an object of type microsoft.sql.DateTimeOffset and is the Java type that corresponds to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetimeoffset** data type.  
   
  **Package:** microsoft.sql  
   

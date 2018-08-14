@@ -18,7 +18,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Project Settings(Synchronization) (DB2ToSQL)
-The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads and refreshes database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads and refreshes database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 The default actions options specify default settings for refreshing objects from the DB2 database and for synchronizing objects with the SQL Server database. For more information, see [Refresh from Database &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md).  
   
@@ -30,7 +30,7 @@ You can access two different Synchronization pages that contain the same setting
   
 ## Miscellaneous Options  
 **Attempts**  
-Specifies the number of attempts SSMA should make when it loads objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Objects that are not loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in the current attempt will be tried again until SSMA reaches the maximum number of attempts in the current synchronization process. Default value set is **2**  
+Specifies the number of attempts SSMA should make when it loads objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Objects that are not loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the current attempt will be tried again until SSMA reaches the maximum number of attempts in the current synchronization process. Default value set is **2**  
   
 ## Synchronization for DB2 Options  
 **Action on local and remote object change**  

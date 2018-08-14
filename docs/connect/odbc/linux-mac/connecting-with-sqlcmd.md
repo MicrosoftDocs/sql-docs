@@ -20,9 +20,9 @@ manager: craigg
 # Connecting with sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS.
+The [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
   
-The following commands show how to use Windows Authentication (Kerberos) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentication, respectively:
+The following commands show how to use Windows Authentication (Kerberos) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, respectively:
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
@@ -96,7 +96,7 @@ Always specify **-M** when connecting to the availability group listener of a [!
 - -s *column_separator_char*  Specify the column-separator character.  
 
 - -S [*protocol*:] *server*[**,***port*]  
-Specify the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] to connect to, or if -D is used, a DSN. The ODBC driver on Linux and macOS requires -S. Note that **tcp** is the only valid protocol.  
+Specify the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to connect to, or if -D is used, a DSN. The ODBC driver on Linux and macOS requires -S. Note that **tcp** is the only valid protocol.  
   
 - -t *query_timeout* Specify the number of seconds before a command (or SQL statement) times out.  
   
@@ -156,7 +156,7 @@ In the current release, the following commands are available:
 ## Unavailable Options
 In the current release, the following options are not available:  
 
-- -A  Log in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] with a Dedicated Administrator Connection (DAC). For information on how to make a dedicated administrator connection (DAC), see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A  Log in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with a Dedicated Administrator Connection (DAC). For information on how to make a dedicated administrator connection (DAC), see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
 - -f *code_page* Specify the input and output code pages.  
   

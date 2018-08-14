@@ -63,7 +63,7 @@ We recommend that users who have many custom reports organize them by using file
 ## Permissions  
 Custom reports run by using the permissions of the current user. To prevent a malicious user from changing the queries run by the report, permissions on the file system folder that contains the report files should be set to restrict access.  
   
-Both the user and the account that is used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] service require read access to the file system folder that contains the report files.  
+Both the user and the account that is used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service require read access to the file system folder that contains the report files.  
   
 Any valid [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] command can be embedded in a report, but the command will not be executed.  
   

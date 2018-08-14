@@ -23,7 +23,7 @@ manager: craigg
 # getInstanceName Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Returns the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instance name.  
+  Returns the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name.  
   
 ## Syntax  
   

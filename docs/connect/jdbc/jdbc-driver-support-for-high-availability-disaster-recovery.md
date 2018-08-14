@@ -49,7 +49,7 @@ If you are using Microsoft JDBC Driver 4.2 (or lower) for SQL Server and if **mu
 ## Connecting With MultiSubnetFailover  
  Always specify **multiSubnetFailover=true** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Failover Cluster Instance. **multiSubnetFailover** enables faster failover for all Availability Groups and failover cluster instances in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and will significantly reduce failover time for single and multi-subnet AlwaysOn topologies. During a multi-subnet failover, the client will attempt connections in parallel. During a subnet failover, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will aggressively retry the TCP connection.  
   
- The **multiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance by trying to connect to all the IP addresses. When **MultiSubnetFailover=true** is specified for a connection, the client retries TCP connection attempts faster than the operating system’s default TCP retransmit intervals. This enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
+ The **multiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by trying to connect to all the IP addresses. When **MultiSubnetFailover=true** is specified for a connection, the client retries TCP connection attempts faster than the operating system’s default TCP retransmit intervals. This enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
   
  For more information about connection string keywords in the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md).  
   
@@ -65,9 +65,9 @@ If you are using Microsoft JDBC Driver 4.2 (or lower) for SQL Server and if **mu
   
 -   To connect to an availability group, specify the availability group listener of the availability group as the server in your connection string. For example, jdbc:sqlserver://VNN1.  
   
--   Connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance configured with more than 64 IP addresses will cause a connection failure.  
+-   Connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance configured with more than 64 IP addresses will cause a connection failure.  
   
--   Behavior of an application that uses the **multiSubnetFailover** connection property is not affected based on the type of authentication: [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, Kerberos Authentication, or Windows Authentication.  
+-   Behavior of an application that uses the **multiSubnetFailover** connection property is not affected based on the type of authentication: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, Kerberos Authentication, or Windows Authentication.  
   
 -   Increase the value of **loginTimeout** to accommodate for failover time and reduce application connection retry attempts.  
   

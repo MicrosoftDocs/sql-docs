@@ -18,7 +18,7 @@ manager: craigg
 # setSendTimeAsDatetime Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  This method was added in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0.  
+  This method was added in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  Modifies the setting of the **sendTimeAsDatetime** connection property.  
   
@@ -32,7 +32,7 @@ public void setSendTimeAsDatetime(boolean sendTimeAsDateTime)
 #### Parameters  
  *sendTimeAsDateTime*  
   
- A Boolean value. When true, causes java.sql.Time values to be sent to the server as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** types. When false, causes java.sql.Time values to be sent to the server as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **time** types.  
+ A Boolean value. When true, causes java.sql.Time values to be sent to the server as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** types. When false, causes java.sql.Time values to be sent to the server as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **time** types.  
   
 ## Remarks  
  [SQLServerDataSource.getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md) returns the setting of the **sendTimeAsDatetime** connection property.  

@@ -18,7 +18,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # What's New in SSMA for DB2 (DB2ToSQL)
-This topic lists SSMA for DB2 changes in each release.  
+This article lists SSMA for DB2 changes in each release.  
 
 ## SSMA v7.9
 The v7.9 release of SSMA for DB2 contains the following changes:

@@ -18,7 +18,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # What's New in SSMA for MySQL (MySQLToSql)
-This topic lists SSMA for MySQL changes in each release. 
+This article lists SSMA for MySQL changes in each release. 
 
 ## SSMA v7.9
 The v7.9 release of SSMA for MySQL contains the following changes:
@@ -43,7 +43,7 @@ The v7.8 release of SSMA for MySQL contains the following changes:
 The v7.7 release of SSMA for MySQL contains the following changes:
 - SSMA for MySQL  has been enhanced with targeted fixes that improve quality and conversion metrics.
 - Based on the popular demand, the 32-bit version of SSMA for MySQL is back. Compared to the previous implementation (prior to v7.4), there are two installer packages, but they cannot be installed side by side. As a result, you must choose the most appropriate version based on the connectivity components you have. It is always preferable to use the 64-bit version, if possible.
-- SSMA for MySQL now has ODBC Connection String connection mode, which allows you to use any third-party ODBC drivers that is compatible with MySQL.
+- SSMA for MySQL now has ODBC Connection String connection mode, which allows you to use any third-party ODBC drivers that are compatible with MySQL.
 
 > [!IMPORTANT]
 > With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
@@ -152,7 +152,7 @@ The July 2011 release of SSMA for MySQL contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for MySQL contains the following changes:  
   
--   Single Installable of “SSMA for MySQL”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” and Azure SQL.  
+-   Single installable of “SSMA for MySQL”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” and Azure SQL.  
 -   The ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
 -   Enhanced client-side data migration engine, supporting parallel migration of data.  
 -   Improved data migration performance with Simple and Bulk logged recovery models.  

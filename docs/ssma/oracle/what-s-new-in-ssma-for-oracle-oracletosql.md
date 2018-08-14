@@ -15,7 +15,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # What's New in SSMA for Oracle (OracleToSQL)
-This topic lists SSMA for Oracle changes in each release.  
+This article lists SSMA for Oracle changes in each release.  
 
 ## SSMA v7.9
 The v7.9 release of SSMA for Oracle contains the following changes:

@@ -18,7 +18,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # What's New in SSMA for Access (AccessToSQL)
-This topic lists SSMA for Access changes in each release.  
+This article lists SSMA for Access changes in each release.  
 
 
 ## SSMA v7.9

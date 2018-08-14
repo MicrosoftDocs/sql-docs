@@ -18,7 +18,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
-This topic lists SSMA for SAP ASE (formerly SSMA for Sybase) changes in each release. 
+This article lists SSMA for SAP ASE (formerly SSMA for Sybase) changes in each release. 
 
 ## SSMA v7.9
 The v7.9 release of SSMA for SAP ASE contains the following changes:
@@ -200,7 +200,7 @@ The May 2007 release of SSMA for Sybase contains the following changes:
 -   Added support for user-entered comments in the SQL Server formatted SQL mode.  
 -   Added improvements in object conversion.  
   
-The Help file was not updated for this release. For more information, see the Documentation Notes section later in this topic.  
+The Help file was not updated for this release. For more information, see the Documentation Notes section later in this article.  
   
 ## November 2006  
 The November 2006 release of SSMA for Sybase contains the following changes:  
@@ -216,7 +216,7 @@ The November 2006 release of SSMA for Sybase contains the following changes:
     -   UPDATE statements that contain unresolved identifiers.  
 -   Added a new migration option that lets you specify how SSMA should handle dates that are outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date range.  
 -   Added a **Formatted SQL** setting on the **SQL** tab, which formats the code for improved readability.  
--   Bug fixes that include the following:  
+-   Bug fixes, including:  
     -   SSMA now converts LOCK TABLE *table* IN { SHARED | EXCLUSIVE } MODE statements by adding a TABLOCK or TABLOCKX hint to the subsequent SELECT query on the table.  
     -   The necessary casts are now added when binary types are used in character expressions.  
     -   Memory and performance improvements.  

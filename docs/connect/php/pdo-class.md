@@ -18,7 +18,7 @@ manager: craigg
 # PDO Class
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-The PDO class contains methods that allow your PHP application to connect to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance.  
+The PDO class contains methods that allow your PHP application to connect to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
 ## Syntax  
   

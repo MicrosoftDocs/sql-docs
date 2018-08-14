@@ -27,7 +27,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Migration Wizard (AccessToSQL)
-The Migration Wizard guides you through the migration of one or more databases from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Or SQL Azure. By using the wizard, you will create a project, add databases to the project, select objects to migrate, and connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Or SQL Azure. You will also convert, load, and migrate Access schemas and data. Optionally, you can link Access tables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Or SQL Azure tables.  
+The Migration Wizard guides you through the migration of one or more databases from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure. By using the wizard, you will create a project, add databases to the project, select objects to migrate, and connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure. You will also convert, load, and migrate Access schemas and data. Optionally, you can link Access tables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure tables.  
   
 Most of the Migration Wizard pages contain the same options as existing SSMA dialog boxes. Therefore, the wizard pages are described here, and then links are provided so that you can learn more about individual options. If a page contains unique options, they are documented here.  
   
@@ -76,7 +76,7 @@ If you have many objects, you might want to use the **Advanced Object Selection*
 For more information about filtering, see the Options section of [Advanced Object Selection (SSMA Common)](http://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## Connect to SQL Server Page  
-On the Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] page, you specify connection properties, and then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Connect to SQL Server](http://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+On the Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page, you specify connection properties, and then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Connect to SQL Server](http://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
   
 > [!IMPORTANT]  
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** and the migration starts.  
@@ -88,13 +88,13 @@ On the Connect to SQL Azure page, you specify connection properties, and then co
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** button on the Links page to start migration.  
   
 ## Link Tables Page  
-The Link Tables page lets you link your original Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure tables. Linking tables modifies your Access database so that your queries, forms, reports, and data access pages use the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database instead of the data in your Access database.  
+The Link Tables page lets you link your original Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables. Linking tables modifies your Access database so that your queries, forms, reports, and data access pages use the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database instead of the data in your Access database.  
   
 **Link tables**  
-Select the **Link tables** check box to link Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure tables. To start migration you should click **Next** button.  
+Select the **Link tables** check box to link Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables. To start migration you should click **Next** button.  
   
 ## Migration Status Page  
-The Migration Status page shows the progress of converting the Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure schemas, loading the converted schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, and then migrating data.  
+The Migration Status page shows the progress of converting the Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure schemas, loading the converted schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, and then migrating data.  
   
 For more information about this page, see [Convert, Load, and Migrate](http://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   

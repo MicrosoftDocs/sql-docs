@@ -28,7 +28,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 
 Uploads R packages to a database from the specified byte stream or file path.
 
-This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes (R, Python, Java, etc.) and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. 
+This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes (R, Python, Java, etc.) and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
 Currently only the R language and Windows platform are supported. Support for Python and Linux is planned for a later release.
 

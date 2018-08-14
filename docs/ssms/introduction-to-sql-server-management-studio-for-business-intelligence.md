@@ -40,7 +40,7 @@ For more information about how to use [!INCLUDE[ssManStudioFull](../includes/ssm
 ## Managing Reporting Services Projects Using SQL Server Management Studio  
 Use SQL Server Management Studio to enable Reporting Services features, administer the server and databases, and manage roles and jobs.  
   
-You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). For more information about these tasks, see the following topics:  
+You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). For more information about these tasks, see the following topics:  
   
 -   [Management Studio How-to Topics](http://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   

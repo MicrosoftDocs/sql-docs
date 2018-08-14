@@ -23,7 +23,7 @@ manager: craigg
 # setPassword Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Sets the password that will be used to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Sets the password that will be used to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   

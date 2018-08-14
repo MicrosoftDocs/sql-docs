@@ -15,10 +15,10 @@ ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Migrating Oracle Databases to SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle is a comprehensive environment that helps you quickly migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB, or Azure SQL Data Warehouse. By using SSMA for Oracle, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB, or Azure SQL Data Warehouse, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB, or Azure SQL Data Warehouse. Note that you cannot migrate SYS and SYSTEM Oracle schemas.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle is a comprehensive environment that helps you quickly migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL DB, or Azure SQL Data Warehouse. By using SSMA for Oracle, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL DB, or Azure SQL Data Warehouse, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL DB, or Azure SQL Data Warehouse. Note that you cannot migrate SYS and SYSTEM Oracle schemas.
   
 ## Recommended Migration Process  
-To successfully migrate objects and data from Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB, or Azure SQL Data Warehouse, use the following process:
+To successfully migrate objects and data from Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL DB, or Azure SQL Data Warehouse, use the following process:
   
 1.  [Create a new SSMA project](http://msdn.microsoft.com/ee5d94c0-c7a6-4779-bd32-729bdaf61e1b).  
   
@@ -38,7 +38,7 @@ To successfully migrate objects and data from Oracle databases to [!INCLUDE[ssNo
   
     You can do this in one of the following ways:  
   
-    -   Save a script and run it in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+    -   Save a script and run it in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   Synchronize the database objects.  
   

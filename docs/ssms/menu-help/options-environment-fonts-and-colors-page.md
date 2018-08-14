@@ -37,7 +37,7 @@ Lists all the user interface elements for which you can change font and color sc
 |Find Results Window|Changes to font style, size, and color display settings for this item affect the appearance of text in the FindResults window.|  
 |Output Window|Changes to font style, size, and color display settings for this item affect the appearance of text in the Output window.|  
 |Grid Results|Changes to the font style, size, and color display settings for this item affect the appearance of text in the **Grid Results** area of the Query window.|  
-|Execution Plan|Changes to font style, size, and color display settings for this item affect the appearance of text in the Execution Plan of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and [!INCLUDE[ssEW](../../includes/ssew-md.md)] queries.|  
+|Execution Plan|Changes to font style, size, and color display settings for this item affect the appearance of text in the Execution Plan of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssEW](../../includes/ssew-md.md)] queries.|  
 |Text Results|Changes to font style, size, and color display settings for this item affect the appearance of text in the **Text Results** area of the Query window.|  
 |Business Intelligence Designers|Changes to font style, size, and color display settings for this item affect the appearance of text in the BusinessIntelligenceDesignerswindow.|  
   

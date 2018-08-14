@@ -46,7 +46,7 @@ public java.sql.Time getTime(java.lang.String columnName)
 ## Remarks  
  This getTime method is specified by the getTime method in the java.sql.ResultSet interface.  
   
- This method returns a valid time part of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime or smalldatetime data type, with the date part set to the Java baseline date of 1970/01/01.  
+ This method returns a valid time part of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime or smalldatetime data type, with the date part set to the Java baseline date of 1970/01/01.  
   
 ## See Also  
  [getTime Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   

@@ -56,7 +56,7 @@ You can use the web portal to browse the report server folders or search for spe
 
 The web portal is used only for a report server that runs in native mode. It is not supported for a report server that you configure for SharePoint integrated mode.
 
-Some web portal features are only available in specified editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)]. For more information, see [Reporting Services Features supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Some web portal features are only available in specified editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Reporting Services Features supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant User Access to a Report Server](security/grant-user-access-to-a-report-server-report-manager.md)
 

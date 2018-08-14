@@ -51,7 +51,7 @@
       href: sql-server-aris-install-big-data-tools.md
   - name: Data virtualization
     items:
-      name: Virtualize external data
+    - name: Virtualize external data
       href: sql-server-aris-virtualize-data.md
   - name: Troubleshoot
     items:

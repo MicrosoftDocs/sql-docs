@@ -23,7 +23,7 @@ manager: craigg
 # setServerName Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Sets the name of the computer that is running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Sets the name of the computer that is running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Syntax  
   
@@ -38,7 +38,7 @@ public void setServerName(java.lang.String serverName)
  A **String** that contains the server name.  
   
 ## Remarks  
- The server name is the host name of the target computer that is running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. If the serverName property is not set, [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) returns the default value of null.  
+ The server name is the host name of the target computer that is running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If the serverName property is not set, [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) returns the default value of null.  
   
 ## See Also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

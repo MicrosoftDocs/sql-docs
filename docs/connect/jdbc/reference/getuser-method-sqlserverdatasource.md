@@ -36,7 +36,7 @@ public java.lang.String getUser()
  A **String** that contains the user name.  
   
 ## Remarks  
- The [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) method sets the user name that will be used when connecting to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. If user name value is not set, the getUser method returns the default value of null.  
+ The [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) method sets the user name that will be used when connecting to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If user name value is not set, the getUser method returns the default value of null.  
   
 ## See Also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

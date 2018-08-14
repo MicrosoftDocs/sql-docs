@@ -25,7 +25,7 @@ The **About** dialog box provides product information and allows you to access i
   
 ## Options  
 **Component Name**  
-Lists the name of each [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] item installed.  
+Lists the name of each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] item installed.  
   
 **Version**  
 Lists the version of each installed component.  

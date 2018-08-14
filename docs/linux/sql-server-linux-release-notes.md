@@ -68,7 +68,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 
 ## <a id="CU9-GDR2"></a> CU9-GDR2 (August 2018)
 
-This is a security update that also includes the previously released CU (CU9) for SQL Server 2017. The SQL Server engine version for this release is 14.0.3035.2. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/xxxxx](https://support.microsoft.com/en-us/help/xxxx).
+This is a security update that also includes the previously released CU (CU9) for SQL Server 2017. The SQL Server engine version for this release is 14.0.3035.2. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4293805](https://support.microsoft.com/en-us/help/4293805).
 
 ### Package details
 
@@ -82,7 +82,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="GDR2"></a> GDR2 (August 2018)
 
-This is a security update that only includes the GDR2 (and GDR1) security fixes for SQL Server 2017.  The SQL Server engine version for this release is 14.0.2002.14. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/xxxxx](https://support.microsoft.com/en-us/help/xxxx).
+This is a security update that only includes the GDR2 (and GDR1) security fixes for SQL Server 2017.  The SQL Server engine version for this release is 14.0.2002.14. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4293803](https://support.microsoft.com/en-us/help/4293803).
 
 ### Package details
 

@@ -43,8 +43,8 @@ manager: craigg
 |DBSCHEMA_TABLE_PRIVILEGES|TABLE_CATALOG|  
   
 > [!NOTE]  
->  To restrict a schema rowset to all catalogs from a linked server, use the syntax *linked_server* (where the period separator is part of the name specification). This syntax is equivalent to specifying NULL for the catalog name restriction and is also used when the linked server indicates a data source that does not support catalogs.  
- <!-- Writer mentioned a period separator when the syntax linked_server is clearly separated by an underscore character?Could you please clarify the intention ot fix it?.  -->
+>  To restrict a schema rowset to all catalogs from a linked server, use the syntax *linked_server* (where the underscore separator is part of the name specification). This syntax is equivalent to specifying NULL for the catalog name restriction and is also used when the linked server indicates a data source that does not support catalogs.  
+ 
  The OLE DB Driver for SQL Server defines the schema rowset LINKEDSERVERS, returning a list of OLE DB data sources registered as linked servers.  
   
 ## See Also  

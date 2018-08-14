@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2017"
+ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -19,25 +19,29 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 Always Encrypted with secure enclaves provides additional functionality to the [Always Encrypted](always-encrypted-database-engine.md) feature.
 
-Introduced in SQL Server 2016, Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users of SQL Server. High-privileged unauthorized users include DBAs, computer admins, cloud admins, etc.; these are users who may have legitimate access to servers, hardware, etc., but who should not have access to some or all of the actual data. 
+Introduced in SQL Server 2016, Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users of SQL Server. High-privileged unauthorized users are DBAs, computer admins, cloud admins, or anyone else who has legitimate access to server instances, hardware, etc., but who should not have access to some or all of the actual data. 
 
 Until now, Always Encrypted protected the data by encrypting it on the client side and never allowing the data or the corresponding cryptographic keys to appear in plaintext inside the SQL Server Engine. As a result, the functionality on encrypted columns inside the database was severely restricted. The only operation SQL Server could perform on encrypted data was equality comparisons (and equality comparisons were only available with deterministic encryption). All other operations, including cryptographic operations (initial data encryption or key rotation), or rich computations (for example, pattern matching) were not supported inside the database. Customers needed to move the data outside of the database to perform these operations on the client-side.
 
-Always Encrypted with secure enclaves addresses these limitations by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server Engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view the data or the code inside the enclave from the outside, even with a debugger.  
+Always Encrypted *with secure enclaves* addresses these limitations by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view any data or code inside the enclave from the outside, even with a debugger.  
 
-When parsing an application's query, the SQL Server Engine determines if the query contains any operations on encrypted data that requires the use of the secure enclave. For queries where the secure enclave needs to be accessed:
+
+Always Encrypted uses secure enclaves as illustrated in the following diagram:
+
+![data flow](./media/always-encrypted-enclaves/ae-data-flow.png)
+
+
+
+When parsing an application's query, the SQL Server Engine determines if the query contains any operations on encrypted data that require the use of the secure enclave. For queries where the secure enclave needs to be accessed:
 
 - The client driver sends the column encryption keys required for the operations to the secure enclave (over a secure channel). 
 - Then, the client driver submits the query for execution along with the encrypted query parameters.
 
 During query processing, the data or the column encryption keys are not exposed in plaintext in the SQL Server Engine outside of the secure enclaves. The SQL Server engine delegates cryptographic operations and computations on encrypted columns to the secure enclave. If needed, the secure enclave decrypts the query parameters and/or the data stored in encrypted columns and performs the requested operations.
 
+## Why use Always Encrypted with secure enclaves?
 
-Always Encrypted uses secure enclaves as illustrated on the following diagram:
-
-![data flow](./media/always-encrypted-enclaves/ae-data-flow.png)
-
-With secure enclaves, Always Encrypted can protect the confidentiality of sensitive data while providing the following benefits:
+With secure enclaves, Always Encrypted protects the confidentiality of sensitive data while providing the following benefits:
 
 - **In-place encryption** – cryptographic operations on sensitive data, for example: initial data encryption or rotating a column encryption key, are performed inside the secure enclave and do not require moving the data outside of the database. You can issue in-place encryption using the ALTER TABLE Transact-SQL statement, and you do not need to use tools, such as the Always Encrypted wizard in SSMS or the Set-SqlColumnEncryption PowerShell cmdlet.
 

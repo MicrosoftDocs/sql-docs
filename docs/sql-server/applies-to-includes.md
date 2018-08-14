@@ -39,7 +39,7 @@ SQL Content writers frequently need to include the name of the product and versi
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv14-md.md)]` ? | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## SQL Server applies-to includes (non-version-specific)
+## SQL Server (non-version-specific)
 
 These applies-to includes omit the version of SQL Server.
 
@@ -61,7 +61,7 @@ These applies-to includes omit the version of SQL Server.
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## SQL Server applies-to includes (version-specific)
+## SQL Server (version-specific)
 
 These applies-to includes specify which versions of SQL the documentation applies to.
 
@@ -105,7 +105,7 @@ These applies-to includes specify which versions of SQL the documentation applie
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## Analysis Services applies-to includes
+## Analysis Services
 
 These applies-to includes are used with Analysis Services documentation.
 
@@ -122,7 +122,7 @@ These applies-to includes are used with Analysis Services documentation.
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## Reporting Services applies-to includes
+## Reporting Services
 
 These applies-to includes are used with Reporting Services documentation.
 

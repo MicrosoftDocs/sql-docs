@@ -15,13 +15,13 @@ manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
-# SQL Server version and applies-to include files
+# SQL Server include files for versioning and applies-to
 
 References in the documentation can be easily modified without changing the actual text of individual articles by using include files in Markdown. There are three types of include files in the SQL content world: SQL version, applies-to, and referential text. SQL version includes are used to indicate the version of SQL being discussed, such as SQL Server 2016 or 2017, and the applies-to indicate what version of SQL Server the document applies to, such as SQL Server on Linux or Azure SQL Database. Referential text are includes that don't fall in the other two categories, such as the Get Help include, a list of links that customers can use to get help with SQL.
 
 This article is meant to be used as a reference point for just the first two types of includes. You can browse the complete list of include files in the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
-## SQL Server Version includes
+## SQL Server version includes
 
 SQL Content writers frequently need to include the name of the product and version of SQL Server. This way, if something changes in the name, the include is updated instead of manually updating the value in every single article. These includes are used as placeholders for product names but have not been consistently used in all SQL documentation. SQL Server vNext refers to a future release of SQL that does not yet have a version number and is the exception to this.  
 
@@ -39,7 +39,9 @@ SQL Content writers frequently need to include the name of the product and versi
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv14-md.md)]` ? | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## SQL Server Non-Version Specific applies-to
+## SQL Server applies-to includes (non-version-specific)
+
+These applies-to includes omit the version of SQL Server.
 
 | File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|
@@ -59,8 +61,9 @@ SQL Content writers frequently need to include the name of the product and versi
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## SQL Server Version specific applies-to
-These applies-to specify which versions of SQL the documentation applies to.
+## SQL Server applies-to includes (version-specific)
+
+These applies-to includes specify which versions of SQL the documentation applies to.
 
  File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|
@@ -102,7 +105,9 @@ These applies-to specify which versions of SQL the documentation applies to.
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## Analysis Services applies-to
+## Analysis Services applies-to includes
+
+These applies-to includes are used with Analysis Services documentation.
 
 | File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|
@@ -117,7 +122,9 @@ These applies-to specify which versions of SQL the documentation applies to.
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## Reporting Services applies-to
+## Reporting Services applies-to includes
+
+These applies-to includes are used with Reporting Services documentation.
 
 | File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|

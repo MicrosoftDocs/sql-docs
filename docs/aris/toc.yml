@@ -49,6 +49,10 @@
       href: sql-server-aris-deploy-on-vms.md
     - name: Install big data tools
       href: sql-server-aris-install-big-data-tools.md
+  - name: Data virtualization
+    items:
+      name: Virtualize external data
+      href: sql-server-aris-virtualize-data.md
   - name: Troubleshoot
     items:
     - name: Troubleshoot SQL Server Aris

@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a

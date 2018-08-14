@@ -18,7 +18,7 @@ manager: craigg
 # SQLServerDataSource Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Represents a list of properties specific to connecting to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using a [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
+  Represents a list of properties specific to connecting to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database by using a [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
   
  **Package:** com.microsoft.sqlserver.jdbc  
   

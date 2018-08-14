@@ -46,7 +46,7 @@ public short getShort(java.lang.String sCol)
 ## Remarks  
  This getShort method is specified by the getShort method in the java.sql.CallableStatement interface.  
   
- This method is only supported on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data types that can safely return an integer value such as smallint, tinyint, and bit. Using this method on any other data types will cause an exception to be thrown.  
+ This method is only supported on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types that can safely return an integer value such as smallint, tinyint, and bit. Using this method on any other data types will cause an exception to be thrown.  
   
 ## See Also  
  [getShort Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   

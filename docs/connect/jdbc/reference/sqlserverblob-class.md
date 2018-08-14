@@ -39,7 +39,7 @@ public class SQLServerBlob
 ```  
   
 ## Remarks  
- A BLOB is stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] as an IMAGE data type.  
+ A BLOB is stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as an IMAGE data type.  
   
 ## See Also  
  [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   

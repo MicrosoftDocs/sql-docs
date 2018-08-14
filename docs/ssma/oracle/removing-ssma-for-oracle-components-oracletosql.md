@@ -17,7 +17,7 @@ ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Removing SSMA  for Oracle Components (OracleToSQL)
-When you have finished migrating databases from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time. However, you should not uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] unless your migrated databases no longer use functions in the **ssma_oracle** schema of the **sysdb** database.  
+When you have finished migrating databases from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time. However, you should not uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unless your migrated databases no longer use functions in the **ssma_oracle** schema of the **sysdb** database.  
   
 ## Uninstalling the SSMA for Oracle Client  
 You can uninstall SSMA by using **Add or Remove Programs**.  
@@ -26,7 +26,7 @@ You can uninstall SSMA by using **Add or Remove Programs**.
   
 1.  In Control Panel, open **Add or Remove Programs**.  
   
-2.  Select **[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Oracle**, and then click **Remove**.  
+2.  Select **[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle**, and then click **Remove**.  
   
 3.  To confirm that you want to uninstall SSMA, click **Yes**.  
   
@@ -45,7 +45,7 @@ If you are sure your migrated databases do not use objects in the **sysdb.ssma_o
   
 5.  On the Connection Parameters page, select the authentication method, and then click **Next**.  
   
-    Windows Authentication will use your Windows credentials to try to log on to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. If you select [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, you must enter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] login name and password.  
+    Windows Authentication will use your Windows credentials to try to log on to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you must enter a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name and password.  
   
 6.  On the Operation Completed page, click **OK**.  
   

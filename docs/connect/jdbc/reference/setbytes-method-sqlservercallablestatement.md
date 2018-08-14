@@ -46,7 +46,7 @@ public void setBytes(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## Remarks  
- In a previous version of the driver, you could use SQLServerCallableStatement.setBytes to convert values between byte arrays and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data type **date**, **time**, **datetime2**, or **datetimeoffset**. Now, using this method with those data types will cause an exception indicating that the conversion is not supported.  
+ In a previous version of the driver, you could use SQLServerCallableStatement.setBytes to convert values between byte arrays and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type **date**, **time**, **datetime2**, or **datetimeoffset**. Now, using this method with those data types will cause an exception indicating that the conversion is not supported.  
   
  This setBytes method is specified by the setBytes method in the java.sql.CallableStatement interface.  
   

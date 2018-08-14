@@ -138,8 +138,8 @@ The July 2011 release of SSMA for Sybase contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for Sybase contains the following changes:  
   
--   Consolidated “SSMA for Sybase” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” and Azure SQL.  
--   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali.”  
+-   Consolidated “SSMA for Sybase” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” and Azure SQL.  
+-   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
 -   Added a new feature to convert and migrate Sybase databases to Azure SQL.  
 -   Enhanced client-side data migration engine, supporting parallel migration of data.  
 -   Improved data migration performance with Simple and Bulk logged recovery models.  
@@ -147,7 +147,7 @@ The April 2011 release of SSMA for Sybase contains the following changes:
 -   Added support for conversion of Sybase ASE Non-ANSI join statements to SQL Server ANSI join statements has been extended to DELETE and UPDATE statements.  
 -   Provided additional connectivity options for connecting to Sybase ASE servers using Sybase ASE ODBC provider and Sybase ASE ADO.Net providers.  
 -   Removed the dependency on a separate database called **SysDB**, which contains the Sybase emulation functions (installed as part of Extension Pack).  
--   Added the ability to install SSMA for Sybase Extension Pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] clusters.  
+-   Added the ability to install SSMA for Sybase Extension Pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clusters.  
 -   Added backward compatibility of projects created by earlier versions of SSMA (v4.0 and v4.2).  
 -   Added the ability to install the SSMA for Sybase v5.0 product side-by-side (SxS) with older versions of SSMA (v4.0 and v4.2).  
   
@@ -172,7 +172,7 @@ The June 2008 release of SSMA for Sybase contains the following changes:
     -   Clustered constraints and indexes on data-only-locked.  
     -   Temporary tables created by SELECT INTO.  
     -   Constraints / Indexes for temporary tables.  
-    -   New [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 datetime types are supported.  
+    -   New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 datetime types are supported.  
     -   Sybase 15.0 connectivity and datatypes support.  
   
 ## May 2007  
@@ -196,7 +196,7 @@ The November 2006 release of SSMA for Sybase contains the following changes:
     -   Proxy tables.  
     -   User message error numbers for RAISERROR.  
     -   UPDATE statements that contain unresolved identifiers.  
--   Added a new migration option that lets you specify how SSMA should handle dates that are outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] date range.  
+-   Added a new migration option that lets you specify how SSMA should handle dates that are outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date range.  
 -   Added a **Formatted SQL** setting on the **SQL** tab, which formats the code for improved readability.  
 -   Bug fixes that include the following:  
     -   SSMA now converts LOCK TABLE *table* IN { SHARED | EXCLUSIVE } MODE statements by adding a TABLOCK or TABLOCKX hint to the subsequent SELECT query on the table.  

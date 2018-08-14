@@ -18,7 +18,7 @@ manager: craigg
 # Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The Microsoft ODBC Drivers for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] are stand-alone ODBC drivers which provide an application programming interface (API) implementing the standard ODBC interfaces to Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+The Microsoft ODBC Drivers for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] are stand-alone ODBC drivers which provide an application programming interface (API) implementing the standard ODBC interfaces to Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 The Microsoft ODBC Driver for SQL Server can be used to create new applications. You can also upgrade your older applications which currently use an older ODBC driver. The ODBC Driver for SQL Server supports connections to Azure SQL Database, Azure SQL Data Warehouse, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, and SQL Server 2005.  
 
@@ -32,7 +32,7 @@ The Microsoft ODBC Driver for SQL Server can be used to create new applications.
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>Driver-Aware Connection Pooling</li><li>Connection Resiliency</li><li>Asynchronous execution (Polling Method)</li></ul> |    
 
 ## Documentation  
-This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] includes:  
+This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes:  
   
 -   [Release Notes](../../../connect/odbc/windows/release-notes.md)  
 -   [Features of the Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  

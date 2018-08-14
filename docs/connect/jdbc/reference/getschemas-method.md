@@ -51,10 +51,10 @@ public java.sql.ResultSet getSchemas()
  The results are ordered by TABLE_CATALOG, and then TABLE_SCHEM. Each row has TABLE_SCHEM as the first column and TABLE_CATALOG as the second column.  
   
 > [!NOTE]  
->  For more information about the data returned by the getSchemas method, see "sys.schemas (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  For more information about the data returned by the getSchemas method, see "sys.schemas (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getSchemas method to return information about the catalog and its associated schema names in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] when the connection argument specifies the database to be used.  
+ The following example demonstrates how to use the getSchemas method to return information about the catalog and its associated schema names in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] when the connection argument specifies the database to be used.  
   
 ```  
 public static void executeGetSchemas(Connection con) {  

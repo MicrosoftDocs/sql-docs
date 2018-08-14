@@ -2,19 +2,16 @@
 title: "DSN and Connection String Keywords and Attributes Used in the ODBC Driver for SQL Server| Microsoft Docs"
 ms.custom: ""
 ms.date: "03/21/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "MightyPen"
+ms.topic: conceptual
+author: MightyPen
 ms.author: "v-jizho2"
-manager: "jhubbard"
-ms.workload: "On Demand"
+manager: craigg
 ---
 
 
@@ -26,8 +23,7 @@ This page lists the keywords for connection strings and DSNs, and connection att
 
 ## Supported DSN/Connection String Keywords and Connection Attributes
 
-The following table lists the available keywords and the attributes for each platform (L: Linux ; M: Mac ; W: Windows).
-Click the keyword or attribute for more details.
+The following table lists the available keywords and the attributes for each platform (L: Linux ; M: Mac ; W: Windows). Click the keyword or attribute for more details.
 
 | DSN / Connection String Keyword | Connection Attribute | Platform | 
 |-|-|-|

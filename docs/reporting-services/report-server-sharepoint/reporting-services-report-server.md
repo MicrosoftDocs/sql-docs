@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-server-sharepoint"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -16,7 +15,6 @@ ms.topic: "get-started-article"
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Reporting Services report server
@@ -84,7 +82,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
 ### Native mode with SharePoint web parts
 
- Reporting Services provides two web parts that you can install and register on an instance of [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 or later, or [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 or later. From a SharePoint site, you can use the web parts to find and view reports that are stored and processed on a report server that runs in native mode. These web parts were introduced in earlier releases of Reporting Services.  
+ Reporting Services provides two web parts that you can install and register on an instance of [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 or later, or SharePoint Portal Server 2003 or later. From a SharePoint site, you can use the web parts to find and view reports that are stored and processed on a report server that runs in native mode. These web parts were introduced in earlier releases of Reporting Services.  
   
 ## SharePoint mode
 

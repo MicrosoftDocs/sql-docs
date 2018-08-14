@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask
+  commentId: T:Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.dts.tasks.executesqltask.executesqltask(v=sql.120).aspx
+  name: ExecuteSQLTask
+  name.vb: ExecuteSQLTask
+  fullName: Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask
+  fullName.vb: Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask

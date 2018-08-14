@@ -2,15 +2,13 @@
 title: "Updating Data in SQL Server Cursors | Microsoft Docs"
 description: "Updating data in SQL Server cursors"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-rowsets"
+ms.component: "oledb|ole-db-rowsets"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -22,11 +20,12 @@ helpviewer_keywords:
   - "data updates [SQL Server], OLE DB"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Updating Data in SQL Server Cursors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   When fetching and updating data through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursors, a OLE DB Driver for SQL Server consumer application is bound by the same considerations and constraints that apply to any other client application.  
   

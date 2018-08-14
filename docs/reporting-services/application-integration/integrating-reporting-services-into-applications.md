@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "10/19/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "application-integration"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -18,7 +17,7 @@ applies_to:
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Integrating Reporting Services into Applications
 

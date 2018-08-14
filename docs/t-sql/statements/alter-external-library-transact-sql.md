@@ -1,11 +1,8 @@
----
+﻿---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "t-sql|statements"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -18,9 +15,10 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "ALTER EXTERNAL LIBRARY"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "craigg"
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  
 

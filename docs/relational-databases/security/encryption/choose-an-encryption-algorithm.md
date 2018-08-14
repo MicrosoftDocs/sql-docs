@@ -1,28 +1,24 @@
----
+﻿---
 title: "Choose an Encryption Algorithm | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/08/2016"
-ms.prod: "sql-non-specified"
+ms.date: "08/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "cryptography [SQL Server], algorithms"
   - "encryption [SQL Server], algorithms"
   - "security [SQL Server], encryption"
   - "algorithms [SQL Server encryption]"
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: aliceku
+ms.author: aliceku
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Choose an Encryption Algorithm
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,11 +35,13 @@ ms.workload: "On Demand"
   
 -   Long keys generally yield stronger encryption than short keys.  
   
--   Asymmetric encryption is weaker than symmetric encryption using the same key length, but it is relatively slow.  
+-   Asymmetric encryption is slower than symmetric encryption.  
   
 -   Block ciphers with long keys are stronger than stream ciphers.  
   
 -   Long, complex passwords are stronger than short passwords.  
+
+-   Symmetric encryption is generally recommended when they key is only stored locally, assymmetric encryption is recommended when keys need to be shared across the wire.
   
 -   If you are encrypting lots of data, you should encrypt the data using a symmetric key, and encrypt the symmetric key with an asymmetric key.  
   

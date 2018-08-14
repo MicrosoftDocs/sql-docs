@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Secure Sockets Layer (SSL)"
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
@@ -34,7 +33,7 @@ manager: "kfile"
   
  For testing purposes, you can generate a certificate locally. If you use the **MakeCert** utility and the sample command as a template, be sure to specify your server name as the host and remove all line breaks before running the command. If you run the command in a DOS window, you might need to increase the buffer size of the window to accommodate the entire command.  
   
- If you are running IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] together on the same computer, you can use the [!INCLUDE[iismgr](../../includes/iismgr-md.md)] console application to get the certificate installed on your computer. [!INCLUDE[iismgr](../../includes/iismgr-md.md)] includes options for creating and packaging a certificate request (.crt) file for subsequent processing by a trusted certificate authority. The certificate authority that you are using will generate a certificate (.cer) file and send it back to you. You can use IIS Management console to install the certificate file in the local store. For more information, see [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) on Technet.  
+ If you are running IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] together on the same computer, you can use the IIS Manager console application to get the certificate installed on your computer. IIS Manager includes options for creating and packaging a certificate request (.crt) file for subsequent processing by a trusted certificate authority. The certificate authority that you are using will generate a certificate (.cer) file and send it back to you. You can use IIS Management console to install the certificate file in the local store. For more information, see [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) on Technet.  
   
 ## Interoperability Issues with IIS  
  The presence of IIS on the same computer as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will significantly affect SSL connections to a report server:  

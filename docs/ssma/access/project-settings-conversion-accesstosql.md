@@ -1,17 +1,13 @@
 ---
 title: "Project Settings (Conversion) (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-access"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -22,11 +18,10 @@ ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Project Settings (Conversion) (AccessToSQL)
-The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects.  
+The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects.  
   
 The Conversion pane is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   
@@ -36,7 +31,7 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
   
 ## Options  
 **Add primary key**  
-Creates a new primary key in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure table if an Access table has no primary key or unique index.  
+Creates a new primary key in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure table if an Access table has no primary key or unique index.  
   
 -   **Default Mode**: False  
   

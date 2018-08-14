@@ -1,20 +1,13 @@
 ---
-title: "How to perform realtime scoring or native scoring in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/09/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: How to perform realtime scoring or native scoring in SQL Server Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # How to perform realtime scoring or native scoring in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -217,7 +210,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### Step 3. Call sp_rxPredict
 
-You call sp\_rxPredict as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _@model_ for the model in binary format, and _@inputData_ for the data to use in scoring, defined as a valid SQL query.
+You call sp\_rxPredict as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _\@model_ for the model in binary format, and _\@inputData_ for the data to use in scoring, defined as a valid SQL query.
 
 Because the binary format is the same that is used by the PREDICT function, you can use the models and data table from the preceding example.
 

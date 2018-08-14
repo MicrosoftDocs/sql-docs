@@ -1,0 +1,90 @@
+- name: Overview
+  href: data-types-transact-sql.md
+- name: Constants
+  href: constants-transact-sql.md
+- name: Conversion
+  href: data-type-conversion-database-engine.md
+- name: Precedence
+  href: data-type-precedence-transact-sql.md
+- name: Synonyms
+  href: data-type-synonyms-transact-sql.md
+- name: Precision, Scale, and Length
+  href: precision-scale-and-length-transact-sql.md
+- name: cursor
+  href: cursor-transact-sql.md
+- name: Date and time
+  href: date-and-time-types.md
+  items:
+  - name: date
+    href: date-transact-sql.md
+  - name: datetime
+    href: datetime-transact-sql.md
+  - name: datetime2
+    href: datetime2-transact-sql.md
+  - name: datetimeoffset
+    href: datetimeoffset-transact-sql.md
+  - name: smalldatetime
+    href: smalldatetime-transact-sql.md
+  - name: time
+    href: time-transact-sql.md
+- name: hierarchyid methods
+  href: hierarchyid-data-type-method-reference.md
+  items:
+  - name: GetAncestor (Database Engine)
+    href: getancestor-database-engine.md
+  - name: GetDescendant (Database Engine)
+    href: getdescendant-database-engine.md
+  - name: GetLevel (Database Engine)
+    href: getlevel-database-engine.md
+  - name: GetRoot (Database Engine)
+    href: getroot-database-engine.md
+  - name: IsDescendantOf (Database Engine)
+    href: isdescendantof-database-engine.md
+  - name: Parse (Database Engine)
+    href: parse-database-engine.md
+  - name: Read (Database Engine)
+    href: read-database-engine.md
+  - name: GetReparentedValue (Database Engine)
+    href: getreparentedvalue-database-engine.md
+  - name: ToString (Database Engine)
+    href: tostring-database-engine.md
+  - name: Write (Database Engine)
+    href: write-database-engine.md
+- name: Numeric
+  href: numeric-types.md
+  items:
+  - name: bit
+    href: bit-transact-sql.md
+  - name: decimal and numeric
+    href: decimal-and-numeric-transact-sql.md
+  - name: float and real
+    href: float-and-real-transact-sql.md
+  - name: int, bigint, smallint, and tinyint
+    href: int-bigint-smallint-and-tinyint-transact-sql.md
+  - name: money and smallmoney
+    href: money-and-smallmoney-transact-sql.md
+- name: rowversion
+  href: rowversion-transact-sql.md
+- name: String and binary
+  href: string-and-binary-types.md
+  items:
+  - name: binary and varbinary
+    href: binary-and-varbinary-transact-sql.md
+  - name: char and varchar
+    href: char-and-varchar-transact-sql.md
+  - name: nchar and nvarchar
+    href: nchar-and-nvarchar-transact-sql.md
+  - name: ntext, text, and image
+    href: ntext-text-and-image-transact-sql.md
+- name: Spatial geography
+  href: ../../t-sql/spatial-geography/spatial-types-geography.md
+- name: Spatial geometry
+  href: ../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md
+- name: sql_variant
+  href: sql-variant-transact-sql.md
+- name: Table
+  href: table-transact-sql.md
+- name: uniqueidentifier
+  href: uniqueidentifier-transact-sql.md
+- name: XML
+  href: ../../t-sql/xml/xml-transact-sql.md

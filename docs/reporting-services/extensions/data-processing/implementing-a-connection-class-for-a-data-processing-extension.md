@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "extensions"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -24,16 +23,15 @@ caps.latest.revision: 42
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Implementing a Connection Class for a Data Processing Extension
   The **Connection** object represents a database connection or similar resource and is the starting point for users of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension. It represents connections to database servers, though any entity with similar behavior can be exposed as a **Connection**.  
   
  To implement a **Connection** object, create a class that implements <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> and optionally implements <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
   
- In your implementation, you must ensure that a connection is created and opened before commands can be executed. Ensure that your implementation requires clients to open and close connections explicitly, rather than having your implementation open and close connections implicitly for the client. Perform your security checks when the connection is obtained. Requiring an existing connection for the other classes in your [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] data processing extension will then ensure that security checks are always performed when working with your data source.  
+ In your implementation, you must ensure that a connection is created and opened before commands can be executed. Ensure that your implementation requires clients to open and close connections explicitly, rather than having your implementation open and close connections implicitly for the client. Perform your security checks when the connection is obtained. Requiring an existing connection for the other classes in your [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing extension will then ensure that security checks are always performed when working with your data source.  
   
- The properties of the desired connection are represented as a connection string. It is strongly recommended that [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] data processing extensions support the <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> property using the familiar name/value pair system defined by OLE DB.  
+ The properties of the desired connection are represented as a connection string. It is strongly recommended that [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing extensions support the <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> property using the familiar name/value pair system defined by OLE DB.  
   
 > [!NOTE]  
 >  **Connection** objects are often resource-intensive to obtain, so you may want to consider pooling connections or other techniques to mitigate this.  

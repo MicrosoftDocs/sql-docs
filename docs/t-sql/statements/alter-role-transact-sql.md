@@ -1,15 +1,12 @@
----
+﻿---
 title: "ALTER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,13 +22,13 @@ helpviewer_keywords:
   - "names [SQL Server], database roles"
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 caps.latest.revision: 64
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Adds or removes members to or from a database role, or changes the name of a user-defined database role.  
   
@@ -121,7 +118,7 @@ Additionally, to change the membership in a fixed database role you need:
 ### A. Change the name of a database role  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- The following example changes the name of role `buyers` to `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ The following example changes the name of role `buyers` to `purchasing`.   This example can be executed in the [AdventureWorks](http://msftdbprodsamples.codeplex.com/) sample database.
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -130,7 +127,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### B. Add or remove role members  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry.   This example can be executed in the [AdventureWorks](http://msftdbprodsamples.codeplex.com/) sample database.
   
 ```sql  
 CREATE ROLE Sales;  

@@ -1,17 +1,14 @@
----
+﻿---
 title: "Encrypt a Column of Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], columns"
   - "cryptography [SQL Server], columns"
@@ -19,10 +16,10 @@ helpviewer_keywords:
   - "cell level encryption"
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: aliceku
+ms.author: aliceku
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Encrypt a Column of Data
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ PASSWORD = '<some strong password>';
 ```  
 Always backup your database master key. For more information on database master keys, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
-#### To encrypt a column of data using a simple symmetric encryption  
+#### To encrypt a column of data using symmetric encryption that includes an authenticator  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -120,7 +117,7 @@ Always backup your database master key. For more information on database master 
     GO  
     ```  
   
-#### To encrypt a column of data using symmetric encryption that includes an authenticator  
+#### To encrypt a column of data using a simple symmetric encryption  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

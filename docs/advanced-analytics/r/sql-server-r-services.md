@@ -1,19 +1,13 @@
 ---
-title: "SQL Server Machine Learning and R Services (In-Database) | Microsoft Docs"
-ms.date: "03/16/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Active"
+title: SQL Server Machine Learning and R Services (In-Database) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # SQL Server Machine Learning and R Services (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +41,7 @@ SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following 
 | Python tools | The built-in Python command line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
 | Anaconda | Anaconda is an open-source distribution of Python and essential packages. |
 | Python samples and scripts | As with R, Python includes built-in data sets  and scripts. Find the revoscalepy data at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
-| Pre-trained models in R and Python | Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. The setup program for Microsoft Machine Learning Server provides the models, which you can install free of charge. For more information, see [Install pretrained machine learning models on SQL Server](install-pretrained-models-sql-server.md). |
+| Pre-trained models in R and Python | Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. The setup program for Microsoft Machine Learning Server provides the models, which you can install free of charge. For more information, see [Install pretrained machine learning models on SQL Server](../install/sql-pretrained-models-install.md). |
 
 ## Get started step-by-step
 
@@ -126,7 +120,7 @@ To take advantages of the resource management and securty features in SQL Server
 **Resources**
 
 + [Resource Governance for R](resource-governance-for-r-services.md)
-+ [R Package Management for SQL Server](r-package-management-for-sql-server-r-services.md)
++ [R Package Management for SQL Server](install-additional-r-packages-on-sql-server.md)
 
 ## See also
 

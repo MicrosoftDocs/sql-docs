@@ -2,16 +2,14 @@
 title: "Walkthrough: Adding and Changing a Database Diagram | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database diagrams [SQL Server], about database diagrams"
   - "database diagrams [SQL Server], designing"
@@ -20,8 +18,8 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Walkthrough: Adding and Changing a Database Diagram
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +28,7 @@ This walkthrough illustrates how to create and modify a database diagram and mak
 ## Prerequisites  
 In order to complete this walkthrough, you will need:  
   
--   Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] sample database  
+-   Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database  
   
 -   An account with database owner **dbo** privileges  
   
@@ -43,7 +41,7 @@ In order to complete this walkthrough, you will need:
   
 1.  On the **View** menu, click **Object Explorer**.  
   
-2.  Open the Databases node and then open the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] node.  
+2.  Open the Databases node and then open the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] node.  
   
 3.  Right-click the Database Diagrams node and choose **New Database Diagram**.  
   

@@ -1,17 +1,16 @@
----
+﻿---
 title: "Work with Change Tracking (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "track-changes"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], making changes"
   - "change tracking [SQL Server], troubleshooting"
@@ -27,8 +26,8 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Work with Change Tracking (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.workload: "On Demand"
  CHANGE_TRACKING_CURRENT_VERSION() function  
  Is used to obtain the current version that will be used the next time when querying changes. This version represents the version of the last committed transaction.  
   
- CHANGE_TRACKING_MIN_VALID_VERSION()function  
+ CHANGE_TRACKING_MIN_VALID_VERSION() function  
  Is used to obtain the minimum valid version that a client can have and still obtain valid results from CHANGETABLE(). The client should check the last synchronization version against the value thatis returned by this function. If the last synchronization version is less than the version returned by this function, the client will be unable to obtain valid results from CHANGETABLE() and will have to reinitialize.  
   
 ### Obtaining Initial Data  

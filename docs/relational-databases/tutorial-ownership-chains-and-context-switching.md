@@ -2,9 +2,8 @@
 title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,8 +20,7 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ Each code block in this example is explained in line. To copy the complete examp
 ## 1. Configure the Environment  
 Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2012` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -66,7 +64,7 @@ For more information about the CURRENT_USER statement, see [CURRENT_USER &#40;Tr
   
 Use this code as the dbo user to create two users on the server and in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
-```  
+```sql
 CREATE LOGIN TestManagerUser   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khx';  
 GO  
@@ -87,7 +85,7 @@ For more information about the CREATE USER statement, see [CREATE USER &#40;Tran
   
 Use the following code to change the ownership of the `Purchasing` schema to the `TestManagerUser` account. This allows that account to use all Data Manipulation Language (DML) statement access (such as `SELECT` and `INSERT` permissions) on the objects it contains. `TestManagerUser` is also granted the ability to create stored procedures.  
   
-```  
+```sql
 /* Change owner of the Purchasing Schema to TestManagerUser */  
 ALTER AUTHORIZATION   
    ON SCHEMA::Purchasing   
@@ -107,7 +105,7 @@ To switch context within a database, use the EXECUTE AS statement. EXECUTE AS re
   
 Use the `EXECUTE AS` statement in the following code to change the context to `TestManagerUser` and create a stored procedure showing only the data required by `TestEmployeeUser`. To satisfy the requirements, the stored procedure accepts one variable for the purchase order number and does not display financial information, and the WHERE clause limits the results to partial shipments.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestManagerUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -131,7 +129,7 @@ GO
   
 Currently `TestEmployeeUser` does not have access to any database objects. The following code (still in the `TestManagerUser` context) grants the user account the ability to query base-table information through the stored procedure.  
   
-```  
+```sql
 GRANT EXECUTE  
    ON OBJECT::Purchasing.usp_ShowWaitingItems  
    TO TestEmployeeUser;  
@@ -140,7 +138,7 @@ GO
   
 The stored procedure is part of the `Purchasing` schema, even though no schema was explicitly specified, because `TestManagerUser` is assigned by default to the `Purchasing` schema. You can use system catalog information to locate objects, as shown in the following code.  
   
-```  
+```sql
 SELECT a.name AS 'Schema'  
    , b.name AS 'Object Name'  
    , b.type AS 'Object Type'  
@@ -153,7 +151,7 @@ GO
   
 With this section of the example completed, the code switches context back to dbo using the `REVERT` statement.  
   
-```  
+```sql
 REVERT;  
 GO  
 ```  
@@ -163,7 +161,7 @@ For more information about the REVERT statement, see [REVERT &#40;Transact-SQL&#
 ## 3. Access Data Through the Stored Procedure  
 `TestEmployeeUser` has no permissions on the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database objects other than a login and the rights assigned to the public database role. The following code returns an error when `TestEmployeeUser` attempts to access base tables.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -179,7 +177,7 @@ GO
   
 Because the objects referenced by the stored procedure created in the last section are owned by `TestManagerUser` by virtue of the `Purchasing` schema ownership, `TestEmployeeUser` can access the base tables through the stored procedure. The following code, still using the `TestEmployeeUser` context, passes purchase order 952 as a parameter.  
   
-```  
+```sql
 EXEC Purchasing.usp_ShowWaitingItems 952  
 GO  
 ```  
@@ -187,7 +185,7 @@ GO
 ## 4. Reset the Environment  
 The following code uses the `REVERT` command to return the context of the current account to `dbo`, and then resets the environment.  
   
-```  
+```sql
 REVERT;  
 GO  
 ALTER AUTHORIZATION   
@@ -211,7 +209,7 @@ This section displays the complete example code.
 > [!NOTE]  
 > This code does not include the two expected errors that demonstrate the inability of `TestEmployeeUser` to select from base tables.  
   
-```  
+```sql
 /*   
 Script:       UserContextTutorial.sql  
 Author:       Microsoft  

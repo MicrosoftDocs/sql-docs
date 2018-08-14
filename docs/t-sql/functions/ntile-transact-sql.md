@@ -1,15 +1,12 @@
----
+﻿---
 title: "NTILE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +21,10 @@ helpviewer_keywords:
   - "NTILE function"
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 caps.latest.revision: 63
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # NTILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +41,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## Arguments  
  *integer_expression*  
- Is a positive integer constant expression that specifies the number of groups into which each partition must be divided. *integer_expression* can be of type **int**, or **bigint**.  
+ Is a positive integer expression that specifies the number of groups into which each partition must be divided. *integer_expression* can be of type **int**, or **bigint**.  
   
  \<partition_by_clause>  
  Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

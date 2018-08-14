@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/23/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -19,7 +18,6 @@ caps.latest.revision: 53
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Lesson 3: Defining a Dataset for the Table Report (Reporting Services)
 After you define the data source, you need to define a dataset. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, as well as calculated fields and variables.  
@@ -34,7 +32,7 @@ Use the query designer in Report Designer to design the dataset. For this tutori
   
 3.  Click **Use a dataset embedded in my report**.  
   
-4.  Select the data souce you created in the previous lesson, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
+4.  Select the data source you created in the previous lesson, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
 5. Select **Text** for the **Query type**.  
   
 6.  Type, or copy and paste, the following Transact-SQL query into the **Query** box.  

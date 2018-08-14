@@ -2,15 +2,13 @@
 title: "Supporting Local Transactions | Microsoft Docs"
 description: "Local transactions in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-transactions"
+ms.component: "oledb|ole-db-transactions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -22,11 +20,12 @@ helpviewer_keywords:
   - "local transactions [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Supporting Local Transactions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   A session delimits transaction scope for a OLE DB Driver for SQL Server local transaction. When, at the direction of a consumer, the OLE DB Driver for SQL Server submits a request to a connected instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the request constitutes a unit of work for the OLE DB Driver for SQL Server. Local transactions always wrap one or more units of work on a single OLE DB Driver for SQL Server session.  
   

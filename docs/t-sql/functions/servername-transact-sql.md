@@ -2,14 +2,11 @@
 title: "@@SERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,10 +19,9 @@ helpviewer_keywords:
   - "local servers [SQL Server]"
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # &#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,8 +51,8 @@ ms.workload: "Active"
 |--------------|------------------------|  
 |Default instance|'*servername*'|  
 |Named instance|'*servername*\\*instancename*'|  
-|fail over clustered instance - default instance|'*virtualservername*'|  
-|fail over clustered instance - named instance|'*virtualservername*\\*instancename*'|  
+|failover cluster instance - default instance|'*network_name_for_fci_in_wsfc*'|  
+|failover cluster instance - named instance|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
   
  Although the @@SERVERNAME function and the SERVERNAME property of SERVERPROPERTY function may return strings with similar formats, the information can be different. The SERVERNAME property automatically reports changes in the network name of the computer.  
   

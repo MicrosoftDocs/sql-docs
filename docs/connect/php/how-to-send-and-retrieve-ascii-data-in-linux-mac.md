@@ -2,15 +2,12 @@
 title: "How to: Send and Retrieve ASCII Data in Linux and macOS (SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/16/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "retrieving data, ASCII data"
   - "sending data"
@@ -19,7 +16,6 @@ helpviewer_keywords:
 author: "yitam"
 ms.author: "v-yitam"
 manager: "mbarwin"
-ms.workload: "On Demand"
 ---
 # How to: Send and Retrieve ASCII Data in Linux and macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +37,7 @@ The default encoding for PDO_SQLSRV driver is UTF-8 (PDO::SQLSRV_ENCODING_UTF8),
 ## Example  
 The following examples demonstrate how to send and retrieve ASCII data using the PHP Drivers for SQL Server by specifying a particular locale before making the connection. The locales in various Linux platforms may be named differently from the same locales in macOS. For example, the US ISO-8859-1 (Latin 1) locale is `en_US.ISO-8859-1` in Linux while in macOS the name is `en_US.ISO8859-1`.
   
-The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is installed on a server. All output is written to the browser when the examples are run from the browser.  
+The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a server. All output is written to the browser when the examples are run from the browser.  
   
 ```  
 <?php  

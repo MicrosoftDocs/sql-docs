@@ -2,16 +2,12 @@
 title: "Mapping Sybase ASE and SQL Server Data Types (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -22,11 +18,10 @@ ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Mapping Sybase ASE and SQL Server Data Types (SybaseToSQL)
-Sybase Adaptive Server Enterprise (ASE) database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database types. When you convert ASE database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, you must specify how to map data types from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
+Sybase Adaptive Server Enterprise (ASE) database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database types. When you convert ASE database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, you must specify how to map data types from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
   
 ## Default Mappings  
 SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings &#40;Type Mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
@@ -65,7 +60,7 @@ The following procedure shows how to map data types at the project, database, or
   
         This lets you customize the data mapping for smaller and larger values of the same data type.  
   
-    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure data type.  
+    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure data type.  
   
         Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box.  
   
@@ -81,7 +76,7 @@ The following procedure shows how to map data types at the project, database, or
   
         This lets you customize the data mapping for smaller and larger values of the same data type.  
   
-    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure data type.  
+    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure data type.  
   
         Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box, and then click **OK**.  
   
@@ -94,7 +89,7 @@ The following procedure shows how to map data types at the project, database, or
         You cannot remove inherited mappings. However, inherited mappings are overridden by custom mappings on a specific object or object category.  
   
 ## Next Steps  
-The next step in the migration process is to either [Create an assessment report](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) or [Convert Sybase ASE database objects to SQL Server or SQL Azure syntax](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3). If you create an assessment report, Sybase ASE objects are automatically converted during the assessment.  
+The next step in the migration process is to either [Create an assessment report](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) or [Convert Sybase ASE database objects to SQL Server or SQL Azure syntax](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3). If you create an assessment report, Sybase ASE objects are automatically converted during the assessment.  
   
 ## See Also  
 [Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

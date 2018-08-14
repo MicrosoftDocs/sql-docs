@@ -1,30 +1,14 @@
 ---
 title: "Configure Service Accounts (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "security [Analysis Services], logon accounts"
-  - "logon accounts [Analysis Services]"
-  - "accounts [Analysis Services]"
-  - "logon accounts [Analysis Services], about logon accounts"
-ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 54
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Service Accounts (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +56,7 @@ ms.workload: "On Demand"
 |||  
 |-|-|  
 |**Increase a process working set** (SeIncreaseWorkingSetPrivilege)|This privilege is available to all users by default through the **Users** security group. If you lock down a server by removing privileges for this group, Analysis Services might fail to start, logging this error: "A required privilege is not held by the client." When this error occurs, restore the privilege to Analysis Services by granting it to the appropriate Analysis Services security group.|  
-|**Adjust memory quotas for a process** (SeIncreaseQuotaSizePrivilege)|This privilege is used to request more memory if a process has insufficient resources to complete its execution, subject to the memory thresholds established for the instance.|  
+|**Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|This privilege is used to request more memory if a process has insufficient resources to complete its execution, subject to the memory thresholds established for the instance.|  
 |**Lock pages in memory** (SeLockMemoryPrivilege)|This privilege is needed only when paging is turned off entirely. By default, a tabular server instance uses the Windows paging file, but you can prevent it from using Windows paging by setting **VertiPaqPagingPolicy** to 0.<br /><br /> **VertiPaqPagingPolicy** to 1 (default), instructs the tabular server instance to use the Windows paging file. Allocations are not locked, allowing Windows to page out as needed. Because paging is being used, there is no need to lock pages in memory. Thus, for the default configuration (where **VertiPaqPagingPolicy** = 1), you do not need to grant the **Lock pages in memory** privilege to a tabular instance.<br /><br /> **VertiPaqPagingPolicy** to 0. If you turn off paging for Analysis Services, allocations are locked, assuming the **Lock pages in memory** privilege is granted to the tabular instance. Given this setting and the **Lock pages in memory** privilege, Windows cannot page out memory allocations made to Analysis Services when the system is under memory pressure. Analysis Services relies on the **Lock pages in memory** permission as the enforcement behind **VertiPaqPagingPolicy** = 0. Note that turning off Windows paging is not recommended. It will increase the rate of out-of-memory errors for operations that might otherwise succeed if paging were allowed. See [Memory Properties](../../analysis-services/server-properties/memory-properties.md) for more information about **VertiPaqPagingPolicy**.|  
   
 #### To view or add Windows privileges on the service account  

@@ -1,14 +1,11 @@
----
+﻿---
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -18,9 +15,10 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "DROP EXTERNAL LIBRARY"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "craigg"
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

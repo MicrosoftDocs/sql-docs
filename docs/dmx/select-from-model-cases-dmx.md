@@ -1,33 +1,14 @@
 ---
 title: "SELECT FROM &lt;model&gt;.CASES (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SELECT"
-  - "CASES"
-  - "FROM"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "SELECT FROM <model>.CASES statement"
-  - "drillthrough [DMX]"
-ms.assetid: d58acb47-aaa6-40b7-b8c4-6a6700fbc1dd
-caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SELECT FROM &lt;model&gt;.CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

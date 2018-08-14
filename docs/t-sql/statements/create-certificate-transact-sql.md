@@ -1,15 +1,12 @@
----
+﻿---
 title: "CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
-ms.prod: "sql-non-specified"
+ms.date: "06/19/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -30,13 +27,13 @@ helpviewer_keywords:
   - "CREATE CERTIFICATE statement"
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 caps.latest.revision: 74
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Adds a certificate to a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -88,7 +85,7 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   
     { <generate_new_keys> | FROM <existing_keys> }  
@@ -155,7 +152,7 @@ CREATE CERTIFICATE certificate_name
  Is the date on which the certificate becomes valid. If not specified, START_DATE is set equal to the current date. START_DATE is in UTC time and can be specified in any format that can be converted to a date and time.  
   
  EXPIRY_DATE ='*datetime*'  
- Is the date on which the certificate expires. If not specified, EXPIRY_DATE is set to a date one year after START_DATE. EXPIRY_DATE is in UTC time and can be specified in any format that can be converted to a date and time. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker checks the expiration date. However, expiration is not enforced when the certificate is used for encryption.  
+ Is the date on which the certificate expires. If not specified, EXPIRY_DATE is set to a date one year after START_DATE. EXPIRY_DATE is in UTC time and can be specified in any format that can be converted to a date and time. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker checks the expiration date. Backup with Encryption using certificates also checks the expiration date and will not allow a new backup to be created with an expired certificate, but will allow restores with an expired certificate. However, expiration is not enforced when the certificate is used for database encryption or Always Encrypted.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Makes the certificate available to the initiator of a [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog conversation. The default value is ON.  
@@ -180,7 +177,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 >  Built-in functions for encryption and signing do not check the expiration dates of certificates. Users of these functions must decide when to check certificate expiration.  
   
- A binary description of a certificate can be created by using the [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) and [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) functions. For an example that uses **CERTPRIVATEKEY** and **CERTENCODED** to copy a certificate to another database, see example B in the topic [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
+ A binary description of a certificate can be created by using the [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) and [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) functions. For an example that uses **CERTPRIVATEKEY** and **CERTENCODED** to copy a certificate to another database, see example B in the article [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
   
 ## Permissions  
  Requires CREATE CERTIFICATE permission on the database. Only Windows logins, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, and application roles can own certificates. Groups and roles cannot own certificates.  
@@ -229,7 +226,7 @@ GO
 ```  
   
 ### D. Creating a self-signed certificate  
- The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ```  
 CREATE CERTIFICATE Shipping04   

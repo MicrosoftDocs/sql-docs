@@ -1,17 +1,14 @@
----
+﻿---
 title: "Enable Indexes and Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [SQL Server], enabling"
   - "nonclustered indexes [SQL Server], enabling a disabled index"
@@ -21,10 +18,10 @@ helpviewer_keywords:
   - "clustered indexes, enabling disabled indexes"
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 caps.latest.revision: 27
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Enable Indexes and Constraints
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +74,7 @@ ms.workload: "On Demand"
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- Requires ALTER permission on the table or view. If using DBCC DBREINDEX, eser must either own the table or be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
+ Requires ALTER permission on the table or view. If using DBCC DBREINDEX, user must either own the table; or be a member of the **sysadmin** fixed server role; or the **db_ddladmin** and **db_owner** fixed database roles.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

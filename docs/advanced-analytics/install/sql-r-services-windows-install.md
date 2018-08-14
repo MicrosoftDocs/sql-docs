@@ -1,27 +1,13 @@
 ---
-title: "Install SQL Server 2016 R Services (In-Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
+title: Install SQL Server 2016 R Services (In-Database) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
   
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "installing SQL Server R Services"
-  - "installing SQL Server Machine Learning Services"
-  - "Set up R Services"
-  - "install SQL machine learning"
-ms.assetid: 
-caps.latest.revision: 36
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Active"
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Install SQL Server 2016 R Services (In-Database) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -267,7 +253,7 @@ The R solutions you create for SQL Server can call basic R functions, functions 
 
 Packages that you want to use from SQL Server must be installed in the default library that is used by the instance. If you have a separate installation of R on the computer, or if you installed packages to user libraries, you won't be able to use those packages from T-SQL.
 
-The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Package management](../r/r-package-management-for-sql-server-r-services.md).
+The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages](../r/install-additional-r-packages-on-sql-server.md).
 
 
 ## Get help

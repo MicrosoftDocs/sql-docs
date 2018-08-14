@@ -5,16 +5,13 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.topic: conceptual
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: "sql-linux"
-ms.workload: "On Demand"
 ---
 # Choose the right tool to manage SQL Server on Linux
 
@@ -23,6 +20,7 @@ ms.workload: "On Demand"
 There are several ways to manage SQL Server 2017 on Linux. The following section provides a quick overview of different management tools and techniques with pointers to more resources.
 
 ## mssql-conf 
+
 The **mssql-conf** tool configures SQL Server on Linux. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## Transact-SQL

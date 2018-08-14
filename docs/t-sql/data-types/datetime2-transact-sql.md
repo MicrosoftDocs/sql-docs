@@ -1,15 +1,12 @@
----
+﻿---
 title: "datetime2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,10 +22,10 @@ helpviewer_keywords:
   - "datetime2 data type [SQL Server]"
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 caps.latest.revision: 58
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +37,7 @@ Defines a date that is combined with a time of day that is based on 24-hour cloc
 |Property|Value|  
 |--------------|-----------|  
 |Syntax|**datetime2** [ (*fractional seconds precision*) ]|  
-|Usage|DECLARE @MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|Usage|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |Default string literal format<br /><br /> (used for down-level client)|YYYY-MM-DD hh:mm:ss[.fractional seconds]<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows.|  
 |Date range|0001-01-01 through 9999-12-31<br /><br /> January 1,1 CE through December 31, 9999 CE|  
 |Time range|00:00:00 through 23:59:59.9999999|  

@@ -1,0 +1,90 @@
+- name: UI Designers and Dialog Boxes for Tabular Analysis
+  href: ui-designers-dialog-boxes-tabular.md
+- name: Analysis Services Designers and Dialog Boxes (Tabular)
+  href: ../analysis-services-designers-and-dialog-boxes-tabular.md
+- name: Dialog Boxes Reference
+  href: ../dialog-boxes-reference-ssas.md
+  items:
+  - name: Column Width Dialog Box
+    href: ../column-width-dialog-box-ssas.md
+  - name: Mark as Date Table Dialog Box
+    href: ../mark-as-date-table-dialog-box-ssas.md
+  - name: Edit Table Properties Dialog Box
+    href: ../edit-table-properties-dialog-box-ssas.md
+  - name: Go To Dialog Box
+    href: ../go-to-dialog-box-ssas.md
+  - name: Insert Function Dialog Box
+    href: ../insert-function-dialog-box-ssas.md
+  - name: Move Table Dialog Box
+    href: ../move-table-dialog-box-ssas.md
+- name: Table Import Wizard
+  href: ../table-import-wizard-reference-ssas.md
+  items:
+  - name: Advanced Settings
+    href: ../advanced-settings-ssas.md
+  - name: Analysis Services MDX Query Designer
+    href: ../analysis-services-mdx-query-designer-ssas.md
+  - name: Choose How to Import the Data
+    href: ../choose-how-to-import-the-data-ssas.md
+  - name: Connect to a Report or Data Feed
+    href: ../connect-to-a-report-or-data-feed-ssas.md
+  - name: Connect to a Data Source
+    href: ../connect-to-a-data-source-ssas.md
+  - name: Connect to a DB2 Database
+    href: ../connect-to-a-db2-database-ssas.md
+  - name: Connect to a Flat File
+    href: ../connect-to-a-flat-file-ssas.md
+  - name: Connect to a Microsoft Access Database
+    href: ../connect-to-a-microsoft-access-database-ssas.md
+  - name: Connect to a Microsoft Excel File
+    href: ../connect-to-a-microsoft-excel-file-ssas.md
+  - name: Connect to an Azure SQL Database
+    href: ../connect-to-an-azure-sql-database-ssas.md
+  - name: Connect to a Microsoft SQL Server Database
+    href: ../connect-to-a-microsoft-sql-server-database-ssas.md
+  - name: Connect to a Microsoft SQL Server Parallel Data Warehouse
+    href: ../connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md
+  - name: Connect to Microsoft SQL Server Analysis Services
+    href: ../connect-to-microsoft-sql-server-analysis-services-ssas.md
+  - name: Connect to an Informix Database
+    href: ../connect-to-an-informix-database-ssas.md
+  - name: Connect to an Oracle Database
+    href: ../connect-to-an-oracle-database-ssas.md
+  - name: Connect to a Sybase Database
+    href: ../connect-to-a-sybase-database-ssas.md
+  - name: Connect to a Teradata Database
+    href: ../connect-to-a-teradata-database-ssas.md
+  - name: Data Source Credentials
+    href: ../data-source-credentials-ssas.md
+  - name: Details
+    href: ../details-ssas.md
+  - name: Filter Details
+    href: ../filter-details-ssas.md
+  - name: Impersonation Information Dialog Box
+    href: ../impersonation-information-dialog-box-table-import-wizard.md
+  - name: Importing
+    href: ../importing-ssas.md
+  - name: Import Summary
+    href: ../import-summary-ssas.md
+  - name: Preview Selected Table
+    href: ../preview-selected-table-ssas.md
+  - name: Relational Query Designer
+    href: ../relational-query-designer-ssas.md
+  - name: Select Tables and Views
+    href: ../select-tables-and-views-ssas.md
+  - name: Select Tables and Views (Data Feeds)
+    href: ../select-tables-and-views-data-feeds-ssas.md
+  - name: Set Advanced Properties
+    href: ../set-advanced-properties-ssas.md
+  - name: Specify a connection string
+    href: ../specify-a-connection-string-ssas.md
+  - name: Specify a SQL or MDX Query
+    href: ../specify-a-sql-or-mdx-query-ssas.md
+- name: Connection Properties Dialog Box (SSAS - Tabular)
+  href: ../connection-properties-dialog-box-ssas-tabular.md
+- name: Database Properties Dialog Box (SSAS - Tabular)
+  href: ../database-properties-dialog-box-ssas-tabular.md
+- name: Table Properties Dialog Box (SSAS - Tabular)
+  href: ../table-properties-dialog-box-ssas-tabular.md
+- name: Row Filters (Role Designer)(Tabular Model)
+  href: ../row-filters-role-designer-tabular-model.md

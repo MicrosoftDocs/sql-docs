@@ -1,39 +1,14 @@
 ---
 title: "Partitions (Analysis Services - Multidimensional Data) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "storage [Analysis Services], partitions"
-  - "incremental updates [Analysis Services]"
-  - "data sources [Analysis Services], partitions"
-  - "data storage [Analysis Services]"
-  - "aggregations [Analysis Services], partitions"
-  - "OLAP objects [Analysis Services], partitions"
-  - "storing data [Analysis Services], partitions"
-  - "partitions [Analysis Services], about partitions"
-  - "cubes [Analysis Services], partitions"
-  - "partitions [Analysis Services]"
-  - "remote partitions [Analysis Services]"
-  - "measure groups [Analysis Services], partitions"
-ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Partitions (Analysis Services - Multidimensional Data)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

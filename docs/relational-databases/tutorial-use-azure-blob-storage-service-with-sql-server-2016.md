@@ -2,24 +2,22 @@
 title: "Tutorial: Use Azure Blob storage service with SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Tutorial: Use Azure Blob storage service with SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +26,7 @@ Welcome to the  Working with SQL Server 2016 in Microsoft Azure Blob Storage ser
 SQL Server integration support for the Microsoft Azure Blob storage service began as a SQL Server 2012 Service Pack 1 CU2 enhancement, and has been enhanced further with SQL Server 2014 and SQL Server 2016. For an overview of the functionality and benefits of using this functionality, see [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). For a live demo, see [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
   
   
-**Download**<br /><br />**>>**  To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.  
+**Download**<br /><br />**>>**  To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.  
   
 ## What you will learn  
 This tutorial shows you how to work with  SQL Server Data Files in Microsoft Azure Blob storage service in multiple lessons. Each lesson is focused on a specific task and the lessons should be completed in sequence. First, you will learn how to create a new container in Blob storage with a stored access policy and a shared access signature. Then, you will learn how to create a SQL Server credential to integrate SQL Server with Azure blob storage. Next, you will back up a database to Blob storage and restore it to an Azure virtual machine. You will then use SQL Server 2016 file-snapshot transaction log backup to restore to a point in time and to a new database. Finally, the tutorial will demonstrate the use of meta data system stored procedures and functions to help you understand and work with file-snapshot backups.  
@@ -39,7 +37,7 @@ This article assumes the following:
   
 -   You have an Azure storage account.  
   
--   You have at least one Azure virtual machines with SQL Server 2016 installed and provisioned this virtual machine in accordance with [Provisioning a SQL Server Virtual Machine on Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-provision-sql-server/). As an option, a second virtual machine can be used for the scenario in [Lesson 8. Restore as new database from log backup](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)).  
+-   You have at least one Azure virtual machines with SQL Server 2016 installed and provisioned this virtual machine in accordance with [Provisioning a SQL Server Virtual Machine on Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/). As an option, a second virtual machine can be used for the scenario in [Lesson 8. Restore as new database from log backup](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)).  
   
 This tutorial is divided into nine lessons, which you must complete in order:  
   

@@ -1,24 +1,17 @@
 ---
-title: "Data type conversion rules for dwloader"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "This topic describes the input data formats and implicit data type conversions that dwloader Command-Line Loader supports when it loads data into PDW."
-ms.date: "10/20/2016"
-ms.topic: "article"
-ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
-caps.latest.revision: 30
-
+title: Dwloader data type conversion rules - Parallel Data Warehouse | Microsoft Docs
+description: This topic describes the input data formats and implicit data type conversions that dwloader Command-Line Loader supports when it loads data into Parallel Data Warehouse (PDW)."
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
-# Data type conversion rules for dwloader
+# Data type conversion rules for dwloader - Parallel Data Warehouse
 This topic describes the input data formats and implicit data type conversions that [dwloader Command-Line Loader](dwloader.md) supports when it loads data into PDW. The implicit data conversions occur when the input data does not match the data type in the SQL Server PDW target table. Use this information when designing your loading process to ensure your data will load successfully into SQL Server PDW.  
    
   

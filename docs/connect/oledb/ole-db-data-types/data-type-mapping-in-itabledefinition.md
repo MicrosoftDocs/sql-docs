@@ -2,15 +2,13 @@
 title: "Data Type Mapping in ITableDefinition | Microsoft Docs"
 description: "Data type mapping in ITableDefinition"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-data-types"
+ms.component: "oledb|ole-db-data-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "drivers"
+ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -23,11 +21,12 @@ helpviewer_keywords:
   - "OLE DB, data types"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Data Type Mapping in ITableDefinition
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   When creating tables by using the **ITableDefinition::CreateTable** function, the OLE DB Driver for SQL Server consumer can specify [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types in the *pwszTypeName* member of the DBCOLUMNDESC array that is passed. If the consumer specifies the data type of a column by name, OLE DB data type mapping, represented by the *wType* member of the DBCOLUMNDESC structure, is ignored.  
   

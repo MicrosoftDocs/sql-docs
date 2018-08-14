@@ -1,0 +1,10 @@
+- name: Deploying a Rendering Extension
+  href: deploying-a-rendering-extension.md
+- name: Implementing a Rendering Extension
+  href: implementing-a-rendering-extension.md
+- name: Implementing the IRenderingExtension Interface
+  href: implementing-the-irenderingextension-interface.md
+- name: Removing a Rendering Extension
+  href: removing-a-rendering-extension.md
+- name: Rendering Extensions Overview
+  href: rendering-extensions-overview.md

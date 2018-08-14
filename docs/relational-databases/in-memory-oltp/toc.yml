@@ -1,0 +1,171 @@
+- name: Overview
+  href: in-memory-oltp-in-memory-optimization.md
+- name: Inventory of In-Memory OLTP Technologies for Faster Transact-SQL Performance
+  href: survey-of-initial-areas-in-in-memory-oltp.md
+- name: Overview and Usage Scenarios
+  href: overview-and-usage-scenarios.md
+- name: Internals for SQL Server 2016 whitepaper
+  href: sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+- name: Plan your adoption of In-Memory OLTP Features in SQL Server
+  href: plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
+- name: Requirements for Using Memory-Optimized Tables
+  href: requirements-for-using-memory-optimized-tables.md
+- name: In-Memory OLTP Code Samples
+  href: in-memory-oltp-code-samples.md
+  items:
+  - name: "Demonstration: Performance Improvement of In-Memory OLTP"
+    href: demonstration-performance-improvement-of-in-memory-oltp.md
+  - name: Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure
+    href: creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+  - name: Application-Level Partitioning
+    href: application-level-partitioning.md
+  - name: Sample Database for In-Memory OLTP
+    href: sample-database-for-in-memory-oltp.md
+- name: Memory-Optimized Tables
+  href: memory-optimized-tables.md
+  items:
+  - name: Introduction to Memory-Optimized Tables
+    href: introduction-to-memory-optimized-tables.md
+  - name: Native Compilation of Tables and Stored Procedures
+    href: native-compilation-of-tables-and-stored-procedures.md
+  - name: Altering Memory-Optimized Tables
+    href: altering-memory-optimized-tables.md
+  - name: Transactions with Memory-Optimized Tables
+    href: transactions-with-memory-optimized-tables.md
+  - name: Application Pattern for Partitioning Memory-Optimized Tables
+    href: application-pattern-for-partitioning-memory-optimized-tables.md
+  - name: Statistics for Memory-Optimized Tables
+    href: statistics-for-memory-optimized-tables.md
+  - name: Table and Row Size in Memory-Optimized Tables
+    href: table-and-row-size-in-memory-optimized-tables.md
+  - name: A Guide to Query Processing for Memory-Optimized Tables
+    href: a-guide-to-query-processing-for-memory-optimized-tables.md
+- name: Faster temp table and table variable by using memory optimization
+  href: faster-temp-table-and-table-variable-by-using-memory-optimization.md
+- name: Scalar User-Defined Functions for In-Memory OLTP
+  href: scalar-user-defined-functions-for-in-memory-oltp.md
+- name: Indexes for Memory-Optimized Tables
+  href: indexes-for-memory-optimized-tables.md
+  items:
+  - name: Hash Indexes for Memory-Optimized Tables
+    href: ../../relational-databases/sql-server-index-design-guide.md#hash_index
+  - name: Nonclustered Index for Memory-Optimized Tables
+    href: ../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index
+  - name: Troubleshooting Hash Indexes for Memory-Optimized Tables
+    href: hash-indexes-for-memory-optimized-tables.md
+- name: Natively Compiled Stored Procedures
+  href: natively-compiled-stored-procedures.md
+  items:
+  - name: Creating Natively Compiled Stored Procedures
+    href: creating-natively-compiled-stored-procedures.md
+  - name: Altering Natively Compiled T-SQL Modules
+    href: altering-natively-compiled-t-sql-modules.md
+  - name: Atomic Blocks
+    href: atomic-blocks-in-native-procedures.md
+  - name: Natively Compiled Stored Procedures and Execution Set Options
+    href: natively-compiled-stored-procedures-and-execution-set-options.md
+  - name: Best Practices for Calling Natively Compiled Stored Procedures
+    href: best-practices-for-calling-natively-compiled-stored-procedures.md
+  - name: Monitoring Performance of Natively Compiled Stored Procedures
+    href: monitoring-performance-of-natively-compiled-stored-procedures.md
+  - name: Calling Natively Compiled Stored Procedures from Data Access Applications
+    href: calling-natively-compiled-stored-procedures-from-data-access-applications.md
+- name: Estimate Memory Requirements for Memory-Optimized Tables
+  href: estimate-memory-requirements-for-memory-optimized-tables.md
+  items:
+  - name: Bind a Database with Memory-Optimized Tables to a Resource Pool
+    href: bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+  - name: Monitor and Troubleshoot Memory Usage
+    href: monitor-and-troubleshoot-memory-usage.md
+  - name: Resolve Out Of Memory Issues
+    href: resolve-out-of-memory-issues.md
+  - name: Restore a Database and Bind it to a Resource Pool
+    href: restore-a-database-and-bind-it-to-a-resource-pool.md
+  - name: In-Memory OLTP Garbage Collection
+    href: in-memory-oltp-garbage-collection.md
+- name: Creating and Managing Storage for Memory-Optimized Objects
+  href: creating-and-managing-storage-for-memory-optimized-objects.md
+  items:
+  - name: Configuring Storage for Memory-Optimized Tables
+    href: configuring-storage-for-memory-optimized-tables.md
+  - name: The Memory Optimized Filegroup
+    href: the-memory-optimized-filegroup.md
+  - name: Durability for Memory-Optimized Tables
+    href: durability-for-memory-optimized-tables.md
+  - name: Checkpoint Operation for Memory-Optimized Tables
+    href: checkpoint-operation-for-memory-optimized-tables.md
+  - name: Defining Durability for Memory-Optimized Objects
+    href: defining-durability-for-memory-optimized-objects.md
+  - name: Comparing Disk-Based Table Storage to Memory-Optimized Table Storage
+    href: comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+  - name: Scalability
+    href: scalability.md
+- name: Backing Up a Database with Memory-Optimized Tables
+  href: backing-up-a-database-with-memory-optimized-tables.md
+  items:
+  - name: Piecemeal Restore of Databases With Memory-Optimized Tables
+    href: piecemeal-restore-of-databases-with-memory-optimized-tables.md
+  - name: Restore and Recovery of Memory-Optimized Tables
+    href: restore-and-recovery-of-memory-optimized-tables.md
+- name: SQL Server Support for In-Memory OLTP
+  href: sql-server-support-for-in-memory-oltp.md
+  items:
+  - name: Unsupported SQL Server Features for In-Memory OLTP
+    href: unsupported-sql-server-features-for-in-memory-oltp.md
+  - name: SQL Server Management Objects Support for In-Memory OLTP
+    href: sql-server-management-objects-support-for-in-memory-oltp.md
+  - name: SQL Server Integration Services Support for In-Memory OLTP
+    href: sql-server-integration-services-support-for-in-memory-oltp.md
+  - name: SQL Server Management Studio Support for In-Memory OLTP
+    href: sql-server-management-studio-support-for-in-memory-oltp.md
+  - name: High Availability Support for In-Memory OLTP databases
+    href: high-availability-support-for-in-memory-oltp-databases.md
+  - name: Transact-SQL Support for In-Memory OLTP
+    href: transact-sql-support-for-in-memory-oltp.md
+    items:
+    - name: Supported Data Types for In-Memory OLTP
+      href: supported-data-types-for-in-memory-oltp.md
+    - name: Accessing Memory-Optimized Tables Using Interpreted Transact-SQL
+      href: accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+    - name: Supported Features for Natively Compiled T-SQL Modules
+      href: supported-features-for-natively-compiled-t-sql-modules.md
+    - name: Supported DDL for Natively Compiled T-SQL modules
+      href: supported-ddl-for-natively-compiled-t-sql-modules.md
+    - name: Transact-SQL Constructs Not Supported by In-Memory OLTP
+      href: transact-sql-constructs-not-supported-by-in-memory-oltp.md
+- name: Migrating to In-Memory OLTP
+  href: migrating-to-in-memory-oltp.md
+  items:
+  - name: Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
+    href: determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+  - name: Memory Optimization Advisor
+    href: memory-optimization-advisor.md
+  - name: Native Compilation Advisor
+    href: native-compilation-advisor.md
+  - name: PowerShell Cmdlet for Migration Evaluation
+    href: powershell-cmdlet-for-migration-evaluation.md
+  - name: Implementing SQL_VARIANT in a Memory-Optimized Table
+    href: implementing-sql-variant-in-a-memory-optimized-table.md
+  - name: Migration Issues for Natively Compiled Stored Procedures
+    href: migration-issues-for-natively-compiled-stored-procedures.md
+    items:
+    - name: Creating and Accessing Tables in TempDB from Natively Compiled Stored Procedures
+      href: create-and-access-tables-in-tempdb-from-stored-procedures.md
+    - name: Simulating an IF-WHILE EXISTS Statement in a Natively Compiled Module
+      href: simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+    - name: Implementing MERGE Functionality in a Natively Compiled Stored Procedure
+      href: implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+    - name: Implementing a CASE Expression in a Natively Compiled Stored Procedure
+      href: implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+    - name: Implementing UPDATE with FROM or Subqueries
+      href: implementing-update-with-from-or-subqueries.md
+    - name: Implementing an Outer Join
+      href: implementing-an-outer-join.md
+  - name: Migrating Computed Columns
+    href: migrating-computed-columns.md
+  - name: Migrating Triggers
+    href: migrating-triggers.md
+  - name: Cross-Database Queries
+    href: cross-database-queries.md
+  - name: Implementing IDENTITY in a Memory-Optimized Table
+    href: implementing-identity-in-a-memory-optimized-table.md

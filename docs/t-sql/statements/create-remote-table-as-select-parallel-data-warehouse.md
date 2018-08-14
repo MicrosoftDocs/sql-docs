@@ -1,23 +1,20 @@
----
+﻿---
 title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: ""
 ms.prod_service: "pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "t-sql|statements"
+ms.service: sql-data-warehouse
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.component: t-sql
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: 9
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

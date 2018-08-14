@@ -1,17 +1,14 @@
----
+﻿---
 title: "Installing SQL Server Native Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/15/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client|applications"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+ms.technology: native-client
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -26,13 +23,12 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], installing SQL Server Native Client"
   - "removing SQL Server Native Client"
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-caps.latest.revision: 44
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Installing SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > For content related to previous versions of SQL Server, see [Installing SQL Server Native Client](https://msdn.microsoft.com/en-US/library/ms131321(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Installing SQL Server Native Client](https://msdn.microsoft.com/library/ms131321(SQL.120).aspx).
 
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 

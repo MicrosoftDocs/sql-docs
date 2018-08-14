@@ -1,17 +1,13 @@
----
+﻿---
 title: "Configure Always Encrypted using SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/30/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "security"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"
   - "SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1"
@@ -19,11 +15,10 @@ f1_keywords:
 helpviewer_keywords: 
   - "Always Encrypted, configure with SSMS"
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Configure Always Encrypted using SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

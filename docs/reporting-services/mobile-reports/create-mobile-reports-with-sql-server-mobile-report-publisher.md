@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "03/30/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -18,7 +17,6 @@ caps.latest.revision: 35
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Create mobile reports with SQL Server Mobile Report Publisher
 Learn about [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and connected to on-premises data, with an assortment of data visualizations. 

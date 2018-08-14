@@ -1,23 +1,21 @@
----
+﻿---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/09/2018"
-ms.prod: "sql-non-specified"
+ms.date: "07/02/2018"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssdt"
+ms.technology: ssdt
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,26 +23,103 @@ This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-t
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
+
+## SSDT for Visual Studio 2017 (15.7.1)
+Build number: 14.0.16167.0  
+Release date: July 02, 2018  
+  
+### What's New?
+
+**SSIS:**
+
+- Add support for new Azure Government AAD authority (login.microsoftonline.us) for use with AS Tasks.
+- Fix an issue that AS processing task UI will show “Method not found” when target server version is SQLServer2016.
+- Fix an issue that some pipeline components cannot be executed when target server version is SQLServer2012.
+
+**Installer:**
+
+- Filter the VS instance list to exclude the instances that cannot install SSDT.
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- When installing SSDT on Windows 10 and choosing “Install new SQL Server Data Tools for Visual Studio 2017 instance”, the installation will fail on “The requested metafile operation is not supported”. Please reboot the machine and launch SSDT installer again to continue the installation.
+
+
+
+## SSDT for Visual Studio 2017 (15.7.0)
+Build number: 14.0.16165.0  
+Release date: June 4, 2018  
+  
+### What's New?
+
+**SSIS:**
+
+- Fix an issue that *Integration Services Designers* page in Options dialog cannot be shown properly.  
+- Fix an issue that luminosity ratio issue for text appearing in *Sort Transformation Editor* editor.  
+- Fix an issue that *Resolve References* dialog disappears when attempting to edit a combobox.  
+- Fix an issue that F1 help link of *Hadoop Connection Manager* doesn’t work.  
+- Fix an issue that script task code will be lost if it’s in a container when targeting SQL Server 2016.  
+
+
+**Installer:**
+
+- Fix an issue that SSAS cannot be installed before SSRS and SSIS are installed in VS 15.7.2.
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+## SSDT for Visual Studio 2017 (15.6.0)
+Build number: 14.0.16162.0  
+Release date: April 10, 2018
+  
+### What's New?
+
+**SSIS:**
+
+- Fix an issue that AS processing task doesn’t log any processing steps when targeting to SQLServer2016 and SQLServer2017
+- Fix an issue that access violation will happen when opening dtsx with very long non-English task names in SSDT
+- Fix an issue that sometimes variable list of ScriptTask will disappear in task UI
+- Fix an issue that adding copy of existing package will fail when the package location is SQL Server
+- Fix an issue that focus gets stuck while accessing the combo box in some editor dialog box.
+- Fix an issue that background will not change while switching VS theme.
+- Fix an issue that annotation and loading label is invisible in dark theme.
+- Fix an issue that the state property is not defined correctly for SSIS toolbox disabled items.
+- Fix an issue that it always fails to execute WebServiceTask.
+- Fix an issue that package deployment will fail if connection string is set to variable having expression dependent on project parameters.
+
+**Installer:**
+
+- Add the link of “Customer Experience Improvement Program for SQL Server Data Tools” in privacy disclaimer.
+- Fix an issue that VS installer window will popup when selecting “Install new SQL Server Data Tools for Visual Studio 2017 instance”
+
+### Known issues:
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+
 ## SSDT for Visual Studio 2017 (15.5.2)
 Build number: 14.0.16156.0
   
 ### What's New?
 
 **SSIS**
-1.	Fix an issue that migrating SSIS 2008 projects will fail when both SSAS and SSIS are installed to same VS 2017 instance.
-2.	Fix an issue that Rdlc projects cannot be built when both Rdlc report designer and SSIS are installed to same VS 2017 instance.
-3.	Fix an issue that the annotation color can't update.
-4.	Fix an issue that some strings in Hadoop connection manager editor are truncated in other languages.
-5.	Fix an issue that some strings are truncated in OData connection manager editor.
-6.	Fix an issue that some strings are truncated in Integration Services import project wizard window.
-7.	Fix an issue that the title in SSIS tool box information window.
-8.	Fix an issue that some strings are truncated in Integration Services Deployment Wizard window. 
+- Fix an issue that migrating SSIS 2008 projects will fail when both SSAS and SSIS are installed to the same VS 2017 instance.
+- Fix an issue that Rdlc projects cannot be built when both Rdlc report designer and SSIS are installed to same VS 2017 instance.
+- Fix an issue that the annotation color can't update.
+- Fix an issue that some strings in Hadoop connection manager editor are truncated in other languages.
+- Fix an issue that some strings are truncated in OData connection manager editor.
+- Fix an issue that some strings are truncated in Integration Services import project wizard window.
+- Fix an issue with the title in the SSIS tool box information window.
+- Fix an issue that some strings are truncated in Integration Services Deployment Wizard window. 
 
 **Installer**
-- Fix an issue that sometimes downloading payload will fail with error "The system cannot find the file specified (0x80070002)"  
+- Fix an issue that sometimes downloading payload will fail with error "The system cannot find the file specified (0x80070002)".  
 
 ### Known issues
-- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 
 
 

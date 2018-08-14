@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,7 +11,7 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "removing role assignments"
   - "roles [Reporting Services], assignments"
@@ -24,7 +23,6 @@ caps.latest.revision: 45
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 # Role Assignments - Modify or Delete
   A role assignment maps a group or user account to a predefined role definition that includes tasks that can be performed. It determines the types of operations that a user can perform relative to a folder, report, model, or other content type. To create, modify, or delete role assignments, you use Report Manager. After you create a role assignment for a particular user or group, you can modify it later by selecting a different role. If you want to revoke permissions to a report server, you can delete a role assignment from the report server.  

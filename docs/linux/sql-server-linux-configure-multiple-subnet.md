@@ -5,15 +5,12 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 12/1/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
+ms.topic: conceptual
+ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
-ms.technology: database-engine
-ms.workload: "On Demand"
+ms.technology: linux
 ---
 
 # Configure multiple-subnet Always On Availability Groups and failover cluster instances

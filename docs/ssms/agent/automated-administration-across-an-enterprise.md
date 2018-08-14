@@ -1,17 +1,15 @@
----
+﻿---
 title: "Automated Administration Across an Enterprise | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "enterprise automatic administration [SQL Server]"
   - "multiserver administration [SQL Server]"
@@ -26,8 +24,8 @@ ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Automated Administration Across an Enterprise
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.workload: "Inactive"
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-Automating administration across multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is called *multiserver administration*. Use multiserver administration to do the following:  
+Automating administration across multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is called *multiserver administration*. Use multiserver administration to do the following:  
   
 -   Manage two or more servers.  
   
@@ -65,10 +63,10 @@ Write this backup job one time on the master server and then enlist each departm
 Contains information about how to create and manage master and target servers.  
   
 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
-Contains information about how using nonadministrative Windows accounts or the Local System account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service can affect multiserver environments.  
+Contains information about how using nonadministrative Windows accounts or the Local System account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service can affect multiserver environments.  
   
 [Set Encryption Options on Target Servers](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-Contains information about setting the MsxEncryptChannelOptions[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent registry subkey on target servers.  
+Contains information about setting the MsxEncryptChannelOptions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registry subkey on target servers.  
   
 [Manage Jobs Across an Enterprise](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Contains information about checking job status, changing target servers for jobs, synchronizing target server clocks, and polling master servers for their current job status.  
@@ -83,7 +81,7 @@ Contains information about how to implicitly and explicitly make target servers 
 Contains information about event forwarding from target servers to master servers.  
   
 [Tune Automated Administration Across an Enterprise](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
-Contains information about how automated administration in a multiserver environment takes advantage of the self-tuning features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Contains information about how automated administration in a multiserver environment takes advantage of the self-tuning features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## See Also  
 [Backward Compatibility Topics for Installing the SQL Server Database Engine](http://msdn.microsoft.com/en-us/10de5ec6-d3cf-42ef-aa62-1bdf3fbde841)  

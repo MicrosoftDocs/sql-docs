@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/20/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -12,11 +11,10 @@ ms.technology:
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Active"
 ---
 # Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)
 
@@ -24,7 +22,7 @@ ms.workload: "Active"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  To include data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] and  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  To include data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -42,7 +40,7 @@ ms.workload: "Active"
   
      Developers can use the <xref:Microsoft.ReportingServices.DataProcessing> API to create data processing extensions to support additional types of data sources.  
   
--   In [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], browse to a report server or SharePoint site and select shared data sources or create embedded data sources in the report. You cannot create a shared data source in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. You cannot use custom data extensions in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+-   In [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], browse to a report server or SharePoint site and select shared data sources or create embedded data sources in the report. You cannot create a shared data source in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. You cannot use custom data extensions in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
  The following table summarizes the differences between embedded and shared data sources.  
   
@@ -85,7 +83,7 @@ ms.workload: "Active"
   
  For a full list of data sources and versions [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-## Data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+## Data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
 1.  **Data sources in the Report Data pane** A data source appears in the Report Data pane after you create an embedded data source or add a shared data source.  

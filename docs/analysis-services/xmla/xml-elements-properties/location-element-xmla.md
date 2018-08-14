@@ -1,37 +1,14 @@
 ---
 title: "Location Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Location Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "microsoft.xml.analysis.location"
-  - "urn:schemas-microsoft-com:xml-analysis#Location"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#Location"
-helpviewer_keywords: 
-  - "Location element"
-ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Location Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,7 +18,7 @@ ms.workload: "Inactive"
   
 ```xml  
   
-<Backup> <!-- or one of the elements listed below in the Element Relationships table -->  
+<Backup> <!-- or one of the elements listed below in the Element relationships table -->  
    ...  
    <Location>  
 ```  
@@ -62,7 +39,7 @@ ms.workload: "Inactive"
 </Backup>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -70,7 +47,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -84,7 +61,7 @@ ms.workload: "Inactive"
 |[Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md), [DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md), [DataSourceType](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md), [Folders](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
   
 ## Remarks  
- For **Backup** commands, the **Location** element provides information about creating a remote backup file for a remote instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ For **Backup** commands, the **Location** element provides information about creating a remote backup file for a remote instance of Analysis Services.  
   
  For **Restore** commands, the **Location** element provides information about identifying and connecting to a remote [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance, as well as the remote backup file used to restore remote partitions on that remote instance.  
   
@@ -92,7 +69,7 @@ ms.workload: "Inactive"
   
  For more information about backing up and restoring remote instances, see [Backing Up and Restoring Objects (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
-## See Also  
+## See also
  [BackupRemotePartitions Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

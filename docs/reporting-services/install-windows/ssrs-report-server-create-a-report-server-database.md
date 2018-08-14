@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "09/20/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 
 # Create a Report Server Database
@@ -75,6 +72,6 @@ ms.workload: "On Demand"
 
 ## Next steps
 
-[Reporting Services Configuration Manager](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Reporting Services Configuration Manager](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

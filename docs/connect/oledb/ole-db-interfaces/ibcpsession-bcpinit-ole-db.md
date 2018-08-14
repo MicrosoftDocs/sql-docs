@@ -2,11 +2,10 @@
 title: "IBCPSession::BCPInit (OLE DB) | Microsoft Docs"
 description: "IBCPSession::BCPInit (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-interfaces"
+ms.component: "oledb|ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -20,11 +19,12 @@ helpviewer_keywords:
   - "BCPInit method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # IBCPSession::BCPInit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Initializes the bulk copy structure, performs some error checking, verifies that the data and format file names are correct, and then opens them.  
   

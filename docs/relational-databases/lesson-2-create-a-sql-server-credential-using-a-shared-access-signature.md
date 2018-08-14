@@ -2,24 +2,21 @@
 title: "Lesson 2: Create a SQL Server credential using a shared access signature | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Lesson 2: Create a SQL Server credential using a shared access signature
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +25,7 @@ In this lesson, you will create a credential to store the security information t
 A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. The credential stores the URI path of the storage container and the shared access signature for this container.  
   
 > [!NOTE]  
-> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the [deprecated syntax](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) documented here to create a SQL Server credential based on your storage account key.  
+> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the [deprecated syntax](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) documented here to create a SQL Server credential based on your storage account key.  
   
 ## Create SQL Server credential  
 To create a SQL Server credential, follow these steps:  

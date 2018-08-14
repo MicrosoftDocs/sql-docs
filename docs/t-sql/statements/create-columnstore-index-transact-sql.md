@@ -1,15 +1,12 @@
----
+﻿---
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -32,10 +29,10 @@ helpviewer_keywords:
   - "CREATE INDEX statement"
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: 76
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -340,8 +337,8 @@ If the underlying table has a column of a data type that is not supported for co
 -   uniqueidentifier (Applies to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Nonclustered columnstore indexes:**
--   Cannot have more than 1024 columns.  
--   A table with a nonclustered columnstore index can have unique constraints, primary key constraints, or foreign key constraints, but the constraints cannot be included in the nonclustered columnstore index.  
+-   Cannot have more than 1024 columns.
+-   Cannot be created as a constraint-based index. It is possible to have unique constraints, primary key constraints, and foreign key constraints on a table with a columnstore index. Constraints are always enforced with a row-store index. Constraints cannot be enforced with a columnstore (clustered or nonclustered) index.
 -   Cannot be created on a view or indexed view.  
 -   Cannot include a sparse column.  
 -   Cannot be changed by using the **ALTER INDEX** statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use **ALTER INDEX** to disable and rebuild a columnstore index.  
@@ -358,13 +355,13 @@ If the underlying table has a column of a data type that is not supported for co
 
 You cannot use cursors or triggers on a table with a clustered columnstore index. This restriction does not apply to nonclustered columnstore indexes; you can use cursors and triggers on a table with a nonclustered columnstore index.
 
-**SQL Server 2014 specific limitations**  
-These limitations apply only to SQL Server 2014. In this release, we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] specific limitations**  
+These limitations apply only to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In this release, we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
 
 -   Change tracking. You cannot use change tracking with nonclustered columnstore indexes (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
 -   Change data capture. You cannot use change data capture for nonclustered columnstore index (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
 -   Readable secondary. You cannot access  a clustered clustered columnstore index (CCI) from a readable secondary of an Always OnReadable availability group.  You can access a nonclustered columnstore index (NCCI) from a readable secondary.  
--   Multiple Active Result Sets (MARS). SQL Server 2014 uses MARS for  read-only connections to tables with a columnstore index.    However, SQL Server 2014 does not support MARS for concurrent data manipulation language (DML) operations on a table with a columnstore index. When this occurs, SQL Server terminates the connections and aborts the transactions.  
+-   Multiple Active Result Sets (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] uses MARS for  read-only connections to tables with a columnstore index. However, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support MARS for concurrent data manipulation language (DML) operations on a table with a columnstore index. When this occurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terminates the connections and aborts the transactions.  
   
  For information about the performance benefits and limitations of columnstore indexes, see [Columnstore Indexes Overview](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
@@ -383,7 +380,7 @@ These limitations apply only to SQL Server 2014. In this release, we introduced 
 ### A. Convert a heap to a clustered columnstore index  
  This example creates a table as a heap and then converts it to a clustered columnstore index named cci_Simple. This changes the storage for the entire table from rowstore to columnstore.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable(  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -397,7 +394,7 @@ GO
 ### B. Convert a clustered index to a clustered columnstore index with the same name.  
  This example creates a table with clustered index, and then demonstrates the syntax of converting the clustered index to a clustered columnstore index. This changes the storage for the entire table from rowstore to columnstore.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -418,8 +415,7 @@ GO
   
  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you could not create a nonclustered index on a columnstore index. This example shows how in previous releases you need to drop the nonclustered indexes before creating the columnstore index.  
   
-```  
-  
+```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -442,7 +438,6 @@ DROP INDEX SimpleTable.nc2_simple;
 --Convert the rowstore table to a columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;   
 GO  
-  
 ```  
   
 ### D. Convert a large fact table from rowstore to columnstore  
@@ -452,7 +447,7 @@ GO
   
 1.  First, create a small table to use in this example.  
   
-    ```  
+    ```sql  
     --Create a rowstore table with a clustered index and a non-clustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
@@ -470,7 +465,7 @@ GO
   
 2.  Drop all non-clustered indexes from the rowstore table.  
   
-    ```  
+    ```sql  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
@@ -480,9 +475,9 @@ GO
     -   Do this only if you want to specify a new name for the index when it is converted to a clustered columnstore index. If you do not drop the clustered index, the new clustered columnstore index has the same name.  
   
         > [!NOTE]  
-        >  The name of the index might be easier to remember if you use your own name. All rowstore clustered indexes use the default name which is 'ClusteredIndex_\<GUID>'.  
+        > The name of the index might be easier to remember if you use your own name. All rowstore clustered indexes use the default name which is 'ClusteredIndex_\<GUID>'.  
   
-    ```  
+    ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
     --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
@@ -497,7 +492,7 @@ GO
   
 4.  Convert the rowstore table to a columnstore table with a clustered columnstore index.  
   
-    ```  
+    ```sql  
     --Option 1: Convert to columnstore and name the new clustered columnstore index MyCCI.  
     CREATE CLUSTERED COLUMNSTORE INDEX MyCCI ON MyFactTable;  
   
@@ -522,7 +517,7 @@ GO
 ### E. Convert a columnstore table to a rowstore table with a clustered index  
  To convert a columnstore table to a rowstore table with a clustered index, use the CREATE INDEX statement with the DROP_EXISTING option.  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX ci_MyTable   
 ON MyFactTable  
 WITH ( DROP EXISTING = ON );  
@@ -531,21 +526,21 @@ WITH ( DROP EXISTING = ON );
 ### F. Convert a columnstore table to a rowstore heap  
  To convert a columnstore table to a rowstore heap, simply drop the clustered columnstore index.  
   
-```  
+```sql  
 DROP INDEX MyCCI   
 ON MyFactTable;  
 ```  
   
 
 ### G. Defragment by rebuilding the entire clustered columnstore index  
-   Applies to: SQL Server 2014  
+   Applies to: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  There are two ways to rebuild the full clustered columnstore index. You can use CREATE CLUSTERED COLUMNSTORE INDEX, or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) and the REBUILD option. Both methods achieve the same results.  
   
 > [!NOTE]  
->  Beginning with SQL Server 2016, use ALTER INDEX REORGANIZE instead of rebuilding with the methods described in this example.  
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use `ALTER INDEX...REORGANIZE` instead of rebuilding with the methods described in this example.  
   
-```  
+```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
 SELECT i.object_id, i.name, t.object_id, t.name   
 FROM sys.indexes i   
@@ -563,7 +558,6 @@ ALTER INDEX my_CCI
 ON MyFactTable  
 REBUILD PARTITION = ALL  
 WITH ( DROP_EXISTING = ON );  
-  
 ```  
   
 ##  <a name="nonclustered"></a> Examples for nonclustered columnstore indexes  
@@ -571,7 +565,7 @@ WITH ( DROP_EXISTING = ON );
 ### A. Create a columnstore index as a secondary index on a rowstore table  
  This example creates a nonclustered columnstore index on a rowstore table. Only one columnstore index can be created in this situation. The columnstore index requires extra storage since it contains a copy of the data in the rowstore table. This example creates a simple table and a clustered index, and then demonstrates the syntax of creating a nonclustered columnstore index.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable  
 (ProductKey [int] NOT NULL,   
 OrderDateKey [int] NOT NULL,   
@@ -589,7 +583,7 @@ GO
 ### B. Create a simple nonclustered columnstore index using all options  
  The following example demonstrates the syntax of creating a nonclustered columnstore index by using all options.  
   
-```  
+```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
 ON SimpleTable  
 (OrderDateKey, DueDateKey, ShipDateKey)  
@@ -605,7 +599,7 @@ GO
 ### C. Create a nonclustered columnstore index with a filtered predicate  
  The following example creates a filtered nonclustered columnstore index on the Production.BillOfMaterials table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The filter predicate can include columns that are not key columns in the filtered index. The predicate in this example selects only the rows where EndDate is non-NULL.  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithEndDate'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -615,7 +609,6 @@ GO
 CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
-  
 ```  
   
 ###  <a name="ncDML"></a> D. Change the data in a nonclustered columnstore index  
@@ -625,7 +618,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Disable or drop the columnstore index. You can then update the data in the table. If you disable the columnstore index, you can rebuild the columnstore index when you finish updating the data. For example,  
   
-    ```  
+    ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
     -- update mytable --  
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
@@ -646,7 +639,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  This example creates the xDimProduct table as a rowstore table with a clustered index, and then uses CREATE CLUSTERED COLUMNSTORE INDEX to change the table from a rowstore table to a columnstore table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF EXISTS (SELECT name FROM sys.tables  
@@ -671,7 +664,7 @@ WITH ( DROP_EXISTING = ON );
 ### B. Rebuild a clustered columnstore index  
  Building on the previous example, this example uses CREATE CLUSTERED COLUMNSTORE INDEX to rebuild the existing clustered columnstore index called cci_xDimProduct.  
   
-```  
+```sql  
 --Rebuild the existing clustered columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_xDimProduct   
 ON xdimProduct   
@@ -685,7 +678,7 @@ WITH ( DROP_EXISTING = ON );
   
  Using the cci_xDimProduct clustered columnstore index from the previous example, this example drops the cci_xDimProduct clustered columnstore index and then recreates the clustered columnstore index with the name mycci_xDimProduct.  
   
-```  
+```sql  
 --For illustration purposes, drop the clustered columnstore index.   
 --The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xDimProduct;  
@@ -699,20 +692,19 @@ WITH ( DROP_EXISTING = OFF );
 ### D. Convert a columnstore table to a rowstore table with a clustered index  
  There might be a situation for which you want to drop a clustered columnstore index and create a clustered index. This stores the table in rowstore format. This example converts a columnstore table to a rowstore table with a clustered index with the same name. None of the data is lost. All data goes to the rowstore table and the columns listed becomes the key columns in the clustered index.  
   
-```  
+```sql  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
 --All of the columns are stored in the rowstore clustered index.   
 --The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
-  
 ```  
   
 ### E. Convert a columnstore table back to a rowstore heap  
  Use [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) to drop the clustered columnstore index and convert the table to a rowstore heap. This example converts the cci_xDimProduct table to a rowstore heap. The table continues to be distributed, but is stored as a heap.  
   
-```  
+```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  

@@ -1,34 +1,17 @@
 ---
 title: "DROP KPI Statement (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "KPI"
-  - "DROP"
-  - "DROP KPI"
-  - "DROP_KPI"
-helpviewer_keywords: 
-  - "DROP KPI statement"
-  - "key performance indicators [MDX]"
-ms.assetid: d19c6809-b8a6-459d-8554-b41854f7cc45
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Definition - DROP KPI
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Drops the specified key performance indicator (KPI) from the specified cube.  
   

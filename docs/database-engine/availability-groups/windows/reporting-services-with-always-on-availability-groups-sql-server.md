@@ -2,27 +2,22 @@
 title: "Reporting Services with Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 
 
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Reporting Services with Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +87,7 @@ ms.workload: "On Demand"
   
 -   **SharePoint Mode:** Use SharePoint configuration pages within the document libraries for reports that are already published to a SharePoint server.  
   
--   **Report Design:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new reports. See the ‘Report Design’ section in this topic or more information.  
+-   **Report Design:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] or [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new reports. See the ‘Report Design’ section in this topic or more information.  
   
  **Additional Resources:**  
   
@@ -113,11 +108,11 @@ ms.workload: "On Demand"
  When using a read-only secondary as a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data source, it is important to ensure that data update latency meets the needs of the report users.  
   
 ##  <a name="bkmk_reportdesign"></a> Report Design and Availability Groups  
- When designing reports in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] or a report project in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], a user can configure a report data source connection string to contain new connection properties provided by [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Support for the new connection properties depends on where a user previews the report.  
+ When designing reports in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] or a report project in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], a user can configure a report data source connection string to contain new connection properties provided by [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Support for the new connection properties depends on where a user previews the report.  
   
--   **Local preview:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 and support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties.  
+-   **Local preview:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] and [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 and support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties.  
   
--   **Remote or server mode preview:** If after publishing reports to the report server or using preview in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)], you see an error similar to the following, it is an indication you are previewing reports against the report server and the .Net Framework 3.5 SP1 Hotfix for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] has not been installed on the report server.  
+-   **Remote or server mode preview:** If after publishing reports to the report server or using preview in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], you see an error similar to the following, it is an indication you are previewing reports against the report server and the .Net Framework 3.5 SP1 Hotfix for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] has not been installed on the report server.  
   
 > **Error message:** “Keyword not supported ‘applicationintent’”  
   

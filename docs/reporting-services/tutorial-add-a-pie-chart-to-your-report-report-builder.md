@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/15/2016"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -19,7 +18,6 @@ caps.latest.revision: 14
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Tutorial: Add a Pie Chart to Your Report (Report Builder)
 In this tutorial, you create pie chart in a Reporting Services paginated report. You add percentages and combine small slices into a single slice.

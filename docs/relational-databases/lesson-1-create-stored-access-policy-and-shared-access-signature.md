@@ -2,28 +2,25 @@
 title: "Lesson 1: Create stored access policy and shared access signature | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Lesson 1: Create stored access policy and shared access signature
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In this lesson, you will use an [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) script to create a shared access signature on an Azure blob container using a stored access policy.  
+In this lesson, you will use an [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) script to create a shared access signature on an Azure blob container using a stored access policy.  
   
 > [!NOTE]  
 > This script is written using Azure PowerShell 5.0.10586.  
@@ -136,7 +133,7 @@ To create a policy on container and generate a Shared Access Signature (SAS) key
 [Lesson 2: Create a SQL Server credential using a shared access signature](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## See Also  
-[Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

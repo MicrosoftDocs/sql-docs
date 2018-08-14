@@ -1,32 +1,17 @@
 ---
 title: "UnknownMember (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "UnknownMember"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "UnknownMember function"
-ms.assetid: 5ae39cbe-65c8-4a59-9548-71b28ecf6eb5
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # UnknownMember (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Returns the unknown member associated with a level or member.  
   
@@ -49,7 +34,7 @@ Hierarchy_Expression.UnknownMember
  A valid Multidimensional Expressions (MDX) expression that returns a hierarchy.  
   
 ## Remarks  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creates an unknown member to associate fact table data with a hierarchy when the hierarchy is not known. The unknown member can be at one of the following levels:  
+ Analysis Services creates an unknown member to associate fact table data with a hierarchy when the hierarchy is not known. The unknown member can be at one of the following levels:  
   
 -   At the top level for attribute hierarchies that are not aggregated.  
   

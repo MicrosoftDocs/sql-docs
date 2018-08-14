@@ -1,17 +1,13 @@
 ---
 title: "What's New in SSMA  for DB2 (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-db2"
+ms.prod: sql
 ms.custom: ""
-ms.date: "03/01/2018"
+ms.date: "08/14/2018"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
+ms.technology: ssma
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 applies_to: 
   - "Azure SQL Database"
   - "SQL Server"
@@ -19,11 +15,28 @@ ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # What's New in SSMA for DB2 (DB2ToSQL)
-This topic lists SSMA for DB2 changes in each release.  
+This article lists SSMA for DB2 changes in each release.  
+
+## SSMA v7.9
+The v7.9 release of SSMA for DB2 contains the following changes:
+- Targeted fixes that improve quality and conversion metrics.
+- Support in SSMA command line to alter Data Type mapping and Project Preferences.
+- Support for migrating data using SQL Server Integration Services (SSIS). After converting the schema, it is possible to create an SSIS package by using a right-click context menu option.
+- The Azure SQL Database connection dialog in SSMA has also been altered to specify the fully qualified server name. In previous versions of SSMA, the Azure SQL Database prefix had to be explicitly mentioned inside projects settings.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
+## SSMA v7.8
+The v7.8 release of SSMA for DB2 contains the following changes:
+- Highlighted change type mapping in Project Settings.
+- Provided the ability for users to disable telemetry.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v7.7
 The v7.7 release of SSMA for DB2 contains the following changes:

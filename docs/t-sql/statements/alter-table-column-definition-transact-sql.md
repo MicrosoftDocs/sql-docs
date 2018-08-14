@@ -1,15 +1,12 @@
----
+﻿---
 title: "column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/05/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/17/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +21,10 @@ helpviewer_keywords:
   - "column definitions [SQL Server]"
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 caps.latest.revision: 78
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -154,8 +151,13 @@ DEFAULT
 *constant_expression*  
  Is a literal value, a NULL, or a system function used as the default column value. If used in conjunction with a column defined to be of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] user-defined type, the implementation of the type must support an implicit conversion from the *constant_expression* to the user-defined type.  
   
-WITH VALUES  
- Specifies that the value given in DEFAULT *constant_expression* is stored in a new column added to existing rows. If the added column allows null values and WITH VALUES is specified, the default value is stored in the new column, added to existing rows. If WITH VALUES is not specified for columns that allow nulls, the value NULL is stored in the new column in existing rows. If the new column does not allow nulls, the default value is stored in new rows regardless of whether WITH VALUES is specified.  
+WITH VALUES   
+ When adding a column AND a DEFAULT constraint, if the column allows NULLS using WITH VALUES will, for existing rows, set the new column's value to the value given in DEFAULT *constant_expression*. 
+ If the column being added does not allow NULLS, for existing rows, the column's value will always be set to the value given in the DEFAULT *constant expression*. 
+ Starting in SQL Server 2012 this may be a meta data operation [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ If this is used when the related column isn't also being added then it has no effect.
+ 
+ Specifies that the value given in DEFAULT *constant_expression* is stored in a new column that is added to existing rows. If the added column allows null values and WITH VALUES is specified, the default value is stored in the new column that is added to existing rows. If WITH VALUES is not specified for columns that allow nulls, the value NULL is stored in the new column, in existing rows. If the new column does not allow nulls, the default value is stored in new rows regardless of whether WITH VALUES is specified.  
   
 IDENTITY  
  Specifies that the new column is an identity column. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides a unique, incremental value for the column. When you add identifier columns to existing tables, the identity numbers are added to the existing rows of the table with the seed and increment values. The order in which the rows are updated is not guaranteed. Identity numbers are also generated for any new rows that are added.  

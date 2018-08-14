@@ -3,7 +3,6 @@ title: "Behavior changes to SQL Server Reporting Services in SQL Server 2016 | M
 ms.date: "07/02/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
@@ -31,7 +30,6 @@ caps.latest.revision: 69
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "Inactive"
 ---
 
 # Behavior changes to SQL Server Reporting Services in SQL Server 2016

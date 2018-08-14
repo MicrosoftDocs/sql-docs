@@ -1,6 +1,6 @@
 ---
-title: Load data into Azure SQL Data Warehouse with SQL Server Integration Services (SSIS) | Microsoft Docs
-description: Shows you how to create a SQL Server Integration Services (SSIS) package to move data from a wide variety of data sources to Azure SQL Data Warehouse.
+title: Load data into Azure SQL Database with SQL Server Integration Services (SSIS) | Microsoft Docs
+description: Shows you how to create a SQL Server Integration Services (SSIS) package to move data from a wide variety of data sources to Azure SQL Database.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -10,14 +10,14 @@ ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 08/09/2018
+ms.date: 08/14/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
 ---
-# Load data into Azure SQL Data Warehouse with SQL Server Integration Services (SSIS)
+# Load data into Azure SQL Database with SQL Server Integration Services (SSIS)
 
-Create a SQL Server Integration Services (SSIS) package to load data into [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
+Create a SQL Server Integration Services (SSIS) package to load data into [Azure SQL Database](/azure/sql-database/). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
 
 This article shows you how to do the following things:
 
@@ -35,12 +35,15 @@ A detailed introduction to SSIS is beyond the scope of this article. To learn mo
 
 - [How to Create an ETL Package](ssis-how-to-create-an-etl-package.md)
 
-## Options for loading data into SQL Data Warehouse with SSIS
-SQL Server Integration Services (SSIS) is a flexible set of tools that provides a variety of options for connecting to, and loading data into, SQL Data Warehouse.
+## About the solution
 
-1. The preferred method, which provides the best performance, is to create a package that uses the [Azure SQL DW Upload Task](control-flow/azure-sql-dw-upload-task.md) to load the data. This task encapsulates both source and destination information. It assumes that your source data is stored locally in delimited text files.
+The solution is a typical package which uses a Data Flow task that contains a source and a destination. This approach supports a wide range of data sources, including SQL Server and Azure SQL Database.
 
-2. Alternately, you can create a package that uses a Data Flow task that contains a source and a destination. This approach supports a wide range of data sources, including SQL Server and Azure SQL Data Warehouse.
+This tutorial uses SQL Server as the data source. SQL Server runs on premises or on an Azure virtual machine.
+
+To connect to SQL Server and to SQL Database, you can use an ADO.NET connection manager and source and destination, or an OLE DB connection manager and source and destination. This tutorial uses ADO.NET because it has the fewest configuration options. OLE DB may provide slightly better performance than ADO.NET.
+
+As a shortcut, you can use the SQL Server Import and Export Wizard to create the basic package. Then, save the package, and open it in Visual Studio or SSDT to view and customize it. For more info, see [Import and Export Data with the SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 ## Prerequisites
 To step through this tutorial, you need the following things:
@@ -48,7 +51,9 @@ To step through this tutorial, you need the following things:
 1. **SQL Server Integration Services (SSIS)**. SSIS is a component of SQL Server and requires a licensed version, or the developer or evaluation version, of SQL Server. To get an evaluation version of SQL Server, see [Evaluate SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (optional). To get the free Visual Studio Community Edition, see [Visual Studio Community][Visual Studio Community]. If you don't want to install Visual Studio, you can install SQL Server Data Tools (SSDT) only. SSDT installs a version of Visual Studio with limited functionality.
 3. **SQL Server Data Tools for Visual Studio (SSDT)**. To get SQL Server Data Tools for Visual Studio, see [Download SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **An Azure SQL Data Warehouse database and permissions**. This tutorial connects to a SQL Data Warehouse instance and loads data into it. You have to have permission to connect, to create a table, and to load data.
+4. **An Azure SQL Database database and permissions**. This tutorial connects to a SQL Database instance and loads data into it. You have to have permission to connect, to create a table, and to load data.
+5. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data to be loaded into SQL Database. To get the AdventureWorks sample database, see [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases].
+6. **A firewall rule**. You have to create a firewall rule on SQL Database with the IP address of your local computer before you can upload data to the SQL Database.
 
 ## Create a new Integration Services project
 1. Launch Visual Studio.
@@ -64,55 +69,7 @@ Visual Studio opens and creates a new Integration Services (SSIS) project. Then 
   
     ![][01]
 
-## Option 1 - Use the SQL DW Upload task
-
-The first approach is a package that uses the SQL DW Upload task. This task encapsulates both source and destination information. It assumes that your source data is stored in delimited text files, either locally or in Azure Blob Storage.
-
-### Prerequisites for Option 1
-
-To continue the tutorial with this option, you need the following things:
-
-- The [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. The SQL DW Upload task is a component of the Feature Pack.
-
-- An [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) account. The SQL DW Upload task loads data from Azure Blob Storage into Azure SQL Data Warehouse. You can load files that are already in Blob Storage, or you can load files from your computer. If you select files on your computer, the SQL DW Upload task uploads them to Blob Storage first for staging, and then loads them into SQL Data Warehouse.
-
-### Add and configure the SQL DW Upload Task
-
-1. Drag a SQL DW Upload Task from the Toolbox to the center of the design surface (on the **Control Flow** tab).
-
-2. Double-click the task to open the **SQL DW Upload Task Editor**.
-
-    ![General page of the SQL DW Upload Task editor](media/load-data-to-sql-data-warehouse/azure-sql-dw-upload-task-editor.png)
-
-3. Configure the task with the help of the guidance in the article [Azure SQL DW Upload Task](control-flow/azure-sql-dw-upload-task.md). Since this task encapsulates both source and destination information, and the mappings between source and destination tables, the task editor has several pages of settings to configure.
-
-### Create a similar solution manually
-
-For more control, you can manually create a package that emulates the work done by the SQL DW Upload task. 
-
-1. Use the Azure Blob Upload Task to stage the data in Azure Blob Storage. To get the Azure Blob Upload task, download the [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
-
-2. Then use the SSIS Execute SQL task to launch a Polybase script that loads the data into SQL Data Warehouse. For an example that loads data from Azure Blob Storage into SQL Data Warehouse (but not with SSIS), see [Tutorial: Load data to Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
-
-## Option 2 - Use a source and destination
-
-The second approach is a typical package which uses a Data Flow task that contains a source and a destination. This approach supports a wide range of data sources, including SQL Server and Azure SQL Data Warehouse.
-
-This tutorial uses SQL Server as the data source. SQL Server runs on premises or on an Azure virtual machine.
-
-To connect to SQL Server and to SQL Data Warehouse, you can use an ADO.NET connection manager and source and destination, or an OLE DB connection manager and source and destination. This tutorial uses ADO.NET because it has the fewest configuration options. OLE DB may provide slightly better performance than ADO.NET.
-
-As a shortcut, you can use the SQL Server Import and Export Wizard to create the basic package. Then, save the package, and open it in Visual Studio or SSDT to view and customize it. For more info, see [Import and Export Data with the SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
-
-### Prerequisites for Option 2
-
-To continue the tutorial with this option, you need the following things:
-
-1. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data to be loaded into SQL Data Warehouse. To get the AdventureWorks sample database, see [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases].
-
-2. **A firewall rule**. You have to create a firewall rule on SQL Data Warehouse with the IP address of your local computer before you can upload data to the SQL Data Warehouse.
-
-### Create the basic data flow
+## Create the basic data flow
 1. Drag a Data Flow Task from the Toolbox to the center of the design surface (on the **Control Flow** tab).
    
     ![][02]
@@ -122,7 +79,7 @@ To continue the tutorial with this option, you need the following things:
    
     ![][09]
 
-### Configure the source adapter
+## Configure the source adapter
 1. Double-click the source adapter to open the **ADO.NET Source Editor**.
    
     ![][03]
@@ -153,7 +110,7 @@ To continue the tutorial with this option, you need the following things:
 8. In the **Preview Query Results** dialog box, click **Close** to return to the **ADO.NET Source Editor**.
 9. In the **ADO.NET Source Editor**, click **OK** to finish configuring the data source.
 
-### Connect the source adapter to the destination adapter
+## Connect the source adapter to the destination adapter
 1. Select the source adapter on the design surface.
 2. Select the blue arrow that extends from the source adapter and drag it to the destination editor until it snaps into place.
    
@@ -161,17 +118,17 @@ To continue the tutorial with this option, you need the following things:
    
     In a typical SSIS package, you use a number of other components from the SSIS Toolbox in between the source and the destination to restructure, transform, and cleanse your data as it passes through the SSIS data flow. To keep this example as simple as possible, we’re connecting the source directly to the destination.
 
-### Configure the destination adapter
+## Configure the destination adapter
 1. Double-click the destination adapter to open the **ADO.NET Destination Editor**.
    
     ![][11]
-2. On the **Connection Manager** tab of the **ADO.NET Destination Editor**, click the **New** button next to the **Connection manager** list to open the **Configure ADO.NET Connection Manager** dialog box and create connection settings for the Azure SQL Data Warehouse database into which this tutorial loads data.
+2. On the **Connection Manager** tab of the **ADO.NET Destination Editor**, click the **New** button next to the **Connection manager** list to open the **Configure ADO.NET Connection Manager** dialog box and create connection settings for the Azure SQL Database database into which this tutorial loads data.
 3. In the **Configure ADO.NET Connection Manager** dialog box, click the **New** button to open the **Connection Manager** dialog box and create a new data connection.
 4. In the **Connection Manager** dialog box, do the following things.
    1. For **Provider**, select the SqlClient Data Provider.
-   2. For **Server name**, enter the SQL Data Warehouse name.
+   2. For **Server name**, enter the SQL Database name.
    3. In the **Log on to the server** section, select **Use SQL Server authentication** and enter authentication information.
-   4. In the **Connect to a database** section, select an existing SQL Data Warehouse database.
+   4. In the **Connect to a database** section, select an existing SQL Database database.
    5. Click **Test Connection**.
    6. In the dialog box that reports the results of the connection test, click **OK** to return to the **Connection Manager** dialog box.
    7. In the **Connection Manager** dialog box, click **OK** to return to the **Configure ADO.NET Connection Manager** dialog box.
@@ -182,8 +139,8 @@ To continue the tutorial with this option, you need the following things:
 7. In the **Create Table** dialog box, do the following things.
    
    1. Change the name of the destination table to **SalesOrderDetail**.
-   2. Remove the **rowguid** column. The **uniqueidentifier** data type is not supported in SQL Data Warehouse.
-   3. Change the data type of the **LineTotal** column to **money**. The **decimal** data type is not supported in SQL Data Warehouse. For info about supported data types, see [CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
+   2. Remove the **rowguid** column. The **uniqueidentifier** data type is not supported in SQL Database.
+   3. Change the data type of the **LineTotal** column to **money**. The **decimal** data type is not supported in SQL Database. For info about supported data types, see [CREATE TABLE (Azure SQL Database, Parallel Data Warehouse)][CREATE TABLE (Azure SQL Database, Parallel Data Warehouse)].
       
        ![][12b]
    4. Click **OK** to create the table and return to the **ADO.NET Destination Editor**.
@@ -205,7 +162,7 @@ When the package has finished running, you see green check marks to indicate suc
 
 ![][15]
 
-Congratulations! You’ve successfully used SQL Server Integration Services to load data into Azure SQL Data Warehouse.
+Congratulations! You’ve successfully used SQL Server Integration Services to load data into Azure SQL Database.
 
 ## Next steps
 
@@ -234,9 +191,7 @@ Congratulations! You’ve successfully used SQL Server Integration Services to l
 <!-- Article references -->
 
 <!-- MSDN references -->
-[PolyBase Guide]: ../relational-databases/polybase/polybase-guide.md
 [Download SQL Server Data Tools (SSDT)]: ../ssdt/download-sql-server-data-tools-ssdt.md
-[CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
 [Data Flow]: ./data-flow/data-flow.md
 [Troubleshooting Tools for Package Development]: ./troubleshooting/troubleshooting-tools-for-package-development.md
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md

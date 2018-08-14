@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.database_query_store_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2017"

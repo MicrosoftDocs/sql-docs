@@ -20,7 +20,6 @@ manager: craigg
 # What's New in SSMA for Access (AccessToSQL)
 This article lists SSMA for Access changes in each release.  
 
-
 ## SSMA v7.9
 The v7.9 release of SSMA for Access contains the following changes:
 - Targeted fixes that improve quality and conversion metrics.

@@ -1,7 +1,7 @@
 ﻿---
 title: "Choose an Encryption Algorithm | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/08/2016"
+ms.date: "08/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -35,11 +35,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Long keys generally yield stronger encryption than short keys.  
   
--   Asymmetric encryption is weaker than symmetric encryption using the same key length, but it is relatively slow.  
+-   Asymmetric encryption is slower than symmetric encryption.  
   
 -   Block ciphers with long keys are stronger than stream ciphers.  
   
 -   Long, complex passwords are stronger than short passwords.  
+
+-   Symmetric encryption is generally recommended when they key is only stored locally, assymmetric encryption is recommended when keys need to be shared across the wire.
   
 -   If you are encrypting lots of data, you should encrypt the data using a symmetric key, and encrypt the symmetric key with an asymmetric key.  
   

@@ -59,7 +59,7 @@ To set the isolation level for a transaction, you can use the [setTransactionIso
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```
 
-To use the new snapshot isolation level of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can use one of the `SQLServerConnection` constants:  
+To use the new snapshot isolation level of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use one of the `SQLServerConnection` constants:  
 
 ```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -71,7 +71,7 @@ or you can use:
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] isolation levels, see "Isolation Levels in the [!INCLUDE[ssDE](../../includes/ssde_md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] isolation levels, see "Isolation Levels in the [!INCLUDE[ssDE](../../includes/ssde_md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
 
 ## See Also
 

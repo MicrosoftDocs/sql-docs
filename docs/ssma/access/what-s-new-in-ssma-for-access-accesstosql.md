@@ -137,8 +137,8 @@ The July 2011 release of SSMA for Access contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for Access contains the following changes:  
   
--   Added a single installable of “SSMA for Access”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” and Azure SQL.  
--   Added the ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali.”  
+-   Added a single installable of “SSMA for Access”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” and Azure SQL.  
+-   Added the ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
 -   Added SSMA for Access Console version support for backward compatibility. You can open the projects created by versions earlier to SSMA v5.0.
 -   Added the ability to install SSMA v5.0 product side by side (SxS) with older versions of SSMA Product.  
   
@@ -167,10 +167,10 @@ The May 2007 release of SSMA for Access contains the following changes:
 ## November 2006  
 The November 2006 release of SSMA for Access contains the following changes:  
   
--   Added a  new Database Migration Wizard that guides you through the migration of a single database from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
--   Added a new Convert, Load, and Migrate command that converts Access databases, loads the converted objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and migrates data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] all in one step.  
+-   Added a  new Database Migration Wizard that guides you through the migration of a single database from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Added a new Convert, Load, and Migrate command that converts Access databases, loads the converted objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and migrates data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all in one step.  
 -   Improved query migration. Query migration now converts more SELECT queries to views. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
--   Added the ability to edit table and index properties on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Table** tab.  
+-   Added the ability to edit table and index properties on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Table** tab.  
 -   Added new global settings:  
     -   You can opt to show line numbers in editor windows.  
     -   You can configure SSMA to prompt to replace duplicate objects, or always or never replace duplicate objects during schema conversion.  

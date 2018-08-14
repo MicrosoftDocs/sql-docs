@@ -18,7 +18,7 @@ manager: craigg
 # ISQLServerResultSet Interface
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Represents a JDBC result set. This interface was added in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0.  
+  Represents a JDBC result set. This interface was added in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  **Package:** com.microsoft.sqlserver.jdbc  
   

@@ -127,14 +127,14 @@ The July 2011 release of SSMA for MySQL contains the following changes:
 ## July 2011  
 The July 2011 release of SSMA for MySQL contains the following changes:  
   
--   Support for conversion of LIMIT to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” OFFSET.  
+-   Support for conversion of LIMIT to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” OFFSET.  
 -   Improved error reporting during data migration.  
   
 ## April 2011  
 The April 2011 release of SSMA for MySQL contains the following changes:  
   
--   Single Installable of “SSMA for MySQL”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” and Azure SQL.  
--   The ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali.”  
+-   Single Installable of “SSMA for MySQL”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” and Azure SQL.  
+-   The ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
 -   Enhanced client-side data migration engine, supporting parallel migration of data.  
 -   Improved data migration performance with Simple and Bulk logged recovery models.  
 -   SSMA for MySQL Console version supports backward compatibility. You can open the projects created by versions earlier to SSMA v5.0.  

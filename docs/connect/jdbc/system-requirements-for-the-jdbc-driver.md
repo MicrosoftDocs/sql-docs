@@ -18,7 +18,7 @@ manager: craigg
 # System Requirements for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  To access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] by using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must have the following components installed on your computer:
+  To access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] by using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must have the following components installed on your computer:
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([download](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment
@@ -143,9 +143,9 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
  The JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). However, only Sun Solaris, SUSE Linux, and Windows operating systems have officially been tested.  
   
 ## Supported Languages  
- The JDBC driver supports all [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] column collations. For more information about the collations supported by the JDBC driver, see [International Features of the JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ The JDBC driver supports all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column collations. For more information about the collations supported by the JDBC driver, see [International Features of the JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
- For more information about collations, see "Working with Collations" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+ For more information about collations, see "Working with Collations" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

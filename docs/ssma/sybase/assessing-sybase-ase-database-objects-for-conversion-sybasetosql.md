@@ -18,10 +18,10 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Assessing SAP ASE database objects for conversion (SybaseToSQL)
-Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL, you should determine how complexity of the migration and how much time it should take. SSMA can create an assessment report that shows the percentage of objects and procedures that will successfully be converted to [!INCLUDE[tsql](../../includes/tsql-md.md)]. SSMA also lets you view the specific issues that can cause conversion failures.  
+Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL, you should determine how complexity of the migration and how much time it should take. SSMA can create an assessment report that shows the percentage of objects and procedures that will successfully be converted to [!INCLUDE[tsql](../../includes/tsql-md.md)]. SSMA also lets you view the specific issues that can cause conversion failures.  
   
 ## Create assessment reports  
-When creating this assessment report, SSMA converts the selected SAP Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL syntax, and then shows the results.  
+When creating this assessment report, SSMA converts the selected SAP Adaptive Server Enterprise (ASE) database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL syntax, and then shows the results.  
   
 **To create an assessment report**  
   
@@ -35,7 +35,7 @@ When creating this assessment report, SSMA converts the selected SAP Adaptive Se
   
     SSMA shows progress in the status bar at the bottom of the window. If the Output pane is visible, you will also see any related messages.  
   
-    When the assessment is complete, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Sybase : Assessment Report window will appear.  
+    When the assessment is complete, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase : Assessment Report window will appear.  
   
 ## Use assessment reports  
 The Assessment Report window contains three panes:  
@@ -72,7 +72,7 @@ The **Conversion Statistics panes** show the conversion statistics. If the perce
   
     -   In ASE, you can alter the ASE object to remove or revise problematic code. To load the updated code into SSMA, you will have to update the metadata. For more information, see [Connecting to Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
-    -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before you load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL and migrate data from ASE.
+    -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before you load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL and migrate data from ASE.
   
 ## Next steps  
 [Converting SAP ASE Database Objects &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  

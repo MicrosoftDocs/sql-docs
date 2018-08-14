@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CHARINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -184,7 +184,7 @@ GO
   
 ```
 -----------
-13
+11
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

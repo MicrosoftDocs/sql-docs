@@ -22,7 +22,7 @@ manager: craigg
 
 Sparse columns are ordinary columns that have an optimized storage for null values. Sparse columns reduce the space requirements for null values at the cost of more overhead to retrieve non-null values. Consider using sparse columns when the space saved is at least 20 percent to 40 percent.
 
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 supports sparse columns when you connect to a [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (or later) server. You can use [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), or [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) to determine which column is sparse and which column is the column set column.
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 supports sparse columns when you connect to a [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (or later) server. You can use [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), or [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) to determine which column is sparse and which column is the column set column.
 
 The code file for this sample is named SparseColumns.java, and it can be found in the following location:  
 

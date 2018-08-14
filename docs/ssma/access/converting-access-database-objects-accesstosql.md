@@ -38,13 +38,13 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Converting Access Database Objects (AccessToSQL)
-After you have added Access databases and connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, SSMA displays metadata for Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects. You can now select Access database objects, and then convert the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure schemas.  
+After you have added Access databases and connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, SSMA displays metadata for Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects. You can now select Access database objects, and then convert the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure schemas.  
   
 ## The Conversion Process  
-Converting database objects takes the object definitions from the Access metadata, converts them into equivalent [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and then loads this information into the project. You can then view the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects and their properties by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer.  
+Converting database objects takes the object definitions from the Access metadata, converts them into equivalent [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and then loads this information into the project. You can then view the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects and their properties by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer.  
   
 > [!IMPORTANT]  
-> Converting objects does not create the objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. It only converts the object definitions and stores the information in the SSMA project.  
+> Converting objects does not create the objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. It only converts the object definitions and stores the information in the SSMA project.  
   
 During the conversion, SSMA prints status to the Output pane, and error, warning, and informational messages to the Error List pane. Use this information to determine whether you need to modify your Access databases or your conversion process to obtain the desired conversion results. You can also use the information in the [Preparing Access Databases for Migration](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114) topic to determine what will and will not be converted.  
   
@@ -52,7 +52,7 @@ During the conversion, SSMA prints status to the Output pane, and error, warning
 Before converting objects, review the project conversion options in the **Project Settings** dialog box. By using this dialog box, you can set how SSMA converts indexed memo columns, primary keys, foreign key constraints, timestamps, and tables without indexes. For more information, see [Project Settings (Conversion)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## Conversion Results  
-The following table shows which Access objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects:  
+The following table shows which Access objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects:  
   
 |Access Object|Resulting SQL Server Object|  
 |-----------------|-------------------------------|  
@@ -101,11 +101,11 @@ To convert Access database objects, you first must select the objects you want t
 4.  Review messages in the **Output** pane and any errors and warnings in the **Error List** pane.  
   
 ## Altering Tables and Indexes  
-After you convert Access metadata to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure metadata, and before you load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you can alter [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure tables and indexes.  
+After you convert Access metadata to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure metadata, and before you load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you can alter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables and indexes.  
   
 **To alter table or index properties**  
   
-1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer, select the table or index you want to alter.  
+1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer, select the table or index you want to alter.  
   
 2.  On the **Table** tab, click the property you want to alter and then enter or select the new setting. For example, you can change nvarchar(15) to nvarchar(20), or select a check box to make a table column nullable.  
   

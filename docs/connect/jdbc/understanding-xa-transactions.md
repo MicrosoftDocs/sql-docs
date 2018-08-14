@@ -42,7 +42,7 @@ The following additional guidelines apply to tightly coupled transactions:
 
 - When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you may notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and the work that is performed by loosely coupled XA branches is isolated from one another.  
   
-     The hotfix provided at [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653) enables the support for tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see one another's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+     The hotfix provided at [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653) enables the support for tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see one another's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 - A [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows the applications to use tightly coupled XA transactions, which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:  
   
@@ -59,7 +59,7 @@ The following steps are required if you want to use XA data sources together wit
   
 ### Running the MS DTC Service
 
-The MS DTC service should be marked **Automatic** in Service Manager to make sure that it is running when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] service is started. To enable MS DTC for XA transactions, you must follow these steps:  
+The MS DTC service should be marked **Automatic** in Service Manager to make sure that it is running when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is started. To enable MS DTC for XA transactions, you must follow these steps:  
   
 On Windows Vista and later:  
   
@@ -75,30 +75,30 @@ On Windows Vista and later:
   
 6. Click **OK** again to close the **Properties** dialog box, and then close **Component Services**.  
   
-7. Stop and then restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to make sure that it syncs up with the MS DTC changes.  
+7. Stop and then restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make sure that it syncs up with the MS DTC changes.  
 
 ### Configuring the JDBC Distributed Transaction Components  
 
 You can configure the JDBC driver distributed transaction components by following these steps:  
   
-1. Copy the new sqljdbc_xa.dll from the JDBC driver installation directory to the Binn directory of every [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] computer that will participate in distributed transactions.  
+1. Copy the new sqljdbc_xa.dll from the JDBC driver installation directory to the Binn directory of every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer that will participate in distributed transactions.  
   
     > [!NOTE]  
-    > If you are using XA transactions with a 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], use the sqljdbc_xa.dll file in the x86 folder, even if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is installed on a x64 processor. If you are using XA transactions with a 64-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] on the x64 processor, use the sqljdbc_xa.dll file in the x64 folder.  
+    > If you are using XA transactions with a 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the sqljdbc_xa.dll file in the x86 folder, even if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a x64 processor. If you are using XA transactions with a 64-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the x64 processor, use the sqljdbc_xa.dll file in the x64 folder.  
   
-2. Execute the database script xa_install.sql on every [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance that will participate in distributed transactions. This script installs the extended stored procedures that are called by sqljdbc_xa.dll. These extended stored procedures implement distributed transaction and XA support for the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. You'll need to run this script as an administrator of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance.  
+2. Execute the database script xa_install.sql on every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that will participate in distributed transactions. This script installs the extended stored procedures that are called by sqljdbc_xa.dll. These extended stored procedures implement distributed transaction and XA support for the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. You'll need to run this script as an administrator of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
 3. To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role.  
   
-You can configure only one version of the sqljdbc_xa.dll assembly on each [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance at a time. Applications may need to use different versions of the JDBC driver to connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance by using the XA connection. In that case, sqljdbc_xa.dll, which comes with the newest JDBC driver, must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance.  
+You can configure only one version of the sqljdbc_xa.dll assembly on each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance at a time. Applications may need to use different versions of the JDBC driver to connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by using the XA connection. In that case, sqljdbc_xa.dll, which comes with the newest JDBC driver, must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
-There are three ways to verify the version of sqljdbc_xa.dll is currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance:  
+There are three ways to verify the version of sqljdbc_xa.dll is currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance:  
   
-1. Open the LOG directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] computer that will participate in distributed transactions. Select and open the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "ERRORLOG" file. Search for "Using 'SQLJDBC_XA.dll' version ..." phrase in the "ERRORLOG" file.  
+1. Open the LOG directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer that will participate in distributed transactions. Select and open the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "ERRORLOG" file. Search for "Using 'SQLJDBC_XA.dll' version ..." phrase in the "ERRORLOG" file.  
   
-2. Open the Binn directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] computer that will participate in distributed transactions. Select sqljdbc_xa.dll assembly.  
+2. Open the Binn directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer that will participate in distributed transactions. Select sqljdbc_xa.dll assembly.  
 
-    - On Windows Vista or later: Right-click sqljdbc_xa.dll and then select Properties. Then click the **Details** tab. The **File Version** field shows the version of sqljdbc_xa.dll that is currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance.  
+    - On Windows Vista or later: Right-click sqljdbc_xa.dll and then select Properties. Then click the **Details** tab. The **File Version** field shows the version of sqljdbc_xa.dll that is currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
 3. Set the logging functionality as shown in the code example in the next section. Search for "Server XA DLL version:..." phrase in the output log file.  
 
@@ -149,9 +149,9 @@ When you install a new version of the JDBC driver, you should also use sqljdbc_x
   
 1. Unload sqljdbc_xa.dll using the [!INCLUDE[tsql](../../includes/tsql-md.md)] command **DBCC sqljdbc_xa (FREE)**.  
   
-2. Copy the new sqljdbc_xa.dll from the JDBC driver installation directory to the Binn directory of every [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] computer that will participate in distributed transactions.  
+2. Copy the new sqljdbc_xa.dll from the JDBC driver installation directory to the Binn directory of every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer that will participate in distributed transactions.  
   
-    The new DLL will be loaded when an extended procedure in sqljdbc_xa.dll is called. You don't need to restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to load the new definitions.  
+    The new DLL will be loaded when an extended procedure in sqljdbc_xa.dll is called. You don't need to restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load the new definitions.  
   
 ### Configuring the User-Defined Roles
 

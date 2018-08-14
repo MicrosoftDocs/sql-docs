@@ -23,7 +23,7 @@ manager: craigg
 # CONCUR_SS_OPTIMISTIC_CC Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] read/write optimistic concurrency type with no row locks.  
+  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] read/write optimistic concurrency type with no row locks.  
   
 ## Syntax  
   

@@ -92,9 +92,9 @@ Indicate whether intermediate pages in this index are provided the same percenta
 **Ignore Duplicate Keys**  
 Specify what happens when a row is inserted during a bulk insert operation whose key value equals an existing key value. If you choose:  
   
--   **Yes** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] issues a warning, ignores the offending incoming row, and tries to insert the remaining rows.  
+-   **Yes** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues a warning, ignores the offending incoming row, and tries to insert the remaining rows.  
   
--   **No** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] issues an error message and rolls back the entire bulk insert operation.  
+-   **No** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues an error message and rolls back the entire bulk insert operation.  
   
 **Included Columns**  
 Displays a comma-separated list of the names of all the columns that constitute the index key. Subkey columns can only be specified for nonclustered indexes. This property is hidden for XML indexes.  

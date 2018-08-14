@@ -2,7 +2,7 @@
 title: "What's New in SSMA for Access(AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "08/05/2018"
+ms.date: "08/14/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
@@ -18,7 +18,24 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # What's New in SSMA for Access (AccessToSQL)
-This topic lists SSMA for Access changes in each release.  
+This article lists SSMA for Access changes in each release.  
+
+## SSMA v7.9
+The v7.9 release of SSMA for Access contains the following changes:
+- Targeted fixes that improve quality and conversion metrics.
+- Support in SSMA command line to alter Data Type mapping and Project Preferences.
+- The Azure SQL Database connection dialog in SSMA has also been altered to specify the fully qualified server name. In previous versions of SSMA, the Azure SQL Database prefix had to be explicitly mentioned inside projects settings.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
+## SSMA v7.8
+The v7.8 release of SSMA for Access contains the following changes:
+- Highlighted change type mapping in Project Settings.
+- Provided the ability for users to disable telemetry.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v7.7
 The v7.7 release of SSMA for Access contains the following changes:

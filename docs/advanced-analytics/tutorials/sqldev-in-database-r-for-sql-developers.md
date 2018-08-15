@@ -27,17 +27,15 @@ The process of building an end-to-end solution typically consists of obtaining a
 
 However, after the solution has been created, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-- [Lesson 1: Download the sample data and scripts](../tutorials/sqldev-download-the-sample-data.md)
+- [Lesson 1: Set up NYC Taxi demo data](../tutorials/sqldev-download-the-sample-data.md)
 
-- [Lesson 2: Set up the tutorial environment](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [Lesson 2: Explore and visualize data shape and distribution by calling R functions in stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Lesson 3: Explore and visualize data shape and distribution by calling R functions in stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-- [Lesson 4: Create data features using R in T-SQL functions](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [Lesson 3: Create data features using R in T-SQL functions](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
-- [Lesson 5: Train and save an R model using functions and stored procedures](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [Lesson 4: Train and save an R model using functions and stored procedures](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [Lesson 6: Wrap R code in a stored procedure for operationalization](../tutorials/sqldev-operationalize-the-model.md). 
+- [Lesson 5: Wrap R code in a stored procedure for operationalization](../tutorials/sqldev-operationalize-the-model.md). 
   After the model has been saved to the database, call the model for prediction from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
 
 ## Prerequisites

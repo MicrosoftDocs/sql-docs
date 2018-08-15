@@ -21,10 +21,10 @@ In SQL Server vNext CTP 2.0, partition-based modeling is the ability to create a
 
 Partition-based modeling is enabled through two new parameters on [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
 
-+ **input_data_1_partition_by_columns**, which specifies a column to partition by. In this tutorial, the partition column is the payment method.
++ **input_data_1_partition_by_columns**, which specifies a column to partition by.
 + **input_data_1_order_by_columns** specifies which columns to order by. 
 
-In this tutorial, learn partition-based modeling using the classic NYC taxi sample data and R script. 
+In this tutorial, learn partition-based modeling using the classic NYC taxi sample data and R script. The partition column is the payment method.
 
 > [!div class="checklist"]
 > * Partition based on a payment_type column. Values in this column segment data, one partition for each payment types.
@@ -45,12 +45,11 @@ SQL Server vNext CTP 2.0 or later, with Machine Learning Services installed and 
 
 ### Tools for query execution
 
-You can download and install SQL Server Management Studio, or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
+You can [download and install SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
 
 ### Sample data
 
-Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. If you completed other tutorials, you might have the database already.
-
+Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. If you completed other tutorials, you might have the database already. For instructions and script, see [Download NYC Taxi demo data from Github](tutorials/sqldev-download-the-sample-data.md#download-tutorial-files-from-github).
 
 ### R packages
 
@@ -70,13 +69,11 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## Connect to the database
 
-Once prerequisites are met, expand the database objects in Object Explorer to review the available tables. 
-
-You'll use data from table X and Y, and add new stored procedures and models as you step through this tutorial.
+Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYC Taxi demo database](tutorials/sqldev-download-the-sample-data.md#download-tutorial-files-from-githu)exists. 
 
 ## Define a procedure for creating and training per-partition models
 
-This tutorial wraps all R script in a stored procedure. The following script creates an input dataset, builds a classification model to predict a tip outcome, and stores it in the database.
+This tutorial wraps all R script in a stored procedure. In this step, you add script that creates an input dataset, builds a classification model to predict a tip outcome, and stores the model in the database.
 
 Among the objects created by this script, you'll see **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**.  Recall that these objects are the mechanism by which partitioned modeling occurs. The parameters are passed as inputs to `sp_execute_external_script` to process partitions with the external script executing once for every partition.
 

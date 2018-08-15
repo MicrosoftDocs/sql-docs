@@ -21,7 +21,7 @@ ms.author: "Shamikg"
 manager: "murato"
 ---
 # User Interface Reference (AccessToSQL)
-This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access.  
+This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access.  
   
 ## In this section  
   
@@ -29,7 +29,7 @@ This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssno
 |---------|---------------|  
 |[Advanced Object Selection  &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Use the **Advanced Object Select** dialog box to find database objects by using filter criteria, and then select or clear those objects.|  
 |[Assessment Report &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|Use the **Assessment Report** dialog box to analyze the conversion of Access database objects and to estimate how long the migration will take.|  
-|[Connect To SQL Server](http://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to which you want to migrate.|  
+|[Connect To SQL Server](http://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you want to migrate.|  
 |[Connect To SQL Azure](http://msdn.microsoft.com/bf44b236-d9be-41ae-a5fd-bd73038e505f)|Use the **Connect to SQL Azure** dialog box to connect to the instance of SQL Azure to which you want to migrate.|  
 |[Convert, Load, and Migrate](http://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)|The **Convert, Load, and Migrate** dialog is part of the Migration Wizard and also appears when you use the **Convert, Load, and Migrate** command.|  
 |[Data Migration Report &#40;AccessToSQL&#41;](../../ssma/access/data-migration-report-accesstosql.md)|Appears after data migration and reports migration successes and failures for each table.|  
@@ -45,7 +45,7 @@ This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssno
 |[New Project (SSMA)](http://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)|Use the **New Project** dialog box to create a new SSMA project.|  
 |[Project Settings (Conversion)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)|Use the **Conversion** page of the **Project Settings** dialog box to specify how SSMA converts indexed memo columns, primary keys, foreign key constraints, timestamps, and tables without indexes.|  
 |[Project Settings &#40;GUI&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-gui-accesstosql.md)|Use the GUI page of the **Project Settings** dialog box to specify how much data appears on the **Data** tab.|  
-|[Project Settings (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Use the Migration page of the **Project Settings** dialog box to specify the migration batch size, table locking, constraint checking, insertion trigger firing, identity and null value handling, and how to handle dates that are out of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] range.|  
+|[Project Settings (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Use the Migration page of the **Project Settings** dialog box to specify the migration batch size, table locking, constraint checking, insertion trigger firing, identity and null value handling, and how to handle dates that are out of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] range.|  
 |[Project Settings (Type Mapping)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Use the Type Mapping page of the **Project Settings** dialog box to specify the default type mappings for all databases and database objects in the SSMA project.|  
 |[Project Settings (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Use the SQL Azure page of the **Project Settings** dialog box to specify the database suffix and also the heartbeat timeout interval.|  
 |[Save Metadata &#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|The **Save Metadata** dialog box appears when you save a project that is missing metadata.|  

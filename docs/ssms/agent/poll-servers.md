@@ -52,7 +52,7 @@ Issue this command keeps the target servers synchronized with the current job de
   
 If you use the following items, you do not have to post operations explicitly:  
   
--   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] to control multiserver jobs.  
+-   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to control multiserver jobs.  
   
 -   Job stored procedures that do not modify job schedules or job steps.  
   

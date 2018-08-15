@@ -46,7 +46,7 @@ public byte getByte(java.lang.String columnName)
 ## Remarks  
  This getByte method is specified by the getByte method in the java.sql.ResultSet interface.  
   
- This method is supported only on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data types that can safely return a byte value, such as tinyint and bit. All other data types will cause an exception to be thrown.  
+ This method is supported only on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types that can safely return a byte value, such as tinyint and bit. All other data types will cause an exception to be thrown.  
   
 ## See Also  
  [getByte Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   

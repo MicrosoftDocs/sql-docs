@@ -48,7 +48,7 @@ The number of days to keep report execution information in the execution log. Va
 > Setting a value of **0** *deletes* all entries from the execution log. A value of **-1** keeps the entries of the execution log and doesn't delete them.
 
 **RDLXReportTimetout**
- RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.
+RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace do not time out during processing. The default value is **1800**.
 
 **SessionTimeout**
 The length of time, in seconds, that a session remains active. The default value is **600**.  
@@ -134,9 +134,6 @@ Specifies the number of seconds until a report edit session times out. The defau
 **EnableCustomVisuals** ***(Power BI Report Server only)***
 To enable the display of Power BI custom visuals. Values are True/False. *Default is True.*  
 
-**EnablePowerBIReportEmbeddedModels** ***(Power BI Report Server only)***
-To enable embedded models. Values are True/False. *Default is True.*
-
 **ExecutionLogLevel**
 Set the Execution Log Level. *Default is Normal.*
 
@@ -144,34 +141,37 @@ Set the Execution Log Level. *Default is Normal.*
 Set the process timeout in minutes. *Default is 30.*
 
 **MaxFileSizeMb**
-Set the max file size of the report in MB. *Default is 1000.*
+Set the max file size of the report in MB. *Default is 1000.  Max is 2000.*
 
 **ModelCleanupCycleminutes**
 Set the model cleanup cycle in minutes. *Default is 15.*
 
-**OfficeAccessTokenExpirationSeconds**
+**OfficeAccessTokenExpirationSeconds** ***(Power BI Report Server only)***
 Set for how long you want the office access token to expire in seconds. *Default is 60.*
 
+**OfficeOnlineDiscoveryURL** ***(Power BI Report Server only)***
+Set the address of your Office Online Server instance for viewing Excel Workbooks.
+
 **RequireIntune**
-Set this to To require Intune to access your organization's reports. *Default is False.*
+Set this to require Intune to access your organization's reports via the Power BI mobile app. *Default is False.*
 
 **ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server only)***
 Set for how long you want the schedule refresh to timeout. *Default is 120.*
 
 **ShowDownloadMenu**
-Set this to enable the showdown load menu. *Default is true.*
+Set this to enable the client tools download menu. *Default is true.*
 
 **TimeInitialDelaySeconds**
 Set for how long you want the initial time to be delayed in seconds. *Default is 60.*
 
 **TrustedFileFormat**
-Set all the external file formats to be displayed in a report. *Default is jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.*
+Set all the external file formats that can be saved. *Default is jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.*
 
-**EnablePower BIReportExportData** ***(Power BI Report Server only)***  
-Should Power BI Report Server enable the export of data from Power BI visuals. Values are True, False.  Default is True.  
+**EnablePowerBIReportExportData** ***(Power BI Report Server only)***  
+Enable Power BI Report Server data export from Power BI visuals. Values are True, False.  Default is True.  
 
 **ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server only)***  
-Data refresh timeout in minutes for Scheduled refresh on Power BI reports with embedded AS models. Default is 120 minutes.
+Data refresh timeout in minutes for scheduled refresh on Power BI reports with embedded AS models. Default is 120 minutes.
 
 **EnableTestConnectionDetailedErrors**  
 Indicates whether to send detailed error messages to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.

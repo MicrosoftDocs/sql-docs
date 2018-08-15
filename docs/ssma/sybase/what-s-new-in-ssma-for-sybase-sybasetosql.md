@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "08/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,7 +18,25 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
-This topic lists SSMA for SAP ASE (formerly SSMA for Sybase) changes in each release. 
+This article lists SSMA for SAP ASE (formerly SSMA for Sybase) changes in each release. 
+
+## SSMA v7.9
+The v7.9 release of SSMA for SAP ASE contains the following changes:
+- Targeted fixes that improve quality and conversion metrics.
+- Support in SSMA command line to alter Data Type mapping and Project Preferences.
+- Support for migrating data using SQL Server Integration Services (SSIS). After converting the schema, it is possible to create an SSIS package by using a right-click context menu option.
+- The Azure SQL Database connection dialog in SSMA has also been altered to specify the fully qualified server name. In previous versions of SSMA, the Azure SQL Database prefix had to be explicitly mentioned inside projects settings.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
+## SSMA v7.8
+The v7.8 release of SSMA for SAP ASE contains the following changes:
+- Highlighted change type mapping in Project Settings.
+- Provided the ability for users to disable telemetry.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v7.7
 The v7.7 release of SSMA for SAP ASE contains the following changes:
@@ -138,8 +156,8 @@ The July 2011 release of SSMA for Sybase contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for Sybase contains the following changes:  
   
--   Consolidated “SSMA for Sybase” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” and Azure SQL.  
--   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali.”  
+-   Consolidated “SSMA for Sybase” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” and Azure SQL.  
+-   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
 -   Added a new feature to convert and migrate Sybase databases to Azure SQL.  
 -   Enhanced client-side data migration engine, supporting parallel migration of data.  
 -   Improved data migration performance with Simple and Bulk logged recovery models.  
@@ -147,7 +165,7 @@ The April 2011 release of SSMA for Sybase contains the following changes:
 -   Added support for conversion of Sybase ASE Non-ANSI join statements to SQL Server ANSI join statements has been extended to DELETE and UPDATE statements.  
 -   Provided additional connectivity options for connecting to Sybase ASE servers using Sybase ASE ODBC provider and Sybase ASE ADO.Net providers.  
 -   Removed the dependency on a separate database called **SysDB**, which contains the Sybase emulation functions (installed as part of Extension Pack).  
--   Added the ability to install SSMA for Sybase Extension Pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] clusters.  
+-   Added the ability to install SSMA for Sybase Extension Pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clusters.  
 -   Added backward compatibility of projects created by earlier versions of SSMA (v4.0 and v4.2).  
 -   Added the ability to install the SSMA for Sybase v5.0 product side-by-side (SxS) with older versions of SSMA (v4.0 and v4.2).  
   
@@ -172,7 +190,7 @@ The June 2008 release of SSMA for Sybase contains the following changes:
     -   Clustered constraints and indexes on data-only-locked.  
     -   Temporary tables created by SELECT INTO.  
     -   Constraints / Indexes for temporary tables.  
-    -   New [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 datetime types are supported.  
+    -   New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 datetime types are supported.  
     -   Sybase 15.0 connectivity and datatypes support.  
   
 ## May 2007  
@@ -182,7 +200,7 @@ The May 2007 release of SSMA for Sybase contains the following changes:
 -   Added support for user-entered comments in the SQL Server formatted SQL mode.  
 -   Added improvements in object conversion.  
   
-The Help file was not updated for this release. For more information, see the Documentation Notes section later in this topic.  
+The Help file was not updated for this release. For more information, see the Documentation Notes section later in this article.  
   
 ## November 2006  
 The November 2006 release of SSMA for Sybase contains the following changes:  
@@ -196,9 +214,9 @@ The November 2006 release of SSMA for Sybase contains the following changes:
     -   Proxy tables.  
     -   User message error numbers for RAISERROR.  
     -   UPDATE statements that contain unresolved identifiers.  
--   Added a new migration option that lets you specify how SSMA should handle dates that are outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] date range.  
+-   Added a new migration option that lets you specify how SSMA should handle dates that are outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date range.  
 -   Added a **Formatted SQL** setting on the **SQL** tab, which formats the code for improved readability.  
--   Bug fixes that include the following:  
+-   Bug fixes, including:  
     -   SSMA now converts LOCK TABLE *table* IN { SHARED | EXCLUSIVE } MODE statements by adding a TABLOCK or TABLOCKX hint to the subsequent SELECT query on the table.  
     -   The necessary casts are now added when binary types are used in character expressions.  
     -   Memory and performance improvements.  

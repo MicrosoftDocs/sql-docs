@@ -23,7 +23,7 @@ manager: craigg
 # TYPE_SS_DIRECT_FORWARD_ONLY Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] fast forward-only, read-only cursor type.  
+  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fast forward-only, read-only cursor type.  
   
 ## Syntax  
   

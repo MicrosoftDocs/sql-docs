@@ -48,7 +48,7 @@ manager: craigg
 > [!NOTE]  
 >  Although the previous example uses a username and password in the connection string, you should use integrated security as it is more secure. For more information, see the [Connecting with Integrated Authentication](#Connectingintegrated) section later in this topic.  
   
- The following connection string shows an example of how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database using integrated authentication and Kerberos from an application running on any operating system supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
+ The following connection string shows an example of how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using integrated authentication and Kerberos from an application running on any operating system supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -71,7 +71,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## Named and Multiple SQL Server Instances  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] allows for the installation of multiple database instances per server. Each instance is identified by a specific name. To connect to a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can either specify the port number of the named instance (preferred), or you can specify the instance name as a JDBC URL property or a **datasource** property. If no instance name or port number property is specified, a connection to the default instance is created. See the following examples:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows for the installation of multiple database instances per server. Each instance is identified by a specific name. To connect to a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can either specify the port number of the named instance (preferred), or you can specify the instance name as a JDBC URL property or a **datasource** property. If no instance name or port number property is specified, a connection to the default instance is created. See the following examples:  
   
  To use a port number, do the following:  
   

@@ -31,12 +31,14 @@ ms.date: "06/10/2016"
   
 ## Options
 
- **Enable Windows integrated security for report data sources**  
- Specify whether a connection to a report data source can be made using the Windows security token of the user who requested the report.  
+### Enable Windows-Integrated Security for report data sources
+
+ Specify whether a connection to a report data source is using the Windows security token of the user who requested the report.  
   
- If you turn off this feature, the Windows-Integrated Security feature in the report data source property pages becomes unavailable. If report data sources are configured for Windows-integrated security and you subsequently turn off this feature, the report server immediately updates all data source connection properties to prompt for credentials.  
+ If you turn off the feature, the Windows-Integrated Security feature in the report data source property pages becomes unavailable. If your report data sources are configured for Windows-integrated security and you subsequently turn off this feature, the report server immediately updates all your data source connection properties to prompt for credentials.  
   
- **Enable Ad Hoc Reporting**
+### Enable Ad Hoc Reporting
+
  Specify whether users can perform ad hoc queries from a Report Builder report, where new reports are automatically generated when a user clicks data of interest.  
   
  Setting this option determines whether the **EnableLoadReportDefinition** property on the report server is set to **True** or **False**. If you clear this option, the property is set to **False** and report server doesn't generate clickthrough reports that are created during data exploration. All calls to the **LoadReportDefinition** method are blocked.  

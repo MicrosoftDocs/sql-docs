@@ -94,7 +94,7 @@ sp_execute_external_script
  [ **@output_data_1_name** =  N'*output_data_1_name*' ]  
  Specifies the name of the variable in the external script that contains the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. For R, the output must be a data frame. For Python, the output must be a pandas data frame. *output_data_1_name* is **sysname**.  Default value is *OutputDataSet*.  
 
- [ **@parallel** = 0 | 1 ]
+ [ **@parallel** = 0 | 1 ]  
  Enable parallel execution of R scripts by setting the `@parallel` parameter to 1. The default for this parameter is 0 (no parallelism). If `@parallel = 1` and the output is being streamed directly to the client machine, then the `WITH RESULTS SETS` clause is required and an output schema must be specified.  
   
  + For R scripts that do not use RevoScaleR functions, using the  `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows are distributed according to the **MAXDOP** setting.  

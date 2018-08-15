@@ -23,7 +23,7 @@ manager: craigg
 ---
 # Add an External Tool to the Tools Menu (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-You can launch any [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows or [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] application from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. External applications can be added to, and run from, the **Tools** menu.  
+You can launch any [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows or [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] application from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. External applications can be added to, and run from, the **Tools** menu.  
   
 ### To add an external tool to the Tools menu  
   

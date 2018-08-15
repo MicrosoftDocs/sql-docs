@@ -38,7 +38,7 @@ public void setUser(java.lang.String user)
  A **String** that contains the user name.  
   
 ## Remarks  
- The setUser method sets the user name that will be used to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. If user name value is not set, the [getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) method returns the default value of null.  
+ The setUser method sets the user name that will be used to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If user name value is not set, the [getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) method returns the default value of null.  
   
 ## See Also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

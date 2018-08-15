@@ -25,7 +25,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-Use this page to view and modify the general properties of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent operators.  
+Use this page to view and modify the general properties of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operators.  
   
 ## Options  
 **Name**  
@@ -50,10 +50,10 @@ Sets the times at which the pager is active.
 Select the days that the pager is active.  
   
 **Workday begin**  
-Select the time of day after which [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent sends messages to the pager.  
+Select the time of day after which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sends messages to the pager.  
   
 **Workday end**  
-Select the time of day after which [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent no longer sends messages to the pager.  
+Select the time of day after which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no longer sends messages to the pager.  
   
 ## See Also  
 [Operators](../../ssms/agent/operators.md)  

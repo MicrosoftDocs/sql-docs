@@ -31,7 +31,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Installing SQL Server Migration Assistant for Access (AccessToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access is installed by using a Windows Installer-based wizard. This topic provides information about installation prerequisites, a link to the latest version of SSMA, and instructions for installing, licensing, uninstalling, and upgrading SSMA.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access is installed by using a Windows Installer-based wizard. This topic provides information about installation prerequisites, a link to the latest version of SSMA, and instructions for installing, licensing, uninstalling, and upgrading SSMA.  
   
 ## Prerequisites  
 Before you install SSMA, make sure that your system meets the following requirements:  
@@ -40,9 +40,9 @@ Before you install SSMA, make sure that your system meets the following requirem
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.  
   
--   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework version 4.0 or a later version. The .NET Framework version 4.0 is available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] product disc, and by using information in the [Microsoft .NET Guide](https://docs.microsoft.com/dotnet/framework/).
+-   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework version 4.0 or a later version. The .NET Framework version 4.0 is available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product disc, and by using information in the [Microsoft .NET Guide](https://docs.microsoft.com/dotnet/framework/).
   
--   Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/SQL Azure DB to which you will be migrating database objects and data.  
+-   Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure DB to which you will be migrating database objects and data.  
   
 -   Microsoft Data Access Object (DAO) provider version 12.0 or 14.0. You can install DAO provider from Microsoft Office 2010/2007 product or download it from Microsoft web site.  
   

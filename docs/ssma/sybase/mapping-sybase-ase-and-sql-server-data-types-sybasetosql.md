@@ -21,7 +21,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Mapping Sybase ASE and SQL Server Data Types (SybaseToSQL)
-Sybase Adaptive Server Enterprise (ASE) database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database types. When you convert ASE database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, you must specify how to map data types from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
+Sybase Adaptive Server Enterprise (ASE) database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database types. When you convert ASE database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, you must specify how to map data types from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
   
 ## Default Mappings  
 SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings &#40;Type Mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
@@ -60,7 +60,7 @@ The following procedure shows how to map data types at the project, database, or
   
         This lets you customize the data mapping for smaller and larger values of the same data type.  
   
-    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure data type.  
+    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure data type.  
   
         Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box.  
   
@@ -76,7 +76,7 @@ The following procedure shows how to map data types at the project, database, or
   
         This lets you customize the data mapping for smaller and larger values of the same data type.  
   
-    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure data type.  
+    4.  Under **Target type**, select the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure data type.  
   
         Some types require a target data type length. If it is required, enter the new data length in the **Replace with** box, and then click **OK**.  
   

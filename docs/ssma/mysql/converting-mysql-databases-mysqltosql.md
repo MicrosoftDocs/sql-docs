@@ -18,10 +18,10 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Converting MySQL Databases (MySQLToSQL)
-After you have connected to MySQL, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, and set project and data mapping options, you can convert MySQL database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects.  
+After you have connected to MySQL, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, and set project and data mapping options, you can convert MySQL database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects.  
   
 ## The Conversion Process  
-Converting database objects takes the object definitions from MySQL, converts them to similar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects, and then loads this information into the SSMA metadata. It does not load the information into the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can then view the objects and their properties by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer.  
+Converting database objects takes the object definitions from MySQL, converts them to similar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, and then loads this information into the SSMA metadata. It does not load the information into the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can then view the objects and their properties by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer.  
   
 During the conversion, SSMA prints output messages to the Output pane and error messages to the Error List pane. Use the output and error information to determine whether you have to modify your MySQL databases or your conversion process to obtain the desired conversion results.  
   
@@ -29,7 +29,7 @@ During the conversion, SSMA prints output messages to the Output pane and error 
 Before converting objects, review the project conversion options in the **Project Settings** dialog box. By using this dialog box, you can set how SSMA converts tables and indexes. For more information see, [Project Settings &#40;Conversion&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 ## Conversion Results  
-The following table shows which MySQL objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects:  
+The following table shows which MySQL objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects:  
   
 |||  
 |-|-|  
@@ -104,7 +104,7 @@ For each item that could not be converted, you have to determine what you want t
   
 -   You can modify the object in the MySQL database to remove or revise problematic code. To load the updated code into SSMA, you will have to update the metadata. For more information, see [Connecting to MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
--   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure Metadata Explorer and MySQL Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure and migrating data from MySQL.  
+-   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer and MySQL Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure and migrating data from MySQL.  
   
 ## Next Step  
 The next step in the migration process is [Loading Converted Database Objects into SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  

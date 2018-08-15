@@ -44,7 +44,7 @@ public boolean rowDeleted()
  A deleted row might leave a visible hole in a result set. This method can be used to detect holes in a result set. The value that is returned depends on whether this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object can detect deletions.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] detects deleted rows for all updatable cursor types, though the detection is transient for forward and dynamic cursors.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detects deleted rows for all updatable cursor types, though the detection is transient for forward and dynamic cursors.  
   
 ## See Also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

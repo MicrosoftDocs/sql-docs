@@ -20,7 +20,7 @@ manager: craigg
 ---
 # Create a New Solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-When you create a project, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] creates a solution to contain it. You can only open one solution at a time. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] does not allow you to create folders within projects. To organize your work, create multiple projects.  
+When you create a project, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] creates a solution to contain it. You can only open one solution at a time. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not allow you to create folders within projects. To organize your work, create multiple projects.  
   
 To access Solution Explorer, click **Solution Explorer** on the **View** menu.  
   

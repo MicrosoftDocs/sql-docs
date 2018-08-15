@@ -25,7 +25,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Setting Conversion and Migration Options (AccessToSQL)
-For each SSMA project, you can set project-level options. These options specify how objects are converted, how data is migrated, and how source data types map to target data types. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, verify that the configuration options are appropriate for the project.  
+For each SSMA project, you can set project-level options. These options specify how objects are converted, how data is migrated, and how source data types map to target data types. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, verify that the configuration options are appropriate for the project.  
   
 ## Configuration Options and Modes  
 SSMA has four sets of configuration settings and four modes for configuring these settings: Default, Optimistic, Full, and Custom. The Default mode is recommended for most users. Use the Optimistic mode for simple conversions. Use the Full mode if you want to see all messages. In the Custom mode, you set the options.  

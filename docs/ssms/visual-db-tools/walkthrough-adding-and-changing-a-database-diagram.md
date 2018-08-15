@@ -28,7 +28,7 @@ This walkthrough illustrates how to create and modify a database diagram and mak
 ## Prerequisites  
 In order to complete this walkthrough, you will need:  
   
--   Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] sample database  
+-   Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database  
   
 -   An account with database owner **dbo** privileges  
   
@@ -41,7 +41,7 @@ In order to complete this walkthrough, you will need:
   
 1.  On the **View** menu, click **Object Explorer**.  
   
-2.  Open the Databases node and then open the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] node.  
+2.  Open the Databases node and then open the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] node.  
   
 3.  Right-click the Database Diagrams node and choose **New Database Diagram**.  
   

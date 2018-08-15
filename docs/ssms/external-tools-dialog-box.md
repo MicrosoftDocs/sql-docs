@@ -22,7 +22,7 @@ manager: craigg
 ---
 # External Tools Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use the **External Tools** dialog box to add external tools such as SQLCMD or Notepad to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in the [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] environment. You can specify arguments and a working directory when launching the tool. In addition, the output from some tools can be displayed in the **Output** window. The **External Tools** dialog box is available on the **Tools** menu.  
+Use the **External Tools** dialog box to add external tools such as SQLCMD or Notepad to the **Tools** menu. Adding external tools allows you to easily launch other applications while working in the [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment. You can specify arguments and a working directory when launching the tool. In addition, the output from some tools can be displayed in the **Output** window. The **External Tools** dialog box is available on the **Tools** menu.  
   
 ## Options  
 **Menu contents**  
@@ -70,7 +70,7 @@ Entering the following values in the **External Tools** dialog box will create a
 |Box|Value|  
 |-------|---------|  
 |**Title**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
+|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Arguments**|-A|  
   
 ## See Also  

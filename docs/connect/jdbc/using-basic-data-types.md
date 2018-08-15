@@ -19,11 +19,11 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] uses the JDBC basic data types to convert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types to a format that can be understood by the Java programming language, and vice versa. The JDBC driver provides support for the JDBC 4.0 API, which includes the **SQLXML** data type, and National (Unicode) data types, such as **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, and **NCLOB**.  
+The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] uses the JDBC basic data types to convert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types to a format that can be understood by the Java programming language, and vice versa. The JDBC driver provides support for the JDBC 4.0 API, which includes the **SQLXML** data type, and National (Unicode) data types, such as **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, and **NCLOB**.  
   
 ## Data Type Mappings
 
-The following table lists the default mappings between the basic [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], JDBC, and Java programming language data types:  
+The following table lists the default mappings between the basic [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], JDBC, and Java programming language data types:  
   
 | SQL Server Types   | JDBC Types (java.sql.Types)                        | Java Language Types          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
@@ -64,7 +64,7 @@ The following table lists the default mappings between the basic [!INCLUDE[ssNoV
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) To use java.sql.Time with the time [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type, you must set the **sendTimeAsDatetime** connection property to false.  
+(1) To use java.sql.Time with the time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type, you must set the **sendTimeAsDatetime** connection property to false.  
   
 (2) You can programmatically access values of **datetimeoffset** with [DateTimeOffset Class](../../connect/jdbc/reference/datetimeoffset-class.md).  
   

@@ -23,7 +23,7 @@ manager: craigg
 # setInstanceName Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Sets the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instance name.  
+  Sets the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name.  
   
 ## Syntax  
   

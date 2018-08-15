@@ -18,7 +18,7 @@ manager: craigg
 # ISQLServerDataSource Interface
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  A factory to create connections to the data source represented by this object. This interface was added in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0.  
+  A factory to create connections to the data source represented by this object. This interface was added in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  **Package:** com.microsoft.sqlserver.jdbc  
   

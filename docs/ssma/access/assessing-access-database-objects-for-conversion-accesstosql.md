@@ -27,10 +27,10 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Assessing Access Database Objects for Conversion (AccessToSQL)
-Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you should determine how much of the migration will be successful, and how long the conversion might take. SSMA can create an assessment report that shows the percentage of objects that were successfully converted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure syntax and time estimates for performing the migration. SSMA also lets you view the specific issues that caused conversion failures.  
+Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you should determine how much of the migration will be successful, and how long the conversion might take. SSMA can create an assessment report that shows the percentage of objects that were successfully converted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure syntax and time estimates for performing the migration. SSMA also lets you view the specific issues that caused conversion failures.  
   
 ## Creating Assessment Reports  
-When it creates an assessment report, SSMA converts the selected Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure syntax, and then shows the results.  
+When it creates an assessment report, SSMA converts the selected Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure syntax, and then shows the results.  
   
 **To create an assessment report**  
   
@@ -44,7 +44,7 @@ When it creates an assessment report, SSMA converts the selected Access database
   
     SSMA shows progress in the status bar at the bottom of the window. If the Output pane is visible, you will also see messages in the Output pane.  
   
-When the assessment is complete, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Access : Assessment Report window appears.  
+When the assessment is complete, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Access : Assessment Report window appears.  
   
 ## Using Assessment Reports  
 The Assessment Report window contains three panes: an explorer, a details pane, and a message pane.  

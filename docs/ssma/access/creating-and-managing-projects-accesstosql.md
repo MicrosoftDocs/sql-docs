@@ -26,7 +26,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Creating and Managing Projects (AccessToSQL)
-To migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you must first create an SSMA project. The project is a file that contains metadata about the Access databases that you want to migrate to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, metadata about the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure that will receive the migrated objects and data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connection information, and project settings.  
+To migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you must first create an SSMA project. The project is a file that contains metadata about the Access databases that you want to migrate to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, metadata about the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure that will receive the migrated objects and data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection information, and project settings.  
   
 ## Reviewing Default Project Settings  
 SSMA contains several options for converting and synchronizing database objects and for converting data. The default setting for these options is appropriate for many users. However, before you create a new SSMA project, you should review the options and, if you want to, change the default settings that will be used for all your new projects.  
@@ -56,7 +56,7 @@ SSMA contains several options for converting and synchronizing database objects 
 **Note** SQL Azure settings will be available only when you select Migration to SQL Azure while creating a project.  
   
 ## Creating New Projects  
-SSMA starts without loading a default project. To migrate data from Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you must create a project.  
+SSMA starts without loading a default project. To migrate data from Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you must create a project.  
   
 **To create a new project**  
   
@@ -95,7 +95,7 @@ When you save a project, SSMA persists the project settings, and optionally the 
         SSMA will parse the Access schemas and save the metadata to the project file.  
   
 ## Opening Projects  
-When you open a project, it is disconnected from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. This lets you work offline. To update metadata load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. To migrate data, you must reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+When you open a project, it is disconnected from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. This lets you work offline. To update metadata load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. To migrate data, you must reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
 **To open a project**  
   
@@ -105,7 +105,7 @@ When you open a project, it is disconnected from [!INCLUDE[ssNoVersion](../../in
   
     -   On the **File** menu, select **Open Project**, locate the .a2ssproj project file, select the file, and then click **Open**.  
   
-2.  To reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], on the **File** menu, select **Reconnect to SQL Server**.  
+2.  To reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], on the **File** menu, select **Reconnect to SQL Server**.  
   
 3.  To reconnect to SQL Azure, on the **File** menu, select **Reconnect to SQL Azure.**  
   

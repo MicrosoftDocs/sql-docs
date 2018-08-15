@@ -38,7 +38,7 @@ Type mapping is available in the **Project Settings** and **Default Project Sett
 The Access data type to map.  
   
 **Target Type**  
-The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure data type for the specified Access data type.  
+The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure data type for the specified Access data type.  
   
 The following table shows the default mapping between source and target data types.  
   

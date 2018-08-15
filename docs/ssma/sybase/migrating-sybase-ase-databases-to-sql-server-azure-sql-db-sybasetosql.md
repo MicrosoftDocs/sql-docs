@@ -18,10 +18,10 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Migrating SAP ASE databases to SQL Server - Azure SQL Database (SybaseToSQL)
-SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (ASE) is a comprehensive environment that helps you quickly migrate SAP ASE databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database. By using SSMA for SAP ASE, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database.  
+SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (ASE) is a comprehensive environment that helps you quickly migrate SAP ASE databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database. By using SSMA for SAP ASE, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database.  
   
 ## Recommended migration process  
-To successfully migrate objects and data from SAP ASE databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database, use the following process:  
+To successfully migrate objects and data from SAP ASE databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, use the following process:  
   
 1.  [Create a new SSMA project](working-with-ssma-projects-sybasetosql.md).  
   
@@ -39,7 +39,7 @@ To successfully migrate objects and data from SAP ASE databases to [!INCLUDE[ssN
   
 7.  [Load the converted database objects into SQL Server / Azure SQL Database](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
-    Either save a script and run it in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Database, or synchronize the database objects.  
+    Either save a script and run it in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, or synchronize the database objects.  
   
 8.  [Migrate data to SQL Server / Azure SQL Database](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   

@@ -28,6 +28,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 >  Some changes will not take effect in your current editor session.  You must open a new Transact-SQL editor session to see the change.
   
 ### To turn statement completion options off by default  
+
+> [!NOTE]
+> SQL Data Warehouse does not support IntelliSense.
+>
+>
   
 1.  On the **Tools** menu, click **Options**.  
   

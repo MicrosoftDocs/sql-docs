@@ -6,8 +6,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "database-engine-imoltp"
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 

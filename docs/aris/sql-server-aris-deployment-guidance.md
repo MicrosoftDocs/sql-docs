@@ -170,44 +170,6 @@ kubectl describe pod mssql-data-pool-node-0 -n <name of your cluster
 
 There will probably be multiple data pool pods number 0-n.  You can run the above command to see the status of each of them as they are deploying by changing the number at the end.
 
-> [!IMPORTANT]
-> In CTP 1.3 all pods were created in the default namespace.  Now they are created in two namespaces as follows:
-> - The controller service (mssql-controller) and pod (mssql-controller) will be created in the default namespace.
-> - The master instance pod (mssql-data-pool-master-0) and data pool pods (mssql-data-pool-node-n) will be created in a namespace that you specified for the cluster_name parameter.
->
-> Thus, when you are running commands like kubectl get pod or kubectl get service, etc., you need to make sure you are specifying the namespace using the -n parameter when needed.  If you don’t specify a -n parameter value, Kubernetes will assume the default namespace.
->
-> Example:
-> `kubectl get all`: Here the namespace is not specified so Kubernetes will assume the default namespace and will show the mssql-controller pod and service.
->
-> ```bash
-> $ kubectl get all
-> NAME                  READY     STATUS    RESTARTS   AGE
-> po/mssql-controller   1/1       Running   0          9m
->
-> NAME                   CLUSTER-IP     EXTERNAL-IP     PORT(S)           AGE
-> svc/kubernetes         10.0.0.1       <none>          443/TCP           1h
-> svc/mssql-controller   10.0.230.113   13.66.209.228   30080:31343/TCP   9m
-> ```
->
-> `kubectl get all -n <your cluster name>`: Here Kubernetes will retrieve the objects in the specified namespace like the master instance pod and data pool instances pods.
->
-> ```bash
-> $ kubectl get all -n aristest
-> NAME                          READY     STATUS    RESTARTS   AGE
-> po/mssql-data-pool-master-0   3/3       Running   0          11m
-> po/mssql-data-pool-node-0     3/3       Running   0          11m
-> po/mssql-data-pool-node-1     3/3       Running   0          11m
->
-> NAME                    CLUSTER-IP    EXTERNAL-IP                   AGE
-> svc/service-master      None          <none>          
-> svc/service-node        None          <none>          
->
-> NAME                                  DESIRED   CURRENT   AGE
-> statefulsets/mssql-data-pool-master   1         1         11m
-> statefulsets/mssql-data-pool-node     2         2         11m
-> ```
-
 ## <a id="masterip"></a> Get the master instance IP address
 
 After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below.

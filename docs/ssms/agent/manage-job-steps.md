@@ -197,7 +197,7 @@ When you create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]
   
 Note that if you deployed the package to the SSIS Catalog and you specify **SSIS Catalog** as the package source, much of this configuration information is obtained automatically from the package. Under the **Configuration** tab you can specify the environment, parameter values, connection manager values, property overrides, and whether the package runs in a 32-bit runtime environment.  
   
-For more information about creating job steps that run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] packages, see [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
+For more information about creating job steps that run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, see [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
 ## Related Tasks  
   

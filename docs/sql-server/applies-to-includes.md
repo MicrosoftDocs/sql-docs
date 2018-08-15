@@ -1,7 +1,7 @@
 ---
 title: "SQL Server documentation include files | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/13/2018"
+ms.date: "08/15/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "sqlcmd"
@@ -17,13 +17,13 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 # SQL Server include files for versioning and applies-to
 
-References in the documentation can be easily modified without changing the actual text of individual articles by using include files in Markdown. There are three types of include files in the SQL content world: SQL version, applies-to, and referential text. SQL version includes are used to indicate the version of SQL being discussed, such as SQL Server 2016 or 2017, and the applies-to indicate what version of SQL Server the document applies to, such as SQL Server on Linux or Azure SQL Database. Referential text are includes that don't fall in the other two categories, such as the Get Help include, a list of links that customers can use to get help with SQL.
+References in the documentation can be easily modified without changing the actual text of individual articles by using include files in Markdown. There are three types of include files in the SQL content world: SQL version, applies-to, and referential text. **SQL version includes** are used to indicate the version of SQL being discussed, such as SQL Server 2016 or 2017. The **applies-to includes** indicate what SQL products and services the document applies to, such as SQL Server on Linux or Azure SQL Database. **Referential text includes** don't fall in the other two categories, such as the "Get Help" include, a list of links that customers can use to get help with SQL.
 
 This article is meant to be used as a reference point for just the first two types of includes. You can browse the complete list of include files in the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
 ## SQL Server version includes
 
-SQL Content writers frequently need to include the name of the product and version of SQL Server. This way, if something changes in the name, the include is updated instead of manually updating the value in every single article. These includes are used as placeholders for product names but have not been consistently used in all SQL documentation. SQL Server vNext refers to a future release of SQL that does not yet have a version number and is the exception to this.  
+SQL Content writers frequently need to include the name of the product and version of SQL Server. This way, if something changes in the name, the include file is updated instead of manually updating the value in every single article. These include files are used as placeholders for product names but have not been consistently used in all SQL documentation. SQL Server vNext refers to a future release of SQL that does not yet have a version number and is the exception to this.  
 
 |SQL Version| File Name| Markdown Example |Text|
 | :------------  | :-------------| :----------| :-------------------|
@@ -36,7 +36,7 @@ SQL Content writers frequently need to include the name of the product and versi
 | SQL 2016 | sssql15-md.md | `[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]` | SQL Server 2016 (13.x) |
 | SQL 2017 | sssql17-md.md | `[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]` | SQL Server 2017 (14.x) |
 | SQL 2017 | sssqlv14-md.md | `[!INCLUDE[sssqlv14](../includes/sssqlv14-md.md)]` | SQL Server 2017 (14.x) |
-| SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv14-md.md)]` ? | SQL Server vNext |
+| SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
 ## SQL Server (non-version-specific)
@@ -137,4 +137,4 @@ These applies-to includes are used with Reporting Services documentation.
 
 ## Next steps
 
-For more informatiom on how to use these includes, see [Applies-to includes](sql-server-docs-contribute.md#applies-to-includes).
+For more information on how to use these include files, see [Applies-to includes](sql-server-docs-contribute.md#applies-to-includes).

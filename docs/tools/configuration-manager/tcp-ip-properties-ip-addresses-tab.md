@@ -61,6 +61,6 @@ manager: craigg
 ## See Also  
  [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)   
- [SQL Server Browser Service](sql-server-browser-service.md).aspx)  
+ [SQL Server Browser Service](sql-server-browser-service.md)  
   
   

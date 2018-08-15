@@ -31,7 +31,7 @@ manager: craigg
 ## Selecting the Type of Component to Create  
  When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box appears. You preconfigure the component as a source, transformation, or destination. After you make this initial selection, you can continue to configure the component in the **Script Transformation Editor**.  
   
- To set the default script language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../../general-page-of-integration-services-designers-options.md).aspx).  
+ To set the default script language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../../general-page-of-integration-services-designers-options.md).  
   
 ## Understanding the Two Design-Time Modes  
  In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode.  

@@ -89,7 +89,7 @@ This compact list provides links to all the updated articles that are listed in 
 
 
 
-- **Automatic Soft-NUMA partitioning** – With SQL 2014 SP2, Automatic [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).aspx) partitioning is introduced when Trace Flag 8079 is enabled at the server level. When Trace Flag 8079 is enabled during startup, SQL Server 2014 SP2 interrogates the hardware layout and automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance of the workload with Auto-Soft NUMA before it is turned ON in production.
+- **Automatic Soft-NUMA partitioning** – With SQL 2014 SP2, Automatic [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) partitioning is introduced when Trace Flag 8079 is enabled at the server level. When Trace Flag 8079 is enabled during startup, SQL Server 2014 SP2 interrogates the hardware layout and automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance of the workload with Auto-Soft NUMA before it is turned ON in production.
 
 **Service Pack 3 release notes**
 

@@ -66,7 +66,7 @@ or
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Workaround:** This can happen when SQL Server Engine or Analysis Services fails to install. To fix this issue, refer the SQL Server Setup logs, and troubleshoot the SQL Server Engine and Analysis Services failures. For more information, see View and Read SQL Server Setup Log Files. For more information, see [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).aspx).  
+**Workaround:** This can happen when SQL Server Engine or Analysis Services fails to install. To fix this issue, refer the SQL Server Setup logs, and troubleshoot the SQL Server Engine and Analysis Services failures. For more information, see View and Read SQL Server Setup Log Files. For more information, see [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### 1.4 SQL Server 2008, 2008 R2 Analysis Services Failover Cluster upgrade to SQL Server 2012 might fail after renaming the network name  
 **Issue:** After you change the network name of a Microsoft SQL Server 2008, or 2008 R2 Analysis Services failover cluster instance using the Windows Cluster Administrator tool, the upgrade operation might fail.  
@@ -219,7 +219,7 @@ SQL Server 2012 is supported on the Windows Vista SP2, Windows Server 2008 SP2, 
   
 8.  The **Repair Progress** page shows the status of the repair operation. The **Complete** page indicates that the operation is finished.  
   
-For more information on how to repair an instance of SQL Server, see [Repair a Failed SQL Server 2012 Installation](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).aspx).  
+For more information on how to repair an instance of SQL Server, see [Repair a Failed SQL Server 2012 Installation](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).  
   
 ### 1.11 An instance of SQL Server 2012 might fail after an OS upgrade  
 **Issue:** An instance of SQL Server 2012 might fail with the following error after you upgrade the operating system to Windows 7 SP1 from Windows Vista.  

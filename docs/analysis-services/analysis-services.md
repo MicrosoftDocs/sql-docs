@@ -34,7 +34,7 @@ In general, [Azure Analysis Services documentation](https://docs.microsoft.com/a
 *  [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
 *  [Tutorials](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [Server management](../analysis-services/instances/analysis-services-instance-management.md)    
-*  [Developer documentation](analysis-services-developer-documentation.md).aspx)  
+*  [Developer documentation](analysis-services-developer-documentation.md)  
 *  [Technical reference](../analysis-services/powershell/technical-reference-ssas.md)
 
 See also

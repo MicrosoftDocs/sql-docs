@@ -26,7 +26,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 
 -   [Communicating with SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
 -   [Connection and query timeout support](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
--   [Cursors](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md).aspx)  
+-   [Cursors](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
 -   [Date/Time Improvements (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
 -   [Executing Queries (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
 -   [Handling Errors and Messages](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

@@ -47,7 +47,7 @@ manager: craigg
  [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
  **User Access Security**  
- [User Access Security Architecture](understanding-microsoft-olap-logical-architecture.md).aspx)  
+ [User Access Security Architecture](understanding-microsoft-olap-logical-architecture.md)  
   
 ## See Also  
  [Understanding Microsoft OLAP Architecture](../olap-physical/understanding-microsoft-olap-architecture.md)   

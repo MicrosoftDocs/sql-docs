@@ -121,7 +121,7 @@ Your connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta
 The procedure for reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is the same as the procedure for establishing a connection.  
   
 ## Next Steps  
-If you want to customize the mapping between source and target databases, see [Mapping Source and Target Databases](mapping-source-and-target-databases-accesstosql.md) Otherwise, the next step is to convert database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax using [convert database objects](converting-access-database-objects-accesstosql.md)  
+If you want to customize the mapping between source and target databases, see [Mapping Source and Target Databases](mapping-source-and-target-databases-accesstosql.md) Otherwise, the next step is to convert database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax using [convert database objects](converting-access-database-objects-accesstosql.md)  
   
 ## See Also  
 [Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

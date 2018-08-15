@@ -37,10 +37,10 @@ The Jet database engine, which is used as the database engine for Access, is a f
 After you migrate databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can continue to use Access by using linked tables, or you can manually migrate your applications to [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework-based code that interacts directly with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Determining which databases to migrate  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access can locate Access databases for you. You can then export metadata about those databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information about how to export and query metadata, see [Exporting an Access Inventory](exporting-an-access-inventory-accesstosql.md).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access can locate Access databases for you. You can then export metadata about those databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about how to export and query metadata, see [Exporting an Access Inventory](exporting-an-access-inventory-accesstosql.md).  
 
    > [!NOTE]
-   > Not all Access features and settings are supported by, or can be easily converted to, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Before you start migrating databases, see [Incompatible Access Features](incompatible-access-features-accesstosql.md).
+   > Not all Access features and settings are supported by, or can be easily converted to, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Before you start migrating databases, see [Incompatible Access Features](incompatible-access-features-accesstosql.md).
   
 ## Preparing for migration  
 Use the following guidelines to help prepare your Access databases for migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

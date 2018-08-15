@@ -74,9 +74,9 @@ You can use Access Metadata Explorer to perform the following tasks:
   
 -   Browse the tables in each Access database.  
   
--   Select objects for conversion and convert the objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax. For more information, see [Converting Access Database Objects](converting-access-database-objects-accesstosql.md).  
+-   Select objects for conversion and convert the objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax. For more information, see [Converting Access Database Objects](converting-access-database-objects-accesstosql.md).  
   
--   Select objects for data migration and migrate the data from those objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Migrating Access Data into SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
+-   Select objects for data migration and migrate the data from those objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Migrating Access Data into SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   
 -   Link and unlink Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables.  
   
@@ -94,7 +94,7 @@ Most metadata settings are read-only. However, you can alter the following metad
   
 -   In Access Metadata Explorer, you can alter type mappings. Be sure to make these changes before you create reports or convert schemas.  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you can alter table and index properties on the **Table** tab. Make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Converting Access Database Objects](converting-access-database-objects-accesstosql.md).  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer, you can alter table and index properties on the **Table** tab. Make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Converting Access Database Objects](converting-access-database-objects-accesstosql.md).  
   
 ### Toolbars  
 SSMA has two toolbars: a project toolbar and a migration toolbar.  

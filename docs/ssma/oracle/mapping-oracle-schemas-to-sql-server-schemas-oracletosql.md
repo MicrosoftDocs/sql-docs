@@ -57,7 +57,7 @@ If you customize the mapping between an Oracle schema and a [!INCLUDE[ssNoVersio
 1.  Under the schema mapping tab, select any row and click **Reset to Default** to revert to the default database and schema.  
   
 ## Next Steps  
-If you want to analyze the conversion of Oracle objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects, you can [Create a conversion report](assessing-oracle-schemas-for-conversion-oracletosql.md). Otherwise you can [Convert the Oracle database object definitions](converting-oracle-schemas-oracletosql.md) into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] object definitions.  
+If you want to analyze the conversion of Oracle objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you can [Create a conversion report](assessing-oracle-schemas-for-conversion-oracletosql.md). Otherwise you can [Convert the Oracle database object definitions](converting-oracle-schemas-oracletosql.md) into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object definitions.  
   
 ## See Also  
 [Connecting to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  

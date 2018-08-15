@@ -39,11 +39,11 @@ To successfully migrate objects and data from Access to [!INCLUDE[ssNoVersion](.
   
     You can connect either to SQL Server or SQL Azure.  
   
-4.  To customize the mapping between one or more Access databases and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure schemas,  [map the source and target databases](mapping-source-and-target-databases-accesstosql.md).  
+4.  To customize the mapping between one or more Access databases and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure schemas,  [map the source and target databases](mapping-source-and-target-databases-accesstosql.md).  
   
-5.  Optionally, you can [create an assessment report](assessing-access-database-objects-for-conversion-accesstosql.md) to determine whether the Access database objects can be successfully converted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+5.  Optionally, you can [create an assessment report](assessing-access-database-objects-for-conversion-accesstosql.md) to determine whether the Access database objects can be successfully converted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
-6.  [Convert Access database objects](converting-access-database-objects-accesstosql.md) to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure object definitions.  
+6.  [Convert Access database objects](converting-access-database-objects-accesstosql.md) to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure object definitions.  
   
 7.  [Load the converted database objects into SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
@@ -54,7 +54,7 @@ To successfully migrate objects and data from Access to [!INCLUDE[ssNoVersion](.
     > [!NOTE]  
     > You can convert, load, and migrate schemas and data in one step. To perform one-click migration, click the **Convert, Load, and Migrate** button.  
   
-9. If you want your Access applications to use the data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, use [link the Access tables to the SQL Server tables](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
+9. If you want your Access applications to use the data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, use [link the Access tables to the SQL Server tables](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
   
 You can also use the Migration Wizard to guide you through this process. For more information, see [Migration Wizard](migration-wizard-accesstosql.md).  
   

@@ -29,7 +29,7 @@ This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssno
 |---------|---------------|  
 |[Advanced Object Selection  &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Use the **Advanced Object Select** dialog box to find database objects by using filter criteria, and then select or clear those objects.|  
 |[Assessment Report &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|Use the **Assessment Report** dialog box to analyze the conversion of Access database objects and to estimate how long the migration will take.|  
-|[Connect To SQL Server](http://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to which you want to migrate.|  
+|[Connect To SQL Server](http://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you want to migrate.|  
 |[Connect To SQL Azure](connect-to-azure-sql-db-accesstosql.md)|Use the **Connect to SQL Azure** dialog box to connect to the instance of SQL Azure to which you want to migrate.|  
 |[Convert, Load, and Migrate](http://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)|The **Convert, Load, and Migrate** dialog is part of the Migration Wizard and also appears when you use the **Convert, Load, and Migrate** command.|  
 |[Data Migration Report &#40;AccessToSQL&#41;](../../ssma/access/data-migration-report-accesstosql.md)|Appears after data migration and reports migration successes and failures for each table.|  

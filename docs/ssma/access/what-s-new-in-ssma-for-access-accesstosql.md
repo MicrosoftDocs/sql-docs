@@ -184,10 +184,10 @@ The May 2007 release of SSMA for Access contains the following changes:
 ## November 2006  
 The November 2006 release of SSMA for Access contains the following changes:  
   
--   Added a  new Database Migration Wizard that guides you through the migration of a single database from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
--   Added a new Convert, Load, and Migrate command that converts Access databases, loads the converted objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and migrates data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] all in one step.  
+-   Added a  new Database Migration Wizard that guides you through the migration of a single database from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Added a new Convert, Load, and Migrate command that converts Access databases, loads the converted objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and migrates data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all in one step.  
 -   Improved query migration. Query migration now converts more SELECT queries to views. For more information, see [Converting Access Database Objects](converting-access-database-objects-accesstosql.md).  
--   Added the ability to edit table and index properties on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Table** tab.  
+-   Added the ability to edit table and index properties on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Table** tab.  
 -   Added new global settings:  
     -   You can opt to show line numbers in editor windows.  
     -   You can configure SSMA to prompt to replace duplicate objects, or always or never replace duplicate objects during schema conversion.  

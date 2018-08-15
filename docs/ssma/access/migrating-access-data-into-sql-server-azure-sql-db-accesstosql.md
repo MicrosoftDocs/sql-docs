@@ -52,7 +52,7 @@ To view migration messages, make sure the Output pane is visible. If it is not, 
 You also can migrate data outside of SSMA by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp** command-line utility or [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. For more information about these tools, see [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Next Step  
-If you have Access database applications that you want to continue to use after migration, link the Access database tables to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure tables. For more information, see [Linking Access Applications to SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
+If you have Access database applications that you want to continue to use after migration, link the Access database tables to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables. For more information, see [Linking Access Applications to SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
   
 ## See Also  
 [Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

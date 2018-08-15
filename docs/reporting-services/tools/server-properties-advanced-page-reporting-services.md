@@ -6,17 +6,15 @@ manager: "kfile"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "tools"
-ms.suite: "pro-bi"
+ms.suite: "reporting-services"
 ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.Report Server.serverproperties.advanced.f1"
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 18
 ms.custom: ""
 ms.reviewer: ""
 ms.technology: ""
 ms.tgt_pltfrm: ""
-ms.date: 08/14/2018
+ms.date: 08/16/2018
 ---
 
 # Server Properties (Advanced Page) - Reporting Services

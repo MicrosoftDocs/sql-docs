@@ -23,7 +23,7 @@ This quickstart requires that you have already done the following tasks:
 
 ## Initialize a data pool
 
-Connect to the master instance using the IP address / port number (31433) obtained at the end of the deployment script. You can now create a data pool on the master instance. Execute the batch below to create a data pool that consists of 2 instances. If you modified the number of Kubernetes agents above, then change the value of @cluster_node_count variable to match.
+Connect to the master instance using the IP address / port number (31433) obtained at the end of the deployment script. You can now create a data pool on the master instance. Execute the batch below to create a data pool that consists of 2 instances. If you modified the number of Kubernetes agents above, then change the value of `@cluster_node_count` variable to match.
 
 ```sql
 USE high_value_data
@@ -37,7 +37,7 @@ GO
 
 ## Derive table schema from sample file using spark and create sql server table schema
 
-After successful creation of the data pool, you can now configure the data pool instances to receive data from a Spark streaming job and query the data from the master instance. For this example, we will derive the schema of the table in SQL Server from a sample file that resides on an HDFS volume on the newly created cluster. Execute the batch below to create an external table called "airlinedata" on the master instance and tables on the data pool instances to hold data from the Spark streaming job.
+After successful creation of the data pool, you can now configure the data pool instances to receive data from a Spark streaming job and query the data from the master instance. For this example, we will derive the schema of the table in SQL Server from a sample file that resides on an HDFS volume on the newly created cluster. Execute the batch below to create an external table called **airlinedata** on the master instance and tables on the data pool instances to hold data from the Spark streaming job.
 
 ```sql
 USE high_value_data
@@ -104,5 +104,5 @@ GO
 
 Explore how to run Jupyter notebooks in Azure Data Studio:
 
-> [!div class="nextstepaction"]
+> [!div class=**nextstepaction**]
 > [Run Jupyter notebooks on SQL Server vNext](quickstart-sql-server-aris-jupyter-notebook.md)

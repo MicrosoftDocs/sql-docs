@@ -30,7 +30,7 @@ To get these libraries, install any of the following, but choose an option that 
 
 ## 2 - Use built-in R tools
 
-When you install R with SQL Server, you get the same R tools that are installed with any baseinstallation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials.
+When you install R with SQL Server, you get the same R tools that are installed with any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials.
 
 Base R in Microsoft products is provided by Microsoft R Open, included in SQL Server Setup, built on open-source R. The following standard R tools are therefore installed by default. 
 
@@ -42,6 +42,7 @@ Base R in Microsoft products is provided by Microsoft R Open, included in SQL Se
 
 Tools are located in **bin** folder for base R as installed SQL Server or R Client. The following paths are valid locations for the tools, depending on which product version and feature you installed:
 
++ R Client: `~\Program Files\Microsoft\R Client\R_SERVER\bin\x64`
 + R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
 + R Server Standalone: `~\Program Files\Microsoft SQL Server\130\R_SERVER\bin\x64`
 + Machine Learning Services: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`

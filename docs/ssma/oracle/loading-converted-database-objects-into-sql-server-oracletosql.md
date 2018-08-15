@@ -104,7 +104,7 @@ You can also run scripts from the command line by using the **sqlcmd** utility, 
 After you have loaded the converted database objects into SQL Server, you can grant and deny permissions on those objects. It is a good idea to do this before migrating data to SQL Server. For information about how to help secure objects in SQL Server, see "Security Considerations for Databases and Database Applications" in SQL Server Books Online.  
   
 ## Next Step  
-The next step in the migration process is to [Migrate data into SQL Server](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13).  
+The next step in the migration process is to [Migrate data into SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md).  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

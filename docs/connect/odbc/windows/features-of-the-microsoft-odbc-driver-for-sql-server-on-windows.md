@@ -29,7 +29,7 @@ Azure Active Directory allows users, DBA's, and application programmers to use A
   
 ## Microsoft ODBC Driver 11 for SQL Server on Windows  
 
-The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contains all the functionality of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver that shipped in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. For more information, see [SQL Server Native Client Programming](http://msdn.microsoft.com/library/ms130892.aspx). The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver is based on the ODBC driver that ships in the Windows operating system. For more information, see [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
+The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contains all the functionality of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver that shipped in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. For more information, see [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md). The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver is based on the ODBC driver that ships in the Windows operating system. For more information, see [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
   
 This release of the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contains the following new features:  
   

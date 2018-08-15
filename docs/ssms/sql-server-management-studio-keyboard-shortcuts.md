@@ -460,6 +460,6 @@ manager: craigg
 |Display the grid on the design surface|ENTER|No equivalent|  
   
 ## See Also  
- [Customize Menus and Shortcut Keys](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
+ [Customize Menus and Shortcut Keys](customize-menus-and-shortcut-keys.md)  
   
   

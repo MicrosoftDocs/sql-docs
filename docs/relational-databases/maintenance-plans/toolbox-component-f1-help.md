@@ -41,7 +41,7 @@ manager: craigg
  The Azure Feature Pack for Integration Services contains connection managers to connect to Azure data sources and tasks to do common Azure operations. Install the Feature Pack to add these items to the Toolbox. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
 ## See Also  
- [Use the Toolbox](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
+ [Use the Toolbox](../../ssms/use-the-toolbox.md)   
  [Choose Toolbox Items &#40;Maintenance Tasks Page&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   
   

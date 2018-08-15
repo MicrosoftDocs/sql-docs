@@ -78,7 +78,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
     |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) (A, RR), only available on 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
     |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> (Changes to 1 when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is started. Default value is 0 if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is set to automatic start during Setup.)|  
     |[allow updates](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) (Obsolete. Do not use. Will cause an error during reconfigure.)|0|1|0|  
-    |[automatic soft-NUMA disabled](http://msdn.microsoft.com/library/ms345357.aspx)|0|1|0|  
+    |[automatic soft-NUMA disabled](soft-numa-sql-server.md)|0|1|0|  
     |[backup checksum default](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  

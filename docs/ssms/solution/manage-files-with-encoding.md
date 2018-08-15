@@ -63,5 +63,5 @@ If you are using Visual SourceSafe to store files with ANSI, UTF8, or Unicode, b
   
 ## See Also  
 [Files That Manage Solutions and Projects](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
-[Associating File Extensions to a Code Editor](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[Associating File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

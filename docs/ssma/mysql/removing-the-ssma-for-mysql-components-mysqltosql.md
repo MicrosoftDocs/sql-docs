@@ -59,5 +59,5 @@ After the uninstallation process is completed, you can confirm that objects in t
   
 ## See Also  
 [Installing SSMA for MySQL Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[Installing SSMA Components on SQL Server](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+[Installing SSMA Components on SQL Server](installing-ssma-components-on-sql-server-mysqltosql.md)  
   

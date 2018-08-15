@@ -18,7 +18,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 10: Adding Fuzzy Group Transform to Identify Duplicates
-  In this task, you add a Fuzzy Group Transform to the data flow. The Fuzzy Group transformation can help identify duplicates in the source data. See [Fuzzy Grouping Transformation](http://msdn.microsoft.com/library/ms141764.aspx) for more details.  
+  In this task, you add a Fuzzy Group Transform to the data flow. The Fuzzy Group transformation can help identify duplicates in the source data. See [Fuzzy Grouping Transformation](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) for more details.  
   
 1.  Drag-drop **Fuzzy Group** transform in **Other Transforms** on the **SSIS Toolbox** to the **Data Flow** tab under **Combine Correct and Corrected Records**.  
   

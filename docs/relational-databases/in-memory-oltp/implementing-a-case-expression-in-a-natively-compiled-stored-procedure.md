@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Implementing a CASE Expression in a Natively Compiled Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/21/2017"

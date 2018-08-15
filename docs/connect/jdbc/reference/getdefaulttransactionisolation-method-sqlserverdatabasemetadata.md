@@ -41,7 +41,7 @@ public int getDefaultTransactionIsolation()
 ## Remarks  
  This getDefaultTransactionIsolation method is specified by the getDefaultTransactionIsolation method in the java.sql.DatabaseMetaData interface.  
   
- When using the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database, this method returns either a value of TRANSACTION_READ_COMMITTED, or the **int** value 2.  
+ When using the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, this method returns either a value of TRANSACTION_READ_COMMITTED, or the **int** value 2.  
   
 ## See Also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

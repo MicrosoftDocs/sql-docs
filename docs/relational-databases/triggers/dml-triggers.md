@@ -6,7 +6,6 @@ ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-dml"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

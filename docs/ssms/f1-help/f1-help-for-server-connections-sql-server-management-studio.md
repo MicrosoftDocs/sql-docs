@@ -24,7 +24,7 @@ manager: craigg
 ---
 # F1 Help for Server Connections (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Browse for Servers &#40;Local Servers&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

@@ -30,7 +30,7 @@ manager: craigg
   
 -   Register servers.  
   
--   Connect to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssAS](../includes/ssas-md.md)], [!INCLUDE[ssRS](../includes/ssrs-md.md)], or [!INCLUDE[ssIS](../includes/ssis-md.md)].  
+-   Connect to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssAS](../includes/ssas-md.md)], [!INCLUDE[ssRS](../includes/ssrs.md)], or [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 -   Configure server properties.  
   

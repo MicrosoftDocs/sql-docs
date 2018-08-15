@@ -46,7 +46,7 @@ public java.sql.Date getDate(java.lang.String columnName)
 ## Remarks  
  This getDate method is specified by the getDate method in the java.sql.ResultSet interface.  
   
- This method returns a valid date part of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime or smalldatetime data type, with the time part set to the Java time baseline of 00:00 (midnight).  
+ This method returns a valid date part of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime or smalldatetime data type, with the time part set to the Java time baseline of 00:00 (midnight).  
   
 ## See Also  
  [getDate Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   

@@ -20,7 +20,7 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-A [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stored procedure that you can call is one that returns one or more OUT parameters, which are parameters that the stored procedure uses to return data back to the calling application. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class, which you can use to call this kind of stored procedure and process the data that it returns.
+A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure that you can call is one that returns one or more OUT parameters, which are parameters that the stored procedure uses to return data back to the calling application. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class, which you can use to call this kind of stored procedure and process the data that it returns.
 
 When you call this kind of stored procedure by using the JDBC driver, you must use the `call` SQL escape sequence together with the [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) method of the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class. The syntax for the `call` escape sequence with OUT parameters is the following:
 
@@ -31,12 +31,12 @@ When you call this kind of stored procedure by using the JDBC driver, you must u
 
 When you construct the `call` escape sequence, specify the OUT parameters by using the ? (question mark) character. This character acts as a placeholder for the parameter values that will be returned from the stored procedure. To specify a value for an OUT parameter, you must specify the data type of each parameter by using the [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) method of the SQLServerCallableStatement class before you run the stored procedure.
 
-The value that you specify for the OUT parameter in the registerOutParameter method must be one of the JDBC data types contained in java.sql.Types, which in turn maps to one of the native [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types. For more information about the JDBC and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types, see [Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+The value that you specify for the OUT parameter in the registerOutParameter method must be one of the JDBC data types contained in java.sql.Types, which in turn maps to one of the native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types. For more information about the JDBC and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 When you pass a value to the registerOutParameter method for an OUT parameter, you must specify not only the data type to be used for the parameter, but also the parameter's ordinal placement or the parameter's name in the stored procedure. For example, if your stored procedure contains a single OUT parameter, its ordinal value will be 1; if the stored procedure contains two parameters, the first ordinal value will be 1, and the second ordinal value will be 2.
 
 > [!NOTE]  
-> The JDBC driver does not support the use of CURSOR, SQLVARIANT, TABLE, and TIMESTAMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types as OUT parameters.
+> The JDBC driver does not support the use of CURSOR, SQLVARIANT, TABLE, and TIMESTAMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types as OUT parameters.
 
 As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:
 

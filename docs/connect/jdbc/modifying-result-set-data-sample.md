@@ -20,7 +20,7 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve an updatable set of data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Then, using methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object, it inserts, modifies, and then finally deletes a row of data from the set of data.
+This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve an updatable set of data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Then, using methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object, it inserts, modifies, and then finally deletes a row of data from the set of data.
 
 The code file for this sample is named UpdateResultSet.java, and it can be found in the following location:
 

@@ -20,7 +20,7 @@ manager: craigg
 # Connecting with bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
+The [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
   
 - The field terminator is a tab ("\t").  
   
@@ -77,7 +77,7 @@ Specifies the number of the first row to export from a table or import from a da
 Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted.  
   
 - -l  
-Specifies a login timeout. The –l option specifies the number of seconds before a login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp` generates an error message. A value of 0 specifies an infinite timeout.
+Specifies a login timeout. The –l option specifies the number of seconds before a login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp` generates an error message. A value of 0 specifies an infinite timeout.
   
 - -L *last_row*  
 Specifies the number of the last row to export from a table or import from a data file.  
@@ -92,25 +92,25 @@ Uses the native (database) data types of the data to perform the bulk-copy opera
 Specifies the password for the login ID.  
   
 - -q  
-Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the `bcp` utility and an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Executes the SET QUOTED_IDENTIFIERS ON statement in the connection between the `bcp` utility and an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -r *row_terminator*  
 Specifies the row terminator.  
   
 - -R  
-Specifies that currency, date, and time data is bulk copied into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] using the regional format defined for the locale setting of the client computer.  
+Specifies that currency, date, and time data is bulk copied into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the regional format defined for the locale setting of the client computer.  
   
 - -S *server*  
-Specifies the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instance to connect to, or if -D is used, a DSN.  
+Specifies the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to connect to, or if -D is used, a DSN.  
   
 - -t *field_terminator*  
 Specifies the field terminator.  
   
 - -T  
-Specifies that the `bcp` utility connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] with a trusted connection (integrated security).  
+Specifies that the `bcp` utility connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with a trusted connection (integrated security).  
   
 - -U *login_id*  
-Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Specifies the login ID used to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -v  
 Reports the `bcp` utility version number and copyright.  
@@ -139,7 +139,7 @@ Uses the native (database) data types of the data for noncharacter data, and Uni
 Specifies the name of a file that receives output redirected from the command prompt.  
   
 - -V (80 | 90 | 100)  
-Uses data types from an earlier version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Uses data types from an earlier version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -x  
 Used with the format and -f format_file options, generates an XML-based format file instead of the default non-XML format file.  

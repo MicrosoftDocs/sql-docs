@@ -44,7 +44,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Access Inventory Schemas (AccessToSQL)
-The following sections describe the tables that are created by SSMA when you export Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+The following sections describe the tables that are created by SSMA when you export Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Databases  
 Database metadata is exported to the **SSMA_Access_InventoryDatabases** table. This table contains the following columns:  

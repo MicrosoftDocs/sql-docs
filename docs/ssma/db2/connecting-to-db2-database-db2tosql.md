@@ -18,7 +18,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Connecting to DB2 Database (DB2ToSQL)
-To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you must connect to the DB2 database that you want to migrate. When you connect, SSMA obtains metadata about all DB2 schemas, and then displays it in the DB2 Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  
+To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must connect to the DB2 database that you want to migrate. When you connect, SSMA obtains metadata about all DB2 schemas, and then displays it in the DB2 Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  
   
 Your connection to the database stays active until you close the project. When you reopen the project, you must reconnect if you want an active connection to the database.  
   
@@ -32,7 +32,7 @@ User authorization defines the list of the commands and objects that are availab
 -   Data access for data migration requires DATAACCESS  
   
 ## Establishing a Connection to DB2  
-When you connect to a database, SSMA reads the database metadata, and then adds this metadata to the project file. This metadata is used by SSMA when it converts objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax, and when it migrates data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can browse this metadata in the DB2 Metadata Explorer pane and review properties of individual database objects.  
+When you connect to a database, SSMA reads the database metadata, and then adds this metadata to the project file. This metadata is used by SSMA when it converts objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax, and when it migrates data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can browse this metadata in the DB2 Metadata Explorer pane and review properties of individual database objects.  
   
 > [!IMPORTANT]  
 > Before you try to connect, make sure that the database server is running and can accept connections.  
@@ -78,7 +78,7 @@ When you connect to a database, SSMA reads the database metadata, and then adds 
     For more information, see [Connect To Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## Reconnecting to DB2  
-Your connection to the database server stays active until you close the project. When you reopen the project, you must reconnect if you want an active connection to the database. You can work offline until you want to update metadata, load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and migrate data.  
+Your connection to the database server stays active until you close the project. When you reopen the project, you must reconnect if you want an active connection to the database. You can work offline until you want to update metadata, load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and migrate data.  
   
 ## Refreshing DB2 Metadata  
 Metadata about the DB2 database is not automatically refreshed. The metadata in DB2 Metadata Explorer is a snapshot of the metadata when you first connected, or the last time that you manually refreshed metadata. You can manually update metadata for all schemas, a single schema, or individual database objects.  
@@ -103,7 +103,7 @@ Metadata about the DB2 database is not automatically refreshed. The metadata in 
   
     To view the definitions of the color coding, click the **Legend** button.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## Next Step  
   

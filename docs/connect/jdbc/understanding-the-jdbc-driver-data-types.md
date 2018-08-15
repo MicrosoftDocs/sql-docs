@@ -19,9 +19,9 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports the use of JDBC basic and advanced data types within a Java application that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] as its database.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports the use of JDBC basic and advanced data types within a Java application that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as its database.  
   
-The JDBC type system mediates the conversion between [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types and Java language types and objects. The JDBC types are modeled on the SQL-92 and SQL-99 types. The JDBC driver adheres to the JDBC specification and is designed to provide the right balance between predictability and flexibility.  
+The JDBC type system mediates the conversion between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types and Java language types and objects. The JDBC types are modeled on the SQL-92 and SQL-99 types. The JDBC driver adheres to the JDBC specification and is designed to provide the right balance between predictability and flexibility.  
   
 The topics in this section describe how to use the basic and advanced data types, and how data types can be converted into other data types.  
   

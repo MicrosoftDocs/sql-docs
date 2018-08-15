@@ -22,7 +22,7 @@ manager: craigg
 ---
 # SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] (SSMS) is an integrated environment for managing any SQL infrastructure. Use SSMS to access, configure, manage, administer, and develop all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)], Azure SQL Database, and SQL Data Warehouse. SSMS provides a single comprehensive utility that combines a broad group of graphical tools with a number of rich script editors to provide access to [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] for developers and database administrators of all skill levels.
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is an integrated environment for managing any SQL infrastructure. Use SSMS to access, configure, manage, administer, and develop all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Azure SQL Database, and SQL Data Warehouse. SSMS provides a single comprehensive utility that combines a broad group of graphical tools with a number of rich script editors to provide access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for developers and database administrators of all skill levels.
 
 
 
@@ -36,11 +36,11 @@ manager: craigg
   
 |Description|Component|  
 |---------------|---------|  
-|Use **Object Explorer** to view and manage all of the objects in one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].|[Object Explorer](../ssms/object/object-explorer.md)|  
+|Use **Object Explorer** to view and manage all of the objects in one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Object Explorer](../ssms/object/object-explorer.md)|  
 |How to use **Template Explorer** to build and manage files of boilerplate text that can be used to speed the development of queries and scripts.|[Template Explorer](../ssms/template/template-explorer.md)|  
 |How to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](../ssms/solution/solution-explorer.md)|  
-|How to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|How to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
+|How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 
 
 ## Next steps  

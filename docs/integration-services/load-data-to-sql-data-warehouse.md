@@ -19,7 +19,7 @@ manager: craigg-msft
 
 Create a SQL Server Integration Services (SSIS) package to load data into [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
 
-This article shows you how to do the following things.
+This article shows you how to do the following things:
 
 * Create a new Integration Services project in Visual Studio.
 * Design an SSIS package that loads data from the source into the destination.
@@ -27,7 +27,7 @@ This article shows you how to do the following things.
 
 ## Basic concepts
 
-The package is the basic unit of work in SSIS. Related packages are grouped in projects. You create projects and design packages in Visual Studio with SQL Server Data Tools. The design process is a visual process in which you drag and drop components from the Toolbox to the design surface, connect them, and set their properties. After you finish your package, you can run it, and you can optionally deploy it to SQL Server for comprehensive management, monitoring, and security.
+The package is the basic unit of work in SSIS. Related packages are grouped in projects. You create projects and design packages in Visual Studio with SQL Server Data Tools. The design process is a visual process in which you drag and drop components from the Toolbox to the design surface, connect them, and set their properties. After you finish your package, you can run it, and you can optionally deploy it to SQL Server or SQL Database for comprehensive management, monitoring, and security.
 
 A detailed introduction to SSIS is beyond the scope of this article. To learn more, see the following articles:
 
@@ -100,7 +100,7 @@ The second approach is a typical package which uses a Data Flow task that contai
 
 This tutorial uses SQL Server as the data source. SQL Server runs on premises or on an Azure virtual machine.
 
-To connect to SQL Server and to SQL Data Warehouse, you can use an ADO.NET connection manager and source and destination, or an OLE DB connection manager and source and destination. This tutorial uses  ADO.NET because it has the fewest configuration options. OLE DB may provide slightly better performance than ADO.NET.
+To connect to SQL Server and to SQL Data Warehouse, you can use an ADO.NET connection manager and source and destination, or an OLE DB connection manager and source and destination. This tutorial uses ADO.NET because it has the fewest configuration options. OLE DB may provide slightly better performance than ADO.NET.
 
 As a shortcut, you can use the SQL Server Import and Export Wizard to create the basic package. Then, save the package, and open it in Visual Studio or SSDT to view and customize it. For more info, see [Import and Export Data with the SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
@@ -108,7 +108,7 @@ As a shortcut, you can use the SQL Server Import and Export Wizard to create the
 
 To continue the tutorial with this option, you need the following things:
 
-1. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data to be loaded into SQL Data Warehouse. To get the AdventureWorks sample database, see [AdventureWorks  Sample Databases][AdventureWorks 2014 Sample Databases].
+1. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data to be loaded into SQL Data Warehouse. To get the AdventureWorks sample database, see [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases].
 
 2. **A firewall rule**. You have to create a firewall rule on SQL Data Warehouse with the IP address of your local computer before you can upload data to the SQL Data Warehouse.
 
@@ -190,7 +190,7 @@ To continue the tutorial with this option, you need the following things:
 8. In the **ADO.NET Destination Editor**, select the **Mappings** tab to see how columns in the source are mapped to columns in the destination.
    
     ![][13]
-9. Click **OK** to finish configuring the data source.
+9. Click **OK** to finish configuring the destination.
 
 ## Run the package to load the data
 Run the package by clicking the **Start** button on the toolbar or by selecting one of the **Run** options on the **Debug** menu.

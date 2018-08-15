@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: native-client  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467

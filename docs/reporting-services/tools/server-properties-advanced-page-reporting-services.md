@@ -6,17 +6,15 @@ manager: "kfile"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "tools"
-ms.suite: "pro-bi"
+ms.suite: "reporting-services"
 ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.Report Server.serverproperties.advanced.f1"
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 18
 ms.custom: ""
 ms.reviewer: ""
 ms.technology: ""
 ms.tgt_pltfrm: ""
-ms.date: 08/14/2018
+ms.date: 08/16/2018
 ---
 
 # Server Properties (Advanced Page) - Reporting Services
@@ -59,7 +57,7 @@ This read-only property indicates the server mode. If this value is False, the r
 **SiteName**  
 The name of the report server site displayed in the page title of the web portal. The default value is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This property can be an empty string. The maximum length is 8,000 characters.  
 
-**StoredParametersLifetime**  
+**StoredParametersLifetime**
 Specifies the maximum number of days that a stored parameter can be stored. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **180** days.  
 
 **StoredParametersThreshold**  
@@ -98,7 +96,7 @@ Determines whether Windows integrated security is supported for report data sour
 |**False**|Windows integrated security is not enabled. Report data sources that are configured to use Windows integrated security will not run.|
 
 **EnableLoadReportDefinition**  
-Select this option to specify whether users can perform ad hoc report execution from a Report Builder report. Setting this option determines the value of the **EnableLoadReportDefinition** property on the report server.  
+Select this option to specify whether users can perform an unplanned report execution from a Report Builder report. Setting this option determines the value of the **EnableLoadReportDefinition** property on the report server.  
 
 If you clear this option, the property is set to False. Report server won't generate clickthrough reports for reports that use a report model as a data source. Any calls to the LoadReportDefinition method are blocked.  
 

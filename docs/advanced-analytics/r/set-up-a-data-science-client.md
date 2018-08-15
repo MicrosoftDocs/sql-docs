@@ -20,14 +20,15 @@ This article describes some typical client scenarios, including configuration of
 
 Your client environment must include Microsoft R Open, as well as the additional RevoScaleR packages that support distributed execution of R on SQL Server. Standard distributions of R do not have the packages that support remote compute contexts or parallel execution of R tasks.
 
-To get these libraries, install any of the following, but choose an option that most closely matches your SQL Server installation. Doing so ensures that client libraries match equivalent libraries on the server. Developer editions of the standalone servers are free of charge for development purposes. 
+To get these libraries, install any of the following, but choose an option that most closely matches your SQL Server installation. Doing so ensures that client libraries match equivalent libraries on the server. 
 
-+ [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
-+ [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md)
+| Library provider | Usage  |
+|------------------|--------------------------------|
+| [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) | For best compatibility with a SQL Server 2017 instance, install the free developer edition of SQL Server 2017, choosing the "Standalone server" feature under **Shared features** in SQL Server Setup. |
+| [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) | Recommended for SQL Server 2016 R Services, install the free developer edition of SQL Server 2016, choosing the "Standalone R Server" feature under **Shared features** in SQL Server Setup. |
+| [Microsoft R Client](http://aka.ms/rclient/download) |  A free download that gives you access to the RevoScaleR packages for development use. By installing R Client, you can create R solutions that can be run in all supported compute contexts, including SQL Server in-database analytics, and distributed R computing on Hadoop, Spark, or Linux using Machine Learning Server. In production environments where SQL Server is a central hub for in-database analytics, you can install R Client on computer workstations. Libraries installed with R Client execute locally, but can shift computations to the remote SQL Server. For more information, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client). |
 
-[Microsoft R Client](http://aka.ms/rclient/download) is a free download that gives you access to the RevoScaleR packages for development use. By installing R Client, you can create R solutions that can be run in all supported compute contexts, including SQL Server in-database analytics, and distributed R computing on Hadoop, Spark, or Linux using Machine Learning Server. In production environments where SQL Server is a central hub for in-database analytics, you can install R Client on computer workstations. Libraries installed with R Client execute locally, but can shift computations to the remote SQL Server. For more information, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).
-
-## Built-in R tools
+## Use built-in R tools
 
 When you install R with SQL Server, you get the same R tools that are installed with any **base** installation of R, such as RGui, Rterm, and so forth. Therefore technically, you have all the tools you need to develop and test R code.
 
@@ -41,10 +42,10 @@ The following standard R tools are included in a *base installation* of R, and t
 
 Tools are located in **bin** folder for base R as installed SQL Server or R Client. The following paths are valid locations for the tools, depending on which product version and feature you installed:
 
-+ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
-+ SQL Server 2016 R Server Standalone: `~\Program Files\Microsoft SQL Server\130\R_SERVER\bin\x64`
-+ SQL Server 2017 Machine Learning Services: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
-+ SQL Server 2017 Machine Learning Server (Standalone): `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64`
++ R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ R Server Standalone: `~\Program Files\Microsoft SQL Server\130\R_SERVER\bin\x64`
++ Machine Learning Services: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ Machine Learning Server (Standalone): `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64`
 
 ## Install an IDE
 
@@ -100,7 +101,6 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
     sampleDataQuery <- "SELECT TOP 100 * from [dbo].[MyTestTable]"
     inDataSource <- RxSqlServerData(sqlQuery = sampleDataQuery, connectionString = connStr, rowsPerRead = 500)
     ```
-
     > [!TIP]
     > To run a batch, select the lines you want to run and press CTRL + ENTER.
 

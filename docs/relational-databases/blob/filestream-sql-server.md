@@ -17,6 +17,7 @@ ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # FILESTREAM (SQL Server)

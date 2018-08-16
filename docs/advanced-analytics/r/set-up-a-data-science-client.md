@@ -1,5 +1,5 @@
 ---
-title: Set up a data-science client for R development on SQL Server | Microsoft Docs
+title: Set up a data science client for R development on SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -16,93 +16,65 @@ After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/ssc
 
 This article describes some typical client scenarios, including configuration of the free Visual Studio Community edition to run R code in SQL Server.
 
-## Install R libraries on the client
+## 1 - Install R libraries
 
-Your client environment must include Microsoft R Open, as well as the additional RevoScaleR packages that support distributed execution of R on SQL Server. Standard distributions of R do not have the packages that support remote compute contexts or parallel execution of R tasks.
+Your client environment must include Microsoft R Open, as well as RevoScaleR and other product-specific R packages that support distributed execution of R on SQL Server. Standard distributions of R do not have the packages that support remote compute contexts or parallel execution of R tasks.
 
-To get these libraries, install any of the following:
-  
-+ [Microsoft R Client](http://aka.ms/rclient/download)
+To get the full complement of libraries, install any of the following, but choose an option that most closely matches your SQL Server installation. Your client libraries should closely match equivalent libraries on the server. 
 
-+ Microsoft R Server (for SQL Server 2016)
+| Library provider | Usage  |
+|------------------|--------------------------------|
+| [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) | For best compatibility with a SQL Server 2017 instance, install the free developer edition of SQL Server 2017, choosing the "Standalone server" feature under **Shared features** in SQL Server Setup. |
+| [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) | Recommended for use with SQL Server 2016 R Services. Install the free developer edition of SQL Server 2016, choosing the "Standalone R Server" feature under **Shared features** in SQL Server Setup. |
+| [Microsoft R Client](http://aka.ms/rclient/download) |  This free download is a limited version of R Server: it provides RevoScaleR and other R packages, but is capped at two threads and in-memory data. However, by installing R Client, you can create R solutions that start locally, and shift execution (referred to as *compute context*) to access data and the computational power of a remote SQL Server instance. For more information, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client). |
 
-    - To install from SQL Server setup, see [Install SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md)
+## 2 - Use built-in R tools
 
-    - To use the separate Windows-based installer, see [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+When you install R with SQL Server, you get the same R tools that are installed with any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials.
 
-+ Machine Learning Server (for SQL Server 2017)
+Base R in Microsoft products is provided by Microsoft R Open, included in SQL Server Setup, built on open-source R. The following standard R tools are therefore installed by default. 
 
-    - To install from SQL Server setup, see [Install SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
+| Tool | Description | 
+|------|-------------|
+| **RTerm**: | A command-line terminal for running R scripts | 
+| **RGui.exe** | A simple interactive editor for R. The command-line arguments are the same for RGui.exe and RTerm. |
+|**RScript** | A command-line tool for running R scripts in batch mode. |
 
-    - To use the separate Windows-based installer, see [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+Tools are located in **bin** folder for base R as installed SQL Server or R Client. The following paths are valid locations for the tools, depending on which product version and feature you installed:
 
-## R tools
++ R Client: `~\Program Files\Microsoft\R Client\R_SERVER\bin\x64`
++ R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ R Server Standalone: `~\Program Files\Microsoft SQL Server\130\R_SERVER\bin\x64`
++ Machine Learning Services: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ Machine Learning Server (Standalone): `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64`
 
-When you install R with SQL Server, you get the same R tools that are installed with any **base** installation of R, such as RGui, Rterm, and so forth. Therefore technically, you have all the tools you need to develop and test R code.
+## 3 - Install an IDE
 
-The following standard R tools are included in a *base installation* of R, and therefore are installed by default.
+For sustained and serious development projects, you should install an integrated development environment (IDE).
 
-+ **RTerm**: A command-line terminal for running R scripts
+### RStudio
 
-+ **RGui.exe**:  A simple interactive editor for R. The command-line arguments are the same for RGui.exe and RTerm.
+When using [RStudio](https://www.rstudio.com/), you can configure the environment to use the R libraries and executables that correspond to those on a remote SQL Server.
 
-+ **RScript**: A command-line tool for running R scripts in batch mode.
+1. Check R package versions installed on SQL Server. For more information, see [Get R package information](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
 
-To locate these tools, determine the R library that was installed when you set up SQL Server or the standalone machine learning feature. For example, in a default installation, the R tools are located in these folders:
+1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as those on the server. For version information, see the version map in this article: [Upgrade R and Python components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
-+ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
-+ Microsoft R Server Standalone: `~\Program Files\Microsoft R\R_SERVER\bin\x64`
-+ SQL Server 2017 Machine Learning Services: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
-+ Machine Learning Server (Standalone): `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. Depending on how you obtained RevoScaleR and other libraries, it is most likely one of the following paths:
 
-If you need help with the R tools, just open **RGui**, click **Help**, and select one of the options
+  + C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
+  + C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library
+  + C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
 
-## Microsoft R Client
+### R Tools for Visual Studio (RTVS)
 
-Microsoft R Client is a free download that gives you access to the RevoScaleR packages for development use. By installing R Client, you can create R solutions that can be run in all supported compute contexts, including SQL Server in-database analytics, and distributed R computing on Hadoop, Spark, or Linux using Machine Learning Server.
+If you don't already have a preferred IDE for R, we recommend **R Tools for Visual Studio**.
 
-If you have already installed a different R development environment, such as RStudio, be sure to reconfigure the environment to use the libraries and executables provided by Microsoft R Client. By doing so you can use all the features of the RevoScaleR package, although performance will be limited.
++ [Download R Tools for Visual Studio (RTVS)](https://visualstudio.microsoft.com/vs/features/rtvs/)
++ [Installation instrructions](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS is available in several versions of Visual Studio.
++ [Get started with R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
 
-For more information, see [What is Microsoft R Client?](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
-
-## Install a development environment
-
-If you don't already have a preferred R development environment, we recommend one of the following:
-
-+ R Tools for Visual Studio
-
-    Works with Visual Studio 2015.
-
-    For setup information, see [How to install R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation).
- 
-    To configure RTVS to use your Microsoft R client libraries, see [About Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
-
-+ Visual Studio 2017
-
-    Even the free Community Edition includes the data science workload, which installs project templates for R, Python, and F#.
-
-    Download Visual Studio from [this site](https://www.visualstudio.com/vs/). 
-
-+ RStudio
-
-    If you prefer to use RStudio, some additional steps are required to use the RevoScaleR libraries:
-
-    - Install Microsoft R Client to get the required packages and libraries.
-    - Update your R path to use the Microsoft R runtime.
-
-    For more information, see [R Client - configure your IDE](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client#step-2-configure-your-ide).
-
-## Configure your IDE
-
-+ R Tools for Visual Studio
-
-    See [this site](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r) for some examples of how to build and debug R projects using R Tools for Visual Studio. 
-
-+ Visual Studio 2017
-
-    If you install Microsoft R Client or R Server **before** you install Visual Studio, the R Server libraries are automatically detected and used for your library path. If you have not installed the RevoScaleR libraries, from the **R Tools** menu, select **Install R Client**.
-
-## Run R in SQL Server
+### Connect to SQL Server from RTVS
 
 This example uses Visual Studio 2017 Community Edition, with the data science workload installed.
 
@@ -132,7 +104,6 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
     sampleDataQuery <- "SELECT TOP 100 * from [dbo].[MyTestTable]"
     inDataSource <- RxSqlServerData(sqlQuery = sampleDataQuery, connectionString = connStr, rowsPerRead = 500)
     ```
-
     > [!TIP]
     > To run a batch, select the lines you want to run and press CTRL + ENTER.
 
@@ -146,3 +117,10 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
     Results are returned in the **R Interactive** window.
     
     If you want to assure yourself that the code is being executed on the SQL Server instance, you can use Profiler to create a trace.
+
+## Next steps
+
+Two different tutorials include exercises for switching the compute context from local to a remote SQL Server instance.
+
++ [Tutorial: Use RevoScaleR R functions with SQL Server data](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [Data Science End-to-End Walkthrough](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

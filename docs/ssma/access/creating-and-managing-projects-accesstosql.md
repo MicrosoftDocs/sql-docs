@@ -70,12 +70,12 @@ SSMA starts without loading a default project. To migrate data from Access datab
   
 4.  In the Migration To drop down, select one of SQL Server 2005/ SQL Server 2008/ SQL Server 2012/ SQL Server 2014/ SQL Server 2016/ Azure SQL DB, and then click **OK**.  
   
-SSMA creates the project file. You can now perform the next step of [adding one or more Access databases](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
+SSMA creates the project file. You can now perform the next step of [adding one or more Access databases](adding-and-removing-access-database-files-accesstosql.md).  
   
 ## Customizing Project Settings  
-In addition to defining default project settings, which apply to all new SSMA projects, you can also customize the settings for each project. For more information, see [Setting Conversion and Migration Options](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167).  
+In addition to defining default project settings, which apply to all new SSMA projects, you can also customize the settings for each project. For more information, see [Setting Conversion and Migration Options](setting-conversion-and-migration-options-accesstosql.md).  
   
-When you customize data type mappings between source and target databases, you can define mappings at the project, database, or object level. For more information about type mapping, see [Mapping Source and Target Data Types](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+When you customize data type mappings between source and target databases, you can define mappings at the project, database, or object level. For more information about type mapping, see [Mapping Source and Target Data Types](mapping-source-and-target-data-types-accesstosql.md).  
   
 ## Saving Projects  
 When you save a project, SSMA persists the project settings, and optionally the database metadata, to the project file.  
@@ -110,9 +110,9 @@ When you open a project, it is disconnected from [!INCLUDE[ssNoVersion](../../in
 3.  To reconnect to SQL Azure, on the **File** menu, select **Reconnect to SQL Azure.**  
   
 ## Next Step  
-The next step in the migration process is to [add one or more Access databases](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
+The next step in the migration process is to [add one or more Access databases](adding-and-removing-access-database-files-accesstosql.md).  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Adding and Removing Access Database Files](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Adding and Removing Access Database Files](adding-and-removing-access-database-files-accesstosql.md)  
   

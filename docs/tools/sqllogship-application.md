@@ -71,7 +71,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ## Remarks  
  We recommend that you use the backup, copy, and restore jobs to perform the backup, copy and restore when possible. To start these jobs from a batch operation or other application, call the [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) stored procedure.  
   
- The log shipping history created by **sqllogship** is interspersed with the history created by log shipping backup, copy, and restore jobs. If you plan to use **sqllogship** repeatedly to perform backup, copy, or restore operations for a log shipping configuration, consider disabling the corresponding log shipping job or jobs. For more information, see [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
+ The log shipping history created by **sqllogship** is interspersed with the history created by log shipping backup, copy, and restore jobs. If you plan to use **sqllogship** repeatedly to perform backup, copy, or restore operations for a log shipping configuration, consider disabling the corresponding log shipping job or jobs. For more information, see [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
  The **sqllogship** application, SqlLogShip.exe, is installed in the x:\Program Files\Microsoft SQL Server\130\Tools\Binn directory.  
   

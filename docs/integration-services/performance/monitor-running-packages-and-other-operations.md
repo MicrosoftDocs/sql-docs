@@ -178,7 +178,7 @@ manager: craigg
 > [!NOTE]  
 >  When you add custom reports to the **SSISDB** node under the **Databases** node, the SSISDB prefix is not necessary.  
   
- For instructions on how to create and add a custom report, see [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f).  
+ For instructions on how to create and add a custom report, see [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md).  
 
 ## View Reports for the Integration Services Server
   In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  For more information about the reports, see [Reports for the Integration Services Server](#reports).  

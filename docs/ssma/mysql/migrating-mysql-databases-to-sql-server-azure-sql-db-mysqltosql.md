@@ -39,7 +39,7 @@ To successfully migrate objects and data from MySQL databases to SQL Server or S
   
 7.  [Converting MySQL Databases &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Synchronization](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+8.  [Synchronization](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. You can do this in one of the following ways:  
   

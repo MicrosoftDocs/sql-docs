@@ -19,7 +19,7 @@ manager: craigg
   
 **Applies to**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] unless noted otherwise.  
   
- This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](http://msdn.microsoft.com/library/ms175049.aspx).  
+ This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](../relational-databases/indexes/indexes.md).  
   
 ##  <a name="Top"></a> In This Guide  
  [Index Design Basics](#Basics)  

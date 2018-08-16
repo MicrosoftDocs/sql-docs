@@ -118,6 +118,9 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
     
     If you want to assure yourself that the code is being executed on the SQL Server instance, you can use Profiler to create a trace.
 
-## See also
+## Next steps
 
-+ [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
+Two different tutorials include exercises for switching the compute context from local to a remote SQL Server instance.
+
++ [Tutorial: Use RevoScaleR R functions with SQL Server data](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [Data Science End-to-End Walkthrough](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

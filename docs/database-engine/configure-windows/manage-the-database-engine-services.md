@@ -68,7 +68,7 @@ manager: craigg
 |[Set an Instance of SQL Server to Start Automatically &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
   
 ## Related Content  
- [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+ [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
  [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   

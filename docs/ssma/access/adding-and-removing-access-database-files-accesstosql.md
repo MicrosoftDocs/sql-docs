@@ -46,7 +46,7 @@ When you add an Access database to an SSMA project, SSMA reads database metadata
 > An Access database can be split into multiple files: a back-end database that contains tables, and front-end databases that contain queries, forms, reports, macros, modules, and shortcuts. If you want to migrate a split database to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, add the front-end database to SSMA.  
   
 ## Permissions that are required by SSMA  
-To migrate an Access database to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, the Users group and the Admin user must have Administer permissions. For information about how to migrate databases with workgroup protection, see [Preparing Access Databases for Migration](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+To migrate an Access database to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, the Users group and the Admin user must have Administer permissions. For information about how to migrate databases with workgroup protection, see [Preparing Access Databases for Migration](preparing-access-databases-for-migration-accesstosql.md).  
   
 ## Selecting Databases to Add  
 If you want to add one or more databases to an SSMA project, and the files are all in one known location, you can add the files by using the following procedure.  
@@ -132,6 +132,6 @@ You can remove an Access database from a project by following these steps.
 The next step in the migration process is to [connect to SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Creating and Managing Projects](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Creating and Managing Projects](creating-and-managing-projects-accesstosql.md)  
   

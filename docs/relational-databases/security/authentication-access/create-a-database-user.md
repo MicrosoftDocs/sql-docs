@@ -133,7 +133,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      View or specify the extended properties for the object. Each extended property consists of a name/value pair of metadata associated with the object.  
   
      **Ellipsis (…)**  
-     Click the ellipsis **(…)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Click the ellipsis **(…)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete**  
      Removes the selected extended property.  

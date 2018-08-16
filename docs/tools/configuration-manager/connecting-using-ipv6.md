@@ -17,6 +17,7 @@ ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Connecting Using IPv6

@@ -239,7 +239,7 @@ on the database. This permission can be granted by a user with CONTROL permissio
   
 **DacFx**  
   
- Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server beginning with SQL Server 2016 that affects the database schema, exports of the schema (with or without data) are not be able to be imported into an older version of SQL Server e.g. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. For example, an export to a [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) or a [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) from an [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database that used this new feature would not be able to be imported into a down-level server.  
+ Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server beginning with SQL Server 2016 that affects the database schema, exports of the schema (with or without data) are not be able to be imported into an older version of SQL Server e.g. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. For example, an export to a [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) or a [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) from an [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database that used this new feature would not be able to be imported into a down-level server.  
 
 **ELEVATE_ONLINE** 
 

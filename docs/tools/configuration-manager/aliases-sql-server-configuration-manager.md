@@ -13,6 +13,7 @@ ms.assetid: 7dc5d029-a1ed-4c13-a5c2-2aafb0f7866f
 caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Aliases (SQL Server Configuration Manager)

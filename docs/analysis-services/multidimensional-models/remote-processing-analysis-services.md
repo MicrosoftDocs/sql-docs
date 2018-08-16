@@ -42,9 +42,9 @@ manager: kfile
   
  Use the following links to set permissions:  
   
--   [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+-   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) suggests alternative fixed server roles if granting **sysadmin** permissions is not possible.  
+-   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md) suggests alternative fixed server roles if granting **sysadmin** permissions is not possible.  
   
  After account permissions are configured, continue with these steps.  
   
@@ -85,7 +85,7 @@ manager: kfile
 2.  As a final step, modify the job to run on a schedule that you define, adding any alerts or notifications necessary to administer the job. You might also want to refine the processing script, or create multiple steps in the job to process objects independently.  
   
 ## See Also  
- [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md)   
  [Schedule SSAS Administrative Tasks with SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Batch Processing &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

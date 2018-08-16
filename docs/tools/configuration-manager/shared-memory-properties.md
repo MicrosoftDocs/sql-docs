@@ -15,6 +15,7 @@ ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Shared Memory Properties

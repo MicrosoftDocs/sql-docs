@@ -23,6 +23,7 @@ ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 79
 author: "Minewiskan"
 ms.author: "owend"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: "erikre"
 ---
 # Upgrade Analysis Services

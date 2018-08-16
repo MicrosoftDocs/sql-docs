@@ -183,9 +183,9 @@ GO
 ## More about backup tasks  
 -   [Create a Maintenance Plan](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
--   [Create a Job](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Create a Job](../../ssms/agent/create-a-job.md)  
   
--   [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)  
+-   [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
   
 ## Working with backup devices and backup media  
 -   [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

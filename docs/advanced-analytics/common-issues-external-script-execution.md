@@ -54,7 +54,7 @@ However, in organizations where more restrictive security policies are enforced,
 
 To correct the problem, ensure that the group **SQLRUserGroup** has the system right **Allow log on locally**.
 
-For more information, see [Configure Windows service accounts and permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
+For more information, see [Configure Windows service accounts and permissions](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 ## Permissions to run external scripts
 

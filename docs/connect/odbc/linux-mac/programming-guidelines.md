@@ -25,21 +25,21 @@ An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLU
 The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) are valid when using the ODBC driver on macOS and Linux:  
 
 -   [Communicating with SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
--   [Connection and query timeout support](http://msdn.microsoft.com/library/ms130822.aspx)  
--   [Cursors](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
+-   [Connection and query timeout support](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [Cursors](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
 -   [Date/Time Improvements (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
 -   [Executing Queries (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
--   [Handling Errors and Messages](http://msdn.microsoft.com/library/ms131289.aspx)  
--   [Kerberos authentication](http://msdn.microsoft.com/library/cc280459.aspx)  
+-   [Handling Errors and Messages](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
+-   [Kerberos authentication](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
 -   [Large CLR User-Defined Types (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [Performing Transactions (ODBC) (except distributed transactions)](http://msdn.microsoft.com/library/ms131706.aspx)  
 -   [Processing Results (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
--   [Running Stored Procedures](http://msdn.microsoft.com/library/ms131440.aspx)
+-   [Running Stored Procedures](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Sparse Columns Support (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL encryption](http://msdn.microsoft.com/library/ms131691.aspx)
+-   [SSL encryption](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Table Valued Parameters](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 and UTF-16 for command and data API](http://msdn.microsoft.com/library/ff878241.aspx)
--   [Using Catalog Functions](http://msdn.microsoft.com/library/ms131490.aspx)  
+-   [Using Catalog Functions](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## Unsupported Features
 

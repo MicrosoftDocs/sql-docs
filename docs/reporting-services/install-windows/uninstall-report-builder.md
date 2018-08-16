@@ -22,7 +22,7 @@ manager: "kfile"
 
 You can uninstall the stand-alone version of Report Builder from the control panel or the command line.
 
-Uninstalling Report Builder from the command line uses syntax that is identical to the syntax you use to install Report Builder, except you use the /x option instead of the /i option. Command lines for uninstalling can also include the /quiet option and other standard options. If the Report Builder Windows Installer Package (ReportBuilder3_x86.msi) has been removed, you cannot use the command line easily to uninstall Report Builder. To learn more about how you might be able to remove Report Builder by using its GUID, see the documentation for the msiexec program in [Command-Line Options](https://msdn.microsoft.com/library/windows/desktop/aa367988.aspx).  
+Uninstalling Report Builder from the command line uses syntax that is identical to the syntax you use to install Report Builder, except you use the /x option instead of the /i option. Command lines for uninstalling can also include the /quiet option and other standard options. If the Report Builder Windows Installer Package (ReportBuilder3_x86.msi) has been removed, you cannot use the command line easily to uninstall Report Builder. To learn more about how you might be able to remove Report Builder by using its GUID, see the documentation for the msiexec program in [Command-Line Options](/windows/desktop/Msi/command-line-options).  
 
 If folders used by Report Builder include custom files, the folders and the files are preserved when Report Builder is removed. Only the Report Builder files are removed.  
 

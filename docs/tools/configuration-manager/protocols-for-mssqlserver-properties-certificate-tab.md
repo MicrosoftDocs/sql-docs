@@ -17,6 +17,7 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Protocols for MSSQLSERVER Properties (Certificate Tab)

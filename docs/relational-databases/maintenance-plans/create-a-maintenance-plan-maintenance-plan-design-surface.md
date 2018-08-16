@@ -82,7 +82,7 @@ manager: craigg
      Displays the **Reporting and Logging** dialog box. See below for more information on this dialog box.  
   
      **Servers**  
-     Display the **Servers** dialog box, which is used to select the servers where the subplan tasks will be run. This option is enabled only on master servers in multiserver environments. For more information, see [Create a Multiserver Environment](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) and [Maintenance Plan &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Display the **Servers** dialog box, which is used to select the servers where the subplan tasks will be run. This option is enabled only on master servers in multiserver environments. For more information, see [Create a Multiserver Environment](../../ssms/agent/create-a-multiserver-environment.md) and [Maintenance Plan &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Name**  
      Display the maintenance plan name. For new maintenance plans, the name is specified in a dialog box before the maintenance plan designer opens. To rename a maintenance plan, right-click the plan in Object Explorer, and then click **Rename**.  

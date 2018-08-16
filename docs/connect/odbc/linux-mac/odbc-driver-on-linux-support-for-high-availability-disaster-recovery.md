@@ -79,7 +79,7 @@ Two ODBC connection string keywords support [!INCLUDE[ssHADR](../../../includes/
   
 -   **MultiSubnetFailover**  
   
-For more information about ODBC connection string keywords, see [Using Connection String Keywords with SQL Server Native Client](http://msdn.microsoft.com/library/ms130822.aspx).  
+For more information about ODBC connection string keywords, see [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 The equivalent connection attributes are:
   
@@ -87,7 +87,7 @@ The equivalent connection attributes are:
   
 -   **SQL_COPT_SS_MULTISUBNET_FAILOVER**  
   
-For more information about ODBC connection attributes, see [SQLSetConnectAttr](http://msdn.microsoft.com/library/ms131709.aspx).  
+For more information about ODBC connection attributes, see [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
 An ODBC application that uses [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] can use one of two functions to make the connection:  
   

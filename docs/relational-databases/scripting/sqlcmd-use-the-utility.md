@@ -556,7 +556,7 @@ SQLCMD –E –N –C
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Edit SQLCMD Scripts with Query Editor](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
- [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [Create a CmdExec Job Step](http://msdn.microsoft.com/library/b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c)  
+ [Manage Job Steps](../../ssms/agent/manage-job-steps.md)   
+ [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

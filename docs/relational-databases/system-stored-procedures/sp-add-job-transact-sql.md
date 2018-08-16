@@ -135,7 +135,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- For information about the specific permissions that are associated with each of these fixed database roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For information about the specific permissions that are associated with each of these fixed database roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Only members of the **sysadmin** fixed server role can set or change the value for **@owner_login_name**. If users who are not members of the **sysadmin** role set or change the value of **@owner_login_name**, execution of this stored procedure fails and an error is returned.  
   

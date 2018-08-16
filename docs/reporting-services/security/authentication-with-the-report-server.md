@@ -77,7 +77,7 @@ manager: "kfile"
 |Configure the Windows Integrated authentication type.|[Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
 |Configure the Basic authentication type.|[Configure Basic Authentication on the Report Server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Configure forms authentication or otherwise a Custom authentication type.|[Configure Custom or Forms Authentication on the Report Server](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to handle the custom authentication scenario.|[Configure the Web Portal to Pass Custom Authentication Cookies](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
+|Enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to handle the custom authentication scenario.|[Configure the Web Portal to Pass Custom Authentication Cookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 
 ## Next steps
 

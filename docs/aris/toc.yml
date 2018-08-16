@@ -53,6 +53,10 @@
     items:
     - name: Virtualize external data
       href: sql-server-aris-virtualize-data.md
+  - name: Notebooks
+    items:
+    - name: How to use Jupyter notebooks in SQL Server vNext
+      href: sql-server-aris-jupyter-notebook-guidance.md
   - name: Troubleshoot
     items:
     - name: Troubleshoot SQL Server Aris

@@ -114,7 +114,7 @@ An *operator* defines contact information for an individual responsible for the 
 > [!IMPORTANT]  
 > The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
-To send notifications to operators by using e-mail or pagers, you must configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use Database Mail. For more information, see [Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
+To send notifications to operators by using e-mail or pagers, you must configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use Database Mail. For more information, see [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
 You can define an operator as the alias for a group of individuals. In this way, all members of that alias are notified at the same time. For more information, see [Operators](../../ssms/agent/operators.md).  
   
@@ -176,9 +176,9 @@ Use the following tasks to get started with [!INCLUDE[ssNoVersion](../../include
 |Describes considerations for specifying an account for the SQL Server Agent service.|[Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |Describes how to use the SQL Server Agent error log.|[SQL Server Agent Error Log](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Describes how to use performance objects.|[Use Performance Objects](../../ssms/agent/use-performance-objects.md)|  
-|Describes the Maintenance Plan Wizard, which is a utility that you can use to help create jobs, alerts, and operators to automate administration of an instance of SQL Server.|[Use the Maintenance Plan Wizard](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
+|Describes the Maintenance Plan Wizard, which is a utility that you can use to help create jobs, alerts, and operators to automate administration of an instance of SQL Server.|[Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |Describes how to automate administrative tasks using SQL Server Agent.|[Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## See Also  
-[Surface Area Configuration](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)  
   

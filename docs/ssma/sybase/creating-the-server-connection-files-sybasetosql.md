@@ -109,5 +109,5 @@ The user can easily validate his/her server connection file against the schema d
 The next step in operating the console is [Executing the SSMA Console &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## See Also  
-[Executing the SSMA Console](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Executing the SSMA Console](executing-the-ssma-console-sybasetosql.md)  
   

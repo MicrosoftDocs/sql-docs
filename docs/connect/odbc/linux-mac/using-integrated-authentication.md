@@ -70,7 +70,7 @@ Before reuse, an application must reset pooled connections by executing `sp_rese
 
 ## Using Active Directory to Manage User Identities
 
-An application system administrator does not have to manage separate sets of login credentials for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. It is possible to configure Active Directory as a key distribution center (KDC) for Integrated Authentication. See [Microsoft Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747(v=vs.85).aspx) for more information.
+An application system administrator does not have to manage separate sets of login credentials for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. It is possible to configure Active Directory as a key distribution center (KDC) for Integrated Authentication. See [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) for more information.
 
 ## Using Linked Server and Distributed Queries
 

@@ -41,7 +41,7 @@ There are several types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 ##  <a name="PShellJob"></a> Create a PowerShell Job Step  
  **To create a PowerShell job step**  
   
-1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](../ssms/agent/create-jobs.md).  
   
 2.  In the **Job Properties** dialog, click the **Steps** page, and then click **New**.  
   
@@ -58,7 +58,7 @@ There are several types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 ##  <a name="CmdExecJob"></a> Create a Command Prompt Job Step  
  **To create a CmdExec job step**  
   
-1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](../ssms/agent/create-jobs.md).  
   
 2.  In the **Job Properties** dialog, click the **Steps** page, and then click **New**.  
   

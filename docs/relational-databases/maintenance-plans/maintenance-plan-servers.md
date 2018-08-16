@@ -28,8 +28,8 @@ manager: craigg
   
 ## See Also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Create a Multiserver Environment](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)   
- [Make a Master Server](http://msdn.microsoft.com/library/05739a73-1fdf-4d9d-92a6-70f328380322)   
- [Make a Target Server](http://msdn.microsoft.com/library/13aabe2d-67fe-4c67-8d49-2928dd705b7a)  
+ [Create a Multiserver Environment](../../ssms/agent/create-a-multiserver-environment.md)   
+ [Make a Master Server](../../ssms/agent/make-a-master-server.md)   
+ [Make a Target Server](../../ssms/agent/make-a-target-server.md)  
   
   

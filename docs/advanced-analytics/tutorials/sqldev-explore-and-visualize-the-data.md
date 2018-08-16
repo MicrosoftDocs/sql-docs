@@ -272,8 +272,8 @@ To view the plot, open the destination folder and review the files that were cre
 
 ## Next lesson
 
-[Lesson 4: Create data features using T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lesson 3: Create data features using T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## Previous lesson
 
-[Lesson 2: Prepare the tutorial environment using PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lesson 1: Set up NYC Taxi demo data](sqldev-download-the-sample-data.md)

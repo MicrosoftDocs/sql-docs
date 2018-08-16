@@ -12,6 +12,7 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Install SQL Server using a configuration file

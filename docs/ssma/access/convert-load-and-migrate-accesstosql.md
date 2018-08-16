@@ -34,5 +34,5 @@ Shows the associated conversion or migration report.
   
 ## See Also  
 [User Interface Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
-[Migration Wizard](http://msdn.microsoft.com/en-us/5bab5914-b2ae-4795-8cf5-83e42d64bef2)  
+[Migration Wizard](migration-wizard-accesstosql.md)  
   

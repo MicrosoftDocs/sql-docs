@@ -79,12 +79,12 @@ You can also customize settings for the current project. These settings are save
 ## Next Steps  
 The next step in the migration depends on your project needs:  
   
--   To customize the mapping of source and target data types, see [Mapping Source and Target Data Types](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+-   To customize the mapping of source and target data types, see [Mapping Source and Target Data Types](mapping-source-and-target-data-types-accesstosql.md)  
   
--   To customize the mapping of source and target databases, see [Mapping Source and Target Databases](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
+-   To customize the mapping of source and target databases, see [Mapping Source and Target Databases](mapping-source-and-target-databases-accesstosql.md)  
   
--   Otherwise, you can convert the Access database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure object definitions. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   Otherwise, you can convert the Access database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure object definitions. For more information, see [Converting Access Database Objects](converting-access-database-objects-accesstosql.md)  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

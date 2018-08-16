@@ -50,5 +50,5 @@ There are two buttons present viz.:
 -   **Cancel:** Click **Cancel** to restore the settings present before the changes were being made.  
   
 ## See Also  
-[Migrating Oracle Data to SQL Server](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13)  
+[Migrating Oracle Data to SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

@@ -351,7 +351,7 @@ The script file contains a sequence of migration workflow commands in the XML fo
   
 For example, a typical data migration of a specific table in a MySQL database follows the hierarchy of: Database -&gt; Table.  
   
-When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](http://msdn.microsoft.com/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a) or, in a separate section within the script file for variable values.  
+When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](creating-variable-value-files-mysqltosql.md) or, in a separate section within the script file for variable values.  
   
 **Example:**  
   

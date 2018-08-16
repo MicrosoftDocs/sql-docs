@@ -39,5 +39,5 @@ Topics covered in this section include:
 |[Troubleshooting &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Provides brief information about fixing migration issues.|  
   
 ## See Also  
-[Getting Started with SSMA for MySQL Console](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
+[Getting Started with SSMA for MySQL Console](getting-started-with-ssma-for-mysql-console-mysqltosql.md)  
   

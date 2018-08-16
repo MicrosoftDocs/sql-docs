@@ -11,6 +11,11 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/r/sqldev-import-data-to-sql-server-using-powershell.md",
+            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/tutorials/sqldev-download-the-sample-data",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md",
             "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough",
             "redirect_document_id": false

@@ -44,5 +44,5 @@ manager: craigg
 
 
 ## Next steps  
-[Tutorial: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
+[Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
 [Tutorial: Writing Transact-SQL Statements](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  

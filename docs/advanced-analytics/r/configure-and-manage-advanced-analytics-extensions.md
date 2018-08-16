@@ -59,7 +59,7 @@ If you modify the service account, be sure to use the **Local Security Policy** 
 + Log on as a service (SeServiceLogonRight)
 + Replace a process-level token (SeAssignPrimaryTokenPrivilege)
 
-For more information about permissions required to run SQL Server services, see [Configure Windows Service Accounts and Permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
+For more information about permissions required to run SQL Server services, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 ##  <a name="bkmk_ChangingConfig"></a> Change advanced service options
 

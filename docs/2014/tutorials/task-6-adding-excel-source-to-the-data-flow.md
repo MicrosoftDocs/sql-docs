@@ -18,7 +18,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Task 6: Adding Excel Source to the Data Flow
-  In this task, you add an Excel Source to the data flow to read supplier data from the source Excel file. The Excel Source extracts data from worksheets or ranges in Microsoft Excel workbooks. See [Excel Source](http://msdn.microsoft.com/library/ms141683.aspx) topic for more details.  
+  In this task, you add an Excel Source to the data flow to read supplier data from the source Excel file. The Excel Source extracts data from worksheets or ranges in Microsoft Excel workbooks. See [Excel Source](../integration-services/data-flow/excel-source.md) topic for more details.  
   
 1.  Drag-drop **Excel Source** from **Other Sources** in **SSIS Toolbox** to the **Data Flow** tab.  
   

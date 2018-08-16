@@ -18,15 +18,15 @@ This article describes some typical client scenarios, including configuration of
 
 ## 1 - Install R libraries
 
-Your client environment must include Microsoft R Open, as well as the additional RevoScaleR packages that support distributed execution of R on SQL Server. Standard distributions of R do not have the packages that support remote compute contexts or parallel execution of R tasks.
+Your client environment must include Microsoft R Open, as well as RevoScaleR and other product-specific R packages that support distributed execution of R on SQL Server. Standard distributions of R do not have the packages that support remote compute contexts or parallel execution of R tasks.
 
-To get these libraries, install any of the following, but choose an option that most closely matches your SQL Server installation. Doing so ensures that client libraries match equivalent libraries on the server. 
+To get the full complement of libraries, install any of the following, but choose an option that most closely matches your SQL Server installation. Your client libraries should closely match equivalent libraries on the server. 
 
 | Library provider | Usage  |
 |------------------|--------------------------------|
 | [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) | For best compatibility with a SQL Server 2017 instance, install the free developer edition of SQL Server 2017, choosing the "Standalone server" feature under **Shared features** in SQL Server Setup. |
 | [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) | Recommended for use with SQL Server 2016 R Services. Install the free developer edition of SQL Server 2016, choosing the "Standalone R Server" feature under **Shared features** in SQL Server Setup. |
-| [Microsoft R Client](http://aka.ms/rclient/download) |  This free download is a limited version of R Server: it provides RevoScaleR and other R packages, but is constrained to two threads and in-memory data. However, by installing R Client, you can create R solutions that start locally, but shift execution (referred to as *compute context*) to access data and  computing power of a remote SQL Server instance. For more information, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client). |
+| [Microsoft R Client](http://aka.ms/rclient/download) |  This free download is a limited version of R Server: it provides RevoScaleR and other R packages, but is capped at two threads and in-memory data. However, by installing R Client, you can create R solutions that start locally, and shift execution (referred to as *compute context*) to access data and the computational power of a remote SQL Server instance. For more information, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client). |
 
 ## 2 - Use built-in R tools
 
@@ -50,7 +50,7 @@ Tools are located in **bin** folder for base R as installed SQL Server or R Clie
 
 ## 3 - Install an IDE
 
-For serious development and testing, you should install an integrated development environment (IDE).
+For sustained and serious development projects, you should install an integrated development environment (IDE).
 
 ### RStudio
 
@@ -58,7 +58,7 @@ When using [RStudio](https://www.rstudio.com/), you can configure the environmen
 
 1. Check R package versions installed on SQL Server. For more information, see [Get R package information](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
 
-1. Install Microsoft R Client or a standalone server to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as those on the server. For version information, see the version map in this article: [Upgrade R and Python components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as those on the server. For version information, see the version map in this article: [Upgrade R and Python components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. Depending on how you obtained RevoScaleR and other libraries, it is most likely one of the following paths:
 

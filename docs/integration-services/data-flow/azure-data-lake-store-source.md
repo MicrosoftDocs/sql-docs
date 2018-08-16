@@ -41,4 +41,4 @@ manager: craigg
 
 ## Text qualifier
 
-The **Azure Data Lake Store Source** does not support a text qualifier. If you have to specify a text qualifier to process your files correctly, consider downloading the files to our local computer and processing the files with the **Flat File Source**. The Flat File Source lets you specify a text qualifier. For more info, see [Flat File Source](flat-file-source.md).
+The **Azure Data Lake Store Source** does not support a text qualifier. If you have to specify a text qualifier to process your files correctly, consider downloading the files to your local computer and processing the files with the **Flat File Source**. The Flat File Source lets you specify a text qualifier. For more info, see [Flat File Source](flat-file-source.md).

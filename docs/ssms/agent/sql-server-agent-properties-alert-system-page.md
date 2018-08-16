@@ -110,6 +110,6 @@ Select this check box to enable token replacement for jobs that are activated by
   
 ## See Also  
 [Operators](../../ssms/agent/operators.md)  
-[Configure SQL Server Agent Mail to Use Database Mail](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
-[Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+[Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

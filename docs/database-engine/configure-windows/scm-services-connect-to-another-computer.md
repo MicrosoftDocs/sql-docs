@@ -72,6 +72,6 @@ manager: craigg
 >  When using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager on a remote computer, the computer name is not obvious and it is possible to mistakenly stop or configure the wrong computer. On the **Service** tab, check the **Host Name** box to confirm the computer name before modifying a service.  
   
 ## See Also  
- [Configure WMI to Show Server Status in SQL Server Tools](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)  
+ [Configure WMI to Show Server Status in SQL Server Tools](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

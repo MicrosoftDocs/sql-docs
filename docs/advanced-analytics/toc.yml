@@ -85,17 +85,15 @@
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - Get data and scripts
+      - name: 1 - Set up demo data
         href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 - Set up the environment
-        href: r/sqldev-import-data-to-sql-server-using-powershell.md
-      - name: 3 - Visualize data
+      - name: 2 - Visualize data
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 4 - Create data features
+      - name: 3 - Create data features
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 5 - Train and save to SQL
+      - name: 4 - Train and save to SQL
         href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 6 - Predict outcomes
+      - name: 5 - Predict outcomes
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Data science end-to-end walkthrough
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md

@@ -133,7 +133,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## Permissions  
  By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted the **SQLAgentOperatorRole** fixed database role in the **msdb** database.  
   
- For details about **SQLAgentOperatorRole**, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about **SQLAgentOperatorRole**, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## Examples  
  The following example reports information about the `Demo: Sev. 25 Errors` alert.  

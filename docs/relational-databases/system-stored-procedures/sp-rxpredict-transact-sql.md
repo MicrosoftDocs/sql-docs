@@ -96,5 +96,5 @@ In addition to being a valid SQL query, the input data in *@inputData* must incl
 
 `sp_rxPredict` supports only the following .NET column types: double, float, short, ushort, long, ulong and string. You may need to filter out unsupported types in your input data before using it for real-time scoring. 
 
-  For information about corresponding SQL types, see [SQL-CLR Type Mapping](https://msdn.microsoft.com/library/bb386947.aspx) or [Mapping CLR Parameter Data](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+  For information about corresponding SQL types, see [SQL-CLR Type Mapping](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) or [Mapping CLR Parameter Data](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

@@ -37,10 +37,10 @@ The Jet database engine, which is used as the database engine for Access, is a f
 After you migrate databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can continue to use Access by using linked tables, or you can manually migrate your applications to [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework-based code that interacts directly with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Determining which databases to migrate  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access can locate Access databases for you. You can then export metadata about those databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about how to export and query metadata, see [Exporting an Access Inventory](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access can locate Access databases for you. You can then export metadata about those databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about how to export and query metadata, see [Exporting an Access Inventory](exporting-an-access-inventory-accesstosql.md).  
 
    > [!NOTE]
-   > Not all Access features and settings are supported by, or can be easily converted to, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Before you start migrating databases, see [Incompatible Access Features](http://msdn.microsoft.com/99d45b9c-e3b9-4d56-8c25-b594b887ace1).
+   > Not all Access features and settings are supported by, or can be easily converted to, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Before you start migrating databases, see [Incompatible Access Features](incompatible-access-features-accesstosql.md).
   
 ## Preparing for migration  
 Use the following guidelines to help prepare your Access databases for migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -76,5 +76,5 @@ For information about how to  back up [!INCLUDE[ssNoVersion](../../includes/ssno
 You might also want to document the properties, such as lists of database objects, file sizes, and permissions, of your Access databases. To generate this documentation in Access, on the **Tools** menu, point to **Analyze**, and then click **Documented**.  
   
 ## See also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Linking Access Applications to SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Linking Access Applications to SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

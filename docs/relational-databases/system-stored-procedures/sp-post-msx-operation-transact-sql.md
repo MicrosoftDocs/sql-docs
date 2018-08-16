@@ -81,7 +81,7 @@ sp_post_msx_operation
   
  After an operation has been posted, it appears in the **sysdownloadlist** table. After a job has been created and posted, subsequent changes to that job must also be communicated to the target servers (TSX). This is also accomplished using the download list.  
   
- We highly recommend that the download list be managed by using the SQL Server Management Studio. For more information, see [View or Modify Jobs](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7).  
+ We highly recommend that the download list be managed by using the SQL Server Management Studio. For more information, see [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md).  
   
 ## Permissions  
  To run this stored procedure, users must be granted the **sysadmin** fixed server role.  

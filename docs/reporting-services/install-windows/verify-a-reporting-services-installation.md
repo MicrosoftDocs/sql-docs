@@ -66,7 +66,7 @@ manager: "kfile"
   
 1.  In a SharePoint document library, create a basic [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder and a basic report will preview.  
   
-2.  Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
+2.  Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder](../report-builder/start-report-builder.md).  
   
 ### Reporting Services samples  
   

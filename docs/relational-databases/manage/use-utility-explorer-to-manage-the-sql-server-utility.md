@@ -68,6 +68,6 @@ manager: craigg
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Configure Health Policies &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
- [Object Explorer](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
+ [Object Explorer](../../ssms/object/object-explorer.md)  
   
   

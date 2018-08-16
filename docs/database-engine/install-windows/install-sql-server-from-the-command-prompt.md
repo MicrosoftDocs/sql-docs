@@ -85,6 +85,7 @@ helpviewer_keywords:
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Install SQL Server from the Command Prompt

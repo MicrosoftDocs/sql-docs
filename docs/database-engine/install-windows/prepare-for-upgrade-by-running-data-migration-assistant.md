@@ -12,6 +12,7 @@ ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Prepare for upgrade by running Data Migration Assistant

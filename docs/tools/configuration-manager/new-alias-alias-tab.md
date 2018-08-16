@@ -13,6 +13,7 @@ ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # New Alias (Alias Tab)

@@ -13,6 +13,7 @@ ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
 caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # SQL Server Services

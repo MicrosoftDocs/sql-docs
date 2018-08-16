@@ -18,6 +18,7 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # SQL Server Installation

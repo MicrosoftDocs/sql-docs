@@ -60,6 +60,7 @@ DmaCmd.exe /AssessmentName="string"
 
 **Single-database assessment using Windows authentication and running compatibility rules**
 
+
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
@@ -121,11 +122,27 @@ Catalog=DatabaseName3;Integrated Security=true"***
 ## Azure SQL Database SKU recommendations using the CLI
 
 ```
-.\DmaCmd.exe /Action=SkuRecommendation /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv" /SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv" /SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json" /SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html" /SkuRecommendationCurrencyCode=USD /SkuRecommendationOfferName=MS-AZR-0044p /SkuRecommendationRegionName=UKWest /SkuRecommendationSubscriptionId=<Your Subscription Id> /AzureAuthenticationInteractiveAuthentication=true /AzureAuthenticationClientId=<Your AzureAuthenticationClientId> /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationInteractiveAuthentication=true
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
 ```
-.\DmaCmd.exe /Action=SkuRecommendation /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv" /SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv" /SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json" /SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html" /SkuRecommendationPreventPriceRefresh=true 
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true 
 ```
 
 |Argument  |Description  | Required (Y/N)
@@ -155,14 +172,30 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 **Azure SQL DB SKU recommendation with price refresh (get latest prices)**
 ```
-.\DmaCmd.exe /Action=SkuRecommendation /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv" /SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv" /SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json" /SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html" /SkuRecommendationCurrencyCode=USD /SkuRecommendationOfferName=MS-AZR-0044p /SkuRecommendationRegionName=UKWest /SkuRecommendationSubscriptionId=<Your Subscription Id> /AzureAuthenticationInteractiveAuthentication=true /AzureAuthenticationClientId=<Your AzureAuthenticationClientId> /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationInteractiveAuthentication=true
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 	
 **Azure SQL DB SKU recommendation without price refresh (use static prices)**
 ```
-	.\DmaCmd.exe /Action=SkuRecommendation /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv" /SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv" /SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json" /SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html" /SkuRecommendationPreventPriceRefresh=true 
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true 
 ```
 
 ## See also
 
-[Data Migration Assistant Download](https://www.microsoft.com/download/details.aspx?id=53595)
+[Data Migration Assistant Download](https://aka.ms/get-dma)

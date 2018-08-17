@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"

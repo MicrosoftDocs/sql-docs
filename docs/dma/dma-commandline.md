@@ -197,5 +197,5 @@ Catalog=DatabaseName3;Integrated Security=true"***
 ```
 
 ## See also
-
-[Data Migration Assistant Download](https://aka.ms/get-dma)
+- [Data Migration Assistant](https://aka.ms/get-dma) download.
+- The article [Identify the right Azure SQL Database SKU for your on-premises database](https://aka.ms/dma-sku-recommend-sqldb).

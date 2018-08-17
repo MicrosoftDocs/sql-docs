@@ -15,17 +15,9 @@ manager: cgronlun
 
 After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to support machine learning, you should set up an R development environment that is capable of connecting to the server for remote execution and deployment.
 
+This article describes some typical client scenarios, including configuration of the free Visual Studio Community edition to run R code in SQL Server.
+
 If you have the developer edition and plan to work locally, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local R libraries installed by SQL Server.
-
-For data scientists and analysts connect to SQL Server remotely, this article explains how to set up your workstation so that you can write and debug R script locally, connect to SQL Server, and remote-execute R script on relational data on the server. SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md). 
-
-This article covers the following tasks:
-
-> [!div class="checklist"]
-> * Add Microsoft R packages
-> * Permissions for remote access
-> * Point a development tool to R libraries
-> * Connect to a remote server
 
 ## 1 - Install R packages
 
@@ -33,19 +25,19 @@ R functionality in Microsoft products is multi-layered. It starts with Microsoft
 
 Coordinated operations between a client and remote server requires both systems having the same packages. To get the full complement of libraries on a client workstation, install any of the following software. 
 
-You should choose an option that most closely matches your SQL Server installation.
+You should choose an option that most closely matches your SQL Server in-database analytics installation.
 
 | Library provider | Usage  |
 |------------------|--------------------------------|
-| [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) | Recommended when the remote server is a SQL Server 2017 instance. Install the free developer edition of SQL Server 2017, choosing the "Standalone server" feature under **Shared features** in SQL Server Setup. |
-| [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) | Recommended for use with SQL Server 2016 R Services. Install the free developer edition of SQL Server 2016, choosing the "Standalone R Server" feature under **Shared features** in SQL Server Setup. |
+| [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) | Recommended when the remote server is a [SQL Server 2017 machine learning instance](../install/sql-machine-learning-services-windows-install.md). Install the free developer edition of SQL Server 2017, choosing the "Standalone server" feature under **Shared features** in SQL Server Setup. |
+| [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) | Recommended for use with [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). Install the free developer edition of SQL Server 2016, choosing the "Standalone R Server" feature under **Shared features** in SQL Server Setup. |
 | [Microsoft R Client](http://aka.ms/rclient/download) |  This free download is a limited version of R Server: it provides RevoScaleR and other R packages, but is capped at two threads and in-memory data. However, you can still create R solutions that start locally, and shift execution (referred to as *compute context*) to access data and the computational power of a remote SQL Server instance. For more information about this tool, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).|
 
 <a name="r-tool"></a>
  
 ## 2 - Use built-in R tools
 
-When you install R with SQL Server, you get the same R tools that are standard to any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials.
+When you install R with SQL Server, you get the same R tools that are standard to any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials. You can use these tools to confirm connectivity.
 
 | Tool | Description | 
 |------|-------------|
@@ -55,11 +47,14 @@ When you install R with SQL Server, you get the same R tools that are standard t
 
 Tools are located in **bin** folder for base R as installed SQL Server or R Client. The following paths are valid locations for the tools, depending on which product version and feature you installed:
 
-+ R Client: `~\Program Files\Microsoft\R Client\R_SERVER\bin\x64`
-+ R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
-+ R Server Standalone: `~\Program Files\Microsoft SQL Server\130\R_SERVER\bin\x64`
-+ Machine Learning Services: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
-+ Machine Learning Server (Standalone): `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64`
+| Microsoft product | R tool location |
+|-------------------|-----------------|
+| Microsoft R Client | `~\Program Files\Microsoft\R Client\R_SERVER\bin\x64` |
+| Microsoft Machine Learning (R) Server | `~\Program Files\Microsoft\R_SERVER\bin\x64`
+| SQL Server 2016 R Services | `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`|
+| SQL Server 2016 R Standalone Server | `~\Program Files\Microsoft SQL Server\130\R_SERVER\bin\x64` 
+| SQL Server 2017 Machine Learning (R) Services | `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`|
+| SQL Server 2017 Machine Learning Learning (R) Standalone Server | `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` |
 
 ## 3 - Permissions
 
@@ -71,15 +66,16 @@ To connect to an instance of SQL Server to run scripts and upload data, you must
 
 To run the queries used to train the model, you must have db_datareader privileges on the database where the data is stored. To run R on the server, you must have the permission, `EXECUTE ANY EXTERNAL SCRIPT`.
 
-We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some demo purposes.
+We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some scenarios.
 
 > [!Tip]
 > If you are unfamiliar with SQL Server and working in a local development environment, you can step through this tutorial to learn about logins and setting permissions: [Deep-dive into RevoScaleR](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 
-
 ## 4 - Test connections
 
-As a verification step, use a built-in tool and RevoScaleR to confirm connectivity to the remote server.
+SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to.
+
+ As a verification step, use a built-in tool and RevoScaleR to confirm connectivity to the remote server.
 
 1. Start by [opening an R tool](#r-tool) on the client workstation. RevoScaleR loads automatically. For example, go to `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` and double-click **RGui.exe** to start it.
 

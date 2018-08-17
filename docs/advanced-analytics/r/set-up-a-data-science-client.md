@@ -1,9 +1,10 @@
 ---
 title: Set up a data science client for R development on SQL Server | Microsoft Docs
+description: Install local R libraries and tools on a development workstation for remote connections to SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 08/15/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,27 +13,39 @@ manager: cgronlun
 # Set up a data-science client for R development on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to support machine learning, you should set up a development environment that is capable of connecting to the server for remote execution and deployment.
+After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to support machine learning, you should set up an R development environment that is capable of connecting to the server for remote execution and deployment.
 
-This article describes some typical client scenarios, including configuration of the free Visual Studio Community edition to run R code in SQL Server.
+If you have the developer edition and plan to work locally, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local R libraries installed by SQL Server.
 
-## 1 - Install R libraries
+For data scientists and analysts connect to SQL Server remotely, this article explains how to set up your workstation so that you can write and debug R script locally, connect to SQL Server, and remote-execute R script on relational data on the server. SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md). 
 
-Your client environment must include Microsoft R Open, as well as RevoScaleR and other product-specific R packages that support distributed execution of R on SQL Server. Standard distributions of R do not have the packages that support remote compute contexts or parallel execution of R tasks.
+This article covers the following tasks:
 
-To get the full complement of libraries, install any of the following, but choose an option that most closely matches your SQL Server installation. Your client libraries should closely match equivalent libraries on the server. 
+> [!div class="checklist"]
+> * Add Microsoft R packages
+> * Permissions for remote access
+> * Point a development tool to R libraries
+> * Connect to a remote server
+
+## 1 - Install R packages
+
+R functionality in Microsoft products is multi-layered. It starts with Microsoft's open-source base R distribution, but is then extended with product-specific packages, such as RevoScaleR, that enable remote compute contexts and parallel execution of R tasks.
+
+Coordinated operations between a client and remote server requires both systems having the same packages. To get the full complement of libraries on a client workstation, install any of the following software. 
+
+You should choose an option that most closely matches your SQL Server installation.
 
 | Library provider | Usage  |
 |------------------|--------------------------------|
-| [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) | For best compatibility with a SQL Server 2017 instance, install the free developer edition of SQL Server 2017, choosing the "Standalone server" feature under **Shared features** in SQL Server Setup. |
+| [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) | Recommended when the remote server is a SQL Server 2017 instance. Install the free developer edition of SQL Server 2017, choosing the "Standalone server" feature under **Shared features** in SQL Server Setup. |
 | [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) | Recommended for use with SQL Server 2016 R Services. Install the free developer edition of SQL Server 2016, choosing the "Standalone R Server" feature under **Shared features** in SQL Server Setup. |
-| [Microsoft R Client](http://aka.ms/rclient/download) |  This free download is a limited version of R Server: it provides RevoScaleR and other R packages, but is capped at two threads and in-memory data. However, by installing R Client, you can create R solutions that start locally, and shift execution (referred to as *compute context*) to access data and the computational power of a remote SQL Server instance. For more information, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client). |
+| [Microsoft R Client](http://aka.ms/rclient/download) |  This free download is a limited version of R Server: it provides RevoScaleR and other R packages, but is capped at two threads and in-memory data. However, you can still create R solutions that start locally, and shift execution (referred to as *compute context*) to access data and the computational power of a remote SQL Server instance. For more information about this tool, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).|
 
+<a name="r-tool"></a>
+ 
 ## 2 - Use built-in R tools
 
-When you install R with SQL Server, you get the same R tools that are installed with any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials.
-
-Base R in Microsoft products is provided by Microsoft R Open, included in SQL Server Setup, built on open-source R. The following standard R tools are therefore installed by default. 
+When you install R with SQL Server, you get the same R tools that are standard to any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials.
 
 | Tool | Description | 
 |------|-------------|
@@ -48,9 +61,38 @@ Tools are located in **bin** folder for base R as installed SQL Server or R Clie
 + Machine Learning Services: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
 + Machine Learning Server (Standalone): `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64`
 
-## 3 - Install an IDE
+## 3 - Permissions
 
-For sustained and serious development projects, you should install an integrated development environment (IDE).
+To connect to an instance of SQL Server to run scripts and upload data, you must have a valid login on the database server. You can use either a SQL login or integrated Windows authentication. Ask the database administrator to configure the following permissions for the account, in the database where you use R:
+
++ Create database, tables, functions, and stored procedures
++ Write data into tables
++ Ability to run R script (`GRANT EXECUTE ANY EXTERNAL SCRIPT to <user>`)
+
+To run the queries used to train the model, you must have db_datareader privileges on the database where the data is stored. To run R on the server, you must have the permission, `EXECUTE ANY EXTERNAL SCRIPT`.
+
+We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some demo purposes.
+
+> [!Tip]
+> If you are unfamiliar with SQL Server and working in a local development environment, you can step through this tutorial to learn about logins and setting permissions: [Deep-dive into RevoScaleR](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+
+
+## 4 - Test connections
+
+As a verification step, use a built-in tool and RevoScaleR to confirm connectivity to the remote server.
+
+1. Start by [opening an R tool](#r-tool) on the client workstation. RevoScaleR loads automatically. For example, go to `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` and double-click **RGui.exe** to start it.
+
+2. Confirm RevoScaleR is operational by running this command, which returns statistical summary on a built-in R dataset:
+
+
+<a name="install-ide"></a>
+
+## 5 - Install an IDE
+
+For sustained and serious development projects, you should install an integrated development environment (IDE). SQL Server tools and the built-in R tools are not equipped for heavy R development. Once you have working code, you can deploy it as a stored procedure for execution on SQL Server.
+
+You should point your IDE to the local R libraries: base R, RevoScaleR, and so forth. Running workloads on a remote SQL Server occurs during script execution, when your script invokes a remote compute context on SQL Server, accessing data and operations on that server.
 
 ### RStudio
 

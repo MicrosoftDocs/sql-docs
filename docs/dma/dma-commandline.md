@@ -154,7 +154,7 @@ Catalog=DatabaseName3;Integrated Security=true"***
 |`/SkuRecommendationHtmlResultsFilePath` |	Full path to the HTML result file |	Y <br>(Either TSV or JSON or HTML file path is required)
 |`/SkuRecommendationPreventPriceRefresh` |	Prevents the price refresh from occurring. Use if running in offline mode. |	Y <br>(Either this argument is selected for static prices or all the arguments below need to be selected for getting latest prices)
 |`/SkuRecommendationCurrencyCode` |	The currency in which to display prices (e.g. "USD") | Y <br>(If you want to get the latest prices)
-|`/SkuRecommendationOfferName` |	The offer name (e.g. "MS-AZR-0003P"). See the [Microsoft Azure Offer Details](https://azure.microsoft.com/en-us/support/legal/offer-details/) page for more information. |	Y <br>(If you want to get the latest prices)
+|`/SkuRecommendationOfferName` |	The offer name (e.g. "MS-AZR-0003P"). See the [Microsoft Azure Offer Details](https://azure.microsoft.com/support/legal/offer-details/) page for more information. |	Y <br>(If you want to get the latest prices)
 |`/SkuRecommendationRegionName` |	The region name (e.g. "WestUS") |	Y <br>(If you want to get the latest prices)
 |`/SkuRecommendationSubscriptionId` | The subscription ID. |	Y <br>(If you want to get the latest prices)
 |`/AzureAuthenticationTenantId` | The authentication tenant. |	Y <br>(If you want to get the latest prices)

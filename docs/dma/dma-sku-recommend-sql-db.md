@@ -35,7 +35,7 @@ The following instructions help you determine Azure SQL Database SKU recommendat
 
 Download Database Migration Assistant v4.0 or later, and then install it. If you already have the tool installed, close and reopen it, and you will be prompted to upgrade the tool.
 
-## Collect performance counters from the computer(s) hosting your databases
+## Collect performance counters
 
 The first step in the process is to collect performance counters for your databases. You can collect performance counters by running a PowerShell command on the computer that hosts your databases. DMA provides you with a copy of this PowerShell file, but you can also use your own method to capture performance counters from your computer.
 
@@ -67,7 +67,7 @@ You do not need to perform this task for each database individually. The perform
     
     After the command executes, the process will output a file with performance counters in the location you specified. This file can be used as input for the SKU recommendation command in the next section.
 
-## Use the DMA command line interface to get SKU recommendations
+## Use the DMA CLI to get SKU recommendations
 
 Use the performance counters output file from the previous step as input for this step. DMA will provide you with recommendations for the Azure SQL Database pricing tier, the compute level, and the maximum data size for each database on your computer. DMA will also provide you with the estimated monthly cost for each database.
 
@@ -84,7 +84,7 @@ In addition, you need to pick one of the following arguments:
     - **/SkuRecommendationPreventPriceRefresh**: Prevents the price refresh from occurring. Use if running in offline mode.
 - Get the latest prices 
     - **/SkuRecommendationCurrencyCode**: The currency in which to display prices (e.g. "USD").
-    - **/SkuRecommendationOfferName**: The offer name (e.g. "MS-AZR-0003P"). For more information, see the [Microsoft Azure Offer Details](https://azure.microsoft.com/en-us/support/legal/offer-details/) page.
+    - **/SkuRecommendationOfferName**: The offer name (e.g. "MS-AZR-0003P"). For more information, see the [Microsoft Azure Offer Details](https://azure.microsoft.com/support/legal/offer-details/) page.
     - **/SkuRecommendationRegionName**: The region name (e.g. "WestUS").
     - **/SkuRecommendationSubscriptionId**: The subscription ID.
     - **/AzureAuthenticationTenantId**: The authentication tenant.
@@ -143,7 +143,7 @@ Note that the recommended value is the minimum SKU required for your queries to 
 
 The HTML file contains this information in a graphical format. You can use the HTML file to input Azure subscription information, pick the pricing tier, compute level and Max data size for your databases, and generate a script to provision your databases. This script can be executed using PowerShell.
 
-## Provision your databases to Azure using the recommendations
+## Provision your databases to Azure
 With just a few clicks, you can use the recommendations from the previous step to provision target databases in Azure to which you can migrate your databases. You can also make changes to the recommendations by updating the HTML file as follows.
 
 1. Open the HTML file and enter the following information:
@@ -160,3 +160,7 @@ With just a few clicks, you can use the recommendations from the previous step t
     This process should create all the databases you selected in the HTML page.
 
 You can perform all the steps in this process on a single computer or you can perform them on multiple computers to determine SKU recommendations at scale. DMA makes it a simple and scalable experience by supporting all these steps via the Command Line Interface. Again, support for this feature via the DMA user interface will be available later this year.
+
+## Next steps
+- Download the latest version of [Data Migration Assistant](https://aka.ms/get-dma).
+- See the article [Run Data Migration Assistant from the command line](https://docs.microsoft.com/en-us/sql/dma/dma-commandline?view=sql-server-2017) for a complete listing of commands for running DMA from the CLI.

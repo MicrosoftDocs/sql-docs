@@ -4,6 +4,8 @@
   href: dma-whatsnew.md
 - name: Assess your SQL Server migration
   href: dma-assesssqlonprem.md
+- name: Identify the right Azure SQL Database SKU
+  href: dma-skurecommendsqldb.md
 - name: Upgrade SQL Server to a later version
   href: dma-migrateonpremsql.md
 - name: Migrate SQL Server to Azure SQL Database

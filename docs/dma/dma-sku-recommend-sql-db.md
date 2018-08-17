@@ -163,4 +163,4 @@ You can perform all the steps in this process on a single computer or you can pe
 
 ## Next steps
 - Download the latest version of [Data Migration Assistant](https://aka.ms/get-dma).
-- See the article [Run Data Migration Assistant from the command line](https://docs.microsoft.com/en-us/sql/dma/dma-commandline?view=sql-server-2017) for a complete listing of commands for running DMA from the CLI.
+- See the article [Run Data Migration Assistant from the command line](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017) for a complete listing of commands for running DMA from the CLI.

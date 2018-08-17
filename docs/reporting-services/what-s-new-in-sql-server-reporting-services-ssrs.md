@@ -1,6 +1,6 @@
 ---
 title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
-ms.date: "05/24/2018"
+ms.date: "08/17/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "reporting-services"
@@ -23,9 +23,7 @@ manager: "kfile"
 
 Learn about what's new in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This covers the major feature areas and is updated as new items are released.
 
-  For information on what's new in other areas of SQL Server, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) or [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
-
- **Download** ![download](../analysis-services/media/download.png "download")
+**Download** ![download](../analysis-services/media/download.png "download")
 
 - To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
@@ -33,6 +31,14 @@ For the current release notes, see [SQL Server 2017 Release Notes](../sql-server
 
 For information about Power BI Report Server, see [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## What's new in SQL Server vNext CTP 2.0 Reporting Services
+
+SQL Server vNext CTP 2.0 Reporting Services isn’t available for preview. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md). 
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## What's new in SQL Server 2017
 
 ### Comments on reports
@@ -61,6 +67,7 @@ Read more on the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlr
 * Download [SQL Server Data Tools - Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
 > **Note**: You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
+::: moniker-end
  
 ## What's new in SQL Server 2016
   

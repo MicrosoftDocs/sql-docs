@@ -38,7 +38,7 @@ SQL Server vNext CTP 2.0 Reporting Services isn’t available for preview. Insta
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-## SQL Server 2017
+## SSRS 2017
 
 ### Comments on reports
 
@@ -68,7 +68,7 @@ Read more on the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlr
 > **Note**: You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
 ::: moniker-end
  
-## SQL Server 2016
+## SSRS 2016
   
 ### Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  A new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] is available. This is an updated, modern, portal which incorporates KPIs, Mobile Reports, Paginated Reports, Excel and Power BI Desktop files. The [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] replaces Report Manager from previous releases. You can also download Mobile Report Publisher and Report Builder from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] without the need of ClickOnce technology.

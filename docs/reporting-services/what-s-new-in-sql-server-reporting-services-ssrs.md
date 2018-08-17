@@ -23,23 +23,22 @@ manager: "kfile"
 
 Learn about what's new in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This covers the major feature areas and is updated as new items are released.
 
-**Download** ![download](../analysis-services/media/download.png "download")
-
-- To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
-
 For the current release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). 
 
 For information about Power BI Report Server, see [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
+**Download** ![download](../analysis-services/media/download.png "download")
+
+To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-## What's new in SQL Server vNext CTP 2.0 Reporting Services
+## SQL Server vNext CTP 2.0 Reporting Services
 
 SQL Server vNext CTP 2.0 Reporting Services isn’t available for preview. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md). 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-## What's new in SQL Server 2017
+## SQL Server 2017
 
 ### Comments on reports
 
@@ -57,9 +56,9 @@ In the latest releases of Report Builder and SQL Server Data Tools, you can crea
 
 To enable development of modern applications and customization, SQL Server Reporting Services now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
-## Query designer support for DAX now in Report Builder and SQL Server Data Tools
+### Query designer support for DAX now in Report Builder and SQL Server Data Tools
 
-In the latest releases of Report Builder and SQL Server Data Tools – Release Candidate, you can now create native DAX queries against supported SQL Server Analysis Services tabular data models. You can use the query designer in both tools to drag and drop the fields you want and have the DAX query generated for you instead of writing it yourself.  
+In Report Builder and SQL Server Data Tools, you can now create native DAX queries against supported SQL Server Analysis Services tabular data models. You can use the query designer in both tools to drag and drop the fields you want and have the DAX query generated for you instead of writing it yourself.  
  
 Read more on the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
@@ -69,7 +68,7 @@ Read more on the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlr
 > **Note**: You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
 ::: moniker-end
  
-## What's new in SQL Server 2016
+## SQL Server 2016
   
 ### Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  A new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] is available. This is an updated, modern, portal which incorporates KPIs, Mobile Reports, Paginated Reports, Excel and Power BI Desktop files. The [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] replaces Report Manager from previous releases. You can also download Mobile Report Publisher and Report Builder from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] without the need of ClickOnce technology.
@@ -195,7 +194,6 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 ## Next steps
 
 [What's New in Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)   
 [Backward Compatibility](reporting-services-backward-compatibility.md)   
 [Reporting Services Features Supported by the Editions of SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Upgrade and Migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

@@ -58,8 +58,13 @@ You do not need to perform this task for each database individually. The perform
     Here's a sample invocation:
 
     ```
-    .\SkuRecommendationDataCollectionScript.ps1 -ComputerName Foobar1 -OutputFilePath D:\counters2.csv -CollectionTimeInSeconds 10 -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+    .\SkuRecommendationDataCollectionScript.ps1
+     -ComputerName Foobar1
+     -OutputFilePath D:\counters2.csv
+     -CollectionTimeInSeconds 10
+     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
+    
     After the command executes, the process will output a file with performance counters in the location you specified. This file can be used as input for the SKU recommendation command in the next section.
 
 ## Use the DMA command line interface to get SKU recommendations
@@ -96,12 +101,29 @@ In addition, you need to pick one of the following arguments:
 Here are some sample invocations:
 
 ```
-.\DmaCmd.exe /Action=SkuRecommendation /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv" /SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv" /SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json" /SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html" /SkuRecommendationCurrencyCode=USD /SkuRecommendationOfferName=MS-AZR-0044p /SkuRecommendationRegionName=UKWest /SkuRecommendationSubscriptionId=<Your Subscription Id> /AzureAuthenticationInteractiveAuthentication=true /AzureAuthenticationClientId=<Your AzureAuthenticationClientId> /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationInteractiveAuthentication=true
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
 ```
-.\DmaCmd.exe /Action=SkuRecommendation /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv" /SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv" /SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json" /SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html" /SkuRecommendationPreventPriceRefresh=true
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true
 ```
+
 The TSV output file will contain the columns shown in the following graphic:
 
    ![PowerShell file shown in DMA folder](../dma/media/dma-tsv-file-column.png)

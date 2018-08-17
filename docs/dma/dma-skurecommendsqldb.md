@@ -22,7 +22,7 @@ manager: craigg
 
 # Identify the right Azure SQL Database SKU for your on-premises database
 
-Migrating your databases to the cloud is a complicated and time-consuming task that involves a lot of variables. Picking the right Azure database target and SKU for your database can be challenging. Our goal with the Database Migration Assistant (DMA) is to address these questions and to make your database migration experience simple and effective.
+The task of migrating your databases to the cloud is a complicated and time-consuming, involving a number of variables. Picking the right Azure database target and SKU for your database can be challenging. Our goal with the Database Migration Assistant (DMA) is to address these questions and to make your database migration experience simple and effective.
 
 This article focuses primarily on DMA’s Azure SQL Database SKU recommendations feature, which allows you to identify the minimum recommended Azure SQL Database SKU based on performance counters collected from the computer(s) hosting your databases. This feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to provision all your databases to Azure in bulk.
 
@@ -37,9 +37,9 @@ Download Database Migration Assistant v4.0 or later, and then install it. If you
 
 ## Collect performance counters from the computer(s) hosting your databases
 
-The first step in this process is to collect performance counters for your databases. You can do this by running a PowerShell command on the computer that hosts your databases. DMA provides you with a copy of this PowerShell file, but you can also use your own method to capture performance counters from your computer.
+The first step in the process is to collect performance counters for your databases. You can collect performance counters by running a PowerShell command on the computer that hosts your databases. DMA provides you with a copy of this PowerShell file, but you can also use your own method to capture performance counters from your computer.
 
-You do not need to do this for each database individually. The performance counters collected from a computer can be used to recommend the SKU for all databases hosted on the computer.
+You do not need to perform this task for each database individually. The performance counters collected from a computer can be used to recommend the SKU for all databases hosted on the computer.
 
 > [!IMPORTANT]
 > The computer from which you are running this command requires Administrator permissions to the computer hosting your databases.
@@ -60,7 +60,7 @@ You do not need to do this for each database individually. The performance count
     ```
     .\SkuRecommendationDataCollectionScript.ps1 -ComputerName Foobar1 -OutputFilePath D:\counters2.csv -CollectionTimeInSeconds 10 -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
-    After this executes, the process will output a file with performance counters in the location you specified. This file can be used as input for the SKU recommendation command in the next section.
+    After the command executes, the process will output a file with performance counters in the location you specified. This file can be used as input for the SKU recommendation command in the next section.
 
 ## Use the DMA command line interface to get SKU recommendations
 
@@ -79,7 +79,7 @@ In addition, you need to pick one of the following arguments:
     - **/SkuRecommendationPreventPriceRefresh**: Prevents the price refresh from occurring. Use if running in offline mode.
 - Get the latest prices 
     - **/SkuRecommendationCurrencyCode**: The currency in which to display prices (e.g. "USD").
-    - **/SkuRecommendationOfferName**: The offer name (e.g. "MS-AZR-0003P"). See the [Microsoft Azure Offer Details](https://azure.microsoft.com/en-us/support/legal/offer-details/) page for more information.
+    - **/SkuRecommendationOfferName**: The offer name (e.g. "MS-AZR-0003P"). For more information, see the [Microsoft Azure Offer Details](https://azure.microsoft.com/en-us/support/legal/offer-details/) page.
     - **/SkuRecommendationRegionName**: The region name (e.g. "WestUS").
     - **/SkuRecommendationSubscriptionId**: The subscription ID.
     - **/AzureAuthenticationTenantId**: The authentication tenant.
@@ -114,10 +114,10 @@ A description of each column follows.
 - **MetricValue** - Recommended Azure SQL Database SKU.
 - **SQLMiEquivalentCores** - If you choose to go for Azure SQL Database Managed Instance, you can use this value for core count.
 - **IsTierRecommended** - We make a minimum SKU recommendation for each tier. We then apply heuristics to determine the right tier for your database. 
-- **ExclusionReasons** - This value is blank if a Tier is recommended. For each tier that is not recommended, we provide the reasons why it was was not picked.
+- **ExclusionReasons** - This value is blank if a Tier is recommended. For each tier that is not recommended, we provide the reasons why it was not picked.
 - **AppliedRules** - A short notation of the rules that were applied.
 
-Please note that the recommended value is the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
+Note that the recommended value is the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
 
 The HTML file contains this information in a graphical format. You can use the HTML file to input Azure subscription information, pick the pricing tier, compute level and Max data size for your databases, and generate a script to provision your databases. This script can be executed using PowerShell.
 
@@ -125,9 +125,9 @@ The HTML file contains this information in a graphical format. You can use the H
 With just a few clicks, you can use the recommendations from the previous step to provision target databases in Azure to which you can migrate your databases. You can also make changes to the recommendations by updating the HTML file as follows.
 
 1. Open the HTML file and enter the following information:
-    - **Subscription Id** – The subscription Id of the Azure subscription to which you want to provision the databases.
-    - **Region** – The region in which to provision databases. Please make sure your subscription supports the select region.
-    - **Resource Group** – The resource group to which you want to deploy the databases. You must enter a resource group that exists.
+    - **Subscription ID** – The subscription ID of the Azure subscription to which you want to provision the databases.
+    - **Region** – The region in which to provision databases. Make sure your subscription supports the select region.
+    - **Resource Group** – The resource group to which you want to deploy the databases. Enter a resource group that exists.
     - **Server Name** – The Azure SQL Database server to which you want the databases deployed. If you enter a server name that does not exist, it will be created.
     - **Admin Username\Password** – The credentials you use to login to the subscription in Azure.
 
@@ -135,6 +135,6 @@ With just a few clicks, you can use the recommendations from the previous step t
 
 3. Select **Generate Provisioning Script**, save the script, and then execute it in PowerShell.
 
-    This should create all the databases you selected in the HTML page.
+    This process should create all the databases you selected in the HTML page.
 
 You can perform all the steps in this process on a single computer or you can perform them on multiple computers to determine SKU recommendations at scale. DMA makes it a simple and scalable experience by supporting all these steps via the Command Line Interface. Again, support for this feature via the DMA user interface will be available later this year.

@@ -405,7 +405,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       MAX_LENGTH="12"/>  
     <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="20"   
       COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
-    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"   
+    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"/>   
       MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
   </RECORD>  
   <ROW>  

@@ -2,7 +2,7 @@
 title: "Run Data Migration Assistant from the command line (SQL Server) | Microsoft Docs"
 description: Learn how to run Data Migration Assistant from the command line to assess SQL Server databases for migration
 ms.custom: ""
-ms.date: "08/17/2018"
+ms.date: "08/18/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -52,7 +52,7 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentResultCsv`    | Full path to the CSV result file   | Y <br>(Either AssessmentResultJson or AssessmentResultCsv is required)
 
 
-## Examples for assessments using the CLI
+## Examples of assessments using the CLI
 
 **Dmacmd.exe**
 
@@ -154,7 +154,7 @@ Catalog=DatabaseName3;Integrated Security=true"***
 |`/SkuRecommendationHtmlResultsFilePath` |	Full path to the HTML result file |	Y <br>(Either TSV or JSON or HTML file path is required)
 |`/SkuRecommendationPreventPriceRefresh` |	Prevents the price refresh from occurring. Use if running in offline mode. |	Y <br>(Either this argument is selected for static prices or all the arguments below need to be selected for getting latest prices)
 |`/SkuRecommendationCurrencyCode` |	The currency in which to display prices (e.g. "USD") | Y <br>(If you want to get the latest prices)
-|`/SkuRecommendationOfferName` |	The offer name (e.g. "MS-AZR-0003P"). See the [Microsoft Azure Offer Details](https://azure.microsoft.com/support/legal/offer-details/) page for more information. |	Y <br>(If you want to get the latest prices)
+|`/SkuRecommendationOfferName` |	The offer name (e.g. "MS-AZR-0003P"). For more information, see the [Microsoft Azure Offer Details](https://azure.microsoft.com/support/legal/offer-details/) page. |	Y <br>(If you want to get the latest prices)
 |`/SkuRecommendationRegionName` |	The region name (e.g. "WestUS") |	Y <br>(If you want to get the latest prices)
 |`/SkuRecommendationSubscriptionId` | The subscription ID. |	Y <br>(If you want to get the latest prices)
 |`/AzureAuthenticationTenantId` | The authentication tenant. |	Y <br>(If you want to get the latest prices)
@@ -164,13 +164,13 @@ Catalog=DatabaseName3;Integrated Security=true"***
 |`/AzureAuthenticationCertificateThumbprint`	| Set to the cert thumbprint. |	Y <br>(If you want to get the latest prices) <br>(Pick one of the 3 authentication options - option 2)
 |`/AzureAuthenticationToken` |	Set to the certificate token. |	Y <br>(If you want to get the latest prices) <br>(Pick one of the 3 authentication options - option 3)
 
-## Examples for SKU assessments using the CLI
+## Examples of SKU assessments using the CLI
 
 **Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Azure SQL DB SKU recommendation with price refresh (get latest prices)**
+**Azure SQL DB SKU recommendation with price refresh (get latest prices) - Interactive authentication** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -181,19 +181,52 @@ Catalog=DatabaseName3;Integrated Security=true"***
 /SkuRecommendationOfferName=MS-AZR-0044p
 /SkuRecommendationRegionName=UKWest
 /SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
 /AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+/AzureAuthenticationInteractiveAuthentication=true 
 ```
-	
-**Azure SQL DB SKU recommendation without price refresh (use static prices)**
+
+**Azure SQL DB SKU recommendation with price refresh (get latest prices) - Certificate authentication**
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
 /SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
 /SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
 /SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationPreventPriceRefresh=true 
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+/AzureAuthenticationCertificateStoreLocation=<Your Certificate Store Location>
+/AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
+```
+
+**Azure SQL DB SKU recommendation with price refresh (get latest prices) - Token authentication**  
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+/AzureAuthenticationToken=<Your Authentication Token> 
+```
+
+**Azure SQL DB SKU recommendation without price refresh (use static prices)** 
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true  
 ```
 
 ## See also

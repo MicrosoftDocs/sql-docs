@@ -70,8 +70,7 @@ The report server database provides storage for one or more report server instan
 ## Next steps
 
 [Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[Create a Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Change Database Wizard](../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md) 
+[Create a Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Migrate a Reporting Services Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 

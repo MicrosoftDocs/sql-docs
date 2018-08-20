@@ -131,8 +131,6 @@
     href: set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
   - name: Dataset Fields Collection
     href: dataset-fields-collection-report-builder-and-ssrs.md
-  - name: Dataset Properties Dialog Box, Filters
-    href: dataset-properties-dialog-box-filters.md
   - name: Dataset Properties Dialog Box, Options
     href: dataset-properties-dialog-box-options-report-builder.md
   - name: Dataset Properties Dialog Box, Parameters

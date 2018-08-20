@@ -1,7 +1,7 @@
 ---
 title: "Filter, Group, and Sort Data (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/17/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "report-design"
@@ -115,7 +115,7 @@ manager: "kfile"
 ### Sorting Data in a Dataset Query  
  Include sort order in the dataset query to pre-sort data before it is retrieved for a report. By sorting data in the query, the sorting work is done by the data source instead of by the report processor.  
   
- For a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source type, you can add an ORDER BY clause to the dataset query. For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query sorts the columns Sales and Region by Sales in descending order from the table SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. For more information, see "Sorting Rows with ORDER BY" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  
+ For a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source type, you can add an ORDER BY clause to the dataset query. For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query sorts the columns Sales and Region by Sales in descending order from the table SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
   
 > [!NOTE]  
 >  Not all data sources support the ability to specify sort order in the query.  

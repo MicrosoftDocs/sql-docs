@@ -187,7 +187,7 @@
   href: ../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md
 - name: Import from or export to Excel
   href: load-data-to-from-excel-with-ssis.md
-- name: Load data to SQL Database
+- name: Load data to SQL Server or SQL Database
   href: load-data-to-sql-database-with-ssis.md
 - name: Load data to SQL Data Warehouse
   href: load-data-to-sql-data-warehouse.md

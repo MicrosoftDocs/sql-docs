@@ -137,7 +137,10 @@ For the primary database, the **last_commit_time** is the time when the latest t
  
 ## Estimate RTO and RPO using DMVs
 
-The below queries create stored procedures to estimate RTO and RPO without relying on the SQL Server Management Studio dashboard. 
+It is possible to query the DMVs [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) and [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) to estimate the RPO and RTO of a database. The below queries create stored procedures that accomplish both things. 
+
+  >[!NOTE]
+  > Be sure to create and run the stored procedure to estimate the RTO first, as the values it produces are necessary to run the stored procedure for estimating the RPO. 
 
 ### Create a stored procedure to estimate RTO 
 

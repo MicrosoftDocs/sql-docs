@@ -98,12 +98,12 @@ manager: craigg
   
  A simpler way to estimate Tdata_loss is to use [last_commit_time](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md). The DMV on the primary replica reports this value for all replicas. You can calculate the difference between the value for the primary replica and the value for the secondary replica to estimate how fast the log on the secondary replica is catching up to the primary replica. As stated previously, this calculation does not tell you the potential data loss based on how fast the log is generated, but it should be a close approximation.  
 
-## Estimating RTO & RPO with the SSMS dashboard
+## Estimate RTO & RPO with the SSMS dashboard
 In Always On Availability Groups, the RTO and RPO is calculated and displayed for the databases hosted on the secondary replicas. On the dashboard of the primary replica, the RTO and RPO is grouped by the secondary replica. 
 
 To view the RTO and RPO within the dashboard, do the following:
 1. In SQL Server Management Studio, expand the **Always On High Availability** node, right-click the name of your availability group, and select **Show Dashboard**. 
-1. Select **Add/Remove Columns** under the **Group by** tab. Check both **Estimated Recovery Time(seconds)(RTO)** and **Estimated Data Loss (time) (RPO)**. 
+1. Select **Add/Remove Columns** under the **Group by** tab. Check both **Estimated Recovery Time(seconds)** [RTO] and **Estimated Data Loss (time)** [RPO]. 
 
    ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
 
@@ -111,7 +111,7 @@ To view the RTO and RPO within the dashboard, do the following:
 The recovery time calculation determines how much time is needed to recover the *secondary database* after a failover happens.  The failover time is usually short and constant. The detection time depends on cluster-level settings and not on the individual availability replicas. 
 
 
-For a secondary database (DB_sec), calculation and display of its RTO is based on its redo_queue_size and redo_rate:
+For a secondary database (DB_sec), calculation and display of its RTO is based on its **redo_queue_size** and **redo_rate**:
 
 ![Calculation of RTO](media/calculate-rto.png)
 
@@ -131,20 +131,19 @@ For the primary database, the **last_commit_time** is the time when the latest t
 
 ### Performance Counters used in RTO/RPO formulas
 
-- **redo_queue_size** (KB) [used in RTO]: The redo queue size is the size of transaction logs between its **last_received_lsn** and **last_redone_lsn**.
-    - **last_received_lsn** is the log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database and **last_redone_lsn** is the log sequence number of the last log record that was redone on the secondary database. Based on these two values, we can find IDs of the starting log block (**last_received_lsn**) and the end log block (**last_redone_lsn**). The space between these two log blocks then can represent how may transaction log blocks have not yet been redone. This is measured in Kilobytes(KB).
--  **redo_rate** (KB/sec) [used in RTO]: An accumulative value which represent at a period of elapsed time, how much of the transaction log (KB) has been redone on the secondary database in Kilobytes(KB)/escond. 
-- **last_commit_time** (Datetime) [used iN RPO]: For the primary database, **last_commit_time** is the time when the latest transaction has been committed. For the secondary database, the **last_commit_time** is the latest commit time for the transaction on the primary database that has been successfully hardened on the secondary database as well. Since this value on the secondary should be synchronized with the same value on the primary, any gap between these two values is the estimate of data loss (RPO).  
+- **redo_queue_size** (KB) [*used in RTO*]: The redo queue size is the size of transaction logs between its **last_received_lsn** and **last_redone_lsn**. **last_received_lsn** is the log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database. **Last_redone_lsn** is the log sequence number of the last log record that was redone on the secondary database. Based on these two values, we can find IDs of the starting log block (**last_received_lsn**) and the end log block (**last_redone_lsn**). The space between these two log blocks then can represent how may transaction log blocks have not yet been redone. This is measured in Kilobytes(KB).
+-  **redo_rate** (KB/sec) [*used in RTO*]: An accumulative value which represent at a period of elapsed time, how much of the transaction log (KB) has been redone on the secondary database in Kilobytes(KB)/escond. 
+- **last_commit_time** (Datetime) [*used in RPO*]: For the primary database, **last_commit_time** is the time when the latest transaction has been committed. For the secondary database, the **last_commit_time** is the latest commit time for the transaction on the primary database that has been successfully hardened on the secondary database as well. Since this value on the secondary should be synchronized with the same value on the primary, any gap between these two values is the estimate of data loss (RPO).  
  
 ## Estimate RTO and RPO using DMVs
 
-The below queries create stored procedures  to estimate RTO and RPO without relying on the SQL Server Management Studio dashboard. 
+The below queries create stored procedures to estimate RTO and RPO without relying on the SQL Server Management Studio dashboard. 
 
 ### Create a stored procedure to estimate RTO 
 
 1. On the target secondary replica, create stored procedure **proc_calculate_RTO**. If this stored procedure already exists, drop it first, and then recreate it. 
 
-```sql
+  ```sql
     if object_id(N'proc_calculate_RTO', 'p') is not null
         drop procedure proc_calculate_RTO
     go
@@ -213,8 +212,8 @@ The below queries create stored procedures  to estimate RTO and RPO without rely
   	  print 'group_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_id)
   	  print 'replica_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @replica_id)
   	  print 'group_database_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_database_id)
-  end
- ```
+    end
+   ```
 
 2. Execute **proc_calculate_RTO** with the target secondary database name:
   ```sql
@@ -223,10 +222,10 @@ The below queries create stored procedures  to estimate RTO and RPO without rely
 3. The output displays the RTO value of the target secondary replica database. Save the *group_id*, *replica_id*, and *group_database_id* to use with the RPO-estimation stored procedure. 
    
    Sample Output:
- RTO of Database DB_sec' is 0 
- group_id of Database DB4 is F176DD65-C3EE-4240-BA23-EA615F965C9B
- replica_id of Database DB4 is 405554F6-3FDC-4593-A650-2067F5FABFFD
- group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
+RTO of Database DB_sec' is 0 
+group_id of Database DB4 is F176DD65-C3EE-4240-BA23-EA615F965C9B
+replica_id of Database DB4 is 405554F6-3FDC-4593-A650-2067F5FABFFD
+group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
 
 ### Create a stored procedure to estimate RPO 
 1. On the primary replica, create stored procedure **proc_calculate_RPO**. If it already exists, drop it first, and then recreate it. 
@@ -288,7 +287,7 @@ The below queries create stored procedures  to estimate RTO and RPO without rely
     	  	print 'RPO of database '+ @db_name +' is not available'
     	  	return
     	  end
-      
+     
     	  if @is_local = 0
     	  begin
     	  	print 'You are visiting wrong replica'
@@ -313,9 +312,9 @@ The below queries create stored procedures  to estimate RTO and RPO without rely
     	  		set @RPO =  CONVERT(varchar, DATEADD(ms, datediff(ss ,@last_commit_time_sec, @last_commit_time_pri) * 1000, 0), 114)
     	  end
     	  print 'RPO of database '+ @db_name +' is ' + @RPO
-      
       end
- ```
+  ```
+
 2. Execute **proc_calculate_RPO** with the target secondary database's *group_id*, *replica_id*, and *group_database_id*. 
 
   ```sql

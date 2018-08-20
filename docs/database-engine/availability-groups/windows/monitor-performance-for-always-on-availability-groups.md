@@ -196,7 +196,7 @@ The below queries create stored procedures to estimate RTO and RPO without relyi
   	  	print 'You are visiting wrong replica';
   	  	return
   	  end
-          	  
+
   	  if @redo_queue_size = 0 
   	  	set @RTO = 0 
   	  else if @redo_rate is null or @redo_rate = 0 
@@ -221,10 +221,10 @@ The below queries create stored procedures to estimate RTO and RPO without relyi
 3. The output displays the RTO value of the target secondary replica database. Save the *group_id*, *replica_id*, and *group_database_id* to use with the RPO-estimation stored procedure. 
    
    Sample Output:
-RTO of Database DB_sec' is 0 
-group_id of Database DB4 is F176DD65-C3EE-4240-BA23-EA615F965C9B
-replica_id of Database DB4 is 405554F6-3FDC-4593-A650-2067F5FABFFD
-group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
+<br>RTO of Database DB_sec' is 0 
+<br>group_id of Database DB4 is F176DD65-C3EE-4240-BA23-EA615F965C9B
+<br>replica_id of Database DB4 is 405554F6-3FDC-4593-A650-2067F5FABFFD
+<br>group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
 
 ### Create a stored procedure to estimate RPO 
 1. On the primary replica, create stored procedure **proc_calculate_RPO**. If it already exists, drop it first, and then recreate it. 

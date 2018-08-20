@@ -15,17 +15,13 @@ manager: cgronlun
 
 After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to support machine learning, you should set up an R development environment that is capable of connecting to the server for remote execution and deployment.
 
-This article describes some typical client scenarios, including configuration of the free Visual Studio Community edition to run R code in SQL Server.
-
 If you have the developer edition and plan to work locally, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local R libraries installed by SQL Server.
 
 ## 1 - Install R packages
 
-R functionality in Microsoft products is multi-layered. It starts with Microsoft's open-source base R distribution, but is then extended with product-specific packages, such as RevoScaleR, that enable remote compute contexts and parallel execution of R tasks.
+R functionality in Microsoft products is multi-layered. It starts with Microsoft's open-source base R distribution, but is then extended with product-specific packages, such as [RevoScaleR](revoscaler-overview.md), that enable remote compute contexts and parallel execution of R tasks.
 
-Coordinated operations between a client and remote server requires both systems having the same packages. To get the full complement of libraries on a client workstation, install any of the following software. 
-
-You should choose an option that most closely matches your SQL Server in-database analytics installation.
+Coordinated operations between a client and remote server require both systems having the same packages. To get the full complement of libraries on a client workstation, install one of the software packages in the following table. You should choose an option that most closely matches your SQL Server in-database analytics installation.
 
 | Library provider | Usage  |
 |------------------|--------------------------------|
@@ -58,29 +54,39 @@ Tools are located in **bin** folder for base R as installed SQL Server or R Clie
 
 ## 3 - Permissions
 
-To connect to an instance of SQL Server to run scripts and upload data, you must have a valid login on the database server. You can use either a SQL login or integrated Windows authentication. Ask the database administrator to configure the following permissions for the account, in the database where you use R:
+To connect to an instance of SQL Server to run scripts and upload data, you must have a valid login on the database server. You can use either a SQL login or integrated Windows authentication. We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some scenarios.
 
-+ Create database, tables, functions, and stored procedures
-+ Write data into tables
-+ Ability to run R script (`GRANT EXECUTE ANY EXTERNAL SCRIPT to <user>`)
+At a minimum, the account used to run code must have permission to read from the databases you are working with, plus the special permission EXECUTE ANY EXTERNAL SCRIPT. Most developers also require permissions to create new objects in the form of stored procedures containing your script, and write data into tables containing training data or scored data. 
 
-To run the queries used to train the model, you must have db_datareader privileges on the database where the data is stored. To run R on the server, you must have the permission, `EXECUTE ANY EXTERNAL SCRIPT`.
+Ask the database administrator to configure the following permissions for the account, in the database where you use R:
 
-We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some scenarios.
++ EXECUTE ANY EXTERNAL SCRIPT to run R on the server.
++ **db_datareader** privileges to run the queries used for training the model.
++ **db_datawriter** to write training data or scored data.
++ **db_owner** to create objects such as stored procedures, tables, functions. You also need **db_owner** to create sample and test databases. 
+
+If your code requires packages that are not installed by default with SQL Server, arrange with the database administrator to have the packages installed with the instance. SQL Server is a secured environment and there are restrictions on where packages can be installed. Ad hoc installation of packages as part of your code is not recommended, even if you have rights. Also, always carefully consider the security implications before installing new packages in the server library.
 
 > [!Tip]
 > If you are unfamiliar with SQL Server and working in a local development environment, you can step through this tutorial to learn about logins and setting permissions: [Deep-dive into RevoScaleR](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 
 ## 4 - Test connections
 
-SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to.
+SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to. The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/sqldev-download-the-sample-data.md) and Windows authentication.
 
  As a verification step, use a built-in tool and RevoScaleR to confirm connectivity to the remote server.
 
 1. Start by [opening an R tool](#r-tool) on the client workstation. RevoScaleR loads automatically. For example, go to `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` and double-click **RGui.exe** to start it.
 
-2. Confirm RevoScaleR is operational by running this command, which returns statistical summary on a built-in R dataset:
+2. Confirm RevoScaleR is operational by running this command, which returns statistical summary on a built-in R dataset. Provide a valid server name for the SQL Server database engine instance.
 
+```r
+> connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=TaxiNYC_Sample;Trusted_Connection=true"
+> testQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+> cc <-RxInSqlServer(connectionString=connStr)
+> rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=testQuery, connectionString=connStr), computeContext=cc)
+```
+This scripts connects to a database on the remote server, provides a query, creates compute context `cc` instruction for remote code execution, then provides the RevoScaleR function **rxSummary** to return statistical summary of the query results.
 
 <a name="install-ide"></a>
 
@@ -109,7 +115,7 @@ When using [RStudio](https://www.rstudio.com/), you can configure the environmen
 If you don't already have a preferred IDE for R, we recommend **R Tools for Visual Studio**.
 
 + [Download R Tools for Visual Studio (RTVS)](https://visualstudio.microsoft.com/vs/features/rtvs/)
-+ [Installation instrructions](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS is available in several versions of Visual Studio.
++ [Installation instructions](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS is available in several versions of Visual Studio.
 + [Get started with R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
 
 ### Connect to SQL Server from RTVS
@@ -118,20 +124,20 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
 
 1. From the **File** menu, select **New** and then select **Project**.
 
-2. The -hand pane contains a list of preinstalled templates. Click **R**, and select **R Project**. In the **Name** box, type `dbtest` and click **OK**.
+2. The left-hand pane contains a list of preinstalled templates. Click **R**, and select **R Project**. In the **Name** box, type `dbtest` and click **OK**. 
 
-3. Visual Studio creates a new project folder and a default script file, `Script.R`. 
+  Visual Studio creates a new project folder and a default script file, `Script.R`. 
 
-4. Type `.libPaths()` on the first line of the script file, and then press CTRL + ENTER.
+3. Type `.libPaths()` on the first line of the script file, and then press CTRL + ENTER.
 
-5. The current R library path should be displayed in the **R Interactive** window. 
+  The current R library path should be displayed in the **R Interactive** window. 
 
-6. Click the **R Tools** menu and select **Windows** to see a list of other R-specific windows that you can display in your workspace.
+4. Click the **R Tools** menu and select **Windows** to see a list of other R-specific windows that you can display in your workspace.
  
     + View help on packages in the current library by pressing CTRL + 3.
     + See R variables in the **Variable Explorer**, by pressing CTRL + 8.
 
-7. Create a connection string to a SQL Server instance, and use the connection string in the RxInSqlServer constructor to create a SQL Server data source object. 
+5. Create a connection string to a SQL Server instance, and use the connection string in the RxInSqlServer constructor to create a SQL Server data source object. 
 
     ```r
     connStr <- "Driver=SQL Server;Server=MyServer;Database=MyTestDB;Uid=;Pwd="
@@ -145,7 +151,7 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
     > [!TIP]
     > To run a batch, select the lines you want to run and press CTRL + ENTER.
 
-8. Set the compute context to the server, and then run some simple R code on the data.
+6. Set the compute context to the server, and then run some simple R code on the data.
 
     ```r
     rxSetComputeContext(cc)
@@ -158,7 +164,7 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
 
 ## Next steps
 
-Two different tutorials include exercises for switching the compute context from local to a remote SQL Server instance.
+Two different tutorials include exercises so that you can practice switching the compute context from local to a remote SQL Server instance.
 
 + [Tutorial: Use RevoScaleR R functions with SQL Server data](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [Data Science End-to-End Walkthrough](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

@@ -1,7 +1,7 @@
 ---
 title: "SSIS How to Create an ETL Package | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -48,7 +48,7 @@ To run this tutorial, you have to have the following components installed:
 
 -   The **AdventureWorksDW2012** sample database. To download the **AdventureWorksDW2012** database, download `AdventureWorksDW2012.bak` from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
 
--   The **sample data** files. The sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages as a Zip file, see [SQL Server Integration Services Tutorial - Create a Simple ETL Package](https://www.microsoft.com/download/details.aspx?id=56827).
+-   The **sample data** files. The sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages as a Zip file, see [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827).
 
     - Most of the files in the Zip file are read-only to prevent unintended changes. To write output to a file or to change it, you may have to turn off the read-only attribute in the file properties.
     - The sample packages assume that the data files are located in the folder `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. If you unzip the download to another location, you may have to update the file path in multiple places in the sample packages.

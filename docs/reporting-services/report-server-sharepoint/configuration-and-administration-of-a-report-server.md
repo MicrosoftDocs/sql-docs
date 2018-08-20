@@ -1,7 +1,7 @@
 ---
 title: "Configuration and administration of a report server (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: "08/17/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "report-server-sharepoint"
@@ -59,6 +59,4 @@ Use the following sections to help you understand concepts, deployment scenarios
   
 -   [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- For more general information about Reporting Services, see [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. For information about other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../../sql-server/sql-server-technical-documentation.md).  
-
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

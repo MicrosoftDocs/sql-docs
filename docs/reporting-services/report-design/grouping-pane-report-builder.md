@@ -1,7 +1,7 @@
 ---
 title: "Grouping Pane (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "08/17/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "report-design"
@@ -80,7 +80,6 @@ manager: "kfile"
 -   **(Static)** Indicates a static member with no header cell, known as a hidden static.  
   
 ## See Also  
- [Report Builder Help for Dialog Boxes, Panes, and Wizards](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"
@@ -114,7 +114,7 @@ END
   
  The CASE expression cannot be used to control the flow of execution of Transact-SQL statements, statement blocks, user-defined functions, and stored procedures. For a list of control-of-flow methods, see [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
- The CASE statement evaluates its conditions sequentially and stops with the first condition whose condition is satisfied. In some situations, an expression is evaluated before a CASE statement receives the results of the expression as its input. Errors in evaluating these expressions are possible. Aggregate expressions that appear in WHEN arguments to a CASE statement are evaluated first, then provided to the CASE statement. For example, the following query produces a divide by zero error when producing the value of the MAX aggregate. This occurs prior to evaluating the CASE expression.  
+ The CASE expression evaluates its conditions sequentially and stops with the first condition whose condition is satisfied. In some situations, an expression is evaluated before a CASE expression receives the results of the expression as its input. Errors in evaluating these expressions are possible. Aggregate expressions that appear in WHEN arguments to a CASE expression are evaluated first, then provided to the CASE expression. For example, the following query produces a divide by zero error when producing the value of the MAX aggregate. This occurs prior to evaluating the CASE expression.  
   
 ```sql  
 WITH Data (value) AS   

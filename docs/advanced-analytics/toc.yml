@@ -37,6 +37,7 @@
 - name: Install
   items:
   - name: SQL Server vNext
+    items: 
     - Name: Machine Learning Services
     - href: install/sql-machine-learning-services-vnext.md
   - name: SQL Server 2017

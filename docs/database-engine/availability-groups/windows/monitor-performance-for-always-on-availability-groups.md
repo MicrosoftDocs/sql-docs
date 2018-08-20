@@ -143,7 +143,7 @@ The below queries create stored procedures to estimate RTO and RPO without relyi
 
 1. On the target secondary replica, create stored procedure **proc_calculate_RTO**. If this stored procedure already exists, drop it first, and then recreate it. 
 
-  ```sql
+ ```sql
     if object_id(N'proc_calculate_RTO', 'p') is not null
         drop procedure proc_calculate_RTO
     go
@@ -174,8 +174,7 @@ The below queries create stored procedures to estimate RTO and RPO without relyi
   	  declare @group_database_id uniqueidentifier
   	  declare @group_id uniqueidentifier
   	  declare @RTO float 
-    
-    
+
   	  select 
   	  @is_primary_replica = dbr.is_primary_replica, 
   	  @is_failover_ready = dbcs.is_failover_ready, 
@@ -186,7 +185,7 @@ The below queries create stored procedures to estimate RTO and RPO without relyi
   	  @group_id = dbr.group_id 
   	  from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs 	on dbr.replica_id = dbcs.replica_id and 
   	  dbr.group_database_id = dbcs.group_database_id  where dbcs.database_name = @secondary_database_name
-    
+
   	  if  @is_primary_replica is null or @is_failover_ready is null or @redo_queue_size is null or @replica_id is null or @group_database_id is null or @group_id is null
   	  begin
   	  	print 'RTO of Database '+ @secondary_database_name +' is not available'
@@ -197,7 +196,7 @@ The below queries create stored procedures to estimate RTO and RPO without relyi
   	  	print 'You are visiting wrong replica';
   	  	return
   	  end
-  	  
+          	  
   	  if @redo_queue_size = 0 
   	  	set @RTO = 0 
   	  else if @redo_rate is null or @redo_rate = 0 
@@ -213,7 +212,7 @@ The below queries create stored procedures to estimate RTO and RPO without relyi
   	  print 'replica_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @replica_id)
   	  print 'group_database_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_database_id)
     end
-   ```
+ ```
 
 2. Execute **proc_calculate_RTO** with the target secondary database name:
   ```sql
@@ -230,7 +229,7 @@ group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
 ### Create a stored procedure to estimate RPO 
 1. On the primary replica, create stored procedure **proc_calculate_RPO**. If it already exists, drop it first, and then recreate it. 
 
-  ```sql
+ ```sql
     if object_id(N'proc_calculate_RPO', 'p') is not null
     				drop procedure proc_calculate_RPO
     go
@@ -261,11 +260,9 @@ group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
     	  declare @is_failover_ready bit
     	  declare @is_local bit
     	  declare @last_commit_time_sec datetime 
-    	  declare @last_commit_time_pri datetime 
-    	  
-      
+    	  declare @last_commit_time_pri datetime      
     	  declare @RPO nvarchar(max) 
-      
+
     	  -- secondary database's last_commit_time 
     	  select 
     	  @db_name = dbcs.database_name,
@@ -273,27 +270,26 @@ group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
     	  @last_commit_time_sec = dbr.last_commit_time 
     	  from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
     	  dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.replica_id = @replica_id and dbr.group_database_id = @group_database_id
-      
-    	  
+
     	  -- correlated primary database's last_commit_time 
     	  select
     	  @last_commit_time_pri = dbr.last_commit_time,
     	  @is_local = dbr.is_local
     	  from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
     	  dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.is_primary_replica = 1 and dbr.group_database_id = @group_database_id
-      
+
     	  if @is_local is null or @is_failover_ready is null
     	  begin
     	  	print 'RPO of database '+ @db_name +' is not available'
     	  	return
     	  end
-     
+
     	  if @is_local = 0
     	  begin
     	  	print 'You are visiting wrong replica'
     	  	return
-    	  end
-      
+    	  end  
+
     	  if @is_failover_ready = 1
     	  	set @RPO = '00:00:00'
     	  else if @last_commit_time_sec is null or  @last_commit_time_pri is null 
@@ -313,15 +309,15 @@ group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
     	  end
     	  print 'RPO of database '+ @db_name +' is ' + @RPO
       end
-  ```
+ ```
 
 2. Execute **proc_calculate_RPO** with the target secondary database's *group_id*, *replica_id*, and *group_database_id*. 
 
-  ```sql
+ ```sql
    exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
         @replica_id =  '405554F6-3FDC-4593-A650-2067F5FABFFD',
         @group_database_id  = '39F7942F-7B5E-42C5-977D-02E7FFA6C392'
-  ```
+ ```
 3. The output displays the RPO value of the target secondary replica database. 
 
   

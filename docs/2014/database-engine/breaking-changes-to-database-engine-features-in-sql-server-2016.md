@@ -260,7 +260,7 @@ manager: craigg
 ||Have a certificate issued for shortname.<br /><br /> -This option works for all applications.|  
   
 ##  <a name="Yukon"></a> Breaking Changes in SQL Server 2005  
- For a list of breaking changes introduced in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], see [Breaking Changes to Database Engine Features in SQL Server 2005](http://msdn.microsoft.com/library/ms143179\(SQL.90\).aspx).  
+ For a list of breaking changes introduced in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], see [Breaking Changes to Database Engine Features in SQL Server 2005](breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   

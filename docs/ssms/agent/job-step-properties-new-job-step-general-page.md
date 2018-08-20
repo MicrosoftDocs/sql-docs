@@ -373,6 +373,6 @@ Type the command line options to use for this package.
   
 ## See Also  
 [Manage Job Steps](../../ssms/agent/manage-job-steps.md)  
-[SQL Server Agent Jobs for Packages](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
-[Administering Replication Agents](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
+[SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[Administering Replication Agents](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

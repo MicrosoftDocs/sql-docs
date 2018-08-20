@@ -119,7 +119,7 @@ manager: craigg
   
 10. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup runs one more set of rules that are based on the features you selected to validate your configuration.  
   
-11. On the Instance Configuration page, specify whether to install a default or a named instance. For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).  
+11. On the Instance Configuration page, specify whether to install a default or a named instance. For more information, see [Instance Configuration](../../install/instance-configuration.md).  
   
      **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Name** — Specify a network name for the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster. This is the name that is used to identify your failover cluster on the network.  
   

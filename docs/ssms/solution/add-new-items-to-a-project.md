@@ -53,7 +53,7 @@ Add new items to a project to extend application functionality. A new item can b
   
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
-[Associating File Extensions to a Code Editor](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[Associating File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
 [Add Existing Items to a Project](../../ssms/solution/add-existing-items-to-a-project.md)  
 [Remove or Delete an Item or Project](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
   

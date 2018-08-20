@@ -42,9 +42,9 @@ The following SQL Server Reporting Services features won't be supported in the n
 
 ## Features Not Supported in Previous Versions of SQL Server Reporting Services
 
-- [SQL Server 2014 Reporting Services Deprecated Features](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)
+- [SQL Server 2014 Reporting Services Deprecated Features](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
-- [SQL Server 2012 Reporting Services Deprecated Features](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)
+- [SQL Server 2012 Reporting Services Deprecated Features](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
 ## Next steps
 

@@ -23,7 +23,7 @@ manager: craigg
 ---
 # Create a Database Mail Profile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Use either the **Database Mail Configuration Wizard** or [!INCLUDE[tsql](../../includes/tsql-md.md)] to create Database Mail public and private profiles. For more information about mail profiles see [Database Mail Profile](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
+  Use either the **Database Mail Configuration Wizard** or [!INCLUDE[tsql](../../includes/tsql-md.md)] to create Database Mail public and private profiles. For more information about mail profiles see [Database Mail Profile](database-mail-configuration-objects.md).
   
 -   **Before you Begin:** [Prerequisites](#Prerequisites), , [Security](#Security)  
   

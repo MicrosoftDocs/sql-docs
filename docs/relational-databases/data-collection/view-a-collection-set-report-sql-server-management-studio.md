@@ -54,7 +54,7 @@ manager: craigg
   
 ## See Also  
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
- [Custom Reports in Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979)   
+ [Custom Reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)   
  [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
   

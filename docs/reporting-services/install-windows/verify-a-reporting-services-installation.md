@@ -34,7 +34,7 @@ manager: "kfile"
   
 2.  Verify the **SQL Server Reporting Services Service** is installed and in the **Running** state.  
   
-     If you do not see the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service in the list, verify the service is installed. For more information, see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+     If you do not see the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service in the list, verify the service is installed. For more information, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).  
   
 ### To verify the Service Application  
   

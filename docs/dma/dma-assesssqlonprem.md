@@ -220,7 +220,7 @@ This section is the primary part of the report, which shows the readiness of an 
 - ObjectType
 - ImpactedObjectName
 
-  ![DMA Database Readiness report drilldown](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown.png)
+ ![DMA Database Readiness report drilldown](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown.png)
 
 This report also serves as the filter point for creating the Remediation Plan Report.
 
@@ -235,8 +235,6 @@ This task filters the remediation plan report to the current hierarchy level bas
 You can also use the Remediation Plan report on its own to build a custom remediation plan by using the filters in the **Visualizations Filters** blade.
  
   ![DMA Remediation Plan report filter options](../dma/media//dma-assesssqlonprem/dma-remediation-plan-report-filter-options.png)
-
-Happy assessing!
 
 ### Script Disclaimer
 *The sample scripts provided in this article are not supported under any Microsoft standard support program or service. All scripts are provided AS IS without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a specific purpose. The entire risk arising out of the use or performance of the sample scripts and documentation remains with you. In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the scripts be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.  Seek permission before reposting these scripts on other sites/repositories/blogs.*

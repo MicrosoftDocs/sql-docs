@@ -37,7 +37,7 @@ manager: craigg
 >  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Some synchronous replicas are not synchronized](http://go.microsoft.com/fwlink/p/?LinkId=220853) on the TechNet Wiki.  
   
 ## Possible Causes  
- In this availability group, at least one synchronous replica is not currently synchronized. The replica synchronization state could be either SYNCHONIZING or NOT SYNCHRONIZING.  
+ In this availability group, at least one synchronous replica is not currently synchronized. The replica synchronization state could be either SYNCHRONIZING or NOT SYNCHRONIZING.  
   
 ## Possible Solution  
  Use the availability replica policy state to find the availability replica with the incorrect synchronization state, and then resolve the issue at the availability replica.  

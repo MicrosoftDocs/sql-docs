@@ -2,7 +2,7 @@
 title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database SKU for your on-premises database
 ms.custom: ""
-ms.date: "08/17/2018"
+ms.date: "08/18/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -151,7 +151,7 @@ With just a few clicks, you can use the recommendations from the previous step t
     - **Region** – The region in which to provision databases. Make sure your subscription supports the select region.
     - **Resource Group** – The resource group to which you want to deploy the databases. Enter a resource group that exists.
     - **Server Name** – The Azure SQL Database server to which you want the databases deployed. If you enter a server name that does not exist, it will be created.
-    - **Admin Username\Password** – The credentials you use to login to the subscription in Azure.
+    - **Admin Username\Password** – The server admin username and password.
 
 2. Review recommendations for each database, and modify the pricing tier, compute level, and max data size as needed. Be sure to deselect any databases that you do not currently want to provision.
 

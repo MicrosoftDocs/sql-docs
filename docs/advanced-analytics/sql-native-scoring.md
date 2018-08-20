@@ -11,9 +11,11 @@ manager: cgronlun
 ---
 
 # Native scoring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-This article describes features in SQL Server 2017 that provide scoring on machine learning models in near real time. This feature is operational on both Windows and Linux. In SQL Server 2017, it is the only machine learning feature that runs on the Linux operating system.
+Once you have a pre-trained model, you can pass new input data to the function to generate prediction values or *scores*. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can use the PREDICT function in Transact-SQL to support native scoring. It requires only that you have a model already trained, which you can call using T-SQL. 
+
+Native scoring is operational on SQL Server 2017 for Windows, Linux, and Azure SQL Database. In SQL Server 2017, it is the only machine learning feature that runs on the Linux operating system and in the Azure cloud.
 
 + What is native scoring vs. real-time scoring
 + How it works

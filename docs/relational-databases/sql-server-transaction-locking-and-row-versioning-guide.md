@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Server Transaction Locking and Row Versioning Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2018"
@@ -229,7 +229,7 @@ GO
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
-       SET name = 'New' WHERE ID = 5;  
+      (Id, Name) VALUES(6 ,'New');  
     COMMIT;   
     ```  
   

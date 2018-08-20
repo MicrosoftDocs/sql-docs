@@ -1,7 +1,7 @@
 ---
 title: "Azure Blob Source | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/25/2016"
+ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -33,7 +33,9 @@ manager: craigg
   
 4.  For the **Blob file format** field, select the blob format you want to use, **Text** or **Avro**.  
   
-5.  If the file format is **Text**, you must specify the **Column delimiter character** value. Also select **Column names in the first data row** if the first row in the file contains column names.
+5.  If the file format is **Text**, you must specify the **Column delimiter character** value. (Multi-character delimiters are not supported.)
+
+    Also select **Column names in the first data row** if the first row in the file contains column names.
 
 6.  If the file is compressed, select **Decompress the file**.
 

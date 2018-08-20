@@ -1,7 +1,7 @@
 ---
 title: "SQL Azure Connection Type (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/24/2017"
+ms.date: "08/17/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "report-data"
@@ -122,7 +122,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  If a stored procedure has a parameter that has a default value, you can access that value by using the DEFAULT keyword as a value for the parameter. If the query parameter is linked to a report parameter, the user can type or select the word DEFAULT in the input box for the report parameter.  
   
- For more information about stored procedures, see "Stored Procedures (Database Engine)" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335) on msdn.microsoft.com.  
+ For more information about stored procedures, see [Stored Procedures (Database Engine)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
   
 ##  <a name="Parameters"></a> Parameters  

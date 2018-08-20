@@ -12,7 +12,7 @@ manager: cgronlun
 # How to perform real-time scoring or native scoring in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article demonstrates two approaches in SQL Server for predicting outcomes in near real-time using pre-trained models. Both real-time scoring and native scoring are designed to let you use a machine learning model without having to install R or Python. Given a pre-trained model in a compatible format - saved to a SQL Server database - you can use standard data access techniques to quickly generate prediction scores on new inputs.
+This article demonstrates two approaches in SQL Server for predicting outcomes in near real-time using pre-trained models written in R. Both real-time scoring and native scoring are designed to let you use a machine learning model without having to install R. Given a pre-trained model in a compatible format - saved to a SQL Server database - you can use standard data access techniques to quickly generate prediction scores on new inputs.
 
 ## Choose a scoring method
 

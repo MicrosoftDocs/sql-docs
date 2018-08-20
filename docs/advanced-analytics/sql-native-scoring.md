@@ -1,6 +1,6 @@
 ---
 title: Native scoring in SQL Server machine learning | Microsoft Docs
-description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pretrained model written in R or Python on SQL Server.
+description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pre-trained model written in R or Python on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -11,7 +11,7 @@ ms.author: heidist
 manager: cgronlun
 ---
 
-# Native scoring
+# Native scoring using the PREDICT T-SQL function
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Once you have a pre-trained model, you can pass new input data to the function to generate prediction values or *scores*. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can use the PREDICT function in Transact-SQL to support native scoring. It requires only that you have a model already trained, which you can call using T-SQL. 

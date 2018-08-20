@@ -1,6 +1,6 @@
 ---
 title: Real-time scoring in SQL Server machine learning | Microsoft Docs
-description: Generate predictions using sp_rxPredict, scoring dta inputs against a pre-trained model written in R or Python onSQL Server.
+description: Generate predictions using sp_rxPredict, scoring dta inputs against a pre-trained model written in R on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

@@ -221,16 +221,15 @@
       href: r/creating-multiple-models-using-rxexecby.md
     - name: Use data from OLAP cubes in R
       href: r/using-data-from-olap-cubes-in-r.md
-    - name: Create a stored procedure using sqlrutils
-      href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
-  - name: Generate predictions
-    items:
     - name: Real-time scoring with sp_rxPredict
       href: real-time-scoring.md
     - name: Native scoring with PREDICT T-SQL
       href: sql-native-scoring.md
     - name: How to generate predictions
-      href: r/how-to-do-realtime-scoring.md    
+      href: r/how-to-do-realtime-scoring.md   
+    - name: Create a stored procedure using sqlrutils
+      href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+
   - name: Performance
     items:
     - name: Performance tuning for R - Overview

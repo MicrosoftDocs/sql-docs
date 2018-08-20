@@ -15,19 +15,22 @@ manager: cgronlun
 
 After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to support machine learning, you should set up an R development environment that is capable of connecting to the server for remote execution and deployment.
 
+
+## Evaluation and independent development
+ 
 If you have the developer edition and plan to work locally, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local R libraries installed by SQL Server.
 
 ## 1 - Install R packages
 
 R functionality in Microsoft products is multi-layered. It starts with Microsoft's open-source base R distribution, but is then extended with product-specific packages, such as [RevoScaleR](revoscaler-overview.md), that enable remote compute contexts and parallel execution of R tasks.
 
-Coordinated operations between a client and remote server require both systems having the same packages. To get the full complement of libraries on a client workstation, install one of the software packages in the following table. You should choose an option that most closely matches your SQL Server in-database analytics installation.
+Coordinated operations between a client and remote server require both systems having the same packages. To get the full complement of libraries on a client workstation, install one of the software packages in the following table. 
 
 | Library provider | Usage  |
 |------------------|--------------------------------|
-| [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) | Recommended when the remote server is a [SQL Server 2017 machine learning instance](../install/sql-machine-learning-services-windows-install.md). Install the free developer edition of SQL Server 2017, choosing the "Standalone server" feature under **Shared features** in SQL Server Setup. |
-| [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) | Recommended for use with [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). Install the free developer edition of SQL Server 2016, choosing the "Standalone R Server" feature under **Shared features** in SQL Server Setup. |
-| [Microsoft R Client](http://aka.ms/rclient/download) |  This free download is a limited version of R Server: it provides RevoScaleR and other R packages, but is capped at two threads and in-memory data. However, you can still create R solutions that start locally, and shift execution (referred to as *compute context*) to access data and the computational power of a remote SQL Server instance. For more information about this tool, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).|
+| [Microsoft R Client](http://aka.ms/rclient/download) |  This free download provides RevoScaleR, MicrosoftML, and other R packages, but is capped at two threads and in-memory data. However, you can still create R solutions that start locally, and shift execution (referred to as *compute context*) to access data and the computational power of a remote SQL Server instance. This is the recommended approach for client integration with a production SQL Server instance. For more information about this tool, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).|
+| Standalone servers | Under **Shared features**, SQL Server Setup includes standalone server options for SQL Server 2016 R Services and SQL Server 2017 machine learning. These are full-featured servers, fully decoupled from SQL Server, with the ability to connect to and consume data from multiple data platforms, but you could potentially use the software in a client capacity to access SQL Server database engine instance running R and Python tasks. [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) has the same libraries as a SQL Server 2017 machine learning instance. [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) has the same libraries as SQL Server 2016 R Services. |
+
 
 <a name="r-tool"></a>
  

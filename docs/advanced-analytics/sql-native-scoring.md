@@ -16,8 +16,6 @@ manager: cgronlun
 
 Once you have a pre-trained model, you can pass new input data to the function to generate prediction values or *scores*. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can use the PREDICT function in Transact-SQL to support native scoring. It requires only that you have a model already trained, which you can call using T-SQL. 
 
-Native scoring is operational on SQL Server 2017 for Windows, Linux, and Azure SQL Database. In SQL Server 2017, it is the only machine learning feature that runs on the Linux operating system and in the Azure cloud.
-
 + What is native scoring vs. real-time scoring
 + How it works
 + Supported platforms and requirements

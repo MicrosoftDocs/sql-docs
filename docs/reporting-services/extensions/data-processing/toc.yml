@@ -20,7 +20,5 @@
   href: implementing-a-datareader-class-for-a-data-processing-extension.md
 - name: Preparing to Implement a Data Processing Extension
   href: preparing-to-implement-a-data-processing-extension.md
-- name: Removing a Data Processing Extension
-  href: removing-a-data-processing-extension.md
 - name: Using an External Dataset with Reporting Services
   href: using-an-external-dataset-with-reporting-services.md

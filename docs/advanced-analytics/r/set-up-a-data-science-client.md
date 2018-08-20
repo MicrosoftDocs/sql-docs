@@ -60,10 +60,11 @@ At a minimum, the account used to run code must have permission to read from the
 
 Ask the database administrator to configure the following permissions for the account, in the database where you use R:
 
-+ EXECUTE ANY EXTERNAL SCRIPT to run R on the server.
++ **EXECUTE ANY EXTERNAL SCRIPT** to run R on the server.
 + **db_datareader** privileges to run the queries used for training the model.
 + **db_datawriter** to write training data or scored data.
-+ **db_owner** to create objects such as stored procedures, tables, functions. You also need **db_owner** to create sample and test databases. 
++ **db_owner** to create objects such as stored procedures, tables, functions. 
+  You also need **db_owner** to create sample and test databases. 
 
 If your code requires packages that are not installed by default with SQL Server, arrange with the database administrator to have the packages installed with the instance. SQL Server is a secured environment and there are restrictions on where packages can be installed. Ad hoc installation of packages as part of your code is not recommended, even if you have rights. Also, always carefully consider the security implications before installing new packages in the server library.
 
@@ -78,15 +79,15 @@ SQL Server must be enabled for [remote connections](https://docs.microsoft.com/s
 
 1. Start by [opening an R tool](#r-tool) on the client workstation. RevoScaleR loads automatically. For example, go to `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` and double-click **RGui.exe** to start it.
 
-2. Confirm RevoScaleR is operational by running this command, which returns statistical summary on a built-in R dataset. Provide a valid server name for the SQL Server database engine instance.
+2. Confirm RevoScaleR is operational by running this command, which returns statistical summary on a demo dataset. Make sure you provide a valid server name for the SQL Server database engine instance.
 
 ```r
-> connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=TaxiNYC_Sample;Trusted_Connection=true"
-> testQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
-> cc <-RxInSqlServer(connectionString=connStr)
-> rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=testQuery, connectionString=connStr), computeContext=cc)
+connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=TaxiNYC_Sample;Trusted_Connection=true"
+testQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+cc <-RxInSqlServer(connectionString=connStr)
+rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=testQuery, connectionString=connStr), computeContext=cc)
 ```
-This scripts connects to a database on the remote server, provides a query, creates compute context `cc` instruction for remote code execution, then provides the RevoScaleR function **rxSummary** to return statistical summary of the query results.
+This script connects to a database on the remote server, provides a query, creates a compute context `cc` instruction for remote code execution, then provides the RevoScaleR function **rxSummary** to return a statistical summary of the query results.
 
 <a name="install-ide"></a>
 

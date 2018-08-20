@@ -36,6 +36,9 @@
       href: python/security-overview-sql-server-python-services.md
 - name: Install
   items:
+  - name: SQL Server vNext
+    - Name: Machine Learning Services
+    - href: install/sql-machine-learning-services-vnext.md
   - name: SQL Server 2017
     items:
     - name: In-Database analytics

@@ -50,7 +50,7 @@ manager: "kfile"
   
 -   For URL requests, the query parameters are included as standard URL parameters.  
   
--   For Web service requests, query parameters are passed to the Web service method. To define a query parameter, use the **Parameters** page of the **Dataset Properties** dialog box. For more information, see [Dataset Properties Dialog Box, Parameters](../../reporting-services/report-data/dataset-properties-dialog-box-parameters.md).  
+-   For Web service requests, query parameters are passed to the Web service method. To define a query parameter, use the **Parameters** page of the **Dataset Properties** dialog box. 
   
 ### Example  
  The examples in the following table illustrate how to retrieve data from the Report Server Web service, an XML document, and embedded XML data.  

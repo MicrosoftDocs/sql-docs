@@ -1,27 +1,25 @@
 ---
-title: How to perform realtime scoring or native scoring in SQL Server Machine Learning | Microsoft Docs
+title: How to perform real-time scoring or native scoring in SQL Server Machine Learning | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 08/15/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# How to perform realtime scoring or native scoring in SQL Server
+# How to perform real-time scoring or native scoring in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article provides instructions and sample code for how to execute the realtime scoring and native scoring features in SQL Server 2017 and SQL Server 2016. The goal of both realtime scoring and native scoring is to improve the performance of scoring operations in small batches.
+This article demonstrates two approaches in SQL Server for predicting outcomes in near real-time using pre-trained models. Both real-time scoring and native scoring are designed to let you use a machine learning model without having to install R or Python. Given a pre-trained model in a compatible format - saved to a SQL Server database - you can use standard data access techniques to quickly generate prediction scores on new inputs.
 
-Both realtime scoring and native scoring are designed to let you use a machine learning model without having to install R. All you need to do is obtain a pretrained model in a compatible format, and save it in a SQL Server database.
-
-## Choosing a scoring method
+## Choose a scoring method
 
 The following options are supported for fast batch prediction:
 
-+ **Native scoring**: T-SQL PREDICT function in SQL Server 2017
-+ **Realtime scoring**: Using the sp\_rxPredict stored procedure in either SQL Server 2016 or SQL Server 2017.
++ **Native scoring**: T-SQL PREDICT function in SQL Server 2017 Windows, SQL Server 2017 Linux, and Azure SQL Database.
++ **Real-time scoring**: Using the sp\_rxPredict stored procedure in either SQL Server 2016 or SQL Server 2017 (Windows only).
 
 > [!NOTE]
 > Use of the PREDICT function is recommended in SQL Server 2017.
@@ -38,9 +36,9 @@ The overall process of preparing the model and then generating scores is similar
 
 + The PREDICT function is available in all editions of SQL Server 2017 and is enabled by default. You do not need to install R or enable additional features.
 
-+ If using sp\_rxPredict, some additional steps are required. See [Enable realtime scoring](#bkmk_enableRtScoring).
++ If using sp\_rxPredict, some additional steps are required. See [Enable real-time scoring](#bkmk_enableRtScoring).
 
-+ At this time, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Realtime scoring](../real-time-scoring.md).
++ At this time, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Real-time scoring](../real-time-scoring.md).
 
 ### Serialization and storage
 
@@ -71,7 +69,7 @@ From R code, there are two ways to save the model to a table:
 
 ## Native scoring with PREDICT
 
-In this example, you create a model, and then call the realtime prediction function from T-SQL.
+In this example, you create a model, and then call the real-time prediction function from T-SQL.
 
 ### Step 1. Prepare and save the model
 
@@ -163,16 +161,16 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 > [!NOTE]
 > Because the columns and values returned by **PREDICT** can vary by model type, you must define the schema of the returned data by using a **WITH** clause.
 
-## Realtime scoring with sp_rxPredict
+## Real-time scoring with sp_rxPredict
 
-This section describes the steps required to set up **realtime** prediction, and provides an example of how to call the function from T-SQL.
+This section describes the steps required to set up **real-time** prediction, and provides an example of how to call the function from T-SQL.
 
-### <a name ="bkmk_enableRtScoring"></a> Step 1. Enable the realtime scoring procedure
+### <a name ="bkmk_enableRtScoring"></a> Step 1. Enable the real-time scoring procedure
 
 You must enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
 
 > [!NOTE]
-> In order for realtime scoring to work, SQL CLR functionality needs to be enabled in the instance; additionally, the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, consider the additional security implications before doing this!
+> In order for real-time scoring to work, SQL CLR functionality needs to be enabled in the instance; additionally, the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, consider the additional security implications before doing this!
 
 1. Open an elevated command prompt, and navigate to the folder where RegisterRExt.exe is located. The following path can be used in a default installation:
     
@@ -192,7 +190,7 @@ You must enable this feature for each database that you want to use for scoring.
 
 	+ Trusted assemblies
 	+ The stored procedure `sp_rxPredict`
-	+ A new database role, `rxpredict_users`. The database administrator can use this role to grant permission to users who use the realtime scoring functionality.
+	+ A new database role, `rxpredict_users`. The database administrator can use this role to grant permission to users who use the real-time scoring functionality.
 
 4. Add any users who need to run `sp_rxPredict` to the new role.
 
@@ -229,20 +227,22 @@ EXEC sp_rxPredict
 > 
 > The call to sp\_rxPredict fails if the input data for scoring does not include columns that match the requirements of the model. Currently, only the following .NET data types are supported: double, float, short, ushort, long, ulong and string.
 > 
-> Therefore, you might need to filter out unsupported types in your input data before using it for realtime scoring.
+> Therefore, you might need to filter out unsupported types in your input data before using it for real-time scoring.
 > 
 > For information about corresponding SQL types, see [SQL-CLR Type Mapping](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) or [Mapping CLR Parameter Data](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-## Disable realtime scoring
+## Disable real-time scoring
 
-To disable realtime scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+To disable real-time scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## Realtime scoring in Microsoft R Server or Machine Learning Server
+## Real-time scoring in other Microsoft product
 
-Machine Learning Server supports distributed realtime scoring from models published as a web service. For more information, see these articles:
+If you are using the standalone server or a Microsoft Machine Learning Server instead of SQL Server in-database analytics, you have other options besides stored procedures and T-SQL functions for generating predictions.
+
+Both the standalone server and Machine Learning Server support the concept of a *web service* for code deployment. You can bundle an R or Python pre-trained model as a web service, called at run time to evaluate new data inputs. For more information, see these articles:
 
 + [What are web services in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [What is operationalization?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
 + [Deploy a Python model as a web service with azureml-model-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
-+ [Publish an R code block or a realtime model as a new web service](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [Publish an R code block or a real-time model as a new web service](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [mrsdeploy package for R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

@@ -50,7 +50,7 @@ Tools are located in **bin** folder for base R as installed SQL Server or R Clie
 | SQL Server 2016 R Services | `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`|
 | SQL Server 2016 R Standalone Server | `~\Program Files\Microsoft SQL Server\130\R_SERVER\bin\x64` 
 | SQL Server 2017 Machine Learning (R) Services | `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`|
-| SQL Server 2017 Machine Learning Learning (R) Standalone Server | `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` |
+| SQL Server 2017 Machine Learning (R) Standalone Server | `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` |
 
 ## 3 - Permissions
 

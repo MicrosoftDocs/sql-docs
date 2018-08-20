@@ -211,14 +211,8 @@
       href: r/r-libraries-and-data-types.md
     - name: Python libraries and data types
       href: python/python-libraries-and-data-types.md
-    - name: Native scoring
-      href: sql-native-scoring.md
-    - name: Real-time scoring
-      href: real-time-scoring.md
     - name: Predictive modeling with R
       href: r/data-exploration-and-predictive-modeling-with-r.md
-    - name: How to perform real-time or native scoring
-      href: r/how-to-do-realtime-scoring.md
     - name: Load R objects using ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
     - name: Converting R Code for Use in Machine Learning Services
@@ -229,6 +223,14 @@
       href: r/using-data-from-olap-cubes-in-r.md
     - name: Create a stored procedure using sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+  - name: Generate predictions
+    items:
+    - name: Real-time scoring with sp_rxPredict
+      href: real-time-scoring.md
+    - name: Native scoring with PREDICT T-SQL
+      href: sql-native-scoring.md
+    - name: How to generate predictions
+      href: r/how-to-do-realtime-scoring.md    
   - name: Performance
     items:
     - name: Performance tuning for R - Overview

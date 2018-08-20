@@ -1,5 +1,6 @@
 ---
-title: Native scoring| Microsoft Docs
+title: Native scoring in SQL Server machine learning | Microsoft Docs
+description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pretrained model written in R or Python on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -38,7 +39,7 @@ To support fast scoring, SQL Server Machine Learning Services (and Microsoft Mac
     + No additional configuration is required.
     + The R runtime is not called. There is no need to install R.
 
-**Realtime scoring**
+**Real-time scoring**
 
 + **sp_rxPredict** is a stored procedure for real-time scoring that can be used to generates scores from any supported model type, without calling the R runtime.
 
@@ -83,7 +84,7 @@ Supported platforms are as follows:
 
 + SQL Server 2016
 
-   Realtime scoring using sp_rxPredict is possible with SQL Server 2016, and can also be run on Microsoft R Server. This option requires SQLCLR to be enabled, and that you install the Microsoft R Server upgrade.
+   Real-time scoring using sp_rxPredict is possible with SQL Server 2016, and can also be run on Microsoft R Server. This option requires SQLCLR to be enabled, and that you install the Microsoft R Server upgrade.
    For more information, see [Realtime scoring](Real-time-scoring.md)
 
 ### Model preparation
@@ -112,3 +113,7 @@ The following model types are not supported:
 + PMML models
 + Models created using other R libraries from CRAN or other repositories
 + Models containing any other R transformation
+
+## See also
+
+[Real-time scoring in SQL Server machine learning ](real-time-scoring.md)

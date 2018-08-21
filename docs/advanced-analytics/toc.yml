@@ -38,7 +38,7 @@
   items:
   - name: SQL Server vNext
     items: 
-    - name: Machine Learning on SQL Server vNext
+    - name: Differences in Maching Learning
       href: install/sql-machine-learning-services-vnext.md
   - name: SQL Server 2017
     items:

@@ -202,7 +202,7 @@ We recommend Visual Studio because it supports database projects as well as mach
 
 Because developers frequently work with multiple versions of Python, setup does not add Python to your PATH. To use the Python executable and libraries installed by setup, link your IDE to **Python.exe** at the path that also provides revoscalepy and microsoftml. For example, for a Python project in Visual Studio, your custom environment would specify `C:\Program Files\Microsoft\PyForMLS`, `C:\Program Files\Microsoft\PyForMLS\python.exe` and `C:\Program Files\Microsoft\PyForMLS\pythonw.exe` for **Prefix path**, **Interpreter path**, and **Windowed interpreter**, respectively.
 
-For additional guidance, see [Link Python tools and IDEs](https://docs.microsoft.com/en-us/machine-learning-server/python/quickstart-python-tools). The article is written for Microsoft Machine Learning Server so the Python paths are different, but it shows you how to link to Python libraries from various tools.
+For additional guidance, see [Link Python tools and IDEs](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools). The article is written for Microsoft Machine Learning Server so the Python paths are different, but it shows you how to link to Python libraries from various tools.
 
 ## Next steps
 

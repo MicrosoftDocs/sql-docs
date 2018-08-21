@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 **(Not for production workloads)**
 
-In SQL Server vNext CTP 2.0, partition-based modeling is the ability to create and train models over partitioned data. For stratified data that naturally segments into a given classification scheme - such as geographic regions, date and time, age or gender - you can execute script over the entire data set, with the ability to model, train, and score over partitions that remain intact over all these operations. 
+In SQL Server vNext, partition-based modeling is the ability to create and train models over partitioned data. For stratified data that naturally segments into a given classification scheme - such as geographic regions, date and time, age or gender - you can execute script over the entire data set, with the ability to model, train, and score over partitions that remain intact over all these operations. 
 
 Partition-based modeling is enabled through two new parameters on [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
 
@@ -69,19 +69,19 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## Connect to the database
 
-Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYC Taxi demo database](tutorials/sqldev-download-the-sample-data.md#download-tutorial-files-from-githu)exists. 
+Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYC Taxi demo database](sqldev-download-the-sample-data.md) exists. 
 
 ## Define a procedure for creating and training per-partition models
 
 This tutorial wraps all R script in a stored procedure. In this step, you add script that creates an input dataset, builds a classification model to predict a tip outcome, and stores the model in the database.
 
-Among the objects created by this script, you'll see **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**.  Recall that these objects are the mechanism by which partitioned modeling occurs. The parameters are passed as inputs to `sp_execute_external_script` to process partitions with the external script executing once for every partition.
+Among the objects created by this script, you'll see **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**.  Recall that these parameters are the mechanism by which partitioned modeling occurs. The parameters are passed as inputs to `sp_execute_external_script` to process partitions with the external script executing once for every partition.
 
-Create a stored procedure that trains models on each partition of the data, [using parallelism](#parallel) for faster time to completion.
+When creating the stored procedure, [use parallelism](#parallel) for faster time to completion.
 
 
 ```sql
-USE [nyctaxiDB]
+USE TaxiNYC_Sample
 GO
 
 CREATE OR ALTER procedure [dbo].[train_rxLogIt_per_partition] (
@@ -184,7 +184,7 @@ You can use the same parameters for scoring. The following sample contains an R 
 As before, create a stored procedure to wrap your R code.
 
 ```sql
-USE [nyctaxiDB]
+USE TaxiNYC_Sample
 GO
 
 -- Stored procedure that scores per partition. 

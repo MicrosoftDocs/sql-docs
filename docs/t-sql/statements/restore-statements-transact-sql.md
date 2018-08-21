@@ -728,7 +728,7 @@ RESTORE DATABASE Sales
 
 # Azure SQL Database Managed Instance
 
-This command enables you to restore an entire database from a full database backup (a complete restore).
+This command enables you to restore an entire database from a full database backup (a complete restore) form Azure Blob Storage account.
 
 For other supported RESTORE commands, see:
 - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
@@ -757,7 +757,7 @@ Specifies the target database.
   
 FROM URL
 
-Specifies the URL to use for the restore operation. The URL format is used for restoring backups from the Microsoft Azure storage service. 
+Specifies one or more backup devices placed on URLs that will be used for the restore operation. The URL format is used for restoring backups from the Microsoft Azure storage service. 
 
 > [!IMPORTANT]  
 > In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
@@ -767,7 +767,7 @@ Is a placeholder that indicates that up to 64 backup devices may be specified in
  
 ## General Remarks
 
-For an asynchronous restore, the restore continues even if client connection breaks. If your connection is dropped, you can check [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) view for the status of a restore operation (as well as for CREATE and DROP database). 
+RESTORE operation is asynchronous - the restore continues even if client connection breaks. If your connection is dropped, you can check [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) view for the status of a restore operation (as well as for CREATE and DROP database). 
 
 The following database options are set/overridden and cannot be changed later:
 
@@ -800,6 +800,7 @@ RESTORE permissions are given to roles in which membership information is always
 ##  <a name="examples"></a> Examples  
 The following examples restore a copy only database backup from URL, including the creation of a credential.  
   
+###  <a name="restore-mi-database"></a> A. Restore database from three backup devices.   
 ```sql
 
 -- Create credential
@@ -813,11 +814,13 @@ FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-Wid
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
-
---The following error is shown if the database already exists:
+```
+The following error is shown if the database already exists:
+```
 Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
-
+```
+###  <a name="restore-mi-database-variables"></a> B. Restore database specified via variable.  
 -- An example with variables:
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
 DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';

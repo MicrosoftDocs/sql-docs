@@ -34,15 +34,26 @@ Coordinated operations between a client and remote server require both systems h
 
 <a name="r-tool"></a>
  
-## 2 - Use built-in R tools
+## 2 - Open an R prompt
 
-When you install R with SQL Server, you get the same R tools that are standard to any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials. You can use these tools to confirm connectivity.
+When you install R with SQL Server, you get the same R tools that are standard to any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials. You can use these tools to get R version information and confirm connectivity.
+
+To use the version of R installed with SQL Server or R Client, open an R prompt from the SQL Server or R Client program folder. The following steps are for R Client and RGui.exe.
+
+1. For R Client, go to `~\Program Files\Microsoft\R Client\R_SERVER\bin\x64`.
+2. Double-click **RGui.exe** to start an R session with an R command prompt.
+
+When you start an R session from a Microsoft program folder, several packages including RevoScaleR load automatically. Enter **search()** at the R prompt for confirmation.
+
+   ![Version information when loading R](../../install/media/rclient-rgui-r-prompt.png "Open an R prompt")
+
+### Tool list and location
 
 | Tool | Description | 
 |------|-------------|
 | **RTerm**: | A command-line terminal for running R scripts | 
 | **RGui.exe** | A simple interactive editor for R. The command-line arguments are the same for RGui.exe and RTerm. |
-|**RScript** | A command-line tool for running R scripts in batch mode. |
+| **RScript** | A command-line tool for running R scripts in batch mode. |
 
 Tools are located in **bin** folder for base R as installed SQL Server or R Client. The following paths are valid locations for the tools, depending on which product version and feature you installed:
 

@@ -1,5 +1,5 @@
 ---
-title: Install SQL Server machine learning components without internet access | Microsoft Docs
+title: Install SQL Server machine learning R and Python components without internet access | Microsoft Docs
 description: Offline or disconnected Machine Learning R and Python setup on isolated SQL Server instance.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Install SQL Server machine learning R and Python features on computers with no internet access
+# Install SQL Server machine learning R and Python on computers with no internet access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.

@@ -1,7 +1,7 @@
 ---
 title: "Replication, Change Tracking, & Change Data Capture - Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/25/2018"
+ms.date: "08/21/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -208,7 +208,7 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
 |**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|Yes|Yes| 
 |**P2P**|No|No|No|  
 |**Merge**|Yes|No|No|  
-|**Snapshot**|Yes|No|Yes*|
+|**Snapshot**|Yes|No|Yes|
   
  **The Distributor database is not supported for use with database mirroring.  
   

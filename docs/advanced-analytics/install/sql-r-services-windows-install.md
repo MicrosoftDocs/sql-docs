@@ -77,7 +77,8 @@ For local installations, you must run Setup as an administrator. If you install 
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-7. When the installation is complete, restart your computer.
+7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+
 
 ##  <a name="bkmk_enableFeature"></a>Enable external script execution
 
@@ -122,7 +123,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
 
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. Restart the service if is not running. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md).
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md).
 
 7. If Launchpad is running, you should be able to run simple R to verify that external scripting runtimes can communicate with SQL Server. 
 

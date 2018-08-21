@@ -93,13 +93,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-## Restart the service
-
-When the installation is complete, restart the database engine before continuing to the next, enabling script execution.
-
-Restarting the ervice also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
-
-You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 ## <a name="bkmk_enableFeature"></a>Enable external script execution
 
@@ -127,9 +121,13 @@ You can restart the service using the right-click **Restart** command for the in
     
     If you have already enabled the feature for the R language, don't run reconfigure a second time for Python. The underlying extensibility platform supports both languages.
 
-4. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+## Restart the service
 
-    You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+When the installation is complete, restart the database engine before continuing to the next, enabling script execution.
+
+Restarting the ervice also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+
+You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 ## Verify installation
 
@@ -143,7 +141,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
     
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. Restart the service if is not running. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md). 
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md). 
    
 3. If Launchpad is running, you should be able to run simple R and Python scripts to verify that external scripting runtimes can communicate with SQL Server.
 

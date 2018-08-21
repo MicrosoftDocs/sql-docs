@@ -205,12 +205,10 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
 |||||  
 |-|-|-|-|  
 ||**Publisher**|**Distributor***\*|**Subscriber**|  
-|**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|No|Yes|  
+|**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|Yes|Yes| 
 |**P2P**|No|No|No|  
-|**Merge**|Yes|No|Yes*|  
-|**Snapshot**|Yes|No|Yes*|  
-  
- *Failover to the replica database is a manual procedure. Automatic failover is not provided.  
+|**Merge**|Yes|No|No|  
+|**Snapshot**|Yes|No|Yes*|
   
  **The Distributor database is not supported for use with database mirroring.  
   

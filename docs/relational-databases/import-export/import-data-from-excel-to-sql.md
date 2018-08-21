@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Import data from Excel to SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/29/2018"

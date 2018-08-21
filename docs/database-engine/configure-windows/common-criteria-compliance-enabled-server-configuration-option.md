@@ -20,7 +20,7 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ---
-# common criteria compliance enabled Server Configuration Option
+# Common Criteria Compliance Enabled Server Configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 The common criteria compliance option enables the following elements that are required for the [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/).  

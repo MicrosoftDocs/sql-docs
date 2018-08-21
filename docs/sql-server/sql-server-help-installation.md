@@ -99,7 +99,7 @@ SSMS 17.x and VS 2015 and 2017 use Help Viewer 2.x, which supports SQL Server 20
 |XQuery Language Reference (SQL Server) | XQuery Language Reference (SQL Server)|
 
 > [!NOTE]
-> If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/en-us/library/dd831853.aspx).
+> If the Help Viewer freezes (hangs) while adding content, change the Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" line in the %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings or HlpViewer_VisualStudiox_en-US.settings file to some date in the future. For more information about this issue, see [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio).
 
 **To view offline help content in SSMS with Help Viewer v2.x**
 

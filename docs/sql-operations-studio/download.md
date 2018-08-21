@@ -92,7 +92,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
    **Debian:** 
    ```bash
-   sudo apt-get install libuwind8
+   sudo apt-get install libunwind8
    ```
 
    **Redhat:** 

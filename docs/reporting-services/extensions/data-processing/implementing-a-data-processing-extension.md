@@ -56,9 +56,6 @@ manager: "kfile"
  [Debugging Data Processing Extension Code](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  Describes how to debug code in your data processing extensions.  
   
- [Removing a Data Processing Extension](../../../reporting-services/extensions/data-processing/removing-a-data-processing-extension.md)  
- Describes how to remove a data processing extension from a report server or Report Designer.  
-  
  For a sample of a fully implemented data processing extension, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  

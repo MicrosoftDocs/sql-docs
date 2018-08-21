@@ -53,6 +53,22 @@
     items:
     - name: Virtualize external data
       href: sql-server-aris-virtualize-data.md
+  - name: Data ingestion
+    items:
+    - name: Load data with curl
+      href: sql-server-aris-data-ingestion-curl.md
+    - name: Restore a database
+      href: sql-server-aris-restore-databse.md
+  - name: Query scenarios
+    items:
+    - name: Read CSV with OPENROWSET  
+      href: sql-server-aris-openrowset.md
+    - name: Create a data pool
+      href: sql-server-aris-query-create-datapool.md
+  - name: Notebooks
+    items:
+    - name: How to use Jupyter notebooks in SQL Server vNext
+      href: sql-server-aris-jupyter-notebook-guidance.md
   - name: Troubleshoot
     items:
     - name: Troubleshoot SQL Server Aris

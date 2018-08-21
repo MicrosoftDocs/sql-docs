@@ -123,7 +123,7 @@ To resolve this, reboot the computer where [!INCLUDE[ssNoVersion](../../includes
 > Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to specify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must start up when the operating system starts.  
   
 ## See Also  
-[Setting Up Windows Service Accounts](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
+[Setting Up Windows Service Accounts](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 [Managing Services Using SQL Computer Manager](http://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)  
   

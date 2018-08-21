@@ -80,9 +80,9 @@ manager: craigg
   
  For step by step instructions about how to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential, see [Create a Credential](#credential) example later in this topic.  
   
- For general information about credentials, see [Credentials](http://msdn.microsoft.com/en-us/library/ms161950.aspx)  
+ For general information about credentials, see [Credentials](../security/authentication-access/credentials-database-engine.md)  
   
- For information, on other examples where credentials are used, see [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/ms175834.aspx).  
+ For information, on other examples where credentials are used, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitations  
   

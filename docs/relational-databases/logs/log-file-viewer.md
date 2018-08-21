@@ -52,6 +52,6 @@ manager: craigg
   
 ## See Also  
  [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
- [SQL Server Agent Error Log](http://msdn.microsoft.com/library/0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41)  
+ [SQL Server Agent Error Log](../../ssms/agent/sql-server-agent-error-log.md)  
   
   

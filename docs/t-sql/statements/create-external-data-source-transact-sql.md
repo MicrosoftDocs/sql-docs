@@ -1,7 +1,7 @@
 ﻿---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/02/2018"
+ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -54,7 +54,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
   
 -- PolyBase only: Azure Storage Blob as data source   
--- (on SQL Server 2016 and Azure SQL Data Warehouse)  
+-- (on SQL Server 2016)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = BLOB_STORAGE,  

@@ -15,6 +15,7 @@ ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # &lt;Alias&gt; Properties (Alias Tab)

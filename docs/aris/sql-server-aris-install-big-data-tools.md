@@ -13,9 +13,9 @@ ms.prod: sql
 
 This article describes how to install big data tools for SQL Server vNext.
 
-## Install SQL Operations Studio
+## Install [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)]
 
-1. Download the version of SQL Operations Studio for your OS from [https://github.com/Microsoft/sqlservervnext/releases/tag/v0.1.8](https://github.com/Microsoft/sqlservervnext/releases/tag/v0.1.8).
+1. Download the version of [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)] for your OS from [https://github.com/Microsoft/sqlservervnext/releases/tag/v0.1.8](https://github.com/Microsoft/sqlservervnext/releases/tag/v0.1.8).
 
 1. Unzip the file and run the application. We recommend using 7zip on Windows.
 
@@ -23,15 +23,15 @@ This article describes how to install big data tools for SQL Server vNext.
 
 1. Download the extension from [https://github.com/Microsoft/sqlservervnext/releases/tag/v0.1.8](https://github.com/Microsoft/sqlservervnext/releases/tag/v0.1.8).
 
-1. In SQL Operations Studio press F1 to open the action bar and type "Extensions: Install from VSIX", and then press enter to select this action.
+1. In [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)] press F1 to open the action bar and type "Extensions: Install from VSIX", and then press enter to select this action.
 
 1. Choose the VSIX file you just downloaded and click **Install**.
 
-1. You will be prompted to reload SQL Operations Studio – click the **Reload** button as requested.
+1. You will be prompted to reload [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)] – click the **Reload** button as requested.
 
 ## Connect to the cluster
 
-In SQL Operations Studio, press F1 -> New Connection. You can now connect to your SQL Server (Example: **\<IP Address\>,31433**). Connect to the **high_value_data** database.
+In [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], press F1 -> New Connection. You can now connect to your SQL Server (Example: **\<IP Address\>,31433**). Connect to the **high_value_data** database.
 
 ![Connect to cluster](./media/sql-server-aris-install-big-data-tools/connect-to-cluster.png)
 

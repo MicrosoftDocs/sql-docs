@@ -45,7 +45,7 @@ To use the version of R installed with SQL Server or R Client, open an R prompt 
 
 When you start an R session from a Microsoft program folder, several packages including RevoScaleR load automatically. Enter **search()** at the R prompt for confirmation.
 
-   ![Version information when loading R](../../install/media/rclient-rgui-r-prompt.png "Open an R prompt")
+   ![Version information when loading R](../install/media/rclient-rgui-r-prompt.png "Open an R prompt")
 
 ### Tool list and location
 

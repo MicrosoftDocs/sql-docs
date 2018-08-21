@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Contained Database Users - Making Your Database Portable | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"

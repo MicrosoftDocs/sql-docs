@@ -13,7 +13,7 @@ manager: craigg
 
 Starting in SQL Server 2017, R and Python support for in-database analytics is provided in SQL Server Machine Learning Services, the successor to R Services feature introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
 
-This article details the differences when installing SQL Server Machine Learning Services for SQL Server vNext. For installation instructions, please see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md#install-sql-server-machine-learning-services-in-database-on-windows).
+This article details the differences when installing SQL Server Machine Learning Services for SQL Server vNext. For installation instructions, please see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
 
 ## User accounts
 

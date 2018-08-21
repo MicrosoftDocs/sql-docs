@@ -25,7 +25,8 @@ For details about developing applications that use Always Encrypted protected da
 
 - [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Using Always Encrypted with the JDBC Driver](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
-- [Using Always Encrypted with the Windows ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Using Always Encrypted with the PHP Drivers](../../../connect/php/using-always-encrypted-php-drivers.md)
 
 
 

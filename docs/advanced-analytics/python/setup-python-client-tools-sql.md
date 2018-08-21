@@ -61,7 +61,7 @@ Python integration in Microsoft includes built-in tools and data in addition to 
 
 To use the Python executable installed by the setup script:
 
-1. Go to `C:\Program Files\Microsoft\PyForMLS\python.exe` or whatever location you chose for installation path..
+1. Go to `C:\Program Files\Microsoft\PyForMLS\python.exe` or whatever location you chose for installation path.
 
 2. Right-click **Python.exe** and select **Run as administrator** to open an interactive command-line window.
 
@@ -196,17 +196,17 @@ If you are simply debugging scripts from the command line, you can get by with t
 + [Visual Studio 2017 Community Edition](https://www.visualstudio.com/vs/features/python/) with Python
 + [AI tools for Visual Studio](https://docs.microsoft.com/visualstudio/ai/installation)
 + [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
-+ Popular third party tools such as PyCharm, Spyder, and Eclipse
++ Popular third-party tools such as PyCharm, Spyder, and Eclipse
 
 We recommend Visual Studio because it supports database projects as well as machine learning projects. For help configuring a Python environment, see [Managing Python environments in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
 
 Because developers frequently work with multiple versions of Python, setup does not add Python to your PATH. To use the Python executable and libraries installed by setup, link your IDE to **Python.exe** at the path that also provides revoscalepy and microsoftml. For example, for a Python project in Visual Studio, your custom environment would specify `C:\Program Files\Microsoft\PyForMLS`, `C:\Program Files\Microsoft\PyForMLS\python.exe` and `C:\Program Files\Microsoft\PyForMLS\pythonw.exe` for **Prefix path**, **Interpreter path**, and **Windowed interpreter**, respectively.
 
-For additional guidance, see [Link Python tools and IDEs](../python/quickstart-python-tools.md). The article is written for Machine Learning Server so the Python paths are different, but it shows you how to link to Python libraries from various tools.
+For additional guidance, see [Link Python tools and IDEs](https://docs.microsoft.com/en-us/machine-learning-server/python/quickstart-python-tools). The article is written for Microsoft Machine Learning Server so the Python paths are different, but it shows you how to link to Python libraries from various tools.
 
 ## Next steps
 
-Now that you have tools and a working connection to SQL Server, step through a tutorial to get a closer look at revocalepy functions and switching compute contexts.
+Now that you have tools and a working connection to SQL Server, step through a tutorial to get a closer look at revoscalepy functions and switching compute contexts.
 
 > [!div class="nextstepaction"]
 > [Create a model using revoscalepy and a remote compute context](../tutorials/use-python-revoscalepy-to-create-model.md)

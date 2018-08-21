@@ -20,7 +20,7 @@ After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/ssc
 If you have the developer edition and plan to work locally on R script you plan to move to SQL Server, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local R libraries used by SQL Server.
 
 > [!Tip]
-> For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) and [this YouTube video](https://youtu.be/D5erljpJDjE).
+> For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) or this [YouTube video](https://youtu.be/D5erljpJDjE).
 
 ## 1 - Install R packages
 

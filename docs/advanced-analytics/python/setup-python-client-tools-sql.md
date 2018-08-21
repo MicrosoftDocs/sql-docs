@@ -21,7 +21,7 @@ In this article, learn how to configure development workstations so that you can
 If you have the developer edition and plan to work locally on Python script you plan to move to SQL Server, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local Python libraries used by SQL Server.
 
 > [!Tip]
-> For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) and [this YouTube video](https://youtu.be/D5erljpJDjE).
+> For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) or this [YouTube video](https://youtu.be/D5erljpJDjE).
 
 ## 1 - Install Python packages
 
@@ -29,11 +29,13 @@ Local workstations must have the same Python package versions as those on SQL Se
 
 1. Download the installation shell script from [https://aka.ms/mls93-py](https://aka.ms/mls93-py) (or use [https://aka.ms/mls-py](https://aka.ms/mls-py) for the 9.2. release). The script installs Anaconda 4.2.0, which includes Python 3.5.2, along with all packages listed previously.
 
+  Python components are provided through [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054&clcid=1033). If you need a different version, see [CAB downloads](../install/sql-ml-cab-downloads.md)
+
 2. Open PowerShell window with elevated administrator permissions (right-click **Run as administrator**).
 
 3. Go to the folder in which you downloaded the installer and run the script. Add the `-InstallFolder` command-line argument to specify a folder location for the libraries. For example: 
 
-   ```
+   ```python
    cd {{download-directory}}
    .\Install-PyForMLS.ps1 -InstallFolder "C:\path-to-python-for-mls")
    ```
@@ -44,7 +46,7 @@ The installation script does not modify the PATH environment variable on your co
 
 <a name="python-tool"></a>
  
-## 2 - Open Python from the command line 
+## 2 - Open a Python prompt
 
 Python integration in Microsoft includes built-in tools and data in addition to the product-specific libraries like revoscalepy and microsoftml. The following items are available on both client and server instances when setup is complete:
 
@@ -57,22 +59,19 @@ Python integration in Microsoft includes built-in tools and data in addition to 
 
 ### On client workstations
 
-To use the Python runtime that is installed with the instance, you can start the Python executable from the installation path. 
+To use the Python executable installed by the setup script:
 
 1. Go to `C:\Program Files\Microsoft\PyForMLS\python.exe` or whatever location you chose for installation path..
 
 2. Right-click **Python.exe** and select **Run as administrator** to open an interactive command-line window.
 
-
 ### On SQL Server
 
-SQL Server Setup adds standard Python tools and resources to a server instance. If you are using the developer edition or you want to check Python versions on the server instance:
+SQL Server Setup adds standard Python tools and resources to a server instance. If you are using the developer edition and want to check Python version or run ad hoc commands:
 
 1. Go to `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`.
 
 2. Right-click **Python.exe** and select **Run as administrator** to open an interactive command-line window.
-
-By default, installation is to this folder: `~\Program Files\Microsoft SQL Server\<instance_name>\PYTHON_SERVICES`. 
 
 > [!Note]
 > Generally, to avoid resource contention, we recommend that you **do not** run Python from the instance library on the server, if you think it is possible the SQL Server instance is running Python code. However, using the tools in the instance library might be valuable if you are trying to debug an issue that occurs only when running in SQL Server and want to view more detailed error messages, or make sure that all required packages are installed.
@@ -85,7 +84,7 @@ At a minimum, the account used to run code must have permission to read from the
 
 Ask the database administrator to configure the following permissions for the account, in the database where you use Python:
 
-+ **EXECUTE ANY EXTERNAL SCRIPT** to run R on the server.
++ **EXECUTE ANY EXTERNAL SCRIPT** to run Python on the server.
 + **db_datareader** privileges to run the queries used for training the model.
 + **db_datawriter** to write training data or scored data.
 + **db_owner** to create objects such as stored procedures, tables, functions. 
@@ -115,7 +114,7 @@ print(summary)
 
 The sample data path is printed so that you can determine which instance of Python is being called.
 
-### Verify that Python can be called from SQL Server
+### Verify that Python can be called from a local SQL Server
 
 On a local development environment, verify that Python is communicating with local [SQL Server instance configured for external scripting](../install/sql-machine-learning-services-windows-install.md). Use SQL Server Management Studio to open a new **Query** window and run any simple Python command in the context of a stored procedure:
 
@@ -153,7 +152,7 @@ Because rx_summary returns an object of type `class revoscalepy.functions.RxSumm
 
 ### Verify Python execution in SQL Server as remote compute context
 
-If you have installed **revoscalepy** in your local Python development environment, you should be able to connect to an instance of SQL Server 2017 where Python has been enabled, and run a similar code sample using the server as the compute context. 
+If you have installed **revoscalepy** in your local Python development environment, you should be able to connect to a remote instance of SQL Server 2017 where Python has been enabled, and run a similar code sample using the server as the compute context. 
 
 For this script to run, specify a valid server name and an existing database. This particular script doesn't use the database, but the connection string requires it.
 
@@ -205,13 +204,9 @@ Because developers frequently work with multiple versions of Python, setup does 
 
 For additional guidance, see [Link Python tools and IDEs](../python/quickstart-python-tools.md). The article is written for Machine Learning Server so the Python paths are different, but it shows you how to link to Python libraries from various tools.
 
-## <a name="bkmk_update"></a> Update Python components
-
-You can update the Python components by downloading and installing a more recent version, using the script described here: [Install Python client on Windows](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter#install-on-windows)
-> 
-> The installer downloaded by the script is [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054&clcid=1033). If you need a different version, see [Installing machine learning components without internet access](http://bing.com)
-
 ## Next steps
+
+Now that you have tools and a working connection to SQL Server, step through a tutorial to get a closer look at revocalepy functions and switching compute contexts.
 
 > [!div class="nextstepaction"]
 > [Create a model using revoscalepy and a remote compute context](../tutorials/use-python-revoscalepy-to-create-model.md)

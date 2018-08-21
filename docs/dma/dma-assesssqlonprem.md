@@ -1,5 +1,5 @@
 ---
-title: "Assess an enterprise and consolidate assessment reports (Data Migration Assistant) | Microsoft Docs"
+title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
 ms.date: "08/21/2018"
@@ -30,9 +30,9 @@ The following step-by-step instructions help you use the Data Migration Assistan
 - Download and install:
     - [Data Migration Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=53595) v3.6 or above.
     - [PowerShell](http://aka.ms/wmf5download) v5.0 or above.
-    - [.NET Framework](https://www.microsoft.com/en-us/download/details.aspx?id=30653) v4.5 or above.
+    - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 or above.
     - [SSMS](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) 17.0 or above.
-    - [PowerBI desktop](https://docs.microsoft.com/en-us/power-bi/desktop-get-the-desktop).
+    - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
 - Download and extract:
     - The [DMA Reports Power BI template](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
     - The [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip).

@@ -49,7 +49,7 @@ You can [download and install SQL Server Management Studio](https://docs.microso
 
 ### Sample data
 
-Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. If you completed other tutorials, you might have the database already. For instructions and script, see [Download NYC Taxi demo data from Github](tutorials/sqldev-download-the-sample-data.md#download-tutorial-files-from-github).
+Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. If you completed other tutorials, you might have the database already. For instructions and script, see [Download NYC Taxi demo data from Github](sqldev-download-the-sample-data.md).
 
 ### R packages
 

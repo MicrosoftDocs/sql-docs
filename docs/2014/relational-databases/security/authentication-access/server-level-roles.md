@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "server-level roles [SQL Server]"
   - "authentication [SQL Server], roles"
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 ---
 # Server-Level Roles

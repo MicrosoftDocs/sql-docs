@@ -12,9 +12,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server], certificates and asymmetric keys"
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-caps.latest.revision: 18
-author: CarlRabeler
-ms.author: carlrab
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

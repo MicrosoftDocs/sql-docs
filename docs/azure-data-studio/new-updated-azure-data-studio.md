@@ -1,5 +1,5 @@
 ---
-title: Updated - SQL Operations Studio docs | Microsoft Docs
+title: Updated - Azure Data Studio docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for SQL Operations Studio.
 manager: craigg
 author: MightyPen
@@ -11,7 +11,7 @@ ms.technology: release-landing
 ms.prod: sql
 ms.date: 04/28/2018
 ---
-# New and Recently Updated: SQL Operations Studio docs
+# New and Recently Updated: Azure Data Studio docs
 
 
 
@@ -220,7 +220,7 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (3+3): &nbsp; &nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
 - [New + Updated (7+10): &nbsp; &nbsp;**Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
 - [New + Updated (0+2): &nbsp; &nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (1+3): &nbsp; &nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (1+3): &nbsp; &nbsp; **Azure Data Studio** docs](../azure-data-studio/new-updated-azure-data-studio.md)
 - [New + Updated (2+3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
 - [New + Updated (1+1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [New + Updated (5+2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)

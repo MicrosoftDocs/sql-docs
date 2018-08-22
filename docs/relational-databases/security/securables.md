@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "hierarchies [SQL Server], securables"
   - "server securables [SQL Server]"
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
-caps.latest.revision: 41
-author: CarlRabeler
-ms.author: carlrab
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

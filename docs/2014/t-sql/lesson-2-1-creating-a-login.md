@@ -6,15 +6,13 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "creating a login"
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 ---
 # Creating a Login

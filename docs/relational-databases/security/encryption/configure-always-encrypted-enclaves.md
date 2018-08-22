@@ -48,6 +48,8 @@ To use secure enclaves with Always Encrypted, your environment requires Windows 
 
 #### HGS computer requirements
 
+
+
 - See Configuring HGS Attestation.pdf for details.
 
     > [!NOTE]
@@ -61,6 +63,8 @@ To use secure enclaves with Always Encrypted, your environment requires Windows 
 
 
 ### Configure HGS attestation
+
+??? - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview)
 
 For step-by-step instructions, see: Configuring HGS Attestation.pdf
 

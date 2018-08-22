@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "08/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -21,7 +21,7 @@ Always Encrypted with secure enclaves provides additional functionality to the [
 
 Introduced in SQL Server 2016, Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users of SQL Server. High-privileged unauthorized users are DBAs, computer admins, cloud admins, or anyone else who has legitimate access to server instances, hardware, etc., but who should not have access to some or all of the actual data. 
 
-Until now, Always Encrypted protected the data by encrypting it on the client side and never allowing the data or the corresponding cryptographic keys to appear in plaintext inside the SQL Server Engine. As a result, the functionality on encrypted columns inside the database was severely restricted. The only operation SQL Server could perform on encrypted data was equality comparisons (and equality comparisons were only available with deterministic encryption). All other operations, including cryptographic operations (initial data encryption or key rotation), or rich computations (for example, pattern matching) were not supported inside the database. Customers needed to move the data outside of the database to perform these operations on the client-side.
+Until now, Always Encrypted protected the data by encrypting it on the client side and never allowing the data or the corresponding cryptographic keys to appear in plaintext inside the SQL Server Engine. As a result, the functionality on encrypted columns inside the database was severely restricted. The only operation SQL Server could perform on encrypted data was equality comparisons (and equality comparisons were only available with deterministic encryption). All other operations, including cryptographic operations (initial data encryption or key rotation), or rich computations (for example, pattern matching) were not supported inside the database. Users needed to move the data outside of the database to perform these operations on the client-side.
 
 Always Encrypted *with secure enclaves* addresses these limitations by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view any data or code inside the enclave from the outside, even with a debugger.  
 
@@ -47,14 +47,15 @@ With secure enclaves, Always Encrypted protects the confidentiality of sensitive
 
 - **Rich computations** – operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system.
 
-In the current Community Technology Preview (CTP) of SQL Server vNext, Always Encrypted with secure enclaves uses Virtualization-Based security (VBS) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
+In the current Community Technology Preview (CTP) of SQL Server vNext, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-vbs) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
 
 ## Secure Enclave Attestation
 
-The secure enclave inside the SQL Server Engine can access the sensitive data stored in encrypted database columns, and the corresponding column encryption keys in plaintext. Therefore, before you or your application submits a query that involves enclave computations to SQL Server, the client driver inside the application must verify the secure enclave is a genuine enclave based on a given technology (for example, VBS) and the code running inside the enclave has been signed for running inside the enclave. The process of verifying the enclave is called **enclave attestation**, and it usually involves a client driver within the application (and sometimes also SQL Server) contacting an external attestation service. The specifics of the attestation process depend on the enclave technology and the attestation service.
+The secure enclave inside the SQL Server Engine can access sensitive data stored in encrypted database columns and the corresponding column encryption keys in plaintext. Before submitting a query that involves enclave computations to SQL Server, the client driver inside the application must verify the secure enclave is a genuine enclave based on a given technology (for example, VBS) and the code running inside the enclave has been signed for running inside the enclave. 
 
-The attestation process, SQL Server supports for VBS secure enclaves in SQL Server vNext CTP is Windows Defender System Guard runtime attestation, which uses Host Guardian Service (HGS) as an attestation service. You need to configure HGS in your environment and register the machine hosting your SQL Server instance in HGS. You also must configure
-you client applications or tools (for example, SQL Server Management Studio) with an HGS attestation.
+The process of verifying the enclave is called **enclave attestation**, and it usually involves a client driver within the application (and sometimes also SQL Server) contacting an external attestation service. The specifics of the attestation process depend on the enclave technology and the attestation service.
+
+The attestation process, SQL Server supports for VBS secure enclaves in SQL Server vNext CTP is Windows Defender System Guard runtime attestation, which uses Host Guardian Service (HGS) as an attestation service. You need to configure HGS in your environment and register the machine hosting your SQL Server instance in HGS. You also must configure you client applications or tools (for example, SQL Server Management Studio) with an HGS attestation.
 
 ## Secure Enclave Providers
 
@@ -81,12 +82,12 @@ For more information about encryption types, see [Always Encrypted Cryptography]
 The following table summarizes the functionality available for encrypted columns, depending on whether the columns use enclave-enabled column encryption keys and an encryption
 type.
 
-| **Operation**                             | **A** **column** **is** **NOT enclave-enabled** | **A column is enclave-enabled**  |
+| **Operation**                             | **Column is NOT enclave-enabled** | **Column is enclave-enabled**  |
 | ----------------------------------------- | ----------------------------------------------- | -------------------------------- | ------------------------------ | -------------------------------- |
 |                                           | **Randomized encryption**                       | **Deterministic encryption**     | **Randomized encryption**      | **Deterministic encryption**     |
 | **In-place encryption**                   | Not Supported                                   | Not Supported                    | Supported                      | Supported                        |
 | **Equality comparison**                   | Not Supported                                   | Supported outside of the enclave | Supported (inside the enclave) | Supported outside of the enclave |
-| **Comparison operators beyond equality ** | Not Supported                                   | Not Supported                    | Supported                      | Not Supported                    |
+| **Comparison operators beyond equality** | Not Supported                                   | Not Supported                    | Supported                      | Not Supported                    |
 | **LIKE**                                  | Not Supported                                   | Not Supported                    | Supported                      | Not Supported                    |
 |                                           |                                                 |                                  |                                |                                  |
 
@@ -130,6 +131,6 @@ Limitations that apply to the preview and may be lifted later:
 
 - Tooling support for Always Encrypted with secure enclaves is currently incomplete. To trigger an in-place cryptographic operation via an ALTER TABLE Transact-SQL statement, you need to issue the statement using a query window in SSMS, or you can write your own program that issues the statement. SQL command-line tools (sqlcmd.exe, the Invoke-SqlCmd cmdlet, or the Set-SqlColumnEncryption cmdlet) and the Always Encrypted wizard in SSMS do not support in-place encryption yet.
 
-## Known Bugs
+## Known issues
 
 - For rich computations, a BIN2 collation must be set at the database level.

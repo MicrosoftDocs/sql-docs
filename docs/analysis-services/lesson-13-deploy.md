@@ -1,6 +1,6 @@
 ---
-title: "Lesson 14: Deploy | Microsoft Docs"
-ms.date: 05/08/2018
+title: "Lesson 13: Deploy | Microsoft Docs"
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models

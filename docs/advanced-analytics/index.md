@@ -1,9 +1,9 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: SQL Server AI and Extensibility Documentation
+title: SQL Server MLS and Extensibility Documentation
 metadata:
   document_id: 
-  title: SQL Server AI Documentation - Tutorials, API Reference
+  title: SQL Server MLS Documentation - Tutorials, API Reference
   meta.description: Learn how to use embedded R, Python, Java with SQL Server relational data.
   ms.topic: landing-page
   ms.date: 08/27/2018
@@ -17,7 +17,7 @@ metadata:
   ms.tgt_pltfrm: na
   ms.devlang:
 abstract:
-  description: SQL Server machine learning extends the database engine to include embedded R, Python, and Java for running external code on resident relational data.<br/><br/>R and Python libraries include open-source base distributions, extended with Microsoft libraries that add predictive analytics at scale.<br/><br/>Java extensions are available in SQL Server vNext only as a preview feature. Operationalize Java code in stored procedures, or access through Transact-SQL on local relational data.
+  description: SQL Server machine learning extends the database engine to include embedded R, Python, and Java for running external code on resident relational data.<br/><br/>R and Python libraries include base distributions, extended with Microsoft libraries that add predictive analytics at scale.<br/><br/>Java extensions are available in SQL Server vNext only as a preview feature. Operationalize Java code in stored procedures, or access through Transact-SQL on local relational data.
   aside:
     image:
       alt: 
@@ -35,7 +35,7 @@ sections:
     columns: 3
     items:
       - href: /sql/advanced-analytics/what-is-sql-server-machine-learning
-        html: <p>Open-source R is extended with Microsoft industry-leading AI algorithms for machine learning workloads, statistical analysis, visualization, data manipulation and exploration.</p>
+        html: <p>Open-source R, extended with Microsoft AI algorithms for machine learning workloads and statistical analysis, visualization, and data manipulation at scale.</p>
         image:
           src: /media/index/placeholder.svg
         title: R

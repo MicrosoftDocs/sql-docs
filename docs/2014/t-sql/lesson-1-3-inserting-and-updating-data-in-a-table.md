@@ -6,15 +6,13 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting and updating data"
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
-caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 ---
 # Inserting and Updating Data in a Table (Tutorial)

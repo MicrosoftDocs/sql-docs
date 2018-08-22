@@ -17,54 +17,44 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 # Configure Always Encrypted with secure enclaves
 
-Always Encrypted with secure enclaves extends the existing [Always Encrypted](always-encrypted-database-engine.md) feature to enable richer functionality on sensitive data while keeping the data confidential.
+[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends the existing [Always Encrypted](always-encrypted-database-engine.md) feature to enable richer functionality on sensitive data while keeping the data confidential.
 
-To setup Always Encrypted with Secure Enclaves, use the following workflow:
+To setup Always Encrypted with secure enclaves, use the following workflow:
 
 1. Configure HGS attestation.
-2. Install SQL Server CTP on the SQL Server computer.
+2. Install SQL Server vNext on the SQL Server computer.
 3. Install tools on the client/development computer.
 4. Configure the enclave type in your SQL Server instance.
 5. Provision enclave-enabled keys.
-6. Encrypt sensitive data columns in-place.
-7. Test your rich queries in SSMS.
-8. Develop your .NET application using Always Encrypted with secure
-    enclaves.  
+6. Encrypt columns that contain sensitive data.
+ 
 
 
 ## Configure your environment 
 
 To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and minimum versions of SQL Server Management Studio (SSMS), .NET Framework, and several other components. The following sections provide specific details and links to get the required components.
 
-### System Requirements
+### SQL Server computer requirements
 
-#### SQL Server computer requirements
+The computer running SQL Server needs the following operating system and SQL Server version:
 
-- Windows Server 2019 Preview. The computer must be configured as a guarded host, attested by HGS. See Configuring HGS Attestation.pdf for details.
+- [Windows Server 2019 Preview](https://insider.windows.com/en-us/for-business-getting-started-server/). The computer must be configured as a guarded host, attested by HGS. See [Configure HGS Attestation](#configure-hgs-attestation) for details.
 - SQL Server vNext CTP 2.0 or later
 
     > [!NOTE]
     > During the preview (for testing/prototyping), it is fine to use Always Encrypted with secure enclaves in a SQL Server instance inside a virtual machine. However, for production, the recommended TPM attestation mode requires SQL Server runs on a physical computer.
 
-#### HGS computer requirements
+### HGS computer requirements
 
-
+??? - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview)
 
 - See Configuring HGS Attestation.pdf for details.
 
     > [!NOTE]
     > A single HGS computer is sufficient during the preview (testing/prototyping). For production, a Windows failover cluster with 3 computers is strongly recommended.
 
-#### Client/development computer
-
-- .NET Framework 4.7.2
-- SQL Server Management Studio (SSMS) 18.0 or later
-- Visual Studio (2017 recommended)
-
 
 ### Configure HGS attestation
-
-??? - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview)
 
 For step-by-step instructions, see: Configuring HGS Attestation.pdf
 
@@ -74,10 +64,10 @@ For step-by-step instructions, see: Configuring HGS Attestation.pdf
 To determine an attestation service URL, you need to configure your tools and applications with:
 
 1. Log on to you SQL Server computer as administrator.
-2. Open PowerShell ad administrator.
-3. Run Get-HGSClientConfiguration.
-4. Take note of the AttestationServerURL property. It should look like this: http://10.193.16.185/Attestation.
-5. If you are using SQL Server v.Next CTP 2.0, you must append "/attestationservice.svc/signingCertificates" to the above URL. The result is the attestation URL for your SQL server instance.
+2. Open PowerShell as administrator.
+3. Run [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
+4. Write down and save the AttestationServerURL property. It should look like this: *http://10.193.16.185/Attestation*.
+5. If you are using SQL Server vNext CTP 2.0, you must append "/attestationservice.svc/signingCertificates" to the above URL. The result is the attestation URL for your SQL server instance.
 
 
 ### Install tools
@@ -917,7 +907,7 @@ GO
 CEK1 is assumed to be an enclave-enabled column encryption key.
 
 
-```csharp
+```cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -936,57 +926,43 @@ namespace ConsoleApp1
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {
+   connection.Open();
+   
+   SqlCommand cmd = connection.CreateCommand();
+   cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [Salary] FROM [dbo].[Employees] WHERE [SSN] LIKE @SSNPattern AND [Salary] > @MinSalary;";
+   
+   SqlParameter paramSSNPattern = cmd.CreateParameter();
+   
+   paramSSNPattern.ParameterName = @"@SSNPattern";
+   paramSSNPattern.DbType = DbType.AnsiStringFixedLength;
+   paramSSNPattern.Direction = ParameterDirection.Input;
+   paramSSNPattern.Value = "%1111";
+   paramSSNPattern.Size = 11;
+   
+   cmd.Parameters.Add(paramSSNPattern);
+   
+   SqlParameter MinSalary = cmd.CreateParameter();
+   
+   MinSalary.ParameterName = @"@MinSalary";
+   MinSalary.DbType = DbType.Int32;
+   MinSalary.Direction = ParameterDirection.Input;
+   MinSalary.Value = 900;
+   
+   cmd.Parameters.Add(MinSalary);
+   cmd.ExecuteNonQuery();
+   
+   SqlDataReader reader = cmd.ExecuteReader();
+   while (reader.Read())
+   
+   {
+     Console.WriteLine(reader);
+     Console.WriteLine(reader\[0\] + ", " + reader\[1\] + ", " + reader\[2\] + ", " + reader\[3\]);
+   }
 
-connection.Open();
+   Console.ReadKey();
 
-SqlCommand cmd = connection.CreateCommand();
-
-cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [Salary] FROM [dbo].[Employees] WHERE [SSN] LIKE @SSNPattern AND [Salary] > @MinSalary;";
-
-SqlParameter paramSSNPattern = cmd.CreateParameter();
-
-paramSSNPattern.ParameterName = @"@SSNPattern";
-
-paramSSNPattern.DbType = DbType.AnsiStringFixedLength;
-
-paramSSNPattern.Direction = ParameterDirection.Input;
-
-paramSSNPattern.Value = "%1111";
-
-paramSSNPattern.Size = 11;
-
-cmd.Parameters.Add(paramSSNPattern);
-
-SqlParameter MinSalary = cmd.CreateParameter();
-
-MinSalary.ParameterName = @"@MinSalary";
-
-MinSalary.DbType = DbType.Int32;
-
-MinSalary.Direction = ParameterDirection.Input;
-
-MinSalary.Value = 900;
-
-cmd.Parameters.Add(MinSalary);
-
-cmd.ExecuteNonQuery();
-
-SqlDataReader reader = cmd.ExecuteReader();
-
-while (reader.Read())
-
-{
-
-Console.WriteLine(reader);
-
-Console.WriteLine(reader\[0\] + ", " + reader\[1\] + ", " + reader\[2\] + ", " + reader\[3\]);
-
-}
-
-Console.ReadKey();
-
-}
-}
-}
+   }
+  }
+ }
 }
 ```

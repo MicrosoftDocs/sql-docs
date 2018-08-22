@@ -58,7 +58,7 @@ In the original dataset, the taxi identifiers and trip records were provided in 
 
 To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **PlotHistogram**.
 
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **TaxiNYC_Sample** database, expand **Programmability**, and then expand **Stored Procedures** to view the procedures created in lesson 2.
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **NYCTaxi_Sample** database, expand **Programmability**, and then expand **Stored Procedures** to view the procedures created in lesson 2.
 
 2. Right-click **PlotHistogram** and select **Modify** to view the source. You can execute this procedure to call **rxHistogram** on data contained in the tipped column of nyctaxi_sample table.
 
@@ -121,7 +121,9 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
     > [!NOTE]
     > Command switches for bcp are case-sensitive.
   
-3.  If the connection is successful, you will be prompted to enter more information about the graphic file format. Press ENTER at each prompt to accept the defaults, except for these changes:
+3.  If the connection is successful, you will be prompted to enter more information about the graphic file format. 
+
+   Press ENTER at each prompt to accept the defaults, except for these changes:
     
     -   For **prefix-length of field plot**, type 0
   

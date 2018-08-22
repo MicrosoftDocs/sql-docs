@@ -69,7 +69,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## Connect to the database
 
-Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYC Taxi demo database](sqldev-download-the-sample-data.md) exists. 
+Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [TaxiNYC_Sample database](sqldev-download-the-sample-data.md) exists. 
 
 ## Define a procedure for creating and training per-partition models
 
@@ -139,7 +139,7 @@ go
 
 ### Parallel execution
 
-Notice that the `sp_execute_external_script` inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server vNext CTP 2.0, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
+Notice that the `sp_execute_external_script` inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server vNext, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
 
 By default, the query optimizer tends to operate under `@parallel=1` on tables having more than 256 rows, but if you can handle this explicitly by setting `@parallel=1` as shown in this script.
 
@@ -289,7 +289,10 @@ select * from prediction_results;
 
 ## Next steps
 
-To apply [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) and this technique to your own data, review the guidance on how to structure partitioned data sets, call external scripts in stored procedures, and use the RevoScaleR or revoscalepy `rx` functions.
+In this tutorial, you used [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) to iterate operations over partitioned data. For a closer look at calling external scripts in stored procedures and using RevoScaleR functions, continue with the following tutorial.
+
+> [!div class="nextstepaction"]
+> [walkthrough for R and SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
 <!--
 ## Old intro

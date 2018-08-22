@@ -55,7 +55,7 @@ manager: "kfile"
   
      These credentials are used by the report server to make a data connection to the external data source. For some types of data sources, credentials can be stored securely on the report server. These credentials enable other users to run the report without providing credentials for the underlying data connection.  
   
--   Data source credentials that you enter in the [Enter Data Source Credentials Dialog Box &#40;Report Builder&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) when you run a dataset query, refresh dataset fields, or preview the report.  
+-   Data source credentials that you enter in the **Enter Data Source Credentials** Dialog Box when you run a dataset query, refresh dataset fields, or preview the report.  
   
      These credentials are used to make a data connection from Report Builder to the external data source, or to preview a report that is configured to prompt for credentials. Credentials that you enter in this dialog box are not stored on the report server and are not available for use by other users. Report Builder caches the credentials during the report editing session so that you do not need to enter them every time you run the query or preview the report.  
   

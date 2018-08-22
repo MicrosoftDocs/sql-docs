@@ -52,19 +52,19 @@ Select **Query** on the **Dataset Properties** dialog box to choose a shared dat
  This option appears when you choose the **Text** command type option. Type a query or import a pre-existing query by clicking **Import**. Click the **Expression** (*fx*) button to edit the expression.  
   
 > [!NOTE]  
->  If you used a query designer to build a query, the text of the query appears in this box.  
+>  If you use a query designer to build a query, the text of the query appears in this box.  
   
- **Table name**  
- Enter the name of the table that you want to use as a dataset. This option appears when you select **Table**.  
+**Table name**  
+This option appears when you select **Table**. Enter the name of the table that you want to use as a dataset.   
   
- **Select or enter stored procedure name**  
- Type or choose the name of the stored procedure that you want to use. Click the **Expression** (*fx*) button to edit the expression. This option appears when you choose the Stored Procedure command type option.  
+**Select or enter stored procedure name**  
+This option appears when you choose the Stored Procedure command type option. Type or choose the name of the stored procedure that you want to use. Click the **Expression** (*fx*) button to edit the expression.   
   
  **Time out (in seconds)**  
  Type the number of seconds until the query times out. The default is 30 seconds. The value for **Time out** must be empty or greater than zero. If it is empty, the query does not time out.  
   
  **Refresh Fields**  
- Run the query command to update the list of fields in the [Dataset Properties Dialog Box, Fields](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) page.  
+ Run the query command to update the list of fields in the **Dataset Properties Dialog Box, Fields**page.  
   
 ## See Also  
 [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Import data from Excel to SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/29/2018"
@@ -24,7 +24,7 @@ There are several ways to import data from Excel files to SQL Server or to Azure
 
 -   You can import data in a single step, directly from Excel to SQL, by using one of the following tools:
     -   The [SQL Server Import and Export Wizard](#wiz)
-    -   ]SQL Server Integration Services (SSIS)](#ssis)
+    -   [SQL Server Integration Services (SSIS)](#ssis)
     -   The [OPENROWSET](#openrowset) function
 -   You can import data in two steps, by exporting your data from Excel as text, and then using one of the following tools to import the text file:
     -   The [Import Flat File Wizard](#import-wiz)

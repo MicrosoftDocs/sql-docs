@@ -1,7 +1,7 @@
 ﻿---
 title: "Always Encrypted (client development) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2016"
+ms.date: "08/21/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -28,7 +28,8 @@ For details about developing applications that use Always Encrypted protected da
 - [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Using Always Encrypted with the PHP Drivers](../../../connect/php/using-always-encrypted-php-drivers.md)
 
-
+> [!NOTE]
+> Always Encrypted is not currently supported in [.NET CORE](https://docs.microsoft.com/dotnet/core/).
 
 ## See Also
 

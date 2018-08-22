@@ -1,7 +1,7 @@
 ---
 title: "sp_rxPredict | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/14/2018"
+ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
@@ -20,18 +20,19 @@ helpviewer_keywords:
   - "sp_rxPredict procedure"
 author: "HeidiSteen"
 ms.author: "heidist"
-manager: craigg
+manager: cgronlun
 ---
 # sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Generates a predicted value based on a stored model.
+Generates a predicted value for a given input based on a machine learning model stored in a binary format in a SQL Server database.
 
-Provides scoring on machine learning models in near real-time. `sp_rxPredict` is a stored procedure provided as a wrapper for the `rxPredict` function in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). It is written in C+ and is optimized specifically for scoring operations. It supports both R or Python machine learning models.
+Provides scoring on R and Python machine learning models in near real-time. `sp_rxPredict` is a stored procedure provided as a wrapper for the `rxPredict` R function in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), and the [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python function in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). It is written in C+ and is optimized specifically for scoring operations.
 
 **This topic applies to**:  
 - [SQL Server 2017 Machine Learning Services (In-Database) with R](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)
 - [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install), with [upgraded R components](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server) providing the MicrosoftML library
+
 
 ## Syntax
 
@@ -63,9 +64,18 @@ To enable use of the stored procedure, SQLCLR must be enabled on the instance.
 
 The user needs `EXECUTE` permission on the database.
 
+
+### Supported platforms
+ 
+- SQL Server 2017 Machine Learning Services (includes R Server 9.2)  
+- SQL Server 2017 Machine Learning Server (Standalone) 
+- SQL Server R Services 2016, with an upgrade of the R Services instance to R Server 9.1.0 or later  
+
+
 ### Supported algorithms
 
 + RevoScaleR models
+
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*

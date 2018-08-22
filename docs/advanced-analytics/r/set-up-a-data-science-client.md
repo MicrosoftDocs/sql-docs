@@ -15,10 +15,12 @@ manager: cgronlun
 
 After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to support machine learning, you should set up an R development environment that is capable of connecting to the server for remote execution and deployment.
 
-
-## Evaluation and independent development
+### Evaluation and independent development
  
-If you have the developer edition and plan to work locally, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local R libraries installed by SQL Server.
+If you have the developer edition and plan to work locally on R script you plan to move to SQL Server, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local R libraries used by SQL Server.
+
+> [!Tip]
+> For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) or this [YouTube video](https://youtu.be/D5erljpJDjE).
 
 ## 1 - Install R packages
 
@@ -29,20 +31,31 @@ Coordinated operations between a client and remote server require both systems h
 | Library provider | Usage  |
 |------------------|--------------------------------|
 | [Microsoft R Client](http://aka.ms/rclient/download) |  This free download provides RevoScaleR, MicrosoftML, and other R packages, but is capped at two threads and in-memory data. However, you can still create R solutions that start locally, and shift execution (referred to as *compute context*) to access data and the computational power of a remote SQL Server instance. This is the recommended approach for client integration with a production SQL Server instance. For more information about this tool, see [What is Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).|
-| Standalone servers | Under **Shared features**, SQL Server Setup includes standalone server options for SQL Server 2016 R Services and SQL Server 2017 machine learning. These are full-featured servers, fully decoupled from SQL Server, with the ability to connect to and consume data from multiple data platforms, but you could potentially use the software in a client capacity to access SQL Server database engine instance running R and Python tasks. [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) has the same libraries as a SQL Server 2017 machine learning instance. [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) has the same libraries as SQL Server 2016 R Services. |
+| Standalone servers | Under **Shared features**, SQL Server Setup includes standalone server install options for SQL Server 2016 R Services and SQL Server 2017 machine learning. These are full-featured servers, fully decoupled from SQL Server, with the ability to connect to and consume data from multiple data platforms. But you could potentially use the software in a client capacity to access SQL Server database engine instance running R and Python tasks. [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) has the same libraries as a SQL Server 2017 machine learning instance. [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md) has the same libraries as SQL Server 2016 R Services. |
 
 
 <a name="r-tool"></a>
  
-## 2 - Use built-in R tools
+## 2 - Open an R prompt
 
-When you install R with SQL Server, you get the same R tools that are standard to any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials. You can use these tools to confirm connectivity.
+When you install R with SQL Server, you get the same R tools that are standard to any base installation of R, such as RGui, Rterm, and so forth. These tools are lightweight, useful for checking package and library information, running ad hoc commands or script, or stepping through tutorials. You can use these tools to get R version information and confirm connectivity.
+
+To use the version of R installed with SQL Server or R Client, open an R prompt from the SQL Server or R Client program folder. The following steps are for R Client and RGui.exe.
+
+1. For R Client, go to `~\Program Files\Microsoft\R Client\R_SERVER\bin\x64`.
+2. Double-click **RGui.exe** to start an R session with an R command prompt.
+
+When you start an R session from a Microsoft program folder, several packages, including RevoScaleR, load automatically. Enter **search()** at the R prompt for confirmation.
+
+   ![Version information when loading R](../install/media/rclient-rgui-r-prompt.png "Open an R prompt")
+
+### Tool list and location
 
 | Tool | Description | 
 |------|-------------|
 | **RTerm**: | A command-line terminal for running R scripts | 
 | **RGui.exe** | A simple interactive editor for R. The command-line arguments are the same for RGui.exe and RTerm. |
-|**RScript** | A command-line tool for running R scripts in batch mode. |
+| **RScript** | A command-line tool for running R scripts in batch mode. |
 
 Tools are located in **bin** folder for base R as installed SQL Server or R Client. The following paths are valid locations for the tools, depending on which product version and feature you installed:
 

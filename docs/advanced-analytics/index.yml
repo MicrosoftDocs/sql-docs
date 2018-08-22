@@ -16,9 +16,8 @@ metadata:
   ms.service: 
   ms.tgt_pltfrm: na
   ms.devlang:
-
 abstract:
-  description: SQL Server machine learning extends the database engine to include embedded R, Python, and Java for running external code on resident relational data. R and Python libraries include open-source base distributions, extended with Microsoft libraries that add predictive analytics at scale.<br/>In SQL Server vNext the extensibility framework can now accommodate Java. Custom Java code can be operationalized as stored procedures or accessed through Transact-SQL on local relational data. Learn how to use embedded R, Python, and Java with our quickstarts, tutorials, and samples.
+  description: SQL Server machine learning extends the database engine to include embedded R, Python, and Java for running external code on resident relational data.<br/><br/>R and Python libraries include open-source base distributions, extended with Microsoft libraries that add predictive analytics at scale.<br/><br/>Java extensions are available in SQL Server vNext only as a preview feature. Operationalize Java code in stored procedures, or access through Transact-SQL on local relational data.
   aside:
     image:
       alt: 
@@ -29,7 +28,6 @@ abstract:
     href: https://www.youtube.com/watch?v=ACejZ9optCQ
     width: 250
 sections:
-
 - items:
   - type: list
     style: cards
@@ -39,19 +37,19 @@ sections:
       - href: /sql/advanced-analytics/what-is-sql-server-machine-learning
         html: <p>Open-source R is extended with Microsoft industry-leading AI algorithms for machine learning workloads, statistical analysis, visualization, data manipulation and exploration.</p>
         image:
-          src: media/index/placeholder.svg
+          src: /media/index/placeholder.svg
         title: R
       - href: /sql/advanced-analytics/what-is-sql-server-machine-learning
         html: <p>Python developers can use Microsoft libraries for predictive analytics and machine learning at scale, using functions from revoscalepy and microsoftml. Anaconda and Python 3.5-compatible libraries are supported. </p>
         image:
-          src: media/index/logo_python.svg
+          src: /media/index/logo_python.svg
         title: Python
       - href: /sql/advanced-analytics/what-is-sql-server-machine-learning
         html: <p>(SQL Server vNext only) Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL.</p>
         image:
-          src: media/index/logo_java.svg
+          src: /media/index/logo_java.svg
         title: Java
-sections:
+        
 - title: 5-Minute Quickstarts
   items:
   - type: paragraph
@@ -71,7 +69,6 @@ sections:
         src: 
       text: Java
       href:
-
 - title: Step-by-Step Tutorials
   items:
   - type: paragraph

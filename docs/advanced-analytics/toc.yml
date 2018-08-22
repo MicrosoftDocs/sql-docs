@@ -1,16 +1,16 @@
-- name: Overview
+- name: SQL AI and Extensibility Documentation
+  href: index.yml
+- name: SQL Server Machine Learning
+  href: what-is-sql-server-machine-learning.md
   items:
-  - name: AI and exentensibility
-    href: what-is-sql-server-machine-learning.md
-  - name: SQL Server Machine Learning Services (R & Python)
+  - name: Machine Learning Services (R & Python)
     href: r/sql-server-r-services.md
-  - name: SQL Server R Services
+  - name: R Services
+    href: r/sql-server-r-services.md
   - name: Standalone server
     href: r/r-server-standalone.md
   - name: What's new
     href: what-s-new-in-sql-server-machine-learning-services.md
-  - name: Features by edition
-    href: r/differences-in-r-features-between-editions-of-sql-server.md
 - name: Install
   items:
   - name: SQL Server Machine Learning vNext
@@ -153,7 +153,7 @@
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
   href: tutorials/data-science-scenarios-and-solution-templates.md
-- name: Concepts and components
+- name: Concepts
   href: architecture-overview-machine-learning.md
   items:
   - name: R

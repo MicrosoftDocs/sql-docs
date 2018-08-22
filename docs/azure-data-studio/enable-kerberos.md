@@ -1,6 +1,6 @@
 ---
-title: Use Active Directory Authentication (Kerberos) when connecting with SQL Operations Studio (preview) | Microsoft Docs
-description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Operations Studio (preview)
+title: Use Active Directory Authentication (Kerberos) when connecting with Azure Data Studio (preview) | Microsoft Docs
+description: Learn how to enable Kerberos to use Active Directory Authentication for Azure Data Studio (preview)
 ms.custom: "tools|sos"
 ms.date: "11/17/2017"
 ms.prod: sql

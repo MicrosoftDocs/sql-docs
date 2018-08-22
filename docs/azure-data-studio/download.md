@@ -1,6 +1,6 @@
 ---
-title: Download and install Microsoft Azure Data Studio (preview) | Microsoft Docs
-description: 'Download and Install Microsoft Azure Data Studio (preview) for Windows, macOS, or Linux'
+title: Download and install Azure Data Studio (preview) | Microsoft Docs
+description: 'Download and Install Azure Data Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
 ms.date: "08/22/2018"
 ms.prod: sql

@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "audits [SQL Server], creating database specification"
   - "database audit [SQL Server]"
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
-caps.latest.revision: 17
-author: CarlRabeler
-ms.author: carlrab
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 ---
 # Create a Server Audit and Database Audit Specification

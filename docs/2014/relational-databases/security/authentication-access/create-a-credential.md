@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "authentication [SQL Server], credentials"
   - "logins [SQL Server], credentials"
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 ---
 # Create a Credential

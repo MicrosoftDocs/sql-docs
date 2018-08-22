@@ -38,6 +38,8 @@
     href: sql-server-linux-run-sql-server-agent-job.md
   - name: 5_Setup AD Authentication
     href: sql-server-linux-active-directory-authentication.md
+    - name: Third Party AD Auth
+      href: sql-server-linux-active-directory-third-party-providers.md
   - name: 6_Create failover cluster instance
     href: sql-server-linux-shared-disk-cluster-configure.md
     items:

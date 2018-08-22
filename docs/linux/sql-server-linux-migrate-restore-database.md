@@ -158,6 +158,39 @@ To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQ
    ```
 
    You should get a message the database is successfully restored.
+   If you get an error like:
+   ```bash
+   File 'YourDB_Product' cannot be restored to 'Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf'. Use WITH MOVE to identify a valid location for the file.
+   Msg 5133, Level 16, State 1, Server servername, Line 1
+   Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
+   ```
+   This is because your original DB contains secondary files. If these files are not "MOVE"d, the restore procedure will try to use the same location as in the original server. 
+   You can list all files included in the backup:
+   ```sql
+   RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   GO
+   ```
+   You should get a list like the one below (listing only the two first columns):
+   ```sql
+   LogicalName         PhysicalName                                                                 ..............
+   ----------------------------------------------------------------------------------------------------------------------
+   YourDB              Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB.mdf          ..............
+   YourDB_Product      Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf  ..............
+   YourDB_Customer     Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Customer.ndf ..............
+   YourDB_log          Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
+   ```
+   
+   Now you have the complete image of your DB. Your **RESTORE DATABASE** command should be :
+   ```sql
+   RESTORE DATABASE YourDB
+   FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   WITH MOVE 'YourDB' TO '/var/opt/mssql/data/YourDB.mdf',
+   MOVE 'YourDB_Product' TO '/var/opt/mssql/data/YourDB_Product.ndf',
+   MOVE 'YourDB_Customer' TO '/var/opt/mssql/data/YourDB_Customer.ndf',
+   MOVE 'YourDB_Log' TO '/var/opt/mssql/data/YourDB_Log.ldf'
+   GO
+   ```
+
 
 1. Verify the restoration by listing all of the databases on the server. The restored database should be listed.
 

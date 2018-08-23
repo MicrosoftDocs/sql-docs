@@ -1,8 +1,8 @@
 ---
-title: SQL Operations Studio (preview) FAQ | Microsoft Docs
-description: Frequently asked questions (FAQ) for SQL Operations Studio (preview).
+title: Azure Data Studio (preview) FAQ | Microsoft Docs
+description: Frequently asked questions (FAQ) for Azure Data Studio (preview).
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"

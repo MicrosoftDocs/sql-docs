@@ -1,8 +1,8 @@
 ---
-title: "Tutorial: Use the SQL Operations Studio (preview) Transact-SQL editor to create database objects | Microsoft Docs"
-description: This tutorial demonstrates the key features in SQL Operations Studio (preview) that simplify using T-SQL.
+title: "Tutorial: Use the Azure Data Studio (preview) Transact-SQL editor to create database objects | Microsoft Docs"
+description: This tutorial demonstrates the key features in Azure Data Studio (preview) that simplify using T-SQL.
 ms.custom: "tools|sos"
-ms.date: "03/13/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -58,7 +58,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 ## Use T-SQL snippets to create stored procedures
 
-SQL Operations Studio provides many built-in T-SQL snippets for quickly creating statements.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] provides many built-in T-SQL snippets for quickly creating statements.
 
 
 1. Open a new query editor by pressing **Ctrl+N**.
@@ -112,7 +112,7 @@ The stored procedure is now created, and the **RESULTS** pane displays the retur
 
 ## Use Peek Definition 
 
-SQL Operations Studio provides the ability to view an objects definition using the peek definition feature. This section creates a second stored procedure and uses peek definition to see what columns are in a table to quickly create the body of the stored procedure.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] provides the ability to view an objects definition using the peek definition feature. This section creates a second stored procedure and uses peek definition to see what columns are in a table to quickly create the body of the stored procedure.
 
 1. Open a new editor by pressing **Ctrl+N**. 
 

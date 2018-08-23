@@ -1,8 +1,8 @@
 ---
-title: "Quickstart: Connect and query SQL Server using SQL Operations Studio (preview) | Microsoft Docs"
-description: This quickstart shows how to use SQL Operations Studio (preview) to connect to SQL Server and run a query
+title: "Quickstart: Connect and query SQL Server using Azure Data Studio (preview) | Microsoft Docs"
+description: This quickstart shows how to use Azure Data Studio (preview) to connect to SQL Server and run a query
 ms.custom: "tools|sos"
-ms.date: "03/08/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"

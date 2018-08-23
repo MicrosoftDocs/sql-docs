@@ -1,8 +1,8 @@
 ---
-title: "Quickstart: Connect and query an Azure SQL Data Warehouse using SQL Operations Studio (preview) | Microsoft Docs"
-description: This quickstart shows how to use SQL Operations Studio (preview) to connect to a SQL database and run a query
+title: "Quickstart: Connect and query an Azure SQL Data Warehouse using Azure Data Studio (preview) | Microsoft Docs"
+description: This quickstart shows how to use Azure Data Studio (preview) to connect to a SQL database and run a query
 ms.custom: "tools|sos"
-ms.date: "03/08/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -50,7 +50,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
    ![New Connection Icon](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. If your server doesn't have a firewall rule allowing SQL Operations Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![New firewall rule](media/quickstart-sql-dw/firewall.png)  
 

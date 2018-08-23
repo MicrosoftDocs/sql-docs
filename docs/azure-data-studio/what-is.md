@@ -1,8 +1,8 @@
 ---
-title: What is SQL Operations Studio (preview)? | Microsoft Docs
-description: SQL Operations Studio (preview) is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running. 
+title: What is Azure Data Studio (preview)? | Microsoft Docs
+description: Azure Data Studio (preview) is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running. 
 ms.custom: "tools|sos"
-ms.date: "11/17/2017"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"

@@ -2,8 +2,8 @@
   href: ../tools/overview-sql-tools.md
 - name: New and updated articles
   href: new-updated-tools.md
-- name: SQL Operations Studio (preview)
-  href: ../sql-operations-studio/what-is.md
+- name: Azure Data Studio (preview)
+  href: ../azure-data-studio/what-is.md
 - name: SQL Server Management Studio (SSMS)
   href: ../ssms/download-sql-server-management-studio-ssms.md
 - name: SQL Server Data Tools (SSDT)

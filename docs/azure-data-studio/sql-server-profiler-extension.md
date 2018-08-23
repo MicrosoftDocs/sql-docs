@@ -1,8 +1,8 @@
 ---
-title: SQL Operations Studio (preview) SQL Server Profiler extension | Microsoft Docs
-description: SQL Server Profiler extension for SQL Operations Studio (preview)
+title: Azure Data Studio (preview) SQL Server Profiler extension | Microsoft Docs
+description: SQL Server Profiler extension for Azure Data Studio (preview)
 ms.custom: "tools|sos"
-ms.date: "07/19/2018"
+ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.suite: "sql"
@@ -16,7 +16,7 @@ manager: craigg
 ---
 # SQL Server Profiler extension
 
-The SQL Server Profiler extension provides a simple SQL Server tracing solution similar to SQL Server Management Studio (SSMS) Profiler except built using XEvents. SQL Server Profiler is very easy to use and has good default values for the most common tracing configurations. The UX is optimized for browsing through events and viewing the associated Transact-SQL (T-SQL) text. The SQL Server Profiler for SQL Operations Studio also assumes good default values for collecting T-SQL execution activities with an easy to use UX.
+The SQL Server Profiler extension provides a simple SQL Server tracing solution similar to SQL Server Management Studio (SSMS) Profiler except built using XEvents. SQL Server Profiler is very easy to use and has good default values for the most common tracing configurations. The UX is optimized for browsing through events and viewing the associated Transact-SQL (T-SQL) text. The SQL Server Profiler for Azure Data Studio also assumes good default values for collecting T-SQL execution activities with an easy to use UX.
 
 **Common SQL Profiler use-cases:**
 

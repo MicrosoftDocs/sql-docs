@@ -10,16 +10,12 @@
   href: implementing-a-delivery-extension.md
 - name: Implementing the IDeliveryExtension Interface for a Delivery Extension
   href: implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
-- name: Implementing the ISubscriptionBaseUIUserControl Interface
-  href: implementing-the-isubscriptionbaseuiusercontrol-interface.md
 - name: Preparing to Implement a Delivery Extension
   href: preparing-to-implement-a-delivery-extension.md
 - name: Removing a Delivery Extension
   href: removing-a-delivery-extension.md
 - name: Using a Notification Class for a Delivery Extension
   href: using-a-notification-class-for-a-delivery-extension.md
-- name: Using the IDeliveryReportServerInformation Interface for a Delivery Extension
-  href: using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md
 - name: Using the RenderedOutputFile Class for a Delivery Extension
   href: using-the-renderedoutputfile-class-for-a-delivery-extension.md
 - name: Using the Report Class for a Delivery Extension

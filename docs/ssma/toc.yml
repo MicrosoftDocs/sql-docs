@@ -1,7 +1,5 @@
 - name: SQL Server Migration Assistant
   href: sql-server-migration-assistant.md
-- name: New and updated articles
-  href: new-updated-ssma.md
 - name: Access +
   href: ../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md
 - name: DB2 +

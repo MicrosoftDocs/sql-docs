@@ -11,9 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server], logins and users"
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 ---
 # Managing Logins, Users, and Schemas How-to Topics

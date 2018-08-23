@@ -1,7 +1,7 @@
 ---
 title: "Built-in Globals and Users References (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/17/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "report-design"
@@ -77,9 +77,7 @@ manager: "kfile"
 |----------------|--------------|---------------------|  
 |**Language**|**String**|The language of the user running the report. For example, `en-US`.|  
 |**UserID**|**String**|The ID of the user running the report. If you are using Windows Authentication, this value is the domain account of the current user. The value is determined by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] security extension, which can use Windows Authentication or custom authentication.|  
-  
- For more information about supporting multiple languages in a report, see "Solution Design Considerations for Multi-Lingual or Global Deployments" in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [SQL Server Books Online](http://go.microsoft.com/fwlink/?LinkId=120955).  
-  
+ 
 ### Using Locale Settings  
  You can use expressions to refer to the locale settings on a client computer through the **User.Language** value to determine how a report appears to the user. For example, you can create a report that uses a different query expression based on the locale value. The query may change to retrieve localized information from a different column depending on the language returned. You can also use an expression in the language settings of the report or report items based on this variable.  
   

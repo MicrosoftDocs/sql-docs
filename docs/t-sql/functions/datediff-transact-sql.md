@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DATEDIFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -98,7 +98,7 @@ If *startdate* and *enddate* are both assigned only a time value, and the *datep
   
 `DATEDIFF` does not use a time zone offset component of *startdate* or *enddate* to calculate the return value.
   
-Because [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) has accurate only to the minute, seconds and milliseconds are always set to 0 in the return value when *startdate* or *enddate* have a **smalldatetime** value.
+Because [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) is accurate only to the minute, seconds and milliseconds are always set to 0 in the return value when *startdate* or *enddate* have a **smalldatetime** value.
   
 If only a time value is assigned to a date data type variable, `DATEDIFF` sets the value of the missing date part to the default value: 1900-01-01. If only a date value is assigned to a variable of a time or date data type, `DATEDIFF` sets the value of the missing time part to the default value: 00:00:00. If either *startdate* or *enddate* have only a time part and the other only a date part, `DATEDIFF` sets the missing time and date parts to the default values.
   

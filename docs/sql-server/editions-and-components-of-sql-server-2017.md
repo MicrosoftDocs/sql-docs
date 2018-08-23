@@ -291,12 +291,12 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Basic R integration|Yes|Yes|Yes|Yes|No|   
-|Advanced R integration|Yes|No|No|No|No| 
+|Basic R integration <sup>1</sup>|Yes|Yes|Yes|Yes|No|   
+|Advanced R integration <sup>2</sup>|Yes|No|No|No|No| 
 |Basic Python integration|Yes|Yes|Yes|Yes|No|
 |Advanced Python integration|Yes|No|No|No|No| 
 |Machine Learning Server (Standalone)|Yes|No|No|No|No|   
-|Polybase compute node|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup> | 
+|Polybase compute node|Yes|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup> | 
 |Polybase head node|Yes|No|No|No|No| 
 |JSON|Yes|Yes|Yes|Yes|Yes|   
 |Query Store|Yes|Yes|Yes|Yes|Yes|   
@@ -316,7 +316,12 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Graph|Yes|Yes|Yes|Yes|Yes|  
 
 
-<sup>1</sup> Scale out with multiple compute nodes requires a head node.
+<sup>1</sup> Basic integration is limited to 2 cores and in-memory data sets. 
+
+<sup>2</sup> Advanced integration can use all available cores for parallel processing of data sets at any size subject to hardware limits. 
+
+<sup>3</sup> Scale out with multiple compute nodes requires a head node.
+
 
 ## <a name="IS"></a> Integration Services
 

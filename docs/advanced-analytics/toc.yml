@@ -19,10 +19,8 @@
     href: install/sql-machine-learning-services-windows-install.md
   - name: SQL Server R Services
     href: install/sql-r-services-windows-install.md
-  - name: Standalone server
+  - name: Standalone server (R, Python)
     href: install/sql-machine-learning-standalone-windows-install.md
-  - name: R Server (Standalone)
-    href: install/sql-r-standalone-windows-install.md
   - name: Pre-trained models
     href: install/sql-pretrained-models-install.md
   - name: Command-prompt setup

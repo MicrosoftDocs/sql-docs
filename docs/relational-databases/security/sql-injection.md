@@ -12,9 +12,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Injection"
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
-caps.latest.revision: 7
-author: CarlRabeler
-ms.author: carlrab
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

@@ -49,17 +49,11 @@ manager: "kfile"
  [Using the Setting Class for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
  Describes the attributes of a **Setting** class and how to use it in your delivery extension implementation.  
   
- [Using the IDeliveryReportServerInformation Interface for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- Describes the attributes of a **IDeliveryReportServerInformation** interface and how to use it in your delivery extension implementation.  
-  
  [Using the Report Class for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
  Describes the attributes of a **Report** class and how to use it in your delivery extension implementation.  
   
  [Using the RenderedOutputFile Class for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
  Describes the attributes of a **RenderedOutputFile** class and how to use it in your delivery extension implementation.  
-  
- [Implementing the ISubscriptionBaseUIUserControl Interface for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
- Describes the attributes of a delivery extension user control and how to implement your own user interface for a subscription.  
   
  [Deploying a Delivery Extension](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
  Describes how to deploy your delivery extension.  

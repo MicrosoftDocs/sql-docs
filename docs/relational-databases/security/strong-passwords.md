@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "characters [SQL Server], password policies"
   - "strong passwords [SQL Server]"
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-caps.latest.revision: 30
-author: CarlRabeler
-ms.author: carlrab
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

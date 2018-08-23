@@ -6,13 +6,11 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
-caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 ---
 # Lesson 1: Creating Database Objects

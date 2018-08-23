@@ -1,25 +1,26 @@
 ---
-title: Native scoring| Microsoft Docs
+title: Native scoring in SQL Server machine learning | Microsoft Docs
+description: Generate predictions using the PREDICT T-SQL function, scoring dta inputs against a pre-trained model written in R or Python on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 08/15/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
 
-# Native scoring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# Native scoring using the PREDICT T-SQL function
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-This topic describes features in SQL Server 2017 that provide scoring on machine learning models in near realtime.
+Once you have a pre-trained model, you can pass new input data to the function to generate prediction values or *scores*. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can use the PREDICT function in Transact-SQL to support native scoring. It requires only that you have a model already trained, which you can call using T-SQL. 
 
-+ What is native scoring vs. realtime scoring
++ What is native scoring vs. real-time scoring
 + How it works
 + Supported platforms and requirements
 
-## What is native scoring and how is it different from realtime scoring?
+## What is native scoring and how is it different from real-time scoring?
 
 In SQL Server 2016, Microsoft created an extensibility framework that allows R scripts to be executed from T-SQL. This framework supports any operation you might perform in R, ranging from simple functions to training complex machine learning models. However, the dual-process architecture requires invoking an external R process for every call, regardless of the complexity of the operation. If you are loading a pre-trained model from a table and scoring against it on data already in SQL Server, the overhead of calling the external R process represents an unnecessary performance cost.
 
@@ -36,9 +37,9 @@ To support fast scoring, SQL Server Machine Learning Services (and Microsoft Mac
     + No additional configuration is required.
     + The R runtime is not called. There is no need to install R.
 
-**Realtime scoring**
+**Real-time scoring**
 
-+ **sp_rxPredict** is a stored procedure for realtime scoring that can be used to generates scores from any supported model type, without calling the R runtime.
++ **sp_rxPredict** is a stored procedure for real-time scoring that can be used to generates scores from any supported model type, without calling the R runtime.
 
   This stored procedure is also available in SQL Server 2016, if you upgrade the R components using the standalone installer of Microsoft R Server. sp_rxPredict is also supported in SQL Server 2017. Therefore, you might use this function when generating scores with a model type not supported by the PREDICT function.
 
@@ -46,7 +47,7 @@ To support fast scoring, SQL Server Machine Learning Services (and Microsoft Mac
 
 For all of these scoring methods, you must use a model that was trained using one of the supported RevoScaleR or MicrosoftML algorithms.
 
-For an example of realtime scoring in action, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
+For an example of real-time scoring in action, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## How native scoring works
 
@@ -61,7 +62,7 @@ The function returns predictions for the input data, together with any columns o
 
 For code samples, along with instructions on how to prepare the models in the required binary format, see this article:
 
-+ [How to perform realtime scoring](r/how-to-do-realtime-scoring.md)
++ [How to perform real-time scoring](r/how-to-do-realtime-scoring.md)
 
 For a complete solution that includes native scoring, see these samples from the SQL Server development team:
 
@@ -77,11 +78,11 @@ Supported platforms are as follows:
     Native scoring using PREDICT requires SQL Server 2017.
     It works on any version of SQL Server 2017, including Linux.
 
-    You can also perform realtime scoring using sp_rxPredict. To use this stored procedure requires that you enable [SQL Server CLR integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
+    You can also perform real-time scoring using sp_rxPredict. To use this stored procedure requires that you enable [SQL Server CLR integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
 + SQL Server 2016
 
-   Realtime scoring using sp_rxPredict is possible with SQL Server 2016, and can also be run on Microsoft R Server. This option requires SQLCLR to be enabled, and that you install the Microsoft R Server upgrade.
+   Real-time scoring using sp_rxPredict is possible with SQL Server 2016, and can also be run on Microsoft R Server. This option requires SQLCLR to be enabled, and that you install the Microsoft R Server upgrade.
    For more information, see [Realtime scoring](Real-time-scoring.md)
 
 ### Model preparation
@@ -99,7 +100,7 @@ Supported platforms are as follows:
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-If you need to use models from MicrosoftML, use realtime scoring with sp_rxPredict.
+If you need to use models from MicrosoftML, use real-time scoring with sp_rxPredict.
 
 ### Restrictions
 
@@ -110,3 +111,7 @@ The following model types are not supported:
 + PMML models
 + Models created using other R libraries from CRAN or other repositories
 + Models containing any other R transformation
+
+## See also
+
+[Real-time scoring in SQL Server machine learning ](real-time-scoring.md)

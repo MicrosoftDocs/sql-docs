@@ -2,7 +2,7 @@
     "redirections": [
         {
             "source_path": "docs/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server.md",
-            "redirect_url": "https://docs.microsoft.com/sql/sql/sql-server/editions-and-components-of-sql-server-2017",
+            "redirect_url": "https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017",
             "redirect_document_id": false
         }, 
         {

@@ -46,8 +46,12 @@ The following example creates a table named EmployeeOrg, which includes employee
 1.  In a Query Editor window, run the following code to create the `EmployeeOrg` table. Specifying the `OrgNode` column as the primary key with a clustered index will create a depth-first index:  
   
     ```sql  
-    USE AdventureWorks2012 ;  
+    USE AdventureWorks2017 ;  
     GO  
+    
+    if OBJECT_ID('HumanResources.EmployeeOrg') is not null
+     drop table HumanResources.EmployeeOrg 
+    
     CREATE TABLE HumanResources.EmployeeOrg  
     (  
        OrgNode hierarchyid PRIMARY KEY CLUSTERED,  

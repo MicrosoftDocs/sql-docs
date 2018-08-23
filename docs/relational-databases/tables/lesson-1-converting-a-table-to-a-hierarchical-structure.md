@@ -47,8 +47,7 @@ The sample Adventureworks2017 (or later) database contains an **Employee** table
     GO  
       if OBJECT_ID('HumanResources.EmployeeDemo') is not null
      drop table HumanResources.EmployeeDemo 
-
-
+     
     SELECT emp.BusinessEntityID AS EmployeeID, emp.LoginID, 
       (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
 		    WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 

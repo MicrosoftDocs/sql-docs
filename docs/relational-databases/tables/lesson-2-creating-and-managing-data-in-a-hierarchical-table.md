@@ -51,7 +51,7 @@ The following example creates a table named EmployeeOrg, which includes employee
     
     if OBJECT_ID('HumanResources.EmployeeOrg') is not null
      drop table HumanResources.EmployeeOrg 
-    
+         
     CREATE TABLE HumanResources.EmployeeOrg  
     (  
        OrgNode hierarchyid PRIMARY KEY CLUSTERED,  

@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "07/19/2018"
+ms.date: "08/28/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -16,7 +16,61 @@ manager: craigg
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download the July Public Preview](download.md)**
+**[Download the August Public Preview](download.md)**
+
+
+
+
+## August 2018 (August Public Preview)
+
+release date: August 28, 2018  
+version: 0.32.5
+
+The *August Public Preview* focuses on on bug fixes, product stabilization and filling gaps in existing scenarios.
+
+
+- Announcing the SQL Server Import Extension
+- SQL Server Profiler Session management
+- SQL Server Profiler session template support
+- SQL Server Agent improvements
+- New community extension: First responder kit
+- Quality of Life improvements: Connection strings
+
+### Bug Fixes
+
+- Parse SQL in a Query Editor window by using the `Parse Syntax` command
+- Save edit data scroll position when switching tabs [#2129](https://github.com/Microsoft/sqlopsstudio/pull/2129)
+- View as Chart options are cut off at the bottom [#1497](https://github.com/Microsoft/sqlopsstudio/pull/1497)
+- Cancel change connection disconnects current connection [#1474](https://github.com/Microsoft/sqlopsstudio/pull/1474)
+- Bug: Error message when saving Excel file second (and subsequent) time [#1748](https://github.com/Microsoft/sqlopsstudio/pull/1748)
+- Update document icon for Dashboard and Profiler documents [#2107](https://github.com/Microsoft/sqlopsstudio/pull/2107)
+- SQL Tab DB Icon is red [#387](https://github.com/Microsoft/sqlopsstudio/pull/387)
+- Feature Request: Auto Connect to current server after Script as... [#825](https://github.com/Microsoft/sqlopsstudio/pull/825)
+- Added more saveAsCsv options [#2099](https://github.com/Microsoft/sqlopsstudio/pull/2099)
+- Feature Suggestion: Get Connection String for existing connection [#1620](https://github.com/Microsoft/sqlopsstudio/pull/1620)
+- Bug: Results pane loses its scrolling positions when switching between tabs [#1744](https://github.com/Microsoft/sqlopsstudio/pull/1744)
+- Agent: Enabled button to import queries from sql files [#2042](https://github.com/Microsoft/sqlopsstudio/pull/2042)
+- .sql files not associated with SQL Operations Studio [#1836](https://github.com/Microsoft/sqlopsstudio/pull/1836)
+- Copy from query results grid is off by 1 column [#1985](https://github.com/Microsoft/sqlopsstudio/pull/1985)
+- Add VS Code version to About dialog [#1998](https://github.com/Microsoft/sqlopsstudio/pull/1998)
+- double-click not selecting @ in variable name [#143](https://github.com/Microsoft/sqlopsstudio/pull/143)
+- Typing N'' autocompletes to N''' [#1850](https://github.com/Microsoft/sqlopsstudio/pull/1850)
+- Results Grid Row Indicator Zero Based [#2152](https://github.com/Microsoft/sqlopsstudio/pull/2152)
+- Fix the decimal separator #1317](https://github.com/Microsoft/sqlopsstudio/pull/1317)
+- SelectBox doesn't change color when disabled [#1624](https://github.com/Microsoft/sqlopsstudio/pull/1624)
+- Save as JSON/EXCEL/CSV not work [#1728](https://github.com/Microsoft/sqlopsstudio/pull/1728)
+- Shell/Dashboard: Main viewlet icons are draggable and can crash the app [#1524](https://github.com/Microsoft/sqlopsstudio/pull/1524)
+- Can't use Ctrl+C shortcut to copy from result pane [#2091](https://github.com/Microsoft/sqlopsstudio/pull/2091)
+- Updating causes application icon to be removed/replaced in Windows [#1285](https://github.com/Microsoft/sqlopsstudio/pull/1285)
+- Not able to expand/collapse remote file browser folder by clicking name [#1578](https://github.com/Microsoft/sqlopsstudio/pull/1578)
+- sqlops.desktop [Desktop Entry] - redundant value for Name & Comment [#1278](https://github.com/Microsoft/sqlopsstudio/pull/1278)
+- Edit data: cell doesn't revert to original value on hitting Escape key [#1782](https://github.com/Microsoft/sqlopsstudio/pull/1782)
+  
+
+## Known Issues
+
+- [#2150](https://github.com/Microsoft/sqlopsstudio/pull/2150) Unable to connect on Ubuntu 16.04 to SQL in a container
+
 
 ## July 2018 (July Public Preview)
 

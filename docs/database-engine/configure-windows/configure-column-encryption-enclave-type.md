@@ -1,7 +1,7 @@
 ---
 title: "Column encryption enclave type Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/22/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
@@ -21,17 +21,17 @@ manager: craigg
 
  The following table lists the possible **column encryption enclave type** values:  
   
-|Outcome value|Description|  
+|Value|Description|  
 |-------------------|-----------------|  
-|0|**No secure enclave**. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will not attempt to initialize the secure enclave for Always Encrypted on the next restart. As a result, the functionality of Always Encrypted with secure enclaves will not be available.|  
-|1|**Virtualization based security (VBS)**. After the next restart, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will attempt to initialize the secure enclave (a VBS secure memory enclave) for Always Encrypted.|    
+|0|**No secure enclave**. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will not initialize the secure enclave for Always Encrypted. As a result, the functionality of Always Encrypted with secure enclaves will not be available.|  
+|1|**Virtualization based security (VBS)**. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will initialize the secure enclave (a VBS secure memory enclave) for Always Encrypted.|    
 
-> [!NOTE]
-> Changing the **column encryption enclave type** requires a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+> [!IMPORTANT]
+> Changes to the **column encryption enclave type** do not take affect until you restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
   
    
 ## Examples  
- The following example enables the secure enclave of the VBS type:  
+ The following example enables the secure enclave:  
 
 ```sql  
 sp_configure 'column encryption enclave type', 1;  

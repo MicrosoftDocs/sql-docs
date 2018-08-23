@@ -1,7 +1,7 @@
 ---
 title: "ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/28/2015"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -65,8 +65,10 @@ ALTER COLUMN ENCRYPTION KEY key_name
  Column master keys need to be rotated for following reasons:
 - Compliance regulations may require keys are periodically rotated.
 - A column master key is compromised, and it needs to be rotated for security reasons.
-- To enable or disable sharing column encryption keys with a secure enclave on the server side. For example, if your current column master key does not support enclave computations (has not been defined with the ENCLAVE_COMPUTATIONS property) and you want to enable enclave computations on columns protected with a column encryption key, your column master key encrypts, you need to replace the column master key with the new key with the ENCLAVE_COMPUTATIONS property. Please see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) for more information.
-  
+::: moniker range=" >= sql-server-ver15 || = sqlallproducts-allversions"
+- To enable or disable sharing column encryption keys with a secure enclave on the server side. For example, if your current column master key does not support enclave computations (has not been defined with the ENCLAVE_COMPUTATIONS property) and you want to enable enclave computations on columns protected with a column encryption key that your column master key encrypts, you need to replace the column master key with the new key with the ENCLAVE_COMPUTATIONS property. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+::: moniker-end
+
 Use [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) and [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) to view information about column encryption keys.  
   
 ## Permissions  

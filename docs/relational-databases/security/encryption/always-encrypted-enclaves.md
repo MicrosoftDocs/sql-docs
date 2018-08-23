@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

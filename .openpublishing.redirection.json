@@ -121,6 +121,52 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-databases/tables/lesson-1-1-examining-the-current-structure-of-the-employee-table.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-1-3-optimizing-the-neworg-table.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
             "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
             "redirect_document_id": false

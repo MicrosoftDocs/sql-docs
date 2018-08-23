@@ -1,8 +1,8 @@
 ---
-title: Integrated terminal in SQL Operations Studio (preview) | Microsoft Docs
-description: Learn about the Integrated terminal in SQL Operations Studio (preview).
+title: Integrated terminal in Azure Data Studio (preview) | Microsoft Docs
+description: Learn about the Integrated terminal in Azure Data Studio (preview).
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"

@@ -1,8 +1,8 @@
 ---
-title: SQL Operations Studio (preview) User and Workspace Settings | Microsoft Docs
-description: How to modify SQL Operations Studio (preview) User and Workspace Settings.
+title: Azure Data Studio (preview) User and Workspace Settings | Microsoft Docs
+description: How to modify Azure Data Studio (preview) User and Workspace Settings.
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -49,9 +49,9 @@ The workspace setting file is located under the `.[!INCLUDE[name-sos](../include
 
 ## Hot Exit
 
-SQL Operations Studio will remember unsaved changes to files when you exit by default. This is the same as the Hot exit feature in Visual Studio Code.
+Azure Data Studio remembers unsaved changes to files when you exit by default. This is the same as the hot exit feature in Visual Studio Code.
 
-By default, Hot exit is off. Enable Hot exit by editing the `files.hotExit` setting. For details, see [Hot Exit (in the Visual Studio Code documentation)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+By default, hot exit is off. Enable hot exit by editing the `files.hotExit` setting. For details, see [Hot Exit (in the Visual Studio Code documentation)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
 
 ## Tab color

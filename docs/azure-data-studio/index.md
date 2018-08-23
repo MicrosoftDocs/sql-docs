@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/sql-operations-studio/what-is 
+redirect_url: /sql/azure-data-studio/what-is 
 ---

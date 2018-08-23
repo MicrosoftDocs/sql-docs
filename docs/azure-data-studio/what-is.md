@@ -2,7 +2,7 @@
 title: What is Azure Data Studio (preview)? | Microsoft Docs
 description: Azure Data Studio (preview) is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running. 
 ms.custom: "tools|sos"
-ms.date: "08/22/2017"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"

@@ -286,10 +286,9 @@ Now that the HumanResources.EmployeeOrg table is fully populated, this task will
     GO  
   
     ```  
+   
   
-The next task will reorganize the hierarchy.  
-  
-  Reordering Data in a Hierarchical Table Using Hierarchical Methods
+## Reordere Data in a Hierarchical Table Using Hierarchical Methods
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Reorganizing a hierarchy is a common maintenance task. In this task, we will use an UPDATE statement with the [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) method to first move a single row to a new location in the hierarchy. Then we will move an entire sub-tree to a new location.  
   
@@ -325,7 +324,7 @@ The `GetReparentedValue` method takes two arguments. The first argument describe
   
     Wanida is now at node **/3/1/**.  
   
-### To reorganize a section of a hierarchy  
+### Reorganize a section of a hierarchy  
   
 1.  To demonstrate how to move a larger number of people at the same time, first execute the following code to add an intern reporting to Wanida:  
   

@@ -186,18 +186,23 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md",
+            "redirect_url": "/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/reporting-services/extensions/data-processing/removing-a-data-processing-extension.md",
-            "redirect_url": "/sql/reporting-services/extensions/reporting-services-extensions?view=sql-server-2017",
+            "redirect_url": "/sql/reporting-services/extensions/reporting-services-extensions",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md",
-            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension?view=sql-server-2017",
+            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md",
-            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension?view=sql-server-2017",
+            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension",
             "redirect_document_id": false
         },
         {

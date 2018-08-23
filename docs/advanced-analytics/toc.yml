@@ -1,5 +1,5 @@
 - name: SQL MLS and Extensibility Documentation
-  href: index.yml
+  href: index.md
 - name: SQL Server Machine Learning
   href: what-is-sql-server-machine-learning.md
   items:

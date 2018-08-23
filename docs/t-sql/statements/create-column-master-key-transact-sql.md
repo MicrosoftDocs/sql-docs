@@ -40,7 +40,7 @@ manager: craigg
  
 
 > [!IMPORTANT]
-> Creating enclave-enabled keys (with ENCLAVE_COMPUTATIONS) uses [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md), and requires SQL Server vNext or later.
+> Creating enclave-enabled keys (with ENCLAVE_COMPUTATIONS) requires [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Syntax  
 
@@ -153,7 +153,7 @@ The below tables captures the names of system providers:
      The URL of the key in Azure Key Vault
 
 ENCLAVE_COMPUTATIONS  
-Specifies the column master key is enclave-enabled, which means all column encryption keys, encrypted with this column master key, can be shared with a server-side secure enclave and used for computations inside the enclave. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Specifies the column master key is enclave-enabled, which means all column encryption keys encrypted with this column master key can be shared with a server-side secure enclave and used for computations inside the enclave. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
  *signature*  
 A binary literal that is a result of digitally signing *key path* and the ENCLAVE_COMPUTATIONS setting with the column master key (the signature reflects whether ENCLAVE_COMPUTATIONS has been specified or not). The signature protects the signed values from being altered by unauthorized users. An Always Encrypted-enabled client driver can verify the signature and return an error to the application if the signature is invalid. The signature must be generated using client-side tools. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).

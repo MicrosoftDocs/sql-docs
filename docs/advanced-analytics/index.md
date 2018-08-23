@@ -20,7 +20,7 @@ Java extensions are currently in preview. Using SQL Server vNext, you can operat
 
 |   |   |   |   |   |   |
 |---|---|---|---|---|---|
-| [R logo](media/index/logo_r.svg) |  Open-source R, extended with Microsoft AI algorithms for machine learning workloads and statistical analysis, visualization, and data manipulation at scale. | [Python logo](media/index/logo_python.svg)  |  Python developers can use Microsoft libraries for predictive analytics and machine learning at scale, using functions from revoscalepy and microsoftml. Anaconda and Python 3.5-compatible libraries are supported.  | [Java logo](media/index/logo_java.svg) | (SQL Server vNext only) Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL. |
+| ![R logo](media/index/placeholder.png) |  Open-source R, extended with Microsoft AI algorithms for machine learning workloads and statistical analysis, visualization, and data manipulation at scale. | ![Python logo](media/index/placeholder.png)  |  Python developers can use Microsoft libraries for predictive analytics and machine learning at scale, using functions from revoscalepy and microsoftml. Anaconda and Python 3.5-compatible libraries are supported.  | ![Java logo](media/index/placeholder.png) | (SQL Server vNext only) Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL. |
 
 > [!VIDEO https://www.youtube.com/embed/ACejZ9optCQ]
 

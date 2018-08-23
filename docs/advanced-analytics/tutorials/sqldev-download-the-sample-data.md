@@ -1,19 +1,19 @@
 ---
-title: Download NYC Taxi demo data and scripts for embedded R (SQL Server Machine Learning) | Microsoft Docs
-description: Instructions for downloading New York City taxi sample data and creating a database. Data is used in SQL Server tutorials showing how to embed R in SQL Server stored procedures and T-SQL functions.
+title: Download NYC Taxi demo data and scripts for embedded R and Python (SQL Server Machine Learning) | Microsoft Docs
+description: Instructions for downloading New York City taxi sample data and creating a database. Data is used in SQL Server tutorials showing how to embed R and Python in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/15/2018  
+ms.date: 08/22/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Load NYC Taxi demo data for SQL Server tutorials
+# NYC Taxi demo data for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article prepares your system for tutorials on how to use R for in-database analytics in SQL Server.
+This article prepares your system for tutorials on how to use R and Python for in-database analytics in SQL Server.
 
 In this exercise, you will download sample data, a PowerShell script for preparing the environment, and [!INCLUDE[tsql](../../includes/tsql-md.md)] script files used in several tutorials. When you are finished, an **TaxiNYC_Sample** database is available on your local instance, providing demo data for hands-on learning. 
 
@@ -25,9 +25,9 @@ You will need an internet connection, PowerShell, and local administrative right
 
 1.  Open a Windows PowerShell command console.
   
-    Use the option, **Run as Administrator**, if administrative privileges are needed  to create the destination directory or to write files to the specified destination.
+    Use the **Run as Administrator** option to create the destination directory or to write files to the specified destination.
   
-2.  Run the following PowerShell commands, changing the value of the parameter *DestDir* to any local directory.  The default we've used here is **TempRSQL**.
+2.  Run the following PowerShell commands, changing the value of the parameter *DestDir* to any local directory. The default we've used here is **TempRSQL**.
   
     ```ps
     $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
@@ -40,7 +40,7 @@ You will need an internet connection, PowerShell, and local administrative right
     If the folder you specify in *DestDir* does not exist, it will be created by the PowerShell script.
   
     > [!TIP]
-    > If you get an error, you can temporarily set the policy for  execution of PowerShell scripts to **unrestricted** only for this walkthrough, by using the Bypass argument and scoping the changes to the current session.
+    > If you get an error, you can temporarily set the policy for execution of PowerShell scripts to **unrestricted** only for this walkthrough by using the Bypass argument and scoping the changes to the current session.
     >   
     >````
     > Set\-ExecutionPolicy Bypass \-Scope Process
@@ -49,7 +49,7 @@ You will need an internet connection, PowerShell, and local administrative right
   
     Depending on your Internet connection, the download might take a while.
   
-3.  When all files have been downloaded, the PowerShell script opens to the folder specified by  *DestDir*. In the PowerShell command prompt, run the following command and review the files that have been downloaded.
+3.  When all files have been downloaded, the PowerShell script opens to the *DestDir* folder. In the PowerShell command prompt, run the following command and review the files that have been downloaded.
   
     ```
     ls
@@ -88,7 +88,7 @@ You are prompted to input the following information:
 
 - Server instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] has been installed. On a default instance, this can be as simple as the machine name.
 
-- Database name. For this tutorial, scripts assume `TaxiNYC_Sample`.
+- Database name. For this tutorial, scripts assume `NYCTaxi_Sample`.
 
 - User name and user password. Enter a SQL Server database login for these values. Alternatively, if you modified the script to accept a trusted Windows identity, press Enter to leave these values blank. Your Windows identity is used on the connection.
 

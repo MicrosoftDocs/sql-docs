@@ -19,7 +19,7 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ---
-# Lesson 2: Creating and Managing Data in a Hierarchical Table
+# Lesson 2: Create and Manage Data in a Hierarchical Table
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 In Lesson 1, you modified an existing table to use the **hierarchyid** data type, and populated the **hierarchyid** column with the representation of the existing data. In this lesson, you will start with a new table, and insert data by using the hierarchical methods. Then, you will query and manipulate the data by using the hierarchical methods. 
 
@@ -41,7 +41,7 @@ The following example creates a table named EmployeeOrg, which includes employee
 -   EmpName contains the name of the employee.    
 -   Title contains the title of the employee.  
 
-## To create the EmployeeOrg table  
+## Create the EmployeeOrg table  
   
 1.  In a Query Editor window, run the following code to create the `EmployeeOrg` table. Specifying the `OrgNode` column as the primary key with a clustered index will create a depth-first index:  
   
@@ -212,10 +212,10 @@ As in the previous lesson, we use the `ToString()` method to convert the **hiera
   
 The table is now fully populated with the Marketing organization.  
 
-  ## Query a Hierarchical Table Using Hierarchy Methods
+## Query a hierarchical table using hierarchy methods
 Now that the HumanResources.EmployeeOrg table is fully populated, this task will show you how to query the hierarchy using some of the hierarchical methods.  
   
-### To find subordinate nodes  
+### Find subordinate nodes  
   
 1.  Sariya has one subordinate employee. To query for Sariya's subordinates, execute the following query that uses the [IsDescendantOf](../../t-sql/data-types/isdescendantof-database-engine.md) method:  
   
@@ -265,7 +265,7 @@ Now that the HumanResources.EmployeeOrg table is fully populated, this task will
   
     This time, you also receive Mary who also reports to David, two levels down.  
   
-### To use GetRoot, and GetLevel  
+## Use GetRoot, and GetLevel  
   
 1.  As the hierarchy grows larger it is more difficult to determine where the members are in the hierarchy. Use the [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) method to find how many levels down each row is in the hierarchy. Execute the following code to view the levels of all the rows:  
   
@@ -288,13 +288,13 @@ Now that the HumanResources.EmployeeOrg table is fully populated, this task will
     ```  
    
   
-## Reordere Data in a Hierarchical Table Using Hierarchical Methods
+## Reorder data in a hierarchical table using hierarchical methods
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Reorganizing a hierarchy is a common maintenance task. In this task, we will use an UPDATE statement with the [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) method to first move a single row to a new location in the hierarchy. Then we will move an entire sub-tree to a new location.  
   
 The `GetReparentedValue` method takes two arguments. The first argument describes the part of the hierarchy to be modified. For example, if a hierarchy is **/1/4/2/3/** and you want to change the **/1/4/** section, the hierarchy becomes **/2/1/2/3/**, leaving the last two nodes (**2/3/**) unchanged, you must provide the changing nodes (**/1/4/**) as the first argument. The second argument provides the new hierarchy level, in our example **/2/1/**. The two arguments do not have to contain the same number of levels.  
   
-### To move a single row to a new location in the hierarchy  
+### Move a single row to a new location in the hierarchy  
   
 1.  Currently Wanida reports to Sariya. In this procedure, you move Wanida from her current node **/1/1/,** so that she reports to Jill. Her new node will become **/3/1/** so **/1/** is the first argument and **/3/** is the second. These correspond to the **OrgNode** values of Sariya and Jill. Execute the following code to move Wanida from Sariya's organization to Jill's:  
   

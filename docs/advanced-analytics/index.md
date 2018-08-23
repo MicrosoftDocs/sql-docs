@@ -1,5 +1,5 @@
 ---
-title: SQL Server machine learning and extensibility | Microsoft Docs
+title: SQL Server AI and extensibility product documentation | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ---
 
-# SQL Server MLS and Extensibility Documentation
+# SQL Server AI and Extensibility Documentation
 
 SQL Server machine learning extends the database engine to include embedded R, Python, and Java for running external code on resident, relational data. Learn how to use external libraries and languages on relational data with our quickstarts, tutorials, and how-to articles.
 
@@ -18,9 +18,9 @@ R and Python libraries include base distributions, extended with Microsoft machi
 
 |   |   | 
 |---|---|-
-| ![R logo](./media/index/placeholder.png) | Open-source R, extended with RevoScaleR and Microsoft AI algorithms in MicrosoftML. These libraries give you forecasting and prediction models, statistical analysis, visualization, and data manipulation at scale. <br/>R integration starts in [SQL Server 2016]().| 
-| ![Python logo](./media/index/placeholder.png) | Python developers can use Microsoft revoscalepy and microsoftml libraries for predictive analytics and machine learning at scale. Anaconda and Python 3.5-compatible libraries are the baseline distribution. <br/>Python integration starts in [SQL Server 2017]().  | 
-| ![Java logo](./media/index/placeholder.png) | Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL. Java support uses the same extensibility framework as R and Python, but does not have the Microsoft machine learning libraries (such as RevoScaleR or revoscalepy) for those languages.<br/>Java integration is currently [SQL Server vNext only](./install/sql-machine-learning-services-vnext.md). |
+| ![R logo](./media/index/logo_r.png) | Open-source R, extended with [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and Microsoft AI algorithms in [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package). These libraries give you forecasting and prediction models, statistical analysis, visualization, and data manipulation at scale. <br/>R integration starts in [SQL Server 2016](./install/sql-r-services-windows-install.md).| 
+| ![Python logo](./media/index/logo_python.png) | Python developers can use Microsoft [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) libraries for predictive analytics and machine learning at scale. Anaconda and Python 3.5-compatible libraries are the baseline distribution. <br/>Python integration starts in [SQL Server 2017](sql-machine-learning-services-windows-install.md).  | 
+| ![Java logo](./media/index/logo_java.png) | Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL. Java support uses the same extensibility framework as R and Python, but does not have the Microsoft machine learning libraries (such as RevoScaleR or revoscalepy) for those languages.<br/>Java integration is currently [SQL Server vNext only](./install/sql-machine-learning-services-vnext.md). |
 
 ## 5-Minute Quickstarts
 
@@ -38,6 +38,11 @@ Links to quickstarts go here...
 
 ## Reference
 
-R library
-
-Python library
+| Package | Language | Description | 
+|---------|----------|-------------|
+| [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | R | Distributed and parallel processing for R tasks: data transformation, exploration, visualization, statistical and predictive analytics. |
+| [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | Functions based on Microsoft's AI algorithms, adapted for R. |
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | R | Imports data from OLAP cube.s |
+| [sqlRUtils]() | R | Helper functions for encapsulating R and T-SQL. |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Python | Distributed and parallel processing for Python tasks: data transformation, exploration, visualization, statistical and predictive analytics.  | 
+| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Python | Functions based on Microsoft's AI algorithms, adapted for Python.  |

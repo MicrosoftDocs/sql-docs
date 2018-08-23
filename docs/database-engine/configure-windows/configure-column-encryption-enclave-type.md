@@ -13,6 +13,7 @@ caps.latest.revision: 11
 author: jaszymas
 ms.author: jaszymas
 manager: craigg
+monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # column encryption enclave type Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

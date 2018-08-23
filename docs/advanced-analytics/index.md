@@ -18,35 +18,23 @@ R and Python libraries include base distributions, extended with Microsoft machi
 
 Java extensions are currently in preview. Using SQL Server vNext, you can operationalize Java code in stored procedures, or access code through Transact-SQL operating on local relational data.
 
-|   |   |   |   |   |   |
-|---|---|---|---|---|---|
-| ![R logo](./media/index/placeholder.png) |  Open-source R, extended with Microsoft AI algorithms for machine learning workloads and statistical analysis, visualization, and data manipulation at scale. | ![Python logo](./media/index/placeholder.png)  |  Python developers can use Microsoft libraries for predictive analytics and machine learning at scale, using functions from revoscalepy and microsoftml. Anaconda and Python 3.5-compatible libraries are supported.  | ![Java logo](./media/index/placeholder.png) | (SQL Server vNext only) Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL. |
-
-
-<table style="width:100%">
-<tr>
-<td><img src="./media/index/placeholder.png" alt="logo" style="width: 45px;"/></td>
-<td>Open-source R, extended with Microsoft AI algorithms for machine learning workloads and statistical analysis, visualization, and data manipulation at scale.</td>
-<td><img src="./media/index/placeholder.png" alt="logo" height="42" width="42"/></td>
-<td>Python developers can use Microsoft libraries for predictive analytics and machine learning at scale, using functions from revoscalepy and microsoftml. Anaconda and Python 3.5-compatible libraries are supported.</td>
-<td><img src="./media/index/placeholder.png" alt="logo" height="42" width="42"/></td>
-<td>(SQL Server vNext only) Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL.</td>
-</tr>
-</table>
-
-<img src="./media/index/placeholder.png" alt="logo" style="width: 45px;"/>
+|   |   | 
+|---|---|-
+| ![R logo](./media/index/placeholder.png) | Open-source R, extended with Microsoft AI algorithms for machine learning workloads and statistical analysis, visualization, and data manipulation at scale. | 
+| ![Python logo](./media/index/placeholder.png) | Python developers can use Microsoft libraries for predictive analytics and machine learning at scale, using functions from revoscalepy and microsoftml. Anaconda and Python 3.5-compatible libraries are supported.  | 
+| ![Java logo](./media/index/placeholder.png) | Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL. <br/>([SQL Server vNext only](./install/sql-machine-learning-services-vnext.md)) |
 
 ## 5-Minute Quickstarts
 
-Links to quickstarts go here.
+Links to quickstarts go here...
 
 ## Step-by-Step Tutorials
 
-+ [How to execute R from T-SQL and stored procedures](/tutorials/sql-dev-r-tutorials.md)
-+ [How to embed analytics in Python](tutorials/sqldev-in-database-python-for-sql-developers.md)
-+ [Create a predictive model in R](tutorials/rtsql-create-a-predictive-model.md)
++ [How to execute R from T-SQL and stored procedures](./tutorials/sql-dev-r-tutorials.md)
++ [How to embed analytics in Python](./tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Create a predictive model in R](./tutorials/rtsql-create-a-predictive-model-r.md)
 
-## Video introduction
+## Video Introduction
 
 > [!VIDEO https://www.youtube.com/embed/ACejZ9optCQ]
 

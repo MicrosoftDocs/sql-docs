@@ -51,6 +51,14 @@
       href: tutorials/rtsql-create-a-predictive-model-r.md
     - name: Predict and plot from model
       href: tutorials/rtsql-predict-and-plot-from-model.md
+  - name: Python
+    items:
+    - name: placeholder
+      href: 
+  - name: Java
+    items:
+    - name: placeholder
+      href: 
 - name: Tutorials
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -149,6 +157,11 @@
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
       - name: Operationalize the model
         href: tutorials/sqldev-py6-operationalize-the-model.md
+  - name: Java
+    href:
+    items:
+    - name: placholder
+      href: 
 - name: Samples
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions

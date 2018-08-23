@@ -34,7 +34,7 @@ Learn about a related scenario:
 -   [Get started with columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
 ## What is a columnstore index?  
-A columnstore index is a technology for storing, retrieving, and managing data by using a columnar data format, called a *columnstore*.  
+A columnstore index is a technology for storing, retrieving, and managing data by using a column data format, called a *columnstore*.  
   
 ### Key terms and concepts  
 The following key terms and concepts are associated with columnstore indexes.  

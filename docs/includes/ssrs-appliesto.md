@@ -10,4 +10,4 @@
  ms.custom: include file
 ---
 
-**THIS TOPIC APPLIES TO:**
+**APPLIES TO:**

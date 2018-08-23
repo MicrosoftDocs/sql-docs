@@ -3,7 +3,7 @@
 - name: SQL Server Machine Learning
   href: what-is-sql-server-machine-learning.md
   items:
-  - name: Machine Learning Services (R & Python)
+  - name: Machine Learning Services (R, Python, Java)
     href: r/sql-server-r-services.md
   - name: R Services
     href: r/sql-server-r-services.md
@@ -13,7 +13,7 @@
     href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
-  - name: SQL Server Machine Learning vNext
+  - name: SQL Server vNext (R, Python, Java)
     href: install/sql-machine-learning-services-vnext.md
   - name: SQL Server Machine Learning Services
     href: install/sql-machine-learning-services-windows-install.md

@@ -20,10 +20,21 @@ Java extensions are currently in preview. Using SQL Server vNext, you can operat
 
 |   |   |   |   |   |   |
 |---|---|---|---|---|---|
-| ![R logo](media/index/placeholder.png) |  Open-source R, extended with Microsoft AI algorithms for machine learning workloads and statistical analysis, visualization, and data manipulation at scale. | ![Python logo](media/index/placeholder.png)  |  Python developers can use Microsoft libraries for predictive analytics and machine learning at scale, using functions from revoscalepy and microsoftml. Anaconda and Python 3.5-compatible libraries are supported.  | ![Java logo](media/index/placeholder.png) | (SQL Server vNext only) Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL. |
+| ![R logo](./media/index/placeholder.png) |  Open-source R, extended with Microsoft AI algorithms for machine learning workloads and statistical analysis, visualization, and data manipulation at scale. | ![Python logo](./media/index/placeholder.png)  |  Python developers can use Microsoft libraries for predictive analytics and machine learning at scale, using functions from revoscalepy and microsoftml. Anaconda and Python 3.5-compatible libraries are supported.  | ![Java logo](./media/index/placeholder.png) | (SQL Server vNext only) Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL. |
 
-> [!VIDEO https://www.youtube.com/embed/ACejZ9optCQ]
 
+<table style="width:100%">
+<tr>
+<td><img src="./media/index/placeholder.png" alt="logo" style="width: 45px;"/></td>
+<td>Open-source R, extended with Microsoft AI algorithms for machine learning workloads and statistical analysis, visualization, and data manipulation at scale.</td>
+<td><img src="./media/index/placeholder.png" alt="logo" height="42" width="42"/></td>
+<td>Python developers can use Microsoft libraries for predictive analytics and machine learning at scale, using functions from revoscalepy and microsoftml. Anaconda and Python 3.5-compatible libraries are supported.</td>
+<td><img src="./media/index/placeholder.png" alt="logo" height="42" width="42"/></td>
+<td>(SQL Server vNext only) Java developers can wrap code in stored procedures or in a binary format accessible through Transact-SQL.</td>
+</tr>
+</table>
+
+<img src="./media/index/placeholder.png" alt="logo" style="width: 45px;"/>
 
 ## 5-Minute Quickstarts
 
@@ -35,7 +46,12 @@ Links to quickstarts go here.
 + [How to embed analytics in Python](tutorials/sqldev-in-database-python-for-sql-developers.md)
 + [Create a predictive model in R](tutorials/rtsql-create-a-predictive-model.md)
 
+## Video introduction
+
+> [!VIDEO https://www.youtube.com/embed/ACejZ9optCQ]
+
 ## Reference
 
 R library
+
 Python library

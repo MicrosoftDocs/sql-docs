@@ -1,6 +1,6 @@
 ---
-title: Third Party AD Providers | Microsoft Docs
-description: This tutorial provides the configuration steps for AD Authentication with third party providers
+title: Third-Party AD Providers | Microsoft Docs
+description: This tutorial provides the configuration steps for AD Authentication with third-party providers
 author: dylan-MSFT
 ms.date: 07/25/2018
 ms.author: dygray 
@@ -14,13 +14,13 @@ ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AD authentication"
 ---
-# Tutorial: Use Active Directory Authentication with SQL Server on Linux through Third Party AD Providers
+# Tutorial: Use Active Directory Authentication with SQL Server on Linux through Third-Party AD Providers
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This tutorial explains how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host machine with AD Authentication when using third party AD providers, such as [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [Vintela Authentication Services (VAS)](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your AD configuration, and it is not intended to instruct on how to join a machine to a domain. For detailed instructions on joining a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to a domain using REALM and SSSD, see [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+This tutorial explains how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host machine with AD Authentication when using third-party AD providers, such as [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [Vintela Authentication Services (VAS)](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your AD configuration, and it is not intended to instruct on how to join a machine to a domain. For detailed instructions on joining a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to a domain using REALM and SSSD, see [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
-To setup AD Authentication with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux, you need to do the following:
+To set up AD Authentication with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux, you need to do the following steps:
 
 > [!div class="checklist"]
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to an AD domain
@@ -30,13 +30,13 @@ To setup AD Authentication with [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
 > * Create AD-based logins in Trasact-SQL
 > * Connect to SQL Server using AD Authentication
 
-In this tutorial, we will cover the second step listed above. For help with joining the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to an AD domain with SSSD, please look at [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md). Alternatively, you can use a third party AD provider to join the AD domain, such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/).
+In this tutorial, we will cover the second step listed above. For help with joining the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to an AD domain with SSSD, look at [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md). Alternatively, you can use a third-party AD provider to join the AD domain, such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/).
 
-For help with steps 3-6, please follow the steps at [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+For help with steps 3-6, follow the steps at [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 ## Prerequisites
 
-Before you configure AD Authentication, you need to set up an AD Domain Controller (Windows) on your network. You must also join your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host to an AD domain. You can use [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/).
+Before you configure AD Authentication, you need to set up an AD Domain Controller (Windows) on your network and join your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host to an AD domain. You can use [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/).
 
 >NOTE
 >
@@ -52,7 +52,7 @@ Check you can contact the domain controller with both the short and fully qualif
    ping contoso.com
    ```
 
-   If either of these fail, update your domain search list
+   If either of these fails, update your domain search list.
 
    - **Ubuntu**:
 
@@ -115,7 +115,7 @@ Check you can contact the domain controller with both the short and fully qualif
 
    - **SLES**:
 
-     Edit the `/etc/sysconfig/network/config` file so that your AD domain controller IP will be used for DNS queries and the your AD domain is in the domain search list:
+     Edit the `/etc/sysconfig/network/config` file so that your AD domain controller IP will be used for DNS queries and your AD domain is in the domain search list:
 
      ```/etc/sysconfig/network/config
      <...>
@@ -137,18 +137,18 @@ Check you can contact the domain controller with both the short and fully qualif
 
 ## Check Reverse DNS is properly configured
 
-The following command should return the fully qualified domain name of the host running SQL Server (eg. "SqlHost.contoso.com").
+The following command should return the fully qualified domain name of the host running SQL Server (e.g. "SqlHost.contoso.com").
 
    ```bash
    host **<IP address of SQL Server host>**
    # **<reversed IP address>**.in-addr.arpa domain name pointerSqlHost.contoso.com.
    ```
 
-   If this does not return your host's FQDN or if the FQDN is incorrect, please add a reverse DNS entry for your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host to your DNS server.
+   If this does not return your host's FQDN or if the FQDN is incorrect, add a reverse DNS entry for your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host to your DNS server.
 
 ## Check your KRB5 configuration is correct
 
-Check your `/etc/krb5.conf` is configured correctly. For most third party AD providers, this is done automatically. However, please check `/etc/krb5.conf` for the following values to prevent any future issues:
+Check your `/etc/krb5.conf` is configured correctly. For most third-party AD providers, this is done automatically. However, check `/etc/krb5.conf` for the following values to prevent any future issues:
 
    ```/etc/krb5.conf
    [libdefaults]
@@ -165,7 +165,7 @@ Check your `/etc/krb5.conf` is configured correctly. For most third party AD pro
 
 ## Next steps
 
-To setup AD Authentication with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux, you need to do the following:
+To set up AD Authentication with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux, you need to do the following steps:
 
 > [!div class="checklist"]
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to an AD domain
@@ -175,7 +175,7 @@ To setup AD Authentication with [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
 > * Create AD-based logins in Trasact-SQL
 > * Connect to SQL Server using AD Authentication
 
-In this tutorial, we will covered step #2. For help with steps #3-6, please follow the instructions at [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+In this tutorial, we covered step #2. For help with steps #3-6, follow the instructions at [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 > [!div class="nextstepaction"]
 > [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md)

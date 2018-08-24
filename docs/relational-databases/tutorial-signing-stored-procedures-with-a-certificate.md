@@ -43,7 +43,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Download [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-Instructions for restoring databases in SSMS are here: [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## 1. Configure the Environment  
 To set the initial context of the example, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] open a new Query and run the following code to open the Adventureworks2017 database. This code changes the database context to `AdventureWorks2012` and creates a new server login and database user account (`TestCreditRatingUser`), using a password.  

@@ -2,8 +2,6 @@
   items:
   - name: What's new
     href: whats-new-analytics-platform-system.md
-  - name: New and updated articles
-    href: new-updated-analytics-platform-system.md
 - name: Architecture
   items:
   - name: Parallel Data Warehouse overview

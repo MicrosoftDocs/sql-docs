@@ -18,8 +18,6 @@
     href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
   - name: Breaking changes in SQL Server 2016
     href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
-  - name: New and updated articles
-    href: new-updated-database-engine.md
 - name: Install
   href: ../database-engine/install-windows/installation-for-sql-server-2016.md
 - name: Configure

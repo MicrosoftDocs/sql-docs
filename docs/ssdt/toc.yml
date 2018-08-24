@@ -2,8 +2,6 @@
   href: sql-server-data-tools.md
 - name: Download SSDT
   href: download-sql-server-data-tools-ssdt.md
-- name: New and updated articles
-  href: new-updated-ssdt.md
 - name: Changelog for SSDT
   href: changelog-for-sql-server-data-tools-ssdt.md
 - name: Data-Tier Application Framework - License Terms

@@ -91,7 +91,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
       Now check that your `/etc/resolv.conf` file contains a line like the following example:  
 
-      ```Code
+      ```/etc/resolv.conf
       nameserver **<AD domain controller IP address>**
       ```
 
@@ -113,7 +113,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
      Now check that your `/etc/resolv.conf` file contains a line like the following example:  
 
-     ```Code
+     ```/etc/resolv.conf
      nameserver **<AD domain controller IP address>**
      ```
 
@@ -123,23 +123,20 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
      ```/etc/sysconfig/network/config
      <...>
-     NETCONFIG_DNS_STATIC_SEARCHLIST=""
      NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
      ```
 
      After editing this file, restart the network service:
+
      ```bash
      sudo systemctl restart network
      ```
 
      Now check that your `/etc/resolv.conf` file contains a line like the following example:
 
-     ```bash
-     cat /etc/resolv.conf
+     ```/etc/resolv.conf
+     nameserver \*\*\<AD domain controller IP address\>\*\*
      ```
-
-     >search contoso.com com
-     >nameserver \*\*\<AD domain controller IP address\>\*\*
 
 1. Join the domain
 

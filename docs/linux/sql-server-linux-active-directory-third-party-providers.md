@@ -78,12 +78,10 @@ Check you can contact the domain controller with both the short and fully qualif
 
      Now check that your `/etc/resolv.conf` file contains a line like the following example:  
 
-     ```bash
-     cat /etc/resolv.conf
+     ```/etc/resolv.conf
+     search contoso.com com  
+     nameserver \*\*\<AD domain controller IP address\>\*\* 
      ```
-
-     >search contoso.com com  
-     >nameserver \*\*\<AD domain controller IP address\>\*\*
 
    - **RHEL**:
 
@@ -104,12 +102,10 @@ Check you can contact the domain controller with both the short and fully qualif
 
      Now check that your `/etc/resolv.conf` file contains a line like the following example:  
 
-     ```bash
-     cat /etc/resolv.conf
+     ```/etc/resolv.conf
+     search contoso.com com  
+     nameserver \*\*\<AD domain controller IP address\>\*\*
      ```
-
-     >search contoso.com com  
-     >nameserver \*\*\<AD domain controller IP address\>\*\*
 
    If you still cannot ping the domain controller, find the fully qualified domain name (e.g. DC1.CONTOSO.COM) and IP address of the domain controller and add the following entry to `/etc/hosts`
 
@@ -134,12 +130,10 @@ Check you can contact the domain controller with both the short and fully qualif
 
      Now check that your `/etc/resolv.conf` file contains a line like the following example:
 
-     ```bash
-     cat /etc/resolv.conf
+     ```/etc/resolv.conf
+     search contoso.com com
+     nameserver \*\*\<AD domain controller IP address\>\*\*
      ```
-
-     >search contoso.com com
-     >nameserver \*\*\<AD domain controller IP address\>\*\*
 
 ## Check Reverse DNS is properly configured
 
@@ -147,9 +141,8 @@ The following command should return the fully qualified domain name of the host 
 
    ```bash
    host **<IP address of SQL Server host>**
+   # **<reversed IP address>**.in-addr.arpa domain name pointerSqlHost.contoso.com.
    ```
-
-   >\*\*\<reversed IP address\>\*\*.in-addr.arpa domain name pointerSqlHost.contoso.com.
 
    If this does not return your host's FQDN or if the FQDN is incorrect, please add a reverse DNS entry for your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host to your DNS server.
 
@@ -157,20 +150,18 @@ The following command should return the fully qualified domain name of the host 
 
 Check your `/etc/krb5.conf` is configured correctly. For most third party AD providers, this is done automatically. However, please check `/etc/krb5.conf` for the following values to prevent any future issues:
 
-   ```bash
-   cat /etc/krb5.conf
-   ```
+   ```/etc/krb5.conf
+   [libdefaults]
+   default_realm = CONTOSO.COM
 
-   >[libdefaults]  
-   >default_realm = CONTOSO.COM
-   >
-   >[realms]  
-   >CONTOSO.COM = {  
-   >}
-   >
-   >[domain_realm]  
-   >contoso.com = CONTOSO.COM  
-   >.contoso.com = CONTOSO.COM
+   [realms]
+   CONTOSO.COM = {
+   }
+
+   [domain_realm]
+   contoso.com = CONTOSO.COM
+   .contoso.com = CONTOSO.COM
+   ```
 
 ## Next steps
 

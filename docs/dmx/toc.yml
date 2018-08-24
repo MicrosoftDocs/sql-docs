@@ -1,7 +1,5 @@
 - name: Overview
   href: data-mining-extensions-dmx-reference.md
-- name: New and updated articles
-  href: new-updated-dmx.md
 - name: DMX Statements - Data Definition
   href: dmx-statements-data-definition.md
   items:

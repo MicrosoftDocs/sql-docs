@@ -14,7 +14,7 @@ ms.prod: sql
 SQL Server vNext can be deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 
 - Setup Kubernetes cluster on a single VM, cluster of VMs or in Azure Container Service
-- Deploy SQL Server vNext CTP1.8 in a Kubernetes cluster
+- Deploy SQL Server vNext CTP 2.0 in a Kubernetes cluster
 - Configure the SQL Server master instance
 
 ## Kubernetes prerequisistes
@@ -33,7 +33,7 @@ You can choose to deploy Kubernetes in any of three ways:
 |---|---|
 | **Minikube** | A single-node Kubernetes cluster in a VM. |
 | **Azure Container Services (ACS)** | A managed Kubernetes cluster in Azure. |
-| **Multiple VMs** | Please refer to **“/CTP1.8/documentation/k8s-deployment-multiple-vms.docx”** document in GitHub for instructions. |
+| **Multiple VMs** | Please refer to **CTP1.8/documentation/k8s-deployment-multiple-vms.docx** document in GitHub for instructions. |
 
 For guidance on configuring one of these Kubernetes cluster options for SQL Server vNext, see one of the followin articles:
 
@@ -75,7 +75,7 @@ Initialize the following environment variables first. Enter the Docker username 
 > You can set the MSSQL passwords to whatever you like, but make sure they are sufficiently complex and don’t use the ! & or ‘ characters.
 
 > [!NOTE]
-> For the CTP 1.8 release do not change the default ports.
+> For the CTP 2.0 release do not change the default ports.
 
 ### Windows
 

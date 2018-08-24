@@ -4,18 +4,18 @@ description:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 08/15/2018
+ms.date: 08/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ---
 
 # Quickstart: Run Jupypter Notebooks on SQL Server vNext
 
-We are introducing Notebooks which is one of the main features for the CTP 1.8 release. The next section in the document illustrates how you can start launching the Notebooks against the cluster and start authoring your own Notebooks and how you submit jobs against the cluster.
+This quickstart illustrates how you can launch Jupyter Notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
 ## Connect to the Hadoop Gateway Knox end point
 
-In CTP 1.8 release, we let users connect to different end-points in the cluster. While users can connect to the Microsoft SQL Server Connection type, we are also introducing an ability for users to connect to the Hadoop Gateway (Knox) end-point in the cluster. The Knox endpoint is exposed through a Kubernetes service called (for now) **service-security-lb**.
+You can connect to different end-points in the cluster. You can connect to the Microsoft SQL Server connection type or to the Hadoop Gateway (Knox) end-point in the cluster. The Knox endpoint is exposed through a Kubernetes service called **service-security-lb**.
 
 ![Kubernetes service example](media/quickstart-sql-server-aris-jupyter-notebook/kubernetes-service-example.png)
 

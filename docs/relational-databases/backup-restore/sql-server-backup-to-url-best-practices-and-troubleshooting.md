@@ -87,6 +87,22 @@ manager: craigg
         -   **VERIFYONLY**  
   
     -   You can also find information by reviewing the Windows Event Log - Under Application logs with the name `SQLBackupToUrl`.  
+
+-   Consider COMPRESSION, MAXTRANSFERSIZE and BLOCKSIZE and multiple URL arguments when backing up large databases.  See [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
+
+    -   `Msg 3202, Level 16, State 1, Line 1
+Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
+Msg 3013, Level 16, State 1, Line 1
+BACKUP DATABASE is terminating abnormally.`  
+  
+    ```sql  
+    BACKUP DATABASE TestDb
+    TO URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak',
+    URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_1.bak',
+    URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_2.bak'
+    WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
+    ```  
+  
   
 -   When restoring from a compressed backup, you might see the following error:  
   

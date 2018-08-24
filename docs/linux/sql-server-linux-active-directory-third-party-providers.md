@@ -40,7 +40,7 @@ Before you configure AD Authentication, you need to set up an AD Domain Controll
 
 >NOTE
 >
->This walkthrough uses "contoso.com" and "CONTOSO.COM" as example domain and realm names respectively. It also uses "DC1.CONTOSO.COM" as the example fully qualified domain name of the domain controller. You should replace these with your own values.
+>This tutorial uses "contoso.com" and "CONTOSO.COM" as example domain and realm names respectively. It also uses "DC1.CONTOSO.COM" as the example fully qualified domain name of the domain controller. You should replace these with your own values.
 
 ## Check Connection to Domain Controller
 
@@ -80,7 +80,7 @@ Check you can contact the domain controller with both the short and fully qualif
 
      ```/etc/resolv.conf
      search contoso.com com  
-     nameserver \*\*\<AD domain controller IP address\>\*\* 
+     nameserver **<AD domain controller IP address>**
      ```
 
    - **RHEL**:
@@ -104,14 +104,14 @@ Check you can contact the domain controller with both the short and fully qualif
 
      ```/etc/resolv.conf
      search contoso.com com  
-     nameserver \*\*\<AD domain controller IP address\>\*\*
+     nameserver **<AD domain controller IP address>**
      ```
 
    If you still cannot ping the domain controller, find the fully qualified domain name (e.g. DC1.CONTOSO.COM) and IP address of the domain controller and add the following entry to `/etc/hosts`
 
-      ```/etc/hosts
-      **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
-      ```
+   ```/etc/hosts
+   **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
+   ```
 
    - **SLES**:
 
@@ -132,7 +132,7 @@ Check you can contact the domain controller with both the short and fully qualif
 
      ```/etc/resolv.conf
      search contoso.com com
-     nameserver \*\*\<AD domain controller IP address\>\*\*
+     nameserver **<AD domain controller IP address>**
      ```
 
 ## Check Reverse DNS is properly configured

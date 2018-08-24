@@ -135,7 +135,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
      Now check that your `/etc/resolv.conf` file contains a line like the following example:
 
      ```/etc/resolv.conf
-     nameserver \*\*\<AD domain controller IP address\>\*\*
+     nameserver **<AD domain controller IP address>**
      ```
 
 1. Join the domain

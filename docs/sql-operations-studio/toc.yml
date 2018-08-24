@@ -59,8 +59,6 @@
     href: https://www.github.com/Microsoft/SqlOpsStudio
   - name: SQL Server Blog
     href: https://blogs.technet.microsoft.com/dataplatforminsider/
-  - name: New and updated articles
-    href: new-updated-sql-operations-studio.md
 - name: FAQ
   href: faq.md
 - name: Report issues & make suggestions

@@ -1,7 +1,5 @@
 - name: Overview
   href: database-features.md
-- name: New and updated articles
-  href: new-updated-relational-databases.md
 - name: SQL Server Guides
   href: sql-server-guides.md
   items:

@@ -51,7 +51,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Download [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-Instructions for restoring databases in SSMS are here: [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## 1. Configure the Environment  
 Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2017` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  

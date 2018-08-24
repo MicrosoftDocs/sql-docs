@@ -147,14 +147,14 @@ SQL Server Version  |Redistributable Install Link
     In this case, let’s use the Azure Active Directory service principal created in Part I to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   
     > [!IMPORTANT]  
-    >  The Azure Active Directory service principal must have at least the `get`, `list`, `wrapKey`, and `unwrapKey` permissions for the key vault.  
+    >  The Azure Active Directory service principal must have at least the `get`, `wrapKey`, and `unwrapKey` permissions for the key vault.  
   
      As shown below, use the **Client ID** from Part I for the `ServicePrincipalName` parameter. The `Set-AzureRmKeyVaultAccessPolicy` runs silently with no output if it runs successfully.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      Call the `Get-AzureRmKeyVault` cmdlet to confirm the permissions. In the statement output under ‘Access Policies,’ you should see your AAD application name listed as another tenant that has access to this key vault.  

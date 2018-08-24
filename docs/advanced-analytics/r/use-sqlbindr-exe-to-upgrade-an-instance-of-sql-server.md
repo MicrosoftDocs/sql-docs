@@ -158,7 +158,7 @@ OutputDataSet <- data.frame(Name, Version);'
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-For SQL Server 2016 R Services bound to Machine Learning Server 9.3, R Base package should be 3.4.1, RevoScaleR should be  9.3, and you should also have MicrosoftML 9.3. 
+For SQL Server 2016 R Services bound to Machine Learning Server 9.3, R Base package should be 3.4.3, RevoScaleR should be  9.3, and you should also have MicrosoftML 9.3. 
 
 If you added the pre-trained models, the models are embedded in the MicrosoftML library and you can call them through MicrosoftML functions. For more information, see [R samples for MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
 

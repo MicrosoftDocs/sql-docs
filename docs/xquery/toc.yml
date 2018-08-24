@@ -1,7 +1,5 @@
 - name: Overview
   href: xquery-language-reference-sql-server.md
-- name: New and updated articles
-  href: new-updated-xquery.md
 - name: Modules and Prologs - XQuery Prolog
   href: modules-and-prologs-xquery-prolog.md
 - name: XQuery Basics

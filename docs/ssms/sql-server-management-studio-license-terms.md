@@ -19,7 +19,7 @@ manager: craigg
 # SQL Server Management Studio - License Terms
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### Available Languages:  
-[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[Chinese (Simplified)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinese (Traditional)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [German](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## MICROSOFT SOFTWARE LICENSE TERMS  

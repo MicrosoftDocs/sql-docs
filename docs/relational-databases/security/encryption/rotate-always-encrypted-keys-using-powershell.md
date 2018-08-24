@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Rotate Always Encrypted Keys using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"

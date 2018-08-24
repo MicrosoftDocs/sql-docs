@@ -65,7 +65,7 @@ GO
   
 For more information about the CURRENT_USER statement, see [CURRENT_USER &#40;Transact-SQL&#41;](../t-sql/functions/current-user-transact-sql.md).  
   
-Use this code as the dbo user to create two users on the server and in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+Use this code as the dbo user to create two users on the server and in the AdventureWorks2017 database.  
   
 ```sql
 CREATE LOGIN TestManagerUser   

@@ -29,9 +29,9 @@ This tutorial consists of the following tasks:
 > * Create AD-based logins in Transact-SQL
 > * Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
 
-> Note
+> [!NOTE]
 >
-> If you wish to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to use a third party AD provider, please see [Use Active Directory Authentication with SQL Server on Linux through Third Party AD Providers](./sql-server-linux-active-directory-third-party-providers.md).
+> If you wish to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to use a third-party AD provider, please see [Use third-party Active Directory providers with SQL Server on Linux](./sql-server-linux-active-directory-third-party-providers.md).
 
 ## Prerequisites
 
@@ -340,12 +340,12 @@ The specific connection string parameter for clients to use AD Authentication de
   * ADO.NET: [Connection String Syntax](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
 
 ## Performance Improvements
-If you notice that AD account lookups are taking a while, and you have checked you AD configuration is valid with the steps at [Use Active Directory Authentication with SQL Server on Linux through Third Party AD Providers](sql-server-linux-active-directory-third-party-providers.md), you can add the lines below to `/var/opt/mssql/mssql.conf` to skip SSSD calls and directly use LDAP calls.
+If you notice that AD account lookups are taking a while, and you have checked you AD configuration is valid with the steps at [Use Active Directory Authentication with SQL Server on Linux through Third-Party AD Providers](sql-server-linux-active-directory-third-party-providers.md), you can add the lines below to `/var/opt/mssql/mssql.conf` to skip SSSD calls and directly use LDAP calls.
 
-   ```/var/opt/mssql/mssql.conf
-   [network]
-   disablesssd = true
-   ```
+```/var/opt/mssql/mssql.conf
+[network]
+disablesssd = true
+```
 
 ## Next steps
 

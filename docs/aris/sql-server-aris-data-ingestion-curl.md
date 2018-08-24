@@ -15,7 +15,7 @@ This article explains how to use **curl** to load data into HDFS on SQL Server v
 
 ## Obtain the service external IP
 
-WebHDFS is started when deployment is completed. Starting in CTP 1.7, WebHDFS access goes through Knox.  The Knox endpoint is exposed through a Kubernetes service called (for now) **service-security-lb**.  To create the WebHDFS URL that you will need to use CURL to upload/download files you will need the **service-security-lb** service external IP address and the name of your cluster.  You can get the service-security-lb service external IP address by running this command:
+WebHDFS is started when deployment is completed, and its access goes through Knox. The Knox endpoint is exposed through a Kubernetes service called (for now) **service-security-lb**.  To create the WebHDFS URL that you will need to use CURL to upload/download files you will need the **service-security-lb** service external IP address and the name of your cluster. You can get the service-security-lb service external IP address by running this command:
 
 ```bash
 kubectl get service service-security-lb -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip

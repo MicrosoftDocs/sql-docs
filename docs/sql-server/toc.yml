@@ -20,8 +20,6 @@
     href: customer-experience-improvement-program-for-sql-server-data-tools.md
   - name: Configure SQL Server to send feedback to Microsoft
     href: sql-server-customer-feedback.md
-- name: New and updated articles
-  href: new-updated-sql-server.md
 - name: Release Notes
   items:
   - name: SQL Server vNext Notes

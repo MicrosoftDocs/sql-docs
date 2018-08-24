@@ -102,19 +102,20 @@ The column must appear in the FROM clause of the SELECT statement, but is not re
   
 The following statements are allowed:  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
+```  
   
 The following statements are not allowed:  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+```  
+
 The column expression cannot contain:
 
 - A column alias that is defined in the SELECT list. It can use a column alias for a derived table that is defined in the FROM clause.
@@ -129,7 +130,7 @@ Groups the SELECT statement results according to the values in a list of one or 
 
 For example, this query creates a Sales table with columns for Country, Region, and Sales. It inserts four rows and two of the rows have matching values for Country and Region.  
 
-```
+```sql
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
@@ -148,7 +149,7 @@ The Sales table contains these rows:
 
 This next query groups Country and Region and returns the aggregate sum for each combination of values.  
  
-``` 
+```sql 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
@@ -177,7 +178,7 @@ For example, `GROUP BY ROLLUP (col1, col2, col3, col4)` creates groups for each 
 
 Using the table from the previous example, this code runs a GROUP BY ROLLUP operation instead of a simple GROUP BY.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region);
@@ -200,7 +201,7 @@ GROUP BY CUBE creates groups for all possible combinations of columns. For GROUP
 
 Using the table from the previous examples, this code runs a GROUP BY CUBE operation on Country and Region. 
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY CUBE (Country, Region);
@@ -228,7 +229,7 @@ For example, `GROUP BY ROLLUP (Country, Region)` and `GROUP BY GROUPING SETS ( R
 
 When GROUPING SETS has two or more elements, the results are a union of the elements. This example returns the union of the ROLLUP and CUBE results for Country and Region.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
@@ -236,15 +237,14 @@ GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 
 The results are the same as this query that returns a union of the two GROUP BY statements.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region)
 UNION ALL
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
-GROUP BY CUBE (Country, Region)
-;
+GROUP BY CUBE (Country, Region);
 ```
 
 SQL does not consolidate duplicate groups generated for a GROUPING SETS list. For example, in `GROUP BY ( (), CUBE (Country, Region) )`, both elements return a row for the grand total and both rows will be listed in the results. 
@@ -252,7 +252,7 @@ SQL does not consolidate duplicate groups generated for a GROUPING SETS list. Fo
  ### GROUP BY ()  
 Specifies the empty group which generates the grand total. This is useful as one of the elements of a GROUPING SET. For example, this statement gives the total sales for each country and then gives the grand-total for all countries.
 
-```
+```sql
 SELECT Country, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
@@ -357,7 +357,7 @@ The GROUP BY clause supports all GROUP BY features that are included in the SQL-
 ### A. Use a simple GROUP BY clause  
  The following example retrieves the total for each `SalesOrderID` from the `SalesOrderDetail` table. This example uses AdventureWorks.  
   
-```  
+```sql  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
 FROM Sales.SalesOrderDetail AS sod  
 GROUP BY SalesOrderID  
@@ -367,7 +367,7 @@ ORDER BY SalesOrderID;
 ### B. Use a GROUP BY clause with multiple tables  
  The following example retrieves the number of employees for each `City` from the `Address` table joined to the `EmployeeAddress` table. This example uses AdventureWorks. 
   
-```  
+```sql  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
 FROM Person.BusinessEntityAddress AS bea   
     INNER JOIN Person.Address AS a  
@@ -379,7 +379,7 @@ ORDER BY a.City;
 ### C. Use a GROUP BY clause with an expression  
  The following example retrieves the total sales for each year by using the `DATEPART` function. The same expression must be present in both the `SELECT` list and `GROUP BY` clause.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -390,7 +390,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### D. Use a GROUP BY clause with a HAVING clause  
  The following example uses the `HAVING` clause to specify which of the groups generated in the `GROUP BY` clause should be included in the result set.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -404,7 +404,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### E. Basic use of the GROUP BY clause  
  The following example finds the total amount for all sales on each day. One row containing the sum of all sales is returned for each day.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales  
@@ -414,7 +414,7 @@ GROUP BY OrderDateKey ORDER BY OrderDateKey;
 ### F. Basic use of the DISTRIBUTED_AGG hint  
  This example uses the DISTRIBUTED_AGG query hint to force the appliance to shuffle the table on the `CustomerKey` column before performing the aggregation.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT CustomerKey, SUM(SalesAmount) AS sas  
@@ -426,7 +426,7 @@ ORDER BY CustomerKey DESC;
 ### G. Syntax Variations for GROUP BY  
  When the select list has no aggregations, each column in the select list must be included in the GROUP BY list. Computed columns in the select list can be listed, but are not required, in the GROUP BY list. These are examples of syntactically valid SELECT statements:  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName FROM DimCustomer GROUP BY LastName, FirstName;  
@@ -439,7 +439,7 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 ### H. Using a GROUP BY with multiple GROUP BY expressions  
  The following example groups results using multiple `GROUP BY` criteria. If, within each `OrderDateKey` group, there are subgroups that can be differentiated by `DueDateKey`, a new grouping will be defined for the result set.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
@@ -451,7 +451,7 @@ ORDER BY OrderDateKey;
 ### I. Using a GROUP BY clause with a HAVING clause  
  The following example uses the `HAVING` clause to specify the groups generated in the `GROUP BY` clause that should be included in the result set. Only those groups with order dates in 2004 or later will be included in the results.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   

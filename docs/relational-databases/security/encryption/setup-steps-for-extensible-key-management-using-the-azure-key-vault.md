@@ -1,7 +1,7 @@
 ---
 title: "SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/11/2018"
+ms.date: "08/24/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"

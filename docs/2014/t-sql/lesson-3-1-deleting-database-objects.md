@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting database objects"
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Deleting Database Objects

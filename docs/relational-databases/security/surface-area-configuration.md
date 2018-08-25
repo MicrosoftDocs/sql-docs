@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "attackable surface area [SQL Server]"
   - "installing SQL Server, security"
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Surface Area Configuration

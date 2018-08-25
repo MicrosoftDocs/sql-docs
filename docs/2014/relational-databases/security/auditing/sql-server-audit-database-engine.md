@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Audit"
   - "audits [SQL Server], SQL Server Audit"
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SQL Server Audit (Database Engine)

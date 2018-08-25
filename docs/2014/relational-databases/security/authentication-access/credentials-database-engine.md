@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "credentials [SQL Server], about credentials"
   - "credentials [SQL Server]"
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Credentials (Database Engine)

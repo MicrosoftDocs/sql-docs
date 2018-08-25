@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Transact-SQL tutorials"
   - "tutorials [Transact-SQL]"
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Tutorial: Writing Transact-SQL Statements

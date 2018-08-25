@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.TABLE_PRIVILEGES view"
   - "TABLE_PRIVILEGES view"
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

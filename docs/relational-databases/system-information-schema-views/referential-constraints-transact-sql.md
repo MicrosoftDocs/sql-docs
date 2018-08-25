@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS view"
   - "REFERENTIAL_CONSTRAINTS view"
 ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

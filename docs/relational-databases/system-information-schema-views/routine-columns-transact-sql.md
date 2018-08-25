@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "ROUTINE_COLUMNS view"
   - "INFORMATION_SCHEMA.ROUTINE_COLUMNS view"
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

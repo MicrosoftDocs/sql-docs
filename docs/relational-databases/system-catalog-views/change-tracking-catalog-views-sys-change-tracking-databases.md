@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "sys.change_tracking_databases"
   - "change tracking [SQL Server], sys.change_tracking_databases"
 ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

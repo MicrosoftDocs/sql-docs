@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.key_constraints catalog view"
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+ author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

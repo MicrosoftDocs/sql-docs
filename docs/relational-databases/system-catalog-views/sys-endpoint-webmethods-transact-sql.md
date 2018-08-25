@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sys.endpoint_webmethods catalog view"
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+ author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.endpoint_webmethods (Transact-SQL)

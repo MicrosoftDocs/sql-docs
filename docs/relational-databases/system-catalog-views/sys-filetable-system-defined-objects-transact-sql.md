@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.filetable_system_defined_objects catalog view"
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+ author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.filetable_system_defined_objects (Transact-SQL)

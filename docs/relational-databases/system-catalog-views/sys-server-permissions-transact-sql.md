@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_permissions catalog view"
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

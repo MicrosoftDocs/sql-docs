@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.partition_parameters catalog view"
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+ author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

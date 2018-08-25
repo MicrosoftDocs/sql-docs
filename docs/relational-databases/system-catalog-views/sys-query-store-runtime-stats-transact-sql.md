@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.query_store_runtime_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+ author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

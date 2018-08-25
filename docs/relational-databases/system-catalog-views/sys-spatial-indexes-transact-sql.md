@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.spatial_indexes catalog view"
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 caps.latest.revision: 27
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

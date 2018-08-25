@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.system_views catalog view"
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 caps.latest.revision: 24
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

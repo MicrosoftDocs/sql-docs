@@ -16,8 +16,7 @@ helpviewer_keywords:
   - "linked servers [SQL Server], catalog views"
   - "catalog views [SQL Server], linked servers"
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
-caps.latest.revision: 24
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

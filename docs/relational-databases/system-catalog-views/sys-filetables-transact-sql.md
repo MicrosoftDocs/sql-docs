@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.filetables catalog view"
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 caps.latest.revision: 15
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

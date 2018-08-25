@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.all_views catalog view"
 ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
 caps.latest.revision: 29
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.endpoints catalog view"
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 caps.latest.revision: 45
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

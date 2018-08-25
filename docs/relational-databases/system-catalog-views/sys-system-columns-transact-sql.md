@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.system_columns catalog view"
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 caps.latest.revision: 46
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"

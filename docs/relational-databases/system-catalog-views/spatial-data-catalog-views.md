@@ -14,7 +14,7 @@ dev_langs:
   - "TSQL"
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 caps.latest.revision: 5
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

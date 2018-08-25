@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.sql_modules catalog view"
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 caps.latest.revision: 43
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"

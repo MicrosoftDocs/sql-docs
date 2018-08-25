@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.trigger_event_types catalog view"
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 caps.latest.revision: 15
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

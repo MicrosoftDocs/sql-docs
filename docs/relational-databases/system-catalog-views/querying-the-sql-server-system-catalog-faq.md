@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "catalog views [SQL Server], frequently asked questions"
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 caps.latest.revision: 51
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

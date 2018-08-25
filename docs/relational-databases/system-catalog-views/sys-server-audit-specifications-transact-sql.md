@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.server_audit_specifications catalog view"
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 caps.latest.revision: 16
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

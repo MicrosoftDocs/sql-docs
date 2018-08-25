@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.server_event_notifications catalog view"
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 caps.latest.revision: 36
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

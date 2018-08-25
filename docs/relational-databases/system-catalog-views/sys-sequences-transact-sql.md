@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "sys.sequences catalog view"
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 caps.latest.revision: 21
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"

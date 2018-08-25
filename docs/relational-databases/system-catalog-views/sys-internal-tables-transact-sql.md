@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "sys.internal_tables catalog view"
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 caps.latest.revision: 52
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

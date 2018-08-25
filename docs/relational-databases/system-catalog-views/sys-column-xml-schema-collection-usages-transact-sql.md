@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.column_xml_schema_collection_usages catalog view"
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
 caps.latest.revision: 12
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

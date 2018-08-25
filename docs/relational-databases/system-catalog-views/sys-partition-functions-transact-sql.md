@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.partition_functions catalog view"
 ms.assetid: 96515727-728b-4bea-804a-36ce915b8b75
 caps.latest.revision: 37
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"

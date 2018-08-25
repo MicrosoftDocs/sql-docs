@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "catalog views [SQL Server], scalar types"
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 caps.latest.revision: 13
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

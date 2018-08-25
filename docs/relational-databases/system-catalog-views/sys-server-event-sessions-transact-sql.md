@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "xe"
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 caps.latest.revision: 15
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

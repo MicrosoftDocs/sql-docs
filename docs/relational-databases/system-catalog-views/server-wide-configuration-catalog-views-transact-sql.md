@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "server-wide configuration catalog views [SQL Server]"
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 caps.latest.revision: 30
- author: stevestein
+author: stevestein
 ms.author: sstein
 manager: craigg
 ---

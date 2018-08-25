@@ -8,9 +8,7 @@ ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "tutorials [connecting]"
   - "tutorials [Database Engine]"

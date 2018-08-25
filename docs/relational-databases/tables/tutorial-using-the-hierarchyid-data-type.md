@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 applies_to: 
   - "SQL Server 2016"
 helpviewer_keywords: 

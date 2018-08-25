@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_configure"
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_configure (Transact-SQL)

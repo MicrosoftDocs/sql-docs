@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_cursor_prepare"
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_cursorprepare (Transact-SQL)

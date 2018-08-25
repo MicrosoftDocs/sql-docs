@@ -14,9 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "synonyms [SQL Server], about synonyms"
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

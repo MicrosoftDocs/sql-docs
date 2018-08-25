@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_log_shipping_alert_job"
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
-caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_help_log_shipping_alert_job (Transact-SQL)

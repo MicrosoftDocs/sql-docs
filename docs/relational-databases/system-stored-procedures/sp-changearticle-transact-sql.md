@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changearticle"
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: 77
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_changearticle (Transact-SQL)

@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_stop_sp"
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
-caps.latest.revision: 28
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sysmail_stop_sp (Transact-SQL)

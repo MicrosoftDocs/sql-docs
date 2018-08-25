@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysmail_update_principalprofile_sp"
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 caps.latest.revision: 46
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sysmail_update_principalprofile_sp (Transact-SQL)

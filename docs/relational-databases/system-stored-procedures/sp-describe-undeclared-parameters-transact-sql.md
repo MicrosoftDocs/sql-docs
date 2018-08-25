@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_describe_undeclared_parameters"
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

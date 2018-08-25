@@ -13,9 +13,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
-caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_delete_backup_file_snapshot (Transact-SQL)

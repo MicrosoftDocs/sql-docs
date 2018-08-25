@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_replflush"
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_replflush (Transact-SQL)

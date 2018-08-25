@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_statistics"
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

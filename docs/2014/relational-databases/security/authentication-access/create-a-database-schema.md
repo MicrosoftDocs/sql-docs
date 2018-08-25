@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database schemas"
   - "schemas [SQL Server], creating"
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Database Schema

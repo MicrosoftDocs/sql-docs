@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "configuring permissions on databases"
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Summary: Configuring Permissions on Database Objects

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "reading data in a table"
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Reading the Data in a Table (Tutorial)

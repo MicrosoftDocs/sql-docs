@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_delete_policy_category"
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
-caps.latest.revision: 7
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_delete_policy_category (Transact-SQL)

@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_category"
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: 29
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_add_category (Transact-SQL)

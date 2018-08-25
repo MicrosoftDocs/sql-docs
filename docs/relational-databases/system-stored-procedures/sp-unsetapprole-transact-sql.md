@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_unsetapprole"
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_unsetapprole (Transact-SQL)

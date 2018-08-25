@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sp_query_store_flush_db"
 ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

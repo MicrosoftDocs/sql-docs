@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "upgrading SQL Server"
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2

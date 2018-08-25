@@ -18,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.database_scoped_configurations catalog view"
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
-caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

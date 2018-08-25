@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "sys.security_predicates catalog view"
   - "security_predicates catalog view"
 ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

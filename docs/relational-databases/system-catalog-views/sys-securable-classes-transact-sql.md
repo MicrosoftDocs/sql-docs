@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.securable_classes catalog view"
 ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

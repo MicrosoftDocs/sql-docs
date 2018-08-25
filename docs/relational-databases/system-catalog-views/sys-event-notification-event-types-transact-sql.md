@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.event_notification_event_types catalog view"
 ms.assetid: 73dae456-7044-4b00-b0bd-990ef810b356
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

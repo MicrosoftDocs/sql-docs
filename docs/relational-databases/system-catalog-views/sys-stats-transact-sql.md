@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.stats catalog view"
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

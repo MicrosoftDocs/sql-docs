@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.partition_range_values catalog view"
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_role_members catalog view"
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

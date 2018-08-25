@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.indexes catalog view"
 ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

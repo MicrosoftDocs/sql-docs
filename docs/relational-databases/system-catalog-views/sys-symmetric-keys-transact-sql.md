@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.symmetric_keys catalog view"
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

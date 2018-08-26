@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "S_OK"
   - "FAILED macro"
   - "errors [OLE DB], return codes"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Return Codes

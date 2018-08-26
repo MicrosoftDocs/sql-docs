@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], components"
   - "components [OLE DB Driver for SQL Server]"
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Components of OLE DB Driver for SQL Server

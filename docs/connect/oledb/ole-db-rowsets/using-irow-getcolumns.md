@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, fetching"
   - "rowsets [OLE DB], fetching"
   - "GetColumns method"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Using IRow::GetColumns

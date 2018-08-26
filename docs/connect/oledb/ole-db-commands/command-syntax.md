@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "commands [OLE DB]"
   - "OLE DB Driver for SQL Server, stored procedures"
   - "stored procedures [OLE DB], command syntax"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Command Syntax

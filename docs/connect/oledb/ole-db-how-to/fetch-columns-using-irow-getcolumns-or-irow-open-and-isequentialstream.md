@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Open method"
   - "ISequentialStream interface, samples"
   - "GetColumns method"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream

@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "schema rowsets [OLE DB]"
   - "table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Schema Rowsets Changed for OLE DB Table-Valued Parameters

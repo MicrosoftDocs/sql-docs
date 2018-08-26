@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "dropping indexes"
   - "OLE DB Driver for SQL Server, indexes"
   - "indexes [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Dropping a SQL Server Index

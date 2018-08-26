@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], executing"
   - "OLE DB, stored procedures"
   - "OLE DB Driver for SQL Server, stored procedures"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Stored Procedures - Running

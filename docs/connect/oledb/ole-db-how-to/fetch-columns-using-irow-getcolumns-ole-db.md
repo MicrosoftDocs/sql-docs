@@ -13,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IRow interface"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)

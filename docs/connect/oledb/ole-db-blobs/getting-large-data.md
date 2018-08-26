@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "DBPROP_ACCESSORDER property"
   - "OLE DB Driver for SQL Server, BLOBs"
   - "large data, OLE objects"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Getting Large Data

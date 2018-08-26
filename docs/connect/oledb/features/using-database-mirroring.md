@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], connecting clients to"
   - "MSOLEDBSQL, database mirroring"
   - "OLE DB Driver for SQL Server, database mirroring"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Using Database Mirroring

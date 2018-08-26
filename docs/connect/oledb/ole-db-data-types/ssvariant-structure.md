@@ -16,8 +16,8 @@ f1_keywords:
   - "SSVARIANT"
 helpviewer_keywords: 
   - "SSVARIANT struct"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # SSVARIANT Structure

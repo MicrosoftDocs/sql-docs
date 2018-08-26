@@ -17,8 +17,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "BCPReadFmt method"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # IBCPSession::BCPReadFmt (OLE DB)

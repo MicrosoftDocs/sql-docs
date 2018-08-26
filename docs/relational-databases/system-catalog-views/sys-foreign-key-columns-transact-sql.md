@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.foreign_key_columns catalog view"
 ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

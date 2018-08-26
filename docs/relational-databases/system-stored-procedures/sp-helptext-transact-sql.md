@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_helptext"
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

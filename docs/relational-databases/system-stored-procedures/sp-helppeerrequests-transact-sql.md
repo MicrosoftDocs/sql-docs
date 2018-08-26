@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helppeerrequests"
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helppeerrequests (Transact-SQL)

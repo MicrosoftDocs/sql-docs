@@ -6,7 +6,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: clr
-ms.topic: "get-started-article"
+ms.topic: quickstart
 dev_langs: 
   - "TSQL"
   - "VB"

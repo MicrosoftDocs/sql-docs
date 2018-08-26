@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "MSOLEDBSQL, query notifications"
   - "OLE DB Driver for SQL Server, query notifications"
   - "consumer notification for rowset changes [OLE DB Driver for SQL Server]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Working with Query Notifications

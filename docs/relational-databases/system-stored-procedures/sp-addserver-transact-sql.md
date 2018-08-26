@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "machine names [SQL Server]"
   - "computer names"
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addserver (Transact-SQL)

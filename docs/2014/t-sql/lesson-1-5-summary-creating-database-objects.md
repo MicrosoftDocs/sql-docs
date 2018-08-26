@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "creating database objects"
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Summary: Creating Database Objects

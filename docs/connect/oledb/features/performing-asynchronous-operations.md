@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "rowsets [SQL Server], initializing"
   - "MSOLEDBSQL, asynchronous operations"
   - "OLE DB Driver for SQL Server, asynchronous operations"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Performing Asynchronous Operations

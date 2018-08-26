@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.procedures catalog view"
 ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

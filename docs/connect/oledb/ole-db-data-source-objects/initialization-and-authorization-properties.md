@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, initialization properties"
   - "OLE DB Driver for SQL Server, authorization properties"
   - "initialization properties [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Initialization and Authorization Properties

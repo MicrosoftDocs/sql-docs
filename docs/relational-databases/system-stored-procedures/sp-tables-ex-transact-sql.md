@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_tables_ex"
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_tables_ex (Transact-SQL)

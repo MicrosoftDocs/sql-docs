@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sessions [OLE DB Driver for SQL Server]"
   - "OLE DB extensions for XML"
   - "OLE DB Driver for SQL Server, command execution"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Executing a Command

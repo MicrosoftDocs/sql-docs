@@ -6,8 +6,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "Transact-SQL statements, tutorials"
   - "Transact-SQL tutorials"

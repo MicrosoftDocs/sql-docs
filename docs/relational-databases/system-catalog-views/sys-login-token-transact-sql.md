@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "logins [SQL Server], security tokens"
   - "tokens [SQL Server]"
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sys.login_token (Transact-SQL)

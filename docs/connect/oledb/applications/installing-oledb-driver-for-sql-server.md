@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, installing"
   - "data access [OLE DB Driver for SQL Server], installing OLE DB Driver for SQL Server"
   - "removing OLE DB Driver for SQL Server"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Installing OLE DB Driver for SQL Server

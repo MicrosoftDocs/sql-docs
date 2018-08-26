@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_dropdistributor"
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_dropdistributor (Transact-SQL)

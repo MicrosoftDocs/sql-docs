@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_copysnapshot"
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_copysnapshot (Transact-SQL)

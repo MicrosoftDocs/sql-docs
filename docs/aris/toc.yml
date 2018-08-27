@@ -10,9 +10,6 @@
     href: quickstart-sql-server-aris-get-started.md 
   - name: Run Jupyter Notebooks
     href: quickstart-sql-server-aris-jupyter-notebook.md
-- name: Tutorials
-  items:
-  - name: TBD
 - name: Samples
   items:
   - name: Notebooks
@@ -67,6 +64,21 @@
       href: sql-server-aris-openrowset.md
     - name: Create a data pool
       href: sql-server-aris-query-create-datapool.md
+    - name: Hive tables
+      items:
+        - name: Create Hive tables (Spark)
+        - name: Query Hive tables
+    - name: Define an external table over HDFS
+    - name: Datamart queries
+      items:
+        - name: Create and populate
+        - name: Create a Datamart table distributed on a specific column
+        - name: Schedule a refresh
+        - name: Populate data from a parameterized query
+        - name: Preserve existing data in refresh
+        - name: Reorganize datamart tables after adding new datapool instances​​​
+    - name: Write complex analytic queries using multiple external tables​
+    - name: Segregate external table queries based on application data
   - name: Notebooks
     items:
     - name: How to use Jupyter notebooks in SQL Server vNext

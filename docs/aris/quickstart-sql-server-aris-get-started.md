@@ -15,11 +15,9 @@ In this quickstart, you will combine high-volume HDFS data with high-value relat
 
 ## Prerequisites
 
-This quickstart requires that you have already done the following tasks:
+This quickstart requires a running SQL Server Aris cluster. For instructions, see the following article:
 
-- [Configured a Kubernetes cluster](sql-server-aris-deployment-guidance.md#kubernetes).
-- [Installed SQL Server vNext on the Kubernetes cluster](sql-server-aris-deployment-guidance.md#deploy).
-- [Installed SQL Server big data tools](sql-server-aris-install-big-data-tools.md).
+[Quickstart: Deploy SQL Server Aris on Kubernetes](quickstart-sql-server-aris-deploy.md)
 
 ## Initialize a data pool
 

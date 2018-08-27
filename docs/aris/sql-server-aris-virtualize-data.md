@@ -15,7 +15,7 @@ One of the key scenarios for SQL Server vNext is the ability to virtualize data 
 
 ## Launch the virtualize data wizard
 
-Connect to the master instance using the IP address / port number (31433) obtained at the end of the [deployment script](sql-server-aris-deployment-guidance.md#deploy-sql-server-vnext). Expand your **Databases** node in the Object Explorer and select one of the databases where you would like to virtualize the data into from an existing SQL Server instance. Right-click on the Database and select **Virtualize Data** from the context menu. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
+Connect to the master instance using the IP address / port number (31433) obtained at the end of the [deployment script](quickstart-sql-server-aris-deploy.md). Expand your **Databases** node in the Object Explorer and select one of the databases where you would like to virtualize the data into from an existing SQL Server instance. Right-click on the Database and select **Virtualize Data** from the context menu. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
 
 ![Virtualize data wizard](media/sql-server-aris-virtualize-data/virtualize-data-wizard.png)
 

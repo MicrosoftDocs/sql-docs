@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Natively Compiled Stored Procedures and Execution Set Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/26/2017"
@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Natively Compiled Stored Procedures and Execution Set Options
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

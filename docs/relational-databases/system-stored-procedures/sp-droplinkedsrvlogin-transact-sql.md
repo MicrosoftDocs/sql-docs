@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_droplinkedsrvlogin"
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_droplinkedsrvlogin (Transact-SQL)

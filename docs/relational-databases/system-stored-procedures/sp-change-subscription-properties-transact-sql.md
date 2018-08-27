@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_change_subscription_properties"
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 # sp_change_subscription_properties (Transact-SQL)

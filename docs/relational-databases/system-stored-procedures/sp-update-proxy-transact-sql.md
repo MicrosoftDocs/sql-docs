@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "ALTER PROXY statement"
   - "sp_update_proxy"
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
-caps.latest.revision: 30
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_update_proxy (Transact-SQL)

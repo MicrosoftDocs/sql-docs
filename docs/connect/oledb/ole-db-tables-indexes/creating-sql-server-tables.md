@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "DBCOLUMNDESC usage"
   - "adding tables"
   - "CreateTable function"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Creating SQL Server Tables

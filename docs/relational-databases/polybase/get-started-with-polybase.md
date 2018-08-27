@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: polybase
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "PolyBase"
   - "PolyBase, getting started"

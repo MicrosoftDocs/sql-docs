@@ -13,9 +13,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 46615017-c4f2-4586-91d9-4d66b5311ae9
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_dropalias (Transact-SQL)

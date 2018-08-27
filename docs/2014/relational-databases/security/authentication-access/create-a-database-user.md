@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "users [SQL Server], adding"
   - "mapping database users"
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Database User

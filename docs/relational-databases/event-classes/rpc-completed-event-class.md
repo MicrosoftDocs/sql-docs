@@ -1,4 +1,4 @@
-﻿---
+---
 title: "RPC:Completed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2015"
@@ -15,7 +15,7 @@ caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RPC:Completed Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

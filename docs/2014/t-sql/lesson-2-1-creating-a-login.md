@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "creating a login"
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Creating a Login

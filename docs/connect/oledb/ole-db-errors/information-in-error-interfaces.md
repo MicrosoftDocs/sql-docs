@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "OLE DB error handling, error interfaces"
   - "ISQLErrorInfo interface"
   - "errors [OLE DB], error interfaces"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Information in Error Interfaces

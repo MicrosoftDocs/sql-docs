@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "MSOLEDBSQL, additional resources"
   - "OLE DB Driver for SQL Server, additional resources"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Finding More OLE DB Driver for SQL Server Information

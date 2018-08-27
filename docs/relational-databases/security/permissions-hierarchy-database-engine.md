@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Permissions Hierarchy (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/23/2016"
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "permissions [SQL Server], hierarchy"
   - "security [SQL Server], granting access"
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Permissions Hierarchy (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

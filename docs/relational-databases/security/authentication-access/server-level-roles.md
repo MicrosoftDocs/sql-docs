@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Server-Level Roles | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
@@ -26,7 +26,7 @@ caps.latest.revision: 52
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Server-Level Roles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]

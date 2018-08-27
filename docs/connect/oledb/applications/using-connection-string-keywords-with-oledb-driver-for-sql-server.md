@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "MSOLEDBSQL, connection string keywords"
   - "connection strings [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, connection string keywords"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Using Connection String Keywords with OLE DB Driver for SQL Server

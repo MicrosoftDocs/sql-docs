@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "rowsets [OLE DB], creating"
   - "OLE DB Driver for SQL Server, rowsets"
   - "OLE DB rowsets, creating"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Creating a Rowset with IOpenRowset

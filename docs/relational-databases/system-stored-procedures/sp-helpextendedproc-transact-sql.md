@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_helpextendedproc"
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpextendedproc (Transact-SQL)

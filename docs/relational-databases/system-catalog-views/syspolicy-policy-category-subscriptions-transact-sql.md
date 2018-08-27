@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syspolicy_policy_group_subscriptions view"
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
-caps.latest.revision: 16
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # syspolicy_policy_category_subscriptions (Transact-SQL)

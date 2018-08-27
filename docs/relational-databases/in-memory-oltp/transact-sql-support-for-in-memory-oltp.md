@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Transact-SQL Support for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -15,7 +15,7 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Support for In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

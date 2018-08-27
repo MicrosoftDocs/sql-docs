@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "SQL authentication mode"
   - "Password Expired dialog box"
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Choose an Authentication Mode

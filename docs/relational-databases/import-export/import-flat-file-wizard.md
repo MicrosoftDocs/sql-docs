@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Import Flat File to SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/26/2017"
@@ -16,7 +16,7 @@ f1_keywords:
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import Flat File to SQL Wizard
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, indexes"
   - "indexes [OLE DB]"
   - "adding indexes"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Creating SQL Server Indexes

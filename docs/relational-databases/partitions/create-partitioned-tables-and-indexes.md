@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -32,7 +32,7 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

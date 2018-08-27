@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syspolicy_system_health_state view"
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
-caps.latest.revision: 22
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # syspolicy_system_health_state (Transact-SQL)

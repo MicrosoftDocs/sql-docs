@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addqueued_artinfo"
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addqueued_artinfo (Transact-SQL)

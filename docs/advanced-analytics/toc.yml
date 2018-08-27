@@ -15,9 +15,9 @@
   items:
   - name: SQL Server vNext (R, Python, Java)
     href: install/sql-machine-learning-services-vnext.md
-  - name: SQL Server Machine Learning Services
+  - name: Machine Learning Services (R, Python, Java)
     href: install/sql-machine-learning-services-windows-install.md
-  - name: SQL Server R Services
+  - name: R Services
     href: install/sql-r-services-windows-install.md
   - name: Standalone server (R, Python)
     href: install/sql-machine-learning-standalone-windows-install.md
@@ -27,8 +27,9 @@
     href: install/sql-ml-component-commandline-install.md
   - name: Offline setup (no internet)
     href: install/sql-ml-component-install-without-internet-access.md
-  - name: CAB downloads (offline setup)
-    href: install/sql-ml-cab-downloads.md
+    items:
+    - name: CAB downloads (offline setup)
+      href: install/sql-ml-cab-downloads.md
   - name: Upgrade R and Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: Set up R tools

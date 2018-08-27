@@ -6,6 +6,8 @@
     href: sql-server-aris-release-notes.md
 - name: Quickstarts
   items:
+  - name: Deploy SQL Server Aris
+    href: quickstart-sql-server-aris-deploy.md
   - name: Get started with SQL Server Aris
     href: quickstart-sql-server-aris-get-started.md 
   - name: Run Jupyter Notebooks
@@ -60,16 +62,18 @@
       href: sql-server-aris-restore-databse.md
   - name: Query scenarios
     items:
-    - name: Read CSV with OPENROWSET  
-      href: sql-server-aris-openrowset.md
-    - name: Create a data pool
-      href: sql-server-aris-query-create-datapool.md
-    - name: Hive tables
+      - name: Data pool scenarios
       items:
+        - name: Create a data pool
+          href: sql-server-aris-query-create-datapool.md
+      - name: HDFS scenarios
+      items:
+        - name: Read data from CSV 
+          href: sql-server-aris-openrowset.md
         - name: Create Hive tables (Spark)
         - name: Query Hive tables
-    - name: Define an external table over HDFS
-    - name: Datamart queries
+        - name: Define an external table over HDFS
+    - name: Datamart scenarios
       items:
         - name: Create and populate
         - name: Create a Datamart table distributed on a specific column
@@ -77,8 +81,10 @@
         - name: Populate data from a parameterized query
         - name: Preserve existing data in refresh
         - name: Reorganize datamart tables after adding new datapool instances​​​
-    - name: Write complex analytic queries using multiple external tables​
-    - name: Segregate external table queries based on application data
+    - name: Analytics
+        - name: Write complex analytic queries using multiple external tables​
+        - name: Segregate external table queries based on application data
+    - name: Polycloud catalog queries?
   - name: Notebooks
     items:
     - name: How to use Jupyter notebooks in SQL Server vNext

@@ -42,21 +42,17 @@ For SQL Server 2016 only: Microsoft has identified a problem with the specific v
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
 1. Start the installation wizard.
-
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 2. Click the **Installation** tab, and select **New Machine Learning Server (Standalone) installation**.
     
      ![Install Machine Learning Server Standalone](media/2017setup-installation-page-mlsvr.png "Start installation of Machine Learning Server Standalone")
 ::: moniker-end
-
 ::: moniker range="=sql-server-2016"
 2. On the **Installation** tab, click **New R Server (Standalone) installation**.
     
      ![Start setup of R Server Standalone](media/2016-setup-installation-rsvr.png "Start setup of R Server Standalone")
 ::: moniker-end
-
 3. After the rules check is complete, accept SQL Server licensing terms, and select a new installation.
-
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 4. On the **Feature Selection** page, the following options should already be selected:
 
@@ -75,7 +71,6 @@ For local installations, you must run Setup as an administrator. If you install 
     > 
     > For these reasons, we generally recommend that you install Machine Learning Server (Standalone) on a separate computer from SQL Server Machine Learning Services.
 ::: moniker-end
-
 ::: moniker range="=sql-server-2016"
 4.  On the **Feature Selection** page, the following option should be already selected:
     
@@ -92,13 +87,10 @@ For local installations, you must run Setup as an administrator. If you install 
     > 
     > We generally recommend that you install R Server (Standalone) on a separate computer from SQL Server R Services (In-Database).
 ::: moniker-end
-
 5.  Accept the license terms for downloading and installing base language distributions. When the **Accept** button becomes unavailable, you can click **Next**. 
-
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
      ![Python license agreement](media/2017setup-python-license.png "Python license agreement")
 ::: moniker-end
-
 6.  On the **Ready to Install** page, verify your selections, and click **Install**.
 
 ### Default installation folders

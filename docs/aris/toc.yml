@@ -62,28 +62,29 @@
       href: sql-server-aris-restore-databse.md
   - name: Query scenarios
     items:
-      - name: Data pool scenarios
+    - name: Data pool scenarios
       items:
-        - name: Create a data pool
-          href: sql-server-aris-query-create-datapool.md
-      - name: HDFS scenarios
+      - name: Create a data pool
+        href: sql-server-aris-query-create-datapool.md
+    - name: HDFS scenarios
       items:
-        - name: Read data from CSV 
-          href: sql-server-aris-openrowset.md
-        - name: Create Hive tables (Spark)
-        - name: Query Hive tables
-        - name: Define an external table over HDFS
+      - name: Read data from CSV 
+        href: sql-server-aris-openrowset.md
+      - name: Create Hive tables (Spark)
+      - name: Query Hive tables
+      - name: Define an external table over HDFS
     - name: Datamart scenarios
       items:
-        - name: Create and populate
-        - name: Create a Datamart table distributed on a specific column
-        - name: Schedule a refresh
-        - name: Populate data from a parameterized query
-        - name: Preserve existing data in refresh
-        - name: Reorganize datamart tables after adding new datapool instances​​​
+      - name: Create and populate
+      - name: Create a Datamart table distributed on a specific column
+      - name: Schedule a refresh
+      - name: Populate data from a parameterized query
+      - name: Preserve existing data in refresh
+      - name: Reorganize datamart tables after adding new datapool instances​​​
     - name: Analytics
-        - name: Write complex analytic queries using multiple external tables​
-        - name: Segregate external table queries based on application data
+      items:
+      - name: Write complex analytic queries using multiple external tables​
+      - name: Segregate external table queries based on application data
     - name: Polycloud catalog queries?
   - name: Notebooks
     items:

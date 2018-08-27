@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "expired passwords [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, password expiration"
   - "modifying passwords"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Changing Passwords Programmatically

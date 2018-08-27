@@ -3,12 +3,9 @@ title: "sys.external_libraries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,9 +17,9 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.external_libraries catalog view"
-author: "jeannt"
-ms.author: "jeannt"
-manager: craigg
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.external_libraries (Transact-SQL)  

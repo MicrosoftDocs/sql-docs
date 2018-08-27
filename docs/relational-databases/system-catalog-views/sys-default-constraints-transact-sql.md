@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.default_constraints catalog view"
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

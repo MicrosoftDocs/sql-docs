@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_create_plan_guide"
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 caps.latest.revision: 82
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_create_plan_guide (Transact-SQL)

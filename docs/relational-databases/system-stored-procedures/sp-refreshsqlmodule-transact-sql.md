@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], refreshing metadata"
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

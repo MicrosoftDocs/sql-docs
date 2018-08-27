@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_createstats"
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

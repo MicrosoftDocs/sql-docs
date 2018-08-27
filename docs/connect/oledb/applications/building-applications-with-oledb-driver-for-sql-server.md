@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSOLEDBSQL, building applications"
   - "applications [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, building applications"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Building Applications with OLE DB Driver for SQL Server

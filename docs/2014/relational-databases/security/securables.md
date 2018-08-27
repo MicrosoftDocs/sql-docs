@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "hierarchies [SQL Server], securables"
   - "server securables [SQL Server]"
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Securables

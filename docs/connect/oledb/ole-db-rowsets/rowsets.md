@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OLE DB rowsets"
   - "OLE DB rowsets, about rowsets"
   - "rowsets [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Rowsets

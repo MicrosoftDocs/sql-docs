@@ -17,8 +17,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "ISSAsynchStatus interface"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # ISSAsynchStatus (OLE DB)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
   - "IRowset interface"
   - "OLE DB Driver for SQL Server, fetching"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Fetching Rows

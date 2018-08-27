@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "TRUSTWORTHY database property"
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # TRUSTWORTHY Database Property

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Grant permission to a principal"
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Grant a Permission to a Principal

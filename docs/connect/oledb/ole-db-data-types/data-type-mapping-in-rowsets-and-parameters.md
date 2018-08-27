@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "SSPROP_ALLOWNATIVEVARIANT property"
   - "GetParameterInfo function"
   - "OLE DB, data types"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Data Type Mapping in Rowsets and Parameters

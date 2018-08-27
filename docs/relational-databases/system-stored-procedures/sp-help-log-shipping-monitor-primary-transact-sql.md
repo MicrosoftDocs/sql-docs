@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_log_shipping_monitor_primary"
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
-caps.latest.revision: 21
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_help_log_shipping_monitor_primary (Transact-SQL)

@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_validname"
 ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

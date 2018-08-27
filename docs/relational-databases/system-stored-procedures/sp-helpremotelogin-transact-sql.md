@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_helpremotelogin"
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpremotelogin (Transact-SQL)

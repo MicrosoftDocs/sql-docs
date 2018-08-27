@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_updateextendedproperty"
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

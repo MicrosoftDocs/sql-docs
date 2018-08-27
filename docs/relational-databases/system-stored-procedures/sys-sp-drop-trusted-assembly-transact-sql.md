@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_drop_trusted_assembly"
 ms.assetid: 
-caps.latest.revision: 
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

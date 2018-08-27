@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "OLE DB error handling, retrieving information"
   - "errors [OLE DB], retrieving information"
   - "OLE DB error handling, examples"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Retrieving Error Information

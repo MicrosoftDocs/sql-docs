@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "spatial_reference_systems"
 ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

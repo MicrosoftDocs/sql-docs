@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Create login [SQL Server]"
   - "SQL Server logins"
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Login

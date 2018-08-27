@@ -10,19 +10,24 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# What is R Server (standalone) and Machine Learning Server (Standalone) in SQL Server
+# R Server (standalone) and Machine Learning Server (Standalone) in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server provides installation support for a standalone R Server or Machine Learning Server that runs independently of SQL Server. A standalone server has a foundation of open-source distributions, overlayed with high-performance libraries from Microsoft that add statistical and predictive analytics at scale. The server also includes libraries for machine learning tasks coded in R or Python. In SQL Server 2016, this feature is called **R Server (Standalone)** and is R-only. In SQL Server 2017, it's called **Machine Learning Server (Standalone)** and includes both R and Python.  
+SQL Server provides installation support for a standalone R Server or Machine Learning Server that runs independently of SQL Server. Depending on your SQL Server version, a standalone server has a foundation of open-source R or Python, overlayed with high-performance libraries from Microsoft that add statistical and predictive analytics at scale, as well as libraries for machine learning tasks coded in R or Python. In SQL Server 2016, this feature is called **R Server (Standalone)** and is R-only. In SQL Server 2017, it's called **Machine Learning Server (Standalone)** and includes both R and Python.  
 
 > [!Note]
 > As installed by SQL Server Setup, a standalone server is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), supporting the same use cases and scenarios, including remote execution, operationalization and web services, and the complete collection of RevoScaleR and revoscalepy functions.
 
-As an independent server decoupled from SQL Server, the R and Python environment is configured, secured, and accessed using the underlying operating system and tools provided in the standalone server, not SQL Server. R and Python developers can choose a standalone server to move beyond the memory and processing constraints of open-source R and Python. A standalone server can load and process large amounts of data on multiple cores and aggregate the results into a single consolidated output. This capability is provided through function libraries that execute on the server. High-performance functions are engineered for both scale and utility: delivering predictive analytics, statistical modeling, data visualizations, and leading-edge machine learning algorithms in a commercial server product engineered and supported by Microsoft.
 
-As an adjunct to SQL Server, a standalone server is useful if you need to develop high-performance machine learning solutions that can use remote compute contexts, switching interchangeably between the local server and a remote Machine Learning Server on a Spark cluster or on another SQL Server instance. The R and Python packages on a standalone server are the same as those provided in a SQL Server (In-Database) installation, allowing for code portability and [compute-context switching](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
+## Use cases
 
-## Components of a standalone server
+R and Python developers typically choose a standalone server to move beyond the memory and processing constraints of open-source R and Python. R and Python libraries executing on a standalone server can load and process large amounts of data on multiple cores and aggregate the results into a single consolidated output. High-performance functions are engineered for both scale and utility: delivering predictive analytics, statistical modeling, data visualizations, and leading-edge machine learning algorithms in a commercial server product engineered and supported by Microsoft.
+
+As an independent server decoupled from SQL Server, the R and Python environment is configured, secured, and accessed using the underlying operating system and standard tools provided in the standalone server, not SQL Server. There is no built-in support for SQL Server relational data. If you want to use SQL Server data, you can create data source objects and connections as you would from any client.
+
+As an adjunct to SQL Server, a standalone server is also useful as a powerful development environment if you need both local and remote capacity. The R and Python packages on a standalone server are the same as those provided with a database engine installation, allowing for code portability and [compute-context switching](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
+
+## Components
 
 SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following table describes the features in each version.
 
@@ -51,7 +56,11 @@ Install either one of these versions:
 
 ### Step 2: Configure a development tool
 
-Configure your development tools to use the Machine Learning Server binaries. For more information about Python, see [Link Python binaries](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools). For instructions on how to connect in R Studio, see [Using Different Versions of R](https://support.rstudio.com/hc/en-us/articles/200486138-Using-Different-Versions-of-R) and point the tool to C:\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64. You could also try [R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation). 
+On a standalone server, it's common to work locally using a development installed on the same computer.
+
++ [Set up R tools](set-up-a-data-science-client.md)
+
++ [Set up Python tools](../python/setup-python-client-tools-sql.md)
 
 ### Step 3: Write your first script
 
@@ -69,5 +78,5 @@ Standalone servers can use the [operationalization](https://docs.microsoft.com//
 
 ## See also
 
- [R Services in SQL Server](sql-server-r-services.md)
+ [Install R Server (Standalone) or Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
 

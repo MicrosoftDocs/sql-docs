@@ -48,6 +48,7 @@
     - name: Install big data tools
       href: sql-server-aris-install-big-data-tools.md
   - name: Manage
+    items:
     - name: Monitoring and troubleshooting   
   - name: Data virtualization
     items:

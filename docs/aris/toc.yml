@@ -49,7 +49,10 @@
       href: sql-server-aris-install-big-data-tools.md
   - name: Manage
     items:
-    - name: Monitoring and troubleshooting   
+    - name: Monitoring
+    - href: sql-server-aris-monitoring.md
+    - name: Troubleshooting   
+    - href: sql-server-aris-troubleshooting.md
   - name: Data virtualization
     items:
     - name: Virtualize external data
@@ -87,14 +90,14 @@
       - name: Write complex analytic queries using multiple external tables​
       - name: Segregate external table queries based on application data
     - name: Polycloud catalog queries?
+    - name: Troubleshooting
+      items:
+      - name: Troubleshooting queries
+        href: sql-server-aris-troubleshooting-queries.md
   - name: Notebooks
     items:
     - name: How to use Jupyter notebooks in SQL Server vNext
       href: sql-server-aris-jupyter-notebook-guidance.md
-  - name: Troubleshoot
-    items:
-    - name: Troubleshoot SQL Server Aris
-      href: sql-server-aris-troubleshoot.md
 - name: Resources
   items:
   - name: FAQ

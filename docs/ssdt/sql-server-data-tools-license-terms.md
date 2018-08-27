@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Server Data Tools - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # SQL Server Data Tools - License Terms
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

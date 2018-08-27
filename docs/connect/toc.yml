@@ -2,8 +2,6 @@
   href: homepage-sql-connection-programming.md
 - name: SQL Server Drivers
   href: sql-connection-libraries.md
-- name: New and updated articles
-  href: new-updated-connect.md
 - name: SQL Server Driver History
   href: connect-history.md
 - name: ADO.NET +

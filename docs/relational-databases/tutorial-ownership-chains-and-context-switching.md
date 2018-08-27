@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ownership chains [SQL Server]"
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: "rothja"
-ms.author: "jroth"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: craigg
 ---
 # Tutorial: Ownership Chains and Context Switching
@@ -27,34 +27,37 @@ manager: craigg
 This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  
-> To run the code in this tutorial you must have both Mixed Mode security configured and the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](../relational-databases/security/choose-an-authentication-mode.md).  
+> To run the code in this tutorial you must have both Mixed Mode security configured and the AdventureWorks2017 database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](../relational-databases/security/choose-an-authentication-mode.md).  
   
 ## Scenario  
-In this scenario, two users need accounts to access purchase order data stored in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The requirements are as follows:  
+In this scenario, two users need accounts to access purchase order data stored in the AdventureWorks2017 database. The requirements are as follows:  
   
 -   The first account (TestManagerUser) must be able to see all details in every purchase order.  
-  
 -   The second account (TestEmployeeUser) must be able to see the purchase order number, order date, shipping date, product ID numbers, and the ordered and received items per purchase order, by purchase order number, for items where partial shipments have been received.  
-  
--   All other accounts must retain their current permissions.  
-  
+-   All other accounts must retain their current permissions.   
 To fulfill the requirements of this scenario, the example is broken into four parts that demonstrate the concepts of ownership chains and context switching:  
   
-1.  Configuring the environment.  
-  
-2.  Creating a stored procedure to access data by purchase order.  
-  
+1.  Configuring the environment.   
+2.  Creating a stored procedure to access data by purchase order.   
 3.  Accessing the data through the stored procedure.  
-  
 4.  Resetting the environment.  
   
-Each code block in this example is explained in line. To copy the complete example, see [Complete Example](#CompleteExample) at the end of this tutorial.  
+Each code block in this example is explained in line. To copy the complete example, see [Complete Example](#CompleteExample) at the end of this tutorial.
+
+## Prerequisites
+To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
+
+- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Download [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+
+For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## 1. Configure the Environment  
-Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2012` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  
+Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2017` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -62,7 +65,7 @@ GO
   
 For more information about the CURRENT_USER statement, see [CURRENT_USER &#40;Transact-SQL&#41;](../t-sql/functions/current-user-transact-sql.md).  
   
-Use this code as the dbo user to create two users on the server and in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+Use this code as the dbo user to create two users on the server and in the AdventureWorks2017 database.  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -174,6 +177,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+The error that's returned:
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 Because the objects referenced by the stored procedure created in the last section are owned by `TestManagerUser` by virtue of the `Purchasing` schema ownership, `TestEmployeeUser` can access the base tables through the stored procedure. The following code, still using the `TestEmployeeUser` context, passes purchase order 952 as a parameter.  
   
@@ -217,7 +226,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  

@@ -1,5 +1,5 @@
 ---
-title: Install SQL Server R Server or Machine Learning Server (Standalone) | Microsoft Docs
+title: Install R Server or Machine Learning Server (Standalone) using SQL Server Setup | Microsoft Docs
 description: Setup a non-instance-aware standalone machine learning server for R and Python development using RevoScaleR, revoscalepy, MicrosoftML and other packages.
 ms.prod: sql
 ms.technology: machine-learning
@@ -11,7 +11,7 @@ ms.author: heidist
 manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Install Machine Learning Server (Standalone) or R Server (Standalone) on Windows
+# Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server setup includes a **shared feature** option for installing a non-instance-aware, standalone machine learning server that runs outside of SQL Server. In SQL Server 2016, this feature is called **R Server (Standalone)**. In SQL Server 2017, it's called **Machine Learning Server (Standalone)** and includes R and Python. 

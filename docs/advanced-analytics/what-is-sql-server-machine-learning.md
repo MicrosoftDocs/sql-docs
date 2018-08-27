@@ -1,5 +1,5 @@
 ---
-title: What is Machine Learning Services in SQL Server  2017? | Microsoft Docs
+title: Machine Learning Services in SQL Server | Microsoft Docs
 description: Overview introduction to SQL Server 2017 Machine Learning services, R and Python support for in-database analytics
 ms.prod: sql
 ms.technology: machine-learning

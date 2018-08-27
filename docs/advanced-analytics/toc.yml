@@ -1,4 +1,4 @@
-- name: Overview
+- name: SQL Server Machine Learning
   items:
   - name: Machine Learning Services (R, Python)
     href: what-is-sql-server-machine-learning.md
@@ -12,9 +12,9 @@
   items:
   - name: Machine Learning Services (R, Python)
     href: install/sql-machine-learning-services-windows-install.md
-  - name: R Services (In-Database)
+  - name: R Services
     href: install/sql-r-services-windows-install.md
-  - name: Standalone server  (R, Python)
+  - name: Standalone server (R, Python)
     href: install/sql-machine-learning-standalone-windows-install.md
   - name: Pre-trained models
     href: install/sql-pretrained-models-install.md

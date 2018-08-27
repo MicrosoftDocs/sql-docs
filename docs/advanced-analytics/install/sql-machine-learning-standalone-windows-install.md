@@ -125,7 +125,7 @@ The following table lists the paths for each installation.
 
 ## Development tools
 
-A development IDE is not installed as part of setup. For more information on how to configure a development environment, see [Set up R tools](./r/set-up-a-data-science-client.md) and [Set up Python tools](./python/setup-python-client-tools-sql.md).
+A development IDE is not installed as part of setup. For more information on how to configure a development environment, see [Set up R tools](../r/set-up-a-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
 
 ## Get help
 

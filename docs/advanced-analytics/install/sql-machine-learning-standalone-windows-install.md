@@ -77,7 +77,7 @@ When installation is finished, see [Custom reports for SQL Server R Services](..
 For help with any errors or warnings, see [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 ::: moniker-end
 
-::: moniker range=">sql-server-2016"
+::: moniker range="=sql-server-2016"
 ## Run Setup
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.

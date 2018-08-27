@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Automatic tuning | Microsoft Docs"
 description: Learn about automatic tuning in SQL Server and Azure SQL Database
 ms.custom: ""
@@ -19,7 +19,7 @@ caps.latest.revision:
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Automatic tuning
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

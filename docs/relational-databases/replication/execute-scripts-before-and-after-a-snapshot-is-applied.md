@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Execute Scripts Before and After a Snapshot Is Applied | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -19,7 +19,7 @@ caps.latest.revision: 39
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Execute Scripts Before and After a Snapshot Is Applied
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

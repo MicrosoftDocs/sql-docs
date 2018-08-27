@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Database Checkpoints (SQL Server) | Microsoft Docs"
 ms.date: "09/23/2016"
 ms.prod: sql
@@ -30,7 +30,7 @@ caps.latest.revision: 74
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Checkpoints (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.time_zone_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2018"
@@ -26,7 +26,7 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.time_zone_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-asdw-xxx-md.md)]

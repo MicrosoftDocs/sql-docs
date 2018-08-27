@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Initialization and Authorization Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -19,7 +19,7 @@ ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Initialization and Authorization Properties
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DDL Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/01/2016"
@@ -16,7 +16,7 @@ ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Events
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "OLE Automation Objects in Transact-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -17,7 +17,7 @@ ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE Automation Objects in Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -24,10 +24,9 @@ manager: craigg
 ## August 2018 (August Public Preview)
 
 release date: August 28, 2018  
-version: 0.32.5
+version: 0.32.6
 
-The *August Public Preview* focuses on on bug fixes, product stabilization and filling gaps in existing scenarios.
-
+The *August Public Preview* focuses on on bug fixes, product stabilization, and filling gaps in existing scenarios.
 
 - Announcing the SQL Server Import Extension
 - SQL Server Profiler Session management
@@ -38,7 +37,7 @@ The *August Public Preview* focuses on on bug fixes, product stabilization and f
 
 ### Bug Fixes
 
-- Parse SQL in a Query Editor window by using the `Parse Syntax` command
+- Parse SQL in a Query Editor window by using the *Parse Syntax* command
 - Save edit data scroll position when switching tabs [#2129](https://github.com/Microsoft/sqlopsstudio/pull/2129)
 - View as Chart options are cut off at the bottom [#1497](https://github.com/Microsoft/sqlopsstudio/pull/1497)
 - Cancel change connection disconnects current connection [#1474](https://github.com/Microsoft/sqlopsstudio/pull/1474)
@@ -48,7 +47,7 @@ The *August Public Preview* focuses on on bug fixes, product stabilization and f
 - Feature Request: Auto Connect to current server after Script as... [#825](https://github.com/Microsoft/sqlopsstudio/pull/825)
 - Added more saveAsCsv options [#2099](https://github.com/Microsoft/sqlopsstudio/pull/2099)
 - Feature Suggestion: Get Connection String for existing connection [#1620](https://github.com/Microsoft/sqlopsstudio/pull/1620)
-- Bug: Results pane loses its scrolling positions when switching between tabs [#1744](https://github.com/Microsoft/sqlopsstudio/pull/1744)
+- Results pane loses its scrolling positions when switching between tabs [#1744](https://github.com/Microsoft/sqlopsstudio/pull/1744)
 - Agent: Enabled button to import queries from sql files [#2042](https://github.com/Microsoft/sqlopsstudio/pull/2042)
 - .sql files not associated with SQL Operations Studio [#1836](https://github.com/Microsoft/sqlopsstudio/pull/1836)
 - Copy from query results grid is off by 1 column [#1985](https://github.com/Microsoft/sqlopsstudio/pull/1985)

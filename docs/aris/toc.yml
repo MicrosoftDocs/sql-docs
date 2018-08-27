@@ -12,16 +12,13 @@
     href: quickstart-sql-server-aris-get-started.md 
   - name: Run Jupyter Notebooks
     href: quickstart-sql-server-aris-jupyter-notebook.md
-- name: Samples
-  items:
-  - name: Notebooks
-    href: sql-server-aris-notebook-samples.md
 - name: Concepts
   items:
   - name: HDFS
     href: concept-hdfs.md
   - name: Spark
     href: concept-spark.md
+  - name: Machine Learning
   - name: Controller
     href: concept-controller.md
   - name: Master instance
@@ -50,6 +47,8 @@
       href: sql-server-aris-deploy-on-vms.md
     - name: Install big data tools
       href: sql-server-aris-install-big-data-tools.md
+  - name: Manage
+    - name: Monitoring and troubleshooting   
   - name: Data virtualization
     items:
     - name: Virtualize external data
@@ -60,6 +59,7 @@
       href: sql-server-aris-data-ingestion-curl.md
     - name: Restore a database
       href: sql-server-aris-restore-databse.md
+    - name: Streaming  
   - name: Query scenarios
     items:
     - name: Data pool scenarios

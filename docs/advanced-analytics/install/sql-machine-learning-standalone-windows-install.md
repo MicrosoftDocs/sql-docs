@@ -20,14 +20,14 @@ A standalone server as installed by SQL Server Setup is functionally equivalent 
 
 As an independent server decoupled from SQL Server, the R and Python environment is configured, secured, and accessed using the underlying operating system and tools provided in the standalone server, not SQL Server.
 
-As an adjunct to SQL Server, a standalone server useful if you need to develop high-performance machine learning solutions that can use remote compute contexts, switching interchangeably between the local server and a remote Machine Learning Server on a Spark cluster or on another SQL Server instance.
+As an adjunct to SQL Server, a standalone server is useful if you need to develop high-performance machine learning solutions that can use remote compute contexts, switching interchangeably between the local server and a remote Machine Learning Server on a Spark cluster or on another SQL Server instance.
   
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
 If you installed a previous version, such as SQL Server 2016 R Server (Standalone) or Microsoft R Server, uninstall the existing installation before continuing.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
  ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement 
 
 For SQL Server 2016 only: Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server. If this update to the VC runtime binaries is not installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server follow the instructions at [SQL Server Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries.  
@@ -44,21 +44,21 @@ For local installations, you must run Setup as an administrator. If you install 
 1. Start the installation wizard.
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-1. Click the **Installation** tab, and select **New Machine Learning Server (Standalone) installation**.
+2. Click the **Installation** tab, and select **New Machine Learning Server (Standalone) installation**.
     
      ![Install Machine Learning Server Standalone](media/2017setup-installation-page-mlsvr.png "Start installation of Machine Learning Server Standalone")
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-1. On the **Installation** tab, click **New R Server (Standalone) installation**.
+::: moniker range="=sql-server-2016"
+2. On the **Installation** tab, click **New R Server (Standalone) installation**.
     
      ![Start setup of R Server Standalone](media/2016-setup-installation-rsvr.png "Start setup of R Server Standalone")
 ::: moniker-end
 
-1. After the rules check is complete, accept SQL Server licensing terms, and select a new installation.
+3. After the rules check is complete, accept SQL Server licensing terms, and select a new installation.
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-1. On the **Feature Selection** page, the following options should already be selected:
+4. On the **Feature Selection** page, the following options should already be selected:
 
     - Microsoft Machine Learning Server (Standalone)
 
@@ -76,8 +76,8 @@ For local installations, you must run Setup as an administrator. If you install 
     > For these reasons, we generally recommend that you install Machine Learning Server (Standalone) on a separate computer from SQL Server Machine Learning Services.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-1.  On the **Feature Selection** page, the following option should be already selected:
+::: moniker range="=sql-server-2016"
+4.  On the **Feature Selection** page, the following option should be already selected:
     
     **R Server (Standalone)**  
     
@@ -93,27 +93,19 @@ For local installations, you must run Setup as an administrator. If you install 
     > We generally recommend that you install R Server (Standalone) on a separate computer from SQL Server R Services (In-Database).
 ::: moniker-end
 
-1.  Accept the license terms for downloading and installing Microsoft R Open. When the **Accept** button becomes unavailable, you can click **Next**.
+5.  Accept the license terms for downloading and installing base language distributions. When the **Accept** button becomes unavailable, you can click **Next**. 
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-1.  Accept the license terms for downloading and installing Anaconda.
-    
      ![Python license agreement](media/2017setup-python-license.png "Python license agreement")
-    
-    Installation of these components, and any prerequisites they might require, might take a while. When the **Accept** button becomes unavailable, you can click **Next**.
 ::: moniker-end
 
-1.  On the **Ready to Install** page, verify your selections, and click **Install**.
+6.  On the **Ready to Install** page, verify your selections, and click **Install**.
 
 ### Default installation folders
 
-When you install R Server or Machine Learning Server using SQL Server setup, the R libraries are installed in a folder associated with the SQL Server version that you used for setup. In this folder, you will also find sample data, documentation for the R base packages, and documentation of the R tools and runtime.
+For R and Python development, it's common to have multiple versions on the same computer. As installed by SQL Server setup, the base distribution is installed in a folder associated with the SQL Server version that you used for setup.
 
-However, if you install using the separate Windows installer, or if you upgrade using the separate Windows installer, the R libraries are installed in a different folder.
-
-Just for reference, if you have installed an instance of SQL Server with R Services (In-Database) or Machine Learning Services (In-Database), and that instance is on the same computer, the R libraries and tools are installed by default in a different folder.
-
-The following table lists the paths for each installation.
+The following table lists the paths for R and Python distributions created by Microsoft installers. For completeness, the table includes paths generated by SQL Server setup as well as the standalone installer for Microsoft Machine Learning Server.
 
 |Version| Installation method | Default folder|
 |----|----|----|
@@ -144,9 +136,11 @@ R developers can get started with some simple examples, and learn the basics of 
 + [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
 + [Tutorial: Run Python in T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Tutorial: In-database analytics for Python developers](../tutorials/sqldev-in-database-python-for-sql-developers.md)
+::: moniker-end
 
 To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).

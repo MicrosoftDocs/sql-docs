@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ALTER DATABASE File and Filegroup Options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2018"
@@ -60,18 +60,9 @@ In the following row, click whichever product name you are interested in. The cl
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
-> </tr>
-> </table>
-
-&nbsp;
+> |||
+> |-|-|-|
+> |**_\* SQL Server \*_**<br />&nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 
 # SQL Server
 

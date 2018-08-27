@@ -20,12 +20,12 @@
     href: concept-spark.md
   - name: Machine Learning and extensibility
     items:
-      -name: Java extension
-       href: sql-server-aris-ml-java-extension.md
-      -name: Spark ML
-       href: sql-server-aris-ml-spark.md
-      -name: ML services on Master
-       href: sql-server-aris-ml-on-master.md
+    -name: Java extension
+     href: sql-server-aris-ml-java-extension.md
+    -name: Spark ML
+     href: sql-server-aris-ml-spark.md
+    -name: ML services on Master
+     href: sql-server-aris-ml-on-master.md
   - name: Controller
     href: concept-controller.md
   - name: Master instance

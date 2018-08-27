@@ -67,11 +67,11 @@ Enter the computer name of the Scale Out Worker you want to add and click **Vali
 
 If validation succeeds, Scale Out Manager tries to read the  worker server configuration file and get the certificate thumbprint of the worker. For more info, see [Scale Out Worker](integration-services-ssis-scale-out-worker.md). If Scale Out Manager can't read the worker service configuration file, there are two alternative ways for you to provide the worker certificate. 
 
-1.  You can enter the thumbprint of worker certificate directly.
+- You can enter the thumbprint of worker certificate directly.
 
     ![Worker Certificate 1](media/portal-cert1-new.PNG)
 
-2.  Or, you can provide the certificate file. 
+- Or, you can provide the certificate file.
 
     ![Worker Certificate 2](media/portal-cert2-new.PNG)
 

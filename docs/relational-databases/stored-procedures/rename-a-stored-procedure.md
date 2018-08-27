@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Rename a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
@@ -15,7 +15,7 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

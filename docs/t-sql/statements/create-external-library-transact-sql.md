@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL LIBRARY (Transact-SQL)  
 

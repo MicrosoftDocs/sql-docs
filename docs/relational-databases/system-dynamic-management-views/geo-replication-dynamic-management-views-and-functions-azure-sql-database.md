@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Geo-Replication Dynamic Management Views and Functions (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2015"
@@ -21,7 +21,7 @@ caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

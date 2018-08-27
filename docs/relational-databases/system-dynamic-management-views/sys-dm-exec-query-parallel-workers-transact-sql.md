@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
@@ -23,7 +23,7 @@ caps.latest.revision: 1
 author: "pelopes"
 ms.author: "pelopes"
 manager: "ajayj"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

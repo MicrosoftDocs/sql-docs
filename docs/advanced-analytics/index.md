@@ -12,11 +12,11 @@ manager: cgronlun
 
 # SQL Server AI and Extensibility Documentation
 
-[SQL Server machine learning](what-is-sql-server-machine-learning.md) extends the database engine to include embedded R, Python, and Java for running external code on resident, relational data. Learn how to use external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles.
+[SQL Server machine learning](what-is-sql-server-machine-learning.md) extends the database engine to include embedded R, Python, and Java for running external code on SQL Server. Learn how to use external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles.
 
-R and Python libraries include base distributions, extended with Microsoft machine learning algorithms and a comprehensive collection of functions in RevoScaleR and revoscalepy for predictive analytics at scale. Data manipulation and transformation, exploration and visualization, and analysis are available at the instance level without having to load or transfer data across the network.
+R and Python libraries include base distributions, enriched with Microsoft machine learning algorithms and a comprehensive collection of functions in RevoScaleR and revoscalepy for high-performance predictive analytics. Data manipulation and transformation, exploration and visualization, and analysis are available at the instance level without having to transfer data across the network.
 
-Java support uses the same extensibility framework as R and Python, but does not have the Microsoft machine learning libraries (such as RevoScaleR or revoscalepy).
+Java code execution uses the same extensibility framework as R and Python, but does not include Java-equivalent packages for machine learning or embedded analytics at scale.
 
 |   |   | 
 |---|---|-
@@ -28,7 +28,7 @@ Java support uses the same extensibility framework as R and Python, but does not
 
 + [Create a predictive model in R](./tutorials/rtsql-create-a-predictive-model-r.md)
 
-+ [Predict and plot from model using R](./tutorials/rtsql-predict-and-plot-from-model)
++ [Predict and plot from model using R](./tutorials/rtsql-predict-and-plot-from-model.md)
 
 
 ## Step-by-Step Tutorials

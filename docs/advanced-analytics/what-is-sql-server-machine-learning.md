@@ -1,31 +1,25 @@
 ---
-title: What is SQL Server Machine Learning Services? | Microsoft Docs
+title: What is Machine Learning Services in SQL Server  2017? | Microsoft Docs
+description: Overview introduction to SQL Server 2017 Machine Learning services, R and Python support for in-database analytics
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 08/27/2018  
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# What is SQL Server Machine Learning Services?
+# What is Machine Learning Services in SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server Machine Learning Services is an embedded, predictive analytics and data science engine that can execute R and Python code within a SQL Server database as stored procedures, as T-SQL script containing R or Python statements, or as R or Python code containing T-SQL. 
+SQL Server 2017 Machine Learning Services is an embedded, predictive analytics and data science engine that can execute R and Python code within a SQL Server database as stored procedures, as T-SQL script containing R or Python statements, or as R or Python code containing T-SQL. If you previously used SQL Server 2016 R Services, SQL Server 2017 Machine Learning services is the next generation of R support in SQL Server, providing updated versions of RevoScaleR, MicrosoftML, and other R libraries introduced in 2016.
 
 The key value proposition of Machine Learning Services is the power of its proprietary packages to deliver advanced analytics at scale, and the ability to bring calculations and processing to where the data resides, eliminating the need to pull data across the network.
 
-There are two options for using machine learning capabilities in SQL Server: 
-
-+ [**SQL Server Machine Learning Services (In-Database)**](r/sql-server-r-services.md) operates within the database engine instance, where the calculation engine is fully integrated with the database engine. Most installations are this option.
-+ [**SQL Server Machine Learning Server (Standalone)**](r/r-server-standalone.md) is Machine Learning Server for Windows that runs independently of the database engine. Although you use SQL Server Setup to install the server, the feature is not instance-aware. Functionally, it is equivalent to the non-SQL-Server [Microsoft Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
-
 ## R and Python packages
 
-Support for each language is through proprietary Microsoft packages used for creating and training models of various types, scoring data, and parallel processing using the underlying system resources.
-
-Because the proprietary packages are built on open-source R and Python distributions, script or code that you run in SQL Server can also call base functions and use third-party packages compatible with the language version provided in SQL Server (Python 3.5 and recent versions of R, currently 3.3.3).
+Microsoft R and Python packages are built on open-source R and Python distributions, which means that script or code that you run in SQL Server can also call base functions and use third-party packages compatible with the language version provided in SQL Server (Python 3.5 and recent versions of R, currently 3.3.3).
 
 | R  | Python | Description |
 |-----------|----------------|-------------|
@@ -38,6 +32,23 @@ Because the proprietary packages are built on open-source R and Python distribut
 Portability of your custom R and Python code is addressed through package distribution and interpreters that are built into multiple products. The same packages that ship in SQL Server are also available in several other Microsoft products and services, including a non-SQL version called [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Free clients that include our R and Python interpreters include [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) and the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
 
 Packages and interpreters are also available on several [Azure virtual machines](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux), Azure Machine Learning, and Azure services like [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight). 
+
+## Components of Machine Learning Services
+
+SQL Server 2017 supports R and Python. The following table describes the components.
+
+| Component | Description |
+|-----------|-------------|
+| SQL Server Launchpad service | A service that manages communications between the external R and Python runtimes and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. |
+| R packages | [RevoScaleR](revoscaler-overview.md) is the primary library for scaleable R with functions for data manipulation, transformation, visualzation, and analysis.  <br/>[MicrosoftML (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[mrsdeploy](operationalization-with-mrsdeploy.md) offers web service deployment (in SQL Server 2017 only). <br/>[olapR](how-to-create-mdx-queries-using-olapr.md) is for specifying MDX queries in R.|
+| Microsoft R Open (MRO) | [MRO](https://mran.microsoft.com/open) is Microsoft's open-source distribution of R. The package and interpreter are included. Always use the version of MRO bundled in setup. |
+| R tools | R console windows and command prompts are standard tools in an R distribution. Find them at \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
+| R Samples and scripts |  Open-source R and RevoScaleR packages include built-in data sets so that you can create and run script using pre-installed data. Look for them at \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets and \library\RevoScaleR. |
+| Python packages | [revoscalepy](../python/what-is-revoscalepy.md) is the primary library for scaleable Python with functions for data manipulation, transformation, visualzation, and analysis. <br/>[microsoftml (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis.  |
+| Python tools | The built-in Python command line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
+| Anaconda | Anaconda is an open-source distribution of Python and essential packages. |
+| Python samples and scripts | As with R, Python includes built-in data sets  and scripts. Find the revoscalepy data at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
+| Pre-trained models in R and Python | Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. The setup program for Microsoft Machine Learning Server provides the models, which you can install free of charge. For more information, see [Install pretrained machine learning models on SQL Server](../install/sql-pretrained-models-install.md). |
 
 
 ## Use cases
@@ -53,6 +64,8 @@ The most common approach for in-database analytics is to use [sp_execute_externa
 From any client workstation that has an IDE, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) or the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), and then write code that pushes execution (referred to as a *remote compute context*) to data and operations to a remote SQL Server. 
 
 Similarly, if you are using the Developer edition, you can build solutions on a client workstation using the same libraries and interpreters, and then deploy production code on SQL Server Machine Learning Services (In-Database). 
+
+
 
 ## Version history
 

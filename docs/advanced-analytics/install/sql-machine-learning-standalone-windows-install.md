@@ -27,6 +27,10 @@ As an adjunct to SQL Server, a standalone server is useful if you need to develo
 
 If you installed a previous version, such as SQL Server 2016 R Server (Standalone) or Microsoft R Server, uninstall the existing installation before continuing.
 
+As a general rule, we recommend that you treat standalone server and database engine instance-aware installations as mutually exclusive to avoid resource contention, but if you have sufficient resources, there is no prohibition against installing them both on the same physical computer.
+
+You can only have one standalone server on the computer: either SQL Server 2017 Machine Learning Server or SQL Server 2016 R Server (Standalone). You must manually uninstall one version before installing a different version.
+
 ::: moniker range="=sql-server-2016"
  ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement 
 

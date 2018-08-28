@@ -1,6 +1,6 @@
 ---
 title: Standalone R Server or Machine Learning Server installation in SQL Server | Microsoft Docs
-description: Overview introduction to standalone R server and Machine Learning Server in SQL Server Setup
+description: Overview introduction to standalone R Server and Machine Learning Server in SQL Server Setup
 ms.prod: sql
 ms.technology: machine-learning
 

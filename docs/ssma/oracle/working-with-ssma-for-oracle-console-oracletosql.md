@@ -36,5 +36,5 @@ Topics covered in this section include:
 |[Troubleshooting &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|Provides brief information about fixing migration issues.|  
   
 ## See Also  
-[Getting Started with SSMA for Oracle Console](http://msdn.microsoft.com/en-us/667a5e4a-6848-4973-a72d-1287f64718ac)  
+[Getting Started with SSMA for Oracle Console](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
   

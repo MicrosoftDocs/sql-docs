@@ -1,15 +1,11 @@
 ---
 title: Development SQL Server partners | Microsoft Docs
 description: Lists of third-party partners with development solutions for Server.
-services: sql-server
-documentationcenter: NA
-ms.suite: "sql"
-ms.devlang: NA
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: ""
-ms.date: 17/09/2017    
+ms.date: 09/17/2017    
 ms.prod: sql
+ms.technology: 
 ms.prod_service: "database-engine"
 ms.author: mikeray
 author: MikeRayMSFT

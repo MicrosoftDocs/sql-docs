@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addlogin"
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_addlogin (Transact-SQL)

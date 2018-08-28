@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "backup devices [SQL Server], viewing information"
   - "sys.backup_devices catalog view"
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-caps.latest.revision: 32
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sys.backup_devices (Transact-SQL)

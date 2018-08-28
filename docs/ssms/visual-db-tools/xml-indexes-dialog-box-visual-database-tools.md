@@ -89,5 +89,5 @@ Compute new statistics when the index is created. Re-computing statistics slows 
 Specify whether row-level locking is allowed on this index. Allowing or disallowing row-level locking affects database performance.  
   
 ## See Also  
-[Create XML Indexes](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[Create XML Indexes](../../relational-databases/xml/create-xml-indexes.md)  
   

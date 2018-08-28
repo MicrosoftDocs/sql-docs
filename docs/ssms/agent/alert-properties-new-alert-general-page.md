@@ -85,7 +85,7 @@ Specify the WQL statement that identifies the event that the alert responds to.
   
 ## See Also  
 [Alerts](../../ssms/agent/alerts.md)  
-[Using WQL with the WMI Provider for Server Events](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)  
+[Using WQL with the WMI Provider for Server Events](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
 [Create an Alert Using an Error Number](../../ssms/agent/create-an-alert-using-an-error-number.md)  
 [Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
   

@@ -307,9 +307,10 @@ The below query displays a wealth of information about the health of both the av
  ```sql
  -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
  SELECT 
-    ag.name AS 'Distributed AG', 
- 	ar.replica_server_name AS 'AG', 
- 	dbs.name AS 'Database', 
+        ag.name AS 'AG Name', 
+        ag.is_distributed, 
+        ar.replica_server_name AS 'AG', 
+        dbs.name AS 'Database',
  	ars.role_desc, 
 	drs.synchronization_health_desc, 
 	drs.log_send_queue_size, 

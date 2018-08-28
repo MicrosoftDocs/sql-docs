@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "security [SQL Server], planning"
   - "applications [SQL Server], security"
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: 31
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Securing SQL Server

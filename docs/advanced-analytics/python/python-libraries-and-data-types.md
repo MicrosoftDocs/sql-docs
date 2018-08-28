@@ -18,7 +18,7 @@ This article also lists unsupported data types, and lists the data type conversi
 
 ## Python Version
 
-SQL Server 2017 CTP 2.0 includes a portion of the Anaconda distribution and Python 3.6.
+SQL Server 2017 Anaconda 4.2 distribution and Python 3.6.
 
 A subset of the RevoScaleR functionality (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, maybe a few others) is provided using Python APIs, using a new Python package **revoscalepy**. You can use this package to work with data using Pandas data frames, XDF files, or SQL data queries.
 

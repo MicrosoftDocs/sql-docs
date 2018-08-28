@@ -155,7 +155,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Database Maintenance Plans](http://msdn.microsoft.com/library/ms187658.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online)  
+-   [Database Maintenance Plans](../maintenance-plans/maintenance-plans.md) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online)  
   
 ## See Also  
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   

@@ -46,7 +46,7 @@ The Create New Project page is where you enter the project file name, location a
 ## Add Access Databases Page  
 The Add Access Databases page is where you add one or more Access databases to the project. You can add individual databases by clicking **Add Databases**, and then selecting the databases from the **Open** window. Or, you can find databases by using the **Find Databases** button. For more information, see the following topics:  
   
--   [Adding and Removing Access Database Files](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+-   [Adding and Removing Access Database Files](adding-and-removing-access-database-files-accesstosql.md)  
   
 -   [Find Databases Wizard (Select Locations)](http://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
   
@@ -82,7 +82,7 @@ On the Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** and the migration starts.  
   
 ## Connect to SQL Azure Page  
-On the Connect to SQL Azure page, you specify connection properties, and then connect to SQL Azure. To create a new azure database, you can do so by using **Create Azure Database** option that appears on the click of **Browse** button. For more information, see [Connect to SQL Azure](http://msdn.microsoft.com/bf44b236-d9be-41ae-a5fd-bd73038e505f)  
+On the Connect to SQL Azure page, you specify connection properties, and then connect to SQL Azure. To create a new azure database, you can do so by using **Create Azure Database** option that appears on the click of **Browse** button. For more information, see [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md)  
   
 > [!IMPORTANT]  
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** button on the Links page to start migration.  
@@ -100,6 +100,6 @@ For more information about this page, see [Convert, Load, and Migrate](http://ms
   
 ## See Also  
 [Getting Started with SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [User Interface Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

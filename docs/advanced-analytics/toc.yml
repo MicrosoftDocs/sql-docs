@@ -87,17 +87,15 @@
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - Get data and scripts
+      - name: 1 - Set up demo data
         href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 - Set up the environment
-        href: r/sqldev-import-data-to-sql-server-using-powershell.md
-      - name: 3 - Visualize data
+      - name: 2 - Visualize data
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 4 - Create data features
+      - name: 3 - Create data features
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 5 - Train and save to SQL
+      - name: 4 - Train and save to SQL
         href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 6 - Predict outcomes
+      - name: 5 - Predict outcomes
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Data science end-to-end walkthrough
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -215,14 +213,8 @@
       href: r/r-libraries-and-data-types.md
     - name: Python libraries and data types
       href: python/python-libraries-and-data-types.md
-    - name: Native scoring
-      href: sql-native-scoring.md
-    - name: Real-time scoring
-      href: real-time-scoring.md
     - name: Predictive modeling with R
       href: r/data-exploration-and-predictive-modeling-with-r.md
-    - name: How to perform real-time or native scoring
-      href: r/how-to-do-realtime-scoring.md
     - name: Load R objects using ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
     - name: Converting R Code for Use in Machine Learning Services
@@ -233,6 +225,14 @@
       href: r/using-data-from-olap-cubes-in-r.md
     - name: Create a stored procedure using sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+  - name: Predictions
+    items:
+    - name: How to generate predictions
+      href: r/how-to-do-realtime-scoring.md   
+    - name: Real-time scoring with sp_rxPredict
+      href: real-time-scoring.md
+    - name: Native scoring with PREDICT T-SQL
+      href: sql-native-scoring.md
   - name: Performance
     items:
     - name: Performance tuning for R - Overview

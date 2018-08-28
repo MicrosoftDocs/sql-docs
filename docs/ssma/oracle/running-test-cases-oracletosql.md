@@ -26,7 +26,7 @@ To run the prepared Test Case:
   
 2.  In the **Connect to Oracle** dialog box, enter the connection information, and then click **Connect**.  
   
-When the test is complete, the Test Case Report is created. Click the **Report** button to view the [Test Case Report](http://msdn.microsoft.com/8da14323-9dd6-4019-bf79-3e8b972a9bc0). The result of the test (Test Case Report) is automatically stored in the [Test Results Repository](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4) for later use.  
+When the test is complete, the Test Case Report is created. Click the **Report** button to view the [Test Case Report](viewing-test-case-reports-oracletosql.md). The result of the test (Test Case Report) is automatically stored in the [Test Results Repository](using-test-repositories-oracletosql.md) for later use.  
   
 ## Test Case Execution Steps  
   

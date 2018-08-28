@@ -1,7 +1,5 @@
 - name: Overview
   href: analysis-services-language-reference.md
-- name: New and updated articles
-  href: new-updated-mdx.md
 - name: Multidimensional Expressions (MDX) Reference
   href: multidimensional-expressions-mdx-reference.md
   items:

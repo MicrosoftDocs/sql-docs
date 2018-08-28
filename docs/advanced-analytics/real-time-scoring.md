@@ -1,5 +1,9 @@
 ---
 title: Real-time scoring in SQL Server machine learning | Microsoft Docs
+<<<<<<< HEAD
+=======
+description: Generate predictions using sp_rxPredict, scoring dta inputs against a pre-trained model written in R on SQL Server.
+>>>>>>> 29732579600bae690b7a61198a97b8cae5605c64
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,6 +14,7 @@ ms.author: heidist
 manager: cgronlun
 ---
 
+<<<<<<< HEAD
 # Real-time scoring in SQL Server machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -21,6 +26,19 @@ This article describes a feature available in SQL Server 2016 R Services and SQL
 ## How real-time scoring works
 
 Real-time scoring is supported in both SQL Server 2017 and SQL Server 2016, on specific model types based on RevoScaleR or MicrosoftML functions such as  [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
+=======
+# Real-time scoring with sp_rxPredict in SQL Server machine learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This article explains how scoring in near-real-time works for SQL Server relational data, using machine learning models written in R. 
+
+> [!Note]
+> Native scoring is a special implementation of real-time scoring that uses the native T-SQL PREDICT function for very fast scoring. For more information and availability, see [Native scoring](sql-native-scoring.md).
+
+## How real-time scoring works
+
+Real-time scoring is supported in both SQL Server 2017 and SQL Server 2016, on specific model types based on RevoScaleR or MicrosoftML functions such as  [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) or [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
+>>>>>>> 29732579600bae690b7a61198a97b8cae5605c64
 
 Because a trained model can be used for scoring without having to call an external language runtime, the overhead of multiple processes is reduced. This supports much faster prediction performance for production scoring scenarios. Because the data never leaves SQL Server, results can be generated and inserted into a new table without any data translation between R and SQL.
 

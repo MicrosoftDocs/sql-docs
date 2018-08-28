@@ -13,6 +13,7 @@ ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # SQL Server Agent Properties (Advanced Tab)

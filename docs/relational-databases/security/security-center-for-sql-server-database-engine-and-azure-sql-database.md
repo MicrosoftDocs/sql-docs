@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Security Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/27/2017"
@@ -18,10 +18,10 @@ helpviewer_keywords:
   - "databases [SQL Server], security"
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 55
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,9 +76,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Additional links for application programmers:  
   
--   [Application Security Scenarios in SQL Server](https://msdn.microsoft.com/library/bb669057.aspx)  
+-   [Application Security Scenarios in SQL Server](/dotnet/framework/data/adonet/sql/application-security-scenarios-in-sql-server)  
   
--   [Writing Secure Dynamic SQL in SQL Server](https://msdn.microsoft.com/library/bb669091.aspx)  
+-   [Writing Secure Dynamic SQL in SQL Server](/dotnet/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server)  
   
 -   [How To: Protect From SQL Injection in ASP.NET](https://msdn.microsoft.com/library/ff648339.aspx)  
   

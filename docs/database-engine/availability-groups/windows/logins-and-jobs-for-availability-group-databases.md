@@ -59,13 +59,13 @@ manager: craigg
   
 -   [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
   
--   [Create a Job](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Create a Job](../../../ssms/agent/create-a-job.md)  
   
 -   [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Contained Databases](../../../relational-databases/databases/contained-databases.md)   
- [Create Jobs](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)  
+ [Create Jobs](../../../ssms/agent/create-jobs.md)  
   
   

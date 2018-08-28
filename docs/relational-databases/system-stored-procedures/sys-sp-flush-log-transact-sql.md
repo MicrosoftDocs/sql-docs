@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_flush_log"
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
-caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sys.sp_flush_log (Transact-SQL)

@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syspolicy_policies view"
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
-caps.latest.revision: 25
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # syspolicy_policies (Transact-SQL)

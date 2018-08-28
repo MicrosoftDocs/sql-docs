@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create and Store Column Master Keys (Always Encrypted) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/01/2016"
@@ -14,7 +14,7 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Store Column Master Keys (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ A column master key for Always Encrypted can be stored in a key store implementi
 
 To make an HSM available to applications on a given machine, a Key Storage Provider (KSP), which implements CNG, must be installed and configured on the machine. An Always Encrypted client driver (a column master key store provider inside the driver), uses the KSP to encrypt and decrypt column encryption keys, protected with column master key stored in the key store.
 
-Windows includes Microsoft Software Key Storage Provider – a software-based KSP, which you can use for testing purposes. See [CNG Key Storage Providers](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx).
+Windows includes Microsoft Software Key Storage Provider – a software-based KSP, which you can use for testing purposes. See [CNG Key Storage Providers](/windows/desktop/SecCertEnroll/cng-key-storage-providers).
 
 ### Creating Column Master Keys in a Key Store using CNG/KSP
 

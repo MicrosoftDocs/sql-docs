@@ -3,9 +3,9 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
-author: "craigg-msft" 
-ms.author: "craigg"
-ms.topic: "hub-page"
+author: craigg-msft 
+ms.author: craigg
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: install
 ---
@@ -33,12 +33,11 @@ ms.technology: install
                                                 <h3 class="bgdAccent1" style="padding:20px;">Databases</h3>
                                                 <h4>SQL</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/">Azure SQL Database</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is">Azure SQL Data Warehouse</a></li>                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016">SQL Server 2016</a></li>
                                                     <li><a class="barLink" href="/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">Previous Versions (2005 - 2012)</a></li>
-                                                    <li><a class="barLink" href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
-                                                    <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL Data Warehouse</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">Previous SQL Server Versions (2005 - 2012)</a></li>
                                                     <li><a class="barLink" href="/sql/analytics-platform-system/index">Analytics Platform System - Parallel Data Warehouse</a><li>
                                                 </ul>
                                                 <h4>Run on Windows or Linux</h4>
@@ -108,10 +107,8 @@ ms.technology: install
                                                     <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>
                                                     <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
                                                     <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
-                                                    <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li> 
-                                                    <li><a class="barLink" href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
-                                                    <li><a class="barLink" href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li> 
+                                                    <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server Machine Learning Services</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server (Standalone)</a></li>
                                                 </ul>

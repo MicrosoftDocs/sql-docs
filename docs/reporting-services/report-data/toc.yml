@@ -69,8 +69,6 @@
   href: store-credentials-in-a-reporting-services-data-source.md
 - name: Update Credentials in Report Data Sources from a SharePoint Site
   href: update-credentials-in-report-data-sources-from-a-sharepoint-site.md
-- name: Enter Data Source Credentials Dialog Box
-  href: enter-data-source-credentials-dialog-box-report-builder.md
 - name: Specify Connections for Custom Data Processing Extensions
   href: specify-connections-for-custom-data-processing-extensions.md
 - name: Bind a Report or Model to a Shared Data Source
@@ -131,8 +129,6 @@
     href: set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
   - name: Dataset Fields Collection
     href: dataset-fields-collection-report-builder-and-ssrs.md
-  - name: Dataset Properties Dialog Box, Filters
-    href: dataset-properties-dialog-box-filters.md
   - name: Dataset Properties Dialog Box, Options
     href: dataset-properties-dialog-box-options-report-builder.md
   - name: Dataset Properties Dialog Box, Parameters

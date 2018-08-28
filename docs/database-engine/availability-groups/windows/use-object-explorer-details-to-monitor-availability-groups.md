@@ -25,7 +25,7 @@ manager: craigg
   This topic describes how to use the **Object Explorer Details** pane of [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] to monitor and manage existing Always On availability groups, availability replicas, and availability databases.  
   
 > [!NOTE]  
->  For information about using the Object Explorer Details pane, see [Object Explorer Details Pane](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47).  
+>  For information about using the Object Explorer Details pane, see [Object Explorer Details Pane](../../../ssms/object/object-explorer-details-pane.md).  
   
 -   **Before you begin:**  [Prerequisites](#Prerequisites)  
   

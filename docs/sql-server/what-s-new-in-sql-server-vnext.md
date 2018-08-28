@@ -31,6 +31,8 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 
 - [Database engine](#databaseengine)
   - Intelligent query processing
+- [High Availability](#ha)
+  - Connection redirection
 - [SQL Graph](#sqlgraph)
   - Match support in `MERGE` DML
   - Derived Tables and Views support for graph tables
@@ -42,6 +44,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - OpenLDAP support for third-party AD providers
   - Machine Learning support
   - New container registry
+  - New RHEL-based container images
 - [PolyBase](#polybase)
   - New connectors for SQL Server, Oracle, Teradata, and MongoDB.
 - [SQL Server Machine Learning Services](#ml)
@@ -79,6 +82,10 @@ Continue reading for more details about these features.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
 
+## <a id="ha"></a> High Availability
+
+- **Connection redirection**: Improved scale-out with automatic redirection of connections based on read/write intent.
+
 ## <a id="sqlgraph"></a> SQL Graph
 
 - **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
@@ -100,13 +107,15 @@ Continue reading for more details about these features.
 
 - **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server vNext on Linux supports the Microsoft Distributed Transactions Coordinator (MSDTC).
 
-- **Always On Availability Group on Docker containers with Kubernetes**: Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor. 
+- **Always On Availability Group on Docker containers with Kubernetes**: Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor.
 
 - **OpenLDAP support for third-party AD providers**: SQL Server on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
-- **Machine Learning on Linux**: Linux now supports SQL Server vNext Machine Learning Services (In-Database). For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server vNext Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux**: SQL Server vNext Machine Learning Services (In-Database) is now supported on Linux. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server vNext Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-- **New container registry**: Certified container images for SQL Server vNext as well as SQL Server 2017 are now located in the Microsoft Container Registry.
+- **New container registry**: All container images for SQL Server vNext as well as SQL Server 2017 are now located in the Microsoft Container Registry.
+
+- **New RHEL-based container images**: New certified RHEL-based container images are now available.
 
 ## <a id="polybase"></a> PolyBase
 
@@ -114,13 +123,13 @@ Continue reading for more details about these features.
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
 
-- **Machine Learning on Linux**: Linux now supports SQL Server vNext Machine Learning Services (In-Database). For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server vNext Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux**: SQL Server vNext Machine Learning Services (In-Database) is now supported on Linux. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server vNext Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 - **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
 
 - **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
 
-- **Java extensibility**: Use the Java language extension to execute Java code on relational data in SQL Server. Extensibility is enabled when you add Machine Learning Services to a database engine instance.
+- **Java extensibility**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature ‘Machine Learning Services (in-database) to your SQL Server instance.
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 

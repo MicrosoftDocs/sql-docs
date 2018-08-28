@@ -29,29 +29,33 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
 
-- Database engine
+- [Database engine](#databaseengine)
   - Intelligent query processing
-- SQL Server on Linux
+- [SQL Graph](#sqlgraph)
+  - Match support in `MERGE` DML
+  - Derived Tables and Views support for graph tables
+  - Edge Constraints
+- [SQL Server on Linux](#sqllinux)
   - Replication support
   - Support for the Microsoft Distributed Transaction Coordinator (MSDTC)
   - Always On Availability Group on Docker containers with Kubernetes
   - OpenLDAP support for third-party AD providers
   - Machine Learning support
   - New container registry
-- PolyBase
+- [PolyBase](#polybase)
   - New connectors for SQL Server, Oracle, Teradata, and MongoDB.
-- SQL Server Machine Learning Services
+- [SQL Server Machine Learning Services](#ml)
   - Machine Learning on Linux
   - Partition-based modeling
   - Failover cluster support
   - Java extensibility
-- Security
+- [Security](#security)
   - Always Encrypted with enclaves
   - Database scoped default setting for online and resumable DDL operations
 
 Continue reading for more details about these features.
 
-## Database Engine
+## <a id="databaseengine"></a> Database Engine
 
 ### Intelligent query processing 
 
@@ -75,7 +79,7 @@ Continue reading for more details about these features.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
 
-## SQL Graph
+## <a id="sqlgraph"></a> SQL Graph
 
 - **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 
@@ -83,7 +87,7 @@ Continue reading for more details about these features.
 
 - **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
 
-## SQL Server on Linux
+## <a id="sqllinux"></a> SQL Server on Linux
 
 - **Replication support**. CTP 2.0 supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
@@ -104,11 +108,11 @@ Continue reading for more details about these features.
 
 - **New container registry**: Certified container images for SQL Server vNext as well as SQL Server 2017 are now located in the Microsoft Container Registry.
 
-## PolyBase
+## <a id="polybase"></a> PolyBase
 
 - **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server vNext introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
 
-## SQL Server Machine Learning Services
+## <a id="ml"></a> SQL Server Machine Learning Services
 
 - **Machine Learning on Linux**: Linux now supports SQL Server vNext Machine Learning Services (In-Database). For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server vNext Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
@@ -116,11 +120,11 @@ Continue reading for more details about these features.
 
 - **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
 
-- **Java extensibility**: Use the Java language extension with Machine Learning.
+- **Java extensibility**: Use the Java language extension to execute Java code on relational data in SQL Server. Extensibility is enabled when you add Machine Learning Services to a database engine instance.
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
-## Security
+## <a id="security"></a>Security
 
 - Database scoped default setting for online and resumable DDL operations.
 

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "effective permissions"
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 caps.latest.revision: 5
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_grant_proxy_to_subsystem"
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
-caps.latest.revision: 37
-author: "stevestein"
-ms.author: "sstein"
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_grant_proxy_to_subsystem (Transact-SQL)

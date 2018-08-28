@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_resetsnapshotdeliveryprogress"
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_resetsnapshotdeliveryprogress (Transact-SQL)

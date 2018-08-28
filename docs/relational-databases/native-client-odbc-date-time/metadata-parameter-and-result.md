@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Parameter and Result Metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,7 +15,7 @@ ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata - Parameter and Result
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

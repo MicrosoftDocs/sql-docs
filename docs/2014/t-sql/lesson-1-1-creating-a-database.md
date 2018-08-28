@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorial creating a database"
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Creating a Database (Tutorial)

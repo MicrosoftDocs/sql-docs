@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database access"
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
 caps.latest.revision: 11
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Granting Access to a Database

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.server_principals (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -20,11 +20,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_principals catalog view"
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

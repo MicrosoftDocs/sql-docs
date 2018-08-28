@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_browsereplcmds"
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 # sp_browsereplcmds (Transact-SQL)

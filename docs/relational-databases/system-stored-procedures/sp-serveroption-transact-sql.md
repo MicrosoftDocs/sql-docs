@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_serveroption"
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_serveroption (Transact-SQL)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, updating data"
   - "OLE DB Driver for SQL Server, data updates"
   - "data updates [SQL Server], OLE DB"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Updating Data in Rowsets

@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergefilter"
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
-caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addmergefilter (Transact-SQL)

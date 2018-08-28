@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_prepexecrpc"
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_prepexecrpc (Transact-SQL)

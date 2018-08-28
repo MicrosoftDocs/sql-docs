@@ -1,7 +1,5 @@
 - name: Overview
   href: data-quality-services.md
-- name: New and updated articles
-  href: new-updated-data-quality-services.md
 - name: Concept and Features
   items:
   - name: Introduction to Data Quality Services

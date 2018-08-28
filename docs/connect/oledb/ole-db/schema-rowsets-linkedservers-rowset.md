@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "LINKEDSERVERS rowset"
   - "enumerating data sources [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Schema Rowsets - LINKEDSERVERS Rowset

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Modify a Partition Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,7 +12,7 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify a Partition Function
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

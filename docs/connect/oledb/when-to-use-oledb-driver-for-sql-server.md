@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server"
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
   - "data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # When to Use OLE DB Driver for SQL Server

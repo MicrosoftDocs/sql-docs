@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_sqlmaint"
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
-author: CarlRabeler
-ms.author: carlrab
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # xp_sqlmaint (Transact-SQL)

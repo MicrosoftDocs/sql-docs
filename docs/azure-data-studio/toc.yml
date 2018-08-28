@@ -55,12 +55,10 @@
   items:
   - name: Transact-SQL Reference
     href: ../t-sql/language-reference.md
-  - name: Azure Data Studio (preview) GitHub repo
+  - name: SQL Operations Studio (preview) GitHub repo
     href: https://www.github.com/Microsoft/SqlOpsStudio
   - name: SQL Server Blog
     href: https://blogs.technet.microsoft.com/dataplatforminsider/
-  - name: New and updated articles
-    href: new-updated-azure-data-studio.md
 - name: FAQ
   href: faq.md
 - name: Report issues & make suggestions

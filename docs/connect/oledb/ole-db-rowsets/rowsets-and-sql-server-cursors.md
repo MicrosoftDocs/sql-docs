@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "rowsets [OLE DB], cursors"
   - "properties [OLE DB]"
   - "cursors [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Rowsets and SQL Server Cursors

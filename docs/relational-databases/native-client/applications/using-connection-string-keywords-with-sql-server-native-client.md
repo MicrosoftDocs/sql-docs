@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Using Connection String Keywords with SQL Server Native Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
@@ -19,7 +19,7 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Connection String Keywords with SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

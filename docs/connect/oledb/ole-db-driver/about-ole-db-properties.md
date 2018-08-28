@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, properties"
   - "properties [OLE DB]"
   - "property values [OLE DB Driver for SQL Server]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # About OLE DB Properties

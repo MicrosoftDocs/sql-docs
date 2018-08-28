@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_subscribe_to_policy_category"
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
-caps.latest.revision: 7
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_subscribe_to_policy_category (Transact-SQL)

@@ -32,13 +32,15 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - Database engine - Intelligent query processing
 - SQL Server on Linux
   - Replication support
-  - Active Directory Impersonation
+  - Support for the Microsoft Distributed Transaction Coordinator (MSDTC)
   - Always On Availability Group on Docker containers with Kubernetes
+  - OpenLDAP support for third-party AD providers
+- PolyBase
+  - New connectors for SQL Server, Oracle, Teradata, and MongoDB.
 - SQL Server Machine Learning Services - High availability with Windows Server failover cluster
-- Security 
+- Security
   - Always Encrypted with enclaves
-  - Database scoped default setting for online and resumable DDL operations 
-
+  - Database scoped default setting for online and resumable DDL operations
 
 Continue reading for more details about these features.
 
@@ -84,10 +86,16 @@ Continue reading for more details about these features.
   - Merge
 
   CTP 2.0 does not support configuration of replication with the user interface. Use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
-  
-- **Always On Availability Group on Docker containers with Kubernetes**. Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor. 
 
-- **Active Directory impersonation**
+- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server vNext on Linux supports the Microsoft Distributed Transactions Coordinator (MSDTC).
+
+- **Always On Availability Group on Docker containers with Kubernetes**: Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor. 
+
+- **OpenLDAP support for third-party AD providers**: SQL Server on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
+
+## PolyBase
+
+- **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server vNext introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
 
 ## SQL Server Machine Learning Services
 

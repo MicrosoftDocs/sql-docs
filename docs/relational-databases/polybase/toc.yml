@@ -1,21 +1,44 @@
 - name: Overview
   href: polybase-guide.md
-- name: Get started
-  href: get-started-with-polybase.md
-- name: Feature summary
-  href: polybase-versioned-feature-summary.md
-- name: Scale-out groups
-  href: polybase-scale-out-groups.md
-- name: Installation
-  href: polybase-installation.md
-- name: Configuration
-  href: polybase-configuration.md
-- name: T-SQL objects
-  href: polybase-t-sql-objects.md
-- name: Queries
-  href: polybase-queries.md
-- name: Troubleshooting
-  href: polybase-troubleshooting.md
+- name: Quickstarts
   items:
-  - name: Troubleshoot PolyBase Kerberos connectivity
-    href: polybase-troubleshoot-connectivity.md
+  - name: Query Hadoop on Windows
+    href: quickstart-query-hadoop-windows.md
+- name: Concepts
+  items:
+  - name: Query scenarios
+    href: polybase-queries.md
+  - name: Scale-out groups
+    href: polybase-scale-out-groups.md
+- name: How-to guides
+  items:
+  - name: Install
+    items:
+    - name: Features and limitations
+      href: polybase-versioned-feature-summary.md
+    - name: Install on Windows
+      href: polybase-installation.md
+  - name: Troubleshoot
+    items:
+    - name: Monitor and troubleshoot
+      href: polybase-troubleshooting.md
+    - name: Kerberos connectivity
+      href: polybase-troubleshoot-connectivity.md
+- name: Reference
+  items:
+  - name: Transact-SQL reference
+    href: polybase-t-sql-objects.md
+- name: Resources
+  items:
+  - name: SQL Server documentation
+    href: /sql-server/sql-server-technical-documentation?view=sql-server-linux-2017
+  - name: DBA Stack Exchange
+    href: https://dba.stackexchange.com/questions/tagged/sql-server
+  - name: Stack Overflow
+    href: http://stackoverflow.com/questions/tagged/sql-server
+  - name: MSDN Forums
+    href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
+  - name: Submit feedback
+    href: https://feedback.azure.com/forums/908035-sql-server
+  - name: Reddit
+    href: https://www.reddit.com/r/SQLServer

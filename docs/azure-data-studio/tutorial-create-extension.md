@@ -17,7 +17,7 @@ manager: craigg
 
 # Tutorial: Create an Azure Data Studio extension
 
-This tutorial demonstrates how to create a new !INCLUDE[name-sos-short](../includes/name-sos-short.md) extension.
+This tutorial demonstrates how to create a new Azure Data Studio (preview) extension.
 
 During this tutorial you learn how to:
 > [!div class="checklist"]
@@ -34,13 +34,11 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so we'll
 
 - [Node.js](https://nodejs.org) installed and available in your `$PATH`. Node.js includes [npm](https://www.npmjs.com/), the Node.js Package Manager, which is used to install the extension generator.
 - [Visual Studio Code](https://code.visualstudio.com) to debug the extension.
-- The !INCLUDE[name-sos-short](../includes/name-sos-short.md) [Debug extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
+- The Azure Data Studio [Debug extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
 - Ensure sqlops is on your path. For Windows, make sure you choose the "Add to Path" option in the setup.exe. For Mac/Linux, you can run the Install 'sqlops' command in PATH option.
 
 
 ## Create a new extension project
-
-
 
 Visual Studio Code
 Node.js installed and added to your path
@@ -83,7 +81,6 @@ In this step, ...
 
 In this step, ...
 
-![alt text](./media/tutorial-keymap-extension/filename.png)
 
 ## Next steps
 

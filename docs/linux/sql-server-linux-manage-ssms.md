@@ -20,7 +20,7 @@ ms.custom: "sql-linux"
 This article introduces [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) and walks you through a couple of common tasks. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 > [!TIP]
-> If you do not have a Windows machine to run SSMS on, consider the new [SQL Server Operations Studio](../sql-operations-studio/index.md). It provides a graphical tool for managing SQL Server and runs on both Linux and Windows.
+> If you do not have a Windows machine to run SSMS on, consider the new [Azure Data Studio](../azure-data-studio/index.md). It provides a graphical tool for managing SQL Server and runs on both Linux and Windows.
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) is part of a suite of SQL tools that Microsoft offers free of charge for your development and management needs. SSMS is an integrated environment to access, configure, manage, administer, and develop all components of SQL Server. It can connect to SQL Server running on any platform both on-premises, in Docker containers, and in the cloud. It also connects to Azure SQL Database and Azure SQL Data Warehouse. SSMS combines a broad group of graphical tools with a number of rich script editors to provide access to SQL Server to developers and administrators of all skill levels.
 

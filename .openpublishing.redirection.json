@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server.md",
+            "redirect_url": "https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
             "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
             "redirect_document_id": false
@@ -121,6 +126,52 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-databases/tables/lesson-1-1-examining-the-current-structure-of-the-employee-table.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-1-3-optimizing-the-neworg-table.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
             "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
             "redirect_document_id": false
@@ -186,18 +237,23 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md",
+            "redirect_url": "/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/reporting-services/extensions/data-processing/removing-a-data-processing-extension.md",
-            "redirect_url": "/sql/reporting-services/extensions/reporting-services-extensions?view=sql-server-2017",
+            "redirect_url": "/sql/reporting-services/extensions/reporting-services-extensions",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md",
-            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension?view=sql-server-2017",
+            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md",
-            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension?view=sql-server-2017",
+            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension",
             "redirect_document_id": false
         },
         {

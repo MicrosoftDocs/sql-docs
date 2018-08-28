@@ -6,15 +6,13 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting database objects"
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
-caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: vanto
+ms.author: VanMSFT
 manager: craigg
 ---
 # Deleting Database Objects

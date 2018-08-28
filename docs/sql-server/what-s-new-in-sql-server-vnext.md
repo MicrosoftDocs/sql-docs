@@ -29,15 +29,22 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
 
-- Database engine - Intelligent query processing
+- Database engine
+  - Intelligent query processing
 - SQL Server on Linux
   - Replication support
   - Support for the Microsoft Distributed Transaction Coordinator (MSDTC)
   - Always On Availability Group on Docker containers with Kubernetes
   - OpenLDAP support for third-party AD providers
+  - Machine Learning support
+  - New container registry
 - PolyBase
   - New connectors for SQL Server, Oracle, Teradata, and MongoDB.
-- SQL Server Machine Learning Services - High availability with Windows Server failover cluster
+- SQL Server Machine Learning Services
+  - Machine Learning on Linux
+  - Partition-based modeling
+  - Failover cluster support
+  - Java extensibility
 - Security
   - Always Encrypted with enclaves
   - Database scoped default setting for online and resumable DDL operations
@@ -93,15 +100,23 @@ Continue reading for more details about these features.
 
 - **OpenLDAP support for third-party AD providers**: SQL Server on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
+- **Machine Learning on Linux**: Linux now supports SQL Server vNext Machine Learning Services (In-Database). For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server vNext Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+
+- **New container registry**: Certified container images for SQL Server vNext as well as SQL Server 2017 are now located in the Microsoft Container Registry.
+
 ## PolyBase
 
 - **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server vNext introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
 
 ## SQL Server Machine Learning Services
 
-- **sp_execute_external_script**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
+- **Machine Learning on Linux**: Linux now supports SQL Server vNext Machine Learning Services (In-Database). For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server vNext Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+
+- **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
 
 - **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
+
+- **Java extensibility**: Use the Java language extension with Machine Learning.
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 

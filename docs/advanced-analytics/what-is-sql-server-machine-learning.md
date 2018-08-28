@@ -26,7 +26,7 @@ SQL Server 2017 supports R and Python. The following table describes the compone
 | Component | Description |
 |-----------|-------------|
 | SQL Server Launchpad service | A service that manages communications between the external R and Python runtimes and the database engine instance. |
-| R packages | [**RevoScaleR**](r/revoscaler-overview.md) is the primary library for scaleable R. Functions in this library are among the most widely used. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling and analyses are found in these libraries. Additionally, functions in these libraries automatically distribute workloads across available cores for parallel processing, with the ability to work on chunks of data that are coordinated and managed by the calculation engine.  <br/>[**MicrosoftML (R)**](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[**sqlRUtils**](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) provides helper functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.<br/>[**olapR**](r/how-to-create-mdx-queries-using-olapr.md) is for building or executing an MDX query in R script.|
+| R packages | [**RevoScaleR**](r/revoscaler-overview.md) is the primary library for scaleable R. Functions in this library are among the most widely used. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling and analyses are found in these libraries. Additionally, functions in these libraries automatically distribute workloads across available cores for parallel processing, with the ability to work on chunks of data that are coordinated and managed by the calculation engine.  <br/>[**MicrosoftML (R)**](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[**sqlRUtils**](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) provides helper functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.<br/>[**olapR**](r/how-to-create-mdx-queries-using-olapr.md) is for building or executing an MDX query in R script.|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) is Microsoft's open-source distribution of R. The package and interpreter are included. Always use the version of MRO installed by Setup. |
 | R tools | R console windows and command prompts are standard tools in an R distribution.  |
 | R Samples and scripts |  Open-source R and RevoScaleR packages include built-in data sets so that you can create and run script using pre-installed data. |
@@ -48,13 +48,13 @@ Finally, if you are using a [standalone server](r/r-server-standalone.md) and th
 
 ### Step 1: Install the software
 
-+ [SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
  
 ### Step 2: Configure a development tool
 
 Data scientists typically use R or Python on their own laptop or development workstation, to explore data, and build and tune predictive models until a good predictive model is achieved. With in-database analytics in SQL Server, there is no need to change this process. After installation is complete, you can run R or Python code on SQL Server locally and remotely.
 
-![rsql_keyscenario2](media/rsql-keyscenario2.png) 
+![rsql_keyscenario2](media/r/rsql-keyscenario2.png) 
 
 + **Use the IDE you prefer**. You can link the R and Python libraries to your development tool of choice. For more information, see [Set up R tools](r/set-up-a-data-science-client.md) and [Set up Python tools](python/setup-python-client-tools-sql.md).  
 
@@ -87,13 +87,13 @@ Traditionally, data scientists using R have had problems with both performance a
 
 + **revoscalepy**. This Python library implements the most popular functions in RevoScaleR, such as remote compute contexts, and many algorithms that support distributed processing.
 
-For more information about performance, see this [performance case study](../../advanced-analytics/r/performance-case-study-r-services.md) and [R and data optimization](../../advanced-analytics/r/r-and-data-optimization-r-services.md).
+For more information about performance, see this [performance case study](r/performance-case-study-r-services.md) and [R and data optimization](r/r-and-data-optimization-r-services.md).
 
 ### Step 5: Deploy and Consume
 
 After the script or model is ready for production use, a database developer might embed the code or model in a stored procedure so that the saved R or Python code can be called from an application. Storing and running R code from SQL Server has many benefits: you can use the convenient SQL Server interface, and all computations take place in the database, avoiding unnecessary data movement.
 
-![rsql_keyscenario1](media/rsql-keyscenario1.png)
+![rsql_keyscenario1](media/r/rsql-keyscenario1.png)
 
 + **Secure and extensible**. SQL Server uses a new extensibility architecture that keeps your database engine secure and isolates R and Python sessions. You also have control over the users who can execute scripts, and you can specify which databases can be accessed by code. You can control the amount of resources allocated to the runtime, to prevent massive computations from jeopardizing the overall server performance.
 
@@ -105,7 +105,7 @@ To take advantage of the resource management and security features in SQL Server
 + Setting up security and locking down packages used by a particular task
 + Enabling resource governance (requires the Enterprise edition)
 
-For more information, see [Resource Governance for R](resource-governance-for-r-services.md) and [R Package Management for SQL Server](install-additional-r-packages-on-sql-server.md).
+For more information, see [Resource Governance for R](r/resource-governance-for-r-services.md) and [R Package Management for SQL Server](r/install-additional-r-packages-on-sql-server.md).
 
 ## Version history
 

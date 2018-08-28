@@ -39,16 +39,16 @@ Start with setup, attach the binaries to your favorite development tool, and wri
 
 **Step 1:** Install and configure the software. 
 
-+ [Install SQL Server 2016 R Services (In-Database)](install/sql-r-services-windows-install.md)
++ [Install SQL Server 2016 R Services (In-Database)](../install/sql-r-services-windows-install.md)
 
 **Step 2:** Gain hands-on experience using either one of these tutorials:
 
-+ [Tutorial: Learn in-database analytics using R](tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [Tutorial: End-to-end walkthrough with R](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [Tutorial: Learn in-database analytics using R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: End-to-end walkthrough with R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
 **Step 3:** Add your favorite R packages and use them together with packages provided by Microsoft
 
-+ [R Package management for SQL Server](r/install-additional-r-packages-on-sql-server.md)
++ [R Package management for SQL Server](install-additional-r-packages-on-sql-server.md)
 
 
 ## See also

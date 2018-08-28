@@ -11,7 +11,7 @@
 - name: Tutorials
   items:
   - name: Scale-out groups (Windows)
-    href: tutorial-scale-out-group-windows.md
+    href: tutorial-scale-out-groups-windows.md
   - name: Scale-out groups (Linux)
     href: tutorial-scale-out-groups-linux.md
 - name: Concepts

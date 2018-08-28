@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: polybase
 ms.tgt_pltfrm: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "PolyBase, fundamentals"
   - "PolyBase, SQL statements"

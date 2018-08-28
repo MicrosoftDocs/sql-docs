@@ -6,6 +6,11 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/install/sql-r-standalone-windows-install.md",
+            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install",
+            "redirect_document_id": false
+        },   
+        {
             "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
             "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
             "redirect_document_id": false

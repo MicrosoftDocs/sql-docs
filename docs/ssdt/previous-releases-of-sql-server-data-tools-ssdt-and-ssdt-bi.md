@@ -28,7 +28,7 @@ SSDT is backwards compatible, so you can always use [the newest SSDT](download-s
 
 ## Recent downloads
 
-The last few downloads are provided for the unlikely event that you experience issues with the [latest release](download-sql-server-data-tools-ssdt.md). 
+The last few downloads are provided for the unlikely event that you experience issues with the latest release.
 
 |SSDT release| Visual Studio 2017|
 |:---|:---|
@@ -36,7 +36,6 @@ The last few downloads are provided for the unlikely event that you experience i
 |15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
 |15.5.2|[SSDT for VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
 <br>
-
 
 |SSDT release| Visual Studio 2015|
 |:---|:---|

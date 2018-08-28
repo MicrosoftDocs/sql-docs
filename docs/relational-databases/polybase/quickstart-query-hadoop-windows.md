@@ -8,18 +8,9 @@ ms.custom: ""
 ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: "quickstart"
-f1_keywords: 
-  - "PolyBase"
-  - "PolyBase, guide"
-helpviewer_keywords: 
-  - "PolyBase"
-  - "PolyBase, overview"
-  - "Hadoop import ×"
-  - "Hadoop export"
-  - "Hadoop export, PolyBase overview"
-  - "Hadoop import, PolyBase overview"
 author: rothja
 ms.author: jroth
 manager: craigg
+monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Query Hadoop from SQL Server on Windows

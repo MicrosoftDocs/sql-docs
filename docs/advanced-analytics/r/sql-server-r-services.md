@@ -13,7 +13,7 @@ manager: cgronlun
 # R Services in SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2016 R Services is an add-on to a database engine instance, used for executing R code within a SQL Server database as stored procedures, as T-SQL script containing R statements, or as R code containing T-SQL. 
+SQL Server 2016 R Services is an add-on to a database engine instance, used for executing R code on SQL Server. 
 Code runs in an extensibility framework, isolated from core engine processes, but fully available to relational data as stored procedures, as T-SQL script containing R statements, or as R code containing T-SQL. 
 
 R Services includes a base distribution of R, overlayed with enterprise R packages from Microsoft so that you can load and process large amounts of data on multiple cores and aggregate the results into a single consolidated output. Microsoft's R functions and algorithms are engineered for both scale and utility: delivering predictive analytics, statistical modeling, data visualizations, and leading-edge machine learning algorithms in a commercial server product engineered and supported by Microsoft. 
@@ -29,80 +29,27 @@ SQL Server 2016 is R only. The following table describes the features in SQL Ser
 | SQL Server Launchpad service | A service that manages communications between the external R runtimes and the SQL Server instance. |
 | R packages | [**RevoScaleR**](revoscaler-overview.md) is the primary library for scaleable R. Functions in this library are among the most widely used. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling and analyses are found in these libraries. Additionally, functions in these libraries automatically distribute workloads across available cores for parallel processing, with the ability to work on chunks of data that are coordinated and managed by the calculation engine.  <br/>[**MicrosoftML (R)**](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. <br/>[**sqlRUtils**](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) provides helper functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment<br/>[**olapR**](how-to-create-mdx-queries-using-olapr.md) is for specifying MDX queries in R.|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) is Microsoft's open-source distribution of R. The package and interpreter are included. Always use the version of MRO installed by Setup. |
-| R tools | R console windows and command prompts are standard tools in an R distribution. Find them at \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
+| R tools | R console windows and command prompts are standard tools in an R distribution.  |
 | R Samples and scripts |  Open-source R and RevoScaleR packages include built-in data sets so that you can create and run script using pre-installed data |
-| Pre-trained models in R | Pre-trained models are created and maintained by the data science engineering team at Microsoft. The models run in R Services, but cannot be install tthrough SQL Server Setup. Tor more information, see [Install pre-trained machine learning models on SQL Server](../install/sql-pretrained-models-install.md). |
+| Pre-trained models in R | Pre-trained models are created for specific use cases and maintained by the data science engineering team at Microsoft. You can use the pre-trained models as-is to score positive-negative sentiment in text, or detect features in images, using new data inputs that you provide. The models run in R Services, but cannot be installed through SQL Server Setup. For more information, see [Install pre-trained machine learning models on SQL Server](../install/sql-pretrained-models-install.md). |
 
 ## How to get started
 
 Start with setup, attach the binaries to your favorite development tool, and write your first script.
 
-### Step 1: Install the software
+**Step 1:** Install and configure the software. 
 
-+ [SQL Server 2016 R Services (In-Database) - R only](../install/sql-r-services-windows-install.md)
- 
-### Step 2: Configure a development tool
++ [Install SQL Server 2016 R Services (In-Database)](install/sql-r-services-windows-install.md)
 
-Data scientists typically use R or Python on their own laptop or development workstation, to explore data, and build and tune predictive models until a good predictive model is achieved. With in-database analytics in SQL Server, there is no need to change this process. After installation is complete, you can run R or Python code on SQL Server either locally or remotely:
+**Step 2:** Gain hands-on experience using either one of these tutorials:
 
-![rsql_keyscenario2](media/rsql-keyscenario2.png) 
++ [Tutorial: Learn in-database analytics using R](tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: End-to-end walkthrough with R](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-+ **Use the IDE you prefer**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] client components provide the data scientist with all the tools needed to experiment and develop. These tools include the R runtime, the Intel math kernel library to boost the performance of standard R operations, and a set of enhanced R packages that support executing R code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+**Step 3:** Add your favorite R packages and use them together with packages provided by Microsoft
 
-+ **Work remotely or locally**. Data scientists can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and bring the data to the client for local analysis, as usual. However, a better solution is to use the **RevoScaleR** or **revoscalepy** APIs to push computations to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, avoiding costly and insecure data movement.
++ [R Package management for SQL Server](r/install-additional-r-packages-on-sql-server.md)
 
-+ **Embed R or Python scripts in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures**. When your code is fully optimized, wrap it in a stored procedure to avoid unnecessary data movement and optimize data processing tasks.
-
-### Step 3: Write your first script
-
-Call R or Python functions from within T-SQL script:
-  
-  + [R: Use R code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md) 
-  + [R: In-database analytics for SQL developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-  + [Python: Run Python using T-SQL](../tutorials/run-python-using-t-sql.md)
-  + [Python: In-database analytics for SQL developers](../tutorials/sqldev-in-database-python-for-sql-developers.md)
-
-Choose the best language for the task. R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
-
-### Step 4: Optimize your solution
-
-When the model is ready to scale on enterprise data, the data scientist often works with the DBA or SQL developer to optimize processes such as:
-
-+ Feature engineering
-+ Data ingestion and data transformation
-+ Scoring
-
-Traditionally data scientists using R have had problems with both performance and scale, especially when using large dataset. That is because the common runtime implementation is single-threaded and can accommodate only those data sets that fit into the available memory on the local computer. Integration with SQl Server Machine Learning Services provides multiple features for better performance, with more data:
-
-+ **RevoScaleR**: This R package contains implementations of some of the most popular R functions, redesigned to provide parallelism and scale. The package also includes functions that further boost  performance and scale by pushing computations to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, which typically has far greater memory and computational power.
-
-+ **revoscalepy**. This Python library, available in SQL Server 2017, implements the most popular functions in RevoScaleR, such as remote compute contexts, and many algorithms that support distributed processing.
-
-**Resources**
-
-+ [Performance Case Study](../../advanced-analytics/r/performance-case-study-r-services.md)
-+ [R and Data Optimization](../../advanced-analytics/r/r-and-data-optimization-r-services.md)
-
-### Step 5: Deploy and Consume
-
-After the script or model is ready for production use, a database developer might embed the code or model in a stored procedure, so that the saved R or Python code can be called from an application. Storing and running R code from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has many benefits: you can use the convenient [!INCLUDE[tsql](../../includes/tsql-md.md)] interface, and all computations take place in the database, avoiding unnecessary data movement.
-
-![rsql_keyscenario1](media/rsql-keyscenario1.png)
-
-+ **Secure and extensible**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] uses a new extensibility architecture that keeps your database engine secure and isolates R and Python sessions. You also have control over the users who can execute scripts, and you can specify which databases can be accessed by code. You can control the amount of resources allocated to the runtime, to prevent massive computations from jeopardizing the overall server performance.
-
-+ **Scheduling and auditing**. When external script jobs are run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can control and audit the data used by data scientists. You can also schedule jobs and author workflows containing external R or Python scripts, just like you would schedule any other T-SQL job or stored procedure.
-
-To take advantages of the resource management and securty features in SQL Server, the deployment process might include these tasks:
-
-+ Converting yourcode to a function that can run optimally in a stored procedure
-+ Setting up security and locking down packages used by a particular task
-+ Enabling resource governance (requires the Enterprise edition)
-
-**Resources**
-
-+ [Resource Governance for R](resource-governance-for-r-services.md)
-+ [R Package Management for SQL Server](install-additional-r-packages-on-sql-server.md)
 
 ## See also
 

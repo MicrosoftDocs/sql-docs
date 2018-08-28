@@ -13,3 +13,9 @@ ms.author: jroth
 manager: craigg
 ---
 # Query Hadoop from SQL Server on Windows
+
+TBD
+
+## Next steps
+
+TBD

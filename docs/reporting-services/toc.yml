@@ -4,8 +4,6 @@
   items:
   - name: What's new in Reporting Services
     href: what-s-new-in-sql-server-reporting-services-ssrs.md
-  - name: New and updated articles
-    href: new-updated-reporting-services.md
   - name: Change log
     href: change-log-sql-server-reporting-services.md
   - name: Reporting Services Concepts (SSRS)

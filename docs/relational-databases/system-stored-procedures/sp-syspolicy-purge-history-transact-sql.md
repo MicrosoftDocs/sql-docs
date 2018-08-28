@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_purge_history"
 ms.assetid: 6db414e7-4946-4bd2-8264-6b490810b306
-caps.latest.revision: 7
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_purge_history (Transact-SQL)

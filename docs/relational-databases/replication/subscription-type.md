@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Subscription Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +17,7 @@ caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Subscription Type
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

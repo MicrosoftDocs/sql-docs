@@ -14,8 +14,8 @@ ms.topic: "reference"
 apitype: "COM"
 helpviewer_keywords: 
   - "IBCPSession interface"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # IBCPSession (OLE DB)

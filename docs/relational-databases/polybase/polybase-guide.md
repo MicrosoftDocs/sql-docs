@@ -7,7 +7,7 @@ ms.suite: "sql"
 ms.custom: ""
 ms.technology: polybase
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 f1_keywords: 
   - "PolyBase"
   - "PolyBase, guide"

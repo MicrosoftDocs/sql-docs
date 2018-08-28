@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_changedbowner"
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_changedbowner (Transact-SQL)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "IRowsetResynch interface"
   - "resynchronizing rows"
   - "data updates [SQL Server], OLE DB"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Updating Data in Rowsets - Resynchronizing Rows

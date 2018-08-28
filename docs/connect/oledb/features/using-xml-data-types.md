@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server OLE DB interfaces"
   - "XML [SQL Server], OLE DB Driver for SQL Server"
   - "COLUMNS rowset"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Using XML Data Types

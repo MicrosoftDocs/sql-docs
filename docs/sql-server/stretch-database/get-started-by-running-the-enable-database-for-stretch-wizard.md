@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 f1_keywords: 
   - "sql13.swb.stretchwizard.f1"
   - "sql13.swb.stretchwizard.createdatabasecredentials.f1"

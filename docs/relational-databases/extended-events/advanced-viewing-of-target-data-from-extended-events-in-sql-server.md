@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Advanced Viewing of Target Data from Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/04/2016"
@@ -14,7 +14,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Advanced Viewing of Target Data from Extended Events in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

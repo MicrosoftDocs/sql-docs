@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/21/2017"
@@ -21,10 +21,10 @@ helpviewer_keywords:
   - "sys.columns catalog view"
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 caps.latest.revision: 57
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

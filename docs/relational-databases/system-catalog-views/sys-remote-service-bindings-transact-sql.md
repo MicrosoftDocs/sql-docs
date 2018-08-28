@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.remote_service_bindings catalog view"
 ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sys.remote_service_bindings (Transact-SQL)

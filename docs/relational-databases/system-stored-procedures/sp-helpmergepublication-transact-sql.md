@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_helpmergepublication"
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpmergepublication (Transact-SQL)

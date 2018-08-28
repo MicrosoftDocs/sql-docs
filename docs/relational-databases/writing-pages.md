@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Writing Pages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -16,7 +16,7 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: "pmasl"
 ms.author: "pelopes"
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Writing Pages
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addsubscriber_schedule"
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addsubscriber_schedule (Transact-SQL)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "AddColumn function"
   - "OLE DB Driver for SQL Server, columns"
   - "adding columns"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Adding a Column to a SQL Server Table

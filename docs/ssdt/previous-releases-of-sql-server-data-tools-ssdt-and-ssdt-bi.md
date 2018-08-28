@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/02/2018"
@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

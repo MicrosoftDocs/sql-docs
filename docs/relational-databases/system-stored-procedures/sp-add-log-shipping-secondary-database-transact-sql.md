@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_log_shipping_secondary_database"
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: 22
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_add_log_shipping_secondary_database (Transact-SQL)

@@ -4,8 +4,6 @@
   items:
   - name: What's New in Master Data Services (MDS)
     href: what-s-new-in-master-data-services-mds.md
-  - name: New and updated articles
-    href: new-updated-master-data-services.md
   - name: Learn SQL Server Master Data Services
     href: learn-sql-server-master-data-services.md
   - name: "SQL Server Samples: Model Deployment Packages (MDS)"

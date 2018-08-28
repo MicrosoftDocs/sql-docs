@@ -14,8 +14,8 @@ ms.topic: "reference"
 apitype: "COM"
 helpviewer_keywords: 
   - "IRowsetFastLoad interface"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # IRowsetFastLoad (OLE DB)

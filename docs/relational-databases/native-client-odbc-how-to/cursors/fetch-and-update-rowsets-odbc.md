@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Fetch and Update Rowsets (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,7 +15,7 @@ ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetch and Update Rowsets (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

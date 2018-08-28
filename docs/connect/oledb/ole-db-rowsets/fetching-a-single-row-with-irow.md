@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, fetching"
   - "rowsets [OLE DB], fetching"
   - "OLE DB Driver for SQL Server, fetching"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Fetching a Single Row with IRow

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, tables"
   - "removing tables"
   - "dropping tables"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Dropping a SQL Server Table

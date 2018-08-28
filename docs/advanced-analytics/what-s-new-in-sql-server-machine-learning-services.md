@@ -25,15 +25,15 @@ The R component of SQL Server 2017 Machine Learning Services is the next generat
 
 New capabilities for R include [**package management**](r/install-additional-r-packages-on-sql-server.md), with the following highlights: 
 
-+ Database roles to help the DBA manage packages and assign permissions to install packages.
-+ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement in T-SQL to help DBAs manage packages in the familiar T-SQL language.
-+ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) functions to help install, remove, or list packages owned by users. For more information, see [How to use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md).
++ Database roles help DBAs manage packages and assign permissions for package installation.
++ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) helps DBAs manage packages in the familiar T-SQL language.
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) functions help install, remove, or list packages owned by users. For more information, see [How to use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md).
 
 ### R libraries
 
 | Package | Description |
 |---------|-------------|
-| [**MicrosoftML**](using-the-microsoftml-package.md) | In this release MicrosoftML is included in a default R installation, eliminating the upgrade step required in SQL Server 2016 R Services. MicrosoftML provides state-of-the-art machine learning algorithms and data transformation that can be scaled or run in remote compute contexts. Algorithms include customizable deep neural networks, fast decision trees and decision forests, linear regression, and logistic regression.  |
+| [**MicrosoftML**](using-the-microsoftml-package.md) | In this release, MicrosoftML is included in a default R installation, eliminating the upgrade step required in the previous SQL Server 2016 R Services. MicrosoftML provides state-of-the-art machine learning algorithms and data transformations that can be scaled or run in remote compute contexts. Algorithms include customizable deep neural networks, fast decision trees and decision forests, linear regression, and logistic regression.  |
 
 ### Python integration for in-database analytics
 

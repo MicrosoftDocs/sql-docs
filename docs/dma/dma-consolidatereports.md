@@ -78,8 +78,6 @@ Create a database called **EstateInventory** and a table called **DatabaseInvent
 - InstanceName
 - DatabaseName
 - AssessmentFlag
- 
- ![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
 
 If this database is not on the tools computer, ensure that the tools computer has network connectivity to this SQL Server instance.
 

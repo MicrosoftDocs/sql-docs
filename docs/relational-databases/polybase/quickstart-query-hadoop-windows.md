@@ -11,6 +11,5 @@ ms.topic: "quickstart"
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Query Hadoop from SQL Server on Windows

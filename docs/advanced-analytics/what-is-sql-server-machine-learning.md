@@ -15,7 +15,7 @@ manager: cgronlun
 
 SQL Server 2017 Machine Learning Services is an add-on to a database engine instance, used for executing R and Python code on SQL Server. Code runs in an extensibility framework, isolated from core engine processes, but fully available to relational data as stored procedures, as T-SQL script containing R or Python statements, or as R or Python code containing T-SQL. 
 
-If you previously used SQL Server 2016 R Services, Machine Learning services in SQL Server 2017 is the next generation of R support, with updated versions of base R, RevoScaleR, MicrosoftML, and other libraries introduced in 2016.
+If you previously used SQL Server 2016 R Services, Machine Learning Services in SQL Server 2017 is the next generation of R support, with updated versions of base R, RevoScaleR, MicrosoftML, and other libraries introduced in 2016.
 
 The key value proposition of Machine Learning Services is the power of its enterprise R and Python packages to deliver advanced analytics at scale, and the ability to bring calculations and processing to where the data resides, eliminating the need to pull data across the network.
 
@@ -30,7 +30,7 @@ SQL Server 2017 supports R and Python. The following table describes the compone
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) is Microsoft's open-source distribution of R. The package and interpreter are included. Always use the version of MRO installed by Setup. |
 | R tools | R console windows and command prompts are standard tools in an R distribution.  |
 | R Samples and scripts |  Open-source R and RevoScaleR packages include built-in data sets so that you can create and run script using pre-installed data. |
-| Python packages | [**revoscalepy**](python/what-is-revoscalepy.md) is the primary library for scaleable Python with functions for data manipulation, transformation, visualzation, and analysis. <br/>[**microsoftml (Python)**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis.  |
+| Python packages | [**revoscalepy**](python/what-is-revoscalepy.md) is the primary library for scaleable Python with functions for data manipulation, transformation, visualization, and analysis. <br/>[**microsoftml (Python)**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis.  |
 | Python tools | The built-in Python command line tool is useful for ad hoc testing and tasks.  |
 | Anaconda | Anaconda is an open-source distribution of Python and essential packages. |
 | Python samples and scripts | As with R, Python includes built-in data sets  and scripts.  |
@@ -99,9 +99,9 @@ After the script or model is ready for production use, a database developer migh
 
 + **Scheduling and auditing**. When external script jobs are run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can control and audit the data used by data scientists. You can also schedule jobs and author workflows containing external R or Python scripts, just like you would schedule any other T-SQL job or stored procedure.
 
-To take advantage of the resource management and securty features in SQL Server, the deployment process might include these tasks:
+To take advantage of the resource management and security features in SQL Server, the deployment process might include these tasks:
 
-+ Converting yourcode to a function that can run optimally in a stored procedure
++ Converting your code to a function that can run optimally in a stored procedure
 + Setting up security and locking down packages used by a particular task
 + Enabling resource governance (requires the Enterprise edition)
 

@@ -1,5 +1,5 @@
 ---
-title: "PolyBase T-SQL objects | Microsoft Docs"
+title: "PolyBase Transact-SQL reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.prod: sql
@@ -16,7 +16,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# PolyBase T-SQL objects
+# PolyBase Transact-SQL reference
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To use  PolyBase, you must create external tables to reference your external data.  
   

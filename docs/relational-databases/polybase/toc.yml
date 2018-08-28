@@ -1,15 +1,31 @@
 - name: Overview
-  href: polybase-guide.md
+  items:
+  - name: What is PolyBase?
+    href: polybase-guide.md
 - name: Quickstarts
   items:
   - name: Query Hadoop on Windows
     href: quickstart-query-hadoop-windows.md
+  - name: Query Hadoop on Linux
+    href: quickstart-query-hadoop-linux.md
+- name: Tutorials
+  items:
+  - name: Scale-out groups (Windows)
+    href: tutorial-scale-out-group-windows.md
+  - name: Scale-out groups (Linux)
+    href: tutorial-scale-out-groups-linux.md
 - name: Concepts
   items:
+  - name: External data sources
+    href: polybase-xternal-data-sources.md
   - name: Query scenarios
     href: polybase-queries.md
+  - name: Push-down computation
+    href: polybase-pushdown-computation.md
   - name: Scale-out groups
     href: polybase-scale-out-groups.md
+  - name: Type mapping
+    href: polybase-type-mapping.md
 - name: How-to guides
   items:
   - name: Install
@@ -18,6 +34,22 @@
       href: polybase-versioned-feature-summary.md
     - name: Install on Windows
       href: polybase-installation.md
+    - name: Install on Linux
+      href: polybase-installation-linux.md
+  - name: Configure external data sources
+    items:
+    - name: Hadoop
+      href: polybase-configure-hadoop.md
+    - name: Azure Blob Storage
+      href: polybase-configure-azure-blob-storage.md
+    - name: SQL Server
+      href: polybase-configure-sql-server.md
+    - name: Oracle
+      href: polybase-configure-oracle.md
+    - name: Teradata
+      href: polybase-configure-teradata.md
+    - name: MongoDB
+      href: polybase-configure-mongodb.md
   - name: Troubleshoot
     items:
     - name: Monitor and troubleshoot
@@ -31,7 +63,7 @@
 - name: Resources
   items:
   - name: SQL Server documentation
-    href: /sql-server/sql-server-technical-documentation?view=sql-server-linux-2017
+    href: /sql/sql-server/sql-server-technical-documentation?view=sql-server-linux-2017
   - name: DBA Stack Exchange
     href: https://dba.stackexchange.com/questions/tagged/sql-server
   - name: Stack Overflow

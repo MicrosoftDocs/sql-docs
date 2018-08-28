@@ -56,11 +56,11 @@ Data scientists typically use R or Python on their own laptop or development wor
 
 ![rsql_keyscenario2](media/rsql-keyscenario2.png) 
 
-+ **Use the IDE you prefer**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] client components provide the data scientist with all the tools needed to experiment and develop. For more information, see [Set up R tools](r/set-up-a-data-science-client.md) and [Set up Python tools](python/setup-python-client-tools-sql.md).  
++ **Use the IDE you prefer**. You can link the R and Python libraries to your development tool of choice. For more information, see [Set up R tools](r/set-up-a-data-science-client.md) and [Set up Python tools](python/setup-python-client-tools-sql.md).  
 
-+ **Work remotely or locally**. Data scientists can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and bring the data to the client for local analysis, as usual. However, a better solution is to use the **RevoScaleR** or **revoscalepy** APIs to push computations to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, avoiding costly and insecure data movement.
++ **Work remotely or locally**. Data scientists can connect to SQL Server and bring the data to the client for local analysis, as usual. However, a better solution is to use the **RevoScaleR** or **revoscalepy** APIs to push computations to the SQL Server computer, avoiding costly and insecure data movement.
 
-+ **Embed R or Python scripts in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures**. When your code is fully optimized, wrap it in a stored procedure to avoid unnecessary data movement and optimize data processing tasks.
++ **Embed R or Python scripts in SQL Server stored procedures**. When your code is fully optimized, wrap it in a stored procedure to avoid unnecessary data movement and optimize data processing tasks.
 
 ### Step 3: Write your first script
 
@@ -71,7 +71,7 @@ Call R or Python functions from within T-SQL script:
 + [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
 + [Python: Learn in-database analytics using Python](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Choose the best language for the task. R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
+Choose the best language for the task. R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of SQL Server  to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
 
 ### Step 4: Optimize your solution
 
@@ -83,7 +83,7 @@ When the model is ready to scale on enterprise data, the data scientist often wo
 
 Traditionally, data scientists using R have had problems with both performance and scale, especially when using large dataset. That is because the common runtime implementation is single-threaded and can accommodate only those data sets that fit into the available memory on the local computer. Integration with SQL Server Machine Learning Services provides multiple features for better performance, with more data:
 
-+ **RevoScaleR**: This R package contains implementations of some of the most popular R functions, redesigned to provide parallelism and scale. The package also includes functions that further boost  performance and scale by pushing computations to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, which typically has far greater memory and computational power.
++ **RevoScaleR**: This R package contains implementations of some of the most popular R functions, redesigned to provide parallelism and scale. The package also includes functions that further boost  performance and scale by pushing computations to the SQL Server computer, which typically has far greater memory and computational power.
 
 + **revoscalepy**. This Python library implements the most popular functions in RevoScaleR, such as remote compute contexts, and many algorithms that support distributed processing.
 
@@ -91,13 +91,13 @@ For more information about performance, see this [performance case study](../../
 
 ### Step 5: Deploy and Consume
 
-After the script or model is ready for production use, a database developer might embed the code or model in a stored procedure so that the saved R or Python code can be called from an application. Storing and running R code from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has many benefits: you can use the convenient [!INCLUDE[tsql](../../includes/tsql-md.md)] interface, and all computations take place in the database, avoiding unnecessary data movement.
+After the script or model is ready for production use, a database developer might embed the code or model in a stored procedure so that the saved R or Python code can be called from an application. Storing and running R code from SQL Server has many benefits: you can use the convenient SQL Server interface, and all computations take place in the database, avoiding unnecessary data movement.
 
 ![rsql_keyscenario1](media/rsql-keyscenario1.png)
 
-+ **Secure and extensible**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] uses a new extensibility architecture that keeps your database engine secure and isolates R and Python sessions. You also have control over the users who can execute scripts, and you can specify which databases can be accessed by code. You can control the amount of resources allocated to the runtime, to prevent massive computations from jeopardizing the overall server performance.
++ **Secure and extensible**. SQL Server uses a new extensibility architecture that keeps your database engine secure and isolates R and Python sessions. You also have control over the users who can execute scripts, and you can specify which databases can be accessed by code. You can control the amount of resources allocated to the runtime, to prevent massive computations from jeopardizing the overall server performance.
 
-+ **Scheduling and auditing**. When external script jobs are run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can control and audit the data used by data scientists. You can also schedule jobs and author workflows containing external R or Python scripts, just like you would schedule any other T-SQL job or stored procedure.
++ **Scheduling and auditing**. When external script jobs are run in SQL Server, you can control and audit the data used by data scientists. You can also schedule jobs and author workflows containing external R or Python scripts, just like you would schedule any other T-SQL job or stored procedure.
 
 To take advantage of the resource management and security features in SQL Server, the deployment process might include these tasks:
 

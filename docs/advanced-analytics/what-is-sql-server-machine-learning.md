@@ -40,7 +40,7 @@ SQL Server 2017 supports R and Python. The following table describes the compone
 
 Developers and analysts often have code running on top of a local SQL Server instance. The most common approach for in-database analytics is to use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), passing R or Python script as an input parameter.
 
-Classic client-server interaction are another modality. From any client workstation that has an IDE, you can install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) or the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), and then write code that pushes execution (referred to as a *remote compute context*) to data and operations to a remote SQL Server. 
+Classic client-server interactions are another modality. From any client workstation that has an IDE, you can install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) or the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), and then write code that pushes execution (referred to as a *remote compute context*) to data and operations to a remote SQL Server. 
 
 Finally, if you are using a [standalone server](r/r-server-standalone.md) and the Developer edition, you can build solutions on a client workstation using the same libraries and interpreters, and then deploy production code on SQL Server Machine Learning Services (In-Database). 
 
@@ -54,7 +54,7 @@ Finally, if you are using a [standalone server](r/r-server-standalone.md) and th
 
 Data scientists typically use R or Python on their own laptop or development workstation, to explore data, and build and tune predictive models until a good predictive model is achieved. With in-database analytics in SQL Server, there is no need to change this process. After installation is complete, you can run R or Python code on SQL Server locally and remotely.
 
-![rsql_keyscenario2](media/r/rsql-keyscenario2.png) 
+![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
 
 + **Use the IDE you prefer**. You can link the R and Python libraries to your development tool of choice. For more information, see [Set up R tools](r/set-up-a-data-science-client.md) and [Set up Python tools](python/setup-python-client-tools-sql.md).  
 
@@ -93,7 +93,7 @@ For more information about performance, see this [performance case study](r/perf
 
 After the script or model is ready for production use, a database developer might embed the code or model in a stored procedure so that the saved R or Python code can be called from an application. Storing and running R code from SQL Server has many benefits: you can use the convenient SQL Server interface, and all computations take place in the database, avoiding unnecessary data movement.
 
-![rsql_keyscenario1](media/r/rsql-keyscenario1.png)
+![rsql_keyscenario1](r/media/rsql-keyscenario1.png)
 
 + **Secure and extensible**. SQL Server uses a new extensibility architecture that keeps your database engine secure and isolates R and Python sessions. You also have control over the users who can execute scripts, and you can specify which databases can be accessed by code. You can control the amount of resources allocated to the runtime, to prevent massive computations from jeopardizing the overall server performance.
 

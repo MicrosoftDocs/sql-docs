@@ -1,5 +1,5 @@
 ---
-title: "PolyBase troubleshooting | Microsoft Docs"
+title: "Monitor and troubleshoot PolyBase | Microsoft Docs"
 ms.custom: ""
 ms.date: "8/29/2017"
 ms.prod: sql
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# PolyBase troubleshooting
+# Monitor and troubleshoot PolyBase
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To troubleshoot PolyBase, use the techniques found in this topic.  
   

@@ -1,5 +1,5 @@
 ---
-title: "PolyBase Versioned Feature Summary | Microsoft Docs"
+title: "PolyBase features and limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
 ms.prod: sql
@@ -14,7 +14,7 @@ ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# PolyBase Versioned Feature Summary
+# PolyBase features and limitations
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 Summary of PolyBase features available for SQL Server products and services.  
   

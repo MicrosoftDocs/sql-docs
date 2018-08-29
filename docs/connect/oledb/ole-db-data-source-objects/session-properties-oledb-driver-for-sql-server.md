@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "sessions [OLE DB]"
   - "OLE DB Driver for SQL Server, sessions"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Session Properties - OLE DB Driver for SQL Server

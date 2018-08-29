@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "characters [SQL Server], password policies"
   - "strong passwords [SQL Server]"
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Strong Passwords

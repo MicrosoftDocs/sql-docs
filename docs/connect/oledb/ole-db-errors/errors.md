@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "errors [OLE DB]"
   - "OLE DB error handling, about error handling"
   - "OLE DB error handling"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Errors

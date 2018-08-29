@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Executing Queries How-to Topics (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,7 +15,7 @@ ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Queries How-to Topics (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

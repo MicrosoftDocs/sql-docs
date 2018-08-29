@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Unsupported SQL Server Features for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2017"
@@ -15,7 +15,7 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unsupported SQL Server Features for In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_adduser"
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_adduser (Transact-SQL)

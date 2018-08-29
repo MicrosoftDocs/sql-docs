@@ -3,9 +3,9 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
-author: "craigg-msft" 
-ms.author: "craigg"
-ms.topic: "hub-page"
+author: craigg-msft 
+ms.author: craigg
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: install
 ---

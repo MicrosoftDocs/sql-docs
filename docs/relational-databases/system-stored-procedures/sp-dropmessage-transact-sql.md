@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_dropmessage"
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_dropmessage (Transact-SQL)

@@ -13,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "user-defined functions [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Execute a User-Defined Function and Process Return Code (OLE DB)

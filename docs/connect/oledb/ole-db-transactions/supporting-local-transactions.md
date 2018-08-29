@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ITransactionLocal interface"
   - "OLE DB Driver for SQL Server, transactions"
   - "local transactions [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Supporting Local Transactions

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sp_addrolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -18,11 +18,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addrolemember"
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
-caps.latest.revision: 59
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

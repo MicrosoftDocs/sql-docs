@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Credentials (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"
@@ -22,10 +22,10 @@ helpviewer_keywords:
   - "credentials [SQL Server]"
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 31
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Credentials (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

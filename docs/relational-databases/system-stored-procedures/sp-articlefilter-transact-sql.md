@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_articlefilter"
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 # sp_articlefilter (Transact-SQL)

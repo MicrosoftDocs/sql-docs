@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Replication with SQL Database Managed Instance| Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2018"
@@ -19,7 +19,7 @@ caps.latest.revision: 15
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Replication with SQL Database Managed Instance
 

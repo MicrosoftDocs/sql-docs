@@ -13,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB Driver for SQL Server, BLOBs"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Streaming Support for BLOB Output Parameters

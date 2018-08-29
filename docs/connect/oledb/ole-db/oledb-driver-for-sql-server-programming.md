@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "OLE DB"
   - "OLE DB Driver for SQL Server"
   - "OLE DB Driver for SQL Server, OLE DB"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # OLE DB Driver for SQL Server Programming

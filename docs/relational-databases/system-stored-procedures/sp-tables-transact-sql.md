@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sp_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "sp_tables"
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

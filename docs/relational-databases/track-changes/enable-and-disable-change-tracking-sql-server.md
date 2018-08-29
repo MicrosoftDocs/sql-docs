@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Enable and Disable Change Tracking (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
@@ -23,7 +23,7 @@ caps.latest.revision: 34
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enable and Disable Change Tracking (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

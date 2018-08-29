@@ -21,9 +21,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_adddistributor"
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # sp_adddistributor (Transact-SQL)

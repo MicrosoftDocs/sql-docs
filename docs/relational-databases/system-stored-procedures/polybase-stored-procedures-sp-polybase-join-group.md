@@ -15,9 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "PolyBase"
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-caps.latest.revision: 12
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # sp_polybase_join_group (Transact-SQL)

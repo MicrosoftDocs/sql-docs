@@ -1,4 +1,4 @@
-﻿---
+---
 title: "TABLES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -18,11 +18,10 @@ helpviewer_keywords:
   - "TABLES view"
   - "INFORMATION_SCHEMA.TABLES view"
 ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TABLES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

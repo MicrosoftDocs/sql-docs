@@ -11,8 +11,8 @@ ms.custom: ""
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Support Policies for OLE DB Driver for SQL Server

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, rowsets"
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Rowset Properties and Behaviors

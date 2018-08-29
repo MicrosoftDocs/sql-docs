@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.server_audits catalog view"
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.server_audits (Transact-SQL)

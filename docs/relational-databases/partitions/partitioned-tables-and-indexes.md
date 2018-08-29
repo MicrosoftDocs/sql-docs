@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2016"
@@ -17,7 +17,7 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Metadata Visibility Configuration | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "database metadata [SQL Server]"
   - "metadata [SQL Server], permissions"
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata Visibility Configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

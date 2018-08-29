@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_rename_policy_category"
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
-caps.latest.revision: 7
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_rename_policy_category (Transact-SQL)

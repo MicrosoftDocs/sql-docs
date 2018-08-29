@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Getting Started with Database Engine Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"
@@ -8,15 +8,15 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "permissions [SQL Server], getting started"
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: 15
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Getting Started with Database Engine Permissions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

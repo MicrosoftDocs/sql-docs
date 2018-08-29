@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/02/2018"
+ms.date: "08/28/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -17,7 +17,7 @@ caps.latest.revision: 113
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # Download and install SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,53 +79,6 @@ This release of **SSDT for VS 2017** can be installed in the following languages
 
 
 
-## SSDT for VS 2015 (standalone installer)
-
-[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)
-
-**Version Information**  
-  
-The release number: 17.4
-
-The build number for this release: 14.0.61712.050
-  
-For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
-
-### Available Languages - SSDT for VS 2015
-  
-This release of **SSDT for VS 2015** can be installed in the following languages:  
-
-[Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
-[Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
-[French]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
-[Italian]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x410) | 
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x411) | 
-[Korean]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x412) | 
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x416) | 
-[Russian]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x419) | 
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40a)  
-
-### ISO Images - SSDT for VS 2015
-
-An ISO image of SSDT can be used as an alternative way to install SSDT or to set up an Administrative Installation point. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive or burned to a DVD.
-
-> [!NOTE]
-> The SSDT for VS 2015 17.4 ISO images are now available.
-
-[Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
-[Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
-[French]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |
-[Italian]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x410) |
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x411) |
-[Korean]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x412) |
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x416) |
-[Russian]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x419) |
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40a)
-
 
 
 ## Supported SQL versions
@@ -138,6 +91,11 @@ Relational databases|  SQL Server 2005* - SQL Server 2017<br> (use SSDT 17.x or 
   
 ## DacFx
 SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4.1: [Download Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
+
+## Previous versions
+
+To download and install SSDT for Visual Studio 2015, or an older version of SSDT, see [Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md).
+
 
 
 ## Next steps  

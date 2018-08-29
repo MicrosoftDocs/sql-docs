@@ -1,4 +1,4 @@
-﻿---
+---
 title: "PolyBase features and limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -12,7 +12,7 @@ ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PolyBase features and limitations
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

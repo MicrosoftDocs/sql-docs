@@ -1,17 +1,13 @@
 ---
 title: "Reporting Services Delivery Extension Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "report-server-web-service"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-web-service
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 applies_to: 
   - "SQL Server 2016 Preview"
 helpviewer_keywords: 
@@ -27,10 +23,8 @@ helpviewer_keywords:
   - "mail [Reporting Services]"
   - "Web service [Reporting Services], delivery extension settings"
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-caps.latest.revision: 36
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Reporting Services Delivery Extension Settings
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension and a file share delivery extension. E-mail delivery provides a way to send a report to individual users or groups through e-mail. File share delivery enables you to automatically send rendered reports to a share on your network. You can use either one of the supported delivery extensions with standard subscriptions or data-driven subscriptions. You pass delivery settings that are specific to the type of delivery extension whenever you call the <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>,<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>,<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>, and <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> methods. To retrieve a list of delivery settings programmatically, use the <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> method.  

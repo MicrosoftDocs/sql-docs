@@ -39,9 +39,8 @@ helpviewer_keywords:
   - "authentication [SQL Server], roles"
   - "groups [SQL Server], roles"
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
-caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Database-Level Roles

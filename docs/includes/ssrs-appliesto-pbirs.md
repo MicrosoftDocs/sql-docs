@@ -10,4 +10,4 @@
  ms.custom: include file
 ---
 
-![yes](media/yes.png)Power BI Report Server
+ ![yes](media/yes.png)Power BI Report Server

@@ -18,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_job"
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

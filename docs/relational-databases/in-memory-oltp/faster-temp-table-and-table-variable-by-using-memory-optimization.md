@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Faster temp table and table variable by using memory optimization | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2018"
@@ -15,7 +15,7 @@ caps.latest.revision: 20
 author: Jodebrui
 ms.author: jodebrui
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Faster temp table and table variable by using memory optimization
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

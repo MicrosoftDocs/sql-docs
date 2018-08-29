@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_logininfo"
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # xp_logininfo (Transact-SQL)

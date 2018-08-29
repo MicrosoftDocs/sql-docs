@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_change_agent_parameter"
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 # sp_change_agent_parameter (Transact-SQL)

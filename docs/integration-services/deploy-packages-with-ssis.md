@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: integration-services
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "deployment tutorial [Integration Services]"
   - "deploying packages [Integration Services]"

@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_adddynamicsnapshot_job"
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # sp_adddynamicsnapshot_job (Transact-SQL)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, data types"
   - "data types [OLE DB]"
   - "OLE DB, data types"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Data Types (OLE DB)

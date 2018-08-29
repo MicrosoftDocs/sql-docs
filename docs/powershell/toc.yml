@@ -32,8 +32,6 @@
     href: escape-sql-server-identifiers.md
 - name: Resources
   items:
-  - name: New and updated articles
-    href: new-updated-powershell.md
   - name: SQL Server PowerShell License Terms
     href: sql-server-powershell-license-terms.md
 - name: Cmdlet reference

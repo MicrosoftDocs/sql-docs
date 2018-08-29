@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "adding a member to a role"
   - "join a role"
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Join a Role

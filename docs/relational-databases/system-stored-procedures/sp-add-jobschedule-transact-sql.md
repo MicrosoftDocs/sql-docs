@@ -18,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_jobschedule"
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

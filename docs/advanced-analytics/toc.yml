@@ -1,61 +1,30 @@
-- name: Overview
+- name: SQL Server Machine Learning
   items:
-  - name: What is SQL Server Machine Learning Services?
+  - name: Machine Learning Services (R, Python)
     href: what-is-sql-server-machine-learning.md
-    items:
-    - name: In-Database analytics
-      href: r/sql-server-r-services.md
-    - name: Standalone server
-      href: r/r-server-standalone.md
-  - name: New features
+  - name: R Services
+    href: r/sql-server-r-services.md
+  - name: Standalone server
+    href: r/r-server-standalone.md
+  - name: What's new
     href: what-s-new-in-sql-server-machine-learning-services.md
-  - name: Features by edition
-    href: r/differences-in-r-features-between-editions-of-sql-server.md
-- name: Architecture
-  href: architecture-overview-machine-learning.md
-  items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: R interoperability
-      href: r/r-interoperability-in-sql-server.md
-    - name: Components that support R integration
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: Security for R
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: Python in Machine Learning Services
-      href: python/sql-server-python-services.md
-    - name: Python interoperability
-      href: python/python-interoperability.md
-    - name: Components to support Python
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python security
-      href: python/security-overview-sql-server-python-services.md
 - name: Install
   items:
-  - name: SQL Server 2017
-    items:
-    - name: In-Database analytics
-      href: install/sql-machine-learning-services-windows-install.md
-    - name: Standalone server
-      href: install/sql-machine-learning-standalone-windows-install.md
-  - name: SQL Server 2016
-    items:
-    - name: R Services (In-Database)
-      href: install/sql-r-services-windows-install.md
-    - name: R Server (Standalone)
-      href: install/sql-r-standalone-windows-install.md
+  - name: Machine Learning Services (R, Python)
+    href: install/sql-machine-learning-services-windows-install.md
+  - name: R Services
+    href: install/sql-r-services-windows-install.md
+  - name: Standalone server (R, Python)
+    href: install/sql-machine-learning-standalone-windows-install.md
   - name: Pre-trained models
     href: install/sql-pretrained-models-install.md
   - name: Command-prompt setup
     href: install/sql-ml-component-commandline-install.md
   - name: Offline setup (no internet)
     href: install/sql-ml-component-install-without-internet-access.md
-  - name: CAB downloads (offline setup)
-    href: install/sql-ml-cab-downloads.md
+    items:
+    - name: CAB downloads (offline setup)
+      href: install/sql-ml-cab-downloads.md
   - name: Upgrade R and Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: Set up R tools
@@ -178,6 +147,29 @@
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
   href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: Concepts
+  href: architecture-overview-machine-learning.md
+  items:
+  - name: R
+    href: r/architecture-overview-sql-server-r.md
+    items:
+    - name: R interoperability
+      href: r/r-interoperability-in-sql-server.md
+    - name: Components that support R integration
+      href: r/new-components-in-sql-server-to-support-r.md
+    - name: Security for R
+      href: r/security-overview-sql-server-r.md
+  - name: Python
+    href: python/architecture-overview-sql-server-python.md
+    items:
+    - name: Python in Machine Learning Services
+      href: python/sql-server-python-services.md
+    - name: Python interoperability
+      href: python/python-interoperability.md
+    - name: Components to support Python
+      href: python/new-components-in-sql-server-to-support-python-integration.md
+    - name: Python security
+      href: python/security-overview-sql-server-python-services.md
 - name: How To
   href: r/sql-server-machine-learning-tasks.md
   items:

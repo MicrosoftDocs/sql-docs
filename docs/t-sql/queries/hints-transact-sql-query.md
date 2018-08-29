@@ -1,7 +1,7 @@
 ---
 title: "Query Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/14/2018"
+ms.date: "08/29/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -249,7 +249,7 @@ manager: craigg
  If such a plan is not possible, the query optimizer returns an error instead of deferring error detection to query execution. Rows may contain variable-length columns; the [!INCLUDE[ssDE](../../includes/ssde-md.md)] allows for rows to be defined that have a maximum potential size beyond the ability of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to process them. Generally, despite the maximum potential size, an application stores rows that have actual sizes within the limits that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can process. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encounters a row that is too long, an execution error is returned.  
  
 <a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
- **Applies to**: Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Provides one or more additional hints to the query processor as specified by a hint name **inside single quotation marks**.   
 
@@ -280,11 +280,17 @@ manager: craigg
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins
 ](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+ Forces the query optimizer behavior at a query level, as if the query was compiled with database compatibility level *n*, where *n* is a supported database compatibility level. Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for *n*. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
  
-> [!TIP]
-> Hint names are case-insensitive.
+    > [!NOTE]
+    > The QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint does not override default or legacy cardinality estimation setting, if it is forced through database scoped configuration, trace flag or another query hint such as QUERYTRACEON.   
+    > This hint only affects the behavior of the query optimizer. It does not affect other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that may depend on the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), such as the availability of certain database features.   
   
   The list of all supported USE HINT names can be queried using the dynamic management view [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+
+> [!TIP]
+> Hint names are case-insensitive.   
   
 > [!IMPORTANT] 
 > Some USE HINT hints may conflict with trace flags enabled at the global or session level, or database scoped configuration settings. In this case, the query level hint (USE HINT) always takes precedence. If a USE HINT conflicts with another query hint, or a trace flag enabled at the query level (such as by QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will generate an error when trying to execute the query. 

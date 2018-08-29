@@ -30,7 +30,7 @@ This article focuses primarily on DMA’s Azure SQL Database SKU recommendations
 > This functionality is currently available only via the Command Line Interface (CLI). Support for this feature via the DMA user interface will be added in an upcoming release.
 
 > [!IMPORTANT]
-> SKU recommendations for Azure SQL Database are currently available for migrations from SQL Server 2016 or later. Support for earlier versions of SQL Server will be included in future releases.
+> SKU recommendations for Azure SQL Database are currently available for migrations from SQL Server 2016 or later.
 
 The following instructions help you determine Azure SQL Database SKU recommendations and provision the associated databases to Azure, by using Data Migration Assistant.
 

@@ -1,10 +1,10 @@
 ---
-title: What's new in SQL Server Machine Learning Services | Microsoft Docs
-ms.custom: sqlseattle
+title: "What&#39;s new in SQL Server Machine Learning Services | Microsoft Docs"
+description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/14/2018  
+ms.date: 08/28/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -31,23 +31,44 @@ This release adds the top-requested features for R and Python machine learning o
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## New in SQL Server 2017
 
-This release added Python support and industry-leading machine learning algorithms. Renamed to reflect the new scope, SQL Server 2017 marked the introduction of **SQL Server Machine Learning Services (In-Database)**, with language support for both Python and R. 
+This release adds [Python support and industry-leading machine learning algorithms](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), with language support for both Python and R. 
 
-This release also introduced **SQL Server Machine Learning Server (Standalone)**, fully independent of SQL Server, for R and Python workloads that you want to run on a dedicated system. With the standalone server, you can distribute and scale R or Python solutions without using SQL Server.
+### R enhancements
 
-| Release | Feature update |
-|---------|----------------|
-| CU 6 | Bug fixes and package refresh, but no new feature announcements. Fixes include support for DateTime data types in SPEES query for Python and improved error messages in microsoftml when pre-trained models are missing. |
-| CU 5 | Bug fixes and package refresh, but no new feature announcements. Fixes include improvements to transform functions and variables in revoscalepy, correcting the long path-related errors in rxInstallPackages, fixing connections in a loopback for RxExec and rx_exec functions, and revisions to warning messages. |
-| CU 4 | Bug fixes and package refresh, but no new feature announcements. |
-| CU 3 | Python model serialization in revoscalepy, using the [rx_serialize_model function](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Native scoring](sql-native-scoring.md) plus enhancements to [Real-time scoring](real-time-scoring.md). With in-database scoring, throughput is a million rows per second using R models. In this update, real-time scoring and native scoring offer better performance in single-row and batch scoring. Native scoring uses a T-SQL function for fast scoring that can be run on any edition of SQL Server, even on Linux. The function requires no installation of R or extra configuration. This means you can train a model elsewhere, save it in SQL Server, and then perform scoring without ever calling R. For more information on scoring methodologies, see [How to perform real-time scoring or native scoring](r/how-to-do-realtime-scoring.md). |
-| CU 2 | Bug fixes and package refresh, but no new feature announcements. |
-| CU 1 | In revoscalepy, adds rx_create_col_info for returning schema information from a SQL Server data source, similar to [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) for  R. <br/><br/>Enhancements to [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) to support parallel scenarios using the `RxLocalParallel` compute context.|
-| Initial release |[**Python integration for in-database analytics**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>The [revoscalepy](python/what-is-revoscalepy.md) package is the Python-equivalent of RevoScaleR. You can create Python models for linear and logistic regressions, decision trees, boosted trees, and random forests, all parallelizable, and capable of being run in remote compute contexts. This package supports use of multiple data sources and remote compute contexts. The data scientist or developer can execute Python code on a remote SQL Server, to explore data or build models without moving data. <br/><br/>The [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) package is the Python-equivalent of the MicrosoftML R package.<br/><br/>T-SQL and Python integration through [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). You can call any Python code using this stored procedure. This secure infrastructure enables enterprise-grade deployment of Python models and scripts that can be called from an application using a simple stored procedure. Additional performance gains are achieved by streaming data from SQL to Python processes and MPI ring parallelization. <br/><br/>You can use the T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) function to perform [native scoring](sql-native-scoring.md) on a pre-trained model that has been previously saved in the required binary format.|
-| Initial release | [**MicrosoftML (R)**](using-the-microsoftml-package.md) contains state-of-the-art machine learning algorithms and data transformation that can be scaled or run in remote compute contexts. Algorithms include customizable deep neural networks, fast decision trees and decision forests, linear regression, and logistic regression. |
-| Initial release | [**Pre-trained models**](install/sql-pretrained-models-install.md) for image recognition and positive-negative sentiment analysis. Use these models to generate predictions on your own data. |
-| Initial release | [**R package management**](r/install-additional-r-packages-on-sql-server.md), including the following highlights: database roles to help the DBA manage packages and assign permissions to install packages, [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement in T-SQL to help DBAs manage packages without needing to know R, and a rich set of R functions in [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) to help install, remove, or list packages owned by users. |
-| Initial release | [**Operationalization through mrsdeploy**](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package) for deploying and hosting R script as a web service. Applies to R script only (no Python equivalent). Intended for the (Standalone) server option to avoid resource competition with other SQL Server operations. |
+The R component of SQL Server 2017 Machine Learning Services is the next generation of SQL Server 2016 R Services, with updated versions of base R, RevoScaler, and other packages.
+
+New capabilities for R include [**package management**](r/install-additional-r-packages-on-sql-server.md), with the following highlights: 
+
++ Database roles help DBAs manage packages and assign permissions for package installation.
++ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) helps DBAs manage packages in the familiar T-SQL language.
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) functions help install, remove, or list packages owned by users. For more information, see [How to use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md).
+
+### R libraries
+
+| Package | Description |
+|---------|-------------|
+| [**MicrosoftML**](using-the-microsoftml-package.md) | In this release, MicrosoftML is included in a default R installation, eliminating the upgrade step required in the previous SQL Server 2016 R Services. MicrosoftML provides state-of-the-art machine learning algorithms and data transformations that can be scaled or run in remote compute contexts. Algorithms include customizable deep neural networks, fast decision trees and decision forests, linear regression, and logistic regression.  |
+
+### Python integration for in-database analytics
+
+T-SQL and Python integration is now supported through the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure. You can call any Python code using this stored procedure. Code runs in a secure, dual architecture that enables enterprise-grade deployment of Python models and scripts, callable from an application using a simple stored procedure. Additional performance gains are achieved by streaming data from SQL to Python processes and MPI ring parallelization.
+
+You can use the T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) function to perform [native scoring](sql-native-scoring.md) on a pre-trained model that has been previously saved in the required binary format.
+
+### Python libraries
+
+| Package | Description |
+|---------|-------------|
+[**revoscalepy**](python/what-is-revoscalepy.md)| Python-equivalent of RevoScaleR. You can create Python models for linear and logistic regressions, decision trees, boosted trees, and random forests, all parallelizable, and capable of being run in remote compute contexts. This package supports use of multiple data sources and remote compute contexts. The data scientist or developer can execute Python code on a remote SQL Server, to explore data or build models without moving data. |
+|[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |Python-equivalent of the MicrosoftML R package. |
+
+### Pre-trained models
+
+[**Pre-trained models**](install/sql-pretrained-models-install.md) are available for both Python and R. Use these models for image recognition and positive-negative sentiment analysis, to generate predictions on your own data. 
+
+### Standalone Server as a shared feature in SQL Server Setup
+
+This release also adds [SQL Server Machine Learning Server (Standalone)](r/r-server-standalone.md), a fully independent data science server, supporting statistical and predictive analytics in R and Python. As with R Services, this server is the next version of SQL Server 2016 R Server (Standalone). With the standalone server, you can distribute and scale R or Python solutions with no dependencies on SQL Server.
 ::: moniker-end
 
 ## New in SQL Server 2016

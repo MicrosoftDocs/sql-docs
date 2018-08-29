@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "08/29/2018"
+ms.date: "08/30/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -19,12 +19,10 @@ manager: craigg
 **[Download the August Public Preview](download.md)**
 
 
-
-
 ## August 2018 (August Public Preview)
 
 release date: August 30, 2018  
-version: 0.32.6
+version: 0.32.7
 
 The *August Public Preview* focuses on on bug fixes, product stabilization, and filling gaps in existing scenarios.
 
@@ -37,7 +35,7 @@ The *August Public Preview* focuses on on bug fixes, product stabilization, and 
 
 ### Bug Fixes
 
-- Parse SQL in a Query Editor window by using the *Parse Syntax* command
+- Parse SQL in a Query Editor window by using the `Parse Syntax` command.
 - Fix [issue #143](https://github.com/Microsoft/sqlopsstudio/pull/143): Double-click not selecting @ in variable name.
 - Fix [issue #387](https://github.com/Microsoft/sqlopsstudio/pull/387): SQL Tab DB Icon is red.
 - Fix [issue #825](https://github.com/Microsoft/sqlopsstudio/pull/825): Request: Auto Connect to current server after Script as... 

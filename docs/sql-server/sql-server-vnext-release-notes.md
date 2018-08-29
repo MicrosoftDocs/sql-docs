@@ -33,7 +33,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 ### SQL Graph
 
-**Issue and customer impact**: Tools which have dependency on DacFx like import-export will not work for the new graph features - Edge Constraints, Merge DML and Derived Tables/Views. Scripting in SSMS may not work. 
+**Issue and customer impact**: Tools which have dependency on DacFx like import-export will not work for the new graph features - Edge Constraints or Merge DML. Scripting in SSMS may not work.
 
 **Workaround**: Writing T-SQL scripts and running them against the server using SSMS or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using t-sql scripts. 
 

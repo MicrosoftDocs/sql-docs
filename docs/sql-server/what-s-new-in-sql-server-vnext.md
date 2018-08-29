@@ -31,6 +31,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 
 - [Database engine](#databaseengine)
   - Intelligent query processing
+  - Database scoped configuration setting for online and resumable DDL operations
 - [High Availability](#ha)
   - Connection redirection
 - [SQL Graph](#sqlgraph)
@@ -54,7 +55,6 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Java extensibility
 - [Security](#security)
   - Always Encrypted with enclaves
-  - Database scoped default setting for online and resumable DDL operations
 
 Continue reading for more details about these features.
 
@@ -83,6 +83,8 @@ Continue reading for more details about these features.
 - **Scalar UDF inlining** automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
+
+### Database scoped configuration setting for online and resumable DDL operations
 
 ## <a id="ha"></a> High Availability
 
@@ -136,8 +138,6 @@ Continue reading for more details about these features.
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## <a id="security"></a>Security
-
-- Database scoped default setting for online and resumable DDL operations.
 
 ## Next steps
 

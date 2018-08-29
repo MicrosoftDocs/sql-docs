@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Specify First and Last Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -18,7 +18,7 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify First and Last Triggers
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

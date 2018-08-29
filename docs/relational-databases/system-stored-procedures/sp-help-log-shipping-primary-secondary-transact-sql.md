@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_log_shipping_primary_secondary"
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
-caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_help_log_shipping_primary_secondary (Transact-SQL)

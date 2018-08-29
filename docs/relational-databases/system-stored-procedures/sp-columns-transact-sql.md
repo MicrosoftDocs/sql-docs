@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sp_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2016"
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "sp_columns"
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

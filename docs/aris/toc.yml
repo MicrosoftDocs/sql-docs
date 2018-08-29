@@ -6,20 +6,26 @@
     href: sql-server-aris-release-notes.md
 - name: Quickstarts
   items:
+  - name: Deploy SQL Server Aris
+    href: quickstart-sql-server-aris-deploy.md
   - name: Get started with SQL Server Aris
     href: quickstart-sql-server-aris-get-started.md 
   - name: Run Jupyter Notebooks
     href: quickstart-sql-server-aris-jupyter-notebook.md
-- name: Samples
-  items:
-  - name: Notebooks
-    href: sql-server-aris-notebook-samples.md
 - name: Concepts
   items:
   - name: HDFS
     href: concept-hdfs.md
   - name: Spark
     href: concept-spark.md
+  - name: Machine Learning and extensibility
+    items:
+    - name: Java extension
+      href: sql-server-aris-ml-java-extension.md
+    - name: Spark ML
+      href: sql-server-aris-ml-spark.md
+    - name: ML services on Master
+      href: sql-server-aris-ml-on-master.md
   - name: Controller
     href: concept-controller.md
   - name: Master instance
@@ -48,6 +54,12 @@
       href: sql-server-aris-deploy-on-vms.md
     - name: Install big data tools
       href: sql-server-aris-install-big-data-tools.md
+  - name: Manage
+    items:
+    - name: Monitoring
+      href: sql-server-aris-monitoring.md
+    - name: Troubleshooting   
+      href: sql-server-aris-troubleshooting.md
   - name: Data virtualization
     items:
     - name: Virtualize external data
@@ -58,35 +70,41 @@
       href: sql-server-aris-data-ingestion-curl.md
     - name: Restore a database
       href: sql-server-aris-restore-databse.md
+    - name: Streaming  
   - name: Query scenarios
     items:
-    - name: Read CSV with OPENROWSET  
-      href: sql-server-aris-openrowset.md
-    - name: Create a data pool
-      href: sql-server-aris-query-create-datapool.md
-    - name: Hive tables
+    - name: Data pool scenarios
       items:
-        - name: Create Hive tables (Spark)
-        - name: Query Hive tables
-    - name: Define an external table over HDFS
-    - name: Datamart queries
+      - name: Create a data pool
+        href: sql-server-aris-query-create-datapool.md
+    - name: HDFS scenarios
       items:
-        - name: Create and populate
-        - name: Create a Datamart table distributed on a specific column
-        - name: Schedule a refresh
-        - name: Populate data from a parameterized query
-        - name: Preserve existing data in refresh
-        - name: Reorganize datamart tables after adding new datapool instances​​​
-    - name: Write complex analytic queries using multiple external tables​
-    - name: Segregate external table queries based on application data
+      - name: Read data from CSV 
+        href: sql-server-aris-openrowset.md
+      - name: Create Hive tables (Spark)
+      - name: Query Hive tables
+      - name: Define an external table over HDFS
+    - name: Datamart scenarios
+      items:
+      - name: Create and populate
+      - name: Create a Datamart table distributed on a specific column
+      - name: Schedule a refresh
+      - name: Populate data from a parameterized query
+      - name: Preserve existing data in refresh
+      - name: Reorganize datamart tables after adding new datapool instances​​​
+    - name: Analytics
+      items:
+      - name: Write complex analytic queries using multiple external tables​
+      - name: Segregate external table queries based on application data
+    - name: Polycloud catalog queries?
+    - name: Troubleshooting
+      items:
+      - name: Troubleshooting queries
+        href: sql-server-aris-troubleshooting-queries.md
   - name: Notebooks
     items:
     - name: How to use Jupyter notebooks in SQL Server vNext
       href: sql-server-aris-jupyter-notebook-guidance.md
-  - name: Troubleshoot
-    items:
-    - name: Troubleshoot SQL Server Aris
-      href: sql-server-aris-troubleshoot.md
 - name: Resources
   items:
   - name: FAQ

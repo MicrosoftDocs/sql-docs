@@ -13,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (properties)"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # OLE DB Table-Valued Parameter Type Support (Properties)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Always Encrypted (client development) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/21/2018"
@@ -14,7 +14,7 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted (client development)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

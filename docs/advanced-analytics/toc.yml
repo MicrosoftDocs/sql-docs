@@ -1,10 +1,9 @@
-- name: SQL AI and Extensibility Documentation
+- name: SQL ML and Extensibility Documentation
   href: index.md
 - name: SQL Server Machine Learning
-  href: what-is-sql-server-machine-learning.md
   items:
   - name: Machine Learning Services (R, Python, Java)
-    href: r/sql-server-r-services.md
+    href: what-is-sql-server-machine-learning.md
   - name: R Services
     href: r/sql-server-r-services.md
   - name: Standalone server
@@ -13,7 +12,7 @@
     href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
-  - name: SQL Server vNext (R, Python, Java)
+  - name: vNext (R, Python, Java)
     href: install/sql-machine-learning-services-vnext.md
   - name: Machine Learning Services (R, Python, Java)
     href: install/sql-machine-learning-services-windows-install.md

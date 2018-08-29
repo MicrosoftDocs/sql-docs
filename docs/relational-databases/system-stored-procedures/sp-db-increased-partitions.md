@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_db_increased_partitions"
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_db_increased_partitions

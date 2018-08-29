@@ -21,12 +21,13 @@ helpviewer_keywords:
   - "sp_execute_external_script"
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 caps.latest.revision: 34
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # sp_execute_external_script (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Executes the script provided as argument at an external location. The script must be written in a supported and registered language (R or Python). To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  

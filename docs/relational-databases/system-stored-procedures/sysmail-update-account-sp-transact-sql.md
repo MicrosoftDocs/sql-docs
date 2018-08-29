@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_update_account_sp"
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 51
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sysmail_update_account_sp (Transact-SQL)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, multiple rowsets"
   - "commands [OLE DB]"
   - "multiple-rowset results"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Commands Generating Multiple-Rowset Results

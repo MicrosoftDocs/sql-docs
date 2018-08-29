@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "MDAC [SQL Server]"
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
   - "data access [OLE DB Driver for SQL Server], features"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # OLE DB Driver for SQL Server Features

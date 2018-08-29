@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_data_file_recover_suspect_db"
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
-caps.latest.revision: 51
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_add_data_file_recover_suspect_db (Transact-SQL)

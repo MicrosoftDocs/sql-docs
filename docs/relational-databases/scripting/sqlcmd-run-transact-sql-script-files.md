@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Run Transact-SQL Script Files Using sqlcmd | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/15/2016"
@@ -15,7 +15,7 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Run Transact-SQL Script Files
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

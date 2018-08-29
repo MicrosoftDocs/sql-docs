@@ -9,7 +9,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Install SQL Server Machine Learning Services (In-Database) on Windows 
+# Install SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Starting in SQL Server 2017, R and Python support for in-database analytics is provided in SQL Server Machine Learning Services, the successor to R Services feature introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
@@ -95,7 +95,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## <a name="bkmk_enableFeature"></a>Enable external script execution
+## <a name="bkmk_enableFeature"></a>Enable script execution
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 

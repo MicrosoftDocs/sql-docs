@@ -4,7 +4,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 08/24/2018
+ms.date: 08/27/2018
 ms.topic: overview
 ms.prod: sql
 ---
@@ -23,15 +23,10 @@ The following diagram shows the eventual state of the Project Aris architecture:
 
 ![Architecture diagram](./media/sql-server-aris-overview/architecture-diagram.png)
 
-Compared to this architecture diagram, the CTP 2.0 release has a few differences:
-
-- There are no compute pools in CTP 2.0.
-- The Hive metastore is in the master SQL Server instance for now but it will be moved to the controller SQL Server instance.
-- There are no connectors to data sources such as Oracle, Teradata, SQL Server, MongoDB yet.
-
 ## Next steps
 
 To get started, see the following quickstarts:
 
-- [Get started with big data on SQL Server vNext](quickstart-sql-server-aris-get-started.md)
+- [Deploy SQL Server Aris on Kubernetes](quickstart-sql-server-aris-deploy.md)
+- [Get started with SQL Server Aris on SQL Server vNext](quickstart-sql-server-aris-get-started.md)
 - [Run Jupypter Notebooks on SQL Server vNext](quickstart-sql-server-aris-jupyter-notebook.md)

@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], catalog"
   - "catalog system stored procedures [SQL Server]"
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Catalog Stored Procedures (Transact-SQL)

@@ -22,7 +22,7 @@ The way SQL Server Aris consumes these persistent volumes is by using [Storage C
 
 ## Deployment settings
 
-To use persistent storage during deployment, configure the **USE_PERSISTENT_STORAGE** and **STORAGE_CLASS_NAME** flags with mssqlctl. **USE_PERSISTENT_STORAGE** is set to false by default, and, in this case, SQL Server Aris uses emptyDir mounts. If you set the flag to true, you must also provide **STORAGE_CLASS_NAME** as a parameter at the deployment time.
+To use persistent storage during deployment, configure the **USE_PERSISTENT_VOLUME** and **STORAGE_CLASS_NAME** flags with mssqlctl. **USE_PERSISTENT_VOLUME** is set to false by default, and, in this case, SQL Server Aris uses emptyDir mounts. If you set the flag to true, you must also provide **STORAGE_CLASS_NAME** as a parameter at the deployment time.
 
 ## AKS/ACS storage classes
 

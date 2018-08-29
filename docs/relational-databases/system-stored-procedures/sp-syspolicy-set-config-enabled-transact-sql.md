@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_set_config_enabled"
 ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
-caps.latest.revision: 7
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_set_config_enabled (Transact-SQL)

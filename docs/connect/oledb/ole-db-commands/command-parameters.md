@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, commands"
   - "parameters [OLE DB Driver for SQL Server], OLE DB"
   - "commands [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Command Parameters

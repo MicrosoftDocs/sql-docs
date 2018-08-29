@@ -1,5 +1,5 @@
 ---
-title: "PolyBase installation | Microsoft Docs"
+title: "Install PolyBase on Windows | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
 ms.prod: sql
@@ -14,7 +14,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# PolyBase installation
+# Install PolyBase on Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   To install a trial version of  SQL Server, go to [SQL Server evaluations](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 

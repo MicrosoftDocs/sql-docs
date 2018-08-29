@@ -20,9 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.traces catalog view"
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
-caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sys.traces (Transact-SQL)

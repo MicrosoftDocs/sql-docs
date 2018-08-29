@@ -202,7 +202,7 @@ End Class
   
  `Connection description: OLE DB connection to the AdventureWorks database.`  
   
- `Connection description: OLE DB connection to the AdventureWorks database.`  
+ `Connection description: Flat File connection.`  
   
  `Number of connections in package: 2`  
   

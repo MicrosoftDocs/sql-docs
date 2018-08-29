@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "audit action groups [SQL Server]"
   - "audits [SQL Server], actions"
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SQL Server Audit Action Groups and Actions

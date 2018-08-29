@@ -1,4 +1,4 @@
-﻿---
+---
 title: "View the Definition of a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +17,7 @@ ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Definition of a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

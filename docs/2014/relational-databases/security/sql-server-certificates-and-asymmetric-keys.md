@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server], certificates and asymmetric keys"
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SQL Server Certificates and Asymmetric Keys

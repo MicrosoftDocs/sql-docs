@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_dbcmptlevel"
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_dbcmptlevel (Transact-SQL)

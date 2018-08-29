@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_validate_replica_hosts_as_publishers"
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_validate_replica_hosts_as_publishers (Transact-SQL)

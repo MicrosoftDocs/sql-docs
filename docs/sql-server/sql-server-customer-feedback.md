@@ -1,8 +1,8 @@
 ---
 title: Configure SQL Server to send feedback to Microsoft | Microsoft Docs
 description: 
-author: annashres 
-ms.author: anshrest 
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual

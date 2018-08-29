@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_lock"
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 caps.latest.revision: 56
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_lock (Transact-SQL)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "server audit [SQL Server]"
   - "audits [SQL Server], specification"
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Server Audit and Server Audit Specification

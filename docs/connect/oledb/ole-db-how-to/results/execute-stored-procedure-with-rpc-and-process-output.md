@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "RPC syntax"
   - "stored procedures [SQL Server], RPC syntax"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Execute Stored Procedure with RPC and Process Output

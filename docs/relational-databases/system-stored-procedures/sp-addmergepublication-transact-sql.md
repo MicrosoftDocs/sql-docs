@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergepublication"
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-caps.latest.revision: 72
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addmergepublication (Transact-SQL)

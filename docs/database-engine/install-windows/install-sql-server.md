@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "AdventureWorks sample database"
   - "installing SQL Server, preparing to install"

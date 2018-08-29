@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "protecting intellectual property"
   - "intellectual property"
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Protecting Your SQL Server Intellectual Property

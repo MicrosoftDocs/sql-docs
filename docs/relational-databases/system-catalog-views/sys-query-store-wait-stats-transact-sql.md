@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/21/2017"
@@ -23,7 +23,7 @@ caps.latest.revision: 18
 author: "AndrejsAnt"
 ms.author: "AndrejsAnt"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

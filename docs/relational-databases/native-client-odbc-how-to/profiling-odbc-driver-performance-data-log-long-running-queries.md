@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Log Long-Running Queries (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +16,7 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Profiling ODBC Driver Performance Data - Log Long-Running Queries
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

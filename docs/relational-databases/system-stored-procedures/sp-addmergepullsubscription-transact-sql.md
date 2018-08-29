@@ -19,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergepullsubscription"
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
-caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addmergepullsubscription (Transact-SQL)

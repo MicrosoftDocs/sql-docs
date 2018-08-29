@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DENY Database Scoped Credential (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
@@ -22,7 +22,7 @@ caps.latest.revision: 2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENY Database Scoped Credential (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

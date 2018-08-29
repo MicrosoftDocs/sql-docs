@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_log_shipping_primary_secondary"
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
-caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_add_log_shipping_primary_secondary (Transact-SQL)

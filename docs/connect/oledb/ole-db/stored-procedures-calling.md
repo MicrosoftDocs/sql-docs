@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ODBC CALL escape sequence"
   - "stored procedures [OLE DB], calling"
   - "OLE DB Driver for SQL Server, stored procedures"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Stored Procedures - Calling

@@ -211,26 +211,52 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  
 
 
-1. Set the availability mode to synchronous commit for both availability groups. 
+1. Set the availability mode to synchronous commit for both availability groups.  
     
       ```sql  
-      ALTER AVAILABILITY GROUP [distributedag] 
-      MODIFY 
-      AVAILABILITY GROUP ON
-      'ag1' WITH 
-         ( 
-          LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-          FAILOVER_MODE = MANUAL, 
-          SEEDING_MODE = MANUAL 
-          ), 
+      -- run against the Global Primary to switch the mode to synchronous_commit
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
+       ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+       ( 
+       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+       );
+       
+       -- run against the Global Primary to verify that mode is synchronous_commit
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+       
+       -- run against the Forwarder to switch the mode to synchronous_commit
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
+       ( 
+       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+       ), 
       'ag2' WITH  
-        ( 
-        LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022', 
-        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-        FAILOVER_MODE = MANUAL, 
-        SEEDING_MODE = MANUAL 
-        );  
+      ( 
+      AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+      );
+      
+      -- run against the Forwarder to confirm the mode is synchronous_commit
+      select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+      ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+      join sys.availability_replicas ar on ag.group_id=ar.group_id
+      left join sys.dm_hadr_availability_replica_states ars
+      on ars.replica_id=ar.replica_id
+      where ag.is_distributed=1
+      GO
        
       ```  
    >[!NOTE]

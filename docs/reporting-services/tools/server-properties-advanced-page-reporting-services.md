@@ -8,12 +8,9 @@ ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.component: "tools"
 ms.suite: "reporting-services"
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
 ms.custom: ""
 ms.reviewer: ""
 ms.technology: ""
-ms.tgt_pltfrm: ""
 ms.date: 08/16/2018
 ---
 
@@ -88,12 +85,12 @@ The default report processing timeout value, in seconds, for all reports managed
 The maximum number of snapshots that are stored for a report. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, there is no snapshot limit.  
 
 **EnableIntegratedSecurity**  
-Determines whether Windows integrated security is supported for report data source connections. The default is **True**. The valid values are as follows:
+Determines whether Windows-integrated security is supported for report data source connections. The default is **True**. The valid values are as follows:
 
 |Values|Description|
 |---------|---------|
-|**True**|Windows integrated security is enabled.|
-|**False**|Windows integrated security is not enabled. Report data sources that are configured to use Windows integrated security will not run.|
+|**True**|Windows-integrated security is enabled.|
+|**False**|Windows-integrated security is not enabled. Report data sources that are configured to use Windows-integrated security will not run.|
 
 **EnableLoadReportDefinition**  
 Select this option to specify whether users can perform an unplanned report execution from a Report Builder report. Setting this option determines the value of the **EnableLoadReportDefinition** property on the report server.  
@@ -151,19 +148,19 @@ Set for how long you want the office access token to expire in seconds. *Default
 Set the address of your Office Online Server instance for viewing Excel Workbooks.
 
 **RequireIntune**
-Set this to require Intune to access your organization's reports via the Power BI mobile app. *Default is False.*
+Requires Intune to access your organization's reports via the Power BI mobile app. *Default is False.*
 
 **ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server only)***
-Set for how long you want the schedule refresh to timeout. *Default is 120.*
+Set for how long you want the schedule refresh to time out. *Default is 120.*
 
-**ShowDownloadMenu**
-Set this to enable the client tools download menu. *Default is true.*
+**ShowDownloadMenu** 
+Enables the client tools download menu. *Default is true.*
 
 **TimeInitialDelaySeconds**
 Set for how long you want the initial time to be delayed in seconds. *Default is 60.*
 
 **TrustedFileFormat**
-Set all the external file formats that can be saved. *Default is jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.*
+Set all the external file formats that open within the browser under the Reporting Services portal site. External file formats not listed prompts to download the option in the browser. The default values are jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
 
 **EnablePowerBIReportExportData** ***(Power BI Report Server only)***  
 Enable Power BI Report Server data export from Power BI visuals. Values are True, False.  Default is True.  

@@ -75,7 +75,7 @@ Install the following tools on the client/development computer:
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2. [SSMS 18.0 or later](../../../ssms/download-sql-server-management-studio-ssms.md).
-3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md)(??? we will need to specify min version???.
+3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md)(??? we will need to specify min version, verify actual # with Matteo???.
 4. [Visual Studio (2017 or later recommended)](https://visualstudio.microsoft.com/downloads/).
 5. [Developer Pack for .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
 6. Install the following NuGet packages:(???the below instructions will need to be updated for public packages - the below instructions is for private packages, we used for private preview???)
@@ -133,20 +133,18 @@ On the client/development computer:
     > Rich computations are disabled by default in CTP 2.0. They need to be enabled using the above statement after each restart of your SQL Server instance.
 ## Provision enclave-enabled keys
 
-Before provisioning keys, you need to create your database (for example, by restoring it from a backup file) on the SQL Server instance with the secure enclave loaded.(??? Should we keep this sentence? If it is fine for the tutorial, but not sure it belongs to the docs???)
+The introduction of enclave-enabled keys does not fundamentally change the [key provisioning and key management workflows for Always Encrypted](overview-of-key-management-for-always-encrypted.md). The only change is in the column master key provisioning workflow, where you can now mark the key as enclave-enabled (by default, column master keys, are not enclave-enabled). When you specify the new column master key is to be enclave-enabled (with SSMS, or PowerShell), the following happens:
 
-The introduction of enclave-enabled keys does not fundamentally change the [key provisioning and key management workflows for Always Encrypted](overview-of-key-management-for-always-encrypted.md). The only change is in the column master key provisioning workflow, where you can now mark the key as enclave-enabled (by default, column master keys, are not enclave-enabled). When you specify the new column master key is to be enclave-enabled, a couple things happen:
-
-- Sets the **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database.(???This and the following sentence seem to be missing a subject???)
-- Digitally signs column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**). The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
+- The **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database is set.
+- The column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**) are digitally signed. The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
 
 The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key).
 
 To provision an enclave-enabled column encryption key, you just need to make sure that the column master key, encrypting the column encryption key, is enclave-enabled.
 
-The following limitations apply to provisioning enclave-enabled keys **during this preview**) (???Not sure we should make this forward-looking statement???:
+The following limitations currently apply to provisioning enclave-enabled keys:
 
-- Enclave-enabled **column master keys must be stored in Windows Certificate Store or in Azure Key Vault**. Storing enclave-enabled column master keys in other types of key stores (hardware security modules or custom key stores) is not supported.
+- Enclave-enabled **column master keys must be stored in Windows Certificate Store or in Azure Key Vault**. Storing enclave-enabled column master keys in other types of key stores (hardware security modules or custom key stores) is not currently supported.
 
 ### **Provision enclave-enabled keys using SQL Server Management Studio (SSMS)**
 
@@ -162,7 +160,7 @@ The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
     4. Select **Allow enclave computations**.
     5. If you selected Azure Key Vault, sign in to Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
     6. Select your key if it already exists, or follow the directions on the form to create a new key.
-    7. Click **OK**.
+    7. Click **OK**. (???Need to replace the below screenshot???)
 
         ![Allow enclave computations](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -171,7 +169,7 @@ The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
     1. Right click **Always Encrypted Keys** and select **New Column Encryption Key**.
     2. Enter a name for the new column encryption key.
     3. In the **Column master key** dropdown, select the column master key you created in the previous steps.
-    4. Click **OK**.(???Need to replace the below screenshot???)
+    4. Click **OK**.
 
 ### **Provision enclave-enabled keys using PowerShell**
 
@@ -180,7 +178,7 @@ The following sections provide sample PowerShell scripts for provisioning enclav
 **Provisioning Enclave-Enabled Keys – Windows Certificate Store**
 
 On the client/development computer, open Windows PowerShell ISE, copy the following script into Windows PowerShell ISE, customize the script, and run it.
-
+???CALL OUT THE ENCLAVE HIGHLIGHTED???
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -419,7 +417,7 @@ ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
 
 ## Enclave enabled connection strings
 
-Several use cases, described in the remaining part of this document, require that you first open an SSMS query window that uses a connection with Always Encrypted and enclave computations enabled in the connection string.(???This task is not specific to AE with enclaves - some tasks in the current AE also require a connection with ae enabled. Also, in SSMS 18 GA, we will add a new tab to the connection dialog - typing keywords will not be necessary. Screenshots/instructions will need to be updated???)
+Several use cases, described in the remaining part of this document, require that you first open an SSMS query window that uses a connection with Always Encrypted and enclave computations enabled in the connection string.(???WAITING for SSMS build - This task is not specific to AE with enclaves - some tasks in the current AE also require a connection with ae enabled. Also, in SSMS 18 GA, we will add a new tab to the connection dialog - typing keywords will not be necessary. Screenshots/instructions will need to be updated???)
 
 1. Open SSMS.
 2. After specifying your server name and a database name in the Connect To Server dialog, click on the Additional Connection Parameter tab and enter: **Column Encryption Setting = Enabled;** **Enclave Attestation Url = \<your attestation URL\>**

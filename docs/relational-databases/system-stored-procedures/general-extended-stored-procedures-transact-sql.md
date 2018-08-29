@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], extended"
   - "extending SQL Server functionality"
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # General Extended Stored Procedures (Transact-SQL)

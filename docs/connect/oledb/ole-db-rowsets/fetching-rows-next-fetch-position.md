@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, fetching"
   - "next fetch position"
   - "rowsets [OLE DB], fetching"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Fetching Rows - Next Fetch Position

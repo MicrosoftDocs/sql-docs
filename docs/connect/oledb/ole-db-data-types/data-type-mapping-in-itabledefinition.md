@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "data types [OLE DB]"
   - "CreateTable function"
   - "OLE DB, data types"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Data Type Mapping in ITableDefinition

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "IErrorInfo interface"
   - "OLE DB error handling, error details"
   - "ISQLServerErrorInfo interface"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # SQL Server Error Detail

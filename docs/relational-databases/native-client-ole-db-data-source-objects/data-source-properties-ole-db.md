@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Data Source Properties (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,7 +18,7 @@ ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Source Properties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

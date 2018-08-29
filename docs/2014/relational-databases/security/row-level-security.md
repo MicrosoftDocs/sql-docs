@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "security [SQL Server], predicate based access control"
   - "predicate based security"
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Row-Level Security

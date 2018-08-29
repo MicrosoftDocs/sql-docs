@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLE DB, transactions"
   - "transactions [OLE DB]"
   - "OLE DB Driver for SQL Server, transactions"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Transactions

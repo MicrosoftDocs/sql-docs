@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], OLE DB Driver for SQL Server"
   - "OLE DB Driver for SQL Server [FILESTREAM support]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # FILESTREAM Support

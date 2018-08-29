@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "immediate update mode [OLE DB]"
   - "cursors [OLE DB]"
   - "data updates [SQL Server], OLE DB"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Updating Data in SQL Server Cursors

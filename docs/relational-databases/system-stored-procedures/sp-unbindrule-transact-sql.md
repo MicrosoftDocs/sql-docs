@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_unbindrule"
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_unbindrule (Transact-SQL)

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting and updating data"
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Inserting and Updating Data in a Table (Tutorial)

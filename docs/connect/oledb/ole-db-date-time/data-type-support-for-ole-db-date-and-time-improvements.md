@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [OLE DB], data type support"
   - "OLE DB, date/time improvements"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Data Type Support for OLE DB Date and Time Improvements

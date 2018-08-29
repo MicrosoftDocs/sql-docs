@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_log_shipping_secondary_primary"
 ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
-caps.latest.revision: 17
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_delete_log_shipping_secondary_primary (Transact-SQL)

@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], change data capture"
   - "change data capture [SQL Server], stored procedures"
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Change Data Capture Stored Procedures (Transact-SQL)

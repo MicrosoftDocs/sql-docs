@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Lesson 1: Creating Database Objects

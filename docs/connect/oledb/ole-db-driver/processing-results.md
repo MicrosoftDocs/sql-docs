@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB, processing results"
   - "rowsets [SQL Server], results processing"
   - "results [OLE DB Driver for SQL Server]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Processing Results

@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [ODBC]"
   - "ODBC CALL syntax"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Execute Stored Procedure with ODBC CALL and Process Output

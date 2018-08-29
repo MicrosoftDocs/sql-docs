@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Import a BACPAC File to Create a New User Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
@@ -32,7 +32,7 @@ caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import a BACPAC File to Create a New User Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

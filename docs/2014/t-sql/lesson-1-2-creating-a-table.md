@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "creating tables"
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
-author: vanto
-ms.author: VanMSFT
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Creating a Table (Tutorial)

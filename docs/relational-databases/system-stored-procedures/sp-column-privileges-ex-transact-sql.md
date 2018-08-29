@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_column_privileges_ex"
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_column_privileges_ex (Transact-SQL)

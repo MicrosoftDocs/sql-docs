@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, application creation"
   - "applications [OLE DB Driver for SQL Server]"
   - "OLE DB, creating applications"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Creating an OLE DB Driver for SQL Server Application

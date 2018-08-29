@@ -69,7 +69,7 @@ You can use the T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) functi
 ### Standalone Server as a shared feature in SQL Server Setup
 
 This release also adds [SQL Server Machine Learning Server (Standalone)](r/r-server-standalone.md), a fully independent data science server, supporting statistical and predictive analytics in R and Python. As with R Services, this server is the next version of SQL Server 2016 R Server (Standalone). With the standalone server, you can distribute and scale R or Python solutions with no dependencies on SQL Server.
-
+::: moniker-end
 
 ## New in SQL Server 2016
 

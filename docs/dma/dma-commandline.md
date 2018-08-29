@@ -121,6 +121,9 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 ## Azure SQL Database SKU recommendations using the CLI
 
+> [!IMPORTANT]
+> SKU recommendations for Azure SQL Database are currently available for migrations from SQL Server 2016 or later. Support for earlier versions of SQL Server will be included in future releases.
+
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"

@@ -1,22 +1,16 @@
 ---
 title: "Reporting Services Data Alerts | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 33
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Reporting Services Data Alerts
 

@@ -554,7 +554,7 @@ END;
 ```  
   
 ### G. Viewing the events that cause a trigger to fire  
- The following example queries the `sys.triggers` and `sys.trigger_events` catalog views to determine which [!INCLUDE[tsql](../../includes/tsql-md.md)] language events cause trigger `safety` to fire. `safety` is created in the previous example.  
+ The following example queries the `sys.triggers` and `sys.trigger_events` catalog views to determine which [!INCLUDE[tsql](../../includes/tsql-md.md)] language events cause trigger `safety` to fire. The trigger, `safety`, is created in example 'D', found above.  
   
 ```sql  
 SELECT TE.*  

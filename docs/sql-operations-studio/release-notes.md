@@ -22,9 +22,11 @@ manager: craigg
 ## August 2018 (August Public Preview)
 
 release date: August 30, 2018  
-version: 0.32.7
+version: 0.32.8
 
-The *August Public Preview* focuses on on bug fixes, product stabilization, and filling gaps in existing scenarios.
+*0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https://github.com/Microsoft/sqlopsstudio/issues/1971), [#2372](https://github.com/Microsoft/sqlopsstudio/issues/2372)*)
+
+The *August Public Preview* focuses on on bug fixes, product stabilization, and filling gaps in existing scenarios.  
 
 - Announcing the SQL Server Import Extension
 - SQL Server Profiler Session management
@@ -36,36 +38,39 @@ The *August Public Preview* focuses on on bug fixes, product stabilization, and 
 ### Bug Fixes
 
 - Parse SQL in a Query Editor window by using the `Parse Syntax` command.
-- Fix [issue #143](https://github.com/Microsoft/sqlopsstudio/pull/143): Double-click not selecting @ in variable name.
-- Fix [issue #387](https://github.com/Microsoft/sqlopsstudio/pull/387): SQL Tab DB Icon is red.
-- Fix [issue #825](https://github.com/Microsoft/sqlopsstudio/pull/825): Request: Auto Connect to current server after Script as... 
-- Fix [issue #1278](https://github.com/Microsoft/sqlopsstudio/pull/1278): sqlops.desktop [Desktop Entry] - redundant value for Name & Comment.
-- Fix [issue #1285](https://github.com/Microsoft/sqlopsstudio/pull/1285): Updating causes application icon to be removed/replaced in Windows.
-- Fix [issue #1317](https://github.com/Microsoft/sqlopsstudio/pull/1317): Fix the decimal separator.
-- Fix [issue #1474](https://github.com/Microsoft/sqlopsstudio/pull/1474): Cancel change connection disconnects current connection.
-- Fix [issue #1497](https://github.com/Microsoft/sqlopsstudio/pull/1497): View as Chart options are cut off at the bottom.
-- Fix [issue #1524](https://github.com/Microsoft/sqlopsstudio/pull/1524): Shell/Dashboard: Main viewlet icons are draggable and can crash the app.
-- Fix [issue #1578](https://github.com/Microsoft/sqlopsstudio/pull/1578): Not able to expand/collapse remote file browser folder by clicking name.
-- Fix [issue #1620](https://github.com/Microsoft/sqlopsstudio/pull/1620): Feature Suggestion: Get Connection String for existing connection.
-- Fix [issue #1624](https://github.com/Microsoft/sqlopsstudio/pull/1624): SelectBox doesn't change color when disabled.
-- Fix [issue #1728](https://github.com/Microsoft/sqlopsstudio/pull/1728): Save as JSON/EXCEL/CSV not work.
-- Fix [issue #1744](https://github.com/Microsoft/sqlopsstudio/pull/1744): Results pane loses its scrolling positions when switching between tabs.
-- Fix [issue #1748](https://github.com/Microsoft/sqlopsstudio/pull/1748): Error message when saving Excel file second (and subsequent) time.
-- Fix [issue #1782](https://github.com/Microsoft/sqlopsstudio/pull/1782): Edit data: cell doesn't revert to original value on hitting Escape key.
-- Fix [issue #1836](https://github.com/Microsoft/sqlopsstudio/pull/1836): .sql files not associated with SQL Operations Studio.
-- Fix [issue #1850](https://github.com/Microsoft/sqlopsstudio/pull/1850): Typing N'' autocompletes to N'''.
-- Fix [issue #1985](https://github.com/Microsoft/sqlopsstudio/pull/1985): Copy from query results grid is off by 1 column.
+- Fix [issue #143](https://github.com/Microsoft/sqlopsstudio/issues/143): Double-click not selecting @ in variable name.
+- Fix [issue #387](https://github.com/Microsoft/sqlopsstudio/issues/387): SQL Tab DB Icon is red.
+- Fix [issue #825](https://github.com/Microsoft/sqlopsstudio/issues/825): Request: Auto Connect to current server after Script as... 
+- Fix [issue #1278](https://github.com/Microsoft/sqlopsstudio/issues/1278): sqlops.desktop [Desktop Entry] - redundant value for Name & Comment.
+- Fix [issue #1285](https://github.com/Microsoft/sqlopsstudio/issues/1285): Updating causes application icon to be removed/replaced in Windows.
+- Fix [issue #1317](https://github.com/Microsoft/sqlopsstudio/issues/1317): Fix the decimal separator.
+- Fix [issue #1474](https://github.com/Microsoft/sqlopsstudio/issues/1474): Cancel change connection disconnects current connection.
+- Fix [issue #1497](https://github.com/Microsoft/sqlopsstudio/issues/1497): View as Chart options are cut off at the bottom.
+- Fix [issue #1524](https://github.com/Microsoft/sqlopsstudio/issues/1524): Shell/Dashboard: Main viewlet icons are draggable and can crash the app.
+- Fix [issue #1578](https://github.com/Microsoft/sqlopsstudio/issues/1578): Not able to expand/collapse remote file browser folder by clicking name.
+- Fix [issue #1620](https://github.com/Microsoft/sqlopsstudio/issues/1620): Feature Suggestion: Get Connection String for existing connection.
+- Fix [issue #1624](https://github.com/Microsoft/sqlopsstudio/issues/1624): SelectBox doesn't change color when disabled.
+- Fix [issue #1728](https://github.com/Microsoft/sqlopsstudio/issues/1728): Save as JSON/EXCEL/CSV not work.
+- Fix [issue #1744](https://github.com/Microsoft/sqlopsstudio/issues/1744): Results pane loses its scrolling positions when switching between tabs.
+- Fix [issue #1748](https://github.com/Microsoft/sqlopsstudio/issues/1748): Error message when saving Excel file second (and subsequent) time.
+- Fix [issue #1782](https://github.com/Microsoft/sqlopsstudio/issues/1782): Edit data: cell doesn't revert to original value on hitting Escape key.
+- Fix [issue #1836](https://github.com/Microsoft/sqlopsstudio/issues/1836): .sql files not associated with SQL Operations Studio.
+- Fix [issue #1850](https://github.com/Microsoft/sqlopsstudio/issues/1850): Typing N'' autocompletes to N'''.
+- Fix [issue #1985](https://github.com/Microsoft/sqlopsstudio/issues/1985): Copy from query results grid is off by 1 column.
 - Fix [issue #1998](htpts://github.com/Microsoft/sqlopsstudio/pull/1998): Add VS Code version to About dialog.
 - Fix [issue #2042](https://github.com/Microsoft/sqlopsstudio/pull/2042): Agent: Enabled button to import queries from sql files.
-- Fix [issue #2091](https://github.com/Microsoft/sqlopsstudio/pull/2091): Can't use Ctrl+C shortcut to copy from result pane.
+- Fix [issue #2091](https://github.com/Microsoft/sqlopsstudio/issues/2091): Can't use Ctrl+C shortcut to copy from result pane.
 - Fix [issue #2099](https://github.com/Microsoft/sqlopsstudio/pull/2099): Added more saveAsCsv options.
-- Fix [issue #2107](https://github.com/Microsoft/sqlopsstudio/pull/2107): Update document icon for Dashboard and Profiler documents.
+- Fix [issue #2107](https://github.com/Microsoft/sqlopsstudio/issues/2107): Update document icon for Dashboard and Profiler documents.
 - Fix [issue #2129](https://github.com/Microsoft/sqlopsstudio/pull/2129): Save edit data scroll position when switching tabs.
-- Fix [issue #2152](https://github.com/Microsoft/sqlopsstudio/pull/2152): Results Grid Row Indicator Zero Based.
+- Fix [issue #2152](https://github.com/Microsoft/sqlopsstudio/issues/2152): Results Grid Row Indicator Zero Based.
 
 ## Known Issues
 
-- [Issue #2150](https://github.com/Microsoft/sqlopsstudio/pull/2150): Unable to connect on Ubuntu 16.04 to SQL in a container
+- [Issue #2371](https://github.com/Microsoft/sqlopsstudio/issues/2371) Save As Excel Only Saves First Row of Data
+- [Issue #2150](https://github.com/Microsoft/sqlopsstudio/issues/2150): Unable to connect on Ubuntu 16.04 to SQL in a container
+
+For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 ## July 2018 (July Public Preview)
@@ -105,10 +110,6 @@ The *July Public Preview* focuses on the initial release of the SQL Server Agent
  - Fix [issue 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): Error de Ortografia
  - Fix [issue 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): Setting iconPath in ButtonComponent after component() is called does not change icon
  - Fix [issue 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): Better Table organization
-
-
-For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
-
 
 
 ## June 2018 (June Public Preview)

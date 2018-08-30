@@ -1,16 +1,12 @@
 ---
 title: "Authentication with the Report Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Reporting Services], configuring"
@@ -19,10 +15,8 @@ helpviewer_keywords:
   - "authentication [Reporting Services]"
   - "Forms authentication"
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-caps.latest.revision: 34
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Authentication with the Report Server

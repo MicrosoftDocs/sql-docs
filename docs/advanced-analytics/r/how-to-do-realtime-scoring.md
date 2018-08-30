@@ -3,7 +3,7 @@ title: How to perform real-time scoring or native scoring in SQL Server Machine 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/15/2018  
+ms.date: 08/30/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,23 +12,31 @@ manager: cgronlun
 # How to perform real-time scoring or native scoring in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Forecasting and predicting outcomes based on fresh data inputs and existing models is a core task in machine learning. This article enumerates the approaches, which include internal processing options for high speed predictions, where speed is based on increasing levels of proximity to the database engine. Using the internal processing infrastructure introduces code requirements. Models and other functions must be generated from the Microsoft libraries only. Arbitrary R or Python code is not an option.
+Using an existing model to forecast or predict outcomes for new data inputs is a core task in machine learning. This article enumerates the approaches for generating predictions in SQL Server. Among the approaches are internal processing methodologies for high speed predictions, where speed is based on incremental reductions of run time dependencies. Fewer dependencies means faster predictions.
 
-The following table summarizes the scoring frameworks for forecasting and predictions. Speed of processing and not substance of the output is the differentiating feature. Assuming the same functions and inputs, the scored output should not vary based on the approach you use.
+Using the internal processing infrastructure (real-time or native scoring) comes with library requirements. Functions must be from the Microsoft libraries. R or Python code calling open-source or third-party functions is not supported in CLR or C++ extensions.
 
-| Prediction mechanisms | Code restrictions | Processing behaviors |
-|-----------------------|-------------------|----------------------|
-| Extensibility framework | None. Models can be based on any R or Python function | Hundreds of milliseconds. Loading the R or Python runtime is a fixed cost, consuming three to four hundred milliseconds on average, before any new data is scored. |
-| Real-time scoring | R: RevoScaleR and MicrosoftML <br/>Python: revoscalepy and microsoftml | tens of milliseconds. |
-| Native scoring | R: RevoScaleR <br/>Python: revoscalepy | Ones of milliseconds, on average. | 
+The following table summarizes the scoring frameworks for forecasting and predictions. 
 
-Both real-time scoring and native scoring are designed to let you use a machine learning model without having to install R. Given a pre-trained model in a compatible format - saved to a SQL Server database - you can use standard data access techniques to quickly generate prediction scores on new inputs.
+| Methodology           | Interface         | Library requirements | Processing speeds |
+|-----------------------|-------------------|----------------------|----------------------|
+| Extensibility framework | R: rxpredict <br/>Python: rx_predict | None. Models can be based on any R or Python function | Hundreds of milliseconds. <br/>Loading a runtime environment has a fixed cost, averaging three to six hundred milliseconds, before any new data is scored. |
+| Real-time scoring CLR extension | [sp_rxPredict](../../sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md) on a binary model | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Tens of milliseconds, on average. |
+| Native scoring C++ extension| [PREDICT T-SQL function](../../sql/t-sql/queries/predict-transact-sql.md) on a binary model | R: RevoScaleR <br/>Python: revoscalepy | Less than 20 milliseconds, on average. | 
 
-## What is native scoring and how is it different from real-time scoring?
+Speed of processing and not substance of the output is the differentiating feature. Assuming the same functions and inputs, the scored output should not vary based on the approach you use.
 
-In SQL Server 2016, Microsoft created an extensibility framework that allows R scripts to be executed from T-SQL. This framework supports any operation you might perform in R, ranging from simple functions to training complex machine learning models. However, the dual-process architecture requires invoking an external R process for every call, regardless of the complexity of the operation. If you are loading a pre-trained model from a table and scoring against it on data already in SQL Server, the overhead of calling the external R process represents an unnecessary performance cost.
+A binary model is one that's been created using a supported function, serialized to a binary format, and stored in a database. Using a stored procedure or T-SQL, you can load and use a binary model without the overhead of an R or Python language run time, resulting in faster time to completion when generating prediction scores on new inputs.
 
-_Scoring_ is a two-step process. First, you specify a pre-trained model to load from a table. Second, pass new input data to the function, to generate prediction values (or _scores_). The input can be either tabular or single rows. You can choose to output a single column value representing a probability, or you might output several values, such as a confidence interval, error, or other useful complement to the prediction.
+The significance of CLR and C++ extensions is proximity to the database engine itself. The native language of the database engine is C++, which means extensions written in C++ run with fewer dependencies. In contrast, CLR extensions depend on .NET Core. 
+
+As you might expect, platform support is impacted by these run time environments. Native database engine extensions run anywhere the relational database is supported: Windows, Linux, Azure. CLR extensions with the .NET Core requirement is currently Windows only.
+
+## Native and real-time scoring compared
+
+Starting in SQL Server 2016, Microsoft added an extensibility framework that allows R scripts to be executed from T-SQL. This framework supports any operation you might perform in R, ranging from simple functions to training complex machine learning models. However, the dual-process architecture requires invoking an external R process for every call, regardless of the complexity of the operation. If you are loading a pre-trained model from a table and scoring against it on data already in SQL Server, the overhead of calling the external R process represents an unnecessary performance cost.
+
+_Scoring_ is a two-step process. First, you specify an already trained model to load from a table. Second, pass new input data to the function, to generate prediction values (or _scores_). The input can be either tabular or single rows. You can choose to output a single column value representing a probability, or you might output several values, such as a confidence interval, error, or other useful complement to the prediction.
 
 When the input includes many rows of data, it is usually faster to insert the prediction values into a table as part of the scoring process.  Generating a single score is more typical in a scenario where you get input values from a form or user request, and return the score to a client application. To improve performance when generating successive scores, SQL Server might cache the model so that it can be reloaded into memory.
 
@@ -70,14 +78,6 @@ The overall process of preparing the model and then generating scores is similar
 2. Serialize the model using a special binary format.
 3. Make the model available to SQL Server. Typically this means storing the serialized model in a SQL Server table.
 4. Call the function or stored procedure, and pass the model and input data.
-
-## Requirements
-
-+ The PREDICT function is available in all editions of SQL Server 2017 and is enabled by default. You do not need to install R or enable additional features.
-
-+ If using sp\_rxPredict, some additional steps are required. See [Enable real-time scoring](#bkmk_enableRtScoring).
-
-+ At this time, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Real-time scoring](../real-time-scoring.md).
 
 ## Serialization and storage
 

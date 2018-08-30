@@ -43,14 +43,20 @@ For an example of how rxPredict can be used for scoring, see [End to End Loan Ch
 
 ## Requirements
 
++ The PREDICT function is available in all editions of SQL Server 2017 and is enabled by default. You do not need to install R or enable additional features.
+
++ If using sp\_rxPredict, some additional steps are required. See [Enable real-time scoring](#bkmk_enableRtScoring).
+
++ At this time, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Real-time scoring](../real-time-scoring.md).
+
+## Requirements
+
 Real-time scoring is supported on these platforms:
 
 + SQL Server 2017 Machine Learning Services
 + SQL Server R Services 2016, with an upgrade of R components to 9.1.0 or later
 
 On SQL Server, you must enable the real-time scoring feature in advance to add the CLR-based libraries to SQL Server.
-
-For information regarding real-time scoring in a distributed environment based on Microsoft R Server, refer to the [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) function available in the [mrsDeploy package](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package), which supports publishing models for real-time scoring as a new a web service running on R Server.
 
 ## Restrictions
 
@@ -180,99 +186,6 @@ EXEC sp_rxPredict
 
 To disable real-time scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## Example: Native scoring with PREDICT 
-
-In this example, you create a model, and then call the real-time prediction function from T-SQL.
-
-### Step 1. Prepare and save the model
-
-Run the following code to create the sample database and required tables.
-
-```SQL
-CREATE DATABASE NativeScoringTest;
-GO
-USE NativeScoringTest;
-GO
-DROP TABLE IF EXISTS iris_rx_data;
-GO
-CREATE TABLE iris_rx_data (
-  "Sepal.Length" float not null, "Sepal.Width" float not null
-  , "Petal.Length" float not null, "Petal.Width" float not null
-  , "Species" varchar(100) null
-);
-GO
-```
-
-Use the following statement to populate the data table with data from the **iris** dataset.
-
-```SQL
-INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
-EXECUTE sp_execute_external_script
-  @language = N'R'
-  , @script = N'iris_data <- iris;'
-  , @input_data_1 = N''
-  , @output_data_1_name = N'iris_data';
-GO
-```
-
-Now, create a table for storing models.
-
-```SQL
-DROP TABLE IF EXISTS ml_models;
-GO
-CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
-  , model_version nvarchar(100) not null
-  , native_model_object varbinary(max) not null);
-GO
-```
-
-The following code creates a model based on the **iris** dataset and saves it to the table named **models**.
-
-```SQL
-DECLARE @model varbinary(max);
-EXECUTE sp_execute_external_script
-  @language = N'R'
-  , @script = N'
-    iris.sub <- c(sample(1:50, 25), sample(51:100, 25), sample(101:150, 25))
-    iris.dtree <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris[iris.sub, ])
-    model <- rxSerializeModel(iris.dtree, realtimeScoringOnly = TRUE)
-    '
-  , @params = N'@model varbinary(max) OUTPUT'
-  , @model = @model OUTPUT
-  INSERT [dbo].[ml_models]([model_name], [model_version], [native_model_object])
-  VALUES('iris.dtree','v1', @model) ;
-```
-
-> [!NOTE] 
-> Be sure to use the [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
-
-You can run a statement such as the following to view the stored model in binary format:
-
-```SQL
-SELECT *, datalength(native_model_object)/1024. as model_size_kb
-FROM ml_models;
-```
-
-### Step 2. Run PREDICT on the model
-
-The following simple PREDICT statement gets a classification from the decision tree model using the **native scoring** function. It predicts the iris species based on attributes you provide, petal length and width.
-
-```SQL
-DECLARE @model varbinary(max) = (
-  SELECT native_model_object
-  FROM ml_models
-  WHERE model_name = 'iris.dtree'
-  AND model_version = 'v1');
-SELECT d.*, p.*
-  FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
-  WITH(setosa_Pred float, versicolor_Pred float, virginica_Pred float) as p;
-go
-```
-
-If you get the error, "Error occurred during execution of the function PREDICT. Model is corrupt or invalid", it usually means that your query didn't return a model. Check whether you typed the model name correctly, or if the models table is empty.
-
-> [!NOTE]
-> Because the columns and values returned by **PREDICT** can vary by model type, you must define the schema of the returned data by using a **WITH** clause.
 
 ## Next steps
 

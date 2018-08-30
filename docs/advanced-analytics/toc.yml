@@ -1,3 +1,5 @@
+- name: SQL ML and Extensibility Documentation
+  href: index.md
 - name: SQL Server Machine Learning
   items:
   - name: Machine Learning Services (R, Python, Java)

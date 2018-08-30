@@ -67,7 +67,7 @@ manager: craigg
   
 |Object|Invalid characters|  
 |------------|------------------------|  
-|`Server`|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](/windows/desktop/DNS/naming-conventions).aspx) for details.|  
+|`Server`|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](/windows/desktop/DNS/naming-conventions) for details.|  
 |`DataSource`|: / \ * &#124; ? " () [] {} <>|  
 |`Level` or `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
 |`Dimension` or `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  

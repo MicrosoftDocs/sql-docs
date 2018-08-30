@@ -20,7 +20,7 @@ manager: craigg
 # sp_dropalias (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_dropalias** was removed for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For syntax, see [sp_dropalias (Transact-SQL)](sp-dropalias-transact-sql.md).aspx) in earlier documentation.  
+  **sp_dropalias** was removed for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For syntax, see [sp_dropalias (Transact-SQL)](sp-dropalias-transact-sql.md) in earlier documentation.  
   
 ## Syntax  
   

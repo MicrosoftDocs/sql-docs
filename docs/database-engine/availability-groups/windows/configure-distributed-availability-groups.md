@@ -56,7 +56,7 @@ GO
 ## Create first availability group
 
 ### Create the primary availability group on the first cluster  
-Create an availability group on the first WSFC.   In this example, the availability group is named `ag1` for the database `db1`.      
+Create an availability group on the first WSFC.   In this example, the availability group is named `ag1` for the database `db1`. The primary replica of the primary availability group is known as the **global primary** in a distributed availability group. Server1 is the global primary in this example.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -108,7 +108,7 @@ GO
   
 
 ## Create second availability group  
- Then on the second WSFC, create a second availability group, `ag2`. In this case, the database is not specified, because it is automatically seeded from the primary availability group.  
+ Then on the second WSFC, create a second availability group, `ag2`. In this case, the database is not specified, because it is automatically seeded from the primary availability group.  The primary replica of the secondary availability group is known as the **forwarder** in a distributed availability group. In this example, server3 is the forwarder. 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -211,7 +211,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  
 
 
-1. Set the distributed availability group to synchronous commit by running the following code on *both* the Global Primary and the Forwarder.   
+1. Set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -241,7 +241,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
    >Similarly to regular availability groups, the synchronization status between two availability groups replicas part of a distributed      availability group, depends on the availability mode of both replicas. For example, for synchronous commit to occur, both the  current primary availability group and the secondary availability group must be configured with synchronous_commit availability mode.  
 
 
-1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the SQL Server that hosts the primary replica of the primary availability group. 
+1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the global primary, which is the primary replica of the primary availability group. 
     
       ```sql  
       SELECT ag.name
@@ -257,7 +257,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
 
     Proceed after the availability group **synchronization_state_desc** is `SYNCHRONIZED`. If **synchronization_state_desc** is not `SYNCHRONIZED`, run the command every five seconds until it changes. Do not proceed until the **synchronization_state_desc** = `SYNCHRONIZED`. 
 
-1. On the SQL Server that hosts the primary replica for the primary availability group, set the distributed availability group role to `SECONDARY`. 
+1. On the global primary, set the distributed availability group role to `SECONDARY`. 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 

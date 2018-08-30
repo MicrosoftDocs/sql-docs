@@ -214,7 +214,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
 1. Set the distributed availability group to synchronous commit by running the following code on *both* the Global Primary and the Forwarder.   
     
       ```sql  
-      -- sets the distributed availability group to synchronous commit. 
+      -- sets the distributed availability group to synchronous commit 
        ALTER AVAILABILITY GROUP [distributedag] 
        MODIFY 
        AVAILABILITY GROUP ON

@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting SQL Server Aris | Microsoft Docs
+title: Monitoring and troubleshooting queries for SQL Server Aris | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Troubleshooting SQL Server Aris
+# Monitoring and troubleshooting queries for SQL Server Aris
 
 This article describes the DMVs and stored procedures available to help troubleshoot SQL Server Aris. It also provides troubleshooting recommendations for known issues.
 

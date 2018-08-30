@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server vNext | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/29/2018"
+ms.date: "09/24/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.suite: ""
@@ -52,7 +52,8 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Machine Learning on Linux
   - Partition-based modeling
   - Failover cluster support
-  - Java extensibility
+- [Programmability extensions](#programmability)
+  - Java language extension
 - [Security](#security)
   - Always Encrypted with enclaves
 
@@ -133,9 +134,11 @@ Continue reading for more details about these features.
 
 - **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
 
-- **Java extensibility**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature ‘Machine Learning Services (in-database) to your SQL Server instance.
-
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+
+## <a id="programmability"></a> Programmability extensions
+
+- **Java language extension**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
 
 ## <a id="security"></a>Security
 

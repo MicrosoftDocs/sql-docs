@@ -1,13 +1,9 @@
 ---
 title: "Set Deployment Properties (Reporting Services) | Microsoft Docs"
-ms.custom: ""
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
-ms.reviewer: ""
+ms.technology: tools
 ms.suite: "reporting-services"
-ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], deploying"
@@ -15,11 +11,9 @@ helpviewer_keywords:
   - "properties [Reporting Services], deployment"
   - "deploying reports [Reporting Services]"
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 44
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.date: "03/07/2017"
+author: markingmyname
+ms.author: maghan
+ms.date: 03/07/2017
 ---
 
 # Set Deployment Properties (Reporting Services)

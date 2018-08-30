@@ -39,6 +39,10 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Applies To**:  [!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] CTP 2.0.
 
+### Master Data Services (MDS)
+
+The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
+
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

@@ -1,25 +1,19 @@
 ---
 title: "Upgrade a Report Server Database | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/17/2018"
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading databases"
   - "report server database"
   - "upgrading Reporting Services"
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-caps.latest.revision: 44
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Upgrade a Report Server Database

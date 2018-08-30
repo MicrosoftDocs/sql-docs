@@ -1,20 +1,15 @@
 ---
 title: "Configuration and administration of a report server (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/17/2018"
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-sharepoint
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Configuration and administration of a SQL Server Reporting Services (SSRS) report server
 

@@ -1,17 +1,13 @@
 ---
 title: "Identifying Execution State | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "report-server-web-service-net-framework-soap-headers"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-web-service-net-framework-soap-headers
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 applies_to: 
   - "SQL Server 2016 Preview"
 helpviewer_keywords: 
@@ -20,10 +16,8 @@ helpviewer_keywords:
   - "sessions [Reporting Services]"
   - "SessionHeader SOAP header"
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 46
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Identifying Execution State
   Hypertext Transfer Protocol (HTTP) is a connectionless and stateless protocol, which means that it does not automatically indicate whether different requests come from the same client or even whether a single browser instance is still actively viewing a page or site. Sessions create a logical connection to maintain state between server and client over HTTP. The user-specific information relevant to a particular session is known as the session state.  

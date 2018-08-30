@@ -1,21 +1,15 @@
 ---
 title: "Uninstall Report Builder | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Uninstall Report Builder

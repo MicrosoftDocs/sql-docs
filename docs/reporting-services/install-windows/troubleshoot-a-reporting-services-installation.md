@@ -1,20 +1,14 @@
 ---
 title: "Troubleshoot a Reporting Services installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2018"
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.suite: pro-bi
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: 16
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Troubleshoot a Reporting Services installation

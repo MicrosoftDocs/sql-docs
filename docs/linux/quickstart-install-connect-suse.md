@@ -46,7 +46,7 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    ```
 
    > [!TIP]
-   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019 )** repository. Use the following command for SQL Server 2019  installations:
+   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019)** repository. Use the following command for SQL Server 2019  installations:
    >
    > ```bash
    > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo

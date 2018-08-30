@@ -53,7 +53,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    ```
 
    > [!TIP]
-   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019 )** repository. Use the following command for SQL Server 2019  installations:
+   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019)** repository. Use the following command for SQL Server 2019  installations:
    >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"

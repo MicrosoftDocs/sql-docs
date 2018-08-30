@@ -1,6 +1,6 @@
 ---
 title: Get started with SQL Server on Red Hat Enterprise Linux | Microsoft Docs
-description:  This quickstart shows how to install SQL Server 2017 or SQL Server vNext on Red Hat Enterprise Linux and then create and query a database with sqlcmd.
+description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019  on Red Hat Enterprise Linux and then create and query a database with sqlcmd.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -17,7 +17,7 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In this quickstart, you install SQL Server 2017 or SQL Server vNext on Red Hat Enterprise Linux (RHEL) 7.3+. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server 2019  on Red Hat Enterprise Linux (RHEL) 7.3+. You then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -28,7 +28,7 @@ You must have a RHEL 7.3 or 7.4 machine with **at least 2 GB** of memory.
 
 To install Red Hat Enterprise Linux on your own machine, go to [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
-If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and vNext](sql-server-linux-change-repo.md).
+If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019 ](sql-server-linux-change-repo.md).
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -43,7 +43,7 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    ```
 
    > [!TIP]
-   > If you want to try SQL Server vNext, you must instead register the **Preview (vNext)** repository. Use the following command for SQL Server vNext installations:
+   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019 )** repository. Use the following command for SQL Server 2019  installations:
    >
    > ```bash
    > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo

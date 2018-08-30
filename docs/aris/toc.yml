@@ -69,7 +69,17 @@
       - name: Stream to data pool
         href: sql-server-aris-stream-data-pool.md
     - name: Restore a database
-      href: sql-server-aris-restore-databse.md    
+      href: sql-server-aris-restore-databse.md
+  - name: Big Data/Machine Learning
+    items:
+    - name: Use Prose for automated big data wrangling
+      href: sql-server-aris-prose-automated-big-data.md
+    - name: Machine learning with Spark
+      href: sql-server-aris-spark-ml.md
+    - name: Model training and Export with Spark
+      href: sql-server-aris-spark-model-training.md
+    - name: Scoring MLeap exported model with SQL/ML
+      href: sql-server-aris-mleap-scoring-ml.md
   - name: Query scenarios
     items:
       - name: Read CSV with OPENROWSET

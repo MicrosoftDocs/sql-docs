@@ -1,19 +1,14 @@
 ---
 title: "Change log for SQL Server Reporting Services (2017 and later) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/26/2018"
+ms.date: 04/26/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
+ms.technology: reporting-services
 ms.suite: ""
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "casualoak"
 ms.author: "edugonz"
-manager: "kfile"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Change log for SQL Server Reporting Services

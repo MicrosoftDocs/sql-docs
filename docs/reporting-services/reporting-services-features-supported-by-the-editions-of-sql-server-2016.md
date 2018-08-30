@@ -1,22 +1,16 @@
 ---
 title: "Reporting Services Features Supported by the Editions of SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
-caps.latest.revision: 3
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Reporting Services Features Supported by the Editions of SQL Server 2016

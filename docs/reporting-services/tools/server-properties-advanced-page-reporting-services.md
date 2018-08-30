@@ -1,16 +1,12 @@
 ---
 title: "Server Properties (Advanced Page) - Reporting Services | Microsoft Docs"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
+ms.technology: tools
 ms.suite: "reporting-services"
 ms.topic: conceptual
-ms.custom: ""
-ms.reviewer: ""
-ms.technology: ""
 ms.date: 08/16/2018
 ---
 
@@ -160,7 +156,7 @@ Enables the client tools download menu. *Default is true.*
 Set for how long you want the initial time to be delayed in seconds. *Default is 60.*
 
 **TrustedFileFormat**
-Set all the external file formats that can be saved. Default is jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
+Set all the external file formats that open within the browser under the Reporting Services portal site. External file formats not listed prompts to download the option in the browser. The default values are jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
 
 **EnablePowerBIReportExportData** ***(Power BI Report Server only)***  
 Enable Power BI Report Server data export from Power BI visuals. Values are True, False.  Default is True.  

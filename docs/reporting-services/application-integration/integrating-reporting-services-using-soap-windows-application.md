@@ -1,17 +1,13 @@
 ---
 title: "Using the SOAP API in a Windows Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "application-integration"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: application-integration
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 applies_to: 
   - "SQL Server 2016 Preview"
 helpviewer_keywords: 
@@ -20,10 +16,8 @@ helpviewer_keywords:
   - "Windows Forms [Reporting Services]"
   - "SOAP [Reporting Services], Windows applications"
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-caps.latest.revision: 35
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Integrating Reporting Services Using SOAP - Windows Application
   You can access the full functionality of the report server through the Reporting Services SOAP API. The SOAP API is a Web service and, as such, can be easily accessed to provide enterprise reporting features to your custom business applications. You can access the Web service in a Windows application simply by writing code that makes calls to the service. Using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can generate a proxy class that exposes the properties and methods of the Web service and enables you to use a familiar infrastructure and tools to build business applications built on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technology.  

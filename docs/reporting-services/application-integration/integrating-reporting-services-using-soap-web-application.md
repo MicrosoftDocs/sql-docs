@@ -1,17 +1,13 @@
 ---
 title: "Using the SOAP API in a Web Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "application-integration"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: application-integration
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 applies_to: 
   - "SQL Server 2016 Preview"
 helpviewer_keywords: 
@@ -21,10 +17,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], SOAP"
   - "Web applications [Reporting Services]"
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
-caps.latest.revision: 34
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Integrating Reporting Services Using SOAP - Web Application
   You can access the full functionality of the report server through the Reporting Services SOAP API. Because it's a Web service, the SOAP API can be easily accessed to provide enterprise reporting features to your custom business applications. You access the Report Server Web service from a Web application in much the same way that you access the SOAP API from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. Using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can generate a proxy class that exposes the properties and methods of the Report Server Web service and enables you to use a familiar infrastructure and tools to build business applications on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technology.  

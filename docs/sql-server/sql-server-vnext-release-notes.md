@@ -41,20 +41,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 ### Master Data Services (MDS)
 
-**Issue and customer impact**: In the Master Data Services (MDS) portal, the Silverlight components on the following pages have been replaced with HTML controls:
-
-- Function Explore
-  - Entities
-  - Entity Dependencies
-  - Hierarchies
-- Function System Administration
-  - Manage Derived Hierarchies - Edit Derived Hierarchy - Preview
-
-On the modified **Explore** pages, the operators `Matches` and `Does not match` are not supported for filtering grid data in the function **Filter**. Support for these operators will be restored in later CTP releases.
-
-**Workaround**: No workaround is available.
-
-**Applies to**: Windows
+The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

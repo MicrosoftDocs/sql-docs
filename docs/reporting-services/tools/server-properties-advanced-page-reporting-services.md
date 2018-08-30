@@ -1,16 +1,12 @@
 ---
 title: "Server Properties (Advanced Page) - Reporting Services | Microsoft Docs"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
+ms.technology: tools
 ms.suite: "reporting-services"
 ms.topic: conceptual
-ms.custom: ""
-ms.reviewer: ""
-ms.technology: ""
 ms.date: 08/16/2018
 ---
 

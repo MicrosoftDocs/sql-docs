@@ -211,23 +211,23 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  
 
 
-1. Set the distributed availability group to synchronous commit by running the below code against the intended availability group.   
+1. Set the distributed availability group to synchronous commit by running the following code on *both* the Global Primary and the Forwarder.   
     
       ```sql  
-      -- run against the Global Primary to switch the mode to synchronous_commit
+      -- sets the distributed availability group to synchronous commit. 
        ALTER AVAILABILITY GROUP [distributedag] 
        MODIFY 
        AVAILABILITY GROUP ON
        'ag1' WITH 
-       ( 
+        ( 
         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
         ), 
         'ag2' WITH  
-       ( 
-       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
-       );
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
        
-       -- run against the Global Primary to verify that mode is synchronous_commit
+       -- verifies the commit state of the distributed availability group
        select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
        ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
        join sys.availability_replicas ar on ag.group_id=ar.group_id
@@ -235,32 +235,10 @@ Only manual failover is supported at this time. The following Transact-SQL state
        on ars.replica_id=ar.replica_id
        where ag.is_distributed=1
        GO
-       
-       -- run against the Forwarder to switch the mode to synchronous_commit
-       ALTER AVAILABILITY GROUP [distributedag] 
-       MODIFY 
-       AVAILABILITY GROUP ON
-       'ag1' WITH 
-       ( 
-       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
-       ), 
-      'ag2' WITH  
-      ( 
-      AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
-      );
-      
-      -- run against the Forwarder to confirm the mode is synchronous_commit
-      select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
-      ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
-      join sys.availability_replicas ar on ag.group_id=ar.group_id
-      left join sys.dm_hadr_availability_replica_states ars
-      on ars.replica_id=ar.replica_id
-      where ag.is_distributed=1
-      GO
-       
+
       ```  
    >[!NOTE]
-   >Similarly to regular availability groups, the synchronization status between two availability groups replicas part of a distributed      availability group, depends on the availability mode of both replicas. For example, for synchronous commit to occur, both the current    primary availability group and the secondary availability group must be configured with synchronous_commit availability mode.  
+   >Similarly to regular availability groups, the synchronization status between two availability groups replicas part of a distributed      availability group, depends on the availability mode of both replicas. For example, for synchronous commit to occur, both the  current primary availability group and the secondary availability group must be configured with synchronous_commit availability mode.  
 
 
 1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the SQL Server that hosts the primary replica of the primary availability group. 

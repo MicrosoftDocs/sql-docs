@@ -42,7 +42,7 @@ To deploy an availability group in Kubernetes:
 
 1. Create the Kubernetes cluster
 
-   For an availability group, create at least three nodes for SQL Server plus a node for the operator.
+   For an availability group, create at least three nodes for SQL Server plus a node for the master.
 
 1. Deploy the operator
 
@@ -78,11 +78,15 @@ The code for the operator, AG agent, and SQL Server is packaged in a Docker imag
 
 * `mssql-server-k8s-ag-agent-supervisor`
   
-    This process spawns `mssql-server-k8s-ag-agent` processes as child processes and terminates them as necessary, based on which AGs the local SQL Server instance is meant to be part of.
+    This process spawns `mssql-server-k8s-ag-agent` and `mssql-server-k8s-sqlhealth-agent` processes as child processes and terminates them as necessary, based on which AGs the local SQL Server instance is meant to be part of. 
+
+    It also maintains the ag certificate and endpoint. 
 
 * `mssql-server-k8s-ag-agent`
   
     This process monitors the health of an AG replica on a single SQL Server instance and performs failovers.
+
+    It also maintains the leader election.
 
 * `mssql-server-k8s-init-sql`
   

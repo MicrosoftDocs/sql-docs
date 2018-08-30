@@ -1,23 +1,17 @@
 ---
 title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
+ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
+ms.suite: pro-bi
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 6: Adding Grouping and Totals (Reporting Services)
 In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  

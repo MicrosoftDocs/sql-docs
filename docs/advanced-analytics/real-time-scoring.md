@@ -14,10 +14,7 @@ manager: cgronlun
 # Real-time scoring with sp_rxPredict in SQL Server machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how scoring in near-real-time works for SQL Server relational data, using machine learning models written in R. 
-
-> [!Note]
-> Native scoring is a special implementation of real-time scoring that uses the native T-SQL PREDICT function for very fast scoring. For more information and availability, see [Native scoring](sql-native-scoring.md).
+Real-time scoring uses the CLR extension capabilities in SQL Server to generate predictions or scores in forecasting workloads. Because real-time scoring is language-agnostic, it executes with no dependencies on R or Python run times. Assuming a model created from Microsoft functions, trained, and serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on features.
 
 ## How real-time scoring works
 
@@ -32,47 +29,62 @@ Real-time scoring is a multi-step process:
 3. You provide new input data, either tabular or single rows, as input to the model.
 4. To generate scores, call the sp_rxPredict stored procedure.
 
-## Get started
-
-For code examples and instructions, see [How to perform native scoring or real-time scoring](r/how-to-do-realtime-scoring.md).
-
-For an example of how rxPredict can be used for scoring, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
-
 > [!TIP]
-> If you are working exclusively in R code, you can also use the [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) function for fast scoring.
+> For an example of real-time scoring in action, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
-## Requirements
+## Prerequisites
 
-+ The PREDICT function is available in all editions of SQL Server 2017 and is enabled by default. You do not need to install R or enable additional features.
++ [Enable SQL Server CLR integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
-+ If using sp\_rxPredict, some additional steps are required. See [Enable real-time scoring](#bkmk_enableRtScoring).
++ [Enable real-time scoring](#bkmk_enableRtScoring).
 
-+ At this time, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Real-time scoring](../real-time-scoring.md).
++ The model must be trained in advance using one of the supported **rx** algorithms. For R, real-time scoring with `sp_rxPredict` works with [RevoScaleR and MicrosoftML supported algorithms](#bkmk_rt_supported_algos). For Python, see [revoscalepy and microsoftml supported algorithms](#bkmk_py_supported_algos)
 
-## Requirements
++ Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
-Real-time scoring is supported on these platforms:
-
-+ SQL Server 2017 Machine Learning Services
-+ SQL Server R Services 2016, with an upgrade of R components to 9.1.0 or later
-
-On SQL Server, you must enable the real-time scoring feature in advance to add the CLR-based libraries to SQL Server.
-
-## Restrictions
-
-+ The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](#bkmk_rt_supported_algos). Real-time scoring with `sp_rxPredict` supports both RevoScaleR and MicrosoftML algorithms.
-
-+ The model must be saved using the new serialization functions: [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
-
-+ Real-time scoring does not use an interpreter; therefore, any functionality that might require an interpreter is not supported during the scoring step.  These might include:
+Real-time scoring does not use an interpreter; therefore, any functionality that might require an interpreter is not supported during the scoring step.  These might include:
 
   + Models using the `rxGlm` or `rxNaiveBayes` algorithms are not currently supported
 
   + RevoScaleR models that use an R transformation function, or a formula that contains a transformation, such as <code>A ~ log(B)</code> are not supported in real-time scoring. To use a model of this type, we recommend that you perform the transformation on the to input data before passing the data to real-time scoring.
 
-+ Real-time scoring is currently optimized for fast predictions on smaller data sets, ranging from a few rows to hundreds of thousands of rows. On big datasets, using [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) might be faster.
+> [!Note]
+> Real-time scoring is currently optimized for fast predictions on smaller data sets, ranging from a few rows to hundreds of thousands of rows. On big datasets, using [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) might be faster.
 
-## <a name="bkmk_rt_supported_algos">Algorithms that support real-time scoring
+<a name="bkmk_py_supported_algos"></a>
+
+## Python algorithms using real-time scoring
+
++ revoscalepy models
+
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
+  
+  Models marked with \* also support native scoring with the PREDICT function.
+
++ microsoftml models
+
+  + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
+  + [rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
+  + [rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
+  + [rx_neural_net](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
+  + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
+
++ Transformations supplied by microsoftml
+
+  + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text)
+  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
+
+
+<a name="bkmk_rt_supported_algos"></a>
+
+## R algorithms using real-time scoring
 
 + RevoScaleR models
 
@@ -108,11 +120,8 @@ Real-time scoring is not supported for R transformations other than those explic
 For developers accustomed to working with RevoScaleR and other Microsoft R-specific libraries, unsupported functions include 
  `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR, PMML models, and other models created using other R libraries from CRAN or other repositories.
 
-## Known issues
 
-+ `sp_rxPredict` returns an inaccurate message when a NULL value is passed as the model: "System.Data.SqlTypes.SqlNullValueException:Data in Null".
-
-## Example: Real-time scoring with sp_rxPredict
+## Example (R): Real-time scoring with sp_rxPredict
 
 This section describes the steps required to set up **real-time** prediction, and provides an example of how to call the function from T-SQL.
 
@@ -186,7 +195,8 @@ EXEC sp_rxPredict
 
 To disable real-time scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-
 ## Next steps
 
-[How to do real-time scoring](r/how-to-do-realtime-scoring.md)
+For an example of how rxPredict can be used for scoring, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/).
+
+For more background on scoring in SQL Server, see [How to generate predictions in SQL Server machine learning](r/how-to-do-realtime-scoring.md).

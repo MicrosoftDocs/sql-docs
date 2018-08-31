@@ -14,40 +14,42 @@ manager: cgronlun
 # Native scoring using the PREDICT T-SQL function
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Native scoring uses native C++ libraries from Microsoft that can read the model from a special binary format and generate prediction values or *scores* for new input data. This methodology offers the fastest processing speed of forecasting and prediction workloads, but comes with programming requirements so that code executes in closer proximity to the database engine.
+Native scoring leverages the native C++ extension capabilities in SQL Server 2017 to load binary models and generate prediction values or *scores* for new data inputs. This methodology offers the fastest processing speed of forecasting and prediction workloads, but comes with library requirements: only functions from RevoScaleR and revoscalepy have C++ implementations.
 
-Once you have a trained model, you can pass new input data to the function to generate scores. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can use the PREDICT function in Transact-SQL to support native scoring. Native scoring uses model already trained, which you can call using T-SQL. 
+Native scoring requires that you have an already trained model. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can use the PREDICT function in Transact-SQL to invoke native scoring. The PREDICT function takes a pre-trained model and generates scores over data you provide.
 
 ## How native scoring works
 
-Native scoring uses native C++ libraries from Microsoft that can read an already trained model, stored in a special binary format, and generate scores for new data inputs that you provide. Because the model is trained, published, and stored, it can be used for scoring without having to call the R or Python interpreter. As such, the overhead of multiple process interactions is reduced, resulting in much faster prediction performance in enterprise production scenarios.
+Native scoring uses native C++ libraries from Microsoft that can read an already trained model, previosuly stored in a special binary format or saved to disk as raw byte stream, and generate scores for new data inputs that you provide. Because the model is trained, published, and stored, it can be used for scoring without having to call the R or Python interpreter. As such, the overhead of multiple process interactions is reduced, resulting in much faster prediction performance in enterprise production scenarios.
 
-To use native scoring, call the scoring function and pass the following required inputs:
+To use native scoring, call the PREDICT T-SQL function and pass the following required inputs:
 
-+ A compatible model. See the [Requirements](#Requirements) section for details.
++ A compatible model based on a supported algorithm.
 + Input data, typically defined as a SQL query.
 
 The function returns predictions for the input data, together with any columns of source data that you want to pass through.
 
-## Supported platforms
+## Prerequisites
 
-+ SQL Server 2017 Machine Learning Services
+PREDICT is available on all editions of SQL Server 2017 database engine and enabled by default, including SQL Server 2017 Machine Learning Services on Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) or Azure SQL Database. You do not need to install R, Python, or enable additional features.
     
-    Native scoring using PREDICT requires SQL Server 2017. It works on any version of SQL Server 2017, including Linux.
-
-    You can also perform real-time scoring using sp_rxPredict. To use this stored procedure requires that you enable [SQL Server CLR integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
-
-+ SQL Server 2016 R Services
-
-   Real-time scoring using sp_rxPredict is possible with SQL Server 2016, and can also be run on Microsoft R Server. This option requires SQLCLR to be enabled, and that you install the Microsoft R Server upgrade.
-   For more information, see [Realtime scoring](Real-time-scoring.md)
 
 ## Model preparation
 
 + The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](#bkmk_native_supported_algos).
 + The model must be saved using the new serialization function provided in Microsoft R Server 9.1.0. The serialization function is optimized to support fast scoring.
 
-## <a name="bkmk_native_supported_algos"></a> Algorithms that support native scoring
+<a name="bkmk_native_supported_algos"></a> 
+
+## Supported algorithms
+
++ revoscalepy models
+
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
 + RevoScaleR models
 
@@ -57,11 +59,9 @@ The function returns predictions for the input data, together with any columns o
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-If you need to use models from MicrosoftML, use real-time scoring with sp_rxPredict.
+If you need to use models from MicrosoftML or microsoftml, use [real-time scoring with sp_rxPredict](real-time-scoring.md).
 
-## Restrictions
-
-The following model types are not supported:
+Unsupported model types include the following types:
 
 + Models containing other, unsupported types of R transformations
 + Models using the `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR

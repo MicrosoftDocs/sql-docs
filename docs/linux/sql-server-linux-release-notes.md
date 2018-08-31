@@ -67,7 +67,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU9"></a> CU10 (August 2018)
+## <a id="CU10"></a> CU10 (August 2018)
 
 This is the Cumulative Update 10 (CU10) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3037.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4342123](https://support.microsoft.com/en-us/help/4342123).
 

@@ -1,6 +1,6 @@
 ---
-title: Configure Linux repositories for SQL Server 2017 and 2019  | Microsoft Docs
-description: Check and configure source repositories for SQL Server 2019  and SQL Server 2017 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
+title: Configure Linux repositories for SQL Server 2017 and 2019 | Microsoft Docs
+description: Check and configure source repositories for SQL Server 2019 and SQL Server 2017 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -16,7 +16,7 @@ ms.technology: linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019  installations and upgrades on Linux.
+This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux.
 
 > [!TIP]
 > SQL Server nNext CTP 1.4 is now available! To try it, use this article to configure the new **mssql-server-preview** repository. Then upgrade or install using the instructions in the [installation guide](sql-server-linux-setup.md).
@@ -28,7 +28,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 | Repository | Name | Description |
 |---|---|---|
 | **Preview (2017)** | **mssql-server** | SQL Server 2017 CTP and RC repository (discontinued). |
-| **Preview (2019)** | **mssql-server-preview** | SQL Server 2019  CTP and RC repository. |
+| **Preview (2019)** | **mssql-server-preview** | SQL Server 2019 CTP and RC repository. |
 | **CU** | **mssql-server-2017** | SQL Server 2017 Cumulative Update (CU) repository. |
 | **GDR** | **mssql-server-2017-gdr** | SQL Server 2017 GDR repository for critical updates only. |
 
@@ -89,7 +89,7 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 | Repository | Version | Command |
 |---|---|---|
-| **Preview (2019)** | 2019  | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **Preview (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
@@ -122,7 +122,7 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 | Repository | Version | Command |
 |---|---|---|
-| **Preview (2019)** | 2019  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **Preview (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
@@ -163,7 +163,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
 
    | Repository | Version | Command |
    |---|---|---|
-   | **Preview (2019)** | 2019  | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
+   | **Preview (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
    | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 

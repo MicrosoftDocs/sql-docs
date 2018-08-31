@@ -1,6 +1,6 @@
 ---
 title: Get started with SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
-description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019  on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
+description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -17,7 +17,7 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In this quickstart, you install SQL Server 2017 or SQL Server 2019  on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -46,7 +46,7 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    ```
 
    > [!TIP]
-   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019)** repository. Use the following command for SQL Server 2019  installations:
+   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019)** repository. Use the following command for SQL Server 2019 installations:
    >
    > ```bash
    > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo

@@ -148,11 +148,11 @@
 - name: Concepts
   items:
   - name: Extensibility framework
-    href: concept/extensibility-framework.md
-  - name: R/ML extension
-    href: concept/extension-r.md
-  - name: Python/ML extension
-    href: concept/extension-py.md
+    href: concepts/extensibility-framework.md
+  - name: R extension
+    href: concepts/extension-r.md
+  - name: Python extension
+    href: concepts/extension-py.md
 - name: Concepts (old)
   href: architecture-overview-machine-learning.md
   items:

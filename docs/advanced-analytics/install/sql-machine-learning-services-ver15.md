@@ -1,5 +1,5 @@
 ---
-title: Differences to SQL Server Machine Learning Services installation in 2019 | Microsoft Docs
+title: Differences to SQL Server 2019 Machine Learning Services installation | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018  
@@ -9,22 +9,24 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Differences to SQL Server Machine Learning Services installation in 2019
-
+# Differences to SQL Server Machine Learning Services installation in SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Starting in SQL Server 2017, R and Python support for in-database analytics is provided in SQL Server Machine Learning Services, the successor to R Services feature introduced in SQL Server 2016. Function libraries are available in R and Python, and run as external scripts on a database engine instance. 
+Starting with SQL Server 2017, R and Python support for in-database analytics is provided in SQL Server Machine Learning Services, the successor to R Services feature introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
 
 This article details the differences when installing SQL Server Machine Learning Services for SQL Server 2019. For installation instructions, please see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
 
-## User accounts
+## AppContainer isolation
 
-Before SQL Server 2019, physical user accounts were being used to isolate satellite processes. However, SQL Server 2019 now uses appcontainers. 
+Before SQL Server 2019, physical user accounts were being used to isolate satellite processes. However, SQL Server 2019 now uses AppContainers. 
 
-The main differences with user accounts are:
+The main differences with AppContainer isolation are:
 - Physical user accounts are no longer created. This is beneficial for machines with policies that disable local users from logging on, and with passwords that expire. 
-- To use implied authentication, create a SQL login for launchpad user account. Previously, this was necessary for the **SQL R User Group**.
-- **All Application Packages** group will be granted **read and execute** permissions to the SQL Server binn, R_SERVICES, and PTYHON_SERVICES directories. 
+- To use implied authentication, create a SQL login for launchpad user account. Previously, this was necessary for the 'SQL R User Group'. 
+- 'All Application Packages' security principle group will be granted 'read and execute' permissions to the SQL Server 'Binn', R_SERVICES, and PYTHON_SERVICES directories. 
+- All external scripts and code executed from sp_execute_external_script will follow this new security model. This means that in addition to R and Python, the Java language extension introduced in SQL Server 2019 will also use appcontainers.
+
+For more information on AppContainer isolation, see [AppContainer isolation](https://docs.microsoft.com/en-us/windows/desktop/secauthz/appcontainer-isolation). 
 
 ## Firewall
 

@@ -22,7 +22,9 @@ This article explains how to install the machine learning component by running t
 
 + A database engine instance is required. You cannot install just R or Python features, although you can add them incrementally to an existing instance.
 
-+ Do not install Machine Learning Services on a SQL Server 2017 failover cluster. The security mechanism used for isolating R and Python processes is not compatible with a Windows Server failover cluster environment.
+- Do not install Machine Learning Services on a SQL Server 2017 failover cluster.
+    - However, installing Machine Learning Services to a cluster is now supported in SQL Server 2019. 
+  
 
   On SQL Server vNext, installing Machine Learning Services on a failover cluster is supported. 
 

@@ -19,6 +19,21 @@ ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 
 SQL Server 2017 now runs on Linux. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
 
+::: moniker range=">= sql-server-2017"
+> [!TIP]
+> SQL Server 2019 CTP 2.0 has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 CTP 2.0 for Linux](../sql-server/what-s-new-in-sql-server-vnext.md#sqllinux?view=sql-server-ver15).
+::: moniker-end
+
+::: moniker range=">= sql-server-linux-2017"
+> [!TIP]
+> SQL Server 2019 CTP 2.0 has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 CTP 2.0 for Linux](../sql-server/what-s-new-in-sql-server-vnext.md#sqllinux?view=sql-server-linux-ver15).
+::: moniker-end
+
+::: moniker range="= sqlallproducts-allversions"
+> [!TIP]
+> SQL Server 2019 CTP 2.0 has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 CTP 2.0 for Linux](../sql-server/what-s-new-in-sql-server-vnext.md#sqllinux).
+::: moniker-end
+
 ## Install
 
 To get started, install SQL Server on Linux using one of the following quickstarts:

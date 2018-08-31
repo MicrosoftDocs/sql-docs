@@ -135,7 +135,7 @@ For more information, see [Unattended install](https://docs.microsoft.com/sql/li
 
 ## Offline installation
 
-1. Locate the MLS-specific package downloads in the [Release notes](sql-server-linux-release-notes.md). 
+1. Locate the MLS-specific package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). 
 
 2. Continue with [Offline installation](sql-server-linux-setup.md#offline) instructions for your next step.
 

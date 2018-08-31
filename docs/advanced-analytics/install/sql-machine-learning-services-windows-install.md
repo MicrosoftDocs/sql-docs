@@ -24,9 +24,7 @@ This article explains how to install the machine learning component by running t
 
 - Do not install Machine Learning Services on a SQL Server 2017 failover cluster.
     - However, installing Machine Learning Services to a cluster is now supported in SQL Server 2019. 
-  
-
-  On SQL Server vNext, installing Machine Learning Services on a failover cluster is supported. 
+ 
 
 + Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 

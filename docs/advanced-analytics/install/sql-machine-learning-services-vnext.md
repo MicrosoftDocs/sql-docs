@@ -9,7 +9,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Differences to SQL Server Machine Learning Services installation in vNext  
+# Differences to SQL Server Machine Learning Services installation in 2019
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

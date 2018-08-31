@@ -44,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SUM ( [ ALL | DISTINCT ] expression )  
 
 -- Analytic Function Syntax   
-SUM (expression) OVER ( [ partition_by_clause ] order_by_clause)  
+SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## Arguments  

@@ -27,7 +27,7 @@ manager: craigg
 
 #### To open the ODBC Data Source Administrator in Windows 10   
 
-1.  On the **Start** page, type **ODBC Data Sources**. The *ODBC Data Sources Destop App* should appear as a choice. 
+1.  On the **Start** page, type **ODBC Data Sources**. The *ODBC Data Sources Desktop App* should appear as a choice. 
 
   
 #### To open the ODBC Data Source Administrator in Windows 7  

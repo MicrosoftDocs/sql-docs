@@ -1,1 +1,1 @@
-<Token>Microsoft Azure Data Studio (preview)</Token>
+Azure Data Studio (preview)

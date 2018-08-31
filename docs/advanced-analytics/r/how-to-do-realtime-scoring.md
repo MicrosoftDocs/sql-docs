@@ -21,13 +21,13 @@ The following table summarizes the scoring frameworks for forecasting and predic
 
 | Methodology           | Interface         | Library requirements | Processing speeds |
 |-----------------------|-------------------|----------------------|----------------------|
-| Extensibility framework | R: rxPredict <br/>Python: rx_predict | None. Models can be based on any R or Python function | Hundreds of milliseconds. <br/>Loading a runtime environment has a fixed cost, averaging three to six hundred milliseconds, before any new data is scored. |
-| Real-time scoring CLR extension | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) on a binary model | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Tens of milliseconds, on average. |
-| Native scoring C++ extension| [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) on a binary model | R: RevoScaleR <br/>Python: revoscalepy | Less than 20 milliseconds, on average. | 
+| Extensibility framework | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | None. Models can be based on any R or Python function | Hundreds of milliseconds. <br/>Loading a runtime environment has a fixed cost, averaging three to six hundred milliseconds, before any new data is scored. |
+| Real-time scoring CLR extension | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) on a serialized model | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Tens of milliseconds, on average. |
+| Native scoring C++ extension| [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) on a serialized model | R: RevoScaleR <br/>Python: revoscalepy | Less than 20 milliseconds, on average. | 
 
 Speed of processing and not substance of the output is the differentiating feature. Assuming the same functions and inputs, the scored output should not vary based on the approach you use.
 
-A binary model is one that's been created using a supported function, serialized to a binary format, and stored in a database. Using a stored procedure or T-SQL, you can load and use a binary model without the overhead of an R or Python language run time, resulting in faster time to completion when generating prediction scores on new inputs.
+The model must be created using a supported function, then serialized to a raw byte stream saved to disk, or stored in binary format in a database. Using a stored procedure or T-SQL, you can load and use a binary model without the overhead of an R or Python language run time, resulting in faster time to completion when generating prediction scores on new inputs.
 
 The significance of CLR and C++ extensions is proximity to the database engine itself. The native language of the database engine is C++, which means extensions written in C++ run with fewer dependencies. In contrast, CLR extensions depend on .NET Core. 
 
@@ -50,17 +50,17 @@ When the input includes many rows of data, it is usually faster to insert the pr
 
 To preserve the integrity of core database engine processes, support for R and Python is enabled in a dual architecture that isolates language processing from RDBMS processing. Starting in SQL Server 2016, Microsoft added an extensibility framework that allows R scripts to be executed from T-SQL. In SQL Server 2017, Python integration was added. 
 
-The extensibility framework supports any operation you might perform in R or Python, ranging from simple functions to training complex machine learning models. However, the dual-process architecture requires invoking an external R or Python process for every call, regardless of the complexity of the operation. When the workload entails loading a pre-trained model from a table and scoring against it on data already in SQL Server, the overhead of calling the external processes adds latency that can be unacceptable in certain circumstances. For example, in a request-response pattern such as fraud detection, scores must be generated quickly in order to be relevant.
+The extensibility framework supports any operation you might perform in R or Python, ranging from simple functions to training complex machine learning models. However, the dual-process architecture requires invoking an external R or Python process for every call, regardless of the complexity of the operation. When the workload entails loading a pre-trained model from a table and scoring against it on data already in SQL Server, the overhead of calling the external processes adds latency that can be unacceptable in certain circumstances. For example, fraud detection requires fast scoring to be relevant.
 
-To support fast scoring, SQL Server added built-in scoring libraries as C++ and CLR extensions that eliminate the processing overhead of R and Python run times.
+To increase scoring speeds for scenarios like fraud detection, SQL Server added built-in scoring libraries as C++ and CLR extensions that eliminate the overhead of R and Python start-up processes.
 
-**Real-time scoring** was the first solution for high-performance scoring. Introduced in early versions of SQL Server 2017 and later updates to SQL Server 2016, real-time scoring relies on CLR libraries that stand in for R and Python processing over Microsoft-controlled functions in RevoScaleR, MicrosoftML (R), revoscalepy, and microsoftml (Python). CLR libraries are invoked using the **sp_rxPredict** stored procedure to generates scores from any supported model type, without calling the R or Python runtime.
+[**Real-time scoring**](../real-time-scoring.md) was the first solution for high-performance scoring. Introduced in early versions of SQL Server 2017 and later updates to SQL Server 2016, real-time scoring relies on CLR libraries that stand in for R and Python processing over Microsoft-controlled functions in RevoScaleR, MicrosoftML (R), revoscalepy, and microsoftml (Python). CLR libraries are invoked using the **sp_rxPredict** stored procedure to generates scores from any supported model type, without calling the R or Python runtime.
 
-**Native scoring** is a SQL Server 2017 feature, implemented as a native C++ library, but only for RevoScaleR and revoscalepy models. It is the fastest and more secure approach, but supports a smaller set of functions relative to other methodologies.
+[**Native scoring**](../sql-native-scoring.md) is a SQL Server 2017 feature, implemented as a native C++ library, but only for RevoScaleR and revoscalepy models. It is the fastest and more secure approach, but supports a smaller set of functions relative to other methodologies.
 
 ## Choose a scoring method
 
-Platform requirements dictate which scoring methodologies are available.
+Platform requirements often dictate which scoring methodology to use.
 
 | Product version and platform | Methodology |
 |------------------------------|-------------|
@@ -82,9 +82,9 @@ From SQL code, you can train the model using [sp_execute_external_script](https:
 
 **Using R**
 
-From R code, call the [rxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject) function from RevoScaleR package to write the model directly to the database. The `rxWriteObject()` function can retrieve R objects from an ODBC data source like SQL Server, or write objects to SQL Server. The API is modeled after a simple key-value store.
+From R code, call the [rxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject) function from RevoScaleR package to write the model directly to the database. The **rxWriteObject()** function can retrieve R objects from an ODBC data source like SQL Server, or write objects to SQL Server. The API is modeled after a simple key-value store.
   
-If you use this function, be sure to serialize the model using [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) first. Then, set the *serialize* argument in `rxWriteObject` to FALSE, to avoid repeating the serialization step.
+If you use this function, be sure to serialize the model using [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) first. Then, set the *serialize* argument in **rxWriteObject** to FALSE, to avoid repeating the serialization step.
 
 Serializing a model to a binary format is useful, but not required if you are scoring predictions using R and Python run time environment in the extensibility framework. You can save a model in raw byte format to a file and then read from the file into SQL Server. This option might be useful if you are moving or copying models between environments.
 

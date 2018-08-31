@@ -14,7 +14,7 @@ manager: cgronlun
 # Real-time scoring with sp_rxPredict in SQL Server machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Real-time scoring uses the CLR extension capabilities in SQL Server to generate predictions or scores in forecasting workloads. Because real-time scoring is language-agnostic, it executes with no dependencies on R or Python run times. Assuming a model created from Microsoft functions, trained, and serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on features.
+Real-time scoring uses the CLR extension capabilities in SQL Server for high-performance predictions or scores in forecasting workloads. Because real-time scoring is language-agnostic, it executes with no dependencies on R or Python run times. Assuming a model created from Microsoft functions, trained, and serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on features installed.
 
 ## How real-time scoring works
 

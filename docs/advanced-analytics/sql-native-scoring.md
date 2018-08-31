@@ -14,9 +14,9 @@ manager: cgronlun
 # Native scoring using the PREDICT T-SQL function
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Native scoring leverages the native C++ extension capabilities in SQL Server 2017 to load binary models and generate prediction values or *scores* for new data inputs. This methodology offers the fastest processing speed of forecasting and prediction workloads, but comes with library requirements: only functions from RevoScaleR and revoscalepy have C++ implementations.
+Native scoring leverages the native C++ extension capabilities in SQL Server 2017 to generate prediction values or *scores* for new data inputs in near-real-time. This methodology offers the fastest processing speed of forecasting and prediction workloads, but comes with platform and library requirements: only functions from RevoScaleR and revoscalepy have C++ implementations.
 
-Native scoring requires that you have an already trained model. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can use the PREDICT function in Transact-SQL to invoke native scoring. The PREDICT function takes a pre-trained model and generates scores over data you provide.
+Native scoring requires that you have an already trained model. In SQL Server 2017 Windows or Linux, or in Azure SQL Database, you can use the PREDICT function in Transact-SQL to invoke native scoring. The PREDICT function takes a pre-trained model and generates scores over data inputs you provide.
 
 ## How native scoring works
 

@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 STDEVP ( [ ALL | DISTINCT ] expression )  
   
 -- Analytic Function Syntax   
-STDEVP (expression) OVER ( [ partition_by_clause ] order_by_clause)  
+STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## Arguments  

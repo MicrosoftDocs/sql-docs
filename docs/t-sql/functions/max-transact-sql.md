@@ -38,8 +38,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -- Aggregation Function Syntax  
 MAX( [ ALL | DISTINCT ] expression )  
   
--- Aggregation Function Syntax   
-MAX ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
+-- Analytic Function Syntax  
+MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
 ``` 
   
 ## Arguments  

@@ -12,7 +12,7 @@ manager: cgronlun
 ---
 
 # Extensibility architecture in SQL Server Machine Learning Services 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server supports an extensibility framework for execution of R and Python script. This article covers concepts and components, explaining the benefits of integration and the mechanics of script execution.
 
@@ -20,5 +20,5 @@ SQL Server supports an extensibility framework for execution of R and Python scr
 
 ## See Also
 
-+ [R and machine learning extensions in SQL Server](extensibility-r.md)
-+ [Python and machine learning extensions in SQL Server](extensibility-py.md)
++ [R and machine learning extensions in SQL Server](extension-r.md)
++ [Python and machine learning extensions in SQL Server](extension-py.md)

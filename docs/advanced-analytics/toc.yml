@@ -148,7 +148,7 @@
 - name: Concepts
   items:
   - name: Extensibility framework
-    href: concept/extensibility-architecture.md
+    href: concept/extensibility-framework.md
   - name: R/ML extension
     href: concept/extension-r.md
   - name: Python/ML extension
@@ -156,7 +156,7 @@
 - name: Concepts (old)
   href: architecture-overview-machine-learning.md
   items:
-  - name: 
+  - name: R
     href: r/architecture-overview-sql-server-r.md
     items:
     - name: R interoperability

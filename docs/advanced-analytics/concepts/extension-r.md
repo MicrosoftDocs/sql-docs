@@ -16,4 +16,4 @@ manager: cgronlun
 
 ## See also
 
-[Extensibility framework in SQL Server](extensibility-architecture.md)
+[Extensibility framework in SQL Server](extensibility-framework.md)

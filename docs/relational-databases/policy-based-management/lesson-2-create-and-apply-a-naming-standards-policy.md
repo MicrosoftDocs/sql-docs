@@ -49,7 +49,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
   
 2.  In the **Create New Condition** dialog box, in the **Name** box, type **Finance Tables**.  
     1. In the **Facet** list, select **Multipart Name**. 
-    1. In the **Expression** area, in the **Field** box, select **@Name**; in the **Operator** box, select **Like**; and in the **Value** box, type ```**'fintbl%'**``` to force all table names to start with the letters **fintbl**.
+    1. In the **Expression** area, in the **Field** box, select **@Name**; in the **Operator** box, select **Like**; and in the **Value** box, type ```'fintbl%'``` to force all table names to start with the letters **fintbl**.
     1. On the **Description** page, type **Finance table names must begin with fintbl**, and then click **OK** to create the condition.  
 
     ![Finance tables condition](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
@@ -123,7 +123,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
      Policy 'Finance Name' has been violated by 'SQLSERVER:\SQL\SQL\SQL2017\Databases\Finance\Tables\dbo.NewTable'.
      This transaction will be rolled back.
      Policy condition: '@Name LIKE 'fintbl%''
-     Policy description: 'Tables names in the Finance database must contain 'fintbl%''
+     Policy description: 'Tables names in the Finance database must contain 'fintbl%''.
      Additional help: '' : ''
      Statement: 'CREATE TABLE NewTable  
          (Col1 int)'.

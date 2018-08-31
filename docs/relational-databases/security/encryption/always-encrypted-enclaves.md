@@ -45,10 +45,12 @@ With secure enclaves, Always Encrypted protects the confidentiality of sensitive
 
 - **In-place encryption** – cryptographic operations on sensitive data, for example: initial data encryption or rotating a column encryption key, are performed inside the secure enclave and do not require moving the data outside of the database. You can issue in-place encryption using the ALTER TABLE Transact-SQL statement, and you do not need to use tools, such as the Always Encrypted wizard in SSMS or the Set-SqlColumnEncryption PowerShell cmdlet.
 
-- **Rich computations** – operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system. 
-   ??? Rich computations note about perf issues. with link to directions to turn on.
+- **Rich computations (preview)** – operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system. 
 
-In the current Community Technology Preview (CTP) of SQL Server vNext, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-vbs) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
+> [!IMPORTANT]
+> In SQL Server 2019 CTP 2.0, rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default. To enable rich computations, see  ???.
+
+In SQL Server 2019 CTP 2.0, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-vbs) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
 
 ## Secure Enclave Attestation
 
@@ -60,13 +62,13 @@ The attestation process, SQL Server supports for VBS secure enclaves in SQL Serv
 
 ## Secure Enclave Providers
 
-To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. In this stage of the CTP ??? REPLACE CTP/Preview mentions with the official vNext token???, your applications must use .NET Framework 4.7.2 and .NET Framework Data Provider for SQL Server. In addition, .NET applications must be configured with a **secure enclave provider** specific to the enclave type (for example, VBS) and the attestation service (for example, HGS), you are using. The supported enclave providers are shipped separately in a NuGet package, which you need to integrate with your application. An enclave provider implements the client-side logic for the attestation protocol and for establishing a secure channel with a secure enclave of a given type.
+To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. In SQL Server 2019 CTP 2.0, your applications must use .NET Framework 4.7.2 and .NET Framework Data Provider for SQL Server. In addition, .NET applications must be configured with a **secure enclave provider** specific to the enclave type (for example, VBS) and the attestation service (for example, HGS), you are using. The supported enclave providers are shipped separately in a NuGet package, which you need to integrate with your application. An enclave provider implements the client-side logic for the attestation protocol and for establishing a secure channel with a secure enclave of a given type.
 
 ## Enclave-enabled Keys
 
 Always Encrypted with secure enclaves introduces the concept of enclave-enabled keys:
 
-- **Enclave-enabled column master key** – a column master key that has the ENCLAVE\_COMPUTATIONS property specified in the column master key metadata object inside the database. The column master key metadata object must also contain a valid signature of the metadata properties.
+- **Enclave-enabled column master key** – a column master key that has the ENCLAVE_COMPUTATIONS property specified in the column master key metadata object inside the database. The column master key metadata object must also contain a valid signature of the metadata properties.
 - **Enclave-enabled column encryption key** – a column encryption key that is encrypted with an enclave-enabled column master key.
 
 When the SQL Server Engine determines operations, specified in a query, need to be performed inside the secure enclave, the SQL Server Engine requests the client driver shares the column encryption keys that are needed for the computations with the secure enclave. The client driver shares the column encryption keys only if the keys are enclave-enabled (that is, encrypted with enclave-enabled column master keys) and they are properly signed. Otherwise, the query fails.
@@ -81,16 +83,15 @@ An enclave-enabled column is a database column encrypted with an enclave-enabled
 For more information about encryption types, see [Always Encrypted Cryptography](always-encrypted-cryptography.md).
 
 The following table summarizes the functionality available for encrypted columns, depending on whether the columns use enclave-enabled column encryption keys and an encryption
-type.(???There is something wrong with the table - either some columns are missing (the original table had 5 columns), or we included the wrong subset of the 5 columns???)
+type.(???There is something wrong with the table (the original table had 5 columns), - testing format)
 
-| **Operation**                             | **Column is NOT enclave-enabled** || **Column is enclave-enabled**  |
-| ----------------------------------------- | ----------------------------------------------- | -------------------------------- | ------------------------------ | -------------------------------- |
-|                                           | **Randomized encryption**                       | **Deterministic encryption**     | **Randomized encryption**      | **Deterministic encryption**     |
-| **In-place encryption**                   | Not Supported                                   | Not Supported                    | Supported                      | Supported                        |
-| **Equality comparison**                   | Not Supported                                   | Supported outside of the enclave | Supported (inside the enclave) | Supported outside of the enclave |
-| **Comparison operators beyond equality** | Not Supported                                   | Not Supported                    | Supported                      | Not Supported                    |
-| **LIKE**                                  | Not Supported                                   | Not Supported                    | Supported                      | Not Supported                    |
-|                                           |                                                 |                                  |                                |                                  |
+| **Operation**                             | **Column is NOT enclave-enabled** || **Column is enclave-enabled**  ||
+|:---|:---|:---|:---|:---|
+| | **Randomized encryption**  | **Deterministic encryption**     | **Randomized encryption**      | **Deterministic encryption**     |
+| **In-place encryption** | Not Supported  | Not Supported   | Supported         | Supported    |
+| **Equality comparison**   | Not Supported | Supported outside of the enclave | Supported (inside the enclave) | Supported outside of the enclave |
+| **Comparison operators beyond equality** | Not Supported  | Not Supported   | Supported      | Not Supported     |
+| **LIKE**    | Not Supported      | Not Supported    | Supported     | Not Supported    |
 
 In-place encryption includes support for the following operations inside the enclave:
 

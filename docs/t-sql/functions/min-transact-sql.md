@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 MIN ( [ ALL | DISTINCT ] expression )  
   
 -- Analytic Function Syntax   
-MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
+MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
 ```  
   
 ## Arguments  

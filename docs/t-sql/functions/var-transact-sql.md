@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 VAR ( [ ALL | DISTINCT ] expression )  
   
 -- Analytic Function Syntax  
-VAR (expression) OVER ( [ partition_by_clause ] order_by_clause)  
+VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## Arguments  

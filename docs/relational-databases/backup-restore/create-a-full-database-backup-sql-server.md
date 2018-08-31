@@ -22,7 +22,7 @@ manager: craigg
 ---
 # Create a Full Database Backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > For SQL Server 2014, go to [Create a Full Database Backup (SQL Server)](https://msdn.microsoft.com/library/ms187510(SQL.120).aspx).
+ > For SQL Server 2014, go to [Create a Full Database Backup (SQL Server)](create-a-full-database-backup-sql-server.md).
 
   This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
   

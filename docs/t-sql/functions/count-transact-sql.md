@@ -38,18 +38,7 @@ This function returns the number of items found in a group. `COUNT` operates lik
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server and Azure SQL Database  
-  
-COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )   
-    [ OVER (   
-        [ partition_by_clause ]   
-        [ order_by_clause ]   
-        [ ROW_or_RANGE_clause ]  
-    ) ]  
-```  
-  
-```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax
   
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  

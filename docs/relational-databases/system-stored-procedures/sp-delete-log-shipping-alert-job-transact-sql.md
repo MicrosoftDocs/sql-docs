@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_log_shipping_alert_job"
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
-caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_delete_log_shipping_alert_job (Transact-SQL)

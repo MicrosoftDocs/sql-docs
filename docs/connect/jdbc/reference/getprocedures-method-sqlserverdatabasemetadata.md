@@ -66,11 +66,11 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 |NUM_INPUT_PARAMS|**int**|Reserved for future use, currently returns a -1 value.|  
 |NUM_OUTPUT_PARAMS|**int**|Reserved for future use, currently returns a -1 value.|  
 |NUM_RESULT_SETS|**int**|Reserved for future use, currently returns a -1 value.|  
-|REMARKS|**String**|The description of the procedure column.<br /><br /> <br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] does not return a value for this column.|  
+|REMARKS|**String**|The description of the procedure column.<br /><br /> <br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not return a value for this column.|  
 |PROCEDURE_TYPE|**smallint**|The type of stored procedure. It can be one of the following values:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  
->  For more information about the data returned by the getProcedures method, see "sp_stored_procedures (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  For more information about the data returned by the getProcedures method, see "sp_stored_procedures (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
  The following example demonstrates how to use the getProcedures method to return information about the uspGetBillOfMaterials stored procedure in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  

@@ -30,7 +30,7 @@ Metadata about the instance of SQL Azure is not automatically synchronized. Inst
 ## Required SQL Azure Permissions  
 The account that is used to connect to SQL Azure requires different permissions depending on the actions that the account performs:  
   
--   To convert MySQL objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, to update metadata from SQL Azure, or to save converted syntax to scripts, the account must have permission to log on to the instance of SQL Azure.  
+-   To convert MySQL objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, to update metadata from SQL Azure, or to save converted syntax to scripts, the account must have permission to log on to the instance of SQL Azure.  
   
 -   To load database objects into SQL Azure, the minimum permission requirement is membership in the **db_owner** database role in the target database.  
   

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_depends"
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_depends (Transact-SQL)

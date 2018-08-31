@@ -23,7 +23,7 @@ manager: craigg
 # TYPE_SS_SCROLL_DYNAMIC Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] dynamic cursor type.  
+  Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dynamic cursor type.  
   
 ## Syntax  
   

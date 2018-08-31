@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft Docs"
 description: "Returns the current status of resource semaphores used to throttle concurrent query optimization"
 ms.custom: ""
@@ -23,7 +23,7 @@ helpviewer_keywords:
 author: "josack"
 ms.author: "josack"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

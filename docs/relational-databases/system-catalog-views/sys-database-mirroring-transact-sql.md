@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.database_mirroring catalog view"
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 caps.latest.revision: 53
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sys.database_mirroring (Transact-SQL)

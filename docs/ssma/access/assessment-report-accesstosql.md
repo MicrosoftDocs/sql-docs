@@ -21,7 +21,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Assessment Report (AccessToSQL)
-The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  
+The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  
   
 To create an assessment report, select objects to convert in the source metadata explorer, right-click **Databases**, and then select **Create Report**. You can also display this report automatically after you convert schemas. However, the report name will be Conversion Report. For more information, see [Project Settings (GUI) (SSMA Common)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   

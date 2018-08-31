@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_describe_cursor_columns"
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_describe_cursor_columns (Transact-SQL)

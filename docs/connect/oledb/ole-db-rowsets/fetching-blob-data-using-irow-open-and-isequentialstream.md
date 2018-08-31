@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Open method"
   - "ISequentialStream interface"
   - "BLOBs, fetching"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Fetching BLOB Data Using IRow::Open and ISequentialStream

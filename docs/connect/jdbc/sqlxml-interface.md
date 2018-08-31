@@ -19,7 +19,7 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The JDBC driver provides support for the JDBC 4.0 API, which introduces the java.sql.SQLXML interface. The SQLXML interface defines methods to interact and manipulate XML data. The **SQLXML** data type maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**xml** data type.  
+The JDBC driver provides support for the JDBC 4.0 API, which introduces the java.sql.SQLXML interface. The SQLXML interface defines methods to interact and manipulate XML data. The **SQLXML** data type maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** data type.  
   
 The SQLXML interface provides methods for accessing the XML value as a **String**, a **Reader** or **Writer**, or as a **Stream**. The XML value may also be accessed through a **Source** or set as a **Result**, which are used with XML Parser APIs such as Document Object Model (DOM), Simple API for XML (SAX), and Streaming API for XML (StAX), as well as with XSLT transforms and XPath.  
   

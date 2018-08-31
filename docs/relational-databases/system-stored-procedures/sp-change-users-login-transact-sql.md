@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_change_users_login"
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
-caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_change_users_login (Transact-SQL)

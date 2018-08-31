@@ -1,7 +1,5 @@
 - name: Microsoft Open Database Connectivity (ODBC)
   href: microsoft-open-database-connectivity-odbc.md
-- name: New and updated articles
-  href: new-updated-odbc.md
 - name: Microsoft ODBC Drivers +
   href: ../odbc/microsoft/microsoft-supplied-odbc-drivers.md
 - name: ODBC Administration +

@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -121,7 +120,7 @@ manager: craigg
   
  A data collector can be configured on a SQL Server 2012 or later version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- You need a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proxy established with the correct credential for a data collector to upload data to a Management Data Warehouse database on an instance that is different from where transactions will be profiled. To enable a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proxy, you must first establish a credential with a domain-enabled login. The domain-enabled login must be a member of `mdw_admin` group for the Management Data Warehouse database. See [How to: Create a Credential (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) for information on how to create a credential.  
+ You need a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proxy established with the correct credential for a data collector to upload data to a Management Data Warehouse database on an instance that is different from where transactions will be profiled. To enable a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proxy, you must first establish a credential with a domain-enabled login. The domain-enabled login must be a member of `mdw_admin` group for the Management Data Warehouse database. See [How to: Create a Credential (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) for information on how to create a credential.  
   
  To configure data collection to upload to a Management Data Warehouse database on a different instance,  
   

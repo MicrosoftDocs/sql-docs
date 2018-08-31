@@ -57,7 +57,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  The code "file:/install_dir/lib/-" refers to the installation directory of the JDBC driver.  
   
 ## Protecting Server Communication  
- When you use the JDBC driver to communicate with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database, you can secure the communication channel by using either Internet Protocol Security (IPSEC) or Secure Sockets Layer (SSL); or you can use both.  
+ When you use the JDBC driver to communicate with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, you can secure the communication channel by using either Internet Protocol Security (IPSEC) or Secure Sockets Layer (SSL); or you can use both.  
   
  SSL support can be used to provide an additional level of protection besides IPSEC. For more information about using SSL, see [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).  
   

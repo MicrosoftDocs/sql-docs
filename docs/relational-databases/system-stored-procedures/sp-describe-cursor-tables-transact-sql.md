@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_describe_cursor_tables"
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_describe_cursor_tables (Transact-SQL)

@@ -13,6 +13,7 @@ ms.assetid: 78d9f0e8-eca8-458e-a1ad-29ffa0838ef7
 caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Notification Services (SQL Server Configuration Manager)

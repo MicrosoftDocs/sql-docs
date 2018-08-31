@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "tokens [SQL Server]"
   - "user_token catalog view"
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sys.user_token (Transact-SQL)

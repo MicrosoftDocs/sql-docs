@@ -52,6 +52,7 @@ manager: craigg
   
 |Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance (Extended Private Preview)|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
 |6.1|Y|Y|Y|Y|Y|Y|Y|N|N|

@@ -1,16 +1,12 @@
 ---
 title: "Configure and Administer a Report Server (SSRS Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2017"
+ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, components"
@@ -21,10 +17,8 @@ helpviewer_keywords:
   - "components [Reporting Services], configuring"
   - "configuring servers [Reporting Services]"
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
-caps.latest.revision: 51
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure and Administer a Report Server (SSRS Native Mode)
   This topic summarizes the approaches that you can use to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. It also includes a list of topics that explain how to configure specific components, features, or server capabilities. To configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can:  

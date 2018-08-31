@@ -1,22 +1,16 @@
 ---
 title: "Troubleshoot Data Retrieval issues with Reporting Services Reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/27/2016"
+ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot Data Retrieval issues with Reporting Services Reports
 The first step during report processing is to retrieve the report data for each dataset by running the dataset query. When you preview a report locally, your data source connections and credentials must use sufficient permissions to retrieve the data to your computer. When you run a report on the report server, the data source connections and credentials must use sufficient permissions to retrieve the data on the report server. Use this topic to help troubleshoot issues about report data retrieval.   
@@ -43,7 +37,7 @@ For data sources with prompted credentials or credentials specified in the conne
 Verify that the password does not include special characters. If changing the password is impractical, work with your database administrator to store the appropriate credentials locally and on the server as part of a system ODBC data source name (DSN). For more information, see "OdbcConnection.ConnectionString" in the .NET Framework SDK documentation on MSDN.   
   
 > [!NOTE]  
->It is recommended that you do not add login information such as passwords to the connection string. Report Designer provides a **Credentials** page on the [Data Source Properties](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) or the [Shared Data Source Properties dialog boxes](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) that you can use to enter credentials. These credentials are stored securely on the report authoring computer.  
+>It is recommended that you do not add login information such as passwords to the connection string. Report Designer provides a **Credentials** page on the **Data Source Properties** or the **Shared Data Source Properties** dialog boxes that you can use to enter credentials. These credentials are stored securely on the report authoring computer.  
   
 ## Why do I see no data when I run my query in the query designer?  
 When you create a dataset, the dataset field collection appears in the Report Data pane. Sometimes the dataset field collection does not appear as expected.   
@@ -67,7 +61,7 @@ To populate the dataset field collection, do the following:
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

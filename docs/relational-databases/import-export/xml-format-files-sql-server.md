@@ -1,4 +1,4 @@
-﻿---
+---
 title: "XML Format Files (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +19,7 @@ caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Format Files (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -531,7 +531,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  
-    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"  
+    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"/>  
   </RECORD>  
   <ROW>  
     <COLUMN SOURCE="1" NAME="C1" xsi:type="SQLINT" />  

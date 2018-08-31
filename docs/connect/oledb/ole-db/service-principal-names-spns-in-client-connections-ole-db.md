@@ -11,8 +11,8 @@ ms.suite: "sql"
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Service Principal Names (SPNs) in Client Connections (OLE DB)

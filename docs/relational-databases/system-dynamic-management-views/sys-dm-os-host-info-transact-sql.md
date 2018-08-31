@@ -33,7 +33,7 @@ Returns one row that displays operating system version information.
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |The type of operating system: Windows or Linux |
 |**host_distribution** |**nvarchar(256)** |Description of the operating system. |
-|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system release (version number). For a list of values and descriptions, see [Operating System Version (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). <br> For Linux, returns an empty string. |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system release (version number). For a list of values and descriptions, see [Operating System Version (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> For Linux, returns an empty string. |  
 |**host_service_pack_level**|**nvarchar(256)**|Service pack level of the Windows operating system. <br> For Linux, returns an empty string. |  
 |**host_sku**|**int**|Windows Stock Keeping Unit (SKU) ID. For a list of SKU IDs and descriptions, see [GetProductInfo Function](http://msdn.microsoft.com/library/ms724358.aspx). Is nullable. <br> For Linux, returns NULL. |  
 |**os_language_version**|**int**|Windows locale identifier (LCID) of the operating system. For a list of LCID values and descriptions, see [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Cannot be null.|  

@@ -22,9 +22,9 @@ Download and install the latest release, the *August Public Preview*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2013365)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2013712)|August 30, 2018 |0.32.7|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2013715)|August 30, 2018 |0.32.7|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2013833)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2013830)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2013718)|August 30, 2018 |0.32.7|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2013365)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2013712)|August 30, 2018 |0.32.8|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2013715)|August 30, 2018 |0.32.8|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2013833)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2013830)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2013718)|August 30, 2018 |0.32.8|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

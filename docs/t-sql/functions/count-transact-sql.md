@@ -43,7 +43,7 @@ This function returns the number of items found in a group. `COUNT` operates lik
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  
 
 -- Analytic Function Syntax  
-COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )  
+COUNT ( [ ALL ]  { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
 ## Arguments  

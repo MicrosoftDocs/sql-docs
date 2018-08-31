@@ -1,6 +1,6 @@
 ---
 title: Real-time scoring in SQL Server machine learning | Microsoft Docs
-description: Generate predictions using sp_rxPredict, scoring dta inputs against a pre-trained model written in R on SQL Server.
+description: Generate predictions using sp_rxPredict, scoring data inputs against a pre-trained model written in R on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -42,18 +42,14 @@ Real-time scoring is a multi-step process:
 
 + Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
-Real-time scoring does not use an interpreter; therefore, any functionality that might require an interpreter is not supported during the scoring step.  These might include:
-
-  + Models using the `rxGlm` or `rxNaiveBayes` algorithms are not currently supported
-
-  + RevoScaleR models that use an R transformation function, or a formula that contains a transformation, such as <code>A ~ log(B)</code> are not supported in real-time scoring. To use a model of this type, we recommend that you perform the transformation on the to input data before passing the data to real-time scoring.
-
 > [!Note]
 > Real-time scoring is currently optimized for fast predictions on smaller data sets, ranging from a few rows to hundreds of thousands of rows. On big datasets, using [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) might be faster.
 
 <a name="bkmk_py_supported_algos"></a>
 
-## Python algorithms using real-time scoring
+## Supported algorithms
+
+### Python algorithms using real-time scoring
 
 + revoscalepy models
 
@@ -84,7 +80,7 @@ Real-time scoring does not use an interpreter; therefore, any functionality that
 
 <a name="bkmk_rt_supported_algos"></a>
 
-## R algorithms using real-time scoring
+### R algorithms using real-time scoring
 
 + RevoScaleR models
 
@@ -113,19 +109,22 @@ Real-time scoring does not use an interpreter; therefore, any functionality that
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
-## Unsupported model types
+### Unsupported model types
 
-Real-time scoring is not supported for R transformations other than those explicitly listed in the previous section. 
+Real-time scoring does not use an interpreter; therefore, any functionality that might require an interpreter is not supported during the scoring step.  These might include:
 
-For developers accustomed to working with RevoScaleR and other Microsoft R-specific libraries, unsupported functions include 
- `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR, PMML models, and other models created using other R libraries from CRAN or other repositories.
+  + Models using the `rxGlm` or `rxNaiveBayes` algorithms are not supported.
+
+  + Models using a transformation function or formula containing a transformation, such as <code>A ~ log(B)</code> are not supported in real-time scoring. To use a model of this type, we recommend that you perform the transformation on input data before passing the data to real-time scoring.
 
 
-## Example (R): Real-time scoring with sp_rxPredict
+## Example: sp_rxPredict
 
-This section describes the steps required to set up **real-time** prediction, and provides an example of how to call the function from T-SQL.
+This section describes the steps required to set up **real-time** prediction, and provides an example in R of how to call the function from T-SQL.
 
-### <a name ="bkmk_enableRtScoring"></a> Step 1. Enable the real-time scoring procedure
+<a name ="bkmk_enableRtScoring"></a> 
+
+### Step 1. Enable the real-time scoring procedure
 
 You must enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
 

@@ -20,7 +20,7 @@ Native scoring requires that you have an already trained model. In SQL Server 20
 
 ## How native scoring works
 
-Native scoring uses native C++ libraries from Microsoft that can read an already trained model, previosuly stored in a special binary format or saved to disk as raw byte stream, and generate scores for new data inputs that you provide. Because the model is trained, published, and stored, it can be used for scoring without having to call the R or Python interpreter. As such, the overhead of multiple process interactions is reduced, resulting in much faster prediction performance in enterprise production scenarios.
+Native scoring uses native C++ libraries from Microsoft that can read an already trained model, previously stored in a special binary format or saved to disk as raw byte stream, and generate scores for new data inputs that you provide. Because the model is trained, published, and stored, it can be used for scoring without having to call the R or Python interpreter. As such, the overhead of multiple process interactions is reduced, resulting in much faster prediction performance in enterprise production scenarios.
 
 To use native scoring, call the PREDICT T-SQL function and pass the following required inputs:
 
@@ -31,13 +31,11 @@ The function returns predictions for the input data, together with any columns o
 
 ## Prerequisites
 
-PREDICT is available on all editions of SQL Server 2017 database engine and enabled by default, including SQL Server 2017 Machine Learning Services on Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) or Azure SQL Database. You do not need to install R, Python, or enable additional features.
-    
+PREDICT is available on all editions of SQL Server 2017 database engine and enabled by default, including SQL Server 2017 Machine Learning Services on Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux), or Azure SQL Database. You do not need to install R, Python, or enable additional features.
 
-## Model preparation
++ The model must be trained in advance using one of the supported **rx** algorithms listed below.
 
-+ The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](#bkmk_native_supported_algos).
-+ The model must be saved using the new serialization function provided in Microsoft R Server 9.1.0. The serialization function is optimized to support fast scoring.
++ Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -63,13 +61,12 @@ If you need to use models from MicrosoftML or microsoftml, use [real-time scorin
 
 Unsupported model types include the following types:
 
-+ Models containing other, unsupported types of R transformations
-+ Models using the `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR
++ Models containing other transformations
++ Models using the `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR or revoscalepy equivalents
 + PMML models
-+ Models created using other R libraries from CRAN or other repositories
-+ Models containing any other R transformation
++ Models created using other open-source or third-party libraries
 
-## Example: Native scoring with PREDICT 
+## Example: PREDICT (T-SQL)
 
 In this example, you create a model, and then call the real-time prediction function from T-SQL.
 
@@ -169,7 +166,3 @@ For a complete solution that includes native scoring, see these samples from the
 
 + Deploy your ML script: [Using a Python model](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
 + Deploy your ML script: [Using an R model](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
-
-## See also
-
-[Real-time scoring in SQL Server machine learning ](real-time-scoring.md)

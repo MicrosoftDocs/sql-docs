@@ -26,7 +26,7 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
-PolyBase enables your SQL Server 2016 instance to process Transact-SQL queries that read data from Hadoop. The same query can also access relational tables in your SQL Server. PolyBase enables the same query to also join the data from Hadoop and SQL Server. In SQL Server, an [external table[(../../t-sql/statements/create-external-table-transact-sql.md) or [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) provides the connection to Hadoop.
+PolyBase enables your SQL Server 2016 instance to process Transact-SQL queries that read data from Hadoop. The same query can also access relational tables in your SQL Server. PolyBase enables the same query to also join the data from Hadoop and SQL Server. In SQL Server, an [external table](../../t-sql/statements/create-external-table-transact-sql.md) or [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) provides the connection to Hadoop.
 
 PolyBase provides these same functionalities for the following SQL products from Microsoft:
 

@@ -93,7 +93,9 @@ Help:
 - Fixed a long outstanding issue where "Help on Help" was not honoring the online/offline mode.
 - When clicking on "Help | Community Projects and Samples" SSMS now opens the default browser that points to a Git page and shows no errors/warnings due to old browser being used.
 
+### Known issues
 
+- There are currently no known issues in this release.
 
 
 

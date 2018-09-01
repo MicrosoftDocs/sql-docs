@@ -1,5 +1,5 @@
 ---
-title: "What's new in SQL Server vNext | Microsoft Docs"
+title: "What's new in SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/24/2018"
 ms.prod: "sql-server-2018"
@@ -14,16 +14,16 @@ ms.author: "mikeray"
 manager: "craigg"
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# What's new in SQL Server vNext
+# What's new in SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server vNext. For more information and known issues, see the [SQL Server vNext Release Notes](sql-server-vnext-release-notes.md).
+[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server 2019. For more information and known issues, see the [SQL Server 2019 Release Notes](sql-server-vnext-release-notes.md).
 
-**Try SQL Server vNext!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server vNext to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+**Try SQL Server 2019!**
+- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2019 to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
-- [Run on SQL Server vNext on Docker](../linux/quickstart-install-connect-docker.md).
+- [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
 ## CTP 2.0 
 
@@ -110,25 +110,25 @@ Continue reading for more details about these features.
 
   CTP 2.0 does not support configuration of replication with the user interface. Use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
-- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server vNext on Linux supports the Microsoft Distributed Transactions Coordinator (MSDTC).
+- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transactions Coordinator (MSDTC).
 
 - **Always On Availability Group on Docker containers with Kubernetes**: Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor.
 
 - **OpenLDAP support for third-party AD providers**: SQL Server on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
-- **Machine Learning on Linux**: SQL Server vNext Machine Learning Services (In-Database) is now supported on Linux. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server vNext Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-- **New container registry**: All container images for SQL Server vNext as well as SQL Server 2017 are now located in the Microsoft Container Registry.
+- **New container registry**: All container images for SQL Server 2019 as well as SQL Server 2017 are now located in the Microsoft Container Registry.
 
 - **New RHEL-based container images**: New certified RHEL-based container images are now available.
 
 ## <a id="polybase"></a> PolyBase
 
-- **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server vNext introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
+- **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
 
-- **Machine Learning on Linux**: SQL Server vNext Machine Learning Services (In-Database) is now supported on Linux. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server vNext Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 - **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
 
@@ -144,6 +144,6 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ## Next steps
 
-See the [SQL Server vNext Release Notes](sql-server-vnext-release-notes.md).
+See the [SQL Server 2019 Release Notes](sql-server-vnext-release-notes.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

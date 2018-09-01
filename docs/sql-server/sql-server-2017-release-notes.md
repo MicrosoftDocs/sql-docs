@@ -118,7 +118,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 - **Workaround** To work around this issue and fix an application that depends on the v13 version of the assemblies follow these steps:
 
    1. Go to **Add/Remove Programs**
-   2. Find *Microsoft SQL Server vNext T-SQL Language Service CTP2.1*, right-click it, and select **Uninstall**.
+   2. Find *Microsoft SQL Server 2019 T-SQL Language Service CTP2.1*, right-click it, and select **Uninstall**.
    3. After the component is removed, repair the application that is broken or reinstall the appropriate version of *TSqlLanguageService.MSI*.
 
    This workaround removes the v14 version of those assemblies, so any applications that depend on the v14 versions will no longer function. If those assemblies are needed, then a separate installation without any side-by-side 2016 installs is required.

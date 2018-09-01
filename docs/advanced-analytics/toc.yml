@@ -12,8 +12,8 @@
     href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
-  - name: Differences in SQL Server vNext installation
-    href: install/sql-machine-learning-services-vnext.md
+  - name: Differences in SQL Server 2019 installation
+    href: install/sql-machine-learning-services-ver15.md
   - name: Machine Learning Services (R, Python, Java)
     href: install/sql-machine-learning-services-windows-install.md
   - name: R Services
@@ -31,7 +31,7 @@
       href: install/sql-ml-cab-downloads.md
   - name: Upgrade R and Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
-  - name: Set up R tools
+  - name: Set up R tools55
     href: r/set-up-a-data-science-client.md
   - name: Set up Python tools
     href: python/setup-python-client-tools-sql.md

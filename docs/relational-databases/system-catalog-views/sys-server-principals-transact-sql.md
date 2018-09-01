@@ -55,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
  The following query lists the permissions explicitly granted or denied to server principals.  
   
 > [!IMPORTANT]  
->  The permissions of fixed server roles (other than Public) do not appear in sys.server_permissions. Therefore, server principals may have additional permissions not listed here.  
+>  The permissions of fixed server roles (other than public) do not appear in sys.server_permissions. Therefore, server principals may have additional permissions not listed here.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

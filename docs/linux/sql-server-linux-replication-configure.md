@@ -26,9 +26,10 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 Configure replication on Linux with either SQL Server Management Studio (SSMS) or Transact-SQL stored procedures.
 
 * To use SSMS, follow the instructions in this article
+  Use SSMS on a Windows operating system to connect to instances of SQL Server. To for background and instructions, see [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
 * For an example with stored procedures, follow the [Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md) tutorial.
 
-## Prerequisites 
+## Prerequisites
 
 Before configuring publishers, distributors, and subscribers, you need to complete a couple configuration steps for the SQL Server instance.
 
@@ -58,26 +59,35 @@ Before configuring publishers, distributors, and subscribers, you need to comple
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-
-
-
-
-
-Use SQL Server Management Studio (SSMS) on a Windows operating system to connect to instances of SQL Server. To for background and instructions, see [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
 ## Configure and monitor replication with SQL Server Management Studio (SSMS)
 
-1. Configure the distributor.
-  On SSMS, connect to your instance of SQL Server in Object Explorer.
-  Right-click **Replication**, and click **Configure Distribution...**.
-  Follow the instructions on the **Configure Distribution Wizard**.
-2. Create publication and articles.
-  In Object Explorer, click **Replication** > **Local Publications**> **New Publication...**.
-  Follow the instruction on the **New Publication Wizard** to configure the type of replication, and the articles that belong to the publication.
-3. Configure the subscription.
-  In Object Explorer, click **Replication** > **Local Subscriptions**> **New subscriptions...**.
-4. Use Replication Monitor to monitor replication jobs.
-  In Object Explorer, right-click **Replication**, and click **Launch Replication Monitor**.
+### Configure the distributor
+  
+To configure the distributor: 
 
+1. On SSMS connect to your instance of SQL Server in Object Explorer.
+
+1. Right-click **Replication**, and click **Configure Distribution...**.
+
+1. Follow the instructions on the **Configure Distribution Wizard**.
+
+### Create publication and articles
+
+To create a publication and articles:
+
+1. In Object Explorer, click **Replication** > **Local Publications**> **New Publication...**.
+
+1. Follow the instruction on the **New Publication Wizard** to configure the type of replication, and the articles that belong to the publication.
+
+### Configure the subscription
+
+To configure the subscription in Object Explorer, click **Replication** > **Local Subscriptions**> **New subscriptions...**.
+
+### Monitor replication jobs
+
+Use Replication Monitor to monitor replication jobs.
+
+In Object Explorer, right-click **Replication**, and click **Launch Replication Monitor**.
 
 ## Next steps
 

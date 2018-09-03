@@ -15,9 +15,8 @@ f1_keywords:
   - "sql12.swb.common.columnperm.f1"
   - "sql12.swb.SecurableAndEffectivePermission.f1"
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Permissions or Securables Page

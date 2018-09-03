@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.servers catalog view"
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 caps.latest.revision: 53
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

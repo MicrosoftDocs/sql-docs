@@ -1,64 +1,37 @@
-- name: Overview
+- name: SQL ML and Extensibility Documentation
+  href: index.md
+- name: SQL Server Machine Learning
   items:
-  - name: What is SQL Server Machine Learning Services?
+  - name: Machine Learning Services (R, Python, Java)
     href: what-is-sql-server-machine-learning.md
-    items:
-    - name: In-Database analytics
-      href: r/sql-server-r-services.md
-    - name: Standalone server
-      href: r/r-server-standalone.md
-  - name: New features
+  - name: R Services
+    href: r/sql-server-r-services.md
+  - name: Standalone server
+    href: r/r-server-standalone.md
+  - name: What's new
     href: what-s-new-in-sql-server-machine-learning-services.md
-  - name: Features by edition
-    href: r/differences-in-r-features-between-editions-of-sql-server.md
-- name: Architecture
-  href: architecture-overview-machine-learning.md
-  items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: R interoperability
-      href: r/r-interoperability-in-sql-server.md
-    - name: Components that support R integration
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: Security for R
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: Python in Machine Learning Services
-      href: python/sql-server-python-services.md
-    - name: Python interoperability
-      href: python/python-interoperability.md
-    - name: Components to support Python
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python security
-      href: python/security-overview-sql-server-python-services.md
 - name: Install
   items:
-  - name: SQL Server 2017
-    items:
-    - name: In-Database analytics
-      href: install/sql-machine-learning-services-windows-install.md
-    - name: Standalone server
-      href: install/sql-machine-learning-standalone-windows-install.md
-  - name: SQL Server 2016
-    items:
-    - name: R Services (In-Database)
-      href: install/sql-r-services-windows-install.md
-    - name: R Server (Standalone)
-      href: install/sql-r-standalone-windows-install.md
+  - name: Differences in SQL Server 2019 installation
+    href: install/sql-machine-learning-services-ver15.md
+  - name: Machine Learning Services (R, Python, Java)
+    href: install/sql-machine-learning-services-windows-install.md
+  - name: R Services
+    href: install/sql-r-services-windows-install.md
+  - name: Standalone server (R, Python)
+    href: install/sql-machine-learning-standalone-windows-install.md
   - name: Pre-trained models
     href: install/sql-pretrained-models-install.md
   - name: Command-prompt setup
     href: install/sql-ml-component-commandline-install.md
   - name: Offline setup (no internet)
     href: install/sql-ml-component-install-without-internet-access.md
-  - name: CAB downloads (offline setup)
-    href: install/sql-ml-cab-downloads.md
+    items:
+    - name: CAB downloads (offline setup)
+      href: install/sql-ml-cab-downloads.md
   - name: Upgrade R and Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
-  - name: Set up R tools
+  - name: Set up R tools55
     href: r/set-up-a-data-science-client.md
   - name: Set up Python tools
     href: python/setup-python-client-tools-sql.md
@@ -82,20 +55,20 @@
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
+    - name: Create partition-based models
+      href: tutorials/r-tutorial-create-models-per-partition.md
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - Get data and scripts
+      - name: 1 - Set up demo data
         href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 - Set up the environment
-        href: r/sqldev-import-data-to-sql-server-using-powershell.md
-      - name: 3 - Visualize data
+      - name: 2 - Visualize data
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 4 - Create data features
+      - name: 3 - Create data features
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 5 - Train and save to SQL
+      - name: 4 - Train and save to SQL
         href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 6 - Predict outcomes
+      - name: 5 - Predict outcomes
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Data science end-to-end walkthrough
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -178,6 +151,29 @@
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
   href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: Concepts
+  href: architecture-overview-machine-learning.md
+  items:
+  - name: R
+    href: r/architecture-overview-sql-server-r.md
+    items:
+    - name: R interoperability
+      href: r/r-interoperability-in-sql-server.md
+    - name: Components that support R integration
+      href: r/new-components-in-sql-server-to-support-r.md
+    - name: Security for R
+      href: r/security-overview-sql-server-r.md
+  - name: Python
+    href: python/architecture-overview-sql-server-python.md
+    items:
+    - name: Python in Machine Learning Services
+      href: python/sql-server-python-services.md
+    - name: Python interoperability
+      href: python/python-interoperability.md
+    - name: Components to support Python
+      href: python/new-components-in-sql-server-to-support-python-integration.md
+    - name: Python security
+      href: python/security-overview-sql-server-python-services.md
 - name: How To
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -213,14 +209,8 @@
       href: r/r-libraries-and-data-types.md
     - name: Python libraries and data types
       href: python/python-libraries-and-data-types.md
-    - name: Native scoring
-      href: sql-native-scoring.md
-    - name: Real-time scoring
-      href: real-time-scoring.md
     - name: Predictive modeling with R
       href: r/data-exploration-and-predictive-modeling-with-r.md
-    - name: How to perform real-time or native scoring
-      href: r/how-to-do-realtime-scoring.md
     - name: Load R objects using ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
     - name: Converting R Code for Use in Machine Learning Services
@@ -231,6 +221,14 @@
       href: r/using-data-from-olap-cubes-in-r.md
     - name: Create a stored procedure using sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+  - name: Predictions
+    items:
+    - name: How to generate predictions
+      href: r/how-to-do-realtime-scoring.md   
+    - name: Real-time scoring with sp_rxPredict
+      href: real-time-scoring.md
+    - name: Native scoring with PREDICT T-SQL
+      href: sql-native-scoring.md
   - name: Performance
     items:
     - name: Performance tuning for R - Overview

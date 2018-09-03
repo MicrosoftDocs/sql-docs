@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Monitor and Tune for Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
@@ -32,7 +32,7 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor and Tune for Performance
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Changing conditions result in changing performance. In your evaluations, you can
 |[Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)|Advice on using the Query Store.|  
   
 ## See also  
- [Automated Administration Across an Enterprise](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)   
+ [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

@@ -59,7 +59,7 @@ manager: craigg
  Forced quorum  
  The process to start the cluster even though only a minority of the elements that are required for quorum are in communication.  
   
- For more information, see: [Failover Cluster Glossary](http://msdn.microsoft.com/library/aa372869\(VS.85\).aspx)  
+ For more information, see: [Failover Cluster Glossary](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Overview of Windows Server Failover Clustering  
  Windows Server Failover Clustering provides infrastructure features that support the high-availability and disaster recovery scenarios of hosted server applications such as Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and Microsoft Exchange. If a cluster node or service fails, the services that were hosted on that node can be automatically or manually transferred to another available node in a process known as *failover*.  

@@ -28,7 +28,7 @@ You can customize your page design by selecting options in the **Page Setup** di
 Select a size from the list.  
   
 **Source**  
-Specifies the paper to use. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] lists the sources available for the selected printer.  
+Specifies the paper to use. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] lists the sources available for the selected printer.  
   
 ## Orientation  
 **Portrait**  

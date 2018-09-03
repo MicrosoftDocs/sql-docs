@@ -18,7 +18,7 @@ manager: craigg
 # SQLServerConnection Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Represents a JDBC connection to a [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.  
+  Represents a JDBC connection to a [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database.  
   
  **Package:** com.microsoft.sqlserver.jdbc  
   

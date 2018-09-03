@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "bulk copy [OLE DB]"
   - "bulk copy [OLE DB], data files"
   - "bulk copy [OLE DB], about bulk copy"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "prepared statements [OLE DB Driver for SQL Server]"
   - "commands [OLE DB]"
   - "command preparation [OLE DB Driver for SQL Server]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Preparing Commands

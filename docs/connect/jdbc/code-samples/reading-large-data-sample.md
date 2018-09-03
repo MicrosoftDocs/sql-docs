@@ -20,7 +20,7 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve a large single-column value from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using the [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) method.
+This [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sample application demonstrates how to retrieve a large single-column value from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database by using the [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) method.
 
 The code file for this sample is named ReadLargeData.java, and it can be found in the following location:
 

@@ -1,9 +1,9 @@
 ---
 title: Encrypting Connections to SQL Server on Linux | Microsoft Docs
 description: This article describes Encrypting Connections to SQL Server on Linux.
-author: tmullaney 
+author: vin-yu 
 ms.date: 01/30/2018
-ms.author: meetb 
+ms.author: vinsonyu 
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -35,7 +35,6 @@ These symbolic links should be named `libcrypto.so` and `libssl.so` and placed i
 
 ## Overview
 TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When configured correctly, TLS provides both privacy and data integrity for communications between the client and the server.  TLS connections can either be client initiated or server initiated. 
-
 
 ## Client Initiated Encryption 
 - **Generate certificate** (/CN should match your SQL Server host fully qualified domain name)

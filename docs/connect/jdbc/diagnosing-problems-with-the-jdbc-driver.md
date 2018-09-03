@@ -26,7 +26,7 @@ manager: craigg
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Handling Errors](../../connect/jdbc/handling-errors.md)|Describes how to handle errors that are returned from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Handling Errors](../../connect/jdbc/handling-errors.md)|Describes how to handle errors that are returned from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Getting the Driver Version](../../connect/jdbc/getting-the-driver-version.md)|Describes how to determine which version of the JDBC driver is installed.|  
 |[Tracing Driver Operation](../../connect/jdbc/tracing-driver-operation.md)|Describes how to enable tracing when using the JDBC driver.|  
 |[Troubleshooting Connectivity](../../connect/jdbc/troubleshooting-connectivity.md)|Describes how to troubleshoot database connectivity.|  

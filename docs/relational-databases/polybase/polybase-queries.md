@@ -1,5 +1,5 @@
 ---
-title: "PolyBase Queries | Microsoft Docs"
+title: "PolyBase query scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/08/2017"
 ms.prod: sql
@@ -21,7 +21,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# PolyBase Queries
+# PolyBase query scenarios
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This article provides examples of queries using the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server (starting with 2016). Before using these examples, you must also understand the T-SQL statements required to set up PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)

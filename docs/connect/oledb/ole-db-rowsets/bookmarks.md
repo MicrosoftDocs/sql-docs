@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, bookmarks"
   - "rowsets [OLE DB], bookmarks"
   - "OLE DB rowsets, bookmarks"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Bookmarks

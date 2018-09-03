@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services tutorial lesson 5: Create calculated columns | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models

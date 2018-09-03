@@ -1,4 +1,4 @@
-﻿---
+---
 title: "RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2016"
@@ -24,7 +24,7 @@ caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

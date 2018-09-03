@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "bookmarks [OLE DB]"
   - "rows [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Retrieve Rows Using Bookmarks (OLE DB)

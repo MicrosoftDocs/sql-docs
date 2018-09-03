@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_change_log_shipping_secondary_database"
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_change_log_shipping_secondary_database (Transact-SQL)

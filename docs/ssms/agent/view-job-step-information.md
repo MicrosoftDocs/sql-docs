@@ -64,15 +64,15 @@ You can view only those jobs that you own, unless you are a member of the **sysa
   
 5.  On the **General** page of the **Job Step Properties** dialog, you can view the type of job step and what it does.  
   
-6.  Click the **Advanced** page to view the actions [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent takes if the job step succeeds or fails, how many times the job step should be attempted, where the job step output is written, and the user the job step runs as.  
+6.  Click the **Advanced** page to view the actions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent takes if the job step succeeds or fails, how many times the job step should be attempted, where the job step output is written, and the user the job step runs as.  
   
 #### To view job step output  
   
 1.  In the **Job Step Properties** dialog, click the **Advanced** page.  
   
-2.  Depending on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] you are connected to, you can view either the job step output file or table as follows:  
+2.  Depending on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you are connected to, you can view either the job step output file or table as follows:  
   
-    -   When you are connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or later, you can click **View** only when **Log to table** is checked. In this case, the job step output is written to the **sysjobstepslogs** table in the **msdb** database.  
+    -   When you are connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or later, you can click **View** only when **Log to table** is checked. In this case, the job step output is written to the **sysjobstepslogs** table in the **msdb** database.  
   
     -   The **View** button is disabled when job step output is written to a file. To view a job step output file, use Notepad.  
   

@@ -3,11 +3,13 @@
 - name: Overview
   items:
   - name: Release notes
-    href: sql-server-linux-release-notes.md
+    items:
+    - name: SQL Server 2017
+      href: sql-server-linux-release-notes.md
+    - name: SQL Server 2019 CTP 2.0
+      href: sql-server-linux-release-notes-2019.md
   - name: What's new?
     href: sql-server-linux-whats-new.md
-  - name: New and updated articles
-    href: new-updated-linux.md
   - name: Editions and supported features
     href: sql-server-linux-editions-and-components-2017.md
   - name: FAQ
@@ -71,6 +73,8 @@
       href: sql-server-linux-setup-full-text-search.md
     - name: Install SQL Server Integration Services
       href: sql-server-linux-setup-ssis.md
+    - name: Install SQL Server Machine Learning Services
+      href: sql-server-linux-setup-machine-learning.md
     - name: Configure repositories
       href: sql-server-linux-change-repo.md
   - name: Configure
@@ -195,6 +199,8 @@
       href: sql-server-linux-active-directory-auth-overview.md
     - name: Encrypting connections
       href: sql-server-linux-encrypted-connections.md
+    - name: Third Party AD Auth
+      href: sql-server-linux-active-directory-third-party-providers.md
   - name: Performance
     items:
     - name: Best practices

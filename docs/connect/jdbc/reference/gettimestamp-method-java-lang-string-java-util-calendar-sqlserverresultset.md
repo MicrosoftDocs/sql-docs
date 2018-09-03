@@ -51,7 +51,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String colName,
 ## Remarks  
  This getTimestamp method is specified by the getTimestamp method in the java.sql.ResultSet interface.  
   
- This method returns values only from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime and smalldatetime columns.  
+ This method returns values only from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime and smalldatetime columns.  
   
 ## See Also  
  [getTimestamp Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   

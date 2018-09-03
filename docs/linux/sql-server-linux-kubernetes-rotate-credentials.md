@@ -4,15 +4,15 @@ description: This article explains the environment variables to rotate credentia
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 7/16/2018
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-
 # Rotate credentials - SQL Server availability group on Kubernetes
 
 Rotate credentials on a SQL Server Always On availability group in Kubernetes to update the SQL Server instance `sa` password, set a new master key password, or rotate the database mirroring endpoint certificates.

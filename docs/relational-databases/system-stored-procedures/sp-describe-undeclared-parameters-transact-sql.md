@@ -1,7 +1,7 @@
-﻿---
+---
 title: "sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2018"
+ms.date: "08/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "system-stored-procedures"
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "sp_describe_undeclared_parameters"
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -100,7 +100,7 @@ sp_describe_undeclared_parameters
   
 -   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
   
--   If the statement creates any temporary tables.  
+-   If the statement references temporary tables.  
   
  If \@tsql has no parameters, other than those declared in \@params, the procedure returns an empty result set.  
   

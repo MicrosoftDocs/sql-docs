@@ -73,7 +73,7 @@ manager: craigg
 |[Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Reviews several design and coding practices that can help you avoid problems related to multi-language data.|  
   
 ## See Also  
- [Internationalization for Windows Applications](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Internationalization for Windows Applications](/windows/desktop/Intl/international-support)   
  [Go Global Developer Center](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [Writing Windows Store apps with locale-based adaptive design](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Developing Universal Windows Apps with C# and XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  

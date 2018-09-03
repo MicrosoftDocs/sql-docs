@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Always Encrypted (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"
@@ -18,7 +18,7 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,11 +77,11 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 To successfully update the column, do the following:
 
-1.  SELECT the data out of the SSN column, and store it as a result set in the application. This will allow for the application (client) to decrypt the column.
-2. INSERT/UPDATE the data from the result set in the application and send to SQL Server. Paramterization will pass the data into SQL Server via parameters so the values can be encrypted. 
+1. SELECT the data out of the SSN column, and store it as a result set in the application. This will allow for the application (client *driver*) to decrypt the column.
+2. INSERT the data from the result set into SQL Server. 
 
  >[!IMPORTANT]
- > In this example, the data will be unencrypted when sent back to the server because the destination column is a regular varchar that does not accept encrypted data. 
+ > In this scenario, the data will be unencrypted when sent back to the server because the destination column is a regular varchar that does not accept encrypted data. 
   
 ## Selecting  Deterministic or Randomized Encryption  
  The Database Engine never operates on plaintext data stored in encrypted columns, but it still supports some queries on encrypted data, depending on the encryption type for the column. Always Encrypted supports two types of encryption: randomized encryption and deterministic encryption.  

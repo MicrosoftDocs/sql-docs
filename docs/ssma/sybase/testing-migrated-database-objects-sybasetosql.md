@@ -51,9 +51,9 @@ If you want to use SSMA Tester, install SSMA Sybase Extension Pack with the **In
   
 In addition, verify the following:  
   
--   Sybase OLE DB provider is installed on the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] runs.  
+-   Sybase OLE DB provider is installed on the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs.  
   
--   Common Language Runtime (CLR) integration has been enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine.  
+-   Common Language Runtime (CLR) integration has been enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine.  
   
 Note that the current version of SSMA Tester does not support parallel execution by different users on the same source or target server.  
   

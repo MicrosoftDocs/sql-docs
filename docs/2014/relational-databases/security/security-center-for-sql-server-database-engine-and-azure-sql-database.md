@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "database security [SQL Server]"
   - "databases [SQL Server], security"
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database

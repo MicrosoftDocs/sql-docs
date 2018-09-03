@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Policy-Based Management, system views"
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
-caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Policy-Based Management Views (Transact-SQL)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: SQL Graph Database Sample | Microsoft Docs
 description: A quick sample that will help you get started with the new syntax introduced in SQL graph database. 
 ms.date: "04/19/2017"
@@ -20,7 +20,7 @@ caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a graph database and run some pattern matching queries using T-SQL
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

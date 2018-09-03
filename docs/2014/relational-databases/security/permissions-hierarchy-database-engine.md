@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], hierarchy"
   - "security [SQL Server], granting access"
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Permissions Hierarchy (Database Engine)

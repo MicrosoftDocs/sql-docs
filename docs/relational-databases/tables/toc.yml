@@ -127,25 +127,6 @@
   items:
   - name: "Lesson 1: Converting a Table to a Hierarchical Structure"
     href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
-    items:
-    - name: Lesson 1-1 - Examining the Current Structure of the Employee Table
-      href: lesson-1-1-examining-the-current-structure-of-the-employee-table.md
-    - name: Lesson 1-2 - Populating a Table with Existing Hierarchical Data
-      href: lesson-1-2-populating-a-table-with-existing-hierarchical-data.md
-    - name: Lesson 1-3 - Optimizing the NewOrg Table
-      href: lesson-1-3-optimizing-the-neworg-table.md
-    - name: Lesson 1-4 - Summary - Converting a Table to a Hierarchical Structure
-      href: lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md
   - name: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
     href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
-    items:
-    - name: Lesson 2-1 - Creating a Table Using the hierarchyid Data Type
-      href: lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md
-    - name: Lesson 2-2 - Populating a Hierarchical Table Using Hierarchical Methods
-      href: lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md
-    - name: Lesson 2-3 - Querying a Hierarchical Table Using Hierarchy Methods
-      href: lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md
-    - name: Lesson 2-4 - Reordering Data in a Hierarchical Table Using Hierarchical Methods
-      href: lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md
-    - name: Lesson 2-5 - Summary - Managing Data in a Hierarchical Table
-      href: lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
+

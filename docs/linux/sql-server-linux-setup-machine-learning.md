@@ -4,13 +4,14 @@ description: This article describes how to install SQL Server Machine Learning S
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 07/12/2018
+ms.date: 08/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: machine-learning
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server vNext Machine Learning Services R and Python support on Linux
 
@@ -41,7 +42,6 @@ Hardware requirements include:
 ## Install on RHEL
 
 Download the Microsoft SQL Server Red Hat repository configuration file: 
-(copied from: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-linux-2017) 
 
 ```bash
 sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo 
@@ -83,7 +83,6 @@ Run the following commands to install SQL Server with Machine Learning Services 
 Import the public repository GPG keys: 
 
 ```bash
-(copied from: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-linux-2017) 
 
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - 
 ```
@@ -132,15 +131,17 @@ The following example configures the Developer edition of SQL Server with SQL Se
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y ACCEPT_ML_EULA=Y SSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup 
 ```
 
-You can read more about unattended SQL Server installations and scripts here: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-linux-2017#unattended 
+For more information, see [Unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended).
 
 ## Offline installation
 
-If you need an offline installation, locate the package downloads in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+1. Locate the MLS-specific package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). 
+
+2. Continue with [Offline installation](sql-server-linux-setup.md#offline) instructions for your next step.
 
 ## Post-install configuration
 
-After installation of SQL Server on Linux you will need to do the following to accept the license agreement and provide the system administrator (SA) password. This license agreement also contains a supplement for Machine Learning Services if you have installed any of the mlservices packages. 
+After the database engine and Machine Learning Services packages are installed, configure the server for operations. This task includes acceptance of SQL Server, R, and Python license agreements and provision of the system administrator (SA) password.
 
 Run the configuration script to accept the license agreement and provide the System Administrator (SA) password: 
 
@@ -148,7 +149,7 @@ Run the configuration script to accept the license agreement and provide the Sys
 $ sudo /opt/mssql/bin/mssql-conf setup 
 ```
 
-If you already have a SQL Server installation and just want to add the feature machine learning services, then you can install one of the mlservices packages as described above, and run the following to accept the mlservices EULA: 
+If you already have a SQL Server installation and just want to add the feature machine learning services, then you can install mlservices packages and run the following to accept the mlservices EULA: 
 
 ```bash
 $ sudo /opt/mssql/bin/mssql-conf set accept-eula ml 
@@ -156,8 +157,7 @@ $ sudo /opt/mssql/bin/mssql-conf set accept-eula ml
 
 ## Configure external script execution 
 
-Before running R and Python scripts in SQL Server, you need to enable external script execution. 
-Configure external script execution by running the following SQL command: 
+Before running R and Python scripts in SQL Server, enable external script execution: 
 
 ```bash
 EXEC sp_configure 'external scripts enabled', 1 

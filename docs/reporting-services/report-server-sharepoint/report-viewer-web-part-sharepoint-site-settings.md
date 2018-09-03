@@ -1,15 +1,11 @@
 ---
 title: "SharePoint site settings for the Report Viewer web part - SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/31/2017"
+ms.date: 10/31/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
+ms.technology: report-server-sharepoint
 ms.suite: ""
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "jt000"
 ms.author: "jasontre"

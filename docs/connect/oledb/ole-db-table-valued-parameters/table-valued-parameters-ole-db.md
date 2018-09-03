@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, table-valued parameters"
   - "table-valued parameters (OLE DB)"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Table-Valued Parameters (OLE DB)

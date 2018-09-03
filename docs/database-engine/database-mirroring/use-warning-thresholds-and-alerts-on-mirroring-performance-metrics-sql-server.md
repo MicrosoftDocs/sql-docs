@@ -112,9 +112,9 @@ manager: craigg
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To create an alert using SQL Server Management Studio**  
   
--   [Create an Alert Using an Error Number](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [Create an Alert Using an Error Number](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Create a WMI Event Alert](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Create a WMI Event Alert](../../ssms/agent/create-a-wmi-event-alert.md)  
   
  **To monitor database mirroring**  
   

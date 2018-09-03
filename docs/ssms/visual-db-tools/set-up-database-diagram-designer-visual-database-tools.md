@@ -36,9 +36,9 @@ To use Database Diagram Designer, it must first be set up by a member of the **d
 3.  Select **Yes** when prompted if you want to set up database diagramming.  
   
     > [!NOTE]  
-    > This will create the database diagram table, system stored procedures, and a system function on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
+    > This will create the database diagram table, system stored procedures, and a system function on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
-4.  Visual Studio will create the following objects on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
+4.  Visual Studio will create the following objects on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
     1.  sysdiagrams table  
   

@@ -1,7 +1,7 @@
 ---
 title: "sp_rxPredict | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/2017"
+ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
@@ -18,20 +18,21 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_rxPredict procedure"
-author: "jeannt"
-ms.author: "jeannt"
-manager: craigg
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: cgronlun
 ---
 # sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Generates a predicted value based on a stored model.
+Generates a predicted value for a given input based on a machine learning model stored in a binary format in a SQL Server database.
 
-Provides scoring on machine learning models in near real-time. `sp_rxPredict` is a stored procedure provided as a wrapper for the `rxPredict` function in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). It is written in C+ and is optimized specifically for scoring operations. It supports both R or Python machine learning models.
+Provides scoring on R and Python machine learning models in near real-time. `sp_rxPredict` is a stored procedure provided as a wrapper for the `rxPredict` R function in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), and the [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python function in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). It is written in C+ and is optimized specifically for scoring operations.
 
 **This topic applies to**:  
-- SQL Server 2017  
-- SQL Server 2016 R Services with upgrade to Microsoft R Server  
+- [SQL Server 2017 Machine Learning Services (In-Database) with R](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)
+- [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install), with [upgraded R components](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server) providing the MicrosoftML library
+
 
 ## Syntax
 
@@ -63,23 +64,53 @@ To enable use of the stored procedure, SQLCLR must be enabled on the instance.
 
 The user needs `EXECUTE` permission on the database.
 
-### Supported platforms
 
-Requires one of the following editions:  
-- SQL Server 2017 Machine Learning Services (includes Microsoft R Server 9.1.0)  
-- Microsoft Machine Learning Server  
-- SQL Server R Services 2016, with an upgrade of the R Services instance to Microsoft R Server 9.1.0 or later  
+### Supported platforms
+ 
+- SQL Server 2017 Machine Learning Services (includes R Server 9.2)  
+- SQL Server 2017 Machine Learning Server (Standalone) 
+- SQL Server R Services 2016, with an upgrade of the R Services instance to R Server 9.1.0 or later  
+
 
 ### Supported algorithms
 
-For a list of supported algorithms, see [Real-time scoring](../../advanced-analytics/real-time-scoring.md).
++ RevoScaleR models
 
-The following model types are **not** supported:  
-- Models containing other, unsupported types of R transformations  
-- Models using the `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR  
-- PMML models  
-- Models created using other R libraries from CRAN or other repositories  
-- Models containing any other kind of R transformation other than those listed here  
+
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
+  
+  Models marked with \* also support native scoring with the PREDICT function.
+
++ MicrosoftML models
+
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
+
++ Transformations supplied by MicrosoftML
+
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
+
+### Unsupported model types
+
+The following model types are not supported:
+
++ Models containing other, unsupported types of R transformations
++ Models using the `rxGlm` or `rxNaiveBayes` algorithms in RevoScaleR
++ PMML models
++ Models created using other R libraries from CRAN or other repositories
++ Models containing any other kind of R transformation other than those listed here
 
 ## Examples
 
@@ -96,5 +127,5 @@ In addition to being a valid SQL query, the input data in *@inputData* must incl
 
 `sp_rxPredict` supports only the following .NET column types: double, float, short, ushort, long, ulong and string. You may need to filter out unsupported types in your input data before using it for real-time scoring. 
 
-  For information about corresponding SQL types, see [SQL-CLR Type Mapping](https://msdn.microsoft.com/library/bb386947.aspx) or [Mapping CLR Parameter Data](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+  For information about corresponding SQL types, see [SQL-CLR Type Mapping](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) or [Mapping CLR Parameter Data](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

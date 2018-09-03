@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_grantlogin"
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_grantlogin (Transact-SQL)

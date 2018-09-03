@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_set_config_history_retention"
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
-caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_set_config_history_retention (Transact-SQL)

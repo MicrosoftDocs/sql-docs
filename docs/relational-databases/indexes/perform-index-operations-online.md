@@ -1,4 +1,4 @@
-﻿---
+---
 title: Perform Index Operations Online | Microsoft Docs
 ms.custom: ""
 ms.date: 02/17/2017
@@ -18,7 +18,7 @@ ms.author: mikeray
 manager: craigg
 ms.suite: "sql"
 ms.prod_service: "table-view-index, sql-database"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Perform Index Operations Online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

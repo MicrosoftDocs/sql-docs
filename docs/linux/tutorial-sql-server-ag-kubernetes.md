@@ -50,6 +50,14 @@ Several of the steps in this article create a manifest and then deploy the manif
 
 * Install [`kubectl`](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster#install-the-kubectl-cli).
 
+## Configuration and deployment procedures
+
+Kubernetes objects are deployed and managed with .yaml files.
+
+For this tutorial, you can download the .yaml files from [GitHub](https://sqlhelsinki.visualstudio.com/_git/pm-tools?path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example&version=GBmaster). Download all of the files to one directory.  
+
+The tutorial will show how to apply the .yaml files to your Kubernetes cluster.
+
 ## Create storage
 
 To create the storage, create a manifest that describes:
@@ -57,6 +65,7 @@ To create the storage, create a manifest that describes:
 * The [*Storage Class*](http://kubernetes.io/docs/concepts/storage/storage-classes/)
 * Three [*Persistent Volume Claims*](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) as Azure disks
 
+See the example  manifest
 To create the manifest for the storage, make a file named `pvc.yaml`, and copy in the following `.yaml` code.
 
 [!INCLUDE[ag-pvc-manifest](../includes/kubernetes-ag-pvc-yaml.md)]
@@ -96,6 +105,7 @@ kubectl describe pv
 `mssql-operator` is a Kubernetes operator that deploys the instances of SQL Server and configures the availability group in the Kubernetes cluster. Deploy the operator as a one-replica Kubernetes deployment.
 
 To deploy the operator, create a file named `operator.yaml`, and copy in the following manifest.
+
 
 [!INCLUDE[kubernetes-ag-operator-yaml](../includes/kubernetes-ag-operator-yaml.md)]
 

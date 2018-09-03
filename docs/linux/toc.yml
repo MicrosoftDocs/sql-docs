@@ -59,6 +59,8 @@
       href: tutorial-sql-server-containers-kubernetes.md
     - name: Deploy on Kubernetes with availability groups
       href: tutorial-sql-server-ag-kubernetes.md
+  - name: 10_Configure replication
+    href: sql-server-linux-replication-tutorial-tsql.md
 - name: Concepts
   items:
   - name: Install

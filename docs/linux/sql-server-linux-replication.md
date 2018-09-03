@@ -15,6 +15,7 @@ ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: "On Demand"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server Replication on Linux
 
@@ -25,16 +26,37 @@ ms.workload: "On Demand"
 Configure replication on Linux with [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md). You cannot configure replication for SQL Server on Linux with SQL Server Management Studios (SSMS).  
 
 An instance of SQL Server can participate in any replication role:
+
 * Publisher
 * Distributor
 * Subscriber
 
-A replication schema can mix and match operating system platforms. For example, a replication schema can use instances of SQL Server on Linux for publisher and subscriber, and the distributor can be hosted on an instance of SQL Server on Windows.
+A replication schema can mix and match operating system platforms. For example, a replication schema can use instances of SQL Server on Linux for publisher and distributor, and the subscribers can include instances of SQL Server on Windows.
 
 SQL Server instances on Linux can participate in any type of replication.
-* Transactional 
+
+* Transactional
 * Merge
 * Snapshot
+
+## Supported features
+
+For [!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 the following replication features are supported:
+
+* Snapshot replication
+* Transactional replication
+* Merge replication
+* Peer-to-Peer replication
+* Replication with non-default ports <!--Add link to explanation-->
+* Replication with AD authentication
+* Replication configurations across Windows and Linux
+* Immediate updates for transactional replication
+
+## Limitations
+
+[!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 does not support the following features:
+
+* Immediate update subscribers
 
 ## Next steps
 [Sample: Configure SQL Server replication on Linux](sql-server-linux-replication-configure.md)

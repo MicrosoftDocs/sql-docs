@@ -103,6 +103,24 @@ In addition, this feature can be setup be default for a specific database using
 
 For more information see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)
 
+### Database scoped default setting for online and resumable DDL operations 
+
+- **Database scoped default setting for online and resumable DDL operations** allows a default behavior setting for `ONLINE` and `RESUMABLE` index operations at the database level, rather than defining these options for each individual index DDL statement such as index create or rebuild.
+
+- Set these defaults using the `ELEVATE_ONLINE` and `ELEVATE_RESUMABLE` database scoped configuration options. Both options will cause the engine to automatically elevate supported operations to index online or resumable execution. You can enable the following behaviors using these options:
+
+  - `FAIL_UNSUPPORTED` option allows to execute all index operations online or resumable and fail index operations that are not supported for online or resumable.
+  - `WHEN_SUPPPORTED` option allows to execute supported operations online or resumable and run index unsupported operations offline or non-resumable.
+  - `OFF` option allows the current behavior of executing all index operations offline and non-resumable unless explicitly specified in the DDL statement.
+
+To override the default setting, include the ONLINE or RESUMABLE option in the index create and rebuild commands.  
+
+Without this feature you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
+
+More information:
+For more information on index resumable operations see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
+
+
 ## <a id="ha"></a> High Availability
 
 - **Connection redirection**: Improved scale-out with automatic redirection of connections based on read/write intent.

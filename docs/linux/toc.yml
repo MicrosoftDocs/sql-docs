@@ -214,8 +214,6 @@
     items:
     - name: Configure
       href: sql-server-linux-replication-configure.md
-    - name: Examples
-      href: sql-server-linux-replication-examples.md
 - name: Samples
   items:
   - name: Unattended install

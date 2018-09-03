@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 In this tutorial you will configure SQL Server snapshot replication on Linux with 2 instances of SQL Server using Transact-SQL. The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
 
-> * [!div class="checklist"]
+> [!div class="checklist"]
 > * Enable SQL Server replication agents on Linux
 > * Create a sample database
 > * Configure snapshot folder for SQL Server agents access
@@ -288,7 +288,7 @@ the instance for distribution as well.
 
 In this tutorial you configured SQL Server snapshot replication on Linux with 2 instances of SQL Server using Transact-SQL.
 
-> * [!div class="checklist"]
+> [!div class="checklist"]
 > * Enable SQL Server replication agents on Linux
 > * Create a sample database
 > * Configure snapshot folder for SQL Server agents access

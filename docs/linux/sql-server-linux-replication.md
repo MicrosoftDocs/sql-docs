@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 introduces SQL Server Replication for instances of SQL Server on Linux. At this time, SQL Server Replication on Linux is a preview feature.
 
-Configure replication on Linux with [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md). You cannot configure replication for SQL Server on Linux with SQL Server Management Studios (SSMS).  
+Configure replication on Linux with SQL Server Management Studio (SSMS) [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
 An instance of SQL Server can participate in any replication role:
 
@@ -59,4 +59,7 @@ For [!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 the following
 * Immediate update subscribers
 
 ## Next steps
+
+[Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md)
+
 [Sample: Configure SQL Server replication on Linux](sql-server-linux-replication-configure.md)

@@ -85,7 +85,23 @@ Continue reading for more details about these features.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
 
-### Database scoped configuration setting for online and resumable DDL operations
+### Resumable online index create
+
+- **Resumable online index create** allows an index create operation to pause and resume later from where the operation was paused or failed, instead of restarting from the beginning.
+
+  Resumable Online Index Create supports the follow scenarios:
+  - Resume an index create operation after an index create failure, such as after a database failover or after running out of disk space.
+  - Pause an ongoing index create operation and resume it later allowing to temporarily free system resources as required and resume this operation later.
+  - Create large indexes without using a lot of log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
+
+In case of an execution error or failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning
+
+With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+
+In addition, this feature can be setup be default for a specific database using  
+[database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+
+For more information see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)
 
 ## <a id="ha"></a> High Availability
 

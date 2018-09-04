@@ -11,6 +11,7 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
+moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 # Restore a SQL Server database in a Linux Docker container
 
@@ -60,11 +61,14 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
     docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
     ```
 
+    > [!TIP]
+    > Throughout this tutorial, docker command examples are given for both the bash shell (Linux/Mac) and PowerShell (Windows).
+
 ::: moniker-end
 <!--Linux on SQL Server 2019-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
-2. Pull the SQL Server 2017 Linux container image from Docker Hub.
+2. Pull the SQL Server 2019 CTP 2.0 Linux container image from Docker Hub.
 
     ```bash
     sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
@@ -74,10 +78,10 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
     docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
     ```
 
-::: moniker-end
-
     > [!TIP]
     > Throughout this tutorial, docker command examples are given for both the bash shell (Linux/Mac) and PowerShell (Windows).
+
+::: moniker-end
 
 <!--Linux on SQL Server 2017-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"

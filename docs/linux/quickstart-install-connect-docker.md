@@ -33,7 +33,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so
-any changes to one section should be considered to be mirrored in the other-->
+any changes to one section should be duplicated in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 ## <a id="pullandrun2017"></a> Pull and run the container image
@@ -49,10 +49,10 @@ any changes to one section should be considered to be mirrored in the other-->
    ```
 
    > [!TIP]
-   > This quickstart uses the SQL Server 2017 Docker image. If you want to run the SQL Server 2019 CTP 2.0 image, see the [SQL Server 2019 CTP 2.0 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
+   > If you want to try the SQL Server 2019 CTP 2.0 image, see the [SQL Server 2019 CTP 2.0 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
 
    The previous command pulls the latest SQL Server 2017 container image. If you want to pull a specific image, you add a colon and the tag name (for example, `microsoft/mssql-server-linux:2017-GA`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
-   
+
    For the bash commands in this article, `sudo` is used. On MacOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
 2. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS) or elevated PowerShell command prompt.

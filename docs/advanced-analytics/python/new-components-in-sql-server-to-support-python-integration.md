@@ -16,19 +16,8 @@ Beginning in SQL Server 2017, Machine Learning Services supports Python as an ex
 
 This topic describes the components in SQL Server 2017 that support extensibility in general and the Python language specifically.
 
-## SQL Server components and providers
 
-To configure SQL Server 2017 to allow Python script execution is a multi-step process.
-
-1. Install the extensibility feature.
-2. Enable the external script execution feature.
-3. Restart the database engine service.
-
-Additional steps might be required to support remote script execution.
-
-For more information, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
-
-### Launchpad
+## Launchpad
 
 The SQL Server Trusted Launchpad is a service introduced in SQL Server 2016 that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries.
 
@@ -51,7 +40,7 @@ Each satellite process inherits the user account of the Launchpad and uses that 
 
 For more information about the security context of the Launchpad, see [Security](security-overview-sql-server-python-services.md).
 
-### BxlServer and SQL Satellite
+## BxlServer and SQL Satellite
 
 If you run [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) while a Python job is running, you might see one or multiple instances of BxlServer.
 
@@ -95,6 +84,7 @@ The SQL Satellite can be monitored by using windows extended events (xEvents). F
   + Create database objects: for example, if saving external script as part of a new stored procedure.
 
   When [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is used as the compute context for Python script executed from a remote client, and the Python executable must retrieve data from an external source, ODBC is used for writeback. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] maps the identity of the user issuing the remote command to the identity of the user on the current instance, and runs the ODBC command using that user's credentials. The connection string needed to perform this ODBC call is obtained from the client code.
+
 
 ## Interaction of components
 

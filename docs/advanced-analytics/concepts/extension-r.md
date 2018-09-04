@@ -17,6 +17,57 @@ The R extension is part of the SQL Server Machine Learning Services add-on to th
 
 R integration is available in SQL Server starting in SQL Server 2016, with [R Services](../r/sql-server-r-services.md), and continuing forward as part of [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
+## R components
+
+SQL Server does not modify the R executables. The R runtime is Microsoft's distribution of open-source R: Microsoft R Open (MRO). It is installed independently of SQL tools, and is executed outside of core engine processes. During installation, you must consent to the terms of the open-source license. Thereafter, you can run standard R packages without further modification just as you would in any other open source distribution of R.
+
+The R base package distribution that is associated with a specific [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance can be found in the folder associated with the instance. For example, if you installed R Services on the default instance, the R libraries are located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
+
+Similarly, the R tools associated with the default instance would be located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`.
+
+For more information about how MRO differs from a base distribution of R that you might get from CRAN, see [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
+
+R packages added by Microsoft include the following packages.
+
+| Library | Description |
+|---------|-------------|
+| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. The APIs have been optimized to analyze data sets that are too big to fit in memory and to perform computations distributed over several cores or processors. The RevoScaleR package also supports the .XDF file format for faster movement and storage of data used for analysis. The XDF format uses columnar storage, is portable, and can be used to load and then manipulate data from various sources, including text, SPSS, or an ODBC connection. |
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [Using the MicrosoftML package with SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package). | 
+
+## Execution architecture
+
+The following diagrams depict the interaction of SQL Server components with the R runtime in each of the supported scenarios: running script in-database, and remote execution from an R command line, using a SQL Server compute context.
+
+### R scripts executed from SQL Server in-database
+
+R code that is run from "inside" SQL Server is executed by calling a stored procedure. Thus, any application that can make a stored procedure call can initiate execution of R code.  Thereafter SQL Server manages the execution of R code as summarized in the following diagram.
+
+![rsql_indb780-01](media/script_in-db-r.png)
+
+1. A request for the R runtime is indicated by the parameter _@language='R'_ passed to the stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). SQL Server sends this request to the Launchpad service.
+2. The Launchpad service starts the appropriate launcher; in this case, RLauncher.
+3. RLauncher starts the external R process.
+4. BxlServer coordinates with the R runtime to manage exchanges of data with SQL Server and storage of working results.
+5. SQL Satellite manages communications about related tasks and processes with SQL Server.
+6. BxlServer uses SQL Satellite to communicate status and results to SQL Server.
+7. SQL Server gets results and closes related tasks and processes.
+
+### R scripts executed from a remote client
+
+When connecting from a remote data science client that supports Microsoft R, you can run R functions in the context of SQL Server by using the RevoScaleR functions. This is a different workflow from the previous one, and is summarized in the following diagram.
+
+![rsql_fromR2db-01](media/remote-sqlcc-from-r2.png)
+
+1. For RevoScaleR functions, the R runtime calls a linking function which in turn calls BxlServer.
+2. BxlServer is provided with Microsoft R and runs in a separate process from the R runtime.
+3. BxlServer determines the connection target and initiates a connection using ODBC, passing credentials supplied as part of the connection string in the R data source object.
+4. BxlServer opens a connection to the SQL Server instance.
+5. For an R call, the Launchpad service is invoked, which is turn starts the appropriate launcher, RLauncher. Thereafter, processing of R code is similar to the process for running R code from T-SQL.
+6. RLauncher makes a call to the instance of the R runtime that is installed on the SQL Server computer.
+7. Results are returned to BxlServer.
+8. SQL Satellite manages communication with SQL Server and cleanup of related job objects.
+9. SQL Server passes results back to the client.
+
 ## See also
 
 + [Extensibility framework in SQL Server](extensibility-framework.md)

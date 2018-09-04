@@ -40,6 +40,8 @@ SQL Server 2017 supports R and Python. The following table describes the compone
 
 Developers and analysts often have code running on top of a local SQL Server instance. By adding Machine Learning Services and enabling external script execution, you gain the ability to run R and Python code in SQL Server modalities: wrapping script in stored procedures, storing models in a SQL Server table, or combining T-SQL and R or Python functions in queries.
 
+Script execution is within the boundaries of the data security model: permissions on the relational database are the basis of data access in your script. A user running R or Python script should not be able to use any data that could not be accessed by that user in a SQL query. You need the standard database read and write permissions, plus an additional permission to run external script. Models and code that you write for relational data are wrapped in stored procedures, or serialized to a binary format and stored in a table, or loaded from disk if you serialized the raw byte stream to a file.
+
 The most common approach for in-database analytics is to use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), passing R or Python script as an input parameter.
 
 Classic client-server interactions are another approach. From any client workstation that has an IDE, you can install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) or the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), and then write code that pushes execution (referred to as a *remote compute context*) to data and operations to a remote SQL Server. 

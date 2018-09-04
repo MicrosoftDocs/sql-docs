@@ -57,9 +57,7 @@ You can work with local data, get data from SQL Server or other ODBC data source
 + Supported data sources: ODBC databases, SQL Server, and XDF files
 + Supported compute contexts: local, or SQL Server
 
-### Licensing
 
-As part of the installation of Machine Learning Services with Python, you must consent to the terms of the GNU Public License.
 
 ## See Also
 

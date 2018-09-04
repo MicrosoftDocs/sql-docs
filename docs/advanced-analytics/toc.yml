@@ -6,7 +6,7 @@
     href: r/sql-server-r-services.md
   - name: Standalone server
     href: r/r-server-standalone.md
-  - name: What's new
+  - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
@@ -18,19 +18,21 @@
     href: install/sql-machine-learning-standalone-windows-install.md
   - name: Pre-trained models
     href: install/sql-pretrained-models-install.md
-  - name: Command-prompt setup
-    href: install/sql-ml-component-commandline-install.md
   - name: Offline setup (no internet)
     href: install/sql-ml-component-install-without-internet-access.md
     items:
     - name: CAB downloads (offline setup)
       href: install/sql-ml-cab-downloads.md
+  - name: Command-prompt setup
+    href: install/sql-ml-component-commandline-install.md
   - name: Upgrade R and Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: Set up R tools
     href: r/set-up-a-data-science-client.md
   - name: Set up Python tools
     href: python/setup-python-client-tools-sql.md
+  - name: Set up a virtual server
+    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
 - name: Quickstarts
   items:
   - name: R
@@ -209,8 +211,6 @@
     items:
     - name: R libraries and data types
       href: r/r-libraries-and-data-types.md
-    - name: Python libraries and data types
-      href: python/python-libraries-and-data-types.md
     - name: Predictive modeling with R
       href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Load R objects using ODBC
@@ -294,8 +294,6 @@
     href: known-issues-for-sql-server-machine-learning-services.md
   - name: Release notes
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
-  - name: Set up a virtual machine
-    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
   - name: Troubleshooting
     href: machine-learning-troubleshooting-faq.md
     items:

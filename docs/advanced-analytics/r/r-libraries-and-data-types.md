@@ -185,4 +185,3 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## See Also
 
-[Python Libraries and Data Types](../python/python-libraries-and-data-types.md)

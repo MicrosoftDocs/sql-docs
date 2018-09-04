@@ -59,6 +59,8 @@
       href: tutorial-sql-server-containers-kubernetes.md
     - name: Deploy on Kubernetes with availability groups
       href: tutorial-sql-server-ag-kubernetes.md
+  - name: 10_Configure replication
+    href: sql-server-linux-replication-tutorial-tsql.md
 - name: Concepts
   items:
   - name: Install
@@ -207,6 +209,11 @@
       href: sql-server-linux-performance-best-practices.md
     - name: Get started with performance features
       href: sql-server-linux-performance-get-started.md
+  - name: Replication
+    href: sql-server-linux-replication.md
+    items:
+    - name: Configure
+      href: sql-server-linux-replication-configure.md
 - name: Samples
   items:
   - name: Unattended install

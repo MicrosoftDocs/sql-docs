@@ -14,17 +14,17 @@ manager: cgronlun
 # Extensibility architecture in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server supports an extensibility framework for execution of R and Python script. This article covers concepts, components, and the interaction model.
+SQL Server has an extensibility framework for loading external language runtime envrionments. Currently, supported languages are R and Python. This article covers concepts, components, and component interaction for language extensions in SQL Server.
 
 ## Background
 
 The extensibility framework was introduced in SQL Server 2016 to support the R run time. SQL Server 2017 adds support for the Python run time.
 
-The purpose of the extensibility framework is to provide an interface between SQL Server and data science languages such as R and Python, both to reduce the friction that occurs when data science solutions are moved into production, and to protect data that might be exposed during the data science development process. By executing a trusted scripting language within a secure framework managed by SQL Server, the database developer can maintain security while allowing data scientists to use enterprise data.
+The purpose of the extensibility framework is to provide an interface between SQL Server and data science languages such as R and Python, both to reduce the friction that occurs when data science solutions are moved into production, and to protect data that might be exposed during the data science development process. By executing a trusted scripting language within a secure framework managed by SQL Server, the database developer can maintain security while allowing data scientists access to enterprise data.
 
   ![Goals of integration with SQL Server](../media/ml-service-value-add.png "Machine Learning Services Value Add")
 
-Language run times are built on open-source distribution. You can port existing code and execute it in SQL Server with relatively minor modifications as long as your script is compatible with the language versions installed by SQL Server Setup.
+Language runtimes are built on open-source distributions. You can port existing code and execute it in SQL Server with relatively minor modifications as long as your script is compatible with the language versions installed by SQL Server Setup.
 
 Parallel and distributed computing requires the functions in Microsoft product libraries, such as RevoScaleR and revoscalepy. With few exceptions, you cannot make open-source or third-party functions more capable than they already are.
 
@@ -45,10 +45,9 @@ The SQL Server Trusted Launchpad is a service that manages and executes external
 | RLauncher.dll for the R language | SQL Server 2016, SQL Server 2017 |
 | Pythonlauncher.dll for Python 3.5 | SQL Server 2017 |
 
-The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. To execute tasks in a specific supported language, the Launchpad gets a secured worker account from the pool, and starts a satellite process to manage the external runtime. Each satellite process inherits the user account of the Launchpad and uses that worker account for the duration of script execution. If script uses parallel processes, they are created under the same, single worker account.
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. If you change the account that runs Launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
 
-> [!NOTE]
-> If you change the account that runs Launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
+To execute tasks in a specific supported language, the Launchpad gets a secured worker account from the pool, and starts a satellite process to manage the external runtime. Each satellite process inherits the user account of the Launchpad and uses that worker account for the duration of script execution. If script uses parallel processes, they are created under the same, single worker account.
 
 ## BxlServer and SQL Satellite
 

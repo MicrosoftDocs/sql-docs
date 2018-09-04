@@ -1,5 +1,5 @@
 ---
-title: R and machine learning extension in SQL Server Machine Learning Services| Microsoft Docs
+title: R extension in SQL Server | Microsoft Docs
 description: Learn about R code execution and built-in R libraries in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -19,15 +19,13 @@ R integration is available in SQL Server starting in SQL Server 2016, with [R Se
 
 ## R components
 
-SQL Server does not modify the R executables. The R runtime is Microsoft's distribution of open-source R: Microsoft R Open (MRO). It is installed independently of SQL tools, and is executed outside of core engine processes. During installation, you must consent to the terms of the open-source license. Thereafter, you can run standard R packages without further modification just as you would in any other open-source distribution of R.
+SQL Server includes both open-source and proprietary packages. The base R libraries are installed through Microsoft's distribution of open-source R: Microsoft R Open (MRO). MRO is installed independently of SQL tools, and is executed outside of core engine processes, in the extensibility framework. During installation, you must consent to the terms of the open-source license. Thereafter, you can run standard R packages without further modification just as you would in any other open-source distribution of R. 
 
-The R base package distribution that is associated with a specific [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance can be found in the folder associated with the instance. For example, if you installed R Services on the default instance, the R libraries are located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
+SQL Server does not modify the base R executables, but you must use the version of R installed by Setup because that version is the one that the proprietary packages are built and tested on. For more information about how MRO differs from a base distribution of R that you might get from CRAN, see [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
 
-Similarly, the R tools associated with the default instance would be located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`.
+The R base package distribution insstalled by Setup can be found in the folder associated with the instance. For example, if you installed R Services on the default instance, the R libraries are located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`. Similarly, the R tools associated with the default instance would be located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`.
 
-For more information about how MRO differs from a base distribution of R that you might get from CRAN, see [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
-
-R packages added by Microsoft include the following packages.
+R packages added by Microsoft for parallel and distributed workloads include the following libraries.
 
 | Library | Description |
 |---------|-------------|
